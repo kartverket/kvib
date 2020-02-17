@@ -1,0 +1,15 @@
+* {
+  font-family: Verdana, serif;
+  font-size: 16px;
+}
+
+body {
+  margin: auto;
+  max-width: 1030px;
+}
+
+a {
+  color: #1A589F;
+}
+
+/*# sourceMappingURL=styles.css.map */
