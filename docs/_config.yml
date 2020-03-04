@@ -1,0 +1,14 @@
+collections:
+  komponenter:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "components"
+    values:
+      layout: "component"
+  - scope:
+      path: ""
+    values:
+      layout: "default"

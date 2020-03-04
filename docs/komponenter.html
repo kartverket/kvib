@@ -1,0 +1,10 @@
+---
+layout: default
+title: Komponenter
+---
+
+<ul>
+    {% for komponent in site.komponenter %}
+    <li><a href="{{komponent.url | relative_url}}"> {{ komponent.navn }} </a></li>
+    {% endfor %}
+</ul>
