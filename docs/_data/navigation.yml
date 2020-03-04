@@ -1,0 +1,4 @@
+- name: Hjem
+  link: /
+- name: Om Kvib
+  link: /about.html
