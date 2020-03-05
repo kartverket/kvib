@@ -1,6 +1,10 @@
 - name: Hjem
   link: /
-- name: Om Kvib
-  link: /about.html
 - name: Komponenter
   link: /komponenter.html
+- name: Stilguidelines og CSS
+  link: /stil.html
+- name: Ressurser
+  link: /ressurser.html
+- name: Om Kvib
+  link: /about.html
