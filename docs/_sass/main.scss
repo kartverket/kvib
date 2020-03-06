@@ -13,6 +13,8 @@ nav {
   display: grid;
   grid-template-columns: auto auto auto auto auto;
   justify-content: space-evenly;
+  position: sticky;
+  top: 0;
   
   & a {
     color:white;
@@ -32,6 +34,7 @@ h2 {
 }
 
 a {
+
   color: $blaa_hoved;
 }
 
@@ -49,3 +52,16 @@ figcaption {
   font-size: .85em;
 }
 
+table {
+  border-collapse: collapse;
+
+  & caption {
+    font-weight: bold;
+    color: $blaa_hoved;
+  }
+}
+
+th, td {
+  padding: .5em;
+  border-bottom: 1px solid $graa_hoved;
+}
