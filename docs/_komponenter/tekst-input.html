@@ -1,9 +1,111 @@
 ---
 navn: Tekst-input
 ---
-<h2>
+<h1>
     Tekst-input
-</h2>
+</h1>
 <p>
-    Tekst-input feltet brukes alle steder der man har behov for tekstlig input fra brukeren, eks ved utfylling av skjemaer.
+    Tekst-input feltet brukes alle steder der man har behov for tekstlig input fra brukeren, eks ved utfylling av
+    skjemaer.
 </p>
+
+Den enkleste formen av tekst-input komponentet består av en label og et input-felt.
+<div>
+    <figure>
+        <img src="{{"/assets/images/tekst-input.PNG" | relativeUrl}}" alt="Tekst input" style="width: 262px;">
+        <figcaption>Enkel tekst-input</figcaption>
+    </figure>
+</div>
+
+Tekstfeltet skal ha en tydelig markering av hover og fokus med blå ramme rundt input-feltet.
+<div>
+    <figure>
+        <img src="{{"/assets/images/inputMedHover.PNG" | relativeUrl}}" alt="Tekst input med hover"
+            style="width: 262px;">
+        <figcaption>Tekst input med hover har tynn ramme (1px) i farge blå-hoved</figcaption>
+    </figure>
+    <figure>
+        <img src="{{"/assets/images/inputMedFokus.PNG" | relativeUrl}}" alt="Tekst input med fokus"
+            style="width: 262px;">
+        <figcaption>Tekst input med fokus har tykk ramme (5px) i farge blå-hoved</figcaption>
+    </figure>
+</div>
+
+Tekstfeltet kan ha 6 forskjellige bredder, alle er 44px høye.
+<div>
+    <figure>
+        <img src="{{"/assets/images/input-xxsmall.PNG" | relativeUrl}}" alt="Input xxs" style="width: 115px;">
+        <figcaption>Tekst input størrelse xxs har 115px bredde</figcaption>
+    </figure>
+    <figure>
+        <img src="{{"/assets/images/input-xs.PNG" | relativeUrl}}" alt="Input xs" style="width: 164px;">
+        <figcaption>Tekst input størrelse xs har 164px bredde</figcaption>
+    </figure>
+    <figure>
+        <img src="{{"/assets/images/input-s.PNG" | relativeUrl}}" alt="Input small" style="width: 262px;">
+        <figcaption>Tekst input størrelse small har 262px bredde</figcaption>
+    </figure>
+    <figure>
+        <img src="{{"/assets/images/input-m.PNG" | relativeUrl}}" alt="Input medium" style="width: 360px;">
+        <figcaption>Tekst input størrelse medium har 360px bredde</figcaption>
+    </figure>
+    <figure>
+        <img src="{{"/assets/images/input-l.PNG" | relativeUrl}}" alt="Input large" style="width: 409px;">
+        <figcaption>Tekst input størrelse large har 409px bredde</figcaption>
+    </figure>
+    <figure>
+        <img src="{{"/assets/images/input-xl.PNG" | relativeUrl}}" alt="Input xl" style="width: 556px;">
+        <figcaption>Tekst input størrelse xl har 556px bredde</figcaption>
+    </figure>
+</div>
+
+Tekstfeltet kan ha hjelpetekst. Det skal vises med et ikon for hjelpetekst bak labelen, som åpner og lukker selve
+hjelpeteksten. Denne vises i en boks med farge Blå_lys mellom label og inputfelt.
+<div>
+    <figure>
+        <img src="{{"/assets/images/inputMedHjelpetekstikon.PNG" | relativeUrl}}" alt="Tekst input med hjelpetekstikon"
+            style="width: 262px;">
+        <figcaption>Tekst input med lukket hjelpetekst</figcaption>
+    </figure>
+    <figure>
+        <img src="{{"/assets/images/inputMedAapenHjelpetekst.PNG" | relativeUrl}}"
+            alt="Tekst input med åpen hjelpetekst" style="width: 262px;">
+        <figcaption>Tekst input med åpen hjelpetekst</figcaption>
+    </figure>
+</div>
+
+Tekstfeltet skal ha vise feilmelding dersom det ikke er korrekt utfylt. Denne feilmeldingen vises kun dersom brukeren
+har vært innom feltet og så forlatt det igjen, dvs når brukeren først kommer inn på et skjema skal det ikke vises
+feilmeldinger.
+
+Feilmeldinger markeres med ramme rundt input-feltet i fargen advarsel-hoved. I tillegg skal det vises en feilmelding
+rett under input-feltet med advarsels-ikon og tekst, også dette skal ha farge advarsel-hoved.
+<div>
+    <figure>
+        <img src="{{"/assets/images/inputMedAdvarsel.PNG" | relativeUrl}}"
+            alt="Tekst input med advarlsel om at det ikke er korrekt utfylt" style="width: 262px;">
+        <figcaption>Tekst input med advarsel</figcaption>
+    </figure>
+</div>
+
+Et tekstfelt skal være markert som deaktivert dersom det ikke er mulig å fylle ut, f.eks fordi andre felt i samme skjema
+må fylles ut først, eller fordi skjema allerede er sendt inn og det ikke lenger er mulig å gjøre endringer. Dersom
+tekstfeltet ikke har noen preutfylt verdi skal det kodes som disabled i html, men dersom det har en preutfylt verdi skal
+det kodes som read-only. Dette er fordi det skal være mulig å lese innholdet i feltet med skjermleser, eller markere og
+kopiere innholdet. Tekstfelt som er deaktivert skal ikke vise ikon for hjelpetekster og skal ikke ha noen feilmeldinger
+synlige. Det skal heller ikke få endret ramme ved hover eller fokus. Dekaktiverte tekst-input felt skal ha ramme i
+fargen Grå_hoved og bakgrunn i farge Grå_lys. Eventuell preutfylt tekst skal ha fargen Grå_mørk. Denne er litt mørkere
+en Grå_hoved for å få høy nok kontrast mot bakgrunnsfargen i hht wcag-standarden.
+
+<div>
+    <figure>
+        <img src="{{"/assets/images/inputLargeDisabled.PNG" | relativeUrl}}"
+            alt="Deaktivert tekstfelt uten preutfylt tekst" style="width: 409px;">
+        <figcaption>Tomt dekativert tekst-input felt.</figcaption>
+    </figure>
+    <figure>
+        <img src="{{"/assets/images/inputReadonly.PNG" | relativeUrl}}"
+            alt="Deaktiver tekstfelt med preutfylt tekst" style="width: 360px;">
+        <figcaption>Deaktivert tekst-input felt med preutfylt tekst.</figcaption>
+    </figure>
+</div>

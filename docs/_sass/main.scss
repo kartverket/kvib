@@ -35,4 +35,17 @@ a {
   color: $blaa_hoved;
 }
 
+figure {
+  margin: .85em 0;
+}
+
+img {
+  border: 1px solid darkgrey;
+  width: fit-content;
+  padding: .3em;
+}
+
+figcaption {
+  font-size: .85em;
+}
 
