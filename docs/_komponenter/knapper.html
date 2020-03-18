@@ -1,0 +1,39 @@
+---
+navn: Knapper
+---
+
+<h1>Knapper</h1>
+<p>Vi har definert 4 knappestiler, som alle knapper skal bruke. Hver stil er beskrevet under, og knappene er vist interaktive med egen stil for hover/fokus.</p>
+
+<h2>Hovedknapper</h2>
+<p>Det skal finnes maks 1 hovedknapp på hver side, denne brukes for å gjennomføre hovedformålet med siden, for eksempel for innsending av skjema.</p><p> Hovedknappen har fargen "Grønn_hoved", med fargen "Grønn_mørk" ved hover eller fokus. Når knappen trykkes ned får den en liten skygge, og den har "Grå_disabled" når den er dekativert. Knappen har hvit tekst, men som blir svart når den er dekativert. Primærknappene har skygge når de klikkes på.</p>
+<button class="primary">Hovedknapp</button>
+<button class="primary" disabled>Hovedknapp deaktivert</button>
+
+<h2>Sekundærknapper</h2>
+<p>
+    Sekundærknapper brukes til handlinger som er sekundære til hovedhensikten med siden, men fremdeles er viktige for brukerflyten på siden. Dette kan for eksempel være søkeknapper. Disse er avrundede med blå ramme og blå tekst. Ved hover blir knappen blå med hvis tekst. Sekundærknappene har skygge når de klikkes på.
+</p>
+<button class="secondary">Sekundærknapp</button>
+<button class="secondary"><i aria-hidden="true" title="Søkeikon" class="material-icons">search</i>Sekundærknapp</button>
+<button class="secondary" disabled>Sekundærknapp deaktivert</button>
+
+<h2>Valgknapper</h2>
+<p>
+    Valgknapper brukes når en bruker må velge mellom to handlinger, f.eks i en popuboks der brukeren må velge ja eller nei for å gå videre. Valgknappene har grønn ramme og grønn tekst, ved hoved blir knappen grønn med hvit tekst. Valgknappene har skygge når de klikkes på.
+</p>
+<button class="choice">Valgknapp</button>
+<button class="choice" disabled>Valgknapp deaktivert</button>
+
+<h2>Lenkeknapper</h2>
+<p>
+    Lenkeknapper brukes for aksjoner som enkelte brukere har behov for å gjennomføre, men mange brukere vil aldri trykke på disse knappene i det hele tatt. Eksempelvis kan de brukes for å slette et element fra en liste i et skjema.
+</p>
+<button class="link">Lenkeknapp</button>
+<button class="link" ><i aria-hidden="true" title="Slette ikon" class="material-icons">delete</i>Lenkeknapp</button>
+
+<h2>Lenker</h2>
+<p>
+    Lenker vises i blå skrift og med understrekning. Lenker som leder til en ekstern side skal markeres med launch-ikon fra Materiel Design for å vise at de leder brukeren bort fra siden.
+</p>
+<a>Lenke<i aria-hidden="true" title="Launch ikon" class="material-icons">launch</i></a>

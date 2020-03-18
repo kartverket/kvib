@@ -1,0 +1,98 @@
+@import "variables";
+
+a {
+  color: $blaa_hoved;
+  border-bottom: 1px solid $blaa_hoved;
+  line-height: 1.5;
+  text-decoration: none;
+
+  & i {
+    font-size: 24px;
+    margin-left: $grid-s;
+  }
+}
+
+button.primary {
+  background-color: $groenn_hoved;
+  border: none;
+  color: white;
+  font-size: 18px;
+  line-height: 28px;
+  padding: $grid-s $grid-m;
+
+  &:hover, &:focus {
+    background-color: $groenn_moerk;
+  }
+
+  &:active {
+    box-shadow: $skygge;
+  }
+}
+
+@mixin rounded_buttons{
+  border-radius: $border-radius;
+
+  & i {
+    font-size: 20px;
+  }
+
+  &:active {
+    box-shadow: $skygge;
+  }
+}
+
+button.secondary {
+  @include rounded_buttons;
+
+  background-color: white;
+  color: $blaa_hoved;
+  border: 2px solid $blaa_hoved;
+  padding: $grid-s;
+
+  &:hover, &:focus {
+    color: white;
+    background-color: $blaa_hoved;
+  }
+}
+
+button.choice {
+  @include rounded_buttons;
+
+  color: $groenn_moerk;
+  background-color: white;
+  border: 2px solid $groenn_moerk;
+  padding: $grid-s $grid-m;
+
+  &:hover, &:focus {
+    background-color: $groenn_moerk;
+    color: white;
+  }
+}
+
+button.link {
+  background-color: white;
+  color: $blaa_hoved;
+  border: none;
+  font-weight: bold;
+
+  & i {
+    font-size: 24px;
+  }
+}
+
+button{
+  cursor: pointer;
+
+  &:disabled {
+    color: $graa_moerk;
+    background-color: $graa_lys;
+    border: none;
+    &:hover {
+      color: $graa_moerk;
+      background-color: $graa_lys;
+      border: none;
+      cursor: default;
+    }
+  }
+}
+

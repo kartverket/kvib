@@ -1,10 +1,10 @@
 @import "_variables";
+@import "buttons";
+@import "styles";
 
 body {
   margin: auto;
   max-width: 820px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 16px;
 }
 
 nav {
@@ -23,19 +23,6 @@ nav {
 
 .current {
   font-weight: bold;
-}
-
-h1 {
-  font-size: 2em;
-}
-
-h2 {
-  font-size: 1.5em;
-}
-
-a {
-
-  color: $blaa_hoved;
 }
 
 figure {

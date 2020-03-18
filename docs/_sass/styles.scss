@@ -1,0 +1,43 @@
+@import "_variables";
+
+* {
+    font-family: Verdana, serif;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  
+  h1 {
+    font-size: 32px;
+    line-height: 48px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    line-height: 36px;
+  }
+  
+  h3 {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  
+  label {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  
+  /* You can add global styles to this file, and also import other style files */
+  
+  .mat-form-field-appearance-outline .mat-form-field-infix {
+    border-top: 0 solid transparent;
+  }
+  
+  .material-icons {
+    vertical-align: text-bottom;
+    margin-right: $grid-s;
+  }
+  
+    .light-blue {
+    background-color: #e4f1f8;
+  }
+  
