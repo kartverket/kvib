@@ -16,7 +16,7 @@ Følgende ikoner er i bruk:
 <ul>
     {% for item in site.data.ikoner %}
     <li>
-        <i aria-hidden="true" title="{{ item.name }}" class="material-icons">{{item.kode}}</i>{{item.description}}
+        <i aria-hidden="true" title="{{ item.name }}" class="material-icons">{{item.kode}}</i> - {{item.kode}} - {{item.description}}
     </li>
     {% endfor %}
 </ul>
