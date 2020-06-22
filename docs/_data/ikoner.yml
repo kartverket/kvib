@@ -1,0 +1,27 @@
+- name: Søkeikon
+  kode: search
+  description: Indikerer søkefunksjonalitet
+
+- name: Hjelpetekstikon
+  kode: help_outline
+  description: Indikerer mulighet til å åpne en hjelpetekst
+
+- name: Feilmeldingsikon
+  kode: warning
+  description: Indikerer en feil som fører til at det ikke er mulig å gjennomføre en aksjon
+
+- name: Advarselsikon
+  kode: info
+  description: Indikerer en informasjon som man må ta hensyn til før man fortsetter en aksjon
+
+- name: Suksessikon
+  kode: check_circle
+  description: Indikerer at en handling var velykket
+
+- name: Sletteikon
+  kode: delete
+  description: Indikerer mulighet til å slette et element som er lagt til i et skjema, f.eks panteobjekt
+
+- name: Plussikon
+  kode: add
+  description: Indikrer mulighet for å legge til et nytt element i et skjema

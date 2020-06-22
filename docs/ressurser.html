@@ -7,5 +7,17 @@ title: Ressurser
     <figcaption>Kartverkets logo i ikonformat</figcaption>
 </figure>
 
-For ikoner/symboler på sidene bruker vi Material Design-ikoner.
+<p>For ikoner/symboler på sidene bruker vi Material Design-ikoner.
 <a href=https://google.github.io/material-design-icons/#icon-font-for-the-web">Material Design Ikon guide</a>
+</p>
+
+<p>
+Følgende ikoner er i bruk:
+<ul>
+    {% for item in site.data.ikoner %}
+    <li>
+        <i aria-hidden="true" title="{{ item.name }}" class="material-icons">{{item.kode}}</i>{{item.description}}
+    </li>
+    {% endfor %}
+</ul>
+</p>
