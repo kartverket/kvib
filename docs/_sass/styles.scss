@@ -26,8 +26,6 @@
     line-height: 20px;
   }
   
-  /* You can add global styles to this file, and also import other style files */
-  
   .mat-form-field-appearance-outline .mat-form-field-infix {
     border-top: 0 solid transparent;
   }
@@ -37,7 +35,20 @@
     margin-right: $grid-s;
   }
   
-    .light-blue {
+  .light-blue {
     background-color: #e4f1f8;
   }
   
+  .infoboks {
+    color: #000;
+    padding: $grid_xl;
+    &.infoboks-error {
+      background-color: $advarsel_lys;
+    }
+    &.infoboks-advarsel {
+      background-color: $oransje_lys;
+    }
+    &.infoboks-suksess {
+      background-color: $groenn_lys_2;
+    }
+  }
