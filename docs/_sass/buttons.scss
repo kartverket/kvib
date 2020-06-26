@@ -5,12 +5,68 @@ a {
   border-bottom: 1px solid $blaa_hoved;
   line-height: 1.5;
   text-decoration: none;
+  padding: $grid-xs $grid-s;
+  box-sizing: border-box;
 
-  & i {
-    font-size: 24px;
+  & i.material-icons {
+    font-size: 20px;
     margin-left: $grid-s;
   }
+
+  &:hover {
+    background-color: $blaa_lysBakgrunn;
+    padding: $grid-xs $grid-s - 1px;
+    border: 1px solid $blaa_hoved;
+  }
+
+  &:focus {
+    background-color: $blaa_lysBakgrunn;
+    padding: $grid-xs - 1px $grid-s - 2px;
+    border: 2px solid $blaa_hoved;
+  }
+
+  &:visited {
+    color: $lilla;
+    border-color: $lilla;
+  }
 }
+
+button.link {
+  background-color: white;
+  color: $blaa_hoved;
+  border: none;
+  font-weight: bold;
+  transition: color 0.4s;
+  padding: $grid-xs $grid-s;
+
+  &:hover {
+    background-color: $blaa_lysBakgrunn;
+    padding: $grid-xs - 1px $grid-s - 1px;
+    border: 1px solid $blaa_hoved;
+  }
+
+  &:focus {
+    background-color: $blaa_lysBakgrunn;
+    padding: $grid-xs - 2px $grid-s - 2px;
+    border: 2px solid $blaa_hoved;
+  }
+
+  &:disabled {
+    background-color: transparent;
+    color: $graa_hoved;
+    &:hover {
+      background-color: transparent;
+      color: $graa_hoved;
+    }
+  }
+
+  & i {
+    font-size: 20px;
+    vertical-align: bottom;
+    margin-right: $grid-s;
+  }
+}
+
 
 button.primary {
   background-color: $groenn_hoved;
@@ -19,25 +75,29 @@ button.primary {
   font-size: 18px;
   line-height: 28px;
   padding: $grid-s $grid-m;
+  transition: background-color 0.4s;
 
   &:hover, &:focus {
     background-color: $groenn_moerk;
   }
 
   &:active {
+    background-color: $groenn_moerk_2;
     box-shadow: $skygge;
   }
 }
 
 @mixin rounded_buttons{
   border-radius: $border-radius;
-
-  & i {
-    font-size: 20px;
-  }
+  padding: $grid-s $grid-m;
+  transition: background-color 0.4s, color 0.4s;
 
   &:active {
     box-shadow: $skygge;
+  }
+
+  & i {
+    font-size: 20px;
   }
 }
 
@@ -47,11 +107,14 @@ button.secondary {
   background-color: white;
   color: $blaa_hoved;
   border: 2px solid $blaa_hoved;
-  padding: $grid-s;
 
   &:hover, &:focus {
     color: white;
     background-color: $blaa_hoved;
+  }
+
+  &:active {
+    background-color: $blaa_moerk;
   }
 }
 
@@ -61,22 +124,14 @@ button.choice {
   color: $groenn_moerk;
   background-color: white;
   border: 2px solid $groenn_moerk;
-  padding: $grid-s $grid-m;
 
   &:hover, &:focus {
-    background-color: $groenn_moerk;
     color: white;
+    background-color: $groenn_moerk;
   }
-}
 
-button.link {
-  background-color: white;
-  color: $blaa_hoved;
-  border: none;
-  font-weight: bold;
-
-  & i {
-    font-size: 24px;
+  &:active {
+    background-color: $groenn_moerk_2;
   }
 }
 
@@ -84,15 +139,24 @@ button{
   cursor: pointer;
 
   &:disabled {
-    color: $graa_moerk;
-    background-color: $graa_lys;
+    color: $graa_tekst_knapp;
+    background-color: $graa_bakgrunn_knapp;
     border: none;
+
+
     &:hover {
-      color: $graa_moerk;
-      background-color: $graa_lys;
+      color: $graa_tekst_knapp;
+      background-color: $graa_bakgrunn_knapp;
       border: none;
       cursor: default;
     }
+    &:active {
+      box-shadow: none;
+    }
   }
+}
+
+.vertical-align {
+  vertical-align: top;
 }
 
