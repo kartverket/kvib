@@ -1,5 +1,6 @@
 @import "_variables";
 @import "buttons";
+@import "select";
 @import "styles";
 
 body {
@@ -55,4 +56,8 @@ th, td {
 
 ul{
   list-style-type: none;
+}
+
+pre {
+  background-color: $graa_lys;
 }
