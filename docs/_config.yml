@@ -7,3 +7,11 @@ defaults:
       path: ""
     values:
       layout: "default"
+
+include:
+  - node_modules
+
+sass:
+  load_paths:
+    - _sass
+    - node_modules
