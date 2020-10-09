@@ -1,0 +1,9 @@
+{
+    "name": "KVIB-scss",
+    "version": "0.0.3",
+    "description": "Scss-bibliotek for KVIB",
+    "main": "index.scss",
+    "peerDependencies": {
+        "sass": "^1.26.0"
+    }
+}

@@ -1,4 +1,4 @@
-@import "_variables";
+@import "KVIB-scss/index";
 
 * {
     font-family: Verdana, serif;
@@ -39,16 +39,16 @@
     background-color: #e4f1f8;
   }
   
-  .infoboks {
-    color: #000;
-    padding: $grid_xl;
-    &.infoboks-error {
-      background-color: $advarsel_lys;
-    }
-    &.infoboks-advarsel {
-      background-color: $oransje_lys;
-    }
-    &.infoboks-suksess {
-      background-color: $groenn_lys_2;
-    }
-  }
+  // .infoboks {
+  //   color: #000;
+  //   padding: $grid_xl;
+  //   &.infoboks-error {
+  //     background-color: $advarsel_lys;
+  //   }
+  //   &.infoboks-advarsel {
+  //     background-color: $oransje_lys;
+  //   }
+  //   &.infoboks-suksess {
+  //     background-color: $groenn_lys_2;
+  //   }
+  // }
