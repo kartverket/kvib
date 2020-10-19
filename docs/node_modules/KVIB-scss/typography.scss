@@ -77,6 +77,10 @@ ol {
   }
 }
 
+.text-center {
+  text-align: center;
+}
+
 @media (max-width: 768px) {
   h1, .h1 {
     font-size: 2rem; // 32px / 16px
