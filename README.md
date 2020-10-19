@@ -2,9 +2,11 @@
 
 [KVIB](https://kartverket.github.io/kvib/) er et prosjekt i regi av eiendomsportalen med mål om å samle designguidelines og kode for Kartverkets applikasjoner.
 
-Kvib hostes med [github-pages](https://pages.github.com/). Sidene generes med [Jekyll](https://jekyllrb.com/).
+Dokumentasjonen for KVIB hostes med [github-pages](https://pages.github.com/). Sidene generes med [Jekyll](https://jekyllrb.com/).
 
-## Kom i gang
+I tillegg har vi også laget et NPM-bibliotek, KVIB-scss, som inneholder felles-scss for designbiblioteket. Kildekoden til dette ligger i sass-mappen i dette repoet, og det ferdige biblioteket kan lasten ned fra i3-npm repoet på [artifactory](https://artifactory.statkart.no/artifactory/webapp/#/home).
+
+## Kom i gang med github-pages:
 1. Installer ruby og jekyll: https://jekyllrb.com/docs/installation/
 2. Klon prosjektet fra github: https://github.com/kartverket/kvib
 3. Fra prosjektmappa kjør `bundle install`
@@ -14,3 +16,10 @@ Kvib hostes med [github-pages](https://pages.github.com/). Sidene generes med [J
 7. Endringene blir automatisk publisert når du committer til github.
 
 Her er en fin tutorial for å lære jekyll: https://jekyllrb.com/docs/step-by-step/01-setup/
+
+## Kvib-scss:
+For å publisere ny versjon av KVIB-scss til artifactory:
+1. npm login, du må oppgi AD-brukernavn og passord, og du må ha tilgang til repoet i3-npm-release-hfs/ (kan fås fra Vegard Andersen, U2)
+2. npm version patch, evt se [dokumentasjon hos NPM](https://docs.npmjs.com/cli/version)
+3. npm publish --registry https://artifactory.statkart.no/artifactory/api/npm/i3-npm-release-hfs/
+4. Husk å commitee og push endringer til github! Npm version lager kode-endringer, så det skal alltid commites når denne er kjørt!
