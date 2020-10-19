@@ -1,0 +1,15 @@
+.infoboks {
+    color: #000;
+    font-size: 1.125rem; // 18px / 16px
+    line-height: 1.75rem; // 28px / 16px
+    padding: $grid_xl;
+    &.infoboks-error {
+      background-color: $rod_lys;
+    }
+    &.infoboks-advarsel {
+      background-color: $oransje_lys;
+    }
+    &.infoboks-suksess {
+      background-color: $groenn_lys_2;
+    }
+  }

@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "KVIB-scss": "0.0.3",
-    "sass": "^1.27.0"
+    "sass": "^1.27.0",
+    "KVIB-scss": "file:../sass"
   }
 }

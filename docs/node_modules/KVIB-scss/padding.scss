@@ -1,0 +1,78 @@
+@import "variables";
+
+//Padding-top
+.pt-xs {
+  padding-top: $grid-xs;
+}
+.pt-s {
+  padding-top: $grid-s;
+}
+.pt-m {
+  padding-top: $grid-m;
+}
+.pt-l {
+  padding-top: $grid-l;
+}
+.pt-xl {
+  padding-top: $grid-xl;
+}
+
+//Padding-left
+.pl-xs {
+  padding-left: $grid-xs;
+}
+.pl-s {
+  padding-left: $grid-s;
+}
+.pl-m {
+  padding-left: $grid-m;
+}
+.pl-20 {
+  padding-left: 20px;
+}
+.pl-l {
+  padding-left: $grid-l;
+}
+.pl-xl {
+  padding-left: $grid-xl;
+}
+.pl-xxl {
+  padding-left: $grid-xxl;
+}
+
+//Padding-right
+.pr-xs {
+  padding-right: $grid-xs;
+}
+.pr-s {
+  padding-right: $grid-s;
+}
+.pr-m {
+  padding-right: $grid-m;
+}
+.pr-l {
+  padding-right: $grid-l;
+}
+.pr-xl {
+  padding-right: $grid-xl;
+}
+.pr-xxl {
+  padding-right: $grid-xxl;
+}
+
+//Padding-bottom
+.pb-xs {
+  padding-bottom: $grid-xs;
+}
+.pb-s {
+  padding-bottom: $grid-s;
+}
+.pb-m {
+  padding-bottom: $grid-m;
+}
+.pb-l {
+  padding-bottom: $grid-l;
+}
+.pb-xl {
+  padding-bottom: $grid-xl;
+}

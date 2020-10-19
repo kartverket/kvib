@@ -1,6 +1,6 @@
 @import "variables";
 
-a, button.link {
+a, .btn-link {
   color: $blaa_hoved;
   border-bottom: 1px solid $blaa_hoved;
   font-size: 1.125rem; // 18px / 16px
@@ -27,7 +27,7 @@ a, button.link {
   }
 }
 
-button.link {
+.btn-link {
   background-color: transparent;
   border: none;
   font-weight: bold;
@@ -96,7 +96,7 @@ button.link {
   }
 }
 
-button.secondary {
+.btn-secondary {
   @include rounded_buttons;
 
   background-color: white;
@@ -113,7 +113,7 @@ button.secondary {
   }
 }
 
-button.choice {
+.btn-choice {
   @include rounded_buttons;
 
   color: $groenn_moerk;
