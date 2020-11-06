@@ -34,6 +34,17 @@ select {
 
 .select-wrapper {
   position: relative;
+  &.invalid {
+    select {
+      border-color: $advarsel-hoved;
+      &:active, &:focus {
+        box-shadow: 0 0 0 2px $advarsel-hoved;
+      }
+    }
+    &::after {
+      color: $advarsel-hoved;
+    }
+  }
 }
 
 .select-wrapper::after {
