@@ -19,7 +19,8 @@ Her er en fin tutorial for å lære jekyll: https://jekyllrb.com/docs/step-by-st
 
 ## Kvib-scss:
 For å publisere ny versjon av KVIB-scss til artifactory:
-1. npm login, du må oppgi AD-brukernavn og passord, og du må ha tilgang til repoet i3-npm-release-hfs/ (kan fås fra Vegard Andersen, U2)
-2. npm version patch, evt se [dokumentasjon hos NPM](https://docs.npmjs.com/cli/version)
-3. npm publish --registry https://artifactory.statkart.no/artifactory/api/npm/i3-npm-release-hfs/
-4. Husk å commitee og push endringer til github! Npm version lager kode-endringer, så det skal alltid commites når denne er kjørt!
+1. npm config set registry https://artifactory.statkart.no/artifactory/api/npm/i3-npm-release-hfs/
+2. npm login, du må oppgi AD-brukernavn og passord, og du må ha tilgang til repoet i3-npm-release-hfs/ (kan fås fra Vegar Andersen, U2)
+3. npm version patch, evt se [dokumentasjon hos NPM](https://docs.npmjs.com/cli/version)
+4. npm publish --registry https://artifactory.statkart.no/artifactory/api/npm/i3-npm-release-hfs/
+5. Husk å commitee og push endringer til github! Npm version lager kode-endringer, så det skal alltid commites når denne er kjørt!
