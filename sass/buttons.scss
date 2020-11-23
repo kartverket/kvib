@@ -55,25 +55,24 @@ a, .btn-link {
 }
 
 .btn-primary {
-  background-color: $groenn_hoved;
+  background-color: $groenn_moerk;
   border: none;
   border-radius: 2px;
   color: white;
   display: inline-block;
   font-size: 1.125rem; // 20px / 16px
+  font-weight: bold;
   min-height: 44px;
   line-height: 28px;
   padding: $grid-s $grid-l;
-  text-transform: uppercase;
-  transition: background-color 0.4s;
+  transition: background-color 0.4s, box-shadow 0.4s;
 
   &:hover, &:focus {
-    background-color: $groenn_moerk;
+    background-color: $groenn_hoved;
     box-shadow: none;
   }
-  &:active {
-    background-color: $groenn_moerk_2;
-    box-shadow: $skygge;
+  &:focus {
+    box-shadow: 0 0 0 8px rgba(0,0,0,0.12);
   }
   &:visited {
     color: white;
