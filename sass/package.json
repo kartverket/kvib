@@ -1,9 +1,12 @@
 {
-    "name": "KVIB-scss",
+    "name": "@KVIB/KVIB-scss",
     "version": "1.0.5",
     "description": "Scss-bibliotek for KVIB",
     "main": "index.scss",
     "peerDependencies": {
         "sass": "^1.26.0"
+    },
+    "publishConfig": {
+        "@KVIB:registry": " https://gitlab.statkart.no/api/v4/projects/10/packages/npm/"
     }
 }
