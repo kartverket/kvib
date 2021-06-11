@@ -3,65 +3,29 @@ title: Stil
 ---
 <h1>Stilguidelines og css</h1>
 
-<table>
-    <caption>Farger</caption>
+<h2>Farger</h2>
+<table class="table color-table">
     <thead>
         <tr>
-            <th>Navn</th>
-            <th>Hex</th>
-            <th>Farge</th>
+            <th style="width: 45%;">Beskrivelse</th>
+            <th style="width: 20%;">Farge</th>
+            <th style="width: 20%;" class="td-extra-padding">Navn</th>
+            <th style="width: 15%;">Hex</th>
         </tr>
     </thead>
     <tbody>
+        {% for item in site.data.farger %}
         <tr>
-            <td>Blå_hoved</td>
-            <td>#1A589F</td>
-            <td style="background-color: #1A589F;"></td>
+            <td>{{ item.beskrivelse }}</td>
+            <td style="background-color: #{{ item.kode }};" ></td>
+            <td class="td-extra-padding">{{ item.navn }}</td>
+            <td>#{{ item.kode }}</td>
         </tr>
-        <tr>
-            <td>Blå_lys</td>
-            <td>#E4F1F8</td>
-            <td style="background-color: #E4F1F8;"></td>
-        </tr>
-        <tr>
-            <td>Blå_mørk</td>
-            <td>#175092</td>
-                <td style="background-color: #175092;"></td>
-        </tr>
-        <tr>
-            <td>Grønn_hoved</td>
-            <td>#249446</td>
-                <td style="background-color: #249446;"></td>
-        </tr>
-        <tr>
-            <td>Grå_hoved</td>
-            <td>#595959</td>
-                <td style="background-color: #595959;"></td>
-        </tr>
-        <tr>
-            <td>Grå_lys</td>
-            <td>#F7F7F7</td>
-                <td style="background-color: #F7F7F7;"></td>
-        </tr>
-        <tr>
-            <td>Grå_mørk</td>
-            <td>#545454</td>
-                <td style="background-color: #545454;"></td>
-        </tr>
-        <tr>
-            <td>Advarsel_hoved</td>
-            <td>#B00C3B</td>
-                <td style="background-color: #B00C3B;"></td>
-        </tr>
-        <tr>
-            <td>Advarsel_lys</td>
-            <td>#FCF1E8</td>
-                <td style="background-color: #FCF1E8;"></td>
-        </tr>
+        {% endfor %}
     </tbody>
 </table>
 
-<h2>Fonter</h2>
+<!-- <h2>Fonter</h2>
 <dl>
     <dt>Font</dt>
     <dd>Verdana</dd>
@@ -81,22 +45,22 @@ title: Stil
 <table>
     <tr>
         <td>grid-xs</td>
-        <td>4 px</td>            
+        <td>4 px</td>
     </tr>
     <tr>
         <td>grid-s</td>
-        <td>8 px</td>            
+        <td>8 px</td>
     </tr>
     <tr>
         <td>grid-m</td>
-        <td>16 px</td>            
+        <td>16 px</td>
     </tr>
     <tr>
         <td>grid-l</td>
-        <td>24 px</td>            
+        <td>24 px</td>
     </tr>
     <tr>
         <td>grid-xl</td>
-        <td>32 px</td>            
+        <td>32 px</td>
     </tr>
-</table>
+</table> -->

@@ -13,12 +13,12 @@ select {
   appearance: none;
 
   &:hover {
-    border-color: $blaa_hoved;
+    border-color: $blaa;
   }
 
   &:active, &:focus {
-    border-color: $blaa_hoved;
-    box-shadow: 0 0 0 2px $blaa_hoved;
+    border-color: $blaa;
+    box-shadow: 0 0 0 2px $blaa;
     outline: 0;
   }
 
@@ -36,13 +36,13 @@ select {
   position: relative;
   &.invalid {
     select {
-      border-color: $advarsel-hoved;
+      border-color: $roed_moerk;
       &:active, &:focus {
-        box-shadow: 0 0 0 2px $advarsel-hoved;
+        box-shadow: 0 0 0 2px $roed_moerk;
       }
     }
     &::after {
-      color: $advarsel-hoved;
+      color: $roed_moerk;
     }
   }
 }

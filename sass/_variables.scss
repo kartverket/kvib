@@ -1,40 +1,20 @@
-//Blå
-$blaa_hoved: #1A589F;
-$blaa_lysBakgrunn: #E4F1F8;
-$blaa_moerk: #154984;
-
-//Grønn
-$groenn_hoved: #1a833b;
+//farger
+$svart: #222222;
+$graa_moerk: #505050;
+$graa: #707070;
+$graa_linje: #707070E2;
+$graa_lys: #F5F2F2;
+$blaa_moerk: #175092;
+$blaa: #1A589F;
+$blaa_lys: #E4F1F8;
 $groenn_moerk: #156630;
-$groenn_moerk_2: #115529;
-
+$groenn_hover: #1A833B;
 $groenn_lys: #D0ECD6;
-$groenn_lys_2: #E9F4EC;
-
-//Grå
-$graa_hoved: #595959;
-$graa_lys: #f7f7f7;
-$graa_moerk: #545454;
-$graa_tekst_knapp: #383838;
-$graa_bakgrunn_knapp: #cccccc;
-$graa_linje: #979797;
-$graa_ball: #757575;
-
-//lilla
-$lilla: #660099;
-
-//Rød
-$advarsel-hoved: #b00c3b;
-$rod_lys: #f7e6eb;
-//TODO: Duplikat av oransje_lys
-$advarse-lys: #FCF1E8;
-
-//Oransje
-$oransje_hoved: #E7751D;
-$oransje_lys: #FCF1E8;
-
-//Gul
-$gul_hoved: #F0B323;
+$roed_moerk: #D04a14;
+$rosa: #F7E6EB;
+$oransje: #FCF1E8;
+$gul: #FFDD9D;
+$gul_lys: #FCEBCD;
 
 //Skjermstørrelser
 $screenBreak: 992px; //Maks størrelse for large-devices i bootstrap: https://getbootstrap.com/docs/4.1/layout/overview/
@@ -48,7 +28,6 @@ $grid-m: 16px;
 $grid-l: 24px;
 $grid-xl: 32px;
 $grid-xxl: 40px;
-
 
 //Annet
 $border-radius: 25.5px; //For knapper med avrundede hjørner

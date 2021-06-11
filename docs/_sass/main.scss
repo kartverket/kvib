@@ -3,11 +3,11 @@
 
 body {
   margin: auto;
-  max-width: 820px;
+  max-width: 944px;
 }
 
 nav {
-  background-color: $blaa_hoved;
+  // background-color: $blaa_hoved;
   padding: 1em;
   display: grid;
   grid-template-columns: auto auto auto auto auto;
@@ -15,9 +15,6 @@ nav {
   position: sticky;
   top: 0;
   
-  & a {
-    color:white;
-  }
 }
 
 .current {
@@ -43,13 +40,13 @@ table {
 
   & caption {
     font-weight: bold;
-    color: $blaa_hoved;
+    color: $blaa;
   }
 }
 
 th, td {
   padding: .5em;
-  border-bottom: 1px solid $graa_hoved;
+  border-bottom: 1px solid $graa;
 }
 
 ul{
@@ -58,4 +55,8 @@ ul{
 
 pre {
   background-color: $graa_lys;
+}
+
+.td-extra-padding {
+  padding-left: 16px !important;
 }

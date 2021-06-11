@@ -2,6 +2,21 @@
 title: Om Kvib
 ---
 
-For å få en felles designmessig utførelse på sine nettsider og webapplikasjoner skal designspesifikasjoner, skisser, ferdige komponenter, guidelines og så videre legges ut på denne nettsiden, slik at de kan gjenbrukes av alle som skal designe et nettprodukt for Kartverket.
+KVIB er et initiativ som har som formål å gjøre det enklere å drive webutvikling i Kartverket, gjennom å tilgjengeliggjøre felles standarder for CSS, som for eksempel, farger, fonter og stiler for diverse elementer.
 
-Kvib drives i første omgang som en del av arbeidet med ny webløsning for tinglysning.
+## Roadmap
+KVIB drives ikke av noen dedikert gruppe, men utvikles av utviklere spredd rundt på forskjellige prosjekter. Hva som til en hver tid blir utviklet i KVIB vil derfor være avhengig av hva de enkelte gruppene som utvikler KVIB har behov for å mulighet til å legge ned tid til å utvikle. Allikevel har vi laget følgende liste over hva vi ønsker å prioritere i arbeidet med KVIB fremover.
+* Liste over farger, med navn, fargekoder og bruksområder
+* Typografi
+* Knapper
+* Header og footer
+* Skjemaelementer
+* Grid-basert layout
+* Ikonbibliotek
+* Komplett css-fil hostet på ekstern URL
+
+## Versjonering
+Etter første omganger av arbeid med KVIB har Kartverket.no blitt fornyet, og vi har tilpasset tjenestene våre til dette. Vi starter nå arbeidet med en gjennomgang av KVIB i samarbeid med frontend-utviklere, designer og web-master for Kartverket.no, for å tilpasse oss til nye Kartverket.no. Dette arbeidet legges under versjon 2 av KVIB.
+
+### 2.0.0
+* Ny fargeliste, tilpasset Kartverket.no, og med beskrivelser av hver farge.

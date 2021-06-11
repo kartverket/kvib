@@ -1,0 +1,65 @@
+- navn: svart
+  kode: 222222
+  beskrivelse: Hovedfarge tekst
+- navn: graa_moerk
+  kode: 505050
+  beskrivelse: Label
+- navn: graa
+  kode: 707070
+  beskrivelse: H2 på kartverket.no, linjefarge uten gjennomsiktighet
+- navn: graa_linje
+  kode: 707070E2
+  beskrivelse: Farge for grå linje med gjennomsiktighet
+- navn: graa_lys
+  kode: F5F2F2
+  beskrivelse: Bakgrunnsfarge grå bokser
+
+- navn: blaa_moerk
+  kode: 175092
+  beskrivelse: Mørk blå bakgrunn og detaljer
+- navn: blaa
+  kode: 1A589F
+  beskrivelse: Blåfargen fra logoen
+- navn: blaa_lys
+  kode: E4F1F8
+  beskrivelse: Lys blå bakgrunn
+
+- navn: groenn_moerk
+  kode: 156630
+  beskrivelse: Standard grønnfarge
+- navn: groenn_hover
+  kode: 1A833B
+  beskrivelse: Lysere grønnfarge for hover over groenn_moerk. Logofarge.
+- navn: groenn_lys
+  kode: D0ECD6
+  beskrivelse: Lys grønn bakgrunnsfarge. Informasjonsboks med positivt ladet innhold.
+
+- navn: roed_moerk
+  kode: D04a14
+  beskrivelse: Feilmeldingstekst og ikoner. Datovisning for arrangementer
+- navn: rosa
+  kode: F7E6EB
+  beskrivelse: Rosa bakgrunnsfarge. Informasjonsboks med negativt ladet innhold.
+
+- navn: oransje
+  kode: FCF1E8
+  beskrivelse: Stripefarge tabeller og lister.
+
+- navn: gul
+  kode: FFDD9D
+  beskrivelse: Bakgrunnsfarge eiendom
+- navn: gul_lys
+  kode: FCEBCD
+  beskrivelse: Lys gul bakgrunnsfarge, kort og teaser.
+
+  
+
+
+  
+
+
+  
+
+
+  
+

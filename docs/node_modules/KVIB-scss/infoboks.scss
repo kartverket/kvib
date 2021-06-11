@@ -4,12 +4,12 @@
     line-height: 1.75rem; // 28px / 16px
     padding: $grid_xl;
     &.infoboks-error {
-      background-color: $rod_lys;
+      background-color: $rosa;
     }
     &.infoboks-advarsel {
-      background-color: $oransje_lys;
+      background-color: $rosa;
     }
     &.infoboks-suksess {
-      background-color: $groenn_lys_2;
+      background-color: $groenn_lys;
     }
   }

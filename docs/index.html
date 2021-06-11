@@ -3,13 +3,29 @@ title: KVIB
 ---
 
 <h1>Kartverkets interaksjons og designbibliotek</h1>
+<p>Formålet med Kartverkets interasjons og designbibliotek er å gjøre utviklingen av front-end systemer i Kartverket enklere, ved å tilby ferdig scss for de vanligste elementene prosjektene trenger.</p>
 <p>
-    Kartverkets interasjons og designbibliotek er i startfasen, og består for tiden av npm-biblioteket KVIB-scss, som skal inneholder felles scss for Kartkverkets applikasjoner,
+    KVIB består av npm-biblioteket KVIB-scss, som skal inneholder felles scss for Kartkverkets applikasjoner,
     og disse sidene, som skal inneholde dokumentasjon av de felles designprinsippene og bruken av stilene i KVIB-scss.
 </p>
+<h2>Regler for designbiblioteket</h2>
+<p>Designbiblioteket skal:</p>
+<ul>
+    <li>alltid være veldikeholt</li>
+    <li>kun inneholde UU-godkjente elementer og stiler</li>
+    <li>alltid ha oppdatert dokumentasjon</li>
+    <li>inneholde oppdatert dokumentasjon av alle komponenter, med eksempler på bruk og UU</li>
+    <li>inneholde responsive komponenter</li>
+    <li>være enkelt å ta i bruk</li>
+    <li>ha en endringslogg med beskrivelse av hva som er nytt i hver versjon</li>
+    <li>ha tydelige retningslinjer for nye designere og prosjekter</li>
+    <li>utformes på en slik måte at det er minimalt behov for overrides i de enkelte prosjektene</li>
+    <li>ha logiske navn på komponenter, som er forståelige både for utviklere og designere</li>
+</ul>
+<h2>Installasjon og bruk av designbiblioteket</h2>
 <p>
     For å ta i bruk designbiblioteket må du bruke npm. Kjør npm install KVIB-scss mot registry https://artifactory.statkart.no/artifactory/api/npm/i3-npm/.
     Dette er samme registry som skal brukes for å laste ned alle npm-pakker du trenger i prosjektet ditt.
     Stilene blir da liggende åpent under node_modules/KVIB-scss i prosjektet ditt. Du kan også finne disse i 
-    <a href='https://github.com/kartverket/kvib'></a>github-repoet vårt</a>, og Vegar Andersen (Sjefsarkitekt) kan gi tilgang.
+    <a href='https://github.com/kartverket/kvib'></a>github-repoet vårt</a>. Dette er foreløpig et lukket repo. Spør Bente Lien Nilsen om tilgang.
 </p>
