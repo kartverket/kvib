@@ -4,13 +4,13 @@ title: Stil
 <h1>Stilguidelines og css</h1>
 
 <h2>Farger</h2>
-<table class="table">
+<table class="table color-table">
     <thead>
         <tr>
-            <th>Beskrivelse</th>
-            <th>Farge</th>
-            <th>Navn</th>
-            <th>Hex</th>
+            <th style="width: 45%;">Beskrivelse</th>
+            <th style="width: 20%;">Farge</th>
+            <th style="width: 20%;" class="td-extra-padding">Navn</th>
+            <th style="width: 15%;">Hex</th>
         </tr>
     </thead>
     <tbody>
@@ -18,7 +18,7 @@ title: Stil
         <tr>
             <td>{{ item.beskrivelse }}</td>
             <td style="background-color: #{{ item.kode }};" ></td>
-            <td>{{ item.navn }}</td>
+            <td class="td-extra-padding">{{ item.navn }}</td>
             <td>#{{ item.kode }}</td>
         </tr>
         {% endfor %}

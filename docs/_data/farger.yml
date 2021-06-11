@@ -4,15 +4,12 @@
 - navn: graa_moerk
   kode: 505050
   beskrivelse: Label
-- navn: graa_moerk2
+- navn: graa
   kode: 707070
-  beskrivelse: Label
-- navn: graa_linje
-  kode: C1C1C1
-  beskrivelse: Farge for grå linje(figma)
+  beskrivelse: H2 på kartverket.no, linjefarge uten gjennomsiktighet
 - navn: graa_linje
   kode: 707070E2
-  beskrivelse: Farge for grå linje(Kartverket.no)
+  beskrivelse: Farge for grå linje med gjennomsiktighet
 - navn: graa_lys
   kode: F5F2F2
   beskrivelse: Bakgrunnsfarge grå bokser
@@ -20,7 +17,7 @@
 - navn: blaa_moerk
   kode: 175092
   beskrivelse: Mørk blå bakgrunn og detaljer
-- navn: blaa_hoved
+- navn: blaa
   kode: 1A589F
   beskrivelse: Blåfargen fra logoen
 - navn: blaa_lys
@@ -32,7 +29,7 @@
   beskrivelse: Standard grønnfarge
 - navn: groenn_hover
   kode: 1A833B
-  beskrivelse: Lysere grønnfarge for hover over groenn_moerk
+  beskrivelse: Lysere grønnfarge for hover over groenn_moerk. Logofarge.
 - navn: groenn_lys
   kode: D0ECD6
   beskrivelse: Lys grønn bakgrunnsfarge. Informasjonsboks med positivt ladet innhold.
@@ -44,7 +41,7 @@
   kode: F7E6EB
   beskrivelse: Rosa bakgrunnsfarge. Informasjonsboks med negativt ladet innhold.
 
-- navn: orasje
+- navn: oransje
   kode: FCF1E8
   beskrivelse: Stripefarge tabeller og lister.
 

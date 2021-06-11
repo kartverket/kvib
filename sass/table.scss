@@ -38,7 +38,7 @@ table.table {
   }
   th {
     font-size: 0.875rem; // 14px / 16px;
-    color: $graa_hoved;
+    color: $graa;
     vertical-align: bottom;
   }
   td {
@@ -51,7 +51,7 @@ table.table {
   }
   &.table-striped {
     tbody tr:nth-child(even) {
-      background-color: $blaa_lysBakgrunn;
+      background-color: $blaa_lys;
     }
   }
   &.table-header-border {

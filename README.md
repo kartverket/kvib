@@ -24,10 +24,3 @@ For å publisere ny versjon av KVIB-scss til artifactory:
 3. npm version patch, evt se [dokumentasjon hos NPM](https://docs.npmjs.com/cli/version)
 4. npm publish --registry https://artifactory.statkart.no/artifactory/api/npm/i3-npm-release-hfs/
 5. Husk å commitee og push endringer til github! Npm version lager kode-endringer, så det skal alltid commites når denne er kjørt!
-
-For å publisere ny versjon av KVIB-scss til gitlab:
-1. npm config set @KVIB:registry https://gitlab.statkart.no/api/v4/projects/10/packages/npm/
-2. npm config set -- '//gitlab.statkart.no/api/v4/projects/10/packages/npm/:_authToken' "<personlig auth token>" (https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html)
-3. npm version patch, evt se [dokumentasjon hos NPM](https://docs.npmjs.com/cli/version)
-4. npm publish
-5. Husk å commitee og push endringer til github! Npm version lager kode-endringer, så det skal alltid commites når denne er kjørt!

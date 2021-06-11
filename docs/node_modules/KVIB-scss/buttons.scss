@@ -1,8 +1,8 @@
 @import "variables";
 
 a, .btn-link {
-  color: $blaa_hoved;
-  border-bottom: 1px solid $blaa_hoved;
+  color: $blaa;
+  border-bottom: 1px solid $blaa;
   font-size: 1.125rem; // 18px / 16px
   line-height: 1.5;
   text-decoration: none;
@@ -14,15 +14,10 @@ a, .btn-link {
     font-size: 20px;
   }
 
-  &:visited {
-    color: $lilla;
-    border-color: $lilla;
-  }
-
   &:hover, &:focus {
-    background-color: $blaa_hoved;
-    border-color: $blaa_hoved;
-    box-shadow: $blaa_hoved -5px 0px 0px 0px, $blaa_hoved 5px 0px 0px 0px;
+    background-color: $blaa;
+    border-color: $blaa;
+    box-shadow: $blaa -5px 0px 0px 0px, $blaa 5px 0px 0px 0px;
     color: #ffffff;
   }
 }
@@ -33,23 +28,23 @@ a, .btn-link {
   font-weight: bold;
 
   &.link-regular {
-    border-bottom: 1px solid $blaa_hoved;
+    border-bottom: 1px solid $blaa;
     font-weight: normal;
     padding: 0;
 
     &:disabled {
-      border-bottom: 1px solid $graa_hoved;
+      border-bottom: 1px solid $graa;
     }
   }
 
   &:disabled {
     background-color: transparent;
-    color: $graa_hoved;
+    color: $graa;
 
     &:hover {
       background-color: transparent;
       box-shadow: none;
-      color: $graa_hoved;
+      color: $graa;
     }
   }
 }
@@ -68,7 +63,7 @@ a, .btn-link {
   transition: background-color 0.4s, box-shadow 0.4s;
 
   &:hover, &:focus {
-    background-color: $groenn_hoved;
+    background-color: $groenn_hover;
     box-shadow: none;
   }
   &:focus {
@@ -99,12 +94,12 @@ a, .btn-link {
   @include rounded_buttons;
 
   background-color: white;
-  color: $blaa_hoved;
-  border: 2px solid $blaa_hoved;
+  color: $blaa;
+  border: 2px solid $blaa;
 
   &:hover, &:focus {
     color: white;
-    background-color: $blaa_hoved;
+    background-color: $blaa;
   }
 
   &:active {
@@ -121,11 +116,11 @@ a, .btn-link {
 
   &:hover, &:focus {
     color: white;
-    background-color: $groenn_moerk;
+    background-color: $groenn_hover;
   }
 
   &:active {
-    background-color: $groenn_moerk_2;
+    background-color: $groenn_moerk;
   }
 }
 
@@ -137,13 +132,13 @@ button {
   }
 
   &:disabled {
-    color: $graa_tekst_knapp;
-    background-color: $graa_bakgrunn_knapp;
+    color: $graa_moerk;
+    background-color: $graa;
     border-color: transparent;
 
     &:hover {
-      color: $graa_tekst_knapp;
-      background-color: $graa_bakgrunn_knapp;
+      color: $graa_moerk;
+      background-color: $graa;
       border-color: transparent;
       cursor: default;
     }
@@ -159,7 +154,7 @@ button {
 }
 
 button.hjelpetekst-knapp {
-  color: $blaa_hoved;
+  color: $blaa;
   background-color: transparent;
   border: none;
   line-height: 24px;
@@ -171,8 +166,8 @@ button.hjelpetekst-knapp {
   }
   &:disabled,
   &:disabled:hover {
-    color: $graa_hoved;
-    border-color: $graa_hoved;
+    color: $graa;
+    border-color: $graa;
     background: transparent;
   }
 }
