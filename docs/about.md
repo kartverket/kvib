@@ -20,3 +20,6 @@ Etter første omganger av arbeid med KVIB har Kartverket.no blitt fornyet, og vi
 
 ### 2.0.0
 * Ny fargeliste, tilpasset Kartverket.no, og med beskrivelser av hver farge.
+
+### 2.0.1
+* Oppdatert en fargen graa_linje med ny fargekode
