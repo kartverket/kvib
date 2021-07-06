@@ -5,36 +5,71 @@ navn: Knapper
 <h1>Knapper</h1>
 <p>Vi har definert 4 knappestiler, som alle knapper skal bruke. Disse er utformet med tanke på UU med egne stiler for hover og fokus. Stilene finnes i filen buttons.scss</p>
 
-<h2>Hovedknapper: .btn-primary</h2>
+<h2>Hovedknapper</h2>
 <p>Det skal finnes maks 1 hovedknapp på hver side, denne brukes for å gjennomføre hovedformålet med siden, for eksempel for innsending av skjema.</p>
 <button class="btn-primary">Hovedknapp</button>
-<button class="btn-primary" disabled>Hovedknapp deaktivert</button>
+<button class="btn-primary"><i aria-hidden="true" title="Søkeikon" class="material-icons mr-m">search</i>Hovedknapp</button>
+<!--<button class="btn-primary" disabled>Hovedknapp deaktivert</button>-->
 
-<h2>Sekundærknapper: .btn-secondary</h2>
+<h3>Eksempelbruk:</h3>
+<pre><code class="language-html">&lt;button class=&quot;btn-primary&quot;&gt;Hovedknapp&lt;/button&gt;
+&lt;button class=&quot;btn-primary&quot;&gt;
+    &lt;i aria-hidden=&quot;true&quot; title=&quot;S&oslash;keikon&quot; class=&quot;material-icons mr-m&quot;&gt;search&lt;/i&gt;
+    Hovedknapp
+&lt;/button&gt;</code></pre>
+
+<h2>Sekundærknapper</h2>
 <p>
     Sekundærknapper brukes til handlinger som er sekundære til hovedhensikten med siden, men fremdeles er viktige for brukerflyten på siden. Dette kan for eksempel være søkeknapper.
 </p>
-<button class="btn-secondary">Sekundærknapp</button>
-<button class="btn-secondary"><i aria-hidden="true" title="Søkeikon" class="material-icons">search</i>Sekundærknapp</button>
-<button class="btn-secondary" disabled>Sekundærknapp deaktivert</button>
+<button class="btn-outline">Sekundærknapp</button>
+<button class="btn-outline"><i aria-hidden="true" title="Søkeikon" class="material-icons mr-m">search</i>Sekundærknapp</button>
+<!--<button class="btn-outline" disabled>Sekundærknapp deaktivert</button>-->
 
-<h2>Valgknapper: .btn-choice</h2>
-<p>
-    Valgknapper brukes når en bruker må velge mellom to handlinger, f.eks i en popuboks der brukeren må velge ja eller nei for å gå videre.
-</p>
-<button class="btn-choice">Valgknapp</button>
-<button class="btn-choice" disabled>Valgknapp deaktivert</button>
+<h3>Eksempelbruk:</h3>
+<pre><code class="language-html">&lt;button class=&quot;btn-outline&quot;&gt;Sekund&aelig;rknapp&lt;/button&gt;
+&lt;button class=&quot;btn-outline&quot;&gt;
+    &lt;i aria-hidden=&quot;true&quot; title=&quot;S&oslash;keikon&quot; class=&quot;material-icons mr-m&quot;&gt;search&lt;/i&gt;
+    Sekund&aelig;rknapp
+&lt;/button&gt;</code></pre>
 
-<h2>Lenkeknapper: .btn-link</h2>
+
+<h2>Lenkeknapper</h2>
 <p>
-    Lenkeknapper brukes for aksjoner som enkelte brukere har behov for å gjennomføre, men mange brukere vil aldri trykke på disse knappene i det hele tatt. Eksempelvis kan de brukes for å slette et element fra en liste i et skjema.
+    Lenkeknapper brukes for aksjoner som enkelte brukere har behov for å gjennomføre, men mange brukere vil aldri trykke på disse knappene
+    i det hele tatt. Eksempelvis kan de brukes for å slette et element fra en liste i et skjema.
 </p>
+<button class="btn-link"><i aria-hidden="true" title="Slette ikon" class="material-icons mr-s">add</i>Lenkeknapp</button>
 <button class="btn-link">Lenkeknapp</button>
-<button class="btn-link" ><i aria-hidden="true" title="Slette ikon" class="material-icons">delete</i>Lenkeknapp</button>
+
+<h3>Eksempelbruk:</h3>
+<pre><code class="language-html">&lt;button class=&quot;btn-link&quot;&gt;
+    &lt;i aria-hidden=&quot;true&quot; title=&quot;Slette ikon&quot; class=&quot;material-icons mr-s&quot;&gt;add&lt;/i&gt;
+    Lenkeknapp
+&lt;/button&gt;
+&lt;button class=&quot;btn-link&quot;&gt;Lenkeknapp&lt;/button&gt;</code></pre>
 
 <h2>Lenker</h2>
 <p>
-    Lenker vises i blå skrift og med understrekning. Lenker som leder til en ekstern side skal markeres med launch-ikon fra Materiel Design for å vise at de leder brukeren bort fra siden.
+    Lenker vises i grønn skrift og med understrekning, besøkte lenker vises i blått. Lenker som leder til en ekstern side skal markeres
+    med launch-ikon fra Materiel Design for å vise at de leder brukeren bort fra siden. For å unngå unødvendige overrides må lenker
+    wrappes med formatted-text klassen.
 </p>
-<a href="/">Intern lenke</a>
-<a href="http://www.kartverket.no">Ekstern lenke<i aria-hidden="true" title="Launch ikon" class="material-icons">launch</i></a>
+
+<p class="formatted-text">
+    <a href="/">Intern lenke</a>
+    <a href="http://www.kartverket.no">Ekstern lenke<i aria-hidden="true" title="Launch ikon" class="material-icons">launch</i></a>
+</p>
+
+<p class="formatted-text" style="width: 200px;">
+    Tekst tekst tekst <a href="#">Lenke med ganske lang tekst som brekker</a>
+</p>
+
+<h3>Eksempelbruk:</h3>
+<pre><code class="language-html">&lt;p class=&quot;formatted-text&quot;&gt;
+    &lt;a href=&quot;/&quot;&gt;Intern lenke&lt;/a&gt;
+    &lt;a href=&quot;http://www.kartverket.no&quot;&gt;
+        Ekstern lenke
+        &lt;i aria-hidden=&quot;true&quot; title=&quot;Launch ikon&quot; class=&quot;material-icons&quot;&gt;launch&lt;/i&gt;
+    &lt;/a&gt;
+&lt;/p&gt;</code></pre>
