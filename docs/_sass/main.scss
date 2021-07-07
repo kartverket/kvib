@@ -1,4 +1,3 @@
-
 @import "KVIB-scss/index";
 
 body {
@@ -59,4 +58,16 @@ pre {
 
 .td-extra-padding {
   padding-left: 16px !important;
+}
+
+.outer-container {
+  margin: 0 auto;
+  max-width: 944px;
+  padding: 0 32px;
+}
+
+@media (max-width: 540px) {
+  .outer-container {
+    padding: 0 16px;
+  }
 }
