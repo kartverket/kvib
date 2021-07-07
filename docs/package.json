@@ -10,6 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "sass": "^1.27.0",
-    "KVIB-scss": "file:../sass"
+    "KVIB-scss": "2.0.2"
   }
 }
