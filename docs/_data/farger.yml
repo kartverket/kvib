@@ -30,13 +30,19 @@
 - navn: groenn_hover
   kode: 1A833B
   beskrivelse: Lysere grønnfarge for hover over groenn_moerk. Logofarge.
+- navn: groenn_aktiv
+  kode: 05502A
+  beskrivelse: Aktiv state på grønne knapper
 - navn: groenn_lys
   kode: D0ECD6
   beskrivelse: Lys grønn bakgrunnsfarge. Informasjonsboks med positivt ladet innhold.
 
 - navn: roed_moerk
   kode: D04a14
-  beskrivelse: Feilmeldingstekst og ikoner. Datovisning for arrangementer
+  beskrivelse: Datovisning
+- navn: roed_feilmelding
+  kode: A32F00
+  beskrivelse: Feilmeldingstekst, alt som har med feilmeldinger å gjøre
 - navn: rosa
   kode: F7E6EB
   beskrivelse: Rosa bakgrunnsfarge. Informasjonsboks med negativt ladet innhold.
