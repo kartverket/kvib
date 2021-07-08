@@ -27,3 +27,6 @@ Etter første omganger av arbeid med KVIB har Kartverket.no blitt fornyet, og vi
 ### 2.0.2
 * Lagt til fargen groenn_aktiv
 * Endret knappestiler, per nå er det ikke noe deaktivert stiler tilgjengelig, i tillegg er .btn-secondary endret til .btn-outline
+
+### 2.0.3
+* Lagt til fargen roed_feilmelding
