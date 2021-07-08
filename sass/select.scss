@@ -36,13 +36,13 @@ select {
   position: relative;
   &.invalid {
     select {
-      border-color: $roed_moerk;
+      border-color: $roed_feilmelding;
       &:active, &:focus {
-        box-shadow: 0 0 0 2px $roed_moerk;
+        box-shadow: 0 0 0 2px $roed_feilmelding;
       }
     }
     &::after {
-      color: $roed_moerk;
+      color: $roed_feilmelding;
     }
   }
 }

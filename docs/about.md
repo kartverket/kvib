@@ -30,3 +30,6 @@ Etter første omganger av arbeid med KVIB har Kartverket.no blitt fornyet, og vi
 
 ### 2.0.3
 * Lagt til fargen roed_feilmelding
+
+### 2.0.4
+* Endret select sin invalid stil fra roed_moerk til roed_feilmelding
