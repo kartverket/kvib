@@ -43,7 +43,7 @@ p, .brodtekst {
   margin: 0 0 $grid-l;
 }
 
-ul, ol {
+.unordered-list, .ordered-list {
   list-style: none;
   padding: 0;
   margin: 0 0 $grid-m;
@@ -61,7 +61,7 @@ ul, ol {
   }
 }
 
-ul {
+.unordered-list {
   > li:before {
     background-color: #222;
     width: 9px;
@@ -72,7 +72,7 @@ ul {
   }
 }
 
-ol {
+.ordered-list {
   counter-reset: li-counter;
   > li {
     counter-increment: li-counter;
@@ -129,12 +129,12 @@ ol {
   p, .brodtekst {
     margin: 0 0 $grid-m;
   }
-  ul, ol {
+  .unordered-list, .ordered-list {
     list-style: none;
     padding: 0;
     margin: 0 0 $grid-m;
   }
-  ul > li:before {
+  .unordered-list > li:before {
     width: 7px;
     height: 7px;
     top: 10px;
