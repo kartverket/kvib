@@ -1,0 +1,55 @@
+/* farger */
+
+/*svart og hvit*/
+var{--svart: #222222};
+var{--hvit: #FFFFFF};
+
+/*graa*/
+var{--graa_moerk: #505050};
+var{--graa: #707070};
+var{--graa_linje: #7070702E}; /*Finnes ikke i Figma*/
+var{--graa_lys: #F5F2F2};
+
+/*Blaa*/
+var{--blaa_moerk: #175092};
+var{--blaa: #1A589F};
+var{--blaa_lys: #E4F1F8};
+var{--blaa_hover: #1A589F};
+
+/*groenn*/
+var{--groenn_moerk: #156630};
+var{--groenn_hover: #1A833B}; /*hentet fra _variables.scss, men står som groenn i Figma*/
+var{--groenn_aktiv: #05502A};
+var{--groenn_lys: #D0ECD6};
+
+/*roed og rosa*/
+var{--roed_feilmelding: #A32F00};
+var{--roed_moerk: #D04a14};
+var{--rosa: #F7E6EB};
+
+
+/*oransje og gul*/
+var{--oransje: #FCF1E8};
+var{--gul: #FFDD9D};
+var{--gul_lys: #FCEBCD};
+
+
+
+
+
+/*Skjermstørrelser*/
+var{--screenBreak: 992px}; /*Maks størrelse for large-devices i bootstrap: https://getbootstrap.com/docs/4.1/layout/overview/*/
+var{--screenBreakSm: 768px}; /*Maks størrelse som for medium-devices i bootstrap: https://getbootstrap.com/docs/4.1/layout/overview/*/
+var{--screenBreakXl: 1200px}; /*Maks størrelse for extra large-devices i bootstrap: https://getbootstrap.com/docs/4.1/layout/overview/*/
+
+/*Grid*/
+var{--grid-xs: 4px};
+var{--grid-s: 8px};
+var{--grid-m: 16px};
+var{--grid-l: 24px};
+var{--grid-xl: 32px};
+var{--grid-xxl: 40px};
+
+/*Annet*/
+var{--border-radius: 25.5px}; /*For knapper med avrundede hjørner*/
+var{--skygge: 0 2px 4px 0 rgba(0, 0, 0, 0.5)};
