@@ -1,38 +1,37 @@
 /* farger */
 
-/*svart og hvit*/
-var{--svart: #222222};
-var{--hvit: #FFFFFF};
+:root{
+    /*svart og hvit*/
+--svart: #222222;
+--hvit: #FFFFFF;
 
 /*graa*/
-var{--graa_moerk: #505050};
-var{--graa: #707070};
-var{--graa_linje: #7070702E}; /*Finnes ikke i Figma*/
-var{--graa_lys: #F5F2F2};
+--graa_moerk: #505050;
+--graa: #707070;
+--graa_lys: #F5F2F2;
 
 /*Blaa*/
-var{--blaa_moerk: #175092};
-var{--blaa: #1A589F};
-var{--blaa_lys: #E4F1F8};
-var{--blaa_hover: #1A589F};
+--blaa_moerk: #175092;
+--blaa: #1A589F;
+--blaa_lys: #E4F1F8;
+--blaa_hover: #1A589F;
 
 /*groenn*/
-var{--groenn_moerk: #156630};
-var{--groenn_hover: #1A833B}; /*hentet fra _variables.scss, men står som groenn i Figma*/
-var{--groenn_aktiv: #05502A};
-var{--groenn_lys: #D0ECD6};
+--groenn_moerk: #156630;
+--groenn: #1A833B;
+--groenn_aktiv: #05502A;
+--groenn_lys: #D0ECD6;
 
 /*roed og rosa*/
-var{--roed_feilmelding: #A32F00};
-var{--roed_moerk: #D04a14};
-var{--rosa: #F7E6EB};
-
+--roed_feilmelding: #A32F00;
+--roed_moerk: #D04a14;
+--rosa: #F7E6EB;
 
 /*oransje og gul*/
-var{--oransje: #FCF1E8};
-var{--gul: #FFDD9D};
-var{--gul_lys: #FCEBCD};
-
+--oransje: #FCF1E8;
+--gul: #FFDD9D;
+--gul_lys: #FCEBCD;
+}
 
 
 
