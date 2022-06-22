@@ -1,0 +1,103 @@
+
+html {
+    font-family: "Mulish";
+  }
+  
+body {
+    color: black ;/*bytt ut med variabel*/
+    font-style: normal;
+  }
+
+.underline{
+    text-decoration-line: underline;
+}
+
+
+
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+
+/*h1-titles*/
+h1.x-small {
+    font-size: 20px;
+    line-height: 32px;
+}
+
+h1.small{
+    font-size: 24px;
+    line-height: 40px;
+}
+h1.medium{
+    font-size: 32px;
+    line-height: 48px;
+}
+
+h1.large{
+    font-size: 36px;
+    line-height: 48px;
+}
+
+
+/*h2-titles*/
+h2.x-small {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+h2.small{
+    font-size: 24px;
+    line-height: 32px;
+}
+
+h2.medium{
+    font-size: 28px;
+    line-height: 32px;
+}
+h2.large{ 
+    font-size: 32px;
+    line-height: 40px;
+}
+
+/*h3-titles*/
+h3.x-small {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+
+
+/*brodtekst, default xs*/
+p, .brodtekst{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+/*klasse for størrelser (small, medium, large)
+Brukes for brodtekst og h3*/
+.brodtekst.s-m-l, h3.s-m-l{
+    font-size: 18px;
+    line-height: 32px;
+}
+
+
+
+
+/*label og beskrivende tekst*/    
+label, dl{
+    font-weight: 400;   
+
+}
+label.x-small, dl.x-small{
+    font-size: 12px;  
+    line-height: 24px;
+} 
+
+/*label og beskrivende tekst, str. small,medium, large*/  
+label.s-m-l, dl.s-m-l{
+    font-weight: 400; 
+    font-size: 14px;
+    line-height: 24px;
+}
