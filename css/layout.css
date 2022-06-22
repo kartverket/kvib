@@ -1,5 +1,5 @@
 /*Skjermstørrelser: Spør Wanni om disse størrelsene kontra Figma*/
-:root{
+screensize{
     --screenBreakSm: 768px; /*Maks størrelse for small-devices*/
     --screenBreakM: 1023px; /*Maks størrelse som for medium-devices*/
     --screenBreakXl: 1440px; /*Minste størrelse for large-devices*/
@@ -7,7 +7,7 @@
 
 
 /*Grid OBS! Hver av størrelsene mangler en verdi fra figma*/
-:root{
+grid{
     /*extra small/small (stretch grid)*/
     --grid-col-s: 4px;
     --grid-margin-s: 16px;
@@ -25,8 +25,8 @@
 }
 
 
-/*Annet fra variables.scss*/
-:root{
+/*Annet fra variables.scss, spør Wanni/Bente om dette*/
+other{
     --border-radius: 25.5px; /*For knapper med avrundede hjørner*/
     --skygge: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 }
