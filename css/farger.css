@@ -1,0 +1,54 @@
+/* farger */
+
+:root{
+    /*svart og hvit*/
+--svart: #222222;
+--hvit: #FFFFFF;
+
+/*graa*/
+--graa_moerk: #505050;
+--graa: #707070;
+--graa_lys: #F5F2F2;
+
+/*Blaa*/
+--blaa_moerk: #175092;
+--blaa: #1A589F;
+--blaa_lys: #E4F1F8;
+--blaa_hover: #1A589F;
+
+/*groenn*/
+--groenn_moerk: #156630;
+--groenn: #1A833B;
+--groenn_aktiv: #05502A;
+--groenn_lys: #D0ECD6;
+
+/*roed og rosa*/
+--roed_feilmelding: #A32F00;
+--roed_moerk: #D04a14;
+--rosa: #F7E6EB;
+
+/*oransje og gul*/
+--oransje: #FCF1E8;
+--gul: #FFDD9D;
+--gul_lys: #FCEBCD;
+}
+
+
+
+
+/*Skjermstørrelser*/
+var{--screenBreak: 992px}; /*Maks størrelse for large-devices i bootstrap: https://getbootstrap.com/docs/4.1/layout/overview/*/
+var{--screenBreakSm: 768px}; /*Maks størrelse som for medium-devices i bootstrap: https://getbootstrap.com/docs/4.1/layout/overview/*/
+var{--screenBreakXl: 1200px}; /*Maks størrelse for extra large-devices i bootstrap: https://getbootstrap.com/docs/4.1/layout/overview/*/
+
+/*Grid*/
+var{--grid-xs: 4px};
+var{--grid-s: 8px};
+var{--grid-m: 16px};
+var{--grid-l: 24px};
+var{--grid-xl: 32px};
+var{--grid-xxl: 40px};
+
+/*Annet*/
+var{--border-radius: 25.5px}; /*For knapper med avrundede hjørner*/
+var{--skygge: 0 2px 4px 0 rgba(0, 0, 0, 0.5)};

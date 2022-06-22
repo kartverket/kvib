@@ -1,5 +1,4 @@
 /* HovedCSS */
 
-body {
-    background-color: pink;
-}
+@import 'farger.css';
+@import 'layout.css';
