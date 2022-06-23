@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap');
+
+
+html {
+    font-family: "Mulish";
+  }
+  
+body {
+    color: black ;/*bytt ut med variabel*/
+    font-style: normal;
+  }
+
+.underline{
+    text-decoration-line: underline;
+}
+
+
+
+.heading {
+    font-weight: 700;
+}
+
+
+/*h1-titles*/
+.main--x-small {
+    font-size: 1.25rem;
+    line-height: 2rem;
+}
+
+.main--small{
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+}
+.main--medium{
+    font-size: 2rem;
+    line-height: 3rem;
+}
+
+.main--large{
+    font-size: 2.25rem;
+    line-height: 3rem;
+}
+
+
+/*h2-titles*/
+.secondary--x-small {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+}
+
+.secondary--small{
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.secondary--medium{
+    font-size: 1.75rem;
+    line-height: 2rem;
+}
+.secondary--large{ 
+    font-size: 2rem;
+    line-height: 2.5rem;
+}
+
+/*h3-titles*/
+.tertiary--x-small {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+/*brodtekst, default xs*/
+.brodtekst{
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+/*klasse for størrelser (small, medium, large)
+Brukes for brodtekst og h3*/
+.brodtekst.s-m-l, .tertiary--s-m-l{
+    font-size: 1.125rem;
+    line-height: 2rem;
+}
+
+
+/*label og beskrivende tekst*/    
+
+.label--x-small, .beskrivende-tekst--x-small{
+    font-weight: 400;
+    font-size: 0.75rem;  
+    line-height: 1.5rem;
+} 
+
+/*label og beskrivende tekst, str. small,medium, large*/  
+.label--s-m-l, .beskrivende-tekst--s-m-l{
+    font-weight: 400; 
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+}
