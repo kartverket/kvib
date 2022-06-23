@@ -1,32 +1,35 @@
-/*Skjermstørrelser: Spør Wanni om disse størrelsene kontra Figma*/
-screensize{
-    --screenBreakSm: 768px; /*Maks størrelse for small-devices*/
-    --screenBreakM: 1023px; /*Maks størrelse som for medium-devices*/
-    --screenBreakXl: 1440px; /*Minste størrelse for large-devices*/
-}
+/*Skjermstørrelse*/
+:root{
+    --screenBreakSm: 48rem; /*Maks størrelse for small-devices*/
+    --screenBreakM: 63.938rem; /*Maks størrelse som for medium-devices*/
+    --screenBreakXl: 90rem; /*Minste størrelse for large-devices*/
 
 
-/*Grid OBS! Hver av størrelsene mangler en verdi fra figma*/
-grid{
+/*Grid*/
     /*extra small/small (stretch grid)*/
-    --grid-col-s: 4px;
-    --grid-margin-s: 16px;
-    --grid-gutter-s: 16px;
+    --distance-s: 0.5rem;
+    --grid-col-s: 0.25rem;
+    --grid-margin-s: 1rem;
+    --grid-gutter-s: 1rem;
 
     /*medium (stretch grid)*/
-    --grid-col-m: 8px;
-    --grid-margin-m: 64px;
-    --grid-gutter-m: 32px;
+    --distance-m: 1rem;
+    --grid-col-m: 0.5rem;
+    --grid-margin-m: 4rem;
+    --grid-gutter-m: 2rem;
 
     /*large (center grid)*/
-    --grid-col-l: 12px;
-    --grid-margin-l: 64px;
-    --grid-gutter-l: 32px;
+    --distance-l: 1.5rem;
+    --grid-col-l: 0.75;
+    --grid-margin-l: 4rem;
+    --grid-gutter-l: 2rem;
+
+    --distance-xl: 2rem;
 }
 
 
-/*Annet fra variables.scss, spør Wanni/Bente om dette*/
+/*Annet fra variables.scss
 other{
-    --border-radius: 25.5px; /*For knapper med avrundede hjørner*/
-    --skygge: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-}
+    --border-radius: 25.5px; /*For knapper med avrundede hjørner*/ /*egen variabel i button.css i toppen
+    /*--skygge: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+}*/
