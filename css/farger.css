@@ -1,6 +1,6 @@
 /* farger */
 
-colors{
+:root{
     /*svart og hvit*/
     --svart: #222222;
     --hvit: #FFFFFF;
