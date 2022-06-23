@@ -24,7 +24,6 @@ function FormRow() {
                         height: 100,
                         width: 100,
                         marginTop: 5,
-                        backgroundColor: 'blue'
                     }}
                 />
             </Grid>
@@ -42,7 +41,7 @@ function FormRow() {
     );
 }
 
-export default function Farger() {
+export default function Colors() {
     return (
         <Box sx={{ flexGrow: 1 }}>
             <Grid container spacing={1}>
