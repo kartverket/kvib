@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap');
+
 
 html {
     font-family: "Mulish";
@@ -14,90 +16,84 @@ body {
 
 
 
-h1, h2, h3 {
+.heading {
     font-weight: 700;
 }
 
 
 /*h1-titles*/
-h1.x-small {
-    font-size: 20px;
-    line-height: 32px;
+.main--x-small {
+    font-size: 1.25rem;
+    line-height: 2rem;
 }
 
-h1.small{
-    font-size: 24px;
-    line-height: 40px;
+.main--small{
+    font-size: 1.5rem;
+    line-height: 2.5rem;
 }
-h1.medium{
-    font-size: 32px;
-    line-height: 48px;
+.main--medium{
+    font-size: 2rem;
+    line-height: 3rem;
 }
 
-h1.large{
-    font-size: 36px;
-    line-height: 48px;
+.main--large{
+    font-size: 2.25rem;
+    line-height: 3rem;
 }
 
 
 /*h2-titles*/
-h2.x-small {
-    font-size: 18px;
-    line-height: 24px;
+.secondary--x-small {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
 }
 
-h2.small{
-    font-size: 24px;
-    line-height: 32px;
+.secondary--small{
+    font-size: 1.5rem;
+    line-height: 2rem;
 }
 
-h2.medium{
-    font-size: 28px;
-    line-height: 32px;
+.secondary--medium{
+    font-size: 1.75rem;
+    line-height: 2rem;
 }
-h2.large{ 
-    font-size: 32px;
-    line-height: 40px;
+.secondary--large{ 
+    font-size: 2rem;
+    line-height: 2.5rem;
 }
 
 /*h3-titles*/
-h3.x-small {
-    font-size: 16px;
-    line-height: 24px;
+.tertiary--x-small {
+    font-size: 1rem;
+    line-height: 1.5rem;
 }
 
-
-
 /*brodtekst, default xs*/
-p, .brodtekst{
+.brodtekst{
     font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1rem;
+    line-height: 1.5rem;
 }
 
 /*klasse for størrelser (small, medium, large)
 Brukes for brodtekst og h3*/
-.brodtekst.s-m-l, h3.s-m-l{
-    font-size: 18px;
-    line-height: 32px;
+.brodtekst.s-m-l, .tertiary--s-m-l{
+    font-size: 1.125rem;
+    line-height: 2rem;
 }
-
-
 
 
 /*label og beskrivende tekst*/    
-label, dl{
-    font-weight: 400;   
 
-}
-label.x-small, dl.x-small{
-    font-size: 12px;  
-    line-height: 24px;
+.label--x-small, .beskrivende-tekst--x-small{
+    font-weight: 400;
+    font-size: 0.75rem;  
+    line-height: 1.5rem;
 } 
 
 /*label og beskrivende tekst, str. small,medium, large*/  
-label.s-m-l, dl.s-m-l{
+.label--s-m-l, .beskrivende-tekst--s-m-l{
     font-weight: 400; 
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
 }
