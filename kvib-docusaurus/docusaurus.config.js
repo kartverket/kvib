@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'KVIB Styleguides',
+  tagline: 'Styleguides',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -37,96 +37,156 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+              'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+              'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve('./src/css/farger.css'),
         },
       }),
     ],
   ],
 
   themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
-      navbar: {
-        title: 'My Site',
-        logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+  /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+      ({
+        navbar: {
+          title: 'Tittel',
+          logo: {
+            alt: 'Docusaurus logo',
+            src: 'img/docusaurus.png',
+          },
+          items: [
+            {
+              type: 'doc',
+              docId: 'figma-id',
+              position: 'left',
+              label: 'KVIB Figma',
+            },
+            {
+              type: 'doc',
+              docId: 'uu-id',
+              position: 'left',
+              label: 'UU',
+            },
+            {
+              type: 'doc',
+              docId: 'sideelementer-id',
+              position: 'left',
+              label: 'Sideelementer',
+            },
+            {
+              type: 'doc',
+              docId: 'typografi-id',
+              position: 'left',
+              label: 'Typografi',
+            },
+            {
+              type: 'doc',
+              docId: 'inputfelt-id',
+              position: 'left',
+              label: 'Inputfelt',
+            },
+            {
+              type: 'doc',
+              docId: 'grids-id',
+              position: 'left',
+              label: 'Grid',
+            },
+            {
+              type: 'doc',
+              docId: 'logo-id',
+              position: 'left',
+              label: 'Logo',
+            },
+            {
+              type: 'doc',
+              docId: 'icons-id',
+              position: 'left',
+              label: 'Ikoner',
+            },
+            {
+              type: 'doc',
+              docId: 'nav-id',
+              position: 'left',
+              label: 'Navigasjon',
+            },
+            {
+              type: 'doc',
+              docId: 'knapper-id',
+              position: 'left',
+              label: 'Knapper',
+            },
+            {
+              type: 'doc',
+              docId: 'farger-id',
+              position: 'left',
+              label: 'Farger',
+            },
+            {
+              type: 'doc',
+              docId: 'tutorial/intro',
+              position: 'right',
+              label: 'Tutorial',
+            },
+          ],
         },
-        items: [
-          {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: 'Tutorial',
-          },
-          {to: '/blog', label: 'Blog', position: 'left'},
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
-          },
-        ],
-      },
-      footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
-      },
-      prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
-      },
-    }),
+        footer: {
+          style: 'dark',
+          links: [
+            {
+              title: 'Docs',
+              items: [
+                {
+                  label: 'KVIB Figma',
+                  to: '/docs/intro',
+                },
+              ],
+            },
+            {
+              title: 'Community',
+              items: [
+                {
+                  label: 'Stack Overflow',
+                  href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                },
+                {
+                  label: 'Discord',
+                  href: 'https://discordapp.com/invite/docusaurus',
+                },
+                {
+                  label: 'Twitter',
+                  href: 'https://twitter.com/docusaurus',
+                },
+              ],
+            },
+            {
+              title: 'More',
+              items: [
+                {
+                  label: 'Blog',
+                  to: '/blog',
+                },
+                {
+                  label: 'GitHub',
+                  href: 'https://github.com/facebook/docusaurus',
+                },
+              ],
+            },
+          ],
+          copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        },
+        prism: {
+          theme: lightCodeTheme,
+          darkTheme: darkCodeTheme,
+        },
+      }),
 };
 
 module.exports = config;
