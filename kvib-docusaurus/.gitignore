@@ -1,3 +1,12 @@
+# Intellij
+.idea
+
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+/sass/node_modules/*
+
 # Dependencies
 /node_modules
 

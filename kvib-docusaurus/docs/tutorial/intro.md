@@ -1,10 +1,10 @@
 ---
+id: intro
+displayed_sidebar: tutorialSidebar
 sidebar_position: 1
 ---
 
-edit
-
-# Tutorial Intro
+# Tutorial Intro Test
 
 Let's discover **Docusaurus in less than 5 minutes**.
 
