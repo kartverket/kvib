@@ -1,0 +1,13 @@
+.greenPalette {
+    background-color: var(--groenn);
+    height: 100px;
+    width: 100px;
+    margin-top: 40px;
+}
+
+.bluePalette {
+    background-color: var(--blaa);
+    height: 100px;
+    width: 100px;
+    margin-top: 40px;
+}

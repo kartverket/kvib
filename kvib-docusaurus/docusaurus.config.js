@@ -127,7 +127,7 @@ const config = {
               type: 'doc',
               docId: 'farger-id',
               position: 'left',
-              label: 'Colors',
+              label: 'Farger',
             },
             {
               type: 'doc',

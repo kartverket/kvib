@@ -3,28 +3,17 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
-import '../../css/main.css'
+import '../../css/palettes.css'
 
 function FormRow() {
     return (
         <>
             <Grid xs={2}>
-                <Paper
-                    sx={{
-                        height: 100,
-                        width: 100,
-                        marginTop: 5,
-                        backgroundColor: 'green'
-                    }}
-                />
+                <Paper class={"greenPalette"}/>
             </Grid>
             <Grid xs={2}>
                 <Paper
-                    sx={{
-                        height: 100,
-                        width: 100,
-                        marginTop: 5,
-                    }}
+                    class={"bluePalette"}
                 />
             </Grid>
             <Grid xs={2}>
@@ -45,12 +34,6 @@ export default function Colors() {
     return (
         <Box sx={{ flexGrow: 1 }}>
             <Grid container spacing={1}>
-                <Grid container item spacing={4}>
-                    <FormRow />
-                </Grid>
-                <Grid container item spacing={4}>
-                    <FormRow />
-                </Grid>
                 <Grid container item spacing={4}>
                     <FormRow />
                 </Grid>
