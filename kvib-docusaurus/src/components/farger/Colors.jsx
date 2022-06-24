@@ -10,12 +10,21 @@ function GreenRows() {
     return (
         <>
             <Grid item sx>
+                <Paper class={"greenActivePalette"}/>
+                <Typography gutterBottom variant="subtitle1" component="div">
+                    #05502A
+                </Typography>
+                <Typography gutterBottom variant="body2" component="div">
+                    Groenn_aktiv
+                </Typography>
+            </Grid>
+            <Grid item sx>
                 <Paper class={"darkGreenPalette"}/>
                 <Typography gutterBottom variant="subtitle1" component="div">
                     #156630
                 </Typography>
-                <Typography gutterBottom variant="subtitle1" component="div">
-                    Mørk Grønn
+                <Typography gutterBottom variant="body2" component="div">
+                    Groenn_moerk
                 </Typography>
             </Grid>
             <Grid item sx>
@@ -23,17 +32,8 @@ function GreenRows() {
                 <Typography gutterBottom variant="subtitle1" component="div">
                     #1A833B
                 </Typography>
-                <Typography gutterBottom variant="subtitle1" component="div">
-                    Grønn
-                </Typography>
-            </Grid>
-            <Grid item sx>
-                <Paper class={"greenActivePalette"}/>
-                <Typography gutterBottom variant="subtitle1" component="div">
-                    #05502A
-                </Typography>
-                <Typography gutterBottom variant="subtitle1" component="div">
-                    Aktiv grønn
+                <Typography gutterBottom variant="body2" component="div">
+                    Groenn
                 </Typography>
             </Grid>
             <Grid item sx>
@@ -41,8 +41,8 @@ function GreenRows() {
                 <Typography gutterBottom variant="subtitle1" component="div">
                     #D0ECD6
                 </Typography>
-                <Typography gutterBottom variant="subtitle1" component="div">
-                    Lys grønn
+                <Typography gutterBottom variant="body2" component="div">
+                    Groenn_lys
                 </Typography>
             </Grid>
         </>
@@ -53,21 +53,30 @@ function BlueRows() {
     return (
         <>
             <Grid item sx>
-                <Paper class={"darkBluePalette"}/>
-                <Typography gutterBottom variant="subtitle1" component="div">
-                    #175092
-                </Typography>
-                <Typography gutterBottom variant="subtitle1" component="div">
-                    Mørk blå
-                </Typography>
-            </Grid>
-            <Grid item sx>
                 <Paper class={"bluePalette"}/>
                 <Typography gutterBottom variant="subtitle1" component="div">
                     #1A589F
                 </Typography>
+                <Typography gutterBottom variant="body2" component="div">
+                    Blaa
+                </Typography>
+            </Grid>
+            <Grid item sx>
+                <Paper class={"hoverBluePalette"}/>
                 <Typography gutterBottom variant="subtitle1" component="div">
-                    Blå
+                    #439CCD
+                </Typography>
+                <Typography gutterBottom variant="body2" component="div">
+                    Blaa_hover
+                </Typography>
+            </Grid>
+            <Grid item sx>
+                <Paper class={"darkBluePalette"}/>
+                <Typography gutterBottom variant="subtitle1" component="div">
+                    #175092
+                </Typography>
+                <Typography gutterBottom variant="body2" component="div">
+                    Blaa_moerk
                 </Typography>
             </Grid>
             <Grid item sx>
@@ -75,20 +84,10 @@ function BlueRows() {
                 <Typography gutterBottom variant="subtitle1" component="div">
                     #E4F1F8
                 </Typography>
-                <Typography gutterBottom variant="subtitle1" component="div">
-                    Lys blå
+                <Typography gutterBottom variant="body2" component="div">
+                    Blaa_lys
                 </Typography>
             </Grid>
-            <Grid item sx>
-                <Paper class={"hoverBluePalette"}/>
-                <Typography gutterBottom variant="subtitle1" component="div">
-                    #1A589F
-                </Typography>
-                <Typography gutterBottom variant="subtitle1" component="div">
-                    Hover blå
-                </Typography>
-            </Grid>
-
         </>
     )
 }
@@ -101,8 +100,8 @@ function RedRows() {
                 <Typography gutterBottom variant="subtitle1" component="div">
                     #A32F00
                 </Typography>
-                <Typography gutterBottom variant="subtitle1" component="div">
-                    Rød feilmelding
+                <Typography gutterBottom variant="body2" component="div">
+                    Roed_feilmelding
                 </Typography>
             </Grid>
             <Grid item sx>
@@ -110,8 +109,8 @@ function RedRows() {
                 <Typography gutterBottom variant="subtitle1" component="div">
                     #D04a14
                 </Typography>
-                <Typography gutterBottom variant="subtitle1" component="div">
-                    Mørk rød
+                <Typography gutterBottom variant="body2" component="div">
+                    Roed_moerk
                 </Typography>
             </Grid>
             <Grid item sx>
@@ -119,7 +118,7 @@ function RedRows() {
                 <Typography gutterBottom variant="subtitle1" component="div">
                     #F7E6EB
                 </Typography>
-                <Typography gutterBottom variant="subtitle1" component="div">
+                <Typography gutterBottom variant="body2" component="div">
                     Rosa
                 </Typography>
             </Grid>
@@ -135,7 +134,7 @@ function OrangeYellowRows() {
                 <Typography gutterBottom variant="subtitle1" component="div">
                     #FCF1E8
                 </Typography>
-                <Typography gutterBottom variant="subtitle1" component="div">
+                <Typography gutterBottom variant="body2" component="div">
                     Oransje
                 </Typography>
             </Grid>
@@ -144,8 +143,8 @@ function OrangeYellowRows() {
                 <Typography gutterBottom variant="subtitle1" component="div">
                     #FFDD9D
                 </Typography>
-                <Typography gutterBottom variant="subtitle1" component="div">
-                    Gult
+                <Typography gutterBottom variant="body2" component="div">
+                    Gul
                 </Typography>
             </Grid>
             <Grid item sx>
@@ -153,8 +152,8 @@ function OrangeYellowRows() {
                 <Typography gutterBottom variant="subtitle1" component="div">
                     #FCEBCD
                 </Typography>
-                <Typography gutterBottom variant="subtitle1" component="div">
-                    Lys gul
+                <Typography gutterBottom variant="body2" component="div">
+                    Gul_Lys
                 </Typography>
             </Grid>
         </>
@@ -165,21 +164,21 @@ function BlackWhiteRows() {
     return (
         <>
             <Grid item sx>
-                <Paper class={"blackPalette"}/>
-                <Typography gutterBottom variant="subtitle1" component="div">
-                    #222222
-                </Typography>
-                <Typography gutterBottom variant="subtitle1" component="div">
-                    Svart
-                </Typography>
-            </Grid>
-            <Grid item sx>
                 <Paper class={"whitePalette"}/>
                 <Typography gutterBottom variant="subtitle1" component="div">
                     #FFFFFF
                 </Typography>
-                <Typography gutterBottom variant="subtitle1" component="div">
+                <Typography gutterBottom variant="body2" component="div">
                     Hvit
+                </Typography>
+            </Grid>
+            <Grid item sx>
+                <Paper class={"blackPalette"}/>
+                <Typography gutterBottom variant="subtitle1" component="div">
+                    #222222
+                </Typography>
+                <Typography gutterBottom variant="body2" component="div">
+                    Svart
                 </Typography>
             </Grid>
         </>
@@ -195,8 +194,8 @@ function GrayRows() {
                 <Typography gutterBottom variant="subtitle1" component="div">
                     #505050
                 </Typography>
-                <Typography gutterBottom variant="subtitle1" component="div">
-                    Mørk grå
+                <Typography gutterBottom variant="body2" component="div">
+                    Graa_moerk
                 </Typography>
             </Grid>
             <Grid item sx>
@@ -204,8 +203,8 @@ function GrayRows() {
                 <Typography gutterBottom variant="subtitle1" component="div">
                     #707070
                 </Typography>
-                <Typography gutterBottom variant="subtitle1" component="div">
-                    Grå
+                <Typography gutterBottom variant="body2" component="div">
+                    Graa
                 </Typography>
             </Grid>
             <Grid item sx>
@@ -213,8 +212,8 @@ function GrayRows() {
                 <Typography gutterBottom variant="subtitle1" component="div">
                     #F5F2F2
                 </Typography>
-                <Typography gutterBottom variant="subtitle1" component="div">
-                    Lys grå
+                <Typography gutterBottom variant="body2" component="div">
+                    Graa_lys
                 </Typography>
             </Grid>
         </>
@@ -224,22 +223,22 @@ function GrayRows() {
 export default function Colors() {
     return (
         <Box sx={{ flexGrow: 1 }}>
-            <Grid container spacing={1}>
+            <Grid container spacing={3}>
                 <GreenRows />
             </Grid>
-            <Grid container spacing={1}>
+            <Grid container spacing={3}>
                 <BlueRows />
             </Grid>
-            <Grid container spacing={1}>
+            <Grid container spacing={3}>
                 <RedRows />
             </Grid>
-            <Grid container spacing={1}>
+            <Grid container spacing={3}>
                 <OrangeYellowRows />
             </Grid>
-            <Grid container spacing={1}>
+            <Grid container spacing={3}>
                 <BlackWhiteRows />
             </Grid>
-            <Grid container spacing={1}>
+            <Grid container spacing={3}>
                 <GrayRows />
             </Grid>
         </Box>
