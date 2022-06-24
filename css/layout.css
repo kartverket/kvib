@@ -1,11 +1,11 @@
-/*Skjermstørrelse*/
 :root{
+    /*Skjermstørrelse*/
     --screenBreakSm: 48rem; /*Maks størrelse for small-devices*/
     --screenBreakM: 63.938rem; /*Maks størrelse som for medium-devices*/
     --screenBreakXl: 90rem; /*Minste størrelse for large-devices*/
 
 
-/*Grid*/
+    /*Grid*/
     /*extra small/small (stretch grid)*/
     --distance-s: 0.5rem;
     --grid-col-s: 0.25rem;
