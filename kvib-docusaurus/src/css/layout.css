@@ -33,3 +33,28 @@ root{
     --grid-gutter-l: 32px;
 }
 
+.details {
+    border: none;
+    background-color: white;
+    outline: none;
+}
+
+.details > summary {
+    padding: 4px;
+    width: auto;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.details > p {
+    background-color: white;
+    padding: 4px;
+    margin: 0;
+}
+
+mark{
+    color:red;
+}
+
+
