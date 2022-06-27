@@ -47,7 +47,7 @@ const config = {
               'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
-          customCss: require.resolve('./src/css/color.css'),
+          customCss: require.resolve('./src/css/main.css'),
         },
       }),
     ],
@@ -127,7 +127,7 @@ const config = {
               type: 'doc',
               docId: 'farger-id',
               position: 'left',
-              label: 'Colors',
+              label: 'Farger',
             },
             {
               type: 'doc',

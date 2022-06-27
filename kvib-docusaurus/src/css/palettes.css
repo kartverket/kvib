@@ -1,0 +1,134 @@
+.blackPalette {
+    background-color: var(--svart);
+    height: 100px;
+    width: 100px;
+    margin-top: 40px;
+}
+
+.whitePalette {
+    background-color: var(--hvit);
+    height: 100px;
+    width: 100px;
+    margin-top: 40px;
+    border-style: groove;
+}
+
+.darkGrayPalette {
+    background-color: var(--graa_moerk);
+    height: 100px;
+    width: 100px;
+    margin-top: 40px;
+}
+
+.grayPalette {
+    background-color: var(--graa);
+    height: 100px;
+    width: 100px;
+    margin-top: 40px;
+}
+
+.lightGrayPalette {
+    background-color: var(--graa_lys);
+    height: 100px;
+    width: 100px;
+    margin-top: 40px;
+}
+
+.darkBluePalette {
+    background-color: var(--blaa_moerk);
+    height: 100px;
+    width: 100px;
+    margin-top: 40px;
+}
+
+.bluePalette {
+    background-color: var(--blaa);
+    height: 100px;
+    width: 100px;
+    margin-top: 40px;
+}
+
+.lightBluePalette {
+    background-color: var(--blaa_lys);
+    height: 100px;
+    width: 100px;
+    margin-top: 40px;
+}
+
+.hoverBluePalette {
+    background-color: var(--blaa_hover);
+    height: 100px;
+    width: 100px;
+    margin-top: 40px;
+}
+
+.darkGreenPalette {
+    background-color: var(--groenn_moerk);
+    height: 100px;
+    width: 100px;
+    margin-top: 40px;
+}
+
+.greenPalette {
+    background-color: var(--groenn);
+    height: 100px;
+    width: 100px;
+    margin-top: 40px;
+}
+
+.greenActivePalette {
+    background-color: var(--groenn_aktiv);
+    height: 100px;
+    width: 100px;
+    margin-top: 40px;
+}
+
+.lightGreenPalette {
+    background-color: var(--groenn_lys);
+    height: 100px;
+    width: 100px;
+    margin-top: 40px;
+}
+
+.redErrorPalette {
+    background-color: var(--roed_feilmelding);
+    height: 100px;
+    width: 100px;
+    margin-top: 40px;
+}
+
+.darkRedPalette {
+    background-color: var(--roed_moerk);
+    height: 100px;
+    width: 100px;
+    margin-top: 40px;
+}
+
+.pinkPalette {
+    background-color: var(--rosa);
+    height: 100px;
+    width: 100px;
+    margin-top: 40px;
+}
+
+.orangePalette {
+    background-color: var(--oransje);
+    height: 100px;
+    width: 100px;
+    margin-top: 40px;
+}
+
+.yellowPalette {
+    background-color: var(--gul);
+    height: 100px;
+    width: 100px;
+    margin-top: 40px;
+}
+
+.lightYellowPalette {
+    background-color: var(--gul_lys);
+    height: 100px;
+    width: 100px;
+    margin-top: 40px;
+}
+

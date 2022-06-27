@@ -5,9 +5,9 @@
  */
 
 /* You can override the default Infima variables here. */
-root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
+:root {
+  --ifm-color-primary: #1A833B;
+  --ifm-color-primary-dark: #156630;
   --ifm-color-primary-darker: #277148;
   --ifm-color-primary-darkest: #205d3b;
   --ifm-color-primary-light: #33925d;
@@ -29,7 +29,7 @@ root {
   --blaa_moerk: #175092;
   --blaa: #1A589F;
   --blaa_lys: #E4F1F8;
-  --blaa_hover: #1A589F;
+  --blaa_hover: #439CCD;
 
   /*groenn*/
   --groenn_moerk: #156630;
@@ -60,6 +60,3 @@ root {
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-/*.groenn-farge{*/
-/*  color: var(--groenn_moerk)*/
-/*}*/
