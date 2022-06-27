@@ -6,7 +6,7 @@ Hovedklasse kv-button med standard verdier typ marginer, cursor osv...
 Subklasse for farger til primary, secondary og tertiary
 Subklasse for størrelser
 Subklasse for ikon
-Subklasse for ikon tilhørende størrelse
+Subklasse for ikon tilhørende størrelse - ikke nødvendig? Ser ut som at det kun er én størrelse på ikonet
 Subklasse primary
     - hover
     - active
@@ -22,14 +22,14 @@ Subklasse tertiary
 .kv-button{
     background: none; 
     border: none; /* Sjekk senere */
-    border-radius: 1.594rem; /* Gammel verdi sjekk senere, kan hende de ulike knappene har forskjellig border radius */
+    border-radius: 0.5rem;
     text-align: center;
-    text-decoration: none;
+    text-decoration: none; /* Riktig? */
     display: inline-flex;
     cursor: pointer;
     margin: 0; /* Fyll inn riktig verdi senere*/
     gap: 0; /* Fyll inn riktig her senere, samme som gutter*/
-    padding: --padding-button; /*Sjekk denne mot Figma og padding i layout.css senere */
+    padding: var(--padding-button); /*Sjekk denne mot Figma og padding i layout.css senere */
     min-width: 2rem; /* Tilfeldig verdi, sjekk senere */
 }
 
@@ -200,6 +200,7 @@ Subklasse tertiary
     color: var(--kv-button-color--disabled-text);
 }
 
+
 .kv-button-blue--secondary{
     background-color: var(--kv-button-color-secondary-blue--normal);
     color: var(--kv-button-color-secondary-blue--normal--text);
@@ -251,6 +252,7 @@ Subklasse tertiary
     background-color: var(--kv-button-color--disabled);
     color: var(--kv-button-color--disabled-text);
 }
+
 
 .kv-button-blue--tertiary{
     background-color: var(--kv-button-color-tertiary-blue--normal);
