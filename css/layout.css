@@ -25,6 +25,12 @@
     --grid-gutter-l: 2rem;
 
     --distance-xl: 2rem;
+
+    /* Padding */
+    --padding-button: 0.5rem
+
+    /* Focus border state */
+    --focus-border: 0.188rem;
 }
 
 
