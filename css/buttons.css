@@ -122,6 +122,7 @@ Subklasse tertiary
 .kv-button--xs{
     width: 9.875rem;
     height: 3.5rem;
+    font-size: 5rem;
 }
 
 .kv-button--sm{
@@ -132,6 +133,7 @@ Subklasse tertiary
 .kv-button--l{
     width: 14.188rem;
     height: 5rem;
+    text-size-adjust: auto;
 }
 
 
