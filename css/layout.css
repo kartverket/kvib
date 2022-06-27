@@ -27,15 +27,8 @@
     --distance-xl: 2rem;
 
     /* Padding */
-    --padding-button: 0.5rem
+    --padding-button: 0.5rem;
 
     /* Focus border state */
     --focus-border: 0.188rem;
 }
-
-
-/*Annet fra variables.scss
-other{
-    --border-radius: 25.5px; /*For knapper med avrundede hjørner*/ /*egen variabel i button.css i toppen
-    /*--skygge: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-}*/
