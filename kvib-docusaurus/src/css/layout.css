@@ -33,12 +33,13 @@ root{
     --grid-gutter-l: 32px;
 }
 
-details {
-    outline: hidden;
+.details {
+    outline: none;
     background: white;
+    border: none;
 }
 
-details > summary {
+.details > summary {
     padding: 4px;
     width: auto;
     background-color: white;
@@ -46,7 +47,7 @@ details > summary {
     outline: none;
 }
 
-details > p {
+.details > p {
     background-color: white;
     padding: 4px;
     margin: 0;
