@@ -25,7 +25,6 @@
     --grid-gutter-l: 2rem;
 
     --distance-xl: 2rem;
-}
 
 .details {
     outline: none;
@@ -48,9 +47,10 @@
     color: #A32F00;
 }
 
+    /* Padding */
+    --padding-button: 0.5rem;
 
-/*Annet fra variables.scss
-other{
-    --border-radius: 25.5px; /*For knapper med avrundede hjørner*/ /*egen variabel i button.css i toppen
-    /*--skygge: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-}*/
+
+    /* Focus border state */
+    --focus-border: 0.188rem;
+}
