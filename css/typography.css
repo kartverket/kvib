@@ -23,7 +23,7 @@ body {
 
 /*h1-titles
 h3-large*/
-.h1--x-small .h3--large {
+.h1--x-small, .h3--large {
     font-size: 1.25rem;
     line-height: 2rem;
 }
