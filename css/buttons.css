@@ -29,8 +29,8 @@ Subklasse tertiary
     cursor: pointer;
     margin: 0; /* Fyll inn riktig verdi senere*/
     gap: 0; /* Fyll inn riktig her senere, samme som gutter*/
-    padding: var(--padding-button); /*Sjekk denne mot Figma og padding i layout.css senere */
-    min-width: 2rem; /* Tilfeldig verdi, sjekk senere */
+    padding: var(--padding-button); /*Sjekk denne mot Figma og test senere */
+    min-width: 2rem; /* Tilfeldig verdi, minste button width (xs) er 3.5rem så denne skal ikke overkjøre xs størrelsen*/
 }
 
 .kv-button-color{
@@ -98,6 +98,15 @@ Subklasse tertiary
 
     /* Focus border */
     --kv-button-color-border--focus: var(--blaa_moerk);
+
+    /* Icon
+    --kv-button-color-icon--white: var(--hvit);
+    --kv-button-color-icon--green: var(--groenn);
+    --kv-button-color-icon--blue: var(--blaa);
+    --kv-button-color-icon--darkblue: var(--blaa_moerk);
+    --kv-button-color-icon--black: var(--svart);
+    --kv-button-color-icon--disabled: var(--graa_moerk);  /* Endre navn til darkgrey? 
+    */
 }
 
 .kv-button--xs{
@@ -118,7 +127,6 @@ Subklasse tertiary
 
 /* Subklasse for ikon HER  */
 
-/* Subklasse for ikon tilhørende størrelser HER */
 
 
 /* kv-button primary */
