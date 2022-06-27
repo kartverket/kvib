@@ -15,7 +15,7 @@ function GreenRows() {
                     #05502A
                 </Typography>
                 <Typography gutterBottom variant="body2" component="div">
-                    Groenn_aktiv
+                    Groenn_Aktiv
                 </Typography>
             </Grid>
             <Grid item sx>
@@ -24,7 +24,7 @@ function GreenRows() {
                     #156630
                 </Typography>
                 <Typography gutterBottom variant="body2" component="div">
-                    Groenn_moerk
+                    Groenn_Moerk
                 </Typography>
             </Grid>
             <Grid item sx>
@@ -42,7 +42,7 @@ function GreenRows() {
                     #D0ECD6
                 </Typography>
                 <Typography gutterBottom variant="body2" component="div">
-                    Groenn_lys
+                    Groenn_Lys
                 </Typography>
             </Grid>
         </>
@@ -67,7 +67,7 @@ function BlueRows() {
                     #439CCD
                 </Typography>
                 <Typography gutterBottom variant="body2" component="div">
-                    Blaa_hover
+                    Blaa_Hover
                 </Typography>
             </Grid>
             <Grid item sx>
@@ -76,7 +76,7 @@ function BlueRows() {
                     #175092
                 </Typography>
                 <Typography gutterBottom variant="body2" component="div">
-                    Blaa_moerk
+                    Blaa_Moerk
                 </Typography>
             </Grid>
             <Grid item sx>
@@ -85,7 +85,7 @@ function BlueRows() {
                     #E4F1F8
                 </Typography>
                 <Typography gutterBottom variant="body2" component="div">
-                    Blaa_lys
+                    Blaa_Lys
                 </Typography>
             </Grid>
         </>
@@ -101,7 +101,7 @@ function RedRows() {
                     #A32F00
                 </Typography>
                 <Typography gutterBottom variant="body2" component="div">
-                    Roed_feilmelding
+                    Roed_Feilmelding
                 </Typography>
             </Grid>
             <Grid item sx>
@@ -110,7 +110,7 @@ function RedRows() {
                     #D04a14
                 </Typography>
                 <Typography gutterBottom variant="body2" component="div">
-                    Roed_moerk
+                    Roed_Moerk
                 </Typography>
             </Grid>
             <Grid item sx>

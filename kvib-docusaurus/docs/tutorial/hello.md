@@ -3,6 +3,8 @@ sidebar_label: 'First Docusaurus Doc!'
 sidebar_position: 1
 ---
 
+import UUCard from '@site/src/components/UUPage/UU';
+
 # Hello there!
 
 This is my **first Docusaurus document**!
@@ -17,5 +19,7 @@ Note to self: Check out .md
   <summary>Epcot Center</summary>
   <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
 </details>
+
+<UUCard/>
 
 
