@@ -33,6 +33,11 @@ Subklasse tertiary
     min-width: 2rem; /* Tilfeldig verdi, minste button width (xs) er 3.5rem så denne skal ikke overkjøre xs størrelsen*/
 }
 
+
+/*****************
+  Farger
+******************/
+
 .kv-button-color{
     /* Primary */
     --kv-button-color-primary-green--normal: var(--groenn_moerk);
@@ -109,6 +114,11 @@ Subklasse tertiary
     */
 }
 
+
+/******************* 
+  Knappestørrelser 
+********************/
+
 .kv-button--xs{
     width: 9.875rem;
     height: 3.5rem;
@@ -128,6 +138,9 @@ Subklasse tertiary
 /* Subklasse for ikon HER  */
 
 
+/******************
+  Knappetyper
+*******************/
 
 /* kv-button primary */
 .kv-button-green--primary{
