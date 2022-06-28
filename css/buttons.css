@@ -3,7 +3,6 @@
 /* Struktur
 
 Hovedklasse kv-button med standard verdier typ marginer, cursor osv...
-Subklasse for farger til primary, secondary og tertiary
 Subklasse for størrelser
 Subklasse for ikon
 Subklasse for ikon tilhørende størrelse - ikke nødvendig? Ser ut som at det kun er én størrelse på ikonet
@@ -14,104 +13,20 @@ Subklasse primary
     - disabled
     - focus
 Subklasse secondary
-    - samme ting som primary
+    - samme attributter som primary
 Subklasse tertiary
-    - samme ting som primary
+    - samme attributter som primary
 */
 
 .kv-button{
     background: none; 
     border: none; /* Sjekk senere */
     border-radius: 0.5rem;
-    text-align: center;
     text-decoration: none; /* Riktig? */
-    display: inline-flex;
     cursor: pointer;
-    margin: 0; /* Fyll inn riktig verdi senere*/
-    gap: 0; /* Fyll inn riktig her senere, samme som gutter*/
-    padding: var(--padding-button); /*Sjekk denne mot Figma og test senere */
+    margin: 1rem; /* Fyll inn riktig verdi senere*/
+    gap: 1rem; /* Fyll inn riktig her senere, samme som gutter*/
     min-width: 2rem; /* Tilfeldig verdi, minste button width (xs) er 3.5rem så denne skal ikke overkjøre xs størrelsen*/
-}
-
-
-/*****************
-  Farger
-******************/
-
-.kv-button-color{
-    /* Primary */
-    --kv-button-color-primary-green--normal: var(--groenn_moerk);
-    --kv-button-color-primary-green--hover: var(--groenn);
-    --kv-button-color-primary-green--active: var(--groenn_aktiv);
-    
-    --kv-button-color-primary-green-text: var(--hvit);
-
-    
-    --kv-button-color-primary-blue--normal: var(--blaa);
-    --kv-button-color-primary-blue--hover: var(--blaa_hover);
-    --kv-button-color-primary-blue--active: var(--blaa_moerk);
-    
-    --kv-button-color-primary-blue--normal--text: var(--hvit);
-    --kv-button-color-primary-blue--hover--text: var(--svart);
-    --kv-button-color-primary-blue--active--text: var(--hvit);
-
-
-    /* Secondary */
-    --kv-button-color-secondary-green--normal: var(--hvit);
-    --kv-button-color-secondary-green--hover: var(--groenn);
-    --kv-button-color-secondary-green--active: var(--groenn_aktiv);
-
-    --kv-button-color-secondary-green--normal--text: var(--groenn_moerk);
-    --kv-button-color-secondary-green--hover--text: var(--hvit);
-    --kv-button-color-secondary-green--active--text: var(--hvit);
-
-    
-    --kv-button-color-secondary-blue--normal: var(--hvit);
-    --kv-button-color-secondary-blue--hover: var(--blaa_hover);
-    --kv-button-color-secondary-blue--active: var(--blaa_moerk);
-    
-    --kv-button-color-secondary-blue--normal--text: var(--blaa);
-    --kv-button-color-secondary-blue--hover--text: var(--svart);
-    --kv-button-color-secondary-blue--active--text: var(--hvit);
-
-    
-    /* Tertiary */
-    --kv-button-color-tertiary-green--normal: var(--hvit);
-    --kv-button-color-tertiary-green--hover: var(--hvit);
-    --kv-button-color-tertiary-green--active: var(--hvit);
-
-    --kv-button-color-tertiary-green--normal--text: var(--groenn_moerk);
-    --kv-button-color-tertiary-green--hover--text: var(--groenn_moerk);
-    --kv-button-color-tertiary-green--active--text: var(--groenn_aktiv);
-
-    --kv-button-color-tertiary-green--hover--text-underline: var(--groenn_moerk);
-
-
-    --kv-button-color-tertiary-blue--normal: var(--hvit);
-    --kv-button-color-tertiary-blue--hover: var(--hvit);
-    --kv-button-color-tertiary-blue--active: var(--hvit);
-
-    --kv-button-color-tertiary-blue--normal--text: var(--blaa);
-    --kv-button-color-tertiary-blue--hover--text: var(--blaa_moerk);
-    --kv-button-color-tertiary-blue--active--text: var(--blaa_moerk);
-
-    --kv-button-color-tertiary-blue--hover--text-underline: var(--blaa_moerk);
-
-    /* Disabled */
-    --kv-button-color--disabled-text: var(--graa_moerk);
-    --kv-button-color--disabled: var(--graa_lys);
-
-    /* Focus border */
-    --kv-button-color-border--focus: var(--blaa_moerk);
-
-    /* Icon
-    --kv-button-color-icon--white: var(--hvit);
-    --kv-button-color-icon--green: var(--groenn);
-    --kv-button-color-icon--blue: var(--blaa);
-    --kv-button-color-icon--darkblue: var(--blaa_moerk);
-    --kv-button-color-icon--black: var(--svart);
-    --kv-button-color-icon--disabled: var(--graa_moerk);  /* Endre navn til darkgrey? 
-    */
 }
 
 
@@ -119,46 +34,26 @@ Subklasse tertiary
   Knappestørrelser 
 ********************/
 
-.kv-button--xs{
-    width: 8rem;
+.kv-button--xs .heading .tertiary--x-small{
+    width: 9.875rem;
     height: 3.5rem;
-    /*font-size: 1rem;*/
-    border-radius: 1rem;
-    /*color: var(--hvit);*/
-    /*background-color: var(--groenn);*/
+    padding: var(--padding-button--xs);
 }
 
-/*.kb-button--xs:hover{*/
-/*             background-color: var(--groenn_moerk);*/
-/*}*/
-/*.kb-button--xs:focus{*/
-/*    box-shadow: 0 0 0 0.2rem var(--blaa_moerk);*/
-/*}*/
-
-/*.kb-button--xs:active{*/
-/*    box-shadow: none;*/
-/*    background-color: var(--groenn_aktiv);*/
-/*    border-color: #005cbf;*/
-/*}*/
-
-
-
 .kv-button--sm{
-    width: 13.375rem;
+    width: 10.875rem;
     height: 4.5rem;
-    font-size: 1.5rem;
+    padding: var(--padding-button--s-m-l);
 }
 
 .kv-button--l{
-    width: 14.188rem;
+    width: 11.688rem;
     height: 5rem;
-    font-size: 2rem;
-}
-
-.button{
-    width: 14.188rem;
-    height: 10rem;
-    background-color: #A32F00;
+    padding: var(--padding-button--s-m-l);
+    font-family: "Mulish";
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 2rem;
 }
 
 
@@ -171,159 +66,182 @@ Subklasse tertiary
 
 /* kv-button primary */
 .kv-button-green--primary{
-    background-color: var(--groenn);
-    color: var(--kv-button-color-primary-green-text); /* Setter tekstfarge */
-    /* legge til border her? */
+    background-color: var(--groenn_standard);
+    color: var(--hvit); /* Setter tekstfarge */
 }
 
 .kv-button-green--primary:hover{
-    background-color: var(--kv-button-color-primary-green--hover);
-    color: var(--kv-button-color-primary-green-text);
+    background-color: var(--groenn_hover);
+    color: var(--hvit);
 }
 
 .kv-button-green--primary:active{
-    background-color: var(--kv-button-color-primary-green--active);
-    color: var(--kv-button-color-primary-green-text);
+    background-color: var(--groenn_moerk);
+    color: var(--hvit);
 }
 
 .kv-button-green--primary:focus{
-   border: var(--focus-border) var(--kv-button-color-border--focus);
+   outline-style: solid;
+   outline-color: var(--blaa_moerk);
+   outline-width: var(--focus-outline);
+   /*outline: var(--focus-outline) solid var(--blaa_moerk);*/
+   outline-offset: 0.313rem;
 }
 
 .kv-button-green--primary:disabled{
-    background-color: var(--kv-button-color--disabled);
-    color: var(--kv-button-color--disabled-text);
+    background-color: var(--graa_lys);
+    color: var(--graa_moerk);
 }
 
 
 
 .kv-button-blue--primary{
-    background-color: var(--kv-button-color-primary-blue--normal);
-    color: var(--kv-button-color-primary-blue--normal--text);
+    background-color: var(--blaa);
+    color: var(--hvit);
 }
 
 .kv-button-blue--primary:hover{
-    background-color: var(--kv-button-color-primary-blue--hover);
-    color: var(--kv-button-color-primary-blue--hover--text);
+    background-color: var(--blaa_hover);
+    color: var(--svart);
 }
 
 .kv-button-blue--primary:active{
-    background-color: var(--kv-button-color-primary-blue--active);
-    color: var(--kv-button-color-primary-blue--active--text);
+    background-color: var(--blaa_moerk);
+    color: var(--hvit);
 }
 
 .kv-button-blue--primary:focus{
-    border: var(--focus-border) var(--kv-button-color-border--focus);
+   outline-style: solid;
+   outline-color: var(--blaa_moerk);
+   outline-width: var(--focus-outline);
+   /*outline: var(--focus-outline) solid var(--blaa_moerk);*/
+   outline-offset: 0.313rem;
 }
 
 .kv-button-blue--primary:disabled{
-    background-color: var(--kv-button-color--disabled);
-    color: var(--kv-button-color--disabled-text);
+    background-color: var(--graa_lys);
+    color: var(--graa_moerk);
 }
 
 
 
 /* kv-button secondary */
 .kv-button-green-secondary{
-    background-color: var(--kv-button-color-secondary-green--normal);
-    color: var(--kv-button-color-secondary-green--normal--text);
+    background-color: var(--hvit);
+    color: var(--groenn_standard);
 }
 
 .kv-button-green-secondary:hover{
-    background-color: var(--kv-button-color-secondary-green--hover);
-    color: var(--kv-button-color-secondary-green--hover--text);
+    background-color: var(--groenn_hover);
+    color: var(--hvit);
 }
 
 .kv-button-green-secondary:active{
-    background-color: var(--kv-button-color-secondary-green--active);
-    color: var(--kv-button-color-secondary-green--active--text);
+    background-color: var(--groenn_moerk);
+    color: var(--hvit);
 }
 
 .kv-button-green-secondary:focus{
-    border: var(--focus-border) var(--kv-button-color-border--focus);
+   outline-style: solid;
+   outline-color: var(--blaa_moerk);
+   outline-width: var(--focus-outline);
+   /*outline: var(--focus-outline) solid var(--blaa_moerk);*/
+   outline-offset: 0.313rem;
 }
 
 .kv-button-green-secondary:disabled{
-    background-color: var(--kv-button-color--disabled);
-    color: var(--kv-button-color--disabled-text);
+    background-color: var(--graa_lys);
+    color: var(--graa_moerk);
 }
 
 
 .kv-button-blue--secondary{
-    background-color: var(--kv-button-color-secondary-blue--normal);
-    color: var(--kv-button-color-secondary-blue--normal--text);
+    background-color: var(--hvit);
+    color: var(--blaa);
 }
 
 .kv-button-blue--secondary:hover{
-    background-color: var(--kv-button-color-secondary-blue--hover);
-    color: var(--kv-button-color-secondary-blue--hover--text);
+    background-color: var(--blaa_hover);
+    color: var(--svart);
 }
 
 .kv-button-blue--secondary:active{
-    background-color: var(--kv-button-color-secondary-blue--active);
-    color: var(--kv-button-color-secondary-blue--active--text);
+    background-color: var(--blaa_moerk);
+    color: var(--hvit);
 }
 
 .kv-button-blue--secondary:focus{
-    border: var(--focus-border) var(--kv-button-color-border--focus);
+   outline-style: solid;
+   outline-color: var(--blaa_moerk);
+   outline-width: var(--focus-outline);
+   /*outline: var(--focus-outline) solid var(--blaa_moerk);*/
+   outline-offset: 0.313rem;
 }
 
 .kv-button-blue--secondary:disabled{
-    background-color: var(--kv-button-color--disabled);
-    color: var(--kv-button-color--disabled-text);
+    background-color: var(--graa_lys);
+    color: var(--graa_moerk);
 }
 
 
 /* kv-button tertiary */
 .kv-button-green-tertiary{
-    background-color: var(--kv-button-color-tertiary-green--normal);
-    color: var(--kv-button-color-tertiary-green--normal--text);
+    background-color: var(--hvit);
+    color: var(--groenn_standard);
 }
 
 .kv-button-green-tertiary:hover{
-    background-color: var(--kv-button-color-tertiary-green--hover);
-    color: var(--kv-button-color-tertiary-green--hover--text);
+    background-color: var(--hvit);
+    color: var(--groenn_standard);
     text-decoration: underline;
-    text-decoration-color: var(--kv-button-color-tertiary-green--hover--text-underline);
+    text-decoration-color: var(--groenn_standard);
 }
 
 .kv-button-green-tertiary:active{
-    background-color: var(--kv-button-color-tertiary-green--active);
-    color: var(--kv-button-color-tertiary-green--active--text);
+    background-color: var(--hvit);
+    color: var(--groenn_moerk);
 }
 
 .kv-button-green-tertiary:focus{
-    border: var(--focus-border) var(--kv-button-color-border--focus);
+   outline-style: solid;
+   outline-color: var(--blaa_moerk);
+   outline-width: var(--focus-outline);
+   /*outline: var(--focus-outline) solid var(--blaa_moerk);*/
+   outline-offset: 0.313rem;
 }
 
 .kv-button-green-tertiary:disabled{
-    background-color: var(--kv-button-color--disabled);
-    color: var(--kv-button-color--disabled-text);
+    background-color: var(--graa_lys);
+    color: var(--graa_moerk);
 }
 
 
 .kv-button-blue--tertiary{
-    background-color: var(--kv-button-color-tertiary-blue--normal);
-    color: var(--kv-button-color-tertiary-blue--normal--text);
+    background-color: var(--hvit);
+    color: var(--blaa);
 }
 
 .kv-button-blue--tertiary:hover{
-    background-color: var(--kv-button-color-tertiary-blue--hover);
-    color: var(--kv-button-color-tertiary-blue--hover--text);
+    background-color: var(--hvit);
+    color: var(--blaa_moerk);
     text-decoration: underline;
-    text-decoration-color: var(--kv-button-color-tertiary-blue--hover--text-underline);
+    text-decoration-color: var(--blaa_moerk);
 }
 
 .kv-button-blue--tertiary:active{
-    background-color: var(--kv-button-color-tertiary-blue--active);
-    color: var(--kv-button-color-tertiary-blue--active--text);
+    background-color: var(--hvit);
+    color: var(--blaa_moerk);
 }
 
 .kv-button-blue--tertiary:focus{
-    border: var(--focus-border) var(--kv-button-color-border--focus);
+   outline-style: solid;
+   outline-color: var(--blaa_moerk);
+   outline-width: var(--focus-outline);
+   /*outline: var(--focus-outline) solid var(--blaa_moerk);*/
+   outline-offset: 0.313rem;
 }
 
 .kv-button-blue--tertiary:disabled{
-    background-color: var(--kv-button-color--disabled);
-    color: var(--kv-button-color--disabled-text);
+    background-color: var(--graa_lys);
+    color: var(--graa_moerk);
 }
