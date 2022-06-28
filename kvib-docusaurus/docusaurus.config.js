@@ -54,10 +54,9 @@ const config = {
   /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
       ({
         navbar: {
-          title: 'Tittel',
           logo: {
             alt: 'Docusaurus logo',
-            src: 'img/docusaurus.png',
+            src: 'img/logo/kartverket_liggende_web.svg',
           },
           items: [
             {
