@@ -47,7 +47,7 @@ const config = {
               'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
-          customCss: require.resolve('./src/css/main.css'),
+          customCss: require.resolve('../css/main.css'),
         },
       }),
     ],
@@ -185,6 +185,7 @@ const config = {
         prism: {
           theme: lightCodeTheme,
           darkTheme: darkCodeTheme,
+
         },
       }),
 };
