@@ -10,21 +10,12 @@ function GreenRows() {
     return (
         <>
             <Grid item sx>
-                <Paper class={"greenActivePalette"}/>
-                <Typography gutterBottom variant="subtitle1" component="div">
-                    #05502A
-                </Typography>
-                <Typography gutterBottom variant="body2" component="div">
-                    Groenn_Aktiv
-                </Typography>
-            </Grid>
-            <Grid item sx>
                 <Paper class={"darkGreenPalette"}/>
                 <Typography gutterBottom variant="subtitle1" component="div">
                     #156630
                 </Typography>
                 <Typography gutterBottom variant="body2" component="div">
-                    Groenn_Moerk
+                    --groenn_moerk
                 </Typography>
             </Grid>
             <Grid item sx>
@@ -33,7 +24,16 @@ function GreenRows() {
                     #1A833B
                 </Typography>
                 <Typography gutterBottom variant="body2" component="div">
-                    Groenn
+                    --groenn_standard
+                </Typography>
+            </Grid>
+            <Grid item sx>
+                <Paper class={"greenActivePalette"}/>
+                <Typography gutterBottom variant="subtitle1" component="div">
+                    #05502A
+                </Typography>
+                <Typography gutterBottom variant="body2" component="div">
+                    --groenn_hover
                 </Typography>
             </Grid>
             <Grid item sx>
@@ -42,7 +42,7 @@ function GreenRows() {
                     #D0ECD6
                 </Typography>
                 <Typography gutterBottom variant="body2" component="div">
-                    Groenn_Lys
+                    --groenn_lys
                 </Typography>
             </Grid>
         </>
@@ -53,12 +53,21 @@ function BlueRows() {
     return (
         <>
             <Grid item sx>
+                <Paper class={"darkBluePalette"}/>
+                <Typography gutterBottom variant="subtitle1" component="div">
+                    #175092
+                </Typography>
+                <Typography gutterBottom variant="body2" component="div">
+                    --blaa_moerk
+                </Typography>
+            </Grid>
+            <Grid item sx>
                 <Paper class={"bluePalette"}/>
                 <Typography gutterBottom variant="subtitle1" component="div">
                     #1A589F
                 </Typography>
                 <Typography gutterBottom variant="body2" component="div">
-                    Blaa
+                    --blaa
                 </Typography>
             </Grid>
             <Grid item sx>
@@ -67,16 +76,7 @@ function BlueRows() {
                     #439CCD
                 </Typography>
                 <Typography gutterBottom variant="body2" component="div">
-                    Blaa_Hover
-                </Typography>
-            </Grid>
-            <Grid item sx>
-                <Paper class={"darkBluePalette"}/>
-                <Typography gutterBottom variant="subtitle1" component="div">
-                    #175092
-                </Typography>
-                <Typography gutterBottom variant="body2" component="div">
-                    Blaa_Moerk
+                    --blaa_hover
                 </Typography>
             </Grid>
             <Grid item sx>

@@ -70,14 +70,14 @@
 }
 
 .greenPalette {
-    background-color: var(--groenn);
+    background-color: var(--groenn_standard);
     height: 100px;
     width: 100px;
     margin-top: 40px;
 }
 
 .greenActivePalette {
-    background-color: var(--groenn_aktiv);
+    background-color: var(--groenn_hover);
     height: 100px;
     width: 100px;
     margin-top: 40px;
