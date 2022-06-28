@@ -120,20 +120,45 @@ Subklasse tertiary
 ********************/
 
 .kv-button--xs{
-    width: 9.875rem;
+    width: 8rem;
     height: 3.5rem;
-    font-size: 5rem;
+    /*font-size: 1rem;*/
+    border-radius: 1rem;
+    /*color: var(--hvit);*/
+    /*background-color: var(--groenn);*/
 }
+
+/*.kb-button--xs:hover{*/
+/*             background-color: var(--groenn_moerk);*/
+/*}*/
+/*.kb-button--xs:focus{*/
+/*    box-shadow: 0 0 0 0.2rem var(--blaa_moerk);*/
+/*}*/
+
+/*.kb-button--xs:active{*/
+/*    box-shadow: none;*/
+/*    background-color: var(--groenn_aktiv);*/
+/*    border-color: #005cbf;*/
+/*}*/
+
+
 
 .kv-button--sm{
     width: 13.375rem;
     height: 4.5rem;
+    font-size: 1.5rem;
 }
 
 .kv-button--l{
     width: 14.188rem;
     height: 5rem;
-    text-size-adjust: auto;
+    font-size: 2rem;
+}
+
+.button{
+    width: 14.188rem;
+    height: 10rem;
+    background-color: #A32F00;
 }
 
 
@@ -146,7 +171,7 @@ Subklasse tertiary
 
 /* kv-button primary */
 .kv-button-green--primary{
-    background-color: var(--kv-button-color-primary-green--normal);
+    background-color: var(--groenn);
     color: var(--kv-button-color-primary-green-text); /* Setter tekstfarge */
     /* legge til border her? */
 }
