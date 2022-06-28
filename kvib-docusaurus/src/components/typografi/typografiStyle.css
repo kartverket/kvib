@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap');
+
+
+table {
+    text-align:left;
+
+  }
+  table th {
+    background-color: var(--groenn_lys);
+    }
