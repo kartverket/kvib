@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'KVIB Styleguides',
   tagline: 'Styleguides',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://localhost:3000',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -34,17 +34,14 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+          routeBasePath: '/',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-              'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-              'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
           customCss: require.resolve('../css/main.css'),
@@ -57,77 +54,22 @@ const config = {
   /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
       ({
         navbar: {
-          title: 'Tittel',
           logo: {
             alt: 'Docusaurus logo',
-            src: 'img/docusaurus.png',
+            src: 'img/logo/kartverket_liggende_web.svg',
           },
           items: [
             {
               type: 'doc',
-              docId: 'figma-id',
+              docId: 'figmaID',
               position: 'left',
-              label: 'KVIB Figma',
+              label: 'Om Kvib',
             },
             {
               type: 'doc',
-              docId: 'uu-id',
+              docId: 'designsystems/uuID',
               position: 'left',
-              label: 'UU',
-            },
-            {
-              type: 'doc',
-              docId: 'sideelementer-id',
-              position: 'left',
-              label: 'Sideelementer',
-            },
-            {
-              type: 'doc',
-              docId: 'typografi-id',
-              position: 'left',
-              label: 'Typografi',
-            },
-            {
-              type: 'doc',
-              docId: 'inputfelt-id',
-              position: 'left',
-              label: 'Inputfelt',
-            },
-            {
-              type: 'doc',
-              docId: 'grids-id',
-              position: 'left',
-              label: 'Grid',
-            },
-            {
-              type: 'doc',
-              docId: 'logo-id',
-              position: 'left',
-              label: 'Logo',
-            },
-            {
-              type: 'doc',
-              docId: 'icons-id',
-              position: 'left',
-              label: 'Ikoner',
-            },
-            {
-              type: 'doc',
-              docId: 'nav-id',
-              position: 'left',
-              label: 'Navigasjon',
-            },
-            {
-              type: 'doc',
-              docId: 'knapper-id',
-              position: 'left',
-              label: 'Knapper',
-            },
-            {
-              type: 'doc',
-              docId: 'farger-id',
-              position: 'left',
-              label: 'Farger',
+              label: 'Designsystem',
             },
             {
               type: 'doc',

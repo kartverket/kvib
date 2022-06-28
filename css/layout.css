@@ -1,4 +1,4 @@
-:root{
+:root {
     /*Skjermstørrelse*/
     --screenBreakSm: 48rem; /*Maks størrelse for small-devices*/
     --screenBreakM: 63.938rem; /*Maks størrelse som for medium-devices*/
@@ -25,11 +25,34 @@
     --grid-gutter-l: 2rem;
 
     --distance-xl: 2rem;
+
+    /* Padding */
+    --padding-button: 0.5rem;
+
+
+    /* Focus border state */
+    --focus-border: 0.188rem;
+
 }
 
+.details {
+    outline: none;
+    background: white;
+    border: none;
+}
 
-/*Annet fra variables.scss
-other{
-    --border-radius: 25.5px; /*For knapper med avrundede hjørner*/ /*egen variabel i button.css i toppen
-    /*--skygge: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-}*/
+.details > summary {
+    padding: 4px;
+    width: auto;
+    background-color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+.details > p {
+    background-color: white;
+    padding: 4px;
+    margin: 0;
+    color: #A32F00;
+}
+
