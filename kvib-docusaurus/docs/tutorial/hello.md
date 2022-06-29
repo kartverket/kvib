@@ -3,7 +3,7 @@ sidebar_label: 'First Docusaurus Doc!'
 sidebar_position: 1
 ---
 
-import UUCard from '@site/src/components/UUPage/UU';
+
 
 # Hello there!
 
@@ -20,6 +20,5 @@ Note to self: Check out .md
   <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
 </details>
 
-<UUCard/>
 
 
