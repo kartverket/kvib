@@ -8,7 +8,7 @@ sidebar_position: 1
 ---
 
 import { NormalGreenButtonRow, IconLeftGreenButtonRow, IconRightGreenButtonRow, SecondaryGreenButtonRow, IconLeftSecondaryGreenButtonRow, IconRightSecondaryGreenButtonRow } from '@site/src/components/buttons/Buttons';
-
+import FavoriteIcon from '@mui/icons-material/Favorite';
 
 ### Sliderknapp
 
@@ -35,7 +35,16 @@ Primærknappen er grønn og brukes for å avslutte en handling (f. eks send inn 
 
 #### Eksempelbruk
 
+```markup title="/.html"
+<html>
+    <body>
+        <button class="kv-button kv-button-green--primary kv-button--xs">Skriv tekst her</button>
+        <button class="kv-button kv-button-green--primary kv-button--sm">Skriv tekst her</button>
+        <button class="kv-button kv-button-green--primary kv-button--l">Skriv tekst her</button>
+    </body>
+</html>
 
+```
 
 ### Ikon venstre
 
@@ -54,6 +63,19 @@ Sekundærknapper brukes til handlinger som er sekundære til hovedhensikten med 
 <button class="kv-button kv-button-green--secondary kv-button--sm">Skriv tekst her</button>
 <button class="kv-button kv-button-green--secondary kv-button--l">Skriv tekst her</button>
 
+#### Eksempelbruk
+
+```markup title="/.html"
+<html>
+    <body>
+        <button class="kv-button kv-button-green--secondary kv-button--xs">Skriv tekst her</button>
+        <button class="kv-button kv-button-green--secondary kv-button--sm">Skriv tekst her</button>
+        <button class="kv-button kv-button-green--secondary kv-button--l">Skriv tekst her</button>
+    </body>
+</html>
+
+```
+
 ### Ikon venstre
 
 Kommer senere
@@ -71,6 +93,19 @@ Brukes der brukeren har behov for en trykkbar lenke som ikke står i en tekst. K
 <button class="kv-button kv-button-green--tertiary kv-button--xs">Skriv tekst her</button>
 <button class="kv-button kv-button-green--tertiary kv-button--sm">Skriv tekst her</button>
 <button class="kv-button kv-button-green--tertiary kv-button--l">Skriv tekst her</button>
+
+#### Eksempelbruk
+
+```markup title="/.html"
+<html>
+    <body>
+        <button class="kv-button kv-button-green--tertiary kv-button--xs">Skriv tekst her</button>
+        <button class="kv-button kv-button-green--tertiary kv-button--sm">Skriv tekst her</button>
+        <button class="kv-button kv-button-green--tertiary kv-button--l">Skriv tekst her</button>
+    </body>
+</html>
+
+```
 
 ### Ikon venstre
 
@@ -94,6 +129,19 @@ Primærknappen er blå og brukes for å avslutte en handling (f. eks send inn sk
 <button class="kv-button kv-button-blue--primary kv-button--sm">Skriv tekst her</button>
 <button class="kv-button kv-button-blue--primary kv-button--l">Skriv tekst her</button>
 
+#### Eksempelbruk
+
+```markup title="/.html"
+<html>
+    <body>
+        <button class="kv-button kv-button-blue--primary kv-button--xs">Skriv tekst her</button>
+        <button class="kv-button kv-button-blue--primary kv-button--sm">Skriv tekst her</button>
+        <button class="kv-button kv-button-blue--primary kv-button--l">Skriv tekst her</button>
+    </body>
+</html>
+
+```
+
 ### Ikon venstre
 
 Kommer senere
@@ -109,6 +157,19 @@ Kommer senere
 <button class="kv-button kv-button-blue--secondary kv-button--xs">Skriv tekst her</button>
 <button class="kv-button kv-button-blue--secondary kv-button--sm">Skriv tekst her</button>
 <button class="kv-button kv-button-blue--secondary kv-button--l">Skriv tekst her</button>
+
+#### Eksempelbruk
+
+```markup title="/.html"
+<html>
+    <body>
+        <button class="kv-button kv-button-blue--secondary kv-button--xs">Skriv tekst her</button>
+        <button class="kv-button kv-button-blue--secondary kv-button--sm">Skriv tekst her</button>
+        <button class="kv-button kv-button-blue--secondary kv-button--l">Skriv tekst her</button>
+    </body>
+</html>
+
+```
 
 ### Ikon venstre
 
@@ -128,6 +189,19 @@ Brukes der brukeren har behov for en trykkbar lenke som ikke står i en tekst. K
 <button class="kv-button kv-button-blue--tertiary kv-button--sm">Skriv tekst her</button>
 <button class="kv-button kv-button-blue--tertiary kv-button--l">Skriv tekst her</button>
 
+#### Eksempelbruk
+
+```markup title="/.html"
+<html>
+    <body>
+        <button class="kv-button kv-button-blue--tertiary kv-button--xs">Skriv tekst her</button>
+        <button class="kv-button kv-button-blue--tertiary kv-button--sm">Skriv tekst her</button>
+        <button class="kv-button kv-button-blue--tertiary kv-button--l">Skriv tekst her</button>
+    </body>
+</html>
+
+```
+
 ### Ikon venstre
 
 Kommer senere
@@ -135,6 +209,30 @@ Kommer senere
 ### Ikon høyre
 
 Kommer senere
+
+### Disabled
+
+Knappen kan ikke trykkes. Utseende på disable tilstanden er den samme for alle knappene.
+
+### Uten ikon
+
+<button class="kv-button kv-button--xs" disabled>Skriv tekst her</button>
+<button class="kv-button kv-button--sm" disabled>Skriv tekst her</button>
+<button class="kv-button kv-button--l" disabled>Skriv tekst her</button>
+
+#### Eksempelbruk
+
+```markup title="/.html"
+<html>
+    <body>
+        <button class="kv-button kv-button--xs" disabled>Skriv tekst her</button>
+        <button class="kv-button kv-button--sm" disabled>Skriv tekst her</button>
+        <button class="kv-button kv-button--l" disabled>Skriv tekst her</button>
+
+    </body>
+</html>
+
+```
 
 ## Kartverkets knapper
 
