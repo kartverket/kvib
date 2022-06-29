@@ -24,7 +24,7 @@ Subklasse tertiary
     border-radius: 0.5rem;
     text-decoration: none; /* Riktig? */
     cursor: pointer;
-    margin: 1rem; /* Fyll inn riktig verdi senere*/
+    margin: 0.5rem; /* Fyll inn riktig verdi senere*/
     gap: 1rem; /* Fyll inn riktig her senere, samme som gutter*/
     min-width: 2rem; /* Tilfeldig verdi, minste button width (xs) er 3.5rem så denne skal ikke overkjøre xs størrelsen*/
 }
@@ -34,10 +34,14 @@ Subklasse tertiary
   Knappestørrelser 
 ********************/
 
-.kv-button--xs .heading .tertiary--x-small{
+.kv-button--xs{
     width: 9.875rem;
     height: 3.5rem;
     padding: var(--padding-button--xs);
+    /*font-family: "Mulish";
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.5rem;*/
 }
 
 .kv-button--sm{
