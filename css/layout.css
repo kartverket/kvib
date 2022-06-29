@@ -35,24 +35,5 @@
 
 }
 
-.details {
-    outline: none;
-    background: white;
-    border: none;
-}
 
-.details > summary {
-    padding: 4px;
-    width: auto;
-    background-color: white;
-    cursor: pointer;
-    outline: none;
-}
-
-.details > p {
-    background-color: white;
-    padding: 4px;
-    margin: 0;
-    color: #A32F00;
-}
 
