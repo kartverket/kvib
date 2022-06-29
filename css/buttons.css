@@ -22,11 +22,13 @@ Subklasse tertiary
     background: none; 
     border: none; /* Sjekk senere */
     border-radius: 0.5rem;
-    text-decoration: none; /* Riktig? */
+    text-decoration: none;
     cursor: pointer;
-    margin: 0.5rem; /* Fyll inn riktig verdi senere*/
+    margin: 0.5rem;
     gap: 1rem; /* Fyll inn riktig her senere, samme som gutter*/
     min-width: 2rem; /* Tilfeldig verdi, minste button width (xs) er 3.5rem så denne skal ikke overkjøre xs størrelsen*/
+    font-family: 'Mulish';
+    font-weight: 700;
 }
 
 
@@ -38,24 +40,24 @@ Subklasse tertiary
     width: 9.875rem;
     height: 3.5rem;
     padding: var(--padding-button--xs);
-    /*font-family: "Mulish";
-    font-weight: 700;
+    /* h3--x-small*/
     font-size: 1rem;
-    line-height: 1.5rem;*/
+    line-height: 1.5rem;
 }
 
 .kv-button--sm{
     width: 10.875rem;
     height: 4.5rem;
     padding: var(--padding-button--s-m-l);
+    /* h3--x-small*/
+    font-size: 1rem;
+    line-height: 1.5rem;
 }
 
 .kv-button--l{
     width: 11.688rem;
     height: 5rem;
     padding: var(--padding-button--s-m-l);
-    font-family: "Mulish";
-    font-weight: 700;
     font-size: 1.125rem;
     line-height: 2rem;
 }
@@ -130,22 +132,26 @@ Subklasse tertiary
 
 
 /* kv-button secondary */
-.kv-button-green-secondary{
+.kv-button-green--secondary{
     background-color: var(--hvit);
     color: var(--groenn_standard);
+    outline-style: solid;
+    outline-color: var(--groenn_standard);
 }
 
-.kv-button-green-secondary:hover{
+.kv-button-green--secondary:hover{
     background-color: var(--groenn_hover);
     color: var(--hvit);
+    outline: none;
 }
 
-.kv-button-green-secondary:active{
+.kv-button-green--secondary:active{
     background-color: var(--groenn_moerk);
     color: var(--hvit);
+    outline: none;
 }
 
-.kv-button-green-secondary:focus{
+.kv-button-green--secondary:focus{
    outline-style: solid;
    outline-color: var(--blaa_moerk);
    outline-width: var(--focus-outline);
@@ -153,7 +159,7 @@ Subklasse tertiary
    outline-offset: 0.313rem;
 }
 
-.kv-button-green-secondary:disabled{
+.kv-button-green--secondary:disabled{
     background-color: var(--graa_lys);
     color: var(--graa_moerk);
 }
@@ -162,16 +168,20 @@ Subklasse tertiary
 .kv-button-blue--secondary{
     background-color: var(--hvit);
     color: var(--blaa);
+    outline-style: solid;
+    outline-color: var(--blaa);
 }
 
 .kv-button-blue--secondary:hover{
     background-color: var(--blaa_hover);
     color: var(--svart);
+    outline: none;
 }
 
 .kv-button-blue--secondary:active{
     background-color: var(--blaa_moerk);
     color: var(--hvit);
+    outline: none;
 }
 
 .kv-button-blue--secondary:focus{
@@ -189,24 +199,24 @@ Subklasse tertiary
 
 
 /* kv-button tertiary */
-.kv-button-green-tertiary{
+.kv-button-green--tertiary{
     background-color: var(--hvit);
     color: var(--groenn_standard);
 }
 
-.kv-button-green-tertiary:hover{
+.kv-button-green--tertiary:hover{
     background-color: var(--hvit);
     color: var(--groenn_standard);
     text-decoration: underline;
     text-decoration-color: var(--groenn_standard);
 }
 
-.kv-button-green-tertiary:active{
+.kv-button-green--tertiary:active{
     background-color: var(--hvit);
     color: var(--groenn_moerk);
 }
 
-.kv-button-green-tertiary:focus{
+.kv-button-green--tertiary:focus{
    outline-style: solid;
    outline-color: var(--blaa_moerk);
    outline-width: var(--focus-outline);
@@ -214,7 +224,7 @@ Subklasse tertiary
    outline-offset: 0.313rem;
 }
 
-.kv-button-green-tertiary:disabled{
+.kv-button-green--tertiary:disabled{
     background-color: var(--graa_lys);
     color: var(--graa_moerk);
 }
