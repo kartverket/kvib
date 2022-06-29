@@ -2,11 +2,11 @@
 
 
 html {
-    font-family: "Mulish";
+    font-family: 'Mulish', sans-serif;
   }
   
 body {
-    color: black ;/*bytt ut med variabel*/
+    color: black ;
     font-style: normal;
   }
 
@@ -14,53 +14,56 @@ body {
     text-decoration-line: underline;
 }
 
+/*felles for headere*/
 .heading {
     font-weight: 700;
 }
 
-/*h1-titles*/
-.main--x-small {
+
+/*h1-titles
+h3-large*/
+.h1--x-small, .h3--large {
     font-size: 1.25rem;
     line-height: 2rem;
 }
 
-.main--small{
+.h1--small{
     font-size: 1.5rem;
     line-height: 2.5rem;
 }
-.main--medium{
+.h1--medium{
     font-size: 2rem;
     line-height: 3rem;
 }
 
-.main--large{
+.h1--large{
     font-size: 2.25rem;
     line-height: 3rem;
 }
 
 
 /*h2-titles*/
-.secondary--x-small {
+.h2--x-small {
     font-size: 1.125rem;
     line-height: 1.5rem;
 }
 
-.secondary--small{
+.h2--small{
     font-size: 1.5rem;
     line-height: 2rem;
 }
 
-.secondary--medium{
+.h2--medium{
     font-size: 1.75rem;
     line-height: 2rem;
 }
-.secondary--large{ 
+.h2--large{ 
     font-size: 2rem;
     line-height: 2.5rem;
 }
 
 /*h3-titles*/
-.tertiary--x-small {
+.h3--x-small {
     font-size: 1rem;
     line-height: 1.5rem;
 }
@@ -72,9 +75,9 @@ body {
     line-height: 1.5rem;
 }
 
-/*klasse for størrelser (small, medium, large)
-Brukes for brodtekst og h3*/
-.brodtekst.s-m-l, .tertiary--s-m-l{
+/*klasse for h3-størrelser (small, medium)
+ klasse for brodtekst-størrelser (small, meidum,large*/
+.brodtekst.s-m-l, .h3--s-m{
     font-size: 1.125rem;
     line-height: 2rem;
 }
