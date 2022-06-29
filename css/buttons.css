@@ -62,6 +62,12 @@ Subklasse tertiary
     line-height: 2rem;
 }
 
+/* Fokus */
+.kv-button:focus:not(:focus-visible){
+    outline: var(--blaa_moerk) solid var(--focus-outline);
+    /*outline: var(--focus-outline) solid var(--blaa_moerk);*/
+    outline-offset: 0.313rem;
+}
 
 /* Subklasse for ikon HER  */
 
@@ -86,13 +92,6 @@ Subklasse tertiary
     color: var(--hvit);
 }
 
-.kv-button-green--primary:focus{
-   outline-style: solid;
-   outline-color: var(--blaa_moerk);
-   outline-width: var(--focus-outline);
-   /*outline: var(--focus-outline) solid var(--blaa_moerk);*/
-   outline-offset: 0.313rem;
-}
 
 .kv-button-green--primary:disabled{
     background-color: var(--graa_lys);
@@ -116,13 +115,6 @@ Subklasse tertiary
     color: var(--hvit);
 }
 
-.kv-button-blue--primary:focus{
-   outline-style: solid;
-   outline-color: var(--blaa_moerk);
-   outline-width: var(--focus-outline);
-   /*outline: var(--focus-outline) solid var(--blaa_moerk);*/
-   outline-offset: 0.313rem;
-}
 
 .kv-button-blue--primary:disabled{
     background-color: var(--graa_lys);
@@ -151,13 +143,6 @@ Subklasse tertiary
     outline: none;
 }
 
-.kv-button-green--secondary:focus{
-   outline-style: solid;
-   outline-color: var(--blaa_moerk);
-   outline-width: var(--focus-outline);
-   /*outline: var(--focus-outline) solid var(--blaa_moerk);*/
-   outline-offset: 0.313rem;
-}
 
 .kv-button-green--secondary:disabled{
     background-color: var(--graa_lys);
@@ -184,14 +169,6 @@ Subklasse tertiary
     outline: none;
 }
 
-.kv-button-blue--secondary:focus{
-   outline-style: solid;
-   outline-color: var(--blaa_moerk);
-   outline-width: var(--focus-outline);
-   /*outline: var(--focus-outline) solid var(--blaa_moerk);*/
-   outline-offset: 0.313rem;
-}
-
 .kv-button-blue--secondary:disabled{
     background-color: var(--graa_lys);
     color: var(--graa_moerk);
@@ -214,14 +191,6 @@ Subklasse tertiary
 .kv-button-green--tertiary:active{
     background-color: var(--hvit);
     color: var(--groenn_moerk);
-}
-
-.kv-button-green--tertiary:focus{
-   outline-style: solid;
-   outline-color: var(--blaa_moerk);
-   outline-width: var(--focus-outline);
-   /*outline: var(--focus-outline) solid var(--blaa_moerk);*/
-   outline-offset: 0.313rem;
 }
 
 .kv-button-green--tertiary:disabled{
@@ -247,13 +216,6 @@ Subklasse tertiary
     color: var(--blaa_moerk);
 }
 
-.kv-button-blue--tertiary:focus{
-   outline-style: solid;
-   outline-color: var(--blaa_moerk);
-   outline-width: var(--focus-outline);
-   /*outline: var(--focus-outline) solid var(--blaa_moerk);*/
-   outline-offset: 0.313rem;
-}
 
 .kv-button-blue--tertiary:disabled{
     background-color: var(--graa_lys);
