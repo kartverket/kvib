@@ -4,25 +4,32 @@ title: Inputfelt
 description: Inputfelt
 slug: /designsystem/komponenter/inputfelt
 displayed_sidebar: designsystemSidebar
-sidebar_position: 2
+sidebar_position: 4
 ---
-
-## Avmerkningsbokser
-
-En avmerkningsboks gir brukeren muligheten for flervalg. avkryssningsbokser skal følges av en primærknapp.
-
-## Radioknapp
-
-Radiobuttons import
-
 ## Aktivt tekstfelt
 
-Input Field import
+Her er et eksempel på et aktivt tekstfelt, med feilmelding
+
+<label for="textField">Aktivt tekstfelt: </label><br/>
+<input type="text" id="textField" placeholder="Aktivt tekstfelt"/>
 
 ## Deaktivert tekstfelt
 
-Deactivated Input Field import
+Her er et eksempel på et deaktivert tekstfelt
+
+<label for="disabledTextField">Deaktivert tekstfelt </label><br/>
+<input type="text" id="disabledTextField" disabled/><br/>
+
+<label for="disabledTextField">Deaktivert med hjelpetekst </label><br/>
+<input type="text" id="disabledTextField" disabled placeholder="Jeg er deaktivert"/>
 
 ## Nedtrekksmeny
 
-Dropdown import
+<label for="dropdown">Overskrift </label><br/>
+
+<select name="dropdown" id="dropdown">
+    <option value="" disabled selected>Hjelpetekst</option>
+    <option value="eiendom">Eiendom</option>
+    <option value="til lands">Til lands</option>
+    <option value="til sjøs">Til sjøs</option>
+</select>
