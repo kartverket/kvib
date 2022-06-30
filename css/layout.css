@@ -28,12 +28,11 @@
 
     /* Padding */
     --padding-button--xs: 0.5rem 1rem;
-    --padding-button--s-m-l: 0.1rem 0.5rem;/*1rem 1.5rem;*/
+    --padding-button--s-m-l: 1rem 1.5rem;/*1rem 1.5rem;*/
 
 
     /* Focus outline state */
     --focus-outline: 0.188rem;
-
 }
 
 
