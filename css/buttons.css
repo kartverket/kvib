@@ -5,7 +5,7 @@
 Hovedklasse kv-button med standard verdier typ marginer, cursor osv...
 Subklasse for størrelser
 Subklasse for ikon
-Subklasse for ikon tilhørende størrelse - ikke nødvendig? Ser ut som at det kun er én størrelse på ikonet
+Subklasse for ikon tilhørende størrelse
 Subklasse primary
     - hover
     - active
@@ -29,6 +29,7 @@ Subklasse tertiary
     min-width: 2rem; /* Tilfeldig verdi, minste button width (xs) er 3.5rem så denne skal ikke overkjøre xs størrelsen*/
     font-family: 'Mulish';
     font-weight: 700;
+    text-align: left middle;
 }
 
 
@@ -63,8 +64,60 @@ Subklasse tertiary
 }
 
 
-/* Subklasse for ikon HER  */
+/******************
+  Ikoner
+*******************/
 
+.kv-button-icon--xs{
+    width: 11.875rem;
+    height: 3.5rem;
+    padding: var(--padding-button--xs);
+    /* h3--x-small*/
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.kv-button-icon--sm{
+    width: 13.375rem;
+    height: 4.5rem;
+    padding: var(--padding-button--s-m-l);
+    /* h3--x-small*/
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.kv-button-icon--l{
+    width: 14.188rem;
+    height: 5rem;
+    padding: var(--padding-button--s-m-l);
+    font-size: 1.125rem;
+    line-height: 2rem;
+}
+
+/* Ikoner */
+.material-icons{
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-size: 1.5rem;
+    display: inline-block;
+    line-height: 1rem;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'liga';
+    /* Nettopp lagt til*/
+    vertical-align: middle;
+    position: relative;
+    padding-left: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 1rem;
+}
 
 /******************
   Knappetyper
@@ -199,3 +252,4 @@ Subklasse tertiary
     outline-style: solid;
     outline-color: var(--graa_moerk);
 }
+
