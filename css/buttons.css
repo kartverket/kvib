@@ -62,12 +62,6 @@ Subklasse tertiary
     line-height: 2rem;
 }
 
-/* Fokus */
-.kv-button:focus:not(:focus-visible){
-    outline: var(--blaa_moerk) solid var(--focus-outline);
-    /*outline: var(--focus-outline) solid var(--blaa_moerk);*/
-    outline-offset: 0.313rem;
-}
 
 /* Subklasse for ikon HER  */
 
@@ -93,11 +87,6 @@ Subklasse tertiary
 }
 
 
-.kv-button-green--primary:disabled{
-    background-color: var(--graa_lys);
-    color: var(--graa_moerk);
-}
-
 
 
 .kv-button-blue--primary{
@@ -115,11 +104,6 @@ Subklasse tertiary
     color: var(--hvit);
 }
 
-
-.kv-button-blue--primary:disabled{
-    background-color: var(--graa_lys);
-    color: var(--graa_moerk);
-}
 
 
 
@@ -144,11 +128,6 @@ Subklasse tertiary
 }
 
 
-.kv-button-green--secondary:disabled{
-    background-color: var(--graa_lys);
-    color: var(--graa_moerk);
-}
-
 
 .kv-button-blue--secondary{
     background-color: var(--hvit);
@@ -169,10 +148,6 @@ Subklasse tertiary
     outline: none;
 }
 
-.kv-button-blue--secondary:disabled{
-    background-color: var(--graa_lys);
-    color: var(--graa_moerk);
-}
 
 
 /* kv-button tertiary */
@@ -193,11 +168,6 @@ Subklasse tertiary
     color: var(--groenn_moerk);
 }
 
-.kv-button-green--tertiary:disabled{
-    background-color: var(--graa_lys);
-    color: var(--graa_moerk);
-}
-
 
 .kv-button-blue--tertiary{
     background-color: var(--hvit);
@@ -216,8 +186,16 @@ Subklasse tertiary
     color: var(--blaa_moerk);
 }
 
+/* Fokus */
+.kv-button:focus:not(:focus-visible){
+    outline: var(--blaa_moerk) solid var(--focus-outline);
+    outline-offset: 0.313rem;
+}
 
-.kv-button-blue--tertiary:disabled{
+/* Disabled */
+.kv-button:disabled{
     background-color: var(--graa_lys);
     color: var(--graa_moerk);
+    outline-style: solid;
+    outline-color: var(--graa_moerk);
 }
