@@ -30,7 +30,6 @@ Subklasse tertiary
     font-family: 'Mulish';
     font-weight: 700;
     box-sizing: border-box;
-    vertical-align: middle;
 }
 
 
@@ -101,7 +100,6 @@ Subklasse tertiary
     font-weight: normal;
     font-size: 1.5rem;
     line-height: 1.5rem;
-    display: inline-block;
     text-transform: none;
     letter-spacing: normal;
     word-wrap: normal;
@@ -111,9 +109,8 @@ Subklasse tertiary
     text-rendering: optimizeLegibility;
     -moz-osx-font-smoothing: grayscale;
     font-feature-settings: 'liga';
-    /* Nettopp lagt til*/
     vertical-align: middle;
-    position: relative;
+    position: absolute;  /* Denne er endret på og setter teksten i midten. Med relative settes både tekst og ikon til bunnen av knappen */
     padding-left: 0;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -122,6 +119,8 @@ Subklasse tertiary
     width: 2.5rem;
     height: 3.5rem;
 }
+
+
 
 /******************
   Knappetyper
