@@ -189,7 +189,6 @@ Subklasse tertiary
 /* Fokus */
 .kv-button:focus:not(:focus-visible){
     outline: var(--blaa_moerk) solid var(--focus-outline);
-    /*outline: var(--focus-outline) solid var(--blaa_moerk);*/
     outline-offset: 0.313rem;
 }
 
