@@ -5,7 +5,7 @@
 Hovedklasse kv-button med standard verdier typ marginer, cursor osv...
 Subklasse for størrelser
 Subklasse for ikon
-Subklasse for ikon tilhørende størrelse - ikke nødvendig? Ser ut som at det kun er én størrelse på ikonet
+Subklasse for ikon tilhørende størrelse
 Subklasse primary
     - hover
     - active
@@ -29,6 +29,7 @@ Subklasse tertiary
     min-width: 2rem; /* Tilfeldig verdi, minste button width (xs) er 3.5rem så denne skal ikke overkjøre xs størrelsen*/
     font-family: 'Mulish';
     font-weight: 700;
+    box-sizing: border-box;
 }
 
 
@@ -37,8 +38,8 @@ Subklasse tertiary
 ********************/
 
 .kv-button--xs{
-    width: 9.875rem;
-    height: 3.5rem;
+    width: 8.875rem;
+    height: 2.5rem;
     padding: var(--padding-button--xs);
     /* h3--x-small*/
     font-size: 1rem;
@@ -46,8 +47,8 @@ Subklasse tertiary
 }
 
 .kv-button--sm{
-    width: 10.875rem;
-    height: 4.5rem;
+    width: 9.875rem;
+    height: 3.5rem;
     padding: var(--padding-button--s-m-l);
     /* h3--x-small*/
     font-size: 1rem;
@@ -55,15 +56,70 @@ Subklasse tertiary
 }
 
 .kv-button--l{
-    width: 11.688rem;
-    height: 5rem;
+    width: 10.688rem;
+    height: 4rem;
     padding: var(--padding-button--s-m-l);
     font-size: 1.125rem;
     line-height: 2rem;
 }
 
 
-/* Subklasse for ikon HER  */
+/******************
+  Ikoner
+*******************/
+
+.kv-button-icon--xs{
+    width: 10.625rem;
+    height: 2.5rem;
+    padding: var(--padding-button--xs);
+    /* h3--x-small*/
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.kv-button-icon--sm{
+    width: 13.375rem;
+    height: 3.5rem;
+    padding: var(--padding-button--s-m-l);
+    /* h3--x-small*/
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.kv-button-icon--l{
+    width: 14.188rem;
+    height: 4rem;
+    padding: var(--padding-button--s-m-l);
+    font-size: 1.125rem;
+    line-height: 2rem;
+}
+
+/* Ikoner */
+.material-icons{
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'liga';
+    vertical-align: middle;
+    position: absolute;  /* Denne er endret på og setter teksten i midten. Med relative settes både tekst og ikon til bunnen av knappen */
+    padding-left: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 1rem;
+    box-sizing: border-box;
+    width: 2.5rem;
+    height: 3.5rem;
+}
+
 
 
 /******************
@@ -186,6 +242,7 @@ Subklasse tertiary
     color: var(--blaa_moerk);
 }
 
+
 /* Fokus */
 .kv-button:focus:not(:focus-visible){
     outline: var(--blaa_moerk) solid var(--focus-outline);
@@ -199,3 +256,4 @@ Subklasse tertiary
     outline-style: solid;
     outline-color: var(--graa_moerk);
 }
+

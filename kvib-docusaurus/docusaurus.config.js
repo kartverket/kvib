@@ -27,6 +27,15 @@ const config = {
     locales: ['en'],
   },
 
+  stylesheets: [
+    {
+      href: 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined',
+    },
+    {
+      href: 'https://fonts.googleapis.com/icon?family=Material+Icons',
+    },
+  ],
+
   presets: [
     [
       'classic',
