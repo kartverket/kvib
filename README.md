@@ -17,9 +17,9 @@ I tillegg har vi også laget et NPM-bibliotek, KVIB-scss, som inneholder felles-
 
 Her er en fin tutorial for å lære jekyll: https://jekyllrb.com/docs/step-by-step/01-setup/
 
-## Kvib-scss:
-For å publisere ny versjon av KVIB-scss til artifactory:
-1. Bytt til sass-mappen (hele KVIB-scss biblioteket ligger her i denne mappen)
+## Kvib-css:
+For å publisere ny versjon av KVIB-css til artifactory:
+1. Bytt til sass-mappen (hele KVIB-css biblioteket ligger her i denne mappen)
 2. npm config set registry https://artifactory.statkart.no/artifactory/api/npm/i3-npm-release-hfs/
 3. npm login, du må oppgi AD-brukernavn og passord, og du må ha tilgang til repoet i3-npm-release-hfs/ (kan fås fra Vegar Andersen, U2)
 4. npm version patch, evt se [dokumentasjon hos NPM](https://docs.npmjs.com/cli/version)
@@ -27,10 +27,10 @@ For å publisere ny versjon av KVIB-scss til artifactory:
 6. Husk å commitee og push endringer til github! Npm version lager kode-endringer, så det skal alltid commites når denne er kjørt!
 
 ## Rutine ved endringer:
-1. Gjør nødvendige endringer i scss-filene i sass-mappa
+1. Gjør nødvendige endringer i css-filene i css-mappa i src.
 2. Sørg for at dokumentasjonen er oppdatert for all ny kode i docs-mappa.
 3. Opprett pull-request for endringene dine på github
 4. Merg endringene til master når de er godkjent
-5. Publiser ny versjon (se steg 1-5 i avsnittet over) av KVIB-scss til artifactory
+5. Publiser ny versjon (se steg 1-5 i avsnittet over) av KVIB-css til artifactory
 6. Oppdater docs/about.mb med informasjon om ny versjon og hva som er endret, (hent versjonsnummer fra package.json, som ble oppdatert når du kjørte steg 4 i publiseringen)
 7. Push commit med nytt versjonsnummer og oppdatert about.md direkte på master
