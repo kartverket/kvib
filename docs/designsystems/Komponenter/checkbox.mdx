@@ -9,22 +9,37 @@ sidebar_position: 2
 
 En avmerkningsboks gir brukeren muligheten for flervalg. avkryssningsbokser skal følges av en primærknapp.
 
-<label for="normalCheckbox">
-    <input type="checkbox" id="normalCheckbox" value="normal"/>
-    <span class="checkmark"></span>
-    Normal
+## Normal avkryssningsboks
 
-</label>
+<div class="checkbox">
+    <input type="checkbox" id="checkbox_1"/>
+    <label for="checkbox_1">Input tekst</label>
+</div>
 
-<label for="errorCheckbox">
-    <input type="checkbox" id="errorCheckbox" value="normal"/>
-    <span class="checkmark"></span>
-   Feilmelding
+##### Eksempelbruk
 
-</label>
+```markdown
 
-<label for="FocusedCheckbox">
-    <input type="checkbox" id="FocusedCheckbox" value="normal"/>
-    <span class="checkmark"></span>
-    I fokus
-</label>
+<div class="checkbox">
+    <input type="checkbox" id="checkbox_1"/>
+    <label for="checkbox_1">Input tekst</label>
+</div>
+
+```
+
+## Feilmelding avkryssningsboks
+<div class="checkbox error">
+    <input type="checkbox" id="checkbox_2"/>
+    <label for="checkbox_2">Input tekst</label>
+</div>
+
+##### Eksempelbruk
+
+```markdown
+
+<div class="checkbox error">
+    <input type="checkbox" id="checkbox_2"/>
+    <label for="checkbox_2">Input tekst</label>
+</div>
+
+```
