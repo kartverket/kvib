@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkkvib_docusaurus=self.webpackChunkkvib_docusaurus||[]).push([[9008],{1496:a=>{a.exports=JSON.parse('{"label":"facebook","permalink":"/kvib/blog/tags/facebook","allTagsPath":"/kvib/blog/tags","count":1}')}}]);
