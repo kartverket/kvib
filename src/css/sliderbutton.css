@@ -1,0 +1,39 @@
+
+.toggle-switch {
+    margin:20px 0px;
+  }
+  .toggle-switch label {
+    position:relative;
+    display:block;
+    width:32px;
+    height:12px;
+    background:var(--blaa_lys);
+    border: 1px solid var(--blaa_moerk);
+    box-sizing: border-box;
+    cursor:pointer;
+    border-radius:8px;
+    transition:all 300ms ease-in-out;
+  }
+  .toggle-switch label:after {
+    content:"";
+    position:absolute;
+    width:16px;
+    height:16px;
+    background:var(--blaa_moerk);
+    top:50%;
+    left:-1px;
+    transform:translateY(-50%);
+    border-radius:50%;
+    transition:all 300ms ease-in-out;
+  }
+  .toggle-switch input[type="checkbox"]:checked + label:after {
+    left:calc(32px - 16px);
+    background:var(--blaa_moerk);
+  }
+  
+  .toggle-switch input:checked + label {
+    background:var(--blaa_lys);
+  }
+  .toggle-switch input {
+    display:none;
+  }
