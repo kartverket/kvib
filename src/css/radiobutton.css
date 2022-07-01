@@ -1,0 +1,99 @@
+.radio input[type="radio"] {
+    opacity: 0;
+}
+
+.radio label {
+    position: relative;
+    display: inline-block;
+
+    padding-left: 2rem;
+}
+
+.radio label::before,
+.radio label::after {
+    position: absolute;
+    content: "";
+
+    /*Needed for the line-height to take effect*/
+    display: inline-block;
+}
+
+.radio label::before{
+    height: 16px;
+    width: 16px;
+
+    border: 2px solid;
+    border-radius: 1rem;
+    left: 0;
+    color: var(--blaa_moerk);
+
+    top: 3px;
+}
+
+.radio label::after {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    border: 2px solid;
+
+    left: 5px;
+    top: 0.5rem;
+}
+
+/*Hide checkmark by default*/
+.radio input[type="radio"] + label::after {
+    content: none;
+}
+
+/*set checkmark on checked state*/
+.radio input[type="radio"]:checked + label::after {
+    content: "";
+    color: var(--blaa_moerk);
+    background-color: #1A589F;
+}
+
+/*change background color of checkbox on checked state*/
+.radio input[type="radio"]:checked + label::before {
+    background-color: var(--hvit);
+}
+
+/*Adding focus styles on outer-box*/
+.radio input[type="radio"]:focus + label::before {
+    outline: max(3px, 0.15em) solid var(--blaa_moerk);
+    outline-offset: 2px;
+}
+
+/*Adding hover styles on outer-box*/
+.radio input[type="radio"]:hover + label::before {
+    outline: max(3px, 0.15em) solid var(--blaa_moerk);
+    outline-offset: 2px;
+}
+
+/* ----CHECKBOX ERROR----*/
+.error label::before{
+    color: var(--roed_feilmelding);
+}
+
+.error input[type="radio"]:checked + label::after {
+    content: "";
+    color: var(--roed_feilmelding);
+    background-color: var(--roed_feilmelding);
+}
+
+/*set background on the checked state*/
+.error input[type="radio"]:checked + label::before {
+    background-color: var(--hvit);
+}
+
+/*Adding focus styles on the outer-box*/
+.error input[type="radio"]:focus + label::before {
+    outline: max(3px, 0.15em) solid var(--roed_feilmelding);
+    outline-offset: 2px;
+}
+
+/*Adding hover styles on the outer-box*/
+.error input[type="radio"]:hover + label::before {
+    outline: max(3px, 0.15em) solid var(--roed_feilmelding);
+    outline-offset: 2px;
+}
+
