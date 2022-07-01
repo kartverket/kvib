@@ -7,11 +7,48 @@ displayed_sidebar: designsystemSidebar
 sidebar_position: 3
 ---
 
-<input type="radio" id="normalRadio" value="normal"/>
-<label for="normalRadio">Normal </label>
+## Normal avkryssningsboks
 
-<input type="radio" id="errorRadio" value="normal"/>
-<label for="errorCheckbox">Feilmelding </label>
 
-<input type="radio" id="FocusedRadio" value="normal"/>
-<label for="FocusedRadio">I fokus </label>
+<div class="radio">
+    <input type="radio" id="radioBtn_1" name="radioGroup1"/>
+    <label for="radioBtn_1">Input tekst</label>
+</div><br/>
+<div class="radio">
+    <input type="radio" id="radioBtn_2" name="radioGroup1"/>
+    <label for="radioBtn_2">Input tekst</label>
+</div>
+
+##### Eksempelbruk
+
+```markdown title="radio"
+
+<div class="radio">
+    <input type="radio" id="radioBtn_1" name="radioGroup1"/>
+    <label for="radioBtn_1">Input tekst</label>
+</div>
+
+```
+
+## Feilmelding avkryssningsboks
+<div class="radio error">
+    <input type="radio" id="errorRadioBtn_1" name="radioGroup2"/>
+    <label for="errorRadioBtn_1">Input tekst</label>
+</div><br/>
+<div class="radio error">
+    <input type="radio" id="errorRadioBtn_2" name="radioGroup2"/>
+    <label for="errorRadioBtn_2">Input tekst</label>
+</div>
+
+
+
+##### Eksempelbruk
+
+```markdown title="radio error"
+
+<div class="radio error">
+    <input type="radio" id="errorRadioBtn_1" name="radioGroup2"/>
+    <label for="errorRadioBtn_1">Input tekst</label>
+</div>
+
+```
