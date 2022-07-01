@@ -72,74 +72,24 @@
 }
 
 /* ----CHECKBOX ERROR----*/
-
-.checkboxError input[type="checkbox"] {
-    opacity: 0;
-}
-
-.checkboxError label {
-    position: relative;
-    display: inline-block;
-    padding-left: 2rem;
-}
-
-.checkboxError label::before,
-.checkboxError label::after {
-    position: absolute;
-    content: "";
-
-    /*Needed for the line-height to take effect*/
-    display: inline-block;
-}
-
-.checkboxError label::before{
-    height: 15px;
-    width: 15px;
+.error label::before{
     color: var(--roed_feilmelding);
-
-    border: 2px solid;
-    border-radius: 0.10rem;
-    left: 0;
-
-    top: 3px;
-}
-
-.checkboxError label::after {
-    height: 5px;
-    width: 9px;
-    border-left: 2px solid;
-    border-bottom: 2px solid;
-
-    transform: rotate(-45deg);
-
-    left: 4px;
-    top: 7px;
-}
-
-/*Hide the checkmark by default*/
-.checkboxError input[type="checkbox"] + label::after {
-    content: none;
-}
-
-/*set checkmark on checked state*/
-.checkboxError input[type="checkbox"]:checked + label::after {
-    content: "";
-    color: var(--hvit);
 }
 
 /*set background on the checked state*/
-.checkboxError input[type="checkbox"]:checked + label::before {
+.error input[type="checkbox"]:checked + label::before {
     background-color: var(--roed_feilmelding);
 }
 
 /*Adding focus styles on the outer-box*/
-.checkboxError input[type="checkbox"]:focus + label::before {
+.error input[type="checkbox"]:focus + label::before {
     outline: max(3px, 0.15em) solid var(--roed_feilmelding);
     outline-offset: 2px;
 }
 
 /*Adding hover styles on the outer-box*/
-.checkboxError input[type="checkbox"]:hover + label::before {
+.error input[type="checkbox"]:hover + label::before {
     outline: max(3px, 0.15em) solid var(--roed_feilmelding);
     outline-offset: 2px;
 }
+
