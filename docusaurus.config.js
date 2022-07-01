@@ -76,7 +76,7 @@ const config = {
           items: [
             {
               type: 'doc',
-              docId: 'figmaID',
+              docId: 'omKvib/infoKvibID',
               position: 'left',
               label: 'Om Kvib',
             },
