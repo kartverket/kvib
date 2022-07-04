@@ -1,14 +1,10 @@
-
-.sliderbutton {
-    margin:20px 0px;
-  }
-  .sliderbutton label {
+.sliderbutton label {
     position:relative;
-    display:block;
+    display:inline-flex;
     width:32px;
     height:12px;
     background:var(--blaa_lys);
-    border: 1px solid var(--blaa_moerk);
+    border: 1px solid var(--blaa_moerk_knapp);
     box-sizing: border-box;
     cursor:pointer;
     border-radius:8px;
@@ -19,7 +15,7 @@
     position:absolute;
     width:16px;
     height:16px;
-    background:var(--blaa_moerk);
+    background:var(--blaa_moerk_knapp);
     top:50%;
     left:-1px;
     transform:translateY(-50%);
@@ -28,7 +24,7 @@
   }
   .sliderbutton input[type="checkbox"]:checked + label:after {
     left:calc(32px - 16px);
-    background:var(--blaa_moerk);
+    background:var(--blaa_moerk_knapp);
   }
   
   .sliderbutton input:checked + label {
