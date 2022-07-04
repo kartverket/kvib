@@ -38,34 +38,14 @@ select {
     flex-grow: 0;
 }
 
-input[type=text]:focus-visible{
+input[type=text]:focus-visible {
     outline: var(--blaa_moerk) solid;
 }
 
-input[type=text]:hover{
-    outline: var(--blaa_moerk) solid;
+input[type=text]:disabled {
+    background: var(--graa_lys);
 }
 
-
-
-/*.inputForm{*/
-/*    width: 50%;*/
-/*    border-radius: 5px;*/
-/*    background-color: #f2f2f2;*/
-/*    padding: 20px;*/
-/*}*/
-
-/*input[type=submit] {*/
-/*    width: 100%;*/
-/*    background-color: #4CAF50;*/
-/*    color: white;*/
-/*    padding: 14px 20px;*/
-/*    margin: 8px 0;*/
-/*    border: none;*/
-/*    border-radius: 4px;*/
-/*    cursor: pointer;*/
-/*}*/
-
-/*input[type=submit]:hover {*/
-/*    background-color: #45a049;*/
-/*}*/
+input[type=text]:invalid {
+    border: 2px var(--roed_feilmelding) solid;
+}
