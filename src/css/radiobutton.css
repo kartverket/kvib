@@ -63,12 +63,6 @@
     outline-offset: 2px;
 }
 
-/*Adding hover styles on outer-box*/
-.radio input[type="radio"]:hover + label::before {
-    outline: max(3px, 0.15em) solid var(--blaa_moerk);
-    outline-offset: 2px;
-}
-
 /* ----CHECKBOX ERROR----*/
 .error label::before{
     color: var(--roed_feilmelding);

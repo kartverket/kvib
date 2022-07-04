@@ -34,6 +34,13 @@
     margin-top: 40px;
 }
 
+.darkBlueButtonPalette {
+    background-color: var(--blaa_moerk_knapp);
+    height: 100px;
+    width: 100px;
+    margin-top: 40px;
+}
+
 .darkBluePalette {
     background-color: var(--blaa_moerk);
     height: 100px;
