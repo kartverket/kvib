@@ -8,35 +8,61 @@ sidebar_position: 2
 ---
 import {Heading1,Heading2,Heading3,Brodtekst,Label, BeskrivendeTekst, Underline} from '@site/src/components/typografi/typografi';
 
-# Typografi
 
-## Heading1
-Legg inn beskrivelse av når denne skal brukes.
+Det er en rekke krav til tekststruktur for å tilfredstille love. Avhengig av hvilket publiseringsystem som benyttes, kan kravene løses ulikt teknisk, men grunnprinsippet vil være de samme.
+Det er viktig at innholdet struktureres med korrekt kode, og må kunne forstørres uten tap av tekst eller lesbarhet. 
+
+
+## Overskrifter
+Overskrifter kodes ved hjelp av overskriftelementene <h1\> til <h6\> og disse deler opp teksten tilsvarende i kapitler og delkapitler i ulike nivåer. Legg merke til at Kartverket har per dags dato tre nivåer fra <h1\> til <h3\>, det vil komme noe mer senere. 
+
+Overskriftsnivåer brukes for å strukturere teksten, og er særlig aktuelt i redaksjonelt innhold. 
+Rekkefølgen på nivåene skal være korrekt. Nedover i nivået går du ett steg om gangen, oppover avhenger det av hvordan teksten skal bygges opp. <h1\> - <h2\> og <h1\> - <h1\> er tillatt, <h1\> - <h3\> er ikke tillatt.
+Dette kan vi sjekke i eksisterende tekster med Eb Accessibility Toolbar, under Structure. 
+
+Ofte er det informasjon i rammeverk som ikke er direkte knyttet til hovedinnholdet på siden, og som ligger etter hovedinnholdet i koden. Et vanlig eksempel er footer(kolofonen), som gjerne inneholder overordnet kontaktinformasjon.
+I så fall er det gunstig å innlede denne informasjonen med <h1\> for å bryte tydelig med hovedinnholdet. Det kan også være aktuelt å ha mellomtitler i denne informasjonen, og nivåene må selvfølgelig være i riktig rekkefølge.  
+
+### Heading1- Sidetittel
+Hovedinnholdets tittel skal være den første overskriften i koden, og skal være på nivå 1 ved hjelp av elementet <h1\>. Dette gjelder også startsiden, som bør ha en synlig overskrift som tydelig formidler hvilken virksomhet brukeren har kommet til.
+Dette er gunstig både for søkeoptimalisering og for brukere med hjelpemiddel. 
+
+
 <Heading1/>
 
-## Heading2
-Legg inn beskrivelse av når denne skal brukes.
+
+### Heading2 -Overskriftsnivå
 <Heading2/>
 
-## Heading3
-Legg inn beskrivelse av når denne skal brukes.
+### Heading3 -Overskriftsnivå
 <Heading3/>
 
 ## Brødtekst
-Legg inn beskrivelse av når denne skal brukes.
+
+Brødteksten, eller løpende tekst, skal kodes med avsnittselementet <p\>. Dette gjør at det er enkelt å hoppe fra avsnitt til avsnitt. Enkelte publiseringssystem genererer avsnitt ved hjelp av elementet <div\>, men dette er ikke optimalt. 
+Unngå også elementene <span\>, <br\> og <hr\> for å skape avsnitt. Unngå også tomme avsnittselement. Hvis du bruker det for å skape luft skal du løse dette med CSS i stedet. 
+
+For best mulig lesbarhet for alle brukere, bør det ikke være mer enn 65-70 tegn per linje inkludert mellomrom. Da blir teksten mer innbydende og mindre overveldende, og er særlig viktig for brukere med lesevansker og konsentrasjonsvansker. 
+
 <Brodtekst/>
 
 
 ## Label
-Legg inn beskrivelse av når denne skal brukes.
+Label (ledeteksten) er instruksen brukerne får når de skal gi respons i et skjema eller lignende. Ledeteksten kan være et spørsmål eller et enkelt ord, som. “Navn” eller “Dato“. Les mer om hvordan <a href="https://www.gov.uk/" class='underline'> gov.uk bruker ledetekst. </a> 
+  
 <Label/>
 
-## Beskrivende Tekst
-Legg inn beskrivelse av når denne skal brukes.
+## Beskrivende Tekst 
+Beskrivende tekst blir brukt som hjelpetekst og veiledning. Ordet «hjelpetekst» blir brukt om ulike typer innhold: Det kan bety veiledning brukeren kan oppsøke, teksten som hører til et felt, eller feilmeldinger som hjelper brukeren etter at noe har gått galt.
 <BeskrivendeTekst/>
 
 ## Understrekning
-CSS-klassen _.underline_ kan brukes på alle html-tager. 
+Understrekniong skal brukes i lenketekster eller andre elementer som trenger å poengteres. 
+
+Lenketekster skal være beskrivende, og gi brukeren nok informasjon til å forstå hva målet med lenken er. 
+Istedenfor å skrive «Les mer her» bør du for eksempel skrive «Les mer om universell utforming her». På denne måten vil lenken alene være godt nok til å forstå hva som skjuler seg bak lenken.
+
+(CSS-klassen _.underline_ kan brukes på alle html-tager.)
 <Underline/>
 
 ## Eksempelbruk
