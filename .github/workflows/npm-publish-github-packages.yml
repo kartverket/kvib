@@ -31,7 +31,6 @@ jobs:
       - name: Bump package.json
         run: npm version ${{ steps.tag_version.outputs.new_version }} --no-git-tag-version
 
-      - name: Publish library
       - run: npm publish
         working-directory: src/css
         env:
