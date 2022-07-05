@@ -1,3 +1,6 @@
+/* DENNE KODEN HAR BUGS
+
+
 .sliderbutton label {
     position:relative;
     display:inline-flex;
@@ -47,3 +50,4 @@
  .sliderbutton--xs input[type="checkbox"]:checked + label:after {
   left:calc(24px - 12px);
   }
+  */
