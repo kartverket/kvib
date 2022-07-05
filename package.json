@@ -1,5 +1,5 @@
 {
-  "name": "kvib-docusaurus",
+  "name": "kvib",
   "version": "0.0.1",
   "scripts": {
     "docusaurus": "docusaurus",
