@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkkvib=self.webpackChunkkvib||[]).push([[7010],{8604:s=>{s.exports=JSON.parse('{"label":"docusaurus","permalink":"/kvib/blog/tags/docusaurus","allTagsPath":"/kvib/blog/tags","count":4}')}}]);
