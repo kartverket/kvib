@@ -8,9 +8,40 @@ sidebar_position: 3
 ---
 
 
-## Regler for navngivning av CSS-klasser
-Ved å bruke en felles struktur på navngivning av CSS-klasser, blir koden enklere å lese og forstå, samt å opprettholde. Det er derfor viktig at kode som implementeres i KVIB følger samme konvensjoner.
+## Rutine for kvalitetskontroll
+<span class='underline'>Før hver merge til master, skal følgende punkter gjennomføres: </span> 
 
-KVIB bruker navngivningskonvensjoner fra BEM, som baseres på å dele CSS-klasser inn i tre nivåer; blokk, element og modifier. 
-Følg <a href="http://getbem.com/naming/" class="underline"> BEM sine navngivningskonvensjoner</a> ved implmentasjon av CSS-klasser. 
+1. Følge KVIB sine konvensjoner for CSS-klassenavn. Se [Om KVIB -> Konvensjonerfor CSS-klassenavn](./infoKvib.mdx) for beskrivelse.
+
+
+2. Teste komponenter med skjermleser:
+    - NVDA
+
+
+3. Teste komponenter med browserverktøy:
+    - Wave for UU-testing
+    - Lighthouse for beste praksis
+    - Axe
+
+
+4. Teste i ulike browsere:
+    - Chrome / chromium
+    - Firefox
+    - Safari
+
+
+5. Teste med 400% zoom på desktop, samt teste på små skjermer.
+
+
+6. QA på all ny kode.
+
+
+7. Oppdater change-log (Keep a Changelog )
+
+
+8. Følge regler for dokumentasjonssiden:
+    - Struktur
+    - Obligatorisk innhold
+
+
 
