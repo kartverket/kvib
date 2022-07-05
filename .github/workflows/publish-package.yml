@@ -1,6 +1,9 @@
 name: KVIB Package Publish
 
 on:
+  push:
+    branches:
+      - master
   workflow_dispatch:
 
 jobs:
@@ -30,7 +33,7 @@ jobs:
         with:
           tag: ${{ steps.tag_version.outputs.new_tag }}
           name: Release ${{ steps.tag_version.outputs.new_tag }}
-        # body: ${{ steps.tag_version.outputs.changelog }}
+          body: ${{ steps.tag_version.outputs.changelog }}
 
       - run: npm publish
         working-directory: src/css
