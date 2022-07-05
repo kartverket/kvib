@@ -1,5 +1,5 @@
 {
-  "name": "kvib",
+  "name": "@kartverket/kvib",
   "version": "0.0.1",
   "scripts": {
     "docusaurus": "docusaurus",
@@ -12,6 +12,10 @@
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
     "typecheck": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:kartverket/kvib"
   },
   "dependencies": {
     "@docusaurus/core": "2.0.0-beta.21",
