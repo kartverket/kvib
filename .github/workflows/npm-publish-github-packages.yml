@@ -5,8 +5,8 @@ name: KVIB Package
 
 on:
   push:
-    branches: 
-      -master
+    branches:
+      - master
   workflow_dispatch:
 
 jobs:
