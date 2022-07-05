@@ -20,8 +20,9 @@ jobs:
       - name: checkout code
         uses: actions/checkout@v2
         
-      - name: change directory
-        run: cd src/css
+      - name: Change directory
+        run: rm -rf *
+        working-directory: src/css
         
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
