@@ -58,42 +58,32 @@
 }
 
 /*Adding focus styles on outer-box*/
-.radio input[type="radio"]:focus + label::before {
-    outline: max(3px, 0.15em) solid var(--blaa_moerk);
-    outline-offset: 2px;
-}
-
-/*Adding hover styles on outer-box*/
-.radio input[type="radio"]:hover + label::before {
+.radio input[type="radio"]:focus-visible + label::before {
     outline: max(3px, 0.15em) solid var(--blaa_moerk);
     outline-offset: 2px;
 }
 
 /* ----CHECKBOX ERROR----*/
-.error label::before{
-    color: var(--roed_feilmelding);
-}
 
-.error input[type="radio"]:checked + label::after {
+.radio input[type="radio"]:checked:invalid + label::after {
     content: "";
     color: var(--roed_feilmelding);
     background-color: var(--roed_feilmelding);
 }
 
 /*set background on the checked state*/
-.error input[type="radio"]:checked + label::before {
-    background-color: var(--hvit);
+.radio input[type="radio"]:required:invalid + label::before {
+    color: var(--roed_feilmelding);
 }
 
 /*Adding focus styles on the outer-box*/
-.error input[type="radio"]:focus + label::before {
+.radio input[type="radio"]:focus-visible:invalid + label::before {
     outline: max(3px, 0.15em) solid var(--roed_feilmelding);
     outline-offset: 2px;
 }
 
 /*Adding hover styles on the outer-box*/
-.error input[type="radio"]:hover + label::before {
+.radio input[type="radio"]:invalid + label::before {
     outline: max(3px, 0.15em) solid var(--roed_feilmelding);
     outline-offset: 2px;
 }
-

@@ -60,36 +60,20 @@
 }
 
 /*Adding focus styles on outer-box*/
-.checkbox input[type="checkbox"]:focus + label::before {
-    outline: max(3px, 0.15em) solid var(--blaa_moerk);
-    outline-offset: 2px;
-}
-
-/*Adding hover styles on outer-box*/
-.checkbox input[type="checkbox"]:hover + label::before {
+.checkbox input[type="checkbox"]:focus-visible + label::before {
     outline: max(3px, 0.15em) solid var(--blaa_moerk);
     outline-offset: 2px;
 }
 
 /* ----CHECKBOX ERROR----*/
-.error label::before{
-    color: var(--roed_feilmelding);
-}
-
 /*set background on the checked state*/
-.error input[type="checkbox"]:checked + label::before {
-    background-color: var(--roed_feilmelding);
+.checkbox input[type="checkbox"]:required:invalid + label::before {
+    color: var(--roed_feilmelding);
+    /*background-color: var(--roed_feilmelding);*/
 }
 
 /*Adding focus styles on the outer-box*/
-.error input[type="checkbox"]:focus + label::before {
+.checkbox input[type="checkbox"]:focus-visible:invalid + label::before {
     outline: max(3px, 0.15em) solid var(--roed_feilmelding);
     outline-offset: 2px;
 }
-
-/*Adding hover styles on the outer-box*/
-.error input[type="checkbox"]:hover + label::before {
-    outline: max(3px, 0.15em) solid var(--roed_feilmelding);
-    outline-offset: 2px;
-}
-
