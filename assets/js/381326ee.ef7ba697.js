@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkkvib=self.webpackChunkkvib||[]).push([[9489],{1567:e=>{e.exports=JSON.parse('{"permalink":"/kvib/blog/tags/facebook","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

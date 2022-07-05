@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkkvib_docusaurus=self.webpackChunkkvib_docusaurus||[]).push([[8504],{4959:s=>{s.exports=JSON.parse('{"permalink":"/kvib/blog/tags/hola","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
