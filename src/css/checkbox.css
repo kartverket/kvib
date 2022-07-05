@@ -60,7 +60,7 @@
 }
 
 /*Adding focus styles on outer-box*/
-.checkbox input[type="checkbox"]:focus + label::before {
+.checkbox input[type="checkbox"]:focus-visible + label::before {
     outline: max(3px, 0.15em) solid var(--blaa_moerk);
     outline-offset: 2px;
 }
@@ -73,8 +73,7 @@
 }
 
 /*Adding focus styles on the outer-box*/
-.checkbox input[type="checkbox"]:focus:invalid + label::before {
+.checkbox input[type="checkbox"]:focus-visible:invalid + label::before {
     outline: max(3px, 0.15em) solid var(--roed_feilmelding);
     outline-offset: 2px;
 }
-

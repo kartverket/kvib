@@ -58,7 +58,7 @@
 }
 
 /*Adding focus styles on outer-box*/
-.radio input[type="radio"]:focus + label::before {
+.radio input[type="radio"]:focus-visible + label::before {
     outline: max(3px, 0.15em) solid var(--blaa_moerk);
     outline-offset: 2px;
 }
@@ -77,7 +77,7 @@
 }
 
 /*Adding focus styles on the outer-box*/
-.radio input[type="radio"]:invalid:focus + label::before {
+.radio input[type="radio"]:focus-visible:invalid + label::before {
     outline: max(3px, 0.15em) solid var(--roed_feilmelding);
     outline-offset: 2px;
 }
@@ -87,4 +87,3 @@
     outline: max(3px, 0.15em) solid var(--roed_feilmelding);
     outline-offset: 2px;
 }
-

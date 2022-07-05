@@ -38,8 +38,16 @@ select {
     flex-grow: 0;
 }
 
+input[type=text]:focus:active {
+    outline: none;
+}
+
 input[type=text]:focus-visible {
     outline: var(--blaa_moerk) solid;
+}
+
+input[type=text]:focus-visible:invalid {
+    outline: var(--roed_feilmelding) solid;
 }
 
 input[type=text]:disabled {
