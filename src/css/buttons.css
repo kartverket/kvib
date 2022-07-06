@@ -94,7 +94,8 @@ Subklasse tertiary
     line-height: 2rem;
 }
 
-/* Ikoner */
+/*Spesifisere at dette er for button? hvos dette er tilfellet. 
+Ikoner */
 .material__icons{
     font-family: 'Material Icons';
     font-weight: normal;
