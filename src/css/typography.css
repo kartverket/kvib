@@ -22,48 +22,48 @@ body {
 
 /*h1-titles
 h3-large*/
-.heading_h1--x-small, .heading_h3--large {
+.heading__h1--xs, .heading__h3--l {
     font-size: 1.25rem;
     line-height: 2rem;
 }
 
-.heading_h1--small{
+.heading__h1--s{
     font-size: 1.5rem;
     line-height: 2.5rem;
 }
-.heading_h1--medium{
+.heading__h1--m{
     font-size: 2rem;
     line-height: 3rem;
 }
 
-.heading_h1--large{
+.heading__h1--l{
     font-size: 2.25rem;
     line-height: 3rem;
 }
 
 
 /*h2-titles*/
-.heading_h2--x-small {
+.heading__h2--xs {
     font-size: 1.125rem;
     line-height: 1.5rem;
 }
 
-.heading_h2--small{
+.heading__h2--s{
     font-size: 1.5rem;
     line-height: 2rem;
 }
 
-.heading_h2--medium{
+.heading__h2--m{
     font-size: 1.75rem;
     line-height: 2rem;
 }
-.heading_h2--large{ 
+.heading__h2--l{ 
     font-size: 2rem;
     line-height: 2.5rem;
 }
 
 /*h3-titles*/
-.heading_h3--x-small {
+.heading__h3--xs {
     font-size: 1rem;
     line-height: 1.5rem;
 }
@@ -73,14 +73,14 @@ h3-large*/
     font-weight: 400;
 }
 
-.body-text--x-small{
+.body-text--xs{
     font-size: 1rem;
     line-height: 1.5rem;
 }
 
 /*klasse for h3-størrelser (small, medium)
  klasse for brodtekst-størrelser (small, meidum,large*/
-.body-text--small-medium-large, .heading_h3--small-medium{
+.body-text--sml, .heading__h3--sm{
     font-size: 1.125rem;
     line-height: 2rem;
 }
@@ -92,12 +92,12 @@ h3-large*/
     line-height: 1.5rem;
 }
 
-.label--x-small, .detail--x-small{
+.label--xs, .detail--xs{
     font-size: 0.75rem;  
 } 
 
 /*label og beskrivende tekst, str. small,medium, large*/  
-.label--small-medium-large, .detail--small-medium-large{
+.label--sml, .detail--sml{
     font-size: 0.875rem;
 }
 
