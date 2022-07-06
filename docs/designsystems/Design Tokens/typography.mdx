@@ -6,15 +6,15 @@ slug: /designsystems/designtokens/typografi
 displayed_sidebar: designsystemSidebar
 sidebar_position: 2
 ---
-import {Heading1,Heading2,Heading3,Brodtekst,Label, BeskrivendeTekst, Underline} from '@site/src/components/typografi/typografi';
+import {Heading1,Heading2,Heading3,BodyText,Label, Detail, Underline} from '@site/src/components/typografi/typografi';
 
 
-Det er en rekke krav til tekststruktur for å tilfredstille love. Avhengig av hvilket publiseringsystem som benyttes, kan kravene løses ulikt teknisk, men grunnprinsippet vil være de samme.
+Det er en rekke krav til tekststruktur for å tilfredstille lover. Avhengig av hvilket publiseringsystem som benyttes, kan kravene løses ulikt teknisk, men grunnprinsippet vil være de samme.
 Det er viktig at innholdet struktureres med korrekt kode, og må kunne forstørres uten tap av tekst eller lesbarhet. 
 
 
 ## Overskrifter
-Overskrifter kodes ved hjelp av overskriftelementene <h1\> til <h6\> og disse deler opp teksten tilsvarende i kapitler og delkapitler i ulike nivåer. Legg merke til at Kartverket har per dags dato tre nivåer fra <h1\> til <h3\>, det vil komme noe mer senere. 
+Overskrifter kodes ved hjelp av overskriftelementene <h1\> til <h6\>, som deler opp teksten tilsvarende i kapitler og delkapitlers. Kartverket har per dags dato tre nivåer fra <h1\> til <h3\>, det vil komme noe mer senere. 
 
 Overskriftsnivåer brukes for å strukturere teksten, og er særlig aktuelt i redaksjonelt innhold. 
 Rekkefølgen på nivåene skal være korrekt. Nedover i nivået går du ett steg om gangen, oppover avhenger det av hvordan teksten skal bygges opp. <h1\> - <h2\> og <h1\> - <h1\> er tillatt, <h1\> - <h3\> er ikke tillatt.
@@ -25,7 +25,7 @@ I så fall er det gunstig å innlede denne informasjonen med <h1\> for å bryte 
 
 ### Heading1- Sidetittel
 Hovedinnholdets tittel skal være den første overskriften i koden, og skal være på nivå 1 ved hjelp av elementet <h1\>. Dette gjelder også startsiden, som bør ha en synlig overskrift som tydelig formidler hvilken virksomhet brukeren har kommet til.
-Dette er gunstig både for søkeoptimalisering og for brukere med hjelpemiddel. 
+
 
 
 <Heading1/>
@@ -39,12 +39,11 @@ Dette er gunstig både for søkeoptimalisering og for brukere med hjelpemiddel.
 
 ## Brødtekst
 
-Brødteksten, eller løpende tekst, skal kodes med avsnittselementet <p\>. Dette gjør at det er enkelt å hoppe fra avsnitt til avsnitt. Enkelte publiseringssystem genererer avsnitt ved hjelp av elementet <div\>, men dette er ikke optimalt. 
-Unngå også elementene <span\>, <br\> og <hr\> for å skape avsnitt. Unngå også tomme avsnittselement. Hvis du bruker det for å skape luft skal du løse dette med CSS i stedet. 
-
+Brødteksten skal kodes med avsnittselementet <p\>. Unngå bruken av elementene <div\>, <span\>, <br\> og <hr\> for å skape avsnitt.
+Unngå også tomme avsnittselement. Hvis du bruker det for å skape luft skal du løse dette med CSS i stedet. 
 For best mulig lesbarhet for alle brukere, bør det ikke være mer enn 65-70 tegn per linje inkludert mellomrom. Da blir teksten mer innbydende og mindre overveldende, og er særlig viktig for brukere med lesevansker og konsentrasjonsvansker. 
 
-<Brodtekst/>
+<BodyText/>
 
 
 ## Label
@@ -54,7 +53,7 @@ Label (ledeteksten) er instruksen brukerne får når de skal gi respons i et skj
 
 ## Beskrivende Tekst 
 Beskrivende tekst blir brukt som hjelpetekst og veiledning. Ordet «hjelpetekst» blir brukt om ulike typer innhold: Det kan bety veiledning brukeren kan oppsøke, teksten som hører til et felt, eller feilmeldinger som hjelper brukeren etter at noe har gått galt.
-<BeskrivendeTekst/>
+<Detail/>
 
 ## Understrekning
 Understrekniong skal brukes i lenketekster eller andre elementer som trenger å poengteres. 
@@ -62,16 +61,16 @@ Understrekniong skal brukes i lenketekster eller andre elementer som trenger å 
 Lenketekster skal være beskrivende, og gi brukeren nok informasjon til å forstå hva målet med lenken er. 
 Istedenfor å skrive «Les mer her» bør du for eksempel skrive «Les mer om universell utforming her». På denne måten vil lenken alene være godt nok til å forstå hva som skjuler seg bak lenken.
 
-(CSS-klassen _.underline_ kan brukes på alle html-tager.)
 <Underline/>
 
 ## Eksempelbruk
 ```markup title="/.html"
 <html>
     <body>
-        <h1 class='heading h1--medium'> Hello world!</h1>
-        <p class='brodtekst s-m-l'>Dette er et eksempel på bruk av typografi-klassene.</p>
-        <p class='brodtekst s-m-l underline'>Dette er et eksempel på bruk av typografi-klassene.</p>
+        <h1 class='heading heading_h1--medium'> Dette er overskrift H1</h1>
+            <h2 class='heading heading_h2--medium'> Dette er overskrift H2</h2>
+                <p class='body-text--small-medium-large'>Dette er et eksempel på bruk av typografi-klassene.</p>
+                <p class='body-text--small-medium-large underline'> Dette er et eksempel på bruk av typografi-klassene.</p>
     </body>
 </html>
 
@@ -81,8 +80,11 @@ OUTPUT:
 
 <html>
     <body>
-        <h1 class='heading h1--medium'> Velkommen til Kartverket!</h1>
-        <p class='brodtekst s-m-l'>Dette er et eksempel på bruk av typografi-klassene.</p>
-        <p class='brodtekst s-m-l underline'> Dette er et eksempel på bruk av typografi-klassene.</p>
+        <div class="typographyCard">
+            <h1 class='heading heading_h1--medium'> Dette er overskrift H1</h1>
+                <h2 class='heading heading_h2--medium'> Dette er overskrift H2</h2>
+                <p class='body-text--small-medium-large'>Dette er et eksempel på bruk av typografi-klassene.</p>
+                <p class='body-text--small-medium-large underline'> Dette er et eksempel på bruk av typografi-klassene.</p>
+        </div>
     </body>
 </html>

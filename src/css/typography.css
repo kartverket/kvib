@@ -22,78 +22,82 @@ body {
 
 /*h1-titles
 h3-large*/
-.h1--x-small, .h3--large {
+.heading_h1--x-small, .heading_h3--large {
     font-size: 1.25rem;
     line-height: 2rem;
 }
 
-.h1--small{
+.heading_h1--small{
     font-size: 1.5rem;
     line-height: 2.5rem;
 }
-.h1--medium{
+.heading_h1--medium{
     font-size: 2rem;
     line-height: 3rem;
 }
 
-.h1--large{
+.heading_h1--large{
     font-size: 2.25rem;
     line-height: 3rem;
 }
 
 
 /*h2-titles*/
-.h2--x-small {
+.heading_h2--x-small {
     font-size: 1.125rem;
     line-height: 1.5rem;
 }
 
-.h2--small{
+.heading_h2--small{
     font-size: 1.5rem;
     line-height: 2rem;
 }
 
-.h2--medium{
+.heading_h2--medium{
     font-size: 1.75rem;
     line-height: 2rem;
 }
-.h2--large{ 
+.heading_h2--large{ 
     font-size: 2rem;
     line-height: 2.5rem;
 }
 
 /*h3-titles*/
-.h3--x-small {
+.heading_h3--x-small {
     font-size: 1rem;
     line-height: 1.5rem;
 }
 
-/*brodtekst, default xs*/
-.brodtekst{
+/*brodtekst*/
+.body-text{
     font-weight: 400;
+}
+
+.body-text--x-small{
     font-size: 1rem;
     line-height: 1.5rem;
 }
 
 /*klasse for h3-størrelser (small, medium)
  klasse for brodtekst-størrelser (small, meidum,large*/
-.brodtekst.s-m-l, .h3--s-m{
+.body-text--small-medium-large, .heading_h3--small-medium{
     font-size: 1.125rem;
     line-height: 2rem;
 }
 
-
 /*label og beskrivende tekst*/    
 
-.label--x-small, .beskrivende-tekst--x-small{
+.label .detail{
     font-weight: 400;
-    font-size: 0.75rem;  
     line-height: 1.5rem;
+}
+
+.label--x-small, .detail--x-small{
+    font-size: 0.75rem;  
 } 
 
 /*label og beskrivende tekst, str. small,medium, large*/  
-.label--s-m-l, .beskrivende-tekst--s-m-l{
-    font-weight: 400; 
+.label--small-medium-large, .detail--small-medium-large{
     font-size: 0.875rem;
-    line-height: 1.5rem;
 }
+
