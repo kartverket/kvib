@@ -1,9 +1,9 @@
-/* Knapper */
+/* CSS-fil for Knapper */
 
 /* Struktur
 
-Hovedklasse kv-button med standard verdier typ marginer, cursor osv...
-Subklasse for størrelser
+Hovedklasse .button med standard verdier typ marginer, cursor osv...
+Subklasse for størrelser;button--xs/sm/l
 Subklasse for ikon
 Subklasse for ikon tilhørende størrelse
 Subklasse primary
@@ -18,7 +18,7 @@ Subklasse tertiary
     - samme attributter som primary
 */
 
-.kv-button{
+.button{
     background: none; 
     border: none; /* Sjekk senere */
     border-radius: 0.5rem;
@@ -37,7 +37,7 @@ Subklasse tertiary
   Knappestørrelser 
 ********************/
 
-.kv-button--xs{
+.button--xs{
     width: 8.875rem;
     height: 2.5rem;
     padding: var(--padding-button--xs);
@@ -46,7 +46,7 @@ Subklasse tertiary
     line-height: 1.5rem;
 }
 
-.kv-button--sm{
+.button--sm{
     width: 9.875rem;
     height: 3.5rem;
     padding: var(--padding-button--s-m-l);
@@ -55,7 +55,7 @@ Subklasse tertiary
     line-height: 1.5rem;
 }
 
-.kv-button--l{
+.button--l{
     width: 10.688rem;
     height: 4rem;
     padding: var(--padding-button--s-m-l);
@@ -68,7 +68,7 @@ Subklasse tertiary
   Ikoner
 *******************/
 
-.kv-button-icon--xs{
+.button__icon--xs{
     width: 10.625rem;
     height: 2.5rem;
     padding: var(--padding-button--xs);
@@ -77,7 +77,7 @@ Subklasse tertiary
     line-height: 1.5rem;
 }
 
-.kv-button-icon--sm{
+.button__icon--sm{
     width: 13.375rem;
     height: 3.5rem;
     padding: var(--padding-button--s-m-l);
@@ -86,7 +86,7 @@ Subklasse tertiary
     line-height: 1.5rem;
 }
 
-.kv-button-icon--l{
+.button__icon--l{
     width: 14.188rem;
     height: 4rem;
     padding: var(--padding-button--s-m-l);
@@ -95,7 +95,7 @@ Subklasse tertiary
 }
 
 /* Ikoner */
-.material-icons{
+.material__icons{
     font-family: 'Material Icons';
     font-weight: normal;
     font-size: 1.5rem;
@@ -127,17 +127,17 @@ Subklasse tertiary
 *******************/
 
 /* kv-button primary */
-.kv-button-green--primary{
+.button__green--primary{
     background-color: var(--groenn_standard);
     color: var(--hvit); /* Setter tekstfarge */
 }
 
-.kv-button-green--primary:hover{
+.button__green--primary:hover{
     background-color: var(--groenn_hover);
     color: var(--hvit);
 }
 
-.kv-button-green--primary:active{
+.button__green--primary:active{
     background-color: var(--groenn_moerk);
     color: var(--hvit);
 }
@@ -145,17 +145,17 @@ Subklasse tertiary
 
 
 
-.kv-button-blue--primary{
+.button__blue--primary{
     background-color: var(--blaa);
     color: var(--hvit);
 }
 
-.kv-button-blue--primary:hover{
+.button__blue--primary:hover{
     background-color: var(--blaa_hover);
     color: var(--svart);
 }
 
-.kv-button-blue--primary:active{
+.button__blue--primary:active{
     background-color: var(--blaa_moerk);
     color: var(--hvit);
 }
@@ -164,20 +164,20 @@ Subklasse tertiary
 
 
 /* kv-button secondary */
-.kv-button-green--secondary{
+.button__green--secondary{
     background-color: var(--hvit);
     color: var(--groenn_standard);
     outline-style: solid;
     outline-color: var(--groenn_standard);
 }
 
-.kv-button-green--secondary:hover{
+.button__green--secondary:hover{
     background-color: var(--groenn_hover);
     color: var(--hvit);
     outline: none;
 }
 
-.kv-button-green--secondary:active{
+.button__green--secondary:active{
     background-color: var(--groenn_moerk);
     color: var(--hvit);
     outline: none;
@@ -185,20 +185,20 @@ Subklasse tertiary
 
 
 
-.kv-button-blue--secondary{
+.button__blue--secondary{
     background-color: var(--hvit);
     color: var(--blaa);
     outline-style: solid;
     outline-color: var(--blaa);
 }
 
-.kv-button-blue--secondary:hover{
+.button__blue--secondary:hover{
     background-color: var(--blaa_hover);
     color: var(--svart);
     outline: none;
 }
 
-.kv-button-blue--secondary:active{
+.button__blue--secondary:active{
     background-color: var(--blaa_moerk);
     color: var(--hvit);
     outline: none;
@@ -207,50 +207,50 @@ Subklasse tertiary
 
 
 /* kv-button tertiary */
-.kv-button-green--tertiary{
+.button__green--tertiary{
     background-color: var(--hvit);
     color: var(--groenn_standard);
 }
 
-.kv-button-green--tertiary:hover{
+.button__green--tertiary:hover{
     background-color: var(--hvit);
     color: var(--groenn_standard);
     text-decoration: underline;
     text-decoration-color: var(--groenn_standard);
 }
 
-.kv-button-green--tertiary:active{
+.button__green--tertiary:active{
     background-color: var(--hvit);
     color: var(--groenn_moerk);
 }
 
 
-.kv-button-blue--tertiary{
+.button__blue--tertiary{
     background-color: var(--hvit);
     color: var(--blaa);
 }
 
-.kv-button-blue--tertiary:hover{
+.button__blue--tertiary:hover{
     background-color: var(--hvit);
     color: var(--blaa_moerk);
     text-decoration: underline;
     text-decoration-color: var(--blaa_moerk);
 }
 
-.kv-button-blue--tertiary:active{
+.button__blue--tertiary:active{
     background-color: var(--hvit);
     color: var(--blaa_moerk);
 }
 
 
 /* Fokus */
-.kv-button:focus:not(:focus-visible){
+.button:focus:not(:focus-visible){
     outline: var(--blaa_moerk) solid var(--focus-outline);
     outline-offset: 0.313rem;
 }
 
 /* Disabled */
-.kv-button:disabled{
+.button:disabled{
     background-color: var(--graa_lys);
     color: var(--graa_moerk);
     outline-style: solid;
