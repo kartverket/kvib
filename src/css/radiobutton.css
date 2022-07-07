@@ -49,7 +49,7 @@
 .radio input[type="radio"]:checked + label::after {
     content: "";
     color: var(--blaa_moerk);
-    background-color: #1A589F;
+    background-color: var(--blaa_moerk);
 }
 
 /*change background color of checkbox on checked state*/
