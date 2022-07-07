@@ -11,6 +11,52 @@ input[type=text] {
     background: #FFFFFF;
 }
 
+input[type=text]:focus-visible:active {
+    border-color: var(--blaa_hover);
+    box-shadow: 0 0 0 2px var(--blaa_hover);
+}
+
+input[type=text]:focus-visible {
+    outline: var(--blaa_moerk) solid;
+}
+
+
+
+input[type=text]:disabled {
+    background: var(--graa_lys);
+    color: var(--graa_moerk);
+    border-color: var(--graa);
+}
+
+input[type=text]:invalid {
+    border-color: var(--roed_feilmelding);
+}
+
+input[type=text]:invalid:focus-visible {
+    /*box-shadow: 0 0 0 2px var(--roed_feilmelding);*/
+    outline: var(--roed_feilmelding) solid;
+}
+
+input[type=text]:invalid:active {
+    /*box-shadow: 0 0 0 2px var(--roed_feilmelding);*/
+}
+
+.input-label {
+    font-family: Mulish, sans-serif;
+    color: var(--svart);
+    font-size: 14px;
+    white-space: nowrap;
+    display: flex;
+}
+
+.error-label {
+    font-family: Mulish, sans-serif;
+    color: var(--roed_feilmelding);
+    font-size: 14px;
+    white-space: nowrap;
+    display: flex;
+}
+
 select {
     box-sizing: border-box;
 
@@ -36,24 +82,4 @@ select {
     order: 1;
     align-self: stretch;
     flex-grow: 0;
-}
-
-input[type=text]:focus:active {
-    outline: none;
-}
-
-input[type=text]:focus-visible {
-    outline: var(--blaa_moerk) solid;
-}
-
-input[type=text]:focus-visible:invalid {
-    outline: var(--roed_feilmelding) solid;
-}
-
-input[type=text]:disabled {
-    background: var(--graa_lys);
-}
-
-input[type=text]:invalid {
-    border: 2px var(--roed_feilmelding) solid;
 }
