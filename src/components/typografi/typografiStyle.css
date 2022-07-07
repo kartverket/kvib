@@ -1,6 +1,6 @@
+/*css for styling av typografi-komponentene til dokumentasjonen.*/
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap');
 
-/*css for styling av typografi-komponentene til dokumentasjonen.*/
 table {
     text-align:left;
 
@@ -8,3 +8,11 @@ table {
   table th {
     background-color: var(--groenn_lys);
     }
+
+
+div.typographyCard{
+  width: 780px;
+  padding: 10px;
+  border: 4px solid var(--groenn_lys);
+  margin: 0;
+}
