@@ -4,45 +4,45 @@ import '../../css/main.css';
 
 
 const h1Variants = [
-    { størrelse: "Extra Small", utseende: "H1 / Mulish / Bold / 20 ", klasse: "heading h1--x-small" },
-    { størrelse: "Small", utseende: "H1 / Mulish / Bold / 24 ", klasse: "heading h1--small" },
-    { størrelse: "Medium", utseende: "H1 / Mulish / Bold / 32 ", klasse: "heading h1--medium"},
-    { størrelse: "Large", utseende: "H1 / Mulish / Bold / 36 ", klasse: "heading h1--large"}
+    { størrelse: "Extra Small", utseende: "H1 / Mulish / Bold / 20 ", klasse: "heading heading__h1--xs" },
+    { størrelse: "Small", utseende: "H1 / Mulish / Bold / 24 ", klasse: "heading heading__h1--s" },
+    { størrelse: "Medium", utseende: "H1 / Mulish / Bold / 32 ", klasse: "heading heading__h1--m"},
+    { størrelse: "Large", utseende: "H1 / Mulish / Bold / 36 ", klasse: "heading heading__h1--l"}
   ]
 
 const h2Variants = [
-    { størrelse: "Extra Small", utseende: "H2 / Mulish / Bold / 18 ", klasse: "heading h2--x-small" },
-    { størrelse: "Small", utseende: "H2 / Mulish / Bold / 20 ", klasse: "heading h2--small" },
-    { størrelse: "Medium", utseende: "H2 / Mulish / Bold / 24 ", klasse: "heading h2--medium"},
-    { størrelse: "Large", utseende: "H2 / Mulish / Bold / 26 ", klasse: "heading h2--large"}
+    { størrelse: "Extra Small", utseende: "H2 / Mulish / Bold / 18 ", klasse: "heading heading__h2--xs" },
+    { størrelse: "Small", utseende: "H2 / Mulish / Bold / 20 ", klasse: "heading heading__h2--s" },
+    { størrelse: "Medium", utseende: "H2 / Mulish / Bold / 24 ", klasse: "heading heading__h2--m"},
+    { størrelse: "Large", utseende: "H2 / Mulish / Bold / 26 ", klasse: "heading heading__h2--l"}
   ]
 
 const h3Variants= [
-    { størrelse: "Extra Small", utseende: "H3 / Mulish / Bold / 16 ", klasse: "heading h3--x-small" },
-    { størrelse: "Small", utseende: "H3 / Mulish / Bold / 18 ", klasse: "heading h3--s-m" },
-    { størrelse: "Medium", utseende: "H3 / Mulish / Bold / 18 ", klasse: "heading h3--s-m"},
-    { størrelse: "Large", utseende: "H3 / Mulish / Bold / 20 ", klasse: "heading h3--large"}
+    { størrelse: "Extra Small", utseende: "H3 / Mulish / Bold / 16 ", klasse: "heading heading__h3--xs" },
+    { størrelse: "Small", utseende: "H3 / Mulish / Bold / 18 ", klasse: "heading heading__h3--sm" },
+    { størrelse: "Medium", utseende: "H3 / Mulish / Bold / 18 ", klasse: "heading heading__h3--sm"},
+    { størrelse: "Large", utseende: "H3 / Mulish / Bold / 20 ", klasse: "heading heading__h3--l"}
   ]
 
-const brodtekstVariants= [
-    { størrelse: "Extra Small", utseende: "Brødtekst / Mulish / Regular / 16 ", klasse: "brodtekst" },
-    { størrelse: "Small", utseende: "Brødtekst / Mulish / Regular / 18 ", klasse: "brodtekst s-m-l" },
-    { størrelse: "Medium", utseende: "Brødtekst / Mulish / Regular / 18 ", klasse: "brodtekst s-m-l"},
-    { størrelse: "Large", utseende: "Brødtekst / Mulish / Regular / 18 ", klasse: "brodtekst s-m-l"}
+const bodyTextVariants= [
+    { størrelse: "Extra Small", utseende: "Brødtekst / Mulish / Regular / 16 ", klasse: "body-text body-text--xs" },
+    { størrelse: "Small", utseende: "Brødtekst / Mulish / Regular / 18 ", klasse: "body-text body-text--sml" },
+    { størrelse: "Medium", utseende: "Brødtekst / Mulish / Regular / 18 ", klasse: "body-text body-text--sml"},
+    { størrelse: "Large", utseende: "Brødtekst / Mulish / Regular / 18 ", klasse: "body-text body-text--sml"}
   ]
 
   const labelVariants= [
-    { størrelse: "Extra Small", utseende: "Label / Mulish / Regular / 12 ", klasse: "label--x-small" },
-    { størrelse: "Small", utseende: "Label / Mulish / Regular / 14 ", klasse: "label--s-m-l" },
-    { størrelse: "Medium", utseende: "Label / Mulish / Regular / 14 ", klasse: "label--s-m-l"},
-    { størrelse: "Large", utseende: "Label / Mulish / Regular / 14", klasse: "label--s-m-l"}
+    { størrelse: "Extra Small", utseende: "Label / Mulish / Regular / 12 ", klasse: "label label--xs" },
+    { størrelse: "Small", utseende: "Label / Mulish / Regular / 14 ", klasse: "label label--sml" },
+    { størrelse: "Medium", utseende: "Label / Mulish / Regular / 14 ", klasse: "label label--sml"},
+    { størrelse: "Large", utseende: "Label / Mulish / Regular / 14", klasse: "label label--sml"}
   ]
 
-  const beskrivendeTekstVariants= [
-    { størrelse: "Extra Small", utseende: "Label / Mulish / Regular / 12 ", klasse: "label--x-small" },
-    { størrelse: "Small", utseende: "Label / Mulish / Regular / 14 ", klasse: "label--s-m-l" },
-    { størrelse: "Medium", utseende: "Label / Mulish / Regular / 14 ", klasse: "label--s-m-l"},
-    { størrelse: "Large", utseende: "Label / Mulish / Regular / 14", klasse: "label--s-m-l"}
+  const detailVariants= [
+    { størrelse: "Extra Small", utseende: "Label / Mulish / Regular / 12 ", klasse: "detail detail--xs" },
+    { størrelse: "Small", utseende: "Label / Mulish / Regular / 14 ", klasse: "detail detail--sml" },
+    { størrelse: "Medium", utseende: "Label / Mulish / Regular / 14 ", klasse: "detail detail--sml"},
+    { størrelse: "Large", utseende: "Label / Mulish / Regular / 14", klasse: "detail detail--sml"}
   ]
 
 
@@ -114,7 +114,7 @@ function Heading3() {
     </div>        
     );}
     
-function Brodtekst() {
+function BodyText() {
     return (
     <div>
         <table >
@@ -123,7 +123,7 @@ function Brodtekst() {
         <th>UTSEENDE</th>
         <th>KLASSE</th>
         </tr>
-        {brodtekstVariants.map((val, key) => {
+        {bodyTextVariants.map((val, key) => {
         return (
             <tr key={key}>
             <td>{val.størrelse}</td>
@@ -161,7 +161,7 @@ function Label() {
 
 
 
-function BeskrivendeTekst() {
+function Detail() {
     return (
     <div>
         <table>
@@ -170,7 +170,7 @@ function BeskrivendeTekst() {
         <th>UTSEENDE</th>
         <th>KLASSE</th>
         </tr>
-        {beskrivendeTekstVariants.map((val, key) => {
+        {detailVariants.map((val, key) => {
         return (
             <tr key={key}>
                 <td>{val.størrelse}</td>
@@ -194,16 +194,16 @@ function Underline(){
             </tr>
                 <tr>
                     <td>Med understrekning</td>
-                    <td class="bekskrivende-tekst--s-m-l underline">Alpha Bravo Charlie</td>
-                    <td>bekskrivende-tekst--s-m-l underline</td>
+                    <td class="detail--sml underline">Alpha Bravo Charlie</td>
+                    <td> underline</td>
                 </tr>
                 <tr>
                     <td>Uten understrekning</td>
-                    <td class="bekskrivende-tekst--s-m-l">Alpha Bravo Charlie</td>
-                    <td>bekskrivende-tekst--s-m-l</td>
+                    <td class="detail--sml">Alpha Bravo Charlie</td>
+                    <td></td>
                 </tr>
         </table>
     );
 }
 
-export {Heading1,Heading2,Heading3,Brodtekst, Label, BeskrivendeTekst, Underline};
+export {Heading1,Heading2,Heading3,BodyText, Label, Detail, Underline};

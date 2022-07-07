@@ -40,7 +40,6 @@
 }
 
 .palette {
-    font-family: sans-serif;
     display: grid;
     gap: 15px;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -69,84 +68,84 @@
     border-top: none;
 }
 
-.palette_groenn_standard {
+.palette--groenn_standard {
     background: var(--groenn_standard);
 }
 
-.palette_groenn_hover {
+.palette--groenn_hover {
     background: var(--groenn_hover);
 }
 
-.palette_groenn_moerk {
+.palette--groenn_moerk {
     background: var(--groenn_moerk);
 }
 
-.palette_groenn_lys {
+.palette--groenn_lys {
     background: var(--groenn_lys);
 }
 
-.palette_blaa_moerk {
+.palette--blaa_moerk {
     background: var(--blaa_moerk);
 }
 
-.palette_blaa {
+.palette--blaa {
     background: var(--blaa);
 }
 
-.palette_blaa_lys {
+.palette--blaa_lys {
     background: var(--blaa_lys);
 }
 
-.palette_blaa_hover {
+.palette--blaa_hover {
     background: var(--blaa_hover);
 }
 
-.palette_blaa_moerk_knapp {
+.palette--blaa_moerk_knapp {
     background: var(--blaa_moerk_knapp);
 }
 
-.palette_roed_feilmelding {
+.palette--roed_feilmelding {
     background: var(--roed_feilmelding);
 }
 
-.palette_roed_moerk {
+.palette--roed_moerk {
     background: var(--roed_moerk);
 }
 
-.palette_rosa {
+.palette--rosa {
     background: var(--rosa);
 }
 
-.palette_oransje {
+.palette--oransje {
     background: var(--oransje);
 }
 
-.palette_gul {
+.palette--gul {
     background: var(--gul);
 }
 
-.palette_gul_lys {
+.palette--gul_lys {
     background: var(--gul_lys);
 }
 
-.palette_svart {
+.palette--svart {
     background: var(--svart);
 }
 
-.palette_hvit {
+.palette--hvit {
     background: var(--hvit);
     border: 1px solid var(--graa_lys);
 }
 
-.palette_graa_moerk {
+.palette--graa_moerk {
     background: var(--graa_moerk);
 }
 
-.palette_graa {
+.palette--graa {
     background: var(--graa);
 }
 
-.palette_graa_lys {
+.palette--graa_lys {
     background: var(--graa_lys);
 }
 

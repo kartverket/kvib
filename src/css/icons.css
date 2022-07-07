@@ -1,4 +1,4 @@
-.material-symbols-outlined {
+.material__symbols--outlined {
     font-family: 'Material Symbols Outlined';
     font-weight: normal;
     font-style: normal;
@@ -12,12 +12,14 @@
     direction: ltr;
 }
 
+
+/* HVA ER DETTE??? til BEM */
 span.size-20 {
     font-size: 20px;
     font-variation-settings: 'OPSZ' 20;
 }
 
-.material-icons {
+.material__icons {
     font-family: 'Material Icons';
     font-weight: normal;
     font-style: normal;

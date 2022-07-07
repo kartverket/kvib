@@ -6,8 +6,8 @@ slug: /designsystem/komponenter/radiobutton
 displayed_sidebar: designsystemSidebar
 sidebar_position: 3
 ---
-
-## Normal avkryssningsboks
+ Radioknapper skal benyttes hvor en bruker kun skal kunne gjøre et enkelt valg, og ikke fler valg. Ved et nytt valg, skal eventuelle tidligere valg fjernes automatisk. Feilmelding avkrysningsknapp skal brukes for å visualisere feil i avkrysningen, dersom dette har skjedd (eks. ikke krysset av for et alternativ).
+## Normal avkryssningsknapp
 
 
 <div class="radio">
@@ -19,18 +19,15 @@ sidebar_position: 3
     <label for="radioBtn_2">Input tekst</label>
 </div>
 
-##### Eksempelbruk
 
-```markdown title="radio"
-
+```markdown
 <div class="radio">
     <input type="radio" id="radioBtn_1" name="radioGroup1"/>
     <label for="radioBtn_1">Input tekst</label>
 </div>
-
 ```
 
-## Feilmelding avkryssningsboks
+## Feilmelding avkryssningsknapp
 <div class="radio error">
     <input type="radio" id="errorRadioBtn_1" name="radioGroup2" required/>
     <label for="errorRadioBtn_1">Input tekst</label>
@@ -39,16 +36,12 @@ sidebar_position: 3
     <input type="radio" id="errorRadioBtn_2" name="radioGroup2" required/>
     <label for="errorRadioBtn_2">Input tekst</label>
 </div>
+   
+.
 
-
-
-##### Eksempelbruk
-
-```markdown title="radio error"
-
+```markdown
 <div class="radio error">
     <input type="radio" id="errorRadioBtn_1" name="radioGroup2"/>
     <label for="errorRadioBtn_1">Input tekst</label>
 </div>
-
 ```
