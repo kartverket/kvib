@@ -64,13 +64,6 @@
 }
 
 /* ----CHECKBOX ERROR----*/
-
-.radio input[type="radio"]:checked:invalid + label::after {
-    content: "";
-    color: var(--roed_feilmelding);
-    background-color: var(--roed_feilmelding);
-}
-
 /*set background on the checked state*/
 .radio input[type="radio"]:required:invalid + label::before {
     color: var(--roed_feilmelding);
@@ -78,12 +71,6 @@
 
 /*Adding focus styles on the outer-box*/
 .radio input[type="radio"]:focus-visible:invalid + label::before {
-    outline: max(3px, 0.15em) solid var(--roed_feilmelding);
-    outline-offset: 2px;
-}
-
-/*Adding hover styles on the outer-box*/
-.radio input[type="radio"]:invalid + label::before {
     outline: max(3px, 0.15em) solid var(--roed_feilmelding);
     outline-offset: 2px;
 }
