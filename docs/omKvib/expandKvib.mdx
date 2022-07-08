@@ -6,44 +6,117 @@ slug: /omKvib/expandKvib
 displayed_sidebar: OmKvibSidebar
 sidebar_position: 3
 ---
+
+:::info
+
 Før det gjøres endringer i KVIB skal dette avklares med designansvarlig.
+
+:::
+
+
 
 ## Rutine for kvalitetskontroll
 <span class='underline'>Før hver merge til master, skal følgende punkter gjennomføres: </span> 
 
-1. Følge KVIB sine konvensjoner for CSS-klassenavn. Se [Om KVIB -> Konvensjonerfor CSS-klassenavn](./infoKvib.mdx) for beskrivelse.
+1. Følge KVIB sine konvensjoner for CSS-klassenavn. [Se _Konvensjoner for CSS-klassenavn_.](./infoKvib.mdx#konvensjoner-for-css-klassenavn)
 
 
-2. Teste med skjermleser:
+2. Følge KVIB sine konvensjoner for dokumentasjon (struktur og innhold). [Se _Innhold og struktur av dokumentasjon_.](#innhold-og-struktur-i-dokumentasjon)
+
+3. Sjekke rettskriving og klarspråk.
+
+
+4. Teste med skjermleser:
     - NVDA
 
 
-3. Teste med browserverktøy:
+5. Teste med browserverktøy:
     - Wave for UU-testing
     - Lighthouse for beste praksis
 
 
-4. Teste i ulike browsere:
+6. Teste i ulike browsere:
     - Chrome / chromium
     - Firefox
     - Safari
 
 
-5. Teste med 400% zoom på desktop, samt teste på små skjermer.
+7. Teste med 400% zoom på desktop, samt teste på små skjermer.
 
 
-6. Det skal være QA på all ny kode.
+8. Test at tab-navigering på siden funger korrekt. 
 
 
-7. Oppdater change-log (Keep a Changelog).
+9. Det skal være QA på all ny kode.
 
 
-8. Følge regler for dokumentasjonssiden: 
-    - Struktur
-    - Obligatorisk innhold
+10. Oppdater versjonsloggen. [Se _Oppdater versjon_.](#oppdater-versjon)
 
 
-9. Test at tab-navigering funger korrekt. 
+
+
+
+## Innhold og struktur i dokumentasjon
+
+### Struktur av dokumentasjonen
+
+
+* Følg alltid overskriftsnivåene nedover, selv om dette nødvendigvis ikke gir riktig størrelse. Begynn med <h2\> (##) ettersom sidetittelen, <h1\>, settes i beskrivelsen av mdx-filen (øverst i filen) ved bruk av “title”. 
+
+* Vær opppmerksom på hvor mye innhold som blir i mdx-filen. Vurder å eventuelt dele opp innholdet i flere mdx-filer, og legg de samlet i en fellesmappe. Dette generer et til undernivå i venstre sidebar (eks. se hvordan dette er løst med knapper). 
+En slik strukturering gir mindre scrolling på samme side, og samtidig mer oversikt i høyre sidebar ettersom den kun viser element <h2\> og <h3\>.
+
+
+ 
+### Innhold
+Få alltid godkjent komponenter av designer før det legges inn i kvib. Dokumentasjon av en komponent skal inneholde: 
+
+* Beskievende heading: Bruk mest naturlige heading-element, avhengig av sturkturen på resten av siden,  som tittel på den spesifikke komponenten.
+
+* Skriv en liten beskrivelse av komponenten under heading. 
+
+* Vis utseende til komponenten ved å skrive html-kode med tilhørende css-klasser. 
+
+* Vis tilhørende html-kode under komponenten ved å bruke en kodeblokk uten tittel (_ ‘''markup <….> '’'_ ).
+
+
+
+## Oppdater versjon
+Det er viktig å holde en riktig og oppdatert versjonslogg, slik at det skal bli enklere for brukere av KVIB å kunne se endringer som har blitt gjort mellom hver versjon av biblioteket. Seksjonen øverst i dokumentet viser en oversikt over kommendene endringer.
+I versjonsloggen skal den nyeste versjonen stå øverst sammen med utgivelsesdato.
+
+Versjonering følger [konvensjoner fra Semantic Versioning](https://semver.org/). 
+Hovedsakelig inkrementerer patch-versjon ved bakover kompatibel bug-fix, minor-versjon ved ny bakover kompatibel funskjonalitet og major-versjon ved funksjonalitet som ikke er bakvoer kompatibel.  
+
+ 
+For hver endring som gjøres, skal den nye versjonen dokumenteres:
+
+* Legg til ny .mdx-fil under _kvib/blog_, med filnavn: **YYYY-MM-DD-version[major.minor.patch].mdx **(formatet gjør at dato generes automatisk]
+
+* Følg strukturen fra eksisterende filer i _blog_ for å lage en beskrivelse øverst i filen:
+
+    - Sett _"title: Versjon [major.minor.patch]"_. 
+
+    - Skriv kort beskrivelse for mdx-filen. 
+
+    - Sett passende _tags_. 
+
+* Skriv en beskrivelse av endringer som er gjort i versjonen ved å bruke titlene (sett som <h2\>):
+
+    - Added: nye funksjoner som er lagt til 
+
+    - Changed: endringer som er gjort
+
+    - Deprecated: funksjoner som snart skal fjernes. 
+    
+    - Removed: funskjoner som er fjernet. 
+
+    - Fixed: bugs som er fikset. 
+    
+    - Security: dersom det er sårbarheter i koden.
+
+
+* I filen _src/css/package.json_ må variabel _version_ oppdateres. 
 
 
 ## Tekniske strukturen i KVIB
