@@ -49,9 +49,13 @@ const config = {
           // Remove this to remove the "edit this page" links.
         },
         blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
+          showReadingTime: false,
+          blogTitle: 'KVIB Versjoner',
+          blogDescription: 'En oversikt over versjoner av KVIB',
+          postsPerPage: 'ALL',
+          blogSidebarTitle: 'Alle versjoner',
+          blogSidebarCount:'ALL',
+
         },
         theme: {
           customCss: require.resolve('./src/css/main.css'),
@@ -86,6 +90,9 @@ const config = {
               position: 'left',
               label: 'Designsystem',
             },
+
+            {to: 'blog', label: 'Versjoner', position: 'left'},
+
           ],
         },
         footer: {
