@@ -10,20 +10,25 @@ sidebar_position: 4
 
 Her er et eksempel på et aktivt tekstfelt, med feilmelding
 
-<label for="textField">Aktivt tekstfelt: </label>
-<input type="text" id="textField" placeholder="Aktivt tekstfelt"/>
+<div class="input_text_container">
+    <label class="input-label" for="textField">Skriv heia </label>
+    <input type="text" id="textField" placeholder="Aktivt tekstfelt"/>
+</div>
 <br/>
-<label for="textFieldInvalid">Feilmelding: </label>
+<div class="input_text_container">
+<label class="error-label" for="textFieldInvalid">Skriv heia </label>
 <input type="text" id="textFieldInvalid" placeholder="Feilmelding" required/>
+<span class="material-symbols-outlined exclamation">exclamation</span>
+</div>
 
 ## Deaktivert tekstfelt
 
 Her er et eksempel på et deaktivert tekstfelt
 
-<label for="disabledTextField">Deaktivert tekstfelt </label><br/>
+<label class="input-label" for="disabledTextField">Skriv heia </label>
 <input type="text" id="disabledTextField" disabled/><br/>
 
-<label for="disabledTextField">Deaktivert med hjelpetekst </label><br/>
+<label class="input-label" for="disabledTextField">tekstfelt med hjelpetekst </label>
 <input type="text" id="disabledTextField" disabled placeholder="Jeg er deaktivert"/>
 
 ## Nedtrekksmeny
