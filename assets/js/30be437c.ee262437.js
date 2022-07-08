@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunk_kartverket_kvib=self.webpackChunk_kartverket_kvib||[]).push([[9008],{1496:e=>{e.exports=JSON.parse('{"label":"facebook","permalink":"/kvib/blog/tags/facebook","allTagsPath":"/kvib/blog/tags","count":1}')}}]);

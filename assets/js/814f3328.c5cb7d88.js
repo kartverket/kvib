@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_kartverket_kvib=self.webpackChunk_kartverket_kvib||[]).push([[535],{5641:e=>{e.exports=JSON.parse('{"title":"Alle versjoner","items":[{"title":"Versjon [0.0.5]","permalink":"/kvib/blog/2022/07/08/version-[0.0.5]"}]}')}}]);

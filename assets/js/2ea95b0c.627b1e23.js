@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunk_kartverket_kvib=self.webpackChunk_kartverket_kvib||[]).push([[4989],{7973:e=>{e.exports=JSON.parse('{"label":"hello","permalink":"/kvib/blog/tags/hello","allTagsPath":"/kvib/blog/tags","count":2}')}}]);
