@@ -7,17 +7,24 @@ https://docusaurus.io/docs/styling-layout*/
     --ifm-heading-font-family:'Mulish', sans-serif; 
     --ifm-font-family-base:'Mulish', sans-serif;
     --ifm-heading-font-weight:700;
-    --ifm-link-color:var()
+    --ifm-color-primary: var(--blaa_moerk);
+
 
 
 }
-
 
 h1, h2, h3, h4, h5, h6 {
     color: var(--ifm-heading-color);
     font-family: var(--ifm-font-family-base);
     font-weight: var(--ifm-heading-font-weight);
 }
+
+
+p a {
+    text-decoration: underline;
+}
+
+
 
 
 /*css- brukt til å designe dokuemntasjons-siden av kvib-docusaurus/docs/designsystems/uu.mdx */
