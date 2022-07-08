@@ -7,8 +7,9 @@ displayed_sidebar: designsystemSidebar
 sidebar_position: 3
 ---
  Radioknapper skal benyttes hvor en bruker kun skal kunne gjøre et enkelt valg, og ikke fler valg. Ved et nytt valg, skal eventuelle tidligere valg fjernes automatisk. Feilmelding avkrysningsknapp skal brukes for å visualisere feil i avkrysningen, dersom dette har skjedd (eks. ikke krysset av for et alternativ).
-## Normal avkryssningsknapp
+## Normal radio knapp
 
+Radio knapp får fokus sirkel rundt når de velges med tastaturet.
 
 <div class="radio">
     <input type="radio" id="radioBtn_1" name="radioGroup1"/>
@@ -19,29 +20,42 @@ sidebar_position: 3
     <label for="radioBtn_2">Input tekst</label>
 </div>
 
+<br/>
+
 
 ```markdown
 <div class="radio">
     <input type="radio" id="radioBtn_1" name="radioGroup1"/>
     <label for="radioBtn_1">Input tekst</label>
+</div><br/>
+<div class="radio">
+    <input type="radio" id="radioBtn_2" name="radioGroup1"/>
+    <label for="radioBtn_2">Input tekst</label>
 </div>
 ```
 
-## Feilmelding avkryssningsknapp
-<div class="radio error">
-    <input type="radio" id="errorRadioBtn_1" name="radioGroup2" required/>
-    <label for="errorRadioBtn_1">Input tekst</label>
+## Feilmelding radio knapp
+
+Følgende radio knapp får feilmeldings farge hvis et av alternativene må være valgt før bruker kan gå videre.
+
+<div class="radio">
+    <input type="radio" id="invalidRadioBtn_1" name="radioGroup2" required/>
+    <label for="invalidRadioBtn_1">Input tekst</label>
 </div><br/>
-<div class="radio error">
-    <input type="radio" id="errorRadioBtn_2" name="radioGroup2" required/>
-    <label for="errorRadioBtn_2">Input tekst</label>
+<div class="radio">
+    <input type="radio" id="invalidRadioBtn_2" name="radioGroup2" required/>
+    <label for="invalidRadioBtn_2">Input tekst</label>
 </div>
-   
-.
+
+<br/>
 
 ```markdown
-<div class="radio error">
-    <input type="radio" id="errorRadioBtn_1" name="radioGroup2"/>
-    <label for="errorRadioBtn_1">Input tekst</label>
+<div class="radio">
+    <input type="radio" id="invalidRadioBtn_1" name="radioGroup2" required/>
+    <label for="invalidRadioBtn_1">Input tekst</label>
+</div><br/>
+<div class="radio">
+    <input type="radio" id="invalidRadioBtn_2" name="radioGroup2" required/>
+    <label for="invalidRadioBtn_2">Input tekst</label>
 </div>
 ```

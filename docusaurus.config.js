@@ -58,7 +58,7 @@ const config = {
 
         },
         theme: {
-          customCss: require.resolve('./src/css/main.css'),
+          customCss: require.resolve('./src/docusaurus_custom_css/custom.css'),
         },
       }),
     ],
@@ -75,7 +75,7 @@ const config = {
         navbar: {
           logo: {
             alt: 'Kartverket logo',
-            src: 'img/logo/kartverket_liggende_web.svg',
+            src: 'img/logo/kartverket_liggende.svg',
           },
           items: [
             {
