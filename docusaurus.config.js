@@ -24,13 +24,13 @@ const config = {
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'no',
+    locales: ['no'],
   },
 
   stylesheets: [
     {
-      href: 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined',
+      href: 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200',
     },
     {
       href: 'https://fonts.googleapis.com/icon?family=Material+Icons',
