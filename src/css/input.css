@@ -1,3 +1,27 @@
+/*TODO*/
+/*Tekstfelt container*/
+.input_text_container {
+    position: relative;
+}
+
+.exclamation{
+    background: var(--roed_feilmelding);
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+    color: #fff;
+    font-style: normal;
+    height: 100%;
+    line-height: 38px;
+    position: relative;
+    right: 21px;
+    text-align: center;
+    top: 7px;
+    width: 20px;
+}
+
+
+/*Tekstfelt label*/
+
 input[type=text] {
     width: 160px;
     height: 40px;
@@ -20,12 +44,27 @@ input[type=text]:focus-visible {
     outline: var(--blaa_moerk) solid;
 }
 
+.input-label {
+    font-family: Mulish, sans-serif;
+    color: var(--svart);
+    font-size: 12px;
+    white-space: nowrap;
+    display: flex;
+}
 
+/*Tekstfelt feilmelding*/
 
-input[type=text]:disabled {
-    background: var(--graa_lys);
-    color: var(--graa_moerk);
-    border-color: var(--graa);
+.error-label {
+    font-family: Mulish, sans-serif;
+    color: var(--roed_feilmelding);
+    font-size: 12px;
+    white-space: nowrap;
+    display: flex;
+}
+
+.error-label:after {
+    content: "*";
+    color: var(--roed_feilmelding);
 }
 
 input[type=text]:invalid {
@@ -33,28 +72,18 @@ input[type=text]:invalid {
 }
 
 input[type=text]:invalid:focus-visible {
-    /*box-shadow: 0 0 0 2px var(--roed_feilmelding);*/
     outline: var(--roed_feilmelding) solid;
 }
 
-input[type=text]:invalid:active {
-    /*box-shadow: 0 0 0 2px var(--roed_feilmelding);*/
-}
+/*Tekstfelt hjelpetekst*/
 
-.input-label {
-    font-family: Mulish, sans-serif;
-    color: var(--svart);
-    font-size: 14px;
-    white-space: nowrap;
-    display: flex;
-}
 
-.error-label {
-    font-family: Mulish, sans-serif;
-    color: var(--roed_feilmelding);
-    font-size: 14px;
-    white-space: nowrap;
-    display: flex;
+/*Tekstfelt deaktivert*/
+
+input[type=text]:disabled {
+    background: var(--graa_lys);
+    color: var(--graa_moerk);
+    border-color: var(--graa);
 }
 
 select {
