@@ -1,4 +1,4 @@
-.material__symbols--outlined {
+.material-symbols-outlined {
     font-family: 'Material Symbols Outlined';
     font-weight: normal;
     font-style: normal;
@@ -10,7 +10,16 @@
     word-wrap: normal;
     white-space: nowrap;
     direction: ltr;
+    vertical-align: text-bottom;
 }
+
+ .material-symbols-outlined-filled {
+     font-variation-settings:
+             'FILL' 1,
+             'wght' 400,
+             'GRAD' 0,
+             'opsz' 48
+ }
 
 
 /* HVA ER DETTE??? til BEM */
@@ -19,27 +28,8 @@ span.size-20 {
     font-variation-settings: 'OPSZ' 20;
 }
 
-.material__icons {
-    font-family: 'Material Icons';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 24px;  /* Preferred icon size */
-    display: inline-block;
-    line-height: 1;
-    text-transform: none;
-    letter-spacing: normal;
-    word-wrap: normal;
-    white-space: nowrap;
-    direction: ltr;
-
-    /* Support for all WebKit browsers. */
-    -webkit-font-smoothing: antialiased;
-    /* Support for Safari and Chrome. */
-    text-rendering: optimizeLegibility;
-
-    /* Support for Firefox. */
-    -moz-osx-font-smoothing: grayscale;
-
-    /* Support for IE. */
-    font-feature-settings: 'liga';
+.icon-container {
+    box-sizing: border-box;
+    gap: 15px;
+    display: flex;
 }
