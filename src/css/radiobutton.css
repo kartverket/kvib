@@ -69,6 +69,13 @@
     color: var(--roed_feilmelding);
 }
 
+
+.radio input[type="radio"]:required:invalid + label::after {
+    content: "";
+    color: var(--roed_feilmelding);
+    background-color: var(--roed_feilmelding);
+}
+
 /*Adding focus styles on the outer-box*/
 .radio input[type="radio"]:focus-visible:invalid + label::before {
     outline: max(3px, 0.15em) solid var(--roed_feilmelding);
