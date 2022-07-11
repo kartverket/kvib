@@ -1,7 +1,5 @@
 /* CSS-fil for Knapper */
-
 /* Struktur
-
 Hovedklasse .button med standard verdier typ marginer, cursor osv...
 Subklasse for størrelser;button--xs/sm/l
 Subklasse for ikon
@@ -17,7 +15,6 @@ Subklasse secondary
 Subklasse tertiary
     - samme attributter som primary
 */
-
 .button{
     background: none; 
     border: none; /* Sjekk senere */
@@ -32,12 +29,10 @@ Subklasse tertiary
     box-sizing: border-box;
 }
 
-
 /******************* 
   Knappestørrelser 
 ********************/
-
-.button--xs{
+.button__noicon--xs{
     width: 8.875rem;
     height: 2.5rem;
     padding: var(--padding-button--xs);
@@ -45,8 +40,7 @@ Subklasse tertiary
     font-size: 1rem;
     line-height: 1.5rem;
 }
-
-.button--sm{
+.button__noicon--sm{
     width: 9.875rem;
     height: 3.5rem;
     padding: var(--padding-button--s-m-l);
@@ -54,8 +48,7 @@ Subklasse tertiary
     font-size: 1rem;
     line-height: 1.5rem;
 }
-
-.button--l{
+.button__noicon--l{
     width: 10.688rem;
     height: 4rem;
     padding: var(--padding-button--s-m-l);
@@ -63,81 +56,75 @@ Subklasse tertiary
     line-height: 2rem;
 }
 
-
 /******************
-  Ikoner
+  Knappestørrelser med ikon
 *******************/
-
 .button__icon--xs{
     width: 10.625rem;
+    
+    /* Standard for knapp*/
     height: 2.5rem;
     padding: var(--padding-button--xs);
-    /* h3--x-small*/
     font-size: 1rem;
     line-height: 1.5rem;
 }
-
 .button__icon--sm{
-    width: 13.375rem;
+    width: 12.375rem;
     height: 3.5rem;
     padding: var(--padding-button--s-m-l);
-    /* h3--x-small*/
     font-size: 1rem;
     line-height: 1.5rem;
 }
-
 .button__icon--l{
-    width: 14.188rem;
+    width: 13.188rem;
+    /* Standard for knapp */
     height: 4rem;
     padding: var(--padding-button--s-m-l);
     font-size: 1.125rem;
     line-height: 2rem;
 }
 
-/*Spesifisere at dette er for button? hvos dette er tilfellet. 
-Ikoner */
-.material-icons{
-    font-family: 'Material Icons';
-    font-weight: normal;
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-    text-transform: none;
-    letter-spacing: normal;
-    word-wrap: normal;
-    white-space: nowrap;
-    direction: ltr;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    -moz-osx-font-smoothing: grayscale;
-    font-feature-settings: 'liga';
-    vertical-align: middle;
-    position: absolute;  /* Denne er endret på og setter teksten i midten. Med relative settes både tekst og ikon til bunnen av knappen */
-    padding-left: 0;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    padding-right: 1rem;
-    box-sizing: border-box;
-    width: 2.5rem;
-    height: 3.5rem;
+/******************
+  Ikonstørrelse
+*******************/
+.button__icon--xs-left{
+    float: left;
+    padding-right: 0.5rem;
+    font-size: 1.25rem;
+    height: 1.25rem;
+}
+.button__icon--xs-right{
+    float: right;
+    padding-left: 0.5rem;
+    font-size: 1.25rem;
+    height: 1.25rem;
 }
 
+.button__icon--s-m-l-left{
+    float: left;
+    padding-right: 1rem;
+    font-size: 1.5rem;
+    height: 1.5rem;
+}
+.button__icon--s-m-l-right{
+    float: right;
+    padding-left: 1rem;
+    font-size: 1.5rem;
+}
 
 
 /******************
   Knappetyper
 *******************/
-
-/* kv-button primary */
+/* button primary */
 .button__green--primary{
     background-color: var(--groenn_standard);
     color: var(--hvit); /* Setter tekstfarge */
 }
-
 .button__green--primary:hover{
     background-color: var(--groenn_hover);
     color: var(--hvit);
 }
-
 .button__green--primary:active{
     background-color: var(--groenn_moerk);
     color: var(--hvit);
@@ -145,17 +132,14 @@ Ikoner */
 
 
 
-
 .button__blue--primary{
     background-color: var(--blaa);
     color: var(--hvit);
 }
-
 .button__blue--primary:hover{
     background-color: var(--blaa_hover);
     color: var(--svart);
 }
-
 .button__blue--primary:active{
     background-color: var(--blaa_moerk);
     color: var(--hvit);
@@ -163,27 +147,23 @@ Ikoner */
 
 
 
-
-/* kv-button secondary */
+/* button secondary */
 .button__green--secondary{
     background-color: var(--hvit);
     color: var(--groenn_standard);
     outline-style: solid;
     outline-color: var(--groenn_standard);
 }
-
 .button__green--secondary:hover{
     background-color: var(--groenn_hover);
     color: var(--hvit);
     outline: none;
 }
-
 .button__green--secondary:active{
     background-color: var(--groenn_moerk);
     color: var(--hvit);
     outline: none;
 }
-
 
 
 .button__blue--secondary{
@@ -192,13 +172,11 @@ Ikoner */
     outline-style: solid;
     outline-color: var(--blaa);
 }
-
 .button__blue--secondary:hover{
     background-color: var(--blaa_hover);
     color: var(--svart);
     outline: none;
 }
-
 .button__blue--secondary:active{
     background-color: var(--blaa_moerk);
     color: var(--hvit);
@@ -206,50 +184,42 @@ Ikoner */
 }
 
 
-
-/* kv-button tertiary */
+/* button tertiary */
 .button__green--tertiary{
     background-color: var(--hvit);
     color: var(--groenn_standard);
 }
-
 .button__green--tertiary:hover{
     background-color: var(--hvit);
     color: var(--groenn_standard);
     text-decoration: underline;
     text-decoration-color: var(--groenn_standard);
 }
-
 .button__green--tertiary:active{
     background-color: var(--hvit);
     color: var(--groenn_moerk);
 }
 
-
 .button__blue--tertiary{
     background-color: var(--hvit);
     color: var(--blaa);
 }
-
 .button__blue--tertiary:hover{
     background-color: var(--hvit);
     color: var(--blaa_moerk);
     text-decoration: underline;
     text-decoration-color: var(--blaa_moerk);
 }
-
 .button__blue--tertiary:active{
     background-color: var(--hvit);
     color: var(--blaa_moerk);
 }
-
 
 /* Fokus */
 .button:focus:not(:focus-visible){
     outline: var(--blaa_moerk) solid var(--focus-outline);
     outline-offset: 0.313rem;
 }
-
 /* Disabled */
 .button:disabled{
     background-color: var(--graa_lys);
