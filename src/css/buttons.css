@@ -27,6 +27,8 @@ Subklasse tertiary
     font-family: 'Mulish';
     font-weight: 700;
     box-sizing: border-box;
+    display: flex;
+    justify-content: center;
 }
 
 /******************* 
@@ -89,12 +91,14 @@ Subklasse tertiary
 *******************/
 .button__icon--xs-left{
     float: left;
+    /* width:0%; bredden til ikonet blir 0 piksler men størrelsen beholdes fortsatt. Test med større knapper */
     padding-right: 0.5rem;
     font-size: 1.25rem;
     height: 1.25rem;
 }
 .button__icon--xs-right{
     float: right;
+    /* width: 20%; Blir ikke helt riktig, flytter på ikonet bare */
     padding-left: 0.5rem;
     font-size: 1.25rem;
     height: 1.25rem;
