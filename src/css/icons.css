@@ -1,10 +1,8 @@
-.material-symbols-outlined {
+.icon-outlined {
     font-family: 'Material Symbols Outlined';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 24px;  /* Preferred icon size */
-    display: inline-block;
-    line-height: 1;
+    /* font-size: 24px;  Preferred icon size */
+    /* display: inline-block; /*skaper konflikt med float */
+    /*line-height: 1rem; skaper konflikt med float */
     text-transform: none;
     letter-spacing: normal;
     word-wrap: normal;
@@ -13,20 +11,14 @@
     vertical-align: text-bottom;
 }
 
- .material-symbols-outlined-filled {
+
+ .icon-filled {
      font-variation-settings:
              'FILL' 1,
              'wght' 400,
              'GRAD' 0,
              'opsz' 48
  }
-
-
-/* HVA ER DETTE??? til BEM */
-span.size-20 {
-    font-size: 20px;
-    font-variation-settings: 'OPSZ' 20;
-}
 
 .icon-container {
     box-sizing: border-box;
