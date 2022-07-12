@@ -76,7 +76,11 @@ input[type=text]:invalid:focus-visible {
 }
 
 /*Tekstfelt hjelpetekst*/
-
+.helper-text{
+    position: relative;
+    display: block;
+    font-size: 1rem; /* Sjekk figma etterpå */
+}
 
 /*Tekstfelt deaktivert*/
 

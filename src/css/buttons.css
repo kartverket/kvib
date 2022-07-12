@@ -2,18 +2,20 @@
 /* Struktur
 Hovedklasse .button med standard verdier typ marginer, cursor osv...
 Subklasse for størrelser;button--xs/sm/l
-Subklasse for ikon
-Subklasse for ikon tilhørende størrelse
+Subklasse for knappestørrelser for ikonknapper
+Subklasse for ikonstørrelser
 Subklasse primary
     - hover
     - active
     - normal
-    - disabled
-    - focus
 Subklasse secondary
     - samme attributter som primary
 Subklasse tertiary
     - samme attributter som primary
+
+Disabled
+Focus
+
 */
 .button{
     background: none; 
@@ -22,13 +24,11 @@ Subklasse tertiary
     text-decoration: none;
     cursor: pointer;
     margin: 0.5rem;
-    gap: 1rem; /* Fyll inn riktig her senere, samme som gutter*/
-    min-width: 2rem; /* Tilfeldig verdi, minste button width (xs) er 3.5rem så denne skal ikke overkjøre xs størrelsen*/
     font-family: 'Mulish';
     font-weight: 700;
     box-sizing: border-box;
-    display: flex;
-    justify-content: center;
+    /* display: flex;
+    justify-content: center; */
 }
 
 /******************* 
@@ -219,11 +219,13 @@ Subklasse tertiary
     color: var(--blaa_moerk);
 }
 
+
 /* Fokus */
 .button:focus:not(:focus-visible){
     outline: var(--blaa_moerk) solid var(--focus-outline);
     outline-offset: 0.313rem;
 }
+
 /* Disabled */
 .button:disabled{
     background-color: var(--graa_lys);

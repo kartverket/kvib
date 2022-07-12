@@ -1,0 +1,38 @@
+/* Custom zoom knapp til historiske kart 
+
+MERK! Denne er ikke UU-godkjent eller sjekket av Wanni
+
+*/
+
+.zoom{
+    background-color: var(--blaa);
+    color: var(--hvit);
+
+    height: 2rem;
+    width: 2rem;
+    /* border-radius: 0.125rem; */
+
+    margin: 0.063rem; /* basert på eksisterende zoom knapp i historiske kart */
+
+    vertical-align: middle;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.zoom:hover{
+    background-color: var(--blaa_hover);
+}
+
+.zoom:active{
+    background-color: var(--blaa_moerk_knapp);
+}
+
+.zoom:focus:not(:focus-visible){
+    outline: var(--blaa_moerk) solid var(--focus-outline);
+    outline-offset: 0.313rem;
+}
+
+.icon--center{
+    padding: 00.063rem;
+    align-self: center;
+}
