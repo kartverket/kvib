@@ -2,18 +2,20 @@
 /* Struktur
 Hovedklasse .button med standard verdier typ marginer, cursor osv...
 Subklasse for størrelser;button--xs/sm/l
-Subklasse for ikon
-Subklasse for ikon tilhørende størrelse
+Subklasse for knappestørrelser for ikonknapper
+Subklasse for ikonstørrelser
 Subklasse primary
     - hover
     - active
     - normal
-    - disabled
-    - focus
 Subklasse secondary
     - samme attributter som primary
 Subklasse tertiary
     - samme attributter som primary
+
+Disabled
+Focus
+
 */
 .button{
     background: none; 
@@ -22,34 +24,34 @@ Subklasse tertiary
     text-decoration: none;
     cursor: pointer;
     margin: 0.5rem;
-    gap: 1rem; /* Fyll inn riktig her senere, samme som gutter*/
-    min-width: 2rem; /* Tilfeldig verdi, minste button width (xs) er 3.5rem så denne skal ikke overkjøre xs størrelsen*/
     font-family: 'Mulish';
     font-weight: 700;
     box-sizing: border-box;
+    /* display: flex;
+    justify-content: center; */
 }
 
 /******************* 
   Knappestørrelser 
 ********************/
-.button__noicon--xs{
-    width: 8.875rem;
+.button--xs{
+    width: fit-content;
     height: 2.5rem;
     padding: var(--padding-button--xs);
     /* h3--x-small*/
     font-size: 1rem;
     line-height: 1.5rem;
 }
-.button__noicon--sm{
-    width: 9.875rem;
+.button--sm{
+    width: fit-content;
     height: 3.5rem;
     padding: var(--padding-button--s-m-l);
     /* h3--x-small*/
     font-size: 1rem;
     line-height: 1.5rem;
 }
-.button__noicon--l{
-    width: 10.688rem;
+.button--l{
+    width: fit-content;
     height: 4rem;
     padding: var(--padding-button--s-m-l);
     font-size: 1.125rem;
@@ -59,11 +61,11 @@ Subklasse tertiary
 /******************
   Knappestørrelser med ikon
 *******************/
-.button__icon--xs{
+/* .button__icon--xs{
     width: 10.625rem;
     
     /* Standard for knapp*/
-    height: 2.5rem;
+    /* height: 2.5rem;
     padding: var(--padding-button--xs);
     font-size: 1rem;
     line-height: 1.5rem;
@@ -76,25 +78,27 @@ Subklasse tertiary
     line-height: 1.5rem;
 }
 .button__icon--l{
-    width: 13.188rem;
+    width: 13.188rem; */
     /* Standard for knapp */
-    height: 4rem;
+    /* height: 4rem;
     padding: var(--padding-button--s-m-l);
     font-size: 1.125rem;
     line-height: 2rem;
-}
+} */
 
 /******************
   Ikonstørrelse
 *******************/
 .button__icon--xs-left{
     float: left;
+    /* width:0%; bredden til ikonet blir 0 piksler men størrelsen beholdes fortsatt. Test med større knapper */
     padding-right: 0.5rem;
     font-size: 1.25rem;
     height: 1.25rem;
 }
 .button__icon--xs-right{
     float: right;
+    /* width: 20%; Blir ikke helt riktig, flytter på ikonet bare */
     padding-left: 0.5rem;
     font-size: 1.25rem;
     height: 1.25rem;
@@ -215,11 +219,13 @@ Subklasse tertiary
     color: var(--blaa_moerk);
 }
 
+
 /* Fokus */
 .button:focus:not(:focus-visible){
     outline: var(--blaa_moerk) solid var(--focus-outline);
     outline-offset: 0.313rem;
 }
+
 /* Disabled */
 .button:disabled{
     background-color: var(--graa_lys);
