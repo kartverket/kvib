@@ -1,0 +1,34 @@
+/* Søkefeltet til historiske kart
+
+Noen verdier er hentet fra søkefeltet på kartverket.no
+
+*/
+
+.searchbar{
+    background-color: var(--groenn_standard);
+    color: var(--hvit);
+
+    height: 2.75rem;
+    width: 4rem;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+
+    margin: 0rem; /* basert på eksisterende søkeknapp på Kartverket.no */
+    z-index: 2;
+
+    vertical-align: middle;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.searchbar:hover{
+    background-color: var(--groenn_hover);
+}
+
+.searchbar:active{
+    background-color: var(--groenn_moerk);
+}
+
+.searchbar__icon-padding{
+    padding: 0.563rem 1.25rem;
+}

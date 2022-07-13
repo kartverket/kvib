@@ -25,3 +25,7 @@
     gap: 15px;
     display: flex;
 }
+
+.icon--center{
+    align-self: center;
+}
