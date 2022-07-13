@@ -1,0 +1,67 @@
+
+input[type="range"] {
+-webkit-appearance: none;
+margin-right: 15px;
+width: 100%;
+height: 12px;
+border: 1px solid var(--blaa_moerk);
+background:var(--hvit);
+border-radius: 8px;
+background-image: linear-gradient(var(--blaa_moerk), var(--blaa_moerk));
+background-size: 30%;  /*100% this will descide the slider-value"*/
+background-repeat: no-repeat;
+}
+
+/* Input Thumb */
+input[type="range"]::-webkit-slider-thumb {
+-webkit-appearance: none;
+height: 20px;
+width: 20px;
+border-radius: 50%;
+background: var(--blaa_moerk);
+cursor: pointer;
+transition: background .3s ease-in-out;
+}
+
+input[type="range"]::-moz-range-thumb {
+-webkit-appearance: none;
+height: 20px;
+width: 20px;
+border-radius: 50%;
+background: var(--blaa_moerk);
+cursor: pointer;
+transition: background .3s ease-in-out;
+}
+
+input[type="range"]::-ms-thumb {
+-webkit-appearance: none;
+height: 20px;
+width: 20px;
+border-radius: 50%;
+background: var(--blaa_moerk);
+cursor: pointer;
+transition: background .3s ease-in-out;
+}
+
+/* Input Track */
+input[type=range]::-webkit-slider-runnable-track  {
+-webkit-appearance: none;
+box-shadow: none;
+border:none;
+background: transparent;
+}
+
+input[type=range]::-moz-range-track {
+-webkit-appearance: none;
+box-shadow: none;
+border: none;
+background: transparent;
+}
+
+input[type="range"]::-ms-track {
+-webkit-appearance: none;
+box-shadow: none;
+border: none;
+background: transparent;
+}
+      
