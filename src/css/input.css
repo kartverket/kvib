@@ -33,6 +33,7 @@ input[type=text] {
     box-sizing: border-box;
     top: 24px;
     background: #FFFFFF;
+    transition: linear, 0.2s linear;
 }
 
 input[type=text]:focus-visible:active {
@@ -55,7 +56,7 @@ input[type=text]:focus-visible {
 /*Tekstfelt feilmelding*/
 
 .error-label {
-    font-family: Mulish, sans-serif;
+    font-family: 'Mulish', sans-serif;
     color: var(--roed_feilmelding);
     font-size: 12px;
     white-space: nowrap;
@@ -76,7 +77,14 @@ input[type=text]:invalid:focus-visible {
 }
 
 /*Tekstfelt hjelpetekst*/
-
+/* .helper-text{
+    position: relative;
+    display: block;
+    font-size: 0.875rem;
+    font-style: inherit;
+    color: var(--svart); /* Sjekk figma etterpå 
+    z-index: 1;
+} */
 
 /*Tekstfelt deaktivert*/
 

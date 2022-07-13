@@ -1,5 +1,8 @@
 .radio input[type="radio"] {
+    position: absolute;
     opacity: 0;
+    height: 0;
+    width: 0;
 }
 
 .radio label {
@@ -43,6 +46,10 @@
 /*Hide checkmark by default*/
 .radio input[type="radio"] + label::after {
     content: none;
+}
+
+.radio input[type="radio"]:hover + label::before {
+    cursor: pointer;
 }
 
 /*set checkmark on checked state*/

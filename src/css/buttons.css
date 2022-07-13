@@ -1,23 +1,22 @@
 /* CSS-fil for Knapper */
-
 /* Struktur
-
 Hovedklasse .button med standard verdier typ marginer, cursor osv...
 Subklasse for størrelser;button--xs/sm/l
-Subklasse for ikon
-Subklasse for ikon tilhørende størrelse
+Subklasse for knappestørrelser for ikonknapper
+Subklasse for ikonstørrelser
 Subklasse primary
     - hover
     - active
     - normal
-    - disabled
-    - focus
 Subklasse secondary
     - samme attributter som primary
 Subklasse tertiary
     - samme attributter som primary
-*/
 
+Disabled
+Focus
+
+*/
 .button{
     background: none; 
     border: none; /* Sjekk senere */
@@ -25,119 +24,111 @@ Subklasse tertiary
     text-decoration: none;
     cursor: pointer;
     margin: 0.5rem;
-    gap: 1rem; /* Fyll inn riktig her senere, samme som gutter*/
-    min-width: 2rem; /* Tilfeldig verdi, minste button width (xs) er 3.5rem så denne skal ikke overkjøre xs størrelsen*/
     font-family: 'Mulish';
     font-weight: 700;
     box-sizing: border-box;
+    /* display: flex;
+    justify-content: center; */
 }
-
 
 /******************* 
   Knappestørrelser 
 ********************/
-
 .button--xs{
-    width: 8.875rem;
+    width: fit-content;
     height: 2.5rem;
     padding: var(--padding-button--xs);
     /* h3--x-small*/
     font-size: 1rem;
     line-height: 1.5rem;
 }
-
 .button--sm{
-    width: 9.875rem;
+    width: fit-content;
     height: 3.5rem;
     padding: var(--padding-button--s-m-l);
     /* h3--x-small*/
     font-size: 1rem;
     line-height: 1.5rem;
 }
-
 .button--l{
-    width: 10.688rem;
+    width: fit-content;
     height: 4rem;
     padding: var(--padding-button--s-m-l);
     font-size: 1.125rem;
     line-height: 2rem;
 }
-
 
 /******************
-  Ikoner
+  Knappestørrelser med ikon
 *******************/
-
-.button__icon--xs{
+/* .button__icon--xs{
     width: 10.625rem;
-    height: 2.5rem;
+    
+    /* Standard for knapp*/
+    /* height: 2.5rem;
     padding: var(--padding-button--xs);
-    /* h3--x-small*/
     font-size: 1rem;
     line-height: 1.5rem;
 }
-
 .button__icon--sm{
-    width: 13.375rem;
+    width: 12.375rem;
     height: 3.5rem;
     padding: var(--padding-button--s-m-l);
-    /* h3--x-small*/
     font-size: 1rem;
     line-height: 1.5rem;
 }
-
 .button__icon--l{
-    width: 14.188rem;
-    height: 4rem;
+    width: 13.188rem; */
+    /* Standard for knapp */
+    /* height: 4rem;
     padding: var(--padding-button--s-m-l);
     font-size: 1.125rem;
     line-height: 2rem;
+} */
+
+/******************
+  Ikonstørrelse
+*******************/
+.button__icon--xs-left{
+    float: left;
+    /* width:0%; bredden til ikonet blir 0 piksler men størrelsen beholdes fortsatt. Test med større knapper */
+    padding-right: 0.5rem;
+    font-size: 1.25rem;
+    height: 1.25rem;
+}
+.button__icon--xs-right{
+    float: right;
+    /* width: 20%; Blir ikke helt riktig, flytter på ikonet bare */
+    padding-left: 0.5rem;
+    font-size: 1.25rem;
+    height: 1.25rem;
 }
 
-/*Spesifisere at dette er for button? hvos dette er tilfellet. 
-Ikoner */
-.material-icons{
-    font-family: 'Material Icons';
-    font-weight: normal;
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-    text-transform: none;
-    letter-spacing: normal;
-    word-wrap: normal;
-    white-space: nowrap;
-    direction: ltr;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    -moz-osx-font-smoothing: grayscale;
-    font-feature-settings: 'liga';
-    vertical-align: middle;
-    position: absolute;  /* Denne er endret på og setter teksten i midten. Med relative settes både tekst og ikon til bunnen av knappen */
-    padding-left: 0;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+.button__icon--s-m-l-left{
+    float: left;
     padding-right: 1rem;
-    box-sizing: border-box;
-    width: 2.5rem;
-    height: 3.5rem;
+    font-size: 1.5rem;
+    height: 1.5rem;
 }
-
+.button__icon--s-m-l-right{
+    float: right;
+    padding-left: 1rem;
+    font-size: 1.5rem;
+}
 
 
 /******************
   Knappetyper
 *******************/
-
-/* kv-button primary */
+/* button primary */
 .button__green--primary{
     background-color: var(--groenn_standard);
     color: var(--hvit); /* Setter tekstfarge */
 }
-
 .button__green--primary:hover{
     background-color: var(--groenn_hover);
     color: var(--hvit);
 }
-
 .button__green--primary:active{
     background-color: var(--groenn_moerk);
     color: var(--hvit);
@@ -145,17 +136,14 @@ Ikoner */
 
 
 
-
 .button__blue--primary{
     background-color: var(--blaa);
     color: var(--hvit);
 }
-
 .button__blue--primary:hover{
     background-color: var(--blaa_hover);
     color: var(--svart);
 }
-
 .button__blue--primary:active{
     background-color: var(--blaa_moerk);
     color: var(--hvit);
@@ -163,27 +151,23 @@ Ikoner */
 
 
 
-
-/* kv-button secondary */
+/* button secondary */
 .button__green--secondary{
     background-color: var(--hvit);
     color: var(--groenn_standard);
     outline-style: solid;
     outline-color: var(--groenn_standard);
 }
-
 .button__green--secondary:hover{
     background-color: var(--groenn_hover);
     color: var(--hvit);
     outline: none;
 }
-
 .button__green--secondary:active{
     background-color: var(--groenn_moerk);
     color: var(--hvit);
     outline: none;
 }
-
 
 
 .button__blue--secondary{
@@ -192,13 +176,11 @@ Ikoner */
     outline-style: solid;
     outline-color: var(--blaa);
 }
-
 .button__blue--secondary:hover{
     background-color: var(--blaa_hover);
     color: var(--svart);
     outline: none;
 }
-
 .button__blue--secondary:active{
     background-color: var(--blaa_moerk);
     color: var(--hvit);
@@ -206,38 +188,32 @@ Ikoner */
 }
 
 
-
-/* kv-button tertiary */
+/* button tertiary */
 .button__green--tertiary{
     background-color: var(--hvit);
     color: var(--groenn_standard);
 }
-
 .button__green--tertiary:hover{
     background-color: var(--hvit);
     color: var(--groenn_standard);
     text-decoration: underline;
     text-decoration-color: var(--groenn_standard);
 }
-
 .button__green--tertiary:active{
     background-color: var(--hvit);
     color: var(--groenn_moerk);
 }
 
-
 .button__blue--tertiary{
     background-color: var(--hvit);
     color: var(--blaa);
 }
-
 .button__blue--tertiary:hover{
     background-color: var(--hvit);
     color: var(--blaa_moerk);
     text-decoration: underline;
     text-decoration-color: var(--blaa_moerk);
 }
-
 .button__blue--tertiary:active{
     background-color: var(--hvit);
     color: var(--blaa_moerk);

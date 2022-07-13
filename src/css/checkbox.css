@@ -1,5 +1,8 @@
 .checkbox input[type="checkbox"] {
+    position: absolute;
     opacity: 0;
+    height: 0;
+    width: 0;
 }
 
 .checkbox label {
@@ -44,8 +47,14 @@
 }
 
 /*Hide checkmark by default*/
+
 .checkbox input[type="checkbox"] + label::after {
     content: none;
+}
+
+.checkbox input[type="checkbox"]:hover + label::before,
+.checkbox input[type="checkbox"]:hover + label::after{
+    cursor: pointer;
 }
 
 /*set checkmark on checked state*/
