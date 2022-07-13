@@ -1,0 +1,31 @@
+---
+id: sliderID
+title: Slider
+description: sliderRange
+slug: /designsystem/komponenter/slider
+displayed_sidebar: designsystemSidebar
+---
+Kartverket har to størrelser på slider; extra small/small og medium/large. 
+For å implementere denne komponenten med riktig funksjonalitet, må det benyttes en <script\>-tag med en refereanse til 
+slider.js filen hvor det ligger javascript-kode. 
+
+<div>
+    <label for="volume">Volume</label>
+    <input type="range" id="volume" name="volume"
+           min="0" max="100"/>
+</div>
+
+
+  
+
+
+```markup
+<div>
+  <label for="volume">Volume</label>
+  <input type="range" id="volume" name="volume"
+         min="0" max="100"/>
+  <script src="/kvib/slider.js" data-slider-id="volume"></script>
+</div>
+```
+
+

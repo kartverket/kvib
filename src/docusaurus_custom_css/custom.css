@@ -1,17 +1,21 @@
-/*custom.css brukes til å tilpasse design av dokumentasjons-siden. Brukes for å overkjøre docusaurus sine egne variabler opg design.
+/*custom.css brukes til å overkjøre docusaurus sine egne variabler og eget design.
 https://docusaurus.io/docs/styling-layout*/
+
+
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap');
 @import '/src/css/main.css';
+@import './palette.css';
+@import './uu.css';
 
+
+/*overkjøre definerte variabler fra docusaurus*/
 :root {
     --ifm-heading-font-family:'Mulish', sans-serif; 
     --ifm-font-family-base:'Mulish', sans-serif;
     --ifm-heading-font-weight:700;
     --ifm-color-primary: var(--blaa_moerk);
-
-
-
 }
+
 
 h1, h2, h3, h4, h5, h6 {
     color: var(--ifm-heading-color);
@@ -19,150 +23,9 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: var(--ifm-heading-font-weight);
 }
 
-
+/*kun linker som blir understreket*/
 p a {
     text-decoration: underline;
 }
 
 
-
-
-/*css- brukt til å designe dokuemntasjons-siden av kvib-docusaurus/docs/designsystems/uu.mdx */
-.details {
-    outline: none;
-    background: white;
-    border: none;
-}
-
-.details > summary {
-    padding: 4px;
-    width: auto;
-    background-color: white;
-    cursor: pointer;
-    outline: none;
-}
-
-.details > p {
-    background-color: white;
-    padding: 4px;
-    margin: 0;
-    color: #A32F00;
-}
-
-/* Color palettes code for Design Tokens -> Farger */
-
-.palette,
-.palette * {
-    box-sizing: border-box;
-}
-
-.palette {
-    font-family: sans-serif;
-    display: grid;
-    gap: 15px;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-}
-
-.palette__color {
-    height: 150px;
-    position: relative;
-}
-
-.palette__desc {
-    padding: 10px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    color: var(--hvit);
-}
-
-.palette__text {
-    width: 100%;
-    padding: 10px;
-    outline: none;
-    border: 1px solid var(--graa_lys);
-    border-top: none;
-}
-
-.palette--groenn_standard {
-    background: var(--groenn_standard);
-}
-
-.palette--groenn_hover {
-    background: var(--groenn_hover);
-}
-
-.palette--groenn_moerk {
-    background: var(--groenn_moerk);
-}
-
-.palette--groenn_lys {
-    background: var(--groenn_lys);
-}
-
-.palette--blaa_moerk {
-    background: var(--blaa_moerk);
-}
-
-.palette--blaa {
-    background: var(--blaa);
-}
-
-.palette--blaa_lys {
-    background: var(--blaa_lys);
-}
-
-.palette--blaa_hover {
-    background: var(--blaa_hover);
-}
-
-.palette--blaa_moerk_knapp {
-    background: var(--blaa_moerk_knapp);
-}
-
-.palette--roed_feilmelding {
-    background: var(--roed_feilmelding);
-}
-
-.palette--roed_moerk {
-    background: var(--roed_moerk);
-}
-
-.palette--rosa {
-    background: var(--rosa);
-}
-
-.palette--oransje {
-    background: var(--oransje);
-}
-
-.palette--gul {
-    background: var(--gul);
-}
-
-.palette--gul_lys {
-    background: var(--gul_lys);
-}
-
-.palette--svart {
-    background: var(--svart);
-}
-
-.palette--hvit {
-    background: var(--hvit);
-    border: 1px solid var(--graa_lys);
-}
-
-.palette--graa_moerk {
-    background: var(--graa_moerk);
-}
-
-.palette--graa {
-    background: var(--graa);
-}
-
-.palette--graa_lys {
-    background: var(--graa_lys);
-}
