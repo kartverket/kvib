@@ -27,8 +27,6 @@ Focus
     font-family: 'Mulish';
     font-weight: 700;
     box-sizing: border-box;
-    /* display: flex;
-    justify-content: center; */
 }
 
 /******************* 
@@ -58,33 +56,6 @@ Focus
     line-height: 2rem;
 }
 
-/******************
-  Knappestørrelser med ikon
-*******************/
-/* .button__icon--xs{
-    width: 10.625rem;
-    
-    /* Standard for knapp*/
-    /* height: 2.5rem;
-    padding: var(--padding-button--xs);
-    font-size: 1rem;
-    line-height: 1.5rem;
-}
-.button__icon--sm{
-    width: 12.375rem;
-    height: 3.5rem;
-    padding: var(--padding-button--s-m-l);
-    font-size: 1rem;
-    line-height: 1.5rem;
-}
-.button__icon--l{
-    width: 13.188rem; */
-    /* Standard for knapp */
-    /* height: 4rem;
-    padding: var(--padding-button--s-m-l);
-    font-size: 1.125rem;
-    line-height: 2rem;
-} */
 
 /******************
   Ikonstørrelse

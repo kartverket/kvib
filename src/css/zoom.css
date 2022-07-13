@@ -27,8 +27,6 @@ MERK! Denne er ikke UU-godkjent eller sjekket av Wanni
     background-color: var(--blaa_moerk_knapp);
 }
 
-
-.icon--center{
+.zoom__icon-padding{
     padding: 00.063rem;
-    align-self: center;
 }
