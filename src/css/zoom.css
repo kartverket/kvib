@@ -27,10 +27,6 @@ MERK! Denne er ikke UU-godkjent eller sjekket av Wanni
     background-color: var(--blaa_moerk_knapp);
 }
 
-/* .zoom:focus:not(:focus-visible){
-    outline: var(--blaa_moerk) solid var(--focus-outline);
-    outline-offset: 0.313rem;
-} */
 
 .icon--center{
     padding: 00.063rem;

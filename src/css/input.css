@@ -77,14 +77,14 @@ input[type=text]:invalid:focus-visible {
 }
 
 /*Tekstfelt hjelpetekst*/
-.helper-text{
+/* .helper-text{
     position: relative;
     display: block;
     font-size: 0.875rem;
     font-style: inherit;
-    color: var(--svart); /* Sjekk figma etterpå */
+    color: var(--svart); /* Sjekk figma etterpå 
     z-index: 1;
-}
+} */
 
 /*Tekstfelt deaktivert*/
 
