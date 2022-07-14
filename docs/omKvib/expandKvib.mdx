@@ -62,13 +62,25 @@ En slik strukturering gir mindre scrolling på samme side, og samtidig mer overs
 ### Innhold
 Få alltid godkjent komponenter av designer før det legges inn i kvib. Dokumentasjon av en komponent skal inneholde: 
 
-* Beskievende heading: Bruk mest naturlige heading-element, avhengig av sturkturen på resten av siden,  som tittel på den spesifikke komponenten.
+* Beskrivende heading: Bruk mest naturlige heading-element, avhengig av sturkturen på resten av siden,  som tittel på den spesifikke komponenten.
 
-* Skriv en liten beskrivelse av komponenten under heading. 
+
+* Skriv en liten beskrivelse av komponenten under heading.
+
 
 * Vis utseende til komponenten ved å skrive html-kode med tilhørende css-klasser. 
 
+
 * Vis tilhørende html-kode under komponenten ved å bruke en kodeblokk uten tittel (_ ‘''markup <….> '’'_ ).
+
+
+* Tillegg for komponenter som krever Javascript:
+    - Lag en GIF for å vise animert funksjonalitet. (Ta skjermopptak av animasjonen, og deretter konverter til en GIF. Vanlig konvertering av HTML til GIF fungerer ikke i alle tilfeller). Legg GIF inn i dokumentasjon.
+    - Legg evt inn ekstra statiske bilder med beskrivende teskt for å vise flere variasjoner av komponenten.
+
+
+
+![documenting_example](/img/image_docs/documenting_example.PNG)
 
 
 
@@ -106,8 +118,6 @@ For hver endring som gjøres, skal den nye versjonen dokumenteres:
     
     - Security: dersom det er sårbarheter i koden.
 
-
-* I filen _src/css/package.json_ må variabel _version_ oppdateres. 
 
 
 ## Tekniske strukturen i KVIB
