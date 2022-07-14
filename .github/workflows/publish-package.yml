@@ -22,9 +22,6 @@ jobs:
           # Defaults to the user or organization that owns the workflow file
           scope: '@kartverket'
 
-      - name: Update version in package.json
-        uses: maks-stupak/gh-action-bump-version@v7.1.5
-
       - run: npm publish
         working-directory: src/css
         env:
