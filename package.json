@@ -18,6 +18,7 @@
     "url": "git@github.com:kartverket/kvib"
   },
   "dependencies": {
+    "@cmfcmf/docusaurus-search-local": "^0.11.0",
     "@docusaurus/core": "^2.0.0-beta.22",
     "@docusaurus/preset-classic": "^2.0.0-beta.22",
     "@emotion/react": "^11.9.3",
