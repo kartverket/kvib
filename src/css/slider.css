@@ -2,9 +2,9 @@
 input[type="range"].slider {
 -webkit-appearance: none;
 width: 100%;
-border: 1px solid var(--blaa_moerk);
+border: 0.063rem solid var(--blaa_moerk);
 background:var(--hvit);
-border-radius: 8px;
+border-radius: 0.5rem;
 background-image: linear-gradient(var(--blaa_moerk), var(--blaa_moerk));
 background-size: 50%;  /*fill to display the slider value"*/
 background-repeat: no-repeat;
@@ -61,40 +61,40 @@ background: transparent;
 /* #########################*/
 /* Size: xs, small */
 input[type="range"].slider--xs-s {
- height: 12px;
+ height: 0.75rem;
 
 }
 input[type="range"].slider--xs-s::-webkit-slider-thumb  {
- height: 20px;
- width: 20px;
+ height: 1.25rem;
+ width: 1.25rem;
 }
 
 input[type="range"].slider--xs-s::-moz-range-thumb {
- height: 20px;
- width: 20px;
+ height: 1.25rem;
+ width: 1.25rem;
 }
 
 input[type="range"].slider--xs-s::-ms-thumb  {
- height: 20px;
- width: 20px;
+ height: 1.25rem;
+ width: 1.25rem;
 }
 
 /* Size:medium, large*/
 input[type="range"].slider--m-l {
- height: 16px;
+ height: 1rem;
 
 }
 input[type="range"].slider--m-l::-webkit-slider-thumb  {
- height: 24px;
- width: 24px;
+ height: 1.5rem;
+ width: 1.5rem;
 }
 
 input[type="range"].slider--m-l::-moz-range-thumb {
- height: 24px;
- width: 24px;
+ height: 1.5rem;
+ width: 1.5rem;
 }
 
 input[type="range"].slider--m-l::-ms-thumb  {
- height: 24px;
- width: 24px;
+ height: 1.5rem;
+ width: 1.5rem;
 }
