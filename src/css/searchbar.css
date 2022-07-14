@@ -29,6 +29,10 @@ Noen verdier er hentet fra søkefeltet på kartverket.no
     background-color: var(--groenn_moerk);
 }
 
+.searchbar:focus-visible{
+    outline-offset: 0;
+}
+
 .searchbar__icon-padding{
     padding: 0.563rem 1.25rem;
 }
