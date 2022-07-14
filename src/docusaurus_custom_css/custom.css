@@ -29,3 +29,11 @@ p a {
 }
 
 
+/*sette bredde på slider-gif*/
+img[alt=sliderGif] { width: 70%;}
+
+img[alt=documenting_example].img_node_modules-\@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module {
+    height:65%;
+    width: 65%;
+    border: red;
+}
