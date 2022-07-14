@@ -1,6 +1,6 @@
 {
   "name": "@kartverket/kvib",
-  "version": "handled by CI/CD",
+  "version": "",
   "description": "NPM-pakke for KVIB",
   "main": "index.js",
   "scripts": {
