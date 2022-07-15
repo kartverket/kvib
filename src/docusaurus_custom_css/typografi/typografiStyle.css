@@ -11,8 +11,10 @@ table {
 
 
 div.typographyCard{
-  width: 780px;
+
   padding: 10px;
   border: 4px solid var(--groenn_lys);
   margin: 0;
+  display:flex;
+  flex-direction: column;
 }
