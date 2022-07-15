@@ -12,4 +12,4 @@ Se https://kartverket.github.io/kvib/ for informasjon angående bruk av KVIB.
 ### npm
 1. Opprett et .npmrc fil i applikasjons mappen. Skriv: @kartverket:registry=https://npm.pkg.github.com i filen.
 2. Logg på git med brukernavn og passord i terminal og naviger til applikasjons mappen med .npmrc filen i.
-3. Skriv npm install.
+3. Skriv npm install og da skal biblioteket være klar til bruk.
