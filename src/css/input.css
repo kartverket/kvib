@@ -15,7 +15,7 @@
     position: relative;
     right: 1.313rem;
     text-align: center;
-    top: 0.625rem;
+    top: 0.63rem;
     width: 1.25rem;
 }
 
@@ -73,6 +73,10 @@ input[type=text].input__error:invalid {
 }
 
 input[type=text].input__error:invalid:focus-visible {
+    outline: var(--roed_feilmelding) solid;
+}
+
+input[type=text].input__error:invalid:active {
     outline: var(--roed_feilmelding) solid;
 }
 
