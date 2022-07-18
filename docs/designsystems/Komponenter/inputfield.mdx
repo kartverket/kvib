@@ -14,15 +14,15 @@ For å style <label\>-elementet, skal egne
 
 Her er et eksempel på et aktivt tekstfelt, med feilmelding
 
-<div class="input_text_container">
-    <label class="input-label" for="textField">Skriv heia </label>
-    <input type="text" id="textField" placeholder="Aktivt tekstfelt"/>
+<div class="input__text-container">
+    <label class="input--label" for="textField">Skriv heia </label>
+    <input class="input" type="text" id="textField" placeholder="Aktivt tekstfelt"/>
 </div>
 <br/>
 
-<div class="input_text_container">
-<label class="error-label" for="textFieldInvalid">Skriv heia </label>
-<input type="text" id="textFieldInvalid" placeholder="Feilmelding" required/>
+<div class="input__text-container">
+<label class="input__error--label" for="textFieldInvalid">Skriv heia </label>
+<input class="input input__error" type="text" id="textFieldInvalid" placeholder="Feilmelding" required/>
 <span class="material-symbols-outlined exclamation">exclamation</span>
 </div>
 
@@ -30,17 +30,17 @@ Her er et eksempel på et aktivt tekstfelt, med feilmelding
 
 Her er et eksempel på et deaktivert tekstfelt
 
-<label class="input-label" for="disabledTextField">Skriv heia </label>
-<input type="text" id="disabledTextField" disabled/><br/>
+<label class="input--label" for="disabledTextField">Skriv heia </label>
+<input class="input input__disabled" type="text" id="disabledTextField" disabled/><br/>
 
-<label class="input-label" for="disabledTextField">tekstfelt med hjelpetekst </label>
-<input type="text" id="disabledTextField" disabled placeholder="Jeg er deaktivert"/>
+<label class="input--label" for="disabledTextField">tekstfelt med hjelpetekst </label>
+<input class="input input__disabled" type="text" id="disabledTextField" disabled placeholder="Jeg er deaktivert"/>
 
 ## Nedtrekksmeny
 
 <label for="dropdown">Overskrift </label><br/>
 
-<select name="dropdown" id="dropdown">
+<select class="dropdown" name="dropdown" id="dropdown">
     <option value="" disabled selected>Hjelpetekst</option>
     <option value="eiendom">Eiendom</option>
     <option value="til lands">Til lands</option>

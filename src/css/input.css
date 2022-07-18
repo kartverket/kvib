@@ -1,78 +1,78 @@
 /*TODO*/
 /*Tekstfelt container*/
-.input_text_container {
+.input__text-container {
     position: relative;
 }
 
 .exclamation{
     background: var(--roed_feilmelding);
-    border-bottom-right-radius: 3px;
-    border-top-right-radius: 3px;
+    border-bottom-right-radius: 0.188rem;
+    border-top-right-radius: 0.188rem;
     color: #fff;
     font-style: normal;
     height: 100%;
-    line-height: 38px;
+    line-height: 2.375rem;
     position: relative;
-    right: 21px;
+    right: 1.313rem;
     text-align: center;
-    top: 7px;
-    width: 20px;
+    top: 0.625rem;
+    width: 1.25rem;
 }
 
 
 /*Tekstfelt label*/
 
-input[type=text] {
-    width: 160px;
-    height: 40px;
-    padding: 12px 20px;
-    margin: 8px 0;
+input[type=text].input {
+    width: 10rem;
+    height: 2.375rem;
+    padding: 0.75rem 1.25rem;
+    margin: 0.5rem 0;
     display: inline-block;
-    border: 1px solid #213060;
-    border-radius: 4px;
+    border: 0.063rem solid var(--blaa_moerk_knapp);
+    border-radius: 0.25rem;
     box-sizing: border-box;
-    top: 24px;
+    top: 1.5rem;
     background: #FFFFFF;
     transition: linear, 0.2s linear;
 }
 
-input[type=text]:focus-visible:active {
+input[type=text].input:focus-visible:active {
     border-color: var(--blaa_hover);
-    box-shadow: 0 0 0 2px var(--blaa_hover);
+    box-shadow: 0 0 0 0.125rem var(--blaa_hover);
 }
 
-input[type=text]:focus-visible {
+input[type=text].input:focus-visible {
     outline: var(--blaa_moerk) solid;
 }
 
-.input-label {
+.input--label {
     font-family: Mulish, sans-serif;
     color: var(--svart);
-    font-size: 12px;
+    font-size: 0.75rem;
     white-space: nowrap;
     display: flex;
 }
 
 /*Tekstfelt feilmelding*/
 
-.error-label {
+.input__error--label {
     font-family: 'Mulish', sans-serif;
     color: var(--roed_feilmelding);
-    font-size: 12px;
+    font-size: 0.75rem;
     white-space: nowrap;
     display: flex;
 }
 
-.error-label:after {
+.input__error--label:after {
     content: "*";
     color: var(--roed_feilmelding);
 }
 
-input[type=text]:invalid {
+input[type=text].input__error:invalid {
     border-color: var(--roed_feilmelding);
 }
 
-input[type=text]:invalid:focus-visible {
+input[type=text].input__error:invalid:focus-visible {
     outline: var(--roed_feilmelding) solid;
 }
 
@@ -88,13 +88,13 @@ input[type=text]:invalid:focus-visible {
 
 /*Tekstfelt deaktivert*/
 
-input[type=text]:disabled {
+input[type=text].input__disabled:disabled {
     background: var(--graa_lys);
     color: var(--graa_moerk);
     border-color: var(--graa);
 }
 
-select {
+.dropdown {
     box-sizing: border-box;
 
     /* Auto layout */
@@ -103,15 +103,15 @@ select {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    padding: 8px;
-    gap: 16px;
+    padding: 0.5rem;
+    gap: 1rem;
 
-    width: 256px;
-    height: 40px;
+    width: 16rem;
+    height: 2.5rem;
 
     background: #FFFFFF;
-    border: 1px solid #000000;
-    border-radius: 4px;
+    border: 0.063rem solid #000000;
+    border-radius: 0.25rem;
 
     /* Inside auto layout */
 

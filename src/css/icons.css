@@ -1,8 +1,5 @@
 .material-symbols-outlined {
     font-family: 'Material Symbols Outlined';
-    /* font-size: 24px;  Preferred icon size */
-    /* display: inline-block; /*skaper konflikt med float */
-    /*line-height: 1rem; skaper konflikt med float */
     text-transform: none;
     letter-spacing: normal;
     word-wrap: normal;
@@ -12,7 +9,7 @@
 }
 
 
- .icon-filled {
+ .material-symbols-outlined--filled {
      font-variation-settings:
              'FILL' 1,
              'wght' 400,
@@ -20,12 +17,6 @@
              'opsz' 48
  }
 
-.icon-container {
-    box-sizing: border-box;
-    gap: 15px;
-    display: flex;
-}
-
-.icon--center{
+.material-symbols-outlined--center{
     align-self: center;
 }
