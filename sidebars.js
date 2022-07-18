@@ -80,6 +80,11 @@ const sidebars = {
         },
       ],
     },
+    {
+      type: 'doc',
+      id:'designsystems/histkart',
+      label: 'Historiske Kart', // Label til sidebar
+    },
 
 
 
