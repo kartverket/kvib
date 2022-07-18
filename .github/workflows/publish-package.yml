@@ -3,7 +3,7 @@ name: KVIB Package Publish
 on:
   push:
     branches:
-      - master
+      - gh-pages
       
  # workflow_dispatch:
 
