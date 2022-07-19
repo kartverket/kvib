@@ -50,9 +50,10 @@ const sidebars = {
       },
       items: [
         'designsystems/designTokens/typografiID', // Dokument som skal være under 'Design tokens'
-        'designsystems/designTokens/fargerID',
-        'designsystems/designTokens/iconsID',// For å referere til ID til dokument, inkluder path.
-        // Eks. folder/folder/docID
+        'designsystems/designTokens/fargerID', // For å referere til ID til dokument, inkluder path.
+        'designsystems/designTokens/iconsID', // Eks. folder/folder/docID
+        'designsystems/designTokens/logoID',
+
       ],
     },
     {
@@ -68,11 +69,12 @@ const sidebars = {
       items: [
         // Dokument som skal være under 'Design tokens'. For å hente .mdx-fil; skriv path inkludert IDen.
          // Eks. folder/folder/docID
-        'designsystems/Komponenter/logoID',
         'designsystems/Komponenter/checkboxID',
         'designsystems/Komponenter/inputfeltID',
         'designsystems/Komponenter/sliderID',
         'designsystems/Komponenter/radiobuttonID',
+        'designsystems/Komponenter/sideelementerID',
+        'designsystems/Komponenter/navID',
         {
           type: 'category',
           label: 'Knapper', // Label til sidebar
