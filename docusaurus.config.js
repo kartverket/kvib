@@ -1,8 +1,7 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const CodeTheme = require('prism-react-renderer/themes/vsDark');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -134,7 +133,7 @@ const config = {
             },
             {
               type: 'doc',
-              docId: 'designsystems/uuID',
+              docId: 'designsystems/sizesID',
               position: 'left',
               label: 'Designsystem',
             },
@@ -185,8 +184,7 @@ const config = {
           copyright: `Copyright © ${new Date().getFullYear()} KVIB-Kartverket.`,
         },
         prism: {
-          theme: lightCodeTheme,
-          darkTheme: darkCodeTheme,
+          theme: CodeTheme,
 
         },
       }),

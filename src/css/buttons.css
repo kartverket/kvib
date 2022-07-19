@@ -33,13 +33,15 @@ Focus
   Knappestørrelser 
 ********************/
 .button--xs{
-    width: fit-content;
-    height: 2.5rem;
-    padding: var(--padding-button--xs);
-    /* h3--x-small*/
-    font-size: 1rem;
-    line-height: 1.5rem;
+        width: fit-content;
+        height: 2.5rem;
+        padding: var(--padding-button--xs);
+        /* h3--x-small*/
+        font-size: 1rem;
+        line-height: 1.5rem;
 }
+
+
 .button--sm{
     width: fit-content;
     height: 3.5rem;
@@ -48,6 +50,7 @@ Focus
     font-size: 1rem;
     line-height: 1.5rem;
 }
+
 .button--l{
     width: fit-content;
     height: 4rem;
@@ -62,14 +65,12 @@ Focus
 *******************/
 .button__icon--xs-left{
     float: left;
-    /* width:0%; bredden til ikonet blir 0 piksler men størrelsen beholdes fortsatt. Test med større knapper */
     padding-right: 0.5rem;
     font-size: 1.25rem;
     height: 1.25rem;
 }
 .button__icon--xs-right{
     float: right;
-    /* width: 20%; Blir ikke helt riktig, flytter på ikonet bare */
     padding-left: 0.5rem;
     font-size: 1.25rem;
     height: 1.25rem;
@@ -193,8 +194,9 @@ Focus
 
 /* Fokus */
 .button:focus-visible{
-    outline: var(--blaa_moerk) solid var(--focus-outline);
+    outline: var(--blaa_moerk) solid;
     outline-offset: 0.313rem;
+    outline-width: var(--focus-outline);
 }
 
 /* Disabled */
@@ -204,4 +206,3 @@ Focus
     outline-style: solid;
     outline-color: var(--graa_moerk);
 }
-

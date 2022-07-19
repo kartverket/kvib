@@ -18,9 +18,9 @@
     --blaa_moerk_knapp: #213060;
 
     /*groenn*/
-    --groenn_standard: #05520A; /* feil nan, egt grønn mørk?*/
-    --groenn_hover: #156630; /* grønn standard? */
-    --groenn_moerk: #1A833B; /* grønn hover */
+    --groenn_moerk: #05520A; 
+    --groenn_standard: #156630;
+    --groenn_hover: #1A833B;
     --groenn_lys: #D0ECD6;
 
     /*roed og rosa*/
