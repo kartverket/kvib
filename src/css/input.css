@@ -21,7 +21,6 @@
 .input-label {
     display: block;
     margin: 0.75rem 0;
-    /*margin-bottom: 0.5rem;*/
 }
 .input-label--error {
     color: var(--roed_feilmelding);
