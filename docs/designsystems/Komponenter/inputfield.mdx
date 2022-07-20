@@ -6,43 +6,67 @@ slug: /designsystem/komponenter/inputfelt
 displayed_sidebar: designsystemSidebar
 sidebar_position: 4
 ---
+Inputfeltene i KVIB bruker CSS-klassen _.input_. Denne klassen har en bredde satt til 100%, slik at bredden på inputfeltet tilpasses ved å legge <input\>-og <label\>-elementene  i f.eks. et <div\>-element med en bestemt lengde.
+For å style <label\>-elementet, skal egne [CSS-klasser fra _Typografi_ benyttes.](../designTokens/typography.mdx#label)
 
-For å style <label\>-elementet, skal egne
-[CSS-klasser fra _Typografi_ benyttes.](../designTokens/typography.mdx#label)
+## Aktivt inputfelt
 
-## Aktivt tekstfelt
+Under er et eksempel på et aktivt inputfelt. Brukeren skal få feilmelding dersom det gis feil input, samtidig som utseende skal endres til å være slik som nederste inputfeltet viser.
+Dette kan eksempelsvis løses med Javascript. Det er foreløpig ingen eksempelkode på dette i KVIB. I eksempelet under er det ikke lagt til styling av det øverste <div\>-elementet.
 
-Her er et eksempel på et aktivt tekstfelt, med feilmelding
-
-<div class="input__text-container">
-    <label class="input--label" for="textField">Skriv heia </label>
+<div>
+    <label class="label label--sml input-label" for="textField">Skriv heia </label>
     <input class="input" type="text" id="textField" placeholder="Aktivt tekstfelt"/>
 </div>
+
+
+<div>
+    <label class="label label--sml input-label input-label--error" for="textFieldInvalid">Skriv heia </label>
+    <div class="inputError-container">
+        <input class="input input__error" type="text" id="textFieldInvalid" placeholder="Feilmelding" required/>
+        <span class="material-symbols-outlined exclamation">exclamation</span>
+    </div>
+</div>
+
+
 <br/>
 
-<div class="input__text-container">
-<label class="input__error--label" for="textFieldInvalid">Skriv heia </label>
+```markup
+<div>
+    <label class="label label--sml input-label" for="textField">Skriv heia </label>
+    <input class="input" type="text" id="textField" placeholder="Aktivt tekstfelt"/>
+</div>
+
+
+<div>
+    <label class="label label--sml input-label input-label--error" for="textFieldInvalid">Skriv heia </label>
+    <div class="inputError-container">
+        <input class="input input__error" type="text" id="textFieldInvalid" placeholder="Feilmelding" required/>
+        <span class="material-symbols-outlined exclamation">exclamation</span>
+    </div>
+</div>
+
+```
+
+## Deaktivert inputfelt
+
+Her er et eksempel på et deaktivert inputfelt, både med og uten hjelpetekst.
+
+<label class="label label--sml input-label" for="disabledTextField">Skriv heia </label>
+<input class="input input__disabled" type="text" id="disabledTextField" disabled/>
+
+<label class="label label--sml input-label" for="disabledTextField">Skriv heia  </label>
+<input class="input input__disabled" type="text" id="disabledTextField" disabled placeholder="Jeg er deaktivert"/>
+
+<br/>
+<br/>
+
+```markup
+<div>
+<label class="label label--sml input-label input-label--error" for="textFieldInvalid">Skriv heia </label>
 <input class="input input__error" type="text" id="textFieldInvalid" placeholder="Feilmelding" required/>
 <span class="material-symbols-outlined exclamation">exclamation</span>
 </div>
+```
 
-## Deaktivert tekstfelt
 
-Her er et eksempel på et deaktivert tekstfelt
-
-<label class="input--label" for="disabledTextField">Skriv heia </label>
-<input class="input input__disabled" type="text" id="disabledTextField" disabled/><br/>
-
-<label class="input--label" for="disabledTextField">tekstfelt med hjelpetekst </label>
-<input class="input input__disabled" type="text" id="disabledTextField" disabled placeholder="Jeg er deaktivert"/>
-
-## Nedtrekksmeny
-
-<label for="dropdown">Overskrift </label><br/>
-
-<select class="dropdown" name="dropdown" id="dropdown">
-    <option value="" disabled selected>Hjelpetekst</option>
-    <option value="eiendom">Eiendom</option>
-    <option value="til lands">Til lands</option>
-    <option value="til sjøs">Til sjøs</option>
-</select>
