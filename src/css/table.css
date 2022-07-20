@@ -1,0 +1,24 @@
+/*---Listevisning---*/
+
+/* .list{
+    /* Liste */
+
+
+    /* width: 29rem;
+    height: fit-content;  1004px
+    overflow-y: scroll; */
+
+
+    /* Inside auto layout
+
+    flex: none;
+    order: 4;
+    flex-grow: 0;
+} */
+
+#data-input {
+    font-family: 'Mulish';
+    width: 100%;
+    border-collapse: collapse;
+}
+
