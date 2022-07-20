@@ -1,24 +1,45 @@
 /*---Listevisning---*/
 
-/* .list{
-    /* Liste */
-
-
-    /* width: 29rem;
-    height: fit-content;  1004px
-    overflow-y: scroll; */
-
-
-    /* Inside auto layout
-
-    flex: none;
-    order: 4;
-    flex-grow: 0;
-} */
-
 #data-input {
     font-family: 'Mulish';
     width: 100%;
     border-collapse: collapse;
+    overflow-y: scroll;
 }
 
+#data-input td, #data-input th{
+    border: 0;
+    padding: 1rem 0.5rem 1rem 0.5rem;
+}
+
+#data-input tr:nth-child(even){
+    background-color: var(--blaa_lys);
+}
+
+#data-input tr:hover{
+    background-color: var(--blaa_hover);
+    color: var(--hvit);
+}
+
+#data-input th{
+    background-color: var(--hvit);
+    border-bottom: 0.125rem solid var(--svart);
+    text-align: center;
+    color: var(--graa_moerk);
+}
+
+#data-input td:nth-of-type(4n){
+    text-align: right;
+}
+
+#data-input td:nth-of-type(3n){
+    text-align: left;
+}
+
+#data-input td:nth-of-type(5n){
+    text-align: left;
+}
+
+#data-input tr:hover + label::before{
+    color: var(--hvit);
+}

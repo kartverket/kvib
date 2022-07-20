@@ -23,27 +23,28 @@
 }
 
 .checkbox label::before{
-    height: 15px;
-    width: 15px;
+    height: 0.938rem;
+    width: 0.938rem;
 
-    border: 2px solid;
+    border: 0.125rem solid;
     border-radius: 0.10rem;
     left: 0;
     color: var(--blaa_moerk);
+    background-color: white;
 
-    top: 3px;
+    top: 0.188rem;
 }
 
 .checkbox label::after {
-    height: 5px;
-    width: 9px;
-    border-left: 2px solid;
-    border-bottom: 2px solid;
+    height: 0.313rem;
+    width: 0.563rem;
+    border-left: 0.188rem solid;
+    border-bottom: 0.188rem solid;
 
     transform: rotate(-45deg);
 
-    left: 4px;
-    top: 7px;
+    left: 0.25rem;
+    top: 0.438rem;
 }
 
 /*Hide checkmark by default*/
@@ -70,8 +71,8 @@
 
 /*Adding focus styles on outer-box*/
 .checkbox input[type="checkbox"]:focus-visible + label::before {
-    outline: max(3px, 0.15em) solid var(--blaa_moerk);
-    outline-offset: 2px;
+    outline: max(0.188rem, 0.15em) solid var(--blaa_moerk);
+    outline-offset: 0.125rem;
 }
 
 /* ----CHECKBOX ERROR----*/
@@ -83,6 +84,6 @@
 
 /*Adding focus styles on the outer-box*/
 .checkbox input[type="checkbox"]:focus-visible:invalid + label::before {
-    outline: max(3px, 0.15em) solid var(--roed_feilmelding);
-    outline-offset: 2px;
+    outline: max(0.188rem, 0.15em) solid var(--roed_feilmelding);
+    outline-offset: 0.125rem;
 }
