@@ -74,17 +74,6 @@ input[type=text].input__error:invalid:focus-visible {
 }
 
 
-/*Tekstfelt hjelpetekst*/
-/* .helper-text{
-    position: relative;
-    display: block;
-    font-size: 0.875rem;
-    font-style: inherit;
-    color: var(--svart); /* Sjekk figma etterpå 
-    z-index: 1;
-} */
-
-/*deaktivert input*/
 
 input[type=text].input__disabled:disabled {
     background: var(--graa_lys);
@@ -92,30 +81,14 @@ input[type=text].input__disabled:disabled {
     border-color: var(--graa);
 }
 
+/*Tekstfelt hjelpetekst*/
+/* .helper-text{
+    position: relative;
+    display: block;
+    font-size: 0.875rem;
+    font-style: inherit;
+    color: var(--svart); /* Sjekk figma etterpå
+    z-index: 1;
+} */
 
-.dropdown {
-    box-sizing: border-box;
-
-    /* Auto layout */
-
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 0.5rem;
-    gap: 1rem;
-
-    width: 16rem;
-    height: var(--inputHeight);
-
-    background: #FFFFFF;
-    border: 0.063rem solid #000000;
-    border-radius: 0.25rem;
-
-    /* Inside auto layout */
-
-    flex: none;
-    order: 1;
-    align-self: stretch;
-    flex-grow: 0;
-}
+/*deaktivert input*/
