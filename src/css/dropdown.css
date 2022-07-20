@@ -1,0 +1,26 @@
+.dropdown {
+    box-sizing: border-box;
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0.5rem;
+    gap: 1rem;
+
+    width: 16rem;
+    height: var(--inputHeight);
+
+    background: #FFFFFF;
+    border: 0.063rem solid #000000;
+    border-radius: 0.25rem;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
