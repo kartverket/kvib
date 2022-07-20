@@ -29,6 +29,11 @@ const sidebars = {
   designsystemSidebar: [
     {
       type: 'doc',
+      id:'designsystems/sizesID',
+      label: 'Elementstørrelser', // Label til sidebar
+    },
+    {
+      type: 'doc',
       id:'designsystems/uuID',
       label: 'Tilgjengelighet', // Label til sidebar
     },

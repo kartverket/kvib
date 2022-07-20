@@ -63,6 +63,10 @@ input[type=text].input__error:invalid:focus-visible {
     outline: var(--roed_feilmelding) solid;
 }
 
+input[type=text].input__error:invalid:active {
+    outline: var(--roed_feilmelding) solid;
+}
+
 .inputError-container{
     width: 100%;
     position: relative;
