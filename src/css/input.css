@@ -1,37 +1,45 @@
-/*TODO*/
-/*Tekstfelt container*/
-.input__text-container {
-    position: relative;
+:root{
+    --inputHeight: 2.5rem;
 }
-
+/*error-ikon i inputfelt*/
 .exclamation{
-    background: var(--roed_feilmelding);
-    border-bottom-right-radius: 0.188rem;
-    border-top-right-radius: 0.188rem;
-    color: #fff;
-    font-style: normal;
-    height: 100%;
-    line-height: 2.375rem;
-    position: relative;
-    right: 1.313rem;
-    text-align: center;
-    top: 0.63rem;
     width: 1.25rem;
+    height: var(--inputHeight);
+    background: var(--roed_feilmelding);
+    border-bottom-right-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    border: none;
+    color: #fff;
+    line-height: 2.375rem;
+    position: absolute;
+    right: 0rem;
+    text-align: center;
+
 }
 
+/*input-labels*/
+.input-label {
+    display: block;
+    margin: 0.75rem 0;
+    /*margin-bottom: 0.5rem;*/
+}
+.input-label--error {
+    color: var(--roed_feilmelding);
+}
+.input-label--error:after {
+    content: "*";
+    color: var(--roed_feilmelding);
+}
 
-/*Tekstfelt label*/
-
+/*Normal input*/
 input[type=text].input {
-    width: 10rem;
-    height: 2.375rem;
+    width: 100%;
+    height: var(--inputHeight);
     padding: 0.75rem 1.25rem;
-    margin: 0.5rem 0;
-    display: inline-block;
+    display: inline-flex;
     border: 0.063rem solid var(--blaa_moerk_knapp);
     border-radius: 0.25rem;
     box-sizing: border-box;
-    top: 1.5rem;
     background: #FFFFFF;
     transition: linear, 0.2s linear;
 }
@@ -45,29 +53,8 @@ input[type=text].input:focus-visible {
     outline: var(--blaa_moerk) solid;
 }
 
-.input--label {
-    font-family: Mulish, sans-serif;
-    color: var(--svart);
-    font-size: 0.75rem;
-    white-space: nowrap;
-    display: flex;
-}
 
-/*Tekstfelt feilmelding*/
-
-.input__error--label {
-    font-family: 'Mulish', sans-serif;
-    color: var(--roed_feilmelding);
-    font-size: 0.75rem;
-    white-space: nowrap;
-    display: flex;
-}
-
-.input__error--label:after {
-    content: "*";
-    color: var(--roed_feilmelding);
-}
-
+/*Error input*/
 input[type=text].input__error:invalid {
     border-color: var(--roed_feilmelding);
 }
@@ -80,17 +67,17 @@ input[type=text].input__error:invalid:active {
     outline: var(--roed_feilmelding) solid;
 }
 
-/*Tekstfelt hjelpetekst*/
-/* .helper-text{
+.inputError-container{
+    width: 100%;
     position: relative;
-    display: block;
-    font-size: 0.875rem;
-    font-style: inherit;
-    color: var(--svart); /* Sjekk figma etterpå 
-    z-index: 1;
-} */
+    height: calc(var(--inputHeight)+ 0.5rem);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+}
 
-/*Tekstfelt deaktivert*/
+
 
 input[type=text].input__disabled:disabled {
     background: var(--graa_lys);
@@ -98,29 +85,14 @@ input[type=text].input__disabled:disabled {
     border-color: var(--graa);
 }
 
-.dropdown {
-    box-sizing: border-box;
+/*Tekstfelt hjelpetekst*/
+/* .helper-text{
+    position: relative;
+    display: block;
+    font-size: 0.875rem;
+    font-style: inherit;
+    color: var(--svart); /* Sjekk figma etterpå
+    z-index: 1;
+} */
 
-    /* Auto layout */
-
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 0.5rem;
-    gap: 1rem;
-
-    width: 16rem;
-    height: 2.5rem;
-
-    background: #FFFFFF;
-    border: 0.063rem solid #000000;
-    border-radius: 0.25rem;
-
-    /* Inside auto layout */
-
-    flex: none;
-    order: 1;
-    align-self: stretch;
-    flex-grow: 0;
-}
+/*deaktivert input*/

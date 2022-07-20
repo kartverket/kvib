@@ -88,7 +88,7 @@ h3-large*/
 
 /*label og beskrivende tekst*/    
 
-.label .detail{
+.label, .detail{
     font-weight: 400;
     line-height: 1.5rem;
 }

@@ -71,6 +71,7 @@ const sidebars = {
          // Eks. folder/folder/docID
         'designsystems/Komponenter/checkboxID',
         'designsystems/Komponenter/inputfeltID',
+        'designsystems/Komponenter/dropDownID',
         'designsystems/Komponenter/sliderID',
         'designsystems/Komponenter/radiobuttonID',
         'designsystems/Komponenter/sideelementerID',
