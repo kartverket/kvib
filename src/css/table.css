@@ -43,3 +43,13 @@
 #data-input tr:hover + label::before{
     color: var(--hvit);
 }
+
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky + #data-input{
+    padding-top: 6.25rem;
+}
