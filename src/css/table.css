@@ -32,9 +32,10 @@
     height: 2.5rem;
 
     /*--For sticky header--*/
-    position: -webkit-sticky; /* For Safari */
+    position: -webkit-sticky; /* For sticky header i Safari */
     position: sticky;
     top: 0; /* Må være med for å få sticky header */
+    z-index: 1;
 }
 
 #data-input td:nth-of-type(3n){
