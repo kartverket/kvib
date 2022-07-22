@@ -4,12 +4,15 @@
     font-family: 'Mulish';
     width: 100%;
     border-collapse: collapse;
-    overflow-y: scroll;
+    table-layout: fixed;
 }
 
 #data-input td, #data-input th{
     border: 0;
     padding: 1rem 0.5rem 1rem 0.5rem;
+
+    word-break: keep-all;
+    height: 2.5rem;
 }
 
 #data-input tr:nth-child(even){
@@ -21,19 +24,25 @@
     color: var(--hvit);
 }
 
-#data-input th{
+#data-input th {
     background-color: var(--hvit);
     border-bottom: 0.125rem solid var(--svart);
     text-align: center;
     color: var(--graa_moerk);
-}
+    height: 2.5rem;
 
-#data-input td:nth-of-type(4n){
-    text-align: right;
+    /*--For sticky header--*/
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0; /* Må være med for å få sticky header */
 }
 
 #data-input td:nth-of-type(3n){
     text-align: left;
+}
+
+#data-input td:nth-of-type(4n){
+    text-align: right;
 }
 
 #data-input td:nth-of-type(5n){
@@ -42,4 +51,20 @@
 
 #data-input tr:hover + label::before{
     color: var(--hvit);
+}
+
+.table__container--large{
+    height: 30rem;
+    width: 29rem;
+    /* overflow-x: hidden; fjerner sticky header */
+    margin: 2rem;
+    overflow-y: scroll;
+}
+
+.table__container--small{
+    height: 22.5rem;
+    width: 17rem;
+    overflow-y: scroll;
+    /*overflow-x: hidden; */
+    margin: 2rem;
 }
