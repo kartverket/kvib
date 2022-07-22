@@ -4,9 +4,7 @@
     font-family: 'Mulish';
     width: 100%;
     border-collapse: collapse;
-    /* overflow-y: scroll; */
     table-layout: fixed;
-    overflow: hidden;
 }
 
 #data-input td, #data-input th{
@@ -34,6 +32,7 @@
     height: 2.5rem;
 
     /*--For sticky header--*/
+    position: -webkit-sticky; /* For Safari */
     position: sticky;
     top: 0; /* Må være med for å få sticky header */
 }
@@ -57,15 +56,15 @@
 .table__container--large{
     height: 30rem;
     width: 29rem;
-    overflow-y: scroll;
-    overflow-x: hidden;
+    /* overflow-x: hidden; fjerner sticky header */
     margin: 2rem;
+    overflow-y: scroll;
 }
 
 .table__container--small{
     height: 22.5rem;
     width: 17rem;
     overflow-y: scroll;
-    overflow-x: hidden;
+    /*overflow-x: hidden; */
     margin: 2rem;
 }
