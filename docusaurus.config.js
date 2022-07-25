@@ -8,7 +8,7 @@ const config = {
   title: 'KVIB Styleguides',
   tagline: 'Styleguides',
   url: 'https://kartverket.github.io/',
-  baseUrl: '/kvib/',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
