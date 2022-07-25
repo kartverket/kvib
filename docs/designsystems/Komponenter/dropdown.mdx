@@ -9,22 +9,50 @@ Her er KVIB sin nedtrekksmeny.
 For å style <label\>-elementet, skal egne [CSS-klasser fra _Typografi_ benyttes.](../designTokens/typography.mdx#label)
 
 
-<label class="label label--sml" for="dropdown">Overskrift </label>
-<select class="dropdown" name="dropdown" id="dropdown">
-    <option value="" disabled selected>Hjelpetekst</option>
-    <option value="eiendom">Eiendom</option>
-    <option value="til lands">Til lands</option>
-    <option value="til sjøs">Til sjøs</option>
-</select>
+[//]: # (<label class="label label--sml" for="dropdown">Overskrift </label>)
+
+[//]: # ()
+[//]: # (<select class="dropdown" name="dropdown" id="dropdown">)
+
+[//]: # ()
+[//]: # (    <option value="" disabled selected>Hjelpetekst</option>)
+
+[//]: # ()
+[//]: # (    <option value="eiendom">Eiendom</option>)
+
+[//]: # ()
+[//]: # (    <option value="til lands">Til lands</option>)
+
+[//]: # ()
+[//]: # (    <option value="til sjøs">Til sjøs</option>)
+
+[//]: # ()
+[//]: # (</select>)
 
 <br/>
 
 ```markup
 <label class="label label--sml" for="dropdown">Overskrift </label>
-<select class="dropdown" name="dropdown" id="dropdown">
+<select name="dropdown" id="dropdown">
     <option value="" disabled selected>Hjelpetekst</option>
     <option value="eiendom">Eiendom</option>
     <option value="til lands">Til lands</option>
     <option value="til sjøs">Til sjøs</option>
 </select>
 ```
+
+
+<label class="label label--sml " for="standard-select">Standard Select</label>
+<div class="select">
+    <select id="standard-select">
+        <option value="Option 1">Option 1</option>
+        <option value="Option 2">Option 2</option>
+        <option value="Option 3">Option 3</option>
+        <option value="Option 4">Option 4</option>
+        <option value="Option 5">Option 5</option>
+        <option value="Option length">Option that has too long of a value to fit</option>
+    </select>
+    <span class="focus"></span>
+</div>
+
+

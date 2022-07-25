@@ -1,27 +1,17 @@
 :root{
     --inputHeight: 2.5rem;
 }
-/*error-ikon i inputfelt*/
-.exclamation{
-    width: 1.25rem;
-    height: var(--inputHeight);
-    background: var(--roed_feilmelding);
-    border-bottom-right-radius: 0.25rem;
-    border-top-right-radius: 0.25rem;
-    border: none;
-    color: #fff;
-    line-height: 2.375rem;
-    position: absolute;
-    right: 0rem;
-    text-align: center;
 
+/*reset input-style*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
-
 /*input-labels*/
 .input-label {
     display: block;
     margin: 0.75rem 0;
-    /*margin-bottom: 0.5rem;*/
 }
 .input-label--error {
     color: var(--roed_feilmelding);
@@ -42,6 +32,7 @@ input[type=text].input {
     box-sizing: border-box;
     background: #FFFFFF;
     transition: linear, 0.2s linear;
+    font-family: inherit;
 }
 
 input[type=text].input:focus-visible:active {
@@ -54,6 +45,22 @@ input[type=text].input:focus-visible {
 }
 
 
+
+/*error-ikon i inputfelt*/
+.exclamation{
+    width: 1.25rem;
+    height: var(--inputHeight);
+    background: var(--roed_feilmelding);
+    border-bottom-right-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    border: none;
+    color: #fff;
+    line-height: 2.375rem;
+    position: absolute;
+    right: 0;
+    text-align: center;
+
+}
 /*Error input*/
 input[type=text].input__error:invalid {
     border-color: var(--roed_feilmelding);
@@ -67,10 +74,11 @@ input[type=text].input__error:invalid:active {
     outline: var(--roed_feilmelding) solid;
 }
 
-.inputError-container{
+/*Container når inputfelt skal ha et annet element i enden av feltet (knapp, ikon osv.)*/
+.input-container{
     width: 100%;
     position: relative;
-    height: calc(var(--inputHeight)+ 0.5rem);
+    height: 3rem;
     display: flex;
     flex-direction: row;
     align-items: flex-end;

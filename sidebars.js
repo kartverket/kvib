@@ -72,6 +72,7 @@ const sidebars = {
         'designsystems/Komponenter/checkboxID',
         'designsystems/Komponenter/inputfeltID',
         'designsystems/Komponenter/dropDownID',
+        'designsystems/Komponenter/searchbarID',
         'designsystems/Komponenter/sliderID',
         'designsystems/Komponenter/radiobuttonID',
         'designsystems/Komponenter/sideelementerID',
