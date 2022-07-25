@@ -1,34 +1,11 @@
 /* Custom zoom knapp til historiske kart 
 
-MERK! Denne er ikke UU-godkjent eller sjekket av Wanni
+MERK! Denne er ikke UU-godkjent eller sjekket av Wanni*/
 
-*/
 
-.zoom{
-    background-color: var(--blaa);
-    color: var(--hvit);
-
+/* Endrer størrelsen på en ordinær knapp, slik at det er mer tilpasset til å kun ha ikon i knappen. */
+.button--zoom{
     height: 2rem;
     width: 2rem;
-    /* border-radius: 0.125rem; */
-
-    margin: 0.063rem; /* basert på eksisterende zoom knapp i historiske kart */
-
-    vertical-align: middle;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.zoom:hover{
-    background-color: var(--blaa_hover);
-}
-
-.zoom:active{
-    background-color: var(--blaa_moerk_knapp);
-}
-
-
-
-.zoom__icon-padding{
-    padding: 00.063rem;
+    margin: 0.063rem;
 }
