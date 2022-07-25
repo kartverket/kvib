@@ -1,0 +1,34 @@
+---
+id: searchbarID
+title: Søkefelt
+description: Oversikt over søkefelt som blir brukt i Kartverket sine løsninger.
+slug: /designsystem/komponenter/søkefelt
+displayed_sidebar: designsystemSidebar
+---
+**OBS! Dette er IKKE GODKJENT av designer. Under kontruksjon.**
+
+Dette er enn så lenge et utkast for searchbar.
+For å endre lengden til søkefeltet, må det legges inn i et <div\>-element, og deretter endre størrelsen til dette elementet.
+
+
+<div>
+    <div class="input-container">
+        <input class="input" type="text" placeholder="Søk..."/>
+        <button class="button button__searchbar">
+            <span class="material-symbols-outlined">search</span>
+        </button>
+    </div>
+</div>
+
+<br/>
+
+```markup
+<div>
+    <div class="input-container">
+        <input class="input" type="text" placeholder="Søk..."/>
+        <button class="button button__search">
+            <span class="material-symbols-outlined icon--center searchbar__icon-padding">search</span>
+        </button>
+    </div>
+</div>
+```
