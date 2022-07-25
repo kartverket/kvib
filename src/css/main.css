@@ -17,3 +17,5 @@
 @import "dropdown.css";
 @import 'cards.css';
 @import 'table.css';
+@import 'progressbar.css';
+@import 'circular_loader.css';
