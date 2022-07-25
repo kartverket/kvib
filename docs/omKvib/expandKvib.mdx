@@ -122,4 +122,112 @@ For hver endring som gjøres, skal den nye versjonen dokumenteres:
 
 ## Tekniske strukturen i KVIB
 
-Her kommer det besrkivelse av hvordan kildekoden til kvib er bygget opp. 
+Her kommer det besrkivelse av hvordan kildekoden til KVIB er bygget opp. 
+
+### Prosjektstrukturen til KVIB
+
+Slik ser filtreet til KVIB ut på et overordnet nivå:
+
+```markdown 
+kvib
+├─ .docusaurus
+├─ .github
+│  ├─ workflows
+├─ blog
+│  ├─ 2022-07-08-version-[0.0.5].mdx
+├─ docs
+│  ├─ designsystems
+│  │  ├─ designTokens
+│  │  ├─ Komponenter
+│  ├─ omKvib
+├─ node_modules
+├─ src
+│  ├─css
+│  ├─ docusaurus_custom_css
+│  ├─ html
+├─ static
+│  ├─ gif
+│  ├─ img
+│  ├─ .nojekyll
+├─ .gitignore
+├─ babel.config.js
+├─ docusaurus.config.js
+├─ package.json
+├─ package-lock.json
+├─ README.md
+├─ sidebars.js
+├─ tsconfig.json
+```
+
+### Legge til ny komponent/designtoken
+
+#### 1. Opprette CSS-fil
+
+Nye CSS-filer for komponenter og designtokens skal legges i src/css/. Husk å lenke til CSS-filen i main.css som vist under:
+
+```markdown
+/* HovedCSS */
+@import 'farger.css';
+@import 'buttons.css';
+```
+
+#### 2. Dokumentasjon
+
+Alle nye komponenter og designtokens skal dokumenteres i docs/designsystems/ som .mdx-filer. Dersom det er ny komponent skal dokumentasjonen for denne ligge i undermappen Komponenter. Ny designtoken skal legges i undermappen designTokens.
+
+Ved opprettelse av ny .mdx-fil skal dette innholdet ligge øverst i filen som vist for en radioknapp:
+```markdown
+---
+id: radiobuttonID                            /* dokumentets ID som blant annet brukes til å legge .mdx-filen i sidebaren */
+title: Radioknapp                            /* tittelen som vises i KVIB */
+description: Oversikt over radioknapper som blir brukt i Kartverket sine løsninger.
+slug: /designsystem/komponenter/radiobutton  /* filstien til .mdx-filen */                  
+displayed_sidebar: designsystemSidebar       /* for å vise filen i sidebaren til designsystems */
+sidebar_position: 3                          /* setter posisjonen i sidebaren */
+---
+```
+
+Se [Innhold og struktur i dokumentasjon](#innhold-og-struktur-i-dokumentasjon) for hvordan nye komponenter og designtokens skal dokumenteres.
+
+
+#### 3. Legge til dokumentasjonen i sidebaren
+
+For at .mdx-filen skal vises i sidebaren til KVIB må filsti med .mdx-filens id legges til under designsystemSidebar i sidebars.js slik:
+```markdown
+type: 'category',
+      label: 'Komponenter', // Label til sidebar
+      link: {
+        type: 'generated-index',
+        title: 'Komponenter',
+        description: 'Her er en oversikt over utvalget av komponenter i KVIB.' +
+            ' Disse er bygget er blant annet bygget opp ved bruk av desing tokens fra KVIB, eksempelvis farger og typografi. I dokumentasjonen følger beskrivelse av komponenten og bruksområde, sammen med kodeeksempler. ',
+        slug: '/designsystem/Komponenter',
+      },
+      items: [
+        // Dokument som skal være under 'Design tokens'. For å hente .mdx-fil; skriv path inkludert IDen.
+         // Eks. folder/folder/docID
+        'designsystems/Komponenter/checkboxID',
+        'designsystems/Komponenter/inputfeltID',
+        'designsystems/Komponenter/dropDownID',
+        'designsystems/Komponenter/sliderID',
+        'designsystems/Komponenter/radiobuttonID',
+        'designsystems/Komponenter/sideelementerID',
+        'designsystems/Komponenter/navID',
+        'designsystems/Komponenter/tableID',
+        /*----LEGG TIL NY FIL HER----*/
+        {
+          type: 'category',
+          label: 'Knapper', // Label til sidebar
+          items: [
+            'designsystems/Komponenter/Knapper/grønnknappID',
+            'designsystems/Komponenter/Knapper/blåknappID',
+            'designsystems/Komponenter/Knapper/ikonknappID',
+            'designsystems/Komponenter/Knapper/disabledknappID',
+          ],
+        },
+      ],
+    },
+```
+
+Pass på at dette legges under items i riktig category. I eksempelet over legges ny fil i category Komponenter.
+
