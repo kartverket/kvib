@@ -100,7 +100,7 @@ const sidebars = {
     {
       type: 'doc',
       id:'designsystems/tilleggskomponenterID',
-      label: 'Tilleggskomponenter (Historiske kart)', // Label til sidebar
+      label: '(!)Tilleggskomponenter (Historiske kart)', // Label til sidebar
     },
 
 

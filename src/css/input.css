@@ -2,12 +2,6 @@
     --inputHeight: 2.5rem;
 }
 
-/*reset input-style*/
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
 /*input-labels*/
 .input-label {
     display: block;
