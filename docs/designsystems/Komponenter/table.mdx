@@ -1,109 +1,122 @@
 ---
 id: tableID
-title: Listevisning
+title: (!) Listevisning
 description: Lister brukt av Kartverket.
 slug: /designsystem/komponenter/table
 displayed_sidebar: designsystemSidebar
 sidebar_position: 7
 ---
+_**OBS! Under konstruksjon**_
+
+_**Merk at eksempelet lenket nedenfor, samt malen under, er under konstruksjon. De kan dermed ikke tas i bruk på grunn av følgende feil og mangler:**_
+* _**Denne komponenten er ikke testet etter KVIBs rutine for kvalitetskontroll**_
+* _**Vertikal scroll forekommer ikke etter 12 rader. Det er høyden på containeren rundt listen som bestemmer når scroll skal oppstå**_
+* _**Det er ikke testet om horistontal scroll forekommer ved for mange tegn. Det er heller ikke tatt hensyn til hvordan en eventuell overflyt skal håndteres**_
+* _**Avsjekkingsboksens label er ikke fjernet i eksempelet**_
+
+<hr/>
+
+
+KVIBs listevisning har en standard mal vist under. Det vil si at utvikler må endre innholdet og tilpasse størrelsen til eget design. Det stilles likevel felles krav til alle listevisninger:
+
+* Listen skal vise maks 12 rader. Etter 12 rader skal scroll brukes
+* Horisontal scroll skal _aldri_ brukes!
+* Celler med tall skal ha høyrestilt innhold
+* Celler med tekst skal ha venstrestilt innhold
+* Celler med ikoner skal alltid ha ikonet på venstre side av teksten
+* Blanke celler brukes der det er behov for celler uten innhold
+* Celle med avsjekksliste skal ha en "Slett alle"-funksjon
+* Sticky header skal benyttes
+* Listen skal aldri gå utover designets maks grid bredde
+
+Et eksempel som demonstrerer oppførselen til en listevisning og hvordan denne kan se ut finnes <a href="/html/table.html" target="_blank" rel="noopener noreferrer" download="table.html">her</a>. Ettersom "Slett alle"-funksjonen krever Javascript, kan denne ikke vises på denne siden. Se ellers standard malen under.
 
 <table id="data-input">
-    <tr class="detail detail--sml">
-        <th><div class="checkbox"><input type="checkbox" id="select_all_checkboxes"/><label for="checkbox_1">Input tekst</label></div></th>
-        <th class="detail detail--sml">Slett</th>
-        <th class="detail detail--sml">TEKST INNHOLD</th>
-        <th class="detail detail--sml">TALL INNHOLD</th>
-        <th class="detail detail--sml">TEKST INNHOLD</th>
+    <tr>
+        <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
     </tr>
     <tr>
-        <td><div class="checkbox"><input type="checkbox" id="checkbox_2"/><label for="checkbox_2">Input tekst</label></div></td>
-        <td class="detail detail--sml"></td>
-        <td class="detail detail--sml">TEKST TIL VENSTRE</td>
-        <td class="detail detail--sml">1</td>
-        <td class="detail detail--sml">TEKST TIL VENSTRE</td>
+        <td></td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
-        <td><div class="checkbox"><input type="checkbox" id="checkbox_3"/><label for="checkbox_3">Input tekst</label></div></td>
-        <td class="detail detail--sml"></td>
-        <td class="detail detail--sml">TEKST TIL VENSTRE</td>
-        <td class="detail detail--sml">2</td>
-        <td class="detail detail--sml">TEKST TIL VENSTRE</td>
+        <td></td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
-        <td><div class="checkbox"><input type="checkbox" id="checkbox_4"/><label for="checkbox_4">Input tekst</label></div></td>
-        <td class="detail detail--sml"></td>
-        <td class="detail detail--sml">TEKST TIL VENSTRE</td>
-        <td class="detail detail--sml">3</td>
-        <td class="detail detail--sml">TEKST TIL VENSTRE</td>
+        <td></td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
-        <td><div class="checkbox"><input type="checkbox" id="checkbox_5"/><label for="checkbox_5">Input tekst</label></div></td>
-        <td class="detail detail--sml"></td>
-        <td class="detail detail--sml">TEKST TIL VENSTRE</td>
-        <td class="detail detail--sml">4</td>
-        <td class="detail detail--sml">TEKST TIL VENSTRE</td>
+        <td></td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
-        <td><div class="checkbox"><input type="checkbox" id="checkbox_6"/><label for="checkbox_6">Input tekst</label></div></td>
-        <td class="detail detail--sml"></td>
-        <td class="detail detail--sml">TEKST TIL VENSTRE</td>
-        <td class="detail detail--sml">5</td>
-        <td class="detail detail--sml">TEKST TIL VENSTRE</td>
+        <td></td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
-        <td><div class="checkbox"><input type="checkbox" id="checkbox_1"/><label for="checkbox_1">Input tekst</label></div></td>
-        <td class="detail detail--sml"></td>
-        <td class="detail detail--sml">TEKST TIL VENSTRE</td>
-        <td class="detail detail--sml">6</td>
-        <td class="detail detail--sml">TEKST TIL VENSTRE</td>
+        <td></td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
-        <td><div class="checkbox"><input type="checkbox" id="checkbox_1"/><label for="checkbox_1">Input tekst</label></div></td>
-        <td class="detail detail--sml"></td>
-        <td class="detail detail--sml">TEKST TIL VENSTRE</td>
-        <td class="detail detail--sml">7</td>
-        <td class="detail detail--sml">TEKST TIL VENSTRE</td>
-    </tr>
-    <tr>
-        <td><div class="checkbox"><input type="checkbox" id="checkbox_1"/><label for="checkbox_1">Input tekst</label></div></td>
-        <td class="detail detail--sml"></td>
-        <td class="detail detail--sml">TEKST TIL VENSTRE</td>
-        <td class="detail detail--sml">8</td>
-        <td class="detail detail--sml">TEKST TIL VENSTRE</td>
-    </tr>
-    <tr>
-        <td><div class="checkbox"><input type="checkbox" id="checkbox_1"/><label for="checkbox_1">Input tekst</label></div></td>
-        <td class="detail detail--sml"></td>
-        <td class="detail detail--sml">TEKST TIL VENSTRE</td>
-        <td class="detail detail--sml">9</td>
-        <td class="detail detail--sml">TEKST TIL VENSTRE</td>
-    </tr>
-    <tr>
-        <td><div class="checkbox"><input type="checkbox" id="checkbox_1"/><label for="checkbox_1">Input tekst</label></div></td>
-        <td class="detail detail--sml"></td>
-        <td class="detail detail--sml">TEKST TIL VENSTRE</td>
-        <td class="detail detail--sml">10</td>
-        <td class="detail detail--sml">TEKST TIL VENSTRE</td>
-    </tr>
-    <tr>
-        <td><div class="checkbox"><input type="checkbox" id="checkbox_1"/><label for="checkbox_1">Input tekst</label></div></td>
-        <td class="detail detail--sml"></td>
-        <td class="detail detail--sml">TEKST TIL VENSTRE</td>
-        <td class="detail detail--sml">11</td>
-        <td class="detail detail--sml">TEKST TIL VENSTRE</td>
-    </tr>
-    <tr>
-        <td><div class="checkbox"><input type="checkbox" id="checkbox_1"/><label for="checkbox_1">Input tekst</label></div></td>
-        <td class="detail detail--sml"></td>
-        <td class="detail detail--sml">TEKST TIL VENSTRE</td>
-        <td class="detail detail--sml">12</td>
-        <td class="detail detail--sml">TEKST TIL VENSTRE</td>
-    </tr>
-    <tr>
-        <td><div class="checkbox"><input type="checkbox" id="checkbox_1"/><label for="checkbox_1">Input tekst</label></div></td>
-        <td class="detail detail--sml"></td>
-        <td class="detail detail--sml">TEKST TIL VENSTRE</td>
-        <td class="detail detail--sml">13</td>
-        <td class="detail detail--sml">TEKST TIL VENSTRE</td>
+        <td></td>
+        <td></td>
+        <td></td>
     </tr>
   </table>
+
+<br/>
+
+  ```markdown
+<table id="data-input">
+    <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+  </table>
+  ```
