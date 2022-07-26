@@ -1,14 +1,19 @@
 ---
 id: searchbarID
-title: Søkefelt
+title: (!)Søkefelt
 description: Oversikt over søkefelt som blir brukt i Kartverket sine løsninger.
 slug: /designsystem/komponenter/søkefelt
 displayed_sidebar: designsystemSidebar
 ---
-**OBS! Dette er IKKE GODKJENT av designer. Under kontruksjon.**
+***OBS! Ikke design for dette i Figma-KVIB. Under kontruksjon:***
+- ***Nåværende komponent er bygget opp av inputfelt fra KVIB, med en søkeknapp (utgangspunkt i kartverket.no) inni feltet. ***
+- ***Ikke tatt høyde for fokus og hover-funksjoner på hverken knapp eller inputfelt. ***
+- ***Kartverket.no har enda ikke et felles design for søkefelt, men dette kommer. ***
 
-Dette er enn så lenge et utkast for searchbar.
-For å endre lengden til søkefeltet, må det legges inn i et <div\>-element, og deretter endre størrelsen til dette elementet.
+***
+
+For å endre lengden til søkefeltet, må det legges inn i et <div\>-element, slik som gjort i kodeeksempelet under.
+Deretter kan størrelsen endres ved å sette bredde på det ytterste <div\>-elementet.
 
 
 <div>
@@ -26,8 +31,8 @@ For å endre lengden til søkefeltet, må det legges inn i et <div\>-element, og
 <div>
     <div class="input-container">
         <input class="input" type="text" placeholder="Søk..."/>
-        <button class="button button__search">
-            <span class="material-symbols-outlined icon--center searchbar__icon-padding">search</span>
+        <button class="button button__searchbar">
+            <span class="material-symbols-outlined">search</span>
         </button>
     </div>
 </div>
