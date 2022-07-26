@@ -14,7 +14,7 @@
     overflow: hidden;
 }
 
-.progressbar:after {
+.progressbar::after {
     content: '';
     position: absolute;
     left: 0;
@@ -24,7 +24,7 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, .2);
 }
 
-.demo:after {
+.demo::after {
     width: 50%;
     background: var(--blaa_moerk);
 }
