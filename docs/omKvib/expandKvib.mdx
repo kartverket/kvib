@@ -368,3 +368,23 @@ For hver endring som gjøres, skal den nye versjonen dokumenteres:
 
 
 ## Publisering av ny CSS-pakke
+For å publisere ny versjon av KVIB-css til Github Packages:
+1. Trykk på Github Actions i Kvib Github repository
+
+![github actions](/img/image_docs/actions.PNG)
+
+2. Velg  "KVIB Package publish"
+
+![actions workflow](/img/image_docs/workflows.PNG)
+
+3. Trykk på "Run workflow" på Master branch.
+
+![actions run workflow](/img/image_docs/run_workflow.PNG)
+
+Ny versjon av KVIB-css blir opprettet som Github Package og gjort klar til bruk.
+
+## Publisering til Github Pages
+Github Pages bruker gh-pages branchen som kilde.
+
+Github actions workflow "Deploy to GitHub Pages" er opprettet for å publisere til Github Pages.
+Ved push til master branchen, "Test deployment" workflow kjører et build test og etter godkjenning vil "Deploy to GitHub Pages" bli aktivert.

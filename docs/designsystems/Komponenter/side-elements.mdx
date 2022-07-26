@@ -1,10 +1,12 @@
 ---
 id: sideelementerID
-title: Sideelementer
+title: Sideelementer (Under endring)
 description: Sideelementer
 slug: /designsystem/komponenter/sideelementer
 displayed_sidebar: designsystemSidebar
 ---
+
+OBS! Sideelementer er ikke ferdig og er under endringer.
 
 ## Opplastningsmoduler og elementer
 
@@ -17,29 +19,57 @@ Det sirkulære opplastningselementet skal brukes på små flater og som ikon.
 <div class="loader__background__box">
     <div class="white--loader loader--white loader--size loader--pos--white"></div>
 </div>
+<br/>
+
+```markdown
+<div class="loader loader--blue loader--size"></div>
+<div class="loader loader--green loader--size"></div>
+<div class="loader__background__box">
+    <div class="white--loader loader--white loader--size loader--pos--white"></div>
+</div>
+```
 
 
 ## Filopplastningselementer
 
 ### Linjært opplastningselement uten verdi
+Linjært opplastningselementet bruker klassen "progressbar".
 
 <div class="progressbar__container">
     <div class="progressbar"></div>
 </div>
+<br/>
+
+```markdown
+<div class="progressbar__container">
+    <div class="progressbar"></div>
+</div>
+```
 
 ### Linjært opplastningselement med verdi
+Opplastningselementet bruker ::after selector for å sette inn verdi og fyll farge.
+I dette eksemplet er "demo" klassen inneholder: .demo::after {
+width: 50%;
+background: var(--blaa_moerk);
+}
 
 <div class="progressbar__container">
     <div class="progressbar demo"></div>
 </div>
+<br/>
 
-### Desktop
+```markdown
+<div class="progressbar__container">
+    <div class="progressbar demo"></div>
+</div>
 
-<p>Placeholder</p>
-
-### Mobil
-
-<p>Placeholder</p>
+<style>
+.demo::after {
+    width: 50%;
+    background: var(--blaa_moerk);
+}
+</style>
+```
 
 ## Listevisning
 
@@ -56,10 +86,3 @@ Celle med avsjekksliste: Avsjekksliste skal ha en Slett alle funksjon (se under)
 En liste skal aldri scrolles horisontalt, eller gå over designets maks grid bredde.
 Selvom designet i Figma ikke viser sticky header, skal dette kodes inn i ferdig design.
 
-### Eksempel stor skjerm
-
-<p>Placeholder</p>
-
-### Eksempel liten skjerm
-
-<p>Placeholder</p>
