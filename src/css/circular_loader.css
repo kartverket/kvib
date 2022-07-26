@@ -1,3 +1,7 @@
+:root {
+ --loader_size: 5.625rem;
+}
+
 .loader {
     position: relative;
     width: 100%;
@@ -54,8 +58,8 @@
 }
 
 .loader--size {
-    width: 90px;
-    height: 90px;
+    width: var(--loader_size);
+    height: var(--loader_size);
 }
 
 .loader--blue {
