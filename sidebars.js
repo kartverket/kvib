@@ -99,8 +99,8 @@ const sidebars = {
     },
     {
       type: 'doc',
-      id:'designsystems/histkart',
-      label: 'Historiske Kart', // Label til sidebar
+      id:'designsystems/tilleggskomponenterID',
+      label: 'Tilleggskomponenter (Historiske kart)', // Label til sidebar
     },
 
 
