@@ -1,11 +1,259 @@
 ---
 id: implementKvibID
-title: Utvide Kvib
-description: Utivde Kvib
+title: Utvide KVIB
+description: Utvide Kvib
 slug: /omKvib/expandKvib
 displayed_sidebar: OmKvibSidebar
 sidebar_position: 3
 ---
+
+## Teknisk struktur
+
+Her kommer det en beskrivelse av den tekniske strukturen til KVIB. KVIB er bygget på Docusaurus, som er et dokumentasjonsverktøy. [Her](https://docusaurus.io/docs) finner du dokumentasjonen til Docusaurus.
+
+### Prosjektstrukturen til KVIB
+
+Slik ser filtreet til KVIB ut på et overordnet nivå:
+
+```markdown 
+kvib
+├─ .docusaurus
+├─ .github
+│  ├─ workflows
+├─ blog
+│  ├─ 2022-07-08-version-[0.0.5].mdx
+├─ docs
+│  ├─ designsystems
+│  │  ├─ designTokens
+│  │  ├─ Komponenter
+│  ├─ omKvib
+├─ node_modules
+├─ src
+│  ├─css
+│  ├─ docusaurus_custom_css
+│  ├─ html
+├─ static
+│  ├─ gif
+│  ├─ img
+│  ├─ .nojekyll
+├─ .gitignore
+├─ babel.config.js
+├─ docusaurus.config.js
+├─ package.json
+├─ package-lock.json
+├─ README.md
+├─ sidebars.js
+├─ tsconfig.json
+```
+
+### CSS
+
+#### CSS-styling av komponenter og designtokens
+
+CSS-filer til komponenter og designtokens ligger under src/css. Dersom du skal lage en ny CSS-fil, må du lenke filen i main.css som vist under:
+
+```markdown
+/* HovedCSS */
+@import 'farger.css';
+@import 'buttons.css';
+```
+
+#### CSS-styling av dokumentasjonssider
+
+Dersom selve dokumentasjonssiden skal ha styles etter egne preferansen, skal CSS-filene for dette legges under src/docusaurus_custom_css. Husk å lenke filene i custom.css:
+```markdown
+@import './filnavn.css';
+```
+
+I docusaurus.config.js er custom.css lenket under theme i presets for at eget design i dokumentasjonen skal tas i bruk.
+
+### Dokumentasjon
+
+Dokumentasjon ligger under docs-mappen som .mdx-filer. Herunder ligger dokumentasjon av komponenter og designtokens under docs/designsystems, og dokumentasjon om KVIB under docs/omKvib.
+
+Ved opprettelse av ny .mdx-fil skal filens id, title, description, slug, displayed_sidebar og sidebar_position ligge øverst i filen. Se eksempel for komponenten radioknapp under:
+```markdown
+---
+id: radiobuttonID                            /* dokumentets ID brukes blant annet til å legge .mdx-filen i sidemenyen */
+title: Radioknapp                            /* tittelen som vises på siden */
+description: Oversikt over radioknapper som blir brukt i Kartverket sine løsninger.
+slug: /designsystem/komponenter/radiobutton  /* filstien til .mdx-filen */                  
+displayed_sidebar: designsystemSidebar       /* for å vise filen i sidebaren til designsystems */
+sidebar_position: 3                          /* setter posisjonen i sidebaren */
+---
+
+Dokumentasjon HER
+```
+
+Se [Innhold og struktur i dokumentasjon](#innhold-og-struktur-i-dokumentasjon) for hvordan nye komponenter og designtokens skal dokumenteres.
+
+### docusaurus.config.js
+
+Denne seksjonen omhandler innholdet i docusaurus.config.js-filen. I denne filen kan utseende til KVIB og distribusjon av nettsiden endres, samt eksternt innhold som bilder hentes inn.
+
+#### Navigasjonsmeny og footer
+
+Navigasjonsmenyen øverst, footer nederst på siden og deres utseende kan endres ved å redigere innholdet i themeConfig i docusaurus.config.js. Merk at visse elementer i kildekoden nedenfor er fjernet for å gi mer oversikt.
+
+```markdown
+themeConfig:
+/** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+      ({
+        /* utseende for navigasjonsmeny og footer*/
+        colorMode: {
+          defaultMode: 'light',
+          disableSwitch: true,              /* gjemmer knappen for dark/lightmode */
+          respectPrefersColorScheme: false, /* endre til true for å sette egne brukerpreferanser */
+        },
+        /* EKSEMPEL - Legge inn element i navigasjonsmenyen */
+        navbar: {
+          items: [
+            {
+              type: 'doc',
+              docId: 'folder/dokumentID',
+              position: 'LEFT, RIGHT, CENTER',
+              label: 'NAVN PÅ SIDEN',
+            },
+            {
+              type: 'doc',
+              docId: 'designsystems/sizesID',
+              position: 'left',
+              label: 'Designsystem',
+            },
+            /* Alternativt kan denne syntaksen brukes hvis det kun skal navigeres til én side */
+            {to: 'SIDE SOM SKAL NAVIGERES TIL', label: 'NAVN PÅ NAVIGASJONSELEMENT', position: 'LEFT, RIGHT, CENTER'},
+            {to: 'blog', label: 'Versjoner', position: 'left'},
+          ],
+        },
+        footer: {
+          style: 'dark',
+          links: [
+            {
+              title: 'Docs',
+              items: [
+                {
+                  label: 'KVIB Figma',
+                  to: '/',
+                },
+              ],
+            },
+            {
+              title: 'More', /* navn på navigasjonselement */
+              /* Her legges elementer under 'More' */
+              items: [
+                {
+                  label: 'GitHub',
+                  href: '#',
+                },
+              ],
+            },
+          ],
+        },
+        prism: {
+          theme: CodeTheme,  /* her settes fargene på kodeblokkene, se variabel CodeTheme øverst i filen for tema som hentes ut */
+        },
+      }),
+};
+```
+
+#### Sidepaneler
+
+KVIB har et høyre og et venstre sidepanel. Høyre sidepanel genereres når overskriftene <h2\> (##) og <h3\> (###) legges inn i .mdx-filen. 
+
+Venstre sidemeny endres ved å gå inn på sidebars.js. Docusaurus kan autogenerere et sidepanel fra filstrukturen. Denne metoden kan tas i bruk ved få elementer i sidepanelet. 
+```markdown
+const sidebars = {
+  /* NavnPåSidepanel: [{type: 'autogenerated', dirName:'FOLDER INNHOLDET LIGGER UNDER'}] */
+
+  /*--EKSEMPEL--*/
+  OmKvibSidebar: [{type: 'autogenerated', dirName:'omKvib'}]
+}
+```
+
+Ved mange elementer skal sidepanelet konstrueres selv:
+```markdown
+/*---EKSEMPEL--- 
+  Ett nivå i sidepanelet.
+*/
+
+const sidebars = {
+    designsystemSidebar: [
+    {
+      type: 'doc',
+      id:'designsystems/sizesID',
+      label: 'Elementstørrelser', // Label til sidebar
+    }
+}
+
+
+
+/*---EKSEMPEL---
+  Flere nivåer i sidepanelet.
+*/
+
+const sidebars = {
+ designsystemSidebar: [
+    /* NIVÅ 1 */
+    {
+      type: 'category',
+      label: 'Komponenter', // Label til sidebar
+      link: {
+        type: 'generated-index',
+        title: 'Komponenter',
+        description: 'Her er en oversikt over utvalget av komponenter i KVIB.' +
+            ' Disse er bygget er blant annet bygget opp ved bruk av desing tokens fra KVIB, eksempelvis farger og typografi. I dokumentasjonen følger beskrivelse av komponenten og bruksområde, sammen med kodeeksempler. ',
+        slug: '/designsystem/Komponenter',
+      },
+      items: [
+        /* Dokument som skal være under 'Design tokens'. For å hente .mdx-fil; skriv path inkludert IDen.
+        'folder/folder/dokumentID' */
+        'designsystems/Komponenter/checkboxID',
+        'designsystems/Komponenter/inputfeltID',
+        'designsystems/Komponenter/dropDownID',
+        'designsystems/Komponenter/sliderID',
+        'designsystems/Komponenter/radiobuttonID',
+        'designsystems/Komponenter/sideelementerID',
+        'designsystems/Komponenter/navID',
+        'designsystems/Komponenter/tableID',
+        ],
+        /* NIVÅ 2 */
+        {
+          type: 'category',
+          label: 'Knapper', // Label til sidebar
+          items: [
+            'designsystems/Komponenter/Knapper/grønnknappID',
+            'designsystems/Komponenter/Knapper/blåknappID',
+            'designsystems/Komponenter/Knapper/ikonknappID',
+            'designsystems/Komponenter/Knapper/disabledknappID',
+          ],
+        },
+      ],
+    },
+  ],
+
+};
+
+```
+
+#### Ikoner og bilder
+
+Ikonene i KVIB hentes via stylesheets i docusaurus.config.js slik:
+```markdown
+stylesheets: [
+    {
+      href: 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200',
+    },
+  ],
+```
+
+Bilder og GIFs ligger i static-mappen, blant annet Kartverkets logoer og bilder som brukes til dokumentasjon av komponenter med Javascript. Denne mappen lenkes til i docusaurus.config.js-filen slik:
+```markdown
+  staticDirectories: ['src/js', 'static'],
+```
+
+### Distribusjon av nettsiden
+
+Kommer snart
 
 ## Rutine for kvalitetskontroll
 
@@ -119,115 +367,24 @@ For hver endring som gjøres, skal den nye versjonen dokumenteres:
     - Security: dersom det er sårbarheter i koden.
 
 
+## Publisering av ny CSS-pakke
+For å publisere ny versjon av KVIB-css til Github Packages:
+1. Trykk på Github Actions i Kvib Github repository
 
-## Tekniske strukturen i KVIB
+![github actions](/img/image_docs/actions.PNG)
 
-Her kommer det besrkivelse av hvordan kildekoden til KVIB er bygget opp. 
+2. Velg  "KVIB Package publish"
 
-### Prosjektstrukturen til KVIB
+![actions workflow](/img/image_docs/workflows.PNG)
 
-Slik ser filtreet til KVIB ut på et overordnet nivå:
+3. Trykk på "Run workflow" på Master branch.
 
-```markdown 
-kvib
-├─ .docusaurus
-├─ .github
-│  ├─ workflows
-├─ blog
-│  ├─ 2022-07-08-version-[0.0.5].mdx
-├─ docs
-│  ├─ designsystems
-│  │  ├─ designTokens
-│  │  ├─ Komponenter
-│  ├─ omKvib
-├─ node_modules
-├─ src
-│  ├─css
-│  ├─ docusaurus_custom_css
-│  ├─ html
-├─ static
-│  ├─ gif
-│  ├─ img
-│  ├─ .nojekyll
-├─ .gitignore
-├─ babel.config.js
-├─ docusaurus.config.js
-├─ package.json
-├─ package-lock.json
-├─ README.md
-├─ sidebars.js
-├─ tsconfig.json
-```
+![actions run workflow](/img/image_docs/run_workflow.PNG)
 
-### Legge til ny komponent/designtoken
+Ny versjon av KVIB-css blir opprettet som Github Package og gjort klar til bruk.
 
-#### 1. Opprette CSS-fil
+## Publisering til Github Pages
+Github Pages bruker gh-pages branchen som kilde.
 
-Nye CSS-filer for komponenter og designtokens skal legges i src/css/. Husk å lenke til CSS-filen i main.css som vist under:
-
-```markdown
-/* HovedCSS */
-@import 'farger.css';
-@import 'buttons.css';
-```
-
-#### 2. Dokumentasjon
-
-Alle nye komponenter og designtokens skal dokumenteres i docs/designsystems/ som .mdx-filer. Dersom det er ny komponent skal dokumentasjonen for denne ligge i undermappen Komponenter. Ny designtoken skal legges i undermappen designTokens.
-
-Ved opprettelse av ny .mdx-fil skal dette innholdet ligge øverst i filen som vist for en radioknapp:
-```markdown
----
-id: radiobuttonID                            /* dokumentets ID som blant annet brukes til å legge .mdx-filen i sidebaren */
-title: Radioknapp                            /* tittelen som vises i KVIB */
-description: Oversikt over radioknapper som blir brukt i Kartverket sine løsninger.
-slug: /designsystem/komponenter/radiobutton  /* filstien til .mdx-filen */                  
-displayed_sidebar: designsystemSidebar       /* for å vise filen i sidebaren til designsystems */
-sidebar_position: 3                          /* setter posisjonen i sidebaren */
----
-```
-
-Se [Innhold og struktur i dokumentasjon](#innhold-og-struktur-i-dokumentasjon) for hvordan nye komponenter og designtokens skal dokumenteres.
-
-
-#### 3. Legge til dokumentasjonen i sidebaren
-
-For at .mdx-filen skal vises i sidebaren til KVIB må filsti med .mdx-filens id legges til under designsystemSidebar i sidebars.js slik:
-```markdown
-type: 'category',
-      label: 'Komponenter', // Label til sidebar
-      link: {
-        type: 'generated-index',
-        title: 'Komponenter',
-        description: 'Her er en oversikt over utvalget av komponenter i KVIB.' +
-            ' Disse er bygget er blant annet bygget opp ved bruk av desing tokens fra KVIB, eksempelvis farger og typografi. I dokumentasjonen følger beskrivelse av komponenten og bruksområde, sammen med kodeeksempler. ',
-        slug: '/designsystem/Komponenter',
-      },
-      items: [
-        // Dokument som skal være under 'Design tokens'. For å hente .mdx-fil; skriv path inkludert IDen.
-         // Eks. folder/folder/docID
-        'designsystems/Komponenter/checkboxID',
-        'designsystems/Komponenter/inputfeltID',
-        'designsystems/Komponenter/dropDownID',
-        'designsystems/Komponenter/sliderID',
-        'designsystems/Komponenter/radiobuttonID',
-        'designsystems/Komponenter/sideelementerID',
-        'designsystems/Komponenter/navID',
-        'designsystems/Komponenter/tableID',
-        /*----LEGG TIL NY FIL HER----*/
-        {
-          type: 'category',
-          label: 'Knapper', // Label til sidebar
-          items: [
-            'designsystems/Komponenter/Knapper/grønnknappID',
-            'designsystems/Komponenter/Knapper/blåknappID',
-            'designsystems/Komponenter/Knapper/ikonknappID',
-            'designsystems/Komponenter/Knapper/disabledknappID',
-          ],
-        },
-      ],
-    },
-```
-
-Pass på at dette legges under items i riktig category. I eksempelet over legges ny fil i category Komponenter.
-
+Github actions workflow "Deploy to GitHub Pages" er opprettet for å publisere til Github Pages.
+Ved push til master branchen, "Test deployment" workflow kjører et build test og etter godkjenning vil "Deploy to GitHub Pages" bli aktivert.
