@@ -60,18 +60,18 @@ CSS-filer til komponenter og design tokens ligger under _src/css_. Dersom du ska
 
 #### CSS-styling av dokumentasjonssider
 
-Dersom selve dokumentasjonssiden skal ha styles etter egne preferansen, skal CSS-filene for dette legges under _src/docusaurus_custom_css_. Husk å lenke filene i _custom.css_:
+CSS-filene for styling av selve dokumentasjonssiden ligger under _src/docusaurus_custom_css_. Husk å lenke filene i _custom.css_:
 ```markdown
 @import './filnavn.css';
 ```
 
-I _docusaurus.config.js_ er _custom.css_ lenket under theme i presets for at eget design i dokumentasjonen skal tas i bruk.
+I _docusaurus.config.js_ er _custom.css_ lenket under <code>theme</code> i <code>presets</code> for at eget design i dokumentasjonen skal tas i bruk.
 
 ### Dokumentasjon
 
 Dokumentasjon ligger under docs-mappen som _.mdx_ filer. Herunder ligger dokumentasjon av komponenter og design tokens under _docs/designsystems_, og dokumentasjon om KVIB under _docs/omKvib_.
 
-Ved opprettelse av ny _.mdx_ fil skal filens id, title, description, slug, displayed_sidebar og sidebar_position ligge øverst i filen. Se eksempel for radioknapp under:
+Ved opprettelse av ny _.mdx_ fil skal filens <code>id</code>, <code>title</code>, <code>description</code>, <code>slug</code>, <code>displayed_sidebar</code> og <code>sidebar_position</code> ligge øverst i filen. Se eksempel for radioknapp under:
 ```markdown
 ---
 id: radiobuttonID                            /* dokumentets ID brukes blant annet til å legge .mdx-filen i sidemenyen */
@@ -89,17 +89,17 @@ Se [Innhold og struktur i dokumentasjon](#innhold-og-struktur-i-dokumentasjon) f
 
 #### Dokumentasjon av komponenter som krever Javascript
 
-Per i dag støtter ikke _.mdx_ <code><script\></code>-elementet. Av den grunn finnes det en mappe for HTML-filer under _src/html_, slik at komponentene kan demonstreres. [Se Innhold for hvordan komponenter som krever Javascript kan dokumenteres.](#innhold)
+Per i dag støtter ikke _.mdx_ <code><script\></code>-elementet. Av den grunn finnes det en mappe for HTML-filer under _src/html_, for å vise oppførselen til komponentene. [Se Innhold for hvordan komponenter som krever Javascript kan dokumenteres.](#innhold)
 
 
 ### docusaurus.config.js
 
-Denne seksjonen omhandler innholdet i _docusaurus.config.js_. I denne filen kan utseende til KVIB og distribusjon av nettsiden endres, samt eksternt innhold som bilder hentes inn.
+Denne seksjonen omhandler innholdet i _docusaurus.config.js_. I denne filen er det mulig å endre utseende til KVIB og distribusjon av nettsiden, samt eksternt innhold som bilder hentes inn.
 
 
 #### Navigasjonsmeny og footer
 
-Navigasjonsmenyen øverst, footer nederst på siden og deres utseende kan endres ved å redigere innholdet i themeConfig i _docusaurus.config.js_. Merk at visse elementer i kildekoden nedenfor er fjernet for å gi mer oversikt.
+Navigasjonsmenyen øverst, footer nederst på siden og deres utseende kan endres ved å redigere innholdet i <code>themeConfig</code> i _docusaurus.config.js_. Merk at visse elementer i kildekoden nedenfor er fjernet for å gi mer oversikt.
 
 ```markdown
 themeConfig:
