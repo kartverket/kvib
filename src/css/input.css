@@ -87,15 +87,3 @@ input[type=text].input__disabled:disabled {
     color: var(--graa_moerk);
     border-color: var(--graa);
 }
-
-/*Tekstfelt hjelpetekst*/
-/* .helper-text{
-    position: relative;
-    display: block;
-    font-size: 0.875rem;
-    font-style: inherit;
-    color: var(--svart); /* Sjekk figma etterpå
-    z-index: 1;
-} */
-
-/*deaktivert input*/
