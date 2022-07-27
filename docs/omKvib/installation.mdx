@@ -17,18 +17,32 @@ sidebar_position: 2
 ### npm
 1. Opprett en _.npmrc_ fil i prosjektmappen og legg til følgende:
 
-```
+```markdown
 @kartverket:registry=https://npm.pkg.github.com
 ```
 
 2. I prosjektmappen som inneholder _.npmrc_ filen, logg på npm med GitHub brukernavn og PAT ved å bruke følgende kommando:
 
-```
+```markdown
 npm login --scope=@kartverket --registry=https://npm.pkg.github.com
 ```
 
 3. Kjør npm install. Biblioteket er nå klart til bruk.
 
-```
+```markdown
 npm install
+```
+
+4. importer eller legg til link til biblioteket i CSS eller HTML filen i prosjektet.
+
+- I HTML fil:
+
+```markdown
+<link rel="stylesheet" href="PATH/node_modules/@kartverket/kvib/main.css">
+```
+
+- I CSS fil:
+
+```markdown
+@import 'PATH/node_modules/@kartverket/kvib/main.css';
 ```
