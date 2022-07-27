@@ -1,0 +1,11 @@
+/* Custom zoom knapp til historiske kart 
+
+MERK! Denne er ikke UU-godkjent eller sjekket av Wanni*/
+
+
+/* Endrer størrelsen på en ordinær knapp, slik at det er mer tilpasset til å kun ha ikon i knappen. */
+.button--zoom{
+    height: 2rem;
+    width: 2rem;
+    margin: 0.063rem;
+}

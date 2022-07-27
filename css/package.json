@@ -1,0 +1,16 @@
+{
+  "name": "@kartverket/kvib",
+  "version": "Handled by CI/CD",
+  "description": "NPM-pakke for KVIB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:kartverket/kvib"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {}
+}

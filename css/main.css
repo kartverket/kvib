@@ -1,0 +1,21 @@
+/* HovedCSS */
+
+@import 'farger.css';
+@import 'buttons.css';
+@import 'layout.css';
+@import 'typography.css';
+@import 'buttons.css';
+@import 'input.css';
+@import 'radiobutton.css';
+@import 'checkbox.css';
+@import 'sliderbutton.css';
+@import 'icons.css';
+@import 'slider.css';
+@import 'zoom.css';
+@import 'searchbar.css';
+@import 'cards.css';
+@import "dropdown.css";
+@import 'cards.css';
+@import 'table.css';
+@import 'progressbar.css';
+@import 'circular_loader.css';

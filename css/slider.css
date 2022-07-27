@@ -1,0 +1,100 @@
+
+input[type="range"].slider {
+-webkit-appearance: none;
+width: 100%;
+border: 0.063rem solid var(--blaa_moerk);
+background:var(--hvit);
+border-radius: 0.5rem;
+background-image: linear-gradient(var(--blaa_moerk), var(--blaa_moerk));
+background-size: 50%;  /*fill to display the slider value"*/
+background-repeat: no-repeat;
+ box-sizing: border-box;
+}
+
+/* Input Thumb */
+input[type="range"].slider::-webkit-slider-thumb  {
+-webkit-appearance: none;
+border-radius: 50%;
+background: var(--blaa_moerk);
+cursor: pointer;
+transition: background .3s ease-in-out;
+}
+
+input[type="range"].slider::-moz-range-thumb {
+-webkit-appearance: none;
+border-radius: 50%;
+background: var(--blaa_moerk);
+cursor: pointer;
+transition: background .3s ease-in-out;
+}
+
+input[type="range"].slider::-ms-thumb  {
+-webkit-appearance: none;
+border-radius: 50%;
+background: var(--blaa_moerk);
+cursor: pointer;
+transition: background .3s ease-in-out;
+}
+
+/* Input Track */
+ input[type=range].slider::-webkit-slider-runnable-track  {
+-webkit-appearance: none;
+box-shadow: none;
+border:none;
+background: transparent;
+}
+
+ input[type=range].slider::-moz-range-track  {
+-webkit-appearance: none;
+box-shadow: none;
+border: none;
+background: transparent;
+}
+
+ input[type="range"].slider::-ms-track  {
+-webkit-appearance: none;
+box-shadow: none;
+border: none;
+background: transparent;
+}
+
+/* #########################*/
+/* Size: xs, small */
+input[type="range"].slider--xs-s {
+ height: 0.75rem;
+
+}
+input[type="range"].slider--xs-s::-webkit-slider-thumb  {
+ height: 1.25rem;
+ width: 1.25rem;
+}
+
+input[type="range"].slider--xs-s::-moz-range-thumb {
+ height: 1.25rem;
+ width: 1.25rem;
+}
+
+input[type="range"].slider--xs-s::-ms-thumb  {
+ height: 1.25rem;
+ width: 1.25rem;
+}
+
+/* Size:medium, large*/
+input[type="range"].slider--m-l {
+ height: 1rem;
+
+}
+input[type="range"].slider--m-l::-webkit-slider-thumb  {
+ height: 1.5rem;
+ width: 1.5rem;
+}
+
+input[type="range"].slider--m-l::-moz-range-thumb {
+ height: 1.5rem;
+ width: 1.5rem;
+}
+
+input[type="range"].slider--m-l::-ms-thumb  {
+ height: 1.5rem;
+ width: 1.5rem;
+}

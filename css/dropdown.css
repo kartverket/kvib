@@ -1,0 +1,49 @@
+/*css for nedtrekksmeny*/
+
+.label--dropdown{
+    color: var(--graa);
+}
+
+.dropdown{
+    display:block;
+    width:100%;
+    -moz-padding-start:calc(0.75rem - 0.188rem);
+    font-family: inherit;
+    font-size:0.875rem;
+    font-weight:400;
+    background-color:#fff;
+    background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23213060' stroke-linecap='butt' stroke-linejoin='square' stroke-width='4' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat:no-repeat;
+    background-position:right .75rem center;
+    background-size:0.75rem 1rem;
+    border: 0.188rem solid var(--blaa_moerk_knapp);
+    border-radius:.25rem;
+
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+
+    padding: 0.5rem;
+    gap: 1rem;
+    height: 2.5rem;
+}
+
+
+.dropdown:focus{
+    border-color: var(--blaa_moerk);
+    box-shadow: 0 0 0 0.125rem var(--blaa_hover);
+}
+.dropdown:focus-visible {
+    outline: var(--blaa_moerk) solid;
+}
+
+
+/*styling av elementene i nedtrekksmenyen*/
+ .dropdown option{
+    font-family:inherit;
+    font-style: inherit;
+}
+
+.dropdown option:nth-child(even){
+    background-color: var(--blaa_lys);
+}
