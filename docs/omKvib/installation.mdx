@@ -15,19 +15,19 @@ sidebar_position: 2
 2. Autoriser PAT for bruk med organisasjonen. [Se Github dokumentasjon for PAT autentisering](https://docs.github.com/en/enterprise-cloud@latest/authentication/authenticating-with-saml-single-sign-on/authorizing-a-personal-access-token-for-use-with-saml-single-sign-on)
 
 ### npm
-1. Opprett et .npmrc fil i prosjekt mappen og legg til følgende:
+1. Opprett en .npmrc fil i prosjektmappen og legg til følgende:
 
 ```
 @kartverket:registry=https://npm.pkg.github.com
 ```
 
-2. I prosjekt mappen som inneholder .npmrc filen, logg på npm med Github brukernavn og PAT ved å bruke følgende kommando:
+2. I prosjektmappen som inneholder .npmrc filen, logg på npm med GitHub brukernavn og PAT ved å bruke følgende kommando:
 
 ```
 npm login --scope=@kartverket --registry=https://npm.pkg.github.com
 ```
 
-3. Skriv npm install og da skal biblioteket være klar til bruk.
+3. Kjør npm install. Biblioteket er nå klart til bruk.
 
 ```
 npm install

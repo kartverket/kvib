@@ -9,7 +9,7 @@ sidebar_position: 3
 
 ## Teknisk struktur
 
-Her kommer det en beskrivelse av den tekniske strukturen til KVIB. KVIB er bygget på Docusaurus, som er et dokumentasjonsverktøy. [Her](https://docusaurus.io/docs) finner du dokumentasjonen til Docusaurus.
+Her kommer det en beskrivelse av den tekniske strukturen til KVIB. KVIB er bygget med dokumentasjonsverktøyet Docusaurus. [Her finner du dokumentasjonen til Docusaurus.](https://docusaurus.io/docs)
 
 ### Prosjektstrukturen til KVIB
 
@@ -48,9 +48,9 @@ kvib
 
 ### CSS
 
-#### CSS-styling av komponenter og designtokens
+#### CSS-styling av komponenter og design tokens
 
-CSS-filer til komponenter og designtokens ligger under src/css. Dersom du skal lage en ny CSS-fil, må du lenke filen i main.css som vist under:
+CSS-filer til komponenter og design tokens ligger under _src/css_. Dersom du skal lage en ny _.css_ fil, må du lenke filen i _main.css_ som vist under:
 
 ```markdown title='src/css/main.css'
 /* HovedCSS */
@@ -65,11 +65,11 @@ Dersom selve dokumentasjonssiden skal ha styles etter egne preferansen, skal CSS
 @import './filnavn.css';
 ```
 
-I docusaurus.config.js er custom.css lenket under theme i presets for at eget design i dokumentasjonen skal tas i bruk.
+I _docusaurus.config.js_ er _custom.css_ lenket under theme i presets for at eget design i dokumentasjonen skal tas i bruk.
 
 ### Dokumentasjon
 
-Dokumentasjon ligger under docs-mappen som .mdx-filer. Herunder ligger dokumentasjon av komponenter og designtokens under docs/designsystems, og dokumentasjon om KVIB under docs/omKvib.
+Dokumentasjon ligger under docs-mappen som _.mdx_ filer. Herunder ligger dokumentasjon av komponenter og design tokens under _docs/designsystems_, og dokumentasjon om KVIB under _docs/omKvib_.
 
 Ved opprettelse av ny .mdx-fil skal filens id, title, description, slug, displayed_sidebar og sidebar_position ligge øverst i filen. Se eksempel for komponenten radioknapp under:
 ```markdown title='docs/designsystems/Komponenter/radiobuttons.mdx'
@@ -77,7 +77,7 @@ Ved opprettelse av ny .mdx-fil skal filens id, title, description, slug, display
 id: radiobuttonID                            /* dokumentets ID brukes blant annet til å legge .mdx-filen i sidemenyen */
 title: Radioknapp                            /* tittelen som vises på siden */
 description: Oversikt over radioknapper som blir brukt i Kartverket sine løsninger.
-slug: /designsystem/komponenter/radiobutton  /* filstien til .mdx-filen */                  
+slug: /designsystem/komponenter/radiobutton  /* filstien til .mdx filen */
 displayed_sidebar: designsystemSidebar       /* for å vise filen i sidebaren til designsystems */
 sidebar_position: 3                          /* setter posisjonen i sidebaren */
 ---
@@ -85,20 +85,21 @@ sidebar_position: 3                          /* setter posisjonen i sidebaren */
 Dokumentasjon HER
 ```
 
-Se [Innhold og struktur i dokumentasjon](#innhold-og-struktur-i-dokumentasjon) for hvordan nye komponenter og designtokens skal dokumenteres.
+Se [Innhold og struktur i dokumentasjon](#innhold-og-struktur-i-dokumentasjon) for hvordan nye komponenter og design tokens skal dokumenteres.
 
 #### Dokumentasjon av komponenter som krever Javascript
 
-Per i dag støtter ikke .mdx <script\>-taggen. Av den grunn finnes det en mappe for HTML-filer under src/html, slik at komponentene kan demonstreres. Se [Innhold](#innhold) for hvordan komponenter som krever Javascript kan dokumenteres.
+Per i dag støtter ikke _.mdx_ <code><script\></code>-elementet. Av den grunn finnes det en mappe for HTML-filer under _src/html_, slik at komponentene kan demonstreres. [Se Innhold for hvordan komponenter som krever Javascript kan dokumenteres.](#innhold)
+
 
 ### docusaurus.config.js
 
-Denne seksjonen omhandler innholdet i docusaurus.config.js-filen. I denne filen kan utseende til KVIB og distribusjon av nettsiden endres, samt eksternt innhold som bilder hentes inn.
+Denne seksjonen omhandler innholdet i _docusaurus.config.js_. I denne filen kan utseende til KVIB og distribusjon av nettsiden endres, samt eksternt innhold som bilder hentes inn.
 
 
 #### Navigasjonsmeny og footer
 
-Navigasjonsmenyen øverst, footer nederst på siden og deres utseende kan endres ved å redigere innholdet i themeConfig i docusaurus.config.js. Merk at visse elementer i kildekoden nedenfor er fjernet for å gi mer oversikt.
+Navigasjonsmenyen øverst, footer nederst på siden og deres utseende kan endres ved å redigere innholdet i themeConfig i _docusaurus.config.js_. Merk at visse elementer i kildekoden nedenfor er fjernet for å gi mer oversikt.
 
 ```markdown title='docusaurus.config.js'
 themeConfig:
@@ -163,7 +164,7 @@ themeConfig:
 
 #### Sidepaneler
 
-KVIB har et høyre og et venstre sidepanel. Høyre sidepanel genereres når overskriftene <h2\> (##) og <h3\> (###) legges inn i .mdx-filen. 
+KVIB har et høyre og et venstre sidepanel. Høyre sidepanel genereres når overskriftene <code><h2\></code> (##) og <code><h3\></code> (###) legges inn i _.mdx_ filen.
 
 Venstre sidepanel endres ved å gå inn på sidebars.js. Docusaurus kan autogenerere et sidepanel fra filstrukturen. Denne metoden kan tas i bruk ved få elementer i sidepanelet.
 ```markdown title='sidebars.js'
@@ -256,10 +257,6 @@ Bilder og GIFs ligger i static-mappen, blant annet Kartverkets logoer og bilder 
   staticDirectories: ['src/js', 'static'],
 ```
 
-### Distribusjon av nettsiden
-
-Kommer snart
-
 ## Rutine for kvalitetskontroll
 
 Før hver merge til master, skal følgende punkter gjennomføres: 
@@ -305,31 +302,31 @@ Før hver merge til master, skal følgende punkter gjennomføres:
 ### Struktur av dokumentasjonen
 
 
-* Følg alltid overskriftsnivåene nedover, selv om dette nødvendigvis ikke gir riktig størrelse. Begynn med <h2\> (##) ettersom sidetittelen, <h1\>, settes i beskrivelsen av mdx-filen (øverst i filen) ved bruk av “title”. 
+* Følg alltid overskriftsnivåene nedover, selv om dette nødvendigvis ikke gir riktig størrelse. Begynn med <code><h2\></code> (##) ettersom sidetittelen, <code><h1\></code>, settes i beskrivelsen av _.mdx_ filen (øverst i filen) ved bruk av “title”.
 
-* Vær opppmerksom på hvor mye innhold som blir i mdx-filen. Vurder å eventuelt dele opp innholdet i flere mdx-filer, og legg de samlet i en fellesmappe. Dette generer et til undernivå i venstre sidebar (eks. se hvordan dette er løst med knapper). 
-En slik strukturering gir mindre scrolling på samme side, og samtidig mer oversikt i høyre sidebar ettersom den kun viser element <h2\> og <h3\>.
+* Vær opppmerksom på hvor mye innhold som blir i _.mdx_ filen. Vurder å eventuelt dele opp innholdet i flere _.mdx_ filer, og legg de samlet i en fellesmappe. Dette genererer et til undernivå i venstre sidebar (eks. se hvordan dette er løst med knapper).
+En slik strukturering gir mindre scrolling på samme side, og samtidig mer oversikt i høyre sidebar ettersom den kun viser element <code><h2\></code> og <code><h3\></code>.
 
 
  
 ### Innhold
-Få alltid godkjent komponenter av designer før det legges inn i kvib. Dokumentasjon av en komponent skal inneholde: 
+Få alltid godkjent komponenter av designer før det legges inn i KVIB. Dokumentasjon av en komponent skal inneholde:
 
-* Beskrivende heading: Bruk mest naturlige heading-element, avhengig av sturkturen på resten av siden,  som tittel på den spesifikke komponenten.
-
-
-* Skriv en liten beskrivelse av komponenten under heading.
+* Beskrivende heading: Bruk mest naturlige heading-element, avhengig av sturkturen på resten av siden, som tittel på den spesifikke komponenten
 
 
-* Vis utseende til komponenten ved å skrive html-kode med tilhørende css-klasser. 
+* Lag en liten beskrivelse av komponenten under heading
 
 
-* Vis tilhørende html-kode under komponenten ved å bruke en kodeblokk uten tittel (_ ‘''markup <….> '’'_ ).
+* Vis utseende til komponenten ved å skrive HTML-kode med tilhørende CSS-klasser
 
 
-* Tillegg for komponenter som krever Javascript:
-    - Lag en GIF for å vise animert funksjonalitet. (Ta skjermopptak av animasjonen, og deretter konverter til en GIF. Vanlig konvertering av HTML til GIF fungerer ikke i alle tilfeller). Legg GIF inn i dokumentasjon.
-    - Legg evt inn ekstra statiske bilder med beskrivende teskt for å vise flere variasjoner av komponenten.
+* Vis tilhørende HTML-kode under komponenten ved å bruke en kodeblokk uten tittel (_ ‘''markup <….> '’'_ )
+
+
+* Tillegg for komponenter som krever Javascript
+    - Lag en GIF for å vise animert funksjonalitet. (Ta skjermopptak av animasjonen, og deretter konverter til en GIF. Vanlig konvertering av HTML til GIF fungerer ikke i alle tilfeller). Legg GIF inn i dokumentasjon
+    - Legg evt inn ekstra statiske bilder med beskrivende teskt for å vise flere variasjoner av komponenten
 
 
 
@@ -342,22 +339,22 @@ Det er viktig å holde en riktig og oppdatert versjonslogg, slik at det skal bli
 I versjonsloggen skal den nyeste versjonen stå øverst sammen med utgivelsesdato.
 
 Versjonering følger [konvensjoner fra Semantic Versioning](https://semver.org/). 
-Hovedsakelig inkrementerer patch-versjon ved bakover kompatibel bug-fix, minor-versjon ved ny bakover kompatibel funskjonalitet og major-versjon ved funksjonalitet som ikke er bakvoer kompatibel.  
+Hovedsakelig inkrementerer patch-versjon ved bakover kompatibel bug-fix, minor-versjon ved ny bakover kompatibel funksjonalitet og major-versjon ved funksjonalitet som ikke er bakover kompatibel.
 
  
 For hver endring som gjøres, skal den nye versjonen dokumenteres:
 
-* Legg til ny .mdx-fil under _kvib/blog_, med filnavn: **YYYY-MM-DD-version[major.minor.patch].mdx **(formatet gjør at dato generes automatisk]
+* Legg til ny _.mdx_ fil under _kvib/blog_, med filnavn: **YYYY-MM-DD-version[major.minor.patch].mdx **(formatet gjør at dato generes automatisk)
 
-* Følg strukturen fra eksisterende filer i _blog_ for å lage en beskrivelse øverst i filen:
+* Følg strukturen fra eksisterende filer i blog-mappen for å lage en beskrivelse øverst i filen:
 
     - Sett _"title: Versjon [major.minor.patch]"_. 
 
-    - Skriv kort beskrivelse for mdx-filen. 
+    - Skriv kort beskrivelse for _.mdx_ filen.
 
     - Sett passende _tags_. 
 
-* Skriv en beskrivelse av endringer som er gjort i versjonen ved å bruke titlene (sett som <h2\>):
+* Skriv en beskrivelse av endringer som er gjort i versjonen ved å bruke titlene (sett som <code><h2\></code>):
 
     - Added: nye funksjoner som er lagt til 
 
@@ -373,7 +370,9 @@ For hver endring som gjøres, skal den nye versjonen dokumenteres:
 
 
 ## Publisering av ny CSS-pakke
-For å publisere ny versjon av KVIB-css til Github Packages:
+
+For å publisere ny versjon av KVIB-CSS til GitHub Packages:
+1. Trykk på GitHub Actions i KVIB GitHub repository
 
 1. Trykk på Github Actions i Kvib Github repository
 
@@ -381,10 +380,12 @@ For å publisere ny versjon av KVIB-css til Github Packages:
 
 3. Trykk på "Run workflow" på Master branch.
 
-Ny versjon av KVIB-css blir opprettet som Github Package og gjort klar til bruk.
+![actions run workflow](/img/image_docs/run_workflow.PNG)
 
-## Publisering til Github Pages
-Github Pages bruker gh-pages branchen som kilde.
+Ny versjon av KVIB-CSS blir opprettet som GitHub Package og gjort klar til bruk.
 
-Github actions workflow "Deploy to GitHub Pages" er opprettet for å publisere til Github Pages.
+## Publisering til GitHub Pages
+GitHub Pages bruker gh-pages branchen som kilde.
+
+GitHub actions workflow "Deploy to GitHub Pages" er opprettet for å publisere til GitHub Pages.
 Ved push til master branchen, "Test deployment" workflow kjører et build test og etter godkjenning vil "Deploy to GitHub Pages" bli aktivert.
