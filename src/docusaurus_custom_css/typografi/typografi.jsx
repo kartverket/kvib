@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './typografiStyle.css';
-import '../../css/main.css';
+import '../../css/index.css';
 
 
 const h1Variants = [
