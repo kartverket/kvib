@@ -34,6 +34,6 @@ jobs:
         working-directory: src/css
 
       - run: npm publish
-        working-directory: src/css
+        working-directory: static/css
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
