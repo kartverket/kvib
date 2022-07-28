@@ -15,13 +15,13 @@ Hovedsakelig inkrementerer patch-versjon ved bakover kompatibel bug-fix, minor-v
 
 For hver endring som gjøres, skal den nye versjonen dokumenteres:
 
-* Legg til ny _.mdx_ fil under _kvib/blog_, med filnavn: **YYYY-MM-DD-version[major.minor.patch].mdx **(formatet gjør at dato generes automatisk)
+* Legg til ny _.md_ fil under _kvib/blog_, med filnavn: **YYYY-MM-DD-version[major.minor.patch].md **(formatet gjør at dato generes automatisk)
 
 * Følg strukturen fra eksisterende filer i blog-mappen for å lage en beskrivelse øverst i filen:
 
   - Sett _"title: Versjon [major.minor.patch]"_.
 
-  - Skriv kort beskrivelse for _.mdx_ filen.
+  - Skriv kort beskrivelse for _.md_ filen.
 
   - Sett passende _tags_.
 

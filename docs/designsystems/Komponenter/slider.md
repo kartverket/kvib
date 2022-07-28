@@ -18,7 +18,7 @@ For å style <code><label\></code>-elementet, skal egne
 
 
 
-![slider-xs-s](/img/image_docs/slider-xs-s.PNG)
+![slider-xs-s](/img/image_docs/slider-xs-s.PNG 'Slider i størrelse extra small og small')
 
 ``` markup
   <label for="range-slider"> Skriv tekst her</label>
@@ -29,7 +29,7 @@ For å style <code><label\></code>-elementet, skal egne
 
 ## Medium og large
 
-![slider-m-l](/img/image_docs/slider-m-l.PNG)
+![slider-m-l](/img/image_docs/slider-m-l.PNG 'Slider i størrelse medium og large')
 
 ``` markup
  <label for="range-slider">Skriv tekst her</label>

@@ -20,7 +20,7 @@ kvib
 ├─ .github
 │  ├─ workflows
 ├─ blog
-│  ├─ 2022-07-08-version-[0.0.5].mdx
+│  ├─ 2022-07-08-version-[0.0.5].md
 ├─ docs
 │  ├─ designsystems
 │  │  ├─ designTokens
@@ -68,9 +68,9 @@ I _docusaurus.config.js_ er _custom.css_ lenket under <code>theme</code> i <code
 
 ### Dokumentasjon
 
-Dokumentasjon ligger under docs-mappen som _.mdx_ filer. Herunder ligger dokumentasjon av komponenter og design tokens under _docs/designsystems_, og dokumentasjon om KVIB under _docs/omKvib_. Per 28.07.22 støtter ikke _.mdx_ <code><script\></code>-elementet. Av den grunn finnes det en mappe for HTML-filer under _src/html_, for å vise oppførselen til komponentene. [Se Innhold for hvordan komponenter som krever Javascript kan dokumenteres.](#innhold)
+Dokumentasjon ligger under docs-mappen som _.md_ filer. Herunder ligger dokumentasjon av komponenter og design tokens under _docs/designsystems_, og dokumentasjon om KVIB under _docs/omKvib_. Per 28.07.22 støtter ikke _.md_ <code><script\></code>-elementet. Av den grunn finnes det en mappe for HTML-filer under _src/html_, for å vise oppførselen til komponentene. [Se Innhold for hvordan komponenter som krever Javascript kan dokumenteres.](../omKvib/content.md#innhold)
 
-Se [Innhold og struktur i dokumentasjon](#innhold-og-struktur-i-dokumentasjon) for hvordan nye komponenter og design tokens skal dokumenteres.
+Se [Innhold og struktur i dokumentasjon](../omKvib/content.md) for hvordan nye komponenter og design tokens skal dokumenteres.
 
 ### docusaurus.config.js
 
@@ -143,7 +143,7 @@ themeConfig:
 ```
 
 #### Sidepaneler
-KVIB har et høyre og et venstre sidepanel. Høyre sidepanel genereres når overskriftene <code><h2\></code> (##) og <code><h3\></code> (###) legges inn i _.mdx_ filen.
+KVIB har et høyre og et venstre sidepanel. Høyre sidepanel genereres når overskriftene <code><h2\></code> (##) og <code><h3\></code> (###) legges inn i _.md_ filen.
 Venstre sidepanel settes inn i under <code>preset</code> og <code>sidebarPath</code> i _docusaurus.config.js_. Dette sidepanelet endres i filen _sidebars.js_. Docusaurus kan autogenerere et sidepanel fra filstrukturen eller det kan konstrueres manuelt.
 Ved autogenerert sidepanel vil filer og mapper hentes fra filtreet, og de gjeldene navnene vil benyttes som titler i sidepanelet. Navn på mapper kan ikke inneholde mellomrom. Dette er for å eventuelt kunne benytte lenker til andre sider i dokumentasjon.
 Ved manuell konstruksjon er det mer frihet ved navngivning, og sidepanelet kan lettere tilpasses.
@@ -191,7 +191,7 @@ const sidebars = {
         slug: '/designsystem/Komponenter',
       },
       items: [
-        /* Dokument som skal være under 'Design tokens'. For å hente .mdx-fil; skriv path inkludert IDen.
+        /* Dokument som skal være under 'Design tokens'. For å hente .md-fil; skriv path inkludert IDen.
         'folder/folder/dokumentID' */
         'designsystems/Komponenter/checkboxID',
         'designsystems/Komponenter/inputfeltID',
@@ -232,7 +232,7 @@ stylesheets: [
   ],
 ```
 
-Bilder og GIFs ligger i static-mappen, blant annet Kartverkets logoer og bilder som brukes til dokumentasjon av komponenter med Javascript. Denne mappen lenkes til i _docusaurus.config.js_ slik:
+Bilder og logoer ligger i static-mappen, blant annet Kartverkets logoer og bilder som brukes til dokumentasjon av komponenter med Javascript. Denne mappen lenkes til i _docusaurus.config.js_ slik:
 ```markdown title='docusaurus.config.js'
   staticDirectories: ['src/js', 'static'],
 ```

@@ -91,7 +91,7 @@ const sidebars = {
                 slug: '/designsystem/Komponenter',
             },
             items: [
-                // Dokument som skal være under 'Design tokens'. For å hente .mdx-fil; skriv path inkludert IDen.
+                // Dokument som skal være under 'Design tokens'. For å hente .md-fil; skriv path inkludert IDen.
                 // Eks. folder/folder/docID
                 'designsystems/Komponenter/checkboxID',
                 'designsystems/Komponenter/inputfeltID',
