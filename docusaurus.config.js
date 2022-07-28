@@ -128,7 +128,7 @@ const config = {
           logo: {
             alt: 'Kartverket logo',
             src: 'img/logo/kartverket_liggende.svg',
-            href: 'https://www.kartverket.no/'
+            // href: 'https://kartverket.github.io/kvib/'
           },
           items: [
             {
