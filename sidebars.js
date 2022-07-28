@@ -43,9 +43,9 @@ const sidebars = {
       link: {                 // forside til denne kategorien.
         type: 'generated-index',
         title: 'Design tokens',
-        description: 'Her er oversikt over hvilke type design tokens som er tilgjengelige i KVIB. Design tokens er grunnleggende verdier som brukes for den visuelle delen av designsystemet,for eksempel farger,spacing, font og animasjoner.' +
-            'Disse benyttes videre til å bygge opp komponenter. ' +
-            'I dokumentasjonen følger beskrivelse av design tokenet, sammen med bruksområde og kodeeksempler.',
+        description: 'Her er oversikt over hvilke typer design tokens som er tilgjengelige i KVIB. Design tokens er grunnleggende verdier som brukes for den visuelle delen av designsystemet, for eksempel farger, avstand, font og animasjoner.' +
+            ' Disse benyttes videre til å bygge opp komponenter. ' +
+            'I dokumentasjonen følger beskrivelse av design tokenet, med bruksområde og kodeeksempler.',
         slug: '/designsystem/designTokens',
       },
       items: [
@@ -63,7 +63,7 @@ const sidebars = {
         type: 'generated-index',
         title: 'Komponenter',
         description: 'Her er en oversikt over utvalget av komponenter i KVIB.' +
-            ' Disse er blant annet bygget opp ved bruk av desing tokens fra KVIB, eksempelvis farger og typografi. I dokumentasjonen følger beskrivelse av komponenten og bruksområde, sammen med kodeeksempler. ',
+            ' Disse er blant annet bygget opp ved bruk av desing tokens fra KVIB, eksempelvis farger og typografi. I dokumentasjonen følger en beskrivelse av komponenten og bruksområde, med kodeeksempler. ',
         slug: '/designsystem/Komponenter',
       },
       items: [
@@ -84,8 +84,8 @@ const sidebars = {
           link: {
             type: 'generated-index',
             title: 'Knapper',
-            description: 'Her er en oversikt over utvalget av Knapper i KVIB.' +
-                ' Disse er blant annet bygget opp ved bruk av desing tokens fra KVIB, eksempelvis farger og typografi. I dokumentasjonen følger beskrivelse av komponenten og bruksområde, sammen med kodeeksempler.',
+            description: 'Her er en oversikt over utvalget av knapper i KVIB.' +
+                ' Disse er blant annet bygget opp ved bruk av design tokens fra KVIB, eksempelvis farger og typografi. I dokumentasjonen følger beskrivelse av komponenten og bruksområde, sammen med kodeeksempler.',
             slug: 'designsystems/Komponenter/Knapper',
           },
           items: [

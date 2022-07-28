@@ -1,20 +1,20 @@
 ---
 id: radiobuttonID
 title: Radioknapp
-description: Oversikt over radioknapper som blir brukt i Kartverket sine løsninger.
+description: Radioknapper som blir brukt i Kartverket sine løsninger
 slug: /designsystem/komponenter/radiobutton
 displayed_sidebar: designsystemSidebar
 sidebar_position: 3
 ---
- Radioknapper skal benyttes hvor en bruker kun skal kunne gjøre ett enkelt valg, og ikke flervalg. Ved et nytt valg, skal eventuelle tidligere valg fjernes automatisk. Feilmelding avkrysningsknapp skal brukes for å visualisere feil i avkrysningen, dersom dette har skjedd (f.eks. ikke krysset av for et alternativ).
+ Radioknapper skal benyttes der en bruker kun skal kunne gjøre ett enkelt valg, og ikke flervalg. Ved et nytt valg skal eventuelle tidligere valg fjernes automatisk. Feilmelding avkrysningsknapp skal brukes for å visualisere feil i avkrysningen, dersom dette har skjedd (f.eks. ikke krysset av for et alternativ).
  
-For å style <label\>-elementet, skal egne CSS-klasser fra
+For å style <code><label\></code>-elementet, skal egne CSS-klasser fra
 [_Typografi_](../designTokens/typography.mdx#label)
-benyttes. I tillegg skal hver gruppe med radioknapper ligge i <fieldset\>, og ha en <legend\> for å vise at elementene hører sammen. Dette er for at skjermleser skal kunne identifisere beskrivelsen til knappene. Se eksempelbruk under.
+benyttes. I tillegg skal hver gruppe med radioknapper ligge i <code><fieldset\></code>, og ha en <code><legend\></code> for å vise at elementene hører sammen. Dette er for at skjermleser skal kunne identifisere beskrivelsen til knappene. Se eksempelbruk under.
 
-## Normal radio knapp
+## Normal radioknapp
 
-Radio knapp får fokus sirkel rundt når de velges med tastaturet.
+Radioknappene får en fokus sirkel når de velges med tastaturet.
 
 <fieldset>
     <legend>Eksempel på gruppe med radioknapper</legend>
@@ -45,9 +45,9 @@ Radio knapp får fokus sirkel rundt når de velges med tastaturet.
 </fieldset>
 ```
 
-## Feilmelding radio knapp
+## Feilmelding radioknapp
 
-Følgende radio knapp får feilmeldings farge hvis et av alternativene må være valgt før bruker kan gå videre. Merk at i dette eksempelet er _checked={false}_ brukt for å tvinge frem en feilmelding som demonstrasjon.
+Følgende radioknapp får feilmeldingsfarge hvis et av alternativene må være valgt før bruker kan gå videre. Merk at i dette eksempelet er <code>checked={false}</code> brukt for å tvinge frem en feilmelding som demonstrasjon.
 
 <fieldset>
     <legend>Eksempel på gruppe med radioknapper som har feilmelding</legend>

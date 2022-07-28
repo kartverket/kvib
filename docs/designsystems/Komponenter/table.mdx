@@ -1,7 +1,7 @@
 ---
 id: tableID
-title: (!) Listevisning
-description: Lister brukt av Kartverket.
+title: (!)Listevisning
+description: Lister som blir brukt i Kartverket sine løsninger
 slug: /designsystem/komponenter/table
 displayed_sidebar: designsystemSidebar
 sidebar_position: 7
@@ -10,10 +10,10 @@ _**OBS! Under konstruksjon**_
 
 _**Merk at eksempelet lenket nedenfor, samt malen under, er under konstruksjon. De kan dermed ikke tas i bruk på grunn av følgende feil og mangler:**_
 * _**Komponenten er ikke testet etter KVIBs rutine for kvalitetskontroll**_
-* _**Vertikal scroll forekommer ikke etter 12 rader. Det er nå høyden på containeren rundt listen som bestemmer når scroll skal oppstå**_
+* _**Vertikal scroll forekommer ikke etter 12 rader. Det er nå høyden på containeren rundt listen som bestemmer når scroll settes inn**_
 * _**Det er ikke testet om horistontal scroll forekommer ved for mange tegn. Det er heller ikke tatt hensyn til hvordan en eventuell overflyt skal håndteres**_
-* _**Avsjekkingsboksens label er ikke fjernet i eksempelet**_
-
+* _**Avmerkingsboksens label er ikke fjernet i eksempelet**_
+* _**Hvis man huker av "Slett alle"-boksen, skal alle avmerkingsboksene markeres. Hvis man så avhuker "Slett alle"-boksen, skal alle avmerkingsbokser gå tilbake til tilstanden de var i før boksen ble huket av. Det vil si at en avmerkingsboks som var markert før "Slett alle"-boksen ble huket av, skal forbli markert når "Slett alle"-boksen avhukes. Se Figma-KVIB for demonstrasjon. Denne oppførselen er ikke implementert enda**_
 <hr/>
 
 
@@ -29,7 +29,7 @@ KVIBs listevisning har en standard mal, som vist under. Det vil si at utvikler m
 * Sticky header skal benyttes
 * Listen skal aldri gå utover designets maks grid bredde
 
-Et eksempel som demonstrerer oppførselen til en listevisning og hvordan denne kan se ut finnes her (lenke bug). Ettersom "Slett alle"-funksjonen krever Javascript, kan eksempelet ikke vises på denne siden. Se ellers standard malen under.
+[Et eksempel som demonstrerer oppførselen til en listevisning og hvordan denne kan se ut finnes her](pathname:///html/table.html). Ettersom "Slett alle"-funksjonen krever Javascript, kan eksempelet ikke vises på denne siden. Se ellers standard malen under.
 
 <table id="data-input">
     <tr>
