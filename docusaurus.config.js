@@ -127,7 +127,7 @@ const config = {
         navbar: {
           logo: {
             alt: 'Kartverket logo',
-            src: 'img/logo/kartverket_liggende.svg',
+            src: 'img/logo/kvib_logo.svg',
             // href: 'https://kartverket.github.io/kvib/'
           },
           items: [
