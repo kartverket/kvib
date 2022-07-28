@@ -68,9 +68,9 @@ I _docusaurus.config.js_ er _custom.css_ lenket under <code>theme</code> i <code
 
 ### Dokumentasjon
 
-Dokumentasjon ligger under docs-mappen som _.md_ filer. Herunder ligger dokumentasjon av komponenter og design tokens under _docs/designsystems_, og dokumentasjon om KVIB under _docs/omKvib_. Per 28.07.22 støtter ikke _.md_ <code><script\></code>-elementet. Av den grunn finnes det en mappe for HTML-filer under _src/html_, for å vise oppførselen til komponentene. [Se Innhold for hvordan komponenter som krever Javascript kan dokumenteres.](#innhold)
+Dokumentasjon ligger under docs-mappen som _.md_ filer. Herunder ligger dokumentasjon av komponenter og design tokens under _docs/designsystems_, og dokumentasjon om KVIB under _docs/omKvib_. Per 28.07.22 støtter ikke _.md_ <code><script\></code>-elementet. Av den grunn finnes det en mappe for HTML-filer under _src/html_, for å vise oppførselen til komponentene. [Se Innhold for hvordan komponenter som krever Javascript kan dokumenteres.](../omKvib/content.md#innhold)
 
-Se [Innhold og struktur i dokumentasjon](#innhold-og-struktur-i-dokumentasjon) for hvordan nye komponenter og design tokens skal dokumenteres.
+Se [Innhold og struktur i dokumentasjon](../omKvib/content.md) for hvordan nye komponenter og design tokens skal dokumenteres.
 
 ### docusaurus.config.js
 
@@ -232,7 +232,7 @@ stylesheets: [
   ],
 ```
 
-Bilder og GIFs ligger i static-mappen, blant annet Kartverkets logoer og bilder som brukes til dokumentasjon av komponenter med Javascript. Denne mappen lenkes til i _docusaurus.config.js_ slik:
+Bilder og logoer ligger i static-mappen, blant annet Kartverkets logoer og bilder som brukes til dokumentasjon av komponenter med Javascript. Denne mappen lenkes til i _docusaurus.config.js_ slik:
 ```markdown title='docusaurus.config.js'
   staticDirectories: ['src/js', 'static'],
 ```

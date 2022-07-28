@@ -12,7 +12,7 @@ sidebar_position: 4
 ***
 
 Inputfeltene i KVIB bruker CSS-klassen <code>.input</code>. Denne klassen har en bredde satt til 100%, slik at bredden på inputfeltet tilpasses ved å legge <code><input\></code>- og <code><label\></code>-elementene  i f.eks. et <code><div\></code>-element med en bestemt lengde.
-For å style <code><label\></code>-elementet, skal egne [CSS-klasser fra _Typografi_ benyttes.](../designTokens/typography.md#label)
+For å style <code><label\></code>-elementet, skal egne [CSS-klasser fra _Typografi_ benyttes.](../designTokens/typography.mdx#label)
 
 ## Aktivt inputfelt
 

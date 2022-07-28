@@ -12,7 +12,7 @@ Før hver merge til master, skal følgende punkter gjennomføres:
 
 1. Følge KVIB sine konvensjoner for CSS-klassenavn. [Se Konvensjoner for CSS-klassenavn.](../#konvensjoner-for-css-klassenavn)
 
-2. Følge KVIB sine konvensjoner for dokumentasjon (struktur og innhold). [Se Innhold og struktur av dokumentasjon.](#innhold-og-struktur-i-dokumentasjon)
+2. Følge KVIB sine konvensjoner for dokumentasjon (struktur og innhold). [Se Innhold og struktur av dokumentasjon.](../omKvib/content.md)
 
 3. Sjekke rettskriving og klarspråk.
 
@@ -34,4 +34,4 @@ Før hver merge til master, skal følgende punkter gjennomføres:
 
 9. Det skal være QA på all ny kode.
 
-10. Oppdater versjonsloggen. [Se Oppdater versjon.](#oppdater-versjon)
+10. Oppdater versjonsloggen. [Se Oppdater versjon.](../omKvib/version.md)

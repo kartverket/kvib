@@ -9,7 +9,7 @@ sidebar_position: 3
  Radioknapper skal benyttes der en bruker kun skal kunne gjøre ett enkelt valg, og ikke flervalg. Ved et nytt valg skal eventuelle tidligere valg fjernes automatisk. Feilmelding avkrysningsknapp skal brukes for å visualisere feil i avkrysningen, dersom dette har skjedd (f.eks. ikke krysset av for et alternativ).
  
 For å style <code><label\></code>-elementet, skal egne CSS-klasser fra
-[_Typografi_](../designTokens/typography.md#label)
+[_Typografi_](../designTokens/typography.mdx#label)
 benyttes. I tillegg skal hver gruppe med radioknapper ligge i <code><fieldset\></code>, og ha en <code><legend\></code> for å vise at elementene hører sammen. Dette er for at skjermleser skal kunne identifisere beskrivelsen til knappene. Se eksempelbruk under.
 
 ## Normal radioknapp

@@ -44,8 +44,8 @@ Få alltid godkjent komponenter av designer før det legges inn i KVIB. Dokument
 
 * Tillegg for komponenter som krever Javascript
   - Lag en egen _.html_ fil for komponenten, og link til denne i dokumentasjonen. Dette er hovedsaklig for å demonstrere oppførselen til komponenten
-  - Legg evt inn ekstra statiske bilder med beskrivende teskt for å vise flere variasjoner av komponenten
+  - Legg evt inn ekstra statiske bilder med beskrivende tekst for å vise flere variasjoner av komponenten
 
 
 
-![documenting_example](/img/image_docs/documenting_example.PNG)
+![documenting_example](/img/image_docs/documenting_example.PNG 'Eksempel: Statisk bilde av grønn primærknapp')
