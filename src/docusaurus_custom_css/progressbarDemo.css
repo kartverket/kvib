@@ -1,3 +1,7 @@
+.progressbar__container {
+    width: 50%;
+}
+
 .progressbar--demo::after {
     animation: load 5s infinite;
     background: #213060;
@@ -21,7 +25,7 @@
     }
 }
 
-.progressbar--label::after {
+.progressbar__label::after {
     content: "";
     animation: loading-label 5s infinite;
 }
