@@ -27,6 +27,7 @@ input[type=text].input {
     background: #FFFFFF;
     transition: linear, 0.2s linear;
     font-family: inherit;
+    box-sizing: border-box;
 }
 
 input[type=text].input:focus-visible:active {
@@ -73,7 +74,7 @@ input[type=text].input__error:invalid:active {
     width: 100%;
     position: relative;
     /*height: 3rem;*/
-    height: calc(var(--inputHeight)+ 0.063rem + 0.75rem);
+    height: var(--inputHeight);
     display: flex;
     flex-direction: row;
     align-items: flex-end;
