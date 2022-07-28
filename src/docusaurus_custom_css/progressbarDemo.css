@@ -1,0 +1,50 @@
+.progressbar__container {
+    width: 50%;
+}
+
+.progressbar--demo::after {
+    animation: load 5s infinite;
+    background: #213060;
+}
+
+@keyframes load {
+    0% {
+        width: 0;
+    }
+    25% {
+        width: 40%;
+    }
+    50% {
+        width: 60%;
+    }
+    75% {
+        width: 75%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.progressbar__label::after {
+    content: "";
+    animation: loading-label 5s infinite;
+}
+
+@keyframes loading-label {
+    0% {
+        content: "0%";
+    }
+    25% {
+        content: "25%";
+    }
+    50% {
+        content: "50%";
+    }
+    75% {
+        content: "75%";
+    }
+    100% {
+        content: "100%";
+    }
+}
+
