@@ -1,20 +1,20 @@
 ---
 id: sideelementerID
-title: Sideelementer
-description: Sideelementer
+title: (!)Sideelementer
+description: Sideelementer som blir brukt i Kartverket sine løsninger
 slug: /designsystem/komponenter/sideelementer
 displayed_sidebar: designsystemSidebar
 ---
 
 _**OBS! Under konstruksjon**_
 
-* _**Filopplastningselementer er ikke lagt til.**_
+* _**Filopplastningselementer er ikke lagt til**_
 
 ## Opplastningsmoduler og elementer
 
 ### Sirkulært opplastningselement
 Det sirkulære opplastningselementet skal brukes på små flater og som ikon.
-I elementet under er loader--size 5.625rem / 90px. Størrelsen endres av designer for hvert prosjekt.
+I elementet under er <code>loader--size</code> 5.625rem / 90px. Størrelsen endres av designer for hvert prosjekt.
 
 <div class="devsizes-grid">
     <div class="loader loader--blue loader--size"></div>
@@ -34,12 +34,12 @@ I elementet under er loader--size 5.625rem / 90px. Størrelsen endres av designe
 ```
 
 
-## Linjært opplastningselement
-Linjært opplastningselement eksemplet under bruker <code>class="progressbar__container"</code> for å sette størrelsen på elementet.
+## Lineært opplastningselement
+Lineært opplastningselement eksemplet under bruker <code>class="progressbar__container"</code> for å sette størrelsen på elementet.
 I dette tilfellet, er container satt på <code>width: 50%;</code>
 
-### Linjært opplastningselement uten verdi
-Linjært opplastningselementet bruker klassen "progressbar".
+### Lineært opplastningselement uten verdi
+Lineært opplastningselementet bruker klassen <code>progressbar</code>.
 
 <div class="progressbar__container">
     <div class="progressbar__wrapper">
@@ -56,11 +56,11 @@ Linjært opplastningselementet bruker klassen "progressbar".
 </div>
 ```
 
-### Linjært opplastningselement med verdi
-Linjært opplastningselementet bruker ::after selector for å sette inn verdi og fyll farge.
+### Lineært opplastningselement med verdi
+Lineært opplastningselementet bruker <code>::after</code> selector for å sette inn verdi og farge på fyll.
 Eksempel: <code>.progressbar--demo::after {width: 50%; background: var(--blaa_moerk);}</code>
 
-I eksemplet under, <code>progressbar--demo</code> er animert til å bytte width fra 0% til 100%, det gjelder også <code>progressbar--label</code> for endring av verdi.
+I eksemplet under er <code>progressbar--demo</code> animert til å bytte <code>width</code> fra 0% til 100%. Det gjelder også <code>progressbar--label</code> med hensyn til endring av verdi.
 
 <div class="progressbar__container">
     <div class="progressbar__wrapper">
@@ -79,4 +79,6 @@ I eksemplet under, <code>progressbar--demo</code> er animert til å bytte width 
 </div>
 ```
 
-## (!) Filopplastningselementer
+## Filopplastningselementer
+
+Kommer snart.
