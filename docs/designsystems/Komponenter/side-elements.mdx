@@ -17,11 +17,11 @@ Det sirkulære opplastningselementet skal brukes på små flater og som ikon.
 I elementet under er loader--size 5.625rem / 90px. Størrelsen endres av designer for hvert prosjekt.
 
 <div class="devsizes-grid">
-<div class="loader loader--blue loader--size"></div>
-<div class="loader loader--green loader--size"></div>
-<div class="loader__background__box">
-    <div class="white--loader loader--white loader--size loader--pos--white"></div>
-</div>
+    <div class="loader loader--blue loader--size"></div>
+    <div class="loader loader--green loader--size"></div>
+    <div class="loader__background__box">
+        <div class="white--loader loader--white loader--size loader--pos--white"></div>
+    </div>
 </div>
 <br/>
 
@@ -34,21 +34,25 @@ I elementet under er loader--size 5.625rem / 90px. Størrelsen endres av designe
 ```
 
 
-## Filopplastningselementer
-Filopplastningselement eksemplet under bruker <code>class="progressbar__container"</code> for å sette størrelsen på elementet.
+## Linjært opplastningselement
+Linjært opplastningselement eksemplet under bruker <code>class="progressbar__container"</code> for å sette størrelsen på elementet.
 I dette tilfellet, er container satt på <code>width: 50%;</code>
 
 ### Linjært opplastningselement uten verdi
 Linjært opplastningselementet bruker klassen "progressbar".
 
 <div class="progressbar__container">
-    <div class="progressbar progressbar--demo"/>
+    <div class="progressbar__wrapper">
+        <div class="progressbar progressbar--demo"/>
+    </div>
 </div>
 <br/>
 
 ```markdown
 <div class="progressbar__container">
-    <div class="progressbar"/>
+    <div class="progressbar__wrapper">
+        <div class="progressbar progressbar--demo"/>
+    </div>
 </div>
 ```
 
@@ -59,14 +63,20 @@ Eksempel: <code>.progressbar--demo::after {width: 50%; background: var(--blaa_mo
 I eksemplet under, <code>progressbar--demo</code> er animert til å bytte width fra 0% til 100%, det gjelder også <code>progressbar--label</code> for endring av verdi.
 
 <div class="progressbar__container">
-    <label for="demo" class="progressbar--label"/>
-    <div id="demo" class="progressbar progressbar--demo"/>
+    <div class="progressbar__wrapper">
+        <div id="demo" class="progressbar progressbar--demo"/>
+        <label for="demo" class="progressbar__label"/>
+    </div>
 </div>
 <br/>
 
 ```markdown
 <div class="progressbar__container">
-    <label for="demo" class="progressbar--label"/>
-    <div id="demo" class="progressbar progressbar--demo"/>
+    <div class="progressbar__wrapper">
+        <div id="demo" class="progressbar progressbar--demo"/>
+        <label for="demo" class="progressbar__label"/>
+    </div>
 </div>
 ```
+
+## (!) Filopplastningselementer
