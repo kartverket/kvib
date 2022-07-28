@@ -10,7 +10,7 @@ Implementasjon av denne komponenten krever Javascript, i tillegg til CSS-klassen
 Under følger statiske bilder av slideren for å vise forskjell på de ulike størrelsene, sammen med eksempelkode. Bredden til <code>.slider</code> er satt til 100%, slik at slider-bredden tilpasses ved å legge elementene i f.eks. et <code><div\></code>-element.
 
 For å style <code><label\></code>-elementet, skal egne
-[CSS-klasser fra _Typografi_ benyttes.](../designTokens/typography.mdx#label)
+[CSS-klasser fra _Typografi_ benyttes.](../designTokens/typography.md#label)
 
 
 

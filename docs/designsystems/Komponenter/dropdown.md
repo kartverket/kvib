@@ -16,7 +16,7 @@ displayed_sidebar: designsystemSidebar
 
 
 Her er KVIB sin nedtrekksmeny.
-For å style <code><label\></code>-elementet, skal egne [CSS-klasser fra _Typografi_ benyttes.](../designTokens/typography.mdx#label)
+For å style <code><label\></code>-elementet, skal egne [CSS-klasser fra _Typografi_ benyttes.](../designTokens/typography.md#label)
 
 
 <label class="label label--sml label--dropdown" for="dropdown">Overskrift </label>
