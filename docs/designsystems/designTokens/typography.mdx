@@ -1,29 +1,29 @@
 ---
 id: typografiID
 title: Typografi
-description: Oversikt over typografi som blir brukt i Kartverket sine løsninger.
+description: Typografi som blir brukt i Kartverket sine løsninger
 slug: /designsystems/designtokens/typografi
 displayed_sidebar: designsystemSidebar
 ---
 import {Heading1,Heading2,Heading3,BodyText,Label, Detail, Underline} from '@site/src/docusaurus_custom_css/typografi/typografi.jsx';
 
 
-Det er en rekke krav til tekststruktur for å tilfredstille lover. Avhengig av hvilket publiseringsystem som benyttes, kan kravene løses ulikt teknisk, men grunnprinsippet vil være de samme.
+Det er en rekke krav til tekststruktur for å tilfredstille regelverket. Avhengig av hvilket publiseringsystem som benyttes, kan kravene løses ulikt teknisk, men grunnprinsippet vil være det samme.
 Det er viktig at innholdet struktureres med korrekt kode, og må kunne forstørres uten tap av tekst eller lesbarhet. 
 
 
 ## Overskrifter
-Overskrifter kodes ved hjelp av overskriftelementene <h1\> til <h6\>, som deler opp teksten tilsvarende i kapitler og delkapitlers. Kartverket har per dags dato tre nivåer fra <h1\> til <h3\>, det vil komme noe mer senere. 
+Overskrifter kodes ved hjelp av overskriftelementene <code><h1\></code> til <code><h6\></code>, som deler opp teksten i tilsvarende kapitler og delkapitler. Kartverket har per dags dato tre nivåer fra <code><h1\></code> til <code><h3\></code>. Det vil komme mer senere. 
 
 Overskriftsnivåer brukes for å strukturere teksten, og er særlig aktuelt i redaksjonelt innhold. 
-Rekkefølgen på nivåene skal være korrekt. Nedover i nivået går du ett steg om gangen, oppover avhenger det av hvordan teksten skal bygges opp. <h1\> - <h2\> og <h1\> - <h1\> er tillatt, <h1\> - <h3\> er ikke tillatt.
+Rekkefølgen på nivåene skal være korrekt. Nedover i nivået går du ett steg om gangen. Rekkefølgen oppover er avhengig av hvordan teksten skal bygges opp. <code><h1\></code> - <code><h2\></code> og <code><h1\></code> - <code><h1\></code> er tillatt, mens <code><h1\></code> - <code><h3\></code> er ikke tillatt.
 Dette kan vi sjekke i eksisterende tekster med Eb Accessibility Toolbar, under Structure. 
 
-Ofte er det informasjon i rammeverk som ikke er direkte knyttet til hovedinnholdet på siden, og som ligger etter hovedinnholdet i koden. Et vanlig eksempel er footer(kolofonen), som gjerne inneholder overordnet kontaktinformasjon.
-I så fall er det gunstig å innlede denne informasjonen med <h1\> for å bryte tydelig med hovedinnholdet. Det kan også være aktuelt å ha mellomtitler i denne informasjonen, og nivåene må selvfølgelig være i riktig rekkefølge.  
+Ofte er det informasjon i rammeverk som ikke er direkte knyttet til hovedinnholdet på siden, og som ligger etter hovedinnholdet i koden. Et vanlig eksempel er footer (kolofonen), som gjerne inneholder overordnet kontaktinformasjon.
+I så fall er det gunstig å innlede denne informasjonen med <code><h1\></code> for å bryte tydelig med hovedinnholdet. Det kan også være aktuelt å ha mellomtitler i denne informasjonen, og nivåene må selvfølgelig være i riktig rekkefølge.  
 
 ### Heading1- Sidetittel
-Hovedinnholdets tittel skal være den første overskriften i koden, og skal være på nivå 1 ved hjelp av elementet <h1\>. Dette gjelder også startsiden, som bør ha en synlig overskrift som tydelig formidler hvilken virksomhet brukeren har kommet til.
+Hovedinnholdets tittel skal være den første overskriften i koden, og skal være på nivå 1 ved hjelp av elementet <code><h1\></code>. Dette gjelder også startsiden, som bør ha en synlig overskrift som tydelig formidler hvilken virksomhet brukeren har kommet til.
 
 
 
@@ -38,15 +38,15 @@ Hovedinnholdets tittel skal være den første overskriften i koden, og skal vær
 
 ## Brødtekst
 
-Brødteksten skal kodes med avsnittselementet <p\>. Unngå bruken av elementene <div\>, <span\>, <br\> og <hr\> for å skape avsnitt.
-Unngå også tomme avsnittselement. Hvis du bruker det for å skape luft skal du løse dette med CSS i stedet. 
+Brødteksten skal kodes med avsnittselementet <code><p\></code>. Unngå bruken av elementene <code><div\></code>, <code><span\></code>, <code><br\></code> og <code><hr\></code> for å skape avsnitt.
+Unngå også tomme avsnittselement. Hvis du bruker det for å skape luft, skal du løse dette med CSS i stedet. 
 For best mulig lesbarhet for alle brukere, bør det ikke være mer enn 65-70 tegn per linje inkludert mellomrom. Da blir teksten mer innbydende og mindre overveldende, og er særlig viktig for brukere med lesevansker og konsentrasjonsvansker. 
 
 <BodyText/>
 
 
 ## Label
-Label (ledeteksten) er instruksen brukerne får når de skal gi respons i et skjema eller lignende. Ledeteksten kan være et spørsmål eller et enkelt ord, som. “Navn” eller “Dato“. Les mer om hvordan <a href="https://www.gov.uk/" class='underline'> gov.uk bruker ledetekst. </a> 
+Label (ledeteksten) er instruksen brukerne får når de skal gi respons i et skjema eller lignende. Ledeteksten kan være et spørsmål eller et enkelt ord, som “Navn” eller “Dato“. Les mer om hvordan <a href="https://www.gov.uk/" class='underline'> gov.uk bruker ledetekst. </a> 
   
 <Label/>
 
@@ -55,10 +55,10 @@ Beskrivende tekst blir brukt som hjelpetekst og veiledning. Ordet «hjelpetekst�
 <Detail/>
 
 ## Understrekning og lenker
-Understrekniong skal brukes i lenketekster eller andre elementer som trenger å poengteres. 
+Understrekning skal brukes i lenketekster eller andre elementer som trenger å poengteres. 
 
 Lenketekster skal være beskrivende, og gi brukeren nok informasjon til å forstå hva målet med lenken er. 
-Istedenfor å skrive «Les mer her» bør du for eksempel skrive «Les mer om universell utforming her». På denne måten vil lenken alene være godt nok til å forstå hva som skjuler seg bak lenken.
+Istedenfor å skrive «Les mer her», bør du for eksempel skrive «Les mer om universell utforming her». På denne måten vil lenken alene være godt nok til å forstå hva som skjuler seg bak lenken.
 
 <Underline/>
 
