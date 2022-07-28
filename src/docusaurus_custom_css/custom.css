@@ -34,7 +34,7 @@ p a {
 /*sette bredde på gif i docs/designsystems/Komponenter/slider.mdx*/
 img[alt=sliderGif] { width: 70%;}
 
-/*sette bredde på bilde i docs/omKvib/expandKvib.mdx*/
+/*sette bredde på bilde i docs/omKvib/structure.md*/
 img[alt=documenting_example].img_node_modules-\@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module {
     height:65%;
     width: 65%;

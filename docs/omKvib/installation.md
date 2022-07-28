@@ -1,11 +1,9 @@
 ---
 id: installationID
-title: Ta i bruk KVIB
+title: Implementering av KVIB
 description: Ta i bruk Kvib
-slug: /omKvib/installation
+slug: /omKvib/implementering
 displayed_sidebar: OmKvibSidebar
-sidebar_label: Ta i bruk KVIB
-sidebar_position: 2
 ---
 ## Installasjon av KVIB-CSS GitHub Package
 

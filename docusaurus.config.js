@@ -155,8 +155,25 @@ const config = {
               title: 'Docs',
               items: [
                 {
-                  label: 'KVIB Figma',
+                  label: 'Om KVIB',
                   to: '/',
+                },
+                {
+                  label: 'Installasjon',
+                  to: '/omKvib/implementering',
+                },
+                {
+                  label: 'Utvide KVIB',
+                  to: '/utvideKvib',
+                },
+              ],
+            },
+            {
+              title: 'GitHub',
+              items: [
+                {
+                  label: 'KVIB',
+                  href: 'https://github.com/kartverket/kvib',
                 },
               ],
             },
@@ -164,24 +181,7 @@ const config = {
               title: 'Community',
               items: [
                 {
-                  label: 'Stack Overflow',
-                  href: '#',
-                },
-                {
-                  label: 'Discord',
-                  href: '#',
-                },
-                {
-                  label: 'Twitter',
-                  href: '#',
-                },
-              ],
-            },
-            {
-              title: 'More',
-              items: [
-                {
-                  label: 'GitHub',
+                  label: 'Slack',
                   href: '#',
                 },
               ],
