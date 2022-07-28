@@ -31,7 +31,7 @@ p a {
     text-decoration: underline;
 }
 
-/*sette bredde på gif i docs/designsystems/Komponenter/slider.mdx*/
+/*sette bredde på gif i docs/designsystems/Komponenter/slider.md*/
 img[alt=sliderGif] { width: 70%;}
 
 /*sette bredde på bilde i docs/omKvib/structure.md*/

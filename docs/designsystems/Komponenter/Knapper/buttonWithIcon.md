@@ -9,7 +9,7 @@ Knapper som består av tekst og ikon skal ha ikonet plassert på venstre eller h
 En knapp med størrelse extra small benytter et ikon av mindre størrelse enn de øvrige knappestørrelsene, men dette endres automatisk ettersom størrelsen settes for <code><button\></code>-elementet.
 
 
-[Se dokumentasjonssiden for ikoner](../../designTokens/icons.mdx) for å designe <code><span\></code>-elementet.
+[Se dokumentasjonssiden for ikoner](../../designTokens/icons.md) for å designe <code><span\></code>-elementet.
 
 ## Ikon venstre
 
