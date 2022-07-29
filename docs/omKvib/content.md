@@ -10,7 +10,7 @@ displayed_sidebar: OmKvibSidebar
 
 * Følg alltid overskriftsnivåene nedover, selv om dette nødvendigvis ikke gir riktig størrelse. Begynn med <code><h2\></code> (##) ettersom sidetittelen, <code><h1\></code>, settes i beskrivelsen av _.md_ filen (øverst i filen) ved bruk av “title”.
 
-* Vær oppmerksom på hvor mye innhold som blir i _.md_ filen. Vurder å eventuelt dele opp innholdet i flere _.md_ filer, og legg de samlet i en fellesmappe. Dette genererer et til undernivå i venstre sidebar (eks. se hvordan dette er løst med knapper).
+* Vær oppmerksom på hvor mye innhold som blir i _.md_ filen. Vurder å eventuelt dele opp innholdet i flere _.md_ filer, og legg de samlet i en fellesmappe. Dette må legges til som et nytt undernivå i venstre sidebar (eks. se hvordan dette er løst med knapper).
   En slik strukturering gir mindre scrolling på samme side, og samtidig mer oversikt i høyre sidebar ettersom den kun viser element <code><h2\></code> og <code><h3\></code>.
 
 * Ved opprettelse av ny _.md_ fil skal filens <code>id</code>, <code>title</code>, <code>description</code>, <code>slug</code>, <code>displayed_sidebar</code> og <code>sidebar_position</code> ligge øverst i filen. Se eksempel for radioknapp under:
@@ -28,20 +28,28 @@ Dokumentasjon HER
 ```
 
 ### Innhold
-Få alltid godkjent komponenter av designer før det legges inn i KVIB. Dokumentasjon av en komponent skal inneholde:
+Få alltid godkjent komponenter av designer før det legges inn i KVIB. Bildet under viser hvordan det kan se ut. Dokumentasjon av en komponent skal inneholde:
 
-* Beskrivende heading: Bruk mest naturlige heading-element, avhengig av sturkturen på resten av siden, som tittel på den spesifikke komponenten
-
-
-* Lag en liten beskrivelse av komponenten under heading
+* Beskrivende tittel: Bruk mest naturlige overskriftselement, avhengig av sturkturen på resten av siden, som tittel på den spesifikke komponenten
 
 
-* Vis utseende til komponenten ved å skrive HTML-kode med tilhørende CSS-klasser
+* Lag en liten beskrivelse av komponenten under overskriften.
 
 
-* Vis tilhørende HTML-kode under komponenten ved å bruke en kodeblokk uten tittel (_ ‘''markup <….> '’'_ )
+* Vis utseende til komponenten ved å skrive HTML-kode med tilhørende CSS-klasser.
 
 
+* Vis tilhørende HTML-kode under komponenten ved å bruke en kodeblokk uten tittel, slik som vist under: 
+
+<code> ```markup
+<br></br>
+<code>HTML-kode for komponenter her</code>
+<br></br>
+<code> ``` </code>
+</code> 
+
+
+  
 * Tillegg for komponenter som krever Javascript
   - Lag en egen _.html_ fil for komponenten, og link til denne i dokumentasjonen. Dette er hovedsaklig for å demonstrere oppførselen til komponenten
   - Legg evt inn ekstra statiske bilder med beskrivende tekst for å vise flere variasjoner av komponenten
