@@ -17,15 +17,17 @@ For hver endring som gjøres, skal den nye versjonen dokumenteres:
 
 * Legg til ny _.md_ fil under _kvib/blog_, med filnavn: **YYYY-MM-DD-version[major.minor.patch].md **(formatet gjør at dato generes automatisk)
 
-* Følg strukturen fra eksisterende filer i blog-mappen for å lage en beskrivelse øverst i filen:
+* Legg til følgende øverst i filen:
 
-  - Sett _"title: Versjon [major.minor.patch]"_.
+```markup title=blog/YYYY-MM-DD-version[major.minor.patch].md
+---
+title: Versjon [major.minor.patch]
+description: Kort beskrivelse av .md filen
+tags: [tag, tag]
+---
+```
 
-  - Skriv kort beskrivelse for _.md_ filen.
-
-  - Sett passende _tags_.
-
-* Skriv en beskrivelse av endringer som er gjort i versjonen ved å bruke titlene (sett som <code><h2\></code>):
+* Skriv en beskrivelse av endringer som er gjort i versjonen ved å bruke følgende titler (sett som <code><h2\></code>):
 
   - Added: nye funksjoner som er lagt til
 
