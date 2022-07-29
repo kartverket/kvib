@@ -1,14 +1,10 @@
 ---
 id: sideelementerID
-title: (!)Sideelementer
+title: Sideelementer
 description: Sideelementer som blir brukt i Kartverket sine løsninger
 slug: /designsystem/komponenter/sideelementer
 displayed_sidebar: designsystemSidebar
 ---
-
-_**OBS! Under konstruksjon**_
-
-* _**Filopplastningselementer er ikke lagt til**_
 
 ## Opplastningsmoduler og elementer
 
@@ -78,7 +74,3 @@ I eksemplet under er <code>progressbar--demo</code> animert til å bytte <code>w
     </div>
 </div>
 ```
-
-## Filopplastningselementer
-
-Kommer snart.
