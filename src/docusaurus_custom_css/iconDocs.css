@@ -1,6 +1,6 @@
 
 .icon-section{
-    background-color: var(--hvit);
+    background-color: var(--white);
     margin: 2rem;
     padding: 1rem;
     border-radius: 0.5rem;
@@ -10,7 +10,7 @@
 .icon-section--container{
     width: 7rem;
     height: 4rem;
-    background-color: var(--graa_lys);
+    background-color: var(--gray_light);
 
     /* Fra icons.css icon-container */
     box-sizing: border-box;

@@ -24,94 +24,94 @@
     bottom: 0;
     width: 100%;
     background: rgba(0, 0, 0, 0.4);
-    color: var(--hvit);
+    color: var(--white);
 }
 
 .palette__text {
     width: 100%;
     padding: 10px;
     outline: none;
-    border: 1px solid var(--graa_lys);
+    border: 1px solid var(--gray_light);
     border-top: none;
 }
 
-.palette--groenn_standard {
-    background: var(--groenn_standard);
+.palette--green_dark {
+    background: var(--green_dark);
 }
 
-.palette--groenn_hover {
-    background: var(--groenn_hover);
+.palette--green_active {
+    background: var(--green_active);
 }
 
-.palette--groenn_moerk {
-    background: var(--groenn_moerk);
+.palette--green {
+    background: var(--green);
 }
 
-.palette--groenn_lys {
-    background: var(--groenn_lys);
+.palette--green_light {
+    background: var(--green_light);
 }
 
-.palette--blaa_moerk {
-    background: var(--blaa_moerk);
+.palette--blue_dark {
+    background: var(--blue_dark);
 }
 
-.palette--blaa {
-    background: var(--blaa);
+.palette--blue {
+    background: var(--blue);
 }
 
-.palette--blaa_lys {
-    background: var(--blaa_lys);
+.palette--blue_light {
+    background: var(--blue_light);
 }
 
-.palette--blaa_hover {
-    background: var(--blaa_hover);
+.palette--blue_hover {
+    background: var(--blue_hover);
 }
 
-.palette--blaa_moerk_knapp {
-    background: var(--blaa_moerk_knapp);
+.palette--blue_dark_button {
+    background: var(--dark_blue_button);
 }
 
-.palette--roed_feilmelding {
-    background: var(--roed_feilmelding);
+.palette--red_error_message {
+    background: var(--red_error_message);
 }
 
-.palette--roed_moerk {
-    background: var(--roed_moerk);
+.palette--red_dark {
+    background: var(--red_dark);
 }
 
-.palette--rosa {
-    background: var(--rosa);
+.palette--pink {
+    background: var(--pink);
 }
 
-.palette--oransje {
-    background: var(--oransje);
+.palette--orange {
+    background: var(--orange);
 }
 
-.palette--gul {
-    background: var(--gul);
+.palette--yellow {
+    background: var(--yellow);
 }
 
-.palette--gul_lys {
-    background: var(--gul_lys);
+.palette--yellow_light {
+    background: var(--yellow_light);
 }
 
-.palette--svart {
-    background: var(--svart);
+.palette--black {
+    background: var(--black);
 }
 
-.palette--hvit {
-    background: var(--hvit);
-    border: 1px solid var(--graa_lys);
+.palette--white {
+    background: var(--white);
+    border: 1px solid var(--gray_light);
 }
 
-.palette--graa_moerk {
-    background: var(--graa_moerk);
+.palette--gray_dark {
+    background: var(--gray_dark);
 }
 
-.palette--graa {
-    background: var(--graa);
+.palette--gray {
+    background: var(--gray);
 }
 
-.palette--graa_lys {
-    background: var(--graa_lys);
+.palette--gray_light {
+    background: var(--gray_light);
 }

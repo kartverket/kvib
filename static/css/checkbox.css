@@ -29,7 +29,7 @@
     border: 0.125rem solid;
     border-radius: 0.10rem;
     left: 0;
-    color: var(--blaa_moerk);
+    color: var(--blue_dark);
     background-color: white;
 
     top: 0.188rem;
@@ -61,29 +61,29 @@
 /*set checkmark on checked state*/
 .checkbox input[type="checkbox"]:checked + label::after {
     content: "";
-    color: var(--hvit);
+    color: var(--white);
 }
 
 /*change background color of checkbox on checked state*/
 .checkbox input[type="checkbox"]:checked + label::before {
-    background-color: var(--blaa_moerk);
+    background-color: var(--blue_dark);
 }
 
 /*Adding focus styles on outer-box*/
 .checkbox input[type="checkbox"]:focus-visible + label::before {
-    outline: max(0.188rem, 0.15em) solid var(--blaa_moerk);
+    outline: max(0.188rem, 0.15em) solid var(--blue_dark);
     outline-offset: 0.125rem;
 }
 
 /* ----CHECKBOX ERROR----*/
 /*set background on the checked state*/
 .checkbox input[type="checkbox"]:required:invalid + label::before {
-    color: var(--roed_feilmelding);
+    color: var(--red_error_message);
     /*background-color: var(--roed_feilmelding);*/
 }
 
 /*Adding focus styles on the outer-box*/
 .checkbox input[type="checkbox"]:focus-visible:invalid + label::before {
-    outline: max(0.188rem, 0.15em) solid var(--roed_feilmelding);
+    outline: max(0.188rem, 0.15em) solid var(--red_error_message);
     outline-offset: 0.125rem;
 }

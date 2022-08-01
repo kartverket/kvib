@@ -8,11 +8,11 @@
     margin: 0.75rem 0;
 }
 .input-label--error {
-    color: var(--roed_feilmelding);
+    color: var(--red_error_message);
 }
 .input-label--error:after {
     content: "*";
-    color: var(--roed_feilmelding);
+    color: var(--red_error_message);
 }
 
 /*Normal input*/
@@ -21,7 +21,7 @@ input[type=text].input {
     height: var(--inputHeight);
     padding: 0.75rem 1.25rem;
     display: inline-flex;
-    border: 0.063rem solid var(--blaa_moerk_knapp);
+    border: 0.063rem solid var(--dark_blue_button);
     border-radius: 0.25rem;
     box-sizing: border-box;
     background: #FFFFFF;
@@ -31,12 +31,12 @@ input[type=text].input {
 }
 
 input[type=text].input:focus-visible:active {
-    border-color: var(--blaa_hover);
-    box-shadow: 0 0 0 0.125rem var(--blaa_hover);
+    border-color: var(--blue_hover);
+    box-shadow: 0 0 0 0.125rem var(--blue_hover);
 }
 
 input[type=text].input:focus-visible {
-    outline: var(--blaa_moerk) solid;
+    outline: var(--blue_dark) solid;
 }
 
 
@@ -45,7 +45,7 @@ input[type=text].input:focus-visible {
 .exclamation{
     width: 1.25rem;
     height: var(--inputHeight);
-    background: var(--roed_feilmelding);
+    background: var(--red_error_message);
     border-bottom-right-radius: 0.25rem;
     border-top-right-radius: 0.25rem;
     border: none;
@@ -58,15 +58,15 @@ input[type=text].input:focus-visible {
 }
 /*Error input*/
 input[type=text].input__error:invalid {
-    border-color: var(--roed_feilmelding);
+    border-color: var(--red_error_message);
 }
 
 input[type=text].input__error:invalid:focus-visible {
-    outline: var(--roed_feilmelding) solid;
+    outline: var(--red_error_message) solid;
 }
 
 input[type=text].input__error:invalid:active {
-    outline: var(--roed_feilmelding) solid;
+    outline: var(--red_error_message) solid;
 }
 
 /*Container når inputfelt skal ha et annet element i enden av feltet (knapp, ikon osv.)*/
@@ -84,7 +84,7 @@ input[type=text].input__error:invalid:active {
 
 
 input[type=text].input__disabled:disabled {
-    background: var(--graa_lys);
-    color: var(--graa_moerk);
-    border-color: var(--graa);
+    background: var(--gray_light);
+    color: var(--gray_dark);
+    border-color: var(--gray);
 }

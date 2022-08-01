@@ -16,19 +16,19 @@
 }
 
 #data-input tr:nth-child(even){
-    background-color: var(--blaa_lys);
+    background-color: var(--blue_light);
 }
 
 #data-input tr:hover{
-    background-color: var(--blaa_hover);
-    color: var(--hvit);
+    background-color: var(--blue_hover);
+    color: var(--white);
 }
 
 #data-input th {
-    background-color: var(--hvit);
-    border-bottom: 0.125rem solid var(--svart);
+    background-color: var(--white);
+    border-bottom: 0.125rem solid var(--black);
     text-align: center;
-    color: var(--graa_moerk);
+    color: var(--gray_dark);
     height: 2.5rem;
 
     /*--For sticky header--*/
@@ -51,7 +51,7 @@
 }
 
 #data-input tr:hover + label::before{
-    color: var(--hvit);
+    color: var(--white);
 }
 
 .table__container--large{

@@ -15,8 +15,8 @@ https://docusaurus.io/docs/styling-layout*/
     --ifm-heading-font-family:'Mulish', sans-serif; 
     --ifm-font-family-base:'Mulish', sans-serif;
     --ifm-heading-font-weight:700;
-    --ifm-color-primary: var(--blaa_moerk);
-    --ifm-heading-color: var(--svart);
+    --ifm-color-primary: var(--blue_dark);
+    --ifm-heading-color: var(--black);
 }
 
 
