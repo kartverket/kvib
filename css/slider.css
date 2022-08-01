@@ -2,10 +2,10 @@
 input[type="range"].slider {
 -webkit-appearance: none;
 width: 100%;
-border: 0.063rem solid var(--blaa_moerk);
-background:var(--hvit);
+border: 0.063rem solid var(--blue_dark);
+background:var(--white);
 border-radius: 0.5rem;
-background-image: linear-gradient(var(--blaa_moerk), var(--blaa_moerk));
+background-image: linear-gradient(var(--blue_dark), var(--blue_dark));
 background-size: 50%;  /*fill to display the slider value"*/
 background-repeat: no-repeat;
  box-sizing: border-box;
@@ -15,7 +15,7 @@ background-repeat: no-repeat;
 input[type="range"].slider::-webkit-slider-thumb  {
 -webkit-appearance: none;
 border-radius: 50%;
-background: var(--blaa_moerk);
+background: var(--blue_dark);
 cursor: pointer;
 transition: background .3s ease-in-out;
 }
@@ -23,7 +23,7 @@ transition: background .3s ease-in-out;
 input[type="range"].slider::-moz-range-thumb {
 -webkit-appearance: none;
 border-radius: 50%;
-background: var(--blaa_moerk);
+background: var(--blue_dark);
 cursor: pointer;
 transition: background .3s ease-in-out;
 }
@@ -31,7 +31,7 @@ transition: background .3s ease-in-out;
 input[type="range"].slider::-ms-thumb  {
 -webkit-appearance: none;
 border-radius: 50%;
-background: var(--blaa_moerk);
+background: var(--blue_dark);
 cursor: pointer;
 transition: background .3s ease-in-out;
 }
