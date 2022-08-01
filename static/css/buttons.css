@@ -20,7 +20,7 @@ Focus
 :root{
     --icon-button-padding-xs: 0.5rem;
     --icon-button-padding-sml: 1rem;
-    --button-tertiary-background: var(--hvit);
+    --button-tertiary-background: var(--white);
 }
 
 /* Hovedklasse*/
@@ -43,16 +43,16 @@ Focus
 
 /* Fokus */
 .button:focus-visible{
-    outline: var(--blaa_moerk) solid;
+    outline: var(--blue_dark) solid;
     outline-offset: 0.313rem;
     outline-width: var(--focus-outline);
 }
 /* Disabled */
 .button:disabled{
-    background-color: var(--graa_lys);
-    color: var(--graa_moerk);
+    background-color: var(--gray_light);
+    color: var(--gray_dark);
     outline-style: solid;
-    outline-color: var(--graa_moerk);
+    outline-color: var(--gray_dark);
 }
 
 /******************* 
@@ -88,67 +88,67 @@ Focus
 ************************/
 /* BUTTON PRIMARY*/
 .button__green--primary{
-    background-color: var(--groenn_standard);
-    color: var(--hvit); /* Setter tekstfarge */
+    background-color: var(--green_dark);
+    color: var(--white); /* Setter tekstfarge */
 }
 .button__green--primary:hover{
-    background-color: var(--groenn_hover);
-    color: var(--hvit);
+    background-color: var(--green);
+    color: var(--white);
 }
 .button__green--primary:active{
-    background-color: var(--groenn_moerk);
-    color: var(--hvit);
+    background-color: var(--green_active);
+    color: var(--white);
 }
 
 
 .button__blue--primary{
-    background-color: var(--blaa);
-    color: var(--hvit);
+    background-color: var(--blue);
+    color: var(--white);
 }
 .button__blue--primary:hover{
-    background-color: var(--blaa_hover);
-    color: var(--svart);
+    background-color: var(--blue_hover);
+    color: var(--black);
 }
 .button__blue--primary:active{
-    background-color: var(--blaa_moerk);
-    color: var(--hvit);
+    background-color: var(--blue_dark);
+    color: var(--white);
 }
 
 
 
 /* BUTTON SECONDARY*/
 .button__green--secondary{
-    background-color: var(--hvit);
-    color: var(--groenn_standard);
+    background-color: var(--white);
+    color: var(--green_dark);
     outline-style: solid;
-    outline-color: var(--groenn_standard);
+    outline-color: var(--green_dark);
 }
 .button__green--secondary:hover{
-    background-color: var(--groenn_hover);
-    color: var(--hvit);
+    background-color: var(--green);
+    color: var(--white);
     outline: none;
 }
 .button__green--secondary:active{
-    background-color: var(--groenn_moerk);
-    color: var(--hvit);
+    background-color: var(--green_active);
+    color: var(--white);
     outline: none;
 }
 
 
 .button__blue--secondary{
-    background-color: var(--hvit);
-    color: var(--blaa);
+    background-color: var(--white);
+    color: var(--blue);
     outline-style: solid;
-    outline-color: var(--blaa);
+    outline-color: var(--blue);
 }
 .button__blue--secondary:hover{
-    background-color: var(--blaa_hover);
-    color: var(--svart);
+    background-color: var(--blue_hover);
+    color: var(--black);
     outline: none;
 }
 .button__blue--secondary:active{
-    background-color: var(--blaa_moerk);
-    color: var(--hvit);
+    background-color: var(--blue_dark);
+    color: var(--white);
     outline: none;
 }
 
@@ -156,31 +156,31 @@ Focus
 /* BUTTON TERTIARY */
 .button__green--tertiary{
     background-color: var(--button-tertiary-background);
-    color: var(--groenn_standard);
+    color: var(--green_dark);
 }
 .button__green--tertiary:hover{
     background-color: var(--button-tertiary-background);
-    color: var(--groenn_standard);
-    text-decoration: underline var(--groenn_standard);
+    color: var(--green_dark);
+    text-decoration: underline var(--green_dark);
 }
 .button__green--tertiary:active{
     background-color: var(--button-tertiary-background);
-    color: var(--groenn_moerk);
+    color: var(--green_active);
 }
 
 
 .button__blue--tertiary{
     background-color: var(--button-tertiary-background);
-    color: var(--blaa);
+    color: var(--blue);
 }
 .button__blue--tertiary:hover{
     background-color: var(--button-tertiary-background);
-    color: var(--blaa_moerk);
-    text-decoration: underline var(--blaa_moerk);
+    color: var(--blue_dark);
+    text-decoration: underline var(--blue_dark);
 }
 .button__blue--tertiary:active{
     background-color: var(--button-tertiary-background);
-    color: var(--blaa_moerk);
+    color: var(--blue_dark);
 }
 
 

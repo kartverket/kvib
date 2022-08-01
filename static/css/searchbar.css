@@ -1,7 +1,7 @@
 /*css-klasser for å style søkeknappen i søkefelt. SØkefelt bruker også klasser fra input.css*/
 .button__searchbar{
-    background-color: var(--groenn_standard);
-    color: var(--hvit);
+    background-color: var(--green_dark);
+    color: var(--white);
     height:var(--inputHeight);
     width: 4rem;
     border-radius: 0 0.25rem 0.25rem 0;
@@ -12,11 +12,11 @@
 }
 
 .button__searchbar:hover{
-    background-color: var(--groenn_hover);
+    background-color: var(--green);
 }
 
 .button__searchbar:active{
-    background-color: var(--groenn_moerk);
+    background-color: var(--green_active);
 }
 
 .button__searchbar:focus-visible{
