@@ -16,6 +16,7 @@ Disse prinsippene er laget for både å evaluere eksisterende utforming og veile
 
 Du skal følge krav i norske lover og forskrifter når du jobber med universell utforming i Norge. De 7 prinsippene er gode å ha med i utvikling av et produkt og det å tenke rundt hvordan du kan lage løsninger som passer for flest mulig. Lover og forskrifter er helt konkrete krav som må følges helt uavhengig om man har utviklet produktet etter disse prinsippene.
 
+
 <details className="details">
 <summary>Prinsipp 1: Like muligheter for bruk</summary>
     <p>Utformingen skal være brukbar og tilgjengelig for personer med ulike ferdigheter</p>

@@ -106,7 +106,7 @@ const config = {
 
         },
         theme: {
-          customCss: require.resolve('./src/docusaurus_custom_css/custom.css'),
+          customCss: require.resolve('./src/css/custom.css'),
         },
       }),
     ],

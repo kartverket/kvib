@@ -3,11 +3,12 @@ https://docusaurus.io/docs/styling-layout*/
 
 
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap');
-@import '../css/index.css';
-@import './palette.css';
-@import './uu.css';
-@import './iconDocs.css';
-@import './progressbarDemo.css';
+@import 'palette.css';
+@import 'uu.css';
+@import 'iconDocs.css';
+@import 'progressbarDemo.css';
+@import 'typografi/typografiStyle.css';
+@import "/static/css/main.css";
 
 
 /*overkjøre definerte variabler fra docusaurus*/
