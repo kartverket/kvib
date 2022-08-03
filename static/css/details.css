@@ -1,3 +1,7 @@
+.details__container {
+    width: 50%;
+}
+
 details summary {
     width: 100%;
     padding: 0.5rem 0;
@@ -16,6 +20,10 @@ details p {
     font-size: 0.95rem;
     margin: 0 0 1rem;
     padding-top: 1rem;
+}
+
+summary:focus {
+   outline: var(--blue_dark) 2px solid;
 }
 
 summary::before,
