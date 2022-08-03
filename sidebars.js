@@ -102,6 +102,7 @@ const sidebars = {
                 'designsystems/Komponenter/sideelementerID',
                 // 'designsystems/Komponenter/navID',
                 'designsystems/Komponenter/tableID',
+                'designsystems/Komponenter/collapsibleID',
                 {
                     type: 'category',
                     label: 'Knapper', // Label til sidebar

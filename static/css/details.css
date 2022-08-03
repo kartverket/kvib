@@ -1,0 +1,57 @@
+.details__container {
+    width: 50%;
+}
+
+details summary {
+    width: 100%;
+    padding: 0.5rem 0;
+    border-top: 1px solid black;
+    position: relative;
+    cursor: pointer;
+    font-family: 'Mulish', sans-serif;
+    font-weight: bold;
+    list-style: none;
+}
+
+details summary {
+    outline: 0;
+}
+details p {
+    font-size: 0.95rem;
+    margin: 0 0 1rem;
+    padding-top: 1rem;
+}
+
+summary:focus {
+   outline: var(--blue_dark) 2px solid;
+}
+
+summary::before,
+summary::after {
+    width: 0.75em;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    content: '';
+    background-color: black;
+    text-align: right;
+    transform: translateY(-50%);
+    transition: transform 0.2s ease-in-out;
+}
+
+summary:hover {
+    background-color: var(--gray_light);
+}
+
+summary::after {
+    transform: translateY(-50%) rotate(90deg);
+}
+
+[open] summary::after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+details summary::-webkit-details-marker {
+    display: none;
+}
