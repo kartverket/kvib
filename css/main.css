@@ -1,4 +1,4 @@
-/* HovedCSS */
+/* Hoved CSS Pakke */
 
 @import 'farger.css';
 @import 'buttons.css';
@@ -19,3 +19,4 @@
 @import 'table.css';
 @import 'progressbar.css';
 @import 'circular_loader.css';
+@import 'details.css';
