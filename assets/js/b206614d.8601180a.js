@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_kartverket_kvib=self.webpackChunk_kartverket_kvib||[]).push([[1793],{8818:e=>{e.exports=JSON.parse('{"label":"slider knapp","permalink":"/kvib/blog/tags/slider-knapp","allTagsPath":"/kvib/blog/tags","count":1}')}}]);

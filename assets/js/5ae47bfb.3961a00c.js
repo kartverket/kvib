@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_kartverket_kvib=self.webpackChunk_kartverket_kvib||[]).push([[9013],{947:a=>{a.exports=JSON.parse('{"label":"utvidbart panel","permalink":"/kvib/blog/tags/utvidbart-panel","allTagsPath":"/kvib/blog/tags","count":1}')}}]);

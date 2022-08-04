@@ -4,10 +4,30 @@
         <title>KVIB Styleguides Blog</title>
         <link>https://kartverket.github.io/kvib/blog</link>
         <description>KVIB Styleguides Blog</description>
-        <lastBuildDate>Fri, 29 Jul 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 04 Aug 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>no</language>
+        <item>
+            <title><![CDATA[Versjon [1.0.2]]]></title>
+            <link>https://kartverket.github.io/kvib/blog/2022/08/04/version-[1.0.2]</link>
+            <guid>/2022/08/04/version-[1.0.2]</guid>
+            <pubDate>Thu, 04 Aug 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[Utvidbar panel]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="added">Added<a class="hash-link" href="#added" title="Direct link to heading">​</a></h2><p>Ny komponent: <em>Slider knapp (Toggle Switch)</em>.</p><p>Lagt til under <strong>Knapper</strong>.</p>]]></content:encoded>
+            <category>dokumentasjon</category>
+            <category>slider knapp</category>
+        </item>
+        <item>
+            <title><![CDATA[Versjon [1.0.1]]]></title>
+            <link>https://kartverket.github.io/kvib/blog/2022/08/03/version-[1.0.1]</link>
+            <guid>/2022/08/03/version-[1.0.1]</guid>
+            <pubDate>Wed, 03 Aug 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[Utvidbar panel]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="added">Added<a class="hash-link" href="#added" title="Direct link to heading">​</a></h2><p>Ny komponent: <em>utvidbar panel</em>. </p><p>Lagt til under <strong>komponenter</strong>.</p>]]></content:encoded>
+            <category>dokumentasjon</category>
+            <category>utvidbart panel</category>
+        </item>
         <item>
             <title><![CDATA[Versjon [1.0.0]]]></title>
             <link>https://kartverket.github.io/kvib/blog/2022/07/29/version-[1.0.0]</link>
