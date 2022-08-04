@@ -1,7 +1,7 @@
 ---
-id: collapsibleID
-title: (!)Utvidbar panel
-description: Utvidbar panel som blir brukt i Kartverket sine løsninger
+id: detailsID
+title: (!)Utvidbart panel
+description: Utvidbart panel som blir brukt i Kartverket sine løsninger
 slug: /designsystem/komponenter/utvidbar-panel
 displayed_sidebar: designsystemSidebar
 ---
@@ -10,9 +10,9 @@ displayed_sidebar: designsystemSidebar
 
 ***
 
-## Utvidbar panel
+## Utvidbart panel
 
-Utvidbar panel er laget med ``<details>``  og ``<summary>`` elementet.
+Utvidbart panel er laget med ``<details>``  og ``<summary>`` elementet.
 Størrelsen endres ved å sette panelet i et <code>container</code> med ønsket <code>width</code>.
 
 <h1>Tittel</h1>
@@ -31,7 +31,7 @@ Størrelsen endres ved å sette panelet i et <code>container</code> med ønsket 
 </details>
 ```
 
-## Utvidbar panel set
+## Utvidbart panel set
 
 Vi kan opprette et panel set ved å legge til flere ``<details>`` elementer.
 

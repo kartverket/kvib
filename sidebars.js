@@ -102,7 +102,7 @@ const sidebars = {
                 'designsystems/Komponenter/sideelementerID',
                 // 'designsystems/Komponenter/navID',
                 'designsystems/Komponenter/tableID',
-                'designsystems/Komponenter/collapsibleID',
+                'designsystems/Komponenter/detailsID',
                 {
                     type: 'category',
                     label: 'Knapper', // Label til sidebar
@@ -114,6 +114,7 @@ const sidebars = {
                         slug: 'designsystems/Komponenter/Knapper',
                     },
                     items: [
+                        'designsystems/Komponenter/Knapper/toggleSwitchID',
                         'designsystems/Komponenter/Knapper/grønnknappID',
                         'designsystems/Komponenter/Knapper/blåknappID',
                         'designsystems/Komponenter/Knapper/ikonknappID',
