@@ -100,7 +100,7 @@ const sidebars = {
                 'designsystems/Komponenter/sliderID',
                 'designsystems/Komponenter/radiobuttonID',
                 'designsystems/Komponenter/sideelementerID',
-                // 'designsystems/Komponenter/navID',
+                'designsystems/Komponenter/navID',
                 'designsystems/Komponenter/tableID',
                 'designsystems/Komponenter/detailsID',
                 {
