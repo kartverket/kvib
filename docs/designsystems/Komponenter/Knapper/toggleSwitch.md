@@ -1,12 +1,16 @@
 ---
 id: toggleSwitchID
-title: Slider knapp (Toggle Switch)
+title: (!)Slider knapp (Toggle Switch)
 description: Slider knapper
 ---
 
-## Slider knapp
+***OBS! Toggle switch har en liten bug i Chrome og Edge som gjør at fargen i midten flytter på seg ved zoom når knappen er slått på.
+Buggen er mindre synlig i Firefox.***
 
-Extra small:
+***
+
+## Extra small:
+
 
 <label class="switch--xs">
 <input type="checkbox"/>
@@ -20,7 +24,7 @@ Extra small:
 </label>
 ```
 
-Small/Medium/large
+## Small/Medium/large
 
 <label class="switch--l">
 <input type="checkbox"/>
