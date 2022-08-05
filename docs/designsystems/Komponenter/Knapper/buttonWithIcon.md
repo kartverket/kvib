@@ -14,22 +14,22 @@ En knapp med størrelse extra small benytter et ikon av mindre størrelse enn de
 ## Ikon venstre
 
 
-<button class="button button__green--primary button--xs button--icon-left">Extra small<span class="material-symbols-outlined material-symbols-outlined--filled">favorite</span></button>
-<button class="button button__green--primary button--sm button--icon-left">Small/medium<span class="material-symbols-outlined--filled material-symbols-outlined">favorite</span></button>
-<button class="button button__green--primary button--l button--icon-left">Large<span class="material-symbols-outlined--filled material-symbols-outlined">favorite</span></button>
+<button class="button button__green--primary button--xs button--icon-left"><span class="material-symbols-outlined material-symbols-outlined--filled">favorite</span>Extra small</button>
+<button class="button button__green--primary button--sm button--icon-left"><span class="material-symbols-outlined--filled material-symbols-outlined">favorite</span>Small/medium</button>
+<button class="button button__green--primary button--l button--icon-left"><span class="material-symbols-outlined--filled material-symbols-outlined">favorite</span>Large</button>
 
 
 ```markup 
-<button class="button button__green--primary button--xs button--icon-left">Extra small
-    <span class="material-symbols-outlined material-symbols-outlined--filled">favorite</span>
+<button class="button button__green--primary button--xs button--icon-left">
+    <span class="material-symbols-outlined material-symbols-outlined--filled">favorite</span>Extra small
 </button>
 
-<button class="button button__green--primary button--sm button--icon-left">Small/medium
-    <span class="material-symbols-outlined material-symbols-outlined--filled">favorite</span>
+<button class="button button__green--primary button--sm button--icon-left">
+    <span class="material-symbols-outlined material-symbols-outlined--filled">favorite</span>Small/medium
 </button>
 
-<button class="button button__green--primary button--l button--icon-left">Large
-    <span class="material-symbols-outlined material-symbols-outlined--filled">favorite</span>
+<button class="button button__green--primary button--l button--icon-left">
+    <span class="material-symbols-outlined material-symbols-outlined--filled">favorite</span>Large
 </button>
 ```
 

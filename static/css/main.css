@@ -21,3 +21,7 @@
 @import 'circular_loader.css';
 @import 'details.css';
 @import 'button_toggle.css';
+
+html {
+    box-sizing: border-box;
+}

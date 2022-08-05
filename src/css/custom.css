@@ -18,6 +18,7 @@ https://docusaurus.io/docs/styling-layout*/
     --ifm-heading-font-weight:700;
     --ifm-color-primary: var(--blue_dark);
     --ifm-heading-color: var(--black);
+    --ifm-menu-color: var(--black);
 }
 
 
