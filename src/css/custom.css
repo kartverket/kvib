@@ -8,6 +8,7 @@ https://docusaurus.io/docs/styling-layout*/
 @import 'iconDocs.css';
 @import 'progressbarDemo.css';
 @import 'typografi/typografiStyle.css';
+@import 'navigation.css';
 @import "/static/css/main.css";
 
 
@@ -18,6 +19,9 @@ https://docusaurus.io/docs/styling-layout*/
     --ifm-heading-font-weight:700;
     --ifm-color-primary: var(--blue_dark);
     --ifm-heading-color: var(--black);
+    --ifm-menu-color: var(--black);
+    --ifm-navbar-link-color: var(--black);
+    --ifm-toc-link-color: var(--black);
 }
 
 

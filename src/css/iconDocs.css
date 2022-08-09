@@ -23,7 +23,7 @@
 .icon-section--text{
     /* vertical-align: bottom; */
     font-size: 0.8rem;
-    font-family: 'Mulish';
+    font-family: 'Mulish', sans-serif;
     word-wrap: normal;
     text-align: center;
 }
