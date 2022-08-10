@@ -1,33 +1,29 @@
 ---
 id: detailsID
-title: (!)Utvidbart panel
+title: Utvidbart panel
 description: Utvidbart panel som blir brukt i Kartverket sine løsninger
 slug: /designsystem/komponenter/utvidbar-panel
 displayed_sidebar: designsystemSidebar
 ---
-
-***OBS! Venter på godkjenning.***
-
-***
 
 ## Utvidbart panel
 
 Utvidbart panel er laget med ``<details>``  og ``<summary>`` elementet.
 Størrelsen endres ved å sette panelet i et <code>container</code> med ønsket <code>width</code>.
 
-<h1>Tittel</h1>
-<details>
-    <summary>Tekst</summary>
-    <p>Beskrivelse</p>
+<h1 class="heading heading__h1--s">Tittel</h1>
+<details class="expandable">
+    <summary class="expandable__title">Tekst</summary>
+    <p class="detail detail--sml">Beskrivelse</p>
 </details>
 
 <br/>
 
 ```markdown
-<h1>Tittel</h1>
-<details>
-    <summary>Tekst</summary>
-    <p>Beskrivelse</p>
+<h1 class="heading heading__h1--s">Tittel</h1>
+<details class="expandable">
+    <summary class="expandable__title">Tekst</summary>
+    <p class="detail detail--sml">Beskrivelse</p>
 </details>
 ```
 
@@ -35,43 +31,42 @@ Størrelsen endres ved å sette panelet i et <code>container</code> med ønsket 
 
 Vi kan opprette et panel set ved å legge til flere ``<details>`` elementer.
 
-<div></div>
-<h1>Tittel</h1>
-<details>
-    <summary>Tekst</summary>
+<h1 class="heading heading__h1--s">Tittel</h1>
+<details class="expandable">
+    <summary class="expandable__title">Tekst</summary>
     <p>Beskrivelse</p>
 </details>
-<details>
-    <summary>Tekst</summary>
-    <p>Beskrivelse</p>
+<details class="expandable">
+    <summary class="expandable__title">Tekst</summary>
+    <p class="detail detail--sml">Beskrivelse</p>
 </details>
-<details>
-    <summary>Tekst</summary>
-    <p>Beskrivelse</p>
+<details class="expandable">
+    <summary class="expandable__title">Tekst</summary>
+    <p class="detail detail--sml">Beskrivelse</p>
 </details>
-<details>
-    <summary>Tekst</summary>
-    <p>Beskrivelse</p>
+<details class="expandable">
+    <summary class="expandable__title">Tekst</summary>
+    <p class="detail detail--sml">Beskrivelse</p>
 </details>
 
 <br/>
 
 ```markdown
-<h1>Tittel</h1>
-<details>
-    <summary>Tekst</summary>
+<h1 class="heading heading__h1--s">Tittel</h1>
+<details class="expandable">
+    <summary class="expandable__title">Tekst</summary>
     <p>Beskrivelse</p>
 </details>
-<details>
-    <summary>Tekst</summary>
-    <p>Beskrivelse</p>
+<details class="expandable">
+    <summary class="expandable__title">Tekst</summary>
+    <p class="detail detail--sml">Beskrivelse</p>
 </details>
-<details>
-    <summary>Tekst</summary>
-    <p>Beskrivelse</p>
+<details class="expandable">
+    <summary class="expandable__title">Tekst</summary>
+    <p class="detail detail--sml">Beskrivelse</p>
 </details>
-<details>
-    <summary>Tekst</summary>
-    <p>Beskrivelse</p>
+<details class="expandable">
+    <summary class="expandable__title">Tekst</summary>
+    <p class="detail detail--sml">Beskrivelse</p>
 </details>
 ```
