@@ -1,0 +1,40 @@
+.nav__box,
+.nav__box * {
+    box-sizing: border-box;
+}
+
+.nav__box {
+    font-family: sans-serif;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.nav__box__item {
+    height: 150px;
+    position: relative;
+}
+
+.nav__box__container {
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+.nav__box__desc {
+    padding: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    color: var(--white);
+}
+
+.nav__box__text {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid var(--gray_light);
+    border-top: none;
+}

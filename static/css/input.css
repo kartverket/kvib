@@ -2,88 +2,97 @@
     --inputHeight: 2.5rem;
 }
 
-/*input-labels*/
-.input-label {
-    display: block;
-    margin: 0.75rem 0;
-}
-.input-label--error {
-    color: var(--red_error_message);
-}
-.input-label--error:after {
-    content: "*";
-    color: var(--red_error_message);
-}
-
-/*Normal input*/
-input[type=text].input {
-    width: 100%;
-    height: var(--inputHeight);
-    padding: 0.75rem 1.25rem;
-    display: inline-flex;
-    border: 0.063rem solid var(--dark_blue_button);
-    border-radius: 0.25rem;
-    box-sizing: border-box;
-    background: #FFFFFF;
-    transition: linear, 0.2s linear;
-    font-family: inherit;
-    box-sizing: border-box;
-}
-
-input[type=text].input:focus-visible:active {
-    border-color: var(--blue_hover);
-    box-shadow: 0 0 0 0.125rem var(--blue_hover);
-}
-
-input[type=text].input:focus-visible {
-    outline: var(--blue_dark) solid;
-}
-
-
-
-/*error-ikon i inputfelt*/
-.exclamation{
-    width: 1.25rem;
-    height: var(--inputHeight);
-    background: var(--red_error_message);
-    border-bottom-right-radius: 0.25rem;
-    border-top-right-radius: 0.25rem;
-    border: none;
-    color: #fff;
-    line-height: 2.375rem;
-    position: absolute;
-    right: 0;
-    text-align: center;
-
-}
-/*Error input*/
-input[type=text].input__error:invalid {
-    border-color: var(--red_error_message);
-}
-
-input[type=text].input__error:invalid:focus-visible {
-    outline: var(--red_error_message) solid;
-}
-
-input[type=text].input__error:invalid:active {
-    outline: var(--red_error_message) solid;
-}
-
-/*Container når inputfelt skal ha et annet element i enden av feltet (knapp, ikon osv.)*/
-.input-container{
+.inputField__wrapper {
     width: 100%;
     position: relative;
     /*height: 3rem;*/
     height: var(--inputHeight);
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: flex-end;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 
+.inputField__wrapper label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--gray_dark);
+}
 
+.inputField {
+    position: absolute;
+    width: 100%;
+    height: var(--inputHeight);
+    padding: 0.5rem;
+    display: inline-flex;
+    border: 0.063rem solid var(--dark_blue_button);
+    box-sizing: border-box;
+    background: #FFFFFF;
+    transition: linear, 0.2s linear;
+    font-family: inherit;
+    border-radius: 0.25rem;
+    top: 25px;
+}
 
-input[type=text].input__disabled:disabled {
+.inputField:focus-visible {
+    border: var(--blue_dark) 2px solid;
+    outline: none;
+}
+
+.inputField:required {
+    border: var(--red_error_message) 0.063rem solid;
+}
+
+input[required] + label:after {
+    content: '*';
+    color: var(--red_error_message);
+}
+
+.exclamation {
+    position: absolute;
+    top: 25px;
+    right: 0;
+    width: 25px;
+    height: 40px;
+    background: var(--red_error_message);
+    color: var(--white);
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.exclamation i {
+    position: absolute;
+    top: 8px;
+}
+
+.inputField__helper__text {
+    position: absolute;
+    left: 0;
+    top: 70px;
+}
+
+input[type=text]:focus-visible:active {
+    border-color: var(--blue_hover);
+    box-shadow: 0 0 0 0.125rem var(--blue_hover);
+}
+
+input[type=text]:focus-visible {
+    border-color: var(--blue_dark);
+    box-shadow: 0 0 0 0.125rem var(--blue_dark);
+}
+
+input[type=text]:required:focus-visible {
+    border-color: var(--red_error_message);
+    box-shadow: 0 0 0 0.125rem var(--red_error_message);
+}
+
+input[type=text]:required:active {
+    border-color: var(--red_error_message);
+    box-shadow: 0 0 0 0.125rem var(--red_error_message);
+}
+
+input[type=text]:disabled {
     background: var(--gray_light);
     color: var(--gray_dark);
     border-color: var(--gray);
