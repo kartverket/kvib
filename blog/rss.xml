@@ -4,10 +4,21 @@
         <title>KVIB Styleguides Blog</title>
         <link>https://kartverket.github.io/kvib/blog</link>
         <description>KVIB Styleguides Blog</description>
-        <lastBuildDate>Thu, 04 Aug 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 09 Aug 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>no</language>
+        <item>
+            <title><![CDATA[Versjon [1.0.3]]]></title>
+            <link>https://kartverket.github.io/kvib/blog/2022/08/09/version-[1.0.3]</link>
+            <guid>/2022/08/09/version-[1.0.3]</guid>
+            <pubDate>Tue, 09 Aug 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[Inputfelt]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="changed">Changed<a class="hash-link" href="#changed" title="Direct link to heading">​</a></h2><p>Endret kode struktur, la til wrapper og hjelpetekst.
+Oppdatert dokumentasjonssiden.</p><p>Lagt til under <strong>Inputfelt</strong>.</p>]]></content:encoded>
+            <category>dokumentasjon</category>
+            <category>Inputfelt</category>
+        </item>
         <item>
             <title><![CDATA[Versjon [1.0.2]]]></title>
             <link>https://kartverket.github.io/kvib/blog/2022/08/04/version-[1.0.2]</link>
