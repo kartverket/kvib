@@ -9,7 +9,6 @@
 @import 'input.css';
 @import 'radiobutton.css';
 @import 'checkbox.css';
-@import 'sliderbutton.css';
 @import 'icons.css';
 @import 'slider.css';
 @import 'zoom.css';
@@ -23,3 +22,9 @@
 @import 'details.css';
 @import 'button_toggle.css';
 @import 'header.css';
+
+html {
+    box-sizing: border-box;
+}
+
+
