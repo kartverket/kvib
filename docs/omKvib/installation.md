@@ -25,10 +25,10 @@ displayed_sidebar: OmKvibSidebar
 npm login --scope=@kartverket --registry=https://npm.pkg.github.com
 ```
 
-3. Kjør npm install. Biblioteket er nå klart til bruk.
+3. Kjør npm install @kartverket/kvib og biblioteket skal nå være klar til bruk.
 
 ```markdown
-npm install
+npm install @kartverket/kvib
 ```
 
 4. Importer eller legg til link til biblioteket i CSS eller HTML filen i prosjektet.
