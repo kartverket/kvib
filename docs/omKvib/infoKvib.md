@@ -31,6 +31,4 @@ Ved å bruke en felles struktur på navngivning av CSS-klasser blir koden enkler
 KVIB bruker navngivningskonvensjoner fra BEM (Block Element Modifier), som baseres på å dele CSS-klasser inn i tre typer; _blokk, element_ og _modifier_. En blokk brukes om entiter som kan stå alene og fremdeles gi mening.
 Blokker kan nøstes og samhandle med andre blokker, men alle er semantiske like.
 Et element er en del av en blokk og gir ikke mening alene, og er dermed semantisk knyttet til blokken. En modifier fungerer som flagg til en blokk eller et element, og brukes til å endre utseende, oppførsel eller state.
-Les <a href="http://getbem.com/naming/" class="underline"> BEM sine navngivningskonvensjoner</a> for en mer detaljert beskrivelse om bruk av konvensjonene, i tillegg til eksempler. Følg disse ved implementasjon av CSS-klasser. 
-
-
+Les [BEM sine navngivningskonvensjoner <span class="material-symbols-outlined">open_in_new</span>](https://en.bem.info/methodology/naming-convention/) for en mer detaljert beskrivelse om bruk av konvensjonene, i tillegg til eksempler. Følg disse ved implementasjon av CSS-klasser. 

@@ -8,7 +8,7 @@ displayed_sidebar: OmKvibSidebar
 
 ## Teknisk struktur
 
-Her kommer det en beskrivelse av den tekniske strukturen til KVIB. KVIB er bygget med dokumentasjonsverktøyet Docusaurus. [Her finner du dokumentasjonen til Docusaurus.](https://docusaurus.io/docs)
+Her kommer det en beskrivelse av den tekniske strukturen til KVIB. KVIB er bygget med dokumentasjonsverktøyet Docusaurus. [Her finner du dokumentasjonen til Docusaurus. <span class="material-symbols-outlined">open_in_new</span>](https://docusaurus.io/docs)
 
 ### Prosjektstrukturen til KVIB
 
