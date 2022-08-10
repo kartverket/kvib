@@ -7,13 +7,13 @@ displayed_sidebar: designsystemSidebar
 sidebar_position: 4
 ---
 
-Inputfeltene i KVIB bruker CSS-klassen <code>.input</code>. Denne klassen har en bredde satt til 100%, slik at bredden på inputfeltet tilpasses ved å legge <code><input\></code>- og <code><label\></code>-elementene  i f.eks. et <code><div\></code>-element med en bestemt lengde.
-For å style <code><label\></code>-elementet, skal egne [CSS-klasser fra _Typografi_ benyttes.](../designTokens/typography.mdx#label)
+Inputfeltene i KVIB bruker CSS-klassen <code>.inputField</code>. Denne klassen har en bredde satt til 100%, slik at bredden på inputfeltet tilpasses ved å legge <code><div\></code>-klasse _inputField__wrapper_ sammen med <code><input\></code>, <code><label\></code>, <code><span\></code> og <code><small\></code> i et <code><div\></code>-element med en bestemt lengde.
+For å style <code><label\></code> og <code><small\></code>-elementet, skal egne [CSS-klasser fra _Typografi_ benyttes.](../designTokens/typography.mdx#label)
 
 ## Aktivt inputfelt
 
 Under er et eksempel på et aktivt inputfelt. Brukeren skal få feilmelding dersom feil input mottas, samtidig som utseende skal endres til å være slik som nederste inputfeltet.
-Dette kan løses med blant annet Javascript. Det er foreløpig ingen eksempelkode på dette i KVIB. I eksempelet under er det ikke lagt til styling av det øverste <code><div\></code>-elementet.
+Dette kan løses med blant annet Javascript. Det er foreløpig ingen eksempelkode på dette i KVIB.
 
 <div class="inputField__wrapper">
     <input class="inputField" type="text" id="textFieldInvalid" placeholder="Aktivt tekstfelt"/>
