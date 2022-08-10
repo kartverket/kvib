@@ -23,3 +23,9 @@
 @import 'details.css';
 @import 'button_toggle.css';
 @import 'header.css';
+
+html {
+    box-sizing: border-box;
+}
+
+

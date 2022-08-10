@@ -6,12 +6,13 @@
 }
 
 .material-symbols-outlined {
-    font-family: 'Material Symbols Outlined';
-    text-transform: none;
-    letter-spacing: normal;
-    word-wrap: normal;
-    white-space: nowrap;
-    direction: ltr;
+    /*Ser ikke noe forskjell når jeg fjerner dette*/
+    /*font-family: 'Material Symbols Outlined';*/
+    /*text-transform: none;*/
+    /*letter-spacing: normal;*/
+    /*word-wrap: normal;*/
+    /*white-space: nowrap;*/
+    /*direction: ltr;*/
     vertical-align: text-bottom;
 }
 
@@ -22,4 +23,3 @@
              'GRAD' 0,
              'opsz' 48
  }
-
