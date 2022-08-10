@@ -14,7 +14,7 @@
             <guid>/2022/08/10/version-[1.0.4]</guid>
             <pubDate>Wed, 10 Aug 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Utvidbar panel]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="added">Added<a class="hash-link" href="#added" title="Direct link to heading">​</a></h2><p>Opprettet utvidbar panel med <code>&lt;details<!-- -->&gt;</code>.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="changed">Changed<a class="hash-link" href="#changed" title="Direct link to heading">​</a></h2><p>Endret CSS styling fra å style <code>&lt;details<!-- -->&gt;</code>-elemtentet til å sette inn klasse <em>expandable</em> i stedet.</p>]]></content:encoded>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="added">Added<a class="hash-link" href="#added" title="Direct link to heading">​</a></h2><p>Opprettet utvidbar panel med <code>&lt;details<!-- -->&gt;</code>.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="changed">Changed<a class="hash-link" href="#changed" title="Direct link to heading">​</a></h2><p>Opprettet <em>expandable</em> -klasse for <code>&lt;details<!-- -->&gt;</code>-elemtentet.</p>]]></content:encoded>
             <category>dokumentasjon</category>
             <category>Utvidbar panel</category>
         </item>

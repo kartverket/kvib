@@ -13,7 +13,7 @@
         <link href="https://kartverket.github.io/kvib/blog/2022/08/10/version-[1.0.4]"/>
         <updated>2022-08-10T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Utvidbar panel]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="added">Added<a class="hash-link" href="#added" title="Direct link to heading">​</a></h2><p>Opprettet utvidbar panel med <code>&lt;details<!-- -->&gt;</code>.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="changed">Changed<a class="hash-link" href="#changed" title="Direct link to heading">​</a></h2><p>Endret CSS styling fra å style <code>&lt;details<!-- -->&gt;</code>-elemtentet til å sette inn klasse <em>expandable</em> i stedet.</p>]]></content>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="added">Added<a class="hash-link" href="#added" title="Direct link to heading">​</a></h2><p>Opprettet utvidbar panel med <code>&lt;details<!-- -->&gt;</code>.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="changed">Changed<a class="hash-link" href="#changed" title="Direct link to heading">​</a></h2><p>Opprettet <em>expandable</em> -klasse for <code>&lt;details<!-- -->&gt;</code>-elemtentet.</p>]]></content>
         <category label="dokumentasjon" term="dokumentasjon"/>
         <category label="Utvidbar panel" term="Utvidbar panel"/>
     </entry>
