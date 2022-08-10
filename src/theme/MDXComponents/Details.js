@@ -10,7 +10,7 @@ export default function MDXDetails(props) {
   );
   const children = <>{items.filter((item) => item !== summary)}</>;
   return (
-    <details>
+    <details class="expandable">
       {summary}
       {children}
     </details>
