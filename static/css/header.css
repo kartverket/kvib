@@ -1,4 +1,4 @@
-.header--s {
+.nav__header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -6,67 +6,13 @@
     padding: 16px;
 
     /*position: absolute;*/
-    width: 375px;
     height: 64px;
     left: calc(50% - 375px/2 - 3021.5px);
     top: 20px;
 
     /* Kartverket: Hvit */
     background: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.header--m {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding: 16px 64px;
-
-    /*position: absolute;*/
-    width: 834px;
-    height: 64px;
-    left: calc(50% - 834px/2 - 2792px);
-    top: 182px;
-
-    /* Kartverket: Hvit */
-    background: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.header--l {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding: 16px 160px;
-
-    /*position: absolute;*/
-    width: 1440px;
-    height: 80px;
-    left: calc(50% - 1440px/2 - 2489px);
-    top: 345px;
-
-    /* Kartverket: Hvit */
-    background: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.header--f {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding: 16px 64px;
-
-    /*position: absolute;*/
-    height: 64px;
-    left: calc(50% - 834px/2 - 2792px);
-    top: 182px;
-
-    /* Kartverket: Hvit */
-    background: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 /*Ankermeny*/

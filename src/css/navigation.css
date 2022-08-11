@@ -1,27 +1,27 @@
-.nav__box,
-.nav__box * {
+.display__nav,
+.display__nav * {
     box-sizing: border-box;
 }
 
-.nav__box {
+.display__nav {
     font-family: sans-serif;
     display: grid;
     gap: 15px;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 
-.nav__box__item {
+.display__nav__item {
     height: 150px;
     position: relative;
 }
 
-.nav__box__container {
+.display__nav__container {
     position: relative;
     top: 20px;
     left: 20px;
 }
 
-.nav__box__desc {
+.display__nav__desc {
     padding: 10px;
     position: absolute;
     left: 0;

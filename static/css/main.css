@@ -22,6 +22,8 @@
 @import 'details.css';
 @import 'button_toggle.css';
 @import 'header.css';
+@import 'tabs.css';
+@import 'stepper.css';
 
 html {
     box-sizing: border-box;
