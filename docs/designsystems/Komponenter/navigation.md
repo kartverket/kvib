@@ -1,10 +1,13 @@
 ---
 id: navID
-title: Navigasjon
+title: (!)Navigasjon
 description: Navigasjon
 slug: /designsystem/komponenter/navigasjon
 displayed_sidebar: designsystemSidebar
 ---
+
+***OBS! Under kontruksjon:***
+***
 
 ## Header
 Navigasjonsbar-elementet tilpasser seg til skjermstørrelsen siden er åpnet i.
@@ -93,7 +96,7 @@ Størrelsen endres ved å bytte klassen <code>anker--xs</code> til <code>anker--
 
 
 ## Tabs
-Følgende element bruke <code>active__link--demo</code>-klasse for å demonstrere et valgt eller aktivt side.
+Følgende element bruker <code>active__link--demo</code>-klasse for å demonstrere et valgt eller aktivt side.
 
 <div class="tab">
   <button class="tab__links active__link--demo" onclick="#function()">En</button>
@@ -114,48 +117,8 @@ Følgende element bruke <code>active__link--demo</code>-klasse for å demonstrer
 ## Stegvise prosesser
 
 ### Visning på liten skjerm (Extra small/small)
-<ol class="c-stepper">
-    <li class="c-stepper__item">
-        <div class="c-stepper__title">
-        <p class="label label--xs c-stepper__title--center">1</p>
-        </div>
-    </li>  
-    <li class="c-stepper__item">
-          <div class="c-stepper__title">
-        <p class="label label--xs c-stepper__title--center">2</p>
-        </div>
-    </li>  
-    <li class="c-stepper__item">
-    <div class="c-stepper__title">
-        <p class="label label--xs c-stepper__title--center">3</p>
-        </div>
-    </li>
- <li class="c-stepper__item">
-        <div class="c-stepper__title">
-        <p class="label label--xs c-stepper__title--center">4</p>
-        </div>
-    </li>  
-    <li class="c-stepper__item">
-          <div class="c-stepper__title">
-        <p class="label label--xs c-stepper__title--center">5</p>
-        </div>
-    </li>  
-    <li class="c-stepper__item">
-    <div class="c-stepper__title">
-        <p class="label label--xs c-stepper__title--center">6</p>
-        </div>
-    </li>
-    <li class="c-stepper__item">
-    <div class="c-stepper__title">
-        <p class="label label--xs c-stepper__title--center">7</p>
-    </div>
-    </li>
-    <li class="c-stepper__item">
-    <div class="c-stepper__title">
-        <p class="label label--xs c-stepper__title--center">8</p>
-    </div>
-    </li>
-</ol>
+
+
 
 ### Visning på stor skjerm (medium/large)
 <ol class="c-stepper">
