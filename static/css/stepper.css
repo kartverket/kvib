@@ -1,0 +1,45 @@
+.stepper__sizes {
+    --size: 3rem;
+}
+
+.c-stepper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.c-stepper__item {
+    display: flex;
+    align-items: center;
+}
+
+.c-stepper__item:before {
+    content: "";
+    display: block;
+    flex: 0 0 var(--size);
+    height: var(--size);
+    border-radius: 50%;
+}
+
+.c-stepper__item:not(:last-child) {
+    flex: 1;
+}
+
+.c-stepper__item:not(:last-child):after {
+    content: "";
+    flex: 1;
+    height: 2px;
+    background-color: var(--blue_dark);
+}
+
+.c-stepper__title {
+    height: 24px;
+    width: 24px;
+    border: 2px solid var(--blue_dark);
+    border-radius: 50%;
+}
+
+.c-stepper__title--center {
+    position: relative;
+    left: 0.35rem;
+    top: -2px;
+}
