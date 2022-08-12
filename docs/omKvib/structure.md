@@ -29,9 +29,10 @@ kvib
 ├─ node_modules
 ├─ src
 │  ├─css
-│  ├─ docusaurus_custom_css
-│  ├─ html
+│  ├─theme
 ├─ static
+│  ├─ css
+│  ├─ html
 │  ├─ gif
 │  ├─ img
 │  ├─ .nojekyll
@@ -49,20 +50,25 @@ kvib
 
 #### CSS-styling av komponenter og design tokens
 
-CSS-filer til komponenter og design tokens ligger under _static/css_. Dersom du skal lage en ny _.css_ fil, må du lenke filen i _main.css_ som vist under:
+CSS-filer til komponenter og design tokens ligger under _static/css_. Dersom du skal lage en ny _.css_ fil, må du importere filen i _main.css_ som vist under:
 
 ```markdown title='static/css/main.css'
 /* HovedCSS */
-@import 'farger.css';
+@import 'filnavn.css';
 @import 'buttons.css';
 ```
 
 #### CSS-styling av dokumentasjonssider
 
-CSS-filene for styling av selve dokumentasjonssiden ligger under _src/docusaurus_custom_css_. Husk å lenke filene i _custom.css_:
+CSS-filene for styling av selve dokumentasjonssiden ligger under _src/css_. Husk å importere filene i _custom.css_:
 ```markdown title='src/docusaurus_custom_css/custom.css'
 @import './filnavn.css';
 ```
+
+Docusaurus har støtte for swizzle for å endre docusaurus komponenter. Dette kan bruker for å f.eks. bytte ut et komponenter på siden med et eget skreddesyd komponent.
+for mer informasjon se dokumentasjonsiden [her <span class="material-symbols-outlined">open_in_new</span>](https://docusaurus.io/docs/swizzling)
+
+Når du kjører <code>run swizzle</code> får du opp et liste med komponenter for å justere. Når du har valgt et komponent, filen til komponenter blir lagt under _src/theme_
 
 I _docusaurus.config.js_ er _custom.css_ lenket under <code>theme</code> i <code>presets</code> for at eget design i dokumentasjonen skal tas i bruk.
 
