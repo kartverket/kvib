@@ -41,13 +41,18 @@
 /*styling av elementene i nedtrekksmenyen*/
 .dropdown option{
     font-size: 0.875rem;
+    height: 3rem;
  }
+
+.dropdown .options {
+
+}
 
 .dropdown option:nth-child(even){
     background-color: var(--blue_light);
 }
 
-/*W3Schools Custom Select*/
+/*!*W3Schools Custom Select*!*/
 
 /*the container must be positioned relative:*/
 .custom-select {
