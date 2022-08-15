@@ -13,13 +13,11 @@ displayed_sidebar: designsystemSidebar
 
 ***
 
-For å endre lengden til søkefeltet, må det legges inn i et <code><div\></code>-element, slik som gjort i kodeeksempelet under.
-Deretter kan størrelsen endres ved å sette bredde på det ytterste <code><div\></code>-elementet.
+For å endre lengden til søkefeltet, må det legges inn i et <code><div\></code>-element, deretter kan størrelsen endres ved å sette bredde på <code><div\></code>-elementet.
 
 <div class="searchbar__wrapper">
     <div class="inputField__wrapper">
-        <input class="inputField" type="text" id="textFieldInvalid" placeholder="Søk..."/>
-        <label class="label label--sml" for="textFieldInvalid">Skriv heia</label>
+        <input class="inputField" type="text" id="inputID" placeholder="Søk..."/>
     </div>
     <button class="button button__searchbar">
         <span class="material-symbols-outlined">search</span>
@@ -32,8 +30,7 @@ Deretter kan størrelsen endres ved å sette bredde på det ytterste <code><div\
 ```markup
 <div class="searchbar__wrapper">
     <div class="inputField__wrapper">
-        <input class="inputField" type="text" id="textFieldInvalid" placeholder="Søk..."/>
-        <label class="label label--sml" for="textFieldInvalid">Skriv heia</label>
+        <input class="inputField" type="text" id="inputID" placeholder="Søk..."/>
     </div>
     <button class="button button__searchbar">
         <span class="material-symbols-outlined">search</span>
