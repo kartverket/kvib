@@ -24,6 +24,11 @@
     outline-offset: 0;
 }
 
+.button__searchbar span {
+    position: relative;
+    left: -5px;
+}
+
 .searchbar__wrapper {
     position: relative;
     align-items: center;
