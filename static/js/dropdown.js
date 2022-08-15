@@ -26,7 +26,7 @@
                 sl = s.length;
                 h = this.parentNode.previousSibling;
                 for (i = 0; i < sl; i++) {
-                    if (s.options[i].innerHTML == this.innerHTML) {
+                    if (s.options[i].innerHTML === this.innerHTML) {
                         s.selectedIndex = i;
                         h.innerHTML = this.innerHTML;
                         y = this.parentNode.getElementsByClassName("same-as-selected");
@@ -61,7 +61,7 @@
         xl = x.length;
         yl = y.length;
         for (i = 0; i < yl; i++) {
-            if (elmnt == y[i]) {
+            if (elmnt === y[i]) {
                 arrNo.push(i)
             } else {
                 y[i].classList.remove("select-arrow-active");

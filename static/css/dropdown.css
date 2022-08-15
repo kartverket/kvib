@@ -11,8 +11,8 @@
     font-family: inherit;
     font-size:0.875rem;
     font-weight:400;
-    background-color:#fff;
-    background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23213060' stroke-linecap='butt' stroke-linejoin='square' stroke-width='4' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+    background-color: var(--white);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23213060' stroke-linecap='butt' stroke-linejoin='square' stroke-width='4' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
     background-repeat:no-repeat;
     background-position:right .75rem center;
     background-size:0.75rem 1rem;
@@ -44,10 +44,6 @@
     height: 3rem;
  }
 
-.dropdown .options {
-
-}
-
 .dropdown option:nth-child(even){
     background-color: var(--blue_light);
 }
@@ -57,7 +53,7 @@
 /*the container must be positioned relative:*/
 .custom-select {
     position: relative;
-    font-family: Arial;
+    font-family: Mulish;
 }
 
 .custom-select select {
@@ -65,7 +61,7 @@
 }
 
 .select-selected {
-    background-color: DodgerBlue;
+    background-color: var(--white);
 }
 
 /*style the arrow inside the select element:*/
@@ -77,18 +73,18 @@
     width: 0;
     height: 0;
     border: 6px solid transparent;
-    border-color: #fff transparent transparent transparent;
+    border-color: var(--black) transparent transparent transparent;
 }
 
 /*point the arrow upwards when the select box is open (active):*/
 .select-selected.select-arrow-active:after {
-    border-color: transparent transparent #fff transparent;
+    border-color: transparent transparent var(--black) transparent;
     top: 7px;
 }
 
 /*style the items (options), including the selected item:*/
 .select-items div,.select-selected {
-    color: #ffffff;
+    color: var(--black);
     padding: 8px 16px;
     border: 1px solid transparent;
     border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
@@ -97,9 +93,9 @@
 }
 
 /*style items (options):*/
-.select-items {
+.select-items:nth-child(even) {
     position: absolute;
-    background-color: DodgerBlue;
+    background-color: var(--blue_light);
     top: 100%;
     left: 0;
     right: 0;
