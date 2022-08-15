@@ -1,44 +1,98 @@
 .stepper__sizes {
-    --size: 3rem;
+    --size--xs: 3rem;
+    --size--md: 3rem;
+    --spacing: 0.5rem;
 }
 
-.c-stepper {
+/*Liten skjerm (extra small/small)*/
+.stepper--xs {
     display: flex;
     flex-wrap: wrap;
 }
 
-.c-stepper__item {
+.stepper__item--xs {
+    position: relative;
     display: flex;
-    align-items: center;
+    gap: 1rem;
+    padding-bottom: 4rem;
 }
 
-.c-stepper__item:before {
+.stepper__item--xs:before {
     content: "";
-    display: block;
-    flex: 0 0 var(--size);
-    height: var(--size);
+    position: relative;
+    z-index: 1;
+    flex: 0 0 var(--size--xs);
+    height: var(--size--xs);
     border-radius: 50%;
 }
 
-.c-stepper__item:not(:last-child) {
+.stepper__item--xs:not(:last-child) {
     flex: 1;
 }
 
-.c-stepper__item:not(:last-child):after {
+.stepper__item--xs:not(:last-child):after {
     content: "";
-    flex: 1;
-    height: 2px;
+    position: absolute;
+    left: 0;
+    top: calc(var(--size--xs) + var(--spacing));
+    transform: translateX(calc(var(--size--xs) / 2));
+    bottom: var(--spacing);
+    width: 2px;
     background-color: var(--blue_dark);
 }
 
-.c-stepper__title {
+.stepper__title--xs {
     height: 24px;
     width: 24px;
     border: 2px solid var(--blue_dark);
     border-radius: 50%;
 }
 
-.c-stepper__title--center {
+.stepper__title--xs--center {
+    position: relative;
+    left: 0.35rem;
+    top: -2px;
+}
+
+
+/*Stor skjerm (medioum/large)*/
+.stepper--md {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.stepper__item--md {
+    display: flex;
+    align-items: center;
+}
+
+.stepper__item--md:before {
+    content: "";
+    display: block;
+    flex: 0 0 var(--size--md);
+    height: var(--size--md);
+    border-radius: 50%;
+}
+
+.stepper__item--md:not(:last-child) {
+    flex: 1;
+}
+
+.stepper__item--md:not(:last-child):after {
+    content: "";
+    flex: 1;
+    height: 2px;
+    background-color: var(--blue_dark);
+}
+
+.stepper__title--md {
+    height: 24px;
+    width: 24px;
+    border: 2px solid var(--blue_dark);
+    border-radius: 50%;
+}
+
+.stepper__title--md--center {
     position: relative;
     left: 0.35rem;
     top: -2px;

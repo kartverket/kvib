@@ -96,7 +96,7 @@ Størrelsen endres ved å bytte klassen <code>anker--xs</code> til <code>anker--
 
 
 ## Tabs
-Følgende element bruker <code>active__link--demo</code>-klasse for å demonstrere et valgt eller aktivt side.
+Følgende element bruker <code>active__link--demo</code>-klasse for å demonstrere et valgt eller aktivt side. Dette må justeres i hvert prosjekt.
 
 <div class="tab">
   <button class="tab__links active__link--demo" onclick="#function()">En</button>
@@ -117,50 +117,145 @@ Følgende element bruker <code>active__link--demo</code>-klasse for å demonstre
 ## Stegvise prosesser
 
 ### Visning på liten skjerm (Extra small/small)
+Visning på liten skjerm bruker <code>--xs</code>-klasse.
 
-
-
-### Visning på stor skjerm (medium/large)
-<ol class="c-stepper">
-    <li class="c-stepper__item">
-        <div class="c-stepper__title">
-        <p class="label label--xs c-stepper__title--center">1</p>
-        </div>
-    </li>  
-    <li class="c-stepper__item">
-          <div class="c-stepper__title">
-        <p class="label label--xs c-stepper__title--center">2</p>
-        </div>
-    </li>  
-    <li class="c-stepper__item">
-    <div class="c-stepper__title">
-        <p class="label label--xs c-stepper__title--center">3</p>
+<ol class="stepper--xs">
+    <li class="stepper__item--xs">
+        <div class="stepper__content--xs">
+            <h3 class="stepper__title--xs">1</h3>
+        </div><div class="stepper__content--xs">
+            <h3 class="stepper__title--xs">1</h3>
         </div>
     </li>
- <li class="c-stepper__item">
-        <div class="c-stepper__title">
-        <p class="label label--xs c-stepper__title--center">4</p>
+</ol>
+
+<ol class="stepper--xs">
+    <li class="stepper__item--xs">
+        <div class="stepper__title--xs">
+        <p class="label label--xs stepper__title--xs--center">1</p>
         </div>
     </li>  
-    <li class="c-stepper__item">
-          <div class="c-stepper__title">
-        <p class="label label--xs c-stepper__title--center">5</p>
+    <li class="stepper__item--xs">
+          <div class="stepper__title--xs">
+        <p class="label label--xs stepper__title--xs--center">2</p>
         </div>
     </li>  
-    <li class="c-stepper__item">
-    <div class="c-stepper__title">
-        <p class="label label--xs c-stepper__title--center">6</p>
+    <li class="stepper__item--xs">
+    <div class="stepper__title--xs">
+        <p class="label label--xs stepper__title--xs--center">3</p>
         </div>
     </li>
-    <li class="c-stepper__item">
-    <div class="c-stepper__title">
-        <p class="label label--xs c-stepper__title--center">7</p>
+ <li class="stepper__item--xs">
+        <div class="stepper__title--xs">
+        <p class="label label--xs stepper__title--xs--center">4</p>
+        </div>
+    </li>  
+    <li class="stepper__item--xs">
+          <div class="stepper__title--xs">
+        <p class="label label--xs stepper__title--xs--center">5</p>
+        </div>
+    </li>  
+    <li class="stepper__item--xs">
+    <div class="stepper__title--xs">
+        <p class="label label--xs stepper__title--xs--center">6</p>
+        </div>
+    </li>
+    <li class="stepper__item--xs">
+    <div class="stepper__title--xs">
+        <p class="label label--xs stepper__title--xs--center">7</p>
     </div>
     </li>
-    <li class="c-stepper__item">
-    <div class="c-stepper__title">
-        <p class="label label--xs c-stepper__title--center">8</p>
+    <li class="stepper__item--xs">
+    <div class="stepper__title--xs">
+        <p class="label label--xs stepper__title--xs--center">8</p>
     </div>
     </li>
 </ol>
+
+```markdown
+<ol class="stepper--xs">
+    <li class="stepper__item--xs">
+        <div class="stepper__title--xs">
+        <p class="label label--xs stepper__title--xs--center">1</p>
+        </div>
+    </li>  
+    <li class="stepper__item--xs">
+          <div class="stepper__title--xs">
+        <p class="label label--xs stepper__title--xs--center">2</p>
+        </div>
+    </li>  
+    <li class="stepper__item--xs">
+    <div class="stepper__title--xs">
+        <p class="label label--xs stepper__title--xs--center">3</p>
+        </div>
+    </li>
+</ol>
+```
+
+
+### Visning på stor skjerm (medium/large)
+Visning på stor skjerm bruker <code>--md</code>-klasse. 
+
+<ol class="stepper--md">
+    <li class="stepper__item--md">
+        <div class="stepper__title--md">
+        <p class="label label--xs stepper__title--md--center">1</p>
+        </div>
+    </li>  
+    <li class="stepper__item--md">
+          <div class="stepper__title--md">
+        <p class="label label--xs stepper__title--md--center">2</p>
+        </div>
+    </li>  
+    <li class="stepper__item--md">
+    <div class="stepper__title--md">
+        <p class="label label--xs stepper__title--md--center">3</p>
+        </div>
+    </li>
+    <li class="stepper__item--md">
+        <div class="stepper__title--md">
+        <p class="label label--xs stepper__title--md--center">4</p>
+        </div>
+    </li>  
+    <li class="stepper__item--md">
+          <div class="stepper__title--md">
+        <p class="label label--xs stepper__title--md--center">5</p>
+        </div>
+    </li>  
+    <li class="stepper__item--md">
+    <div class="stepper__title--md">
+        <p class="label label--xs stepper__title--md--center">6</p>
+        </div>
+    </li>
+    <li class="stepper__item--md">
+    <div class="stepper__title--md">
+        <p class="label label--xs stepper__title--md--center">7</p>
+    </div>
+    </li>
+    <li class="stepper__item--md">
+    <div class="stepper__title--md">
+        <p class="label label--xs stepper__title--md--center">8</p>
+    </div>
+    </li>
+</ol>
+
+```markdown
+<ol class="stepper--md">
+    <li class="stepper__item--md">
+        <div class="stepper__title--md">
+        <p class="label label--xs stepper__title--md--center">1</p>
+        </div>
+    </li>    
+    <li class="stepper__item--md">
+        <div class="stepper__title--md">
+        <p class="label label--xs stepper__title--md--center">2</p>
+        </div>
+    </li>  
+    <li class="stepper__item--md">
+        <div class="stepper__title--md">
+        <p class="label label--xs stepper__title--md--center">3</p>
+        </div>
+    </li>
+</ol>
+```
 
