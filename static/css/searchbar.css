@@ -8,7 +8,8 @@
     margin: 0;
     z-index: 2;
     position: absolute;
-    right:0;
+    right: 0;
+    top: 25px;
 }
 
 .button__searchbar:hover{
@@ -21,4 +22,14 @@
 
 .button__searchbar:focus-visible{
     outline-offset: 0;
+}
+
+.button__searchbar span {
+    position: relative;
+    left: -5px;
+}
+
+.searchbar__wrapper {
+    position: relative;
+    align-items: center;
 }
