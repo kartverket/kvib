@@ -28,7 +28,7 @@
 
 .progressbar__label {
     position: absolute;
-    top: -0.625rem;
-    right: -3.5rem;
+    top: -0.5rem;
+    right: -2.5rem;
     content: "0%";
 }

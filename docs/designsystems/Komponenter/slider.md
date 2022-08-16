@@ -6,7 +6,7 @@ slug: /designsystem/komponenter/slider
 displayed_sidebar: designsystemSidebar
 ---
 Kartverket har to størrelser på en slider; extra small/small og medium/large.
-Implementasjon av denne komponenten krever Javascript, i tillegg til CSS-klassene fra KVIB, for å håndtere verdi-endringer. [Se her for demonstrasjon av oppførselen til slideren](pathname:///html/slider.html).
+Implementasjon av denne komponenten krever Javascript, i tillegg til CSS-klassene fra KVIB, for å håndtere verdi-endringer. [Se her for demonstrasjon av oppførselen til slideren <span class="material-symbols-outlined">open_in_new</span>](pathname:///html/slider.html).
 Under følger statiske bilder av slideren for å vise forskjell på de ulike størrelsene, sammen med eksempelkode. Bredden til <code>.slider</code> er satt til 100%, slik at slider-bredden tilpasses ved å legge elementene i f.eks. et <code><div\></code>-element.
 
 For å style <code><label\></code>-elementet, skal egne

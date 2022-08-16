@@ -37,7 +37,7 @@ Lineært opplastningselementet bruker klassen <code>progressbar</code>.
 
 <div class="progressbar__container">
     <div class="progressbar__wrapper">
-        <div class="progressbar progressbar--demo"/>
+        <div class="progressbar progressbar--demo"></div>
     </div>
 </div>
 <br/>
@@ -58,8 +58,8 @@ I eksemplet under er <code>progressbar--demo</code> animert til å bytte <code>w
 
 <div class="progressbar__container">
     <div class="progressbar__wrapper">
-        <div id="demo" class="progressbar progressbar--demo"/>
-        <label for="demo" class="progressbar__label"/>
+        <div id="demo" class="progressbar progressbar--demo"></div>
+        <label for="demo" class="detail detail--xs progressbar__label"></label>
     </div>
 </div>
 <br/>
@@ -67,8 +67,8 @@ I eksemplet under er <code>progressbar--demo</code> animert til å bytte <code>w
 ```markdown
 <div class="progressbar__container">
     <div class="progressbar__wrapper">
-        <div id="demo" class="progressbar progressbar--demo"/>
-        <label for="demo" class="progressbar__label"/>
+        <div id="demo" class="progressbar progressbar--demo"></div>
+        <label for="demo" class="detail detail--xs progressbar__label"></label>
     </div>
 </div>
 ```
