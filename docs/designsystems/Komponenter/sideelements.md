@@ -37,7 +37,7 @@ Lineært opplastningselementet bruker klassen <code>progressbar</code>.
 
 <div class="progressbar__container">
     <div class="progressbar__wrapper">
-        <div class="progressbar progressbar--demo"/>
+        <div class="progressbar progressbar--demo"></div>
     </div>
 </div>
 <br/>
