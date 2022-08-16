@@ -29,7 +29,7 @@ KVIBs listevisning har en standard mal, som vist under. Det vil si at utvikler m
 * Sticky header skal benyttes
 * Listen skal aldri gå utover designets maks grid bredde
 
-[Et eksempel som demonstrerer oppførselen til en listevisning og hvordan denne kan se ut finnes her](pathname:///html/table.html). Ettersom "Slett alle"-funksjonen krever Javascript, kan eksempelet ikke vises på denne siden. Se ellers standard malen under.
+[Et eksempel som demonstrerer oppførselen til en listevisning og hvordan denne kan se ut finnes her <span class="material-symbols-outlined">open_in_new</span>](pathname:///html/table.html). Ettersom "Slett alle"-funksjonen krever Javascript, kan eksempelet ikke vises på denne siden. Se ellers standard malen under.
 
 <table id="data-input">
     <tr>
