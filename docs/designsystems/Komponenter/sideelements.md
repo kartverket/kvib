@@ -24,9 +24,7 @@ I elementet under er <code>loader--size</code> 5.625rem / 90px. Størrelsen endr
 ```markdown
 <div class="loader loader--blue loader--size"></div>
 <div class="loader loader--green loader--size"></div>
-<div class="loader__background__box">
-    <div class="white--loader loader--white loader--size loader--pos--white"></div>
-</div>
+<div class="white--loader loader--white loader--size"></div>
 ```
 
 
