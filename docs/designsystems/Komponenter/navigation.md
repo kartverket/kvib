@@ -117,145 +117,125 @@ Følgende element bruker <code>active__link--demo</code>-klasse for å demonstre
 ## Stegvise prosesser
 
 ### Visning på liten skjerm (Extra small/small)
-Visning på liten skjerm bruker <code>--xs</code>-klasse.
+Stegvise prosesser visning på liten skjerm bruker <code>--s</code>-klasse.
 
-<ol class="stepper--xs">
-    <li class="stepper__item--xs">
-        <div class="stepper__content--xs">
-            <h3 class="stepper__title--xs">1</h3>
-        </div><div class="stepper__content--xs">
-            <h3 class="stepper__title--xs">1</h3>
-        </div>
-    </li>
-</ol>
-
-<ol class="stepper--xs">
-    <li class="stepper__item--xs">
-        <div class="stepper__title--xs">
-        <p class="label label--xs stepper__title--xs--center">1</p>
-        </div>
-    </li>  
-    <li class="stepper__item--xs">
-          <div class="stepper__title--xs">
-        <p class="label label--xs stepper__title--xs--center">2</p>
-        </div>
-    </li>  
-    <li class="stepper__item--xs">
-    <div class="stepper__title--xs">
-        <p class="label label--xs stepper__title--xs--center">3</p>
-        </div>
-    </li>
- <li class="stepper__item--xs">
-        <div class="stepper__title--xs">
-        <p class="label label--xs stepper__title--xs--center">4</p>
-        </div>
-    </li>  
-    <li class="stepper__item--xs">
-          <div class="stepper__title--xs">
-        <p class="label label--xs stepper__title--xs--center">5</p>
-        </div>
-    </li>  
-    <li class="stepper__item--xs">
-    <div class="stepper__title--xs">
-        <p class="label label--xs stepper__title--xs--center">6</p>
-        </div>
-    </li>
-    <li class="stepper__item--xs">
-    <div class="stepper__title--xs">
-        <p class="label label--xs stepper__title--xs--center">7</p>
-    </div>
-    </li>
-    <li class="stepper__item--xs">
-    <div class="stepper__title--xs">
-        <p class="label label--xs stepper__title--xs--center">8</p>
-    </div>
-    </li>
-</ol>
+<div class="stepper--s">
+    <ol role="list" aria-label="Stegnavn">
+        <li data-status="complete">
+            <div class="stepper__circle label label--sml" aria-hidden="true"></div>
+            <label class="label label--sml">Input Tekst</label>
+        </li>
+        <li data-status="complete">
+            <div class="stepper__circle label label--sml" aria-hidden="true"></div>
+            <label class="label label--sml">Input Tekst</label>
+        </li>
+        <li data-status="complete">
+            <div class="stepper__circle label label--sml" aria-hidden="true"></div>
+            <label class="detail detail--sml">Input Tekst</label>
+        </li>
+        <li data-status="complete">
+            <div class="stepper__circle label label--sml" aria-hidden="true"></div>
+            <label class="detail detail--sml">Input Tekst</label>
+        </li>
+        <li data-status="complete">
+            <div class="stepper__circle label label--sml" aria-hidden="true"></div>
+            <label class="detail detail--sml">Input Tekst</label>
+        </li>
+        <li aria-current="step">
+            <div class="stepper__circle label label--sml" aria-hidden="true"></div>
+            <label class="detail detail--sml">Input Tekst</label>
+        </li>
+        <li>
+            <div class="stepper__circle label label--sml" aria-hidden="true"></div>
+            <label class="detail detail--sml">Input Tekst</label>
+        </li>
+        <li>
+            <div class="stepper__circle label label--sml" aria-hidden="true"></div>
+            <label class="detail detail--sml">Input Tekst</label>
+        </li>
+    </ol>
+</div>
 
 ```markdown
-<ol class="stepper--xs">
-    <li class="stepper__item--xs">
-        <div class="stepper__title--xs">
-        <p class="label label--xs stepper__title--xs--center">1</p>
-        </div>
-    </li>  
-    <li class="stepper__item--xs">
-          <div class="stepper__title--xs">
-        <p class="label label--xs stepper__title--xs--center">2</p>
-        </div>
-    </li>  
-    <li class="stepper__item--xs">
-    <div class="stepper__title--xs">
-        <p class="label label--xs stepper__title--xs--center">3</p>
-        </div>
-    </li>
-</ol>
+<div class="stepper">
+    <ol role="list" aria-label="Stegnavn">
+        <li data-status="complete">
+            <div class="stepper__circle label label--sml" aria-hidden="true"></div>
+            <label class="label label--sml">Input Tekst</label>
+        </li>
+        <li data-status="complete">
+            <div class="stepper__circle label label--sml" aria-hidden="true"></div>
+            <label class="label label--sml">Input Tekst</label>
+        </li>
+        <li data-status="complete">
+            <div class="stepper__circle label label--sml" aria-hidden="true"></div>
+            <label class="detail detail--sml">Input Tekst</label>
+        </li>
+        <li data-status="complete">
+            <div class="stepper__circle label label--sml" aria-hidden="true"></div>
+            <label class="detail detail--sml">Input Tekst</label>
+        </li>
+        <li data-status="complete">
+            <div class="stepper__circle label label--sml" aria-hidden="true"></div>
+            <label class="detail detail--sml">Input Tekst</label>
+        </li>
+        <li aria-current="step">
+            <div class="stepper__circle label label--sml" aria-hidden="true"></div>
+            <label class="detail detail--sml">Input Tekst</label>
+        </li>
+        <li>
+            <div class="stepper__circle label label--sml" aria-hidden="true"></div>
+            <label class="detail detail--sml">Input Tekst</label>
+        </li>
+        <li>
+            <div class="stepper__circle label label--sml" aria-hidden="true"></div>
+            <label class="detail detail--sml">Input Tekst</label>
+        </li>
+    </ol>
+</div>
 ```
 
 
 ### Visning på stor skjerm (medium/large)
 Visning på stor skjerm bruker <code>--md</code>-klasse. 
 
-<ol class="stepper--md">
-    <li class="stepper__item--md">
-        <div class="stepper__title--md">
-        <p class="label label--xs stepper__title--md--center">1</p>
-        </div>
-    </li>  
-    <li class="stepper__item--md">
-          <div class="stepper__title--md">
-        <p class="label label--xs stepper__title--md--center">2</p>
-        </div>
-    </li>  
-    <li class="stepper__item--md">
-    <div class="stepper__title--md">
-        <p class="label label--xs stepper__title--md--center">3</p>
-        </div>
-    </li>
-    <li class="stepper__item--md">
-        <div class="stepper__title--md">
-        <p class="label label--xs stepper__title--md--center">4</p>
-        </div>
-    </li>  
-    <li class="stepper__item--md">
-          <div class="stepper__title--md">
-        <p class="label label--xs stepper__title--md--center">5</p>
-        </div>
-    </li>  
-    <li class="stepper__item--md">
-    <div class="stepper__title--md">
-        <p class="label label--xs stepper__title--md--center">6</p>
-        </div>
-    </li>
-    <li class="stepper__item--md">
-    <div class="stepper__title--md">
-        <p class="label label--xs stepper__title--md--center">7</p>
-    </div>
-    </li>
-    <li class="stepper__item--md">
-    <div class="stepper__title--md">
-        <p class="label label--xs stepper__title--md--center">8</p>
-    </div>
-    </li>
-</ol>
+<div class="stepper--l">
+    <ol role="list" aria-label="Stegnavn">
+        <li data-status="complete">
+            <div class="stepper__circle label label--sml" aria-hidden="true"></div>
+            <label class="label label--sml">Input Tekst</label>
+        </li>
+        <li data-status="complete">
+            <div class="stepper__circle label label--sml" aria-hidden="true"></div>
+            <label class="label label--sml">Input Tekst</label>
+        </li>
+        <li data-status="complete">
+            <div class="stepper__circle label label--sml" aria-hidden="true"></div>
+            <label class="detail detail--sml">Input Tekst</label>
+        </li>
+        <li data-status="complete">
+            <div class="stepper__circle label label--sml" aria-hidden="true"></div>
+            <label class="detail detail--sml">Input Tekst</label>
+        </li>
+        <li data-status="complete">
+            <div class="stepper__circle label label--sml" aria-hidden="true"></div>
+            <label class="detail detail--sml">Input Tekst</label>
+        </li>
+        <li aria-current="step">
+            <div class="stepper__circle label label--sml" aria-hidden="true"></div>
+            <label class="detail detail--sml">Input Tekst</label>
+        </li>
+        <li>
+            <div class="stepper__circle label label--sml" aria-hidden="true"></div>
+            <label class="detail detail--sml">Input Tekst</label>
+        </li>
+        <li>
+            <div class="stepper__circle label label--sml" aria-hidden="true"></div>
+            <label class="detail detail--sml">Input Tekst</label>
+        </li>
+    </ol>
+</div>
 
-```markdown
-<ol class="stepper--md">
-    <li class="stepper__item--md">
-        <div class="stepper__title--md">
-        <p class="label label--xs stepper__title--md--center">1</p>
-        </div>
-    </li>    
-    <li class="stepper__item--md">
-        <div class="stepper__title--md">
-        <p class="label label--xs stepper__title--md--center">2</p>
-        </div>
-    </li>  
-    <li class="stepper__item--md">
-        <div class="stepper__title--md">
-        <p class="label label--xs stepper__title--md--center">3</p>
-        </div>
-    </li>
-</ol>
-```
+<br/>
+
 
