@@ -2,11 +2,21 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kartverket.github.io/kvib/blog</id>
     <title>KVIB Styleguides Blog</title>
-    <updated>2022-08-10T00:00:00.000Z</updated>
+    <updated>2022-08-22T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kartverket.github.io/kvib/blog"/>
     <subtitle>KVIB Styleguides Blog</subtitle>
     <icon>https://kartverket.github.io/kvib/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Versjon [1.0.5]]]></title>
+        <id>/2022/08/22/version-[1.0.5]</id>
+        <link href="https://kartverket.github.io/kvib/blog/2022/08/22/version-[1.0.5]"/>
+        <updated>2022-08-22T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Navigasjon komponenter]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="added">Added<a class="hash-link" href="#added" title="Direct link to heading">​</a></h2><p>La til stegvise prosesser small skjerm og large skjerm.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="changed">Changed<a class="hash-link" href="#changed" title="Direct link to heading">​</a></h2><ul><li>Fikset feil i søkefelt komponenten der det ble brukt et utdatert klasse som ikke eksisterte lenger.</li><li>Oppdatert KVIB installasjon side, laggt til URL imports.</li></ul>]]></content>
+        <category label="dokumentasjon" term="dokumentasjon"/>
+        <category label="Navigasjon" term="Navigasjon"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Versjon [1.0.4]]]></title>
         <id>/2022/08/10/version-[1.0.4]</id>
