@@ -1,13 +1,10 @@
 ---
 id: navID
-title: (!)Navigasjon
+title: Navigasjon
 description: Navigasjon
 slug: /designsystem/komponenter/navigasjon
 displayed_sidebar: designsystemSidebar
 ---
-
-***OBS! Under kontruksjon:***
-***
 
 ## Header
 Navigasjonsbar-elementet tilpasser seg til skjermstørrelsen siden er åpnet i.
