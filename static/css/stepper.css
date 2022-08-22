@@ -148,19 +148,19 @@
     width: 2px;
     background: var(--color-primary);
     position: absolute;
+    left: -2.5rem;
     rotate: 90deg;
 }
 
 .stepper--l li::before {
     height: calc(var(--stepper--l--y-space) + var(--stepper--l--modifier));
     top: 0;
-    left: -2.5rem;
 }
 
-.stepper--l li::after {
-    height: 100%;
-    top: calc(var(--stepper--l--y-space) + var(--stepper--l--modifier));
-}
+/*.stepper--l li::after {*/
+/*    height: 100%;*/
+/*    top: calc(var(--stepper--l--y-space) + var(--stepper--l--modifier));*/
+/*}*/
 
 .stepper--l li:first-child::before,
 .stepper--l li:last-child::after {
