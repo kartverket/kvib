@@ -31,92 +31,138 @@ KVIBs listevisning har en standard mal, som vist under. Det vil si at utvikler m
 
 [Et eksempel som demonstrerer oppførselen til en listevisning og hvordan denne kan se ut finnes her <span class="material-symbols-outlined">open_in_new</span>](pathname:///html/table.html). Ettersom "Slett alle"-funksjonen krever Javascript, kan eksempelet ikke vises på denne siden. Se ellers standard malen under.
 
+<div class="table__container--large">
 <table id="data-input">
-    <tr>
-        <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-        <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-        <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+     <tbody>
+    <tr class="detail detail--sml" name="table-header">
+        <th>
+            <div class="checkbox">
+                <input type="checkbox" id="select-all" name="checkbox-list"/>
+                <label for="select-all"></label>
+            </div>
+        </th>
+        <th class="detail detail--sml">Slett</th>
+        <th class="detail detail--sml">TEKST INNHOLD</th>
+        <th class="detail detail--sml">TALL INNHOLD</th>
+        <th class="detail detail--sml">TEKST INNHOLD</th>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td><div class="checkbox"><input type="checkbox" id="checkbox_1" name="checkbox-list"/><label for="checkbox_1"></label></div></td>
+        <td class="detail detail--sml"></td>
+        <td class="detail detail--sml">TEKST TIL VENSTRE</td>
+        <td class="detail detail--sml">1</td>
+        <td class="detail detail--sml">TEKST TIL HØYRE</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td><div class="checkbox"><input type="checkbox" id="checkbox_2" name="checkbox-list"/><label for="checkbox_2"></label></div></td>
+        <td class="detail detail--sml"></td>
+        <td class="detail detail--sml">TEKST TIL VENSTRE</td>
+        <td class="detail detail--sml">2</td>
+        <td class="detail detail--sml">TEKST TIL HØYRE</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td><div class="checkbox"><input type="checkbox" id="checkbox_3" name="checkbox-list"/><label for="checkbox_3"></label></div></td>
+        <td class="detail detail--sml"></td>
+        <td class="detail detail--sml">TEKST TIL VENSTRE</td>
+        <td class="detail detail--sml">3</td>
+        <td class="detail detail--sml">TEKST TIL HØYRE</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td><div class="checkbox"><input type="checkbox" id="checkbox_4" name="checkbox-list"/><label for="checkbox_4"></label></div></td>
+        <td class="detail detail--sml"></td>
+        <td class="detail detail--sml">TEKST TIL VENSTRE</td>
+        <td class="detail detail--sml">4</td>
+        <td class="detail detail--sml">TEKST TIL HØYRE</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td><div class="checkbox"><input type="checkbox" id="checkbox_5" name="checkbox-list"/><label for="checkbox_5"></label></div></td>
+        <td class="detail detail--sml"></td>
+        <td class="detail detail--sml">TEKST TIL VENSTRE</td>
+        <td class="detail detail--sml">5</td>
+        <td class="detail detail--sml">TEKST TIL HØYRE</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td><div class="checkbox"><input type="checkbox" id="checkbox_6" name="checkbox-list"/><label for="checkbox_6"></label></div></td>
+        <td class="detail detail--sml"></td>
+        <td class="detail detail--sml">TEKST TIL VENSTRE</td>
+        <td class="detail detail--sml">6</td>
+        <td class="detail detail--sml">TEKST TIL HØYRE</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td><div class="checkbox"><input type="checkbox" id="checkbox_7" name="checkbox-list"/><label for="checkbox_7"></label></div></td>
+        <td class="detail detail--sml"></td>
+        <td class="detail detail--sml">TEKST TIL VENSTRE</td>
+        <td class="detail detail--sml">7</td>
+        <td class="detail detail--sml">TEKST TIL HØYRE</td>
     </tr>
+    <tr>
+        <td><div class="checkbox"><input type="checkbox" id="checkbox_8" name="checkbox-list"/><label for="checkbox_8"></label></div></td>
+        <td class="detail detail--sml"></td>
+        <td class="detail detail--sml">TEKST TIL VENSTRE</td>
+        <td class="detail detail--sml">8</td>
+        <td class="detail detail--sml">TEKST TIL HØYRE</td>
+    </tr>
+    <tr>
+        <td><div class="checkbox"><input type="checkbox" id="checkbox_9" name="checkbox-list"/><label for="checkbox_9"></label></div></td>
+        <td class="detail detail--sml"></td>
+        <td class="detail detail--sml">TEKST TIL VENSTRE</td>
+        <td class="detail detail--sml">9</td>
+        <td class="detail detail--sml">TEKST TIL HØYRE</td>
+    </tr>
+    <tr>
+        <td><div class="checkbox"><input type="checkbox" id="checkbox_10" name="checkbox-list"/><label for="checkbox_10"></label></div></td>
+        <td class="detail detail--sml"></td>
+        <td class="detail detail--sml">TEKST TIL VENSTRE</td>
+        <td class="detail detail--sml">10</td>
+        <td class="detail detail--sml">TEKST TIL HØYRE</td>
+    </tr>
+    <tr>
+        <td><div class="checkbox"><input type="checkbox" id="checkbox_11" name="checkbox-list"/><label for="checkbox_11"></label></div></td>
+        <td class="detail detail--sml"></td>
+        <td class="detail detail--sml">TEKST TIL VENSTRE</td>
+        <td class="detail detail--sml">11</td>
+        <td class="detail detail--sml">TEKST TIL HØYRE</td>
+    </tr>
+    <tr>
+        <td><div class="checkbox"><input type="checkbox" id="checkbox_12" name="checkbox-list"/><label for="checkbox_12"></label></div></td>
+        <td class="detail detail--sml"></td>
+        <td class="detail detail--sml">TEKST TIL VENSTRE</td>
+        <td class="detail detail--sml">12</td>
+        <td class="detail detail--sml">TEKST TIL HØYRE</td>
+    </tr>
+</tbody>
   </table>
+</div>
 
 <br/>
 
   ```markdown
 <table id="data-input">
-    <tr>
-        <th></th>
-        <th></th>
-        <th></th>
+     <tbody>
+    <tr class="detail detail--sml" name="table-header">
+        <th>
+            <div class="checkbox">
+                <input type="checkbox" id="select-all" name="checkbox-list"/>
+                <label for="select-all"></label>
+            </div>
+        </th>
+        <th class="detail detail--sml">Slett</th>
+        <th class="detail detail--sml">TEKST INNHOLD</th>
+        <th class="detail detail--sml">TALL INNHOLD</th>
+        <th class="detail detail--sml">TEKST INNHOLD</th>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>
+            <div class="checkbox">
+                <input type="checkbox" id="checkbox_1" name="checkbox-list"/>
+                <label for="checkbox_1"></label>
+            </div>
+        </td>
+        <td class="detail detail--sml"></td>
+        <td class="detail detail--sml">TEKST TIL VENSTRE</td>
+        <td class="detail detail--sml">1</td>
+        <td class="detail detail--sml">TEKST TIL HØYRE</td>
     </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
+</tbody>
   </table>
   ```

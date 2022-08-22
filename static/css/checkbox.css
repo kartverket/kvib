@@ -1,13 +1,14 @@
 .checkbox input[type="checkbox"] {
     position: absolute;
-    opacity: 0;
-    height: 0;
-    width: 0;
+    /*opacity: 0;*/
+    /*height: 0;*/
+    /*width: 0;*/
+    display: none;
 }
 
 .checkbox label {
     position: relative;
-    display: inline-block;
+    /*display: inline-block;*/
 
     /*16px width of fake checkbox + 6px distance between fake checkbox and text*/
     padding-left: 2rem;
@@ -28,11 +29,12 @@
 
     border: 0.125rem solid;
     border-radius: 0.10rem;
-    left: 0;
+
     color: var(--blue_dark);
     background-color: white;
 
-    top: 0.188rem;
+    top: 0;
+    left: 0;
 }
 
 .checkbox label::after {
@@ -44,7 +46,7 @@
     transform: rotate(-45deg);
 
     left: 0.25rem;
-    top: 0.438rem;
+    top: 0.22rem;
 }
 
 /*Hide checkmark by default*/
