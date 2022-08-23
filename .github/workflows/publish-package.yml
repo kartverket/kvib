@@ -34,7 +34,7 @@ jobs:
         working-directory: static/css
 
       - name: Publish package on GitHub Packages
-      - run: npm publish
+        run: npm publish
         working-directory: static/css
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
