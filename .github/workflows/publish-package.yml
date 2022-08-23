@@ -33,7 +33,23 @@ jobs:
         run: npm version ${{ steps.tag_version.outputs.new_version }} --no-git-tag-version
         working-directory: static/css
 
+      - name: Publish package on GitHub Packages
       - run: npm publish
         working-directory: static/css
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          registry-url: https://registry.npmjs.org/
+      
+      - name: Publish package on npm registry
+        run: npm publish --access public
+        working-directory: static/css
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+    
+          
+          
