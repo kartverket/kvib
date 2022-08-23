@@ -39,11 +39,13 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
-      - name: Setup npm registry-url
+      - name: set registry url
       - uses: actions/checkout@v3
+      # Setup .npmrc file to publish to npm
       - uses: actions/setup-node@v3
         with:
-          registry-url: https://registry.npmjs.org/
+          node-version: '16.x'
+          registry-url: 'https://registry.npmjs.org'
           
       - name: Publish package on npm registry    
         run: npm publish --access public
