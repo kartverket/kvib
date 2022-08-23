@@ -10,7 +10,13 @@
     "type": "git",
     "url": "git@github.com:kartverket/kvib"
   },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {}
+  "author": "KVIB",
+  "license": "MIT",
+  "dependencies": {},
+  "bugs": {
+    "url": "https://github.com/kartverket/kvib/issues"
+  },
+  "homepage": "https://kartverket.github.io/kvib/"
 }
+
+
