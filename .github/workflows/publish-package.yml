@@ -42,13 +42,13 @@ jobs:
         run: npm version ${{ steps.tag_version.outputs.new_version }} --no-git-tag-version
         working-directory: static/css
 
-      - name: Bump react-components package.json
-        run: npm version ${{ steps.tag_version.outputs.new_version }} --no-git-tag-version
-        working-directory: static/js/react-components
-
       - name: Publish CSS package on NPM
         run: npm publish --access public
         working-directory: static/css
+
+      - name: Bump react-components package.json
+        run: npm version ${{ steps.tag_version.outputs.new_version }} --no-git-tag-version
+        working-directory: static/js/react-components
 
       - name: Publish react-components package on NPM
         run: npm publish --access public
