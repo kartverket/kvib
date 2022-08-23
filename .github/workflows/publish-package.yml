@@ -22,19 +22,17 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
           # Defaults to the user or organization that owns the workflow file
           scope: '@kartverket'
-          
       - name: Bump version and push tag
         id: tag_version
         uses: mathieudutour/github-tag-action@v5.3
         with:
           github_token: ${{ github.token }}
-
+      
       - name: Bump package.json
-        run: npm version ${{ steps.tag_version.outputs.new_version }} --no-git-tag-version
+      - run: npm version ${{ steps.tag_version.outputs.new_version }} --no-git-tag-version
         working-directory: static/css
-
       - name: Publish package on GitHub Packages
-        run: npm publish
+      - run: npm publish
         working-directory: static/css
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -46,7 +44,6 @@ jobs:
         with:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
-          
       - name: Publish package on npm registry    
       - run: npm publish --access public
         working-directory: static/css
