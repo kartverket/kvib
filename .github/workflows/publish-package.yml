@@ -46,13 +46,25 @@ jobs:
         run: npm publish --access public
         working-directory: static/js/react-components
 
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+
+          
+  publish-react-package:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          registry-url: https://registry.npmjs.org/
       - name: Bump CSS package.json
         run: npm version ${{ steps.tag_version.outputs.new_version }} --no-git-tag-version
         working-directory: static/css
-
       - name: Publish CSS package on NPM
         run: npm publish --access public
         working-directory: static/css
-
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+
