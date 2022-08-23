@@ -40,10 +40,9 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Setup npm registry-url
-      - uses: actions/checkout@v3
+   #   - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: 16
           registry-url: https://registry.npmjs.org/
           
       - name: Publish package on npm registry    
