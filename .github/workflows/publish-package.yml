@@ -17,12 +17,18 @@ jobs:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org/'
           # Defaults to the user or organization that owns the workflow file
-          scope: '@kartverket'
+          scope: '@kartverket' 
       - name: Bump version and push tag
         id: tag_version
         uses: mathieudutour/github-tag-action@v5.3
         with:
           github_token: ${{ github.token }}
+      - name: Bump CSS package.json
+        run: npm version ${{ steps.tag_version.outputs.new_version }} --no-git-tag-version
+        working-directory: static/css    
+      - name: Bump react-components package.json
+        run: npm version ${{ steps.tag_version.outputs.new_version }} --no-git-tag-version
+        working-directory: static/js/react-components
 
   publish-css-package:
     needs: build
@@ -33,15 +39,9 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
-
-      - name: Bump react-components package.json
-        run: npm version ${{ steps.tag_version.outputs.new_version }} --no-git-tag-version
-        working-directory: static/js/react-components
-
       - name: Publish react-components package on NPM
         run: npm publish --access public
         working-directory: static/js/react-components
-
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
 
@@ -55,9 +55,6 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
-      - name: Bump CSS package.json
-        run: npm version ${{ steps.tag_version.outputs.new_version }} --no-git-tag-version
-        working-directory: static/css
       - name: Publish CSS package on NPM
         run: npm publish --access public
         working-directory: static/css
