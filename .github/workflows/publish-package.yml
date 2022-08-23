@@ -43,8 +43,6 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
-      
-      - name: Publish package on npm registry
       - run: npm publish --access public
         working-directory: static/css
         env:
