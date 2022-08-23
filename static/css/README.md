@@ -1,28 +1,24 @@
-# KVIB
-Se https://kartverket.github.io/kvib/ for informasjon angående bruk av KVIB. 
+# KVIB - Kartverkets interaksjon- og designbibliotek
 
-## Installasjon av KVIB-CSS Github Package
+[KVIB](https://kartverket.github.io/kvib/) er et prosjekt i regi av eiendomsportalen med mål om å samle designguidelines og kode for Kartverkets applikasjoner.
 
-### Github
-1. Opprett et Personal Access Token (PAT).
-   [Se Github dokumentasjon for å opprette PAT](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
-2. Autoriser PAT for bruk med organisasjonen. [Se Github dokumentasjon for PAT autentisering](https://docs.github.com/en/enterprise-cloud@latest/authentication/authenticating-with-saml-single-sign-on/authorizing-a-personal-access-token-for-use-with-saml-single-sign-on)
+Dokumentasjonen for KVIB hostes med [github-pages](https://pages.github.com/).
 
-### npm
-1. Opprett et .npmrc fil i prosjekt mappen og legg til følgende:
+I tillegg har vi også laget et github package, KVIB-css, som inneholder css for designbiblioteket. Kildekoden til dette ligger i css-mappen i dette repoet.
 
-```
-@kartverket:registry=https://npm.pkg.github.com
-```
+## KVIB-CSS:
+For å publisere ny versjon av KVIB-css til Github Packages:
+1. Trykk på Github Actions i Kvib Github repository
+2. Velg  "KVIB Package publish"
+3. Trykk på "Run workflow" på Master branch.
 
-2. I prosjekt mappen som inneholder .npmrc filen, logg på npm med Github brukernavn og PAT ved å bruke følgende kommando:
+Ny versjon av KVIB-css blir opprettet som Github Package og gjort klar til bruk.
 
-```
-npm login --scope=@kartverket --registry=https://npm.pkg.github.com
-```
-
-3. Skriv npm install og da skal biblioteket være klar til bruk.
-
-```
-npm install
-```
+## Rutine ved endringer:
+1. Gjør nødvendige endringer i css-filene i css-mappa i src.
+2. Sørg for at dokumentasjonen er oppdatert for all ny kode i docs-mappa.
+3. Opprett pull-request for endringene dine på github
+4. Merg endringene til master når de er godkjent
+5. Publiser ny versjon (se steg 1-3 i avsnittet over) av KVIB-css til Github Packages
+6. Oppdater blog med informasjon om ny versjon og hva som er endret, (hent versjonsnummer fra package.json, som ble oppdatert når du kjørte steg 3 i publiseringen)
+7. Push commit med nytt versjonsnummer og oppdatert blog direkte på master
