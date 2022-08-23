@@ -38,14 +38,6 @@ jobs:
         with:
           github_token: ${{ github.token }}
 
-      - name: Bump CSS package.json
-        run: npm version ${{ steps.tag_version.outputs.new_version }} --no-git-tag-version
-        working-directory: static/css
-
-      - name: Publish CSS package on NPM
-        run: npm publish --access public
-        working-directory: static/css
-
       - name: Bump react-components package.json
         run: npm version ${{ steps.tag_version.outputs.new_version }} --no-git-tag-version
         working-directory: static/js/react-components
@@ -53,6 +45,14 @@ jobs:
       - name: Publish react-components package on NPM
         run: npm publish --access public
         working-directory: static/js/react-components
+
+      - name: Bump CSS package.json
+        run: npm version ${{ steps.tag_version.outputs.new_version }} --no-git-tag-version
+        working-directory: static/css
+
+      - name: Publish CSS package on NPM
+        run: npm publish --access public
+        working-directory: static/css
 
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
