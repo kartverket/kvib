@@ -1,5 +1,5 @@
 {
-  "name": "@kartverket/kvib",
+  "name": "@kartverket/kvib-css",
   "version": "Handled by CI/CD",
   "description": "NPM-pakke for KVIB",
   "main": "index.js",
