@@ -1,7 +1,7 @@
 {
   "name": "@kartverket/kvib-css",
   "version": "Handled by CI/CD",
-  "description": "NPM-pakke for KVIB",
+  "description": "NPM-pakke for KVIB-CSS",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

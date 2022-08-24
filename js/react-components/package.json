@@ -1,7 +1,7 @@
 {
   "name": "@kartverket/kvib-react-components",
   "version": "Handled by CI/CD",
-  "description": "NPM-pakke for KVIB",
+  "description": "NPM-pakke for KVIB react komponenter",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
