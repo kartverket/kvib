@@ -10,6 +10,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      tag_version_output: ${{ steps.tag_version.outputs.new_version }}
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -35,7 +37,7 @@ jobs:
           registry-url: https://registry.npmjs.org/
       
       - name: Bump react-components package.json
-        run: npm version ${{ steps.tag_version.outputs.new_version }} --no-git-tag-version
+        run: npm version ${{ needs.build.outputs.tag_version_output }} --no-git-tag-version
         working-directory: static/js/react-components   
       
       - name: Publish react-components package on NPM
@@ -56,7 +58,7 @@ jobs:
           registry-url: https://registry.npmjs.org/
       
       - name: Bump CSS package.json
-        run: npm version ${{ steps.tag_version.outputs.new_version }} --no-git-tag-version
+        run: npm version ${{ needs.build.outputs.tag_version_output }} --no-git-tag-version
         working-directory: static/css    
       
       - name: Publish CSS package on NPM
