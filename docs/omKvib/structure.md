@@ -33,8 +33,9 @@ kvib
 ├─ static
 │  ├─ css
 │  ├─ html
-│  ├─ gif
 │  ├─ img
+│  ├─ js
+│  │  ├─ react-components
 │  ├─ .nojekyll
 ├─ .gitignore
 ├─ babel.config.js
@@ -46,7 +47,7 @@ kvib
 ├─ tsconfig.json
 ```
 
-### CSS
+### KVIB CSS
 
 #### CSS-styling av komponenter og design tokens
 
@@ -71,6 +72,11 @@ for mer informasjon se dokumentasjonsiden [her <span class="material-symbols-out
 Når du kjører <code>run swizzle</code> får du opp et liste med komponenter for å justere. Når du har valgt et komponent, filen til komponenter blir lagt under _src/theme_
 
 I _docusaurus.config.js_ er _custom.css_ lenket under <code>theme</code> i <code>presets</code> for at eget design i dokumentasjonen skal tas i bruk.
+
+### KVIB React Components
+#### React komponenter
+
+React-filer til KVIB React komponenter ligger under _static/js/react-components_.
 
 ### Dokumentasjon
 

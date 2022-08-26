@@ -5,49 +5,44 @@ description: Ta i bruk Kvib
 slug: /omKvib/implementering
 displayed_sidebar: OmKvibSidebar
 ---
-## Installasjon av KVIB-CSS
-KVIB kan implementeres på tre måter:
+## Installasjon av KVIB
+KVIB kan tas i bruk ved å legge til link eller url import i HTML/CSS fil eller ved å laste ned npm pakken.
+KVIB er delt i 2 npm pakker, <code>kvib-react-components</code> for KVIB React komponenter og <code>kvib-css</code> for KVIB CSS styling.
 
-### 1. HTML link
+### HTML link
 Importer KVIB HTML link:
 
 ```markdown
- <link rel="stylesheet" href="https://kartverket.github.io/kvib/css/main.css">
+ <link rel="stylesheet" href='https://kartverket.github.io/kvib/css/main.css'>
 ```
 
-### 2. CSS import
+### CSS import
 Importer KVIB i index.css i prosjektet: 
 
 ```markdown
 @import url("https://kartverket.github.io/kvib/css/main.css");
 ```
 
-### 3. Installasjon av KVIB GitHub Package
-#### GitHub
-1. Opprett et Personal Access Token (PAT).
-[Se Github dokumentasjon for å opprette PAT <span class="material-symbols-outlined">open_in_new</span>](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
-2. Autoriser PAT for bruk med organisasjonen. [Se Github dokumentasjon for PAT autentisering <span class="material-symbols-outlined">open_in_new</span>](https://docs.github.com/en/enterprise-cloud@latest/authentication/authenticating-with-saml-single-sign-on/authorizing-a-personal-access-token-for-use-with-saml-single-sign-on)
+### Installasjon av KVIB NPM Package
 
-#### npm
-1. Opprett en _.npmrc_ fil i prosjektmappen og legg til følgende:
+#### (!)KVIB React components
+***OBS! KVIB React Components er under konstruksjon:***
+
+For å laste ned og ta i bruk KVIB React komponenter, skriv følgende kommando i terminalen:
 
 ```markdown
-@kartverket:registry=https://npm.pkg.github.com
+npm i @kartverket/kvib-react-components
 ```
 
-2. I prosjektmappen som inneholder _.npmrc_ filen, logg på npm med GitHub brukernavn og PAT ved å bruke følgende kommando:
+#### KVIB-CSS
+
+For å laste ned og ta i bruk KVIB-CSS, skriv følgende kommando i terminalen:
 
 ```markdown
-npm login --scope=@kartverket --registry=https://npm.pkg.github.com
+npm i @kartverket/kvib-css
 ```
 
-3. Kjør npm install @kartverket/kvib og biblioteket skal nå være klar til bruk.
-
-```markdown
-npm install @kartverket/kvib
-```
-
-4. Importer eller legg til link til biblioteket i CSS eller HTML filen i prosjektet.
+Importer eller legg til link til biblioteket i CSS eller HTML filen i prosjektet.
 
 - I HTML fil:
 
