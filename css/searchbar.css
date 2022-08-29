@@ -2,7 +2,7 @@
 .button__searchbar{
     background-color: var(--green_dark);
     color: var(--white);
-    height:var(--inputHeight);
+    height:var(--input--height);
     width: 4rem;
     border-radius: 0 0.25rem 0.25rem 0;
     margin: 0;
