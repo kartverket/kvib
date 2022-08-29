@@ -16,34 +16,28 @@ Under er et eksempel på et aktivt inputfelt. Brukeren skal få feilmelding ders
 Dette kan løses med blant annet Javascript. Det er foreløpig ingen eksempelkode på dette i KVIB.
 
 <div class="inputField__wrapper">
-    <input class="inputField" type="text" id="textFieldInvalid" placeholder="Aktivt tekstfelt"/>
-    <label class="label label--sml" for="textFieldInvalid">Skriv heia</label>
+    <input class="inputField" type="text" id="inputFieldID" placeholder="Aktivt tekstfelt"/>
+    <label class="label label--sml" for="inputFieldID">Skriv heia</label>
 </div>
 
-<br/>
-<br/>
-
 <div class="inputField__wrapper">
-    <input class="inputField" type="text" id="textFieldInvalid" placeholder="Feilmelding" required/>
-    <label class="label label--sml" for="textFieldInvalid">Skriv heia</label>
+    <input class="inputField" type="text" id="invalidInputFieldID" placeholder="Feilmelding" required/>
+    <label class="label label--sml" for="invalidInputFieldID">Skriv heia</label>
     <span class="exclamation"><i class="material-symbols-outlined">exclamation</i></span>
     <small class="inputField__helper__text detail detail--sml">Feilmelding tekst</small>
 </div>
 
 <br/>
-<br/>
-<br/>
 
 ```markup
 <div class="inputField__wrapper">
-    <input class="inputField" type="text" id="textFieldInvalid" placeholder="Aktivt tekstfelt"/>
-    <label class="label label--sml" for="textFieldInvalid">Skriv heia</label>
+    <input class="inputField" type="text" id="inputFieldID" placeholder="Aktivt tekstfelt"/>
+    <label class="label label--sml" for="inputFieldID">Skriv heia</label>
 </div>
 
-
 <div class="inputField__wrapper">
-    <input class="inputField" type="text" id="textFieldInvalid" placeholder="Feilmelding" required/>
-    <label class="label label--sml" for="textFieldInvalid">Skriv heia</label>
+    <input class="inputField" type="text" id="invalidInputFieldID" placeholder="Feilmelding" required/>
+    <label class="label label--sml" for="invalidInputFieldID">Skriv heia</label>
     <span class="exclamation"><i class="material-symbols-outlined">exclamation</i></span>
     <small class="inputField__helper__text detail detail--sml">Feilmelding tekst</small>
 </div>
@@ -55,30 +49,24 @@ Her er et eksempel på et deaktivert inputfelt, både med og uten hjelpetekst.
 
 
 <div class="inputField__wrapper">
-    <input class="inputField input__disabled" type="text" id="disabledTextField" placeholder="Jeg er deaktivert" disabled/>
-    <label class="label label--sml" for="disabledTextField">Skriv heia</label>
+    <input class="inputField input__disabled" type="text" id="disabledInputFieldPh" placeholder="Jeg er deaktivert" disabled/>
+    <label class="label label--sml" for="disabledInputFieldPh">Skriv heia</label>
 </div>
-
-<br/>
-<br/>
 
 <div class="inputField__wrapper">
-    <input class="inputField input__disabled" type="text" id="disabledTextField" disabled/>
-    <label class="label label--sml" for="disabledTextField">Skriv heia</label>
+    <input class="inputField input__disabled" type="text" id="disabledInputField" disabled/>
+    <label class="label label--sml" for="disabledInputField">Skriv heia</label>
 </div>
-
-<br/>
-<br/>
 
 ```markup
 <div class="inputField__wrapper">
-    <input class="inputField input__disabled" type="text" id="disabledTextField" placeholder="Jeg er deaktivert" disabled/>
-    <label class="label label--sml" for="disabledTextField">Skriv heia</label>
+    <input class="inputField input__disabled" type="text" id="disabledInputFieldPh" placeholder="Jeg er deaktivert" disabled/>
+    <label class="label label--sml" for="disabledInputFieldPh">Skriv heia</label>
 </div>
 
 <div class="inputField__wrapper">
-    <input class="inputField input__disabled" type="text" id="disabledTextField" disabled/>
-    <label class="label label--sml" for="disabledTextField">Skriv heia</label>
+    <input class="inputField input__disabled" type="text" id="disabledInputField" disabled/>
+    <label class="label label--sml" for="disabledInputField">Skriv heia</label>
 </div>
 ```
 
