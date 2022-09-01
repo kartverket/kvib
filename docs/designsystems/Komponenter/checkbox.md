@@ -22,7 +22,7 @@ Avmerkingsboksen får fokus når den velges med tastaturet.
 
 <div class="checkbox">
     <input type="checkbox" id="checkbox_1"/>
-    <label class="detail detail--sml" for="checkbox_1">Test</label>
+    <label class="detail detail--sml" for="checkbox_1">Input tekst</label>
 </div>
 
 <br/>
