@@ -21,24 +21,18 @@ Focus
     --icon-button-padding-xs: 0.5rem;
     --icon-button-padding-sml: 1rem;
     --button-tertiary-background: var(--white); /* Burde denne vært transparent?*/
+
 }
 
 /* Hovedklasse*/
 .button{
-    background: none; 
-    border: none;
+    border: 0.06rem solid;
     border-radius: 0.5rem;
     text-decoration: none;
     cursor: pointer;
     margin: 0.5rem;
     font-family: 'Mulish', 'sans-serif';
     font-weight: 700;
-    /*box-sizing: border-box;  Flyttet denne til main, og satt den på html-elementet, slik blir det konsekvent box-sizing hele veien*/
-
-    /*display: inline-flex;  Display bør om nødvendig settes der knappen brukes. */
-    /*justify-items: center; Tror ikke vi trenger disse tre, ser ingen forskjell når jeg fjerner de*/
-    /*justify-content: center;*/
-    /*align-items: center;*/
 }
 
 /* Fokus */
@@ -70,7 +64,6 @@ Focus
     width: fit-content;
     height: 3.5rem;
     padding: var(--padding-button--s-m-l);
-    /* h3--x-small*/
     font-size: 1rem;
     line-height: 1.5rem;
 }
@@ -88,6 +81,7 @@ Focus
 ************************/
 /* BUTTON PRIMARY*/
 .button__green--primary{
+    border: none;
     background-color: var(--green_dark);
     color: var(--white); /* Setter tekstfarge */
 }
@@ -120,8 +114,8 @@ Focus
 .button__green--secondary{
     background-color: var(--white);
     color: var(--green_dark);
-    outline-style: solid;
     outline-color: var(--green_dark);
+    border-color: var(--green_dark);
 }
 .button__green--secondary:hover{
     background-color: var(--green);
@@ -155,6 +149,7 @@ Focus
 
 /* BUTTON TERTIARY */
 .button__green--tertiary{
+    border: none;
     background-color: var(--button-tertiary-background);
     color: var(--green_dark);
 }
@@ -167,7 +162,6 @@ Focus
     background-color: var(--button-tertiary-background);
     color: var(--green_active);
 }
-
 
 .button__blue--tertiary{
     background-color: var(--button-tertiary-background);
