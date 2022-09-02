@@ -22,7 +22,6 @@
     transition: linear, 0.2s linear;
     font-family: inherit;
     border-radius: 0.25rem;
-    /*top: 25px;*/
 }
 
 .inputField:focus-visible {
@@ -41,10 +40,10 @@ input[required] + label:after {
 
 .exclamation {
     position: absolute;
-    top: 25px;
+    top: 24px;
     right: 0;
     width: 25px;
-    height: 39px;
+    height: 40px;
     background: var(--red_error_message);
     color: var(--white);
     border-bottom-right-radius: 4px;
