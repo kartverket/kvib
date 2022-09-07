@@ -1,17 +1,23 @@
+.checkbox {
+    display: flex;
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
 .checkbox input[type="checkbox"] {
     position: absolute;
     opacity: 0;
     height: 0;
     width: 0;
-    /*display: none;*/
 }
 
 .checkbox label {
     position: relative;
     display: inline-block;
+    margin-bottom: -1rem;
 
     /*16px width of fake checkbox + 6px distance between fake checkbox and text*/
-    padding-left: 2rem;
+    padding-left: 1.6rem;
 }
 
 .checkbox label::before,
@@ -33,7 +39,7 @@
     color: var(--blue_dark);
     background-color: white;
 
-    top: 0;
+    top: 3px;
     left: 0;
 }
 
@@ -45,12 +51,11 @@
 
     transform: rotate(-45deg);
 
-    left: 0.25rem;
-    top: 0.22rem;
+    top: 6px;
+    left: 4px;
 }
 
 /*Hide checkmark by default*/
-
 .checkbox input[type="checkbox"] + label::after {
     content: none;
 }
@@ -81,7 +86,6 @@
 /*set background on the checked state*/
 .checkbox input[type="checkbox"]:required:invalid + label::before {
     color: var(--red_error_message);
-    /*background-color: var(--roed_feilmelding);*/
 }
 
 /*Adding focus styles on the outer-box*/
