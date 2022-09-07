@@ -25,8 +25,6 @@ Avmerkingsboksen får fokus når den velges med tastaturet.
     <label class="detail detail--sml" for="checkbox_1">Input tekst</label>
 </div>
 
-<br/>
-
 ```markdown 
 <div class="checkbox">
     <input type="checkbox" id="checkbox_1"/>
@@ -42,8 +40,6 @@ Følgende avmerkingsboks får feilmeldingsfarge hvis ett av alternativene må v�
     <input type="checkbox" id="checkbox_2" required/>
     <label class="detail detail--sml" for="checkbox_2">Input tekst</label>
 </div>
-
-<br/>
 
 ```markdown
 <div class="checkbox">
