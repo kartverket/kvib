@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunk_kartverket_kvib=self.webpackChunk_kartverket_kvib||[]).push([[9305],{6458:e=>{e.exports=JSON.parse('{"label":"Avmerkingsbokser","permalink":"/kvib/blog/tags/avmerkingsbokser","allTagsPath":"/kvib/blog/tags","count":1}')}}]);
