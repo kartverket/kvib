@@ -9,6 +9,7 @@ displayed_sidebar: designsystemSidebar
 ## Opplastningsmoduler og elementer
 
 ### Sirkulært opplastningselement
+
 Det sirkulære opplastningselementet skal brukes på små flater og som ikon.
 I elementet under er <code>loader--size</code> 5.625rem / 90px. Størrelsen endres av designer for hvert prosjekt.
 
@@ -27,12 +28,14 @@ I elementet under er <code>loader--size</code> 5.625rem / 90px. Størrelsen endr
 <div class="white--loader loader--white loader--size"></div>
 ```
 
-
 ## Lineært opplastningselement
-Lineært opplastningselement eksemplet under bruker <code>class="progressbar__container"</code> for å sette størrelsen på elementet.
+
+Lineært opplastningselement eksemplet under bruker <code>class="progressbar__container"</code> for å sette størrelsen på
+elementet.
 I dette tilfellet, er container satt på <code>width: 50%;</code>
 
 ### Lineært opplastningselement uten verdi
+
 Lineært opplastningselementet bruker klassen <code>progressbar</code>.
 
 <div class="progressbar__container">
@@ -51,10 +54,12 @@ Lineært opplastningselementet bruker klassen <code>progressbar</code>.
 ```
 
 ### Lineært opplastningselement med verdi
+
 Lineært opplastningselementet bruker <code>::after</code> selector for å sette inn verdi og farge på fyll.
 Eksempel: <code>.progressbar--demo::after {width: 50%; background: var(--blaa_moerk);}</code>
 
-I eksemplet under er <code>progressbar--demo</code> animert til å bytte <code>width</code> fra 0% til 100%. Det gjelder også <code>progressbar--label</code> med hensyn til endring av verdi.
+I eksemplet under er <code>progressbar--demo</code> animert til å bytte <code>width</code> fra 0% til 100%. Det gjelder
+også <code>progressbar--label</code> med hensyn til endring av verdi.
 
 <div class="progressbar__container">
     <div class="progressbar__wrapper">
@@ -72,3 +77,19 @@ I eksemplet under er <code>progressbar--demo</code> animert til å bytte <code>w
     </div>
 </div>
 ```
+
+## Filopplastningselementer
+
+### Desktop
+
+<div class="upload__window__wrapper">
+<div class="upload__window__title"></div>
+<div class="upload__window__content">
+<div class="upload__content">
+    <label class="label label--sml">Dra inn filer, aller finn de her</label>
+    <small>(Marks størrelse 50mb</small>
+</div>
+    <button class="button button--sm button__blue--primary">Last opp</button>
+</div>
+</div>
+
