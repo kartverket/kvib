@@ -5,7 +5,7 @@ const CodeTheme = require('prism-react-renderer/themes/vsDark');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'KVIB Styleguides',
+  title: 'KVIB',
   tagline: 'Styleguides',
   url: 'https://kartverket.github.io/',
   baseUrl: '/kvib/',
