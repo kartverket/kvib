@@ -164,6 +164,7 @@ Focus
 }
 
 .button__blue--tertiary{
+    border: none;
     background-color: var(--button-tertiary-background);
     color: var(--blue);
 }

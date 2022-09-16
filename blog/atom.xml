@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kartverket.github.io/kvib/blog</id>
-    <title>KVIB Styleguides Blog</title>
+    <title>KVIB Blog</title>
     <updated>2022-09-08T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kartverket.github.io/kvib/blog"/>
-    <subtitle>KVIB Styleguides Blog</subtitle>
+    <subtitle>KVIB Blog</subtitle>
     <icon>https://kartverket.github.io/kvib/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[Versjon [1.0.25]]]></title>
