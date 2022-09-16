@@ -26,7 +26,7 @@ Focus
 
 /* Hovedklasse*/
 .button{
-    border: 0.06rem solid;
+    border: 0.006rem solid;
     border-radius: 0.5rem;
     text-decoration: none;
     cursor: pointer;
@@ -132,8 +132,8 @@ Focus
 .button__blue--secondary{
     background-color: var(--white);
     color: var(--blue);
-    outline-style: solid;
     outline-color: var(--blue);
+    border-color: var(--blue);
 }
 .button__blue--secondary:hover{
     background-color: var(--blue_hover);
