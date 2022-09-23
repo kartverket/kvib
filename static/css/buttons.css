@@ -30,7 +30,6 @@ Focus
     border-radius: 0.5rem;
     text-decoration: none;
     cursor: pointer;
-    margin: 0.5rem;
     font-family: 'Mulish', 'sans-serif';
     font-weight: 700;
 }
@@ -161,6 +160,13 @@ Focus
 .button__green--tertiary:active{
     background-color: var(--button-tertiary-background);
     color: var(--green_active);
+}
+
+.button__green--tertiary:disabled {
+    border: none;
+    outline: none;
+    background-color: var(--button-tertiary-background);
+    color: var(--gray_dark);
 }
 
 .button__blue--tertiary{
