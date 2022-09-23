@@ -75,3 +75,7 @@ img[alt=documenting_example].img_node_modules-\@docusaurus-theme-classic-lib-the
 .background--container {
     background-color: var(--gray_light);
 }
+
+.button {
+    margin: 0.5rem;
+}
