@@ -1,7 +1,6 @@
 .checkbox {
     display: flex;
     position: relative;
-    margin-bottom: 1.5rem;
 }
 
 .checkbox input[type="checkbox"] {
@@ -14,7 +13,6 @@
 .checkbox label {
     position: relative;
     display: inline-block;
-    margin-bottom: -1rem;
 
     /*16px width of fake checkbox + 6px distance between fake checkbox and text*/
     padding-left: 1.6rem;
