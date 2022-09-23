@@ -78,7 +78,7 @@ også <code>progressbar--label</code> med hensyn til endring av verdi.
 </div>
 ```
 
-## Filopplastningselementer (!)
+## (!)Filopplastningselementer 
 ***OBS! Under konstruksjon.***
 
 ***
