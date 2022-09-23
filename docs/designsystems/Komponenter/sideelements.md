@@ -78,18 +78,11 @@ også <code>progressbar--label</code> med hensyn til endring av verdi.
 </div>
 ```
 
-## Filopplastningselementer
+## Filopplastningselementer (!)
+***OBS! Under konstruksjon.***
 
-### Desktop
+***
 
-<div class="upload__window__wrapper">
-<div class="upload__window__title"></div>
-<div class="upload__window__content">
-<div class="upload__content">
-    <label class="label label--sml">Dra inn filer, aller finn de her</label>
-    <small>(Marks størrelse 50mb</small>
-</div>
-    <button class="button button--sm button__blue--primary">Last opp</button>
-</div>
-</div>
+
+
 
