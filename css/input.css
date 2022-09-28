@@ -20,7 +20,7 @@
     width: 100%;
     height: var(--input--height);
     padding: 0.5rem;
-    border: 0.063rem solid var(--dark_blue_button);
+    border: 0.063rem solid var(--blue_dark_button);
     box-sizing: border-box;
     background: #FFFFFF;
     transition: linear, 0.2s linear;
