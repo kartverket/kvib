@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_kartverket_kvib=self.webpackChunk_kartverket_kvib||[]).push([[6016],{6997:e=>{e.exports=JSON.parse('{"label":"S\xf8kefelt","permalink":"/kvib/blog/tags/sokefelt","allTagsPath":"/kvib/blog/tags","count":1}')}}]);
