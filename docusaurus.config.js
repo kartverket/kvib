@@ -27,11 +27,6 @@ const config = {
   i18n: {
     defaultLocale: 'no',
     locales: ['no'],
-    localeConfigs: {
-      no: {
-        label: 'Norsk',
-      }
-    },
   },
 
   stylesheets: [
@@ -70,6 +65,25 @@ const config = {
   themeConfig:
   /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
       ({
+        algolia: {
+          // The application ID provided by Algolia
+          appId: '5F5HK7A36S',
+
+          // Public API key: it is safe to commit it
+          apiKey: '13e6147634622624bf57712cbc4e9c8d',
+
+          indexName: 'kvib',
+
+          // Optional: see doc section below
+          contextualSearch: true,
+
+          // Optional: Algolia search parameters
+          searchParameters: {},
+
+          // Optional: path for search page that enabled by default (`false` to disable it)
+          searchPagePath: 'search',
+
+        },
         colorMode: {
           defaultMode: 'light',
           disableSwitch: true,
