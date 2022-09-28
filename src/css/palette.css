@@ -68,7 +68,7 @@
 }
 
 .palette--blue_dark_button {
-    background: var(--dark_blue_button);
+    background: var(--blue_dark_button);
 }
 
 .palette--red_error_message {

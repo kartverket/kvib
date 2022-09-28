@@ -6,7 +6,7 @@
     /* Blaa_Lys */
     background: var(--blue_light);
     /* Blaa_Moerk */
-    border: 1px solid var(--dark_blue_button);
+    border: 1px solid var(--blue_dark_button);
     border-radius: 8px;
 }
 
@@ -37,7 +37,7 @@
     top: -3px;
     -webkit-transition: .4s;
     transition: .4s;
-    background: var(--dark_blue_button);
+    background: var(--blue_dark_button);
 }
 
 input:checked + .toggle_switch--xs {
@@ -71,7 +71,7 @@ input:checked + .toggle_switch--xs:before {
     /* Blaa_Lys */
     background-color: var(--blue_light);
     /* Blaa_Moerk */
-    border: 1px solid var(--dark_blue_button);
+    border: 1px solid var(--blue_dark_button);
     border-radius: 8px;
 }
 
@@ -102,7 +102,7 @@ input:checked + .toggle_switch--xs:before {
     top: -3px;
     -webkit-transition: .4s;
     transition: .4s;
-    background-color: var(--dark_blue_button);
+    background-color: var(--blue_dark_button);
 }
 
 input:checked + .toggle_switch--l {
