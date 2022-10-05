@@ -1,0 +1,14 @@
+{
+  "item.label.Om KVIB": {
+    "message": "Om KVIB",
+    "description": "Navbar item with label Om KVIB"
+  },
+  "item.label.Designsystem": {
+    "message": "Designsystem",
+    "description": "Navbar item with label Designsystem"
+  },
+  "item.label.Versjoner": {
+    "message": "Versjoner",
+    "description": "Navbar item with label Versjoner"
+  }
+}

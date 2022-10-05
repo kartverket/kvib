@@ -25,7 +25,7 @@ const sidebars = {
     OmKvibSidebar: [{
         type: 'doc',
         id: 'omKvib/infoKvibID',
-        label: 'Om KVIB', // Label til sidebar
+        label: 'Kom i gang', // Label til sidebar
     },
         {
             type: 'doc',

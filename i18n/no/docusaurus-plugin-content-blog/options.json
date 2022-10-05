@@ -1,0 +1,14 @@
+{
+  "title": {
+    "message": "KVIB Versjoner",
+    "description": "The title for the blog used in SEO"
+  },
+  "description": {
+    "message": "En oversikt over versjoner av KVIB",
+    "description": "The description for the blog used in SEO"
+  },
+  "sidebar.title": {
+    "message": "Alle versjoner",
+    "description": "The label for the left sidebar"
+  }
+}

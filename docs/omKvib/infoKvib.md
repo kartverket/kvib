@@ -1,8 +1,8 @@
 ---
 id: infoKvibID
-title: Om KVIB
+title: Kom i gang
 description: Om KVIB
-slug: /
+slug: /omkvib
 displayed_sidebar: OmKvibSidebar
 ---
 

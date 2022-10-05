@@ -1,0 +1,31 @@
+.features {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.features a {
+  text-decoration: underline;
+  color: var(--black);
+}
+
+.features h3, p{
+  text-align: left;
+}
+
+.featureSvg {
+  height: 200px;
+  width: 200px;
+}
+
+.features__category {
+  width: 352px;
+  height: 150px;
+  background-color: var(--yellow);
+  padding: 1rem;
+}
+
+.features__contact {
+  padding: 2rem;
+}

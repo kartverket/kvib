@@ -6,7 +6,7 @@ const CodeTheme = require('prism-react-renderer/themes/vsDark');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'KVIB',
-  tagline: 'Styleguides',
+  tagline: 'Kartverkets designsystem',
   url: 'https://kartverket.github.io/',
   baseUrl: '/kvib/',
   onBrokenLinks: 'throw',
@@ -65,6 +65,12 @@ const config = {
   themeConfig:
   /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
       ({
+        docs: {
+          sidebar: {
+            hideable: true,
+            autoCollapseCategories: true,
+          },
+        },
         algolia: {
           // The application ID provided by Algolia
           appId: '5F5HK7A36S',
@@ -103,22 +109,27 @@ const config = {
             {
               type: 'doc',
               docId: 'omKvib/infoKvibID',
-              position: 'left',
-              label: 'Om KVIB',
+              position: 'right',
+              label: 'Kom i gang',
             },
             {
               type: 'doc',
               docId: 'designsystems/sizesID',
-              position: 'left',
+              position: 'right',
               label: 'Designsystem',
             },
 
-            {to: 'blog', label: 'Versjoner', position: 'left'},
+            {to: 'blog', label: 'Versjoner', position: 'right'},
 
           ],
         },
         footer: {
           style: 'dark',
+          logo: {
+            alt: 'Kartverket logo',
+            src: 'img/logo/kvib_logo.svg',
+            href: 'https://www.kartverket.no'
+          },
           links: [
             {
               title: 'Docs',
