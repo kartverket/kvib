@@ -125,11 +125,6 @@ const config = {
         },
         footer: {
           style: 'dark',
-          logo: {
-            alt: 'Kartverket logo',
-            src: 'img/logo/kvib_logo.svg',
-            href: 'https://www.kartverket.no'
-          },
           links: [
             {
               title: 'Docs',
