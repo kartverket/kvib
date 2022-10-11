@@ -12,9 +12,9 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-        <h1 className="heading heading__h1--l">{siteConfig.tagline}</h1>
-        <p className="heading heading__h1--s">Gjør oss konsistent, minimerer dobbeltarbeid og hjelp oss <br/> med å bygge gode og helhetlige brukeropplevelser</p>
-          <button className="button button__green--primary button--l"><Link className={styles.button__link} to="/omkvib">Kom i gang</Link></button>
+        <h1 className="heading heading__h1--l">Velkommen til {siteConfig.tagline}</h1>
+        <p className="heading heading__h1--s">VI ønsker å bidra til å gjøre oss mer konsise, minimere dobbeltarbeid og hjelpe oss med å bygge gode og helhetlige brukeropplevelser.</p>
+          <Link className={styles.button__link} to="/omkvib"><button className="button button__green--primary button--l">Kom i gang</button></Link>
       </div>
     </header>
   );

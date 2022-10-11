@@ -1,7 +1,7 @@
 .features {
   display: flex;
-  align-items: center;
-  padding: 2rem 0;
+  position: relative;
+  left: -20px;
   width: 100%;
 }
 
@@ -14,16 +14,12 @@
   text-align: left;
 }
 
-.featureSvg {
-  height: 200px;
-  width: 200px;
-}
-
 .features__category {
   width: 352px;
   height: 150px;
-  background-color: var(--yellow);
+  background-color: var(--yellow_light);
   padding: 1rem;
+  margin: 0.5rem;
 }
 
 .features__contact {
