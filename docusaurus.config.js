@@ -143,7 +143,7 @@ const config = {
               items: [
                 {
                   label: 'Om KVIB',
-                  to: '/',
+                  to: '/omkvib',
                 },
                 {
                   label: 'Installasjon',
