@@ -568,26 +568,19 @@ Dette er ikonbiblioteket til KVIB. Legg til nye ikoner ved behov.
 Dette ikonet har kun outline:
 
 ```markdown
-<div>
 <span class="material-symbols-outlined">home</span>
-</div>
 ```
 
-Output: 
-<div>
+Output:
 <span class="material-symbols-outlined">home</span>
-</div>
+
 
 <hr/>
 
 Dette ikonet har fyll:
 ```markdown
-<div>
 <span class="material-symbols-outlined material-symbols-outlined--filled">home</span>
-</div>
 ```
 
 Output:
-<div>
 <span class="material-symbols-outlined material-symbols-outlined--filled">home</span>
-</div>

@@ -1,13 +1,75 @@
 ---
 id: infoKvibID
-title: Om KVIB
+title: Om Kvib
 description: Om KVIB
-slug: /
+slug: /omkvib
 displayed_sidebar: OmKvibSidebar
 ---
+# Om Kvib
+<p class="heading heading__h1--s">
+Kvib er kartverkets digitale verktøykasse. 
+Ved bruk av Kvib jobber vi med en felles kjerne som hjelper oss med god arbeidsflyt og kontinuerlige leveranser
+</p>
 
-KVIB består av npm-biblioteket KVIB-CSS, som inneholder felles CSS-filer for Kartkverkets applikasjoner.
-Denne nettsiden inneholder dokumentasjon av de felles designprinsippene og bruk av stilene i KVIB-CSS. Designet til komponentene har utgangspunkt i designet som ligger på Figma-KVIB. Innholdet der er laget og godkjent av designer.
+Et designsystem blir aldri helt ferdig, men er et organisk verktøy som utvikler seg utover tid.
+
+## Kom i gang som designer
+<p class="body-text body-text--sml">For å lage skisser til digitale flater bruker vi Figma. Figma er et verktøy som er effektiv i bruk av skisser, prototyping, leveranse, kommunisere og hente ut kode. 
+Alt lagres i skyen og trenger ikke å lastes ned, dermed er et supert verktøy samabeide godt.</p>
+
+### Slack
+<p class="body-text body-text--sml">
+Som kommunikasjonsverktøy bruker vi Slack. Slack er et godt verktøy for både chat og kanaler til faggrupper, prosjektgrupper og annet. 
+Kanaler som kan være nyttig for deg er #Kartverkets-designteam, #gen-kvib og #laug-brukeropplevelse. Kartverkets slack finner du her
+</p>
+
+### UX-møter
+<p class="body-text body-text--sml">
+For å sikre helhetlige tjenester og god dialog på tvers av team har vi etablert UX-møter en gang i uka. 
+Ønsker du å bli inkludert i møtene kan du sende en mail til wanwisa.johnsrud@kartverket.no. Velkommen!
+</p>
+
+## Kom i gang som utvikler
+### HTML link
+Importer KVIB HTML link:
+
+```markdown
+ <link rel="stylesheet" href='https://kartverket.github.io/kvib/css/main.css'>
+```
+
+### CSS import
+Importer KVIB i index.css i prosjektet:
+
+```markdown
+@import url("https://kartverket.github.io/kvib/css/main.css");
+```
+
+### Installasjon av KVIB NPM Package
+
+#### (!)KVIB React components
+***OBS! KVIB React Components er under konstruksjon:***
+
+#### KVIB-CSS
+
+For å laste ned og ta i bruk KVIB-CSS, skriv følgende kommando i terminalen:
+
+```markdown
+npm i @kartverket/kvib-css
+```
+
+Importer eller legg til link til biblioteket i CSS eller HTML filen i prosjektet.
+
+- I HTML fil:
+
+```markdown
+<link rel="stylesheet" href="PATH/node_modules/@kartverket/kvib/main.css">
+```
+
+- I CSS fil:
+
+```markdown
+@import 'PATH/node_modules/@kartverket/kvib/main.css';
+```
 
 ## Krav til KVIB
 

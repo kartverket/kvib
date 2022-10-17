@@ -1,0 +1,32 @@
+.features {
+  display: flex;
+  position: relative;
+  left: -20px;
+  width: 100%;
+}
+
+.features a {
+  text-decoration: underline;
+  color: var(--black);
+}
+
+.features h3, p{
+  text-align: left;
+}
+
+.features__category {
+  width: 352px;
+  height: 150px;
+  background-color: var(--yellow_light);
+  padding: 1rem;
+  margin: 0.5rem;
+}
+
+.features__contact {
+  padding: 2rem;
+}
+
+.message {
+  text-decoration: none;
+  color: white;
+}

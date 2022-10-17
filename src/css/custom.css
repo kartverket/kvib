@@ -10,6 +10,7 @@ https://docusaurus.io/docs/styling-layout*/
 @import 'typografi/typografiStyle.css';
 @import 'navigation.css';
 @import 'links.css';
+@import 'algolia.css';
 @import "/static/css/main.css";
 
 
@@ -78,4 +79,17 @@ img[alt=documenting_example].img_node_modules-\@docusaurus-theme-classic-lib-the
 
 .button {
     margin: 0.5rem;
+}
+
+.footer {
+    background-color: var(--gray_light);
+    color: var(--black);
+}
+
+.footer__title {
+    color: var(--black);
+}
+
+.footer__link-item {
+    color: var(--green_dark);
 }
