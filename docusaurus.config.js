@@ -169,7 +169,7 @@ const config = {
               items: [
                 {
                   label: '#gen-kvib på slack',
-                  href: '#',
+                  href: 'https://slack.com/app_redirect?channel=gen-kvib',
                 },
                 {
                   label: 'Send oss en epost',
