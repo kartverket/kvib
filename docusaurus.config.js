@@ -133,9 +133,13 @@ const config = {
         },
         footer: {
           style: 'dark',
+          logo: {
+            alt: 'Kartverket KVIB Logo',
+            src: 'img/logo/kartverket_liggende.png',
+          },
           links: [
             {
-              title: 'Docs',
+              title: 'Nyttige sider',
               items: [
                 {
                   label: 'Om KVIB',
@@ -161,16 +165,20 @@ const config = {
               ],
             },
             {
-              title: 'Community',
+              title: 'Kontakt',
               items: [
                 {
-                  label: 'Slack',
+                  label: '#gen-kvib på slack',
                   href: '#',
+                },
+                {
+                  label: 'Send oss en epost',
+                  href: 'mailto:kvib-feedbacks-aaaahwh252gnftmofucpaa47ca@kartverketgroup.slack.com?subject=KVIB Feedback'
                 },
               ],
             },
           ],
-          copyright: `Copyright © ${new Date().getFullYear()} KVIB.`,
+          copyright: `© ${new Date().getFullYear()} KVIB.`,
         },
         prism: {
           theme: CodeTheme,
