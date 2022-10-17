@@ -25,3 +25,8 @@
 .features__contact {
   padding: 2rem;
 }
+
+.message {
+  text-decoration: none;
+  color: white;
+}

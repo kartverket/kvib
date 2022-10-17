@@ -59,7 +59,7 @@ const FeatureList = [
         ),
         description: (
             <p className="label label--sml">
-               Trykkmateriell
+               Trykkmateriell (Kommer snart)
             </p>
         ),
     },
@@ -96,7 +96,7 @@ export default function HomepageFeatures() {
                     <h1 className="heading heading__h1--m">Ser du noe som mangler?</h1>
                     <p className="heading heading__h2--s">Et designsystem er i kontinuerlig utvikling. <br/> Send oss en mail og bidra med at systemet blir
                         enda bedre!</p>
-                    <button className="button button__green--secondary button--sm">Skriv en melding</button>
+                    <a href="mailto:kvib-feedbacks-aaaahwh252gnftmofucpaa47ca@kartverketgroup.slack.com?subject=KVIB Feedback"><button className="button button__green--secondary button--sm">Skriv en melding</button></a>
                 </div>
             </section>
         </>

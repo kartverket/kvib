@@ -10,6 +10,7 @@ https://docusaurus.io/docs/styling-layout*/
 @import 'typografi/typografiStyle.css';
 @import 'navigation.css';
 @import 'links.css';
+@import 'algolia.css';
 @import "/static/css/main.css";
 
 

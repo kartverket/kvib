@@ -53,7 +53,6 @@ const config = {
           postsPerPage: 'ALL',
           blogSidebarTitle: 'Alle versjoner',
           blogSidebarCount:'ALL',
-
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -67,7 +66,6 @@ const config = {
       ({
         docs: {
           sidebar: {
-            hideable: true,
             autoCollapseCategories: true,
           },
         },
@@ -113,14 +111,24 @@ const config = {
               label: 'Kom i gang',
             },
             {
-              type: 'doc',
-              docId: 'designsystems/sizesID',
+              to: 'designsystem/Komponenter',
               position: 'right',
-              label: 'Designsystem',
+              label: 'Komponenter',
             },
-
-            {to: 'blog', label: 'Versjoner', position: 'right'},
-
+            {
+              to: 'designsystem/designTokens',
+              position: 'right',
+              label: 'Tokens',
+            },
+            {
+              to: 'designsystems/uu',
+              position: 'right',
+              label: 'Universell utforming',
+            },
+            {
+              to: 'blog',
+              label: 'Versjoner',
+              position: 'right'},
           ],
         },
         footer: {
