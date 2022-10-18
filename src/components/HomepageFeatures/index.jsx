@@ -93,6 +93,23 @@ export default function HomepageFeatures() {
             <br/>
             <section className={styles.features__contact}>
                 <div className="container">
+                    <h1 className="heading heading__h1--m">Designbiblioteket skal:</h1>
+                    <ul className="body-text body-text--sml">
+                        <li>Alltid være vedlikeholdt</li>
+                        <li>Være enkelt å ta i bruk</li>
+                        <li>Kun innehiolde UU-godkjente elementer og stiler</li>
+                        <li>Alltid ha oppdatert dokumentasjom</li>
+                        <li>Inneholde oppdatert dokumentasjon av alle komponenter, med eksempler på bruk og UU</li>
+                        <li>Inneholde responsive komponenter</li>
+                        <li>Ha en endringslogg med beskrivelse av hav som er nytt i hver versjon</li>
+                        <li>Ha tydelige retningslinjer for nye designere og prosjekter</li>
+                        <li>Utformes på en slik måte at det er minimalt behov for overrides i de enkelte prosjektene</li>
+                        <li>Følge KVIB sine navngivningskonvensjoner for CSS-klasser, som er forståelige både for utviklere og designere</li>
+                    </ul>
+                </div>
+            </section>
+            <section className={styles.features__contact}>
+                <div className="container">
                     <h1 className="heading heading__h1--m">Ser du noe som mangler?</h1>
                     <p className="heading heading__h2--s">Et designsystem er i kontinuerlig utvikling. <br/> Send oss en mail og bidra med at systemet blir
                         enda bedre!</p>
