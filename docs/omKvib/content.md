@@ -28,6 +28,7 @@ Dokumentasjon HER
 ```
 
 ### Innhold
+<p class="body-text body-text--sml">
 Få alltid godkjent komponenter av designer før det legges inn i KVIB. Bildet under viser hvordan det kan se ut. Dokumentasjon av en komponent skal inneholde:
 
 * Beskrivende tittel: Bruk mest naturlige overskriftselement, avhengig av sturkturen på resten av siden, som tittel på den spesifikke komponenten
@@ -54,6 +55,6 @@ Få alltid godkjent komponenter av designer før det legges inn i KVIB. Bildet u
   - Lag en egen _.html_ fil for komponenten, og link til denne i dokumentasjonen. Dette er hovedsaklig for å demonstrere oppførselen til komponenten
   - Legg evt inn ekstra statiske bilder med beskrivende tekst for å vise flere variasjoner av komponenten
 
-
+</p>
 
 ![documenting_example](/img/image_docs/documenting_example.PNG 'Eksempel: Statisk bilde av grønn primærknapp')
