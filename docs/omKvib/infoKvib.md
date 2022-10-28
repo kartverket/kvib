@@ -11,12 +11,10 @@ Kvib er kartverkets digitale verktøykasse. Ved bruk av Kvib jobber vi med en fe
 </p>
 
 <p class="body-text body-text--sml">
-Et designsystem blir aldri helt ferdig, men er et organisk verktøy som utvikler seg utover tid. Har du kommentarer eller har du lyst til å bidra? <a href="mailto:kvib-feedbacks-aaaahwh252gnftmofucpaa47ca@kartverketgroup.slack.com?subject=KVIB Feedback">Send oss en mail</a>
+Et designsystem blir aldri helt ferdig, men er et organisk verktøy som utvikler seg utover tid. Har du kommentarer eller har du lyst til å bidra? <br/> <a href="mailto:kvib-feedbacks-aaaahwh252gnftmofucpaa47ca@kartverketgroup.slack.com?subject=KVIB Feedback">Send oss en mail</a>
 </p>
 
 ## Kom i gang som designer
-<p class="body-text body-text--sml">For å lage skisser til digitale flater bruker vi Figma. Figma er et verktøy som er effektiv i bruk av skisser, prototyping, leveranse, kommunisere og hente ut kode. 
-Alt lagres i skyen og trenger ikke å lastes ned, dermed er et supert verktøy samabeide godt.</p>
 
 ### Figma
 <p class="body-text body-text--sml">
