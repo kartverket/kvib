@@ -42,6 +42,10 @@ p {
     max-width: 60ch;
 }
 
+.heading {
+    max-width: 50ch;
+}
+
 /*sette bredde på gif i docs/designsystems/Komponenter/slider.md*/
 img[alt=sliderGif] { width: 70%;}
 
