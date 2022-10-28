@@ -77,6 +77,12 @@ img[alt=documenting_example].img_node_modules-\@docusaurus-theme-classic-lib-the
     background-color: var(--gray_light);
 }
 
+.background--container--green {
+    background-color: var(--green_light);
+    padding: 16px;
+    border-radius: 8px;
+}
+
 .button {
     margin: 0.5rem;
 }

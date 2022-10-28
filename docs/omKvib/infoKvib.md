@@ -5,59 +5,82 @@ description: Om KVIB
 slug: /omkvib
 displayed_sidebar: OmKvibSidebar
 ---
-# Om Kvib
+
 <p class="heading heading__h1--s">
-Kvib er kartverkets digitale verktøykasse. 
-Ved bruk av Kvib jobber vi med en felles kjerne som hjelper oss med god arbeidsflyt og kontinuerlige leveranser
+Kvib er kartverkets digitale verktøykasse. Ved bruk av Kvib jobber vi med en felles kjerne som hjelper oss med god arbeidsflyt og helhetlig brukeropplevelse.
 </p>
 
-Et designsystem blir aldri helt ferdig, men er et organisk verktøy som utvikler seg utover tid.
+<p class="body-text body-text--sml">
+Et designsystem blir aldri helt ferdig, men er et organisk verktøy som utvikler seg utover tid. Har du kommentarer eller har du lyst til å bidra? <a href="mailto:kvib-feedbacks-aaaahwh252gnftmofucpaa47ca@kartverketgroup.slack.com?subject=KVIB Feedback">Send oss en mail</a>
+</p>
 
 ## Kom i gang som designer
 <p class="body-text body-text--sml">For å lage skisser til digitale flater bruker vi Figma. Figma er et verktøy som er effektiv i bruk av skisser, prototyping, leveranse, kommunisere og hente ut kode. 
 Alt lagres i skyen og trenger ikke å lastes ned, dermed er et supert verktøy samabeide godt.</p>
 
+### Figma
+<p class="body-text body-text--sml">
+For å lage skisser til digitale flater bruker vi Figma. Figma er et effektiv verktøy som brukes til skisser, prototyping, leveranse, kommunisere og hente ut kode. Alt lagres i skyen, fungerer både som applikasjon og i nettleser og trenger derfor ikke å lastes ned. 
+Et supert verktøy for å lettere kunne dele underveis i prosessen og samabeide godt på tvers av fagfelt. 
+
+[Kartverkets Figma <span class="material-symbols-outlined">open_in_new</span>](https://www.figma.com/files/team/1014807223471806266)
+
+Har du ikke tilgang eller ønsker å få en kort introduksjon til Figma? Kontakt <a href="mailto:wanwisa.johnsrud@kartverket.no?subject=KVIB Figma">wanwisa.johnsrud@kartverket.no.</a>
+</p>
+
 ### Slack
 <p class="body-text body-text--sml">
 Som kommunikasjonsverktøy bruker vi Slack. Slack er et godt verktøy for både chat og kanaler til faggrupper, prosjektgrupper og annet. 
-Kanaler som kan være nyttig for deg er #Kartverkets-designteam, #gen-kvib og #laug-brukeropplevelse. Kartverkets slack finner du her
+Kanaler som kan være nyttig for deg er #Kartverkets-designteam, #gen-kvib og #laug-brukeropplevelse.
+
+Kartverkets slack finner du [Her <span class="material-symbols-outlined">open_in_new</span>](https://kartverketgroup.slack.com/)
 </p>
 
 ### UX-møter
 <p class="body-text body-text--sml">
 For å sikre helhetlige tjenester og god dialog på tvers av team har vi etablert UX-møter en gang i uka. 
-Ønsker du å bli inkludert i møtene kan du sende en mail til wanwisa.johnsrud@kartverket.no. Velkommen!
+Ønsker du å bli inkludert i møtene kan du sende en mail til <a href="mailto:wanwisa.johnsrud@kartverket.no?subject=KVIB UX-møte">wanwisa.johnsrud@kartverket.no.</a> Velkommen!
 </p>
 
+
 ## Kom i gang som utvikler
-### HTML link
-Importer KVIB HTML link:
+<p class="body-text body-text--sml">
+I kartverkets designsystem finner du komponentene som er godkjent i bruk. Du kan enkelt laste ned ved bruk av NPM eller kopiere lenken til CSS-stylingen for prosjektet ditt.
+</p>
+
+### Bruk av CSS
+
+<div class="background--container--green">
+
+#### Kopier CSS- biblioteket
+
+##### HTML link 
+<p class="body-text body-text--sml">Importer KVIB HTML link:</p>
 
 ```markdown
  <link rel="stylesheet" href='https://kartverket.github.io/kvib/css/main.css'>
 ```
 
-### CSS import
-Importer KVIB i index.css i prosjektet:
+##### CSS import
+<p class="body-text body-text--sml">Importer KVIB i index.css i prosjektet:</p>
 
 ```markdown
 @import url("https://kartverket.github.io/kvib/css/main.css");
 ```
+</div>
 
-### Installasjon av KVIB NPM Package
+<br/>
 
-#### (!)KVIB React components
-***OBS! KVIB React Components er under konstruksjon:***
+<div class="background--container--green">
 
-#### KVIB-CSS
-
-For å laste ned og ta i bruk KVIB-CSS, skriv følgende kommando i terminalen:
+#### Last ned CSS-biblioteket
+<p class="body-text body-text--sml">For å laste ned og ta i bruk KVIB-CSS, skriv følgende kommando i terminalen:</p>
 
 ```markdown
 npm i @kartverket/kvib-css
 ```
 
-Importer eller legg til link til biblioteket i CSS eller HTML filen i prosjektet.
+<p class="body-text body-text--sml">Importer eller legg til link til biblioteket i CSS eller HTML filen i prosjektet.</p>
 
 - I HTML fil:
 
@@ -71,26 +94,8 @@ Importer eller legg til link til biblioteket i CSS eller HTML filen i prosjektet
 @import 'PATH/node_modules/@kartverket/kvib/main.css';
 ```
 
-## Krav til KVIB
+</div>
 
-Designbiblioteket skal:
+### React
+Kommer snart
 
-* Alltid være vedlikeholdt
-* Være enkelt å ta i bruk
-* Kun inneholde UU-godkjente elementer og stiler
-* Alltid ha oppdatert dokumentasjon
-* Inneholde oppdatert dokumentasjon av alle komponenter, med eksempler på bruk og UU
-* Inneholde responsive komponenter
-* Ha en endringslogg med beskrivelse av hva som er nytt i hver versjon
-* Ha tydelige retningslinjer for nye designere og prosjekter
-* Utformes på en slik måte at det er minimalt behov for overrides i de enkelte prosjektene
-* Følge KVIB sine navngivningskonvensjoner for CSS-klasser, som er forståelige både for utviklere og designere
-
-
-## Konvensjoner for CSS-klassenavn
-Ved å bruke en felles struktur på navngivning av CSS-klasser blir koden enklere å lese, forstå og vedlikeholde. Det er derfor viktig at kode som implementeres i KVIB følger samme konvensjoner.
-
-KVIB bruker navngivningskonvensjoner fra BEM (Block Element Modifier), som baseres på å dele CSS-klasser inn i tre typer; _blokk, element_ og _modifier_. En blokk brukes om entiter som kan stå alene og fremdeles gi mening.
-Blokker kan nøstes og samhandle med andre blokker, men alle er semantiske like.
-Et element er en del av en blokk og gir ikke mening alene, og er dermed semantisk knyttet til blokken. En modifier fungerer som flagg til en blokk eller et element, og brukes til å endre utseende, oppførsel eller state.
-Les [BEM sine navngivningskonvensjoner <span class="material-symbols-outlined">open_in_new</span>](https://en.bem.info/methodology/naming-convention/) for en mer detaljert beskrivelse om bruk av konvensjonene, i tillegg til eksempler. Følg disse ved implementasjon av CSS-klasser. 
