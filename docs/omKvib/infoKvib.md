@@ -19,19 +19,28 @@ Et designsystem blir aldri helt ferdig, men er et organisk verktøy som utvikler
 ### Figma
 <p class="body-text body-text--sml">
 For å lage skisser til digitale flater bruker vi Figma. Figma er et effektiv verktøy som brukes til skisser, prototyping, leveranse, kommunisere og hente ut kode. Alt lagres i skyen, fungerer både som applikasjon og i nettleser og trenger derfor ikke å lastes ned. 
-Et supert verktøy for å lettere kunne dele underveis i prosessen og samabeide godt på tvers av fagfelt. 
+Et supert verktøy for å lettere kunne dele underveis i prosessen og samabeide godt på tvers av fagfelt.
+</p>
+
+<p class="body-text body-text--sml">
 
 [Kartverkets Figma <span class="material-symbols-outlined">open_in_new</span>](https://www.figma.com/files/team/1014807223471806266)
 
-Har du ikke tilgang eller ønsker å få en kort introduksjon til Figma? Kontakt <a href="mailto:wanwisa.johnsrud@kartverket.no?subject=KVIB Figma">wanwisa.johnsrud@kartverket.no.</a>
+</p>
+
+<p class="body-text body-text--sml">
+Har du ikke tilgang eller ønsker å få en kort introduksjon til Figma? <br/> Kontakt <a href="mailto:wanwisa.johnsrud@kartverket.no?subject=KVIB Figma">wanwisa.johnsrud@kartverket.no.</a>
 </p>
 
 ### Slack
 <p class="body-text body-text--sml">
 Som kommunikasjonsverktøy bruker vi Slack. Slack er et godt verktøy for både chat og kanaler til faggrupper, prosjektgrupper og annet. 
 Kanaler som kan være nyttig for deg er #Kartverkets-designteam, #gen-kvib og #laug-brukeropplevelse.
+</p>
+<p class="body-text body-text--sml">
 
 Kartverkets slack finner du [Her <span class="material-symbols-outlined">open_in_new</span>](https://kartverketgroup.slack.com/)
+
 </p>
 
 ### UX-møter

@@ -28,11 +28,6 @@ const sidebars = {
         label: 'Kom i gang', // Label til sidebar
     },
         {
-            type: 'doc',
-            id: 'omKvib/installationID',
-            label: 'KVIB Installasjon', // Label til sidebar
-        },
-        {
             type: 'category',
             label: 'Utvide KVIB', // Label til sidebar
             link: {                 // forside til denne kategorien.
