@@ -1,0 +1,19 @@
+{
+  "name": "@kartverket/kvib-design-tokens",
+  "version": "1.0.0",
+  "description": "All Kvibs design tokens",
+  "homepage": "https://github.com/kartverket/kvib/packages/kvib-design-tokens",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kartverket/kvib.git",
+    "directory": "packages/kvib-design-tokens"
+  },
+  "scripts": {
+    "build": "style-dictionary build"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "style-dictionary": "^3.0.2",
+    "prettier": "^2.4.1"
+  }
+}
