@@ -8,6 +8,11 @@
     "url": "https://github.com/kartverket/kvib.git",
     "directory": "packages/kvib-design-tokens"
   },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/tokens.js",
+  "types": "./dist/tokens.d.ts",
   "scripts": {
     "build": "style-dictionary build"
   },
