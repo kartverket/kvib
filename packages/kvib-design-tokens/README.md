@@ -20,10 +20,6 @@ There are a lot of colors in our palette, and the colors are structured into a f
 
 There are several more, like colors/main for our main color palette (most colors should come from here), and colors/text for colors used in typography.
 
-### Depth
-
-The depth category includes drop shadows and z-indexes (elevation), grouped by regular use cases.
-
 ### Fonts
 
 The font category includes all font families and styles - including matching line heights, font weights and so forth.
@@ -33,10 +29,6 @@ The font category includes all font families and styles - including matching lin
 You'll find our spacing scale in sizes, along with border radii, breakpoints, font sizes, line heights and strokes.
 
 Spacing values are available as t-shirt sizes (md, 2xl etc), and pixel values (16px, 32px etc.) under size/spacing and size/spacing-px, respectively. Use the one you're most accustomed to (but try to standardize on one in a single app!)
-
-### Timings
-
-The timings category contains all transition timings and easing functions.
 
 ## Usage
 
