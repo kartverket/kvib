@@ -12,13 +12,17 @@
     "dist"
   ],
   "main": "./dist/tokens.js",
+  "module": "./dist/tokens.mjs",
   "types": "./dist/tokens.d.ts",
   "scripts": {
-    "build": "style-dictionary build"
+    "build": "ts-node scripts/build.ts"
   },
   "license": "MIT",
   "devDependencies": {
+    "json-to-ts": "^1.7.0",
+    "prettier": "^2.4.1",
     "style-dictionary": "^3.0.2",
-    "prettier": "^2.4.1"
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.3"
   }
 }

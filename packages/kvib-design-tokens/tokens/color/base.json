@@ -1,22 +1,23 @@
 {
   "color": {
     "base": {
-      "gray": {
-        "light": {
-          "value": "#CCCCCC"
-        },
-        "medium": {
-          "value": "#999999"
-        },
-        "dark": {
-          "value": "#111111"
-        }
-      },
-      "red": {
-        "value": "#FF0000"
-      },
       "green": {
-        "value": "#00FF00"
+        "value": "#05502A"
+      },
+      "blue": {
+        "value": "#1A589F"
+      },
+      "pink": {
+        "value": "#F7E6EB"
+      },
+      "yellow": {
+        "value": "#FFDD9D"
+      },
+      "black": {
+        "value": "#222222"
+      },
+      "white": {
+        "value": "FFFFFF"
       }
     }
   }
