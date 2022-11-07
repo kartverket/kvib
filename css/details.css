@@ -5,7 +5,8 @@
 
 .expandable .expandable__title {
     width: 100%;
-    padding: 0.5rem 0;
+    padding-top: 0.5rem;
+    padding-right: 2rem;
     border-top: 1px solid black;
     position: relative;
     cursor: pointer;
@@ -36,7 +37,6 @@
     right: 0;
     content: '';
     background-color: black;
-    text-align: right;
     transform: translateY(-50%);
     transition: transform 0.2s ease-in-out;
 }

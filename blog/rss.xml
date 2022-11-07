@@ -4,10 +4,20 @@
         <title>KVIB Blog</title>
         <link>https://kartverket.github.io/kvib/blog</link>
         <description>KVIB Blog</description>
-        <lastBuildDate>Fri, 23 Sep 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 07 Nov 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>no</language>
+        <item>
+            <title><![CDATA[Versjon [1.0.32]]]></title>
+            <link>https://kartverket.github.io/kvib/blog/2022/11/07/version-[1.0.32]</link>
+            <guid>/2022/11/07/version-[1.0.32]</guid>
+            <pubDate>Mon, 07 Nov 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[Utvidbart panel linebreak.]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="changed">Changed<a class="hash-link" href="#changed" title="Direct link to heading">​</a></h2><ul><li>Fikset linebreak i utvidbart panel / details komponent.</li></ul>]]></content:encoded>
+            <category>dokumentasjon</category>
+            <category>Utvidbart panel</category>
+        </item>
         <item>
             <title><![CDATA[Versjon [1.0.29]]]></title>
             <link>https://kartverket.github.io/kvib/blog/2022/09/23/version-[1.0.29]</link>
