@@ -5,11 +5,11 @@
   "include": ["src"],
   "exclude": ["node_modules"],
   "compilerOptions": {
-    "moduleResolution": "node",
+    "jsx": "react-jsx",
     "lib": ["ES2015", "DOM"],
     "module": "ESNext",
     "rootDir": "src",
     "outDir": "dist",
-    "jsx": "react"
+    "target": "es6"
   }
 }
