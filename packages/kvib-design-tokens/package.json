@@ -15,6 +15,7 @@
   "module": "./dist/tokens.mjs",
   "types": "./dist/tokens.d.ts",
   "scripts": {
+    "dev": "ts-node scripts/build.ts",
     "build": "ts-node scripts/build.ts"
   },
   "license": "MIT",
