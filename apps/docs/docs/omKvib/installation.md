@@ -31,7 +31,7 @@ Importer KVIB i index.css i prosjektet:
 For å laste ned og ta i bruk KVIB React komponenter, skriv følgende kommando i terminalen:
 
 ```markdown
-npm i @kartverket/kvib-react-components
+npm i @kvib/react
 ```
 
 #### KVIB-CSS
@@ -39,7 +39,7 @@ npm i @kartverket/kvib-react-components
 For å laste ned og ta i bruk KVIB-CSS, skriv følgende kommando i terminalen:
 
 ```markdown
-npm i @kartverket/kvib-css
+npm i @kvib/css
 ```
 
 Importer eller legg til link til biblioteket i CSS eller HTML filen i prosjektet.

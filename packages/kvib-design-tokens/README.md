@@ -36,22 +36,22 @@ Design tokens can be consumed through a variety of technologies.
 
 ### JavaScript / TypeScript
 
-Install the package with `npm install @kartverket/kvib-design-tokens`.
+Install the package with `npm install @kvib/design-tokens`.
 
 ```tsx
-import tokens from "@kartverket/kvib-design-tokens";
+import tokens from "@kvib/design-tokens";
 
 const background = tokens.colors.base.green;
 ```
 
 ### CSS
 
-Install the package with `npm install @kartverket/kvib-design-tokens`.
+Install the package with `npm install @kvib/design-tokens`.
 
 All values are available as CSS custom properties. If you're using Webpack, you can use the tokens like this:
 
 ```css
-@import "~@kartverket/kvib-design-tokens/dist/tokens.css";
+@import "~@kvib/design-tokens/dist/tokens.css";
 
 .hero {
   font-size: var(--size-font-small);
@@ -60,12 +60,12 @@ All values are available as CSS custom properties. If you're using Webpack, you 
 
 ### SCSS
 
-Install this package with `npm install @kartverket/kvib-design-tokens`.
+Install this package with `npm install @kvib/design-tokens`.
 
 All values are available as SCSS variables.
 
 ```scss
-@import "~@kartverket/kvib-design-tokens/dist/tokens";
+@import "~@kvib/design-tokens/dist/tokens";
 
 .hero {
   font-size: $size-font-small;

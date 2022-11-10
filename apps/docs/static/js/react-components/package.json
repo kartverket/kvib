@@ -1,5 +1,5 @@
 {
-  "name": "@kartverket/kvib-react-components",
+  "name": "@kvib/react",
   "version": "Handled by CI/CD",
   "description": "NPM-pakke for KVIB react komponenter",
   "main": "index.js",

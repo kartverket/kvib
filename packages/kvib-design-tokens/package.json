@@ -1,5 +1,5 @@
 {
-  "name": "@kartverket/kvib-design-tokens",
+  "name": "@kvib/design-tokens",
   "version": "1.0.0",
   "description": "All Kvibs design tokens",
   "homepage": "https://github.com/kartverket/kvib/packages/kvib-design-tokens",

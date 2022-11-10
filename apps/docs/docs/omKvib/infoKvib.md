@@ -84,7 +84,7 @@ I kartverkets designsystem finner du komponentene som er godkjent i bruk. Du kan
 <p class="body-text body-text--sml">For å laste ned og ta i bruk KVIB-CSS, skriv følgende kommando i terminalen:</p>
 
 ```markdown
-npm i @kartverket/kvib-css
+npm i @kvib/css
 ```
 
 <p class="body-text body-text--sml">Importer eller legg til link til biblioteket i CSS eller HTML filen i prosjektet.</p>
