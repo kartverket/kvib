@@ -1,6 +1,6 @@
 {
   "name": "@kvib/css",
-  "version": "Handled by CI/CD",
+  "version": "1.0.0",
   "description": "NPM-pakke for KVIB-CSS",
   "main": "index.js",
   "scripts": {

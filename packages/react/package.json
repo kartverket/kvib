@@ -1,6 +1,6 @@
 {
   "name": "@kvib/react",
-  "version": "Handled by CI/CD",
+  "version": "1.0.0",
   "description": "NPM-pakke for KVIB react komponenter",
   "main": "index.js",
   "scripts": {
