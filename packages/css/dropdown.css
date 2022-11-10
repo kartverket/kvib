@@ -1,4 +1,4 @@
-@import "~@kvib/design-tokens/dist/tokens.css";
+@import "../design-tokens/dist/tokens.css";
 /*css for nedtrekksmeny*/
 
 .label--dropdown {
