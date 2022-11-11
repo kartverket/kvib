@@ -5,8 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "start-storybook -p 6006",
-    "build": "build-storybook",
-    "chromatic": "npx chromatic --project-token=76c5ea3c8810"
+    "build": "build-storybook"
   },
   "dependencies": {
     "react": "^18.2.0",
