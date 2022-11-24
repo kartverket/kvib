@@ -2,7 +2,7 @@
   "name": "@kvib/kvib-css",
   "version": "1.0.0",
   "description": "NPM-pakke for KVIB-CSS",
-  "main": "index.js",
+  "main": "main.css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
