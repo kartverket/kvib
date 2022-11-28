@@ -1,0 +1,16 @@
+{
+  "title": "Knapper",
+  "description": "Her er en oversikt over utvalget av Knapper i KVIB. Disse er blant annet bygget opp ved bruk av desing tokens fra KVIB, eksempelvis farger og typografi. I dokumentasjonen følger beskrivelse av komponenten og bruksområde, sammen med kodeeksempler.",
+  "slug": "designsystems/Komponenter/Knapper",
+  "permalink": "/kvib/designsystems/Komponenter/Knapper",
+  "navigation": {
+    "previous": {
+      "title": "Utvidbart panel",
+      "permalink": "/kvib/designsystem/komponenter/utvidbar-panel"
+    },
+    "next": {
+      "title": "(!)Slider knapp (Toggle Switch)",
+      "permalink": "/kvib/designsystems/Komponenter/Knapper/toggleSwitchID"
+    }
+  }
+}

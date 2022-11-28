@@ -1,0 +1,29 @@
+{
+  "unversionedId": "omKvib/routineID",
+  "id": "omKvib/routineID",
+  "title": "Kvalitetskontroll",
+  "description": "Rutine for kvalitetskontroll",
+  "source": "@site/docs/omKvib/routine.md",
+  "sourceDirName": "omKvib",
+  "slug": "/omKvib/kvalitetskontroll",
+  "permalink": "/kvib/omKvib/kvalitetskontroll",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "routineID",
+    "title": "Kvalitetskontroll",
+    "description": "Rutine for kvalitetskontroll",
+    "slug": "/omKvib/kvalitetskontroll",
+    "displayed_sidebar": "OmKvibSidebar"
+  },
+  "sidebar": "OmKvibSidebar",
+  "previous": {
+    "title": "Teknisk struktur",
+    "permalink": "/kvib/omKvib/struktur"
+  },
+  "next": {
+    "title": "Dokumentasjon",
+    "permalink": "/kvib/omKvib/dokumentasjon"
+  }
+}

@@ -1,0 +1,204 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/kvib/",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/kvib/",
+          "mainDocId": "omKvib/infoKvibID",
+          "docs": [
+            {
+              "id": "designsystems/designTokens/fargerID",
+              "path": "/kvib/designsystems/designtokens/colors",
+              "sidebar": "designsystemSidebar"
+            },
+            {
+              "id": "designsystems/designTokens/iconsID",
+              "path": "/kvib/designsystems/designTokens/designsystems/designtokens/ikoner",
+              "sidebar": "designsystemSidebar"
+            },
+            {
+              "id": "designsystems/designTokens/logoID",
+              "path": "/kvib/designsystem/komponenter/logo",
+              "sidebar": "designsystemSidebar"
+            },
+            {
+              "id": "designsystems/designTokens/typografiID",
+              "path": "/kvib/designsystems/designtokens/typografi",
+              "sidebar": "designsystemSidebar"
+            },
+            {
+              "id": "designsystems/Komponenter/checkboxID",
+              "path": "/kvib/designsystem/komponenter/checkbox",
+              "sidebar": "designsystemSidebar"
+            },
+            {
+              "id": "designsystems/Komponenter/detailsID",
+              "path": "/kvib/designsystem/komponenter/utvidbar-panel",
+              "sidebar": "designsystemSidebar"
+            },
+            {
+              "id": "designsystems/Komponenter/dropDownID",
+              "path": "/kvib/designsystem/komponenter/nedtrekksmeny",
+              "sidebar": "designsystemSidebar"
+            },
+            {
+              "id": "designsystems/Komponenter/gridsID",
+              "path": "/kvib/designsystem/komponenter/grid",
+              "sidebar": "designsystemSidebar"
+            },
+            {
+              "id": "designsystems/Komponenter/inputfeltID",
+              "path": "/kvib/designsystem/komponenter/inputfelt",
+              "sidebar": "designsystemSidebar"
+            },
+            {
+              "id": "designsystems/Komponenter/Knapper/blåknappID",
+              "path": "/kvib/designsystems/Komponenter/Knapper/blåknappID",
+              "sidebar": "designsystemSidebar"
+            },
+            {
+              "id": "designsystems/Komponenter/Knapper/disabledknappID",
+              "path": "/kvib/designsystems/Komponenter/Knapper/disabledknappID",
+              "sidebar": "designsystemSidebar"
+            },
+            {
+              "id": "designsystems/Komponenter/Knapper/grønnknappID",
+              "path": "/kvib/designsystems/Komponenter/Knapper/grønnknappID",
+              "sidebar": "designsystemSidebar"
+            },
+            {
+              "id": "designsystems/Komponenter/Knapper/ikonknappID",
+              "path": "/kvib/designsystems/Komponenter/Knapper/ikonknappID",
+              "sidebar": "designsystemSidebar"
+            },
+            {
+              "id": "designsystems/Komponenter/Knapper/toggleSwitchID",
+              "path": "/kvib/designsystems/Komponenter/Knapper/toggleSwitchID",
+              "sidebar": "designsystemSidebar"
+            },
+            {
+              "id": "designsystems/Komponenter/navID",
+              "path": "/kvib/designsystem/komponenter/navigasjon",
+              "sidebar": "designsystemSidebar"
+            },
+            {
+              "id": "designsystems/Komponenter/radiobuttonID",
+              "path": "/kvib/designsystem/komponenter/radiobutton",
+              "sidebar": "designsystemSidebar"
+            },
+            {
+              "id": "designsystems/Komponenter/searchbarID",
+              "path": "/kvib/designsystem/komponenter/søkefelt",
+              "sidebar": "designsystemSidebar"
+            },
+            {
+              "id": "designsystems/Komponenter/sideelementerID",
+              "path": "/kvib/designsystem/komponenter/sideelementer",
+              "sidebar": "designsystemSidebar"
+            },
+            {
+              "id": "designsystems/Komponenter/sliderID",
+              "path": "/kvib/designsystem/komponenter/slider",
+              "sidebar": "designsystemSidebar"
+            },
+            {
+              "id": "designsystems/Komponenter/tableID",
+              "path": "/kvib/designsystem/komponenter/table",
+              "sidebar": "designsystemSidebar"
+            },
+            {
+              "id": "designsystems/sizesID",
+              "path": "/kvib/designsystems/sizes",
+              "sidebar": "designsystemSidebar"
+            },
+            {
+              "id": "designsystems/tilleggskomponenterID",
+              "path": "/kvib/designsystems/tilleggskomponenterID",
+              "sidebar": "designsystemSidebar"
+            },
+            {
+              "id": "designsystems/uuID",
+              "path": "/kvib/designsystems/uu",
+              "sidebar": "designsystemSidebar"
+            },
+            {
+              "id": "omKvib/contentID",
+              "path": "/kvib/omKvib/dokumentasjon",
+              "sidebar": "OmKvibSidebar"
+            },
+            {
+              "id": "omKvib/infoKvibID",
+              "path": "/kvib/omkvib",
+              "sidebar": "OmKvibSidebar"
+            },
+            {
+              "id": "omKvib/installationID",
+              "path": "/kvib/omKvib/implementering",
+              "sidebar": "OmKvibSidebar"
+            },
+            {
+              "id": "omKvib/publishingID",
+              "path": "/kvib/omKvib/publisering",
+              "sidebar": "OmKvibSidebar"
+            },
+            {
+              "id": "omKvib/routineID",
+              "path": "/kvib/omKvib/kvalitetskontroll",
+              "sidebar": "OmKvibSidebar"
+            },
+            {
+              "id": "omKvib/structureID",
+              "path": "/kvib/omKvib/struktur",
+              "sidebar": "OmKvibSidebar"
+            },
+            {
+              "id": "omKvib/versionID",
+              "path": "/kvib/omKvib/versjon",
+              "sidebar": "OmKvibSidebar"
+            },
+            {
+              "id": "/utvideKvib",
+              "path": "/kvib/utvideKvib",
+              "sidebar": "OmKvibSidebar"
+            },
+            {
+              "id": "/designsystem/designTokens",
+              "path": "/kvib/designsystem/designTokens",
+              "sidebar": "designsystemSidebar"
+            },
+            {
+              "id": "/designsystem/Komponenter",
+              "path": "/kvib/designsystem/Komponenter",
+              "sidebar": "designsystemSidebar"
+            },
+            {
+              "id": "designsystems/Komponenter/Knapper",
+              "path": "/kvib/designsystems/Komponenter/Knapper",
+              "sidebar": "designsystemSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "OmKvibSidebar": {
+              "link": {
+                "path": "/kvib/omkvib",
+                "label": "Kom i gang"
+              }
+            },
+            "designsystemSidebar": {
+              "link": {
+                "path": "/kvib/designsystems/sizes",
+                "label": "Elementstørrelser"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

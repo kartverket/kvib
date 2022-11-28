@@ -1,0 +1,546 @@
+{
+  "/kvib/__docusaurus/debug-1fa": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
+    "__context": {
+      "plugin": "plugin---kvib-docusaurus-debug-360-2f9"
+    }
+  },
+  "/kvib/__docusaurus/debug/config-d60": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
+    "__context": {
+      "plugin": "plugin---kvib-docusaurus-debug-360-2f9"
+    }
+  },
+  "/kvib/__docusaurus/debug/content-db8": {
+    "__comp": "__comp---theme-debug-contentba-8-ce7",
+    "__context": {
+      "plugin": "plugin---kvib-docusaurus-debug-360-2f9"
+    },
+    "allContent": "allContent---kvib-docusaurus-debug-content-246-e3f"
+  },
+  "/kvib/__docusaurus/debug/globalData-11d": {
+    "__comp": "__comp---theme-debug-global-dataede-0fa",
+    "__context": {
+      "plugin": "plugin---kvib-docusaurus-debug-360-2f9"
+    }
+  },
+  "/kvib/__docusaurus/debug/metadata-41f": {
+    "__comp": "__comp---theme-debug-site-metadata-68-e-3d4",
+    "__context": {
+      "plugin": "plugin---kvib-docusaurus-debug-360-2f9"
+    }
+  },
+  "/kvib/__docusaurus/debug/registry-2d7": {
+    "__comp": "__comp---theme-debug-registry-679-501",
+    "__context": {
+      "plugin": "plugin---kvib-docusaurus-debug-360-2f9"
+    }
+  },
+  "/kvib/__docusaurus/debug/routes-411": {
+    "__comp": "__comp---theme-debug-routes-946-699",
+    "__context": {
+      "plugin": "plugin---kvib-docusaurus-debug-360-2f9"
+    }
+  },
+  "/kvib/blog-4b1": {
+    "__comp": "__comp---theme-blog-list-pagea-6-a-7ba",
+    "__context": {
+      "plugin": "plugin---kvib-blog-62-e-e70"
+    },
+    "sidebar": "sidebar---kvib-blog-814-3f9",
+    "items": [
+      {
+        "content": "content---kvib-blog-12-f-a48"
+      },
+      {
+        "content": "content---kvib-blog-8-e-0-64d"
+      },
+      {
+        "content": "content---kvib-blog-57-d-f24"
+      },
+      {
+        "content": "content---kvib-blog-61-f-147"
+      },
+      {
+        "content": "content---kvib-blog-1-a-4-c25"
+      },
+      {
+        "content": "content---kvib-blog-57-c-422"
+      },
+      {
+        "content": "content---kvib-blog-9-b-6-0e9"
+      },
+      {
+        "content": "content---kvib-blog-32-e-67d"
+      },
+      {
+        "content": "content---kvib-blog-415-afb"
+      },
+      {
+        "content": "content---kvib-blog-88-c-c85"
+      },
+      {
+        "content": "content---kvib-blog-7-b-5-223"
+      }
+    ],
+    "metadata": "metadata---kvib-blogbc-4-a1a"
+  },
+  "/kvib/blog/2022/07/29/version-[1.0.0]-d81": {
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__context": {
+      "plugin": "plugin---kvib-blog-62-e-e70"
+    },
+    "sidebar": "sidebar---kvib-blog-814-3f9",
+    "content": "content---kvib-blog-2022-07-29-version-1-0-0-18-d-7c6"
+  },
+  "/kvib/blog/2022/08/03/version-[1.0.1]-32f": {
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__context": {
+      "plugin": "plugin---kvib-blog-62-e-e70"
+    },
+    "sidebar": "sidebar---kvib-blog-814-3f9",
+    "content": "content---kvib-blog-2022-08-03-version-1-0-1-fa-3-2b9"
+  },
+  "/kvib/blog/2022/08/04/version-[1.0.2]-7c6": {
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__context": {
+      "plugin": "plugin---kvib-blog-62-e-e70"
+    },
+    "sidebar": "sidebar---kvib-blog-814-3f9",
+    "content": "content---kvib-blog-2022-08-04-version-1-0-2-e-3-f-f34"
+  },
+  "/kvib/blog/2022/08/09/version-[1.0.3]-17c": {
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__context": {
+      "plugin": "plugin---kvib-blog-62-e-e70"
+    },
+    "sidebar": "sidebar---kvib-blog-814-3f9",
+    "content": "content---kvib-blog-2022-08-09-version-1-0-3-727-c87"
+  },
+  "/kvib/blog/2022/08/10/version-[1.0.4]-a91": {
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__context": {
+      "plugin": "plugin---kvib-blog-62-e-e70"
+    },
+    "sidebar": "sidebar---kvib-blog-814-3f9",
+    "content": "content---kvib-blog-2022-08-10-version-1-0-4-7-eb-fd2"
+  },
+  "/kvib/blog/2022/08/22/version-[1.0.5]-ca9": {
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__context": {
+      "plugin": "plugin---kvib-blog-62-e-e70"
+    },
+    "sidebar": "sidebar---kvib-blog-814-3f9",
+    "content": "content---kvib-blog-2022-08-22-version-1-0-5-99-c-9bc"
+  },
+  "/kvib/blog/2022/09/02/version-[1.0.23]-6d2": {
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__context": {
+      "plugin": "plugin---kvib-blog-62-e-e70"
+    },
+    "sidebar": "sidebar---kvib-blog-814-3f9",
+    "content": "content---kvib-blog-2022-09-02-version-1-0-23-b-2-f-535"
+  },
+  "/kvib/blog/2022/09/08/version-[1.0.25]-553": {
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__context": {
+      "plugin": "plugin---kvib-blog-62-e-e70"
+    },
+    "sidebar": "sidebar---kvib-blog-814-3f9",
+    "content": "content---kvib-blog-2022-09-08-version-1-0-25-2-d-7-764"
+  },
+  "/kvib/blog/2022/09/16/version-[1.0.28]-e53": {
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__context": {
+      "plugin": "plugin---kvib-blog-62-e-e70"
+    },
+    "sidebar": "sidebar---kvib-blog-814-3f9",
+    "content": "content---kvib-blog-2022-09-16-version-1-0-28-a-97-6ac"
+  },
+  "/kvib/blog/2022/09/23/version-[1.0.29]-414": {
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__context": {
+      "plugin": "plugin---kvib-blog-62-e-e70"
+    },
+    "sidebar": "sidebar---kvib-blog-814-3f9",
+    "content": "content---kvib-blog-2022-09-23-version-1-0-29-946-a0a"
+  },
+  "/kvib/blog/2022/11/07/version-[1.0.32]-c51": {
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__context": {
+      "plugin": "plugin---kvib-blog-62-e-e70"
+    },
+    "sidebar": "sidebar---kvib-blog-814-3f9",
+    "content": "content---kvib-blog-2022-11-07-version-1-0-32-c-0-d-91f"
+  },
+  "/kvib/blog/archive-164": {
+    "__comp": "__comp---theme-blog-archive-page-9-e-4-1d8",
+    "__context": {
+      "plugin": "plugin---kvib-blog-62-e-e70"
+    },
+    "archive": "archive---kvib-blog-archive-4-cb-601"
+  },
+  "/kvib/blog/tags-7d5": {
+    "__comp": "__comp---theme-blog-tags-list-page-01-a-d0b",
+    "__context": {
+      "plugin": "plugin---kvib-blog-62-e-e70"
+    },
+    "sidebar": "sidebar---kvib-blog-814-3f9",
+    "tags": "tags---kvib-blog-tags-8-ef-ed1"
+  },
+  "/kvib/blog/tags/avmerkingsbokser-3ac": {
+    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
+    "__context": {
+      "plugin": "plugin---kvib-blog-62-e-e70"
+    },
+    "sidebar": "sidebar---kvib-blog-814-3f9",
+    "items": [
+      {
+        "content": "content---kvib-blog-8-e-0-64d"
+      },
+      {
+        "content": "content---kvib-blog-61-f-147"
+      },
+      {
+        "content": "content---kvib-blog-1-a-4-c25"
+      }
+    ],
+    "tag": "tag---kvib-blog-tags-avmerkingsbokserd-39-46a",
+    "listMetadata": "listMetadata---kvib-blog-tags-avmerkingsbokser-9-a-5-cb4"
+  },
+  "/kvib/blog/tags/dokumentasjon-b7c": {
+    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
+    "__context": {
+      "plugin": "plugin---kvib-blog-62-e-e70"
+    },
+    "sidebar": "sidebar---kvib-blog-814-3f9",
+    "items": [
+      {
+        "content": "content---kvib-blog-12-f-a48"
+      },
+      {
+        "content": "content---kvib-blog-8-e-0-64d"
+      },
+      {
+        "content": "content---kvib-blog-57-d-f24"
+      },
+      {
+        "content": "content---kvib-blog-61-f-147"
+      },
+      {
+        "content": "content---kvib-blog-1-a-4-c25"
+      },
+      {
+        "content": "content---kvib-blog-57-c-422"
+      },
+      {
+        "content": "content---kvib-blog-9-b-6-0e9"
+      },
+      {
+        "content": "content---kvib-blog-32-e-67d"
+      },
+      {
+        "content": "content---kvib-blog-415-afb"
+      },
+      {
+        "content": "content---kvib-blog-88-c-c85"
+      },
+      {
+        "content": "content---kvib-blog-7-b-5-223"
+      }
+    ],
+    "tag": "tag---kvib-blog-tags-dokumentasjon-2-b-2-5a8",
+    "listMetadata": "listMetadata---kvib-blog-tags-dokumentasjon-88-f-42d"
+  },
+  "/kvib/blog/tags/inputfelt-817": {
+    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
+    "__context": {
+      "plugin": "plugin---kvib-blog-62-e-e70"
+    },
+    "sidebar": "sidebar---kvib-blog-814-3f9",
+    "items": [
+      {
+        "content": "content---kvib-blog-1-a-4-c25"
+      },
+      {
+        "content": "content---kvib-blog-32-e-67d"
+      }
+    ],
+    "tag": "tag---kvib-blog-tags-inputfeltedc-75f",
+    "listMetadata": "listMetadata---kvib-blog-tags-inputfelt-0-db-132"
+  },
+  "/kvib/blog/tags/knapper-f66": {
+    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
+    "__context": {
+      "plugin": "plugin---kvib-blog-62-e-e70"
+    },
+    "sidebar": "sidebar---kvib-blog-814-3f9",
+    "items": [
+      {
+        "content": "content---kvib-blog-8-e-0-64d"
+      },
+      {
+        "content": "content---kvib-blog-57-d-f24"
+      }
+    ],
+    "tag": "tag---kvib-blog-tags-knappercd-8-8f1",
+    "listMetadata": "listMetadata---kvib-blog-tags-knapper-2-a-4-8a1"
+  },
+  "/kvib/blog/tags/kvib-4d6": {
+    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
+    "__context": {
+      "plugin": "plugin---kvib-blog-62-e-e70"
+    },
+    "sidebar": "sidebar---kvib-blog-814-3f9",
+    "items": [
+      {
+        "content": "content---kvib-blog-7-b-5-223"
+      }
+    ],
+    "tag": "tag---kvib-blog-tags-kvib-769-79b",
+    "listMetadata": "listMetadata---kvib-blog-tags-kvib-065-e95"
+  },
+  "/kvib/blog/tags/navigasjon-4ac": {
+    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
+    "__context": {
+      "plugin": "plugin---kvib-blog-62-e-e70"
+    },
+    "sidebar": "sidebar---kvib-blog-814-3f9",
+    "items": [
+      {
+        "content": "content---kvib-blog-57-c-422"
+      }
+    ],
+    "tag": "tag---kvib-blog-tags-navigasjon-83-c-136",
+    "listMetadata": "listMetadata---kvib-blog-tags-navigasjon-966-e80"
+  },
+  "/kvib/blog/tags/nedtrekksmeny-b62": {
+    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
+    "__context": {
+      "plugin": "plugin---kvib-blog-62-e-e70"
+    },
+    "sidebar": "sidebar---kvib-blog-814-3f9",
+    "items": [
+      {
+        "content": "content---kvib-blog-1-a-4-c25"
+      }
+    ],
+    "tag": "tag---kvib-blog-tags-nedtrekksmenyd-76-936",
+    "listMetadata": "listMetadata---kvib-blog-tags-nedtrekksmeny-542-f51"
+  },
+  "/kvib/blog/tags/slider-knapp-05d": {
+    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
+    "__context": {
+      "plugin": "plugin---kvib-blog-62-e-e70"
+    },
+    "sidebar": "sidebar---kvib-blog-814-3f9",
+    "items": [
+      {
+        "content": "content---kvib-blog-415-afb"
+      }
+    ],
+    "tag": "tag---kvib-blog-tags-slider-knappb-20-121",
+    "listMetadata": "listMetadata---kvib-blog-tags-slider-knapp-28-a-57c"
+  },
+  "/kvib/blog/tags/sokefelt-5b6": {
+    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
+    "__context": {
+      "plugin": "plugin---kvib-blog-62-e-e70"
+    },
+    "sidebar": "sidebar---kvib-blog-814-3f9",
+    "items": [
+      {
+        "content": "content---kvib-blog-61-f-147"
+      }
+    ],
+    "tag": "tag---kvib-blog-tags-sokefelt-241-dcb",
+    "listMetadata": "listMetadata---kvib-blog-tags-sokefeltd-74-f0c"
+  },
+  "/kvib/blog/tags/utvidbar-panel-fde": {
+    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
+    "__context": {
+      "plugin": "plugin---kvib-blog-62-e-e70"
+    },
+    "sidebar": "sidebar---kvib-blog-814-3f9",
+    "items": [
+      {
+        "content": "content---kvib-blog-9-b-6-0e9"
+      }
+    ],
+    "tag": "tag---kvib-blog-tags-utvidbar-panel-175-a73",
+    "listMetadata": "listMetadata---kvib-blog-tags-utvidbar-panel-187-6c5"
+  },
+  "/kvib/blog/tags/utvidbart-panel-65f": {
+    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
+    "__context": {
+      "plugin": "plugin---kvib-blog-62-e-e70"
+    },
+    "sidebar": "sidebar---kvib-blog-814-3f9",
+    "items": [
+      {
+        "content": "content---kvib-blog-12-f-a48"
+      },
+      {
+        "content": "content---kvib-blog-88-c-c85"
+      }
+    ],
+    "tag": "tag---kvib-blog-tags-utvidbart-panel-5-ae-854",
+    "listMetadata": "listMetadata---kvib-blog-tags-utvidbart-panelea-4-d9e"
+  },
+  "/kvib/search-a2a": {
+    "__comp": "__comp---theme-search-page-1-a-4-d6f",
+    "__context": {
+      "plugin": "plugin---kvib-search-234-37f"
+    }
+  },
+  "/kvib/-0be": {
+    "__comp": "__comp---site-src-pages-index-jsx-9-dd-cb1",
+    "__context": {
+      "plugin": "plugin---kvib-df-2-3aa"
+    },
+    "config": "config---kvib-5-e-9-0f4"
+  },
+  "/kvib/-745": {
+    "__comp": "__comp---theme-doc-page-1-be-9be",
+    "__context": {
+      "plugin": "plugin---kvib-227-d0f"
+    },
+    "versionMetadata": "versionMetadata---kvib-935-8f4"
+  },
+  "/kvib/designsystem/designTokens-0fe": {
+    "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
+    "categoryGeneratedIndex": "categoryGeneratedIndex---kvib-designsystem-design-tokensc-15-fbc"
+  },
+  "/kvib/designsystem/Komponenter-0aa": {
+    "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
+    "categoryGeneratedIndex": "categoryGeneratedIndex---kvib-designsystem-komponentercd-7-35a"
+  },
+  "/kvib/designsystem/komponenter/checkbox-841": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---kvib-designsystem-komponenter-checkbox-78-c-f3a"
+  },
+  "/kvib/designsystem/komponenter/grid-444": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---kvib-designsystem-komponenter-grid-805-dfa"
+  },
+  "/kvib/designsystem/komponenter/inputfelt-100": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---kvib-designsystem-komponenter-inputfeltaf-8-a01"
+  },
+  "/kvib/designsystem/komponenter/logo-d80": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---kvib-designsystem-komponenter-logof-23-d1f"
+  },
+  "/kvib/designsystem/komponenter/navigasjon-55b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---kvib-designsystem-komponenter-navigasjon-278-a91"
+  },
+  "/kvib/designsystem/komponenter/nedtrekksmeny-456": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---kvib-designsystem-komponenter-nedtrekksmenyfa-1-4c1"
+  },
+  "/kvib/designsystem/komponenter/radiobutton-46a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---kvib-designsystem-komponenter-radiobutton-64-a-e03"
+  },
+  "/kvib/designsystem/komponenter/sideelementer-a0e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---kvib-designsystem-komponenter-sideelementer-8-be-65c"
+  },
+  "/kvib/designsystem/komponenter/slider-0bb": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---kvib-designsystem-komponenter-slider-8-a-4-cf4"
+  },
+  "/kvib/designsystem/komponenter/søkefelt-597": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---kvib-designsystem-komponenter-sokefelt-21-e-ace"
+  },
+  "/kvib/designsystem/komponenter/table-c0f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---kvib-designsystem-komponenter-table-3-cb-996"
+  },
+  "/kvib/designsystem/komponenter/utvidbar-panel-7e4": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---kvib-designsystem-komponenter-utvidbar-panelc-63-6a3"
+  },
+  "/kvib/designsystems/designtokens/colors-ccf": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---kvib-designsystems-designtokens-colorscf-6-5bc"
+  },
+  "/kvib/designsystems/designTokens/designsystems/designtokens/ikoner-c60": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---kvib-designsystems-design-tokens-designsystems-designtokens-ikoner-409-06f"
+  },
+  "/kvib/designsystems/designtokens/typografi-3b7": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---kvib-designsystems-designtokens-typografi-7-d-8-05b"
+  },
+  "/kvib/designsystems/Komponenter/Knapper-a07": {
+    "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
+    "categoryGeneratedIndex": "categoryGeneratedIndex---kvib-designsystems-komponenter-knappere-51-b62"
+  },
+  "/kvib/designsystems/Komponenter/Knapper/blåknappID-5f3": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---kvib-designsystems-komponenter-knapper-blaknapp-id-37-e-0f5"
+  },
+  "/kvib/designsystems/Komponenter/Knapper/disabledknappID-24e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---kvib-designsystems-komponenter-knapper-disabledknapp-i-df-7-f-4a5"
+  },
+  "/kvib/designsystems/Komponenter/Knapper/grønnknappID-f6e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---kvib-designsystems-komponenter-knapper-gronnknapp-id-0-b-3-86f"
+  },
+  "/kvib/designsystems/Komponenter/Knapper/ikonknappID-f60": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---kvib-designsystems-komponenter-knapper-ikonknapp-id-1-c-2-f66"
+  },
+  "/kvib/designsystems/Komponenter/Knapper/toggleSwitchID-12b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---kvib-designsystems-komponenter-knapper-toggle-switch-id-66-c-d7f"
+  },
+  "/kvib/designsystems/sizes-ae6": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---kvib-designsystems-sizes-75-f-a8b"
+  },
+  "/kvib/designsystems/tilleggskomponenterID-7ea": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---kvib-designsystems-tilleggskomponenter-id-0-b-4-992"
+  },
+  "/kvib/designsystems/uu-a23": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---kvib-designsystems-uub-41-b48"
+  },
+  "/kvib/omkvib-6af": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---kvib-omkvib-776-e05"
+  },
+  "/kvib/omKvib/dokumentasjon-37c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---kvib-om-kvib-dokumentasjonf-95-5cb"
+  },
+  "/kvib/omKvib/implementering-a32": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---kvib-om-kvib-implementering-65-b-e7e"
+  },
+  "/kvib/omKvib/kvalitetskontroll-63a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---kvib-om-kvib-kvalitetskontroll-6-cb-bc9"
+  },
+  "/kvib/omKvib/publisering-2fd": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---kvib-om-kvib-publisering-6-c-0-fb9"
+  },
+  "/kvib/omKvib/struktur-339": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---kvib-om-kvib-struktur-5-e-7-810"
+  },
+  "/kvib/omKvib/versjon-ce3": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---kvib-om-kvib-versjon-896-6df"
+  },
+  "/kvib/utvideKvib-c16": {
+    "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
+    "categoryGeneratedIndex": "categoryGeneratedIndex---kvib-utvide-kvib-39-a-9bc"
+  }
+}

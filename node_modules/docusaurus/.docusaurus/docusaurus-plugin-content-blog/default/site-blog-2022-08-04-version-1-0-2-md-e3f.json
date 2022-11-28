@@ -1,0 +1,36 @@
+{
+  "permalink": "/kvib/blog/2022/08/04/version-[1.0.2]",
+  "source": "@site/blog/2022-08-04-version-[1.0.2].md",
+  "title": "Versjon [1.0.2]",
+  "description": "Utvidbar panel",
+  "date": "2022-08-04T00:00:00.000Z",
+  "formattedDate": "4. august 2022",
+  "tags": [
+    {
+      "label": "dokumentasjon",
+      "permalink": "/kvib/blog/tags/dokumentasjon"
+    },
+    {
+      "label": "slider knapp",
+      "permalink": "/kvib/blog/tags/slider-knapp"
+    }
+  ],
+  "hasTruncateMarker": false,
+  "authors": [],
+  "frontMatter": {
+    "title": "Versjon [1.0.2]",
+    "description": "Utvidbar panel",
+    "tags": [
+      "dokumentasjon",
+      "slider knapp"
+    ]
+  },
+  "prevItem": {
+    "title": "Versjon [1.0.3]",
+    "permalink": "/kvib/blog/2022/08/09/version-[1.0.3]"
+  },
+  "nextItem": {
+    "title": "Versjon [1.0.1]",
+    "permalink": "/kvib/blog/2022/08/03/version-[1.0.1]"
+  }
+}

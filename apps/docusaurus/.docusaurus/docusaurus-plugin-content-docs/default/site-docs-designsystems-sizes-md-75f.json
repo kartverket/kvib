@@ -1,0 +1,28 @@
+{
+  "unversionedId": "designsystems/sizesID",
+  "id": "designsystems/sizesID",
+  "title": "Elementstørrelser",
+  "description": "Elementstørrelser",
+  "source": "@site/docs/designsystems/sizes.md",
+  "sourceDirName": "designsystems",
+  "slug": "/designsystems/sizes",
+  "permalink": "/kvib/designsystems/sizes",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "id": "sizesID",
+    "title": "Elementstørrelser",
+    "description": "Elementstørrelser",
+    "slug": "/designsystems/sizes",
+    "displayed_sidebar": "designsystemSidebar",
+    "sidebar_label": "Elementstørrelser",
+    "sidebar_position": 1
+  },
+  "sidebar": "designsystemSidebar",
+  "next": {
+    "title": "Tilgjengelighet",
+    "permalink": "/kvib/designsystems/uu"
+  }
+}

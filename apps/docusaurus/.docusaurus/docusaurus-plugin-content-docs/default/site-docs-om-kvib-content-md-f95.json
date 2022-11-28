@@ -1,0 +1,29 @@
+{
+  "unversionedId": "omKvib/contentID",
+  "id": "omKvib/contentID",
+  "title": "Dokumentasjon",
+  "description": "Innhold og struktur i dokumentasjon",
+  "source": "@site/docs/omKvib/content.md",
+  "sourceDirName": "omKvib",
+  "slug": "/omKvib/dokumentasjon",
+  "permalink": "/kvib/omKvib/dokumentasjon",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "contentID",
+    "title": "Dokumentasjon",
+    "description": "Innhold og struktur i dokumentasjon",
+    "slug": "/omKvib/dokumentasjon",
+    "displayed_sidebar": "OmKvibSidebar"
+  },
+  "sidebar": "OmKvibSidebar",
+  "previous": {
+    "title": "Kvalitetskontroll",
+    "permalink": "/kvib/omKvib/kvalitetskontroll"
+  },
+  "next": {
+    "title": "Versjon",
+    "permalink": "/kvib/omKvib/versjon"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "permalink": "/kvib/blog/2022/08/22/version-[1.0.5]",
+  "source": "@site/blog/2022-08-22-version-[1.0.5].md",
+  "title": "Versjon [1.0.5]",
+  "description": "Navigasjon komponenter",
+  "date": "2022-08-22T00:00:00.000Z",
+  "formattedDate": "22. august 2022",
+  "tags": [
+    {
+      "label": "dokumentasjon",
+      "permalink": "/kvib/blog/tags/dokumentasjon"
+    },
+    {
+      "label": "Navigasjon",
+      "permalink": "/kvib/blog/tags/navigasjon"
+    }
+  ],
+  "hasTruncateMarker": false,
+  "authors": [],
+  "frontMatter": {
+    "title": "Versjon [1.0.5]",
+    "description": "Navigasjon komponenter",
+    "tags": [
+      "dokumentasjon",
+      "Navigasjon"
+    ]
+  },
+  "prevItem": {
+    "title": "Versjon [1.0.23]",
+    "permalink": "/kvib/blog/2022/09/02/version-[1.0.23]"
+  },
+  "nextItem": {
+    "title": "Versjon [1.0.4]",
+    "permalink": "/kvib/blog/2022/08/10/version-[1.0.4]"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "unversionedId": "designsystems/Komponenter/Knapper/blåknappID",
+  "id": "designsystems/Komponenter/Knapper/blåknappID",
+  "title": "Blå knapper (sekundærsett)",
+  "description": "Blå knapper (sekundærsett)",
+  "source": "@site/docs/designsystems/Komponenter/Knapper/blueButton.md",
+  "sourceDirName": "designsystems/Komponenter/Knapper",
+  "slug": "/designsystems/Komponenter/Knapper/blåknappID",
+  "permalink": "/kvib/designsystems/Komponenter/Knapper/blåknappID",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "blåknappID",
+    "title": "Blå knapper (sekundærsett)",
+    "description": "Blå knapper (sekundærsett)"
+  },
+  "sidebar": "designsystemSidebar",
+  "previous": {
+    "title": "Grønne knapper (primærsett)",
+    "permalink": "/kvib/designsystems/Komponenter/Knapper/grønnknappID"
+  },
+  "next": {
+    "title": "Knapper med ikon",
+    "permalink": "/kvib/designsystems/Komponenter/Knapper/ikonknappID"
+  }
+}

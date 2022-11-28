@@ -1,0 +1,25 @@
+{
+  "unversionedId": "omKvib/publishingID",
+  "id": "omKvib/publishingID",
+  "title": "Publisering",
+  "description": "Publisering av CSS-pakke og GitHub Pages",
+  "source": "@site/docs/omKvib/publishing.md",
+  "sourceDirName": "omKvib",
+  "slug": "/omKvib/publisering",
+  "permalink": "/kvib/omKvib/publisering",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "publishingID",
+    "title": "Publisering",
+    "description": "Publisering av CSS-pakke og GitHub Pages",
+    "slug": "/omKvib/publisering",
+    "displayed_sidebar": "OmKvibSidebar"
+  },
+  "sidebar": "OmKvibSidebar",
+  "previous": {
+    "title": "Versjon",
+    "permalink": "/kvib/omKvib/versjon"
+  }
+}

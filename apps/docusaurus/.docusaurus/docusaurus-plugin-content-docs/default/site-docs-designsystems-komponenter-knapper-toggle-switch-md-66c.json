@@ -1,0 +1,27 @@
+{
+  "unversionedId": "designsystems/Komponenter/Knapper/toggleSwitchID",
+  "id": "designsystems/Komponenter/Knapper/toggleSwitchID",
+  "title": "(!)Slider knapp (Toggle Switch)",
+  "description": "Slider knapper",
+  "source": "@site/docs/designsystems/Komponenter/Knapper/toggleSwitch.md",
+  "sourceDirName": "designsystems/Komponenter/Knapper",
+  "slug": "/designsystems/Komponenter/Knapper/toggleSwitchID",
+  "permalink": "/kvib/designsystems/Komponenter/Knapper/toggleSwitchID",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "toggleSwitchID",
+    "title": "(!)Slider knapp (Toggle Switch)",
+    "description": "Slider knapper"
+  },
+  "sidebar": "designsystemSidebar",
+  "previous": {
+    "title": "Knapper",
+    "permalink": "/kvib/designsystems/Komponenter/Knapper"
+  },
+  "next": {
+    "title": "Grønne knapper (primærsett)",
+    "permalink": "/kvib/designsystems/Komponenter/Knapper/grønnknappID"
+  }
+}

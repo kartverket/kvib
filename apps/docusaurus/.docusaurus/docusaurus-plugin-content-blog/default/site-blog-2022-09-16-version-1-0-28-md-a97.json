@@ -1,0 +1,36 @@
+{
+  "permalink": "/kvib/blog/2022/09/16/version-[1.0.28]",
+  "source": "@site/blog/2022-09-16-version-[1.0.28].md",
+  "title": "Versjon [1.0.28]",
+  "description": "avmerkingsboks & søkefelt.",
+  "date": "2022-09-16T00:00:00.000Z",
+  "formattedDate": "16. september 2022",
+  "tags": [
+    {
+      "label": "dokumentasjon",
+      "permalink": "/kvib/blog/tags/dokumentasjon"
+    },
+    {
+      "label": "Knapper",
+      "permalink": "/kvib/blog/tags/knapper"
+    }
+  ],
+  "hasTruncateMarker": false,
+  "authors": [],
+  "frontMatter": {
+    "title": "Versjon [1.0.28]",
+    "description": "avmerkingsboks & søkefelt.",
+    "tags": [
+      "dokumentasjon",
+      "Knapper"
+    ]
+  },
+  "prevItem": {
+    "title": "Versjon [1.0.29]",
+    "permalink": "/kvib/blog/2022/09/23/version-[1.0.29]"
+  },
+  "nextItem": {
+    "title": "Versjon [1.0.25]",
+    "permalink": "/kvib/blog/2022/09/08/version-[1.0.25]"
+  }
+}

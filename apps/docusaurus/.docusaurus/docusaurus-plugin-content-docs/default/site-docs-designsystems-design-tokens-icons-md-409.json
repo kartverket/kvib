@@ -1,0 +1,29 @@
+{
+  "unversionedId": "designsystems/designTokens/iconsID",
+  "id": "designsystems/designTokens/iconsID",
+  "title": "Ikoner",
+  "description": "Ikoner som blir brukt i Kartverket sine løsninger",
+  "source": "@site/docs/designsystems/designTokens/icons.md",
+  "sourceDirName": "designsystems/designTokens",
+  "slug": "/designsystems/designTokens/designsystems/designtokens/ikoner",
+  "permalink": "/kvib/designsystems/designTokens/designsystems/designtokens/ikoner",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "iconsID",
+    "title": "Ikoner",
+    "description": "Ikoner som blir brukt i Kartverket sine løsninger",
+    "slug": "designsystems/designtokens/ikoner",
+    "displayed_sidebar": "designsystemSidebar"
+  },
+  "sidebar": "designsystemSidebar",
+  "previous": {
+    "title": "Farger",
+    "permalink": "/kvib/designsystems/designtokens/colors"
+  },
+  "next": {
+    "title": "Logo",
+    "permalink": "/kvib/designsystem/komponenter/logo"
+  }
+}

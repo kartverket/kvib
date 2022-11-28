@@ -1,0 +1,1845 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "loadedVersions": [
+        {
+          "versionName": "current",
+          "label": "Next",
+          "banner": null,
+          "badge": false,
+          "noIndex": false,
+          "className": "docs-version-current",
+          "path": "/kvib/",
+          "tagsPath": "/kvib/tags",
+          "isLast": true,
+          "routePriority": -1,
+          "sidebarFilePath": "C:\\Users\\nilben\\dev\\kvib\\apps\\docusaurus\\sidebars.js",
+          "contentPath": "C:\\Users\\nilben\\dev\\kvib\\apps\\docusaurus\\docs",
+          "contentPathLocalized": "C:\\Users\\nilben\\dev\\kvib\\apps\\docusaurus\\i18n\\no\\docusaurus-plugin-content-docs\\current",
+          "docs": [
+            {
+              "unversionedId": "designsystems/designTokens/fargerID",
+              "id": "designsystems/designTokens/fargerID",
+              "title": "Farger",
+              "description": "Farger som blir brukt i Kartverket sine løsninger",
+              "source": "@site/docs/designsystems/designTokens/colors.md",
+              "sourceDirName": "designsystems/designTokens",
+              "slug": "/designsystems/designtokens/colors",
+              "permalink": "/kvib/designsystems/designtokens/colors",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "id": "fargerID",
+                "title": "Farger",
+                "description": "Farger som blir brukt i Kartverket sine løsninger",
+                "slug": "/designsystems/designtokens/colors",
+                "displayed_sidebar": "designsystemSidebar"
+              },
+              "sidebar": "designsystemSidebar",
+              "previous": {
+                "title": "Typografi",
+                "permalink": "/kvib/designsystems/designtokens/typografi"
+              },
+              "next": {
+                "title": "Ikoner",
+                "permalink": "/kvib/designsystems/designTokens/designsystems/designtokens/ikoner"
+              }
+            },
+            {
+              "unversionedId": "designsystems/designTokens/iconsID",
+              "id": "designsystems/designTokens/iconsID",
+              "title": "Ikoner",
+              "description": "Ikoner som blir brukt i Kartverket sine løsninger",
+              "source": "@site/docs/designsystems/designTokens/icons.md",
+              "sourceDirName": "designsystems/designTokens",
+              "slug": "/designsystems/designTokens/designsystems/designtokens/ikoner",
+              "permalink": "/kvib/designsystems/designTokens/designsystems/designtokens/ikoner",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "id": "iconsID",
+                "title": "Ikoner",
+                "description": "Ikoner som blir brukt i Kartverket sine løsninger",
+                "slug": "designsystems/designtokens/ikoner",
+                "displayed_sidebar": "designsystemSidebar"
+              },
+              "sidebar": "designsystemSidebar",
+              "previous": {
+                "title": "Farger",
+                "permalink": "/kvib/designsystems/designtokens/colors"
+              },
+              "next": {
+                "title": "Logo",
+                "permalink": "/kvib/designsystem/komponenter/logo"
+              }
+            },
+            {
+              "unversionedId": "designsystems/designTokens/logoID",
+              "id": "designsystems/designTokens/logoID",
+              "title": "Logo",
+              "description": "Logoer som blir brukt i Kartverket sine løsninger",
+              "source": "@site/docs/designsystems/designTokens/logos.md",
+              "sourceDirName": "designsystems/designTokens",
+              "slug": "/designsystem/komponenter/logo",
+              "permalink": "/kvib/designsystem/komponenter/logo",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "id": "logoID",
+                "title": "Logo",
+                "description": "Logoer som blir brukt i Kartverket sine løsninger",
+                "slug": "/designsystem/komponenter/logo",
+                "displayed_sidebar": "designsystemSidebar"
+              },
+              "sidebar": "designsystemSidebar",
+              "previous": {
+                "title": "Ikoner",
+                "permalink": "/kvib/designsystems/designTokens/designsystems/designtokens/ikoner"
+              },
+              "next": {
+                "title": "Komponenter",
+                "permalink": "/kvib/designsystem/Komponenter"
+              }
+            },
+            {
+              "unversionedId": "designsystems/designTokens/typografiID",
+              "id": "designsystems/designTokens/typografiID",
+              "title": "Typografi",
+              "description": "Typografi som blir brukt i Kartverket sine løsninger",
+              "source": "@site/docs/designsystems/designTokens/typography.mdx",
+              "sourceDirName": "designsystems/designTokens",
+              "slug": "/designsystems/designtokens/typografi",
+              "permalink": "/kvib/designsystems/designtokens/typografi",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "id": "typografiID",
+                "title": "Typografi",
+                "description": "Typografi som blir brukt i Kartverket sine løsninger",
+                "slug": "/designsystems/designtokens/typografi",
+                "displayed_sidebar": "designsystemSidebar"
+              },
+              "sidebar": "designsystemSidebar",
+              "previous": {
+                "title": "Design tokens",
+                "permalink": "/kvib/designsystem/designTokens"
+              },
+              "next": {
+                "title": "Farger",
+                "permalink": "/kvib/designsystems/designtokens/colors"
+              }
+            },
+            {
+              "unversionedId": "designsystems/Komponenter/checkboxID",
+              "id": "designsystems/Komponenter/checkboxID",
+              "title": "Avmerkingsbokser",
+              "description": "Avmerkingsbokser som blir brukt i Kartverket sine løsninger",
+              "source": "@site/docs/designsystems/Komponenter/checkbox.md",
+              "sourceDirName": "designsystems/Komponenter",
+              "slug": "/designsystem/komponenter/checkbox",
+              "permalink": "/kvib/designsystem/komponenter/checkbox",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "id": "checkboxID",
+                "title": "Avmerkingsbokser",
+                "description": "Avmerkingsbokser som blir brukt i Kartverket sine løsninger",
+                "slug": "/designsystem/komponenter/checkbox",
+                "displayed_sidebar": "designsystemSidebar",
+                "sidebar_position": 2
+              },
+              "sidebar": "designsystemSidebar",
+              "previous": {
+                "title": "Komponenter",
+                "permalink": "/kvib/designsystem/Komponenter"
+              },
+              "next": {
+                "title": "Inputfelt",
+                "permalink": "/kvib/designsystem/komponenter/inputfelt"
+              }
+            },
+            {
+              "unversionedId": "designsystems/Komponenter/detailsID",
+              "id": "designsystems/Komponenter/detailsID",
+              "title": "Utvidbart panel",
+              "description": "Utvidbart panel som blir brukt i Kartverket sine løsninger",
+              "source": "@site/docs/designsystems/Komponenter/details.md",
+              "sourceDirName": "designsystems/Komponenter",
+              "slug": "/designsystem/komponenter/utvidbar-panel",
+              "permalink": "/kvib/designsystem/komponenter/utvidbar-panel",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "id": "detailsID",
+                "title": "Utvidbart panel",
+                "description": "Utvidbart panel som blir brukt i Kartverket sine løsninger",
+                "slug": "/designsystem/komponenter/utvidbar-panel",
+                "displayed_sidebar": "designsystemSidebar"
+              },
+              "sidebar": "designsystemSidebar",
+              "previous": {
+                "title": "(!)Listevisning",
+                "permalink": "/kvib/designsystem/komponenter/table"
+              },
+              "next": {
+                "title": "Knapper",
+                "permalink": "/kvib/designsystems/Komponenter/Knapper"
+              }
+            },
+            {
+              "unversionedId": "designsystems/Komponenter/dropDownID",
+              "id": "designsystems/Komponenter/dropDownID",
+              "title": "(!)Nedtrekksmeny",
+              "description": "Nedtrekksmeny som blir brukt i Kartverket sine løsninger",
+              "source": "@site/docs/designsystems/Komponenter/dropdown.mdx",
+              "sourceDirName": "designsystems/Komponenter",
+              "slug": "/designsystem/komponenter/nedtrekksmeny",
+              "permalink": "/kvib/designsystem/komponenter/nedtrekksmeny",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "id": "dropDownID",
+                "title": "(!)Nedtrekksmeny",
+                "description": "Nedtrekksmeny som blir brukt i Kartverket sine løsninger",
+                "slug": "/designsystem/komponenter/nedtrekksmeny",
+                "displayed_sidebar": "designsystemSidebar"
+              },
+              "sidebar": "designsystemSidebar",
+              "previous": {
+                "title": "Inputfelt",
+                "permalink": "/kvib/designsystem/komponenter/inputfelt"
+              },
+              "next": {
+                "title": "(!)Søkefelt",
+                "permalink": "/kvib/designsystem/komponenter/søkefelt"
+              }
+            },
+            {
+              "unversionedId": "designsystems/Komponenter/gridsID",
+              "id": "designsystems/Komponenter/gridsID",
+              "title": "Grid",
+              "description": "Grid som blir brukt i Kartverket sine løsninger",
+              "source": "@site/docs/designsystems/Komponenter/grids.md",
+              "sourceDirName": "designsystems/Komponenter",
+              "slug": "/designsystem/komponenter/grid",
+              "permalink": "/kvib/designsystem/komponenter/grid",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 7,
+              "frontMatter": {
+                "id": "gridsID",
+                "title": "Grid",
+                "description": "Grid som blir brukt i Kartverket sine løsninger",
+                "slug": "/designsystem/komponenter/grid",
+                "displayed_sidebar": "designsystemSidebar",
+                "sidebar_position": 7
+              },
+              "sidebar": "designsystemSidebar"
+            },
+            {
+              "unversionedId": "designsystems/Komponenter/inputfeltID",
+              "id": "designsystems/Komponenter/inputfeltID",
+              "title": "Inputfelt",
+              "description": "Inputfelter som blir brukt i Kartverket sine løsninger",
+              "source": "@site/docs/designsystems/Komponenter/inputfield.md",
+              "sourceDirName": "designsystems/Komponenter",
+              "slug": "/designsystem/komponenter/inputfelt",
+              "permalink": "/kvib/designsystem/komponenter/inputfelt",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 4,
+              "frontMatter": {
+                "id": "inputfeltID",
+                "title": "Inputfelt",
+                "description": "Inputfelter som blir brukt i Kartverket sine løsninger",
+                "slug": "/designsystem/komponenter/inputfelt",
+                "displayed_sidebar": "designsystemSidebar",
+                "sidebar_position": 4
+              },
+              "sidebar": "designsystemSidebar",
+              "previous": {
+                "title": "Avmerkingsbokser",
+                "permalink": "/kvib/designsystem/komponenter/checkbox"
+              },
+              "next": {
+                "title": "(!)Nedtrekksmeny",
+                "permalink": "/kvib/designsystem/komponenter/nedtrekksmeny"
+              }
+            },
+            {
+              "unversionedId": "designsystems/Komponenter/Knapper/blåknappID",
+              "id": "designsystems/Komponenter/Knapper/blåknappID",
+              "title": "Blå knapper (sekundærsett)",
+              "description": "Blå knapper (sekundærsett)",
+              "source": "@site/docs/designsystems/Komponenter/Knapper/blueButton.md",
+              "sourceDirName": "designsystems/Komponenter/Knapper",
+              "slug": "/designsystems/Komponenter/Knapper/blåknappID",
+              "permalink": "/kvib/designsystems/Komponenter/Knapper/blåknappID",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "id": "blåknappID",
+                "title": "Blå knapper (sekundærsett)",
+                "description": "Blå knapper (sekundærsett)"
+              },
+              "sidebar": "designsystemSidebar",
+              "previous": {
+                "title": "Grønne knapper (primærsett)",
+                "permalink": "/kvib/designsystems/Komponenter/Knapper/grønnknappID"
+              },
+              "next": {
+                "title": "Knapper med ikon",
+                "permalink": "/kvib/designsystems/Komponenter/Knapper/ikonknappID"
+              }
+            },
+            {
+              "unversionedId": "designsystems/Komponenter/Knapper/disabledknappID",
+              "id": "designsystems/Komponenter/Knapper/disabledknappID",
+              "title": "Disabled",
+              "description": "Deaktivert knapp",
+              "source": "@site/docs/designsystems/Komponenter/Knapper/disabled.md",
+              "sourceDirName": "designsystems/Komponenter/Knapper",
+              "slug": "/designsystems/Komponenter/Knapper/disabledknappID",
+              "permalink": "/kvib/designsystems/Komponenter/Knapper/disabledknappID",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 5,
+              "frontMatter": {
+                "id": "disabledknappID",
+                "sidebar_position": 5,
+                "title": "Disabled",
+                "description": "Deaktivert knapp"
+              },
+              "sidebar": "designsystemSidebar",
+              "previous": {
+                "title": "Knapper med ikon",
+                "permalink": "/kvib/designsystems/Komponenter/Knapper/ikonknappID"
+              },
+              "next": {
+                "title": "Tilleggskomponenter (Historiske kart)",
+                "permalink": "/kvib/designsystems/tilleggskomponenterID"
+              }
+            },
+            {
+              "unversionedId": "designsystems/Komponenter/Knapper/grønnknappID",
+              "id": "designsystems/Komponenter/Knapper/grønnknappID",
+              "title": "Grønne knapper (primærsett)",
+              "description": "Grønne knapper (primærsett)",
+              "source": "@site/docs/designsystems/Komponenter/Knapper/greenButtons.md",
+              "sourceDirName": "designsystems/Komponenter/Knapper",
+              "slug": "/designsystems/Komponenter/Knapper/grønnknappID",
+              "permalink": "/kvib/designsystems/Komponenter/Knapper/grønnknappID",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "id": "grønnknappID",
+                "sidebar_position": 2,
+                "title": "Grønne knapper (primærsett)",
+                "description": "Grønne knapper (primærsett)"
+              },
+              "sidebar": "designsystemSidebar",
+              "previous": {
+                "title": "(!)Slider knapp (Toggle Switch)",
+                "permalink": "/kvib/designsystems/Komponenter/Knapper/toggleSwitchID"
+              },
+              "next": {
+                "title": "Blå knapper (sekundærsett)",
+                "permalink": "/kvib/designsystems/Komponenter/Knapper/blåknappID"
+              }
+            },
+            {
+              "unversionedId": "designsystems/Komponenter/Knapper/ikonknappID",
+              "id": "designsystems/Komponenter/Knapper/ikonknappID",
+              "title": "Knapper med ikon",
+              "description": "Knapper med ikon",
+              "source": "@site/docs/designsystems/Komponenter/Knapper/buttonWithIcon.md",
+              "sourceDirName": "designsystems/Komponenter/Knapper",
+              "slug": "/designsystems/Komponenter/Knapper/ikonknappID",
+              "permalink": "/kvib/designsystems/Komponenter/Knapper/ikonknappID",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 4,
+              "frontMatter": {
+                "id": "ikonknappID",
+                "sidebar_position": 4,
+                "title": "Knapper med ikon",
+                "description": "Knapper med ikon"
+              },
+              "sidebar": "designsystemSidebar",
+              "previous": {
+                "title": "Blå knapper (sekundærsett)",
+                "permalink": "/kvib/designsystems/Komponenter/Knapper/blåknappID"
+              },
+              "next": {
+                "title": "Disabled",
+                "permalink": "/kvib/designsystems/Komponenter/Knapper/disabledknappID"
+              }
+            },
+            {
+              "unversionedId": "designsystems/Komponenter/Knapper/toggleSwitchID",
+              "id": "designsystems/Komponenter/Knapper/toggleSwitchID",
+              "title": "(!)Slider knapp (Toggle Switch)",
+              "description": "Slider knapper",
+              "source": "@site/docs/designsystems/Komponenter/Knapper/toggleSwitch.md",
+              "sourceDirName": "designsystems/Komponenter/Knapper",
+              "slug": "/designsystems/Komponenter/Knapper/toggleSwitchID",
+              "permalink": "/kvib/designsystems/Komponenter/Knapper/toggleSwitchID",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "id": "toggleSwitchID",
+                "title": "(!)Slider knapp (Toggle Switch)",
+                "description": "Slider knapper"
+              },
+              "sidebar": "designsystemSidebar",
+              "previous": {
+                "title": "Knapper",
+                "permalink": "/kvib/designsystems/Komponenter/Knapper"
+              },
+              "next": {
+                "title": "Grønne knapper (primærsett)",
+                "permalink": "/kvib/designsystems/Komponenter/Knapper/grønnknappID"
+              }
+            },
+            {
+              "unversionedId": "designsystems/Komponenter/navID",
+              "id": "designsystems/Komponenter/navID",
+              "title": "Navigasjon",
+              "description": "Navigasjon",
+              "source": "@site/docs/designsystems/Komponenter/navigation.md",
+              "sourceDirName": "designsystems/Komponenter",
+              "slug": "/designsystem/komponenter/navigasjon",
+              "permalink": "/kvib/designsystem/komponenter/navigasjon",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "id": "navID",
+                "title": "Navigasjon",
+                "description": "Navigasjon",
+                "slug": "/designsystem/komponenter/navigasjon",
+                "displayed_sidebar": "designsystemSidebar"
+              },
+              "sidebar": "designsystemSidebar",
+              "previous": {
+                "title": "Sideelementer",
+                "permalink": "/kvib/designsystem/komponenter/sideelementer"
+              },
+              "next": {
+                "title": "(!)Listevisning",
+                "permalink": "/kvib/designsystem/komponenter/table"
+              }
+            },
+            {
+              "unversionedId": "designsystems/Komponenter/radiobuttonID",
+              "id": "designsystems/Komponenter/radiobuttonID",
+              "title": "Radioknapp",
+              "description": "Radioknapper som blir brukt i Kartverket sine løsninger",
+              "source": "@site/docs/designsystems/Komponenter/radiobuttons.md",
+              "sourceDirName": "designsystems/Komponenter",
+              "slug": "/designsystem/komponenter/radiobutton",
+              "permalink": "/kvib/designsystem/komponenter/radiobutton",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 3,
+              "frontMatter": {
+                "id": "radiobuttonID",
+                "title": "Radioknapp",
+                "description": "Radioknapper som blir brukt i Kartverket sine løsninger",
+                "slug": "/designsystem/komponenter/radiobutton",
+                "displayed_sidebar": "designsystemSidebar",
+                "sidebar_position": 3
+              },
+              "sidebar": "designsystemSidebar",
+              "previous": {
+                "title": "Slider",
+                "permalink": "/kvib/designsystem/komponenter/slider"
+              },
+              "next": {
+                "title": "Sideelementer",
+                "permalink": "/kvib/designsystem/komponenter/sideelementer"
+              }
+            },
+            {
+              "unversionedId": "designsystems/Komponenter/searchbarID",
+              "id": "designsystems/Komponenter/searchbarID",
+              "title": "(!)Søkefelt",
+              "description": "Søkefelt som blir brukt i Kartverket sine løsninger",
+              "source": "@site/docs/designsystems/Komponenter/searchbar.md",
+              "sourceDirName": "designsystems/Komponenter",
+              "slug": "/designsystem/komponenter/søkefelt",
+              "permalink": "/kvib/designsystem/komponenter/søkefelt",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "id": "searchbarID",
+                "title": "(!)Søkefelt",
+                "description": "Søkefelt som blir brukt i Kartverket sine løsninger",
+                "slug": "/designsystem/komponenter/søkefelt",
+                "displayed_sidebar": "designsystemSidebar"
+              },
+              "sidebar": "designsystemSidebar",
+              "previous": {
+                "title": "(!)Nedtrekksmeny",
+                "permalink": "/kvib/designsystem/komponenter/nedtrekksmeny"
+              },
+              "next": {
+                "title": "Slider",
+                "permalink": "/kvib/designsystem/komponenter/slider"
+              }
+            },
+            {
+              "unversionedId": "designsystems/Komponenter/sideelementerID",
+              "id": "designsystems/Komponenter/sideelementerID",
+              "title": "Sideelementer",
+              "description": "Sideelementer som blir brukt i Kartverket sine løsninger",
+              "source": "@site/docs/designsystems/Komponenter/sideelements.md",
+              "sourceDirName": "designsystems/Komponenter",
+              "slug": "/designsystem/komponenter/sideelementer",
+              "permalink": "/kvib/designsystem/komponenter/sideelementer",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "id": "sideelementerID",
+                "title": "Sideelementer",
+                "description": "Sideelementer som blir brukt i Kartverket sine løsninger",
+                "slug": "/designsystem/komponenter/sideelementer",
+                "displayed_sidebar": "designsystemSidebar"
+              },
+              "sidebar": "designsystemSidebar",
+              "previous": {
+                "title": "Radioknapp",
+                "permalink": "/kvib/designsystem/komponenter/radiobutton"
+              },
+              "next": {
+                "title": "Navigasjon",
+                "permalink": "/kvib/designsystem/komponenter/navigasjon"
+              }
+            },
+            {
+              "unversionedId": "designsystems/Komponenter/sliderID",
+              "id": "designsystems/Komponenter/sliderID",
+              "title": "Slider",
+              "description": "Sliderere som blir brukt i Kartverket sine løsninger",
+              "source": "@site/docs/designsystems/Komponenter/slider.md",
+              "sourceDirName": "designsystems/Komponenter",
+              "slug": "/designsystem/komponenter/slider",
+              "permalink": "/kvib/designsystem/komponenter/slider",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "id": "sliderID",
+                "title": "Slider",
+                "description": "Sliderere som blir brukt i Kartverket sine løsninger",
+                "slug": "/designsystem/komponenter/slider",
+                "displayed_sidebar": "designsystemSidebar"
+              },
+              "sidebar": "designsystemSidebar",
+              "previous": {
+                "title": "(!)Søkefelt",
+                "permalink": "/kvib/designsystem/komponenter/søkefelt"
+              },
+              "next": {
+                "title": "Radioknapp",
+                "permalink": "/kvib/designsystem/komponenter/radiobutton"
+              }
+            },
+            {
+              "unversionedId": "designsystems/Komponenter/tableID",
+              "id": "designsystems/Komponenter/tableID",
+              "title": "(!)Listevisning",
+              "description": "Lister som blir brukt i Kartverket sine løsninger",
+              "source": "@site/docs/designsystems/Komponenter/table.md",
+              "sourceDirName": "designsystems/Komponenter",
+              "slug": "/designsystem/komponenter/table",
+              "permalink": "/kvib/designsystem/komponenter/table",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 7,
+              "frontMatter": {
+                "id": "tableID",
+                "title": "(!)Listevisning",
+                "description": "Lister som blir brukt i Kartverket sine løsninger",
+                "slug": "/designsystem/komponenter/table",
+                "displayed_sidebar": "designsystemSidebar",
+                "sidebar_position": 7
+              },
+              "sidebar": "designsystemSidebar",
+              "previous": {
+                "title": "Navigasjon",
+                "permalink": "/kvib/designsystem/komponenter/navigasjon"
+              },
+              "next": {
+                "title": "Utvidbart panel",
+                "permalink": "/kvib/designsystem/komponenter/utvidbar-panel"
+              }
+            },
+            {
+              "unversionedId": "designsystems/sizesID",
+              "id": "designsystems/sizesID",
+              "title": "Elementstørrelser",
+              "description": "Elementstørrelser",
+              "source": "@site/docs/designsystems/sizes.md",
+              "sourceDirName": "designsystems",
+              "slug": "/designsystems/sizes",
+              "permalink": "/kvib/designsystems/sizes",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "id": "sizesID",
+                "title": "Elementstørrelser",
+                "description": "Elementstørrelser",
+                "slug": "/designsystems/sizes",
+                "displayed_sidebar": "designsystemSidebar",
+                "sidebar_label": "Elementstørrelser",
+                "sidebar_position": 1
+              },
+              "sidebar": "designsystemSidebar",
+              "next": {
+                "title": "Tilgjengelighet",
+                "permalink": "/kvib/designsystems/uu"
+              }
+            },
+            {
+              "unversionedId": "designsystems/tilleggskomponenterID",
+              "id": "designsystems/tilleggskomponenterID",
+              "title": "Tilleggskomponenter (Historiske kart)",
+              "description": "Komponenter som ligger utenfor Figma-KVIB, og som ikke har noen godkjent design. Likvel er det tenkt at disse kan bli en del av KVIB etterhvert.",
+              "source": "@site/docs/designsystems/histkart-testknapper.md",
+              "sourceDirName": "designsystems",
+              "slug": "/designsystems/tilleggskomponenterID",
+              "permalink": "/kvib/designsystems/tilleggskomponenterID",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "id": "tilleggskomponenterID",
+                "title": "Tilleggskomponenter (Historiske kart)",
+                "description": "Komponenter som ligger utenfor Figma-KVIB, og som ikke har noen godkjent design. Likvel er det tenkt at disse kan bli en del av KVIB etterhvert."
+              },
+              "sidebar": "designsystemSidebar",
+              "previous": {
+                "title": "Disabled",
+                "permalink": "/kvib/designsystems/Komponenter/Knapper/disabledknappID"
+              }
+            },
+            {
+              "unversionedId": "designsystems/uuID",
+              "id": "designsystems/uuID",
+              "title": "Designsystem",
+              "description": "UU",
+              "source": "@site/docs/designsystems/uu.md",
+              "sourceDirName": "designsystems",
+              "slug": "/designsystems/uu",
+              "permalink": "/kvib/designsystems/uu",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "id": "uuID",
+                "title": "Designsystem",
+                "description": "UU",
+                "slug": "/designsystems/uu",
+                "displayed_sidebar": "designsystemSidebar",
+                "sidebar_label": "Tilgjengelighet",
+                "sidebar_position": 2
+              },
+              "sidebar": "designsystemSidebar",
+              "previous": {
+                "title": "Elementstørrelser",
+                "permalink": "/kvib/designsystems/sizes"
+              },
+              "next": {
+                "title": "Design tokens",
+                "permalink": "/kvib/designsystem/designTokens"
+              }
+            },
+            {
+              "unversionedId": "omKvib/contentID",
+              "id": "omKvib/contentID",
+              "title": "Dokumentasjon",
+              "description": "Innhold og struktur i dokumentasjon",
+              "source": "@site/docs/omKvib/content.md",
+              "sourceDirName": "omKvib",
+              "slug": "/omKvib/dokumentasjon",
+              "permalink": "/kvib/omKvib/dokumentasjon",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "id": "contentID",
+                "title": "Dokumentasjon",
+                "description": "Innhold og struktur i dokumentasjon",
+                "slug": "/omKvib/dokumentasjon",
+                "displayed_sidebar": "OmKvibSidebar"
+              },
+              "sidebar": "OmKvibSidebar",
+              "previous": {
+                "title": "Kvalitetskontroll",
+                "permalink": "/kvib/omKvib/kvalitetskontroll"
+              },
+              "next": {
+                "title": "Versjon",
+                "permalink": "/kvib/omKvib/versjon"
+              }
+            },
+            {
+              "unversionedId": "omKvib/infoKvibID",
+              "id": "omKvib/infoKvibID",
+              "title": "Om Kvib",
+              "description": "Om KVIB",
+              "source": "@site/docs/omKvib/infoKvib.md",
+              "sourceDirName": "omKvib",
+              "slug": "/omkvib",
+              "permalink": "/kvib/omkvib",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "id": "infoKvibID",
+                "title": "Om Kvib",
+                "description": "Om KVIB",
+                "slug": "/omkvib",
+                "displayed_sidebar": "OmKvibSidebar"
+              },
+              "sidebar": "OmKvibSidebar",
+              "next": {
+                "title": "Utvide KVIB",
+                "permalink": "/kvib/utvideKvib"
+              }
+            },
+            {
+              "unversionedId": "omKvib/installationID",
+              "id": "omKvib/installationID",
+              "title": "Implementering av KVIB",
+              "description": "Ta i bruk Kvib",
+              "source": "@site/docs/omKvib/installation.md",
+              "sourceDirName": "omKvib",
+              "slug": "/omKvib/implementering",
+              "permalink": "/kvib/omKvib/implementering",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "id": "installationID",
+                "title": "Implementering av KVIB",
+                "description": "Ta i bruk Kvib",
+                "slug": "/omKvib/implementering",
+                "displayed_sidebar": "OmKvibSidebar"
+              },
+              "sidebar": "OmKvibSidebar"
+            },
+            {
+              "unversionedId": "omKvib/publishingID",
+              "id": "omKvib/publishingID",
+              "title": "Publisering",
+              "description": "Publisering av CSS-pakke og GitHub Pages",
+              "source": "@site/docs/omKvib/publishing.md",
+              "sourceDirName": "omKvib",
+              "slug": "/omKvib/publisering",
+              "permalink": "/kvib/omKvib/publisering",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "id": "publishingID",
+                "title": "Publisering",
+                "description": "Publisering av CSS-pakke og GitHub Pages",
+                "slug": "/omKvib/publisering",
+                "displayed_sidebar": "OmKvibSidebar"
+              },
+              "sidebar": "OmKvibSidebar",
+              "previous": {
+                "title": "Versjon",
+                "permalink": "/kvib/omKvib/versjon"
+              }
+            },
+            {
+              "unversionedId": "omKvib/routineID",
+              "id": "omKvib/routineID",
+              "title": "Kvalitetskontroll",
+              "description": "Rutine for kvalitetskontroll",
+              "source": "@site/docs/omKvib/routine.md",
+              "sourceDirName": "omKvib",
+              "slug": "/omKvib/kvalitetskontroll",
+              "permalink": "/kvib/omKvib/kvalitetskontroll",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "id": "routineID",
+                "title": "Kvalitetskontroll",
+                "description": "Rutine for kvalitetskontroll",
+                "slug": "/omKvib/kvalitetskontroll",
+                "displayed_sidebar": "OmKvibSidebar"
+              },
+              "sidebar": "OmKvibSidebar",
+              "previous": {
+                "title": "Teknisk struktur",
+                "permalink": "/kvib/omKvib/struktur"
+              },
+              "next": {
+                "title": "Dokumentasjon",
+                "permalink": "/kvib/omKvib/dokumentasjon"
+              }
+            },
+            {
+              "unversionedId": "omKvib/structureID",
+              "id": "omKvib/structureID",
+              "title": "Teknisk struktur",
+              "description": "Prosjektstrukturen til KVIB",
+              "source": "@site/docs/omKvib/structure.md",
+              "sourceDirName": "omKvib",
+              "slug": "/omKvib/struktur",
+              "permalink": "/kvib/omKvib/struktur",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "id": "structureID",
+                "title": "Teknisk struktur",
+                "description": "Prosjektstrukturen til KVIB",
+                "slug": "/omKvib/struktur",
+                "displayed_sidebar": "OmKvibSidebar"
+              },
+              "sidebar": "OmKvibSidebar",
+              "previous": {
+                "title": "Utvide KVIB",
+                "permalink": "/kvib/utvideKvib"
+              },
+              "next": {
+                "title": "Kvalitetskontroll",
+                "permalink": "/kvib/omKvib/kvalitetskontroll"
+              }
+            },
+            {
+              "unversionedId": "omKvib/versionID",
+              "id": "omKvib/versionID",
+              "title": "Versjon",
+              "description": "Versjonshåndtering",
+              "source": "@site/docs/omKvib/version.md",
+              "sourceDirName": "omKvib",
+              "slug": "/omKvib/versjon",
+              "permalink": "/kvib/omKvib/versjon",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "id": "versionID",
+                "title": "Versjon",
+                "description": "Versjonshåndtering",
+                "slug": "/omKvib/versjon",
+                "displayed_sidebar": "OmKvibSidebar"
+              },
+              "sidebar": "OmKvibSidebar",
+              "previous": {
+                "title": "Dokumentasjon",
+                "permalink": "/kvib/omKvib/dokumentasjon"
+              },
+              "next": {
+                "title": "Publisering",
+                "permalink": "/kvib/omKvib/publisering"
+              }
+            }
+          ],
+          "drafts": [],
+          "sidebars": {
+            "OmKvibSidebar": [
+              {
+                "type": "doc",
+                "id": "omKvib/infoKvibID",
+                "label": "Kom i gang",
+                "translatable": true
+              },
+              {
+                "type": "category",
+                "label": "Utvide KVIB",
+                "link": {
+                  "type": "generated-index",
+                  "title": "Utviding av KVIB",
+                  "description": "Under finner du bruksanvisning på hvordan KVIB kan utvides.",
+                  "slug": "/utvideKvib",
+                  "permalink": "/kvib/utvideKvib"
+                },
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "omKvib/structureID"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "omKvib/routineID"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "omKvib/contentID"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "omKvib/versionID"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "omKvib/publishingID"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              }
+            ],
+            "designsystemSidebar": [
+              {
+                "type": "doc",
+                "id": "designsystems/sizesID",
+                "label": "Elementstørrelser",
+                "translatable": true
+              },
+              {
+                "type": "doc",
+                "id": "designsystems/uuID",
+                "label": "Tilgjengelighet",
+                "translatable": true
+              },
+              {
+                "type": "category",
+                "label": "Design tokens",
+                "link": {
+                  "type": "generated-index",
+                  "title": "Design tokens",
+                  "description": "Her er oversikt over hvilke type design tokens som er tilgjengelige i KVIB. Design tokens er grunnleggende verdier som brukes for den visuelle delen av designsystemet,for eksempel farger,spacing, font og animasjoner.Disse benyttes videre til å bygge opp komponenter. I dokumentasjonen følger beskrivelse av design tokenet, sammen med bruksområde og kodeeksempler.",
+                  "slug": "/designsystem/designTokens",
+                  "permalink": "/kvib/designsystem/designTokens"
+                },
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "designsystems/designTokens/typografiID"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "designsystems/designTokens/fargerID"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "designsystems/designTokens/iconsID"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "designsystems/designTokens/logoID"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              },
+              {
+                "type": "category",
+                "label": "Komponenter",
+                "link": {
+                  "type": "generated-index",
+                  "title": "Komponenter",
+                  "description": "Her er en oversikt over utvalget av komponenter i KVIB. Disse er blant annet bygget opp ved bruk av desing tokens fra KVIB, eksempelvis farger og typografi. I dokumentasjonen følger beskrivelse av komponenten og bruksområde, sammen med kodeeksempler. ",
+                  "slug": "/designsystem/Komponenter",
+                  "permalink": "/kvib/designsystem/Komponenter"
+                },
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "designsystems/Komponenter/checkboxID"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "designsystems/Komponenter/inputfeltID"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "designsystems/Komponenter/dropDownID"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "designsystems/Komponenter/searchbarID"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "designsystems/Komponenter/sliderID"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "designsystems/Komponenter/radiobuttonID"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "designsystems/Komponenter/sideelementerID"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "designsystems/Komponenter/navID"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "designsystems/Komponenter/tableID"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "designsystems/Komponenter/detailsID"
+                  },
+                  {
+                    "type": "category",
+                    "label": "Knapper",
+                    "link": {
+                      "type": "generated-index",
+                      "title": "Knapper",
+                      "description": "Her er en oversikt over utvalget av Knapper i KVIB. Disse er blant annet bygget opp ved bruk av desing tokens fra KVIB, eksempelvis farger og typografi. I dokumentasjonen følger beskrivelse av komponenten og bruksområde, sammen med kodeeksempler.",
+                      "slug": "designsystems/Komponenter/Knapper",
+                      "permalink": "/kvib/designsystems/Komponenter/Knapper"
+                    },
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "designsystems/Komponenter/Knapper/toggleSwitchID"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "designsystems/Komponenter/Knapper/grønnknappID"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "designsystems/Komponenter/Knapper/blåknappID"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "designsystems/Komponenter/Knapper/ikonknappID"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "designsystems/Komponenter/Knapper/disabledknappID"
+                      }
+                    ],
+                    "collapsed": true,
+                    "collapsible": true
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              },
+              {
+                "type": "doc",
+                "id": "designsystems/tilleggskomponenterID",
+                "label": "(!)Tilleggskomponenter (Historiske kart)",
+                "translatable": true
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "docusaurus-plugin-content-blog": {
+    "default": {
+      "blogSidebarTitle": "Alle versjoner",
+      "blogPosts": [
+        {
+          "id": "/2022/11/07/version-[1.0.32]",
+          "metadata": {
+            "permalink": "/kvib/blog/2022/11/07/version-[1.0.32]",
+            "source": "@site/blog/2022-11-07-version-[1.0.32].md",
+            "title": "Versjon [1.0.32]",
+            "description": "Utvidbart panel linebreak.",
+            "date": "2022-11-07T00:00:00.000Z",
+            "formattedDate": "7. november 2022",
+            "tags": [
+              {
+                "label": "dokumentasjon",
+                "permalink": "/kvib/blog/tags/dokumentasjon"
+              },
+              {
+                "label": "Utvidbart panel",
+                "permalink": "/kvib/blog/tags/utvidbart-panel"
+              }
+            ],
+            "hasTruncateMarker": false,
+            "authors": [],
+            "frontMatter": {
+              "title": "Versjon [1.0.32]",
+              "description": "Utvidbart panel linebreak.",
+              "tags": [
+                "dokumentasjon",
+                "Utvidbart panel"
+              ]
+            },
+            "nextItem": {
+              "title": "Versjon [1.0.29]",
+              "permalink": "/kvib/blog/2022/09/23/version-[1.0.29]"
+            }
+          },
+          "content": "## Changed\r\n- Fikset linebreak i utvidbart panel / details komponent."
+        },
+        {
+          "id": "/2022/09/23/version-[1.0.29]",
+          "metadata": {
+            "permalink": "/kvib/blog/2022/09/23/version-[1.0.29]",
+            "source": "@site/blog/2022-09-23-version-[1.0.29].md",
+            "title": "Versjon [1.0.29]",
+            "description": "Knapper.",
+            "date": "2022-09-23T00:00:00.000Z",
+            "formattedDate": "23. september 2022",
+            "tags": [
+              {
+                "label": "dokumentasjon",
+                "permalink": "/kvib/blog/tags/dokumentasjon"
+              },
+              {
+                "label": "Knapper",
+                "permalink": "/kvib/blog/tags/knapper"
+              },
+              {
+                "label": "avmerkingsbokser",
+                "permalink": "/kvib/blog/tags/avmerkingsbokser"
+              }
+            ],
+            "hasTruncateMarker": false,
+            "authors": [],
+            "frontMatter": {
+              "title": "Versjon [1.0.29]",
+              "description": "Knapper.",
+              "tags": [
+                "dokumentasjon",
+                "Knapper",
+                "avmerkingsbokser"
+              ]
+            },
+            "prevItem": {
+              "title": "Versjon [1.0.32]",
+              "permalink": "/kvib/blog/2022/11/07/version-[1.0.32]"
+            },
+            "nextItem": {
+              "title": "Versjon [1.0.28]",
+              "permalink": "/kvib/blog/2022/09/16/version-[1.0.28]"
+            }
+          },
+          "content": "## Changed\r\n- Fikset feil med Tertiærknapp borders og outlines i deaktivert modus.\r\n- Separert og fjernet margin i knappene og avmerkingsbokser til KVIB docusaurus."
+        },
+        {
+          "id": "/2022/09/16/version-[1.0.28]",
+          "metadata": {
+            "permalink": "/kvib/blog/2022/09/16/version-[1.0.28]",
+            "source": "@site/blog/2022-09-16-version-[1.0.28].md",
+            "title": "Versjon [1.0.28]",
+            "description": "avmerkingsboks & søkefelt.",
+            "date": "2022-09-16T00:00:00.000Z",
+            "formattedDate": "16. september 2022",
+            "tags": [
+              {
+                "label": "dokumentasjon",
+                "permalink": "/kvib/blog/tags/dokumentasjon"
+              },
+              {
+                "label": "Knapper",
+                "permalink": "/kvib/blog/tags/knapper"
+              }
+            ],
+            "hasTruncateMarker": false,
+            "authors": [],
+            "frontMatter": {
+              "title": "Versjon [1.0.28]",
+              "description": "avmerkingsboks & søkefelt.",
+              "tags": [
+                "dokumentasjon",
+                "Knapper"
+              ]
+            },
+            "prevItem": {
+              "title": "Versjon [1.0.29]",
+              "permalink": "/kvib/blog/2022/09/23/version-[1.0.29]"
+            },
+            "nextItem": {
+              "title": "Versjon [1.0.25]",
+              "permalink": "/kvib/blog/2022/09/08/version-[1.0.25]"
+            }
+          },
+          "content": "## Changed\r\n- Fikset feil med blå sekundærknapp border / outline.\r\n- Fjernet border på blå tertiærknapp."
+        },
+        {
+          "id": "/2022/09/08/version-[1.0.25]",
+          "metadata": {
+            "permalink": "/kvib/blog/2022/09/08/version-[1.0.25]",
+            "source": "@site/blog/2022-09-08-version-[1.0.25].md",
+            "title": "Versjon [1.0.25]",
+            "description": "avmerkingsboks & søkefelt.",
+            "date": "2022-09-08T00:00:00.000Z",
+            "formattedDate": "8. september 2022",
+            "tags": [
+              {
+                "label": "dokumentasjon",
+                "permalink": "/kvib/blog/tags/dokumentasjon"
+              },
+              {
+                "label": "Søkefelt",
+                "permalink": "/kvib/blog/tags/sokefelt"
+              },
+              {
+                "label": "Avmerkingsbokser",
+                "permalink": "/kvib/blog/tags/avmerkingsbokser"
+              }
+            ],
+            "hasTruncateMarker": false,
+            "authors": [],
+            "frontMatter": {
+              "title": "Versjon [1.0.25]",
+              "description": "avmerkingsboks & søkefelt.",
+              "tags": [
+                "dokumentasjon",
+                "Søkefelt",
+                "Avmerkingsbokser"
+              ]
+            },
+            "prevItem": {
+              "title": "Versjon [1.0.28]",
+              "permalink": "/kvib/blog/2022/09/16/version-[1.0.28]"
+            },
+            "nextItem": {
+              "title": "Versjon [1.0.23]",
+              "permalink": "/kvib/blog/2022/09/02/version-[1.0.23]"
+            }
+          },
+          "content": "## Changed\r\n- Fikset feil med avmerkingsboks som flyttet langt ned ved tomt label.\r\n- Fikset søkefelt wrapper og søkeknapp. (Må godkjennes av designer før den kan tas i bruk)"
+        },
+        {
+          "id": "/2022/09/02/version-[1.0.23]",
+          "metadata": {
+            "permalink": "/kvib/blog/2022/09/02/version-[1.0.23]",
+            "source": "@site/blog/2022-09-02-version-[1.0.23].md",
+            "title": "Versjon [1.0.23]",
+            "description": "Navigasjon komponenter",
+            "date": "2022-09-02T00:00:00.000Z",
+            "formattedDate": "2. september 2022",
+            "tags": [
+              {
+                "label": "dokumentasjon",
+                "permalink": "/kvib/blog/tags/dokumentasjon"
+              },
+              {
+                "label": "Nedtrekksmeny",
+                "permalink": "/kvib/blog/tags/nedtrekksmeny"
+              },
+              {
+                "label": "Avmerkingsbokser",
+                "permalink": "/kvib/blog/tags/avmerkingsbokser"
+              },
+              {
+                "label": "Inputfelt",
+                "permalink": "/kvib/blog/tags/inputfelt"
+              }
+            ],
+            "hasTruncateMarker": false,
+            "authors": [],
+            "frontMatter": {
+              "title": "Versjon [1.0.23]",
+              "description": "Navigasjon komponenter",
+              "tags": [
+                "dokumentasjon",
+                "Nedtrekksmeny",
+                "Avmerkingsbokser",
+                "Inputfelt"
+              ]
+            },
+            "prevItem": {
+              "title": "Versjon [1.0.25]",
+              "permalink": "/kvib/blog/2022/09/08/version-[1.0.25]"
+            },
+            "nextItem": {
+              "title": "Versjon [1.0.5]",
+              "permalink": "/kvib/blog/2022/08/22/version-[1.0.5]"
+            }
+          },
+          "content": "## Changed\r\n- Fikset feil med inputfelt margins, endret wrapper koden og plassering til inputfelt label i koden.\r\n- Endret label farge i inputfelt.\r\n- Fikset med avmerkingsboks navigering med tab da den var blitt fjernet.\r\n- Endret border på nedtrekksmeny til 1px."
+        },
+        {
+          "id": "/2022/08/22/version-[1.0.5]",
+          "metadata": {
+            "permalink": "/kvib/blog/2022/08/22/version-[1.0.5]",
+            "source": "@site/blog/2022-08-22-version-[1.0.5].md",
+            "title": "Versjon [1.0.5]",
+            "description": "Navigasjon komponenter",
+            "date": "2022-08-22T00:00:00.000Z",
+            "formattedDate": "22. august 2022",
+            "tags": [
+              {
+                "label": "dokumentasjon",
+                "permalink": "/kvib/blog/tags/dokumentasjon"
+              },
+              {
+                "label": "Navigasjon",
+                "permalink": "/kvib/blog/tags/navigasjon"
+              }
+            ],
+            "hasTruncateMarker": false,
+            "authors": [],
+            "frontMatter": {
+              "title": "Versjon [1.0.5]",
+              "description": "Navigasjon komponenter",
+              "tags": [
+                "dokumentasjon",
+                "Navigasjon"
+              ]
+            },
+            "prevItem": {
+              "title": "Versjon [1.0.23]",
+              "permalink": "/kvib/blog/2022/09/02/version-[1.0.23]"
+            },
+            "nextItem": {
+              "title": "Versjon [1.0.4]",
+              "permalink": "/kvib/blog/2022/08/10/version-[1.0.4]"
+            }
+          },
+          "content": "## Added\r\n\r\nLa til stegvise prosesser small skjerm og large skjerm.\r\n\r\n## Changed\r\n- Fikset feil i søkefelt komponenten der det ble brukt et utdatert klasse som ikke eksisterte lenger.\r\n- Oppdatert KVIB installasjon side, laggt til URL imports."
+        },
+        {
+          "id": "/2022/08/10/version-[1.0.4]",
+          "metadata": {
+            "permalink": "/kvib/blog/2022/08/10/version-[1.0.4]",
+            "source": "@site/blog/2022-08-10-version-[1.0.4].md",
+            "title": "Versjon [1.0.4]",
+            "description": "Utvidbar panel",
+            "date": "2022-08-10T00:00:00.000Z",
+            "formattedDate": "10. august 2022",
+            "tags": [
+              {
+                "label": "dokumentasjon",
+                "permalink": "/kvib/blog/tags/dokumentasjon"
+              },
+              {
+                "label": "Utvidbar panel",
+                "permalink": "/kvib/blog/tags/utvidbar-panel"
+              }
+            ],
+            "hasTruncateMarker": false,
+            "authors": [],
+            "frontMatter": {
+              "title": "Versjon [1.0.4]",
+              "description": "Utvidbar panel",
+              "tags": [
+                "dokumentasjon",
+                "Utvidbar panel"
+              ]
+            },
+            "prevItem": {
+              "title": "Versjon [1.0.5]",
+              "permalink": "/kvib/blog/2022/08/22/version-[1.0.5]"
+            },
+            "nextItem": {
+              "title": "Versjon [1.0.3]",
+              "permalink": "/kvib/blog/2022/08/09/version-[1.0.3]"
+            }
+          },
+          "content": "## Added\r\n\r\nOpprettet utvidbar panel med <code><details\\></code>.\r\n\r\n## Changed\r\n\r\nOpprettet _expandable_ -klasse for <code><details\\></code>-elemtentet."
+        },
+        {
+          "id": "/2022/08/09/version-[1.0.3]",
+          "metadata": {
+            "permalink": "/kvib/blog/2022/08/09/version-[1.0.3]",
+            "source": "@site/blog/2022-08-09-version-[1.0.3].md",
+            "title": "Versjon [1.0.3]",
+            "description": "Inputfelt",
+            "date": "2022-08-09T00:00:00.000Z",
+            "formattedDate": "9. august 2022",
+            "tags": [
+              {
+                "label": "dokumentasjon",
+                "permalink": "/kvib/blog/tags/dokumentasjon"
+              },
+              {
+                "label": "Inputfelt",
+                "permalink": "/kvib/blog/tags/inputfelt"
+              }
+            ],
+            "hasTruncateMarker": false,
+            "authors": [],
+            "frontMatter": {
+              "title": "Versjon [1.0.3]",
+              "description": "Inputfelt",
+              "tags": [
+                "dokumentasjon",
+                "Inputfelt"
+              ]
+            },
+            "prevItem": {
+              "title": "Versjon [1.0.4]",
+              "permalink": "/kvib/blog/2022/08/10/version-[1.0.4]"
+            },
+            "nextItem": {
+              "title": "Versjon [1.0.2]",
+              "permalink": "/kvib/blog/2022/08/04/version-[1.0.2]"
+            }
+          },
+          "content": "## Changed\r\n\r\nEndret kode struktur, la til wrapper og hjelpetekst.\r\nOppdatert dokumentasjonssiden.\r\n\r\nLagt til under **Inputfelt**."
+        },
+        {
+          "id": "/2022/08/04/version-[1.0.2]",
+          "metadata": {
+            "permalink": "/kvib/blog/2022/08/04/version-[1.0.2]",
+            "source": "@site/blog/2022-08-04-version-[1.0.2].md",
+            "title": "Versjon [1.0.2]",
+            "description": "Utvidbar panel",
+            "date": "2022-08-04T00:00:00.000Z",
+            "formattedDate": "4. august 2022",
+            "tags": [
+              {
+                "label": "dokumentasjon",
+                "permalink": "/kvib/blog/tags/dokumentasjon"
+              },
+              {
+                "label": "slider knapp",
+                "permalink": "/kvib/blog/tags/slider-knapp"
+              }
+            ],
+            "hasTruncateMarker": false,
+            "authors": [],
+            "frontMatter": {
+              "title": "Versjon [1.0.2]",
+              "description": "Utvidbar panel",
+              "tags": [
+                "dokumentasjon",
+                "slider knapp"
+              ]
+            },
+            "prevItem": {
+              "title": "Versjon [1.0.3]",
+              "permalink": "/kvib/blog/2022/08/09/version-[1.0.3]"
+            },
+            "nextItem": {
+              "title": "Versjon [1.0.1]",
+              "permalink": "/kvib/blog/2022/08/03/version-[1.0.1]"
+            }
+          },
+          "content": "## Added\r\n\r\nNy komponent: _Slider knapp (Toggle Switch)_.\r\n\r\nLagt til under **Knapper**."
+        },
+        {
+          "id": "/2022/08/03/version-[1.0.1]",
+          "metadata": {
+            "permalink": "/kvib/blog/2022/08/03/version-[1.0.1]",
+            "source": "@site/blog/2022-08-03-version-[1.0.1].md",
+            "title": "Versjon [1.0.1]",
+            "description": "Utvidbar panel",
+            "date": "2022-08-03T00:00:00.000Z",
+            "formattedDate": "3. august 2022",
+            "tags": [
+              {
+                "label": "dokumentasjon",
+                "permalink": "/kvib/blog/tags/dokumentasjon"
+              },
+              {
+                "label": "utvidbart panel",
+                "permalink": "/kvib/blog/tags/utvidbart-panel"
+              }
+            ],
+            "hasTruncateMarker": false,
+            "authors": [],
+            "frontMatter": {
+              "title": "Versjon [1.0.1]",
+              "description": "Utvidbar panel",
+              "tags": [
+                "dokumentasjon",
+                "utvidbart panel"
+              ]
+            },
+            "prevItem": {
+              "title": "Versjon [1.0.2]",
+              "permalink": "/kvib/blog/2022/08/04/version-[1.0.2]"
+            },
+            "nextItem": {
+              "title": "Versjon [1.0.0]",
+              "permalink": "/kvib/blog/2022/07/29/version-[1.0.0]"
+            }
+          },
+          "content": "## Added\r\n\r\nNy komponent: _utvidbar panel_. \r\n\r\nLagt til under **komponenter**."
+        },
+        {
+          "id": "/2022/07/29/version-[1.0.0]",
+          "metadata": {
+            "permalink": "/kvib/blog/2022/07/29/version-[1.0.0]",
+            "source": "@site/blog/2022-07-29-version-[1.0.0].md",
+            "title": "Versjon [1.0.0]",
+            "description": "ny versjon",
+            "date": "2022-07-29T00:00:00.000Z",
+            "formattedDate": "29. juli 2022",
+            "tags": [
+              {
+                "label": "dokumentasjon",
+                "permalink": "/kvib/blog/tags/dokumentasjon"
+              },
+              {
+                "label": "KVIB",
+                "permalink": "/kvib/blog/tags/kvib"
+              }
+            ],
+            "hasTruncateMarker": false,
+            "authors": [],
+            "frontMatter": {
+              "title": "Versjon [1.0.0]",
+              "description": "ny versjon",
+              "tags": [
+                "dokumentasjon",
+                "KVIB"
+              ]
+            },
+            "prevItem": {
+              "title": "Versjon [1.0.1]",
+              "permalink": "/kvib/blog/2022/08/03/version-[1.0.1]"
+            }
+          },
+          "content": "## Added \r\n* Godkjente Komponenter:\r\n  * Avmerkingsbokser\r\n  * Slider\r\n  * Radioknapp\r\n  * Knapper\r\n  * Sideelementer\r\n* Godkjente Design tokens\r\n  * Typografi\r\n  * Farger\r\n  * Ikoner\r\n  * Logo\r\n* Komponenter under konstruksjon:\r\n  * Inputfelt\r\n  * Søkefelt\r\n  * Nedtrekksmeny\r\n  * Listevisning\r\n  * Tilleggskomponenter\r\n    * Historiske Kart"
+        }
+      ],
+      "blogListPaginated": [
+        {
+          "items": [
+            "/2022/11/07/version-[1.0.32]",
+            "/2022/09/23/version-[1.0.29]",
+            "/2022/09/16/version-[1.0.28]",
+            "/2022/09/08/version-[1.0.25]",
+            "/2022/09/02/version-[1.0.23]",
+            "/2022/08/22/version-[1.0.5]",
+            "/2022/08/10/version-[1.0.4]",
+            "/2022/08/09/version-[1.0.3]",
+            "/2022/08/04/version-[1.0.2]",
+            "/2022/08/03/version-[1.0.1]",
+            "/2022/07/29/version-[1.0.0]"
+          ],
+          "metadata": {
+            "permalink": "/kvib/blog",
+            "page": 1,
+            "postsPerPage": 11,
+            "totalPages": 1,
+            "totalCount": 11,
+            "blogDescription": "En oversikt over versjoner av KVIB",
+            "blogTitle": "KVIB Versjoner"
+          }
+        }
+      ],
+      "blogTags": {
+        "/kvib/blog/tags/dokumentasjon": {
+          "label": "dokumentasjon",
+          "items": [
+            "/2022/11/07/version-[1.0.32]",
+            "/2022/09/23/version-[1.0.29]",
+            "/2022/09/16/version-[1.0.28]",
+            "/2022/09/08/version-[1.0.25]",
+            "/2022/09/02/version-[1.0.23]",
+            "/2022/08/22/version-[1.0.5]",
+            "/2022/08/10/version-[1.0.4]",
+            "/2022/08/09/version-[1.0.3]",
+            "/2022/08/04/version-[1.0.2]",
+            "/2022/08/03/version-[1.0.1]",
+            "/2022/07/29/version-[1.0.0]"
+          ],
+          "permalink": "/kvib/blog/tags/dokumentasjon",
+          "pages": [
+            {
+              "items": [
+                "/2022/11/07/version-[1.0.32]",
+                "/2022/09/23/version-[1.0.29]",
+                "/2022/09/16/version-[1.0.28]",
+                "/2022/09/08/version-[1.0.25]",
+                "/2022/09/02/version-[1.0.23]",
+                "/2022/08/22/version-[1.0.5]",
+                "/2022/08/10/version-[1.0.4]",
+                "/2022/08/09/version-[1.0.3]",
+                "/2022/08/04/version-[1.0.2]",
+                "/2022/08/03/version-[1.0.1]",
+                "/2022/07/29/version-[1.0.0]"
+              ],
+              "metadata": {
+                "permalink": "/kvib/blog/tags/dokumentasjon",
+                "page": 1,
+                "postsPerPage": 11,
+                "totalPages": 1,
+                "totalCount": 11,
+                "blogDescription": "En oversikt over versjoner av KVIB",
+                "blogTitle": "KVIB Versjoner"
+              }
+            }
+          ]
+        },
+        "/kvib/blog/tags/utvidbart-panel": {
+          "label": "Utvidbart panel",
+          "items": [
+            "/2022/11/07/version-[1.0.32]",
+            "/2022/08/03/version-[1.0.1]"
+          ],
+          "permalink": "/kvib/blog/tags/utvidbart-panel",
+          "pages": [
+            {
+              "items": [
+                "/2022/11/07/version-[1.0.32]",
+                "/2022/08/03/version-[1.0.1]"
+              ],
+              "metadata": {
+                "permalink": "/kvib/blog/tags/utvidbart-panel",
+                "page": 1,
+                "postsPerPage": 2,
+                "totalPages": 1,
+                "totalCount": 2,
+                "blogDescription": "En oversikt over versjoner av KVIB",
+                "blogTitle": "KVIB Versjoner"
+              }
+            }
+          ]
+        },
+        "/kvib/blog/tags/knapper": {
+          "label": "Knapper",
+          "items": [
+            "/2022/09/23/version-[1.0.29]",
+            "/2022/09/16/version-[1.0.28]"
+          ],
+          "permalink": "/kvib/blog/tags/knapper",
+          "pages": [
+            {
+              "items": [
+                "/2022/09/23/version-[1.0.29]",
+                "/2022/09/16/version-[1.0.28]"
+              ],
+              "metadata": {
+                "permalink": "/kvib/blog/tags/knapper",
+                "page": 1,
+                "postsPerPage": 2,
+                "totalPages": 1,
+                "totalCount": 2,
+                "blogDescription": "En oversikt over versjoner av KVIB",
+                "blogTitle": "KVIB Versjoner"
+              }
+            }
+          ]
+        },
+        "/kvib/blog/tags/avmerkingsbokser": {
+          "label": "avmerkingsbokser",
+          "items": [
+            "/2022/09/23/version-[1.0.29]",
+            "/2022/09/08/version-[1.0.25]",
+            "/2022/09/02/version-[1.0.23]"
+          ],
+          "permalink": "/kvib/blog/tags/avmerkingsbokser",
+          "pages": [
+            {
+              "items": [
+                "/2022/09/23/version-[1.0.29]",
+                "/2022/09/08/version-[1.0.25]",
+                "/2022/09/02/version-[1.0.23]"
+              ],
+              "metadata": {
+                "permalink": "/kvib/blog/tags/avmerkingsbokser",
+                "page": 1,
+                "postsPerPage": 3,
+                "totalPages": 1,
+                "totalCount": 3,
+                "blogDescription": "En oversikt over versjoner av KVIB",
+                "blogTitle": "KVIB Versjoner"
+              }
+            }
+          ]
+        },
+        "/kvib/blog/tags/sokefelt": {
+          "label": "Søkefelt",
+          "items": [
+            "/2022/09/08/version-[1.0.25]"
+          ],
+          "permalink": "/kvib/blog/tags/sokefelt",
+          "pages": [
+            {
+              "items": [
+                "/2022/09/08/version-[1.0.25]"
+              ],
+              "metadata": {
+                "permalink": "/kvib/blog/tags/sokefelt",
+                "page": 1,
+                "postsPerPage": 1,
+                "totalPages": 1,
+                "totalCount": 1,
+                "blogDescription": "En oversikt over versjoner av KVIB",
+                "blogTitle": "KVIB Versjoner"
+              }
+            }
+          ]
+        },
+        "/kvib/blog/tags/nedtrekksmeny": {
+          "label": "Nedtrekksmeny",
+          "items": [
+            "/2022/09/02/version-[1.0.23]"
+          ],
+          "permalink": "/kvib/blog/tags/nedtrekksmeny",
+          "pages": [
+            {
+              "items": [
+                "/2022/09/02/version-[1.0.23]"
+              ],
+              "metadata": {
+                "permalink": "/kvib/blog/tags/nedtrekksmeny",
+                "page": 1,
+                "postsPerPage": 1,
+                "totalPages": 1,
+                "totalCount": 1,
+                "blogDescription": "En oversikt over versjoner av KVIB",
+                "blogTitle": "KVIB Versjoner"
+              }
+            }
+          ]
+        },
+        "/kvib/blog/tags/inputfelt": {
+          "label": "Inputfelt",
+          "items": [
+            "/2022/09/02/version-[1.0.23]",
+            "/2022/08/09/version-[1.0.3]"
+          ],
+          "permalink": "/kvib/blog/tags/inputfelt",
+          "pages": [
+            {
+              "items": [
+                "/2022/09/02/version-[1.0.23]",
+                "/2022/08/09/version-[1.0.3]"
+              ],
+              "metadata": {
+                "permalink": "/kvib/blog/tags/inputfelt",
+                "page": 1,
+                "postsPerPage": 2,
+                "totalPages": 1,
+                "totalCount": 2,
+                "blogDescription": "En oversikt over versjoner av KVIB",
+                "blogTitle": "KVIB Versjoner"
+              }
+            }
+          ]
+        },
+        "/kvib/blog/tags/navigasjon": {
+          "label": "Navigasjon",
+          "items": [
+            "/2022/08/22/version-[1.0.5]"
+          ],
+          "permalink": "/kvib/blog/tags/navigasjon",
+          "pages": [
+            {
+              "items": [
+                "/2022/08/22/version-[1.0.5]"
+              ],
+              "metadata": {
+                "permalink": "/kvib/blog/tags/navigasjon",
+                "page": 1,
+                "postsPerPage": 1,
+                "totalPages": 1,
+                "totalCount": 1,
+                "blogDescription": "En oversikt over versjoner av KVIB",
+                "blogTitle": "KVIB Versjoner"
+              }
+            }
+          ]
+        },
+        "/kvib/blog/tags/utvidbar-panel": {
+          "label": "Utvidbar panel",
+          "items": [
+            "/2022/08/10/version-[1.0.4]"
+          ],
+          "permalink": "/kvib/blog/tags/utvidbar-panel",
+          "pages": [
+            {
+              "items": [
+                "/2022/08/10/version-[1.0.4]"
+              ],
+              "metadata": {
+                "permalink": "/kvib/blog/tags/utvidbar-panel",
+                "page": 1,
+                "postsPerPage": 1,
+                "totalPages": 1,
+                "totalCount": 1,
+                "blogDescription": "En oversikt over versjoner av KVIB",
+                "blogTitle": "KVIB Versjoner"
+              }
+            }
+          ]
+        },
+        "/kvib/blog/tags/slider-knapp": {
+          "label": "slider knapp",
+          "items": [
+            "/2022/08/04/version-[1.0.2]"
+          ],
+          "permalink": "/kvib/blog/tags/slider-knapp",
+          "pages": [
+            {
+              "items": [
+                "/2022/08/04/version-[1.0.2]"
+              ],
+              "metadata": {
+                "permalink": "/kvib/blog/tags/slider-knapp",
+                "page": 1,
+                "postsPerPage": 1,
+                "totalPages": 1,
+                "totalCount": 1,
+                "blogDescription": "En oversikt over versjoner av KVIB",
+                "blogTitle": "KVIB Versjoner"
+              }
+            }
+          ]
+        },
+        "/kvib/blog/tags/kvib": {
+          "label": "KVIB",
+          "items": [
+            "/2022/07/29/version-[1.0.0]"
+          ],
+          "permalink": "/kvib/blog/tags/kvib",
+          "pages": [
+            {
+              "items": [
+                "/2022/07/29/version-[1.0.0]"
+              ],
+              "metadata": {
+                "permalink": "/kvib/blog/tags/kvib",
+                "page": 1,
+                "postsPerPage": 1,
+                "totalPages": 1,
+                "totalCount": 1,
+                "blogDescription": "En oversikt over versjoner av KVIB",
+                "blogTitle": "KVIB Versjoner"
+              }
+            }
+          ]
+        }
+      },
+      "blogTagsListPath": "/kvib/blog/tags"
+    }
+  },
+  "docusaurus-plugin-content-pages": {
+    "default": [
+      {
+        "type": "jsx",
+        "permalink": "/kvib/",
+        "source": "@site/src/pages/index.jsx"
+      }
+    ]
+  },
+  "docusaurus-plugin-debug": {},
+  "docusaurus-theme-classic": {},
+  "docusaurus-theme-search-algolia": {},
+  "docusaurus-bootstrap-plugin": {},
+  "docusaurus-mdx-fallback-plugin": {}
+}

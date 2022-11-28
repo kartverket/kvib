@@ -1,0 +1,29 @@
+{
+  "unversionedId": "designsystems/Komponenter/navID",
+  "id": "designsystems/Komponenter/navID",
+  "title": "Navigasjon",
+  "description": "Navigasjon",
+  "source": "@site/docs/designsystems/Komponenter/navigation.md",
+  "sourceDirName": "designsystems/Komponenter",
+  "slug": "/designsystem/komponenter/navigasjon",
+  "permalink": "/kvib/designsystem/komponenter/navigasjon",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "navID",
+    "title": "Navigasjon",
+    "description": "Navigasjon",
+    "slug": "/designsystem/komponenter/navigasjon",
+    "displayed_sidebar": "designsystemSidebar"
+  },
+  "sidebar": "designsystemSidebar",
+  "previous": {
+    "title": "Sideelementer",
+    "permalink": "/kvib/designsystem/komponenter/sideelementer"
+  },
+  "next": {
+    "title": "(!)Listevisning",
+    "permalink": "/kvib/designsystem/komponenter/table"
+  }
+}

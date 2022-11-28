@@ -1,0 +1,29 @@
+{
+  "unversionedId": "designsystems/Komponenter/Knapper/grønnknappID",
+  "id": "designsystems/Komponenter/Knapper/grønnknappID",
+  "title": "Grønne knapper (primærsett)",
+  "description": "Grønne knapper (primærsett)",
+  "source": "@site/docs/designsystems/Komponenter/Knapper/greenButtons.md",
+  "sourceDirName": "designsystems/Komponenter/Knapper",
+  "slug": "/designsystems/Komponenter/Knapper/grønnknappID",
+  "permalink": "/kvib/designsystems/Komponenter/Knapper/grønnknappID",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "id": "grønnknappID",
+    "sidebar_position": 2,
+    "title": "Grønne knapper (primærsett)",
+    "description": "Grønne knapper (primærsett)"
+  },
+  "sidebar": "designsystemSidebar",
+  "previous": {
+    "title": "(!)Slider knapp (Toggle Switch)",
+    "permalink": "/kvib/designsystems/Komponenter/Knapper/toggleSwitchID"
+  },
+  "next": {
+    "title": "Blå knapper (sekundærsett)",
+    "permalink": "/kvib/designsystems/Komponenter/Knapper/blåknappID"
+  }
+}

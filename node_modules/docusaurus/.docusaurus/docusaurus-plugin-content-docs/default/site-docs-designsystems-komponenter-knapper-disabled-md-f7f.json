@@ -1,0 +1,29 @@
+{
+  "unversionedId": "designsystems/Komponenter/Knapper/disabledknappID",
+  "id": "designsystems/Komponenter/Knapper/disabledknappID",
+  "title": "Disabled",
+  "description": "Deaktivert knapp",
+  "source": "@site/docs/designsystems/Komponenter/Knapper/disabled.md",
+  "sourceDirName": "designsystems/Komponenter/Knapper",
+  "slug": "/designsystems/Komponenter/Knapper/disabledknappID",
+  "permalink": "/kvib/designsystems/Komponenter/Knapper/disabledknappID",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "id": "disabledknappID",
+    "sidebar_position": 5,
+    "title": "Disabled",
+    "description": "Deaktivert knapp"
+  },
+  "sidebar": "designsystemSidebar",
+  "previous": {
+    "title": "Knapper med ikon",
+    "permalink": "/kvib/designsystems/Komponenter/Knapper/ikonknappID"
+  },
+  "next": {
+    "title": "Tilleggskomponenter (Historiske kart)",
+    "permalink": "/kvib/designsystems/tilleggskomponenterID"
+  }
+}
