@@ -1,0 +1,47 @@
+/*css-klasser for å style søkeknappen i søkefelt. SØkefelt bruker også klasser fra input.css*/
+.searchbar__wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+}
+
+.searchbar__wrapper .inputField {
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.searchbar__wrapper .inputField:focus-visible {
+
+}
+
+.button__searchbar{
+    position: relative;
+    background-color: var(--green_dark);
+    color: var(--white);
+    height: 2.6rem;
+    width: 3.5rem;
+    border-radius: 0 0.25rem 0.25rem 0;
+    z-index: 2;
+    margin: 0;
+    left: -0.52rem;
+}
+
+.button__searchbar:hover{
+    background-color: var(--green);
+}
+
+.button__searchbar:active{
+    background-color: var(--green_active);
+}
+
+.button__searchbar:focus-visible{
+    outline-offset: 0;
+}
+
+.button__searchbar span {
+    position: relative;
+    left: -0.8rem;
+}

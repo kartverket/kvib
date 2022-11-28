@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="htmlComp.css">
+    <style>
+    </style>
+</head>
+<body>
+<div style="width: 25rem;display:inline-block;">
+    <label for="range-slider" class="label--sml">Skriv tekst her</label>
+    <input type="range" id="range-slider" name="range-slider" class="slider slider--m-l"
+           min="0" max="100" />
+<!--        <p id="numVal"></p> //remove comment to display slider value-->
+</div>
+
+<script data-slider-id="range-slider">
+    function handleInputChange(e) {
+        let slider = e.target
+        const min = slider.min
+        const max = slider.max
+        const val = slider.value
+        slider.style.backgroundSize = (val - min) * 100 / (max - min) + "%"
+    }
+    const script = document.currentScript;
+    const sliderId = script.dataset.sliderId;
+    const slider = document.getElementById(sliderId);
+    slider.addEventListener('input', handleInputChange)
+
+    // remove comment to display slider value
+    // const numVal = document.getElementById("numVal");
+    // numVal.innerHTML=slider.value + '%';
+    // slider.oninput = function() {
+    //     numVal.innerHTML = this.value +'%';}
+
+</script>
+
+</body>
+</html>

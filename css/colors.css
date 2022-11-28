@@ -1,0 +1,38 @@
+/* farger */
+
+:root{
+    /*groenn*/
+    --green_active: #05502A;
+    --green_dark: #156630;
+    --green: #1A833B;
+    --green_light: #D0ECD6;
+
+    /*Blaa*/
+    --blue_dark: #175092;
+    --blue: #1A589F;
+    --blue_light: #E4F1F8;
+    --blue_hover: #439CCD;
+    --blue_dark_button: #213060;
+
+    /*roed og rosa*/
+    --red_error_message: #A32F00;
+    --red_dark: #D04a14;
+    --pink: #F7E6EB;
+
+    /*oransje og gul*/
+    --orange: #FCF1E8;
+    --yellow: #FFDD9D;
+    --yellow_light: #FCEBCD;
+
+    /*svart og hvit*/
+    --black: #222222;
+    --white: #FFFFFF;
+
+    /*graa*/
+    --gray_dark: #505050;
+    --gray: #707070;
+    --gray_light: #F5F2F2;
+}
+
+
+
