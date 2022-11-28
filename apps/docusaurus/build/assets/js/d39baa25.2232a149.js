@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocusaurus=self.webpackChunkdocusaurus||[]).push([[9305],{6458:s=>{s.exports=JSON.parse('{"label":"avmerkingsbokser","permalink":"/kvib/blog/tags/avmerkingsbokser","allTagsPath":"/kvib/blog/tags","count":3}')}}]);

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocusaurus=self.webpackChunkdocusaurus||[]).push([[9025],{397:e=>{e.exports=JSON.parse('{"permalink":"/kvib/blog/tags/avmerkingsbokser","page":1,"postsPerPage":3,"totalPages":1,"totalCount":3,"blogDescription":"En oversikt over versjoner av KVIB","blogTitle":"KVIB Versjoner"}')}}]);
