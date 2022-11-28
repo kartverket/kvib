@@ -1,4 +1,4 @@
-name: Publiah-packages
+name: Release
 
 on:
   push:
