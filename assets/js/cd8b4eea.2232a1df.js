@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus=self.webpackChunkdocusaurus||[]).push([[2357],{7465:a=>{a.exports=JSON.parse('{"label":"Knapper","permalink":"/kvib/blog/tags/knapper","allTagsPath":"/kvib/blog/tags","count":2}')}}]);
