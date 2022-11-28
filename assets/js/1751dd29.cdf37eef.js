@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus=self.webpackChunkdocusaurus||[]).push([[4235],{7650:a=>{a.exports=JSON.parse('{"label":"Utvidbar panel","permalink":"/kvib/blog/tags/utvidbar-panel","allTagsPath":"/kvib/blog/tags","count":1}')}}]);

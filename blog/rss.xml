@@ -14,7 +14,7 @@
             <guid>/2022/11/07/version-[1.0.32]</guid>
             <pubDate>Mon, 07 Nov 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Utvidbart panel linebreak.]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="changed">Changed<a class="hash-link" href="#changed" title="Direct link to heading">​</a></h2><ul><li>Fikset linebreak i utvidbart panel / details komponent.</li></ul>]]></content:encoded>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_fF9Z" id="changed">Changed<a class="hash-link" href="#changed" title="Direct link to heading">​</a></h2><ul><li>Fikset linebreak i utvidbart panel / details komponent.</li></ul>]]></content:encoded>
             <category>dokumentasjon</category>
             <category>Utvidbart panel</category>
         </item>
@@ -24,7 +24,7 @@
             <guid>/2022/09/23/version-[1.0.29]</guid>
             <pubDate>Fri, 23 Sep 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Knapper.]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="changed">Changed<a class="hash-link" href="#changed" title="Direct link to heading">​</a></h2><ul><li>Fikset feil med Tertiærknapp borders og outlines i deaktivert modus.</li><li>Separert og fjernet margin i knappene og avmerkingsbokser til KVIB docusaurus.</li></ul>]]></content:encoded>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_fF9Z" id="changed">Changed<a class="hash-link" href="#changed" title="Direct link to heading">​</a></h2><ul><li>Fikset feil med Tertiærknapp borders og outlines i deaktivert modus.</li><li>Separert og fjernet margin i knappene og avmerkingsbokser til KVIB docusaurus.</li></ul>]]></content:encoded>
             <category>dokumentasjon</category>
             <category>Knapper</category>
             <category>avmerkingsbokser</category>
@@ -35,7 +35,7 @@
             <guid>/2022/09/16/version-[1.0.28]</guid>
             <pubDate>Fri, 16 Sep 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[avmerkingsboks & søkefelt.]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="changed">Changed<a class="hash-link" href="#changed" title="Direct link to heading">​</a></h2><ul><li>Fikset feil med blå sekundærknapp border / outline.</li><li>Fjernet border på blå tertiærknapp.</li></ul>]]></content:encoded>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_fF9Z" id="changed">Changed<a class="hash-link" href="#changed" title="Direct link to heading">​</a></h2><ul><li>Fikset feil med blå sekundærknapp border / outline.</li><li>Fjernet border på blå tertiærknapp.</li></ul>]]></content:encoded>
             <category>dokumentasjon</category>
             <category>Knapper</category>
         </item>
@@ -45,7 +45,7 @@
             <guid>/2022/09/08/version-[1.0.25]</guid>
             <pubDate>Thu, 08 Sep 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[avmerkingsboks & søkefelt.]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="changed">Changed<a class="hash-link" href="#changed" title="Direct link to heading">​</a></h2><ul><li>Fikset feil med avmerkingsboks som flyttet langt ned ved tomt label.</li><li>Fikset søkefelt wrapper og søkeknapp. (Må godkjennes av designer før den kan tas i bruk)</li></ul>]]></content:encoded>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_fF9Z" id="changed">Changed<a class="hash-link" href="#changed" title="Direct link to heading">​</a></h2><ul><li>Fikset feil med avmerkingsboks som flyttet langt ned ved tomt label.</li><li>Fikset søkefelt wrapper og søkeknapp. (Må godkjennes av designer før den kan tas i bruk)</li></ul>]]></content:encoded>
             <category>dokumentasjon</category>
             <category>Søkefelt</category>
             <category>Avmerkingsbokser</category>
@@ -56,7 +56,7 @@
             <guid>/2022/09/02/version-[1.0.23]</guid>
             <pubDate>Fri, 02 Sep 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Navigasjon komponenter]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="changed">Changed<a class="hash-link" href="#changed" title="Direct link to heading">​</a></h2><ul><li>Fikset feil med inputfelt margins, endret wrapper koden og plassering til inputfelt label i koden.</li><li>Endret label farge i inputfelt.</li><li>Fikset med avmerkingsboks navigering med tab da den var blitt fjernet.</li><li>Endret border på nedtrekksmeny til 1px.</li></ul>]]></content:encoded>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_fF9Z" id="changed">Changed<a class="hash-link" href="#changed" title="Direct link to heading">​</a></h2><ul><li>Fikset feil med inputfelt margins, endret wrapper koden og plassering til inputfelt label i koden.</li><li>Endret label farge i inputfelt.</li><li>Fikset med avmerkingsboks navigering med tab da den var blitt fjernet.</li><li>Endret border på nedtrekksmeny til 1px.</li></ul>]]></content:encoded>
             <category>dokumentasjon</category>
             <category>Nedtrekksmeny</category>
             <category>Avmerkingsbokser</category>
@@ -68,7 +68,7 @@
             <guid>/2022/08/22/version-[1.0.5]</guid>
             <pubDate>Mon, 22 Aug 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Navigasjon komponenter]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="added">Added<a class="hash-link" href="#added" title="Direct link to heading">​</a></h2><p>La til stegvise prosesser small skjerm og large skjerm.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="changed">Changed<a class="hash-link" href="#changed" title="Direct link to heading">​</a></h2><ul><li>Fikset feil i søkefelt komponenten der det ble brukt et utdatert klasse som ikke eksisterte lenger.</li><li>Oppdatert KVIB installasjon side, laggt til URL imports.</li></ul>]]></content:encoded>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_fF9Z" id="added">Added<a class="hash-link" href="#added" title="Direct link to heading">​</a></h2><p>La til stegvise prosesser small skjerm og large skjerm.</p><h2 class="anchor anchorWithStickyNavbar_fF9Z" id="changed">Changed<a class="hash-link" href="#changed" title="Direct link to heading">​</a></h2><ul><li>Fikset feil i søkefelt komponenten der det ble brukt et utdatert klasse som ikke eksisterte lenger.</li><li>Oppdatert KVIB installasjon side, laggt til URL imports.</li></ul>]]></content:encoded>
             <category>dokumentasjon</category>
             <category>Navigasjon</category>
         </item>
@@ -78,7 +78,7 @@
             <guid>/2022/08/10/version-[1.0.4]</guid>
             <pubDate>Wed, 10 Aug 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Utvidbar panel]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="added">Added<a class="hash-link" href="#added" title="Direct link to heading">​</a></h2><p>Opprettet utvidbar panel med <code>&lt;details<!-- -->&gt;</code>.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="changed">Changed<a class="hash-link" href="#changed" title="Direct link to heading">​</a></h2><p>Opprettet <em>expandable</em> -klasse for <code>&lt;details<!-- -->&gt;</code>-elemtentet.</p>]]></content:encoded>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_fF9Z" id="added">Added<a class="hash-link" href="#added" title="Direct link to heading">​</a></h2><p>Opprettet utvidbar panel med <code>&lt;details<!-- -->&gt;</code>.</p><h2 class="anchor anchorWithStickyNavbar_fF9Z" id="changed">Changed<a class="hash-link" href="#changed" title="Direct link to heading">​</a></h2><p>Opprettet <em>expandable</em> -klasse for <code>&lt;details<!-- -->&gt;</code>-elemtentet.</p>]]></content:encoded>
             <category>dokumentasjon</category>
             <category>Utvidbar panel</category>
         </item>
@@ -88,7 +88,7 @@
             <guid>/2022/08/09/version-[1.0.3]</guid>
             <pubDate>Tue, 09 Aug 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Inputfelt]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="changed">Changed<a class="hash-link" href="#changed" title="Direct link to heading">​</a></h2><p>Endret kode struktur, la til wrapper og hjelpetekst.
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_fF9Z" id="changed">Changed<a class="hash-link" href="#changed" title="Direct link to heading">​</a></h2><p>Endret kode struktur, la til wrapper og hjelpetekst.
 Oppdatert dokumentasjonssiden.</p><p>Lagt til under <strong>Inputfelt</strong>.</p>]]></content:encoded>
             <category>dokumentasjon</category>
             <category>Inputfelt</category>
@@ -99,7 +99,7 @@ Oppdatert dokumentasjonssiden.</p><p>Lagt til under <strong>Inputfelt</strong>.<
             <guid>/2022/08/04/version-[1.0.2]</guid>
             <pubDate>Thu, 04 Aug 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Utvidbar panel]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="added">Added<a class="hash-link" href="#added" title="Direct link to heading">​</a></h2><p>Ny komponent: <em>Slider knapp (Toggle Switch)</em>.</p><p>Lagt til under <strong>Knapper</strong>.</p>]]></content:encoded>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_fF9Z" id="added">Added<a class="hash-link" href="#added" title="Direct link to heading">​</a></h2><p>Ny komponent: <em>Slider knapp (Toggle Switch)</em>.</p><p>Lagt til under <strong>Knapper</strong>.</p>]]></content:encoded>
             <category>dokumentasjon</category>
             <category>slider knapp</category>
         </item>
@@ -109,7 +109,7 @@ Oppdatert dokumentasjonssiden.</p><p>Lagt til under <strong>Inputfelt</strong>.<
             <guid>/2022/08/03/version-[1.0.1]</guid>
             <pubDate>Wed, 03 Aug 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Utvidbar panel]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="added">Added<a class="hash-link" href="#added" title="Direct link to heading">​</a></h2><p>Ny komponent: <em>utvidbar panel</em>. </p><p>Lagt til under <strong>komponenter</strong>.</p>]]></content:encoded>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_fF9Z" id="added">Added<a class="hash-link" href="#added" title="Direct link to heading">​</a></h2><p>Ny komponent: <em>utvidbar panel</em>. </p><p>Lagt til under <strong>komponenter</strong>.</p>]]></content:encoded>
             <category>dokumentasjon</category>
             <category>utvidbart panel</category>
         </item>
@@ -119,7 +119,7 @@ Oppdatert dokumentasjonssiden.</p><p>Lagt til under <strong>Inputfelt</strong>.<
             <guid>/2022/07/29/version-[1.0.0]</guid>
             <pubDate>Fri, 29 Jul 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[ny versjon]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="added">Added<a class="hash-link" href="#added" title="Direct link to heading">​</a></h2><ul><li>Godkjente Komponenter:<ul><li>Avmerkingsbokser</li><li>Slider</li><li>Radioknapp</li><li>Knapper</li><li>Sideelementer</li></ul></li><li>Godkjente Design tokens<ul><li>Typografi</li><li>Farger</li><li>Ikoner</li><li>Logo</li></ul></li><li>Komponenter under konstruksjon:<ul><li>Inputfelt</li><li>Søkefelt</li><li>Nedtrekksmeny</li><li>Listevisning</li><li>Tilleggskomponenter<ul><li>Historiske Kart</li></ul></li></ul></li></ul>]]></content:encoded>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_fF9Z" id="added">Added<a class="hash-link" href="#added" title="Direct link to heading">​</a></h2><ul><li>Godkjente Komponenter:<ul><li>Avmerkingsbokser</li><li>Slider</li><li>Radioknapp</li><li>Knapper</li><li>Sideelementer</li></ul></li><li>Godkjente Design tokens<ul><li>Typografi</li><li>Farger</li><li>Ikoner</li><li>Logo</li></ul></li><li>Komponenter under konstruksjon:<ul><li>Inputfelt</li><li>Søkefelt</li><li>Nedtrekksmeny</li><li>Listevisning</li><li>Tilleggskomponenter<ul><li>Historiske Kart</li></ul></li></ul></li></ul>]]></content:encoded>
             <category>dokumentasjon</category>
             <category>KVIB</category>
         </item>

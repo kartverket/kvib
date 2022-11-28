@@ -1,8 +1,8 @@
 {
-  "name": "@kartverket/kvib-css",
-  "version": "Handled by CI/CD",
+  "name": "@kvib/css",
+  "version": "2.0.0",
   "description": "NPM-pakke for KVIB-CSS",
-  "main": "index.js",
+  "main": "main.css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,5 +18,3 @@
   },
   "homepage": "https://kartverket.github.io/kvib/"
 }
-
-

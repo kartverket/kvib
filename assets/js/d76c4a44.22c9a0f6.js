@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus=self.webpackChunkdocusaurus||[]).push([[6680],{8742:s=>{s.exports=JSON.parse('{"label":"Nedtrekksmeny","permalink":"/kvib/blog/tags/nedtrekksmeny","allTagsPath":"/kvib/blog/tags","count":1}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus=self.webpackChunkdocusaurus||[]).push([[6284],{2294:e=>{e.exports=JSON.parse('{"permalink":"/kvib/blog/tags/slider-knapp","page":1,"postsPerPage":1,"totalPages":1,"totalCount":1,"blogDescription":"En oversikt over versjoner av KVIB","blogTitle":"KVIB Versjoner"}')}}]);

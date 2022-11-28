@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunk_kartverket_kvib=self.webpackChunk_kartverket_kvib||[]).push([[4945],{6761:e=>{e.exports=JSON.parse('{"permalink":"/kvib/blog/tags/knapper","page":1,"postsPerPage":2,"totalPages":1,"totalCount":2,"blogDescription":"En oversikt over versjoner av KVIB","blogTitle":"KVIB Versjoner"}')}}]);
