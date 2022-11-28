@@ -1,0 +1,228 @@
+:root {
+    --color-primary: var(--blue_dark_button);
+    --color-secondary: var(--white);
+    --font: 'Mulish', sans-serif;
+
+    /*extra small / small stepper*/
+    --stepper--s--y-space: 0.5rem;
+    --stepper--s--x-space: 2.5rem;
+    --stepper--s--modifier: 0.5rem;
+
+    /*medium / large stepper*/
+    --stepper--l--y-space: 4rem;
+    --stepper--l--x-space: 2.5rem;
+    --stepper--l--modifier: 4rem;
+}
+
+/*----Liten skjerm (extra small/small)----*/
+
+.stepper--s {
+    counter-reset: steps;
+}
+
+.stepper--s [role='list'] {
+    font-family: Mulish, sans-serif;
+    line-height: 1.1;
+    margin: calc(var(--stepper--s--y-space) * -1) 0 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.stepper--s li {
+    padding-left: var(--stepper--s--x-space);
+    padding-top: var(--stepper--s--y-space);
+    position: relative;
+    counter-increment: steps;
+}
+
+.stepper--s li::before,
+.stepper--s li::after {
+    content: '';
+    width: 2px;
+    background: var(--color-primary);
+    position: absolute;
+    left: 13px;
+}
+
+.stepper--s li::before {
+    height: calc(var(--stepper--s--y-space) + var(--stepper--s--modifier));
+    top: 0;
+}
+
+.stepper--s li::after {
+    height: 100%;
+    top: calc(var(--stepper--s--y-space) + var(--stepper--s--modifier));
+}
+
+.stepper--s li:first-child::before,
+.stepper--s li:last-child::after {
+    display: none;
+}
+
+.stepper--s .stepper__circle {
+    display: block;
+    position: relative;
+}
+
+.stepper--s label {
+    position: relative;
+    top: -0.8rem;
+}
+
+/* circle< */
+.stepper--s .stepper__circle::after {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: var(--color-secondary);
+    position: absolute;
+    bottom: 100%;
+    left: calc(var(--stepper--s--x-space) * -1);
+    border: 2px solid var(--color-primary);
+    transform: translateY(50%);
+    z-index: 1;
+}
+
+.stepper--s .stepper__circle::before {
+    content: counter(steps);
+    speak-as: digits;
+    color: black;
+    position: absolute;
+    top: -0.75rem;
+    left: -1.9rem;
+    z-index: 2;
+}
+
+.stepper--s [data-status='complete'] .stepper__circle::after {
+    background-color: var(--color-primary);
+    background-image: url('data:image/svg+xml;utf8,<svg fill="white" width="9" height="7" xmlns="http://www.w3.org/2000/svg"><path d="M7.868.141a.474.474 0 01.03.652L3.244 6.087a.433.433 0 01-.627.028L.292 3.911a.474.474 0 01-.03-.652.433.433 0 01.628-.028l1.996 1.892L7.24.17A.433.433 0 017.868.14z"/></svg>');
+    background-size: 16px 13px;
+    background-position: 5px center;
+    background-repeat: no-repeat;
+    border-color: var(--color-primary);
+}
+
+.stepper--s [data-status='complete'] .stepper__circle::before {
+    content: "";
+}
+
+.stepper--s [aria-current='step'] .stepper__circle::after,
+.stepper--s [aria-current='step'] .stepper__circle::before {
+    content: "";
+    background-color: var(--color-primary);
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="white" height="48" width="48"><path d="m39.85 15.1-6.6-6.6 1.9-1.95q1-1 2.45-1 1.45 0 2.6 1.05l1.65 1.6q1.15 1.1 1.025 2.55-.125 1.45-1.125 2.45Zm-2.05 2.05L12.35 42.6h-6.6V36l25.4-25.4Z"/></svg>');
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    background-position: 4px center;
+}
+
+
+/*----Stor skjerm (medioum/large)----*/
+
+.stepper--l {
+    counter-reset: steps;
+}
+
+.stepper--l [role='list'] {
+    display: flex;
+    align-items: center;
+    font-family: Mulish, sans-serif;
+    line-height: 1.1;
+    margin: calc(var(--stepper--l--y-space) * -1) 0 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.stepper--l li {
+    padding-left: var(--stepper--l--x-space);
+    padding-top: var(--stepper--l--y-space);
+    position: relative;
+    counter-increment: steps;
+}
+
+.stepper--l li::before,
+.stepper--l li::after {
+    content: '';
+    width: 2px;
+    background: var(--color-primary);
+    position: absolute;
+    left: -2.5rem;
+    rotate: 90deg;
+}
+
+.stepper--l li::before {
+    height: calc(var(--stepper--l--y-space) + var(--stepper--l--modifier));
+    top: 0;
+}
+
+/*.stepper--l li::after {*/
+/*    height: 100%;*/
+/*    top: calc(var(--stepper--l--y-space) + var(--stepper--l--modifier));*/
+/*}*/
+
+.stepper--l li:first-child::before,
+.stepper--l li:last-child::after {
+    display: none;
+}
+
+.stepper--l .stepper__circle {
+    display: block;
+    position: relative;
+}
+
+.stepper--l label {
+    position: relative;
+    top: 1rem;
+    left: -3.5rem;
+}
+
+/* circle< */
+.stepper--l .stepper__circle::after {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: var(--color-secondary);
+    position: absolute;
+    bottom: 100%;
+    left: calc(var(--stepper--l--x-space) * -1);
+    border: 2px solid var(--color-primary);
+    transform: translateY(50%);
+    z-index: 1;
+}
+
+.stepper--l .stepper__circle::before {
+    content: counter(steps);
+    speak-as: digits;
+    color: black;
+    position: absolute;
+    top: -0.75rem;
+    left: -1.9rem;
+    z-index: 2;
+}
+
+.stepper--l [data-status='complete'] .stepper__circle::after {
+    background-color: var(--color-primary);
+    background-image: url('data:image/svg+xml;utf8,<svg fill="white" width="9" height="7" xmlns="http://www.w3.org/2000/svg"><path d="M7.868.141a.474.474 0 01.03.652L3.244 6.087a.433.433 0 01-.627.028L.292 3.911a.474.474 0 01-.03-.652.433.433 0 01.628-.028l1.996 1.892L7.24.17A.433.433 0 017.868.14z"/></svg>');
+    background-size: 16px 13px;
+    background-position: 5px center;
+    background-repeat: no-repeat;
+    border-color: var(--color-primary);
+}
+
+.stepper--l [data-status='complete'] .stepper__circle::before {
+    content: "";
+}
+
+.stepper--l [aria-current='step'] .stepper__circle::after,
+.stepper--l [aria-current='step'] .stepper__circle::before {
+    content: "";
+    background-color: var(--color-primary);
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="white" height="48" width="48"><path d="m39.85 15.1-6.6-6.6 1.9-1.95q1-1 2.45-1 1.45 0 2.6 1.05l1.65 1.6q1.15 1.1 1.025 2.55-.125 1.45-1.125 2.45Zm-2.05 2.05L12.35 42.6h-6.6V36l25.4-25.4Z"/></svg>');
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    background-position: 4px center;
+}
