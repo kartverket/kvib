@@ -11,7 +11,7 @@ https://docusaurus.io/docs/styling-layout*/
 @import 'navigation.css';
 @import 'links.css';
 @import 'algolia.css';
-@import "@kvib/kvib-css/main.css";
+@import "@kvib/css/main.css";
 
 
 /*overkjøre definerte variabler fra docusaurus*/

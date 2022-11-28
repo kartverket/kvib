@@ -1,5 +1,5 @@
 ---
-"@kvib/kvib-css": major
+"@kvib/css": major
 ---
 
 - Converts to a monorepo structure

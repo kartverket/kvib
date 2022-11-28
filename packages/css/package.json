@@ -1,5 +1,5 @@
 {
-  "name": "@kvib/kvib-css",
+  "name": "@kvib/css",
   "version": "1.0.0",
   "description": "NPM-pakke for KVIB-CSS",
   "main": "main.css",

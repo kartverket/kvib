@@ -26,7 +26,7 @@
     "@docusaurus/theme-search-algolia": "^2.1.0",
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
-    "@kvib/kvib-css": "*",
+    "@kvib/css": "*",
     "@material-ui/core": "^4.12.4",
     "@mdx-js/react": "^1.6.22",
     "@mui/icons-material": "^5.8.4",
