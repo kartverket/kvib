@@ -38,9 +38,9 @@ p a {
     text-decoration: underline;
 }
 
-p {
+/* p {
     max-width: 60ch;
-}
+} */
 
 .heading {
     max-width: 50ch;
