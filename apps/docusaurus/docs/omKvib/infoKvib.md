@@ -60,7 +60,7 @@ For å sikre helhetlige tjenester og god dialog på tvers av team har vi etabler
 <p class="body-text body-text--sml">For å laste ned og ta i bruk KVIB-CSS, skriv følgende kommando i terminalen:</p>
 
 ```markdown
-npm i @kartverket/kvib-css
+npm i @kvib/css
 ```
 <p class="body-text body-text--sml">Du kan også angi i package.json fila i prosjektet ditt hvilken versjon av @kvib/css du ønsker å ta i bruk, slik at teamet selv har full kontroll når det kommer oppdateringer til biblioteket.</p>
 
@@ -69,13 +69,13 @@ npm i @kartverket/kvib-css
 - I HTML fil:
 
 ```markdown
-<link rel="stylesheet" href="PATH/node_modules/@kartverket/kvib/main.css">
+<link rel="stylesheet" href="PATH/node_modules/@kvib/css/main.css">
 ```
 
 - I CSS fil:
 
 ```markdown
-@import 'PATH/node_modules/@kartverket/kvib/main.css';
+@import 'PATH/node_modules/@kvib/css/main.css';
 ```
 
 <p class="body-text body-text--sml">Vi anbefaler primært å bundle @KVIB/css sammen med front-end koden deres for å ha full kontroll på tilgjengelighet og versjonering av denne. Dersom dere allikevel ønsker å ta i bruk KVIB-css via et CDN er det for eksempel mulig å benytte seg av <a href="https://www.jsdelivr.com/">jsDeliver</a> Dette er et open source CDN som tilbyr alle pakker offentlig tilgjengelige på npm, inkludert KVIB. Vær da oppmerksom på at dere selv må vurdere risiko ved opptid på tjenesten, og at dere bør hente ressursene med crossorigin=anonymous, for å hindre at CDN-et brukes for å spore brukere rundt om kring på nettet. Mer info om crossorigin finner du på <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/crossorigin">Mozilla developer network</a></p>
