@@ -65,14 +65,14 @@ I kartverkets designsystem finner du komponentene som er godkjent i bruk. Du kan
 <p class="body-text body-text--sml">Importer KVIB HTML link:</p>
 
 ```markdown
- <link rel="stylesheet" href='https://kartverket.github.io/kvib/css/main.css'>
+ <link rel="stylesheet" href='https://cdn.jsdelivr.net/npm/@kvib/css@2/main.min.css'>
 ```
 
 ##### CSS import
 <p class="body-text body-text--sml">Importer KVIB i index.css i prosjektet:</p>
 
 ```markdown
-@import url("https://kartverket.github.io/kvib/css/main.css");
+@import url("https://cdn.jsdelivr.net/npm/@kvib/css@2/main.min.css");
 ```
 </div>
 
@@ -84,7 +84,7 @@ I kartverkets designsystem finner du komponentene som er godkjent i bruk. Du kan
 <p class="body-text body-text--sml">For å laste ned og ta i bruk KVIB-CSS, skriv følgende kommando i terminalen:</p>
 
 ```markdown
-npm i @kartverket/kvib-css
+npm i @kvib/css
 ```
 
 <p class="body-text body-text--sml">Importer eller legg til link til biblioteket i CSS eller HTML filen i prosjektet.</p>
@@ -92,13 +92,13 @@ npm i @kartverket/kvib-css
 - I HTML fil:
 
 ```markdown
-<link rel="stylesheet" href="PATH/node_modules/@kartverket/kvib/main.css">
+<link rel="stylesheet" href="PATH/node_modules/@kvib/css/main.css">
 ```
 
 - I CSS fil:
 
 ```markdown
-@import 'PATH/node_modules/@kartverket/kvib/main.css';
+@import 'PATH/node_modules/@kvib/css/main.css';
 ```
 
 </div>
