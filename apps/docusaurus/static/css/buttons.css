@@ -18,14 +18,14 @@ Focus
 */
 
 :root{
-    --icon-button-padding-xs: 0.5rem;
-    --icon-button-padding-sml: 1rem;
-    --button-tertiary-background: var(--white); /* Burde denne vært transparent?*/
+    --kv-button__icon__padding--xs: 0.5rem;
+    --kv-button__icon__padding--sml: 1rem;
+    --kv-button--tertiary--background: var(--white); /* Burde denne vært transparent?*/
 
 }
 
 /* Hovedklasse*/
-.button{
+.button, .kv-button{
     border: 0.006rem solid;
     border-radius: 0.5rem;
     text-decoration: none;
@@ -35,31 +35,31 @@ Focus
 }
 
 /* Fokus */
-.button:focus-visible{
+.button:focus-visible, .kv-button:focus-visible{
     outline: var(--blue_dark) solid;
     outline-offset: 0.313rem;
     outline-width: var(--focus-outline);
 }
 /* Disabled */
-.button:disabled{
+.button:disabled, .kv-button:disabled{
     background-color: var(--gray_light);
     color: var(--gray_dark);
     outline-style: solid;
     outline-color: var(--gray_dark);
 }
 
-/******************* 
-  Knappestørrelser 
+/*******************
+  Knappestørrelser
 ********************/
-.button--xs{
-        width: fit-content;
-        height: 2.5rem;
-        padding: var(--padding-button--xs);
-        font-size: 1rem;
-        line-height: 1.5rem;
+.button--xs, .kv-button--xs{
+    width: fit-content;
+    height: 2.5rem;
+    padding: var(--padding-button--xs);
+    font-size: 1rem;
+    line-height: 1.5rem;
 }
 
-.button--sm{
+.button--sm, .kv-button--sm{
     width: fit-content;
     height: 3.5rem;
     padding: var(--padding-button--s-m-l);
@@ -67,7 +67,7 @@ Focus
     line-height: 1.5rem;
 }
 
-.button--l{
+.button--l, .kv-button--l{
     width: fit-content;
     height: 4rem;
     padding: var(--padding-button--s-m-l);
@@ -79,30 +79,30 @@ Focus
  Primær-pog sekundærsett
 ************************/
 /* BUTTON PRIMARY*/
-.button__green--primary{
+.button__green--primary, .kv-button--primary--green{
     border: none;
     background-color: var(--green_dark);
     color: var(--white); /* Setter tekstfarge */
 }
-.button__green--primary:hover{
+.button__green--primary:hover, .kv-button--primary--green:hover{
     background-color: var(--green);
     color: var(--white);
 }
-.button__green--primary:active{
+.button__green--primary:active, .kv-button--primary--green:active{
     background-color: var(--green_active);
     color: var(--white);
 }
 
 
-.button__blue--primary{
+.button__blue--primary, .kv-button--primary--blue{
     background-color: var(--blue);
     color: var(--white);
 }
-.button__blue--primary:hover{
+.button__blue--primary:hover, .kv-button--primary--blue:hover{
     background-color: var(--blue_hover);
     color: var(--black);
 }
-.button__blue--primary:active{
+.button__blue--primary:active, .kv-button--primary--blue:active{
     background-color: var(--blue_dark);
     color: var(--white);
 }
@@ -110,36 +110,36 @@ Focus
 
 
 /* BUTTON SECONDARY*/
-.button__green--secondary{
+.button__green--secondary, .kv-button--secondary--green{
     background-color: var(--white);
     color: var(--green_dark);
     outline-color: var(--green_dark);
     border-color: var(--green_dark);
 }
-.button__green--secondary:hover{
+.button__green--secondary:hover, .kv-button--secondary--green:hover{
     background-color: var(--green);
     color: var(--white);
     outline: none;
 }
-.button__green--secondary:active{
+.button__green--secondary:active, .kv-button--secondary--green:active{
     background-color: var(--green_active);
     color: var(--white);
     outline: none;
 }
 
 
-.button__blue--secondary{
+.button__blue--secondary, .kv-button--secondary--blue{
     background-color: var(--white);
     color: var(--blue);
     outline-color: var(--blue);
     border-color: var(--blue);
 }
-.button__blue--secondary:hover{
+.button__blue--secondary:hover, .kv-button--secondary--blue:hover{
     background-color: var(--blue_hover);
     color: var(--black);
     outline: none;
 }
-.button__blue--secondary:active{
+.button__blue--secondary:active, .kv-button--secondary--blue:active{
     background-color: var(--blue_dark);
     color: var(--white);
     outline: none;
@@ -147,105 +147,82 @@ Focus
 
 
 /* BUTTON TERTIARY */
-.button__green--tertiary{
+.button__green--tertiary, .kv-button--tertiary--green{
     border: none;
-    background-color: var(--button-tertiary-background);
+    background-color: var(--kv-button--tertiary--background);
     color: var(--green_dark);
 }
-.button__green--tertiary:hover{
-    background-color: var(--button-tertiary-background);
+.button__green--tertiary:hover, .kv-button--tertiary--green:hover{
+    background-color: var(--kv-button--tertiary--background);
     color: var(--green_dark);
     text-decoration: underline var(--green_dark);
 }
-.button__green--tertiary:active{
-    background-color: var(--button-tertiary-background);
+.button__green--tertiary:active, .kv-button--tertiary--green:active{
+    background-color: var(--kv-button--tertiary--background);
     color: var(--green_active);
 }
 
-.button__green--tertiary:disabled {
+.button__green--tertiary:disabled, .kv-button--tertiary--green:disabled{
     border: none;
     outline: none;
-    background-color: var(--button-tertiary-background);
+    background-color: var(--kv-button--tertiary--background);
     color: var(--gray_dark);
 }
 
-.button__blue--tertiary{
+.button__blue--tertiary, .kv-button--tertiary--blue{
     border: none;
-    background-color: var(--button-tertiary-background);
+    background-color: var(--kv-button--tertiary--background);
     color: var(--blue);
 }
-.button__blue--tertiary:hover{
-    background-color: var(--button-tertiary-background);
+.button__blue--tertiary:hover, .kv-button--tertiary--blue:hover{
+    background-color: var(--kv-button--tertiary--background);
     color: var(--blue_dark); /*Er denne fargen riktig? Det er ikke konsekvent med den grønne, og jeg mistenker at den grønne er riktig. For å få det konsekvent skal det være --blue her.*/
     text-decoration: underline var(--blue_dark);
 }
-.button__blue--tertiary:active{
-    background-color: var(--button-tertiary-background);
+.button__blue--tertiary:active, .kv-button--tertiary--blue:active{
+    background-color: var(--kv-button--tertiary--background);
     color: var(--blue_dark);
 }
-
-
-/*BUG: får ikke fjernet underline på <span>-element ved hover.
-Løst ved å sette underline-farge lik bakgrunnsfargen på knappen*
-Edit Bente: Jeg får ikke denne feilen selv om jeg fjerner denne koden/
-/*.button__blue--tertiary:hover .material-symbols-outlined{*/
-/*    text-decoration:underline var(--button-tertiary-background);*/
-/*}*/
-/*.button__green--tertiary:hover .material-symbols-outlined{*/
-/*    text-decoration:underline var(--button-tertiary-background);*/
-/*}*/
-
-/*************************************
-klasser for knapper med ikon. hvilken side ikonet skal være ift teksten.
-*************************************/
-/*Vi bruker ikke egne klasser for dette. Hvilken side ikonet står på avgjøres av markup (det blir stående der det er plassert i markupen)*/
-/*.button--icon-left{*/
-/*    flex-direction: row-reverse;*/
-/*}*/
-/*.button--icon-right{*/
-/*    flex-direction: row;*/
-/*}*/
-
 
 /*************************************
   Styling av ikonet som er i en knapp
 *************************************/
 
 /* IKON-style (i knapp): xs-venstre*/
-.button--xs.button--icon-left > span.material-symbols-outlined{
+.button--xs.button--icon-left > span.material-symbols-outlined, .kv-button--xs.kv-button__icon--left > span.material-symbols-outlined{
     font-size: var(--icon-fontSize-xs);
     height: var(--icon-height-xs);
-    padding: 0 var(--icon-button-padding-xs) 0 0;
+    padding: 0 var(--kv-button__icon__padding--xs) 0 0;
 }
 /* IKON-style (i knapp): xs-høyre*/
-.button--xs.button--icon-right > span.material-symbols-outlined{
+.button--xs.button--icon-right > span.material-symbols-outlined, .kv-button--xs.kv-button__icon--right > span.material-symbols-outlined{
     font-size: var(--icon-fontSize-xs);
     height: var(--icon-height-xs);
-    padding: 0 0 0 var(--icon-button-padding-xs);
+    padding: 0 0 0 var(--kv-button__icon__padding--xs);
     /*z-index: 2; Z-index har ingen effekt her, fjernes.*/
 }
 /* IKON-style (i knapp): sml-høyre*/
-.button--sm.button--icon-right > span.material-symbols-outlined{
+.button--sm.button--icon-right > span.material-symbols-outlined, .kv-button--sm.kv-button__icon--right > span.material-symbols-outlined{
     font-size: var(--icon-fontSize-sml);
     height: var(--icon-height-sml);
-    padding: 0 0 0 var(--icon-button-padding-sml);
+    padding: 0 0 0 var(--kv-button__icon__padding--sml);
 }
-.button--l.button--icon-right > span.material-symbols-outlined{
+.button--l.button--icon-right > span.material-symbols-outlined, .kv-button--l.kv-button__icon--right > span.material-symbols-outlined{
     font-size: var(--icon-fontSize-sml);
     height: var(--icon-height-sml);
-    padding: 0 0 0 var(--icon-button-padding-sml);
+    padding: 0 0 0 var(--kv-button__icon__padding--sml);
 }
 
 /* IKON-style (i knapp): sml-venstre*/
-.button--sm.button--icon-left > span.material-symbols-outlined{
+.button--sm.button--icon-left > span.material-symbols-outlined, .kv-button--sm.kv-button--icon--left > span.material-symbols-outlined{
     font-size: var(--icon-fontSize-sml);
     height: var(--icon-height-sml);
-    padding: 0 var(--icon-button-padding-sml) 0 0 ;
+    padding: 0 var(--kv-button__icon__padding--sml) 0 0 ;
 }
-.button--l.button--icon-left > span.material-symbols-outlined{
+.button--l.button--icon-left > span.material-symbols-outlined, .kv-button--l.kv-button--icon--left > span.material-symbols-outlined{
     font-size: var(--icon-fontSize-sml);
     height: var(--icon-height-sml);
-    padding: 0 var(--icon-button-padding-sml) 0 0 ;
+    padding: 0 var(--kv-button__icon__padding--sml) 0 0 ;
 }
 
 

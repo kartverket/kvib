@@ -4,6 +4,7 @@ https://docusaurus.io/docs/styling-layout*/
 
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap');
 @import 'palette.css';
+@import 'buttons.css';
 @import 'uu.css';
 @import 'iconDocs.css';
 @import 'progressbarDemo.css';

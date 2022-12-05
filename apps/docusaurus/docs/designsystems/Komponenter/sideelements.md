@@ -14,18 +14,18 @@ Det sirkulære opplastningselementet skal brukes på små flater og som ikon.
 I elementet under er <code>loader--size</code> 5.625rem / 90px. Størrelsen endres av designer for hvert prosjekt.
 
 <div class="devsizes-grid">
-    <div class="loader loader--blue loader--size"></div>
-    <div class="loader loader--green loader--size"></div>
+    <div class="kv-loader kv-loader--blue loader--size"></div>
+    <div class="kv-loader kv-loader--green loader--size"></div>
     <div class="loader__background__box">
-        <div class="white--loader loader--white loader--size loader--pos--white"></div>
+         <div class="kv-loader kv-loader--white loader--size loader--pos--white"></div>
     </div>
 </div>
 <br/>
 
 ```markdown
-<div class="loader loader--blue loader--size"></div>
-<div class="loader loader--green loader--size"></div>
-<div class="white--loader loader--white loader--size"></div>
+<div class="kv-loader kv-loader--blue loader--size"></div>
+<div class="kv-loader kv-loader--green loader--size"></div>
+<div class="kv-loader kv-loader--white loader--size"></div>
 ```
 
 ## Lineært opplastningselement

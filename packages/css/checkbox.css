@@ -1,16 +1,19 @@
-.checkbox {
+.checkbox,
+.kv-checkbox {
     display: flex;
     position: relative;
 }
 
-.checkbox input[type="checkbox"] {
+.checkbox input[type="checkbox"],
+.kv-checkbox input[type="checkbox"] {
     position: absolute;
     opacity: 0;
     height: 0;
     width: 0;
 }
 
-.checkbox label {
+.checkbox label,
+.kv-checkbox label {
     position: relative;
     display: inline-block;
 
@@ -19,7 +22,9 @@
 }
 
 .checkbox label::before,
-.checkbox label::after {
+.checkbox label::after,
+.kv-checkbox label::before,
+.kv-checkbox label::after {
     position: absolute;
     content: "";
 
@@ -27,7 +32,8 @@
     display: inline-block;
 }
 
-.checkbox label::before{
+.checkbox label::before,
+.kv-checkbox label::before {
     height: 0.938rem;
     width: 0.938rem;
 
@@ -41,7 +47,8 @@
     left: 0;
 }
 
-.checkbox label::after {
+.checkbox label::after,
+.kv-checkbox label::after {
     height: 0.313rem;
     width: 0.563rem;
     border-left: 0.188rem solid;
@@ -54,40 +61,48 @@
 }
 
 /*Hide checkmark by default*/
-.checkbox input[type="checkbox"] + label::after {
+.checkbox input[type="checkbox"] + label::after,
+.kv-checkbox input[type="checkbox"] + label::after {
     content: none;
 }
 
 .checkbox input[type="checkbox"]:hover + label::before,
-.checkbox input[type="checkbox"]:hover + label::after{
+.checkbox input[type="checkbox"]:hover + label::after,
+.kv-checkbox input[type="checkbox"]:hover + label::before,
+.kv-checkbox input[type="checkbox"]:hover + label::after {
     cursor: pointer;
 }
 
 /*set checkmark on checked state*/
-.checkbox input[type="checkbox"]:checked + label::after {
+.checkbox input[type="checkbox"]:checked + label::after,
+.kv-checkbox input[type="checkbox"]:checked + label::after {
     content: "";
     color: var(--white);
 }
 
 /*change background color of checkbox on checked state*/
-.checkbox input[type="checkbox"]:checked + label::before {
+.checkbox input[type="checkbox"]:checked + label::before,
+.kv-checkbox input[type="checkbox"]:checked + label::before {
     background-color: var(--blue_dark);
 }
 
 /*Adding focus styles on outer-box*/
-.checkbox input[type="checkbox"]:focus-visible + label::before {
+.checkbox input[type="checkbox"]:focus-visible + label::before,
+.kv-checkbox input[type="checkbox"]:focus-visible + label::before {
     outline: max(0.188rem, 0.15em) solid var(--blue_dark);
     outline-offset: 0.125rem;
 }
 
 /* ----CHECKBOX ERROR----*/
 /*set background on the checked state*/
-.checkbox input[type="checkbox"]:required:invalid + label::before {
+.checkbox input[type="checkbox"]:required:invalid + label::before,
+.kv-checkbox input[type="checkbox"]:required:invalid + label::before {
     color: var(--red_error_message);
 }
 
 /*Adding focus styles on the outer-box*/
-.checkbox input[type="checkbox"]:focus-visible:invalid + label::before {
+.checkbox input[type="checkbox"]:focus-visible:invalid + label::before,
+.kv-checkbox input[type="checkbox"]:focus-visible:invalid + label::before {
     outline: max(0.188rem, 0.15em) solid var(--red_error_message);
     outline-offset: 0.125rem;
 }

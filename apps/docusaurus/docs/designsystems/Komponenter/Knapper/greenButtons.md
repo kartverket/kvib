@@ -14,16 +14,16 @@ Generelt brukes large på desktop, small/medium for mobil og tablets, og extra s
 
 Primærknappen er grønn og brukes for å avslutte en handling (f. eks send inn skjema). Handlingen skal skje umiddelbart etter at knappen er trykket på.
 
-
-<button class="button button__green--primary button--xs">Extra small</button>
-<button class="button button__green--primary button--sm">Small/Medium</button>
-<button class="button button__green--primary button--l">Large</button>
-
+<div class="buttons--section">
+<button class="kv-button kv-button--primary--green kv-button--xs">Extra small</button>
+<button class="kv-button kv-button--primary--green kv-button--sm">Small/Medium</button>
+<button class="kv-button kv-button--primary--green kv-button--l">Large</button>
+</div>
 
 ```markup 
-<button class="button button__green--primary button--xs">Extra small</button>
-<button class="button button__green--primary button--sm">Small/Medium</button>
-<button class="button button__green--primary button--l">Large</button>
+<button class="kv-button kv-button--primary--green kv-button--xs">Extra small</button>
+<button class="kv-button kv-button--primary--green kv-button--sm">Small/Medium</button>
+<button class="kv-button kv-button--primary--green kv-button--l">Large</button>
 ```
 
 
@@ -32,15 +32,16 @@ Primærknappen er grønn og brukes for å avslutte en handling (f. eks send inn 
 
 Sekundærknapper brukes til handlinger som er sekundære til hovedhensikten med siden, men fremdeles er viktige for brukerflyten på siden. Dette kan for eksempel være søkeknapper eller "neste steg".
 
-<button class="button button__green--secondary button--xs">Extra small</button>
-<button class="button button__green--secondary button--sm">Small/Medium</button>
-<button class="button button__green--secondary button--l">Large</button>
-
+<div class="buttons--section">
+<button class="kv-button kv-button--secondary--green kv-button--xs">Extra small</button>
+<button class="kv-button kv-button--secondary--green kv-button--sm">Small/Medium</button>
+<button class="kv-button kv-button--secondary--green kv-button--l">Large</button>
+</div>
 
 ```markup
-<button class="button button__green--secondary button--xs">Extra small</button>
-<button class="button button__green--secondary button--sm">Small/Medium</button>
-<button class="button button__green--secondary button--l">Large</button>
+<button class="kv-button kv-button--secondary--green kv-button--xs">Extra small</button>
+<button class="kv-button kv-button--secondary--green kv-button--sm">Small/Medium</button>
+<button class="kv-button kv-button--secondary--green kv-button--l">Large</button>
 ```
 
 
@@ -50,14 +51,14 @@ Sekundærknapper brukes til handlinger som er sekundære til hovedhensikten med 
 Tertiærknappen brukes der brukeren har behov for en trykkbar lenke som ikke står i en tekst. 
 Kan brukes ved siden av en primær og sekundærknapp, men skal ikke stå alene.
 
-
-<button class="button button__green--tertiary button--xs">Extra small</button>
-<button class="button button__green--tertiary button--sm">Small/Medium</button>
-<button class="button button__green--tertiary button--l">Large</button>
-
+<div class="buttons--section">
+<button class="kv-button kv-button--tertiary--green kv-button--xs">Extra small</button>
+<button class="kv-button kv-button--tertiary--green kv-button--sm">Small/Medium</button>
+<button class="kv-button kv-button--tertiary--green kv-button--l">Large</button>
+</div>
 
 ```markup
-<button class="button button__green--tertiary button--xs">Extra small</button>
-<button class="button button__green--tertiary button--sm">Small/Medium</button>
-<button class="button button__green--tertiary button--l">Large</button>
+<button class="kv-button kv-button--tertiary--green kv-button--xs">Extra small</button>
+<button class="kv-button kv-button--tertiary--green kv-button--sm">Small/Medium</button>
+<button class="kv-button kv-button--tertiary--green kv-button--l">Large</button>
 ```
