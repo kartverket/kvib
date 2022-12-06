@@ -22,7 +22,7 @@ For å style <code><label\></code>-elementet, skal egne
 
 ``` markup
   <label for="range-slider"> Skriv tekst her</label>
-  <input type="range" id="range-slider" name="range-slider" class="slider slider--xs-s"
+  <input type="range" id="range-slider" name="range-slider" class="kv-range-slider kv-range-slider--xs-s"
            min="0" max="100" />
 ```
 
@@ -33,7 +33,7 @@ For å style <code><label\></code>-elementet, skal egne
 
 ``` markup
  <label for="range-slider">Skriv tekst her</label>
- <input type="range" id="range-slider" name="range-slider" class="slider slider--m-l"
+ <input type="range" id="range-slider" name="range-slider" class="kv-range-slider kv-range-slider--m-l"
         min="0" max="100" />
 ```
 

@@ -1,10 +1,12 @@
-.progressbar__wrapper {
+.progressbar__wrapper,
+.kv-progressbar__wrapper {
     position: relative;
     width: 100%;
     display: flex;
 }
 
-.progressbar {
+.progressbar,
+.kv-progressbar {
     position: relative;
     display: inline-block;
     width: 100%;
@@ -15,7 +17,8 @@
     overflow: hidden;
 }
 
-.progressbar::after {
+.progressbar::after,
+.kv-progressbar::after {
     content: '';
     position: absolute;
     left: 0;
@@ -26,7 +29,8 @@
 }
 
 
-.progressbar__label {
+.progressbar__label,
+.kv-progressbar__label {
     position: absolute;
     top: -0.5rem;
     right: -2.5rem;

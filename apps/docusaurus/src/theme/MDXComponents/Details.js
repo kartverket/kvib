@@ -10,7 +10,7 @@ export default function MDXDetails(props) {
   );
   const children = <>{items.filter((item) => item !== summary)}</>;
   return (
-    <details class="expandable">
+    <details class="kv-expandable">
       {summary}
       {children}
     </details>

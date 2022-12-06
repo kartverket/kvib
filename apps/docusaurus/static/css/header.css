@@ -1,4 +1,5 @@
-.nav__header {
+.nav__header,
+.kv-nav__header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;

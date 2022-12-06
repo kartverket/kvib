@@ -13,6 +13,7 @@ En deaktivert (disabled) knapp kan ikke trykkes på. Utseende på disabled-tilst
 <button class="kv-button kv-button--sm" disabled>Skriv tekst her</button>
 <button class="kv-button kv-button--l" disabled>Skriv tekst her</button>
 </div>
+<br/>
 
 ```markup 
 <button class="kv-button kv-button--xs" disabled>Skriv tekst her</button>

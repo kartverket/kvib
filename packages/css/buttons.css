@@ -31,7 +31,6 @@
 .kv-button:disabled {
     background-color: var(--gray_light);
     color: var(--gray_dark);
-    outline-style: solid;
     outline-color: var(--gray_dark);
 }
 
