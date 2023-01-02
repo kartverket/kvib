@@ -6,7 +6,7 @@ slug: designsystems/designtokens/ikoner
 displayed_sidebar: designsystemSidebar
 ---
 
-KVIB bruker font-ikoner fra Google Matrial. Vi anbefaler å bruke outlined ikoner, og disse er inkludert i KVIB. Listen under viser ikonene som er anbefalt av KVIB-teamet, men alle ikoner fra <a href='https://fonts.google.com/icons'> google matrial fonten</a> er tilgjengelige for bruk via KVIB.
+KVIB bruker font-ikoner fra Google Material Design. Vi anbefaler å bruke outlined ikoner, og disse er inkludert i KVIB. Listen under viser ikonene som er anbefalt av KVIB-teamet, men alle ikoner fra <a href='https://fonts.google.com/icons'> google matrial fonten</a> er tilgjengelige for bruk via KVIB.
 
 Vi har følgende regler for bruk av ikoner:
 * Ikoner bør hovedsaklig være outlined, og hentes ut av Google Material
