@@ -20,13 +20,15 @@ For å style <code><label\></code>-elementet, skal egne
 
 Avmerkingsboksen får fokus når den velges med tastaturet.
 
-<div class="checkbox">
-    <input type="checkbox" id="checkbox_1"/>
-    <label class="detail detail--sml" for="checkbox_1">Input tekst</label>
+<div class="component__display">
+    <div class="kv-checkbox">
+        <input type="checkbox" id="checkbox_1"/>
+        <label class="detail detail--sml" for="checkbox_1">Input tekst</label>
+    </div>
 </div>
 
 ```markdown 
-<div class="checkbox">
+<div class="kv-checkbox">
     <input type="checkbox" id="checkbox_1"/>
     <label class="detail detail--sml" for="checkbox_1">Input tekst</label>
 </div>
@@ -36,13 +38,15 @@ Avmerkingsboksen får fokus når den velges med tastaturet.
 
 Følgende avmerkingsboks får feilmeldingsfarge hvis ett av alternativene må være valgt før bruker kan gå videre.
 
-<div class="checkbox">
-    <input type="checkbox" id="checkbox_2" required/>
-    <label class="detail detail--sml" for="checkbox_2">Input tekst</label>
+<div class="component__display">
+    <div class="kv-checkbox">
+        <input type="checkbox" id="checkbox_2" required/>
+        <label class="detail detail--sml" for="checkbox_2">Input tekst</label>
+    </div>
 </div>
 
 ```markdown
-<div class="checkbox">
+<div class="kv-checkbox">
     <input type="checkbox" id="checkbox_2" required/>
     <label class="detail detail--sml" for="checkbox_2">Input tekst</label>
 </div>

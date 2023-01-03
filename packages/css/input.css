@@ -1,9 +1,10 @@
 :root{
-    --input--height: 2.5rem;
-    --input--margin-bottom: 2rem;
+    --kv-input--height: 2.5rem;
+    --kv-input--margin-bottom: 2rem;
 }
 
-.inputField__wrapper {
+.inputField__wrapper,
+.kv-form__input__wrapper {
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -11,14 +12,16 @@
     width: 100%;
 }
 
-.inputField__wrapper label {
+.inputField__wrapper label,
+.kv-form__input__wrapper label {
     color: var(--gray_dark);
 }
 
-.inputField {
+.inputField,
+.kv-form__input {
     display: block;
     width: 100%;
-    height: var(--input--height);
+    height: var(--kv-input--height);
     padding: 0.5rem;
     border: 0.063rem solid var(--blue_dark_button);
     box-sizing: border-box;
@@ -28,12 +31,14 @@
     border-radius: 0.25rem;
 }
 
-.inputField:focus-visible {
+.inputField:focus-visible,
+.kv-form__input:focus-visible {
     border: var(--blue_dark) 2px solid;
     outline: none;
 }
 
-.inputField:required {
+.inputField:required,
+.kv-form__input:required {
     border: var(--red_error_message) 0.063rem solid;
 }
 
@@ -42,7 +47,8 @@ input[required] + label:after {
     color: var(--red_error_message);
 }
 
-.exclamation {
+.exclamation,
+.kv-exclamation {
     position: absolute;
     top: 24px;
     right: 0;
@@ -54,6 +60,7 @@ input[required] + label:after {
     border-top-right-radius: 4px;
 }
 
+.kv-exclamation i,
 .exclamation i {
     position: absolute;
     top: 8px;

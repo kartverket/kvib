@@ -18,21 +18,23 @@ displayed_sidebar: designsystemSidebar
 For å endre lengden til søkefeltet, må det legges inn i et <code><div\></code>-element, deretter kan størrelsen endres
 ved å sette bredde på <code><div\></code>-elementet.
 
-<div class="searchbar__wrapper">
-<div class="inputField__wrapper">
-    <input class="inputField" type="text" id="inputFieldID" placeholder="Søk..."/>
+<div class="kv-searchbar__wrapper">
+<div class="kv-form__input__wrapper">
+    <input class="kv-form__input" type="text" id="inputFieldID" placeholder="Søk..."/>
 </div>
-    <button class="button button__searchbar">
+    <button class="kv-button kv-searchbar__button">
         <span class="material-symbols-outlined">search</span>
     </button>
 </div>
 
+<br/>
+
 ```markup
-<div class="searchbar__wrapper">
-    <div class="inputField__wrapper">
-        <input class="inputField" type="text" id="inputID" placeholder="Søk..."/>
-    </div>
-    <button class="button button__searchbar">
+<div class="kv-searchbar__wrapper">
+<div class="kv-form__input__wrapper">
+    <input class="kv-form__input" type="text" id="inputFieldID" placeholder="Søk..."/>
+</div>
+    <button class="kv-button kv-searchbar__button">
         <span class="material-symbols-outlined">search</span>
     </button>
 </div>

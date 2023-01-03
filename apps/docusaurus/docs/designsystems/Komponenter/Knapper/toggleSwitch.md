@@ -11,30 +11,33 @@ Buggen er mindre synlig i Firefox.***
 
 ## Extra small:
 
-
-<label class="switch--xs">
-<input type="checkbox"/>
-<span class="toggle_switch--xs round"></span>
-</label>
+<div class="buttons--section">
+    <label class="kv-switch--xs">
+    <input type="checkbox"/>
+    <span class="kv-slider--xs round"></span>
+    </label>
+</div>
 
 ```markdown
-<label class="switch--xs">
+<label class="kv-switch--xs">
 <input type="checkbox"/>
-<span class="toggle_switch--xs round"></span>
+<span class="kv-slider--xs round"></span>
 </label>
 ```
 
 ## Small/Medium/large
 
-<label class="switch--l">
-<input type="checkbox"/>
-<span class="toggle_switch--l round"></span>
-</label>
+<div class="buttons--section">
+    <label class="kv-switch--l">
+    <input type="checkbox"/>
+    <span class="kv-slider--l round"></span>
+    </label>
+</div>
 
 ```markdown
-<label class="switch--l">
+<label class="kv-switch--l">
 <input type="checkbox"/>
-<span class="toggle_switch--l round"></span>
+<span class="kv-slider--l round"></span>
 </label>
 ```
 

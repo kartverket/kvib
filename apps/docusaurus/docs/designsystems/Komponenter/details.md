@@ -12,8 +12,8 @@ Utvidbart panel er laget med ``<details>``  og ``<summary>`` elementet.
 Størrelsen endres ved å sette panelet i et <code>container</code> med ønsket <code>width</code>.
 
 <h1 class="heading heading__h1--s">Tittel</h1>
-<details class="expandable">
-    <summary class="expandable__title">Tekst</summary>
+<details class="kv-expandable">
+    <summary class="kv-expandable__title">Tekst</summary>
     <p class="detail detail--sml">Beskrivelse</p>
 </details>
 
@@ -21,8 +21,8 @@ Størrelsen endres ved å sette panelet i et <code>container</code> med ønsket 
 
 ```markdown
 <h1 class="heading heading__h1--s">Tittel</h1>
-<details class="expandable">
-    <summary class="expandable__title">Tekst</summary>
+<details class="kv-expandable">
+    <summary class="kv-expandable__title">Tekst</summary>
     <p class="detail detail--sml">Beskrivelse</p>
 </details>
 ```
@@ -32,20 +32,20 @@ Størrelsen endres ved å sette panelet i et <code>container</code> med ønsket 
 Vi kan opprette et panel set ved å legge til flere ``<details>`` elementer.
 
 <h1 class="heading heading__h1--s">Tittel</h1>
-<details class="expandable">
-    <summary class="expandable__title">Tekst</summary>
+<details class="kv-expandable">
+    <summary class="kv-expandable__title">Tekst</summary>
     <p>Beskrivelse</p>
 </details>
-<details class="expandable">
-    <summary class="expandable__title">Tekst</summary>
+<details class="kv-expandable">
+    <summary class="kv-expandable__title">Tekst</summary>
     <p class="detail detail--sml">Beskrivelse</p>
 </details>
-<details class="expandable">
-    <summary class="expandable__title">Tekst</summary>
+<details class="kv-expandable">
+    <summary class="kv-expandable__title">Tekst</summary>
     <p class="detail detail--sml">Beskrivelse</p>
 </details>
-<details class="expandable">
-    <summary class="expandable__title">Tekst</summary>
+<details class="kv-expandable">
+    <summary class="kv-expandable__title">Tekst</summary>
     <p class="detail detail--sml">Beskrivelse</p>
 </details>
 
@@ -53,20 +53,20 @@ Vi kan opprette et panel set ved å legge til flere ``<details>`` elementer.
 
 ```markdown
 <h1 class="heading heading__h1--s">Tittel</h1>
-<details class="expandable">
-    <summary class="expandable__title">Tekst</summary>
+<details class="kv-expandable">
+    <summary class="kv-expandable__title">Tekst</summary>
     <p>Beskrivelse</p>
 </details>
-<details class="expandable">
-    <summary class="expandable__title">Tekst</summary>
+<details class="kv-expandable">
+    <summary class="kv-expandable__title">Tekst</summary>
     <p class="detail detail--sml">Beskrivelse</p>
 </details>
-<details class="expandable">
-    <summary class="expandable__title">Tekst</summary>
+<details class="kv-expandable">
+    <summary class="kv-expandable__title">Tekst</summary>
     <p class="detail detail--sml">Beskrivelse</p>
 </details>
-<details class="expandable">
-    <summary class="expandable__title">Tekst</summary>
+<details class="kv-expandable">
+    <summary class="kv-expandable__title">Tekst</summary>
     <p class="detail detail--sml">Beskrivelse</p>
 </details>
 ```

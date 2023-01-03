@@ -14,18 +14,18 @@ Det sirkulære opplastningselementet skal brukes på små flater og som ikon.
 I elementet under er <code>loader--size</code> 5.625rem / 90px. Størrelsen endres av designer for hvert prosjekt.
 
 <div class="devsizes-grid">
-    <div class="loader loader--blue loader--size"></div>
-    <div class="loader loader--green loader--size"></div>
+    <div class="kv-loader kv-loader--blue loader--size"></div>
+    <div class="kv-loader kv-loader--green loader--size"></div>
     <div class="loader__background__box">
-        <div class="white--loader loader--white loader--size loader--pos--white"></div>
+         <div class="kv-loader kv-loader--white loader--size loader--pos--white"></div>
     </div>
 </div>
 <br/>
 
 ```markdown
-<div class="loader loader--blue loader--size"></div>
-<div class="loader loader--green loader--size"></div>
-<div class="white--loader loader--white loader--size"></div>
+<div class="kv-loader kv-loader--blue loader--size"></div>
+<div class="kv-loader kv-loader--green loader--size"></div>
+<div class="kv-loader kv-loader--white loader--size"></div>
 ```
 
 ## Lineært opplastningselement
@@ -39,16 +39,16 @@ I dette tilfellet, er container satt på <code>width: 50%;</code>
 Lineært opplastningselementet bruker klassen <code>progressbar</code>.
 
 <div class="progressbar__container">
-    <div class="progressbar__wrapper">
-        <div class="progressbar progressbar--demo"></div>
+    <div class="kv-progressbar__wrapper">
+        <div class="kv-progressbar progressbar--demo"></div>
     </div>
 </div>
 <br/>
 
 ```markdown
 <div class="progressbar__container">
-    <div class="progressbar__wrapper">
-        <div class="progressbar progressbar--demo"/>
+    <div class="kv-progressbar__wrapper">
+        <div class="kv-progressbar progressbar--demo"></div>
     </div>
 </div>
 ```
@@ -62,8 +62,8 @@ I eksemplet under er <code>progressbar--demo</code> animert til å bytte <code>w
 også <code>progressbar--label</code> med hensyn til endring av verdi.
 
 <div class="progressbar__container">
-    <div class="progressbar__wrapper">
-        <div id="demo" class="progressbar progressbar--demo"></div>
+    <div class="kv-progressbar__wrapper">
+        <div id="demo" class="kv-progressbar progressbar--demo"></div>
         <label for="demo" class="detail detail--xs progressbar__label"></label>
     </div>
 </div>
@@ -71,8 +71,8 @@ også <code>progressbar--label</code> med hensyn til endring av verdi.
 
 ```markdown
 <div class="progressbar__container">
-    <div class="progressbar__wrapper">
-        <div id="demo" class="progressbar progressbar--demo"></div>
+    <div class="kv-progressbar__wrapper">
+        <div id="demo" class="kv-progressbar progressbar--demo"></div>
         <label for="demo" class="detail detail--xs progressbar__label"></label>
     </div>
 </div>

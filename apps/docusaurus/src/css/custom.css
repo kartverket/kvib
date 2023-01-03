@@ -1,9 +1,9 @@
 /*custom.css brukes til å overkjøre docusaurus sine egne variabler og eget design.
 https://docusaurus.io/docs/styling-layout*/
 
-
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap');
 @import 'palette.css';
+@import 'buttons.css';
 @import 'uu.css';
 @import 'iconDocs.css';
 @import 'progressbarDemo.css';
@@ -16,9 +16,9 @@ https://docusaurus.io/docs/styling-layout*/
 
 /*overkjøre definerte variabler fra docusaurus*/
 :root {
-    --ifm-heading-font-family:'Mulish', sans-serif; 
-    --ifm-font-family-base:'Mulish', sans-serif;
-    --ifm-heading-font-weight:700;
+    --ifm-heading-font-family: 'Mulish', sans-serif;
+    --ifm-font-family-base: 'Mulish', sans-serif;
+    --ifm-heading-font-weight: 700;
     --ifm-color-primary: var(--blue_dark);
     --ifm-heading-color: var(--black);
     --ifm-menu-color: var(--black);
@@ -47,16 +47,24 @@ p a {
 }
 
 /*sette bredde på gif i docs/designsystems/Komponenter/slider.md*/
-img[alt=sliderGif] { width: 70%;}
+img[alt=sliderGif] {
+    width: 70%;
+}
 
 /*sette bredde på bilde i docs/omKvib/structure.md*/
 img[alt=documenting_example].img_node_modules-\@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module {
-    height:65%;
+    height: 65%;
     width: 65%;
 }
 
+.component__display {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px;
+}
 
-.devsizes-grid{
+.devsizes-grid {
     grid-template-columns: repeat(auto-fill, 9rem);
     padding-bottom: 1rem;
     column-gap: 1rem;
@@ -68,17 +76,17 @@ img[alt=documenting_example].img_node_modules-\@docusaurus-theme-classic-lib-the
     word-wrap: normal;
 }
 
-.devsizes-section--container{
+.devsizes-section--container {
     width: 10rem;
     height: fit-content;
     /* background-color: var(--graa_lys); */
-    
+
     /* Fra icons.css icon-container */
     box-sizing: border-box;
     /* gap: 15px; */
     display: flex;
     flex-direction: column;
-    align-items:center;
+    align-items: center;
 }
 
 .background--container {
@@ -89,10 +97,6 @@ img[alt=documenting_example].img_node_modules-\@docusaurus-theme-classic-lib-the
     background-color: var(--green_light);
     padding: 16px;
     border-radius: 8px;
-}
-
-.button {
-    margin: 0.5rem;
 }
 
 .footer {

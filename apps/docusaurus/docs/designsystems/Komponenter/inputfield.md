@@ -15,33 +15,33 @@ For å style <code><label\></code> og <code><small\></code>-elementet, skal egne
 Under er et eksempel på et aktivt inputfelt. Brukeren skal få feilmelding dersom feil input mottas, samtidig som utseende skal endres til å være slik som nederste inputfeltet.
 Dette kan løses med blant annet Javascript. Det er foreløpig ingen eksempelkode på dette i KVIB.
 
-<div class="inputField__wrapper">
+<div class="kv-form__input__wrapper">
     <label class="label label--sml" for="inputFieldID">Skriv heia</label>
-    <input class="inputField" type="text" id="inputFieldID" placeholder="Aktivt tekstfelt"/>
+    <input class="kv-form__input" type="text" id="inputFieldID" placeholder="Aktivt tekstfelt"/>
 </div>
 
 <br/>
 
-<div class="inputField__wrapper">
+<div class="kv-form__input__wrapper">
     <label class="label label--sml" for="invalidInputFieldID">Skriv heia</label>
-    <input class="inputField" type="text" id="invalidInputFieldID" placeholder="Feilmelding" required/>
-    <span class="exclamation"><i class="material-symbols-outlined">exclamation</i></span>
-    <small class="inputField__helper__text detail detail--sml">Feilmelding tekst</small>
+    <input class="kv-form__input" type="text" id="invalidInputFieldID" placeholder="Feilmelding" required/>
+    <span class="kv-exclamation"><i class="material-symbols-outlined">exclamation</i></span>
+    <small class="kv-form__input__helper__text detail detail--sml">Feilmelding tekst</small>
 </div>
 
 <br/>
 
 ```markup
-<div class="inputField__wrapper">
+<div class="kv-form__input__wrapper">
     <label class="label label--sml" for="inputFieldID">Skriv heia</label>
-    <input class="inputField" type="text" id="inputFieldID" placeholder="Aktivt tekstfelt"/>
+    <input class="kv-form__input" type="text" id="inputFieldID" placeholder="Aktivt tekstfelt"/>
 </div>
 
-<div class="inputField__wrapper">
+<div class="kv-form__input__wrapper">
     <label class="label label--sml" for="invalidInputFieldID">Skriv heia</label>
-    <input class="inputField" type="text" id="invalidInputFieldID" placeholder="Feilmelding" required/>
-    <span class="exclamation"><i class="material-symbols-outlined">exclamation</i></span>
-    <small class="inputField__helper__text detail detail--sml">Feilmelding tekst</small>
+    <input class="kv-form__input" type="text" id="invalidInputFieldID" placeholder="Feilmelding" required/>
+    <span class="kv-exclamation"><i class="material-symbols-outlined">exclamation</i></span>
+    <small class="kv-form__input__helper__text detail detail--sml">Feilmelding tekst</small>
 </div>
 ```
 
@@ -50,29 +50,29 @@ Dette kan løses med blant annet Javascript. Det er foreløpig ingen eksempelkod
 Her er et eksempel på et deaktivert inputfelt, både med og uten hjelpetekst.
 
 
-<div class="inputField__wrapper">
-     <label class="label label--sml" for="disabledInputFieldPh">Skriv heia</label>
-    <input class="inputField input__disabled" type="text" id="disabledInputFieldPh" placeholder="Jeg er deaktivert" disabled/>
+<div class="kv-form__input__wrapper">
+     <label class="label label--sml" for="disabledInputFieldText">Skriv heia</label>
+    <input class="kv-form__input" type="text" id="disabledInputFieldText" placeholder="Jeg er deaktivert" disabled/>
 </div>
 
 <br/>
 
-<div class="inputField__wrapper">
-     <label class="label label--sml" for="disabledInputField">Skriv heia</label>
-    <input class="inputField input__disabled" type="text" id="disabledInputField" disabled/>
+<div class="kv-form__input__wrapper">
+     <label class="label label--sml" for="disabledInputFieldNoText">Skriv heia</label>
+    <input class="kv-form__input" type="text" id="disabledInputFieldNoText" disabled/>
 </div>
 
 <br/>
 
 ```markup
-<div class="inputField__wrapper">
-     <label class="label label--sml" for="disabledInputFieldPh">Skriv heia</label>
-    <input class="inputField input__disabled" type="text" id="disabledInputFieldPh" placeholder="Jeg er deaktivert" disabled/>
+<div class="kv-form__input__wrapper">
+     <label class="label label--sml" for="disabledInputFieldText">Skriv heia</label>
+    <input class="kv-form__input" type="text" id="disabledInputFieldText" placeholder="Jeg er deaktivert" disabled/>
 </div>
 
-<div class="inputField__wrapper">
-     <label class="label label--sml" for="disabledInputField">Skriv heia</label>
-    <input class="inputField input__disabled" type="text" id="disabledInputField" disabled/>
+<div class="kv-form__input__wrapper">
+     <label class="label label--sml" for="disabledInputFieldNoText">Skriv heia</label>
+    <input class="kv-form__input" type="text" id="disabledInputFieldNoText" disabled/>
 </div>
 ```
 

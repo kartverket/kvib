@@ -23,11 +23,11 @@ Radioknappene får en fokus sirkel når de velges med tastaturet.
 
 <fieldset>
     <legend>Eksempel på gruppe med radioknapper</legend>
-    <div class="radio">
+    <div class="kv-button__radio">
         <input type="radio" id="radioBtn_1" name="radioGroup1"/>
         <label class="detail detail--sml" for="radioBtn_1">Input tekst</label>
     </div><br/>
-    <div class="radio">
+    <div class="kv-button__radio">
         <input type="radio" id="radioBtn_2" name="radioGroup1"/>
         <label class="detail detail--sml" for="radioBtn_2">Input tekst</label>
     </div>
@@ -39,11 +39,11 @@ Radioknappene får en fokus sirkel når de velges med tastaturet.
 ```markdown
 <fieldset>
     <legend>Eksempel på gruppe med radioknapper</legend>
-    <div class="radio">
+    <div class="kv-button__radio">
         <input type="radio" id="radioBtn_1" name="radioGroup1"/>
         <label class="detail detail--sml" for="radioBtn_1">Input tekst</label>
     </div><br/>
-    <div class="radio">
+    <div class="kv-button__radio">
         <input type="radio" id="radioBtn_2" name="radioGroup1"/>
         <label class="detail detail--sml" for="radioBtn_2">Input tekst</label>
     </div>
@@ -56,11 +56,11 @@ Følgende radioknapp får feilmeldingsfarge hvis et av alternativene må være v
 
 <fieldset>
     <legend>Eksempel på gruppe med radioknapper som har feilmelding</legend>
-    <div class="radio">
+    <div class="kv-button__radio">
         <input type="radio" id="invalidRadioBtn_1" name="radioGroup2" required checked={false}/>
         <label class="detail detail--sml" for="invalidRadioBtn_1">Feilmelding</label>
     </div><br/>
-    <div class="radio">
+    <div class="kv-button__radio">
         <input type="radio" id="invalidRadioBtn_2" name="radioGroup2"/>
         <label class="detail detail--sml" for="invalidRadioBtn_2">Input tekst</label>
     </div>
@@ -70,11 +70,11 @@ Følgende radioknapp får feilmeldingsfarge hvis et av alternativene må være v
 ```markdown
 <fieldset>
     <legend>Eksempel på gruppe med radioknapper som har feilmelding</legend>
-    <div class="radio">
+    <div class="kv-button__radio">
         <input type="radio" id="invalidRadioBtn_1" name="radioGroup2" required checked={false}/>
         <label class="detail detail--sml" for="invalidRadioBtn_1">Feilmelding</label>
     </div><br/>
-    <div class="radio">
+    <div class="kv-button__radio">
         <input type="radio" id="invalidRadioBtn_2" name="radioGroup2"/>
         <label class="detail detail--sml" for="invalidRadioBtn_2">Input tekst</label>
     </div>
