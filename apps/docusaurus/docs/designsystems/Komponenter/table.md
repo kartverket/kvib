@@ -45,7 +45,7 @@ til eget design. Det stilles likevel felles krav til alle listevisninger:
 Ettersom "Slett alle"-funksjonen krever Javascript, kan eksempelet ikke vises på denne siden. Se ellers standard malen
 under.
 
-<div class="table__container--large">
+<div class="kv-table__container--large">
 <table class="kv-table" id="tableID">
      <tbody>
     <tr class="detail detail--sml" name="table-header">
@@ -151,7 +151,7 @@ under.
 <br/>
 
   ```markdown
-<div class="table__container--large">
+<div class="kv-table__container--large">
 <table class="kv-table" id="tableID">
      <tbody>
     <tr class="detail detail--sml" name="table-header">

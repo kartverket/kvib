@@ -1,11 +1,9 @@
 /*css for nedtrekksmeny*/
 
-.label--dropdown,
 .kv-dropdown__label--gray {
     color: var(--gray);
 }
 
-.dropdown,
 .kv-dropdown {
     display: block;
     width: 100%;
@@ -30,26 +28,21 @@
     height: 2.5rem;
 }
 
-
-.dropdown:focus,
 .kv-dropdown:focus {
     border-color: var(--blue_dark);
     box-shadow: 0 0 0 0.125rem var(--blue_hover);
 }
 
-.dropdown:focus-visible,
 .kv-dropdown:focus-visible {
     outline: var(--blue_dark) solid;
 }
 
 
 /*styling av elementene i nedtrekksmenyen*/
-.dropdown option,
 .kv-dropdown option {
     font-size: 1rem;
 }
 
-.dropdown option:nth-child(even),
 .kv-dropdown option:nth-child(even) {
     background-color: var(--blue_light);
 }

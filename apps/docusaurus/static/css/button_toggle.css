@@ -19,7 +19,7 @@
 }
 
 .toggle_switch--xs,
-.kv-slider--xs {
+.kv-toggle_switch--xs {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -32,7 +32,7 @@
 }
 
 .toggle_switch--xs:before,
-.kv-slider--xs:before {
+.kv-toggle_switch--xs:before {
     position: absolute;
     content: "";
     width: 12px;
@@ -45,17 +45,17 @@
 }
 
 input:checked + .toggle_switch--xs,
-input:checked + .kv-slider--xs {
+input:checked + .kv-toggle_switch--xs {
     background-color: var(--blue);
 }
 
 input:focus + .toggle_switch--xs,
-input:focus + .kv-slider--xs {
+input:focus + .kv-toggle_switch--xs {
     box-shadow: 0 0 1px var(--blue_hover);
 }
 
 input:checked + .toggle_switch--xs:before,
-input:checked + .kv-slider--xs:before {
+input:checked + .kv-toggle_switch--xs:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
@@ -63,12 +63,12 @@ input:checked + .kv-slider--xs:before {
 
 /* Rounded sliders */
 .toggle_switch--xs.round,
-.kv-slider--xs.round {
+.kv-toggle_switch--xs.round {
     border-radius: 34px;
 }
 
 .toggle_switch--xs.round:before,
-.kv-slider--xs.round:before {
+.kv-toggle_switch--xs.round:before {
     border-radius: 50%;
 }
 
@@ -93,7 +93,7 @@ input:checked + .kv-slider--xs:before {
 }
 
 .toggle_switch--l,
-.kv-slider--l {
+.kv-toggle_switch--l {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -106,7 +106,7 @@ input:checked + .kv-slider--xs:before {
 }
 
 .toggle_switch--l:before,
-.kv-slider--l:before {
+.kv-toggle_switch--l:before {
     position: absolute;
     content: "";
     width: 16px;
@@ -119,17 +119,17 @@ input:checked + .kv-slider--xs:before {
 }
 
 input:checked + .toggle_switch--l,
-input:checked + .kv-slider--l {
+input:checked + .kv-toggle_switch--l {
     background-color: var(--blue);
 }
 
 input:focus + .toggle_switch--l,
-input:focus + .kv-slider--l {
+input:focus + .kv-toggle_switch--l {
     box-shadow: 0 0 1px var(--blue_hover);
 }
 
 input:checked + .toggle_switch--l:before,
-input:checked + .kv-slider--l:before {
+input:checked + .kv-toggle_switch--l:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
@@ -137,12 +137,12 @@ input:checked + .kv-slider--l:before {
 
 /* Rounded sliders */
 .toggle_switch--l.round,
-.kv-slider--l.round {
+.kv-toggle_switch--l.round {
     border-radius: 34px;
 }
 
 .toggle_switch--l.round:before,
-.kv-slider--l.round:before {
+.kv-toggle_switch--l.round:before {
     border-radius: 50%;
 }
 
