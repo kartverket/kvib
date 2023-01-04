@@ -3,7 +3,6 @@
     --kv-input--margin-bottom: 2rem;
 }
 
-.inputField__wrapper,
 .kv-form__input__wrapper {
     position: relative;
     display: flex;
@@ -12,12 +11,10 @@
     width: 100%;
 }
 
-.inputField__wrapper label,
 .kv-form__input__wrapper label {
     color: var(--gray_dark);
 }
 
-.inputField,
 .kv-form__input {
     display: block;
     width: 100%;
@@ -31,13 +28,11 @@
     border-radius: 0.25rem;
 }
 
-.inputField:focus-visible,
 .kv-form__input:focus-visible {
     border: var(--blue_dark) 2px solid;
     outline: none;
 }
 
-.inputField:required,
 .kv-form__input:required {
     border: var(--red_error_message) 0.063rem solid;
 }
@@ -47,7 +42,6 @@ input[required] + label:after {
     color: var(--red_error_message);
 }
 
-.exclamation,
 .kv-exclamation {
     position: absolute;
     top: 24px;
@@ -60,8 +54,7 @@ input[required] + label:after {
     border-top-right-radius: 4px;
 }
 
-.kv-exclamation i,
-.exclamation i {
+.kv-exclamation i {
     position: absolute;
     top: 8px;
 }

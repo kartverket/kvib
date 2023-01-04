@@ -1,4 +1,3 @@
-.nav__header,
 .kv-nav__header {
     display: flex;
     flex-direction: row;
@@ -18,7 +17,7 @@
 
 /*Ankermeny*/
 
-.anker--xs {
+.kv-anker--xs {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -32,7 +31,7 @@
     top: 0;
 }
 
-.anker--s {
+.kv-anker--s {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -46,7 +45,7 @@
     top: 51px;
 }
 
-.anker--m {
+.kv-anker--m {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -60,7 +59,7 @@
     top: 104.5px;
 }
 
-.anker--l {
+.kv-anker--l {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -76,7 +75,7 @@
 
 /*Ikon størrelse*/
 
-.anker--xs span {
+.kv-anker--xs span {
     font-variation-settings:
             'FILL' 0,
             'wght' 400,
@@ -84,7 +83,7 @@
             'opsz' 20
 }
 
-.anker--s span {
+.kv-anker--s span {
     font-variation-settings:
             'FILL' 0,
             'wght' 400,
@@ -92,7 +91,7 @@
             'opsz' 24
 }
 
-.anker--m span {
+.kv-anker--m span {
     font-variation-settings:
             'FILL' 0,
             'wght' 400,
@@ -100,7 +99,7 @@
             'opsz' 40
 }
 
-.anker--l span {
+.kv-anker--l span {
     font-variation-settings:
             'FILL' 0,
             'wght' 400,
@@ -110,10 +109,10 @@
 
 /*link styling*/
 
-.anker--xs a,
-.anker--s a,
-.anker--m a,
-.anker--l a {
+.kv-anker--xs a,
+.kv-anker--s a,
+.kv-anker--m a,
+.kv-anker--l a {
     text-decoration: none;
     color: var(--black);
 }
