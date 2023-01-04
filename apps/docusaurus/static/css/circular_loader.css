@@ -1,0 +1,95 @@
+:root {
+ --loader_size: 5.625rem;
+}
+
+.loader,
+.kv-loader {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    border: 4px solid white;
+    /*box-shadow: 0px 0px 100px -50px black;*/
+    animation: animate 2s linear infinite;
+    /*transform: rotate(-4.95deg);*/
+}
+
+.loader::before,
+.kv-loader::before {
+    position: absolute;
+    content: "";
+    background: #fff;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    border-radius: 100%;
+    border: 4px solid white;
+}
+
+.white--loader,
+.kv-loader--white {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    border: 3px solid black;
+    animation: animate 2s linear infinite;
+}
+
+.white--loader::before, .kv-loader--white::before {
+    position: absolute;
+    content: "";
+    background: black;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    border-radius: 100%;
+    border: 3px solid black;
+}
+
+@keyframes animate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loader--size {
+    width: var(--loader_size);
+    height: var(--loader_size);
+}
+
+.loader--blue,
+.kv-loader--blue {
+    background: conic-gradient(from 90deg at 50% 50%, #E4F1F8 0deg, #E4F1F8 0.04deg, #1A589F 360deg);
+}
+
+.loader--green,
+.kv-loader--green {
+    background: conic-gradient(from 90deg at 50% 50%, #E4F1F8 0deg, #D0ECD6 0.04deg, #05502A 360deg);
+}
+
+.loader--white,
+.kv-loader--white {
+    background: conic-gradient(from 90deg at 50% 50%, #E4F1F8 0deg, rgba(255, 255, 255, 0) 0.04deg, #FFFFFF 360deg);
+}
+
+.loader__background__box {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    background: #222222;
+    left: -10px;
+}
+
+.loader--pos--white {
+    left: 10px;
+    top: 10px;
+}
+
