@@ -1,5 +1,13 @@
 # @kvib/css
 
+## 4.0.0
+
+### Major Changes
+
+- 47b01a2e6: Removed old CSS classname, changed kv-slider to kv-toggle_switch.
+
+  _**OBS! Husk å oppdatere og bytte CSS klassenavnene til de nye fra KVIB-CSS for å få komponenter til å virke.**_
+
 ## 3.0.0
 
 ### Major Changes
