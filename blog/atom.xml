@@ -2,11 +2,20 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kartverket.github.io/kvib/blog</id>
     <title>KVIB Blog</title>
-    <updated>2023-01-04T00:00:00.000Z</updated>
+    <updated>2023-01-05T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kartverket.github.io/kvib/blog"/>
     <subtitle>KVIB Blog</subtitle>
     <icon>https://kartverket.github.io/kvib/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Versjon [4.0.0]]]></title>
+        <id>/2023/01/05/version-[4.0.0]</id>
+        <link href="https://kartverket.github.io/kvib/blog/2023/01/05/version-[4.0.0]"/>
+        <updated>2023-01-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Utvidbart panel linebreak.]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_fF9Z" id="changed">Changed<a class="hash-link" href="#changed" title="Direct link to heading">​</a></h2><ul><li>Byttet 'kv-slider' til 'kv-toggle_switch'.</li></ul><h2 class="anchor anchorWithStickyNavbar_fF9Z" id="removed">Removed<a class="hash-link" href="#removed" title="Direct link to heading">​</a></h2><ul><li>Fjernet gamle CSS klassenavn</li></ul><p><strong>Fra 9. januar fjernes støtten for å kunne hente KVIB-CSS stylinger og komponenter direkte fra KVIB URL.</strong></p><p><strong>Husk å oppdatere og endre CSS klassenavnene til de nye for å få stylingen til å virke.</strong></p><p><strong>Last ned nyeste KVIB-CSS npm pakke npm i @kvib/css</strong></p>]]></content>
+        <category label="dokumentasjon" term="dokumentasjon"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Versjon [3.0.0]]]></title>
         <id>/2023/01/04/version-[3.0.0]</id>
@@ -14,15 +23,6 @@
         <updated>2023-01-04T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Utvidbart panel linebreak.]]></summary>
         <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_fF9Z" id="changed">Changed<a class="hash-link" href="#changed" title="Direct link to heading">​</a></h2><p>KVIB-CSS Prefiks: </p><ul><li>Endret og lagt til 'kv-' til følgende komponenter:<ul><li>Buttons</li><li>Checkbox</li><li>Radio buttons</li><li>Input field</li><li>Slider</li><li>Dropdown</li><li>Navigation</li><li>Site elements</li><li>List table</li><li>Expandable panels</li></ul></li><li>Rettet CSS class BEM naming convention skrivefeil på følgende komponenter:<ul><li>Button</li></ul></li><li>Rettet outlined on disabled button.</li></ul><p><strong>Husk å endre CSS klassenavn i prosjektene for å kunne bruke nyeste KVIB-CSS komponenter</strong></p>]]></content>
-        <category label="dokumentasjon" term="dokumentasjon"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Versjon [4.0.0]]]></title>
-        <id>/2023/01/04/version-[4.0.0]</id>
-        <link href="https://kartverket.github.io/kvib/blog/2023/01/04/version-[4.0.0]"/>
-        <updated>2023-01-04T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Utvidbart panel linebreak.]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_fF9Z" id="changed">Changed<a class="hash-link" href="#changed" title="Direct link to heading">​</a></h2><ul><li>Byttet 'kv-slider' til 'kv-toggle_switch'.</li></ul><h2 class="anchor anchorWithStickyNavbar_fF9Z" id="removed">Removed<a class="hash-link" href="#removed" title="Direct link to heading">​</a></h2><ul><li>Fjernet gamle CSS klassenavn</li></ul><p><strong>Fra 9. januar fjernes støtten for å kunne hente KVIB-CSS stylinger og komponenter direkte fra KVIB URL.</strong></p><p><strong>Husk å oppdatere og endre CSS klassenavnene til de nye for å få stylingen til å virke.</strong></p><p><strong>Last ned nyeste KVIB-CSS npm pakke npm i @kvib/css</strong></p>]]></content>
         <category label="dokumentasjon" term="dokumentasjon"/>
     </entry>
     <entry>
