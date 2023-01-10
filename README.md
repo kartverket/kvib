@@ -12,7 +12,7 @@ Se mer på [KVIB](https://kartverket.github.io/kvib/omkvib) for implementering a
 
 
 
-🚦 Viktig infomasjon eller kjøreregler for de som ønsker å bidra
+## 🚦 Viktig infomasjon eller kjøreregler for de som ønsker å bidra
 
 1. Per dags dato er det ikke klart til å gi flere skrivetilganger direkte i repoet.
 
