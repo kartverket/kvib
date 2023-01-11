@@ -14,7 +14,7 @@ IKT-løsninger i Norge skal være universelt utformet. Dette gjelder nettløsnin
 open_in_new</span>](https://www.uutilsynet.no).
 
 Disse prinsippene er laget for både å evaluere eksisterende utforming og veilede i designprosessen. De ble utarbeidet av en tverrfaglig gruppe ved [Centre of Universal Design ved North Carolina State University i USA <span class="material-symbols-outlined">
-open_in_new</span>](https://projects.ncsu.edu/ncsu/design/cud/) i 1997, og har vært en viktig referanse for å  å lage universelle løsninger.
+open_in_new</span>](https://projects.ncsu.edu/ncsu/design/cud/) i 1997, og har vært en viktig referanse for å lage universelle løsninger.
 
 Du skal følge krav i norske lover og forskrifter når du jobber med universell utforming i Norge. De 7 prinsippene er gode å ha med i utvikling av et produkt og det å tenke rundt hvordan du kan lage løsninger som passer for flest mulig. Lover og forskrifter er helt konkrete krav som må følges helt uavhengig om man har utviklet produktet etter disse prinsippene.
 

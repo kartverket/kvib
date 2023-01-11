@@ -52,7 +52,7 @@ Få alltid godkjent komponenter av designer før det legges inn i KVIB. Bildet u
 
   
 * Tillegg for komponenter som krever Javascript
-  - Lag en egen _.html_ fil for komponenten, og link til denne i dokumentasjonen. Dette er hovedsaklig for å demonstrere oppførselen til komponenten
+  - Lag en egen _.html_ fil for komponenten, og link til denne i dokumentasjonen. Dette er hovedsakelig for å demonstrere oppførselen til komponenten
   - Legg evt inn ekstra statiske bilder med beskrivende tekst for å vise flere variasjoner av komponenten
 
 </p>
