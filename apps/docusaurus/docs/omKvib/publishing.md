@@ -19,7 +19,7 @@ displayed_sidebar: OmKvibSidebar
 @Bente Lien Nilsen   
 @Espen Henriksen.
 Har dere spørsmål relatert til kode på KVIB kan dere kontakte dem.  
-Har dere design spørsmål kan dere kontakte @Frida Støvern eller @Wan.
+Har dere design spørsmål kan dere kontakte @Frida Støvern eller @Wanni.
 
 ## Publisering av ny CSS-pakke
 For å publisere ny versjon av KVIB-CSS til GitHub Packages:
