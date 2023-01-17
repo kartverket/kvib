@@ -1,7 +1,7 @@
 .kv-expandable .kv-expandable__title {
     width: 100%;
     padding-top: 0.5rem;
-    padding-right: 2rem;
+    padding-right: 22rem;
     border-top: 1px solid black;
     position: relative;
     cursor: pointer;
@@ -20,6 +20,11 @@
     padding-top: 1rem;
 }
 
+.kv-expandable summary {
+    padding-left: 10px;
+    padding-bottom: 7px;
+}
+
 .kv-expandable__title:focus {
     outline: var(--blue_dark) 2px solid;
 }
@@ -30,7 +35,7 @@
     height: 2px;
     position: absolute;
     top: 50%;
-    right: 0;
+    right: 10px;
     content: '';
     background-color: black;
     transform: translateY(-50%);
