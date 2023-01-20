@@ -24,7 +24,9 @@ Når det er sagt, test ut og komponenten til det behovet du ønsker å møte.
 <h1 class="heading heading__h1--s">Tittel</h1>
 <details class="kv-expandable">
     <summary class="kv-expandable__title">Tekst</summary>
-    <p class="detail detail--sml">Beskrivelse</p>
+    <p class="detail detail--sml">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur doloremque 
+        eligendi, fuga magni mollitia nemo possimus praesentium quod rerum sint. Aut corporis eum, nihil non quaerat 
+        qui quis tenetur voluptatem.</p>
 </details>
 
 <br/>
@@ -44,19 +46,27 @@ Vi kan opprette et panel set ved å legge til flere ``<details>`` elementer.
 <h1 class="heading heading__h1--s">Tittel</h1>
 <details class="kv-expandable">
     <summary class="kv-expandable__title">Tekst</summary>
-    <p>Beskrivelse</p>
+    <p class="detail detail--sml">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur doloremque 
+        eligendi, fuga magni mollitia nemo possimus praesentium quod rerum sint. Aut corporis eum, nihil non quaerat 
+        qui quis tenetur voluptatem.</p>
 </details>
 <details class="kv-expandable">
     <summary class="kv-expandable__title">Tekst</summary>
-    <p class="detail detail--sml">Beskrivelse</p>
+    <p class="detail detail--sml">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur doloremque 
+        eligendi, fuga magni mollitia nemo possimus praesentium quod rerum sint. Aut corporis eum, nihil non quaerat 
+        qui quis tenetur voluptatem.</p>
 </details>
 <details class="kv-expandable">
     <summary class="kv-expandable__title">Tekst</summary>
-    <p class="detail detail--sml">Beskrivelse</p>
+    <p class="detail detail--sml">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur doloremque 
+        eligendi, fuga magni mollitia nemo possimus praesentium quod rerum sint. Aut corporis eum, nihil non quaerat 
+        qui quis tenetur voluptatem.</p>
 </details>
 <details class="kv-expandable">
     <summary class="kv-expandable__title">Tekst</summary>
-    <p class="detail detail--sml">Beskrivelse</p>
+    <p class="detail detail--sml">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur doloremque 
+        eligendi, fuga magni mollitia nemo possimus praesentium quod rerum sint. Aut corporis eum, nihil non quaerat 
+        qui quis tenetur voluptatem.</p>
 </details>
 
 <br/>
@@ -65,7 +75,7 @@ Vi kan opprette et panel set ved å legge til flere ``<details>`` elementer.
 <h1 class="heading heading__h1--s">Tittel</h1>
 <details class="kv-expandable">
     <summary class="kv-expandable__title">Tekst</summary>
-    <p>Beskrivelse</p>
+    <p class="detail detail--sml">Beskrivelse</p>
 </details>
 <details class="kv-expandable">
     <summary class="kv-expandable__title">Tekst</summary>
