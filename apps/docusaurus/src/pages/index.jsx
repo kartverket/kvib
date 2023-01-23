@@ -14,7 +14,7 @@ function HomepageHeader() {
       <div className="container">
         <h1 className="heading heading__h1--l">Velkommen til {siteConfig.tagline}</h1>
         <p className="heading heading__h1--s">Designsystemet gjør oss mer konsise, minimerer dobbeltarbeid og bidrar til at vi bygger gode og helhetlige brukeropplevelser.</p>
-          <Link className={styles.button__link} to="/omkvib"><button className="button button__green--primary button--l">Kom i gang</button></Link>
+          <Link className={styles.button__link} to="/omkvib">Kom i gang</Link>
       </div>
     </header>
   );
