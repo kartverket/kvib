@@ -43,9 +43,9 @@ Få alltid godkjent komponenter av designer før det legges inn i KVIB. Bildet u
 * Vis tilhørende HTML-kode under komponenten ved å bruke en kodeblokk uten tittel, slik som vist under: 
 
 <code> ```markup
-<br></br>
+<br>
 <code>HTML-kode for komponenter her</code>
-<br></br>
+<br>
 <code> ``` </code>
 </code> 
 
