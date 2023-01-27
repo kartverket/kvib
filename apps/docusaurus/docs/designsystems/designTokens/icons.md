@@ -6,10 +6,10 @@ slug: designsystems/designtokens/ikoner
 displayed_sidebar: designsystemSidebar
 ---
 
-KVIB bruker font-ikoner fra Google Material Design. Vi anbefaler å bruke outlined ikoner, og disse er inkludert i KVIB. Listen under viser ikonene som er anbefalt av KVIB-teamet, men alle ikoner fra <a href='https://fonts.google.com/icons'> google matrial fonten</a> er tilgjengelige for bruk via KVIB.
+KVIB bruker font-ikoner fra Google Material Design. Vi anbefaler å bruke outlined ikoner, og disse er inkludert i KVIB. Listen under viser ikonene som er anbefalt av KVIB-teamet, men alle ikoner fra <a href='https://fonts.google.com/icons'> google material fonten</a> er tilgjengelige for bruk via KVIB.
 
 Vi har følgende regler for bruk av ikoner:
-* Ikoner bør hovedsaklig være outlined, og hentes ut av Google Material
+* Ikoner bør hovedsakelig være outlined, og hentes ut av Google Material
 * Ikonets farge må ha god nok kontrast til bakgrunnen
 * Noen av ikonene skal ha fyll. [Se eksempelbruk](#eksempelbruk)
 * Små og ekstra små flater (Dashboard, kart og mobil) skal ha bredde og høyde på 1.25 rem. Tablet og desktop kan bruke 1.5 rem.
