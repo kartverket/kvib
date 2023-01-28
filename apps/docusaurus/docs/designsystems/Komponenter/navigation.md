@@ -42,39 +42,39 @@ Ankermeny kan brukes på sider med mye innhold. Ved å trykke på menyen scrolle
 <div class="display__nav">
     <div class="display__nav__item">
         <div class="display__nav__container">
-                <div class="anker--xs">
+                <div class="kv-anker--xs">
                 <span class="material-symbols-outlined material-symbols-outlined--xs">arrow_downward</span>
                 <a href="#id" class="heading heading__h3--xs">Input</a>
                 </div>
         </div>
-        <div class="display__nav__desc">anker--xs</div>
+        <div class="display__nav__desc">kv-anker--xs</div>
     </div>
  <div class="display__nav__item">
         <div class="display__nav__container">
-                <div class="anker--s">
+                <div class="kv-anker--s">
                 <span class="material-symbols-outlined">arrow_downward</span>
                 <a href="#id" class="heading heading__h3--sm">Input</a>
                 </div>
         </div>
-        <div class="display__nav__desc">anker--s</div>
+        <div class="display__nav__desc">kv-anker--s</div>
     </div>
  <div class="display__nav__item">
         <div class="display__nav__container">
-                <div class="anker--m">
+                <div class="kv-anker--m">
                 <span class="material-symbols-outlined">arrow_downward</span>
                 <a href="#id" class="heading heading__h3--sm">Input</a>
                 </div>
         </div>
-        <div class="display__nav__desc">anker--m</div>
+        <div class="display__nav__desc">kv-anker--m</div>
     </div>
  <div class="display__nav__item">
         <div class="display__nav__container">
-                <div class="anker--l">
+                <div class="kv-anker--l">
                 <span class="material-symbols-outlined">arrow_downward</span>
                 <a href="#id" class="heading heading__h3--l">Input</a>
                 </div>
         </div>
-        <div class="display__nav__desc">anker--l</div>
+        <div class="display__nav__desc">kv-anker--l</div>
     </div>
 </div>
 
@@ -82,7 +82,7 @@ Ankermeny kan brukes på sider med mye innhold. Ved å trykke på menyen scrolle
 
 ### Eksempelbruk
 
-Størrelsen endres ved å bytte klassen <code>anker--xs</code> til <code>anker--m</code>.
+Størrelsen endres ved å bytte klassen <code>kv-anker--xs</code> til <code>kv-anker--m</code>.
 
 ```markdown
 <div class="anker--xs">

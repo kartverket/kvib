@@ -2,11 +2,11 @@ name: Release
 
 on: 
   # Aktiver knapp for å kjøre workflow manuelt.
-  [workflow_dispatch]
+  # [workflow_dispatch]
   
-  # push:
-    # branches:
-      # - master
+  push:
+    branches:
+      - master
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 

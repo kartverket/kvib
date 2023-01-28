@@ -1,9 +1,3 @@
-/*Bruk klasser på dette, i tilfelle prosjektene vil bruke details-elementet til noe annet i tillegg*/
-/*.details__container {*/
-/*    width: 50%;*/
-/*}*/
-
-.expandable .expandable__title,
 .kv-expandable .kv-expandable__title {
     width: 100%;
     padding-top: 0.5rem;
@@ -16,25 +10,20 @@
     list-style: none;
 }
 
-.expandable .expandable__title,
 .kv-expandable .kv-expandable__title {
     outline: 0;
 }
 
-.expandable p,
 .kv-expandable p {
     font-size: 0.95rem;
     margin: 0 0 1rem;
     padding-top: 1rem;
 }
 
-.expandable__title:focus,
 .kv-expandable__title:focus {
     outline: var(--blue_dark) 2px solid;
 }
 
-.expandable__title::before,
-.expandable__title::after,
 .kv-expandable__title::before,
 .kv-expandable__title::after {
     width: 0.75em;
@@ -48,22 +37,18 @@
     transition: transform 0.2s ease-in-out;
 }
 
-.expandable__title:hover,
 .kv-expandable__title:hover {
     background-color: var(--gray_light);
 }
 
-.expandable__title::after,
 .kv-expandable__title::after {
     transform: translateY(-50%) rotate(90deg);
 }
 
-[open] .expandable__title::after,
 [open] .kv-expandable__title::after {
     transform: translateY(-50%) rotate(180deg);
 }
 
-.expandable .expandable__title::-webkit-details-marker,
 .kv-expandable .kv-expandable__title::-webkit-details-marker {
     display: none;
 }
