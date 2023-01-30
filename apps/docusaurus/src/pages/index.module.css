@@ -22,12 +22,12 @@
 
 .button__link {
   text-decoration: none;
-  color: var(--white);
+  color: var(--green);
 }
 
 .button__link:hover {
-  text-decoration: none;
-  color: var(--white);
+  color: var(--green_active);
+  text-decoration: underline;
 }
 
 .heroBanner p {
