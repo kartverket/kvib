@@ -80,6 +80,15 @@
     outline-offset: 0.125rem;
 }
 
+/*Change hover color*/
+.kv-checkbox:hover label {
+    color: var(--blue_hover);
+}
+
+.kv-checkbox:hover label::before {
+    background-color: var(--blue_light);
+}
+
 /* ----CHECKBOX ERROR----*/
 /*set background on the checked state*/
 .kv-checkbox input[type="checkbox"]:required:invalid + label::before {
