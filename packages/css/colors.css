@@ -1,6 +1,6 @@
 /* farger */
 
-:root{
+:root {
     /*groenn*/
     --green_active: #05502A;
     --green_dark: #156630;
@@ -8,7 +8,7 @@
     --green_light: #D0ECD6;
 
     /*Blaa*/
-    --blue_dark: #175092;
+    --blue_dark: #213060;
     --blue: #1A589F;
     --blue_light: #E4F1F8;
     --blue_hover: #439CCD;
