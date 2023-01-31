@@ -3,6 +3,7 @@
     position: relative;
 }
 
+/*.kv-checkbox*/
 .kv-checkbox input[type="checkbox"] {
     position: absolute;
     opacity: 0;
@@ -15,7 +16,7 @@
     display: inline-block;
 
     /*16px width of fake checkbox + 6px distance between fake checkbox and text*/
-    padding-left: 1.6rem;
+    padding-left: 2rem;
 }
 
 .kv-checkbox label::before,
@@ -28,29 +29,29 @@
 }
 
 .kv-checkbox label::before {
-    height: 0.938rem;
-    width: 0.938rem;
+    height: 1rem;
+    width: 1rem;
 
-    border: 0.125rem solid;
-    border-radius: 0.10rem;
+    border: 0.1875rem solid;
+    border-radius: 0.2rem;
 
     color: var(--blue_dark);
     background-color: white;
 
-    top: 3px;
+    top: 0px;
     left: 0;
 }
 
 .kv-checkbox label::after {
-    height: 0.313rem;
-    width: 0.563rem;
+    height: 0.4rem;
+    width: 0.7rem;
     border-left: 0.188rem solid;
     border-bottom: 0.188rem solid;
 
     transform: rotate(-45deg);
 
-    top: 6px;
-    left: 4px;
+    top: 5px;
+    left: 5px;
 }
 
 /*Hide checkmark by default*/
