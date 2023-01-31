@@ -15,8 +15,8 @@
     position: relative;
     display: inline-block;
 
-    /*16px width of fake checkbox + 6px distance between fake checkbox and text*/
-    padding-left: 2rem;
+    /*16px width of fake checkbox + 8px distance between fake checkbox and text*/
+    padding-left: 1.5rem;
 }
 
 .kv-checkbox label::before,
@@ -29,17 +29,17 @@
 }
 
 .kv-checkbox label::before {
-    height: 1rem;
-    width: 1rem;
+    height: 0.75rem;
+    width: 0.75rem;
 
-    border: 0.1875rem solid;
-    border-radius: 0.2rem;
+    border: 0.125rem solid;
+    border-radius: 0.175rem;
 
     color: var(--blue_dark);
     background-color: white;
 
-    top: 0px;
-    left: 0;
+    top: 5px;
+    left: 0px;
 }
 
 .kv-checkbox label::after {
