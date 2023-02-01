@@ -64,6 +64,13 @@ img[alt=documenting_example].img_node_modules-\@docusaurus-theme-classic-lib-the
     padding: 8px;
 }
 
+.component__display__column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px;
+}
+
 .devsizes-grid {
     grid-template-columns: repeat(auto-fill, 9rem);
     padding-bottom: 1rem;

@@ -1,6 +1,8 @@
 .kv-checkbox {
     display: flex;
     position: relative;
+    padding-top: 0.250rem;
+    padding-bottom: 0.250rem;
 }
 
 /*.kv-checkbox*/
@@ -33,7 +35,7 @@
     width: 0.75rem;
 
     border: 0.125rem solid;
-    border-radius: 0.175rem;
+    border-radius: 0.15rem;
 
     color: var(--blue_dark);
     background-color: white;
@@ -77,7 +79,7 @@
 
 /*Adding focus styles on outer-box*/
 .kv-checkbox input[type="checkbox"]:focus-visible + label::before {
-    outline: max(0.188rem, 0.15em) solid var(--blue_dark);
+    outline: max(0.125rem, 0.125rem) solid var(--blue_dark);
     outline-offset: 0.125rem;
 }
 
