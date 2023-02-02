@@ -1,0 +1,27 @@
+{
+  "name": "@kartverket/kvib-react-button",
+  "version": "1.0",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "license": "MIT",
+  "homepage": "https://github.com/kartverket/kvib/tree/master/packages/kvib-react-button",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kartverket/kvib.git",
+    "directory": "packages/kvib-react-button"
+  },
+  "devDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
