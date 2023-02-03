@@ -1,19 +1,29 @@
-import {ButtonProps} from "./types";
+import React, { forwardRef, ButtonHTMLAttributes } from "react";
+import cl from "clsx";
 
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  children?: React.ReactNode;
+  variant?: "primary" | "secondary";
+  size?: "sm" | "md";
+}
 
-const Button = (props: ButtonProps) => {
-    const size = props.size || "xs";
-    const variant = props.variant || "primary";
-
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+  (
+    { size = "sm", variant = "primary", children, className, ...props },
+    ref
+  ) => {
     return (
-        <button
-            disabled={props.disabled}
-            className={`kvib-button--${variant}` + ` kvib-button--${size}` + ` ${props.className}`}
-            onClick={props.onClick}
-        >
-            {props.children}
-        </button>
+      <button
+        className={cl(
+          className,
+          `kvib-button--${variant}`,
+          `kvib-button--${size}`
+        )}
+        ref={ref}
+        {...props}
+      >
+        {children && children}
+      </button>
     );
-};
-
-export default Button;
+  }
+);

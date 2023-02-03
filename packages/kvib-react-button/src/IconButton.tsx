@@ -1,23 +1,30 @@
-import {IconButtonProps} from "./types";
-import Button from "./Button";
+import React, { forwardRef, ButtonHTMLAttributes } from "react";
+import cl from "clsx";
 
+export interface IconButtonProps
+  extends ButtonHTMLAttributes<HTMLButtonElement> {
+  children?: React.ReactNode;
+  variant?: "primary" | "secondary";
+  size?: "sm" | "md";
+}
 
-const IconButton = (props: IconButtonProps) => {
-    const position = props.position || "left";
-    const filled = props.filled;
+export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
+  (
+    { size = "sm", variant = "primary", children, className, ...props },
+    ref
+  ) => {
     return (
-        <Button {...props}>
-             {position === "right" && props.children}
-                <span
-                    className={`material-symbols-outlined ${
-                        filled && "material-symbols-outlined--filled"
-                    }`}
-                >
-          {props.icon}
-        </span>
-                {position === "left" && props.children}
-        </Button>
+      <button
+        className={cl(
+          className,
+          `kvib-button--${variant}`,
+          `kvib-button--${size}`
+        )}
+        ref={ref}
+        {...props}
+      >
+        {children && children}
+      </button>
     );
-};
-
-export default IconButton;
+  }
+);
