@@ -1,10 +1,5 @@
 {
   "extends": "@kartverket/tsconfig/base.json",
-  "include": [
-    ".",
-    "../../apps/storybook/src/stories/components/Button/Button.stories.tsx",
-    "../../apps/storybook/src/stories/components/Button/IconButton.stories.tsx"
-  ],
   "exclude": ["dist", "node_modules"],
   "compilerOptions": {
     "jsx": "react",
