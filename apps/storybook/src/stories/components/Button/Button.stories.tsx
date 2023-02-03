@@ -6,8 +6,14 @@ export default {
   title: "Komponenter/Knapper/Button",
   argTypes: {
     variant: {
-      options: ["primary", "secondary"],
+      options: ["primary", "secondary", "tertiary"],
       control: { type: "radio" },
+    },
+    color: {
+      control: {
+        type: "radio",
+        options: ["green", "blue"],
+      },
     },
     size: {
       control: {

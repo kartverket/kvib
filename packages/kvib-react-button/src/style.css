@@ -1,0 +1,44 @@
+.kvib-button {
+  border-radius: 8px;
+  font-weight: 700;
+  color: #ffffff;
+  border: 0;
+  outline: transparent solid 2px;
+  outline-offset: 2px;
+  display: inline-flex;
+  appearance: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.kvib-button--primary.kvib-button--green {
+  background-color: #156630;
+}
+
+.kvib-button--primary.kvib-button--green:hover {
+  cursor: pointer;
+  background-color: #1a833b;
+}
+
+.kvib-button--primary.kvib-button--green:active,
+.kvib-button--primary.kvib-button--green:focus-visible {
+  background-color: #05502a;
+  box-shadow: rgb(33, 48, 96) 0px 0px 0px 2px inset,
+    rgb(33, 48, 96) 0px 0px 0px 2px inset, currentcolor 0px 0px 0px 4px inset;
+}
+
+.kvib-button--primary.kvib-button--blue {
+  background-color: #1a589f;
+}
+
+.kvib-button--md {
+  font-size: 18px;
+  line-height: 28px;
+  padding: 16px 24px;
+}
+
+.kvib-button--sm {
+  font-size: 16px;
+  line-height: 24px;
+  padding: 10px 24px;
+}

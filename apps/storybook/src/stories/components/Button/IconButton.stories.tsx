@@ -22,7 +22,7 @@ export default {
 } as Meta;
 
 const Template: Story<IconButtonProps> = (args) => {
-  return <IconButton {...args}>Hello world</IconButton>;
+  return <IconButton {...args}>Icon goes here</IconButton>;
 };
 
 export const Component = Template.bind({});
