@@ -9,17 +9,23 @@ export default {
       options: ["primary", "secondary", "tertiary"],
       control: { type: "radio" },
     },
-    color: {
+    colorScheme: {
       control: {
         type: "radio",
         options: ["green", "blue"],
       },
     },
     size: {
+      defaultValue: "md",
+      type: { name: "string", required: false },
+      description: "demo description",
       control: {
         type: "radio",
         options: ["sm", "md"],
       },
+    },
+    isDisabled: {
+      control: "boolean",
     },
   },
 } as Meta;
@@ -31,6 +37,7 @@ const Template: Story<ButtonProps> = (args) => {
 export const Component = Template.bind({});
 Component.args = {
   variant: "primary",
+  colorScheme: "green",
   size: "sm",
 };
 

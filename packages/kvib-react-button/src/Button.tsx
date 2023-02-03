@@ -6,7 +6,8 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children?: React.ReactNode;
   variant: "primary" | "secondary" | "tertiary";
   size: "sm" | "md";
-  color: "green" | "blue";
+  colorScheme: "green" | "blue";
+  isDisabled: boolean;
 }
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
@@ -14,7 +15,8 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     {
       size = "sm",
       variant = "primary",
-      color = "green",
+      colorScheme = "green",
+      isDisabled,
       children,
       className,
       ...props
@@ -28,8 +30,9 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           "kvib-button",
           `kvib-button--${variant}`,
           `kvib-button--${size}`,
-          `kvib-button--${color}`
+          `kvib-button--${colorScheme}`
         )}
+        disabled={isDisabled}
         ref={ref}
         {...props}
       >
