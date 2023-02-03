@@ -103,3 +103,21 @@
     outline: max(0.188rem, 0.15em) solid var(--red_error_message);
     outline-offset: 0.125rem;
 }
+
+/*feilmeldingsboks*/
+.kv-checkbox .error__box {
+    position: relative;
+    top: 2.3rem;
+    right: 13rem;
+    padding: 0.3rem;
+    padding-right: 0.8rem;
+
+    color: var(--red_error_message);
+    background-color: var(--orange);
+    border-radius: 0.5rem;
+}
+
+.kv-checkbox .error__box small {
+    color: var(--red_error_message);
+
+}
