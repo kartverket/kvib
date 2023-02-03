@@ -37,20 +37,63 @@ Avmerkingsboksen får fokus når den velges med tastaturet.
 </div>
 ```
 
-## Feilmelding avmerkingsboks
+## Eksempel for flervalg
 
-Følgende avmerkingsboks får feilmeldingsfarge hvis ett av alternativene må være valgt før bruker kan gå videre.
-
-<div class="component__display">
+<div class="component__display__column">
     <div class="kv-checkbox">
-        <input type="checkbox" id="checkbox_3" required/>
-        <label class="detail detail--sml" for="checkbox_3">Input tekst</label>
+        <input type="checkbox" id="checkbox_3"/>
+        <label class="detail detail--sml" for="checkbox_3">Send meg eposter om... (Valgfritt)</label>
+    </div>
+    <div class="kv-checkbox">
+        <input type="checkbox" id="checkbox_4"/>
+        <label class="detail detail--sml" for="checkbox_4">Jeg aksepterer vilkårene for...</label>
+    </div>
+    <div class="kv-checkbox">
+        <input type="checkbox" id="checkbox_5"/>
+        <label class="detail detail--sml" for="checkbox_5">Huk av alle</label>
     </div>
 </div>
 
 ```markdown
+    <div class="kv-checkbox">
+        <input type="checkbox" id="checkbox_3"/>
+        <label class="detail detail--sml" for="checkbox_3">Send meg epost om... (Valgfritt)</label>
+    </div>
+    <div class="kv-checkbox">
+        <input type="checkbox" id="checkbox_4"/>
+        <label class="detail detail--sml" for="checkbox_4">Jeg aksepterer vilkårene for...</label>
+    </div>
+    <div class="kv-checkbox">
+        <input type="checkbox" id="checkbox_5"/>
+        <label class="detail detail--sml" for="checkbox_5">Huk av alle</label>
+    </div>
+```
+
+## Feilmelding avmerkingsboks
+
+Følgende avmerkingsboks får feilmeldingsfarge og en feilmelding hvis ett av alternativene må være valgt før bruker kan
+gå videre.
+
+<div class="component__display__column">
+    <div class="kv-checkbox">
+        <input type="checkbox" id="checkbox_6" required/>
+        <label class="detail detail--sml" for="checkbox_6">Jeg aksepterer vilkårene for...</label>
+        <div class="error__box">
+            <i class="material-symbols-outlined">exclamation</i>
+            <small>Du må huke av dette feltet</small>
+        </div>
+    </div>
+</div>
+<br/>
+<br/>
+
+```markdown
 <div class="kv-checkbox">
-    <input type="checkbox" id="checkbox_3" required/>
-    <label class="detail detail--sml" for="checkbox_3">Input tekst</label>
+    <input type="checkbox" id="checkbox_6" required/>
+    <label class="detail detail--sml" for="checkbox_6">Jeg aksepterer vilkårene for...</label>
+    <div class="error__box">
+        <i class="material-symbols-outlined">exclamation</i>
+        <small>Du må huke av dette feltet</small>
+    </div>
 </div>
 ```
