@@ -24,7 +24,8 @@ export default {
         options: ["sm", "md"],
       },
     },
-    isDisabled: {
+    disabled: {
+      defaultValue: false,
       control: "boolean",
     },
   },

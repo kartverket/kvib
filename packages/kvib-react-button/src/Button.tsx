@@ -1,9 +1,9 @@
-import React, { forwardRef, ButtonHTMLAttributes } from "react";
+import React, {forwardRef, ReactNode, ComponentPropsWithoutRef} from "react";
 import "./style.css";
 import cl from "clsx";
 
-export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  children?: React.ReactNode;
+export interface ButtonProps extends ComponentPropsWithoutRef<"button"> {
+  children?: ReactNode;
   variant: "primary" | "secondary" | "tertiary";
   size: "sm" | "md";
   colorScheme: "green" | "blue";
@@ -16,7 +16,6 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       size = "sm",
       variant = "primary",
       colorScheme = "green",
-      isDisabled,
       children,
       className,
       ...props
@@ -32,7 +31,6 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           `kvib-button--${size}`,
           `kvib-button--${colorScheme}`
         )}
-        disabled={isDisabled}
         ref={ref}
         {...props}
       >
