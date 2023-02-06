@@ -1,8 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+
 
 .kvib-button {
-    border-radius: 8px;
+    font-family: 'Mulish', sans-serif;
+    font-style: normal;
     font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    border-radius: 8px;
     color: #ffffff;
     border: 0;
     outline: transparent solid 2px;
