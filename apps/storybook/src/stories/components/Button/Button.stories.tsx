@@ -28,6 +28,14 @@ export default {
       defaultValue: false,
       control: "boolean",
     },
+    leftIcon: {
+      defaultValue: "",
+      control: "text",
+    },
+    rightIcon: {
+      defaultValue: "",
+      control: "text",
+    },
   },
 } as Meta;
 
