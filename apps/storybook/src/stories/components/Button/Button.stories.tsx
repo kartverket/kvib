@@ -40,7 +40,7 @@ export default {
 } as Meta;
 
 const Template: Story<ButtonProps> = (args) => {
-  return <Button {...args}>Hello world</Button>;
+  return <Button {...args}>Button</Button>;
 };
 
 export const Component = Template.bind({});
