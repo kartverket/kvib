@@ -20,7 +20,7 @@
     "turbo": "latest"
   },
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=19.6.0"
   },
   "dependencies": {
     "@changesets/cli": "^2.25.2"
