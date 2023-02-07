@@ -17,9 +17,8 @@ _site/
 **/node_modules
 
 # Production
-/build
 **/build
-dist
+**/dist
 
 # Generated files
 .docusaurus
