@@ -38,26 +38,20 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         ref={ref}
         {...props}
       >
-        {leftIcon &&
-          <div className={cl(
-            "kvib-button__icon",
-            "kvib-button__icon--left")}
-          >
-          <span className={cl(
-            "material-symbols-outlined",
-          )}>{leftIcon}</span>
-          </div>}
+        {leftIcon && (
+          <div className={cl("kvib-button__icon", "kvib-button__icon--left")}>
+            <span className={cl("material-symbols-outlined")}>{leftIcon}</span>
+          </div>
+        )}
         {children && children}
-        {rightIcon &&
-          <div className={cl(
-            "kvib-button__icon",
-            "kvib-button__icon--right")}
-          >
-          <span className={cl(
-            "material-symbols-outlined",
-          )}>{rightIcon}</span>
-          </div>}
+        {rightIcon && (
+          <div className={cl("kvib-button__icon", "kvib-button__icon--right")}>
+            <span className={cl("material-symbols-outlined")}>{rightIcon}</span>
+          </div>
+        )}
       </button>
     );
   },
 );
+
+export default Button;
