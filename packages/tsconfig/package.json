@@ -1,5 +1,5 @@
 {
-  "name": "@kartverket/tsconfig",
+  "name": "@kvib/tsconfig",
   "version": "0.0.0",
   "private": true,
   "main": "index.js",
