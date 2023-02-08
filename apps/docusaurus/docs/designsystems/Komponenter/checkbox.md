@@ -37,38 +37,6 @@ Avmerkingsboksen får fokus når den velges med tastaturet.
 </div>
 ```
 
-## Eksempel for flervalg
-
-<div class="component__display__column">
-    <div class="kv-checkbox">
-        <input type="checkbox" id="checkbox_3"/>
-        <label class="detail detail--sml" for="checkbox_3">Send meg eposter om... (Valgfritt)</label>
-    </div>
-    <div class="kv-checkbox">
-        <input type="checkbox" id="checkbox_4"/>
-        <label class="detail detail--sml" for="checkbox_4">Jeg aksepterer vilkårene for...</label>
-    </div>
-    <div class="kv-checkbox">
-        <input type="checkbox" id="checkbox_5"/>
-        <label class="detail detail--sml" for="checkbox_5">Huk av alle</label>
-    </div>
-</div>
-
-```markdown
-    <div class="kv-checkbox">
-        <input type="checkbox" id="checkbox_3"/>
-        <label class="detail detail--sml" for="checkbox_3">Send meg epost om... (Valgfritt)</label>
-    </div>
-    <div class="kv-checkbox">
-        <input type="checkbox" id="checkbox_4"/>
-        <label class="detail detail--sml" for="checkbox_4">Jeg aksepterer vilkårene for...</label>
-    </div>
-    <div class="kv-checkbox">
-        <input type="checkbox" id="checkbox_5"/>
-        <label class="detail detail--sml" for="checkbox_5">Huk av alle</label>
-    </div>
-```
-
 ## Feilmelding avmerkingsboks
 
 Følgende avmerkingsboks får feilmeldingsfarge og en feilmelding hvis ett av alternativene må være valgt før bruker kan
@@ -76,8 +44,8 @@ gå videre.
 
 <div class="component__display__column">
     <div class="kv-checkbox">
-        <input type="checkbox" id="checkbox_6" required/>
-        <label class="detail detail--sml" for="checkbox_6">Jeg aksepterer vilkårene for...</label>
+        <input type="checkbox" id="checkbox_2" required/>
+        <label class="detail detail--sml" for="checkbox_2">Jeg aksepterer vilkårene for...</label>
         <div class="error__box">
             <i class="material-symbols-outlined">exclamation</i>
             <small>Du må huke av dette feltet</small>
@@ -96,4 +64,97 @@ gå videre.
         <small>Du må huke av dette feltet</small>
     </div>
 </div>
+```
+
+## Eksempler
+
+### Eksempel for feilmelding
+
+Marker hvilket felt som MÅ avhukes
+
+<div class="component__display__column">
+    <div class="kv-checkbox">
+        <input type="checkbox" id="checkbox_3"/>
+        <label class="detail detail--sml" for="checkbox_3">Jeg ønsker å få tilsendt nyhetsbrevet</label>
+    </div>
+    <div class="kv-checkbox">
+        <input type="checkbox" id="checkbox_4" required/>
+        <label class="detail detail--sml" for="checkbox_4">Jeg aksepterer vilkårene</label>
+        <div class="error__box">
+        <i class="material-symbols-outlined">exclamation</i>
+        <small>Du må huke av dette feltet</small>
+        </div>
+    </div>
+</div>
+
+<br/>
+<br/>
+
+```markdown
+<div class="kv-checkbox">
+    <input type="checkbox" id="checkbox_3"/>
+    <label class="detail detail--sml" for="checkbox_3">Jeg ønsker å få tilsendt nyhetsbrevet</label>
+</div>
+<div class="kv-checkbox">
+    <input type="checkbox" id="checkbox_4"/>
+    <label class="detail detail--sml" for="checkbox_4">Jeg aksepterer vilkårene</label>
+    <div class="error__box">
+        <i class="material-symbols-outlined">exclamation</i>
+        <small>Du må huke av dette feltet</small>
+    </div>
+</div>
+```
+
+### Eksempel for "velg minst én"
+
+"Velg minst Én" er forskjellig fra radioknapper, som lar deg bare velge en.
+
+Hvordan kommer du deg til jobb?
+
+<div class="component__display__column">
+    <div class="kv-checkbox">
+        <input type="checkbox" id="checkbox_5" required/>
+        <label class="detail detail--sml" for="checkbox_5">Til fots</label> 
+    </div> 
+    <div class="kv-checkbox">
+        <input type="checkbox" id="checkbox_6" required/>
+        <label class="detail detail--sml" for="checkbox_6">Sykkel</label> 
+    </div> 
+    <div class="kv-checkbox">
+        <input type="checkbox" id="checkbox_7" required/>
+        <label class="detail detail--sml" for="checkbox_7">Kollektivt</label> 
+    </div> 
+    <div class="kv-checkbox">
+        <input type="checkbox" id="checkbox_8" required/>
+        <label class="detail detail--sml" for="checkbox_8">Bil</label> 
+        <div class="error__box">
+            <i class="material-symbols-outlined">exclamation</i>
+            <small>Du må velge minst en</small>
+        </div>
+    </div> 
+</div>
+
+<br/>
+
+```markdown
+<div class="kv-checkbox">
+    <input type="checkbox" id="checkbox_5" required/>
+    <label class="detail detail--sml" for="checkbox_5">Til fots</label> 
+</div> 
+<div class="kv-checkbox">
+    <input type="checkbox" id="checkbox_6" required/>
+    <label class="detail detail--sml" for="checkbox_6">Sykkel</label> 
+</div> 
+<div class="kv-checkbox">
+    <input type="checkbox" id="checkbox_7" required/>
+    <label class="detail detail--sml" for="checkbox_7">Kollektivt</label> 
+</div> 
+<div class="kv-checkbox">
+   <input type="checkbox" id="checkbox_8" required/>
+   <label class="detail detail--sml" for="checkbox_8">Bil</label> 
+   <div class="error__box">
+        <i class="material-symbols-outlined">exclamation</i>
+        <small>Du må velge minst en</small>
+    </div>
+</div> 
 ```
