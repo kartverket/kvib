@@ -1,5 +1,6 @@
 .kv-checkbox {
     display: flex;
+    flex-direction: column;
     position: relative;
     padding-top: 0.250rem;
     padding-bottom: 0.250rem;
@@ -83,12 +84,11 @@
     outline-offset: 0.125rem;
 }
 
-/*Change hover color*/
-.kv-checkbox:hover label {
+.kv-checkbox label:hover {
     color: var(--blue_hover);
 }
 
-.kv-checkbox:hover label::before {
+.kv-checkbox label:hover::before {
     background-color: var(--blue_light);
 }
 
@@ -100,20 +100,18 @@
 
 /*Adding focus styles on the outer-box*/
 .kv-checkbox input[type="checkbox"]:focus-visible:invalid + label::before {
-    outline: max(0.188rem, 0.15em) solid var(--red_error_message);
+    outline: max(0.125rem, 0.125em) solid var(--red_error_message);
     outline-offset: 0.125rem;
 }
 
 /*feilmeldingsboks*/
 .kv-checkbox .error__box {
     position: relative;
-    top: 2.3rem;
-    right: 13rem;
     padding: 0.3rem;
     padding-right: 0.8rem;
-
-    color: var(--red_error_message);
+    top: 0.25rem;
     background-color: var(--orange);
+    color: var(--red_error_message);
     border-radius: 0.5rem;
 }
 

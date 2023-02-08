@@ -69,6 +69,7 @@ img[alt=documenting_example].img_node_modules-\@docusaurus-theme-classic-lib-the
     flex-direction: column;
     align-items: flex-start;
     padding: 8px;
+    padding-top: 0px;
     margin-left: 0.5rem;
 }
 
