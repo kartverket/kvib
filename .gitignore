@@ -2,6 +2,10 @@
 .idea
 /kvib.iml
 
+# VSCode
+.vscode/*
+!.vscode/extensions.json
+
 _site/
 .sass-cache/
 .jekyll-cache/
@@ -13,8 +17,8 @@ _site/
 **/node_modules
 
 # Production
-/build
 **/build
+**/dist
 
 # Generated files
 .docusaurus
@@ -28,6 +32,9 @@ _site/
 .env.test.local
 .env.production.local
 
+# Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+storybook-static

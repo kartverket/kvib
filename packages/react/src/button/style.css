@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
+
+.kvib-button {
+  font-family: "Mulish", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  border-radius: 8px;
+  color: #ffffff;
+  border: 0;
+  outline: transparent solid 2px;
+  outline-offset: 2px;
+  display: inline-flex;
+  appearance: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  gap: 4px;
+}
+
+.kvib-button--primary.kvib-button--green {
+  background-color: #156630;
+}
+
+.kvib-button--primary.kvib-button--green:hover,
+.kvib-button--secondary.kvib-button--green:hover {
+  background-color: #1a833b;
+  box-shadow: none;
+  color: #ffffff;
+}
+
+.kvib-button--primary.kvib-button--green:active,
+.kvib-button--primary.kvib-button--green:focus-visible,
+.kvib-button--secondary.kvib-button--green:active,
+.kvib-button--secondary.kvib-button--green:focus-visible {
+  background-color: #05502a;
+  box-shadow: #213060 0 0 0 2px inset, #213060 0 0 0 2px inset,
+    currentcolor 0 0 0 4px inset;
+}
+
+.kvib-button--primary.kvib-button--blue {
+  background-color: #1a589f;
+}
+
+.kvib-button--primary.kvib-button--blue:hover,
+.kvib-button--secondary.kvib-button--blue:hover {
+  background-color: #439ccd;
+  box-shadow: none;
+  color: #ffffff;
+}
+
+.kvib-button--primary.kvib-button--blue:active,
+.kvib-button--primary.kvib-button--blue:focus-visible,
+.kvib-button--secondary.kvib-button--blue:active,
+.kvib-button--secondary.kvib-button--blue:focus-visible {
+  color: #ffffff;
+  background-color: #213060;
+  box-shadow: #213060 0 0 0 2px inset, #213060 0 0 0 2px inset,
+    currentcolor 0 0 0 4px inset;
+}
+
+.kvib-button--primary.kvib-button--green:disabled,
+.kvib-button--primary.kvib-button--blue:disabled,
+.kvib-button--secondary.kvib-button--green:disabled,
+.kvib-button--secondary.kvib-button--blue:disabled {
+  color: #505050;
+  background-color: #f5f2f2;
+  box-shadow: #505050 0 0 0 1px inset;
+  cursor: not-allowed;
+}
+
+.kvib-button--secondary {
+  background-color: #ffffff;
+}
+
+.kvib-button--secondary.kvib-button--green {
+  color: #156630;
+  box-shadow: #156630 0 0 0 1px inset;
+}
+
+.kvib-button--secondary.kvib-button--blue {
+  color: #1a589f;
+  box-shadow: #1a589f 0 0 0 1px inset;
+}
+
+.kvib-button--tertiary {
+  background-color: transparent;
+}
+
+.kvib-button--tertiary .kvib-button--text {
+  text-decoration-line: underline;
+}
+
+.kvib-button--tertiary.kvib-button--green {
+  color: #156630;
+}
+
+.kvib-button--tertiary.kvib-button--green:hover {
+  color: #1a833b;
+}
+
+.kvib-button--tertiary.kvib-button--blue {
+  color: #1a589f;
+}
+
+.kvib-button--tertiary.kvib-button--blue:hover {
+  color: #213060;
+}
+
+.kvib-button--tertiary.kvib-button--green:active,
+.kvib-button--tertiary.kvib-button--green:focus-visible,
+.kvib-button--tertiary.kvib-button--blue:active,
+.kvib-button--tertiary.kvib-button--blue:focus-visible {
+  box-shadow: #213060 0 0 0 2px inset;
+}
+
+.kvib-button--tertiary.kvib-button--green:disabled,
+.kvib-button--tertiary.kvib-button--blue:disabled {
+  color: #505050;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.kvib-button__icon {
+  display: flex;
+  width: 24px;
+  height: 24px;
+}
+
+.kvib-button--md {
+  font-size: 18px;
+  line-height: 28px;
+  padding: 16px 24px;
+}
+
+.kvib-button--sm {
+  font-size: 16px;
+  line-height: 24px;
+  padding: 10px 24px;
+}
