@@ -1,5 +1,11 @@
 # @kvib/css
 
+## 4.0.1
+
+### Patch Changes
+
+- e86ea9090: Fikset styling for utvidbart panel (la til padding)
+
 ## 4.0.0
 
 ### Major Changes
