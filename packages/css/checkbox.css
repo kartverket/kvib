@@ -105,7 +105,8 @@
 }
 
 /*feilmeldingsboks*/
-.kv-checkbox .error__box {
+.error__box {
+    display: inline-block;
     position: relative;
     padding: 0.3rem;
     padding-right: 0.8rem;

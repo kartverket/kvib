@@ -8,8 +8,14 @@
 .kv-button__radio label {
     position: relative;
     display: inline-block;
-
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
     padding-left: 2rem;
+}
+
+.kv-button__radio label:hover {
+    color: var(--blue_hover);
+    cursor: pointer;
 }
 
 .kv-button__radio label::before,
@@ -48,10 +54,6 @@
     content: none;
 }
 
-.kv-button__radio input[type="radio"]:hover + label::before {
-    cursor: pointer;
-}
-
 /*set checkmark on checked state*/
 .kv-button__radio input[type="radio"]:checked + label::after {
     content: "";
@@ -60,6 +62,11 @@
 }
 
 /*change background color of checkbox on checked state*/
+.kv-button__radio input[type="radio"] + label:hover::before {
+    color: var(--blue_dark);
+    background-color: var(--blue_light);
+}
+
 .kv-button__radio input[type="radio"]:checked + label::before {
     background-color: var(--white);
 }
@@ -77,8 +84,6 @@
 }
 
 .kv-button__radio input[type="radio"]:required:invalid + label::after {
-    content: "";
-    color: var(--red_error_message);
     background-color: var(--red_error_message);
 }
 
