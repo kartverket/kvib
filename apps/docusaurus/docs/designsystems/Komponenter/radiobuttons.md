@@ -56,8 +56,8 @@ Radioknappene får en fokus sirkel når de velges med tastaturet.
 
 ## Feilmelding radioknapp
 
-Følgende radioknapp får feilmeldingsfarge hvis et av alternativene må være valgt før bruker kan gå videre. Merk at i
-dette eksempelet er <code>checked={false}</code> brukt for å tvinge frem en feilmelding som demonstrasjon.
+Følgende radioknapp får feilmeldingsfarge hvis et av alternativene må være valgt før bruker kan gå videre. Knappene skal
+ikke ha en "Valgt" dot ved feilmelding.
 
 <fieldset>
     <legend>Eksempel på gruppe med radioknapper som har feilmelding</legend>
