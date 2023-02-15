@@ -1,5 +1,11 @@
 # @kvib/css
 
+## 4.1.0
+
+### Minor Changes
+
+- 989c6628f: Avmerkingsboks har nå en egen feilmelding, samt andre små forandringer
+
 ## 4.0.1
 
 ### Patch Changes
