@@ -4,7 +4,7 @@
   "compilerOptions": {
     "rootDir": ".",
     "outDir": "dist",
-    "target": "es5", // Specify ECMAScript target version
+    "target": "es6", // Specify ECMAScript target version
     "lib": ["dom", "dom.iterable", "esnext"], // List of library files to be included in the compilation
     "allowJs": true, // Allow JavaScript files to be compiled
     "skipLibCheck": true, // Skip type checking of all declaration files
@@ -23,7 +23,6 @@
     "declarationMap": true, // Generate source map for .d.ts files back to original .ts source file
     "noUnusedLocals": true, // Report errors on unused locals
     "noUnusedParameters": true, // Report errors on unused parameters
-    "incremental": true, // Enable incremental compilation by reading/writing information from prior compilations to a file on disk
     "noFallthroughCasesInSwitch": true // Report errors for fallthrough cases in switch statement
   },
   "include": ["."],

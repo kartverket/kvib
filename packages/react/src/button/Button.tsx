@@ -1,4 +1,4 @@
-import React, { ComponentPropsWithoutRef, forwardRef, ReactNode } from "react";
+import { ComponentPropsWithoutRef, forwardRef, ReactNode } from "react";
 import "./style.css";
 import cl from "clsx";
 
