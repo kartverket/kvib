@@ -70,8 +70,8 @@ ikke ha en "Valgt" dot ved feilmelding.
         <label class="detail detail--sml" for="invalidRadioBtn_2">Input tekst</label>
     </div>
     <div class="error__box">
-        <i class="material-symbols-outlined">exclamation</i>
-            <small>Du må velge et alternativ</small>      
+        <i class="material-symbols-outlined">error</i>
+            <small>Du må velge et av alternativene</small>      
     </div>
 </fieldset>
 <br/>

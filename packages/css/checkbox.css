@@ -85,7 +85,7 @@
 }
 
 .kv-checkbox label:hover {
-    color: var(--blue_hover);
+    color: var(--blue_dark);
 }
 
 .kv-checkbox label:hover::before {
@@ -109,7 +109,8 @@
     display: inline-block;
     position: relative;
     padding: 0.3rem;
-    padding-right: 0.8rem;
+    padding-right: 1rem;
+    padding-left: 1.5rem;
     top: 0.25rem;
     background-color: var(--orange);
     color: var(--red_error_message);
@@ -118,5 +119,11 @@
 
 .kv-checkbox .error__box small {
     color: var(--red_error_message);
+}
 
+.error__box i {
+    position: relative;
+    right: 8px;
+    height: 20px;
+    width: 20px;
 }

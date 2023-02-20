@@ -14,7 +14,7 @@
 }
 
 .kv-button__radio label:hover {
-    color: var(--blue_hover);
+    color: var(--blue_dark);
     cursor: pointer;
 }
 
@@ -36,7 +36,7 @@
     left: 0;
     color: var(--blue_dark_button);
 
-    top: 0.188rem;
+    top: 0.4rem;
 }
 
 .kv-button__radio label::after {
@@ -45,8 +45,8 @@
     border-radius: 50%;
     border: 0.125rem solid;
 
-    left: 0.343rem;
-    top: 0.54rem;
+    left: 0.31rem;
+    top: 0.7rem;
 }
 
 /*Hide checkmark by default*/
