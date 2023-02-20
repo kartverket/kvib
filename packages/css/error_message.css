@@ -12,3 +12,11 @@
 .kv-checkbox .error__box small {
     color: var(--red_error_message);
 }
+
+/*Styling for ikon*/
+.error__box i {
+    position: relative;
+    right: 8px;
+    height: 20px;
+    width: 20px;
+}
