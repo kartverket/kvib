@@ -1,0 +1,14 @@
+/*feilmeldingsboks*/
+.error__box {
+    position: relative;
+    padding: 0.3rem;
+    padding-right: 0.8rem;
+    top: 0.25rem;
+    background-color: var(--orange);
+    color: var(--red_error_message);
+    border-radius: 0.5rem;
+}
+
+.kv-checkbox .error__box small {
+    color: var(--red_error_message);
+}
