@@ -46,10 +46,10 @@ gå videre.
     <div class="kv-checkbox">
         <input type="checkbox" id="checkbox_2" required/>
         <label class="detail detail--sml" for="checkbox_2">Jeg aksepterer vilkårene for...</label>
-        <div class="error__box">
-            <i class="material-symbols-outlined">exclamation</i>
-            <small>Du må huke av dette feltet</small>
-        </div>
+    </div>
+    <div class="error__box">
+        <i class="material-symbols-outlined">exclamation</i>
+        <small>Du må huke av dette feltet</small>
     </div>
 </div>
 <br/>
@@ -59,10 +59,10 @@ gå videre.
 <div class="kv-checkbox">
     <input type="checkbox" id="checkbox_6" required/>
     <label class="detail detail--sml" for="checkbox_6">Jeg aksepterer vilkårene for...</label>
-    <div class="error__box">
-        <i class="material-symbols-outlined">exclamation</i>
-        <small>Du må huke av dette feltet</small>
-    </div>
+</div>
+<div class="error__box">
+    <i class="material-symbols-outlined">exclamation</i>
+    <small>Du må huke av dette feltet</small>
 </div>
 ```
 
@@ -80,10 +80,10 @@ Marker hvilket felt som MÅ avhukes
     <div class="kv-checkbox">
         <input type="checkbox" id="checkbox_4" required/>
         <label class="detail detail--sml" for="checkbox_4">Jeg aksepterer vilkårene</label>
-        <div class="error__box">
+    </div>
+    <div class="error__box">
         <i class="material-symbols-outlined">exclamation</i>
         <small>Du må huke av dette feltet</small>
-        </div>
     </div>
 </div>
 
@@ -98,10 +98,10 @@ Marker hvilket felt som MÅ avhukes
 <div class="kv-checkbox">
     <input type="checkbox" id="checkbox_4"/>
     <label class="detail detail--sml" for="checkbox_4">Jeg aksepterer vilkårene</label>
-    <div class="error__box">
-        <i class="material-symbols-outlined">exclamation</i>
-        <small>Du må huke av dette feltet</small>
-    </div>
+</div>
+<div class="error__box">
+    <i class="material-symbols-outlined">exclamation</i>
+    <small>Du må huke av dette feltet</small>
 </div>
 ```
 
@@ -127,13 +127,12 @@ Hvordan kommer du deg til jobb?
     <div class="kv-checkbox">
         <input type="checkbox" id="checkbox_8" required/>
         <label class="detail detail--sml" for="checkbox_8">Bil</label> 
-        <div class="error__box">
-            <i class="material-symbols-outlined">exclamation</i>
-            <small>Du må velge minst en</small>
-        </div>
     </div> 
+    <div class="error__box">
+        <i class="material-symbols-outlined">exclamation</i>
+        <small>Du må velge minst en</small>
+    </div>
 </div>
-
 <br/>
 
 ```markdown
@@ -152,9 +151,9 @@ Hvordan kommer du deg til jobb?
 <div class="kv-checkbox">
    <input type="checkbox" id="checkbox_8" required/>
    <label class="detail detail--sml" for="checkbox_8">Bil</label> 
-   <div class="error__box">
-        <i class="material-symbols-outlined">exclamation</i>
-        <small>Du må velge minst en</small>
-    </div>
+</div>
+<div class="error__box">
+    <i class="material-symbols-outlined">exclamation</i>
+    <small>Du må velge minst en</small>
 </div> 
 ```
