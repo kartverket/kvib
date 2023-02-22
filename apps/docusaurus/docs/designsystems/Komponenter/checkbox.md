@@ -48,7 +48,7 @@ gå videre.
         <label class="detail detail--sml" for="checkbox_2">Jeg aksepterer vilkårene for...</label>
     </div>
     <div class="error__box">
-        <i class="material-symbols-outlined">exclamation</i>
+        <i class="material-symbols-outlined">error</i>
         <small>Du må huke av dette feltet</small>
     </div>
 </div>
@@ -61,7 +61,7 @@ gå videre.
     <label class="detail detail--sml" for="checkbox_6">Jeg aksepterer vilkårene for...</label>
 </div>
 <div class="error__box">
-    <i class="material-symbols-outlined">exclamation</i>
+    <i class="material-symbols-outlined">error</i>
     <small>Du må huke av dette feltet</small>
 </div>
 ```
@@ -82,7 +82,7 @@ Marker hvilket felt som MÅ avhukes
         <label class="detail detail--sml" for="checkbox_4">Jeg aksepterer vilkårene</label>
     </div>
     <div class="error__box">
-        <i class="material-symbols-outlined">exclamation</i>
+        <i class="material-symbols-outlined">error</i>
         <small>Du må huke av dette feltet</small>
     </div>
 </div>
@@ -100,7 +100,7 @@ Marker hvilket felt som MÅ avhukes
     <label class="detail detail--sml" for="checkbox_4">Jeg aksepterer vilkårene</label>
 </div>
 <div class="error__box">
-    <i class="material-symbols-outlined">exclamation</i>
+    <i class="material-symbols-outlined">error</i>
     <small>Du må huke av dette feltet</small>
 </div>
 ```
@@ -129,7 +129,7 @@ Hvordan kommer du deg til jobb?
         <label class="detail detail--sml" for="checkbox_8">Bil</label> 
     </div> 
     <div class="error__box">
-        <i class="material-symbols-outlined">exclamation</i>
+        <i class="material-symbols-outlined">error</i>
         <small>Du må velge minst en</small>
     </div>
 </div>
@@ -153,7 +153,7 @@ Hvordan kommer du deg til jobb?
    <label class="detail detail--sml" for="checkbox_8">Bil</label> 
 </div>
 <div class="error__box">
-    <i class="material-symbols-outlined">exclamation</i>
+    <i class="material-symbols-outlined">error</i>
     <small>Du må velge minst en</small>
 </div> 
 ```
