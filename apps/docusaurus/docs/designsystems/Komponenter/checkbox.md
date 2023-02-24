@@ -59,10 +59,10 @@ gå videre.
 <div class="kv-checkbox">
     <input type="checkbox" id="checkbox_6" required/>
     <label class="detail detail--sml" for="checkbox_6">Jeg aksepterer vilkårene for...</label>
-</div>
-<div class="error__box">
-    <i class="material-symbols-outlined">error</i>
-    <small>Du må huke av dette feltet</small>
+    <div class="error__box">
+        <i class="material-symbols-outlined">error</i>
+        <small>Du må huke av dette feltet</small>
+    </div>
 </div>
 ```
 
@@ -80,10 +80,10 @@ Marker hvilket felt som MÅ avhukes
     <div class="kv-checkbox">
         <input type="checkbox" id="checkbox_4" required/>
         <label class="detail detail--sml" for="checkbox_4">Jeg aksepterer vilkårene</label>
-    </div>
-    <div class="error__box">
-        <i class="material-symbols-outlined">error</i>
-        <small>Du må huke av dette feltet</small>
+        <div class="error__box">
+            <i class="material-symbols-outlined">error</i>
+            <small>Du må huke av dette feltet</small>
+        </div>
     </div>
 </div>
 
@@ -98,10 +98,10 @@ Marker hvilket felt som MÅ avhukes
 <div class="kv-checkbox">
     <input type="checkbox" id="checkbox_4"/>
     <label class="detail detail--sml" for="checkbox_4">Jeg aksepterer vilkårene</label>
-</div>
-<div class="error__box">
-    <i class="material-symbols-outlined">error</i>
-    <small>Du må huke av dette feltet</small>
+    <div class="error__box">
+        <i class="material-symbols-outlined">error</i>
+        <small>Du må huke av dette feltet</small>
+    </div>
 </div>
 ```
 
