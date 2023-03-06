@@ -57,7 +57,8 @@ Radioknappene får en fokus sirkel når de velges med tastaturet.
 ## Feilmelding radioknapp
 
 Følgende radioknapp får feilmeldingsfarge hvis et av alternativene må være valgt før bruker kan gå videre. Feilmelding
-skal bare dukke opp *etter* at brukeren har prøvd å gå videre. Knappene skal ikke ha en "Valgt" dot ved feilmelding, og
+skal bare dukke opp *etter* at brukeren har prøvd å gå videre, og skal forsvinne etter et valg er tatt. Knappene skal
+ikke ha en "Valgt" dot ved feilmelding, og
 skal gå tilbake til vanlig etter at brukeren har tatt et valg.
 
 <fieldset>
