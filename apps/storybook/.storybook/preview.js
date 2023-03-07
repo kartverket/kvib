@@ -6,9 +6,4 @@ export const parameters = {
       date: /Date$/,
     },
   },
-  options: {
-    storySort: {
-      order: ["Introduksjon", "Oppsett", "Bidra"],
-    },
-  },
-};
+}
