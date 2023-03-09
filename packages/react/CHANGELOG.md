@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 0.1.2
+
+### Patch Changes
+
+- 32d56a66c: Endre publish-packages script til å bygge alle pakker under /packages
+
 ## 0.1.1
 
 ### Patch Changes
