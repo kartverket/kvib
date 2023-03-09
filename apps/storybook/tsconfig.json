@@ -1,6 +1,6 @@
 {
   "include": ["."],
-  "exclude": ["dist", "node_modules"],
+  "exclude": ["storybook-static", "node_modules"],
   "compilerOptions": {
     "target": "esnext", // Specify ECMAScript target version
     "lib": ["dom", "dom.iterable", "esnext"], // List of library files to be included in the compilation
