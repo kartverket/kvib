@@ -15,7 +15,10 @@ export interface ButtonProps extends ComponentPropsWithoutRef<"button"> {
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
-      size = "sm",
+
+
+      
+      size = "md",
       variant = "primary",
       colorScheme = "green",
       leftIcon,
