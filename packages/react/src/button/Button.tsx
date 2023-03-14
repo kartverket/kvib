@@ -14,17 +14,8 @@ export interface ButtonProps extends ComponentPropsWithoutRef<"button"> {
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
-    {
-      size = "sm",
-      variant = "primary",
-      colorScheme = "green",
-      leftIcon,
-      rightIcon,
-      children,
-      className,
-      ...props
-    },
-    ref,
+    { size = "sm", variant = "primary", colorScheme = "green", leftIcon, rightIcon, children, className, ...props },
+    ref
   ) => {
     return (
       <button
@@ -33,7 +24,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           "kvib-button",
           `kvib-button--${variant}`,
           `kvib-button--${size}`,
-          `kvib-button--${colorScheme}`,
+          `kvib-button--${colorScheme}`
         )}
         ref={ref}
         {...props}
@@ -51,7 +42,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         )}
       </button>
     );
-  },
+  }
 );
 
 export default Button;

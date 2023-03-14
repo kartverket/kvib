@@ -6,4 +6,3 @@ slug: /designsystem/komponenter/grid
 displayed_sidebar: designsystemSidebar
 sidebar_position: 7
 ---
-

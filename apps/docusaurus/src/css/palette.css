@@ -2,116 +2,116 @@
 
 .palette,
 .palette * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .palette {
-    font-family: sans-serif;
-    display: grid;
-    gap: 15px;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  font-family: sans-serif;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 
 .palette__color {
-    height: 150px;
-    position: relative;
+  height: 150px;
+  position: relative;
 }
 
 .palette__desc {
-    padding: 10px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    color: var(--white);
+  padding: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  color: var(--white);
 }
 
 .palette__text {
-    width: 100%;
-    padding: 10px;
-    outline: none;
-    border: 1px solid var(--gray_light);
-    border-top: none;
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: 1px solid var(--gray_light);
+  border-top: none;
 }
 
 .palette--green_dark {
-    background: var(--green_dark);
+  background: var(--green_dark);
 }
 
 .palette--green_active {
-    background: var(--green_active);
+  background: var(--green_active);
 }
 
 .palette--green {
-    background: var(--green);
+  background: var(--green);
 }
 
 .palette--green_light {
-    background: var(--green_light);
+  background: var(--green_light);
 }
 
 .palette--blue_dark {
-    background: var(--blue_dark);
+  background: var(--blue_dark);
 }
 
 .palette--blue {
-    background: var(--blue);
+  background: var(--blue);
 }
 
 .palette--blue_light {
-    background: var(--blue_light);
+  background: var(--blue_light);
 }
 
 .palette--blue_hover {
-    background: var(--blue_hover);
+  background: var(--blue_hover);
 }
 
 .palette--blue_dark_button {
-    background: var(--blue_dark_button);
+  background: var(--blue_dark_button);
 }
 
 .palette--red_error_message {
-    background: var(--red_error_message);
+  background: var(--red_error_message);
 }
 
 .palette--red_dark {
-    background: var(--red_dark);
+  background: var(--red_dark);
 }
 
 .palette--pink {
-    background: var(--pink);
+  background: var(--pink);
 }
 
 .palette--orange {
-    background: var(--orange);
+  background: var(--orange);
 }
 
 .palette--yellow {
-    background: var(--yellow);
+  background: var(--yellow);
 }
 
 .palette--yellow_light {
-    background: var(--yellow_light);
+  background: var(--yellow_light);
 }
 
 .palette--black {
-    background: var(--black);
+  background: var(--black);
 }
 
 .palette--white {
-    background: var(--white);
-    border: 1px solid var(--gray_light);
+  background: var(--white);
+  border: 1px solid var(--gray_light);
 }
 
 .palette--gray_dark {
-    background: var(--gray_dark);
+  background: var(--gray_dark);
 }
 
 .palette--gray {
-    background: var(--gray);
+  background: var(--gray);
 }
 
 .palette--gray_light {
-    background: var(--gray_light);
+  background: var(--gray_light);
 }

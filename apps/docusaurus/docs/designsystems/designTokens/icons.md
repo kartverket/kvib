@@ -1,7 +1,7 @@
 ---
 id: iconsID
 title: Ikoner
-description:  Ikoner som blir brukt i Kartverket sine løsninger
+description: Ikoner som blir brukt i Kartverket sine løsninger
 slug: designsystems/designtokens/ikoner
 displayed_sidebar: designsystemSidebar
 ---
@@ -9,10 +9,11 @@ displayed_sidebar: designsystemSidebar
 KVIB bruker font-ikoner fra Google Material Design. Vi anbefaler å bruke outlined ikoner, og disse er inkludert i KVIB. Listen under viser ikonene som er anbefalt av KVIB-teamet, men alle ikoner fra <a href='https://fonts.google.com/icons'> google material fonten</a> er tilgjengelige for bruk via KVIB.
 
 Vi har følgende regler for bruk av ikoner:
-* Ikoner bør hovedsakelig være outlined, og hentes ut av Google Material
-* Ikonets farge må ha god nok kontrast til bakgrunnen
-* Noen av ikonene skal ha fyll. [Se eksempelbruk](#eksempelbruk)
-* Små og ekstra små flater (Dashboard, kart og mobil) skal ha bredde og høyde på 1.25 rem. Tablet og desktop kan bruke 1.5 rem.
+
+- Ikoner bør hovedsakelig være outlined, og hentes ut av Google Material
+- Ikonets farge må ha god nok kontrast til bakgrunnen
+- Noen av ikonene skal ha fyll. [Se eksempelbruk](#eksempelbruk)
+- Små og ekstra små flater (Dashboard, kart og mobil) skal ha bredde og høyde på 1.25 rem. Tablet og desktop kan bruke 1.5 rem.
 
 ## Devices
 
@@ -438,6 +439,7 @@ Vi har følgende regler for bruk av ikoner:
 <hr/>
 
 ## Navigasjon
+
 <section class="icon-section">
     <div class="icon-grid">
         <div class="text-center">
@@ -476,6 +478,7 @@ Vi har følgende regler for bruk av ikoner:
 <hr/>
 
 ## Avsjekk
+
 <section class="icon-section">
     <div class="icon-grid">
         <div class="text-center">
@@ -575,10 +578,10 @@ Dette ikonet har kun outline:
 Output:
 <span class="material-symbols-outlined">home</span>
 
-
 <hr/>
 
 Dette ikonet har fyll:
+
 ```markdown
 <span class="material-symbols-outlined material-symbols-outlined--filled">home</span>
 ```

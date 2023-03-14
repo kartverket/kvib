@@ -5,76 +5,88 @@ description: Typografi som blir brukt i Kartverket sine løsninger
 slug: /designsystems/designtokens/typografi
 displayed_sidebar: designsystemSidebar
 ---
-import {Heading1,Heading2,Heading3,BodyText,Label, Detail, Underline} from '@site/src/css/typografi/typografi.jsx';
 
+import {
+  Heading1,
+  Heading2,
+  Heading3,
+  BodyText,
+  Label,
+  Detail,
+  Underline,
+} from "@site/src/css/typografi/typografi.jsx";
 
 Det er en rekke krav til tekststruktur for å tilfredstille regelverket. Avhengig av hvilket publiseringsystem som benyttes, kan kravene løses ulikt teknisk, men grunnprinsippet vil være det samme.
-Det er viktig at innholdet struktureres med korrekt kode, og må kunne forstørres uten tap av tekst eller lesbarhet. 
-
+Det er viktig at innholdet struktureres med korrekt kode, og må kunne forstørres uten tap av tekst eller lesbarhet.
 
 ## Overskrifter
-Overskrifter kodes ved hjelp av overskriftelementene <code><h1\></code> til <code><h6\></code>, som deler opp teksten i tilsvarende kapitler og delkapitler. Kartverket har per dags dato tre nivåer fra <code><h1\></code> til <code><h3\></code>. Det vil komme mer senere. 
 
-Overskriftsnivåer brukes for å strukturere teksten, og er særlig aktuelt i redaksjonelt innhold. 
+Overskrifter kodes ved hjelp av overskriftelementene <code><h1\></code> til <code><h6\></code>, som deler opp teksten i tilsvarende kapitler og delkapitler. Kartverket har per dags dato tre nivåer fra <code><h1\></code> til <code><h3\></code>. Det vil komme mer senere.
+
+Overskriftsnivåer brukes for å strukturere teksten, og er særlig aktuelt i redaksjonelt innhold.
 Rekkefølgen på nivåene skal være korrekt. Nedover i nivået går du ett steg om gangen. Rekkefølgen oppover er avhengig av hvordan teksten skal bygges opp. <code><h1\></code> - <code><h2\></code> og <code><h1\></code> - <code><h1\></code> er tillatt, mens <code><h1\></code> - <code><h3\></code> er ikke tillatt.
-Dette kan vi sjekke i eksisterende tekster med Eb Accessibility Toolbar, under Structure. 
+Dette kan vi sjekke i eksisterende tekster med Eb Accessibility Toolbar, under Structure.
 
 Ofte er det informasjon i rammeverk som ikke er direkte knyttet til hovedinnholdet på siden, og som ligger etter hovedinnholdet i koden. Et vanlig eksempel er footer (kolofonen), som gjerne inneholder overordnet kontaktinformasjon.
-I så fall er det gunstig å innlede denne informasjonen med <code><h1\></code> for å bryte tydelig med hovedinnholdet. Det kan også være aktuelt å ha mellomtitler i denne informasjonen, og nivåene må selvfølgelig være i riktig rekkefølge.  
+I så fall er det gunstig å innlede denne informasjonen med <code><h1\></code> for å bryte tydelig med hovedinnholdet. Det kan også være aktuelt å ha mellomtitler i denne informasjonen, og nivåene må selvfølgelig være i riktig rekkefølge.
 
 ### Heading1- Sidetittel
+
 Hovedinnholdets tittel skal være den første overskriften i koden, og skal være på nivå 1 ved hjelp av elementet <code><h1\></code>. Dette gjelder også startsiden, som bør ha en synlig overskrift som tydelig formidler hvilken virksomhet brukeren har kommet til.
 
-
-
-<Heading1/>
-
+<Heading1 />
 
 ### Heading2 -Overskriftsnivå
-<Heading2/>
+
+<Heading2 />
 
 ### Heading3 -Overskriftsnivå
-<Heading3/>
+
+<Heading3 />
 
 ## Brødtekst
 
 Brødteksten skal kodes med avsnittselementet <code><p\></code>. Unngå bruken av elementene <code><div\></code>, <code><span\></code>, <code><br\></code> og <code><hr\></code> for å skape avsnitt.
-Unngå også tomme avsnittselement. Hvis du bruker det for å skape luft, skal du løse dette med CSS i stedet. 
-For best mulig lesbarhet for alle brukere, bør det ikke være mer enn 65-70 tegn per linje inkludert mellomrom. Da blir teksten mer innbydende og mindre overveldende, og er særlig viktig for brukere med lesevansker og konsentrasjonsvansker. 
+Unngå også tomme avsnittselement. Hvis du bruker det for å skape luft, skal du løse dette med CSS i stedet.
+For best mulig lesbarhet for alle brukere, bør det ikke være mer enn 65-70 tegn per linje inkludert mellomrom. Da blir teksten mer innbydende og mindre overveldende, og er særlig viktig for brukere med lesevansker og konsentrasjonsvansker.
 
-<BodyText/>
-
+<BodyText />
 
 ## Label
-Label (ledeteksten) er instruksen brukerne får når de skal gi respons i et skjema eller lignende. Ledeteksten kan være et spørsmål eller et enkelt ord, som “Navn” eller “Dato“. Les mer om hvordan <a href="https://www.gov.uk/" class='underline'> gov.uk bruker ledetekst. </a> 
-  
-<Label/>
 
-## Beskrivende Tekst 
+Label (ledeteksten) er instruksen brukerne får når de skal gi respons i et skjema eller lignende. Ledeteksten kan være et spørsmål eller et enkelt ord, som “Navn” eller “Dato“. Les mer om hvordan <a href="https://www.gov.uk/" class='underline'> gov.uk bruker ledetekst. </a>
+
+<Label />
+
+## Beskrivende Tekst
+
 Beskrivende tekst blir brukt som hjelpetekst og veiledning. Ordet «hjelpetekst» blir brukt om ulike typer innhold: Det kan bety veiledning brukeren kan oppsøke, teksten som hører til et felt, eller feilmeldinger som hjelper brukeren etter at noe har gått galt.
-<Detail/>
+
+<Detail />
 
 ## Understrekning og lenker
-Understrekning skal brukes i lenketekster eller andre elementer som trenger å poengteres. 
 
-Lenketekster skal være beskrivende, og gi brukeren nok informasjon til å forstå hva målet med lenken er. 
+Understrekning skal brukes i lenketekster eller andre elementer som trenger å poengteres.
+
+Lenketekster skal være beskrivende, og gi brukeren nok informasjon til å forstå hva målet med lenken er.
 Istedenfor å skrive «Les mer her», bør du for eksempel skrive «Les mer om universell utforming her». På denne måten vil lenken alene være godt nok til å forstå hva som skjuler seg bak lenken.
 
-<Underline/>
+<Underline />
 
 ## Eksempelbruk
+
 <html>
-    <body>
-        <div class="typographyCard">
-            <h1 class='heading heading__h1--m'> Dette er overskrift H1</h1>
-                <h2 class='heading heading__h2--m'> Dette er overskrift H2</h2>
-                <p class='body-text--sml'>Dette er et eksempel på bruk av typografi-klassene.</p>
-                <p class='body-text--sml underline'> Dette er et eksempel på bruk av typografi-klassene.</p>
-        </div>
-    </body>
+  <body>
+    <div class="typographyCard">
+      <h1 class="heading heading__h1--m"> Dette er overskrift H1</h1>
+      <h2 class="heading heading__h2--m"> Dette er overskrift H2</h2>
+      <p class="body-text--sml">Dette er et eksempel på bruk av typografi-klassene.</p>
+      <p class="body-text--sml underline"> Dette er et eksempel på bruk av typografi-klassene.</p>
+    </div>
+  </body>
 </html>
 
-```markup 
+```markup
 <html>
     <body>
         <h1 class='heading heading_h1--m'> Dette er overskrift H1</h1>
@@ -84,5 +96,3 @@ Istedenfor å skrive «Les mer her», bør du for eksempel skrive «Les mer om u
     </body>
 </html>
 ```
-
-

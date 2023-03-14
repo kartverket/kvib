@@ -30,7 +30,7 @@ I elementet under er <code>loader--size</code> 5.625rem / 90px. Størrelsen endr
 
 ## Lineært opplastningselement
 
-Lineært opplastningselement eksemplet under bruker <code>class="progressbar__container"</code> for å sette størrelsen på
+Lineært opplastningselement eksemplet under bruker <code>class="progressbar\_\_container"</code> for å sette størrelsen på
 elementet.
 I dette tilfellet, er container satt på <code>width: 50%;</code>
 
@@ -78,11 +78,8 @@ også <code>progressbar--label</code> med hensyn til endring av verdi.
 </div>
 ```
 
-## (!)Filopplastningselementer 
-***OBS! Under konstruksjon.***
+## (!)Filopplastningselementer
 
-***
+**_OBS! Under konstruksjon._**
 
-
-
-
+---

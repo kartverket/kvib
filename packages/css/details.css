@@ -1,61 +1,61 @@
 .kv-expandable .kv-expandable__title {
-    width: 100%;
-    padding-right: 22rem;
-    border-top: 1px solid black;
-    position: relative;
-    cursor: pointer;
-    font-family: 'Mulish', sans-serif;
-    font-weight: bold;
-    list-style: none;
+  width: 100%;
+  padding-right: 22rem;
+  border-top: 1px solid black;
+  position: relative;
+  cursor: pointer;
+  font-family: "Mulish", sans-serif;
+  font-weight: bold;
+  list-style: none;
 }
 
 .kv-expandable .kv-expandable__title {
-    outline: 0;
+  outline: 0;
 }
 
 .kv-expandable p {
-    font-size: 0.95rem;
-    margin: 0 0 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    /*padding-top: 1rem;*/
+  font-size: 0.95rem;
+  margin: 0 0 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  /*padding-top: 1rem;*/
 }
 
 .kv-expandable summary {
-    padding-left: 1rem;
-    padding-bottom: 1rem;
-    padding-top: 1rem;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
 }
 
 .kv-expandable__title:focus {
-    outline: var(--blue_dark) 2px solid;
+  outline: var(--blue_dark) 2px solid;
 }
 
 .kv-expandable__title::before,
 .kv-expandable__title::after {
-    width: 0.75em;
-    height: 2px;
-    position: absolute;
-    top: 50%;
-    right: 1rem;
-    content: '';
-    background-color: black;
-    transform: translateY(-50%);
-    transition: transform 0.2s ease-in-out;
+  width: 0.75em;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  content: "";
+  background-color: black;
+  transform: translateY(-50%);
+  transition: transform 0.2s ease-in-out;
 }
 
 .kv-expandable__title:hover {
-    background-color: var(--gray_light);
+  background-color: var(--gray_light);
 }
 
 .kv-expandable__title::after {
-    transform: translateY(-50%) rotate(90deg);
+  transform: translateY(-50%) rotate(90deg);
 }
 
 [open] .kv-expandable__title::after {
-    transform: translateY(-50%) rotate(180deg);
+  transform: translateY(-50%) rotate(180deg);
 }
 
 .kv-expandable .kv-expandable__title::-webkit-details-marker {
-    display: none;
+  display: none;
 }

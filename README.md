@@ -8,6 +8,7 @@ I tillegg har vi også laget npm package, KVIB-css, som inneholder css for desig
 Kildekoden til dette ligger i packages/css-mappen i dette repoet.
 
 ## KVIB-CSS:
+
 Se mer på [KVIB](https://kartverket.github.io/kvib/omkvib) for implementering av KVIB-CSS
 
 ## 🚦 Viktig infomasjon eller kjøreregler for de som ønsker å bidra 🚦
@@ -20,7 +21,7 @@ Se mer på [KVIB](https://kartverket.github.io/kvib/omkvib) for implementering a
 
 @Farhad Ahmadhadi  
 @Sebastian Maro  
-@Bente Lien Nilsen   
+@Bente Lien Nilsen  
 @Espen Henriksen.
 Har dere spørsmål relatert til kode på KVIB kan dere kontakte dem.  
 Har dere design spørsmål kan dere kontakte @Frida Støvern eller @Wanni.

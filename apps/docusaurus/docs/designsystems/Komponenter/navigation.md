@@ -7,6 +7,7 @@ displayed_sidebar: designsystemSidebar
 ---
 
 ## Header
+
 Navigasjonsbar-elementet tilpasser seg til skjermstørrelsen siden er åpnet i.
 Hvis det er nødvendig med spesifikk størrelse på navigasjonsbaren, må elementet bli plassert i en <code><div\></code> med ønsket width.
 
@@ -37,6 +38,7 @@ Hvis det er nødvendig med spesifikk størrelse på navigasjonsbaren, må elemen
 ```
 
 ## Ankermeny
+
 Ankermeny kan brukes på sider med mye innhold. Ved å trykke på menyen scroller man ned til overskriften.
 
 <div class="display__nav">
@@ -91,9 +93,9 @@ Størrelsen endres ved å bytte klassen <code>kv-anker--xs</code> til <code>kv-a
 </div>
 ```
 
-
 ## Tabs
-Følgende element bruker <code>active__link--demo</code>-klasse for å demonstrere et valgt eller aktivt side. Dette må justeres i hvert prosjekt.
+
+Følgende element bruker <code>active\_\_link--demo</code>-klasse for å demonstrere et valgt eller aktivt side. Dette må justeres i hvert prosjekt.
 
 <div class="kv-tab">
   <button class="kv-tab__links active__link--demo" onclick="#function()">En</button>
@@ -114,6 +116,7 @@ Følgende element bruker <code>active__link--demo</code>-klasse for å demonstre
 ## Stegvise prosesser
 
 ### Visning på liten skjerm (Extra small/small)
+
 Stegvise prosesser visning på liten skjerm bruker <code>--s</code>-klasse. <code>aria-current="step"</code> settes på <code><li\></code>-elementet eller nåværende steg der bruker er på. Ved fullført steg, settes <code>data-status="complete"</code> på <code><li\></code>-elementet.
 
 <div class="kv-stepper--s">
@@ -194,8 +197,8 @@ Stegvise prosesser visning på liten skjerm bruker <code>--s</code>-klasse. <cod
 </div>
 ```
 
-
 ### Visning på stor skjerm (medium/large)
+
 Stegvise prosesser visning på stor skjerm bruker <code>stepper--l</code>-klasse. <code>aria-current="step"</code> settes på <code><li\></code>-elementet eller nåværende steg der bruker er på. Ved fullført steg, settes <code>data-status="complete"</code> på <code><li\></code>-elementet.
 
 <div class="kv-stepper--l">
@@ -275,6 +278,3 @@ Stegvise prosesser visning på stor skjerm bruker <code>stepper--l</code>-klasse
     </ol>
 </div>
 ```
-
-
-

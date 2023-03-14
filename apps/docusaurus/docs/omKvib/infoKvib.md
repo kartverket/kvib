@@ -17,6 +17,7 @@ Et designsystem blir aldri helt ferdig, men er et organisk verktøy som utvikler
 ## Kom i gang som designer
 
 ### Figma
+
 <p class="body-text body-text--sml">
 For å lage skisser til digitale flater bruker vi Figma. Figma er et effektiv verktøy som brukes til skisser, prototyping, leveranse, kommunisere og hente ut kode. Alt lagres i skyen, fungerer både som applikasjon og i nettleser og trenger derfor ikke å lastes ned. 
 Et supert verktøy for å lettere kunne dele underveis i prosessen og samabeide godt på tvers av fagfelt.
@@ -33,6 +34,7 @@ Har du ikke tilgang eller ønsker å få en kort introduksjon til Figma? <br/> K
 </p>
 
 ### Slack
+
 <p class="body-text body-text--sml">
 Som kommunikasjonsverktøy bruker vi Slack. Slack er et godt verktøy for både chat og kanaler til faggrupper, prosjektgrupper og annet. 
 Kanaler som kan være nyttig for deg er #Kartverkets-designteam, #gen-kvib og #laug-brukeropplevelse.
@@ -44,11 +46,11 @@ Kartverkets slack finner du [Her <span class="material-symbols-outlined">open_in
 </p>
 
 ### UX-møter
+
 <p class="body-text body-text--sml">
 For å sikre helhetlige tjenester og god dialog på tvers av team har vi etablert UX-møter en gang i uka. 
 Ønsker du å bli inkludert i møtene kan du sende en mail til <a href="mailto:wanwisa.johnsrud@kartverket.no?subject=KVIB UX-møte">wanwisa.johnsrud@kartverket.no.</a> Velkommen!
 </p>
-
 
 ## Kom i gang som utvikler
 
@@ -57,11 +59,13 @@ For å sikre helhetlige tjenester og god dialog på tvers av team har vi etabler
 <div class="background--container--green">
 
 #### Ta i bruk @kvib/css via NPM
+
 <p class="body-text body-text--sml">For å laste ned og ta i bruk KVIB-CSS, skriv følgende kommando i terminalen:</p>
 
 ```markdown
 npm i @kvib/css
 ```
+
 <p class="body-text body-text--sml">Du kan også angi i package.json fila i prosjektet ditt hvilken versjon av @kvib/css du ønsker å ta i bruk, slik at teamet selv har full kontroll når det kommer oppdateringer til biblioteket.</p>
 
 <p class="body-text body-text--sml">Importer eller legg til link til biblioteket i CSS eller HTML filen i prosjektet.</p>
@@ -83,5 +87,5 @@ npm i @kvib/css
 </div>
 
 ### React
-Kommer snart
 
+Kommer snart

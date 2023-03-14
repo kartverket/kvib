@@ -1,24 +1,23 @@
 .kv-tab {
-overflow: hidden;
-
+  overflow: hidden;
 }
 
 .kv-tab .kv-tab__links {
-    background-color: transparent;
-    float: left;
-    cursor: pointer;
-    padding: 14px 16px;
-    border: none;
+  background-color: transparent;
+  float: left;
+  cursor: pointer;
+  padding: 14px 16px;
+  border: none;
 }
 
 .kv-tab__links:hover {
-    border-bottom: var(--blue_hover) 2px solid;
+  border-bottom: var(--blue_hover) 2px solid;
 }
 
 .kv-tab__links:active {
-    border-bottom: var(--blue) 2px solid;
+  border-bottom: var(--blue) 2px solid;
 }
 
 .kv-tab .active__link--demo {
-    border-bottom: var(--blue) 2px solid;
+  border-bottom: var(--blue) 2px solid;
 }

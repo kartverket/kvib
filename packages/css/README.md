@@ -8,14 +8,17 @@ I tillegg har vi også laget npm package, KVIB-css, som inneholder css for desig
 Kildekoden til dette ligger i static/css-mappen i dette repoet.
 
 ## KVIB-CSS:
+
 For å publisere ny versjon av KVIB-css:
+
 1. Trykk på Github Actions i Kvib Github repository
-2. Velg  "KVIB Package publish"
+2. Velg "KVIB Package publish"
 3. Trykk på "Run workflow" på Master branch.
 
 Ny versjon av KVIB-css blir opprettet og publisert i kartverkets npm konto.
 
 ## Rutine ved endringer:
+
 1. Gjør nødvendige endringer i css-filene i css-mappa i static/css.
 2. Sørg for at dokumentasjonen er oppdatert for all ny kode i docs-mappa.
 3. Opprett pull-request for endringene dine på github.

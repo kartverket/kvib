@@ -1,19 +1,19 @@
 /*css- brukt til å designe dokuemntasjons-siden av kvib-docusaurus/docs/designsystems/uu.md */
 .details {
-    background: white;
-    border: none;
+  background: white;
+  border: none;
 }
 
 .details > summary {
-    padding: 4px;
-    width: auto;
-    background-color: white;
-    cursor: pointer;
+  padding: 4px;
+  width: auto;
+  background-color: white;
+  cursor: pointer;
 }
 
 .details > p {
-    background-color: white;
-    padding: 4px;
-    margin: 0;
-    color: #A32F00;
+  background-color: white;
+  padding: 4px;
+  margin: 0;
+  color: #a32f00;
 }
