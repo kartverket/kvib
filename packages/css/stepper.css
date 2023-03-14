@@ -88,7 +88,7 @@
 .kv-stepper--s .kv-stepper--circle::before {
     content: counter(steps);
     speak-as: digits;
-    color: black;
+    color: var(--black);
     position: absolute;
     top: -0.75rem;
     left: -1.9rem;
@@ -129,7 +129,6 @@
     align-items: center;
     font-family: Mulish, sans-serif;
     line-height: 1.1;
-    /*margin: calc(var(--stepper--l--y-space) * -1) 0 0 0;*/
     padding: 0;
     list-style: none;
 }
@@ -191,7 +190,7 @@
 .kv-stepper--l .kv-stepper--circle::before {
     content: counter(steps);
     speak-as: digits;
-    color: black;
+    color: var(--black);
     position: absolute;
     top: -0.75rem;
     left: -1.9rem;

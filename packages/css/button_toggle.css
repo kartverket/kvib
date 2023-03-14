@@ -3,9 +3,7 @@
     display: inline-block;
     height: 8px;
     width: 24px;
-    /* Blaa_Lys */
     background: var(--blue_light);
-    /* Blaa_Moerk */
     border: 1px solid var(--blue_dark_button);
     border-radius: 8px;
 }
@@ -68,9 +66,7 @@ input:checked + .kv-toggle_switch--xs:before {
     display: inline-block;
     height: 12px;
     width: 32px;
-    /* Blaa_Lys */
     background-color: var(--blue_light);
-    /* Blaa_Moerk */
     border: 1px solid var(--blue_dark_button);
     border-radius: 8px;
 }

@@ -1,4 +1,4 @@
-:root{
+:root {
     --kv-input--height: 2.5rem;
     --kv-input--margin-bottom: 2rem;
 }
@@ -22,7 +22,7 @@
     padding: 0.5rem;
     border: 0.063rem solid var(--blue_dark_button);
     box-sizing: border-box;
-    background: #FFFFFF;
+    background: var(--white);
     transition: linear, 0.2s linear;
     font-family: inherit;
     border-radius: 0.25rem;

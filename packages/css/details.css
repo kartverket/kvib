@@ -18,7 +18,6 @@
     margin: 0 0 1rem;
     padding-left: 1rem;
     padding-right: 1rem;
-    /*padding-top: 1rem;*/
 }
 
 .kv-expandable summary {
@@ -39,7 +38,7 @@
     top: 50%;
     right: 1rem;
     content: '';
-    background-color: black;
+    background-color: var(--black);
     transform: translateY(-50%);
     transition: transform 0.2s ease-in-out;
 }

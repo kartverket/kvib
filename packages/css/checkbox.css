@@ -104,7 +104,7 @@
     outline-offset: 0.125rem;
 }
 
-/*feilmeldingsboks*/
+/*Error message-box*/
 .kv-checkbox .error__box {
     position: relative;
     padding: 0.3rem;
