@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, ButtonProps } from "@kvib/react/src/button";
+import { Button, ButtonProps } from "@kvib/react";
 import { Meta, Story } from "@storybook/react";
 
 export default {
@@ -18,7 +18,6 @@ export default {
     size: {
       defaultValue: "md",
       type: { name: "string", required: false },
-      description: "demo description",
       control: {
         type: "radio",
         options: ["sm", "md"],
