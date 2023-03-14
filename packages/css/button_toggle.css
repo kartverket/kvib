@@ -8,7 +8,8 @@
   /* Blaa_Moerk */
   border: 1px solid var(--blue_dark_button);
   border-radius: 8px;
-    margin: 0;
+  margin: 0;
+  color: black;
 }
 
 .kv-switch--xs input {
