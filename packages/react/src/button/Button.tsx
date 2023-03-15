@@ -1,5 +1,5 @@
 import { ComponentPropsWithoutRef, forwardRef, ReactNode } from "react";
-import "./style.css";
+import { OverridableComponent } from "../utils";
 import cl from "clsx";
 
 export interface ButtonProps extends ComponentPropsWithoutRef<"button"> {
@@ -12,13 +12,23 @@ export interface ButtonProps extends ComponentPropsWithoutRef<"button"> {
   isDisabled: boolean;
 }
 
-export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+export const Button: OverridableComponent<ButtonProps, HTMLButtonElement> = forwardRef(
   (
-    { size = "sm", variant = "primary", colorScheme = "green", leftIcon, rightIcon, children, className, ...props },
+    {
+      as: Component = "button",
+      size = "sm",
+      variant = "primary",
+      colorScheme = "green",
+      leftIcon,
+      rightIcon,
+      children,
+      className,
+      ...props
+    },
     ref
   ) => {
     return (
-      <button
+      <Component
         className={cl(
           className,
           "kvib-button",
@@ -40,7 +50,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             <span className="material-symbols-outlined">{rightIcon}</span>
           </div>
         )}
-      </button>
+      </Component>
     );
   }
 );
