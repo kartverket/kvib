@@ -3,10 +3,11 @@ id: toggleSwitchID
 title: (!)Slider knapp (Toggle Switch)
 description: Slider knapper
 ---
-***OBS! Toggle switch har en liten bug i Chrome og Edge som gjør at fargen i midten flytter på seg ved zoom når knappen er slått på.
-Buggen er mindre synlig i Firefox.***
 
-***
+**_OBS! Toggle switch har en liten bug i Chrome og Edge som gjør at fargen i midten flytter på seg ved zoom når knappen er slått på.
+Buggen er mindre synlig i Firefox._**
+
+---
 
 ## Extra small:
 
@@ -39,4 +40,3 @@ Buggen er mindre synlig i Firefox.***
 <span class="kv-toggle_switch--l round"></span>
 </label>
 ```
-

@@ -1,65 +1,66 @@
 .kv-table {
-    font-family: 'Mulish';
-    width: 100%;
-    border-collapse: collapse;
-    table-layout: fixed;
+  font-family: "Mulish";
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
 }
 
-.kv-table td, .kv-table th {
-    border: 0;
-    padding: 1rem 0.5rem 1rem 0.5rem;
+.kv-table td,
+.kv-table th {
+  border: 0;
+  padding: 1rem 0.5rem 1rem 0.5rem;
 
-    word-break: keep-all;
-    height: 2.5rem;
+  word-break: keep-all;
+  height: 2.5rem;
 }
 
 .kv-table tr:nth-child(even) {
-    background-color: var(--blue_light);
+  background-color: var(--blue_light);
 }
 
 .kv-table tr:hover {
-    background-color: var(--blue_hover);
-    color: var(--white);
+  background-color: var(--blue_hover);
+  color: var(--white);
 }
 
 .kv-table th {
-    background-color: var(--white);
-    border-bottom: 0.125rem solid var(--black);
-    text-align: center;
-    color: var(--gray_dark);
-    height: 2.5rem;
+  background-color: var(--white);
+  border-bottom: 0.125rem solid var(--black);
+  text-align: center;
+  color: var(--gray_dark);
+  height: 2.5rem;
 
-    /*--For sticky header--*/
-    position: -webkit-sticky; /* For sticky header i Safari */
-    position: sticky;
-    top: 0; /* Må være med for å få sticky header */
-    z-index: 1;
+  /*--For sticky header--*/
+  position: -webkit-sticky; /* For sticky header i Safari */
+  position: sticky;
+  top: 0; /* Må være med for å få sticky header */
+  z-index: 1;
 }
 
 .kv-table td:nth-of-type(3n) {
-    text-align: left;
+  text-align: left;
 }
 
 .kv-table td:nth-of-type(4n) {
-    text-align: right;
+  text-align: right;
 }
 
 .kv-table td:nth-of-type(5n) {
-    text-align: left;
+  text-align: left;
 }
 
 .kv-table tr:hover + label::before {
-    color: var(--white);
+  color: var(--white);
 }
 
 .kv-table__container--large {
-    height: 30rem;
-    width: 29rem;
-    overflow-y: scroll;
+  height: 30rem;
+  width: 29rem;
+  overflow-y: scroll;
 }
 
 .kv-table__container--small {
-    height: 22.5rem;
-    width: 17rem;
-    overflow-y: scroll;
+  height: 22.5rem;
+  width: 17rem;
+  overflow-y: scroll;
 }

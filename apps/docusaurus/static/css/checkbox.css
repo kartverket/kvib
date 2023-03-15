@@ -1,108 +1,108 @@
 .checkbox,
 .kv-checkbox {
-    display: flex;
-    position: relative;
+  display: flex;
+  position: relative;
 }
 
 .checkbox input[type="checkbox"],
 .kv-checkbox input[type="checkbox"] {
-    position: absolute;
-    opacity: 0;
-    height: 0;
-    width: 0;
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
 }
 
 .checkbox label,
 .kv-checkbox label {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 
-    /*16px width of fake checkbox + 6px distance between fake checkbox and text*/
-    padding-left: 1.6rem;
+  /*16px width of fake checkbox + 6px distance between fake checkbox and text*/
+  padding-left: 1.6rem;
 }
 
 .checkbox label::before,
 .checkbox label::after,
 .kv-checkbox label::before,
 .kv-checkbox label::after {
-    position: absolute;
-    content: "";
+  position: absolute;
+  content: "";
 
-    /*Needed for the line-height to take effect*/
-    display: inline-block;
+  /*Needed for the line-height to take effect*/
+  display: inline-block;
 }
 
 .checkbox label::before,
 .kv-checkbox label::before {
-    height: 0.938rem;
-    width: 0.938rem;
+  height: 0.938rem;
+  width: 0.938rem;
 
-    border: 0.125rem solid;
-    border-radius: 0.10rem;
+  border: 0.125rem solid;
+  border-radius: 0.1rem;
 
-    color: var(--blue_dark);
-    background-color: white;
+  color: var(--blue_dark);
+  background-color: white;
 
-    top: 3px;
-    left: 0;
+  top: 3px;
+  left: 0;
 }
 
 .checkbox label::after,
 .kv-checkbox label::after {
-    height: 0.313rem;
-    width: 0.563rem;
-    border-left: 0.188rem solid;
-    border-bottom: 0.188rem solid;
+  height: 0.313rem;
+  width: 0.563rem;
+  border-left: 0.188rem solid;
+  border-bottom: 0.188rem solid;
 
-    transform: rotate(-45deg);
+  transform: rotate(-45deg);
 
-    top: 6px;
-    left: 4px;
+  top: 6px;
+  left: 4px;
 }
 
 /*Hide checkmark by default*/
 .checkbox input[type="checkbox"] + label::after,
 .kv-checkbox input[type="checkbox"] + label::after {
-    content: none;
+  content: none;
 }
 
 .checkbox input[type="checkbox"]:hover + label::before,
 .checkbox input[type="checkbox"]:hover + label::after,
 .kv-checkbox input[type="checkbox"]:hover + label::before,
 .kv-checkbox input[type="checkbox"]:hover + label::after {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 /*set checkmark on checked state*/
 .checkbox input[type="checkbox"]:checked + label::after,
 .kv-checkbox input[type="checkbox"]:checked + label::after {
-    content: "";
-    color: var(--white);
+  content: "";
+  color: var(--white);
 }
 
 /*change background color of checkbox on checked state*/
 .checkbox input[type="checkbox"]:checked + label::before,
 .kv-checkbox input[type="checkbox"]:checked + label::before {
-    background-color: var(--blue_dark);
+  background-color: var(--blue_dark);
 }
 
 /*Adding focus styles on outer-box*/
 .checkbox input[type="checkbox"]:focus-visible + label::before,
 .kv-checkbox input[type="checkbox"]:focus-visible + label::before {
-    outline: max(0.188rem, 0.15em) solid var(--blue_dark);
-    outline-offset: 0.125rem;
+  outline: max(0.188rem, 0.15em) solid var(--blue_dark);
+  outline-offset: 0.125rem;
 }
 
 /* ----CHECKBOX ERROR----*/
 /*set background on the checked state*/
 .checkbox input[type="checkbox"]:required:invalid + label::before,
 .kv-checkbox input[type="checkbox"]:required:invalid + label::before {
-    color: var(--red_error_message);
+  color: var(--red_error_message);
 }
 
 /*Adding focus styles on the outer-box*/
 .checkbox input[type="checkbox"]:focus-visible:invalid + label::before,
 .kv-checkbox input[type="checkbox"]:focus-visible:invalid + label::before {
-    outline: max(0.188rem, 0.15em) solid var(--red_error_message);
-    outline-offset: 0.125rem;
+  outline: max(0.188rem, 0.15em) solid var(--red_error_message);
+  outline-offset: 0.125rem;
 }

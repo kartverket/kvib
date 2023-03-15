@@ -7,12 +7,12 @@ displayed_sidebar: designsystemSidebar
 sidebar_position: 3
 ---
 
-***OBS! NVDA har en bug som gjør at skjermleseren ikke klarer å lese av riktig state på radioknappen. Den er derfor testet med Chromevox der riktig state blir lest***
+**_OBS! NVDA har en bug som gjør at skjermleseren ikke klarer å lese av riktig state på radioknappen. Den er derfor testet med Chromevox der riktig state blir lest_**
 
-***
- 
- Radioknapper skal benyttes der en bruker kun skal kunne gjøre ett enkelt valg, og ikke flervalg. Ved et nytt valg skal eventuelle tidligere valg fjernes automatisk. Feilmelding avkrysningsknapp skal brukes for å visualisere feil i avkrysningen, dersom dette har skjedd (f.eks. ikke krysset av for et alternativ).
- 
+---
+
+Radioknapper skal benyttes der en bruker kun skal kunne gjøre ett enkelt valg, og ikke flervalg. Ved et nytt valg skal eventuelle tidligere valg fjernes automatisk. Feilmelding avkrysningsknapp skal brukes for å visualisere feil i avkrysningen, dersom dette har skjedd (f.eks. ikke krysset av for et alternativ).
+
 For å style <code><label\></code>-elementet, skal egne CSS-klasser fra
 [_Typografi_](../designTokens/typography.mdx#label)
 benyttes. I tillegg skal hver gruppe med radioknapper ligge i <code><fieldset\></code>, og ha en <code><legend\></code> for å vise at elementene hører sammen. Dette er for at skjermleser skal kunne identifisere beskrivelsen til knappene. Se eksempelbruk under.
@@ -34,7 +34,6 @@ Radioknappene får en fokus sirkel når de velges med tastaturet.
 </fieldset>
 
 <br/>
-
 
 ```markdown
 <fieldset>
