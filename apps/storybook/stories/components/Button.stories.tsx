@@ -18,7 +18,6 @@ export default {
     size: {
       defaultValue: "md",
       type: { name: "string", required: false },
-      description: "demo description",
       control: {
         type: "radio",
         options: ["sm", "md"],
