@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, ButtonProps } from "@kvib/react";
+import { Button, ButtonProps } from "@kvib/react/src/button";
 import { Meta, Story } from "@storybook/react";
 
 export default {
