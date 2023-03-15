@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 0.2.0
+
+### Minor Changes
+
+- ced38ed92: Button-komponentens komponenttype er nå overridable. Bruker styling fra css-pakka.
+
 ## 0.1.2
 
 ### Patch Changes
