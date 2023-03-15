@@ -1,20 +1,17 @@
 /*css for styling av typografi-komponentene til dokumentasjonen.*/
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap");
 
 table {
-    text-align:left;
+  text-align: left;
+}
+table th {
+  background-color: var(--green_light);
+}
 
-  }
-  table th {
-    background-color: var(--green_light);
-    }
-
-
-div.typographyCard{
-
+div.typographyCard {
   padding: 10px;
   border: 4px solid var(--green_light);
   margin: 0;
-  display:flex;
+  display: flex;
   flex-direction: column;
 }

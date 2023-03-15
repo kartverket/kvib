@@ -6,7 +6,6 @@ slug: /designsystem/komponenter/logo
 displayed_sidebar: designsystemSidebar
 ---
 
-
 ## Kartverkets logo
 
 Kartverket har to utgaver av logo: en stående (med tekst under figuren) og en liggende (med tekst til høyre).
@@ -17,7 +16,7 @@ I størst mulig grad skal stående logo brukes. Forskjellige versjoner av logoen
 Logoen finnes i farger og i svart/hvitt. Logo med ramme er laget for bruk på mørk bakgrunnsfarge.
 Logoen kan brukes i samarbeid med grafisk produksjon og kan åpnes i flere tegne- og bildebehandlingsprogrammer, der fargerommet CMYK blir brukt.
 
-### Logo stående   
+### Logo stående
 
 ![Kartverket staaende logo](/img/logo/kartverket_staaende.svg)
 
@@ -36,7 +35,6 @@ Last ned SVG logo stående <span class="material-symbols-outlined--filled materi
 <div>
 
 ![Kartverket liggende logo](/img/logo/kartverket_liggende.svg)
-
 
 <a class="kv-links" href="/img/logo/kartverket_liggende.png" target="_blank" rel="noopener noreferrer" download="kartverket_liggende_logo.png">
 Last ned PNG logo liggende <span class="material-symbols-outlined--filled material-symbols-outlined button__icon--s-m-l-left">file_download</span>

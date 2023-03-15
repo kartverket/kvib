@@ -7,7 +7,7 @@ displayed_sidebar: designsystemSidebar
 sidebar_position: 4
 ---
 
-Inputfeltene i KVIB bruker CSS-klassen <code>.inputField</code>. Denne klassen har en bredde satt til 100%, slik at bredden på inputfeltet tilpasses ved å legge <code><div\></code>-klasse _inputField__wrapper_ sammen med <code><input\></code>, <code><label\></code>, <code><span\></code> og <code><small\></code> i et <code><div\></code>-element med en bestemt lengde.
+Inputfeltene i KVIB bruker CSS-klassen <code>.inputField</code>. Denne klassen har en bredde satt til 100%, slik at bredden på inputfeltet tilpasses ved å legge <code><div\></code>-klasse _inputField\_\_wrapper_ sammen med <code><input\></code>, <code><label\></code>, <code><span\></code> og <code><small\></code> i et <code><div\></code>-element med en bestemt lengde.
 For å style <code><label\></code> og <code><small\></code>-elementet, skal egne [CSS-klasser fra _Typografi_ benyttes.](../designTokens/typography.mdx#label)
 
 ## Aktivt inputfelt
@@ -49,7 +49,6 @@ Dette kan løses med blant annet Javascript. Det er foreløpig ingen eksempelkod
 
 Her er et eksempel på et deaktivert inputfelt, både med og uten hjelpetekst.
 
-
 <div class="kv-form__input__wrapper">
      <label class="label label--sml" for="disabledInputFieldText">Skriv heia</label>
     <input class="kv-form__input" type="text" id="disabledInputFieldText" placeholder="Jeg er deaktivert" disabled/>
@@ -75,7 +74,3 @@ Her er et eksempel på et deaktivert inputfelt, både med og uten hjelpetekst.
     <input class="kv-form__input" type="text" id="disabledInputFieldNoText" disabled/>
 </div>
 ```
-
-
-
-

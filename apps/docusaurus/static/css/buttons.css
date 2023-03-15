@@ -1,37 +1,36 @@
 /* CSS-fil for Knapper */
 
 :root {
-    --kv-button__icon__padding--xs: 0.5rem;
-    --kv-button__icon__padding--sml: 1rem;
-    --kv-button--tertiary--background: var(--white); /* Burde denne vært transparent?*/
-
+  --kv-button__icon__padding--xs: 0.5rem;
+  --kv-button__icon__padding--sml: 1rem;
+  --kv-button--tertiary--background: var(--white); /* Burde denne vært transparent?*/
 }
 
 /* Hovedklasse*/
 .button,
 .kv-button {
-    border: 0.006rem solid;
-    border-radius: 0.5rem;
-    text-decoration: none;
-    cursor: pointer;
-    font-family: 'Mulish', 'sans-serif';
-    font-weight: 700;
+  border: 0.006rem solid;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: "Mulish", "sans-serif";
+  font-weight: 700;
 }
 
 /* Fokus */
 .button:focus-visible,
 .kv-button:focus-visible {
-    outline: var(--blue_dark) solid;
-    outline-offset: 0.313rem;
-    outline-width: var(--focus-outline);
+  outline: var(--blue_dark) solid;
+  outline-offset: 0.313rem;
+  outline-width: var(--focus-outline);
 }
 
 /* Disabled */
 .button:disabled,
 .kv-button:disabled {
-    background-color: var(--gray_light);
-    color: var(--gray_dark);
-    outline-color: var(--gray_dark);
+  background-color: var(--gray_light);
+  color: var(--gray_dark);
+  outline-color: var(--gray_dark);
 }
 
 /*******************
@@ -39,29 +38,29 @@
 ********************/
 .button--xs,
 .kv-button--xs {
-    width: fit-content;
-    height: 2.5rem;
-    padding: var(--padding-button--xs);
-    font-size: 1rem;
-    line-height: 1.5rem;
+  width: fit-content;
+  height: 2.5rem;
+  padding: var(--padding-button--xs);
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .button--sm,
 .kv-button--sm {
-    width: fit-content;
-    height: 3.5rem;
-    padding: var(--padding-button--s-m-l);
-    font-size: 1rem;
-    line-height: 1.5rem;
+  width: fit-content;
+  height: 3.5rem;
+  padding: var(--padding-button--s-m-l);
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .button--l,
 .kv-button--l {
-    width: fit-content;
-    height: 4rem;
-    padding: var(--padding-button--s-m-l);
-    font-size: 1.125rem;
-    line-height: 2rem;
+  width: fit-content;
+  height: 4rem;
+  padding: var(--padding-button--s-m-l);
+  font-size: 1.125rem;
+  line-height: 2rem;
 }
 
 /***********************
@@ -70,137 +69,135 @@
 /* BUTTON PRIMARY*/
 .button__green--primary,
 .kv-button--primary--green {
-    border: none;
-    background-color: var(--green_dark);
-    color: var(--white); /* Setter tekstfarge */
+  border: none;
+  background-color: var(--green_dark);
+  color: var(--white); /* Setter tekstfarge */
 }
 
 .button__green--primary:hover,
 .kv-button--primary--green:hover {
-    background-color: var(--green);
-    color: var(--white);
+  background-color: var(--green);
+  color: var(--white);
 }
 
 .button__green--primary:active,
 .kv-button--primary--green:active {
-    background-color: var(--green_active);
-    color: var(--white);
+  background-color: var(--green_active);
+  color: var(--white);
 }
-
 
 .button__blue--primary,
 .kv-button--primary--blue {
-    background-color: var(--blue);
-    color: var(--white);
+  background-color: var(--blue);
+  color: var(--white);
 }
 
 .button__blue--primary:hover,
 .kv-button--primary--blue:hover {
-    background-color: var(--blue_hover);
-    color: var(--black);
+  background-color: var(--blue_hover);
+  color: var(--black);
 }
 
 .button__blue--primary:active,
 .kv-button--primary--blue:active {
-    background-color: var(--blue_dark);
-    color: var(--white);
+  background-color: var(--blue_dark);
+  color: var(--white);
 }
-
 
 /* BUTTON SECONDARY*/
 .button__green--secondary,
 .kv-button--secondary--green {
-    background-color: var(--white);
-    color: var(--green_dark);
-    outline-color: var(--green_dark);
-    border-color: var(--green_dark);
+  background-color: var(--white);
+  color: var(--green_dark);
+  outline-color: var(--green_dark);
+  border-color: var(--green_dark);
 }
 
 .button__green--secondary:hover,
 .kv-button--secondary--green:hover {
-    background-color: var(--green);
-    color: var(--white);
-    outline: none;
+  background-color: var(--green);
+  color: var(--white);
+  outline: none;
 }
 
 .button__green--secondary:active,
 .kv-button--secondary--green:active {
-    background-color: var(--green_active);
-    color: var(--white);
-    outline: none;
+  background-color: var(--green_active);
+  color: var(--white);
+  outline: none;
 }
-
 
 .button__blue--secondary,
 .kv-button--secondary--blue {
-    background-color: var(--white);
-    color: var(--blue);
-    outline-color: var(--blue);
-    border-color: var(--blue);
+  background-color: var(--white);
+  color: var(--blue);
+  outline-color: var(--blue);
+  border-color: var(--blue);
 }
 
 .button__blue--secondary:hover,
 .kv-button--secondary--blue:hover {
-    background-color: var(--blue_hover);
-    color: var(--black);
-    outline: none;
+  background-color: var(--blue_hover);
+  color: var(--black);
+  outline: none;
 }
 
 .button__blue--secondary:active,
 .kv-button--secondary--blue:active {
-    background-color: var(--blue_dark);
-    color: var(--white);
-    outline: none;
+  background-color: var(--blue_dark);
+  color: var(--white);
+  outline: none;
 }
-
 
 /* BUTTON TERTIARY */
 .button__green--tertiary,
 .kv-button--tertiary--green {
-    border: none;
-    background-color: var(--kv-button--tertiary--background);
-    color: var(--green_dark);
+  border: none;
+  background-color: var(--kv-button--tertiary--background);
+  color: var(--green_dark);
 }
 
 .button__green--tertiary:hover,
 .kv-button--tertiary--green:hover {
-    background-color: var(--kv-button--tertiary--background);
-    color: var(--green_dark);
-    text-decoration: underline var(--green_dark);
+  background-color: var(--kv-button--tertiary--background);
+  color: var(--green_dark);
+  text-decoration: underline var(--green_dark);
 }
 
 .button__green--tertiary:active,
 .kv-button--tertiary--green:active {
-    background-color: var(--kv-button--tertiary--background);
-    color: var(--green_active);
+  background-color: var(--kv-button--tertiary--background);
+  color: var(--green_active);
 }
 
 .button__green--tertiary:disabled,
 .kv-button--tertiary--green:disabled {
-    border: none;
-    outline: none;
-    background-color: var(--kv-button--tertiary--background);
-    color: var(--gray_dark);
+  border: none;
+  outline: none;
+  background-color: var(--kv-button--tertiary--background);
+  color: var(--gray_dark);
 }
 
 .button__blue--tertiary,
 .kv-button--tertiary--blue {
-    border: none;
-    background-color: var(--kv-button--tertiary--background);
-    color: var(--blue);
+  border: none;
+  background-color: var(--kv-button--tertiary--background);
+  color: var(--blue);
 }
 
 .button__blue--tertiary:hover,
 .kv-button--tertiary--blue:hover {
-    background-color: var(--kv-button--tertiary--background);
-    color: var(--blue_dark); /*Er denne fargen riktig? Det er ikke konsekvent med den grønne, og jeg mistenker at den grønne er riktig. For å få det konsekvent skal det være --blue her.*/
-    text-decoration: underline var(--blue_dark);
+  background-color: var(--kv-button--tertiary--background);
+  color: var(
+    --blue_dark
+  ); /*Er denne fargen riktig? Det er ikke konsekvent med den grønne, og jeg mistenker at den grønne er riktig. For å få det konsekvent skal det være --blue her.*/
+  text-decoration: underline var(--blue_dark);
 }
 
 .button__blue--tertiary:active,
 .kv-button--tertiary--blue:active {
-    background-color: var(--kv-button--tertiary--background);
-    color: var(--blue_dark);
+  background-color: var(--kv-button--tertiary--background);
+  color: var(--blue_dark);
 }
 
 /*************************************
@@ -209,51 +206,49 @@
 /* IKON-style (i knapp): høyre*/
 .button--xs.button--icon-right > span.material-symbols-outlined,
 .kv-button--xs.kv-button__icon--right > span.material-symbols-outlined {
-    font-size: var(--icon-fontSize-xs);
-    height: var(--icon-height-xs);
-    padding: 0 0 0 var(--kv-button__icon__padding--xs);
-    vertical-align: text-top;
+  font-size: var(--icon-fontSize-xs);
+  height: var(--icon-height-xs);
+  padding: 0 0 0 var(--kv-button__icon__padding--xs);
+  vertical-align: text-top;
 }
 
 .button--sm.button--icon-right > span.material-symbols-outlined,
 .kv-button--sm.kv-button__icon--right > span.material-symbols-outlined {
-    font-size: var(--icon-fontSize-sml);
-    height: var(--icon-height-sml);
-    padding: 0 0 0 var(--kv-button__icon__padding--sml);
-    vertical-align: top;
+  font-size: var(--icon-fontSize-sml);
+  height: var(--icon-height-sml);
+  padding: 0 0 0 var(--kv-button__icon__padding--sml);
+  vertical-align: top;
 }
 
 .button--l.button--icon-right > span.material-symbols-outlined,
 .kv-button--l.kv-button__icon--right > span.material-symbols-outlined {
-    font-size: var(--icon-fontSize-sml);
-    height: var(--icon-height-sml);
-    padding: 0 0 0 var(--kv-button__icon__padding--sml);
-    vertical-align: text-top;
+  font-size: var(--icon-fontSize-sml);
+  height: var(--icon-height-sml);
+  padding: 0 0 0 var(--kv-button__icon__padding--sml);
+  vertical-align: text-top;
 }
 
 /* IKON-style (i knapp): venstre*/
 .button--xs.button--icon-left > span.material-symbols-outlined,
 .kv-button--xs.kv-button__icon--left > span.material-symbols-outlined {
-    font-size: var(--icon-fontSize-xs);
-    height: var(--icon-height-xs);
-    padding: 0 var(--kv-button__icon__padding--xs) 0 0;
-    vertical-align: text-top;
+  font-size: var(--icon-fontSize-xs);
+  height: var(--icon-height-xs);
+  padding: 0 var(--kv-button__icon__padding--xs) 0 0;
+  vertical-align: text-top;
 }
 
 .button--sm.button--icon-left > span.material-symbols-outlined,
 .kv-button--sm.kv-button__icon--left > span.material-symbols-outlined {
-    font-size: var(--icon-fontSize-sml);
-    height: var(--icon-height-sml);
-    padding: 0 var(--kv-button__icon__padding--sml) 0 0;
-    vertical-align: top;
+  font-size: var(--icon-fontSize-sml);
+  height: var(--icon-height-sml);
+  padding: 0 var(--kv-button__icon__padding--sml) 0 0;
+  vertical-align: top;
 }
 
 .button--l.button--icon-left > span.material-symbols-outlined,
 .kv-button--l.kv-button__icon--left > span.material-symbols-outlined {
-    font-size: var(--icon-fontSize-sml);
-    height: var(--icon-height-sml);
-    padding: 0 var(--kv-button__icon__padding--sml) 0 0;
-    vertical-align: text-top;
+  font-size: var(--icon-fontSize-sml);
+  height: var(--icon-height-sml);
+  padding: 0 var(--kv-button__icon__padding--sml) 0 0;
+  vertical-align: text-top;
 }
-
-

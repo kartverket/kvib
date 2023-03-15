@@ -5,15 +5,16 @@ description: Søkefelt som blir brukt i Kartverket sine løsninger
 slug: /designsystem/komponenter/søkefelt
 displayed_sidebar: designsystemSidebar
 ---
-***OBS! Under konstruksjon:***
 
-- *** Ikke design for dette i Figma-KVIB ***
-- ***Nåværende komponent er bygget opp av inputfelt fra KVIB, med en søkeknapp (utgangspunkt i kartverket.no) inni
-  feltet ***
-- ***Ikke tatt høyde for fokus og hover-funksjoner på hverken knapp eller inputfelt ***
-- ***Kartverket.no har enda ikke et felles design for søkefelt, men dette kommer etterhvert ***
+**_OBS! Under konstruksjon:_**
 
-***
+- **_ Ikke design for dette i Figma-KVIB _**
+- **_Nåværende komponent er bygget opp av inputfelt fra KVIB, med en søkeknapp (utgangspunkt i kartverket.no) inni
+  feltet _**
+- **_Ikke tatt høyde for fokus og hover-funksjoner på hverken knapp eller inputfelt _**
+- **_Kartverket.no har enda ikke et felles design for søkefelt, men dette kommer etterhvert _**
+
+---
 
 For å endre lengden til søkefeltet, må det legges inn i et <code><div\></code>-element, deretter kan størrelsen endres
 ved å sette bredde på <code><div\></code>-elementet.

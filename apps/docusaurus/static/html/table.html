@@ -1,122 +1,173 @@
 <!DOCTYPE html>
 <html lang="no">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Listevisning</title>
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="htmlComp.css">
-    <style>
-    </style>
-</head>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="htmlComp.css" />
+    <style></style>
+  </head>
 
-<body>
-<div class="table__container--large">
-    <table id="data-input">
+  <body>
+    <div class="table__container--large">
+      <table id="data-input">
         <tbody>
-        <tr class="detail detail--sml" name="table-header">
-            <th><div class="checkbox"><input type="checkbox" id="select-all" name="checkbox-list"/><label for="select-all"></label></div></th>
+          <tr class="detail detail--sml" name="table-header">
+            <th>
+              <div class="checkbox">
+                <input type="checkbox" id="select-all" name="checkbox-list" /><label for="select-all"></label>
+              </div>
+            </th>
             <th class="detail detail--sml">Slett</th>
             <th class="detail detail--sml">TEKST INNHOLD</th>
             <th class="detail detail--sml">TALL INNHOLD</th>
             <th class="detail detail--sml">TEKST INNHOLD</th>
-        </tr>
-        <tr>
-            <td><div class="checkbox"><input type="checkbox" id="checkbox_1" name="checkbox-list"/><label for="checkbox_1"></label></div></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="checkbox">
+                <input type="checkbox" id="checkbox_1" name="checkbox-list" /><label for="checkbox_1"></label>
+              </div>
+            </td>
             <td class="detail detail--sml"></td>
             <td class="detail detail--sml">TEKST TIL VENSTRE</td>
             <td class="detail detail--sml">1</td>
             <td class="detail detail--sml">TEKST TIL VENSTRE</td>
-        </tr>
-        <tr>
-            <td><div class="checkbox"><input type="checkbox" id="checkbox_2" name="checkbox-list"/><label for="checkbox_2"></label></div></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="checkbox">
+                <input type="checkbox" id="checkbox_2" name="checkbox-list" /><label for="checkbox_2"></label>
+              </div>
+            </td>
             <td class="detail detail--sml"></td>
             <td class="detail detail--sml">TEKST TIL VENSTRE</td>
             <td class="detail detail--sml">2</td>
             <td class="detail detail--sml">TEKST TIL VENSTRE</td>
-        </tr>
-        <tr>
-            <td><div class="checkbox"><input type="checkbox" id="checkbox_3" name="checkbox-list"/><label for="checkbox_3"></label></div></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="checkbox">
+                <input type="checkbox" id="checkbox_3" name="checkbox-list" /><label for="checkbox_3"></label>
+              </div>
+            </td>
             <td class="detail detail--sml"></td>
             <td class="detail detail--sml">TEKST TIL VENSTRE</td>
             <td class="detail detail--sml">3</td>
             <td class="detail detail--sml">TEKST TIL VENSTRE</td>
-        </tr>
-        <tr>
-            <td><div class="checkbox"><input type="checkbox" id="checkbox_4" name="checkbox-list"/><label for="checkbox_4"></label></div></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="checkbox">
+                <input type="checkbox" id="checkbox_4" name="checkbox-list" /><label for="checkbox_4"></label>
+              </div>
+            </td>
             <td class="detail detail--sml"></td>
             <td class="detail detail--sml">TEKST TIL VENSTRE</td>
             <td class="detail detail--sml">4</td>
             <td class="detail detail--sml">TEKST TIL VENSTRE</td>
-        </tr>
-        <tr>
-            <td><div class="checkbox"><input type="checkbox" id="checkbox_5" name="checkbox-list"/><label for="checkbox_5"></label></div></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="checkbox">
+                <input type="checkbox" id="checkbox_5" name="checkbox-list" /><label for="checkbox_5"></label>
+              </div>
+            </td>
             <td class="detail detail--sml"></td>
             <td class="detail detail--sml">TEKST TIL VENSTRE</td>
             <td class="detail detail--sml">5</td>
             <td class="detail detail--sml">TEKST TIL VENSTRE</td>
-        </tr>
-        <tr>
-            <td><div class="checkbox"><input type="checkbox" id="checkbox_6" name="checkbox-list"/><label for="checkbox_6"></label></div></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="checkbox">
+                <input type="checkbox" id="checkbox_6" name="checkbox-list" /><label for="checkbox_6"></label>
+              </div>
+            </td>
             <td class="detail detail--sml"></td>
             <td class="detail detail--sml">TEKST TIL VENSTRE</td>
             <td class="detail detail--sml">6</td>
             <td class="detail detail--sml">TEKST TIL VENSTRE</td>
-        </tr>
-        <tr>
-            <td><div class="checkbox"><input type="checkbox" id="checkbox_7" name="checkbox-list"/><label for="checkbox_7"></label></div></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="checkbox">
+                <input type="checkbox" id="checkbox_7" name="checkbox-list" /><label for="checkbox_7"></label>
+              </div>
+            </td>
             <td class="detail detail--sml"></td>
             <td class="detail detail--sml">TEKST TIL VENSTRE</td>
             <td class="detail detail--sml">7</td>
             <td class="detail detail--sml">TEKST TIL VENSTRE</td>
-        </tr>
-        <tr>
-            <td><div class="checkbox"><input type="checkbox" id="checkbox_8" name="checkbox-list"/><label for="checkbox_8"></label></div></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="checkbox">
+                <input type="checkbox" id="checkbox_8" name="checkbox-list" /><label for="checkbox_8"></label>
+              </div>
+            </td>
             <td class="detail detail--sml"></td>
             <td class="detail detail--sml">TEKST TIL VENSTRE</td>
             <td class="detail detail--sml">8</td>
             <td class="detail detail--sml">TEKST TIL VENSTRE</td>
-        </tr>
-        <tr>
-            <td><div class="checkbox"><input type="checkbox" id="checkbox_9" name="checkbox-list"/><label for="checkbox_9"></label></div></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="checkbox">
+                <input type="checkbox" id="checkbox_9" name="checkbox-list" /><label for="checkbox_9"></label>
+              </div>
+            </td>
             <td class="detail detail--sml"></td>
             <td class="detail detail--sml">TEKST TIL VENSTRE</td>
             <td class="detail detail--sml">9</td>
             <td class="detail detail--sml">TEKST TIL VENSTRE</td>
-        </tr>
-        <tr>
-            <td><div class="checkbox"><input type="checkbox" id="checkbox_10" name="checkbox-list"/><label for="checkbox_10"></label></div></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="checkbox">
+                <input type="checkbox" id="checkbox_10" name="checkbox-list" /><label for="checkbox_10"></label>
+              </div>
+            </td>
             <td class="detail detail--sml"></td>
             <td class="detail detail--sml">TEKST TIL VENSTRE</td>
             <td class="detail detail--sml">10</td>
             <td class="detail detail--sml">TEKST TIL VENSTRE</td>
-        </tr>
-        <tr>
-            <td><div class="checkbox"><input type="checkbox" id="checkbox_11" name="checkbox-list"/><label for="checkbox_11"></label></div></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="checkbox">
+                <input type="checkbox" id="checkbox_11" name="checkbox-list" /><label for="checkbox_11"></label>
+              </div>
+            </td>
             <td class="detail detail--sml"></td>
             <td class="detail detail--sml">TEKST TIL VENSTRE</td>
             <td class="detail detail--sml">11</td>
             <td class="detail detail--sml">TEKST TIL VENSTRE</td>
-        </tr>
-        <tr>
-            <td><div class="checkbox"><input type="checkbox" id="checkbox_12" name="checkbox-list"/><label for="checkbox_12"></label></div></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="checkbox">
+                <input type="checkbox" id="checkbox_12" name="checkbox-list" /><label for="checkbox_12"></label>
+              </div>
+            </td>
             <td class="detail detail--sml"></td>
             <td class="detail detail--sml">TEKST TIL VENSTRE</td>
             <td class="detail detail--sml">12</td>
             <td class="detail detail--sml">TEKST TIL VENSTRE</td>
-        </tr>
+          </tr>
         </tbody>
-    </table>
-</div>
+      </table>
+    </div>
 
-  <script>
-    document.getElementById('select-all').onclick = function() {
-        var checkboxes = document.getElementsByName('checkbox-list');
+    <script>
+      document.getElementById("select-all").onclick = function () {
+        var checkboxes = document.getElementsByName("checkbox-list");
         for (var checkbox of checkboxes) {
-            checkbox.checked = this.checked;
+          checkbox.checked = this.checked;
         }
-    }
+      };
     </script>
-    
-</body>
+  </body>
+</html>

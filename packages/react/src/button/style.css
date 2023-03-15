@@ -37,8 +37,7 @@
 .kvib-button--secondary.kvib-button--green:active,
 .kvib-button--secondary.kvib-button--green:focus-visible {
   background-color: #05502a;
-  box-shadow: #213060 0 0 0 2px inset, #213060 0 0 0 2px inset,
-    currentcolor 0 0 0 4px inset;
+  box-shadow: #213060 0 0 0 2px inset, #213060 0 0 0 2px inset, currentcolor 0 0 0 4px inset;
 }
 
 .kvib-button--primary.kvib-button--blue {
@@ -58,8 +57,7 @@
 .kvib-button--secondary.kvib-button--blue:focus-visible {
   color: #ffffff;
   background-color: #213060;
-  box-shadow: #213060 0 0 0 2px inset, #213060 0 0 0 2px inset,
-    currentcolor 0 0 0 4px inset;
+  box-shadow: #213060 0 0 0 2px inset, #213060 0 0 0 2px inset, currentcolor 0 0 0 4px inset;
 }
 
 .kvib-button--primary.kvib-button--green:disabled,

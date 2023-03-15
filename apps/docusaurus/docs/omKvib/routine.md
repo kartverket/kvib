@@ -17,13 +17,16 @@ Før hver merge til master, skal følgende punkter gjennomføres:
 3. Sjekke rettskriving og klarspråk.
 
 4. Teste med skjermleser:
+
    - NVDA
 
 5. Teste med browserverktøy:
+
    - Wave for UU-testing
    - Lighthouse for beste praksis
 
 6. Teste i ulike browsere:
+
    - Chrome / chromium
    - Firefox
    - Safari
