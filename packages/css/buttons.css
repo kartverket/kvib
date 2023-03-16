@@ -108,9 +108,6 @@
 
 .kvib-button--tertiary {
   background-color: transparent;
-}
-
-.kvib-button--tertiary .kvib-button__text {
   text-decoration-line: underline;
 }
 

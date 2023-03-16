@@ -39,17 +39,9 @@ export const Button: OverridableComponent<ButtonProps, HTMLButtonElement> = forw
         ref={ref}
         {...props}
       >
-        {leftIcon && (
-          <div className="kvib-button__icon kvib-button__icon--left">
-            <span className="material-symbols-outlined">{leftIcon}</span>
-          </div>
-        )}
-        {children && <span className="kvib-button__text">{children}</span>}
-        {rightIcon && (
-          <div className="kvib-button__icon kvib-button__icon--right">
-            <span className="material-symbols-outlined">{rightIcon}</span>
-          </div>
-        )}
+        {leftIcon && <span className="material-symbols-outlined">{leftIcon}</span>}
+        {leftIcon || (rightIcon && children) ? <span className="kvib-button__text">{children}</span> : children}
+        {rightIcon && <span className="material-symbols-outlined">{rightIcon}</span>}
       </Component>
     );
   }
