@@ -66,6 +66,8 @@ Det finnes tre ulike varianter: primær, sekundær og tertiær.
 
 Det er mulighet for å ha ikon på begger sider av knappe-teksten.
 
+[Se dokumentasjonssiden for ikoner](../../designTokens/icons.md) for å designe <code><span\></code>-elementet.
+
 <div class="buttons--section">
 <button class="kvib-button kvib-button--primary kvib-button--green kvib-button--md"><span class="material-symbols-outlined material-symbols-outlined--filled">add</span><span class="kvib-button__text">Ikon på venstre side</span></button>
 <button class="kvib-button kvib-button--primary kvib-button--green kvib-button--md"><span class="kvib-button__text">Ikon på høyre side</span><span class="material-symbols-outlined material-symbols-outlined--filled">add</span></button>
