@@ -1,0 +1,32 @@
+/* Hoved CSS Pakke */
+
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+@import 'tokens/colors.css';
+@import 'components/buttons.css';
+@import 'components/layout.css';
+@import 'components/typography.css';
+@import 'components/buttons.css';
+@import 'components/input.css';
+@import 'components/radiobutton.css';
+@import 'components/checkbox.css';
+@import 'components/icons.css';
+@import 'components/slider.css';
+@import 'components/zoom.css';
+@import 'components/searchbar.css';
+@import 'components/cards.css';
+@import "components/dropdown.css";
+@import 'components/cards.css';
+@import 'components/table.css';
+@import 'components/progressbar.css';
+@import 'components/circular_loader.css';
+@import 'components/details.css';
+@import 'components/button_toggle.css';
+@import 'components/header.css';
+@import 'components/tabs.css';
+@import 'components/stepper.css';
+
+html {
+    box-sizing: border-box;
+}
+
+
