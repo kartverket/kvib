@@ -5,16 +5,17 @@
     align-items: flex-end;
     padding: 16px;
 
+    /*position: absolute;*/
     height: 64px;
     left: calc(50% - 375px / 2 - 3021.5px);
     top: 20px;
 
-    background: var(--white);
+    /* Kartverket: Hvit */
+    background: #ffffff;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 /*Ankermeny*/
-
 .kv-anker--xs {
     display: flex;
     flex-direction: row;
@@ -22,6 +23,7 @@
     padding: 8px;
     gap: 16px;
 
+    /*position: absolute;*/
     width: 88px;
     height: 40px;
     left: 125px;
@@ -35,6 +37,7 @@
     padding: 8px;
     gap: 16px;
 
+    /*position: absolute;*/
     width: 101px;
     height: 48px;
     left: 125px;
@@ -48,6 +51,7 @@
     padding: 8px;
     gap: 16px;
 
+    /*position: absolute;*/
     width: 101px;
     height: 48px;
     left: 125px;
@@ -61,6 +65,7 @@
     padding: 16px 8px;
     gap: 16px;
 
+    /*position: absolute;*/
     width: 101px;
     height: 64px;
     left: 125px;
@@ -68,41 +73,27 @@
 }
 
 /*Ikon størrelse*/
-
 .kv-anker--xs span {
-    font-variation-settings: 'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 20
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 20;
 }
 
 .kv-anker--s span {
-    font-variation-settings: 'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 24
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
 }
 
 .kv-anker--m span {
-    font-variation-settings: 'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 40
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 40;
 }
 
 .kv-anker--l span {
-    font-variation-settings: 'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 48
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
 }
 
 /*link styling*/
-
 .kv-anker--xs a,
 .kv-anker--s a,
 .kv-anker--m a,
 .kv-anker--l a {
     text-decoration: none;
-    color: var(--black);
+    color: var(--black-100);
 }

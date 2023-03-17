@@ -1,11 +1,12 @@
 .kv-table {
-    font-family: 'Mulish';
+    font-family: "Mulish";
     width: 100%;
     border-collapse: collapse;
     table-layout: fixed;
 }
 
-.kv-table td, .kv-table th {
+.kv-table td,
+.kv-table th {
     border: 0;
     padding: 1rem 0.5rem 1rem 0.5rem;
 
@@ -14,19 +15,19 @@
 }
 
 .kv-table tr:nth-child(even) {
-    background-color: var(--blue_light);
+    background-color: var(--blue-10);
 }
 
 .kv-table tr:hover {
-    background-color: var(--blue_hover);
-    color: var(--white);
+    background-color: var(--blue-30);
+    color: var(--white-00);
 }
 
 .kv-table th {
-    background-color: var(--white);
-    border-bottom: 0.125rem solid var(--black);
+    background-color: var(--white-00);
+    border-bottom: 0.125rem solid var(--black-100);
     text-align: center;
-    color: var(--gray_dark);
+    color: var(--black-80);
     height: 2.5rem;
 
     /*--For sticky header--*/
@@ -49,7 +50,7 @@
 }
 
 .kv-table tr:hover + label::before {
-    color: var(--white);
+    color: var(--white-00);
 }
 
 .kv-table__container--large {

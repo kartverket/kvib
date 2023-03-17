@@ -61,7 +61,7 @@
 
 /*change background color of checkbox on checked state*/
 .kv-button__radio input[type="radio"]:checked + label::before {
-    background-color: var(--white);
+    background-color: var(--white-00);
 }
 
 /*Adding focus styles on outer-box*/
@@ -73,17 +73,17 @@
 /* ----CHECKBOX ERROR----*/
 /*set background on the checked state*/
 .kv-button__radio input[type="radio"]:required:invalid + label::before {
-    color: var(--red_error_message);
+    color: var(--red-100);
 }
 
 .kv-button__radio input[type="radio"]:required:invalid + label::after {
     content: "";
-    color: var(--red_error_message);
-    background-color: var(--red_error_message);
+    color: var(--red-100);
+    background-color: var(--red-100);
 }
 
 /*Adding focus styles on the outer-box*/
 .kv-button__radio input[type="radio"]:focus-visible:invalid + label::before {
-    outline: max(0.188rem, 0.15em) solid var(--red_error_message);
+    outline: max(0.188rem, 0.15em) solid var(--red-100);
     outline-offset: 0.125rem;
 }

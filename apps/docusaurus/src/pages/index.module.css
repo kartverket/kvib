@@ -1,36 +1,36 @@
 
 .heroBanner {
-  background-color: var(--white);
-  color: var(--black);
-  padding: 4rem 0;
-  text-align: left;
-  position: relative;
-  overflow: hidden;
+    background-color: var(--white-00);
+    color: var(--black-100);
+    padding: 4rem 0;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
 }
 
 @media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
+    .heroBanner {
+        padding: 2rem;
+    }
 }
 
 .buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .button__link {
-  text-decoration: none;
-  color: var(--green);
+    text-decoration: none;
+    color: var(--green-50);
 }
 
 .button__link:hover {
-  color: var(--green_active);
-  text-decoration: underline;
+    color: var(--green-100);
+    text-decoration: underline;
 }
 
 .heroBanner p {
-  width: 654px;
-  height: 127px;
+    width: 654px;
+    height: 127px;
 }

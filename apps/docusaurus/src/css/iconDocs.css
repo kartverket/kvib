@@ -1,16 +1,16 @@
 
-.icon-section{
-    background-color: var(--white);
+.icon-section {
+    background-color: var(--white-00);
     margin: 2rem;
     padding: 1rem;
     border-radius: 0.5rem;
     width: 82%;
 }
 
-.icon-section--container{
+.icon-section--container {
     width: 7rem;
     height: 4rem;
-    background-color: var(--gray_light);
+    background-color: var(--black-10);
 
     /* Fra icons.css icon-container */
     box-sizing: border-box;
@@ -20,7 +20,7 @@
     align-items: center;
 }
 
-.icon-section--text{
+.icon-section--text {
     /* vertical-align: bottom; */
     font-size: 0.8rem;
     font-family: 'Mulish', sans-serif;
@@ -28,11 +28,11 @@
     text-align: center;
 }
 
-.text-center{
+.text-center {
     text-align: center;
 }
 
-.icon-doc-center{
+.icon-doc-center {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -40,7 +40,7 @@
     padding: 1.25rem;
 }
 
-.icon-grid{
+.icon-grid {
     grid-template-columns: repeat(auto-fit, 7rem);
     padding-bottom: 1rem;
     column-gap: 1rem;

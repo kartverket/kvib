@@ -2,19 +2,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap');
 
 table {
-    text-align:left;
+    text-align: left;
 
-  }
-  table th {
-    background-color: var(--green_light);
-    }
+}
+
+table th {
+    background-color: var(--green-20);
+}
 
 
-div.typographyCard{
+div.typographyCard {
 
-  padding: 10px;
-  border: 4px solid var(--green_light);
-  margin: 0;
-  display:flex;
-  flex-direction: column;
+    padding: 10px;
+    border: 4px solid var(--green-20);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
 }

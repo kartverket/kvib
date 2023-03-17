@@ -24,31 +24,31 @@
     bottom: 0;
     width: 100%;
     background: rgba(0, 0, 0, 0.4);
-    color: var(--white);
+    color: var(--white-00);
 }
 
 .palette__text {
     width: 100%;
     padding: 10px;
     outline: none;
-    border: 1px solid var(--gray_light);
+    border: 1px solid var(--black-10);
     border-top: none;
 }
 
-.palette--green_dark {
-    background: var(--green_dark);
+.palette--green-80 {
+    background: var(--green-80);
 }
 
-.palette--green_active {
-    background: var(--green_active);
+.palette--green-100 {
+    background: var(--green-100);
 }
 
-.palette--green {
-    background: var(--green);
+.palette--green-50 {
+    background: var(--green-50);
 }
 
-.palette--green_light {
-    background: var(--green_light);
+.palette--green-20 {
+    background: var(--green-20);
 }
 
 .palette--blue_dark {
@@ -56,56 +56,56 @@
 }
 
 .palette--blue {
-    background: var(--blue);
+    background: var(--blue-50);
 }
 
 .palette--blue_light {
-    background: var(--blue_light);
+    background: var(--blue-10);
 }
 
 .palette--blue_hover {
-    background: var(--blue_hover);
+    background: var(--blue-30);
 }
 
 .palette--blue_dark_button {
-    background: var(--blue_dark_button);
+    background: var(--blue-100);
 }
 
 .palette--red_error_message {
-    background: var(--red_error_message);
+    background: var(--red-100);
 }
 
 .palette--red_dark {
-    background: var(--red_dark);
+    background: var(--red-50);
 }
 
 .palette--pink {
-    background: var(--pink);
+    background: var(--red-10);
 }
 
 .palette--orange {
-    background: var(--orange);
+    background: var(--yellow-10);
 }
 
 .palette--yellow {
-    background: var(--yellow);
+    background: var(--yellow-50);
 }
 
 .palette--yellow_light {
-    background: var(--yellow_light);
+    background: var(--yellow-20);
 }
 
 .palette--black {
-    background: var(--black);
+    background: var(--black-100);
 }
 
 .palette--white {
-    background: var(--white);
-    border: 1px solid var(--gray_light);
+    background: var(--white-00);
+    border: 1px solid var(--black-10);
 }
 
 .palette--gray_dark {
-    background: var(--gray_dark);
+    background: var(--black-80);
 }
 
 .palette--gray {
@@ -113,5 +113,5 @@
 }
 
 .palette--gray_light {
-    background: var(--gray_light);
+    background: var(--black-10);
 }

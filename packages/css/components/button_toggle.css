@@ -3,8 +3,8 @@
     display: inline-block;
     height: 8px;
     width: 24px;
-    background: var(--blue_light);
-    border: 1px solid var(--blue_dark_button);
+    background: var(--blue-10);
+    border: 1px solid var(--blue-100);
     border-radius: 8px;
 }
 
@@ -21,9 +21,9 @@
     left: 0;
     right: 0;
     bottom: 0;
-    -webkit-transition: .4s;
-    transition: .4s;
-    background-color: var(--blue_light);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    background-color: var(--blue-10);
 }
 
 .kv-toggle_switch--xs:before {
@@ -33,17 +33,17 @@
     height: 12px;
     left: -8px;
     top: -3px;
-    -webkit-transition: .4s;
-    transition: .4s;
-    background: var(--blue_dark_button);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    background: var(--blue-100);
 }
 
 input:checked + .kv-toggle_switch--xs {
-    background-color: var(--blue);
+    background-color: var(--blue-50);
 }
 
 input:focus + .kv-toggle_switch--xs {
-    box-shadow: 0 0 1px var(--blue_hover);
+    box-shadow: 0 0 1px var(--blue-30);
 }
 
 input:checked + .kv-toggle_switch--xs:before {
@@ -66,8 +66,8 @@ input:checked + .kv-toggle_switch--xs:before {
     display: inline-block;
     height: 12px;
     width: 32px;
-    background-color: var(--blue_light);
-    border: 1px solid var(--blue_dark_button);
+    background-color: var(--blue-10);
+    border: 1px solid var(--blue-100);
     border-radius: 8px;
 }
 
@@ -84,9 +84,9 @@ input:checked + .kv-toggle_switch--xs:before {
     left: 0;
     right: 0;
     bottom: 0;
-    -webkit-transition: .4s;
-    transition: .4s;
-    background-color: var(--blue_light);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    background-color: var(--blue-10);
 }
 
 .kv-toggle_switch--l:before {
@@ -96,17 +96,17 @@ input:checked + .kv-toggle_switch--xs:before {
     height: 16px;
     left: -6px;
     top: -3px;
-    -webkit-transition: .4s;
-    transition: .4s;
-    background-color: var(--blue_dark_button);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    background-color: var(--blue-100);
 }
 
 input:checked + .kv-toggle_switch--l {
-    background-color: var(--blue);
+    background-color: var(--blue-50);
 }
 
 input:focus + .kv-toggle_switch--l {
-    box-shadow: 0 0 1px var(--blue_hover);
+    box-shadow: 0 0 1px var(--blue-30);
 }
 
 input:checked + .kv-toggle_switch--l:before {
@@ -123,6 +123,3 @@ input:checked + .kv-toggle_switch--l:before {
 .kv-toggle_switch--l.round:before {
     border-radius: 50%;
 }
-
-
-

@@ -44,7 +44,7 @@
 }
 
 .kv-expandable__title:hover {
-    background-color: var(--gray_light);
+    background-color: var(--black-10);
 }
 
 .kv-expandable__title::after {

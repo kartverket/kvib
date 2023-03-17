@@ -28,13 +28,13 @@
     bottom: 0;
     width: 100%;
     background: rgba(0, 0, 0, 0.4);
-    color: var(--white);
+    color: var(--white-00);
 }
 
 .nav__box__text {
     width: 100%;
     padding: 10px;
     outline: none;
-    border: 1px solid var(--gray_light);
+    border: 1px solid var(--black-10);
     border-top: none;
 }

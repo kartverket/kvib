@@ -1,38 +1,37 @@
-/* farger */
-
 :root {
+
     /*groenn*/
-    --green_active: #05502A;
-    --green_dark: #156630;
-    --green: #1A833B;
-    --green_light: #D0ECD6;
+    --green-100: #05502a;
+    --green-80: #156630;
+    --green-50: #1a833b;
+    --green-20: #d0ecd6;
 
     /*Blaa*/
     --blue_dark: #175092;
-    --blue: #1A589F;
-    --blue_light: #E4F1F8;
-    --blue_hover: #439CCD;
-    --blue_dark_button: #213060;
+
+    --blue-100: #213060;
+    --blue-50: #1a589f;
+    --blue-30: #439ccd;
+    --blue-10: #e4f1f8;
 
     /*roed og rosa*/
-    --red_error_message: #A32F00;
-    --red_dark: #D04a14;
-    --pink: #F7E6EB;
+    --red-100: #a32f00;
+    --red-50: #d04a14;
+    --red-10: #f7e6eb;
 
     /*oransje og gul*/
-    --orange: #FCF1E8;
-    --yellow: #FFDD9D;
-    --yellow_light: #FCEBCD;
+    --yellow-50: #ffdd9d;
+    --yellow-20: #fcebcd;
+    --yellow-10: #fcf1e8;
 
     /*svart og hvit*/
-    --black: #222222;
-    --white: #FFFFFF;
+    --black-100: #222222;
+    --white-00: #ffffff;
 
     /*graa*/
-    --gray_dark: #505050;
-    --gray: #707070;
-    --gray_light: #F5F2F2;
+    --black-80: #505050;
+    --gray: #707070; /*TODO: finne ut av hvorfor det er to "black-100"*/
+    --gray_light: #f5f2f2;
 }
 
-
-
+/* farger */

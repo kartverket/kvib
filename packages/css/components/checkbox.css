@@ -2,8 +2,8 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    padding-top: 0.250rem;
-    padding-bottom: 0.250rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
 }
 
 /*.kv-checkbox*/
@@ -39,7 +39,7 @@
     border-radius: 0.15rem;
 
     color: var(--blue_dark);
-    background-color: white;
+    background-color: var(--white-00);
 
     top: 5px;
     left: 0;
@@ -50,9 +50,7 @@
     width: 0.6rem;
     border-left: 0.175rem solid;
     border-bottom: 0.175rem solid;
-
     transform: rotate(-45deg);
-
     top: 8px;
     left: 2px;
 }
@@ -70,7 +68,7 @@
 /*set checkmark on checked state*/
 .kv-checkbox input[type="checkbox"]:checked + label::after {
     content: "";
-    color: var(--white);
+    color: var(--white-00);
 }
 
 /*change background color of checkbox on checked state*/
@@ -85,37 +83,36 @@
 }
 
 .kv-checkbox label:hover {
-    color: var(--blue_hover);
+    color: var(--blue-30);
 }
 
 .kv-checkbox label:hover::before {
-    background-color: var(--blue_light);
+    background-color: var(--blue-10);
 }
 
 /* ----CHECKBOX ERROR----*/
 /*set background on the checked state*/
 .kv-checkbox input[type="checkbox"]:required:invalid + label::before {
-    color: var(--red_error_message);
+    color: var(--red-100);
 }
 
 /*Adding focus styles on the outer-box*/
 .kv-checkbox input[type="checkbox"]:focus-visible:invalid + label::before {
-    outline: max(0.125rem, 0.125em) solid var(--red_error_message);
+    outline: max(0.125rem, 0.125em) solid var(--red-100);
     outline-offset: 0.125rem;
 }
 
-/*Error message-box*/
+/*feilmeldingsboks*/
 .kv-checkbox .error__box {
     position: relative;
     padding: 0.3rem;
     padding-right: 0.8rem;
     top: 0.25rem;
-    background-color: var(--orange);
-    color: var(--red_error_message);
+    background-color: var(--yellow-10);
+    color: var(--red-100);
     border-radius: 0.5rem;
 }
 
 .kv-checkbox .error__box small {
-    color: var(--red_error_message);
-
+    color: var(--red-100);
 }

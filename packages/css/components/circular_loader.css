@@ -7,21 +7,21 @@
     width: 100%;
     height: 100%;
     border-radius: 100%;
-    border: 4px solid white;
+    border: 4px solid var(--white-00);
     animation: animate 2s linear infinite;
 }
 
 .kv-loader::before {
     position: absolute;
     content: "";
-    background: #fff;
+    background: var(--white-00);
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     width: 80%;
     height: 80%;
     border-radius: 100%;
-    border: 4px solid white;
+    border: 4px solid var(--white-00);
 }
 
 .kv-loader--white {
@@ -29,21 +29,21 @@
     width: 100%;
     height: 100%;
     border-radius: 100%;
-    border: 3px solid black;
+    border: 3px solid var(--black-100);
     animation: animate 2s linear infinite;
 }
 
 .kv-loader--white::before {
     position: absolute;
     content: "";
-    background: var(--black);
+    background: var(--black-100);
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     width: 80%;
     height: 80%;
     border-radius: 100%;
-    border: 3px solid var(--black);
+    border: 3px solid var(--black-100);
 }
 
 @keyframes animate {
@@ -61,22 +61,37 @@
 }
 
 .kv-loader--blue {
-    background: conic-gradient(from 90deg at 50% 50%, var(--blue_light) 0deg, var(--blue_light) 0.04deg, var(--blue) 360deg);
+    background: conic-gradient(
+            from 90deg at 50% 50%,
+            var(--blue-10) 0deg,
+            var(--blue-10) 0.04deg,
+            var(--blue-50) 360deg
+    );
 }
 
 .kv-loader--green {
-    background: conic-gradient(from 90deg at 50% 50%, var(--blue_light) 0deg, var(--green_light) 0.04deg, var(--green_active) 360deg);
+    background: conic-gradient(
+            from 90deg at 50% 50%,
+            var(--blue-10) 0deg,
+            var(--green-light) 0.04deg,
+            var(--green-active) 360deg
+    );
 }
 
 .kv-loader--white {
-    background: conic-gradient(from 90deg at 50% 50%, var(--blue_light) 0deg, var(--black) 0.04deg, var(--white) 360deg);
+    background: conic-gradient(
+            from 90deg at 50% 50%,
+            var(--blue-10) 0deg,
+            rgba(255, 255, 255, 0) 0.04deg,
+            var(--white-00) 360deg
+    );
 }
 
 .loader__background__box {
     position: relative;
     width: 110px;
     height: 110px;
-    background: var(--black);
+    background: var(--black-100);
     left: -10px;
 }
 
@@ -84,4 +99,3 @@
     left: 10px;
     top: 10px;
 }
-

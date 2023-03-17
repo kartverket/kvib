@@ -1,5 +1,4 @@
 /*css for nedtrekksmeny*/
-
 .kv-dropdown__label--gray {
     color: var(--gray);
 }
@@ -11,13 +10,13 @@
     font-family: inherit;
     font-size: 0.875rem;
     font-weight: 400;
-    background-color: var(--white);
+    background-color: var(--white-00);
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23213060' stroke-linecap='butt' stroke-linejoin='square' stroke-width='4' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
     background-repeat: no-repeat;
-    background-position: right .75rem center;
+    background-position: right 0.75rem center;
     background-size: 0.75rem 1rem;
-    border: 0.006rem solid var(--blue_dark_button);
-    border-radius: .25rem;
+    border: 0.006rem solid var(--blue-100);
+    border-radius: 0.25rem;
 
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -30,13 +29,12 @@
 
 .kv-dropdown:focus {
     border-color: var(--blue_dark);
-    box-shadow: 0 0 0 0.125rem var(--blue_hover);
+    box-shadow: 0 0 0 0.125rem var(--blue-30);
 }
 
 .kv-dropdown:focus-visible {
     outline: var(--blue_dark) solid;
 }
-
 
 /*styling av elementene i nedtrekksmenyen*/
 .kv-dropdown option {
@@ -44,5 +42,5 @@
 }
 
 .kv-dropdown option:nth-child(even) {
-    background-color: var(--blue_light);
+    background-color: var(--blue-10);
 }

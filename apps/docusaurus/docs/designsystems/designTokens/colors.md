@@ -8,36 +8,36 @@ displayed_sidebar: designsystemSidebar
 
 ## Kartverkets Hovedfarger
 
-Her er Kartverkets hovedfarger. Kartverkets egne tjenester kan ha andre farger for å indikere kartfaglige elementer. 
+Her er Kartverkets hovedfarger. Kartverkets egne tjenester kan ha andre farger for å indikere kartfaglige elementer.
 De grønne fargene brukes primært på artikkelsider, mens de blå er forbeholdt skjema og karttjenester.
 
 <div class="palette">
     <div class="palette__item">
-        <div class="palette__color palette--green_active">
+        <div class="palette__color palette--green-100">
             <div class="palette__desc">#05502A</div>
         </div>
-        <div class="palette__text">--green_active</div>
+        <div class="palette__text">--green-100</div>
         <div class="palette__text">Aktiv state på grønne knapper</div>
     </div>
     <div class="palette__item">
-        <div class="palette__color palette--green_dark">
+        <div class="palette__color palette--green-80">
             <div class="palette__desc">#156630</div>
         </div>
-        <div class="palette__text">--green_dark</div>
+        <div class="palette__text">--green-80</div>
         <div class="palette__text">Standard grønnfarge</div>
     </div>
     <div class="palette__item">
-        <div class="palette__color palette--green">
+        <div class="palette__color palette--green-50">
             <div class="palette__desc">#1A833B</div>
         </div>
-        <div class="palette__text">--green</div>
+        <div class="palette__text">--green-50</div>
         <div class="palette__text">Lysere grønnfarge for hover over groenn_moerk. Logofarge</div>
     </div>
     <div class="palette__item">
-        <div class="palette__color palette--green_light">
+        <div class="palette__color palette--green-20">
             <div class="palette__desc">#D0ECD6</div>
         </div>
-        <div class="palette__text">--green_light</div>
+        <div class="palette__text">--green-20</div>
         <div class="palette__text">Lys grønn bakgrunnsfarge. Informasjonsboks med positivt ladet innhold</div>
     </div>
 </div>

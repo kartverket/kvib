@@ -2,7 +2,7 @@ input[type="range"].kv-range_slider {
     -webkit-appearance: none;
     width: 100%;
     border: 0.063rem solid var(--blue_dark);
-    background: var(--white);
+    background: var(--white-00);
     border-radius: 0.5rem;
     background-image: linear-gradient(var(--blue_dark), var(--blue_dark));
     background-size: 50%; /*fill to display the slider value"*/
@@ -16,7 +16,7 @@ input[type="range"].kv-range_slider::-webkit-slider-thumb {
     border-radius: 50%;
     background: var(--blue_dark);
     cursor: pointer;
-    transition: background .3s ease-in-out;
+    transition: background 0.3s ease-in-out;
 }
 
 input[type="range"].kv-range_slider::-moz-range-thumb {
@@ -24,7 +24,7 @@ input[type="range"].kv-range_slider::-moz-range-thumb {
     border-radius: 50%;
     background: var(--blue_dark);
     cursor: pointer;
-    transition: background .3s ease-in-out;
+    transition: background 0.3s ease-in-out;
 }
 
 input[type="range"].kv-range_slider::-ms-thumb {
@@ -32,18 +32,18 @@ input[type="range"].kv-range_slider::-ms-thumb {
     border-radius: 50%;
     background: var(--blue_dark);
     cursor: pointer;
-    transition: background .3s ease-in-out;
+    transition: background 0.3s ease-in-out;
 }
 
 /* Input Track */
-input[type=range].kv-range_slider::-webkit-slider-runnable-track {
+input[type="range"].kv-range_slider::-webkit-slider-runnable-track {
     -webkit-appearance: none;
     box-shadow: none;
     border: none;
     background: transparent;
 }
 
-input[type=range].kv-range_slider::-moz-range-track {
+input[type="range"].kv-range_slider::-moz-range-track {
     -webkit-appearance: none;
     box-shadow: none;
     border: none;
@@ -61,7 +61,6 @@ input[type="range"].kv-range_slider::-ms-track {
 /* Size: xs, small */
 input[type="range"].kv-range-slider--xs-s {
     height: 0.75rem;
-
 }
 
 input[type="range"].kv-range-slider--xs-s::-webkit-slider-thumb {
@@ -82,7 +81,6 @@ input[type="range"].kv-range-slider--xs-s::-ms-thumb {
 /* Size:medium, large*/
 input[type="range"].kv-range-slider--m-l {
     height: 1rem;
-
 }
 
 input[type="range"].kv-range-slider--m-l::-webkit-slider-thumb {

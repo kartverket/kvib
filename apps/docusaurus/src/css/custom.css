@@ -20,10 +20,10 @@ https://docusaurus.io/docs/styling-layout*/
     --ifm-font-family-base: 'Mulish', sans-serif;
     --ifm-heading-font-weight: 700;
     --ifm-color-primary: var(--blue_dark);
-    --ifm-heading-color: var(--black);
-    --ifm-menu-color: var(--black);
-    --ifm-navbar-link-color: var(--black);
-    --ifm-toc-link-color: var(--black);
+    --ifm-heading-color: var(--black-100);
+    --ifm-menu-color: var(--black-100);
+    --ifm-navbar-link-color: var(--black-100);
+    --ifm-toc-link-color: var(--black-100);
 }
 
 
@@ -99,24 +99,24 @@ img[alt=documenting_example].img_node_modules-\@docusaurus-theme-classic-lib-the
 }
 
 .background--container {
-    background-color: var(--gray_light);
+    background-color: var(--black-10);
 }
 
-.background--container--green {
-    background-color: var(--green_light);
+.background--container--green-50 {
+    background-color: var(--green-20);
     padding: 16px;
     border-radius: 8px;
 }
 
 .footer {
-    background-color: var(--gray_light);
-    color: var(--black);
+    background-color: var(--black-10);
+    color: var(--black-100);
 }
 
 .footer__title {
-    color: var(--black);
+    color: var(--black-100);
 }
 
 .footer__link-item {
-    color: var(--green_dark);
+    color: var(--green-80);
 }

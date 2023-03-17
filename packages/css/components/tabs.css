@@ -1,6 +1,5 @@
 .kv-tab {
-overflow: hidden;
-
+    overflow: hidden;
 }
 
 .kv-tab .kv-tab__links {
@@ -12,13 +11,13 @@ overflow: hidden;
 }
 
 .kv-tab__links:hover {
-    border-bottom: var(--blue_hover) 2px solid;
+    border-bottom: var(--blue-30) 2px solid;
 }
 
 .kv-tab__links:active {
-    border-bottom: var(--blue) 2px solid;
+    border-bottom: var(--blue-50) 2px solid;
 }
 
 .kv-tab .active__link--demo {
-    border-bottom: var(--blue) 2px solid;
+    border-bottom: var(--blue-50) 2px solid;
 }

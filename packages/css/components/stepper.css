@@ -1,7 +1,7 @@
 :root {
-    --color-primary: var(--blue_dark_button);
-    --color-secondary: var(--white);
-    --font: 'Mulish', sans-serif;
+    --color-primary: var(--blue-100);
+    --color-secondary: var(--white-00);
+    --font: "Mulish", sans-serif;
 
     /*extra small / small stepper*/
     --stepper--s--y-space: 0.5rem;
@@ -20,7 +20,7 @@
     counter-reset: steps;
 }
 
-.kv-stepper--s [role='list'] {
+.kv-stepper--s [role="list"] {
     font-family: Mulish, sans-serif;
     line-height: 1.1;
     /*margin: calc(var(--stepper--s--y-space) * -1) 0 0 0;*/
@@ -37,7 +37,7 @@
 
 .kv-stepper--s li::before,
 .kv-stepper--s li::after {
-    content: '';
+    content: "";
     width: 2px;
     background: var(--color-primary);
     position: absolute;
@@ -88,14 +88,14 @@
 .kv-stepper--s .kv-stepper--circle::before {
     content: counter(steps);
     speak-as: digits;
-    color: var(--black);
+    color: var(--black-100);
     position: absolute;
     top: -0.75rem;
     left: -1.9rem;
     z-index: 2;
 }
 
-.kv-stepper--s [data-status='complete'] .kv-stepper--circle::after {
+.kv-stepper--s [data-status="complete"] .kv-stepper--circle::after {
     background-color: var(--color-primary);
     background-image: url('data:image/svg+xml;utf8,<svg fill="white" width="9" height="7" xmlns="http://www.w3.org/2000/svg"><path d="M7.868.141a.474.474 0 01.03.652L3.244 6.087a.433.433 0 01-.627.028L.292 3.911a.474.474 0 01-.03-.652.433.433 0 01.628-.028l1.996 1.892L7.24.17A.433.433 0 017.868.14z"/></svg>');
     background-size: 16px 13px;
@@ -104,12 +104,12 @@
     border-color: var(--color-primary);
 }
 
-.kv-stepper--s [data-status='complete'] .kv-stepper--circle::before {
+.kv-stepper--s [data-status="complete"] .kv-stepper--circle::before {
     content: "";
 }
 
-.kv-stepper--s [aria-current='step'] .kv-stepper--circle::after,
-.kv-stepper--s [aria-current='step'] .kv-stepper--circle::before {
+.kv-stepper--s [aria-current="step"] .kv-stepper--circle::after,
+.kv-stepper--s [aria-current="step"] .kv-stepper--circle::before {
     content: "";
     background-color: var(--color-primary);
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="white" height="48" width="48"><path d="m39.85 15.1-6.6-6.6 1.9-1.95q1-1 2.45-1 1.45 0 2.6 1.05l1.65 1.6q1.15 1.1 1.025 2.55-.125 1.45-1.125 2.45Zm-2.05 2.05L12.35 42.6h-6.6V36l25.4-25.4Z"/></svg>');
@@ -118,13 +118,12 @@
     background-position: 4px center;
 }
 
-
 /*----Stor skjerm (medioum/large)----*/
 .kv-stepper--l {
     counter-reset: steps;
 }
 
-.kv-stepper--l [role='list'] {
+.kv-stepper--l [role="list"] {
     display: flex;
     align-items: center;
     font-family: Mulish, sans-serif;
@@ -142,7 +141,7 @@
 
 .kv-stepper--l li::before,
 .kv-stepper--l li::after {
-    content: '';
+    content: "";
     width: 2px;
     background: var(--color-primary);
     position: absolute;
@@ -190,14 +189,14 @@
 .kv-stepper--l .kv-stepper--circle::before {
     content: counter(steps);
     speak-as: digits;
-    color: var(--black);
+    color: var(--black-100);
     position: absolute;
     top: -0.75rem;
     left: -1.9rem;
     z-index: 2;
 }
 
-.kv-stepper--l [data-status='complete'] .kv-stepper--circle::after {
+.kv-stepper--l [data-status="complete"] .kv-stepper--circle::after {
     background-color: var(--color-primary);
     background-image: url('data:image/svg+xml;utf8,<svg fill="white" width="9" height="7" xmlns="http://www.w3.org/2000/svg"><path d="M7.868.141a.474.474 0 01.03.652L3.244 6.087a.433.433 0 01-.627.028L.292 3.911a.474.474 0 01-.03-.652.433.433 0 01.628-.028l1.996 1.892L7.24.17A.433.433 0 017.868.14z"/></svg>');
     background-size: 16px 13px;
@@ -206,12 +205,12 @@
     border-color: var(--color-primary);
 }
 
-.kv-stepper--l [data-status='complete'] .kv-stepper--circle::before {
+.kv-stepper--l [data-status="complete"] .kv-stepper--circle::before {
     content: "";
 }
 
-.kv-stepper--l [aria-current='step'] .kv-stepper--circle::after,
-.kv-stepper--l [aria-current='step'] .kv-stepper--circle::before {
+.kv-stepper--l [aria-current="step"] .kv-stepper--circle::after,
+.kv-stepper--l [aria-current="step"] .kv-stepper--circle::before {
     content: "";
     background-color: var(--color-primary);
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="white" height="48" width="48"><path d="m39.85 15.1-6.6-6.6 1.9-1.95q1-1 2.45-1 1.45 0 2.6 1.05l1.65 1.6q1.15 1.1 1.025 2.55-.125 1.45-1.125 2.45Zm-2.05 2.05L12.35 42.6h-6.6V36l25.4-25.4Z"/></svg>');
