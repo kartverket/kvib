@@ -4,9 +4,9 @@ title: Standard knapper
 description: Standard knapper
 ---
 
-Standard knapper brukes på artikkelsider, innsendingstjenester, apper (med unntak av apper i egen drakt) og generelt i tjenester som skal være i Kartverkets drakt (men ikke i kartløsninger).
+Vi har to sett med farger. Vi har et primærsett (grønn) og et sekundærsett (blått). Vår palett er inspirert av jordtoner. Vi har valgt sekundærsettet som er blått på karttjenester og forvaltningstjenester for å ha kontrast mot kartet.
 
-Generelt brukes medium på desktop og small for mobil og tablets i apper og kartløsninger.
+Løsninger som skal se ut som en del av [kartverket.no](http://kartverket.no) skal bruke grønn.
 
 ## Farger
 
