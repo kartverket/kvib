@@ -23,9 +23,17 @@ export default {
         options: ["sm", "md"],
       },
     },
-    disabled: {
+    isDisabled: {
       defaultValue: false,
       control: "boolean",
+    },
+    isLoading: {
+      defaultValue: false,
+      control: "boolean",
+    },
+    loadingText: {
+      defaultValue: "",
+      control: "text",
     },
     leftIcon: {
       defaultValue: "",

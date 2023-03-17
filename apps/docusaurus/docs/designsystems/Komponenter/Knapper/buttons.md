@@ -55,11 +55,23 @@ Det finnes tre ulike varianter: primær, sekundær og tertiær.
 ## Disabled
 
 <div class="buttons--section">
-<button class="kvib-button kvib-button--primary kvib-button--md kvib-button--blue" disabled>Disabled</button>
+<button class="kvib-button kvib-button--primary kvib-button--md kvib-button--blue is-disabled" disabled>Disabled</button>
 </div>
 
 ```markup
-<button class="kvib-button kvib-button--primary kvib-button--md kvib-button--blue" disabled>Disabled</button>
+<button class="kvib-button kvib-button--primary kvib-button--md kvib-button--blue is-disabled" disabled>Disabled</button>
+```
+
+## Lasting
+
+<div class="buttons--section">
+<button class="kvib-button kvib-button--primary kvib-button--md kvib-button--green is-loading" disabled><span className="kvib-button__spinner"></span></button>
+<button class="kvib-button kvib-button--primary kvib-button--md kvib-button--green is-loading" disabled><span className="kvib-button__spinner"></span><span className="kvib-button__loading-text">Laster</span></button>
+</div>
+
+```markup
+<button class="kvib-button kvib-button--primary kvib-button--md kvib-button--green is-loading" disabled><span className="kvib-button__spinner"></span></button>
+<button class="kvib-button kvib-button--primary kvib-button--md kvib-button--green is-loading" disabled><span className="kvib-button__spinner"></span><span className="kvib-button__loading-text">Laster</span></button>
 ```
 
 ## Med ikoner
