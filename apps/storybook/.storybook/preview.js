@@ -1,4 +1,4 @@
-import "@kvib/css";
+import { KvibProvider } from "@kvib/react/src/KvibProvider";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -14,3 +14,11 @@ export const parameters = {
     },
   },
 };
+
+export const decorators = [
+  (Story) => (
+    <KvibProvider>
+      <Story />
+    </KvibProvider>
+  ),
+];
