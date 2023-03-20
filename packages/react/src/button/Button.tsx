@@ -10,6 +10,8 @@ export interface ButtonProps extends ComponentPropsWithoutRef<"button"> {
   rightIcon?: string;
   colorScheme: "green" | "blue";
   isDisabled: boolean;
+  isLoading: boolean;
+  loadingText: string;
 }
 
 export const Button: OverridableComponent<ButtonProps, HTMLButtonElement> = forwardRef(
@@ -19,6 +21,9 @@ export const Button: OverridableComponent<ButtonProps, HTMLButtonElement> = forw
       size = "sm",
       variant = "primary",
       colorScheme = "green",
+      isDisabled,
+      isLoading,
+      loadingText,
       leftIcon,
       rightIcon,
       children,
@@ -27,6 +32,33 @@ export const Button: OverridableComponent<ButtonProps, HTMLButtonElement> = forw
     },
     ref
   ) => {
+    let childrenContent;
+    if (children) {
+      if (leftIcon || rightIcon) {
+        childrenContent = <span className="kvib-button__text">{children}</span>;
+      } else {
+        childrenContent = children;
+      }
+    }
+
+    let buttonContent;
+    if (isLoading) {
+      buttonContent = (
+        <>
+          <span className="kvib-button__spinner"></span>
+          {loadingText && <span className="kvib-button__loading-text">{loadingText}</span>}
+        </>
+      );
+    } else {
+      buttonContent = (
+        <>
+          {leftIcon && <span className="material-symbols-outlined">{leftIcon}</span>}
+          {childrenContent}
+          {rightIcon && <span className="material-symbols-outlined">{rightIcon}</span>}
+        </>
+      );
+    }
+
     return (
       <Component
         className={cl(
@@ -34,22 +66,18 @@ export const Button: OverridableComponent<ButtonProps, HTMLButtonElement> = forw
           "kvib-button",
           `kvib-button--${variant}`,
           `kvib-button--${size}`,
-          `kvib-button--${colorScheme}`
+          `kvib-button--${colorScheme}`,
+          {
+            "is-disabled": isDisabled,
+            "is-loading": isLoading,
+            "has-icon": leftIcon || rightIcon,
+          }
         )}
         ref={ref}
+        disabled={isDisabled || isLoading ? true : undefined}
         {...props}
       >
-        {leftIcon && (
-          <div className="kvib-button__icon kvib-button__icon--left">
-            <span className="material-symbols-outlined">{leftIcon}</span>
-          </div>
-        )}
-        {children && <span className="kvib-button__text">{children}</span>}
-        {rightIcon && (
-          <div className="kvib-button__icon kvib-button__icon--right">
-            <span className="material-symbols-outlined">{rightIcon}</span>
-          </div>
-        )}
+        {buttonContent}
       </Component>
     );
   }

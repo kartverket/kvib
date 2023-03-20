@@ -1,4 +1,5 @@
 import "@kvib/css";
+import "./style.css";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -6,11 +7,6 @@ export const parameters = {
     matchers: {
       color: /(background|color)$/i,
       date: /Date$/,
-    },
-  },
-  options: {
-    storySort: {
-      order: ["Introduksjon", "Oppsett", "Bidra"],
     },
   },
 };

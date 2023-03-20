@@ -115,11 +115,8 @@ const sidebars = {
             slug: "designsystems/Komponenter/Knapper",
           },
           items: [
+            "designsystems/Komponenter/Knapper/standardKnappID",
             "designsystems/Komponenter/Knapper/toggleSwitchID",
-            "designsystems/Komponenter/Knapper/grønnknappID",
-            "designsystems/Komponenter/Knapper/blåknappID",
-            "designsystems/Komponenter/Knapper/ikonknappID",
-            "designsystems/Komponenter/Knapper/disabledknappID",
           ],
         },
       ],

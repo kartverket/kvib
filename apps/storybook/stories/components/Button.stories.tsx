@@ -5,6 +5,10 @@ import { Meta, Story } from "@storybook/react";
 export default {
   title: "Komponenter/Knapper/Button",
   argTypes: {
+    children: {
+      defaultValue: "",
+      control: "text",
+    },
     variant: {
       options: ["primary", "secondary", "tertiary"],
       control: { type: "radio" },
@@ -16,16 +20,22 @@ export default {
       },
     },
     size: {
-      defaultValue: "md",
+      defaultValue: "",
       type: { name: "string", required: false },
       control: {
         type: "radio",
         options: ["sm", "md"],
       },
     },
-    disabled: {
-      defaultValue: false,
+    isDisabled: {
       control: "boolean",
+    },
+    isLoading: {
+      control: "boolean",
+    },
+    loadingText: {
+      defaultValue: "",
+      control: "text",
     },
     leftIcon: {
       defaultValue: "",
@@ -39,14 +49,19 @@ export default {
 } as Meta;
 
 const Template: Story<ButtonProps> = (args) => {
-  return <Button {...args}>Button</Button>;
+  const { children } = args;
+
+  return <Button {...args}>{children}</Button>;
 };
 
 export const Component = Template.bind({});
 Component.args = {
+  children: "Klikk på meg",
   variant: "primary",
   colorScheme: "green",
-  size: "sm",
+  size: "md",
+  isDisabled: false,
+  isLoading: false,
 };
 
 Component.storyName = "Button";
