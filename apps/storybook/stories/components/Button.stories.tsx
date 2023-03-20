@@ -2,7 +2,7 @@ import { Button } from "@kvib/react/src/Button";
 import { StoryFn, Meta } from "@storybook/react";
 
 const meta: Meta<typeof Button> = {
-  title: "Butooon",
+  title: "Komponenter/Knapp",
   component: Button,
 };
 

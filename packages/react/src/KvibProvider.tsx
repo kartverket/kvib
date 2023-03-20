@@ -18,8 +18,6 @@ const theme = extendTheme({
 /**
  * KVIBProvider er komponenten som gir de andre komponentene riktig tema og stil
  * Den må settes inn i prosjektet KVIB skal brukes, så nærme rotkomponenten som mulig.
- *
- * TODO: Vurder å bruke ChakraBaseProvider
  */
 export const KvibProvider = ({ children, ...props }: ChakraProviderProps) => (
   <ChakraProvider {...props} theme={theme}>
