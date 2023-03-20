@@ -1,5 +1,11 @@
 # @kvib/css
 
+## 5.0.0
+
+### Major Changes
+
+- 2f1939188: Knappekomponenten har fått nytt design. Komponenten har fått nye klassenavn. Les Docasaurus-dokumentasjon for hvordan ta i bruk den nye komponenten.
+
 ## 4.1.0
 
 ### Minor Changes
