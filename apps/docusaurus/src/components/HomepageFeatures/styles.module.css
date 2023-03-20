@@ -10,7 +10,8 @@
   color: var(--black);
 }
 
-.features h3, p{
+.features h3,
+p {
   text-align: left;
 }
 

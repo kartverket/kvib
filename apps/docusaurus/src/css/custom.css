@@ -1,41 +1,44 @@
 /*custom.css brukes til å overkjøre docusaurus sine egne variabler og eget design.
 https://docusaurus.io/docs/styling-layout*/
 
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap');
-@import 'palette.css';
-@import 'buttons.css';
-@import 'uu.css';
-@import 'iconDocs.css';
-@import 'progressbarDemo.css';
-@import 'typografi/typografiStyle.css';
-@import 'navigation.css';
-@import 'links.css';
-@import 'algolia.css';
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap");
+@import "palette.css";
+@import "buttons.css";
+@import "uu.css";
+@import "iconDocs.css";
+@import "progressbarDemo.css";
+@import "typografi/typografiStyle.css";
+@import "navigation.css";
+@import "links.css";
+@import "algolia.css";
 @import "@kvib/css/main.css";
-
 
 /*overkjøre definerte variabler fra docusaurus*/
 :root {
-    --ifm-heading-font-family: 'Mulish', sans-serif;
-    --ifm-font-family-base: 'Mulish', sans-serif;
-    --ifm-heading-font-weight: 700;
-    --ifm-color-primary: var(--blue_dark);
-    --ifm-heading-color: var(--black);
-    --ifm-menu-color: var(--black);
-    --ifm-navbar-link-color: var(--black);
-    --ifm-toc-link-color: var(--black);
+  --ifm-heading-font-family: "Mulish", sans-serif;
+  --ifm-font-family-base: "Mulish", sans-serif;
+  --ifm-heading-font-weight: 700;
+  --ifm-color-primary: var(--blue_dark);
+  --ifm-heading-color: var(--black);
+  --ifm-menu-color: var(--black);
+  --ifm-navbar-link-color: var(--black);
+  --ifm-toc-link-color: var(--black);
 }
 
-
-h1, h2, h3, h4, h5, h6 {
-    color: var(--ifm-heading-color);
-    font-family: var(--ifm-font-family-base);
-    font-weight: var(--ifm-heading-font-weight);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--ifm-heading-color);
+  font-family: var(--ifm-font-family-base);
+  font-weight: var(--ifm-heading-font-weight);
 }
 
 /*kun linker i avsnitt som blir understreket*/
 p a {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* p {
@@ -43,71 +46,80 @@ p a {
 } */
 
 .heading {
-    max-width: 50ch;
+  max-width: 50ch;
 }
 
 /*sette bredde på gif i docs/designsystems/Komponenter/slider.md*/
-img[alt=sliderGif] {
-    width: 70%;
+img[alt="sliderGif"] {
+  width: 70%;
 }
 
 /*sette bredde på bilde i docs/omKvib/structure.md*/
-img[alt=documenting_example].img_node_modules-\@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module {
-    height: 65%;
-    width: 65%;
+img[alt="documenting_example"].img_node_modules-\@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module {
+  height: 65%;
+  width: 65%;
 }
 
 .component__display {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px;
+}
+
+.component__display__column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 8px;
+  padding-top: 0px;
+  margin-left: 0.5rem;
 }
 
 .devsizes-grid {
-    grid-template-columns: repeat(auto-fill, 9rem);
-    padding-bottom: 1rem;
-    column-gap: 1rem;
-    row-gap: 1.5rem;
-    justify-content: flex-start;
-    align-content: center;
-    display: grid;
-    box-sizing: inherit;
-    word-wrap: normal;
+  grid-template-columns: repeat(auto-fill, 9rem);
+  padding-bottom: 1rem;
+  column-gap: 1rem;
+  row-gap: 1.5rem;
+  justify-content: flex-start;
+  align-content: center;
+  display: grid;
+  box-sizing: inherit;
+  word-wrap: normal;
 }
 
 .devsizes-section--container {
-    width: 10rem;
-    height: fit-content;
-    /* background-color: var(--graa_lys); */
+  width: 10rem;
+  height: fit-content;
+  /* background-color: var(--graa_lys); */
 
-    /* Fra icons.css icon-container */
-    box-sizing: border-box;
-    /* gap: 15px; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  /* Fra icons.css icon-container */
+  box-sizing: border-box;
+  /* gap: 15px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .background--container {
-    background-color: var(--gray_light);
+  background-color: var(--gray_light);
 }
 
 .background--container--green {
-    background-color: var(--green_light);
-    padding: 16px;
-    border-radius: 8px;
+  background-color: var(--green_light);
+  padding: 16px;
+  border-radius: 8px;
 }
 
 .footer {
-    background-color: var(--gray_light);
-    color: var(--black);
+  background-color: var(--gray_light);
+  color: var(--black);
 }
 
 .footer__title {
-    color: var(--black);
+  color: var(--black);
 }
 
 .footer__link-item {
-    color: var(--green_dark);
+  color: var(--green_dark);
 }

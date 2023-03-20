@@ -4,13 +4,13 @@ title: Tilleggskomponenter (Historiske kart)
 description: Komponenter som ligger utenfor Figma-KVIB, og som ikke har noen godkjent design. Likvel er det tenkt at disse kan bli en del av KVIB etterhvert.
 ---
 
-***OBS! Disse er IKKE GODKJENT av designer. Det mangler godkjent design i Figma-KVIB for disse komponentene, og de er dermed under konstruksjon.
+**_OBS! Disse er IKKE GODKJENT av designer. Det mangler godkjent design i Figma-KVIB for disse komponentene, og de er dermed under konstruksjon.
 De nåværende komponentene på siden er basert på en blanding av design fra kartverket.no, Figma-KVIB og Kartverket sin løsning for historiske kart.
-De er i utgangspunktet tiltenkt å brukes i historiske kart, men kan bli del av KVIB når de er godkjent.***
+De er i utgangspunktet tiltenkt å brukes i historiske kart, men kan bli del av KVIB når de er godkjent._**
 
-***
+---
+
 ## Vis/Skjul
-
 
 <div class="buttons--section">
 <button class="kv-button kv-button--secondary--blue kv-button--xs kv-button__icon--left">Vis info
@@ -46,7 +46,6 @@ De er i utgangspunktet tiltenkt å brukes i historiske kart, men kan bli del av 
 </button>
 ```
 
-
 ### Tilhørende tertiærknapper med ikon
 
 <div class="buttons--section">
@@ -70,6 +69,7 @@ De er i utgangspunktet tiltenkt å brukes i historiske kart, men kan bli del av 
 ```
 
 ## Knapper med kun ikon (eks. zoom-knapp)
+
 **Obs! komponenten er under endring**
 
 Disse knappene inneholder kun ikon, og er dermed mindre enn vanlig knapper som vanligvis også inneholder tekst.
@@ -95,6 +95,7 @@ OBS! Det er meningen at <code>.kv-button--icon-only</code> skal brukes generelt 
 ```
 
 ## Kort
+
 **Obs! komponenten er under endring**
 
 <div class="component__display">
@@ -117,5 +118,3 @@ OBS! Det er meningen at <code>.kv-button--icon-only</code> skal brukes generelt 
     </div>
 </div>
 ```
-
-

@@ -1,10 +1,9 @@
-
 .kv-checkbox {
     display: flex;
     flex-direction: column;
     position: relative;
-    padding-top: 0.250rem;
-    padding-bottom: 0.250rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
 }
 
 .kv-checkbox__wrapper {
@@ -33,11 +32,11 @@
 
 .kv-checkbox label::before,
 .kv-checkbox label::after {
-    position: absolute;
-    content: "";
+  position: absolute;
+  content: "";
 
-    /*Needed for the line-height to take effect*/
-    display: inline-block;
+  /*Needed for the line-height to take effect*/
+  display: inline-block;
 }
 
 .kv-checkbox label::before {

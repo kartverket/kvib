@@ -7,10 +7,9 @@ displayed_sidebar: designsystemSidebar
 sidebar_position: 3
 ---
 
-***OBS! NVDA har en bug som gjør at skjermleseren ikke klarer å lese av riktig state på radioknappen. Den er derfor
-testet med Chromevox der riktig state blir lest***
+**_OBS! NVDA har en bug som gjør at skjermleseren ikke klarer å lese av riktig state på radioknappen. Den er derfor testet med Chromevox der riktig state blir lest_**
 
-***
+---
 
 Radioknapper skal benyttes der en bruker kun skal kunne gjøre ett enkelt valg, og ikke flervalg. Ved et nytt valg skal
 eventuelle tidligere valg fjernes automatisk. Feilmelding radioknapp skal brukes for å visualisere feil i

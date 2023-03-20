@@ -1,226 +1,217 @@
-/* CSS-fil for Knapper */
-
-:root {
-    --kv-button__icon__padding--xs: 0.5rem;
-    --kv-button__icon__padding--sml: 1rem;
-    --kv-button--tertiary--background: var(--white); /* Burde denne vært transparent?*/
-
+.kvib-button {
+  font-family: "Mulish", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  border-radius: 8px;
+  color: var(--white);
+  border: 0;
+  outline: transparent solid 2px;
+  outline-offset: 2px;
+  display: inline-flex;
+  appearance: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  gap: 4px;
+  text-decoration: none;
 }
 
-/* Hovedklasse*/
-.kv-button {
-    border: 0.006rem solid;
-    border-radius: 0.5rem;
-    text-decoration: none;
-    cursor: pointer;
-    font-family: 'Mulish', 'sans-serif';
-    font-weight: 700;
+.kvib-button--primary.kvib-button--green {
+  background-color: var(--green_dark);
 }
 
-/* Fokus */
-.kv-button:focus-visible {
-    outline: var(--blue_dark) solid;
-    outline-offset: 0.313rem;
-    outline-width: var(--focus-outline);
+.kvib-button--primary.kvib-button--green:hover,
+.kvib-button--secondary.kvib-button--green:hover {
+  background-color: var(--green);
+  box-shadow: none;
+  color: var(--white);
+}
+
+.kvib-button--primary.kvib-button--green:active,
+.kvib-button--secondary.kvib-button--green:active {
+  color: var(--white);
+  background-color: var(--green_active);
+  box-shadow: var(--blue_dark_button) 0 0 0 2px inset, var(--blue_dark_button) 0 0 0 2px inset,
+    currentcolor 0 0 0 4px inset;
+}
+
+.kvib-button--primary.kvib-button--green:focus-visible {
+  color: var(--white);
+  background-color: var(--green_dark);
+  box-shadow: var(--blue_dark_button) 0 0 0 2px inset, var(--blue_dark_button) 0 0 0 2px inset,
+    currentcolor 0 0 0 4px inset;
+}
+
+.kvib-button--secondary.kvib-button--green:focus-visible {
+  color: var(--green_dark);
+  background-color: var(--white);
+  box-shadow: var(--blue_dark_button) 0 0 0 2px inset, var(--white) 0 0 0 4px inset, currentcolor 0 0 0 5px inset;
+}
+
+.kvib-button--primary.kvib-button--blue {
+  background-color: var(--blue);
+}
+
+.kvib-button--primary.kvib-button--blue:hover,
+.kvib-button--secondary.kvib-button--blue:hover {
+  background-color: var(--blue_hover);
+  box-shadow: none;
+  color: var(--white);
+}
+
+.kvib-button--primary.kvib-button--blue:active,
+.kvib-button--secondary.kvib-button--blue:active {
+  color: var(--white);
+  background-color: var(--blue_dark_button);
+  box-shadow: var(--blue_dark_button) 0 0 0 2px inset, var(--blue_dark_button) 0 0 0 2px inset,
+    currentcolor 0 0 0 4px inset;
+}
+
+.kvib-button--primary.kvib-button--blue:focus-visible {
+  color: var(--white);
+  background-color: var(--blue);
+  box-shadow: var(--blue_dark_button) 0 0 0 2px inset, var(--blue_dark_button) 0 0 0 2px inset,
+    currentcolor 0 0 0 4px inset;
+}
+
+.kvib-button--secondary.kvib-button--blue:focus-visible {
+  color: var(--blue);
+  background-color: var(--white);
+  box-shadow: var(--blue_dark_button) 0 0 0 2px inset, var(--white) 0 0 0 4px inset, currentcolor 0 0 0 5px inset;
+}
+
+.kvib-button--secondary {
+  background-color: var(--white);
+}
+
+.kvib-button--secondary.kvib-button--green {
+  color: var(--green_dark);
+  box-shadow: var(--green_dark) 0 0 0 1px inset;
+}
+
+.kvib-button--secondary.kvib-button--blue {
+  color: var(--blue);
+  box-shadow: var(--blue) 0 0 0 1px inset;
+}
+
+.kvib-button--tertiary {
+  background-color: transparent;
+  text-decoration-line: underline;
+}
+
+.kvib-button--tertiary.kvib-button--green {
+  color: var(--green_dark);
+}
+
+.kvib-button--tertiary.kvib-button--green:hover {
+  color: var(--green);
+}
+
+.kvib-button--tertiary.kvib-button--blue {
+  color: var(--blue);
+}
+
+.kvib-button--tertiary.kvib-button--blue:hover {
+  color: var(--blue_dark_button);
+}
+
+.kvib-button--tertiary.kvib-button--green:active,
+.kvib-button--tertiary.kvib-button--green:focus-visible,
+.kvib-button--tertiary.kvib-button--blue:active,
+.kvib-button--tertiary.kvib-button--blue:focus-visible {
+  box-shadow: var(--blue_dark_button) 0 0 0 2px inset;
 }
 
 /* Disabled */
-.kv-button:disabled {
-    background-color: var(--gray_light);
-    color: var(--gray_dark);
-    outline-color: var(--gray_dark);
+.kvib-button--primary.kvib-button--green.is-disabled,
+.kvib-button--primary.kvib-button--blue.is-disabled,
+.kvib-button--secondary.kvib-button--green.is-disabled,
+.kvib-button--secondary.kvib-button--blue.is-disabled {
+  color: var(--gray_dark);
+  background-color: var(--gray_light);
+  box-shadow: var(--gray_dark) 0 0 0 1px inset;
+  cursor: not-allowed;
 }
 
-/*******************
-  Knappestørrelser
-********************/
-.kv-button--xs {
-    width: fit-content;
-    height: 2.5rem;
-    padding: var(--padding-button--xs);
-    font-size: 1rem;
-    line-height: 1.5rem;
+.kvib-button--tertiary.kvib-button--green.is-disabled,
+.kvib-button--tertiary.kvib-button--blue.is-disabled {
+  color: var(--gray_dark);
+  box-shadow: none;
+  cursor: not-allowed;
 }
 
-.kv-button--sm {
-    width: fit-content;
-    height: 3.5rem;
-    padding: var(--padding-button--s-m-l);
-    font-size: 1rem;
-    line-height: 1.5rem;
+/* Icon */
+.kvib-button--tertiary.has-icon {
+  text-decoration-line: none;
 }
 
-.kv-button--l {
-    width: fit-content;
-    height: 4rem;
-    padding: var(--padding-button--s-m-l);
-    font-size: 1.125rem;
-    line-height: 2rem;
+.kvib-button--tertiary .kvib-button__text {
+  text-decoration-line: underline;
 }
 
-/***********************
- Primær-pog sekundærsett
-************************/
-/* BUTTON PRIMARY*/
-.kv-button--primary--green {
-    border: none;
-    background-color: var(--green_dark);
-    color: var(--white); /* Setter tekstfarge */
+/* Sizes */
+.kvib-button--md {
+  font-size: 18px;
+  line-height: 28px;
+  padding-left: 24px;
+  padding-right: 24px;
+  min-width: 106px;
+  min-height: 56px;
 }
 
-.kv-button--primary--green:hover {
-    background-color: var(--green);
-    color: var(--white);
+.kvib-button--sm {
+  font-size: 16px;
+  line-height: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
+  min-width: 100px;
+  min-height: 44px;
 }
 
-.kv-button--primary--green:active {
-    background-color: var(--green_active);
-    color: var(--white);
+/* Loading */
+.kvib-button.is-loading {
+  pointer-events: none;
 }
 
-.kv-button--primary--blue {
-    background-color: var(--blue);
-    color: var(--white);
+.kvib-button__loading-text {
+  margin-left: 6px;
 }
 
-.kv-button--primary--blue:hover {
-    background-color: var(--blue_hover);
-    color: var(--black);
+.kvib-button__spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--gray_dark);
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
 }
 
-.kv-button--primary--blue:active {
-    background-color: var(--blue_dark);
-    color: var(--white);
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-
-/* BUTTON SECONDARY*/
-.kv-button--secondary--green {
-    background-color: var(--white);
-    color: var(--green_dark);
-    outline-color: var(--green_dark);
-    border-color: var(--green_dark);
+.kvib-button--primary .kvib-button__spinner {
+  border-color: var(--white);
+  border-bottom-color: transparent;
 }
 
-.kv-button--secondary--green:hover {
-    background-color: var(--green);
-    color: var(--white);
-    outline: none;
+.kvib-button--secondary.kvib-button--green .kvib-button__spinner,
+.kvib-button--tertiary.kvib-button--green .kvib-button__spinner {
+  border-color: var(--green_dark);
+  border-bottom-color: transparent;
 }
 
-.kv-button--secondary--green:active {
-    background-color: var(--green_active);
-    color: var(--white);
-    outline: none;
+.kvib-button--secondary.kvib-button--blue .kvib-button__spinner,
+.kvib-button--tertiary.kvib-button--blue .kvib-button__spinner {
+  border-color: var(--blue);
+  border-bottom-color: transparent;
 }
-
-.kv-button--secondary--blue {
-    background-color: var(--white);
-    color: var(--blue);
-    outline-color: var(--blue);
-    border-color: var(--blue);
-}
-
-.kv-button--secondary--blue:hover {
-    background-color: var(--blue_hover);
-    color: var(--black);
-    outline: none;
-}
-
-.kv-button--secondary--blue:active {
-    background-color: var(--blue_dark);
-    color: var(--white);
-    outline: none;
-}
-
-
-/* BUTTON TERTIARY */
-.kv-button--tertiary--green {
-    border: none;
-    background-color: var(--kv-button--tertiary--background);
-    color: var(--green_dark);
-}
-
-.kv-button--tertiary--green:hover {
-    background-color: var(--kv-button--tertiary--background);
-    color: var(--green_dark);
-    text-decoration: underline var(--green_dark);
-}
-
-.kv-button--tertiary--green:active {
-    background-color: var(--kv-button--tertiary--background);
-    color: var(--green_active);
-}
-
-.kv-button--tertiary--green:disabled {
-    border: none;
-    outline: none;
-    background-color: var(--kv-button--tertiary--background);
-    color: var(--gray_dark);
-}
-
-.kv-button--tertiary--blue {
-    border: none;
-    background-color: var(--kv-button--tertiary--background);
-    color: var(--blue);
-}
-
-.kv-button--tertiary--blue:hover {
-    background-color: var(--kv-button--tertiary--background);
-    color: var(--blue_dark); /*Er denne fargen riktig? Det er ikke konsekvent med den grønne, og jeg mistenker at den grønne er riktig. For å få det konsekvent skal det være --blue her.*/
-    text-decoration: underline var(--blue_dark);
-}
-
-.kv-button--tertiary--blue:active {
-    background-color: var(--kv-button--tertiary--background);
-    color: var(--blue_dark);
-}
-
-/*************************************
-  Styling av ikonet som er i en knapp
-*************************************/
-/* IKON-style (i knapp): høyre*/
-.kv-button--xs.kv-button__icon--right > span.material-symbols-outlined {
-    font-size: var(--icon-fontSize-xs);
-    height: var(--icon-height-xs);
-    padding: 0 0 0 var(--kv-button__icon__padding--xs);
-    vertical-align: text-top;
-}
-
-.kv-button--sm.kv-button__icon--right > span.material-symbols-outlined {
-    font-size: var(--icon-fontSize-sml);
-    height: var(--icon-height-sml);
-    padding: 0 0 0 var(--kv-button__icon__padding--sml);
-    vertical-align: top;
-}
-
-.kv-button--l.kv-button__icon--right > span.material-symbols-outlined {
-    font-size: var(--icon-fontSize-sml);
-    height: var(--icon-height-sml);
-    padding: 0 0 0 var(--kv-button__icon__padding--sml);
-    vertical-align: text-top;
-}
-
-/* IKON-style (i knapp): venstre*/
-.kv-button--xs.kv-button__icon--left > span.material-symbols-outlined {
-    font-size: var(--icon-fontSize-xs);
-    height: var(--icon-height-xs);
-    padding: 0 var(--kv-button__icon__padding--xs) 0 0;
-    vertical-align: text-top;
-}
-
-.kv-button--sm.kv-button__icon--left > span.material-symbols-outlined {
-    font-size: var(--icon-fontSize-sml);
-    height: var(--icon-height-sml);
-    padding: 0 var(--kv-button__icon__padding--sml) 0 0;
-    vertical-align: top;
-}
-
-.kv-button--l.kv-button__icon--left > span.material-symbols-outlined {
-    font-size: var(--icon-fontSize-sml);
-    height: var(--icon-height-sml);
-    padding: 0 var(--kv-button__icon__padding--sml) 0 0;
-    vertical-align: text-top;
-}
-
-

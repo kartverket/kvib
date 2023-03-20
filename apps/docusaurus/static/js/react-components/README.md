@@ -7,14 +7,17 @@ Dokumentasjonen for KVIB hostes med [github-pages](https://pages.github.com/).
 I tillegg har vi også laget et github package, KVIB-css, som inneholder css for designbiblioteket. Kildekoden til dette ligger i css-mappen i dette repoet.
 
 ## KVIB-CSS:
+
 For å publisere ny versjon av KVIB-css til Github Packages:
+
 1. Trykk på Github Actions i Kvib Github repository
-2. Velg  "KVIB Package publish"
+2. Velg "KVIB Package publish"
 3. Trykk på "Run workflow" på Master branch.
 
 Ny versjon av KVIB-css blir opprettet som Github Package og gjort klar til bruk.
 
 ## Rutine ved endringer:
+
 1. Gjør nødvendige endringer i css-filene i css-mappa i src.
 2. Sørg for at dokumentasjonen er oppdatert for all ny kode i docs-mappa.
 3. Opprett pull-request for endringene dine på github

@@ -8,7 +8,7 @@ displayed_sidebar: designsystemSidebar
 
 ## Kartverkets Hovedfarger
 
-Her er Kartverkets hovedfarger. Kartverkets egne tjenester kan ha andre farger for å indikere kartfaglige elementer. 
+Her er Kartverkets hovedfarger. Kartverkets egne tjenester kan ha andre farger for å indikere kartfaglige elementer.
 De grønne fargene brukes primært på artikkelsider, mens de blå er forbeholdt skjema og karttjenester.
 
 <div class="palette">
@@ -168,7 +168,3 @@ De grønne fargene brukes primært på artikkelsider, mens de blå er forbeholdt
         <div class="palette__text">Bakgrunnsfarge grå bokser</div>
     </div>
 </div>
-
-
-
-

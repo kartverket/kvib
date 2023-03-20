@@ -1,33 +1,33 @@
 .kv-progressbar__wrapper {
-    position: relative;
-    width: 100%;
-    display: flex;
+  position: relative;
+  width: 100%;
+  display: flex;
 }
 
 .kv-progressbar {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    height: 0.625rem;
-    background: #E4F1F8;
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, .2);
-    border-radius: 4px;
-    overflow: hidden;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 0.625rem;
+  background: #e4f1f8;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
 }
 
 .kv-progressbar::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    width: 0;
-    height: 100%;
-    border-radius: 4px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 100%;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 .kv-progressbar__label {
-    position: absolute;
-    top: -0.5rem;
-    right: -2.5rem;
-    content: "0%";
+  position: absolute;
+  top: -0.5rem;
+  right: -2.5rem;
+  content: "0%";
 }

@@ -5,11 +5,14 @@ description: Ta i bruk Kvib
 slug: /omKvib/implementering
 displayed_sidebar: OmKvibSidebar
 ---
+
 ## Installasjon av KVIB
+
 KVIB kan tas i bruk ved å legge til link eller url import i HTML/CSS fil eller ved å laste ned npm pakken.
 KVIB er delt i 2 npm pakker, <code>kvib-react-components</code> for KVIB React komponenter og <code>kvib-css</code> for KVIB CSS styling.
 
 ### HTML link
+
 Importer KVIB HTML link:
 
 ```markdown
@@ -17,7 +20,8 @@ Importer KVIB HTML link:
 ```
 
 ### CSS import
-Importer KVIB i index.css i prosjektet: 
+
+Importer KVIB i index.css i prosjektet:
 
 ```markdown
 @import url("https://kartverket.github.io/kvib/css/main.css");
@@ -26,7 +30,8 @@ Importer KVIB i index.css i prosjektet:
 ### Installasjon av KVIB NPM Package
 
 #### (!)KVIB React components
-***OBS! KVIB React Components er under konstruksjon:***
+
+**_OBS! KVIB React Components er under konstruksjon:_**
 
 For å laste ned og ta i bruk KVIB React komponenter, skriv følgende kommando i terminalen:
 
