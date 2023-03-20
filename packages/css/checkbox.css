@@ -1,3 +1,4 @@
+
 .kv-checkbox {
     display: flex;
     flex-direction: column;
@@ -6,7 +7,15 @@
     padding-bottom: 0.250rem;
 }
 
-/*.kv-checkbox*/
+.kv-checkbox__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 0.5rem;
+    padding: 0.5rem;
+    padding-top: 0rem;
+}
+
 .kv-checkbox input[type="checkbox"] {
     position: absolute;
     opacity: 0;
@@ -17,7 +26,6 @@
 .kv-checkbox label {
     position: relative;
     display: inline-block;
-
     /*16px width of fake checkbox + 8px distance between fake checkbox and text*/
     padding-left: 1.5rem;
 }
@@ -105,23 +113,24 @@
 }
 
 /*feilmeldingsboks*/
-.error__box {
+.error-box {
     display: inline-block;
     position: relative;
     padding: 0.3rem;
     padding-right: 1rem;
     padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
     top: 0.25rem;
     background-color: var(--orange);
     color: var(--red_error_message);
     border-radius: 0.5rem;
 }
 
-.kv-checkbox .error__box small {
+.kv-checkbox .error-box small {
     color: var(--red_error_message);
 }
 
-.error__box i {
+.error-box i {
     position: relative;
     right: 8px;
     height: 20px;

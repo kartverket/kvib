@@ -23,7 +23,7 @@ For å style <code><label\></code>-elementet, skal egne
 
 Avmerkingsboksen får fokus når den velges med tastaturet.
 
-<div class="component__display">
+<div class="kv-checkbox__wrapper">
     <div class="kv-checkbox">
         <input type="checkbox" id="checkbox_1"/>
         <label class="detail detail--sml" for="checkbox_1">Input tekst</label>
@@ -42,18 +42,16 @@ Avmerkingsboksen får fokus når den velges med tastaturet.
 Følgende avmerkingsboks får feilmeldingsfarge og en feilmelding hvis ett av alternativene må være valgt før bruker kan
 gå videre.
 
-<div class="component__display__column">
+<div class="kv-checkbox__wrapper">
     <div class="kv-checkbox">
         <input type="checkbox" id="checkbox_2" required/>
         <label class="detail detail--sml" for="checkbox_2">Jeg aksepterer vilkårene for...</label>
     </div>
-    <div class="error__box">
+    <div class="error-box">
         <i class="material-symbols-outlined">error</i>
         <small>Du må huke av dette feltet</small>
     </div>
 </div>
-<br/>
-<br/>
 
 ```markdown
 <div class="kv-checkbox">
@@ -72,7 +70,7 @@ gå videre.
 
 Marker hvilket felt som MÅ avhukes
 
-<div class="component__display__column">
+<div class="kv-checkbox__wrapper">
     <div class="kv-checkbox">
         <input type="checkbox" id="checkbox_3"/>
         <label class="detail detail--sml" for="checkbox_3">Jeg ønsker å få tilsendt nyhetsbrevet</label>
@@ -80,15 +78,12 @@ Marker hvilket felt som MÅ avhukes
     <div class="kv-checkbox">
         <input type="checkbox" id="checkbox_4" required/>
         <label class="detail detail--sml" for="checkbox_4">Jeg aksepterer vilkårene</label>
-        <div class="error__box">
+        <div class="error-box">
             <i class="material-symbols-outlined">error</i>
             <small>Du må huke av dette feltet</small>
         </div>
     </div>
 </div>
-
-<br/>
-<br/>
 
 ```markdown
 <div class="kv-checkbox">
@@ -107,11 +102,11 @@ Marker hvilket felt som MÅ avhukes
 
 ### Eksempel for "velg minst én"
 
-"Velg minst Én" er forskjellig fra radioknapper, som lar deg bare velge en.
+"Velg minst én" er forskjellig fra radioknapper, som lar deg bare velge en.
 
 Hvordan kommer du deg til jobb?
 
-<div class="component__display__column">
+<div class="kv-checkbox__wrapper">
     <div class="kv-checkbox">
         <input type="checkbox" id="checkbox_5" required/>
         <label class="detail detail--sml" for="checkbox_5">Til fots</label> 
@@ -128,12 +123,11 @@ Hvordan kommer du deg til jobb?
         <input type="checkbox" id="checkbox_8" required/>
         <label class="detail detail--sml" for="checkbox_8">Bil</label> 
     </div> 
-    <div class="error__box">
+    <div class="error-box">
         <i class="material-symbols-outlined">error</i>
         <small>Du må velge minst en</small>
     </div>
 </div>
-<br/>
 
 ```markdown
 <div class="kv-checkbox">

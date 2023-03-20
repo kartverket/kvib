@@ -71,7 +71,7 @@ skal gå tilbake til vanlig etter at brukeren har tatt et valg.
         <input type="radio" id="invalidRadioBtn_2" name="radioGroup2" required/>
         <label class="detail detail--sml" for="invalidRadioBtn_2">Input tekst</label>
     </div>
-    <div class="error__box">
+    <div class="error-box">
         <i class="material-symbols-outlined">error</i>
             <small>Du må velge et av alternativene</small>      
     </div>
