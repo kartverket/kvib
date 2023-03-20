@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 0.3.0
+
+### Minor Changes
+
+- b039200ff: Endret markup og stiling på knappe-komponenten. Lagt til loading state.
+
 ## 0.2.0
 
 ### Minor Changes
