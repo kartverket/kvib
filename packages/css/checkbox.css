@@ -12,6 +12,7 @@
     flex-direction: column;
     align-items: flex-start;
     margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
     padding: 0.5rem;
     padding-top: 0rem;
 }
@@ -119,7 +120,7 @@
     padding: 0.3rem;
     padding-right: 1rem;
     padding-left: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
     top: 0.25rem;
     background-color: var(--orange);
     color: var(--red_error_message);
