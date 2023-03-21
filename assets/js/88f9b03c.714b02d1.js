@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocusaurus=self.webpackChunkdocusaurus||[]).push([[9906],{3753:e=>{e.exports=JSON.parse('{"permalink":"/kvib/blog/tags/dokumentasjon","page":1,"postsPerPage":14,"totalPages":1,"totalCount":14,"blogDescription":"En oversikt over versjoner av KVIB","blogTitle":"KVIB Versjoner"}')}}]);

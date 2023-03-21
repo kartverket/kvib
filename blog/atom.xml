@@ -2,11 +2,20 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kartverket.github.io/kvib/blog</id>
     <title>KVIB Blog</title>
-    <updated>2023-01-05T00:00:00.000Z</updated>
+    <updated>2023-03-16T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kartverket.github.io/kvib/blog"/>
     <subtitle>KVIB Blog</subtitle>
     <icon>https://kartverket.github.io/kvib/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Versjon [5.0.0]]]></title>
+        <id>https://kartverket.github.io/kvib/blog/2023/03/16/version-[5.0.0]</id>
+        <link href="https://kartverket.github.io/kvib/blog/2023/03/16/version-[5.0.0]"/>
+        <updated>2023-03-16T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Nytt design for knapper.]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_fF9Z" id="changed">Changed<a href="#changed" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2><ul><li>Knapper har fått ny stiling og nye CSS klassenavn.</li><li>Laget felles dokumentasjonsside for knapper. Ligger under siden "Standard knapper".</li></ul><h2 class="anchor anchorWithStickyNavbar_fF9Z" id="removed">Removed<a href="#removed" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2><ul><li>Fjernet gammel stiling og CSS klassenavn for knapper.</li><li>Fjernet dokumentasjonssider for grønn-, blå- og ikonknapp.</li></ul><p><strong>Husk å oppdatere og endre CSS klassenavnene til de nye for å få stylingen til å virke.</strong></p><p><strong>Last ned nyeste KVIB-CSS npm pakke npm i @kvib/css</strong></p>]]></content>
+        <category label="dokumentasjon" term="dokumentasjon"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Versjon [4.0.0]]]></title>
         <id>https://kartverket.github.io/kvib/blog/2023/01/05/version-[4.0.0]</id>
@@ -22,7 +31,7 @@
         <link href="https://kartverket.github.io/kvib/blog/2023/01/04/version-[3.0.0]"/>
         <updated>2023-01-04T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Utvidbart panel linebreak.]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_fF9Z" id="changed">Changed<a href="#changed" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2><p>KVIB-CSS Prefiks: </p><ul><li>Endret og lagt til 'kv-' til følgende komponenter:<ul><li>Buttons</li><li>Checkbox</li><li>Radio buttons</li><li>Input field</li><li>Slider</li><li>Dropdown</li><li>Navigation</li><li>Site elements</li><li>List table</li><li>Expandable panels</li></ul></li><li>Rettet CSS class BEM naming convention skrivefeil på følgende komponenter:<ul><li>Button</li></ul></li><li>Rettet outlined on disabled button.</li></ul><p><strong>Husk å endre CSS klassenavn i prosjektene for å kunne bruke nyeste KVIB-CSS komponenter</strong></p>]]></content>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_fF9Z" id="changed">Changed<a href="#changed" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2><p>KVIB-CSS Prefiks:</p><ul><li>Endret og lagt til 'kv-' til følgende komponenter:<ul><li>Buttons</li><li>Checkbox</li><li>Radio buttons</li><li>Input field</li><li>Slider</li><li>Dropdown</li><li>Navigation</li><li>Site elements</li><li>List table</li><li>Expandable panels</li></ul></li><li>Rettet CSS class BEM naming convention skrivefeil på følgende komponenter:<ul><li>Button</li></ul></li><li>Rettet outlined on disabled button.</li></ul><p><strong>Husk å endre CSS klassenavn i prosjektene for å kunne bruke nyeste KVIB-CSS komponenter</strong></p>]]></content>
         <category label="dokumentasjon" term="dokumentasjon"/>
     </entry>
     <entry>
@@ -135,7 +144,7 @@ Oppdatert dokumentasjonssiden.</p><p>Lagt til under <strong>Inputfelt</strong>.<
         <link href="https://kartverket.github.io/kvib/blog/2022/08/03/version-[1.0.1]"/>
         <updated>2022-08-03T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Utvidbar panel]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_fF9Z" id="added">Added<a href="#added" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2><p>Ny komponent: <em>utvidbar panel</em>. </p><p>Lagt til under <strong>komponenter</strong>.</p>]]></content>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_fF9Z" id="added">Added<a href="#added" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2><p>Ny komponent: <em>utvidbar panel</em>.</p><p>Lagt til under <strong>komponenter</strong>.</p>]]></content>
         <category label="dokumentasjon" term="dokumentasjon"/>
         <category label="utvidbart panel" term="utvidbart panel"/>
     </entry>

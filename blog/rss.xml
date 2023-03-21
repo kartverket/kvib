@@ -4,10 +4,19 @@
         <title>KVIB Blog</title>
         <link>https://kartverket.github.io/kvib/blog</link>
         <description>KVIB Blog</description>
-        <lastBuildDate>Thu, 05 Jan 2023 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 16 Mar 2023 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>no</language>
+        <item>
+            <title><![CDATA[Versjon [5.0.0]]]></title>
+            <link>https://kartverket.github.io/kvib/blog/2023/03/16/version-[5.0.0]</link>
+            <guid>https://kartverket.github.io/kvib/blog/2023/03/16/version-[5.0.0]</guid>
+            <pubDate>Thu, 16 Mar 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[Nytt design for knapper.]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_fF9Z" id="changed">Changed<a href="#changed" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2><ul><li>Knapper har fått ny stiling og nye CSS klassenavn.</li><li>Laget felles dokumentasjonsside for knapper. Ligger under siden "Standard knapper".</li></ul><h2 class="anchor anchorWithStickyNavbar_fF9Z" id="removed">Removed<a href="#removed" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2><ul><li>Fjernet gammel stiling og CSS klassenavn for knapper.</li><li>Fjernet dokumentasjonssider for grønn-, blå- og ikonknapp.</li></ul><p><strong>Husk å oppdatere og endre CSS klassenavnene til de nye for å få stylingen til å virke.</strong></p><p><strong>Last ned nyeste KVIB-CSS npm pakke npm i @kvib/css</strong></p>]]></content:encoded>
+            <category>dokumentasjon</category>
+        </item>
         <item>
             <title><![CDATA[Versjon [4.0.0]]]></title>
             <link>https://kartverket.github.io/kvib/blog/2023/01/05/version-[4.0.0]</link>
@@ -23,7 +32,7 @@
             <guid>https://kartverket.github.io/kvib/blog/2023/01/04/version-[3.0.0]</guid>
             <pubDate>Wed, 04 Jan 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[Utvidbart panel linebreak.]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_fF9Z" id="changed">Changed<a href="#changed" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2><p>KVIB-CSS Prefiks: </p><ul><li>Endret og lagt til 'kv-' til følgende komponenter:<ul><li>Buttons</li><li>Checkbox</li><li>Radio buttons</li><li>Input field</li><li>Slider</li><li>Dropdown</li><li>Navigation</li><li>Site elements</li><li>List table</li><li>Expandable panels</li></ul></li><li>Rettet CSS class BEM naming convention skrivefeil på følgende komponenter:<ul><li>Button</li></ul></li><li>Rettet outlined on disabled button.</li></ul><p><strong>Husk å endre CSS klassenavn i prosjektene for å kunne bruke nyeste KVIB-CSS komponenter</strong></p>]]></content:encoded>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_fF9Z" id="changed">Changed<a href="#changed" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2><p>KVIB-CSS Prefiks:</p><ul><li>Endret og lagt til 'kv-' til følgende komponenter:<ul><li>Buttons</li><li>Checkbox</li><li>Radio buttons</li><li>Input field</li><li>Slider</li><li>Dropdown</li><li>Navigation</li><li>Site elements</li><li>List table</li><li>Expandable panels</li></ul></li><li>Rettet CSS class BEM naming convention skrivefeil på følgende komponenter:<ul><li>Button</li></ul></li><li>Rettet outlined on disabled button.</li></ul><p><strong>Husk å endre CSS klassenavn i prosjektene for å kunne bruke nyeste KVIB-CSS komponenter</strong></p>]]></content:encoded>
             <category>dokumentasjon</category>
         </item>
         <item>
@@ -136,7 +145,7 @@ Oppdatert dokumentasjonssiden.</p><p>Lagt til under <strong>Inputfelt</strong>.<
             <guid>https://kartverket.github.io/kvib/blog/2022/08/03/version-[1.0.1]</guid>
             <pubDate>Wed, 03 Aug 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Utvidbar panel]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_fF9Z" id="added">Added<a href="#added" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2><p>Ny komponent: <em>utvidbar panel</em>. </p><p>Lagt til under <strong>komponenter</strong>.</p>]]></content:encoded>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_fF9Z" id="added">Added<a href="#added" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2><p>Ny komponent: <em>utvidbar panel</em>.</p><p>Lagt til under <strong>komponenter</strong>.</p>]]></content:encoded>
             <category>dokumentasjon</category>
             <category>utvidbart panel</category>
         </item>
