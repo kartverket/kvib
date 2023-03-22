@@ -23,10 +23,10 @@
     "turbo": "latest"
   },
   "engines": {
-    "node": ">=19.6.0"
+    "node": "18.15.0"
   },
   "dependencies": {
     "@changesets/cli": "^2.25.2"
   },
-  "packageManager": "npm@8.19.2"
+  "packageManager": "npm@9.5.0"
 }
