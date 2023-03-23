@@ -26,7 +26,8 @@
     "clsx": "^1.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "tsup": "6.6.3"
+    "tsup": "6.6.3",
+    "typescript": "^5.0.2"
   },
   "peerDependencies": {
     "react": "^18.2.0",
