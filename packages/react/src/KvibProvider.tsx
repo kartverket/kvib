@@ -1,25 +1,15 @@
-import { ChakraProvider, ChakraProviderProps, extendTheme } from "@chakra-ui/react";
+import "@fontsource/mulish/400.css";
+import "@fontsource/mulish/600.css";
+import "@fontsource/mulish/700.css";
 
-const theme = extendTheme({
-  colors: {
-    brand: {
-      100: "red",
-      200: "orange",
-      300: "yellow",
-      400: "green",
-      500: "blue",
-      600: "indigo",
-      700: "violet",
-      800: "black",
-      900: "rebeccapurple",
-    },
-  },
-});
+import { ChakraProvider, ChakraProviderProps } from "@chakra-ui/react";
+import { theme as defaultKvibTheme } from "@kvib/react/src/theme";
+
 /**
  * KVIBProvider er komponenten som gir de andre komponentene riktig tema og stil
  * Den må settes inn i prosjektet KVIB skal brukes, så nærme rotkomponenten som mulig.
  */
-export const KvibProvider = ({ children, ...props }: ChakraProviderProps) => (
+export const KvibProvider = ({ theme = defaultKvibTheme, children, ...props }: ChakraProviderProps) => (
   <ChakraProvider {...props} theme={theme}>
     {children}
   </ChakraProvider>
