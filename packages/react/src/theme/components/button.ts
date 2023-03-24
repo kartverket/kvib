@@ -1,6 +1,10 @@
 import { defineStyleConfig } from "@chakra-ui/react";
 import { colors } from "../foundations";
 
+type ButtonProps = {
+  colorScheme: "blue" | "green";
+};
+
 const config = defineStyleConfig({
   baseStyle: ({ colorScheme }) => ({
     fontFamily: "Mulish",
@@ -19,6 +23,7 @@ const config = defineStyleConfig({
     cursor: "pointer",
     gap: "4px",
     textDecoration: "none",
+    backgroundColor: `${colorScheme}.80`,
   }),
   sizes: {
     sm: {
@@ -39,25 +44,32 @@ const config = defineStyleConfig({
     },
   },
   variants: {
-    primary: {
+    primary: ({ colorScheme }) => ({
+      color: colors.white,
       _disabled: {
         color: colors.grayDark,
         backgroundColor: colors.grayLight,
         boxShadow: `${colors.greenDark} 0 0 0 1px inset`,
         cursor: "not-allowed",
       },
-      _hover: {},
-    },
-    secondary: {
+      _hover: {
+        backgroundColor: `${colorScheme}.50`,
+        boxShadow: "none",
+        color: colors.white,
+      },
+    }),
+    secondary: ({ colorScheme }) => ({
+      color: `${colorScheme}.80`,
       backgroundColor: colors.white,
+      // boxShadow: `${colors.greenDark} 0 0 0 2px inset, ${colors.white} 0 0 0 4px inset, currentcolor 0 0 0 5px inset`,
       _disabled: {
         color: colors.grayDark,
         backgroundColor: colors.grayLight,
         boxShadow: `${colors.greenDark} 0 0 0 1px inset`,
         cursor: "not-allowed",
       },
-    },
-    tertiary: {
+    }),
+    tertiary: ({ colorScheme }) => ({
       backgroundColor: "transparent",
       textDecoration: "underline",
       _disabled: {
@@ -65,7 +77,7 @@ const config = defineStyleConfig({
         boxShadow: "none",
         cursor: "not-allowed",
       },
-    },
+    }),
   },
   defaultProps: {
     variant: "primary",
