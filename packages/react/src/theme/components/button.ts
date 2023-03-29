@@ -1,10 +1,6 @@
 import { defineStyleConfig } from "@chakra-ui/react";
 import { colors } from "../foundations";
 
-type ButtonProps = {
-  colorScheme: "blue" | "green";
-};
-
 const config = defineStyleConfig({
   baseStyle: ({ colorScheme }) => ({
     fontFamily: "Mulish",
@@ -49,29 +45,88 @@ const config = defineStyleConfig({
       _disabled: {
         color: colors.grayDark,
         backgroundColor: colors.grayLight,
-        boxShadow: `${colors.greenDark} 0 0 0 1px inset`,
+        boxShadow: `${colors.grayDark} 0 0 0 1px inset`,
         cursor: "not-allowed",
       },
       _hover: {
         backgroundColor: `${colorScheme}.50`,
-        boxShadow: "none",
-        color: colors.white,
+        _disabled: {
+          color: colors.grayDark,
+          backgroundColor: colors.grayLight,
+        },
+      },
+      _active: {
+        backgroundColor: `${colorScheme}.80`,
+        boxShadow: `${colors.blue[100]} 0 0 0 2px inset, ${colors.blue[100]} 0 0 0 2px inset,
+          ${colors.white} 0 0 0 4px inset`,
+        _disabled: {
+          color: colors.grayDark,
+          backgroundColor: colors.grayLight,
+          boxShadow: `${colors.grayDark} 0 0 0 1px inset`,
+        },
+      },
+      _focusVisible: {
+        backgroundColor: `${colorScheme}.80`,
+        boxShadow: `${colors.blue[100]} 0 0 0 2px inset, ${colors.blue[100]} 0 0 0 2px inset,
+        ${colors.white} 0 0 0 4px inset`,
       },
     }),
-    secondary: ({ colorScheme }) => ({
+    secondary: ({ colorScheme, theme }) => ({
       color: `${colorScheme}.80`,
       backgroundColor: colors.white,
-      // boxShadow: `${colors.greenDark} 0 0 0 2px inset, ${colors.white} 0 0 0 4px inset, currentcolor 0 0 0 5px inset`,
+      boxShadow: `${theme.colors[colorScheme][80]} 0 0 0 1px inset`,
+      _hover: {
+        backgroundColor: `${colorScheme}.50`,
+        boxShadow: `${theme.colors[colorScheme][50]} 0 0 0 1px inset`,
+        color: colors.white,
+        _disabled: {
+          color: colors.grayDark,
+          backgroundColor: colors.grayLight,
+        },
+      },
+      _active: {
+        color: colors.white,
+        backgroundColor: `${colorScheme}.80`,
+        boxShadow: `${colors.blue[100]} 0 0 0 2px inset, ${colors.blue[100]} 0 0 0 2px inset,
+        ${colors.white} 0 0 0 4px inset`,
+        _disabled: {
+          color: colors.grayDark,
+          backgroundColor: colors.grayLight,
+          boxShadow: `${colors.grayDark} 0 0 0 1px inset`,
+        },
+      },
+      _focusVisible: {
+        color: `${colorScheme}.80`,
+        backgroundColor: colors.white,
+        boxShadow: `${theme.colors[colorScheme][100]} 0 0 0 2px inset, ${colors.white} 0 0 0 4px inset, currentcolor 0 0 0 5px inset`,
+      },
       _disabled: {
         color: colors.grayDark,
         backgroundColor: colors.grayLight,
-        boxShadow: `${colors.greenDark} 0 0 0 1px inset`,
+        boxShadow: `${colors.grayDark} 0 0 0 1px inset`,
         cursor: "not-allowed",
       },
     }),
-    tertiary: ({ colorScheme }) => ({
+    tertiary: ({ colorScheme, theme }) => ({
+      color: `${colorScheme}.80`,
       backgroundColor: "transparent",
       textDecoration: "underline",
+      _hover: {
+        color: `${colorScheme}.100`,
+        _disabled: {
+          color: colors.grayDark,
+        },
+      },
+      _active: {
+        boxShadow: `${theme.colors[colorScheme][100]} 0 0 0 2px inset`,
+        _disabled: {
+          color: colors.grayDark,
+          boxShadow: "none",
+        },
+      },
+      _focusVisible: {
+        boxShadow: `${theme.colors[colorScheme][100]} 0 0 0 2px inset`,
+      },
       _disabled: {
         color: colors.grayDark,
         boxShadow: "none",
@@ -81,6 +136,7 @@ const config = defineStyleConfig({
   },
   defaultProps: {
     variant: "primary",
+    size: "md",
   },
 });
 

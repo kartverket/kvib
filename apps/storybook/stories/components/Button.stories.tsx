@@ -37,7 +37,7 @@ const Template: StoryFn<ButtonProps> = (args) => {
 
 export const Component = Template.bind({});
 Component.args = {
-  children: "Klikk på meg",
+  children: "Klikk her",
   variant: "primary",
   colorScheme: "green",
   size: "md",
