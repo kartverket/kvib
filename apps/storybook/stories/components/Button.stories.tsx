@@ -1,6 +1,6 @@
 import { Button, ButtonProps } from "@kvib/react/src/components/Button";
-import { Home } from "@mui/icons-material";
 import { StoryFn, Meta } from "@storybook/react";
+import { House } from "./House";
 
 const meta: Meta<typeof Button> = {
   title: "Komponenter/Knapper",
@@ -81,5 +81,5 @@ Default.args = {
 export const WithIcon = Template.bind({});
 WithIcon.args = {
   children: "Knapp med ikon",
-  leftIcon: <Home />,
+  leftIcon: <House />,
 };
