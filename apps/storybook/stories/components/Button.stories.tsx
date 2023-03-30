@@ -1,5 +1,6 @@
 import { Button, ButtonProps } from "@kvib/react/src/components/Button";
 import { StoryFn, Meta } from "@storybook/react";
+import { STORYBOOK_EXCLUDE_CHAKRA_PROPS } from "./excludedChakraProps";
 import { House } from "./House";
 
 const meta: Meta<typeof Button> = {
@@ -7,11 +8,12 @@ const meta: Meta<typeof Button> = {
   component: Button,
   parameters: {
     docs: {
-      story: { inline: true }, // render the story in an iframe
-      canvas: { sourceState: "shown" }, // start with the source open
+      story: { inline: true },
+      canvas: { sourceState: "shown" },
     },
   },
   argTypes: {
+    ...STORYBOOK_EXCLUDE_CHAKRA_PROPS,
     children: {
       description: "Text in button",
       table: {
@@ -78,8 +80,12 @@ Default.args = {
   isLoading: false,
 };
 
+Default.storyName = "Standard";
+
 export const WithIcon = Template.bind({});
 WithIcon.args = {
   children: "Knapp med ikon",
   leftIcon: <House />,
 };
+
+WithIcon.storyName = "Med Ikon";
