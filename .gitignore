@@ -21,7 +21,6 @@ _site/
 **/dist
 
 # Generated files
-.docusaurus
 .cache-loader
 .turbo
 
