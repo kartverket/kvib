@@ -19,7 +19,12 @@ const config = defineStyleConfig({
     cursor: "pointer",
     gap: "4px",
     textDecoration: "none",
-    backgroundColor: `${colorScheme}.80`,
+    backgroundColor: `${colorScheme}.500`,
+    _disabled: {
+      opacity: 1,
+      color: colors.gray[600],
+      cursor: "not-allowed",
+    },
   }),
   sizes: {
     sm: {
@@ -42,95 +47,77 @@ const config = defineStyleConfig({
   variants: {
     primary: ({ colorScheme }) => ({
       color: colors.white,
-      _disabled: {
-        color: colors.grayDark,
-        backgroundColor: colors.grayLight,
-        boxShadow: `${colors.grayDark} 0 0 0 1px inset`,
-        cursor: "not-allowed",
-      },
       _hover: {
-        backgroundColor: `${colorScheme}.50`,
+        backgroundColor: `${colorScheme}.400`,
         _disabled: {
-          color: colors.grayDark,
-          backgroundColor: colors.grayLight,
+          color: colors.gray[600],
+          backgroundColor: colors.gray[50],
         },
       },
       _active: {
-        backgroundColor: `${colorScheme}.80`,
-        boxShadow: `${colors.blue[100]} 0 0 0 2px inset, ${colors.blue[100]} 0 0 0 2px inset,
+        backgroundColor: `${colorScheme}.600`,
+        boxShadow: `${colors.blue[600]} 0 0 0 2px inset, ${colors.blue[600]} 0 0 0 2px inset,
           ${colors.white} 0 0 0 4px inset`,
         _disabled: {
-          color: colors.grayDark,
-          backgroundColor: colors.grayLight,
-          boxShadow: `${colors.grayDark} 0 0 0 1px inset`,
+          color: colors.gray[600],
+          backgroundColor: colors.gray[50],
+          boxShadow: `${colors.gray[600]} 0 0 0 1px inset`,
         },
       },
-      _focusVisible: {
-        backgroundColor: `${colorScheme}.80`,
-        boxShadow: `${colors.blue[100]} 0 0 0 2px inset, ${colors.blue[100]} 0 0 0 2px inset,
-        ${colors.white} 0 0 0 4px inset`,
+      _disabled: {
+        backgroundColor: colors.gray[50],
+        boxShadow: `${colors.gray[600]} 0 0 0 1px inset`,
       },
     }),
     secondary: ({ colorScheme, theme }) => ({
-      color: `${colorScheme}.80`,
+      color: `${colorScheme}.500`,
       backgroundColor: colors.white,
-      boxShadow: `${theme.colors[colorScheme][80]} 0 0 0 1px inset`,
+      boxShadow: `${theme.colors[colorScheme][500]} 0 0 0 1px inset`,
       _hover: {
-        backgroundColor: `${colorScheme}.50`,
-        boxShadow: `${theme.colors[colorScheme][50]} 0 0 0 1px inset`,
+        backgroundColor: `${colorScheme}.400`,
+        boxShadow: `${theme.colors[colorScheme][400]} 0 0 0 1px inset`,
         color: colors.white,
         _disabled: {
-          color: colors.grayDark,
-          backgroundColor: colors.grayLight,
+          color: colors.gray[600],
+          backgroundColor: colors.gray[50],
         },
       },
       _active: {
         color: colors.white,
-        backgroundColor: `${colorScheme}.80`,
-        boxShadow: `${colors.blue[100]} 0 0 0 2px inset, ${colors.blue[100]} 0 0 0 2px inset,
+        backgroundColor: `${colorScheme}.600`,
+        boxShadow: `${colors.blue[600]} 0 0 0 2px inset, ${colors.blue[600]} 0 0 0 2px inset,
         ${colors.white} 0 0 0 4px inset`,
         _disabled: {
-          color: colors.grayDark,
-          backgroundColor: colors.grayLight,
-          boxShadow: `${colors.grayDark} 0 0 0 1px inset`,
+          color: colors.gray[600],
+          backgroundColor: colors.gray[50],
+          boxShadow: `${colors.gray[600]} 0 0 0 1px inset`,
         },
       },
-      _focusVisible: {
-        color: `${colorScheme}.80`,
-        backgroundColor: colors.white,
-        boxShadow: `${theme.colors[colorScheme][100]} 0 0 0 2px inset, ${colors.white} 0 0 0 4px inset, currentcolor 0 0 0 5px inset`,
-      },
       _disabled: {
-        color: colors.grayDark,
-        backgroundColor: colors.grayLight,
-        boxShadow: `${colors.grayDark} 0 0 0 1px inset`,
-        cursor: "not-allowed",
+        backgroundColor: colors.gray[50],
+        boxShadow: `${colors.gray[600]} 0 0 0 1px inset`,
       },
     }),
-    tertiary: ({ colorScheme, theme }) => ({
-      color: `${colorScheme}.80`,
+    tertiary: ({ colorScheme }) => ({
+      color: `${colorScheme}.500`,
       backgroundColor: "transparent",
       textDecoration: "underline",
       _hover: {
-        color: `${colorScheme}.100`,
+        color: `${colorScheme}.400`,
         _disabled: {
-          color: colors.grayDark,
+          color: colors.gray[600],
         },
       },
       _active: {
-        boxShadow: `${theme.colors[colorScheme][100]} 0 0 0 2px inset`,
+        color: `${colorScheme}.600`,
+        boxShadow: `${colors.blue[600]} 0 0 0 2px inset`,
         _disabled: {
-          color: colors.grayDark,
+          color: colors.gray[600],
           boxShadow: "none",
         },
       },
-      _focusVisible: {
-        boxShadow: `${theme.colors[colorScheme][100]} 0 0 0 2px inset`,
-      },
       _disabled: {
-        color: colors.grayDark,
         boxShadow: "none",
-        cursor: "not-allowed",
       },
     }),
   },
