@@ -40,9 +40,9 @@ const meta: Meta<typeof Button> = {
     size: {
       description: "Size of button",
       table: {
-        type: { summary: "sm | md" },
+        type: { summary: "sm | md | lg" },
       },
-      options: ["sm", "md"],
+      options: ["sm", "md", "lg"],
       control: { type: "radio" },
     },
     isDisabled: {

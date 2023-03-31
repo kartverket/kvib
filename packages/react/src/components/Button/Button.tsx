@@ -7,8 +7,8 @@ import {
   Spinner,
 } from "@chakra-ui/react";
 
-export type ButtonProps = Exclude<ChakraButtonProps, "colorScheme" | "size" | "variant" | "loadingText"> & {
-  size?: "sm" | "md";
+export type ButtonProps = Exclude<ChakraButtonProps, "colorScheme" | "size" | "variant"> & {
+  size?: "sm" | "md" | "lg";
   variant?: "primary" | "secondary" | "tertiary";
   colorScheme?: "green" | "blue";
 };

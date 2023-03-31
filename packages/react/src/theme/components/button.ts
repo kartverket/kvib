@@ -22,9 +22,17 @@ const config = defineStyleConfig({
       paddingLeft: "24px",
       paddingRight: "24px",
       minWidth: "100px",
-      minHeight: "44px",
+      minHeight: "40px",
     },
     md: {
+      fontSize: "16px",
+      lineHeight: "24px",
+      paddingLeft: "24px",
+      paddingRight: "24px",
+      minWidth: "100px",
+      minHeight: "48px",
+    },
+    lg: {
       fontSize: "18px",
       lineHeight: "28px",
       paddingLeft: "24px",
@@ -57,6 +65,14 @@ const config = defineStyleConfig({
         backgroundColor: colors.gray[50],
         boxShadow: `${colors.gray[600]} 0 0 0 1px inset`,
       },
+      _loading: {
+        backgroundColor: `${colorScheme}.500`,
+        color: colors.white,
+        _hover: {
+          backgroundColor: `${colorScheme}.500`,
+          color: colors.white,
+        },
+      },
     }),
     secondary: ({ colorScheme, theme }) => ({
       color: `${colorScheme}.500`,
@@ -86,6 +102,15 @@ const config = defineStyleConfig({
         backgroundColor: colors.gray[50],
         boxShadow: `${colors.gray[600]} 0 0 0 1px inset`,
       },
+      _loading: {
+        color: `${colorScheme}.500`,
+        backgroundColor: colors.white,
+        boxShadow: `${theme.colors[colorScheme][500]} 0 0 0 1px inset`,
+        _hover: {
+          color: `${colorScheme}.500`,
+          backgroundColor: colors.white,
+        },
+      },
     }),
     tertiary: ({ colorScheme }) => ({
       color: `${colorScheme}.500`,
@@ -107,6 +132,9 @@ const config = defineStyleConfig({
       },
       _disabled: {
         boxShadow: "none",
+      },
+      _loading: {
+        color: `${colorScheme}.500`,
       },
     }),
   },
