@@ -2,4 +2,4 @@
 "@kvib/react": minor
 ---
 
-Bygget knappe-komponenten på Chakra UI
+Laget knappe-komponent og tatt i bruk Material Symbols ikoner
