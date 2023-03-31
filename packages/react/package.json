@@ -37,6 +37,8 @@
     "@chakra-ui/react": "^2.5.1",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
-    "framer-motion": "^10.5.0"
+    "@fontsource/mulish": "^4.5.14",
+    "framer-motion": "^10.5.0",
+    "material-symbols": "^0.5.4"
   }
 }
