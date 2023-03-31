@@ -8,6 +8,11 @@ export const parameters = {
       date: /Date$/,
     },
   },
+  options: {
+    storySort: {
+      order: ["Introduksjon", "Kom i gang", "Bidra"],
+    },
+  },
 };
 
 export const decorators = [
