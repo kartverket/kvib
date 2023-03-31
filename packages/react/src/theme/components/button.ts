@@ -7,7 +7,7 @@ const config = defineStyleConfig({
     fontStyle: "normal",
     fontWeight: "700",
     fontSize: "18px",
-    lineHeight: "28p",
+    lineHeight: "28px",
     borderRadius: "8px",
     border: "0",
     outline: "transparent solid 2px",
