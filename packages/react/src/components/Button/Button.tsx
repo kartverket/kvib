@@ -65,7 +65,7 @@ export const Button = forwardRef<ButtonProps, "button">(
         position="relative"
       >
         {isLoading && (
-          <Center position="absolute" right="0" paddingBottom={1} left="0" paddingTop={2}>
+          <Center position="absolute" right="0" left="0">
             <Spinner size="sm" />
           </Center>
         )}
