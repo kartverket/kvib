@@ -1,6 +1,5 @@
 import { Button, ButtonProps } from "@kvib/react/src/components/Button";
 import { StoryFn, Meta } from "@storybook/react";
-import { STORYBOOK_EXCLUDE_CHAKRA_PROPS } from "./excludedChakraProps";
 import { Delete } from "@mui/icons-material";
 
 const meta: Meta<typeof Button> = {
@@ -13,7 +12,6 @@ const meta: Meta<typeof Button> = {
     },
   },
   argTypes: {
-    ...STORYBOOK_EXCLUDE_CHAKRA_PROPS,
     children: {
       description: "Text in button",
       table: {
