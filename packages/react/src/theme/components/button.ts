@@ -3,22 +3,11 @@ import { colors } from "../foundations";
 
 const config = defineStyleConfig({
   baseStyle: ({ colorScheme }) => ({
-    fontFamily: "Mulish",
     fontStyle: "normal",
     fontWeight: "700",
     fontSize: "18px",
     lineHeight: "28px",
     borderRadius: "8px",
-    border: "0",
-    outline: "transparent solid 2px",
-    outlineOffset: "2px",
-    display: "inline-flex",
-    appearance: "none",
-    alignItems: "center",
-    justifyContent: "center",
-    cursor: "pointer",
-    gap: "4px",
-    textDecoration: "none",
     backgroundColor: `${colorScheme}.500`,
     _disabled: {
       opacity: 1,
