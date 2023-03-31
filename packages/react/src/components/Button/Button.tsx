@@ -18,7 +18,7 @@ export type ButtonProps = Exclude<ChakraButtonProps, "colorScheme" | "size" | "v
  *
  * Vi har to sett med farger. Vi har et primærsett (grønn) og et sekundærsett (blått). Vår palett er inspirert av jordtoner. Vi har valgt sekundærsettet som er blått på karttjenester og forvaltningstjenester for å ha kontrast mot kartet.
  *
- * Løsninger som skal se ut som en del av [kartverket.no](http://kartverket.no} skal bruke grønn.
+ * Løsninger som skal se ut som en del av [kartverket.no](http://kartverket.no) skal bruke grønn.
  */
 export const Button = forwardRef<ButtonProps, "button">(
   (
