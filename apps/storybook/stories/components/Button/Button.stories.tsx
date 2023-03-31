@@ -1,6 +1,5 @@
 import { Button, ButtonProps } from "@kvib/react/src/components/Button";
 import { StoryFn, Meta } from "@storybook/react";
-import { Delete } from "@mui/icons-material";
 
 const meta: Meta<typeof Button> = {
   title: "Komponenter/Knapper",
@@ -57,6 +56,20 @@ const meta: Meta<typeof Button> = {
       },
       control: "boolean",
     },
+    leftIcon: {
+      description: "Icon in button",
+      table: {
+        type: { summary: "string" },
+      },
+      control: "text",
+    },
+    rightIcon: {
+      description: "Icon in button",
+      table: {
+        type: { summary: "string" },
+      },
+      control: "text",
+    },
   },
 };
 
@@ -78,12 +91,4 @@ Default.args = {
   isLoading: false,
 };
 
-Default.storyName = "Standard";
-
-export const WithIcon = Template.bind({});
-WithIcon.args = {
-  children: "Knapp med ikon",
-  leftIcon: <Delete />,
-};
-
-WithIcon.storyName = "Med Ikon";
+Default.storyName = "Knapp";

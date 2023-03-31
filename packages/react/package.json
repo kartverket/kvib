@@ -38,8 +38,7 @@
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@fontsource/mulish": "^4.5.14",
-    "@mui/icons-material": "^5.11.11",
-    "@mui/material": "^5.11.15",
-    "framer-motion": "^10.5.0"
+    "framer-motion": "^10.5.0",
+    "material-symbols": "^0.5.4"
   }
 }
