@@ -6,7 +6,6 @@ import {
   forwardRef,
   Spinner,
 } from "@chakra-ui/react";
-import "material-symbols";
 
 export type ButtonProps = Exclude<ChakraButtonProps, "colorScheme" | "size" | "variant" | "leftIcon" | "rightIcon"> & {
   size?: "sm" | "md" | "lg";
