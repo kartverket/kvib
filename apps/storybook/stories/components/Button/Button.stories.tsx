@@ -1,7 +1,7 @@
 import { Button, ButtonProps } from "@kvib/react/src/components/Button";
 import { StoryFn, Meta } from "@storybook/react";
 import { STORYBOOK_EXCLUDE_CHAKRA_PROPS } from "./excludedChakraProps";
-import { House } from "./House";
+import { Delete } from "@mui/icons-material";
 
 const meta: Meta<typeof Button> = {
   title: "Komponenter/Knapper",
@@ -85,7 +85,7 @@ Default.storyName = "Standard";
 export const WithIcon = Template.bind({});
 WithIcon.args = {
   children: "Knapp med ikon",
-  leftIcon: <House />,
+  leftIcon: <Delete />,
 };
 
 WithIcon.storyName = "Med Ikon";
