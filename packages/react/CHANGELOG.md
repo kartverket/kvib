@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 0.4.0
+
+### Minor Changes
+
+- 25e9cb440: Laget knappe-komponent og tatt i bruk Material Symbols ikoner
+
 ## 0.3.0
 
 ### Minor Changes
