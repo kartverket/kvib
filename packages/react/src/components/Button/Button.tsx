@@ -50,17 +50,16 @@ export const Button = forwardRef<ButtonProps, "button">(
         aria-busy={isLoading}
         position="relative"
       >
-        {isLoading ? (
+        {isLoading && (
           <Center position="absolute" right="0" left="0">
             <Spinner size="sm" />
           </Center>
-        ) : (
-          <HStack>
-            {leftIcon && <Square className="material-symbols-outlined">{leftIcon}</Square>}
-            <Center as="span">{children}</Center>
-            {rightIcon && <Square className="material-symbols-outlined">{rightIcon}</Square>}
-          </HStack>
         )}
+        <HStack visibility={isLoading ? "hidden" : "visible"}>
+          {leftIcon && <Square className="material-symbols-outlined">{leftIcon}</Square>}
+          <Center as="span">{children}</Center>
+          {rightIcon && <Square className="material-symbols-outlined">{rightIcon}</Square>}
+        </HStack>
       </ChakraButton>
     );
   }
