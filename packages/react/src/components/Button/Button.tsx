@@ -1,5 +1,4 @@
 import {
-  Box,
   Button as ChakraButton,
   ButtonProps as ChakraButtonProps,
   Center,
@@ -57,7 +56,9 @@ export const Button = forwardRef<ButtonProps, "button">(
         )}
         <HStack visibility={isLoading ? "hidden" : "visible"}>
           {leftIcon && <Square className="material-symbols-outlined">{leftIcon}</Square>}
-          <Center as="span">{children}</Center>
+          <Center className="text" as="span">
+            {children}
+          </Center>
           {rightIcon && <Square className="material-symbols-outlined">{rightIcon}</Square>}
         </HStack>
       </ChakraButton>
