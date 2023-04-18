@@ -5,6 +5,8 @@ import {
   Center,
   forwardRef,
   Spinner,
+  Square,
+  HStack,
 } from "@chakra-ui/react";
 
 export type ButtonProps = Exclude<ChakraButtonProps, "colorScheme" | "size" | "variant" | "leftIcon" | "rightIcon"> & {
@@ -48,29 +50,16 @@ export const Button = forwardRef<ButtonProps, "button">(
         aria-busy={isLoading}
         position="relative"
       >
-        {isLoading && leftIcon ? (
-          <Box visibility={isLoading ? "hidden" : "visible"} aria-hidden="true">
-            <span className="material-symbols-outlined">{leftIcon}</span>
-          </Box>
-        ) : (
-          <Center paddingRight={1}>
-            <span className="material-symbols-outlined">{leftIcon}</span>
-          </Center>
-        )}
-        {isLoading && (
+        {isLoading ? (
           <Center position="absolute" right="0" left="0">
             <Spinner size="sm" />
           </Center>
-        )}
-        <Box visibility={isLoading ? "hidden" : "visible"}>{children}</Box>
-        {isLoading && rightIcon ? (
-          <Box visibility={isLoading ? "hidden" : "visible"} aria-hidden="true">
-            <span className="material-symbols-outlined">{rightIcon}</span>
-          </Box>
         ) : (
-          <Center paddingLeft={1}>
-            <span className="material-symbols-outlined">{rightIcon}</span>
-          </Center>
+          <HStack>
+            {leftIcon && <Square className="material-symbols-outlined">{leftIcon}</Square>}
+            <Center as="span">{children}</Center>
+            {rightIcon && <Square className="material-symbols-outlined">{rightIcon}</Square>}
+          </HStack>
         )}
       </ChakraButton>
     );
