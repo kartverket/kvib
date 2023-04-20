@@ -1,0 +1,48 @@
+import { Meta } from "@storybook/addon-docs";
+import { Box, Flex, Text, Spacer, SimpleGrid } from "@chakra-ui/react";
+import { shadows } from "@Kvib/react/src/theme/foundations";
+
+export const linje = <Box w="105%" bg="black" h="2px" my="15px" />;
+
+<Meta title="Design Tokens/Skygge" />
+
+<h1>Skygger</h1>
+``` import {shadows} from "@Kvib/react/src/theme/foundations"
+
+```
+<SimpleGrid columns="3" spacing="10">
+    <Text fontSize="20px">Verdi</Text>
+    <Text fontSize="20px">Kode</Text>
+    <Text fontSize="20px">Eksempel</Text>
+    {linje}{linje}{linje}
+
+    <Text>Extra small</Text>
+    <Text>shadows.xs </Text>
+    <Box bg="white" w="80px" h="80px" border-radius="4px" shadow={shadows.xs} />
+    {linje}{linje}{linje}
+
+    <Text>Small</Text>
+    <Text>shadows.sm </Text>
+    <Box bg="white" w="80px" h="80px" border-radius="4px" shadow={shadows.sm} />
+    {linje}{linje}{linje}
+
+    <Text>Base</Text>
+    <Text>shadows.base </Text>
+    <Box bg="white" w="80px" h="80px" border-radius="4px" shadow={shadows.base} />
+    {linje}{linje}{linje}
+
+    <Text>Medium</Text>
+    <Text>shadows.md </Text>
+    <Box bg="white" w="80px" h="80px" border-radius="4px" shadow={shadows.md} />
+    {linje}{linje}{linje}
+
+    <Text>Large</Text>
+    <Text>shadows.lg </Text>
+    <Box bg="white" w="80px" h="80px" border-radius="4px" shadow={shadows.lg} />
+    {linje}{linje}{linje}
+
+    <Text>Extra large</Text>
+    <Text>shadows.xl </Text>
+    <Box bg="white" w="80px" h="80px" border-radius="4px" shadow={shadows.xl} />
+</SimpleGrid>
+```
