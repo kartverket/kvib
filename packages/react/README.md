@@ -1,32 +1,47 @@
-# KVIB React-components
+# KVIB React komponentbibliotek
 
-React-components for Kartverkets KVIB designsystem.
+## Ta i bruk
 
-- ~~Uses styling defined in `@kvib/css`~~
-- All components implemented with React.forwardRef!
-- Most components extend native html-elements.
+For å ta i bruk komponentbiblioteket må du installere `@kvib/react`.
 
-## Installation
-
-```bash
-  yarn add @kvib/react
-  npm install @kvib/react
+```
+$ npm install @kvib/react
+# eller
+$ yarn add @kvib/react
 ```
 
-## Usage
+Etterpå må du wrappe hele react-applikasjonen din `KvibProvider`-komponenten.
 
-~~Remember to also import `@kvib/css` for styling!~~
+```
+// I din src/index.tsx fil for eksempel:
+import { App } from 'App';
+import { KvibProvider } from '@kvib/react';
 
-```javascript
+const root = ReactDOM.createRoot(
+  document.getElementById('root') as HTMLElement,
+);
+
+root.render(
+  <KvibProvider>
+    <App />
+  </KvibProvider>
+);
+```
+
+Nå kan du begynne å ta i bruk komponenter i applikasjonen din. For å ta i bruk for eksempel `Button`-komponenten gjør du slik:
+
+```
 import { Button } from "@kvib/react";
 
-function App() {
-  return <Button variant="primary">Click me!</Button>;
-}
+export const App = () => {
+  return (
+    <Button variant="primary">
+      Rediger
+    </Button>
+  );
+};
 ```
 
-## Learn more
+# Utvikling og bidrag
 
-## License
-
-[MIT](https://github.com/navikt/Designsystemet/blob/master/LICENCE)
+Les readme på rot for å lese mer om hvordan utvikle og bidra til KVIB.
