@@ -1,0 +1,33 @@
+import { Title, Canvas, Meta, Story, Controls } from "@storybook/blocks";
+import * as StackStories from "./Stack.stories";
+
+<Meta of={StackStories} />
+
+# Stack
+
+Stack er en layout komponent brukt til å gruppere sammen elementer og legge til spacing mellom dem.
+
+<Canvas of={StackStories.Stack} />
+
+## Ta i bruk
+
+```jsx
+import { Stack, HStack, VStack } from "@kvib/react";
+```
+
+**VStack:** brukes til å stacke elementer i vertikal retning\
+**HStack:** brukes til å stacke elementer i horisontal retning\
+**Stack:** brukes til å stacke elementer i vertikal eller horisontal retning
+
+## Props
+
+Se [Chakras dokumentasjonsside for Stack](https://chakra-ui.com/docs/components/stack/props) for tillate props.
+
+## Flere eksempler
+
+<br />
+### Responsiv Stack
+
+<Canvas of={StackStories.ResponsiveStack} />
+
+Se [Chakra sine dokumentasjonssider](https://chakra-ui.com/docs/components/stack/usage) for flere eksempler og info.

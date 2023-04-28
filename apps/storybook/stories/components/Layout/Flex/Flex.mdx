@@ -1,0 +1,42 @@
+import { Title, Canvas, Meta, Story, Controls } from "@storybook/blocks";
+import * as FlexStories from "./Flex.stories";
+
+<Meta of={FlexStories} />
+
+# Flex
+
+Flex er en boks med display satt til flex og kommer med en rekke hjelpsomme forkortelser. Den rendres som et `div` element.
+
+<Canvas of={FlexStories.Flex} />
+
+## Ta i bruk
+
+```jsx
+import { Flex, Spacer } from "@kvib/react";
+```
+
+**Flex:** En `Box` with `display: flex`.\
+**Spacer:** Er en justerbar tomt rom som kan brukes til å justere avstanden mellom underelementene i `Flex`.
+
+## Props
+
+<Controls of={FlexStories.Flex} />
+
+**Noen nyttige forkortelser:**
+
+`flexDirection` is `direction`\
+`flexWrap` is `wrap`\
+`flexBasis` is `basis`\
+`flexGrow` is `grow`\
+`flexShrink` is `shrink`\
+`alignItems` is `align`\
+`justifyContent` is `justify`
+
+## Flere eksempler
+
+<br />
+### Flex med Spacer
+
+<Canvas of={FlexStories.FlexWithSpacer} />
+
+Se [Chakra sine dokumentasjonssider](https://chakra-ui.com/docs/components/flex/usage) for flere eksempler og info.

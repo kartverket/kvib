@@ -1,4 +1,4 @@
-import { KvibProvider } from "@kvib/react/src/components/KvibProvider";
+import { KvibProvider } from "@kvib/react/src/components/provider/KvibProvider";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },

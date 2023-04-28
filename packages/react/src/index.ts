@@ -1,2 +1,2 @@
-export * from "./components/Button/Button";
-export * from "./components/KvibProvider";
+export * from "./components";
+export * from "./theme";
