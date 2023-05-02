@@ -1,4 +1,4 @@
-import { Button as KvibButton } from "@kvib/react/src/components/Button/Button";
+import { Button as KvibButton } from "@kvib/react/src/components/button/Button";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibButton> = {
