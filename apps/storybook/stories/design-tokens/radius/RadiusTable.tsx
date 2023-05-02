@@ -6,7 +6,7 @@ const example = (radius: any) => <Box backgroundColor="gainsboro" width="80px" h
 export const RadiusTable = () => {
   return (
     <TableContainer>
-      <Table variant="simple" size="lg" width="100%">
+      <Table variant="simple" width="100%">
         <Thead textAlign="left">
           <Tr>
             <Th>Eksempel</Th>

@@ -8,7 +8,7 @@ const example = (shadow: any) => (
 export const ShadowsTable = () => {
   return (
     <TableContainer>
-      <Table variant="simple" size="lg" width="100%">
+      <Table variant="simple" width="100%">
         <Thead textAlign="left">
           <Tr>
             <Th>Eksempel</Th>
