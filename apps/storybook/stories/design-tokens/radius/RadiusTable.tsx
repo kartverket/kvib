@@ -21,7 +21,7 @@ export const RadiusTable = () => {
                 <Center>{example(value)}</Center>
               </Td>
               <Td>{`${size} / ${value}`}</Td>
-              <Td>{`var(--kvib-radius-${size})`}</Td>
+              <Td>{`var(--kvib-radii-${size})`}</Td>
             </Tr>
           ))}
         </Tbody>
