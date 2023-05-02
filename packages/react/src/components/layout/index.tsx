@@ -25,5 +25,4 @@ export type {
   WrapItemProps,
   WrapProps,
 } from "@chakra-ui/react";
-export * from "./Divider";
 export * from "./Stack";

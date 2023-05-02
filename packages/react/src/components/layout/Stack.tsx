@@ -1,4 +1,3 @@
-import React from "react";
 import { Stack as ChakraStack, StackProps as ChakraStackProps, forwardRef } from "@chakra-ui/react";
 
 export type StackProps = Exclude<ChakraStackProps, "direction"> & {
