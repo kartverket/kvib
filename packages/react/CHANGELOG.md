@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 0.5.0
+
+### Minor Changes
+
+- ee9ae4abd: Oppdaterte readme
+
 ## 0.4.0
 
 ### Minor Changes
