@@ -1,6 +1,6 @@
 # KVIB - Kartverkets interaksjon- og designbibliotek
 
-[KVIB](https://kartverket.github.io/kvib/storybook) er monorepoet til Kartverkets designsystem. Kvib er et prosjekt i regi av eiendomsportalen med mål om å samle designguidelines og kode for Kartverkets applikasjoner.
+[KVIB](https://kartverket.github.io/kvib/storybook) er monorepoet til Kartverkets designsystem.
 
 ## Innhold
 
