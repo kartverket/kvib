@@ -10,10 +10,16 @@ Oversikt over alle ikoner finner du her [https://fonts.google.com/icons](https:/
 
 **Material Symbols er lagt til KVIB som avhengig, så det er ikke behov å laste det ned separat.**
 
-## Eksempel på bruk
+## Eksempeler på bruk
 
-Skriv navnet på ikonet du ønsker å bruke i proppen `icon`, `leftIcon` eller `rightIcon`.\
-Navnet på proppen vil variere fra komponent til komponent.
+```html
+<span class="material-symbols-outlined">search</span>
+<span class="material-symbols-outlined">home</span>
+<span class="material-symbols-outlined">settings</span>
+<span class="material-symbols-outlined">favorite</span>
+```
+
+Dersom komponenten har støtte for ikon (for eksempel: `icon`, `leftIcon` eller `rightIcon`), så kan du sende inn navnet på ikonet du ønsker på følgende måte:
 
 ```jsx
 <Button leftIcon="add">Knappetekst</Button>
