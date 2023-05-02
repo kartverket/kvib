@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 0.6.0
+
+### Minor Changes
+
+- 65d41f00d: Lagt til design tokens for shadows
+
 ## 0.5.0
 
 ### Minor Changes
