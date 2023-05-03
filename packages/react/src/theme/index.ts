@@ -1,13 +1,12 @@
-import { extendTheme } from "@chakra-ui/react";
 import { theme as defaultTheme } from "@chakra-ui/theme";
 import * as components from "./components";
 import * as foundations from "./foundations";
 
-export const theme = extendTheme({
+export const theme = {
   ...defaultTheme,
   ...foundations,
   components: {
     ...defaultTheme.components,
     ...components,
   },
-});
+};
