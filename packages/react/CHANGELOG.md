@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 0.7.0
+
+### Minor Changes
+
+- 945ace3b5: Lagt til design tokens for radius og endret tokens for skygger
+
 ## 0.6.0
 
 ### Minor Changes
