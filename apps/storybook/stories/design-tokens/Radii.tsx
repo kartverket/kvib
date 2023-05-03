@@ -1,7 +1,9 @@
 import { Box, Center, Table, Thead, Tbody, Tr, Th, Td, TableContainer, Code } from "@chakra-ui/react";
 import { radii } from "@kvib/react/src/theme/foundations";
 
-const example = (radii: any) => <Box backgroundColor="gainsboro" width="80px" height="80px" borderRadius={radii} />;
+const example = (radii: any) => (
+  <Box border="1px solid black" backgroundColor="white" width="80px" height="80px" borderRadius={radii} />
+);
 
 export const Radii = () => {
   return (
@@ -9,19 +11,19 @@ export const Radii = () => {
       <Table variant="simple" width="100%">
         <Thead textAlign="left">
           <Tr>
-            <Th width="30%">Eksempel</Th>
-            <Th width="auto">Verdi</Th>
-            <Th width="auto">Kode</Th>
+            <Th width="20%">Eksempel</Th>
+            <Th width="50%">Verdi</Th>
+            <Th width="30%">Kode</Th>
           </Tr>
         </Thead>
         <Tbody>
           {Object.entries(radii).map(([size, value]) => (
             <Tr key={size}>
-              <Td>
+              <Td backgroundColor="white">
                 <Center>{example(value)}</Center>
               </Td>
-              <Td>{`${size} / ${value}`}</Td>
-              <Td>
+              <Td backgroundColor="white">{`${size} / ${value}`}</Td>
+              <Td backgroundColor="white">
                 <Code>{`var(--kvib-radii-${size})`}</Code>
               </Td>
             </Tr>
