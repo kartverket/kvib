@@ -4,7 +4,6 @@ import {
   Center,
   forwardRef,
   Spinner,
-  Square,
   HStack,
 } from "@chakra-ui/react";
 
