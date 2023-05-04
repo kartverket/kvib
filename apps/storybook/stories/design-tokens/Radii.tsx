@@ -2,7 +2,7 @@ import { Box, Center, Table, Thead, Tbody, Tr, Th, Td, TableContainer, Code } fr
 import { radii } from "@kvib/react/src/theme/foundations";
 
 const example = (radii: any) => (
-  <Box border="1px solid black" backgroundColor="white" width="80px" height="80px" borderRadius={radii} />
+  <Box border="2px solid #4DB450" backgroundColor="#E9F4EC" width="80px" height="80px" borderRadius={radii} />
 );
 
 export const Radii = () => {

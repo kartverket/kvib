@@ -115,7 +115,9 @@ const config = defineStyleConfig({
     tertiary: ({ colorScheme }) => ({
       color: `${colorScheme}.500`,
       backgroundColor: "transparent",
-      textDecoration: "underline",
+      ".text": {
+        textDecoration: "Underline",
+      },
       _hover: {
         color: `${colorScheme}.400`,
         _disabled: {

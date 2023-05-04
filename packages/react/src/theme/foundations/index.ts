@@ -8,3 +8,4 @@ export * from "./letterSpacings";
 export * from "./textStyles";
 export * from "./shadows";
 export * from "./radii";
+export * from "./breakpoints";

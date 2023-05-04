@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 0.7.1
+
+### Patch Changes
+
+- 7ec16f62c: Småfiks på utseende for knappene.
+
 ## 0.7.0
 
 ### Minor Changes
