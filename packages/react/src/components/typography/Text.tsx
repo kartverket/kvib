@@ -8,13 +8,6 @@ export type TextProps = Omit<ChakraTextProps, "textStyle"> & {
   variant?: ChakraTextProps["textStyle"];
 };
 
-/**
- * A paragraph of text.
- *
- * ```tsx
- * <Text>Welcome to this paragraph of text.</Text>
- * ```
- */
 export const Text = forwardRef<TextProps, "p">(({ variant = "body", ...props }, ref) => {
   return <ChakraText {...props} textStyle={variant} ref={ref} />;
 });

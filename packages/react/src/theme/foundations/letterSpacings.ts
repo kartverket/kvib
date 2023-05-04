@@ -1,4 +1,4 @@
 export const letterSpacings = {
-  sm: "0.5%",
-  md: "1.25%",
+  wide: "0.005em",
+  wider: "0.0125em",
 };
