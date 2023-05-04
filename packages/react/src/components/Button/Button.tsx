@@ -54,12 +54,12 @@ export const Button = forwardRef<ButtonProps, "button">(
             <Spinner size="sm" />
           </Center>
         )}
-        <HStack visibility={isLoading ? "hidden" : "visible"}>
-          {leftIcon && <Square className="material-symbols-outlined">{leftIcon}</Square>}
+        <HStack spacing={1} visibility={isLoading ? "hidden" : "visible"}>
+          {leftIcon && <span className="material-symbols-outlined">{leftIcon}</span>}
           <Center className="text" as="span">
             {children}
           </Center>
-          {rightIcon && <Square className="material-symbols-outlined">{rightIcon}</Square>}
+          {rightIcon && <span className="material-symbols-outlined">{rightIcon}</span>}
         </HStack>
       </ChakraButton>
     );
