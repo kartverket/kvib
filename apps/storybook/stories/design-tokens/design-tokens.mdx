@@ -1,0 +1,40 @@
+import { Meta } from "@storybook/addon-docs";
+import { Radii } from "./Radii";
+import { Shadows } from "./Shadows";
+
+<Meta title="Design tokens" />
+
+# Design tokens
+
+Nedenfor finner du en oversikt over alle KVIBs design tokens.
+
+## Skygger
+
+<Shadows />
+
+## Radius
+
+<Radii />
+
+## Ikoner
+
+KVIB bruker ikoner fra Material Symbols.
+
+Oversikt over alle ikoner finner du her [https://fonts.google.com/icons](https://fonts.google.com/icons).
+
+**Material Symbols er lagt til KVIB som avhengig, så det er ikke behov å laste det ned separat.**
+
+### Eksempler på bruk
+
+```html
+<span class="material-symbols-outlined">search</span>
+<span class="material-symbols-outlined">home</span>
+<span class="material-symbols-outlined">settings</span>
+<span class="material-symbols-outlined">favorite</span>
+```
+
+Dersom komponenten har støtte for ikon (for eksempel: `icon`, `leftIcon` eller `rightIcon`), så kan du sende inn navnet på ikonet du ønsker på følgende måte:
+
+```jsx
+<Button leftIcon="add">Knappetekst</Button>
+```
