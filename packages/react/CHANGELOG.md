@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 0.8.0
+
+### Minor Changes
+
+- ceff882fb: Lagt til design tokens for breakpoints
+
 ## 0.7.1
 
 ### Patch Changes
