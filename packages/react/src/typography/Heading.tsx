@@ -1,4 +1,3 @@
-import React from "react";
 import { HeadingProps as ChakraHeadingProps, Text } from "@chakra-ui/react";
 
 export type HeadingProps = Exclude<ChakraHeadingProps, "textStyle"> & {
