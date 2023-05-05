@@ -22,6 +22,7 @@ const meta: Meta<typeof KvibButton> = {
       description: "Variant",
       table: {
         type: { summary: "primary | secondary | tertiary" },
+        defaultValue: { summary: "primary" },
       },
       options: ["primary", "secondary", "tertiary"],
       control: { type: "radio" },
@@ -30,6 +31,7 @@ const meta: Meta<typeof KvibButton> = {
       description: "Color of button",
       table: {
         type: { summary: "green | blue" },
+        defaultValue: { summary: "green" },
       },
       options: ["green", "blue"],
       control: { type: "radio" },
@@ -38,6 +40,7 @@ const meta: Meta<typeof KvibButton> = {
       description: "Size of button",
       table: {
         type: { summary: "sm | md | lg" },
+        defaultValue: { summary: "md" },
       },
       options: ["sm", "md", "lg"],
       control: { type: "radio" },

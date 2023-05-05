@@ -15,6 +15,7 @@ const meta: Meta<typeof KvibHeading> = {
       description: "Textstyle variant",
       table: {
         type: { summary: "title1 | title2 | title3 | title4" },
+        defaultValue: { summary: "title1" },
       },
       control: { type: "radio" },
       options: ["title1", "title2", "title3", "title4"],
@@ -26,5 +27,10 @@ export default meta;
 type Story = StoryObj<typeof KvibHeading>;
 
 export const Heading: Story = {
-  render: (args) => <KvibHeading {...args}>Jeg er en tittel</KvibHeading>,
+  args: { variant: "title1" },
+  render: (args) => (
+    <KvibHeading variant="title1" {...args}>
+      Jeg er en tittel
+    </KvibHeading>
+  ),
 };
