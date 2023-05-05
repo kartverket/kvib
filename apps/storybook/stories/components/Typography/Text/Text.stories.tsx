@@ -29,7 +29,7 @@ type Story = StoryObj<typeof KvibText>;
 export const Text: Story = {
   args: { variant: "body" },
   render: (args) => (
-    <KvibText variant="body" {...args}>
+    <KvibText {...args}>
       Lorem ipsum dolor sit amet, invenire indoctum eu vim, ad solum equidem est. Ea antiopam qualisque constituam sed,
       minim congue utroque vis eu. Dolorem incorrupte ad qui, labitur meliore ancillae no vel. Menandri constituto
       disputationi ex sit, nulla dolores deleniti nam eu. Pri putent vocibus ea.

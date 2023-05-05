@@ -28,9 +28,5 @@ type Story = StoryObj<typeof KvibHeading>;
 
 export const Heading: Story = {
   args: { variant: "title1" },
-  render: (args) => (
-    <KvibHeading variant="title1" {...args}>
-      Jeg er en tittel
-    </KvibHeading>
-  ),
+  render: (args) => <KvibHeading {...args}>Jeg er en tittel</KvibHeading>,
 };
