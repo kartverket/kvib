@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 0.9.0
+
+### Minor Changes
+
+- 2a940b7cb: Omitter propsa for leftIcon og rightIcon samt flere ubrukte props
+
 ## 0.8.0
 
 ### Minor Changes
