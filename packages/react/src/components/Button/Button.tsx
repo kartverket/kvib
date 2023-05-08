@@ -7,7 +7,18 @@ import {
   HStack,
 } from "@chakra-ui/react";
 
-export type ButtonProps = Exclude<ChakraButtonProps, "colorScheme" | "size" | "variant" | "leftIcon" | "rightIcon"> & {
+export type ButtonProps = Omit<
+  ChakraButtonProps,
+  | "colorScheme"
+  | "size"
+  | "variant"
+  | "leftIcon"
+  | "rightIcon"
+  | "iconSpacing"
+  | "isActive"
+  | "loadingText"
+  | "spinnerPlacement"
+> & {
   size?: "sm" | "md" | "lg";
   variant?: "primary" | "secondary" | "tertiary";
   colorScheme?: "green" | "blue";
