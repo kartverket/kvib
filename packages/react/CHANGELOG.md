@@ -1,5 +1,35 @@
 # @kvib/react
 
+## 0.8.0
+
+### Minor Changes
+
+- ceff882fb: Lagt til design tokens for breakpoints
+
+## 0.7.1
+
+### Patch Changes
+
+- 7ec16f62c: Småfiks på utseende for knappene.
+
+## 0.7.0
+
+### Minor Changes
+
+- 945ace3b5: Lagt til design tokens for radius og endret tokens for skygger
+
+## 0.6.0
+
+### Minor Changes
+
+- 65d41f00d: Lagt til design tokens for shadows
+
+## 0.5.0
+
+### Minor Changes
+
+- ee9ae4abd: Oppdaterte readme
+
 ## 0.4.0
 
 ### Minor Changes
