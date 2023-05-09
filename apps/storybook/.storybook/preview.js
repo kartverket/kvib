@@ -86,4 +86,6 @@ export const argTypes = {
   _mediaReduceMotion: STORYBOOK_DISABLE_CONTROL,
   _dark: STORYBOOK_DISABLE_CONTROL,
   _light: STORYBOOK_DISABLE_CONTROL,
+  _vertical: STORYBOOK_DISABLE_CONTROL,
+  _horizontal: STORYBOOK_DISABLE_CONTROL,
 };
