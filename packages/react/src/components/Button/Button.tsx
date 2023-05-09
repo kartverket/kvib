@@ -57,7 +57,6 @@ export const Button = forwardRef<ButtonProps, "button">(
         colorScheme={colorScheme}
         isDisabled={isDisabled || isLoading}
         aria-busy={isLoading}
-        position="relative"
       >
         {isLoading && (
           <Center position="absolute" right="0" left="0">
