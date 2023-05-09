@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 0.10.0
+
+### Minor Changes
+
+- 3b147bda6: Fikse typo "string" til string for knappen.
+
 ## 0.9.0
 
 ### Minor Changes
