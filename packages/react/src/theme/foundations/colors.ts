@@ -54,4 +54,5 @@ export const colors = {
     600: "#B2750B",
   },
   white: "#FFFFFF",
+  black: "#222222",
 };
