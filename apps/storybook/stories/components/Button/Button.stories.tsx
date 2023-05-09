@@ -1,9 +1,9 @@
-import { Button, ButtonProps } from "@kvib/react/src/components/Button";
-import { StoryFn, Meta } from "@storybook/react";
+import { Button as KvibButton } from "@kvib/react/src/button/Button";
+import { Meta, StoryObj } from "@storybook/react";
 
-const meta: Meta<typeof Button> = {
-  title: "Komponenter/Knapper",
-  component: Button,
+const meta: Meta<typeof KvibButton> = {
+  title: "Komponenter/Knapper og lenker/Button",
+  component: KvibButton,
   parameters: {
     docs: {
       story: { inline: true },
@@ -77,21 +77,9 @@ const meta: Meta<typeof Button> = {
 };
 
 export default meta;
+type Story = StoryObj<typeof KvibButton>;
 
-const Template: StoryFn<ButtonProps> = (args) => {
-  const { children } = args;
-
-  return <Button {...args}>{children}</Button>;
+export const Button: Story = {
+  args: { colorScheme: "green", size: "md", variant: "primary" },
+  render: (args) => <KvibButton {...args}>Klikk her</KvibButton>,
 };
-
-export const Default = Template.bind({});
-Default.args = {
-  children: "Klikk her",
-  variant: "primary",
-  colorScheme: "green",
-  size: "md",
-  isDisabled: false,
-  isLoading: false,
-};
-
-Default.storyName = "Knapp";

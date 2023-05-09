@@ -1,4 +1,3 @@
-import React from "react";
 import { Text as ChakraText, TextProps as ChakraTextProps, forwardRef } from "@chakra-ui/react";
 
 export type TextProps = Omit<ChakraTextProps, "textStyle"> & {
