@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 0.11.1
+
+### Patch Changes
+
+- 1da963e44: Restrukturert @kvib/react
+
 ## 0.11.0
 
 ### Minor Changes
