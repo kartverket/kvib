@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 0.12.0
+
+### Minor Changes
+
+- 4967381be: Lagt til fargen "black" og dokumentert farger i Storybook.
+
 ## 0.11.1
 
 ### Patch Changes
