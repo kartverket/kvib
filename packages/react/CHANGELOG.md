@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 0.10.1
+
+### Patch Changes
+
+- c94b224d7: Fjerne `position: relative` fra knappe-komponenten.
+
 ## 0.10.0
 
 ### Minor Changes
