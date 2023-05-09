@@ -1,5 +1,13 @@
 # @kvib/react
 
+## 0.11.0
+
+### Minor Changes
+
+- 5262589d8: Lagt til tokens for typografi (font size, font weight, line height, letterspacing), og laget Text og Heading-komponent og dokumentert disse i Storybook.
+
+  Har også prefixet alle tokens (css-variabler) med `kvib` og fjernet `extendTheme` slik at det er kun de tokensa vi definerer som gjelder.
+
 ## 0.10.1
 
 ### Patch Changes
