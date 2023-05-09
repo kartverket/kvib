@@ -1,5 +1,23 @@
 # @kvib/react
 
+## 0.10.1
+
+### Patch Changes
+
+- c94b224d7: Fjerne `position: relative` fra knappe-komponenten.
+
+## 0.10.0
+
+### Minor Changes
+
+- 3b147bda6: Fikse typo "string" til string for knappen.
+
+## 0.9.0
+
+### Minor Changes
+
+- 2a940b7cb: Omitter propsa for leftIcon og rightIcon samt flere ubrukte props
+
 ## 0.8.0
 
 ### Minor Changes

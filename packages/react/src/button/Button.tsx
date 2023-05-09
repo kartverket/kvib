@@ -7,12 +7,23 @@ import {
   HStack,
 } from "@chakra-ui/react";
 
-export type ButtonProps = Exclude<ChakraButtonProps, "colorScheme" | "size" | "variant" | "leftIcon" | "rightIcon"> & {
+export type ButtonProps = Omit<
+  ChakraButtonProps,
+  | "colorScheme"
+  | "size"
+  | "variant"
+  | "leftIcon"
+  | "rightIcon"
+  | "iconSpacing"
+  | "isActive"
+  | "loadingText"
+  | "spinnerPlacement"
+> & {
   size?: "sm" | "md" | "lg";
   variant?: "primary" | "secondary" | "tertiary";
   colorScheme?: "green" | "blue";
-  leftIcon?: "string";
-  rightIcon?: "string";
+  leftIcon?: string;
+  rightIcon?: string;
 };
 
 /**
@@ -46,7 +57,6 @@ export const Button = forwardRef<ButtonProps, "button">(
         colorScheme={colorScheme}
         isDisabled={isDisabled || isLoading}
         aria-busy={isLoading}
-        position="relative"
       >
         {isLoading && (
           <Center position="absolute" right="0" left="0">
