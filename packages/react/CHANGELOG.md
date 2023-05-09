@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 0.13.1
+
+### Patch Changes
+
+- 190377067: Fikset feil i tekststil responsiv letter-spacing for title1
+
 ## 0.13.0
 
 ### Minor Changes
