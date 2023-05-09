@@ -22,8 +22,8 @@ export type ButtonProps = Omit<
   size?: "sm" | "md" | "lg";
   variant?: "primary" | "secondary" | "tertiary";
   colorScheme?: "green" | "blue";
-  leftIcon?: "string";
-  rightIcon?: "string";
+  leftIcon?: string;
+  rightIcon?: string;
 };
 
 /**
