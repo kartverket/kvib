@@ -8,7 +8,13 @@ export const textStyles = {
     fontSize: [fontSizes["3xl"], fontSizes["3xl"], fontSizes["4xl"], fontSizes["4xl"], fontSizes["4xl"]],
     fontWeight: fontWeights.extrabold,
     lineHeight: lineHeights.sm,
-    letterSpacing: [letterSpacings.wide, letterSpacings.wider],
+    letterSpacing: [
+      letterSpacings.wide,
+      letterSpacings.wide,
+      letterSpacings.wider,
+      letterSpacings.wider,
+      letterSpacings.wider,
+    ],
   },
   title2: {
     fontSize: [fontSizes["xl"], fontSizes["xl"], fontSizes["2xl"], fontSizes["2xl"], fontSizes["2xl"]],
