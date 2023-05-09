@@ -1,5 +1,37 @@
 # @kvib/react
 
+## 0.11.1
+
+### Patch Changes
+
+- 1da963e44: Restrukturert @kvib/react
+
+## 0.11.0
+
+### Minor Changes
+
+- 5262589d8: Lagt til tokens for typografi (font size, font weight, line height, letterspacing), og laget Text og Heading-komponent og dokumentert disse i Storybook.
+
+  Har også prefixet alle tokens (css-variabler) med `kvib` og fjernet `extendTheme` slik at det er kun de tokensa vi definerer som gjelder.
+
+## 0.10.1
+
+### Patch Changes
+
+- c94b224d7: Fjerne `position: relative` fra knappe-komponenten.
+
+## 0.10.0
+
+### Minor Changes
+
+- 3b147bda6: Fikse typo "string" til string for knappen.
+
+## 0.9.0
+
+### Minor Changes
+
+- 2a940b7cb: Omitter propsa for leftIcon og rightIcon samt flere ubrukte props
+
 ## 0.8.0
 
 ### Minor Changes
