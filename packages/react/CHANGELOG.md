@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 0.13.0
+
+### Minor Changes
+
+- 641f45ac7: Lagt til tokens for borders + dokumentert spacings, sizes, z-index.
+
 ## 0.12.0
 
 ### Minor Changes
