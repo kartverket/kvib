@@ -1,0 +1,23 @@
+import { Title, Canvas, Meta, Story, Controls } from "@storybook/blocks";
+import * as GridStories from "./Grid.stories";
+
+<Meta of={GridStories} />
+
+# Grid
+
+Grid er en layout for å lage grid layouts.
+
+<Canvas of={GridStories.Grid} />
+
+## Ta i bruk
+
+```jsx
+import { Grid, GridItem } from "@kvib/react";
+```
+
+**Grid:** Hovedwrapper med `display: grid`.\
+**GridItem:** Brukes som et underelement til `Grid` til å kontrollere `span` og startposisjoner i griddet.
+
+## Props
+
+Se [Chakras dokumentasjonsside for Grid](https://chakra-ui.com/docs/components/grid/props) for tillate props.

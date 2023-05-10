@@ -1,0 +1,20 @@
+import { Title, Canvas, Meta, Story, Controls } from "@storybook/blocks";
+import * as ContainerStories from "./Container.stories";
+
+<Meta of={ContainerStories} />
+
+# Container
+
+Containere brukes til å avgrense innholdets bredde til et breakpoint.
+
+<Canvas of={ContainerStories.Container} />
+
+## Ta i bruk
+
+```jsx
+import { Container } from "@kvib/react";
+```
+
+## Props
+
+`Container` arver alle props fra `Box`.

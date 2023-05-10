@@ -1,0 +1,29 @@
+import { Title, Canvas, Meta, Story, Controls } from "@storybook/blocks";
+import * as SimpleGridStories from "./SimpleGrid.stories";
+
+<Meta of={SimpleGridStories} />
+
+# Grid
+
+Grid er en layout for å lage grid layouts.
+
+<Canvas of={SimpleGridStories.SimpleGrid} />
+
+## Ta i bruk
+
+```jsx
+import { SimpleGrid } from "@kvib/react";
+```
+
+## Props
+
+Se [Chakras dokumentasjonsside for Simple Grid](https://chakra-ui.com/docs/components/simple-grid/props) for tillate props.
+
+## Flere eksempler
+
+<br />
+### Responsive Simple Grid
+
+<Canvas of={SimpleGridStories.ResponsiveSimpleGrid} />
+
+Se [Chakra sine dokumentasjonssider](https://chakra-ui.com/docs/components/simple-grid/usage) for flere eksempler og info.

@@ -1,0 +1,39 @@
+import { Title, Canvas, Meta, Story, Controls } from "@storybook/blocks";
+import * as BoxStories from "./Box.stories";
+
+<Meta of={BoxStories} />
+
+# Box
+
+Box er grunnpillaren til alle komponentene i KVIB.
+
+<Canvas of={BoxStories.SimpleBox} />
+
+## Ta i bruk
+
+```jsx
+import { Box } from "@kvib/react";
+```
+
+## Props
+
+Box-komponenten aksepterer alle styling props man kan sende til en div eller et View.
+
+I React-implementasjonen kan man også spesifisere hva slags DOM-element man ønsker rendret.
+
+## Retningslinjer
+
+Box er en ganske spesiell komponent. Du kan tenke på den som en `<div />` som du kan style med props og design tokens.
+
+## Flere eksempler
+
+<br />
+### En Box med padding
+
+<Canvas of={BoxStories.BoxWithPadding} />
+
+### En Box som egentlig er en lenke
+
+<Canvas of={BoxStories.AdvancedBox} />
+
+Se [Chakra sine dokumentasjonssider](https://chakra-ui.com/docs/components/box) for flere eksempler og info.

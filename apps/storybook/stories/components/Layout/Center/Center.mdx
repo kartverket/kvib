@@ -1,0 +1,20 @@
+import { Title, Canvas, Meta, Story, Controls } from "@storybook/blocks";
+import * as CenterStories from "./Center.stories";
+
+<Meta of={CenterStories} />
+
+# Center
+
+Center er en boks der innholdet sentreres.
+
+<Canvas of={CenterStories.Center} />
+
+## Ta i bruk
+
+```jsx
+import { Center } from "@kvib/react";
+```
+
+## Props
+
+`Center` arver alle props fra `Box`.

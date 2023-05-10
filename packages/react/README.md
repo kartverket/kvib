@@ -34,11 +34,7 @@ Nå kan du begynne å ta i bruk komponenter i applikasjonen din. For å ta i bru
 import { Button } from "@kvib/react";
 
 export const App = () => {
-  return (
-    <Button variant="primary">
-      Rediger
-    </Button>
-  );
+  return <Button variant="primary">Rediger</Button>;
 };
 ```
 
