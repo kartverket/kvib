@@ -16,9 +16,6 @@ export default meta;
 type Story = StoryObj<typeof KvibCenter>;
 
 export const Center: Story = {
-  render: (args) => (
-    <KvibCenter {...args} backgroundColor="green.50" padding="6">
-      En boks med sentrert innhold
-    </KvibCenter>
-  ),
+  args: { backgroundColor: "green.50", padding: "6" },
+  render: (args) => <KvibCenter {...args}>En boks med sentrert innhold</KvibCenter>,
 };

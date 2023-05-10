@@ -16,19 +16,13 @@ export default meta;
 type Story = StoryObj<typeof KvibBox>;
 
 export const SimpleBox: Story = {
-  render: (args) => (
-    <KvibBox {...args} backgroundColor="green.50">
-      En veldig enkel boks
-    </KvibBox>
-  ),
+  args: { backgroundColor: "green.50" },
+  render: (args) => <KvibBox {...args}>En veldig enkel boks</KvibBox>,
 };
 
 export const BoxWithPadding: Story = {
-  render: (args) => (
-    <KvibBox {...args} backgroundColor="blue.50" borderRadius="md" padding="30px">
-      En litt mer kreativ boks
-    </KvibBox>
-  ),
+  args: { backgroundColor: "blue.50", borderRadius: "md", padding: "30px" },
+  render: (args) => <KvibBox {...args}>En litt mer kreativ boks</KvibBox>,
 };
 
 export const AdvancedBox: Story = {

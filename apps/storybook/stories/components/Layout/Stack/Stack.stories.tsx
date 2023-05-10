@@ -18,13 +18,13 @@ type Story = StoryObj<typeof KvibStack>;
 export const Stack: Story = {
   render: (args) => (
     <HStack {...args} spacing="24px">
-      <Box w="40px" h="40px" bg="yellow.200">
+      <Box width="40px" height="40px" backgroundColor="green.200">
         1
       </Box>
-      <Box w="40px" h="40px" bg="tomato">
+      <Box width="40px" height="40px" backgroundColor="blue.200">
         2
       </Box>
-      <Box w="40px" h="40px" bg="pink.100">
+      <Box width="40px" height="40px" backgroundColor="red.200">
         3
       </Box>
     </HStack>
@@ -34,13 +34,13 @@ export const Stack: Story = {
 export const ResponsiveStack: Story = {
   render: (args) => (
     <KvibStack {...args} direction={["column", "row"]} spacing="24px">
-      <Box w="40px" h="40px" bg="yellow.200">
+      <Box width="40px" height="40px" backgroundColor="green.200">
         1
       </Box>
-      <Box w="40px" h="40px" bg="tomato">
+      <Box width="40px" height="40px" backgroundColor="blue.200">
         2
       </Box>
-      <Box w="40px" h="40px" bg="pink.100">
+      <Box width="40px" height="40px" backgroundColor="red.200">
         3
       </Box>
     </KvibStack>

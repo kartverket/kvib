@@ -1,4 +1,5 @@
 import { Center, Box, Flex as KvibFlex, Spacer } from "@kvib/react/src/layout";
+import { Text } from "@kvib/react/src/typography/Text";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibFlex> = {
@@ -10,15 +11,6 @@ const meta: Meta<typeof KvibFlex> = {
       canvas: { sourceState: "shown" },
     },
   },
-  argTypes: {
-    centerContent: {
-      description: "If `true`, container will center its children regardless of their width.",
-      table: {
-        type: { summary: "boolean" },
-      },
-      control: "boolean",
-    },
-  },
 };
 
 export default meta;
@@ -28,14 +20,13 @@ export const Flex: Story = {
   render: (args) => (
     <KvibFlex {...args}>
       <Center width="100px" backgroundColor="green.100">
-        {/* @todo: erstatte <p></p> med <Text/> */}
-        <p>Text 1</p>
+        <Text>Text 1</Text>
       </Center>
       <Center width="100px" height="150px" backgroundColor="blue.100">
-        <p>Text 2</p>
+        <Text>Text 2</Text>
       </Center>
       <Box flex="1" backgroundColor="yellow.100">
-        <p>Text 3</p>
+        <Text>Text 3</Text>
       </Box>
     </KvibFlex>
   ),

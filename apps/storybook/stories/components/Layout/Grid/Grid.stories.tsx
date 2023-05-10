@@ -18,11 +18,11 @@ type Story = StoryObj<typeof KvibGrid>;
 export const Grid: Story = {
   render: (args) => (
     <KvibGrid {...args} templateColumns="repeat(5, 1fr)" gap={6}>
-      <GridItem width="100%" height="10" backgroundColor="blue.100" />
-      <GridItem width="100%" height="10" backgroundColor="blue.100" />
-      <GridItem width="100%" height="10" backgroundColor="blue.100" />
-      <GridItem width="100%" height="10" backgroundColor="blue.100" />
-      <GridItem width="100%" height="10" backgroundColor="blue.100" />
+      <GridItem width="100%" height={10} backgroundColor="blue.100" />
+      <GridItem width="100%" height={10} backgroundColor="blue.100" />
+      <GridItem width="100%" height={10} backgroundColor="blue.100" />
+      <GridItem width="100%" height={10} backgroundColor="blue.100" />
+      <GridItem width="100%" height={10} backgroundColor="blue.100" />
     </KvibGrid>
   ),
 };

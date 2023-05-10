@@ -30,12 +30,12 @@ export const SimpleGrid: Story = {
 export const ResponsiveSimpleGrid: Story = {
   render: (args) => (
     <KvibSimpleGrid {...args} minChildWidth="120px" spacing="40px">
-      <Box bg="tomato" height="80px"></Box>
-      <Box bg="tomato" height="80px"></Box>
-      <Box bg="tomato" height="80px"></Box>
-      <Box bg="tomato" height="80px"></Box>
-      <Box bg="tomato" height="80px"></Box>
-      <Box bg="tomato" height="80px"></Box>
+      <Box bg="red.100" height="80px"></Box>
+      <Box bg="red.100" height="80px"></Box>
+      <Box bg="red.100" height="80px"></Box>
+      <Box bg="red.100" height="80px"></Box>
+      <Box bg="red.100" height="80px"></Box>
+      <Box bg="red.100" height="80px"></Box>
     </KvibSimpleGrid>
   ),
 };
