@@ -1,4 +1,4 @@
-import { Stack as KvibStack, HStack, Box } from "@kvib/react/src/components/layout";
+import { Stack as KvibStack, HStack, Box } from "@kvib/react/src/layout";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibStack> = {
