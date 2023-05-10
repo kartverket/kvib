@@ -12,7 +12,7 @@ $ yarn add @kvib/react
 
 Etterpå må du wrappe hele react-applikasjonen din `KvibProvider`-komponenten.
 
-```
+```jsx
 // I din src/index.tsx fil for eksempel:
 import { App } from 'App';
 import { KvibProvider } from '@kvib/react';
@@ -30,15 +30,11 @@ root.render(
 
 Nå kan du begynne å ta i bruk komponenter i applikasjonen din. For å ta i bruk for eksempel `Button`-komponenten gjør du slik:
 
-```
+```jsx
 import { Button } from "@kvib/react";
 
 export const App = () => {
-  return (
-    <Button variant="primary">
-      Rediger
-    </Button>
-  );
+  return <Button variant="primary">Rediger</Button>;
 };
 ```
 

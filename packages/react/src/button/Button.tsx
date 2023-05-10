@@ -1,18 +1,29 @@
 import {
-  Box,
   Button as ChakraButton,
   ButtonProps as ChakraButtonProps,
   Center,
   forwardRef,
   Spinner,
+  HStack,
 } from "@chakra-ui/react";
 
-export type ButtonProps = Exclude<ChakraButtonProps, "colorScheme" | "size" | "variant" | "leftIcon" | "rightIcon"> & {
+export type ButtonProps = Omit<
+  ChakraButtonProps,
+  | "colorScheme"
+  | "size"
+  | "variant"
+  | "leftIcon"
+  | "rightIcon"
+  | "iconSpacing"
+  | "isActive"
+  | "loadingText"
+  | "spinnerPlacement"
+> & {
   size?: "sm" | "md" | "lg";
   variant?: "primary" | "secondary" | "tertiary";
   colorScheme?: "green" | "blue";
-  leftIcon?: "string";
-  rightIcon?: "string";
+  leftIcon?: string;
+  rightIcon?: string;
 };
 
 export const Button = forwardRef<ButtonProps, "button">(
@@ -39,32 +50,19 @@ export const Button = forwardRef<ButtonProps, "button">(
         colorScheme={colorScheme}
         isDisabled={isDisabled || isLoading}
         aria-busy={isLoading}
-        position="relative"
       >
-        {isLoading && leftIcon ? (
-          <Box visibility={isLoading ? "hidden" : "visible"} aria-hidden="true">
-            <span className="material-symbols-outlined">{leftIcon}</span>
-          </Box>
-        ) : (
-          <Center paddingRight={1}>
-            <span className="material-symbols-outlined">{leftIcon}</span>
-          </Center>
-        )}
         {isLoading && (
           <Center position="absolute" right="0" left="0">
             <Spinner size="sm" />
           </Center>
         )}
-        <Box visibility={isLoading ? "hidden" : "visible"}>{children}</Box>
-        {isLoading && rightIcon ? (
-          <Box visibility={isLoading ? "hidden" : "visible"} aria-hidden="true">
-            <span className="material-symbols-outlined">{rightIcon}</span>
-          </Box>
-        ) : (
-          <Center paddingLeft={1}>
-            <span className="material-symbols-outlined">{rightIcon}</span>
+        <HStack spacing={1} visibility={isLoading ? "hidden" : "visible"}>
+          {leftIcon && <span className="material-symbols-outlined">{leftIcon}</span>}
+          <Center className="text" as="span">
+            {children}
           </Center>
-        )}
+          {rightIcon && <span className="material-symbols-outlined">{rightIcon}</span>}
+        </HStack>
       </ChakraButton>
     );
   }
