@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 0.14.0
+
+### Minor Changes
+
+- f2f9fceb2: Lagt til layout-komponentene Box, Center, Container, Flex, Grid, Simple Grid, Stack, Wrap og dokumentert disse i Storybook.
+
 ## 0.13.1
 
 ### Patch Changes
