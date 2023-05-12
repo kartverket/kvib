@@ -1,0 +1,26 @@
+import { Meta } from "@storybook/addon-docs";
+
+<Meta title="Ikoner" />
+
+# Ikoner
+
+KVIB bruker ikoner fra Material Symbols.
+
+**Oversikt over alle ikoner finner du her [https://fonts.google.com/icons](https://fonts.google.com/icons).**
+
+## Eksempler på bruk
+
+```jsx
+<span className="material-symbols-outlined">search</span>
+
+// Med farge:
+<span className="material-symbols-outlined" style={{ color: "var(--chakra-colors-red-500)" }}>
+  warning
+</span>
+```
+
+Dersom komponenten har støtte for ikon (for eksempel: `icon`, `leftIcon` eller `rightIcon`), så kan du sende inn navnet på ikonet du ønsker på følgende måte:
+
+```jsx
+<Button leftIcon="add">Knappetekst</Button>
+```
