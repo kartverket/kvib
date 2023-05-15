@@ -1,4 +1,4 @@
-import { Radio, RadioProps } from "@Kvib/react/src/components/Radio/Radio";
+import { Radio, RadioProps } from "@Kvib/react/src/radio/Radio";
 import { StoryFn, Meta } from "@storybook/react";
 
 const meta: Meta<typeof Radio> = {
@@ -48,7 +48,6 @@ export default meta;
 
 const Template: StoryFn<RadioProps> = (args) => {
   const { children } = args;
-
   return <Radio {...args}>{children}</Radio>;
 };
 
