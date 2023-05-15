@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 0.16.0
+
+### Minor Changes
+
+- a4ba933ea: Legge tilbake extendTheme og en del chakra-tokens
+
 ## 0.15.0
 
 ### Minor Changes
