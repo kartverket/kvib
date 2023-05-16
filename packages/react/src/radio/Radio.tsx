@@ -6,12 +6,10 @@ export type RadioProps = Exclude<ChakraRadioProps, "colorScheme" | "size"> & {
   colorScheme?: "blue" | "green";
 };
 
-export const Radio = forwardRef<RadioProps, typeof Input>(({ children, colorScheme, size, ...props }) => {
+export const Radio = forwardRef<RadioProps, typeof Input>(({ children, colorScheme, size, ...props }, ref) => {
   return (
-    <>
-      <ChakraRadio colorScheme={colorScheme} size={size} borderRadius="50%" {...props}>
-        {children}
-      </ChakraRadio>
-    </>
+    <ChakraRadio colorScheme={colorScheme} size={size} ref={ref} borderRadius="50%" {...props}>
+      {children}
+    </ChakraRadio>
   );
 });

@@ -1,9 +1,9 @@
-import { Radio, RadioProps } from "@Kvib/react/src/radio/Radio";
-import { StoryFn, Meta } from "@storybook/react";
+import { Radio as KvibRadio } from "@Kvib/react/src/radio/Radio";
+import { Meta, StoryObj } from "@storybook/react";
 
-const meta: Meta<typeof Radio> = {
-  title: "Komponenter/RadioKnapper",
-  component: Radio,
+const meta: Meta<typeof KvibRadio> = {
+  title: "Komponenter/Knapper og lenker/Radio",
+  component: KvibRadio,
   parameters: {
     docs: {
       story: { inline: true },
@@ -45,18 +45,9 @@ const meta: Meta<typeof Radio> = {
 };
 
 export default meta;
+type Story = StoryObj<typeof KvibRadio>;
 
-const Template: StoryFn<RadioProps> = (args) => {
-  const { children } = args;
-  return <Radio {...args}>{children}</Radio>;
+export const Radio: Story = {
+  args: { colorScheme: "green", size: "md" },
+  render: (args) => <KvibRadio {...args}>Klikk her</KvibRadio>,
 };
-
-export const Default = Template.bind({});
-Default.args = {
-  children: "test",
-  colorScheme: "green",
-  size: "lg",
-  isDisabled: false,
-};
-
-Default.storyName = "Radioknapp";
