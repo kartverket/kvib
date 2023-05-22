@@ -14,11 +14,11 @@ const meta: Meta<typeof KvibText> = {
     variant: {
       description: "Textstyle variant",
       table: {
-        type: { summary: "leadParagraph | body | bodySmall | label | description | tag" },
+        type: { summary: "leadParagraph | body | bodySmall" },
         defaultValue: { summary: "body" },
       },
       control: { type: "radio" },
-      options: ["leadParagraph", "body", "bodySmall", "label", "description", "tag"],
+      options: ["leadParagraph", "body", "bodySmall"],
     },
   },
 };

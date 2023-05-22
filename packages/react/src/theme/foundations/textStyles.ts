@@ -52,22 +52,4 @@ export const textStyles = {
     lineHeight: lineHeights.tall,
     letterSpacing: letterSpacings.wide,
   },
-  label: {
-    fontSize: fontSizes["2xs"],
-    fontWeight: fontWeights.normal,
-    lineHeight: lineHeights.base,
-    letterSpacing: letterSpacings.wide,
-  },
-  description: {
-    fontSize: fontSizes["2xs"],
-    fontWeight: fontWeights.normal,
-    lineHeight: lineHeights.base,
-    letterSpacing: letterSpacings.wide,
-  },
-  tag: {
-    fontSize: fontSizes["3xs"],
-    fontWeight: fontWeights.bold,
-    lineHeight: lineHeights.shortest,
-    letterSpacing: letterSpacings.wide,
-  },
 };

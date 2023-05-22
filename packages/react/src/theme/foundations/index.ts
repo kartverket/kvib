@@ -7,6 +7,6 @@ export * from "./lineHeights";
 export * from "./letterSpacings";
 export * from "./textStyles";
 export * from "./shadows";
-export * from "./radii";
+export * from "./radius";
 export * from "./breakpoints";
 export * from "./borders";
