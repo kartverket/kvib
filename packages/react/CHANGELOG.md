@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 0.15.0
+
+### Minor Changes
+
+- dc33e020b: Legge tilbake chakra line-height og rename KVIB sine.
+
 ## 0.14.0
 
 ### Minor Changes
