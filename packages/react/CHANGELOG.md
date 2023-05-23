@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 0.17.0
+
+### Minor Changes
+
+- 19c018453: Lagt til noen flere tokens for border, radius og shadow.
+
 ## 0.16.0
 
 ### Minor Changes
