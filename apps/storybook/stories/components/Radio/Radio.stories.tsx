@@ -49,5 +49,5 @@ type Story = StoryObj<typeof KvibRadio>;
 
 export const Radio: Story = {
   args: { colorScheme: "green", size: "md" },
-  render: (args) => <KvibRadio {...args}>Klikk her</KvibRadio>,
+  render: (args) => <KvibRadio children={"Klikk her"} {...args} />,
 };
