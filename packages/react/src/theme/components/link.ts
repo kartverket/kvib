@@ -1,5 +1,4 @@
 import { defineStyleConfig } from "@chakra-ui/react";
-import { colors } from "../foundations";
 
 const config = defineStyleConfig({
   baseStyle: {
@@ -9,26 +8,26 @@ const config = defineStyleConfig({
     },
   },
   variants: {
-    primary: {
-      color: colors.green[500],
+    primary: ({ theme }) => ({
+      color: theme.colors.green[500],
       _hover: {
-        color: colors.green[400],
+        color: theme.colors.green[400],
         textDecoration: "none",
       },
       _active: {
-        color: colors.green[600],
+        color: theme.colors.green[600],
       },
-    },
-    secondary: {
-      color: colors.blue[500],
+    }),
+    secondary: ({ theme }) => ({
+      color: theme.colors.blue[500],
       _hover: {
-        color: colors.blue[400],
+        color: theme.colors.blue[400],
         textDecoration: "none",
       },
       _active: {
-        color: colors.blue[600],
+        color: theme.colors.blue[600],
       },
-    },
+    }),
   },
   defaultProps: {
     variant: "primary",
