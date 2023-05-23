@@ -1,7 +1,6 @@
-import React from "react";
 import { Link as ChakraLink, LinkProps as ChakraLinkProps, forwardRef } from "@chakra-ui/react";
 
-type LinkProps = Omit<ChakraLinkProps, "variant"> & {
+export type LinkProps = Omit<ChakraLinkProps, "variant"> & {
   variant?: "primary" | "secondary" | "tertiary";
 };
 /** Link to different sites or parts of site
