@@ -1,5 +1,5 @@
 import React from "react";
-import { Link as ChakraLink, LinkProps as ChakraLinkProps, forwardRef, Box, Center } from "@chakra-ui/react";
+import { Link as ChakraLink, LinkProps as ChakraLinkProps, forwardRef } from "@chakra-ui/react";
 
 type LinkProps = Omit<ChakraLinkProps, "variant"> & {
   variant?: "primary" | "secondary" | "tertiary";
