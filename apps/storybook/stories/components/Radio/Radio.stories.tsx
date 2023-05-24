@@ -1,8 +1,10 @@
-import { Radio as KvibRadio } from "@Kvib/react/src/radio/Radio";
+import { RadioButton as KvibRadio } from "@kvib/react/src/radio/Radio";
+import { RadioGroup as KvibRadioGroup } from "@kvib/react/src/radio/RadioGroup";
 import { Meta, StoryObj } from "@storybook/react";
+import { Stack as KvibStack } from "@kvib/react";
 
 const meta: Meta<typeof KvibRadio> = {
-  title: "Komponenter/Knapper og lenker/Radio",
+  title: "Komponenter/Skjema/Radio",
   component: KvibRadio,
   parameters: {
     docs: {
@@ -12,14 +14,14 @@ const meta: Meta<typeof KvibRadio> = {
   },
   argTypes: {
     children: {
-      description: "Text in button",
+      description: "Text in radio button",
       table: {
         type: { summary: "string" },
       },
       control: "text",
     },
     colorScheme: {
-      description: "Color of button",
+      description: "Color of radio button",
       table: {
         type: { summary: "green | blue" },
       },
@@ -27,7 +29,7 @@ const meta: Meta<typeof KvibRadio> = {
       control: { type: "radio" },
     },
     size: {
-      description: "Size of button",
+      description: "Size of radio button",
       table: {
         type: { summary: "sm | md | lg" },
       },
@@ -35,7 +37,7 @@ const meta: Meta<typeof KvibRadio> = {
       control: { type: "radio" },
     },
     isDisabled: {
-      description: "Toggles if button should be disabled",
+      description: "Toggles if radio button should be disabled",
       table: {
         type: { summary: "boolean" },
       },
@@ -47,7 +49,22 @@ const meta: Meta<typeof KvibRadio> = {
 export default meta;
 type Story = StoryObj<typeof KvibRadio>;
 
+const radioArgs = { children: "Klikk her", size: "md", colorScheme: "green" };
+
 export const Radio: Story = {
-  args: { colorScheme: "green", size: "md" },
-  render: (args) => <KvibRadio children={"Klikk her"} {...args} />,
+  args: radioArgs,
+  render: (args) => <KvibRadio {...args} />,
+};
+
+export const RadioGroup: Story = {
+  args: radioArgs,
+  render: (args) => (
+    <KvibRadioGroup>
+      <KvibStack direction="row">
+        <KvibRadio value="1" {...args} />
+        <KvibRadio value="2" {...args} />
+        <KvibRadio value="3" {...args} />
+      </KvibStack>
+    </KvibRadioGroup>
+  ),
 };
