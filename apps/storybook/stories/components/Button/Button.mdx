@@ -7,9 +7,15 @@ import * as ButtonStories from "./Button.stories";
 
 Her er en oversikt over utvalget av Knapper i KVIB. Disse er blant annet bygget opp ved bruk av desing tokens fra KVIB, eksempelvis farger og typografi. I dokumentasjonen følger beskrivelse av komponenten og bruksområde, sammen med kodeeksempler.
 
-Vi har to sett med farger. Vi har et primærsett (grønn) og et sekundærsett (blått). Vår palett er inspirert av jordtoner. Vi har valgt sekundærsettet som er blått på karttjenester og forvaltningstjenester for å ha kontrast mot kartet.
+I Kartverket har vi to sett med knappestiler.\
+Et nettsidesett og et forvatlningsett. For løsninger som skal gå inn under eller oppfattes som kartverket.no, skal man bruke det grønne nettsidesettet.\
+For karttjenester, forvaltningstjenester og lignende benytter vi oss av det blå settet. Dette er for å få en tydelig kontrast mot kartet.
 
-Løsninger som skal se ut som en del av [kartverket.no](http://kartverket.no) skal bruke grønn.
+I tillegg til knappestiler har vi også knappetyper. Dette er for å få et tydelig knappehierarki som med visuelle grep illustrerer hva som er viktigst og hva knappen gjør.
+
+**Primary button** Brukes for den viktigste, ønsket eller avsluttende handling.\
+**Secondary button** Viktig, men ikke viktigste eller fullført handling.\
+**Tertiary button** Den mindre “viktige handlingen” Fin å bruke mot Primary for å illustrere tydelig handling.
 
 <Canvas of={ButtonStories.Button} />
 
