@@ -1,7 +1,6 @@
 import { RadioButton as KvibRadio } from "@kvib/react/src/radio/Radio";
 import { RadioGroup as KvibRadioGroup } from "@kvib/react/src/radio/RadioGroup";
 import { Meta, StoryObj } from "@storybook/react";
-import { Stack as KvibStack } from "@kvib/react";
 
 const meta: Meta<typeof KvibRadio> = {
   title: "Komponenter/Skjema/Radio",
@@ -49,22 +48,18 @@ const meta: Meta<typeof KvibRadio> = {
 export default meta;
 type Story = StoryObj<typeof KvibRadio>;
 
-const radioArgs = { children: "Klikk her", size: "md", colorScheme: "green" };
-
 export const Radio: Story = {
-  args: radioArgs,
+  args: { children: "Klikk her", size: "md", colorScheme: "green" },
   render: (args) => <KvibRadio {...args} />,
 };
 
 export const RadioGroup: Story = {
-  args: radioArgs,
+  args: { ...Radio.args },
   render: (args) => (
     <KvibRadioGroup>
-      <KvibStack direction="row">
-        <KvibRadio value="1" {...args} />
-        <KvibRadio value="2" {...args} />
-        <KvibRadio value="3" {...args} />
-      </KvibStack>
+      <KvibRadio value="1" {...args} />
+      <KvibRadio value="2" {...args} />
+      <KvibRadio value="3" {...args} />
     </KvibRadioGroup>
   ),
 };
