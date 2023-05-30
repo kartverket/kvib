@@ -10,7 +10,11 @@ import * as RadioStories from "./Radio.stories";
 
 ## Enkeltvisning
 
-Her er en oversikt over utvalget av Radioknapper i Designsystemet. Disse er blant annet bygget opp ved bruk av desing tokens fra Designsystemet, eksempelvis farger og typografi. I dokumentasjonen følger beskrivelse av komponenten og bruksområde, sammen med kodeeksempler.
+Her er en oversikt over utvalget av `<Radio>` i Designsystemet. Disse er blant annet bygget opp ved bruk av desing
+tokens fra Designsystemet, eksempelvis farger og typografi. I dokumentasjonen følger beskrivelse av komponenten og bruksområde, sammen med kodeeksempler.
+
+Radioknapper skal kun brukes hvis brukeren bare har ett valg blant flere alternativer. Ved mange alternativer er det
+lurere å bruke dropdown, men helst bruk radioknapp der det lar seg gjøre, for å redusere klikk.
 
 <Canvas of={RadioStories.Radio} />
 ### Props
@@ -21,7 +25,8 @@ Her er en oversikt over utvalget av Radioknapper i Designsystemet. Disse er blan
 
 ## Gruppevisning
 
-Dette er en mer reell situasjon hvor man bruker radioknapper. For å få knappene til å samarbeide, putter man alle inn i en RadioGroup, deretter tildeler en verdi til hver radioknapp i gruppen.
+Dette er en mer reell situasjon hvor man bruker `<Radio>`. For å få knappene til å samarbeide, putter man alle inn i
+en `<RadioGroup>`, deretter tildeler en `value` til hver `<Radio>` i gruppen.
 
 <Canvas of={RadioStories.RadioGroup} />
 ### Props

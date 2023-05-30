@@ -1,4 +1,4 @@
-import { RadioButton as KvibRadio } from "@kvib/react/src/radio/Radio";
+import { Radio as KvibRadio } from "@kvib/react/src/radio/Radio";
 import { RadioGroup as KvibRadioGroup } from "@kvib/react/src/radio/RadioGroup";
 import { Meta, StoryObj } from "@storybook/react";
 
