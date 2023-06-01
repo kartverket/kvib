@@ -1,6 +1,6 @@
 import { forwardRef, Radio as ChakraRadio, RadioProps as ChakraRadioProps } from "@chakra-ui/react";
 
-export type RadioProps = Exclude<ChakraRadioProps, "colorScheme" | "size"> & {
+export type RadioProps = Exclude<ChakraRadioProps, "colorScheme"> & {
   colorScheme?: "blue" | "green";
 };
 
