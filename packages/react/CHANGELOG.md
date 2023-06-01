@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 0.18.0
+
+### Minor Changes
+
+- 01429f371: Lagt til TextLink-komponenten og endret tokenverdi for shadows.outline.
+
 ## 0.17.0
 
 ### Minor Changes
