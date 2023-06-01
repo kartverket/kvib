@@ -80,6 +80,6 @@ export default meta;
 type Story = StoryObj<typeof KvibButton>;
 
 export const Button: Story = {
-  args: { colorScheme: "green", size: "md", variant: "primary" },
-  render: (args) => <KvibButton {...args}>Klikk her</KvibButton>,
+  args: { children: "Klikk her", colorScheme: "green", size: "md", variant: "primary" },
+  render: (args) => <KvibButton {...args}>{args.children}</KvibButton>,
 };
