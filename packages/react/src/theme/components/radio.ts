@@ -6,15 +6,15 @@ const { definePartsStyle, defineMultiStyleConfig } = createMultiStyleConfigHelpe
 
 const sizes = {
   sm: definePartsStyle({
-    control: { width: "20px", height: "20px" },
+    control: { width: "16px", height: "16px" },
     label: { fontSize: "sm" },
   }),
   md: definePartsStyle({
-    control: { w: "24px", h: "24px" },
+    control: { w: "20px", h: "20px" },
     label: { fontSize: "md" },
   }),
   lg: definePartsStyle({
-    control: { w: "32px", h: "32px" },
+    control: { w: "24px", h: "24px" },
     label: { fontSize: "lg" },
   }),
 };
@@ -27,21 +27,25 @@ const baseStyle = ({ colorScheme }) =>
           borderColor: `${colorScheme}.400`,
           color: `${colorScheme}.400`,
         },
+        ".chakra-radio__label": {
+          color: `${colorScheme}.400`,
+        },
         ".chakra-radio:disabled": {
           pointerEvents: "visiblePainted",
         },
       },
     },
     control: {
+      m: "2px",
       borderColor: `${colorScheme}.500`,
       backgroundColor: "white",
       _checked: {
         backgroundColor: "white",
         color: `${colorScheme}.500`,
-        // _before: {
-        // h: "50%",
-        // w: "50%",
-        // },
+        _before: {
+          h: "62.5%",
+          w: "62.5%",
+        },
         _hover: {
           color: `${colorScheme}.400`,
           borderColor: `${colorScheme}.400`,
@@ -59,9 +63,6 @@ const baseStyle = ({ colorScheme }) =>
       },
     },
     label: {
-      _hover: {
-        color: `${colorScheme}.400`,
-      },
       _disabled: {
         opacity: "100%",
         color: colors.gray[400],
