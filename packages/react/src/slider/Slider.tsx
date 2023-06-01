@@ -7,11 +7,16 @@ import {
   forwardRef,
 } from "@chakra-ui/react";
 
-export const Slider = forwardRef<ChakraSliderProps, "div">((props, ref) => {
+export type SliderProps = Omit<ChakraSliderProps, "colorScheme" | "size" | "variant"> & {
+  size?: "sm" | "md" | "lg";
+  colorScheme?: "green" | "blue";
+};
+
+export const Slider = forwardRef<SliderProps, "div">(({ size = "lg", colorScheme = "green", ...props }, ref) => {
   return (
-    <ChakraSlider ref={ref} {...props} aria-label="slider-ex-1" defaultValue={30}>
+    <ChakraSlider ref={ref} {...props} colorScheme={colorScheme} size={size}>
       <SliderTrack>
-        <SliderFilledTrack />
+        <SliderFilledTrack></SliderFilledTrack>
       </SliderTrack>
       <SliderThumb />
     </ChakraSlider>

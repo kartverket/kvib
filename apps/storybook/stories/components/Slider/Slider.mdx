@@ -1,20 +1,35 @@
 import { Title, Canvas, Meta, Story, Controls } from "@storybook/blocks";
 import * as SliderStories from "./Slider.stories";
+// import * as SliderWithLabelsStories from "./SliderWithLabelsStories";
 
 <Meta of={SliderStories} />
 
 # Slider
 
-her er en oversikt
+## En enkel slider
 
 <Canvas of={SliderStories.Slider} />
 
-## Ta i bruk
+### Ta i bruk
 
 ```jsx
 import { Slider } from "@kvib/react";
 ```
 
-## Props
+### Props
 
 <Controls of={SliderStories.Slider} />
+
+## En slider med labels
+
+{/* <Canvas of={SliderStories.SliderWithLabel} /> */}
+
+### Ta i bruk
+
+```jsx
+import { SliderLabeled } from "@kvib/react";
+```
+
+### Props
+
+{/* <Controls of={SliderStories.SliderWithLabel} /> */}
