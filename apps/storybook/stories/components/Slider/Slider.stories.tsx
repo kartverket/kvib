@@ -1,7 +1,6 @@
 import { Slider as KvibSlider } from "@kvib/react/src/slider/Slider";
 import { SliderLabeled as KvibSliderLabeled } from "@kvib/react/src/slider/SliderLabeled";
 import { SliderMark } from "@chakra-ui/react";
-import { fontSizes, fontWeights } from "@kvib/react/src/theme/foundations";
 
 import { Meta, StoryObj } from "@storybook/react";
 
@@ -47,15 +46,6 @@ const meta: Meta<typeof KvibSlider> = {
       options: ["sm", "md", "lg"],
       control: { type: "radio" },
     },
-    orientation: {
-      description: "Orientation of the slider",
-      table: {
-        type: { summary: "horizontal | vertical" },
-        defaultValue: { summary: "horizontal" },
-      },
-      options: ["vertical", "horizontal"],
-      control: { type: "radio" },
-    },
     min: {
       description: "The minimum allowed value of the slider. Cannot be greater than max.",
       table: {
@@ -72,6 +62,14 @@ const meta: Meta<typeof KvibSlider> = {
       },
       control: { type: "number" },
     },
+    isDisabled: {
+      description: "If true, the slider will be disabled",
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: false },
+      },
+      control: "boolean",
+    },
   },
 };
 
@@ -82,12 +80,12 @@ export const Slider: Story = {
   args: {
     colorScheme: "green",
     size: "md",
-    orientation: "horizontal",
     "aria-label": "slider-ex",
     defaultValue: 30,
     min: 0,
     max: 100,
     id: "slider",
+    isDisabled: false,
   },
   render: (args) => <KvibSlider {...args}></KvibSlider>,
 };
@@ -96,27 +94,8 @@ export const SliderWithLabel: Story = {
   args: { ...Slider.args },
   render: (args) => (
     <KvibSliderLabeled {...args}>
-      <SliderMark
-        value={0}
-        fontSize={fontSizes.xs}
-        fontWeight={fontWeights.normal}
-        lineHeight={"18px"}
-        display={"flex"}
-        height={"13px"}
-        marginY={"5px"}
-      >
-        0
-      </SliderMark>
-      <SliderMark
-        value={100}
-        ml={"-5"}
-        fontSize={fontSizes.xs}
-        fontWeight={fontWeights.normal}
-        lineHeight={"18px"}
-        display={"flex"}
-        height={"13px"}
-        marginY={"5px"}
-      >
+      <SliderMark value={0}>0</SliderMark>
+      <SliderMark value={100} ml={"-5"}>
         100
       </SliderMark>
     </KvibSliderLabeled>

@@ -12,7 +12,6 @@ import {
 } from "@chakra-ui/react";
 
 export type SliderTooltipProps = Omit<ChakraTooltipProps, "hasArrow" | "placement">;
-export type SliderLabeledProps = SliderProps;
 
 export const Tooltip = forwardRef<SliderTooltipProps, "div">(({ ...props }, ref) => {
   return (
@@ -22,8 +21,10 @@ export const Tooltip = forwardRef<SliderTooltipProps, "div">(({ ...props }, ref)
   );
 });
 
+export type SliderLabeledProps = SliderProps;
+
 export const SliderLabeled = forwardRef<SliderLabeledProps, "div">(
-  ({ children, size = "lg", colorScheme = "green", ...props }, ref) => {
+  ({ children, size = "md", colorScheme = "green", ...props }, ref) => {
     const [sliderValue, setSliderValue] = useState(5);
     const [showTooltip, setShowTooltip] = useState(false);
     return (
@@ -42,7 +43,6 @@ export const SliderLabeled = forwardRef<SliderLabeledProps, "div">(
         <SliderTrack>
           <SliderFilledTrack />
         </SliderTrack>
-
         <Container>{children}</Container>
       </ChakraSlider>
     );
