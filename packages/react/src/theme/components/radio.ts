@@ -66,4 +66,5 @@ const baseStyle = ({ colorScheme }) =>
     },
   });
 
-export const radioTheme = defineMultiStyleConfig({ baseStyle });
+export const config = defineMultiStyleConfig({ baseStyle });
+export default config;
