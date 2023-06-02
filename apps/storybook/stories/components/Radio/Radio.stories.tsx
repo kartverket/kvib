@@ -27,14 +27,6 @@ const meta: Meta<typeof KvibRadio> = {
       options: ["green", "blue"],
       control: { type: "radio" },
     },
-    size: {
-      description: "Size of radio button",
-      table: {
-        type: { summary: "sm | md | lg" },
-      },
-      options: ["sm", "md", "lg"],
-      control: { type: "radio" },
-    },
     isDisabled: {
       description: "Toggles if radio button should be disabled",
       table: {
@@ -49,7 +41,7 @@ export default meta;
 type Story = StoryObj<typeof KvibRadio>;
 
 export const Radio: Story = {
-  args: { children: "Klikk her", size: "md", colorScheme: "green" },
+  args: { children: "Klikk her", colorScheme: "green" },
   render: (args) => <KvibRadio {...args} />,
 };
 

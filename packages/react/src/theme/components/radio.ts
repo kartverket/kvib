@@ -4,20 +4,6 @@ import { colors } from "../foundations";
 
 const { definePartsStyle, defineMultiStyleConfig } = createMultiStyleConfigHelpers(radioAnatomy.keys);
 
-const sizes = {
-  sm: definePartsStyle({
-    control: { width: "16px", height: "16px" },
-    label: { fontSize: "sm" },
-  }),
-  md: definePartsStyle({
-    control: { w: "20px", h: "20px" },
-    label: { fontSize: "md" },
-  }),
-  lg: definePartsStyle({
-    control: { w: "24px", h: "24px" },
-    label: { fontSize: "lg" },
-  }),
-};
 // @ts-ignore
 const baseStyle = ({ colorScheme }) =>
   definePartsStyle({
@@ -30,15 +16,22 @@ const baseStyle = ({ colorScheme }) =>
         ".chakra-radio__label": {
           color: `${colorScheme}.400`,
         },
-        ".chakra-radio:disabled": {
+        _disabled: {
           pointerEvents: "visiblePainted",
+          _hover: {
+            ".chakra-radio__label": {
+              color: colors.gray[400],
+            },
+          },
         },
       },
     },
     control: {
+      width: "20px",
+      height: "20px",
       m: "2px",
       borderColor: `${colorScheme}.500`,
-      backgroundColor: "white",
+      // backgroundColor: "black",
       _checked: {
         backgroundColor: "white",
         color: `${colorScheme}.500`,
@@ -73,4 +66,4 @@ const baseStyle = ({ colorScheme }) =>
     },
   });
 
-export const radioTheme = defineMultiStyleConfig({ baseStyle, sizes });
+export const radioTheme = defineMultiStyleConfig({ baseStyle });
