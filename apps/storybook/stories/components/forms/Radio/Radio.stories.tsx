@@ -1,5 +1,5 @@
-import { Radio as KvibRadio } from "@kvib/react/src/radio/Radio";
-import { RadioGroup as KvibRadioGroup } from "@kvib/react/src/radio/RadioGroup";
+import { Radio as KvibRadio } from "@kvib/react/src/forms/Radio";
+import { RadioGroup as KvibRadioGroup } from "@kvib/react/src/forms/RadioGroup";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibRadio> = {
