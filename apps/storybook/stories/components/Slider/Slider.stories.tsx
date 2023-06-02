@@ -1,9 +1,9 @@
 import { Slider as KvibSlider } from "@kvib/react/src/slider/Slider";
-import { SliderLabeled as KvibSliderLabeled, Tooltip as KvibSliderTooltip } from "@kvib/react/src/slider/SliderLabeled";
-import { SliderFilledTrack, SliderMark, SliderThumb, SliderTrack } from "@chakra-ui/react";
+import { SliderLabeled as KvibSliderLabeled } from "@kvib/react/src/slider/SliderLabeled";
+import { SliderMark } from "@chakra-ui/react";
+import { fontSizes, fontWeights } from "@kvib/react/src/theme/foundations";
 
 import { Meta, StoryObj } from "@storybook/react";
-import { useState } from "react";
 
 const meta: Meta<typeof KvibSlider> = {
   title: "Komponenter/Slider/Slider",
@@ -15,6 +15,20 @@ const meta: Meta<typeof KvibSlider> = {
     },
   },
   argTypes: {
+    "aria-label": {
+      description: "The static string to use used for `aria-label` if no visible label is used.",
+      table: {
+        type: { summary: "string" },
+      },
+      control: { type: "text" },
+    },
+    id: {
+      description: "The base id to use for the slider and its components",
+      table: {
+        type: { summary: "string" },
+      },
+      control: { type: "text" },
+    },
     colorScheme: {
       description: "Color of slider",
       table: {
@@ -42,6 +56,22 @@ const meta: Meta<typeof KvibSlider> = {
       options: ["vertical", "horizontal"],
       control: { type: "radio" },
     },
+    min: {
+      description: "The minimum allowed value of the slider. Cannot be greater than max.",
+      table: {
+        type: { summary: "number" },
+        defaultValue: { summary: "0" },
+      },
+      control: { type: "number" },
+    },
+    max: {
+      description: "The maximum allowed value of the slider. Cannot be less than min.",
+      table: {
+        type: { summary: "number" },
+        defaultValue: { summary: "0" },
+      },
+      control: { type: "number" },
+    },
   },
 };
 
@@ -49,40 +79,46 @@ export default meta;
 type Story = StoryObj<typeof KvibSlider>;
 
 export const Slider: Story = {
-  args: { colorScheme: "green", size: "md", orientation: "horizontal" },
-  render: (args) => <KvibSlider {...args} aria-label="slider-ex" defaultValue={30}></KvibSlider>,
+  args: {
+    colorScheme: "green",
+    size: "md",
+    orientation: "horizontal",
+    "aria-label": "slider-ex",
+    defaultValue: 30,
+    min: 0,
+    max: 100,
+    id: "slider",
+  },
+  render: (args) => <KvibSlider {...args}></KvibSlider>,
 };
 
-//TODO-BUGFIX
-
-const [sliderValue, setSliderValue] = useState(5);
-const [showTooltip, setShowTooltip] = useState(false);
 export const SliderWithLabel: Story = {
-  args: { ...Slider.args, setSliderValue, setShowTooltip, sliderValue, showTooltip },
-  render: (...args) => (
-    <KvibSliderLabeled
-      {...args}
-      id="slider"
-      defaultValue={5}
-      min={0}
-      max={100}
-      // onMouseEnter={() => setShowTooltip(true)}
-      // onMouseLeave={() => setShowTooltip(false)}
-      // onChange={(val) => setSliderValue(val)}
-      aria-label="slider-labeled-ex"
-    >
-      <SliderMark value={0} ml="-2">
-        0%
+  args: { ...Slider.args },
+  render: (args) => (
+    <KvibSliderLabeled {...args}>
+      <SliderMark
+        value={0}
+        fontSize={fontSizes.xs}
+        fontWeight={fontWeights.normal}
+        lineHeight={"18px"}
+        display={"flex"}
+        height={"13px"}
+        marginY={"5px"}
+      >
+        0
       </SliderMark>
-      <SliderMark value={100} ml="-5">
-        100%
+      <SliderMark
+        value={100}
+        ml={"-5"}
+        fontSize={fontSizes.xs}
+        fontWeight={fontWeights.normal}
+        lineHeight={"18px"}
+        display={"flex"}
+        height={"13px"}
+        marginY={"5px"}
+      >
+        100
       </SliderMark>
-      <SliderTrack>
-        <SliderFilledTrack />
-      </SliderTrack>
-      <KvibSliderTooltip isOpen={showTooltip} label={`${sliderValue}%`}>
-        <SliderThumb />
-      </KvibSliderTooltip>
     </KvibSliderLabeled>
   ),
 };

@@ -3,10 +3,8 @@ import { SliderProps } from "./Slider";
 import {
   Container,
   Slider as ChakraSlider,
-  Box,
   forwardRef,
   SliderFilledTrack,
-  SliderMark,
   SliderThumb,
   SliderTrack,
   Tooltip as ChakraTooltip,
@@ -14,6 +12,7 @@ import {
 } from "@chakra-ui/react";
 
 export type SliderTooltipProps = Omit<ChakraTooltipProps, "hasArrow" | "placement">;
+export type SliderLabeledProps = SliderProps;
 
 export const Tooltip = forwardRef<SliderTooltipProps, "div">(({ ...props }, ref) => {
   return (
@@ -23,76 +22,29 @@ export const Tooltip = forwardRef<SliderTooltipProps, "div">(({ ...props }, ref)
   );
 });
 
-//TODO: remove when fixed bug below
-
-// export const SliderLabeled = forwardRef<SliderProps, "div">(
-//     ({
-//          size= "lg",
-//          colorScheme="green",
-//          ...props
-//      },
-//      ref) => {
-//
-//         const [sliderValue, setSliderValue] = useState(5)
-//         const [showTooltip, setShowTooltip] = useState(false)
-//         return (
-//             <Box pt={6} pb={2}>
-//                 <ChakraSlider
-//                     ref={ref}
-//                     {...props}
-//                     colorScheme={colorScheme}
-//                     size={size}
-//                     id='slider'
-//                     defaultValue={5}
-//                     min={0}
-//                     max={100}
-//                     onMouseEnter={() => setShowTooltip(true)}
-//                     onMouseLeave={() => setShowTooltip(false)}
-//                     onChange={(val) => setSliderValue(val)}
-//                     aria-label='slider-labeled-ex'>
-//                     <SliderMark value={0} ml="-2">
-//                         0%
-//                     </SliderMark>
-//                     <SliderMark value={100} ml="-5" >
-//                         100%
-//                     </SliderMark>
-//                     <SliderTrack>
-//                         <SliderFilledTrack />
-//                     </SliderTrack>
-//                     <Tooltip
-//                         isOpen={showTooltip}
-//                         label={`${sliderValue}%`}
-//                     >
-//                         <SliderThumb />
-//                     </Tooltip>
-//                 </ChakraSlider>
-//             </Box>
-//         );
-//     });
-
-//TODO-BUGFIX
-export const SliderLabeled = forwardRef<SliderProps, "div">(
+export const SliderLabeled = forwardRef<SliderLabeledProps, "div">(
   ({ children, size = "lg", colorScheme = "green", ...props }, ref) => {
     const [sliderValue, setSliderValue] = useState(5);
     const [showTooltip, setShowTooltip] = useState(false);
     return (
-      <Box pt={6} pb={2}>
-        <ChakraSlider
-          ref={ref}
-          {...props}
-          colorScheme={colorScheme}
-          size={size}
-          // id='slider'
-          // defaultValue={5}
-          // min={0}
-          // max={100}
-          onMouseEnter={() => setShowTooltip(true)}
-          onMouseLeave={() => setShowTooltip(false)}
-          onChange={(val) => setSliderValue(val)}
-        >
-          <Container>{children}</Container>
-        </ChakraSlider>
-      </Box>
+      <ChakraSlider
+        ref={ref}
+        {...props}
+        colorScheme={colorScheme}
+        size={size}
+        onMouseEnter={() => setShowTooltip(true)}
+        onMouseLeave={() => setShowTooltip(false)}
+        onChange={(val) => setSliderValue(val)}
+      >
+        <Tooltip isOpen={showTooltip} label={`${sliderValue}%`}>
+          <SliderThumb />
+        </Tooltip>
+        <SliderTrack>
+          <SliderFilledTrack />
+        </SliderTrack>
+
+        <Container>{children}</Container>
+      </ChakraSlider>
     );
   }
 );
