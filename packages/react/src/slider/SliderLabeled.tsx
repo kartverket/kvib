@@ -25,7 +25,7 @@ export type SliderLabeledProps = SliderProps;
 
 export const SliderLabeled = forwardRef<SliderLabeledProps, "div">(
   ({ children, size = "md", colorScheme = "green", ...props }, ref) => {
-    const [sliderValue, setSliderValue] = useState(5);
+    const [sliderValue, setSliderValue] = useState(props.defaultValue);
     const [showTooltip, setShowTooltip] = useState(false);
     return (
       <ChakraSlider
