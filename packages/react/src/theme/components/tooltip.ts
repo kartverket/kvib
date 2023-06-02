@@ -20,11 +20,10 @@ const baseStyle = defineStyle({
   py: "10px",
   borderRadius: radii.base,
   fontWeight: "medium",
-  fontSize: fontSizes["3xs"],
+  fontSize: fontSizes.xs,
   boxShadow: shadows.base,
   maxW: "xs",
   zIndex: "tooltip",
-  padding: "10px 16px",
 });
 
 export const tooltipTheme = defineStyleConfig({

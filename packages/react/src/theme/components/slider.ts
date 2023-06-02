@@ -1,85 +1,46 @@
 import { sliderAnatomy as parts } from "@chakra-ui/anatomy";
 import { createMultiStyleConfigHelpers, cssVar, defineStyle } from "@chakra-ui/styled-system";
-import { colors, shadows, borders } from "../foundations";
-import { orient } from "@chakra-ui/theme-tools";
+import { colors, shadows, borders, fontSizes, fontWeights } from "../foundations";
 
 const { defineMultiStyleConfig, definePartsStyle } = createMultiStyleConfigHelpers(parts.keys);
 
 const $thumbSize = cssVar("slider-thumb-size");
 const $trackSize = cssVar("slider-track-width");
-const $bg = cssVar("slider-bg");
 
-const baseStyleContainer = defineStyle((props) => {
-  const { orientation } = props;
-
+const baseStyleContainer = defineStyle(() => {
   return {
     display: "inline-block",
     position: "relative",
     cursor: "pointer",
     _disabled: {
-      opacity: 0.6,
+      opacity: "100%",
       cursor: "default",
       pointerEvents: "none",
+      w: "100%",
     },
-    ...orient({
-      orientation,
-      vertical: { h: "100%" },
-      horizontal: { w: "100%" },
-    }),
   };
 });
 
-const baseStyleTrack = defineStyle((props) => {
-  const orientationStyles = orient({
-    orientation: props.orientation,
-    horizontal: { h: $trackSize.reference },
-    vertical: { w: $trackSize.reference },
-  });
-
+const baseStyleTrack = defineStyle(() => {
   return {
-    ...orientationStyles,
+    h: $trackSize.reference,
     overflow: "hidden",
     borderRadius: "9999px",
 
     bg: colors.gray[100],
-    _dark: {
-      [$bg.variable]: "colors.whiteAlpha.200",
+    _disabled: {
+      ".chakra-slider__filled-track": {
+        backgroundColor: colors.gray[500],
+      },
+      opacity: "100%",
     },
-    // _disabled: {
-    //     [$bg.variable]: "colors.gray.300",
-    //     _dark: {
-    //         [$bg.variable]: "colors.whiteAlpha.300",
-    //     },
-    // },
-    //bg: $bg.reference,
   };
 });
 
-const baseStyleThumb = defineStyle((props) => {
-  const { orientation } = props;
-  const orientationStyle = orient({
-    orientation,
-    vertical: {
-      left: "50%",
-      transform: `translateX(-50%)`,
-      _active: {
-        transform: `translateX(-50%) scale(1.15)`,
-      },
-    },
-    horizontal: {
-      top: "50%",
-      transform: `translateY(-50%)`,
-      _active: {
-        transform: `translateY(-50%) scale(1.15)`,
-      },
-    },
-  });
-
+const baseStyleThumb = defineStyle(() => {
   return {
-    ...orientationStyle,
     w: $thumbSize.reference,
     h: $thumbSize.reference,
-    // [$bg.variable]:`${colorScheme}.500`,
     bg: colors.white,
     display: "flex",
     alignItems: "center",
@@ -88,14 +49,19 @@ const baseStyleThumb = defineStyle((props) => {
     outline: 0,
     zIndex: 1,
     borderRadius: "full",
-    // bg: $bg.reference ,
     boxShadow: shadows.base,
     border: borders.none,
-    // borderColor: "transparent",
     transitionProperty: "transform",
     transitionDuration: "normal",
     _focusVisible: {
-      boxShadow: shadows.base,
+      boxShadow: shadows.outline,
+      transform: `translateY(-50%) scale(1.15)`,
+    },
+    _active: {
+      transform: `translateY(-50%) scale(1.15)`,
+    },
+    _hover: {
+      transform: `translateY(-50%) scale(1.15)`,
     },
     _disabled: {
       bg: colors.gray[300],
@@ -109,22 +75,27 @@ const baseStyleFilledTrack = defineStyle((props) => {
   return {
     width: "inherit",
     height: "inherit",
-    // [$bg.variable]: ´colors.${c}.[500]´,
     bg: `${c}.500`,
-    _dark: {
-      [$bg.variable]: `${c}.200`,
-    },
-    _disabled: {
-      bg: colors.gray[500],
-    },
+  };
+});
+
+const baseStyleMark = defineStyle(() => {
+  return {
+    fontSize: fontSizes.xs,
+    fontWeight: fontWeights.normal,
+    lineHeight: "18px",
+    display: "flex",
+    height: "13px",
+    marginY: "5px",
   };
 });
 
 const baseStyle = definePartsStyle((props) => ({
-  container: baseStyleContainer(props),
-  track: baseStyleTrack(props),
-  thumb: baseStyleThumb(props),
+  container: baseStyleContainer(),
+  track: baseStyleTrack(),
+  thumb: baseStyleThumb(),
   filledTrack: baseStyleFilledTrack(props),
+  mark: baseStyleMark(),
 }));
 
 const sizeLg = definePartsStyle({
@@ -159,6 +130,6 @@ export const sliderTheme = defineMultiStyleConfig({
   sizes,
   defaultProps: {
     size: "md",
-    colorScheme: "blue",
+    colorScheme: "green",
   },
 });
