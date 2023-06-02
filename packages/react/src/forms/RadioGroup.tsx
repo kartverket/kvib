@@ -1,5 +1,5 @@
 import { forwardRef, RadioGroup as ChakraRadioGroup, RadioGroupProps as ChakraRadioGroupProps } from "@chakra-ui/react";
-import { Stack } from "@kvib/react";
+import { Stack } from "@kvib/react/src/layout";
 
 export type RadioGroupProps = ChakraRadioGroupProps;
 

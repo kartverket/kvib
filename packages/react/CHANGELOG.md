@@ -1,5 +1,17 @@
 # @kvib/react
 
+## 0.19.0
+
+### Minor Changes
+
+- 6ae53e243: La til første versjon av radioknapp. Denne har default chakra-styling med kv farger
+
+## 0.18.0
+
+### Minor Changes
+
+- 01429f371: Lagt til TextLink-komponenten og endret tokenverdi for shadows.outline.
+
 ## 0.17.0
 
 ### Minor Changes
