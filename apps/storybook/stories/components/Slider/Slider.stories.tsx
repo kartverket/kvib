@@ -70,6 +70,13 @@ const meta: Meta<typeof KvibSlider> = {
       },
       control: "boolean",
     },
+    defaultValue: {
+      description: "The initial value of the slider in uncontrolled mode",
+      table: {
+        type: { summary: "number" },
+      },
+      control: { type: "number" },
+    },
   },
 };
 
@@ -90,7 +97,7 @@ export const Slider: Story = {
   render: (args) => <KvibSlider {...args}></KvibSlider>,
 };
 
-export const SliderWithLabel: Story = {
+export const SliderLabeled: Story = {
   args: { ...Slider.args },
   render: (args) => (
     <KvibSliderLabeled {...args}>
