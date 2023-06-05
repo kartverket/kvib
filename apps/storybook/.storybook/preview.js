@@ -10,6 +10,7 @@ export const parameters = {
   },
   options: {
     storySort: {
+      method: "alphabetical",
       order: ["Introduksjon", "Oppsett", "Bidra", "Design", "Komponenter"],
     },
   },
