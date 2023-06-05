@@ -1,11 +1,11 @@
 import { Box, Center, Table, Thead, Tbody, Tr, Th, Td, TableContainer, Code } from "@chakra-ui/react";
-import { shadows } from "@kvib/react/src/theme/foundations";
+import { radii } from "packages/react/src/theme/foundations";
 
-const example = (shadow: any) => (
-  <Box backgroundColor="white" width="80px" height="80px" boxShadow={shadow} borderRadius="4px" />
+const example = (radii: any) => (
+  <Box border="2px solid #4DB450" backgroundColor="#E9F4EC" width="80px" height="80px" borderRadius={radii} />
 );
 
-export const Shadows = () => {
+export const Radii = () => {
   return (
     <TableContainer>
       <Table variant="simple" width="100%">
@@ -17,14 +17,14 @@ export const Shadows = () => {
           </Tr>
         </Thead>
         <Tbody>
-          {Object.entries(shadows).map(([size, value]) => (
+          {Object.entries(radii).map(([size, value]) => (
             <Tr key={size}>
-              <Td backgroundColor="#F7FAFC">
+              <Td backgroundColor="white">
                 <Center>{example(value)}</Center>
               </Td>
               <Td backgroundColor="white">{`${size} / ${value}`}</Td>
               <Td backgroundColor="white">
-                <Code>{`var(--kvib-shadows-${size})`}</Code>
+                <Code>{`var(--kvib-radii-${size})`}</Code>
               </Td>
             </Tr>
           ))}

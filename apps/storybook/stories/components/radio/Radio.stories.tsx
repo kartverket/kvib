@@ -1,9 +1,8 @@
-import { Radio as KvibRadio } from "@kvib/react/src/forms/Radio";
-import { RadioGroup as KvibRadioGroup } from "@kvib/react/src/forms/RadioGroup";
+import { Radio as KvibRadio, RadioGroup as KvibRadioGroup } from "@kvib/react/src/radio";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibRadio> = {
-  title: "Komponenter/Skjema/Radio",
+  title: "Komponenter/Radio",
   component: KvibRadio,
   parameters: {
     docs: {

@@ -2,7 +2,7 @@ import { Button as KvibButton } from "@kvib/react/src/button/Button";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibButton> = {
-  title: "Komponenter/Knapper og lenker/Button",
+  title: "Komponenter/Button",
   component: KvibButton,
   parameters: {
     docs: {
