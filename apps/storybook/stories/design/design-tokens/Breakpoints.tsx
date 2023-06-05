@@ -1,5 +1,5 @@
 import { Table, Thead, Tbody, Tr, Th, Td, TableContainer, Code } from "@chakra-ui/react";
-import { breakpoints } from "packages/react/src/theme/foundations";
+import { breakpoints } from "@kvib/react/src/theme/foundations";
 
 export const Breakpoints = () => {
   return (

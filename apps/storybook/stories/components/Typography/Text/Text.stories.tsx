@@ -2,7 +2,7 @@ import { Text as KvibText } from "@kvib/react/src/typography/Text";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibText> = {
-  title: "Komponenter/Typografi/Text",
+  title: "Design/Typografi/Text",
   component: KvibText,
   parameters: {
     docs: {

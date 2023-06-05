@@ -1,5 +1,5 @@
 import { Box, Center, Table, Thead, Tbody, Tr, Th, Td, TableContainer, Code } from "@chakra-ui/react";
-import { radii } from "packages/react/src/theme/foundations";
+import { radii } from "@kvib/react/src/theme/foundations";
 
 const example = (radii: any) => (
   <Box border="2px solid #4DB450" backgroundColor="#E9F4EC" width="80px" height="80px" borderRadius={radii} />

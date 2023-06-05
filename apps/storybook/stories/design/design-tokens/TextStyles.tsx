@@ -1,5 +1,5 @@
 import { Text, Table, Thead, Tbody, Tr, Th, Td, TableContainer, Code } from "@chakra-ui/react";
-import { textStyles } from "packages/react/src/theme/foundations";
+import { textStyles } from "@kvib/react/src/theme/foundations";
 
 export const TextStyles = () => {
   const renderValue = (value: string | string[]) => {

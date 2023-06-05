@@ -1,5 +1,5 @@
 import { SimpleGrid, Box, VStack, Text, Heading } from "@chakra-ui/react";
-import { colors } from "packages/react/src/theme/foundations";
+import { colors } from "@kvib/react/src/theme/foundations";
 
 type ColorScaleType =
   | string
