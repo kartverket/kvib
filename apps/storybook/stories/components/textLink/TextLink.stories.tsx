@@ -2,7 +2,7 @@ import { TextLink as KvibLink } from "@kvib/react/src/link/TextLink";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibLink> = {
-  title: "Komponenter/Knapper og lenker/TextLink",
+  title: "Komponenter/TextLink",
   component: KvibLink,
   parameters: {
     docs: {
