@@ -1,2 +1,2 @@
-export { Checkbox } from "@chakra-ui/react";
-export type { CheckboxProps } from "@chakra-ui/react";
+export { Checkbox, CheckboxGroup } from "@chakra-ui/react";
+export type { CheckboxProps, CheckboxGroupProps } from "@chakra-ui/react";
