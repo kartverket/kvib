@@ -1,5 +1,15 @@
 # @kvib/react
 
+## 0.20.0
+
+### Minor Changes
+
+- f9f680def: **Heading:**
+  Lagt til title1-4 som mulige verdier for size i Heading-komponenten. Dokumentert Chakra sine 4xl-xl sizes i Storybook.\\
+
+  **Text**
+  Text-komponenten tar imot textStyles. Fjernet title1-4 som tekststil. Dokumententert fontSizes 6xl-xs i Storybook.
+
 ## 0.19.0
 
 ### Minor Changes
