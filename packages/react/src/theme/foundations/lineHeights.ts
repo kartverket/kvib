@@ -1,6 +1,7 @@
 export const lineHeights = {
   normal: "normal",
   none: 1,
+  shortest: 1.125,
   shorter: 1.25,
   short: 1.375,
   base: 1.5,

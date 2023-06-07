@@ -4,52 +4,22 @@ import { lineHeights } from "./lineHeights";
 import { letterSpacings } from "./letterSpacings";
 
 export const textStyles = {
-  title1: {
-    fontSize: [fontSizes["3xl"], fontSizes["3xl"], fontSizes["4xl"], fontSizes["4xl"], fontSizes["4xl"]],
-    fontWeight: fontWeights.extrabold,
-    lineHeight: lineHeights.shorter,
-    letterSpacing: [
-      letterSpacings.wide,
-      letterSpacings.wide,
-      letterSpacings.wider,
-      letterSpacings.wider,
-      letterSpacings.wider,
-    ],
-  },
-  title2: {
-    fontSize: [fontSizes["xl"], fontSizes["xl"], fontSizes["2xl"], fontSizes["2xl"], fontSizes["2xl"]],
-    fontWeight: fontWeights.bold,
-    lineHeight: lineHeights.short,
-    letterSpacing: letterSpacings.wide,
-  },
-  title3: {
-    fontSize: fontSizes.lg,
-    fontWeight: fontWeights.bold,
-    lineHeight: lineHeights.short,
-    letterSpacing: letterSpacings.wide,
-  },
-  title4: {
-    fontSize: fontSizes.sm,
-    fontWeight: fontWeights.bold,
-    lineHeight: lineHeights.short,
-    letterSpacing: letterSpacings.wide,
-  },
   leadParagraph: {
-    fontSize: fontSizes.md,
+    fontSize: fontSizes["2xl"],
     fontWeight: fontWeights.semibold,
     lineHeight: lineHeights.base,
-    letterSpacing: letterSpacings.wide,
+    letterSpacing: letterSpacings["wide-sm"],
   },
   body: {
-    fontSize: fontSizes.xs,
+    fontSize: fontSizes.lg,
     fontWeight: fontWeights.normal,
-    lineHeight: lineHeights.tall,
-    letterSpacing: letterSpacings.wide,
+    lineHeight: lineHeights.base,
+    letterSpacing: letterSpacings["wide-sm"],
   },
   bodySmall: {
-    fontSize: fontSizes["2xs"],
+    fontSize: fontSizes.md,
     fontWeight: fontWeights.normal,
-    lineHeight: lineHeights.tall,
-    letterSpacing: letterSpacings.wide,
+    lineHeight: lineHeights.base,
+    letterSpacing: letterSpacings["wide-sm"],
   },
 };
