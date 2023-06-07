@@ -66,5 +66,10 @@ const baseStyle = ({ colorScheme }) =>
     },
   });
 
-export const config = defineMultiStyleConfig({ baseStyle });
+export const config = defineMultiStyleConfig({
+  baseStyle,
+  defaultProps: {
+    colorScheme: "green",
+  },
+});
 export default config;

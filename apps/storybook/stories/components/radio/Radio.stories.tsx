@@ -40,7 +40,7 @@ export default meta;
 type Story = StoryObj<typeof KvibRadio>;
 
 export const Radio: Story = {
-  args: { children: "Klikk her", colorScheme: "green" },
+  args: { children: "Klikk her" },
   render: (args) => <KvibRadio {...args} />,
 };
 

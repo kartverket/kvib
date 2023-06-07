@@ -8,7 +8,7 @@ export type RadioGroupProps = ChakraRadioGroupProps & {
 export const RadioGroup = forwardRef<RadioGroupProps, "div">(({ children, direction, ...props }, ref) => {
   return (
     <ChakraRadioGroup {...props} ref={ref}>
-      <Stack direction={direction} />
+      <Stack direction={direction} children={children} />
     </ChakraRadioGroup>
   );
 });
