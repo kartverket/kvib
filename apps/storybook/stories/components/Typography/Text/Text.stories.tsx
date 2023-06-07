@@ -1,4 +1,4 @@
-import { Text as KvibText } from "@kvib/react/src/typography/Text";
+import { Text as KvibText } from "@kvib/react/src/typography";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibText> = {
@@ -11,11 +11,20 @@ const meta: Meta<typeof KvibText> = {
     },
   },
   argTypes: {
-    variant: {
-      description: "Textstyle variant",
+    fontSize: {
+      description: "Fontsize",
+      table: {
+        type: { summary: "6xl | 5xl | 4xl | 3xl | 2xl | xl | lg | md | sm | xs" },
+        defaultValue: { summary: "lg" },
+      },
+      control: { type: "radio" },
+      options: ["6xl", "5xl", "4xl", "3xl", "2xl", "xl", "lg", "md", "sm", "xs"],
+    },
+
+    textStyle: {
+      description: "Textstyle",
       table: {
         type: { summary: "leadParagraph | body | bodySmall" },
-        defaultValue: { summary: "body" },
       },
       control: { type: "radio" },
       options: ["leadParagraph", "body", "bodySmall"],
@@ -27,7 +36,8 @@ export default meta;
 type Story = StoryObj<typeof KvibText>;
 
 export const Text: Story = {
-  args: { variant: "body" },
+  args: { fontSize: "lg" },
+
   render: (args) => (
     <KvibText {...args}>
       Lorem ipsum dolor sit amet, invenire indoctum eu vim, ad solum equidem est. Ea antiopam qualisque constituam sed,

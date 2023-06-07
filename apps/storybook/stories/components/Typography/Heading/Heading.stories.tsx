@@ -1,4 +1,4 @@
-import { Heading as KvibHeading } from "@kvib/react/src/typography/Heading";
+import { Heading as KvibHeading } from "@kvib/react/src/typography";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibHeading> = {
@@ -11,14 +11,14 @@ const meta: Meta<typeof KvibHeading> = {
     },
   },
   argTypes: {
-    variant: {
-      description: "Textstyle variant",
+    size: {
+      description: "Size",
       table: {
-        type: { summary: "title1 | title2 | title3 | title4" },
-        defaultValue: { summary: "title1" },
+        type: { summary: "4xl | 3xl | 2xl | xl | lg | md | sm | xs | title1 | title2 | title3 | title4" },
+        defaultValue: { summary: "4xl" },
       },
       control: { type: "radio" },
-      options: ["title1", "title2", "title3", "title4"],
+      options: ["4xl", "3xl", "2xl", "xl", "lg", "md", "sm", "xs", "title1", "title2", "title3", "title4"],
     },
   },
 };
@@ -27,6 +27,6 @@ export default meta;
 type Story = StoryObj<typeof KvibHeading>;
 
 export const Heading: Story = {
-  args: { variant: "title1" },
+  args: { size: "4xl" },
   render: (args) => <KvibHeading {...args}>Jeg er en tittel</KvibHeading>,
 };
