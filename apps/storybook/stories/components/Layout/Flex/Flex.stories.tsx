@@ -1,5 +1,5 @@
 import { Center, Box, Flex as KvibFlex, Spacer } from "@kvib/react/src/layout";
-import { Text } from "@kvib/react/src/typography";
+import { Text } from "@kvib/react/src/typography/Text";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibFlex> = {
