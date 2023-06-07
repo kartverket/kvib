@@ -15,7 +15,7 @@ const meta: Meta<typeof KvibHeading> = {
       description: "Size",
       table: {
         type: { summary: "4xl | 3xl | 2xl | xl | lg | md | sm | xs | title1 | title2 | title3 | title4" },
-        defaultValue: { summary: "4xl" },
+        defaultValue: { summary: "xl" },
       },
       control: { type: "radio" },
       options: ["4xl", "3xl", "2xl", "xl", "lg", "md", "sm", "xs", "title1", "title2", "title3", "title4"],
@@ -27,6 +27,6 @@ export default meta;
 type Story = StoryObj<typeof KvibHeading>;
 
 export const Heading: Story = {
-  args: { size: "4xl" },
+  args: { size: "xl" },
   render: (args) => <KvibHeading {...args}>Jeg er en tittel</KvibHeading>,
 };

@@ -11,16 +11,6 @@ const meta: Meta<typeof KvibText> = {
     },
   },
   argTypes: {
-    fontSize: {
-      description: "Fontsize",
-      table: {
-        type: { summary: "6xl | 5xl | 4xl | 3xl | 2xl | xl | lg | md | sm | xs" },
-        defaultValue: { summary: "lg" },
-      },
-      control: { type: "radio" },
-      options: ["6xl", "5xl", "4xl", "3xl", "2xl", "xl", "lg", "md", "sm", "xs"],
-    },
-
     textStyle: {
       description: "Textstyle",
       table: {
@@ -29,6 +19,14 @@ const meta: Meta<typeof KvibText> = {
       control: { type: "radio" },
       options: ["leadParagraph", "body", "bodySmall"],
     },
+    fontSize: {
+      description: "Fontsize",
+      table: {
+        type: { summary: "6xl | 5xl | 4xl | 3xl | 2xl | xl | lg | md | sm | xs" },
+      },
+      control: { type: "radio" },
+      options: ["6xl", "5xl", "4xl", "3xl", "2xl", "xl", "lg", "md", "sm", "xs"],
+    },
   },
 };
 
@@ -36,7 +34,7 @@ export default meta;
 type Story = StoryObj<typeof KvibText>;
 
 export const Text: Story = {
-  args: { fontSize: "lg" },
+  args: { textStyle: "body" },
 
   render: (args) => (
     <KvibText {...args}>
