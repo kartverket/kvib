@@ -1,4 +1,4 @@
-import { Button as KvibButton } from "@kvib/react/src/button/Button";
+import { Button as KvibButton, ButtonGroup as KvibButtonGroup } from "@kvib/react/src/button";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibButton> = {
@@ -77,9 +77,23 @@ const meta: Meta<typeof KvibButton> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof KvibButton>;
+type ButtonStory = StoryObj<typeof KvibButton>;
+type ButtonGroupStory = StoryObj<typeof KvibButtonGroup>;
 
-export const Button: Story = {
+export const Button: ButtonStory = {
   args: { children: "Klikk her", colorScheme: "green", size: "md", variant: "primary" },
   render: (args) => <KvibButton {...args}>{args.children}</KvibButton>,
+};
+
+export const ButtonGroup: ButtonGroupStory = {
+  render: (args) => (
+    <KvibButtonGroup {...args}>
+      <KvibButton colorScheme="blue" variant="primary">
+        Klikk her
+      </KvibButton>
+      <KvibButton colorScheme="blue" variant="secondary">
+        Klikk her
+      </KvibButton>
+    </KvibButtonGroup>
+  ),
 };
