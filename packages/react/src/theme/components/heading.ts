@@ -8,7 +8,7 @@ const config = defineStyleConfig({
   sizes: {
     "4xl": {
       fontSize: ["6xl", null, "7xl"],
-      lineHeight: 2,
+      lineHeight: 1,
     },
     "3xl": {
       fontSize: ["5xl", null, "6xl"],
