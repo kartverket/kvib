@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 0.24.0
+
+### Minor Changes
+
+- 06648ef2b: Eksportert alle komponenter i hovedindexfilen
+
 ## 0.23.0
 
 ### Minor Changes
