@@ -1,5 +1,18 @@
 # @kvib/react
 
+## 0.23.0
+
+### Minor Changes
+
+- d808ad6c3: Lagt til feedback-komponenter:
+
+  - Alert
+  - Circular Progress
+  - Progress
+  - Skeleton
+  - Spinner
+  - Toast
+
 ## 0.22.0
 
 ### Minor Changes
