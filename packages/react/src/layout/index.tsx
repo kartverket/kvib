@@ -1,6 +1,7 @@
 export {
   Box,
   Center,
+  Square,
   Circle,
   Container,
   Flex,
@@ -8,21 +9,26 @@ export {
   Grid,
   GridItem,
   SimpleGrid,
+  Stack,
   HStack,
   VStack,
   Wrap,
   WrapItem,
+  AspectRatio,
 } from "@chakra-ui/react";
 export type {
   BoxProps,
   CenterProps,
+  SquareProps,
   ContainerProps,
   FlexProps,
-  GridItemProps,
-  GridProps,
-  SimpleGridProps,
   SpacerProps,
-  WrapItemProps,
+  GridProps,
+  GridItemProps,
+  SimpleGridProps,
+  StackProps,
   WrapProps,
+  WrapItemProps,
+  AspectRatioProps,
 } from "@chakra-ui/react";
 export * from "./Stack";
