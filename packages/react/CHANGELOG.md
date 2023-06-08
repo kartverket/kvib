@@ -1,5 +1,28 @@
 # @kvib/react
 
+## 0.22.0
+
+### Minor Changes
+
+- 5c3b951d0: Eksportert alle data display-komponenter:
+
+  - Badge
+  - Card
+  - Divider
+  - Kbd
+  - List
+  - Stat
+  - Table
+  - Tag
+
+## 0.21.0
+
+### Minor Changes
+
+- 4f0d6db23: - Endret navn på `/foundations`-mappe til `/tokens`
+  - Videreeksportert flere `Layout`-komponenter
+  - Videreeksportert alle `Forms`-komponenter
+
 ## 0.20.0
 
 ### Minor Changes
