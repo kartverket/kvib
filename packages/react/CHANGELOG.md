@@ -1,5 +1,20 @@
 # @kvib/react
 
+## 0.22.0
+
+### Minor Changes
+
+- 5c3b951d0: Eksportert alle data display-komponenter:
+
+  - Badge
+  - Card
+  - Divider
+  - Kbd
+  - List
+  - Stat
+  - Table
+  - Tag
+
 ## 0.21.0
 
 ### Minor Changes
