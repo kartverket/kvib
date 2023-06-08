@@ -1,5 +1,13 @@
 # @kvib/react
 
+## 0.21.0
+
+### Minor Changes
+
+- 4f0d6db23: - Endret navn på `/foundations`-mappe til `/tokens`
+  - Videreeksportert flere `Layout`-komponenter
+  - Videreeksportert alle `Forms`-komponenter
+
 ## 0.20.0
 
 ### Minor Changes
