@@ -7,7 +7,7 @@ export type LinkProps = Omit<ChakraLinkProps, "variant"> & {
  *
  * You can specify the `variant` prop to get different link designs.
  */
-export const TextLink = forwardRef<LinkProps, "a">(({ children, ...props }, ref) => {
+export const Link = forwardRef<LinkProps, "a">(({ children, ...props }, ref) => {
   const isExternal = props.isExternal !== undefined ? props.isExternal : Boolean(props.href?.match(/^https?:\/\//));
   return (
     <ChakraLink {...props} ref={ref} isExternal={isExternal}>
