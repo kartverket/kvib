@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 0.31.0
+
+### Minor Changes
+
+- 65d02b192: Fjerne custom KVIB theming fra kvibifiserte komponenter
+
 ## 0.30.0
 
 ### Minor Changes
