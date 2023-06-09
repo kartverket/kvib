@@ -1,5 +1,21 @@
 # @kvib/react
 
+## 0.28.0
+
+### Minor Changes
+
+- 7ec3f9fea: Eksportert chakra-tokens, med unntak av fonts:
+  -blur
+  -borders
+  -breakpoints-colors
+  raidus
+  -shadows
+  -sizes
+  -spacing
+  -transitions
+  -typography
+  -z-index
+
 ## 0.27.0
 
 ### Minor Changes
