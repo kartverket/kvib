@@ -1,5 +1,18 @@
 # @kvib/react
 
+## 0.27.0
+
+### Minor Changes
+
+- 191b6d340: Eksportert flere Typografi-komponenter (Highlight) og alle Overlay-komponenter
+
+  - Alert Dialog
+  - Drawer
+  - Menu
+  - Modal
+  - Popover
+  - Tooltip
+
 ## 0.26.0
 
 ### Minor Changes
