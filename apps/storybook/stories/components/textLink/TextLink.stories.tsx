@@ -1,4 +1,4 @@
-import { TextLink as KvibLink } from "@kvib/react/src/link/TextLink";
+import { Link as KvibLink } from "@kvib/react/src/link";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibLink> = {
@@ -33,7 +33,7 @@ const meta: Meta<typeof KvibLink> = {
 export default meta;
 type Story = StoryObj<typeof KvibLink>;
 
-export const TextLink: Story = {
+export const Link: Story = {
   args: {
     children: "Dette er en lenke",
     variant: "primary",
