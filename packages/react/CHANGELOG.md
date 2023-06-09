@@ -1,5 +1,33 @@
 # @kvib/react
 
+## 0.26.0
+
+### Minor Changes
+
+- 96e14fee6: Eksportert chakra utility hooks:
+  -useBoolean,
+  -UseBreakpointValue,
+  -useClipboard,
+  -useConst,
+  -useControllable,
+  -useDimensions,
+  -useDisclosure,
+  -useMergeRefs,
+  -useMediaQuery,
+  -useOutsideClick,
+  -usePrefersReducedMotionuseTheme,
+  -useToken
+
+## 0.25.0
+
+### Minor Changes
+
+- d9441ced5: exported chakra components:
+  -Close-Button,
+  -Portal,
+  -Transitions
+  -Hide/show
+
 ## 0.24.0
 
 ### Minor Changes
