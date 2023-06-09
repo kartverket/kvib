@@ -31,3 +31,4 @@ export * from "./textarea";
 export * from "./theme";
 export * from "./toast";
 export * from "./typography";
+export * from "./hooks";
