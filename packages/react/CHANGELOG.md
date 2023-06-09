@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 0.32.0
+
+### Minor Changes
+
+- 88424baa5: Legge til riktig verdi for shadow outline
+
 ## 0.31.0
 
 ### Minor Changes
