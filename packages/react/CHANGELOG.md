@@ -1,5 +1,31 @@
 # @kvib/react
 
+## 0.29.0
+
+### Minor Changes
+
+- 96eacd306: Eksportert følgende komponenter:
+
+  Disclosure
+
+  - Accordion
+  - Tabs
+  - VisuallyHidden
+
+  Navigation
+
+  - Breadcrumbs
+  - Link
+  - LinkBox
+  - SkipNavLink
+  - Stepper
+
+  Media and icons
+
+  - Avatar
+  - Icon
+  - Image
+
 ## 0.28.0
 
 ### Minor Changes
