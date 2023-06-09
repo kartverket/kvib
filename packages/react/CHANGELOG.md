@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 0.30.0
+
+### Minor Changes
+
+- db4e916d0: Revertert kvibifiserte komponenter: Button og Radio (+ Radiogroup)
+
 ## 0.29.0
 
 ### Minor Changes
