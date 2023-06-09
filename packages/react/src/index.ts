@@ -4,3 +4,4 @@ export * from "./button";
 export * from "./layout";
 export * from "./typography";
 export * from "./link";
+export * from "./iconButton";
