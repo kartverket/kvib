@@ -31,4 +31,8 @@ export * from "./textarea";
 export * from "./theme";
 export * from "./toast";
 export * from "./typography";
+export * from "./close-button";
+export * from "./portal";
+export * from "./show-hide";
+export * from "./transitions";
 export * from "./hooks";
