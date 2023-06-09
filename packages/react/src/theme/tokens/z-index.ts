@@ -1,4 +1,4 @@
-const zIndices = {
+export const zIndices = {
   hide: -1,
   auto: "auto",
   base: 0,
@@ -13,5 +13,3 @@ const zIndices = {
   toast: 1700,
   tooltip: 1800,
 };
-
-export default zIndices;
