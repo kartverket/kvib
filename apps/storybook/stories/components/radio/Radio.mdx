@@ -1,38 +1,13 @@
-import { Canvas, Meta, Controls } from "@storybook/blocks";
-import * as RadioStories from "./Radio.stories";
+import { Meta } from "@storybook/blocks";
 
-<Meta of={RadioStories} />
+<Meta title="Komponenter/Radio" />
 
 # Radio
 
-<br />
+Se [https://chakra-ui.com/docs/components/radio](https://chakra-ui.com/docs/components/radio) for eksempler og dokumentasjon.
 
 ## Ta i bruk
 
 ```jsx
-import { Radio, Radiogroup } from "@kvib/react";
+import { Radio, RadioGroup } from "@kvib/react";
 ```
-
-## Enkeltvisning
-
-Her er en oversikt over utvalget av `<Radio>` i Designsystemet. Disse er blant annet bygget opp ved bruk av desing
-tokens fra Designsystemet, eksempelvis farger og typografi. I dokumentasjonen følger beskrivelse av komponenten og bruksområde, sammen med kodeeksempler.
-
-Radioknapper skal kun brukes hvis brukeren bare har ett valg blant flere alternativer. Ved mange alternativer er det
-lurere å bruke dropdown, men helst bruk radioknapp der det lar seg gjøre, for å redusere klikk.
-
-<Canvas of={RadioStories.Radio} />
-### Props
-<Controls of={RadioStories.Radio} />
-
-<br />
-<br />
-
-## Gruppevisning
-
-Dette er en mer reell situasjon hvor man bruker `<Radio>`. For å få knappene til å samarbeide, putter man alle inn i
-en `<RadioGroup>`, deretter tildeler en `value` til hver `<Radio>` i gruppen.
-
-<Canvas of={RadioStories.RadioGroup} />
-### Props
-<Controls of={RadioStories.RadioGroup} />
