@@ -1,28 +1,13 @@
-import { Title, Canvas, Meta, Story, Controls } from "@storybook/blocks";
-import * as HeadingStories from "./Heading.stories";
+import { Meta } from "@storybook/blocks";
 
-<Meta of={HeadingStories} />
+<Meta title="Komponenter/Typografi/Heading" />
 
 # Heading
 
-<Canvas of={HeadingStories.Heading} />
+Se [https://chakra-ui.com/docs/components/heading](https://chakra-ui.com/docs/components/heading) for eksempler og dokumentasjon.
 
 ## Ta i bruk
 
 ```jsx
 import { Heading } from "@kvib/react";
 ```
-
-Du kan spesifisere hvilken h-tag headingen skal ha på følgende måte:
-
-```tsx
-<Heading as="h2" size="xl">
-  Page heading
-</Heading>
-```
-
-Default er `h2`.
-
-## Props
-
-<Controls of={HeadingStories.Heading} />
