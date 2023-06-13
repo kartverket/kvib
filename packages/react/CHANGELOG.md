@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 0.33.0
+
+### Minor Changes
+
+- 5dfa06a47: Tilpasset farge-tokens til kartverketsdesign
+
 ## 0.32.0
 
 ### Minor Changes
