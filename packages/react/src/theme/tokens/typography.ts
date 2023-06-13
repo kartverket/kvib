@@ -1,4 +1,4 @@
-const typography = {
+export const typography = {
   letterSpacings: {
     tighter: "-0.05em",
     tight: "-0.025em",
@@ -62,5 +62,3 @@ const typography = {
     "9xl": "8rem",
   },
 };
-
-export default typography;
