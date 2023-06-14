@@ -1,5 +1,18 @@
 # @kvib/react
 
+## 0.34.0
+
+### Minor Changes
+
+- 250f0e82d: Eksportert
+
+  - InputGroup
+  - InputAddon
+  - InputLeftAddon
+  - InputRightAddon
+  - InputLeftElement
+  - InputRightElement
+
 ## 0.33.0
 
 ### Minor Changes
