@@ -2,7 +2,7 @@
 "@kvib/react": minor
 ---
 
-Eksportert til
+Eksportert
 
 - InputGroup
 - InputAddon
