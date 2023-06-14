@@ -2,4 +2,4 @@
 "@kvib/react": minor
 ---
 
-Bugfix: Eksportert fonts på riktig måte.
+Bugfix: Eksportert typografi på riktig måte.
