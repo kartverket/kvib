@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 0.34.1
+
+### Patch Changes
+
+- 1ad95109d: Bugfix: Eksportert typografi på riktig måte.
+
 ## 0.34.0
 
 ### Minor Changes
