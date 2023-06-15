@@ -1,5 +1,5 @@
 import { SimpleGrid, Box, VStack, Text, Heading } from "@chakra-ui/react";
-import { colors, typography } from "@kvib/react/src/theme/tokens";
+import { colors, fontWeights, fontSizes } from "@kvib/react/src/theme/tokens";
 
 type ColorScaleType =
   | string
@@ -24,10 +24,10 @@ const renderColors = (name: string, colorScale: ColorScaleType) => {
     return (
       <VStack alignItems="flex-start" spacing="4px" borderRadius="6px" border={`1px solid ${colors.gray[100]}`}>
         <Box backgroundColor={hex} height="60px" width="100%"></Box>
-        <Text fontWeight={typography.fontWeights["bold"]} fontSize={typography.fontSizes["sm"]} paddingLeft="6px">
+        <Text fontWeight={fontWeights["bold"]} fontSize={fontSizes["sm"]} paddingLeft="6px">
           {name}
         </Text>
-        <Text fontSize={typography.fontSizes["xs"]} paddingLeft="6px">
+        <Text fontSize={fontSizes["xs"]} paddingLeft="6px">
           {hex}
         </Text>
       </VStack>
@@ -43,12 +43,8 @@ const renderColors = (name: string, colorScale: ColorScaleType) => {
       border={`1px solid ${colors.gray[100]}`}
     >
       <Box backgroundColor={hex} height="60px" width="100%"></Box>
-      <Text
-        fontWeight={typography.fontWeights["bold"]}
-        fontSize={typography.fontSizes["sm"]}
-        paddingLeft="6px"
-      >{`${name}-${value}`}</Text>
-      <Text fontSize={typography.fontSizes["xs"]} paddingLeft="6px">
+      <Text fontWeight={fontWeights["bold"]} fontSize={fontSizes["sm"]} paddingLeft="6px">{`${name}-${value}`}</Text>
+      <Text fontSize={fontSizes["xs"]} paddingLeft="6px">
         {hex}
       </Text>
     </VStack>
