@@ -3,9 +3,10 @@ import * as LinkStories from "./Link.stories";
 
 <Meta of={LinkStories} />
 
-# TextLink
+# Link
 
-<Canvas of={LinkStories.Link} />
+Tekstlenker kan benyttes for å henvise til både interne og eksterne nettsider.
+Hvis lenken man trykker på tar deg ut av siden, eller åpner et nytt vindu, skal de vises med et ikon. Det er også viktig at lenketeksten er beskrivende.
 
 ## Ta i bruk
 
@@ -15,4 +16,14 @@ import { Link } from "@kvib/react";
 
 ## Props
 
+<Canvas of={LinkStories.Link} />
+
 <Controls of={LinkStories.Link} />
+
+## Intern lenke
+
+<Canvas of={LinkStories.LinkInternal} />
+
+## Ekstern lenke
+
+<Canvas of={LinkStories.LinkExternal} />

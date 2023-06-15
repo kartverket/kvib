@@ -12,20 +12,25 @@ const meta: Meta<typeof KvibLink> = {
   },
   argTypes: {
     children: {
-      description: "Dette er en lenke",
+      description: "This is the linktext",
       table: {
         type: { summary: "string" },
       },
       control: "text",
     },
-    variant: {
-      description: "Variant",
+    isExternal: {
+      description: "The Link component composes the Box component.",
       table: {
-        type: { summary: "green | blue" },
-        defaultValue: { summary: "green" },
+        type: { summary: Boolean },
+        defaultValue: { summary: false },
       },
-      options: ["green", "blue"],
-      control: { type: "radio" },
+    },
+    href: {
+      description: "This is the link.",
+      table: {
+        type: { summary: "string" },
+      },
+      control: "text",
     },
   },
 };
@@ -41,4 +46,16 @@ export const Link: Story = {
     isExternal: false,
   },
   render: (args) => <KvibLink {...args}>{args.children}</KvibLink>,
+};
+
+export const LinkExternal: Story = {
+  render: () => (
+    <KvibLink isExternal={true} variant="green">
+      Dette er en lenke
+    </KvibLink>
+  ),
+};
+
+export const LinkInternal: Story = {
+  render: () => <KvibLink variant="green">Dette er en intern lenke</KvibLink>,
 };
