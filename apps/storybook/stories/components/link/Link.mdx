@@ -1,13 +1,18 @@
-import { Meta } from "@storybook/blocks";
+import { Title, Canvas, Meta, Story, Controls } from "@storybook/blocks";
+import * as LinkStories from "./Link.stories";
 
-<Meta title="Komponenter/Link" />
+<Meta of={LinkStories} />
 
-# Link
+# TextLink
 
-Se [https://chakra-ui.com/docs/components/link](https://chakra-ui.com/docs/components/link) for eksempler og dokumentasjon.
+<Canvas of={LinkStories.Link} />
 
 ## Ta i bruk
 
 ```jsx
 import { Link } from "@kvib/react";
 ```
+
+## Props
+
+<Controls of={LinkStories.Link} />

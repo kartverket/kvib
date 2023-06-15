@@ -1,4 +1,5 @@
 import { defineStyleConfig } from "@chakra-ui/react";
+import { colors, borders, radii } from "../tokens";
 
 const config = defineStyleConfig({
   baseStyle: {
@@ -8,29 +9,41 @@ const config = defineStyleConfig({
     },
   },
   variants: {
-    primary: ({ theme }) => ({
-      color: theme.colors.green[500],
+    green: () => ({
+      color: colors.green[500],
+      padding: "8px",
       _hover: {
-        color: theme.colors.green[400],
+        color: colors.green[400],
         textDecoration: "none",
       },
       _active: {
-        color: theme.colors.green[600],
+        color: colors.green[600],
+      },
+      _focus: {
+        border: borders["2px"],
+        borderRadius: radii.base,
+        borderColor: colors.blue[600],
       },
     }),
-    secondary: ({ theme }) => ({
-      color: theme.colors.blue[500],
+    blue: () => ({
+      color: colors.blue[500],
+      padding: "5px",
       _hover: {
-        color: theme.colors.blue[400],
+        color: colors.blue[400],
         textDecoration: "none",
       },
       _active: {
-        color: theme.colors.blue[600],
+        color: colors.blue[600],
+      },
+      _focus: {
+        border: borders["2px"],
+        borderRadius: radii.base,
+        borderColor: colors.blue[600],
       },
     }),
   },
   defaultProps: {
-    variant: "primary",
+    variant: "green",
   },
 });
 
