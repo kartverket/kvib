@@ -19,7 +19,7 @@ const meta: Meta<typeof KvibLink> = {
       control: "text",
     },
     isExternal: {
-      description: "The Link component composes the Box component.",
+      description: "If true, a icon will be included.",
       table: {
         type: { summary: Boolean },
         defaultValue: { summary: false },
