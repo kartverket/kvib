@@ -1,6 +1,7 @@
 export {
   Box,
   Center,
+  AbsoluteCenter,
   Square,
   Circle,
   Container,
@@ -19,6 +20,7 @@ export {
 export type {
   BoxProps,
   CenterProps,
+  AbsoluteCenterProps,
   SquareProps,
   ContainerProps,
   FlexProps,
