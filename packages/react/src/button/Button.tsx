@@ -19,10 +19,19 @@ export type ButtonProps = Omit<
   | "loadingText"
   | "spinnerPlacement"
 > & {
-  size?: "sm" | "md" | "lg";
-  variant?: "primary" | "secondary" | "tertiary";
-  colorScheme?: "green" | "blue";
+  /**The size of the Button*/
+  size?: "xs" | "sm" | "md" | "lg";
+
+  /**The variant of the Button*/
+  variant?: "solid" | "outline" | "link";
+
+  /**The visual color appearance of the component*/
+  colorScheme?: "green" | "blue" | "gray";
+
+  /**If added, the button will show an icon before the button's label.*/
   leftIcon?: string;
+
+  /**If added, the button will show an icon after the button's label.*/
   rightIcon?: string;
 };
 
@@ -31,7 +40,7 @@ export const Button = forwardRef<ButtonProps, "button">(
     {
       children,
       size = "md",
-      variant = "primary",
+      variant = "solid",
       colorScheme = "green",
       isDisabled,
       isLoading,

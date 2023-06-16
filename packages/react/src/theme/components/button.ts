@@ -6,6 +6,7 @@ const config = defineStyleConfig({
     fontStyle: "normal",
     fontWeight: "700",
     fontSize: "18px",
+    gap: "8px",
     lineHeight: "28px",
     borderRadius: "8px",
     backgroundColor: `${colorScheme}.500`,
@@ -16,21 +17,30 @@ const config = defineStyleConfig({
     },
   }),
   sizes: {
+    xs: {
+      fontSize: "12px",
+      lineHeight: "16px",
+      paddingLeft: "8px",
+      paddingRight: "8px",
+      gap: "6px",
+      minWidth: "90px",
+      minHeight: "24px",
+    },
     sm: {
-      fontSize: "16px",
-      lineHeight: "24px",
-      paddingLeft: "24px",
-      paddingRight: "24px",
+      fontSize: "14px",
+      lineHeight: "20px",
+      paddingLeft: "12px",
+      paddingRight: "12px",
       minWidth: "100px",
-      minHeight: "40px",
+      minHeight: "32px",
     },
     md: {
       fontSize: "16px",
       lineHeight: "24px",
-      paddingLeft: "24px",
-      paddingRight: "24px",
+      paddingLeft: "16px",
+      paddingRight: "16px",
       minWidth: "100px",
-      minHeight: "48px",
+      minHeight: "40px",
     },
     lg: {
       fontSize: "18px",
@@ -38,11 +48,11 @@ const config = defineStyleConfig({
       paddingLeft: "24px",
       paddingRight: "24px",
       minWidth: "106px",
-      minHeight: "56px",
+      minHeight: "48px",
     },
   },
   variants: {
-    primary: ({ colorScheme }) => ({
+    solid: ({ colorScheme }) => ({
       color: colors.white,
       _hover: {
         backgroundColor: `${colorScheme}.400`,
@@ -74,7 +84,7 @@ const config = defineStyleConfig({
         },
       },
     }),
-    secondary: ({ colorScheme, theme }) => ({
+    outline: ({ colorScheme, theme }) => ({
       color: `${colorScheme}.500`,
       backgroundColor: colors.white,
       boxShadow: `${theme.colors[colorScheme][500]} 0 0 0 1px inset`,
@@ -112,7 +122,7 @@ const config = defineStyleConfig({
         },
       },
     }),
-    tertiary: ({ colorScheme }) => ({
+    link: ({ colorScheme }) => ({
       color: `${colorScheme}.500`,
       backgroundColor: "transparent",
       ".text": {
@@ -141,7 +151,7 @@ const config = defineStyleConfig({
     }),
   },
   defaultProps: {
-    variant: "primary",
+    variant: "solid",
     size: "md",
   },
 });
