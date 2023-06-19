@@ -19,6 +19,20 @@ const meta: Meta<typeof KvibButton> = {
       },
       control: "boolean",
     },
+    leftIcon: {
+      description: "If added, the button will show an icon before the button's label.",
+      table: {
+        type: { summary: String },
+      },
+      control: "text",
+    },
+    rightIcon: {
+      description: "If added, the button will show an icon after the button's label.",
+      table: {
+        type: { summary: String },
+      },
+      control: "text",
+    },
   },
 };
 
@@ -41,5 +55,15 @@ export const LinkButton: Story = {
 
 export const DisabledButton: Story = {
   args: { children: "Klikk her", colorScheme: "green", size: "md", variant: "solid", isDisabled: true },
+  render: (args) => <KvibButton {...args}>{args.children}</KvibButton>,
+};
+
+export const LeftIconButton: Story = {
+  args: { children: "Klikk her", leftIcon: "add" },
+  render: (args) => <KvibButton {...args}>{args.children}</KvibButton>,
+};
+
+export const RightIconButton: Story = {
+  args: { children: "Klikk her", rightIcon: "add" },
   render: (args) => <KvibButton {...args}>{args.children}</KvibButton>,
 };
