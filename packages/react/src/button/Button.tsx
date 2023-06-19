@@ -20,13 +20,13 @@ export type ButtonProps = Omit<
   | "spinnerPlacement"
 > & {
   /**The size of the Button*/
-  size?: "xs" | "sm" | "md" | "lg";
+  size: "xs" | "sm" | "md" | "lg";
 
   /**The variant of the Button*/
-  variant?: "solid" | "outline" | "link";
+  variant: "solid" | "outline" | "link";
 
   /**The visual color appearance of the component*/
-  colorScheme?: "green" | "blue" | "gray" | "red";
+  colorScheme: "green" | "blue" | "gray" | "red";
 
   /**If added, the button will show an icon before the button's label.*/
   leftIcon?: string;
