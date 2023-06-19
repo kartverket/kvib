@@ -4,9 +4,8 @@ import { Shadows } from "./Shadows";
 import { Breakpoints } from "./Breakpoints";
 import { Colors } from "./Colors";
 import { Borders } from "./Borders";
-import { TextStyles } from "./TextStyles";
 
-<Meta title="Design/Design tokens" />
+<Meta title="Design Fundament/Design tokens" />
 
 # Design tokens
 
@@ -19,71 +18,45 @@ I komponenter brukes de slik: `backgroundColor="green.50"`.
 
 <Colors />
 
-Chakra har også en haug med andre farger: [https://chakra-ui.com/docs/styled-system/theme#colors](https://chakra-ui.com/docs/styled-system/theme#colors)
+[https://chakra-ui.com/docs/styled-system/theme#colors](https://chakra-ui.com/docs/styled-system/theme#colors)
 
 ## Typografi
 
-KVIB har per idag 7 forskjellige tekststiler.\
-Title 1-4 er tiltenkt å bruke i `Heading`-komponenten, mens de andre med `Text` eller f.eks. `Box`-komponenten.
-
-Tekststilene er satt sammen av Chakras font-tokens: [https://chakra-ui.com/docs/styled-system/theme#typography](https://chakra-ui.com/docs/styled-system/theme#typography)
-
-### Tekststiler
-
-Når en egenskap er listet opp med flere verdier med vertikal skillelinje mellom viser den verdien av egenskapen for de 6 forskjellige [breakpointene](/docs/design-tokens--docs#breakpoints) vi har.
-
-Som du ser er det kun `title1` og `title2` som forandrer seg med skjermstørrelse.
-
-<TextStyles />
-
-## Borders
-
-KVIB bruker Chakra sine tokens for borders:
-
-<Borders />
-
-## Radius
-
-KVIB bruker Chakra sine tokens for radius:\
-[https://chakra-ui.com/docs/styled-system/theme#border-radius](https://chakra-ui.com/docs/styled-system/theme#border-radius)
-
-<Radii />
-
-## Skygger
-
-KVIB bruker Chakra sine tokens for shadows:
-
-<Shadows />
+[https://chakra-ui.com/docs/styled-system/theme#typography](https://chakra-ui.com/docs/styled-system/theme#typography)
 
 ## Breakpoints
 
-KVIB bruker Chakra sine tokens for breakpoints:\
 [https://chakra-ui.com/docs/styled-system/theme#breakpoints](https://chakra-ui.com/docs/styled-system/theme#breakpoints)
-
-<Breakpoints />
 
 ## Spacings
 
-KVIB bruker Chakra sine tokens for spacings:\
 [https://chakra-ui.com/docs/styled-system/theme#spacing](https://chakra-ui.com/docs/styled-system/theme#spacing)
 
 ## Sizes
 
-KVIB bruker Chakra sine tokens for sizes:\
 [https://chakra-ui.com/docs/styled-system/theme#sizes](https://chakra-ui.com/docs/styled-system/theme#sizes)
+
+## Radius
+
+[https://chakra-ui.com/docs/styled-system/theme#border-radius](https://chakra-ui.com/docs/styled-system/theme#border-radius)
 
 ## Z-index
 
-KVIB bruker Chakra sine tokens for z-index:\
 [https://chakra-ui.com/docs/styled-system/theme#z-index-values](https://chakra-ui.com/docs/styled-system/theme#z-index-values)
 
 ## Transitions
 
-KVIB bruker Chakra sine tokens for transitions:\
 [https://github.com/chakra-ui/chakra-ui/blob/main/packages/components/theme/src/foundations/transition.ts](https://github.com/chakra-ui/chakra-ui/blob/main/packages/components/theme/src/foundations/transition.ts)\
 [https://chakra-ui.com/docs/components/transitions](https://chakra-ui.com/docs/components/transitions)
 
+## Borders
+
+[https://github.com/chakra-ui/chakra-ui/blob/main/packages/components/theme/src/foundations/borders.ts](https://github.com/chakra-ui/chakra-ui/blob/main/packages/components/theme/src/foundations/borders.ts)
+
+## Skygger
+
+[https://github.com/chakra-ui/chakra-ui/blob/main/packages/components/theme/src/foundations/shadows.ts](https://github.com/chakra-ui/chakra-ui/blob/main/packages/components/theme/src/foundations/shadows.ts)
+
 ## Blurs
 
-KVIB bruker Chakra sine tokens for blurs:\
 [https://github.com/chakra-ui/chakra-ui/blob/main/packages/components/theme/src/foundations/blur.ts](https://github.com/chakra-ui/chakra-ui/blob/main/packages/components/theme/src/foundations/blur.ts)

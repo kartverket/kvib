@@ -1,5 +1,5 @@
 import { Box, Center, Table, Thead, Tbody, Tr, Th, Td, TableContainer, Code } from "@chakra-ui/react";
-import { shadows } from "@kvib/react/src/theme/foundations";
+import { shadows } from "@kvib/react/src/theme/tokens";
 
 const example = (shadow: any) => (
   <Box backgroundColor="white" width="80px" height="80px" boxShadow={shadow} borderRadius="4px" />

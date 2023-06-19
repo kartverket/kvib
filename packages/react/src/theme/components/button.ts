@@ -1,5 +1,5 @@
 import { defineStyleConfig } from "@chakra-ui/react";
-import { colors } from "../foundations";
+import { colors } from "../tokens";
 
 const config = defineStyleConfig({
   baseStyle: ({ colorScheme }) => ({

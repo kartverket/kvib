@@ -1,5 +1,183 @@
 # @kvib/react
 
+## 0.34.1
+
+### Patch Changes
+
+- 1ad95109d: Bugfix: Eksportert typografi på riktig måte.
+
+## 0.34.0
+
+### Minor Changes
+
+- 250f0e82d: Eksportert
+
+  - InputGroup
+  - InputAddon
+  - InputLeftAddon
+  - InputRightAddon
+  - InputLeftElement
+  - InputRightElement
+
+## 0.33.0
+
+### Minor Changes
+
+- 5dfa06a47: Tilpasset farge-tokens til kartverketsdesign
+
+## 0.32.0
+
+### Minor Changes
+
+- 88424baa5: Legge til riktig verdi for shadow outline
+
+## 0.31.0
+
+### Minor Changes
+
+- 65d02b192: Fjerne custom KVIB theming fra kvibifiserte komponenter
+
+## 0.30.0
+
+### Minor Changes
+
+- db4e916d0: Revertert kvibifiserte komponenter: Button og Radio (+ Radiogroup)
+
+## 0.29.0
+
+### Minor Changes
+
+- 96eacd306: Eksportert følgende komponenter:
+
+  Disclosure
+
+  - Accordion
+  - Tabs
+  - VisuallyHidden
+
+  Navigation
+
+  - Breadcrumbs
+  - Link
+  - LinkBox
+  - SkipNavLink
+  - Stepper
+
+  Media and icons
+
+  - Avatar
+  - Icon
+  - Image
+
+## 0.28.0
+
+### Minor Changes
+
+- 7ec3f9fea: Eksportert chakra-tokens, med unntak av fonts:
+  -blur
+  -borders
+  -breakpoints-colors
+  raidus
+  -shadows
+  -sizes
+  -spacing
+  -transitions
+  -typography
+  -z-index
+
+## 0.27.0
+
+### Minor Changes
+
+- 191b6d340: Eksportert flere Typografi-komponenter (Highlight) og alle Overlay-komponenter
+
+  - Alert Dialog
+  - Drawer
+  - Menu
+  - Modal
+  - Popover
+  - Tooltip
+
+## 0.26.0
+
+### Minor Changes
+
+- 96e14fee6: Eksportert chakra utility hooks:
+  -useBoolean,
+  -UseBreakpointValue,
+  -useClipboard,
+  -useConst,
+  -useControllable,
+  -useDimensions,
+  -useDisclosure,
+  -useMergeRefs,
+  -useMediaQuery,
+  -useOutsideClick,
+  -usePrefersReducedMotionuseTheme,
+  -useToken
+
+## 0.25.0
+
+### Minor Changes
+
+- d9441ced5: exported chakra components:
+  -Close-Button,
+  -Portal,
+  -Transitions
+  -Hide/show
+
+## 0.24.0
+
+### Minor Changes
+
+- 06648ef2b: Eksportert alle komponenter i hovedindexfilen
+
+## 0.23.0
+
+### Minor Changes
+
+- d808ad6c3: Lagt til feedback-komponenter:
+
+  - Alert
+  - Circular Progress
+  - Progress
+  - Skeleton
+  - Spinner
+  - Toast
+
+## 0.22.0
+
+### Minor Changes
+
+- 5c3b951d0: Eksportert alle data display-komponenter:
+
+  - Badge
+  - Card
+  - Divider
+  - Kbd
+  - List
+  - Stat
+  - Table
+  - Tag
+
+## 0.21.0
+
+### Minor Changes
+
+- 4f0d6db23: - Endret navn på `/foundations`-mappe til `/tokens`
+  - Videreeksportert flere `Layout`-komponenter
+  - Videreeksportert alle `Forms`-komponenter
+
+## 0.20.0
+
+### Minor Changes
+
+- f9f680def: **Heading:**
+  Lagt til title1-4 som mulige verdier for size i Heading-komponenten. Dokumentert Chakra sine 4xl-xl sizes i Storybook.\\
+
+  **Text**
+  Text-komponenten tar imot textStyles. Fjernet title1-4 som tekststil. Dokumententert fontSizes 6xl-xs i Storybook.
+
 ## 0.19.0
 
 ### Minor Changes
