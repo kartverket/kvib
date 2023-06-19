@@ -1,18 +1,154 @@
-import { defineStyleConfig } from "@chakra-ui/react";
+import { defineStyleConfig, defineStyle } from "@chakra-ui/react";
 import { colors } from "../tokens";
 
+const variantSolid = defineStyle((props) => {
+  const { colorScheme: c } = props;
+
+  if (c === "gray") {
+    return {
+      bg: colors.gray[100],
+      color: colors.black,
+      _hover: {
+        bg: colors.gray[200],
+      },
+      _active: {
+        bg: colors.gray[300],
+      },
+    };
+  }
+  return {
+    bg: `${c}.500`,
+    color: colors.white,
+    _hover: {
+      bg: `${c}.400`,
+    },
+    _active: {
+      bg: `${c}.600`,
+    },
+  };
+});
+
+const variantOutline = defineStyle((props) => {
+  const { colorScheme: c } = props;
+
+  if (c === "gray") {
+    return {
+      bg: colors.white,
+      borderColor: colors.gray[200],
+      color: colors.black,
+      _hover: {
+        bg: colors.gray[50],
+        _disabled: {
+          bg: colors.white,
+          color: colors.black,
+        },
+      },
+      _active: {
+        bg: colors.gray[100],
+        _disabled: {
+          bg: colors.white,
+          color: colors.black,
+        },
+      },
+    };
+  }
+  return {
+    bg: colors.white,
+    borderColor: `${c}.500`,
+    color: `${c}.500`,
+    _hover: {
+      bg: `${c}.400`,
+      color: colors.white,
+      _disabled: {
+        bg: colors.white,
+        color: `${c}.500`,
+      },
+    },
+    _active: {
+      bg: `${c}.600`,
+      color: colors.white,
+      _disabled: {
+        bg: colors.white,
+        color: `${c}.500`,
+      },
+    },
+  };
+});
+
+const variantLink = defineStyle((props) => {
+  const { colorScheme: c } = props;
+
+  if (c === "gray") {
+    return {
+      color: colors.gray[800],
+      backgroundColor: "transparent",
+      _hover: {
+        color: colors.gray[500],
+        ".text": {
+          textDecoration: "Underline",
+        },
+        _disabled: {
+          ".text": {
+            textDecoration: "none",
+            color: colors.gray[800],
+          },
+        },
+      },
+      _active: {
+        color: colors.gray[900],
+        ".text": {
+          textDecoration: "Underline",
+        },
+        _disabled: {
+          color: colors.gray[800],
+        },
+      },
+      _loading: {
+        color: colors.gray[800],
+      },
+    };
+  }
+  return {
+    color: `${c}.500`,
+    backgroundColor: "transparent",
+    _hover: {
+      color: `${c}.400`,
+      ".text": {
+        textDecoration: "Underline",
+      },
+      _disabled: {
+        ".text": {
+          textDecoration: "none",
+          color: `${c}.500`,
+        },
+      },
+    },
+    _active: {
+      color: `${c}.600`,
+      ".text": {
+        textDecoration: "Underline",
+      },
+      _disabled: {
+        ".text": {
+          textDecoration: "none",
+          color: `${c}.500`,
+        },
+      },
+    },
+    _loading: {
+      color: `${c}.500`,
+    },
+  };
+});
+
 const config = defineStyleConfig({
-  baseStyle: ({ colorScheme }) => ({
+  baseStyle: () => ({
     fontStyle: "normal",
-    fontWeight: "700",
-    fontSize: "18px",
+    fontWeight: "600",
     gap: "8px",
-    lineHeight: "28px",
-    borderRadius: "8px",
-    backgroundColor: `${colorScheme}.500`,
+    borderRadius: "6px",
     _disabled: {
-      opacity: 1,
-      color: colors.gray[600],
+      opacity: 0.5,
       cursor: "not-allowed",
     },
   }),
@@ -52,103 +188,9 @@ const config = defineStyleConfig({
     },
   },
   variants: {
-    solid: ({ colorScheme }) => ({
-      color: colors.white,
-      _hover: {
-        backgroundColor: `${colorScheme}.400`,
-        _disabled: {
-          color: colors.gray[600],
-          backgroundColor: colors.gray[50],
-        },
-      },
-      _active: {
-        backgroundColor: `${colorScheme}.600`,
-        boxShadow: `${colors.blue[600]} 0 0 0 2px inset, ${colors.blue[600]} 0 0 0 2px inset,
-          ${colors.white} 0 0 0 4px inset`,
-        _disabled: {
-          color: colors.gray[600],
-          backgroundColor: colors.gray[50],
-          boxShadow: `${colors.gray[600]} 0 0 0 1px inset`,
-        },
-      },
-      _disabled: {
-        backgroundColor: colors.gray[50],
-        boxShadow: `${colors.gray[600]} 0 0 0 1px inset`,
-      },
-      _loading: {
-        backgroundColor: `${colorScheme}.500`,
-        color: colors.white,
-        _hover: {
-          backgroundColor: `${colorScheme}.500`,
-          color: colors.white,
-        },
-      },
-    }),
-    outline: ({ colorScheme, theme }) => ({
-      color: `${colorScheme}.500`,
-      backgroundColor: colors.white,
-      boxShadow: `${theme.colors[colorScheme][500]} 0 0 0 1px inset`,
-      _hover: {
-        backgroundColor: `${colorScheme}.400`,
-        boxShadow: `${theme.colors[colorScheme][400]} 0 0 0 1px inset`,
-        color: colors.white,
-        _disabled: {
-          color: colors.gray[600],
-          backgroundColor: colors.gray[50],
-        },
-      },
-      _active: {
-        color: colors.white,
-        backgroundColor: `${colorScheme}.600`,
-        boxShadow: `${colors.blue[600]} 0 0 0 2px inset, ${colors.blue[600]} 0 0 0 2px inset,
-        ${colors.white} 0 0 0 4px inset`,
-        _disabled: {
-          color: colors.gray[600],
-          backgroundColor: colors.gray[50],
-          boxShadow: `${colors.gray[600]} 0 0 0 1px inset`,
-        },
-      },
-      _disabled: {
-        backgroundColor: colors.gray[50],
-        boxShadow: `${colors.gray[600]} 0 0 0 1px inset`,
-      },
-      _loading: {
-        color: `${colorScheme}.500`,
-        backgroundColor: colors.white,
-        boxShadow: `${theme.colors[colorScheme][500]} 0 0 0 1px inset`,
-        _hover: {
-          color: `${colorScheme}.500`,
-          backgroundColor: colors.white,
-        },
-      },
-    }),
-    link: ({ colorScheme }) => ({
-      color: `${colorScheme}.500`,
-      backgroundColor: "transparent",
-      ".text": {
-        textDecoration: "Underline",
-      },
-      _hover: {
-        color: `${colorScheme}.400`,
-        _disabled: {
-          color: colors.gray[600],
-        },
-      },
-      _active: {
-        color: `${colorScheme}.600`,
-        boxShadow: `${colors.blue[600]} 0 0 0 2px inset`,
-        _disabled: {
-          color: colors.gray[600],
-          boxShadow: "none",
-        },
-      },
-      _disabled: {
-        boxShadow: "none",
-      },
-      _loading: {
-        color: `${colorScheme}.500`,
-      },
-    }),
+    solid: variantSolid,
+    outline: variantOutline,
+    link: variantLink,
   },
   defaultProps: {
     variant: "solid",
