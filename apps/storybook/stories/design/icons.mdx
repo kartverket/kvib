@@ -1,26 +1,15 @@
 import { Meta } from "@storybook/addon-docs";
 
-<Meta title="Design/Ikoner" />
+<Meta title="Design Fundament/Ikoner" />
 
 # Ikoner
 
 Vi benytter ikoner som et virkemiddel for hjelpe brukere med å forstå handling eller kontekst. Ikoner kan være med på å skille og fremheve innhold. Det er også et fint navigasjonsverkøy som kan vise varsling av feil eller fortelle brukeren om de forlater nettsiden.
 
-**I Kartverkets designsystem bruker vi ikoner fra [Material Symbols, her finner du den fulle ikonoversikten ](https://fonts.google.com/icons)**
+KVIB tilbyr ikke ikoner. Ikoner må hentes separat fra et tredjeparts ikonbibliotek.
 
-## Eksempler på bruk
+## Noen anbefalte ikonbibliotek
 
-```jsx
-<span className="material-symbols-outlined">search</span>
-
-// Med farge:
-<span className="material-symbols-outlined" style={{ color: "var(--kvib-colors-red-500)" }}>
-  warning
-</span>
-```
-
-Dersom komponenten har støtte for ikon (for eksempel: `icon`, `leftIcon` eller `rightIcon`), så kan du sende inn navnet på ikonet du ønsker på følgende måte:
-
-```jsx
-<Button leftIcon="add">Knappetekst</Button>
-```
+- [@chakra-ui/icons](https://www.npmjs.com/package/@chakra-ui/icon)
+- [@react-icons](https://www.npmjs.com/package/react-icons)
+- [@mui/material-icons](https://mui.com/material-ui/material-icons/)

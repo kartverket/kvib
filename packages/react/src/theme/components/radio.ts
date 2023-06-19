@@ -1,6 +1,6 @@
 import { radioAnatomy } from "@chakra-ui/anatomy";
 import { createMultiStyleConfigHelpers } from "@chakra-ui/react";
-import { colors } from "../foundations";
+import { colors } from "../tokens";
 
 const { definePartsStyle, defineMultiStyleConfig } = createMultiStyleConfigHelpers(radioAnatomy.keys);
 
