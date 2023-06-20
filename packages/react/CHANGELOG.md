@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 0.35.0
+
+### Minor Changes
+
+- 1dc1c1d70: Lilla-fargepalett er nå tilgjengelig.
+
 ## 0.34.1
 
 ### Patch Changes
