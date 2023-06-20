@@ -11,6 +11,13 @@ const meta: Meta<typeof KvibInput> = {
     },
   },
   argTypes: {
+    placeholder: {
+      description: "Placeholder for text",
+      table: {
+        defaultValue: { summary: "Skriv her..." },
+      },
+      control: "text",
+    },
     size: {
       description: "Size of input",
       table: {
@@ -36,7 +43,7 @@ const meta: Meta<typeof KvibInput> = {
       },
       control: "boolean",
     },
-    isReadonly: {
+    isReadOnly: {
       description: "Toggles if input should be read-only",
       table: {
         type: { summary: "boolean" },
@@ -61,9 +68,9 @@ const meta: Meta<typeof KvibInput> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof KvibInput>;
+type InputStory = StoryObj<typeof KvibInput>;
 
-export const Input: Story = {
-  args: { size: "md", variant: "outline", isRequired: false, isReadonly: false, isInvalid: false, isDisabled: false },
+export const Input: InputStory = {
+  args: { placeholder: "Skriv her...", size: "md", variant: "outline" },
   render: (args) => <KvibInput {...args} />,
 };

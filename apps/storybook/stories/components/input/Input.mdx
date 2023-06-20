@@ -1,6 +1,9 @@
-import { Meta } from "@storybook/blocks";
+import { Canvas, Controls, Meta } from "@storybook/blocks";
+import * as InputStories from "./Input.stories";
 
-<Meta title="Komponenter/Input" />
+[//]: # '<Meta title="Komponenter/Input" />'
+
+<Meta of={InputStories} />
 
 # Input
 
@@ -11,3 +14,8 @@ Se [https://chakra-ui.com/docs/components/input](https://chakra-ui.com/docs/comp
 ```jsx
 import { Input } from "@kvib/react";
 ```
+
+## Input
+
+<Canvas of={InputStories.Input} />
+<Controls of={InputStories.Input} />

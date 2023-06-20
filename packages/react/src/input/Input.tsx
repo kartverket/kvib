@@ -16,13 +16,13 @@ export type InputProps = Omit<
   size?: "lg" | "md" | "sm" | "xs";
   variant?: "outline" | "filled" | "flushed" | "unstyled";
   isRequired?: boolean;
-  isReadonly?: boolean;
+  isReadOnly?: boolean;
   isInvalid?: boolean;
   isDisabled?: boolean;
 };
 
 export const Input = forwardRef<InputProps, "input">(
-  ({ size = "md", variant, isRequired, isReadonly, isInvalid, isDisabled, ...props }, ref) => {
+  ({ size = "md", variant, isRequired, isReadOnly, isInvalid, isDisabled, ...props }, ref) => {
     return (
       <ChakraInput
         {...props}
@@ -30,7 +30,7 @@ export const Input = forwardRef<InputProps, "input">(
         size={size}
         variant={variant}
         isRequired={isRequired}
-        isReadOnly={isReadonly}
+        isReadOnly={isReadOnly}
         isInvalid={isInvalid}
         isDisabled={isDisabled}
       />
