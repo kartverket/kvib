@@ -1,4 +1,4 @@
-import { colors, radii } from "../foundations";
+import { colors, radii } from "../tokens";
 import { createMultiStyleConfigHelpers } from "@chakra-ui/styled-system";
 
 const helpers = createMultiStyleConfigHelpers(["button", "icon"]);
