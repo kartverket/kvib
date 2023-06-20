@@ -24,7 +24,7 @@ export type IconButtonProps = Omit<
   colorScheme: "green" | "blue" | "gray" | "red";
 
   /**The icon to be used in the button.*/
-  icon?: string;
+  icon: string;
 
   /**A label that describes the button*/
   "aria-label": string;

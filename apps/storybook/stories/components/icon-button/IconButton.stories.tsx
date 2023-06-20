@@ -1,4 +1,5 @@
 import { IconButton as KvibIconButton } from "@kvib/react/src/button";
+import { HStack } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibIconButton> = {
@@ -67,5 +68,10 @@ type Story = StoryObj<typeof KvibIconButton>;
 
 export const IconButton: Story = {
   args: { colorScheme: "green", size: "md", variant: "ordinary", icon: "add" },
-  render: (args) => <KvibIconButton {...args}></KvibIconButton>,
+  render: (args) => (
+    <HStack>
+      <KvibIconButton {...args}></KvibIconButton>
+      <KvibIconButton variant="ordinary" aria-label="IconButton Large" size="lg" icon="add"></KvibIconButton>
+    </HStack>
+  ),
 };
