@@ -1,13 +1,18 @@
-import { Meta } from "@storybook/blocks";
+import { Title, Canvas, Meta, Story, Controls } from "@storybook/blocks";
+import * as IconButtonStories from "./IconButton.stories";
 
-<Meta title="Komponenter/Icon Button" />
+<Meta of={IconButtonStories} />
 
 # Icon Button
 
-Se [https://chakra-ui.com/docs/components/icon-button](https://chakra-ui.com/docs/components/icon-button) for eksempler og dokumentasjon.
+<Canvas of={IconButtonStories.IconButton} />
 
 ## Ta i bruk
 
 ```jsx
-import { IconButton } from "@kvib/react";
+import { Button } from "@kvib/react";
 ```
+
+## Props
+
+<Controls of={IconButtonStories.IconButton} />

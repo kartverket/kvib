@@ -1,4 +1,4 @@
-import { IconButton as KvibIconButton } from "@kvib/react/src/iconButton";
+import { IconButton as KvibIconButton } from "@kvib/react/src/button";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibIconButton> = {
@@ -66,6 +66,6 @@ export default meta;
 type Story = StoryObj<typeof KvibIconButton>;
 
 export const IconButton: Story = {
-  args: { colorScheme: "green", size: "md", variant: "ordinary", icon: "search" },
+  args: { colorScheme: "green", size: "md", variant: "ordinary", icon: "add" },
   render: (args) => <KvibIconButton {...args}></KvibIconButton>,
 };
