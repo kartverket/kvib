@@ -15,9 +15,21 @@ export type InputProps = Omit<
 > & {
   size?: "lg" | "md" | "sm" | "xs";
   variant?: "outline" | "filled" | "flushed" | "unstyled";
+  /**
+   * @default false
+   */
   isRequired?: boolean;
+  /**
+   * @default false
+   */
   isReadOnly?: boolean;
+  /**
+   * @default false
+   */
   isInvalid?: boolean;
+  /**
+   * @default false
+   */
   isDisabled?: boolean;
 };
 

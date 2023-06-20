@@ -71,6 +71,14 @@ export default meta;
 type InputStory = StoryObj<typeof KvibInput>;
 
 export const Input: InputStory = {
-  args: { placeholder: "Skriv her...", size: "md", variant: "outline" },
+  args: {
+    placeholder: "Skriv her...",
+    size: "md",
+    variant: "outline",
+    isDisabled: false,
+    isInvalid: false,
+    isReadOnly: false,
+    isRequired: false,
+  },
   render: (args) => <KvibInput {...args} />,
 };
