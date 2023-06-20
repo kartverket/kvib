@@ -83,6 +83,7 @@ const variantLink = defineStyle((props) => {
       color: colors.gray[800],
       backgroundColor: "transparent",
       _hover: {
+        textDecoration: "none",
         color: colors.gray[500],
         ".text": {
           textDecoration: "Underline",
@@ -96,6 +97,7 @@ const variantLink = defineStyle((props) => {
       },
       _active: {
         color: colors.gray[900],
+        textDecoration: "none",
         ".text": {
           textDecoration: "Underline",
         },
@@ -112,6 +114,7 @@ const variantLink = defineStyle((props) => {
     color: `${c}.500`,
     backgroundColor: "transparent",
     _hover: {
+      textDecoration: "none",
       color: `${c}.400`,
       ".text": {
         textDecoration: "Underline",
@@ -119,14 +122,16 @@ const variantLink = defineStyle((props) => {
       _disabled: {
         ".text": {
           textDecoration: "none",
-          color: `${c}.500`,
         },
+        textDecoration: "none",
+        color: `${c}.500`,
       },
     },
     _active: {
+      textDecoration: "none",
       color: `${c}.600`,
       ".text": {
-        textDecoration: "Underline",
+        textDecoration: "underline",
       },
       _disabled: {
         ".text": {
