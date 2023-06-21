@@ -1,5 +1,20 @@
 # @kvib/react
 
+## 0.36.0
+
+### Minor Changes
+
+- 7f6bda20d: AbsoluteCenter og StackDivider er tilgjengelig i Designbiblioteket.
+
+  Button-komponent er tilgjengelig med Kartverkets Design. Dokumentasjon er oppdatert.
+  Kritiske endringer: -**colorScheme** tar verdiene: "green" (default), "blue", "gray", "red". -**rightIcon**/ **leftIcon**: er av typen String, ikke lenger et element.
+
+## 0.35.0
+
+### Minor Changes
+
+- 1dc1c1d70: Lilla-fargepalett er nå tilgjengelig.
+
 ## 0.34.1
 
 ### Patch Changes

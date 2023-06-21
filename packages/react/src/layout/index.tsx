@@ -1,6 +1,7 @@
 export {
   Box,
   Center,
+  AbsoluteCenter,
   Square,
   Circle,
   Container,
@@ -12,6 +13,7 @@ export {
   Stack,
   HStack,
   VStack,
+  StackDivider,
   Wrap,
   WrapItem,
   AspectRatio,
@@ -19,6 +21,7 @@ export {
 export type {
   BoxProps,
   CenterProps,
+  AbsoluteCenterProps,
   SquareProps,
   ContainerProps,
   FlexProps,
@@ -27,6 +30,7 @@ export type {
   GridItemProps,
   SimpleGridProps,
   StackProps,
+  StackDividerProps,
   WrapProps,
   WrapItemProps,
   AspectRatioProps,
