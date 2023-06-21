@@ -1,13 +1,50 @@
-import { Meta } from "@storybook/blocks";
+import { Title, Canvas, Meta, Story, Controls } from "@storybook/blocks";
+import * as ButtonStories from "./Button.stories";
 
-<Meta title="Komponenter/Button" />
+<Meta of={ButtonStories} />
 
 # Button
 
-Se [https://chakra-ui.com/docs/components/button](https://chakra-ui.com/docs/components/button) for eksempler og dokumentasjon.
+Her er en oversikt over utvalget av Knapper i KVIB. Disse er blant annet bygget opp ved bruk av desing tokens fra KVIB, eksempelvis farger og typografi. I dokumentasjonen følger beskrivelse av komponenten og bruksområde, sammen med kodeeksempler.
+
+I Kartverket har vi to sett med knappestiler.\
+Et nettsidesett og et forvaltningsett. For løsninger som skal gå inn under eller oppfattes som kartverket.no, skal man bruke det grønne nettsidesettet.\
+For karttjenester, forvaltningstjenester og lignende benytter vi oss av det blå settet. Dette er for å få en tydelig kontrast mot kartet.
+
+I tillegg til knappestiler har vi også knappetyper. Dette er for å få et tydelig knappehierarki som med visuelle grep illustrerer hva som er viktigst og hva knappen gjør.
+
+**Solid button (primary)** Brukes for den viktigste, ønsket eller avsluttende handling. Hovedregel er at det kun skal være en solid/primary Button per side. \
+**Outline button (secondary)** Viktig, men ikke viktigste eller fullført handling.\
+**Link button (tertiary)** Den mindre “viktige handlingen” Fin å bruke mot Primary for å illustrere tydelig handling.
 
 ## Ta i bruk
 
 ```jsx
-import { Button, ButtonGroup } from "@kvib/react";
+import { Button } from "@kvib/react";
 ```
+
+## Props
+
+<Canvas of={ButtonStories.SolidButton} />
+<Controls of={ButtonStories.SolidButton} />
+
+## Solid Button
+
+<Canvas of={ButtonStories.SolidButton} />
+
+## Outline Button
+
+<Canvas of={ButtonStories.OutlineButton} />
+
+## Link Button
+
+<Canvas of={ButtonStories.LinkButton} />
+
+## Disabled Button
+
+<Canvas of={ButtonStories.DisabledButton} />
+
+## Button med tekst og ikon
+
+<Canvas of={ButtonStories.LeftIconButton} />
+<Canvas of={ButtonStories.RightIconButton} />
