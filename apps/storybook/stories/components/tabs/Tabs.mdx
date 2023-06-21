@@ -1,6 +1,7 @@
 import { Meta } from "@storybook/blocks";
+import * as TabsStories from "./Tabs.stories";
 
-<Meta title="Komponenter/Tabs" />
+<Meta of={TabsStories} />
 
 # Tabs
 
@@ -9,5 +10,5 @@ Se [https://chakra-ui.com/docs/components/tabs](https://chakra-ui.com/docs/compo
 ## Ta i bruk
 
 ```jsx
-import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@kvib/react";
+<Canvas of {TabsStories.Tabs} />
 ```
