@@ -2,7 +2,6 @@ import { FormControl as KvibFormControl } from "@kvib/react/src/form-control/For
 import { FormLabel } from "@kvib/react/src/form-control/Form-label";
 import { FormHelperText } from "@kvib/react/src/form-control/Form-helper-text";
 import { FormErrorMessage } from "@kvib/react/src/form-control/Form-error-message";
-
 import { Input } from "@kvib/react/src/input/Input";
 import { Meta, StoryObj } from "@storybook/react";
 
@@ -56,8 +55,11 @@ export const FormControl: FormControlStory = {
     <KvibFormControl {...args}>
       <FormLabel label={"Label"} />
       <Input placeholder={"Skriv her..."} size={"md"} variant={"outline"} />
-      <FormHelperText helperText={"Hjelpetekst..."} />
-      <FormErrorMessage errorMessage={"Må fylles ut!"} />
+      {!args.isInvalid ? (
+        <FormHelperText helperText={"Hjelpetekst..."} />
+      ) : (
+        <FormErrorMessage errorMessage={"Må fylles ut!"} />
+      )}
     </KvibFormControl>
   ),
 };
