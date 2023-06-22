@@ -71,13 +71,3 @@ export const IconButtonVariants: Story = {
     </HStack>
   ),
 };
-
-// export const IconButtonBlue: Story = {
-//   args: { icon: "add" ,isDisabled: false, colorScheme:"blue"},
-//   render: (args) => (
-//       <HStack>
-//         <KvibIconButton {...args} aria-label="IconButton green solid" variant="solid"></KvibIconButton>
-//         <KvibIconButton {...args} aria-label="IconButton green outline" variant="outline"></KvibIconButton>
-//       </HStack>
-//   ),
-// };
