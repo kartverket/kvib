@@ -41,7 +41,7 @@ type Story = StoryObj<typeof KvibLink>;
 export const Link: Story = {
   args: {
     children: "Dette er en lenke",
-    variant: "green",
+    colorScheme: "green",
     href: "/?path=/docs/introduksjon--docs",
     isExternal: false,
   },
@@ -50,12 +50,12 @@ export const Link: Story = {
 
 export const LinkExternal: Story = {
   render: () => (
-    <KvibLink isExternal={true} variant="green">
+    <KvibLink isExternal={true} colorScheme="green">
       Dette er en lenke
     </KvibLink>
   ),
 };
 
 export const LinkInternal: Story = {
-  render: () => <KvibLink variant="green">Dette er en intern lenke</KvibLink>,
+  render: () => <KvibLink colorScheme="green">Dette er en intern lenke</KvibLink>,
 };

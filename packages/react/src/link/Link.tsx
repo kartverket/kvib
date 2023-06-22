@@ -1,9 +1,9 @@
 import { Link as ChakraLink, LinkProps as ChakraLinkProps, forwardRef } from "@chakra-ui/react";
 
-export type LinkProps = Omit<ChakraLinkProps, "variant"> & {
+export type LinkProps = Omit<ChakraLinkProps, "colorScheme"> & {
   /** The colorvariant of the link.
    */
-  variant: "green" | "blue";
+  colorScheme: "green" | "blue";
 };
 
 /** Link to different sites or parts of site
