@@ -1,6 +1,13 @@
 import { defineStyleConfig, defineStyle } from "@chakra-ui/react";
 import { colors } from "../tokens";
 
+const customIconButton = defineStyle({
+  background: "orange.500",
+  color: "white",
+  fontFamily: "serif",
+  fontWeight: "normal",
+});
+
 const variantSolid = defineStyle((props) => {
   const { colorScheme: c } = props;
 
@@ -196,6 +203,7 @@ const config = defineStyleConfig({
     solid: variantSolid,
     outline: variantOutline,
     link: variantLink,
+    iconButton: customIconButton,
   },
   defaultProps: {
     variant: "solid",
