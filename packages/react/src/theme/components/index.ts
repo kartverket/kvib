@@ -1,2 +1,2 @@
 export { default as Button } from "./button";
-//export { IconButtonTheme as IconButton } from "./iconButton";
+export { IconButtonTheme as IconButton } from "./iconButton";
