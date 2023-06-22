@@ -1,5 +1,5 @@
-import { IconButton as KvibIconButton } from "@kvib/react/src/button";
-// import { HStack } from "@kvib/react";
+import { IconButton as KvibIconButton, HStack } from "@kvib/react/src";
+
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibIconButton> = {
@@ -12,23 +12,6 @@ const meta: Meta<typeof KvibIconButton> = {
     },
   },
   argTypes: {
-    // icon: {
-    //   description: "Icon in button",
-    //   table: {
-    //     type: { summary: "string" },
-    //   },
-    //   control: { type: "string" },
-    // },
-    // variant: {
-    //   description: "Variant",
-    //   table: {
-    //     type: { summary: "primary | secondary" },
-    //     defaultValue: { summary: "primary" },
-    //   },
-    //   options: ["primary", "secondary"],
-    //   control: { type: "radio" },
-    // },
-
     size: {
       description: "Size of Icon button",
       table: {
@@ -39,9 +22,10 @@ const meta: Meta<typeof KvibIconButton> = {
       control: { type: "radio" },
     },
     isDisabled: {
-      description: "Toggles if button should be disabled",
+      description: "If true, the button will be disabled.",
       table: {
-        type: { summary: "boolean" },
+        type: { summary: Boolean },
+        defaultValue: { summary: false },
       },
       control: "boolean",
     },
@@ -59,9 +43,41 @@ export default meta;
 type Story = StoryObj<typeof KvibIconButton>;
 
 export const IconButton: Story = {
-  args: { icon: "add" },
+  args: { icon: "add", isDisabled: false, "aria-label": "IconButton default" },
   render: (args) => (
     <KvibIconButton {...args}></KvibIconButton>
     /*<KvibIconButton variant="ordinary" aria-label="IconButton Large" size="lg" icon="add"></KvibIconButton>*/
   ),
 };
+
+export const IconButtonSizes: Story = {
+  args: { icon: "add", isDisabled: false },
+  render: (args) => (
+    <HStack>
+      <KvibIconButton {...args} aria-label="IconButton Large" size="xs"></KvibIconButton>
+      <KvibIconButton {...args} aria-label="IconButton Large" size="sm"></KvibIconButton>
+      <KvibIconButton {...args} aria-label="IconButton Large" size="md"></KvibIconButton>
+      <KvibIconButton {...args} aria-label="IconButton Large" size="lg"></KvibIconButton>
+    </HStack>
+  ),
+};
+
+export const IconButtonVariants: Story = {
+  args: { icon: "add", isDisabled: false },
+  render: (args) => (
+    <HStack>
+      <KvibIconButton {...args} aria-label="IconButton solid" variant="solid"></KvibIconButton>
+      <KvibIconButton {...args} aria-label="IconButton outline" variant="outline"></KvibIconButton>
+    </HStack>
+  ),
+};
+
+// export const IconButtonBlue: Story = {
+//   args: { icon: "add" ,isDisabled: false, colorScheme:"blue"},
+//   render: (args) => (
+//       <HStack>
+//         <KvibIconButton {...args} aria-label="IconButton green solid" variant="solid"></KvibIconButton>
+//         <KvibIconButton {...args} aria-label="IconButton green outline" variant="outline"></KvibIconButton>
+//       </HStack>
+//   ),
+// };
