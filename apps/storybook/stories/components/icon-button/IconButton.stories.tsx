@@ -28,24 +28,16 @@ const meta: Meta<typeof KvibIconButton> = {
     //   options: ["primary", "secondary"],
     //   control: { type: "radio" },
     // },
-    // colorScheme: {
-    //   description: "Color of button",
-    //   table: {
-    //     type: { summary: "green | blue| gray" },
-    //     defaultValue: { summary: "green" },
-    //   },
-    //   options: ["green", "blue", "gray"],
-    //   control: { type: "radio" },
-    // },
-    // size: {
-    //   description: "Size of Icon button",
-    //   table: {
-    //     type: { summary: "sm | md | lg" },
-    //     defaultValue: { summary: "md" },
-    //   },
-    //   options: ["sm", "md", "lg"],
-    //   control: { type: "radio" },
-    // },
+
+    size: {
+      description: "Size of Icon button",
+      table: {
+        type: { summary: " xs| sm | md | lg" },
+        defaultValue: { summary: "md" },
+      },
+      options: ["xs", "sm", "md", "lg"],
+      control: { type: "radio" },
+    },
     isDisabled: {
       description: "Toggles if button should be disabled",
       table: {
@@ -67,7 +59,7 @@ export default meta;
 type Story = StoryObj<typeof KvibIconButton>;
 
 export const IconButton: Story = {
-  args: { variant: "solid", icon: "add" },
+  args: { icon: "add" },
   render: (args) => (
     <KvibIconButton {...args}></KvibIconButton>
     /*<KvibIconButton variant="ordinary" aria-label="IconButton Large" size="lg" icon="add"></KvibIconButton>*/
