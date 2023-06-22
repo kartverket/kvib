@@ -4,4 +4,4 @@
 
 Lenker er nå tilgjengelig med Kartverkets Design. Dokumemtasjon er oppdatert.  
 Kritiske endringer:  
--**variant** verdier er: "green", "blue"
+-**colorScheme** verdier er: "green", "blue"
