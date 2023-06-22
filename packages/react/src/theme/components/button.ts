@@ -1,7 +1,7 @@
 import { defineStyleConfig, defineStyle } from "@chakra-ui/react";
 import { colors } from "../tokens";
 
-const variantSolid = defineStyle((props) => {
+export const variantSolid = defineStyle((props) => {
   const { colorScheme: c } = props;
 
   if (c === "gray") {
@@ -10,9 +10,17 @@ const variantSolid = defineStyle((props) => {
       color: colors.black,
       _hover: {
         bg: colors.gray[200],
+        _disabled: {
+          bg: colors.gray[100],
+          color: colors.black,
+        },
       },
       _active: {
         bg: colors.gray[300],
+        _disabled: {
+          bg: colors.gray[100],
+          color: colors.black,
+        },
       },
     };
   }
@@ -21,18 +29,27 @@ const variantSolid = defineStyle((props) => {
     color: colors.white,
     _hover: {
       bg: `${c}.400`,
+      _disabled: {
+        bg: `${c}.500`,
+        color: colors.white,
+      },
     },
     _active: {
       bg: `${c}.600`,
+      _disabled: {
+        bg: `${c}.500`,
+        color: colors.white,
+      },
     },
   };
 });
 
-const variantOutline = defineStyle((props) => {
+export const variantOutline = defineStyle((props) => {
   const { colorScheme: c } = props;
 
   if (c === "gray") {
     return {
+      border: "1px",
       bg: colors.white,
       borderColor: colors.gray[200],
       color: colors.black,
@@ -53,23 +70,28 @@ const variantOutline = defineStyle((props) => {
     };
   }
   return {
+    border: "1px",
     bg: colors.white,
     borderColor: `${c}.500`,
     color: `${c}.500`,
     _hover: {
+      border: "0px",
       bg: `${c}.400`,
       color: colors.white,
       _disabled: {
         bg: colors.white,
         color: `${c}.500`,
+        border: "1px",
       },
     },
     _active: {
       bg: `${c}.600`,
+      border: "0px",
       color: colors.white,
       _disabled: {
         bg: colors.white,
         color: `${c}.500`,
+        border: "1px",
       },
     },
   };
