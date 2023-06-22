@@ -5,8 +5,9 @@ export type IconButtonProps = Omit<
   ChakraIconButtonProps,
   "colorScheme" | "variant" | "isActive" | "icon" | "spinner"
 > & {
-  /**The variant of the IconButton*/
-  variant: "solid" | "outlined" | "link";
+  /**The variant of the IconButton
+   * @default solid */
+  variant: "solid" | "outline";
 
   /**The icon to be used in the button.*/
   icon: string;
@@ -40,7 +41,7 @@ export const IconButton = forwardRef<IconButtonProps, "button">(
         // colorScheme={colorScheme}
         isDisabled={isDisabled || isLoading}
         aria-busy={isLoading}
-        icon={<span className="material-symbols-outlined">{props.icon}</span>}
+        icon={<span className="material-symbols-rounded">{props.icon}</span>}
       ></ChakraIconButton>
     );
   }

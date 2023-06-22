@@ -46,7 +46,7 @@ export const IconButtonTheme = defineStyleConfig({
   },
   variants: {
     solid: variantSolid,
-    outlined: variantOutline,
+    outline: variantOutline,
   },
   defaultProps: {
     variant: "solid",
