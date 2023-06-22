@@ -9,8 +9,6 @@ const config = helpers.defineMultiStyleConfig({
     return {
       root: {
         display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
       },
       tab: {
         color: colors.blue[900],
