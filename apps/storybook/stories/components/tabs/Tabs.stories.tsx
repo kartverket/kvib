@@ -18,7 +18,7 @@ export default meta;
 type Story = StoryObj<typeof KvibTabs>;
 
 export const Tabs: Story = {
-  args: { colorScheme: "green", size: "md", align: "center" },
+  args: { colorScheme: "green", size: "md" },
   render: (args) => (
     <KvibTabs {...args}>
       <TabList>
@@ -77,7 +77,7 @@ export const TabsSizes: Story = {
   args: { colorScheme: "green" },
   render: (args) => (
     <VStack alignItems="start">
-      <KvibTabs {...args} size="sm">
+      <KvibTabs {...args} aria-label="Tabs small" size="sm">
         <TabList>
           <Tab>Første fane</Tab>
           <Tab>Andre fane</Tab>
