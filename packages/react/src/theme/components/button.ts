@@ -188,6 +188,9 @@ const config = defineStyleConfig({
       gap: "6px",
       minWidth: "90px",
       minHeight: "24px",
+      ".material-symbols-rounded": {
+        fontSize: "12px",
+      },
     },
     sm: {
       fontSize: "14px",
@@ -196,6 +199,9 @@ const config = defineStyleConfig({
       paddingRight: "12px",
       minWidth: "100px",
       minHeight: "32px",
+      ".material-symbols-rounded": {
+        fontSize: "14px",
+      },
     },
     md: {
       fontSize: "16px",
@@ -204,6 +210,9 @@ const config = defineStyleConfig({
       paddingRight: "16px",
       minWidth: "100px",
       minHeight: "40px",
+      ".material-symbols-rounded": {
+        fontSize: "16px",
+      },
     },
     lg: {
       fontSize: "18px",
@@ -212,6 +221,9 @@ const config = defineStyleConfig({
       paddingRight: "24px",
       minWidth: "106px",
       minHeight: "48px",
+      ".material-symbols-rounded": {
+        fontSize: "16px",
+      },
     },
   },
   variants: {
