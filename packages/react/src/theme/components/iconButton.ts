@@ -40,7 +40,7 @@ export const variantGhost = defineStyle((props) => {
       },
     },
     _active: {
-      bg: colors.gray[100],
+      bg: `${c}.100`,
       _disabled: {
         bg: "transparent",
         color: `${c}.500`,
