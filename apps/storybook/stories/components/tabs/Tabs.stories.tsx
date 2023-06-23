@@ -52,24 +52,16 @@ export const TabsColors: Story = {
 export const TabsNumber: Story = {
   args: { colorScheme: "green", size: "md" },
   render: (args) => (
-    <VStack alignItems="start">
-      <KvibTabs {...args}>
-        <TabList>
-          <Tab>Første fane</Tab>
-          <Tab>Andre fane</Tab>
-        </TabList>
-      </KvibTabs>
-      <KvibTabs {...args}>
-        <TabList>
-          <Tab>Første fane</Tab>
-          <Tab>Andre fane</Tab>
-          <Tab>Tredje fane</Tab>
-          <Tab>Fjerde fane</Tab>
-          <Tab>Femte fane</Tab>
-          <Tab>Sjette fane</Tab>
-        </TabList>
-      </KvibTabs>
-    </VStack>
+    <KvibTabs {...args}>
+      <TabList>
+        <Tab>Første fane</Tab>
+        <Tab>Andre fane</Tab>
+        <Tab>Tredje fane</Tab>
+        <Tab>Fjerde fane</Tab>
+        <Tab>Femte fane</Tab>
+        <Tab>Sjette fane</Tab>
+      </TabList>
+    </KvibTabs>
   ),
 };
 
@@ -99,14 +91,13 @@ export const TabsSizes: Story = {
   ),
 };
 
-export const TabsStates: Story = {
+export const TabsDisabled: Story = {
   args: { colorScheme: "green", size: "md" },
   render: (args) => (
     <KvibTabs {...args}>
       <TabList>
-        <Tab>Active</Tab>
-        <Tab>Default</Tab>
-        <Tab isDisabled={true}>Disabled</Tab>
+        <Tab>Enabled</Tab>
+        <Tab isDisabled>Disabled</Tab>
       </TabList>
     </KvibTabs>
   ),
