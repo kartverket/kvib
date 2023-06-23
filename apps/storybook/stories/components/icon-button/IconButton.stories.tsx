@@ -30,9 +30,10 @@ const meta: Meta<typeof KvibIconButton> = {
       control: "boolean",
     },
     isLoading: {
-      description: "Toggles if Icon button should be loading",
+      description: "If true, the button will show a spinner.",
       table: {
         type: { summary: "boolean" },
+        defaultValue: { summary: false },
       },
       control: "boolean",
     },
@@ -43,7 +44,7 @@ export default meta;
 type Story = StoryObj<typeof KvibIconButton>;
 
 export const IconButton: Story = {
-  args: { icon: "add", isDisabled: false, "aria-label": "IconButton default" },
+  args: { icon: "add", "aria-label": "IconButton default" },
   render: (args) => (
     <KvibIconButton {...args}></KvibIconButton>
     /*<KvibIconButton variant="ordinary" aria-label="IconButton Large" size="lg" icon="add"></KvibIconButton>*/
@@ -70,6 +71,16 @@ export const IconButtonVariants: Story = {
       <KvibIconButton {...args} aria-label="IconButton outline" variant="outline"></KvibIconButton>
       <KvibIconButton {...args} aria-label="IconButton link" variant="link"></KvibIconButton>
       <KvibIconButton {...args} aria-label="IconButton ghost" variant="ghost"></KvibIconButton>
+    </HStack>
+  ),
+};
+
+export const IconButtonStates: Story = {
+  args: { icon: "add" },
+  render: (args) => (
+    <HStack>
+      <KvibIconButton {...args} aria-label="IconButton disabled" isDisabled></KvibIconButton>
+      <KvibIconButton {...args} aria-label="IconButton loading" isLoading></KvibIconButton>
     </HStack>
   ),
 };
