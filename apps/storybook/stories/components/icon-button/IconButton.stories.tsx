@@ -54,10 +54,10 @@ export const IconButtonSizes: Story = {
   args: { icon: "add", isDisabled: false },
   render: (args) => (
     <HStack>
-      <KvibIconButton {...args} aria-label="IconButton Large" size="xs"></KvibIconButton>
-      <KvibIconButton {...args} aria-label="IconButton Large" size="sm"></KvibIconButton>
-      <KvibIconButton {...args} aria-label="IconButton Large" size="md"></KvibIconButton>
-      <KvibIconButton {...args} aria-label="IconButton Large" size="lg"></KvibIconButton>
+      <KvibIconButton {...args} aria-label="IconButton xs" size="xs"></KvibIconButton>
+      <KvibIconButton {...args} aria-label="IconButton sm" size="sm"></KvibIconButton>
+      <KvibIconButton {...args} aria-label="IconButton md" size="md"></KvibIconButton>
+      <KvibIconButton {...args} aria-label="IconButton lg" size="lg"></KvibIconButton>
     </HStack>
   ),
 };
@@ -68,6 +68,7 @@ export const IconButtonVariants: Story = {
     <HStack>
       <KvibIconButton {...args} aria-label="IconButton solid" variant="solid"></KvibIconButton>
       <KvibIconButton {...args} aria-label="IconButton outline" variant="outline"></KvibIconButton>
+      <KvibIconButton {...args} aria-label="IconButton link" variant="link"></KvibIconButton>
     </HStack>
   ),
 };
