@@ -97,7 +97,7 @@ export const variantOutline = defineStyle((props) => {
   };
 });
 
-const variantLink = defineStyle((props) => {
+export const variantLink = defineStyle((props) => {
   const { colorScheme: c } = props;
 
   if (c === "gray") {
