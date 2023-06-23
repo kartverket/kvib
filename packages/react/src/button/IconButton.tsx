@@ -17,10 +17,6 @@ export type IconButtonProps = Omit<ChakraIconButtonProps, "colorScheme" | "varia
   /**The visual color appearance of the component.
      @default green*/
   colorScheme: "green" | "blue" | "gray" | "red";
-
-  /**The visual color appearance of the component.
-     @default green*/
-  isLoading: boolean;
 };
 
 const IconSpinner = (props: IconButtonProps) => {
@@ -32,13 +28,7 @@ const IconSpinner = (props: IconButtonProps) => {
 
 export const IconButton = forwardRef<IconButtonProps, "button">(
   (
-    {
-      isDisabled,
-      isLoading,
-      // variant="solid",
-      // colorScheme="green" ,
-      ...props
-    },
+    { isDisabled, isLoading, ...props },
 
     ref
   ) => {
@@ -48,9 +38,6 @@ export const IconButton = forwardRef<IconButtonProps, "button">(
         {...props}
         ref={ref}
         __css={{ ...styles }}
-        // size={size}
-        // variant={variant}
-        // colorScheme={colorScheme}
         isDisabled={isDisabled || isLoading}
         aria-busy={isLoading}
         icon={IconSpinner({ isLoading, ...props })}
