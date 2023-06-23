@@ -51,7 +51,7 @@ export const IconButton: Story = {
 };
 
 export const IconButtonSizes: Story = {
-  args: { icon: "add", isDisabled: false },
+  args: { icon: "add" },
   render: (args) => (
     <HStack>
       <KvibIconButton {...args} aria-label="IconButton xs" size="xs"></KvibIconButton>
@@ -63,12 +63,13 @@ export const IconButtonSizes: Story = {
 };
 
 export const IconButtonVariants: Story = {
-  args: { icon: "add", isDisabled: false },
+  args: { icon: "add" },
   render: (args) => (
     <HStack>
       <KvibIconButton {...args} aria-label="IconButton solid" variant="solid"></KvibIconButton>
       <KvibIconButton {...args} aria-label="IconButton outline" variant="outline"></KvibIconButton>
       <KvibIconButton {...args} aria-label="IconButton link" variant="link"></KvibIconButton>
+      <KvibIconButton {...args} aria-label="IconButton ghost" variant="ghost"></KvibIconButton>
     </HStack>
   ),
 };
