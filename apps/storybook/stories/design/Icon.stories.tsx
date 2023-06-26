@@ -18,15 +18,17 @@ const meta: Meta<typeof Icon> = {
       defaultValue: { summary: "black" },
     },
     weight: {
-      control: "number",
+      control: { type: "range", min: 100, max: 700, step: 100 },
       defaultValue: { summary: 600 },
     },
     grade: {
-      control: "number",
+      control: "radio",
+      options: [-25, 0, 200],
       defaultValue: { summary: 0 },
     },
     size: {
-      control: "number",
+      control: "radio",
+      options: [20, 24, 40, 48],
       defaultValue: { summary: 24 },
     },
     isFilled: {
@@ -40,7 +42,7 @@ export default meta;
 type Story = StoryObj<typeof Icon>;
 
 export const defaultIcon: Story = {
-  args: { icon: "search" },
+  args: { icon: "favorite" },
   render: (args) => <Icon {...args} />,
 };
 
@@ -58,7 +60,7 @@ export const exampleIcon: Story = {
       <Spacer />
       <Icon icon="info" color="blue" size={40} />
       <Spacer />
-      <Icon icon="info" color="blue" size={32} isFilled={true} />
+      <Icon icon="info" color="blue" size={48} isFilled={true} />
     </HStack>
   ),
 };

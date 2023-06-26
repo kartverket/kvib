@@ -12,7 +12,7 @@ export const Icon = ({
   /**The icon from Material symbols you want to display*/
   icon: string;
   /**The font size of the icon */
-  size?: number;
+  size?: 20 | 24 | 40 | 48;
   /**The color of the icon*/
   color?: string;
   /**The weight of the icon*/
