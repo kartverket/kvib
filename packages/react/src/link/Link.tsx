@@ -18,7 +18,7 @@ export const Link = forwardRef<LinkProps, "a">(({ children, colorScheme = "green
       {children}
       {isExternal && (
         <span
-          className="material-symbols-outlined"
+          className="material-symbols-rounded"
           style={{ fontSize: "18px", verticalAlign: "middle", marginLeft: "4px" }}
           aria-label="Ekstern lenke"
         >
