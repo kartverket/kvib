@@ -1,5 +1,12 @@
 # @kvib/react
 
+## 1.2.0
+
+### Minor Changes
+
+- 58aefa8ea: Tabs-komponent er tilgjengelig med Kartverkets Design. Dokumentasjon er oppdatert.
+  Kritiske endringer: -**colorScheme** tar verdiene: "green" (default) og "blue".
+
 ## 1.1.0
 
 ### Minor Changes
