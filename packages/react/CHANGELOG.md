@@ -1,5 +1,12 @@
 # @kvib/react
 
+## 1.1.0
+
+### Minor Changes
+
+- 403c6e020: Link-komponent er nå tilgjengelig med Kartverkets Design. Dokumemtasjon er oppdatert.
+  Kritiske endringer: -**colorScheme** verdier er: "green", "blue".
+
 ## 1.0.0
 
 ### Major Changes
