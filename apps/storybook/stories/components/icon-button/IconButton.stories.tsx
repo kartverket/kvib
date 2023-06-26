@@ -45,10 +45,7 @@ type Story = StoryObj<typeof KvibIconButton>;
 
 export const IconButton: Story = {
   args: { icon: "add", "aria-label": "IconButton default" },
-  render: (args) => (
-    <KvibIconButton {...args}></KvibIconButton>
-    /*<KvibIconButton variant="ordinary" aria-label="IconButton Large" size="lg" icon="add"></KvibIconButton>*/
-  ),
+  render: (args) => <KvibIconButton {...args}></KvibIconButton>,
 };
 
 export const IconButtonSizes: Story = {
