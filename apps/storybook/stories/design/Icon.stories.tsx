@@ -29,7 +29,7 @@ const meta: Meta<typeof Icon> = {
       control: "number",
       defaultValue: { summary: 24 },
     },
-    fill: {
+    isFilled: {
       control: "boolean",
       defaultValue: { summary: false },
     },
@@ -50,15 +50,15 @@ export const exampleIcon: Story = {
     <HStack>
       <Icon {...args} icon="home" />,
       <Spacer />
-      <Icon {...args} icon="home" fill={true} />,
+      <Icon {...args} icon="home" isFilled={true} />,
       <Spacer />
-      <Icon icon="warning" color="orange" fill={true} />,
+      <Icon icon="warning" color="orange" isFilled={true} />,
       <Spacer />
-      <Icon icon="error" color="red" fill={true} />,
+      <Icon icon="error" color="red" isFilled={true} />,
       <Spacer />
       <Icon icon="info" color="blue" size={40} />
       <Spacer />
-      <Icon icon="info" color="blue" size={32} fill={true} />
+      <Icon icon="info" color="blue" size={32} isFilled={true} />
     </HStack>
   ),
 };

@@ -7,7 +7,7 @@ export const Icon = ({
   color = "black",
   weight = 600,
   grade = 0,
-  fill = false,
+  isFilled = false,
 }: {
   /**The icon from Material symbols you want to display*/
   icon: string;
@@ -20,7 +20,7 @@ export const Icon = ({
   /**The of grade the icon*/
   grade?: number;
   /**Decides whether the icon is filled or not*/
-  fill?: boolean;
+  isFilled?: boolean;
 }) => {
   return (
     <span
@@ -28,7 +28,9 @@ export const Icon = ({
       style={{
         fontSize: size,
         color: color,
-        fontVariationSettings: `'FILL' ${fill ? 1 : 0}, 'wght' ${weight ? weight : 600}, 'GRAD' ${grade ? grade : 0}`,
+        fontVariationSettings: `'FILL' ${isFilled ? 1 : 0}, 'wght' ${weight ? weight : 600}, 'GRAD' ${
+          grade ? grade : 0
+        }`,
       }}
     >
       {icon}
