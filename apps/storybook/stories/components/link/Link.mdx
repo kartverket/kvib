@@ -1,13 +1,34 @@
-import { Meta } from "@storybook/blocks";
+import { Title, Canvas, Meta, Story, Controls } from "@storybook/blocks";
+import * as LinkStories from "./Link.stories";
 
-<Meta title="Komponenter/Link" />
+<Meta of={LinkStories} />
 
 # Link
 
-Se [https://chakra-ui.com/docs/components/link](https://chakra-ui.com/docs/components/link) for eksempler og dokumentasjon.
+Tekstlenker kan benyttes for å henvise til både interne og eksterne nettsider.
+Hvis lenken man trykker på tar deg ut av siden, eller åpner et nytt vindu, skal de vises med et ikon. Det er også viktig at lenketeksten er beskrivende.
+
+Dersom _Link_ skal benyttes sammen med et routing bibliotek, se [Chakras dokumentasjon om 'Usage with Routing Library'](https://chakra-ui.com/docs/components/link/usage#usage-with-routing-library) for eksempler og dokumentasjon.
+For bruk av _Link_ med Next.js, se [Chakras dokumentasjon om 'Usage with Next.js'](https://chakra-ui.com/docs/components/link/usage#usage-with-nextjs) for eksempler og dokumentasjon.
 
 ## Ta i bruk
 
 ```jsx
 import { Link } from "@kvib/react";
 ```
+
+## Props
+
+<Canvas of={LinkStories.Link} />
+
+<Controls of={LinkStories.Link} />
+
+## States (intern og ekstern lenke)
+
+Hvis lenken man trykker på tar deg ut av siden, eller åpnet et nytt vindu, skal de vises med ikon.
+
+<Canvas of={LinkStories.LinkStates} />
+
+## Farger
+
+<Canvas of={LinkStories.LinkColorscheme} />

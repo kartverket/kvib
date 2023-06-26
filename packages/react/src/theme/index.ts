@@ -7,6 +7,7 @@ import * as tokens from "./tokens";
 export const theme = extendTheme({
   ...defaultTheme,
   ...tokens,
+
   components: {
     ...defaultTheme.components,
     ...components,
