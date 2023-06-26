@@ -7,6 +7,6 @@ export type TabsProps = Omit<ChakraTabsProps, "colorScheme" | "size"> & {
   size: "sm" | "md" | "lg";
 };
 
-export const Tabs = forwardRef<TabsProps, "div">(({ ...props }, ref) => {
+export const Tabs = forwardRef<TabsProps, "div">(({ colorScheme = "green", size = "md", ...props }, ref) => {
   return <ChakraTabs {...props} ref={ref} />;
 });
