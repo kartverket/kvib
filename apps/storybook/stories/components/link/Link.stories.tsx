@@ -67,8 +67,7 @@ export const LinkStates: Story = {
 export const LinkColorscheme: Story = {
   args: {
     children: "Dette er en lenke",
-    href: "https://chakra-ui.com/docs/components",
-    isExternal: false,
+    href: "/?path=/docs/introduksjon--docs",
   },
   render: (args) => (
     <VStack>
