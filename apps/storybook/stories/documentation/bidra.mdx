@@ -2,6 +2,261 @@ import { Meta } from "@storybook/addon-docs";
 
 <Meta title="Bidra" />
 
-# Hvordan bidra?
+# Guidelines for bidragsløypa
 
-Skriv om hvordan bidra.
+## Byggeløype for en komponent
+
+### Generelt
+
+- Mapper navngis med små bokstaver
+- .ts-filer navngis med små bokstaver, alle andre filer navngis med stor forbokstav. Eksempelvis vil det bli: link.ts og Link.tsx.
+- Alle gjeldende props til en komponent skal dokumenteres i Kvib, og ikke bare de props’ene vi definerer selv. Dette gjøres av to grunner:
+  - enklere for brukere; trenger bare forholde seg til en nettside
+  - I tilfeller hvor vi har fjernet/endret på props’ene til Chakra vil det være misvisende å henvise til Chakra sin dokumentasjon.
+- For å tydeliggjøre hvilke komponenter som er kvibifisert, skal vi i dokumentasjonen benytte “\*\*” ved siden av komponentnanvet i Storybook filstrukturen.
+
+### Bygge komponenten
+
+Under følger en beskrivelse av hvordan en komponent kan bygges. Link-komponenten brukes som eksempel.
+
+1.  I `packages/react/src`: finn mappen med navnet på komponenten, dvs link.
+2.  I denne mappen (`packages/react/src/link`) lag én fil, _Link.tsx_ (i tillegg til _index.tsx_ som ligger der fra før).
+    _Link.tsx_ skal brukes for å kvibifisere komponenten med f.eks. egne props, og index.tsx brukes for å eksportere alt fra _.tsx_-filen.
+3.  I _Link.tsx_: Begynn med å definere hvilke props som skal være gjeldende for din komponent, samt hvilke typer hver prop kan ta. Dette kan gjøres på to måter:
+
+    - **Alternativ 1- bygg på Chakras props**: Importer Chakra sine props (her; LinkProps), og fjern unødvendige props og legg evt. til egndefinerte props.
+      Du må også definere en prop fra Chakra på nytt dersom du skal endre på hvilke verdier denne propen kan ta.
+      I koden under har vi fjernet chakra sin egen `variant`, og heller lagt til vår egendefinerte `variant` som kun tar verdiene “green” og “blue”.
+
+          ```jsx
+          import {LinkProps as ChakraLinkProps} from "@chakra-ui/react";
+
+          export type LinkProps = Omit<ChakraLinkProps, "variant">
+          & {variant: "green" | "blue"; };
+          ```
+
+    - **Alternativ 2- definer egne props fra bunnen**: Her må man definere alle props fra bunnen av.
+
+      ```jsx
+      export type LinkProps = {
+        variant: "green" | "blue",
+        isExternal?: Boolean,
+        href?: string,
+        children?: string,
+      };
+      ```
+
+4.  Videre i _Link.tsx_ skal du bygge opp komponenten ved å bruke propsa du definerte i steg 3. De propsene du endrer på sendes manuelt videre til Chakra-komponenten, de andre kan videresendes ved å bruke _“…props”_- syntaksen.
+5.  Flere av Chakra-komponentene har en litt annen variant for å kunne opprettes. Disse komponentene kan opprettes med funksjonen _forwardRef(props, ref)_ fra `@chakra-ui/react`.
+    I tillegg til å ta imot _props_, tas det også imot en _ref_, som refererer til det underliggende html-element brukt i komponenten. _ref_ skal sendes uendret videre til den underliggende Chakra-komponenten (se eksempelet under).
+    På denne måten kan man manipulere DOM-en direkte, for eksempel for å flytte fokus til et element (dette har ikke react innebygget støtte for). Mer informasjon om forwardRef finner du på [forwardRef-react](https://react.dev/reference/react/forwardRef)
+    og [The as prop and Custom component](https://chakra-ui.com/community/recipes/as-prop).
+    **OBS!** Viktig at forwardRef brukes fra chakra-ui og ikke fra react.
+
+            ```jsx
+                export const Link forwardRef<LinkProps,"a">({children, ...props }, ref) => {
+                  const isExternal = props.isExternal !== undefined ? props.isExternal : Boolean(props.href?.match(/^https?:\/\//));
+
+                  return(
+                      <ChakraLink {...props} ref={ref} isExternal={isExternal}>
+                        {children}
+                        {isExternal && (
+                          <span
+                            className="material-symbols-rounded"
+                            style={{ fontSize: "18px", verticalAlign: "middle", marginLeft: "4px" }}
+                            aria-label="Ekstern lenke"
+                          >
+                          launch
+                        </span>
+                        )}
+                      </ChakraLink>
+                  );
+                  });
+            ```
+
+6.  Tilslutt; eksporter alt fra _Link.tsx_ i _index.tsx_, og fjern komponenten og props som blir eksportert fra Chakra i denne filen.
+
+**_Tips_**: _Når du skal bygge selve komponenten er det lurt å benytte [komponent-dokumentasjonen til Chakra ](https://chakra-ui.com/docs/components) for den spesifikke komponenten._
+_I de fleste tilfeller kan du kopiere eksempelkoden deres, og tilpasse/bygge videre på denne._
+
+### Style komponenten
+
+Under følger en beskrivelse av hvordan en komponent kan styles. Link-komponenten brukes som eksempel.
+
+1.  Gå til `packages/react/src/theme/components`: lag en ny fil, link.ts. Her skal stylingen til Chakra overskrives med Kartverkets eget design.
+2.  Følg [guiden til Chakra på hvordan style en komponent](https://chakra-ui.com/docs/styled-system/component-style).
+    Du trenger ikke gjøre steget som omhandler “extendTheme”, da dette allerde er satt opp, så lenge du benytter mappestrukturen som allerede er satt opp.
+    * **OBS!** Det kan være nødvendig å bygge styling av en komponent fra bunnen av, eksempelvis dersom komponenten ikke er del av Chakra UI, eller komponenten ikke har egen styling annet enn at den arver styling fra annen komponent.
+    Benytt `useStyleConfig` hooken når komponenten defineres for å konsumere denne typen styling. Se [hvordan bruke useStyleConfig](https://chakra-ui.com/docs/styled-system/component-style#usestyleconfig-api) for eksempel.
+    For at komponenten skal få en default-styling er det viktig å sette *defaultProps* i *.ts*-filen (ikke bare som default i komponenten i *.tsx-filen*).
+    IconButton er en komponent hvor useStyleConfig er benyttet, og under vises det hvordan *defaultProps* settes, og hvordan useStyleConfig brukes i *.tsx\*.
+
+                    ```jsx
+                    //packages/react/src/theme/components/iconButton.ts
+
+                    export const IconButtonTheme = defineStyleConfig({
+                      baseStyle:{....},
+                      sizes: {....},
+                      variants: {...},
+                      defaultProps: {
+                        variant: "solid",
+                        size: "md",
+                        colorScheme: "green"},
+                    });
+                    ```
+
+                    ```jsx
+                    //packages/react/src/Button/IconButton.tsx
+
+                    export const IconButton = forwardRef<IconButtonProps, "button">(
+                      ({ isDisabled, isLoading, ...props },ref) => {
+                        const styles = useStyleConfig("IconButton", props);
+                        return (
+                          <ChakraIconButton
+                            {...props}
+                            ref={ref}
+                            __css={{ ...styles }}
+                            isDisabled={isDisabled || isLoading}
+                            aria-busy={isLoading}
+                            icon={IconSpinner({ isLoading, ...props })}
+                          ></ChakraIconButton>
+                          );}
+                    );
+                    ```
+
+3.  Eksporter themet fra _link.ts_ i `packages/react/src/theme/components/index.ts`.
+
+**_Tips_**: _Chakra lenker til sin egen styling-kode for de fleste komponentene.For eksempel kan stylingen av Button-komponenten sees ved å trykke på “Theme source” øverst på [Chakra sin dokumentasjonsside av Button](https://chakra-ui.com/docs/components/button/usage)._
+_Mye av deres kode kan gjenbrukes ved å bytte ut med egne CSS-variabler._
+_På denne måten kan man også se om komponenten arver fra andre, eksempelvis vil theme-source for IconButton lenkes til theming for Button, altså bruker de samme theming._
+
+### Dokumentere komponenten
+
+Under følger en beskrivelse av hvordan en komponent skal dokumenteres. Link-komponenten brukes som eksempel.
+
+1.  Gå til `apps/storybook/stories/components/link` og lag filen: _Link.stories.tsx_. I denne filen skal du lage stories for komponenten, og i _.mdx_-filen (som ligger i denne mappen fra før av) skrives dokumentasjonen.
+2.  I _Link.stories.tsx_ sett følgende øverst i filen:
+
+    ```jsx
+    import { Meta, StoryObj } from "@storybook/react";
+
+    const meta: Meta<typeof KvibLink> = {
+      title: "Komponenter/Link<3 ",
+      component: KvibLink,
+      parameters: {
+        docs: {
+          story: { inline: true },
+          canvas: { sourceState: "shown" },
+        },
+      },
+      argTypes: {
+        isExternal: {
+          description: "If true, a icon will be included.",
+          table: {
+            type: { summary: Boolean },
+            defaultValue: { summary: false },
+          },
+          control: "boolean",
+        },
+      },
+    };
+    ```
+
+    - `title` setter filstrukturen på selve [dokumentasjonssiden til Designbiblioteket](https://kartverket.github.io/kvib/storybook).
+    - Hvis man ønsker å endre på sortertingen av filstrukturen på Storybook, gå til `apps/storybook/.storybook/preview.js`, og tilpass `order` som overskriver den ellers alfabetiske rekkefølgen.
+
+3.  På selve dokumentasjonssiden er det en _control-tabell_ som benyttes for å teste ulike props-verdier på komponenten.
+    Beskrivelsen og default-verdien av egendefinerte props legges til som kommentar i _.tsx_-filen hvor propsene blir definert, altså i `packages/react/src/link/Link.tsx`.
+    Videre generer Storybook control-tabellen automatisk. Under er eksempel på beskrivelse av propen `variant`.
+
+         ```jsx
+        //packages/react/src/link/Link.tsx.
+
+        export type LinkProps = Omit<ChakraLinkProps, "variant"> & {
+
+          /**The colorvariant of the link.
+          @default green*/
+          variant: "green" | "blue";
+        };
+        ```
+
+4.  I `apps/storybook/stories/components/link/Link.stories.tsx` skal du videre definere stories for å vise komponenten med ulike props-verdier. Lag én story som viser default-verdiene til komponenten.
+    Dvs. benytt bare de nødvendige propsa når du definerer komponenten slik at default-verdiene vises.
+    Derav vil tilhørende kodesnutt vise minstekravet for at denne komponenten skal fungere. Under vises Link.
+
+    ```jsx
+    export default meta;
+    type Story = StoryObj<typeof KvibLink>;
+
+    export const Link: Story = {
+      args: {
+        children: "Dette er en lenke",
+        href: "/?path=/docs/introduksjon--docs",
+      },
+      render: (args) => <KvibLink {...args}>{args.children}</KvibLink>,
+    };
+    ```
+
+    Slik vil storyen se ut i dokumentasjonen, og vil vise minimale koden en bruker trenger å skrive.
+
+<img alt="Story av default-verider til komponenten" src="apps/storybook/stories/documentation/assets/test.jpg" />
+
+![Story av default-verider til komponenten]("./assets/test.jpg")
+
+5. Lag videre stories som viser verdier for de ulike propsa, f.eks. size, variant, colorScheme, states (loading, disabled,…).
+   Velg de som er mest hensiktsmessig for komponenten. Bruk _HStack/VStack_ til å ordne flere komponenter ved siden av hverandre i en story, hvor du tilordner hver komponent forksjellige verdier.
+   Dette tydeliggjør forskjellen samtidig som det gir en oversiktlig dokumentasjon. Under er det vist eksempel hvor ulike states (internal og external link) vises
+
+   ```jsx
+   export const LinkStates: Story = {
+     args: { colorScheme: "blue" },
+     render: (args) => (
+       <VStack>
+         <KvibLink href="/?path=/docs/introduksjon--docs" {...args}>
+           Dette er en intern lenke
+         </KvibLink>
+         <KvibLink isExternal href="https://chakra-ui.com/docs/components" {...args}>
+           Dette er en ekstern lenke
+         </KvibLink>
+       </VStack>
+     ),
+   };
+   ```
+
+6. I `apps/storybook/stories/components/link/Link.mdx`:
+
+   - Øverst i filen; bytt ut <Meta/> med: (Nå som du har definert en .stories.tsx fil settes tittelen her og ikke i .mdx)
+
+     ```jsx
+     import * as LinkStories from "./Link.stories";
+
+     <Meta of={LinkStories} />;
+     ```
+
+   - Gi en beskrivelse av komponenten og hvordan den skal brukes.
+   - Etter “Ta i bruk”, sett inn den storyen som er default ( Her; Link), og sett inn controll-tabellen til denne storyen:
+
+     ```jsx
+     ## Props
+
+     <Canvas of={LinkStories.Link} />         //henter selve storien (default-komponenten)
+
+     <Controls of={LinkStories.Link} />       //henter control- tabellen
+     ```
+
+   - Sett inn de resterende storiesene med tilhørende titler (##).
+
+     ```jsx
+     ## States (intern og ekstern link)
+
+     <Canvas of={LinkStories.LinkStates} />
+
+     ## Farger
+
+     <Canvas of={LinkStories.LinkColorscheme} />
+     ```
+
+<br />
+<br />
+***Nå kan du kjøre npm run dev for å se Storybook-dokumentasjonssiden lokalt. Videre må du gjøre ulike tester for å
+sjekke at alt stemmer.***
