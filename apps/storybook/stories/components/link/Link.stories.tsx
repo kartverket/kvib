@@ -1,5 +1,6 @@
 import { Link as KvibLink } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
+import { VStack } from "@chakra-ui/react";
 
 const meta: Meta<typeof KvibLink> = {
   title: "Komponenter/Link**",
@@ -24,6 +25,7 @@ const meta: Meta<typeof KvibLink> = {
         type: { summary: Boolean },
         defaultValue: { summary: false },
       },
+      control: "boolean",
     },
     href: {
       description: "This is the link.",
@@ -38,20 +40,42 @@ const meta: Meta<typeof KvibLink> = {
 export default meta;
 type Story = StoryObj<typeof KvibLink>;
 
-export const InternalLink: Story = {
+export const Link: Story = {
   args: {
     children: "Dette er en lenke",
     href: "/?path=/docs/introduksjon--docs",
-    isExternal: false,
   },
   render: (args) => <KvibLink {...args}>{args.children}</KvibLink>,
 };
 
-export const ExternalLink: Story = {
+export const LinkStates: Story = {
   args: {
-    children: "Dette er en ekstern lenke",
-    href: "https://chakra-ui.com/docs/components",
-    isExternal: true,
+    colorScheme: "blue",
   },
-  render: (args) => <KvibLink {...args}>{args.children}</KvibLink>,
+  render: (args) => (
+    <VStack>
+      <KvibLink href="/?path=/docs/introduksjon--docs" {...args}>
+        Dette er en intern lenke
+      </KvibLink>
+      <KvibLink isExternal href="https://chakra-ui.com/docs/components" {...args}>
+        Dette er en ekstern lenke
+      </KvibLink>
+    </VStack>
+  ),
+};
+
+export const LinkColorscheme: Story = {
+  args: {
+    children: "Dette er en lenke",
+    href: "https://chakra-ui.com/docs/components",
+    isExternal: false,
+  },
+  render: (args) => (
+    <VStack>
+      <KvibLink {...args}>{args.children}</KvibLink>
+      <KvibLink colorScheme="blue" {...args}>
+        {args.children}
+      </KvibLink>
+    </VStack>
+  ),
 };
