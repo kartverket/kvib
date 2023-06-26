@@ -1,6 +1,5 @@
 import { HStack, VStack } from "@chakra-ui/layout";
-import { Tab, TabList } from "@chakra-ui/tabs";
-import { Tabs as KvibTabs } from "@kvib/react/src/tabs";
+import { Tabs as KvibTabs, Tab as KvibTab, TabList as KvibTabList } from "@kvib/react/src/tabs";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibTabs> = {
@@ -21,10 +20,10 @@ export const Tabs: Story = {
   args: { colorScheme: "green", size: "md" },
   render: (args) => (
     <KvibTabs {...args}>
-      <TabList>
-        <Tab>Første fane</Tab>
-        <Tab>Andre fane</Tab>
-      </TabList>
+      <KvibTabList>
+        <KvibTab>Første fane</KvibTab>
+        <KvibTab>Andre fane</KvibTab>
+      </KvibTabList>
     </KvibTabs>
   ),
 };
@@ -34,16 +33,16 @@ export const TabsColors: Story = {
   render: (args) => (
     <HStack spacing="2rem">
       <KvibTabs {...args} colorScheme="blue">
-        <TabList>
-          <Tab>Første fane</Tab>
-          <Tab>Andre fane</Tab>
-        </TabList>
+        <KvibTabList>
+          <KvibTab>Første fane</KvibTab>
+          <KvibTab>Andre fane</KvibTab>
+        </KvibTabList>
       </KvibTabs>
       <KvibTabs {...args} colorScheme="green">
-        <TabList>
-          <Tab>Første fane</Tab>
-          <Tab>Andre fane</Tab>
-        </TabList>
+        <KvibTabList>
+          <KvibTab>Første fane</KvibTab>
+          <KvibTab>Andre fane</KvibTab>
+        </KvibTabList>
       </KvibTabs>
     </HStack>
   ),
@@ -53,14 +52,14 @@ export const TabsNumber: Story = {
   args: { colorScheme: "green", size: "md" },
   render: (args) => (
     <KvibTabs {...args}>
-      <TabList>
-        <Tab>Første fane</Tab>
-        <Tab>Andre fane</Tab>
-        <Tab>Tredje fane</Tab>
-        <Tab>Fjerde fane</Tab>
-        <Tab>Femte fane</Tab>
-        <Tab>Sjette fane</Tab>
-      </TabList>
+      <KvibTabList>
+        <KvibTab>Første fane</KvibTab>
+        <KvibTab>Andre fane</KvibTab>
+        <KvibTab>Tredje fane</KvibTab>
+        <KvibTab>Fjerde fane</KvibTab>
+        <KvibTab>Femte fane</KvibTab>
+        <KvibTab>Sjette fane</KvibTab>
+      </KvibTabList>
     </KvibTabs>
   ),
 };
@@ -70,22 +69,22 @@ export const TabsSizes: Story = {
   render: (args) => (
     <VStack alignItems="start">
       <KvibTabs {...args} aria-label="Tabs small" size="sm">
-        <TabList>
-          <Tab>Første fane</Tab>
-          <Tab>Andre fane</Tab>
-        </TabList>
+        <KvibTabList>
+          <KvibTab>Første fane</KvibTab>
+          <KvibTab>Andre fane</KvibTab>
+        </KvibTabList>
       </KvibTabs>
       <KvibTabs {...args} size="md">
-        <TabList>
-          <Tab>Første fane</Tab>
-          <Tab>Andre fane</Tab>
-        </TabList>
+        <KvibTabList>
+          <KvibTab>Første fane</KvibTab>
+          <KvibTab>Andre fane</KvibTab>
+        </KvibTabList>
       </KvibTabs>
       <KvibTabs {...args} size="lg">
-        <TabList>
-          <Tab>Første fane</Tab>
-          <Tab>Andre fane</Tab>
-        </TabList>
+        <KvibTabList>
+          <KvibTab>Første fane</KvibTab>
+          <KvibTab>Andre fane</KvibTab>
+        </KvibTabList>
       </KvibTabs>
     </VStack>
   ),
@@ -95,10 +94,10 @@ export const TabsDisabled: Story = {
   args: { colorScheme: "green", size: "md" },
   render: (args) => (
     <KvibTabs {...args}>
-      <TabList>
-        <Tab>Enabled</Tab>
-        <Tab isDisabled>Disabled</Tab>
-      </TabList>
+      <KvibTabList>
+        <KvibTab>Enabled</KvibTab>
+        <KvibTab isDisabled>Disabled</KvibTab>
+      </KvibTabList>
     </KvibTabs>
   ),
 };
