@@ -1,5 +1,20 @@
 # @kvib/react
 
+## 1.1.0
+
+### Minor Changes
+
+- 403c6e020: Link-komponent er nå tilgjengelig med Kartverkets Design. Dokumemtasjon er oppdatert.
+  Kritiske endringer: -**colorScheme** verdier er: "green", "blue".
+
+## 1.0.0
+
+### Major Changes
+
+- bd83d1b41: Designbiblioteket inneholder nå diverse komponenter som alle har Kartverkets farger og font. Komponentene er klare til bruk.
+
+  IconButton er tilgjengelig med Kartverkets Design. Dokumentasjon er oppdatert. Kritiske endringer: -**variant** tar verdiene: "solid"(default),"outline", "link", "ghost" -**colorScheme** tar verdiene: "green" (default), "blue", "gray", "red" -**icon**: er av typen String, ikke lenger et element.
+
 ## 0.36.0
 
 ### Minor Changes
