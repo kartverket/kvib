@@ -50,7 +50,7 @@ export const InternalLink: Story = {
 export const ExternalLink: Story = {
   args: {
     children: "Dette er en ekstern lenke",
-    href: "/?path=/docs/introduksjon--docs",
+    href: "https://chakra-ui.com/docs/components",
     isExternal: true,
   },
   render: (args) => <KvibLink {...args}>{args.children}</KvibLink>,
