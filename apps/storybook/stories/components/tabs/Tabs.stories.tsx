@@ -1,5 +1,11 @@
 import { HStack, VStack } from "@chakra-ui/layout";
-import { Tabs as KvibTabs, Tab as KvibTab, TabList as KvibTabList } from "@kvib/react/src/tabs";
+import {
+  Tabs as KvibTabs,
+  Tab as KvibTab,
+  TabList as KvibTabList,
+  TabPanels as KvibTabPanels,
+  TabPanel as KvibTabPanel,
+} from "@kvib/react/src/tabs";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibTabs> = {
@@ -9,6 +15,22 @@ const meta: Meta<typeof KvibTabs> = {
     docs: {
       story: { inline: true },
       canvas: { sourceState: "shown" },
+    },
+  },
+  argTypes: {
+    id: {
+      description: "The id of the tab",
+      table: {
+        type: { summary: String },
+      },
+      control: "text",
+    },
+    index: {
+      description: "The index of the selected tab (in controlled mode)",
+      table: {
+        type: { summary: Number },
+      },
+      control: "number",
     },
   },
 };
@@ -90,12 +112,28 @@ export const TabsSizes: Story = {
   ),
 };
 
-export const TabsDisabled: Story = {
+export const TabsPanels: Story = {
   args: { colorScheme: "green", size: "md" },
   render: (args) => (
     <KvibTabs {...args}>
       <KvibTabList>
-        <KvibTab>Enabled</KvibTab>
+        <KvibTab>Første fane</KvibTab>
+        <KvibTab>Andre fane</KvibTab>
+      </KvibTabList>
+      <KvibTabPanels>
+        <KvibTabPanel>Fane 1</KvibTabPanel>
+        <KvibTabPanel>Fane 2</KvibTabPanel>
+      </KvibTabPanels>
+    </KvibTabs>
+  ),
+};
+
+export const TabsStates: Story = {
+  args: { colorScheme: "green", size: "md" },
+  render: (args) => (
+    <KvibTabs {...args}>
+      <KvibTabList>
+        <KvibTab isSelected>Selected</KvibTab>
         <KvibTab isDisabled>Disabled</KvibTab>
       </KvibTabList>
     </KvibTabs>
