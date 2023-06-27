@@ -1,36 +1,26 @@
 import { defineStyleConfig } from "@chakra-ui/react";
+import { colors, borders, radii } from "../tokens";
 
 const config = defineStyleConfig({
-  baseStyle: {
+  baseStyle: ({ colorScheme }) => ({
+    padding: "8px",
     textDecoration: "underline",
-    _focusVisible: {
-      borderRadius: "2px",
+    _focus: {
+      border: borders["2px"],
+      borderRadius: radii.base,
+      borderColor: colors.blue[600],
     },
-  },
-  variants: {
-    primary: ({ theme }) => ({
-      color: theme.colors.green[500],
-      _hover: {
-        color: theme.colors.green[400],
-        textDecoration: "none",
-      },
-      _active: {
-        color: theme.colors.green[600],
-      },
-    }),
-    secondary: ({ theme }) => ({
-      color: theme.colors.blue[500],
-      _hover: {
-        color: theme.colors.blue[400],
-        textDecoration: "none",
-      },
-      _active: {
-        color: theme.colors.blue[600],
-      },
-    }),
-  },
+    color: `${colorScheme}.500`,
+    _hover: {
+      color: `${colorScheme}.400`,
+      textDecoration: "none",
+    },
+    _active: {
+      color: `${colorScheme}.600`,
+    },
+  }),
   defaultProps: {
-    variant: "primary",
+    colorScheme: "green",
   },
 });
 
