@@ -24,7 +24,7 @@ export type ButtonProps = Omit<
 };
 
 export const Button = forwardRef<ButtonProps, "button">(
-  ({ children, variant, colorScheme, isDisabled, isLoading, leftIcon, rightIcon, ...props }, ref) => {
+  ({ children, colorScheme, isDisabled, isLoading, leftIcon, rightIcon, ...props }, ref) => {
     const buttonGroup = useButtonGroup();
     const finalColorScheme = (colorScheme ?? buttonGroup?.colorScheme ?? "green") as Required<
       ButtonProps["colorScheme"]
