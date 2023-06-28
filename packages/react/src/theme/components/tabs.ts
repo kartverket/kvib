@@ -8,7 +8,7 @@ const config = helpers.defineMultiStyleConfig({
   baseStyle: ({ colorScheme }) => {
     return {
       root: {
-        display: "flex",
+        width: "fit-content",
       },
       tab: {
         color: colors.blue[900],
