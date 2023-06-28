@@ -12,7 +12,8 @@ export type ButtonProps = Omit<
   ChakraButtonProps,
   "colorScheme" | "leftIcon" | "rightIcon" | "iconSpacing" | "isActive" | "loadingText" | "spinnerPlacement"
 > & {
-  /**The visual color appearance of the component*/
+  /**The visual color appearance of the component
+   * @default green*/
   colorScheme: "green" | "blue" | "gray" | "red";
 
   /**If added, the button will show an icon before the button's label.*/
