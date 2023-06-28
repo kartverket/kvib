@@ -53,13 +53,10 @@ export const FormControl: FormControlStory = {
   args: { isRequired: false, isInvalid: false, isReadOnly: false, isDisabled: false },
   render: (args) => (
     <KvibFormControl {...args}>
-      <FormLabel label={"Label"} />
-      <Input placeholder={"Skriv her..."} size={"md"} variant={"outline"} />
-      {!args.isInvalid ? (
-        <FormHelperText helperText={"Hjelpetekst..."} />
-      ) : (
-        <FormErrorMessage errorMessage={"Må fylles ut!"} />
-      )}
+      <FormLabel label={"Label (valgfri)"} />
+      <FormHelperText helperText={"Skriv Hjelpetekst"} />
+      <Input placeholder={"Eksempel"} size={"md"} variant={"outline"} />
+      <FormErrorMessage errorMessage={"Her er feilmelding"} />
     </KvibFormControl>
   ),
 };

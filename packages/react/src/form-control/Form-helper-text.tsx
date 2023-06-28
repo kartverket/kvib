@@ -12,7 +12,7 @@ export interface FormHelperTextProps extends FormControlProps {
 
 export const FormHelperText = forwardRef<FormHelperTextProps, "div">(({ helperText, ...props }, ref) => {
   return (
-    <ChakraFormHelperText {...props} ref={ref}>
+    <ChakraFormHelperText {...props} ref={ref} fontSize={"16px"} paddingBottom={"8px"}>
       {helperText}
     </ChakraFormHelperText>
   );
