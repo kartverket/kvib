@@ -43,3 +43,16 @@ import { Button } from "@kvib/react";
 ## Button med tekst og ikon
 
 <Canvas of={ButtonStories.ButtonWithIcon} />
+
+## Gruppering av Buttons (ButtonGroup)
+
+Dersom flere Button komponenter skal stå samlet og grupperes, kan en bruke _Stack_ eller _ButtonGroup_.
+ButtonGroup har noen flere props som er tilpasset til å gruppere Buttons fremfor hva Stack har.
+
+Følgende props er gjeldende for ButtonGroup:
+* **size**, **colorScheme**, **variant** og **isDisabled**: Samme description som for *Button*-props. Ved å sette disse vil de bli gjeldene for alle knappene som er inni.
+* **isAttached**. _Type: Boolean (default false)_: smelter knappene sammen ved at border-radius fjernes i mellom Buttons (se eksempelet).
+* **orientation** *Type: String [horizontal(default), vertical]_: velge hvilken retning knappene skal plasseres
+_ **spacing** _Type: Number (default '0.5rem')_: legger til space mellom knappene.
+
+<Canvas of={ButtonStories.ButtonGroup} />
