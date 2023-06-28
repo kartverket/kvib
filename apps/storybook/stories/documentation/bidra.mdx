@@ -214,7 +214,7 @@ Under følger en beskrivelse av hvordan en komponent skal dokumenteres. Link-kom
 
     Slik vil storyen se ut i dokumentasjonen, og vil vise den minimale koden en bruker trenger å skrive.
 
-    <img alt="example of codesnippet" src={require("../../public/assets/deafultCompDocs.png")} />
+    <img alt="example of codesnippet" src={require("../../public/assets/deafultCompDocs.png")} width="700px" />
 
 5.  Lag videre stories som viser verdier for de ulike propsa, f.eks. size, variant, colorScheme, states (loading, disabled,…).
     Velg de som er mest hensiktsmessig for komponenten. Bruk _HStack/VStack_ til å ordne flere komponenter ved siden av hverandre i en story, hvor du tilordner hver komponent forksjellige verdier.
@@ -246,7 +246,7 @@ Under følger en beskrivelse av hvordan en komponent skal dokumenteres. Link-kom
       <Meta of={LinkStories} />;
       ```
 
-    - Gi en beskrivelse av komponenten og hvordan den skal brukes.
+    - Gi en beskrivelse av komponenten og hvordan den skal brukes. **_OSB!_**Sjekk rettskriving og klarspråk.
     - Etter “Ta i bruk”, sett inn den storyen som er default ( Her; Link), og sett inn controll-tabellen til denne storyen:
 
       ```jsx
@@ -299,10 +299,18 @@ Fin artikkel om akkurat dette: [Use npm pack to test your packages locally](http
 
 ### UU-testing av komponenten 🔍
 
-**_Under arbeid._**
+For å sørge for at komponentene vi lager overholder krav til universell utforming, må de testes for accessibility.
+Designerne våre tenker på UU når en komponenent blir designet, og Chakra flere accessibility-features, blant annet A11y. Likevel har vi noen manuelle tester for komponenten før den havner i designsystemet.
 
-<br />
-<br />
+1. Test hvordan komponenten oppfører seg med skjermleser, eksmepelvis NVDA. Det er særlig viktig at tab-navigering fungerer korrekt.
+2. Teste med 400% zoom på desktop, samt teste på små skjermer. I storybook er det en egen funksjon som gjør at en kan teste hvordan komponenten ville sett ut på liten skjerm.
+3. I hver story kan det gjennomføres accessibility-tester for synet. Den finner du i menyen på toppen, merket med et accessibility-symbol. Test de ulike versjonene (Blurred vision, deutoranomaly, osv.) for å se om det er mulig å lese og forstå hva komponenten gjør.
+   <img alt="navBar in story" src={require("../../public/assets/navBarStory.png")} width="500px" />
+4. Frem til nå er det kun a11y som er lagt til som en automatisk test i Storybook. I en story/komponent på storybook er det en accessibility-fane, hvor det kontinuerlig og automatisk blir testet for accessibility.
+   Ved å klikke på fanen, får du en oversikt over testene som er gjort; både de godkjente og de som har brudd på krav. Alle testene må godkjennes før en komponent kan bli lagt til i designsystemet.
+   {" "}
+   <img alt="accessibility-test tab " src={require("../../public/assets/tabsNavBarStory.png")} width="500px" />
+
 ## Oppdatere npm-pakken og changelog
 
 Når komponenten er testet både for oppførsel og UU, kan den merges med master, og legges til i npm-pakken.
