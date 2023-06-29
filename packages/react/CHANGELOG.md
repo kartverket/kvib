@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 1.3.0
+
+### Minor Changes
+
+- a9fc68200: Oppdaterte dokumentasjon for tab-komponenten
+
 ## 1.2.0
 
 ### Minor Changes
