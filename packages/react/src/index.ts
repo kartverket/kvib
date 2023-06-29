@@ -47,6 +47,7 @@ export * from "./tabs";
 export * from "./tag";
 export * from "./textarea";
 export * from "./theme";
+export * from "./theme-utils";
 export * from "./toast";
 export * from "./tooltip";
 export * from "./transitions";
