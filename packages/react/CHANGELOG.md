@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 1.3.1
+
+### Patch Changes
+
+- 1368ee9a0: Videresender et par funksjoner fra theme-utils (extendTheme og withDefaultColorScheme)
+
 ## 1.3.0
 
 ### Minor Changes
