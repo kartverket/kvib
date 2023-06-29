@@ -66,11 +66,11 @@ export const Button = forwardRef<ButtonProps, "button">(
           </Center>
         )}
         <HStack spacing={1} visibility={isLoading ? "hidden" : "visible"}>
-          {leftIcon && <span className="material-symbols-outlined">{leftIcon}</span>}
+          {leftIcon && <span className="material-symbols-rounded">{leftIcon}</span>}
           <Center className="text" as="span">
             {children}
           </Center>
-          {rightIcon && <span className="material-symbols-outlined">{rightIcon}</span>}
+          {rightIcon && <span className="material-symbols-rounded">{rightIcon}</span>}
         </HStack>
       </ChakraButton>
     );
