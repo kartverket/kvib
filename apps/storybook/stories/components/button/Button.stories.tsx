@@ -1,4 +1,4 @@
-import { Button as KvibButton, HStack, VStack, StackDivider, ButtonGroup as KvibButtonGroup } from "@kvib/react/src";
+import { Button as KvibButton, VStack, StackDivider, ButtonGroup as KvibButtonGroup } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibButton> = {
@@ -73,7 +73,7 @@ export const Button: Story = {
 export const ButtonVariants: Story = {
   args: { children: "Klikk her" },
   render: (args) => (
-    <HStack>
+    <KvibButtonGroup>
       <KvibButton {...args} variant="solid">
         {args.children}
       </KvibButton>
@@ -86,42 +86,42 @@ export const ButtonVariants: Story = {
       <KvibButton {...args} variant="ghost">
         {args.children}
       </KvibButton>
-    </HStack>
+    </KvibButtonGroup>
   ),
 };
 
 export const ButtonStates: Story = {
   args: { children: "Klikk her" },
   render: (args) => (
-    <HStack>
+    <KvibButtonGroup>
       <KvibButton {...args} isLoading>
         {args.children}
       </KvibButton>
       <KvibButton {...args} isDisabled>
         {args.children}
       </KvibButton>
-    </HStack>
+    </KvibButtonGroup>
   ),
 };
 
 export const ButtonWithIcon: Story = {
   args: { children: "Klikk her" },
   render: (args) => (
-    <HStack>
+    <KvibButtonGroup>
       <KvibButton {...args} leftIcon="add">
         {args.children}
       </KvibButton>
       <KvibButton {...args} rightIcon="add">
         {args.children}
       </KvibButton>
-    </HStack>
+    </KvibButtonGroup>
   ),
 };
 
 export const ButtonSizes: Story = {
   args: { children: "Klikk her" },
   render: (args) => (
-    <HStack>
+    <KvibButtonGroup>
       <KvibButton {...args} size="xs">
         {args.children}
       </KvibButton>
@@ -134,7 +134,7 @@ export const ButtonSizes: Story = {
       <KvibButton {...args} size="lg">
         {args.children}
       </KvibButton>
-    </HStack>
+    </KvibButtonGroup>
   ),
 };
 
@@ -142,7 +142,7 @@ export const ButtonGroup: Story = {
   args: { children: "Klikk her" },
   render: (args) => (
     <VStack divider={<StackDivider borderColor="gray.200" />}>
-      <KvibButtonGroup orientation="vertical" variant="outline" isAttached size="sm">
+      <KvibButtonGroup orientation="vertical" variant="outline" spacing="4" size="sm">
         <KvibButton {...args}>{args.children}</KvibButton>
         <KvibButton {...args}>{args.children}</KvibButton>
       </KvibButtonGroup>
