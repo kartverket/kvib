@@ -16,9 +16,9 @@ export const Icon = ({
   /**The color of the icon*/
   color?: string;
   /**The weight of the icon*/
-  weight?: number;
+  weight?: 100 | 200 | 300 | 400 | 500 | 600 | 700;
   /**The of grade the icon*/
-  grade?: number;
+  grade?: -25 | 0 | 200;
   /**Decides whether the icon is filled or not*/
   isFilled?: boolean;
 }) => {

@@ -46,21 +46,59 @@ export const defaultIcon: Story = {
   render: (args) => <Icon {...args} />,
 };
 
-export const exampleIcon: Story = {
-  args: { color: colors.green[400] },
+export const colorIcon: Story = {
+  args: { size: 20 },
   render: (args) => (
     <HStack>
-      <Icon {...args} icon="home" />,
+      <Icon {...args} icon="home" color={colors.green[400]} />,
       <Spacer />
-      <Icon {...args} icon="home" isFilled={true} />,
+      <Icon {...args} icon="home" color={colors.green[400]} isFilled={true} />,
       <Spacer />
-      <Icon icon="warning" color="orange" isFilled={true} />,
+      <Icon {...args} icon="warning" color="orange" isFilled={true} />,
       <Spacer />
-      <Icon icon="error" color="red" isFilled={true} />,
+      <Icon {...args} icon="error" color="red" isFilled={true} />,
       <Spacer />
-      <Icon icon="info" color="blue" size={40} />
+      <Icon {...args} icon="info" color="blue" />
       <Spacer />
-      <Icon icon="info" color="blue" size={48} isFilled={true} />
+      <Icon {...args} icon="info" color="blue" isFilled={true} />
+    </HStack>
+  ),
+};
+
+export const sizeIcon: Story = {
+  args: { color: colors.green[400], icon: "map" },
+  render: (args) => (
+    <HStack>
+      <Icon {...args} size={20} />
+      <Icon {...args} size={24} />
+      <Icon {...args} size={40} />
+      <Icon {...args} size={48} />
+    </HStack>
+  ),
+};
+
+export const weightIcon: Story = {
+  args: { color: colors.green[400], icon: "database" },
+  render: (args) => (
+    <HStack>
+      <Icon {...args} weight={100} />
+      <Icon {...args} weight={200} />
+      <Icon {...args} weight={300} />
+      <Icon {...args} weight={400} />
+      <Icon {...args} weight={500} />
+      <Icon {...args} weight={600} />
+      <Icon {...args} weight={700} />
+    </HStack>
+  ),
+};
+
+export const gradeIcon: Story = {
+  args: { color: colors.green[400], icon: "contactless" },
+  render: (args) => (
+    <HStack>
+      <Icon {...args} grade={-25} />
+      <Icon {...args} grade={0} />
+      <Icon {...args} grade={200} />
     </HStack>
   ),
 };
