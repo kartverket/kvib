@@ -14,7 +14,7 @@ export type ButtonProps = Omit<
 > & {
   /**The visual color appearance of the component
    * @default green*/
-  colorScheme: "green" | "blue" | "gray" | "red";
+  colorScheme?: "green" | "blue" | "gray" | "red";
 
   /**If added, the button will show an icon before the button's label.*/
   leftIcon?: string;
