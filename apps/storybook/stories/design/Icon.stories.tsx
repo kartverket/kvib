@@ -1,5 +1,5 @@
 import { Icon } from "@kvib/react/src/icon";
-import { HStack, Spacer } from "@kvib/react/src/layout";
+import { HStack } from "@kvib/react/src/layout";
 import { Meta, StoryObj } from "@storybook/react";
 import { colors } from "@kvib/react/src/theme/tokens";
 
@@ -47,20 +47,12 @@ export const defaultIcon: Story = {
 };
 
 export const colorIcon: Story = {
-  args: { size: 20 },
+  args: { size: 40 },
   render: (args) => (
     <HStack>
-      <Icon {...args} icon="home" color={colors.green[400]} />,
-      <Spacer />
-      <Icon {...args} icon="home" color={colors.green[400]} isFilled={true} />,
-      <Spacer />
-      <Icon {...args} icon="warning" color="orange" isFilled={true} />,
-      <Spacer />
-      <Icon {...args} icon="error" color="red" isFilled={true} />,
-      <Spacer />
-      <Icon {...args} icon="info" color="blue" />
-      <Spacer />
-      <Icon {...args} icon="info" color="blue" isFilled={true} />
+      <Icon {...args} icon="home" color={colors.green[400]} /> Dette er colors.green[400]
+      <Icon {...args} icon="home" color={colors.green[400]} isFilled={true} />
+      <Icon {...args} icon="warning" color="orange" isFilled={true} />
     </HStack>
   ),
 };
