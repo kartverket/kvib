@@ -14,7 +14,6 @@ jobs:
         with:
           node-version: "16.x"
       - name: Install dependencies
-        working-directory: ./apps/storybook
         run: npm install
       - name: Install Playwright
         working-directory: ./apps/storybook
