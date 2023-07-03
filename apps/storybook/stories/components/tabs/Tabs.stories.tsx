@@ -16,10 +16,10 @@ const meta: Meta<typeof KvibTabs> = {
       story: { inline: true },
       canvas: { sourceState: "shown" },
     },
-    a11y: {
-      // This option disables all a11y checks on this story
-      disable: true,
-    },
+    // a11y: {
+    //   // This option disables all a11y checks on this story
+    //   disable: true,
+    // },
   },
 
   argTypes: {
