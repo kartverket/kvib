@@ -14,12 +14,16 @@ jobs:
         with:
           node-version: "16.x"
       - name: Install dependencies
+        working-directory: ./apps/storybook
         run: npm install
       - name: Install Playwright
+        working-directory: ./apps/storybook
         run: npx playwright install --with-deps
       - name: Build Storybook
+        working-directory: ./apps/storybook
         run: npm run build
       - name: Serve Storybook and run tests
+        working-directory: ./apps/storybook
         run: |
           npx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
             "npx http-server storybook-static --port 6006 --silent" \
