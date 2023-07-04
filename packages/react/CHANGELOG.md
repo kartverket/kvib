@@ -1,5 +1,15 @@
 # @kvib/react
 
+## 1.5.0
+
+### Minor Changes
+
+- 5ba55d2c8: Bugfix:
+
+  - IconButton: **colorScheme** og **variant** er ikke lenger required prop.
+  - Link: aria-attributes for ikon er oppdatert. **colorScheme** er ikke lenger required prop.
+  - Tabs: importert manglende komponenter; TabList, TabPanels, Tab, TabPanel
+
 ## 1.4.0
 
 ### Minor Changes
