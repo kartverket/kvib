@@ -4,7 +4,7 @@ export type LinkProps = Omit<ChakraLinkProps, "colorScheme" | "variant"> & {
   /** The color of the link.
    * @default green
    */
-  colorScheme: "green" | "blue";
+  colorScheme?: "green" | "blue";
 };
 
 /** Link to different sites or parts of site
