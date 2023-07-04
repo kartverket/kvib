@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 1.4.0
+
+### Minor Changes
+
+- 0045b6ccf: Videreeksporterer useToastOptions
+
 ## 1.3.1
 
 ### Patch Changes
