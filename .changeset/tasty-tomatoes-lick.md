@@ -4,6 +4,6 @@
 
 Bugfix:
 
-- IconButton: **colorScheme** og **variant** er ikke lenger required props.
-- Link: aria-attributes for ikon er oppdatert.
+- IconButton: **colorScheme** og **variant** er ikke lenger required prop.
+- Link: aria-attributes for ikon er oppdatert. ColorScheme er ikke lenger required prop.
 - Tabs: importert manglende komponenter; TabList, TabPanels, Tab, TabPanel
