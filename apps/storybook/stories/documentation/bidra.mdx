@@ -38,12 +38,13 @@ Link-komponenten brukes som eksempel under.
 
           ```
 
-    - **Alternativ 2- definer egne props fra bunnen**: Her må man definere alle props fra bunnen av.
+    - **Alternativ 2- definer egne props fra bunnen**: Her må man definere alle props fra bunnen av. **OBS!** _required_ props er ikke det samme som å sette default.
+      Eksempelvis colorScheme er ikke required fordi man ønsker ikke at brukeren må sette colorScheme dersom hen vil ha default-verdien. Hvordan sette default-verdi kommer i senere steg i denne guiden.
 
       ```jsx
       export type LinkProps = {
-        colorScheme: "green" | "blue", //denne er satt som required
-        href?: string, //denne er ikke required pga. "?"
+        colorScheme?: "green" | "blue", //denne er ikke required pga. "?"
+        href: string, //denne er required. Kommer feilmelding dersom denne ikke settes i komponenten.
         children?: string,
       };
       ```
@@ -300,16 +301,29 @@ Fin artikkel om akkurat dette: [Use npm pack to test your packages locally](http
 ### UU-testing av komponenten 🔍
 
 For å sørge for at komponentene vi lager overholder krav til universell utforming, må de testes for accessibility.
-Designerne våre tenker på UU når en komponenent blir designet, og Chakra flere accessibility-features, blant annet A11y. Likevel har vi noen manuelle tester for komponenten før den havner i designsystemet.
+Designerne våre tenker på UU når en komponenent blir designet, og Chakra tilbyr accessibility-features, blant annet A11y. Likevel har vi noen manuelle tester for komponenten før den havner i designsystemet.
 
 1. Test hvordan komponenten oppfører seg med skjermleser, eksmepelvis NVDA. Det er særlig viktig at tab-navigering fungerer korrekt.
 2. Teste med 400% zoom på desktop, samt teste på små skjermer. I storybook er det en egen funksjon som gjør at en kan teste hvordan komponenten ville sett ut på liten skjerm.
 3. I hver story kan det gjennomføres accessibility-tester for synet. Den finner du i menyen på toppen, merket med et accessibility-symbol. Test de ulike versjonene (Blurred vision, deutoranomaly, osv.) for å se om det er mulig å lese og forstå hva komponenten gjør.
+
    <img alt="navBar in story" src={require("../../public/assets/navBarStory.png")} width="500px" />
-4. Frem til nå er det kun a11y som er lagt til som en automatisk test i Storybook. I en story/komponent på storybook er det en accessibility-fane, hvor det kontinuerlig og automatisk blir testet for accessibility.
+
+   <br />
+
+4. I en story/komponent på dokumentasjonssiden er det en accessibility-fane, hvor det kontinuerlig og automatisk blir testet for accessibility gjennom a11y.
    Ved å klikke på fanen, får du en oversikt over testene som er gjort; både de godkjente og de som har brudd på krav. Alle testene må godkjennes før en komponent kan bli lagt til i designsystemet.
    {" "}
+
    <img alt="accessibility-test tab " src={require("../../public/assets/tabsNavBarStory.png")} width="500px" />
+
+   - **OBS!** Det kan være enkelte tilfeller hvor testene feiler på grunn av noe underliggende i Chakra. Det er mulig å overkjøre reglene og testingen til a11y, men dette skal kun gjøres dersom du ikke får endret det på noen annen måte.
+     Følg [guiden til Storybook på hvordan konfigurere a11y](https://storybook.js.org/docs/react/writing-tests/accessibility-testing#configure).
+
+5. Storybook sin Test Runner sjekker om storyene kjører uten feil, og er derav ikke en direkte UU-test.
+   Likevel er a11y konfigurert sammen med denne testen slik at det kjøres som tester i Github Actions.
+   Alle tester må derav godkjennes før det er tillatt å merge til master. Dersom du ønsker å kjøre test runner lokalt, åpne termninalen og naviger til mappen `apps/storybook` og kjør her `npm run dev` for å kjøre storybook.
+   Videre mens storybook kjører, åpne en ny terminal, naviger til samme mappe og kjør `npm run test-storybook`. Testene vil da vises i terminalen.
 
 ## Oppdatere npm-pakken og changelog
 
