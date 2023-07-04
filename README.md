@@ -1,24 +1,6 @@
 # KVIB - Kartverkets interaksjon- og designbibliotek
 
-[KVIB](https://kartverket.github.io/kvib/storybook) er monorepoet til Kartverkets designsystem.
-
-## Introduksjon
-
-Les om designsystemet her: https://kartverket.github.io/kvib/storybook?path=/docs/introduksjon--docs.
-
-## Dokumentasjonsside
-
-Dokumentasjonssiden for designsystemet finner du på https://kartverket.github.io/kvib/storybook. Der dokumenterer vi
-tokens, retningslinjer for bruk og alle komponentene.
-
-## Ta i bruk
-
-Her finner du ut hvordan man installerer kvib: https://kartverket.github.io/kvib/storybook?path=/docs/oppsett--docs.
-
-## Oppsett for å bidra
-
-Her finner du en detaljert guide på hvordan man
-bidrar: https://kartverket.github.io/kvib/storybook?path=/docs/introduksjon--docs.
+Dokumentasjonssiden for designsystemet er https://kartverket.github.io/kvib/storybook
 
 ## 🚦 Viktig infomasjon eller kjøreregler for de som ønsker å bidra 🚦
 
