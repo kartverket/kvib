@@ -1,4 +1,7 @@
 import { Meta } from "@storybook/addon-docs";
+import { Unstyled } from "@storybook/blocks";
+import { Alert, AlertIcon, AlertTitle, AlertDescription, Button } from "@kvib/react";
+import { KvibProvider } from "@kvib/react/src/provider/KvibProvider";
 
 <Meta title="Oppsett" />
 
@@ -38,4 +41,59 @@ import { Button } from "@kvib/react";
 export const App = () => {
   return <Button variant="primary">Rediger</Button>;
 };
+```
+
+## Egen styling - inline styling og styled-components
+
+<KvibProvider>
+    <Alert status='error'>
+      <AlertIcon />
+      <AlertTitle>Your browser is outdated!</AlertTitle>
+      <AlertDescription>Your Chakra experience may be degraded.</AlertDescription>
+    </Alert>
+
+</KvibProvider>>
+
+<KvibProvider>
+  <Button>Klikk her</Button>
+</KvibProvider>
+
+I utgangspunktet skal man benytte komponentene fra Kartverkets designbibliotek med stylingen som er der.
+Er det funksjoner og design du synes mangler i dagens bibliotek, ønsker vi at du bidrar med dette til biblioteket istedenfor å overskrive stylingen i eget prosjekt- da kan fler enn deg ta det i bruk! Se [dokumentasjonen for hvordan bidra til designsystemet](/?path=/docs/bidra--docs) for guidelines.
+Dersom det likevel er nødvendig å gjøre egne tilpassninger av stylingen til eget prosjekt, kan dette gjøres med inline styling eller styled-components.
+
+**_OBS!_** Avklar med designer dersom dette skal gjøres.
+
+La oss si du bruker en knapp fra Kartverkets designbibliotek, men du ønsker å tilpasse den litt.
+Et alternativ er å benytte inline-styling, som f.eks. `<Button background="red">Klikk her</Button>`. Et annet alternativ er styled-components, som noen team allerede benytter.
+For å endre farge med sistnevnte kan man skrive: `const RedButton = styled(Button)`background: red`; `. En fordel med styled-components er at stylingen er samlet.
+Likevel må noen ekstra konfigurasjoner gjøres for at dette skal fungere. Under følger beskrivelse av hvorfor og hvordan du setter det opp styled-components med Kartverkets komponenter.
+
+Både Chakra UI (bygd på emotion) og styled-components (nesten det samme som emotion) genererer klassenavn som settes på elementene som skal styles, også settes en lang rekke med stylesheets i `<head>` der stilene er definert.
+Chakra sine stylesheets blir appendet på `<head>` , altså de kommer alltid sist. Videre har selectorene samme grunnleggende specificity (de targeter bare et klassenavn), og derfor blir det stilen som er definert sist som blir gjeldende, altså Chakra sitt.
+Med andre ord kan man ikke style Chakra-komponenter (som våres komponenter igjen bygger på) med styled-components uten å gjøre noen konfigurasjoner.
+
+Det første åpenbare alternativet er å bruke `!important`, men dette kan fort bli rot dersom du skal overstyre dette igjen og må bruke `!!important`.
+Det andre alternativet er å lure seg til en mer spesifikk selector som dette: `&&& { background: red; }`, men det er uintuitivt og er ikke tydelig på når man trenger å bruke selectoren, hva den egentlig gjør, at man må bruke den alle steder man ønsker å overstyre chakra, osv.
+Et tredje alternativ kunne vært CSS Layers som nå får støtte i nettleserne. Likevel kan man møte på noen av de samme problemene her ved at man må gjøre det overalt, og at man plutselig trenger å overstyre den også.
+Problemet er rekkefølgen på stylesheets i `<head>` , noe Chakra ikke har en konfigurasjonsmulighet for per nå. Det kan likevel løses med en cache for Chakra sin styling som lages gjennom emotion (som er mulig ettersom Chakra, og derav våre komponenter, bygger på emotion).
+
+Slik setter du Chakra sin styling øverst i `<head>` i ditt eget prosjekt: (all styling som defineres etterpå med samme eller sterkere specificity vil overskrive det)
+
+```jsx
+import createCache from "@emotion/cache";
+import { CacheProvider } from "@emotion/react";
+
+const emotionCache = createCache({
+  key: "emotion-cache",
+  prepend: true, // ensures styles are prepended to the <head>, instead of appended
+});
+
+export default function App() {
+  return (
+    <CacheProvider value={emotionCache}>
+      <KvibProvider>{children}</KvibProvider>
+    </CacheProvider>
+  );
+}
 ```
