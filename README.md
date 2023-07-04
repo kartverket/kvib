@@ -4,7 +4,7 @@
 
 ## Introduksjon
 
-https://kartverket.github.io/kvib/storybook?path=/docs/introduksjon--docs
+Les om designsystemet her: https://kartverket.github.io/kvib/storybook?path=/docs/introduksjon--docs.
 
 ## Dokumentasjonsside
 
@@ -13,11 +13,12 @@ tokens, retningslinjer for bruk og alle komponentene.
 
 ## Ta i bruk
 
-https://kartverket.github.io/kvib/storybook?path=/docs/oppsett--docs
+Her finner du ut hvordan man installerer kvib: https://kartverket.github.io/kvib/storybook?path=/docs/oppsett--docs.
 
 ## Oppsett for å bidra
 
-https://kartverket.github.io/kvib/storybook?path=/docs/introduksjon--docs
+Her finner du en detaljert guide på hvordan man
+bidrar: https://kartverket.github.io/kvib/storybook?path=/docs/introduksjon--docs.
 
 ## 🚦 Viktig infomasjon eller kjøreregler for de som ønsker å bidra 🚦
 
