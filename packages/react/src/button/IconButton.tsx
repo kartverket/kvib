@@ -9,14 +9,14 @@ import { useStyleConfig } from "@chakra-ui/system";
 export type IconButtonProps = Omit<ChakraIconButtonProps, "colorScheme" | "variant" | "isActive" | "icon"> & {
   /**The variant of the IconButton
    * @default solid */
-  variant: "solid" | "outline" | "link" | "ghost";
+  variant?: "solid" | "outline" | "link" | "ghost";
 
   /**The icon to be used in the button.*/
   icon: string;
 
   /**The visual color appearance of the component.
      @default green*/
-  colorScheme: "green" | "blue" | "gray" | "red";
+  colorScheme?: "green" | "blue" | "gray" | "red";
 };
 
 const IconSpinner = (props: IconButtonProps) => {

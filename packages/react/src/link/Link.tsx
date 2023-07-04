@@ -4,7 +4,7 @@ export type LinkProps = Omit<ChakraLinkProps, "colorScheme" | "variant"> & {
   /** The color of the link.
    * @default green
    */
-  colorScheme: "green" | "blue";
+  colorScheme?: "green" | "blue";
 };
 
 /** Link to different sites or parts of site
@@ -20,7 +20,8 @@ export const Link = forwardRef<LinkProps, "a">(({ children, colorScheme = "green
         <span
           className="material-symbols-rounded"
           style={{ fontSize: "18px", verticalAlign: "middle", marginLeft: "4px" }}
-          aria-label="Ekstern lenke"
+          aria-label="launch-ikon"
+          role="link"
         >
           launch
         </span>
