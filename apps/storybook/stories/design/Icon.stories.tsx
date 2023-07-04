@@ -50,7 +50,8 @@ export const colorIcon: Story = {
   args: { size: 40 },
   render: (args) => (
     <HStack>
-      <Icon {...args} icon="home" color={colors.green[400]} /> Dette er colors.green[400]
+      <Icon {...args} icon="home" color={colors.green[400]} />
+      // #1A833B er colors.green[400]
       <Icon {...args} icon="home" color={colors.green[400]} isFilled={true} />
       <Icon {...args} icon="warning" color="orange" isFilled={true} />
     </HStack>
