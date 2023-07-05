@@ -3,10 +3,10 @@
 
 export const Icon = ({
   icon,
-  size = 24,
-  color = "black",
-  weight = 600,
-  grade = 0,
+  size,
+  color,
+  weight,
+  grade,
   isFilled = false,
 }: {
   /**The icon from Material symbols you want to display*/
@@ -28,8 +28,8 @@ export const Icon = ({
       style={{
         fontSize: size,
         color: color,
-        fontVariationSettings: `'FILL' ${isFilled ? 1 : 0}, 'wght' ${weight ? weight : 600}, 'GRAD' ${
-          grade ? grade : 0
+        fontVariationSettings: `'FILL' ${isFilled ? 1 : undefined}, 'wght' ${weight ? weight : undefined}, 'GRAD' ${
+          grade ? grade : undefined
         }`,
       }}
     >
