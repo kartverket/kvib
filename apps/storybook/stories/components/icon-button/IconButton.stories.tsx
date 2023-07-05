@@ -1,4 +1,4 @@
-import { IconButton as KvibIconButton, HStack } from "@kvib/react/src";
+import { IconButton as KvibIconButton, HStack } from "@kvib/react";
 
 import { Meta, StoryObj } from "@storybook/react";
 
