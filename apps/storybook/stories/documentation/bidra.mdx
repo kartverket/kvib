@@ -45,29 +45,28 @@ Link-komponenten brukes som eksempel under.
 - **Alternativ 2- definer egne props fra bunnen**: Her må man definere alle props fra bunnen av. **OBS!** _required_ props er ikke det samme som å sette default.
   Eksempelvis colorScheme er ikke required fordi man ønsker ikke at brukeren må sette colorScheme dersom hen vil ha default-verdien. Hvordan sette default-verdi kommer i senere steg i denne guiden.
 
-````jsx
-export type LinkProps = {
-  colorScheme?: "green" | "blue", //denne er ikke required pga. "?"
-  href: string, //denne er required. Kommer feilmelding dersom denne ikke settes i komponenten.
-  children?: string,
-};
-      ```
+  ````jsx
+  export type LinkProps = {
+    colorScheme?: "green" | "blue", //denne er ikke required pga. "?"
+    href: string, //denne er required. Kommer feilmelding dersom denne ikke settes i komponenten.
+    children?: string,
+  };
+        ```
+  ````
 
 4.  Videre i _Link.tsx_ skal du bygge opp komponenten ved å bruke propsa du definerte i steg 3. De propsene du endrer på sendes manuelt videre til Chakra-komponenten, de andre kan videresendes ved å bruke _“…props”_- syntaksen.
-Ved å tilegne props verdier settes default for komponenten, noe som må gjøres dersom propsen er satt som required.
+    Ved å tilegne props verdier settes default for komponenten, noe som må gjøres dersom propsen er satt som required.
 
-- **_OBS!_** Under “Style komponenten” nevnes defaultProps som en del av .ts-filen. Default som settes i selve komponenten overkjører defaultPropsa som settes i styling-filen.
+        - **_OBS!_** Under “Style komponenten” nevnes defaultProps som en del av .ts-filen. Default som settes i selve komponenten overkjører defaultPropsa som settes i styling-filen.
 
 5.  Flere av Chakra-komponentene har en litt annen variant for å kunne opprettes. Disse komponentene kan opprettes med funksjonen _forwardRef(props, ref)_ fra `@chakra-ui/react`.
-I tillegg til å ta imot _props_, tas det også imot en _ref_, som refererer til det underliggende html-element brukt i komponenten.
-_ref_ skal sendes uendret videre til den underliggende Chakra-komponenten (se eksempelet under).
-På denne måten kan man manipulere DOM-en direkte, for eksempel for å flytte fokus til et element (dette har ikke react innebygget støtte for).
-Mer informasjon om forwardRef finner du på [forwardRef-react](https://react.dev/reference/react/forwardRef)
-og [The as prop and Custom component](https://chakra-ui.com/community/recipes/as-prop).
+    I tillegg til å ta imot _props_, tas det også imot en _ref_, som refererer til det underliggende html-element brukt i komponenten.
+    _ref_ skal sendes uendret videre til den underliggende Chakra-komponenten (se eksempelet under).
+    På denne måten kan man manipulere DOM-en direkte, for eksempel for å flytte fokus til et element (dette har ikke react innebygget støtte for).
+    Mer informasjon om forwardRef finner du på [forwardRef-react](https://react.dev/reference/react/forwardRef)
+    og [The as prop and Custom component](https://chakra-ui.com/community/recipes/as-prop).
 
-- **_OBS!_** Viktig at forwardRef brukes fra chakra-ui og ikke fra react.
-
-```jsx
+````jsx
 export const Link = forwardRef<LinkProps, "a">(({ children, colorScheme = "green", ...props }, ref) => {
   const isExternal = props.isExternal !== undefined ? props.isExternal : Boolean(props.href?.match(/^https?:\/\//));
   return (
@@ -87,7 +86,12 @@ export const Link = forwardRef<LinkProps, "a">(({ children, colorScheme = "green
 });
 
     ```
-
+    <KvibProvider>
+        <Alert status="warning">
+        <AlertIcon />
+        Viktig at forwardRef brukes fra chakra-ui og ikke fra react.
+        </Alert>
+    </KvibProvider>
 6.  Tilslutt; eksporter alt fra _Link.tsx_ i _index.tsx_, og fjern komponenten og props som blir eksportert fra Chakra i denne filen. Hvis det er flere komponenter og props i _index.tsx_; fjern kun de du har overskrevet.
 
 <span
@@ -253,7 +257,7 @@ import * as LinkStories from "./Link.stories";
 <Meta of={LinkStories} />;
       ```
 
-- Gi en beskrivelse av komponenten og hvordan den skal brukes. **_OSB!_**Sjekk rettskriving og klarspråk.
+- Gi en beskrivelse av komponenten og hvordan den skal brukes. **Sjekk rettskriving og klarspråk**.
 - Etter “Ta i bruk”, sett inn den storyen som er default ( Her; Link), og sett inn controll-tabellen til denne storyen:
 
 ```jsx
@@ -293,9 +297,8 @@ import { KvibProvider } from "@kvib/react/src/provider/KvibProvider";
 ````
 
 <br />
-<br />
-🏁 Nå kan du kjøre `npm run dev` for å se Storybook-dokumentasjonssiden lokalt. Videre må du gjøre ulike tester for å
-sjekke at alt stemmer.
+
+🏁 **Nå kan du kjøre `npm run dev` for å se Storybook-dokumentasjonssiden lokalt. Videre må du gjøre ulike tester for å sjekke at alt stemmer.**
 
 <KvibProvider>
   <Alert status="info">
@@ -328,32 +331,46 @@ Fin artikkel om akkurat dette: [Use npm pack to test your packages locally](http
 For å sørge for at komponentene vi lager overholder krav til universell utforming, må de testes for accessibility.
 Designerne våre tenker på UU når en komponenent blir designet, og Chakra tilbyr accessibility-features, blant annet A11y. Likevel har vi noen manuelle tester for komponenten før den havner i designsystemet.
 
-1. Test hvordan komponenten oppfører seg med skjermleser, eksmepelvis NVDA. Det er særlig viktig at tab-navigering fungerer korrekt.
-2. Teste med 400% zoom på desktop, samt teste på små skjermer. I storybook er det en egen funksjon som gjør at en kan teste hvordan komponenten ville sett ut på liten skjerm.
-3. I hver story kan det gjennomføres accessibility-tester for synet. Den finner du i menyen på toppen, merket med et accessibility-symbol. Test de ulike versjonene (Blurred vision, deutoranomaly, osv.) for å se om det er mulig å lese og forstå hva komponenten gjør.
+1. **Skjermleser**:Test hvordan komponenten oppfører seg med skjermleser, eksmepelvis NVDA. Det er særlig viktig at tab-navigering fungerer korrekt.
+2. **Zoom og skjermstørrelse**:Teste med 400% zoom på desktop, samt teste på små skjermer. I storybook er det en egen funksjon som gjør at en kan teste hvordan komponenten ville sett ut på liten skjerm.
+3. **a11y-synsnedsettelse**:I hver story kan det gjennomføres accessibility-tester for synet. Den finner du i menyen på toppen, merket med et accessibility-symbol. Test de ulike versjonene (Blurred vision, deutoranomaly, osv.) for å se om det er mulig å lese og forstå hva komponenten gjør.
 
 <img alt="navBar in story" src={require("../../public/assets/navBarStory.png")} width="500px" />
 
 <br />
 
-4. I en story/komponent på dokumentasjonssiden er det en accessibility-fane, hvor det kontinuerlig og automatisk blir testet for accessibility gjennom a11y.
+4. **a11y-andre UU-tester**: I en story/komponent på dokumentasjonssiden er det en accessibility-fane, hvor det kontinuerlig og automatisk blir testet for accessibility gjennom a11y.
    Ved å klikke på fanen, får du en oversikt over testene som er gjort; både de godkjente og de som har brudd på krav. Alle testene må godkjennes før en komponent kan bli lagt til i designsystemet.
    {" "}
 
 <img alt="accessibility-test tab " src={require("../../public/assets/tabsNavBarStory.png")} width="500px" />
 
-- **OBS!** Det kan være enkelte tilfeller hvor testene feiler på grunn av noe underliggende i Chakra. Det er mulig å overkjøre reglene og testingen til a11y, men dette skal kun gjøres dersom du ikke får endret det på noen annen måte.
-  Følg [guiden til Storybook på hvordan konfigurere a11y](https://storybook.js.org/docs/react/writing-tests/accessibility-testing#configure).
-
-5. Storybook sin Test Runner sjekker om storyene kjører uten feil, og er derav ikke en direkte UU-test.
+5. **Test Runner**:Storybook sin Test Runner sjekker om storyene kjører uten feil, og er derav ikke en direkte UU-test.
    Likevel er a11y konfigurert sammen med denne testen slik at det kjøres som tester i Github Actions.
    Alle tester må derav godkjennes før det er tillatt å merge til master. Dersom du ønsker å kjøre test runner lokalt, åpne termninalen og naviger til mappen `apps/storybook` og kjør her `npm run dev` for å kjøre storybook.
    Videre mens storybook kjører, åpne en ny terminal, naviger til samme mappe og kjør `npm run test-storybook`. Testene vil da vises i terminalen.
+
+<KvibProvider>
+  <Alert status="info">
+    <AlertIcon />
+    Det kan være enkelte tilfeller hvor ally-testene feiler på grunn av noe underliggende i Chakra. Det er mulig å overkjøre
+    reglene og testingen til a11y, men dette skal kun gjøres dersom du ikke får endret det på noen annen måte. Følg [guiden
+    til Storybook på hvordan konfigurere a11y](https://storybook.js.org/docs/react/writing-tests/accessibility-testing#configure).
+  </Alert>
+</KvibProvider>
 
 ## Oppdatere npm-pakken og changelog
 
 Når komponenten er testet både for oppførsel og UU, kan den merges med master, og legges til i npm-pakken.
 Det er viktig å ha en god changelog for at brukere enkelt skal kunne se om endringer av pakken påvirker komponenter de eventuelt har tatt i bruk i egne prosjekt.
+
+Under følger noen kjennetegn for versjonsoppdatering: (Informasjonen er hentet fra [Major.Minor.Patch artikkelen](https://medium.com/fiverr-engineering/major-minor-patch-a5298e2e1798))
+
+- **patch**: ved interne fixes, eksempelvis bug fix, forbedrelse av performance, enviroment eller andre interne tweaks. Hovedregel: Bruker _burde_ oppdatere pakken uten å nøle.
+- **minor**: når interfacet endrer seg, men har **mulighet** til å rulle tilbake til tidligere versjoner. Eksempelvis ved nye funksjoner, komponenter, nye tilgjengelige props osv.
+  Hovedregel: Bruker oppdaterer pakke for å få nye funksjoner, uten at noe vil kræsje.
+- **major**: når interfacet endrer seg, men har **ikke mulighet** til å rulle tilbake til tidligere versjoner. Eksempelvis endrer API endpoint navn eller signatur.
+  Hovedregel: test systemet nøye etter oppdatering.
 
 Slik gjør du det:
 
@@ -373,7 +390,10 @@ Slik gjør du det:
 
         ```jsx
 
-Button-komponent er tilgjengelig med Kartverkets Design. Dokumentasjon er oppdatert.
-Kritiske endringer: -**colorScheme** tar verdiene: "green" (default), "blue", "gray", "red". -**rightIcon**/ **leftIcon**: er av typen String, ikke lenger et element.
+        Button-komponent er tilgjengelig med Kartverkets Design. Dokumentasjon er oppdatert. Kritiske endringer:
+         -**colorScheme** tar verdiene: "green" (default), "blue", "gray", "red".
+         -**rightIcon**/ **leftIcon**: er av typen String, ikke lenger et element.
+
+    ```
 
     ```
