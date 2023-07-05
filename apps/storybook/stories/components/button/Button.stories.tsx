@@ -41,10 +41,17 @@ const meta: Meta<typeof KvibButton> = {
       },
       control: "boolean",
     },
+    iconFill: {
+      table: {
+        type: { summary: "boolean" },
+      },
+      control: "boolean",
+    },
   },
 };
 
 export default meta;
+
 type Story = StoryObj<typeof KvibButton>;
 
 export const Button: Story = {
@@ -87,10 +94,13 @@ export const ButtonWithIcon: Story = {
   args: { children: "Klikk her" },
   render: (args) => (
     <HStack>
-      <KvibButton {...args} leftIcon="add">
+      <KvibButton {...args} leftIcon="favorite">
         {args.children}
       </KvibButton>
-      <KvibButton {...args} rightIcon="add">
+      <KvibButton {...args} rightIcon="favorite">
+        {args.children}
+      </KvibButton>
+      <KvibButton {...args} iconFill rightIcon="favorite">
         {args.children}
       </KvibButton>
     </HStack>
