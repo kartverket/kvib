@@ -1,5 +1,4 @@
 import { Meta } from "@storybook/addon-docs";
-import { Unstyled } from "@storybook/blocks";
 import { Alert, AlertIcon, AlertDescription } from "@kvib/react";
 import { KvibProvider } from "@kvib/react/src/provider/KvibProvider";
 
@@ -46,20 +45,24 @@ export const App = () => {
 ## Egen styling - inline styling og styled-components
 
 <KvibProvider>
-  <Alert status="info">
-    <AlertIcon />
-    <AlertDescription>
-      I utgangspunktet skal man benytte komponentene fra Kartverkets designbibliotek med stylingen som er der. Er det
-      funksjoner og design du synes mangler i dagens bibliotek, ønsker vi at du bidrar med dette til biblioteket
-      istedenfor å overskrive stylingen i eget prosjekt- da kan fler enn deg ta det i bruk! Se [dokumentasjonen for
-      hvordan bidra til designsystemet](/?path=/docs/bidra--docs) for guidelines. Dersom det likevel er nødvendig å
-      gjøre egne tilpassninger av stylingen til eget prosjekt, kan dette gjøres med inline styling eller
-      styled-components.
+    <Alert status="info">
+        <AlertIcon/>
+        <AlertDescription>
+            I utgangspunktet skal man benytte komponentene fra Kartverkets designbibliotek med stylingen som er der. Er
+            det
+            funksjoner og design du synes mangler i dagens bibliotek, ønsker vi at du bidrar med dette til biblioteket
+            istedenfor å overskrive stylingen i eget prosjekt- da kan fler enn deg ta det i bruk! Se [dokumentasjonen
+            for
+            hvordan bidra til designsystemet](/?path=/docs/bidra--docs) for guidelines. Dersom det likevel er nødvendig
+            å
+            gjøre egne tilpassninger av stylingen til eget prosjekt, kan dette gjøres med inline styling eller
+            styled-components.
 
-      **Avklar med designer før du lager egen styling.**
-    </AlertDescription>
+            **Avklar med designer før du lager egen styling.**
+        </AlertDescription>
 
-  </Alert>
+    </Alert>
+
 </KvibProvider>
 
 La oss si du bruker en knapp fra Kartverkets designbibliotek, men du ønsker å tilpasse den litt.
