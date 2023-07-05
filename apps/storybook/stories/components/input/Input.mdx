@@ -1,11 +1,11 @@
-import { Title, Canvas, Meta, Story, Controls } from "@storybook/blocks";
+import { Canvas, Meta, Controls } from "@storybook/blocks";
 import * as InputStories from "./Input.stories";
 
 <Meta of={InputStories} />
 
 # Input
 
-Se [https://chakra-ui.com/docs/components/input](https://chakra-ui.com/docs/components/input) for eksempler og dokumentasjon.
+<Canvas of={InputStories.Input} />
 
 ## Ta i bruk
 
@@ -17,3 +17,7 @@ import { Input } from "@kvib/react";
 
 <Canvas of={InputStories.Input} />
 <Controls of={InputStories.Input} />
+
+## Date picker
+
+<Canvas of={InputStories.InputDate} />

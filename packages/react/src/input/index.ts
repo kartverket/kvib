@@ -16,5 +16,3 @@ export type {
   InputLeftElementProps,
   InputRightElementProps,
 } from "@chakra-ui/react";
-
-// export * from "./Input";

@@ -26,7 +26,6 @@
     "node": "18.15.0"
   },
   "dependencies": {
-    "@chakra-ui/icons": "^2.0.19",
     "@changesets/cli": "^2.25.2"
   },
   "packageManager": "npm@9.5.0"
