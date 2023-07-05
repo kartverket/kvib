@@ -1,4 +1,6 @@
 import { Meta } from "@storybook/addon-docs";
+import { Alert, AlertIcon } from "@kvib/react";
+import { KvibProvider } from "@kvib/react/src/provider/KvibProvider";
 
 <Meta title="Bidra" />
 
@@ -274,12 +276,31 @@ Under følger en beskrivelse av hvordan en komponent skal dokumenteres. Link-kom
 
       ```
 
+7.  Dersom du skal sette inn komponenter i dokumentasjon som er fra selve designbibliotek (eksempelvis Alert), så må komponenten wrappes inn i en `<KvibProvider/>`, slik som vist under:
+
+```jsx
+import { Alert, AlertIcon } from "@kvib/react";
+import { KvibProvider } from "@kvib/react/src/provider/KvibProvider";
+
+<KvibProvider>
+  <Alert status="info">
+    <AlertIcon />
+    <AlertDescription>Husk å oppdatere npm-pakken og changelog før du merger.</AlertDescription>
+  </Alert>
+</KvibProvider>;
+```
+
 <br />
 <br />
 🏁 Nå kan du kjøre `npm run dev` for å se Storybook-dokumentasjonssiden lokalt. Videre må du gjøre ulike tester for å
 sjekke at alt stemmer.
 
-**_OBS_**! Husk å oppdatere npm-pakken og changelog før du merger.
+<KvibProvider>
+  <Alert status="info">
+    <AlertIcon />
+    Husk å oppdatere npm-pakken og changelog før du merger.
+  </Alert>
+</KvibProvider>
 
 <br />
 ## Testing av komponenten
