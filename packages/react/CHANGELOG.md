@@ -1,13 +1,75 @@
 # @kvib/react
 
+## 1.6.0
+
+### Minor Changes
+
+- 458e1a81d: Icon-komponent er tilgjengelig. Dokumentasjon er oppdatert.
+
+## 1.5.0
+
+### Minor Changes
+
+- 5ba55d2c8: Bugfix:
+
+  - IconButton: **colorScheme** og **variant** er ikke lenger required prop.
+  - Link: aria-attributes for ikon er oppdatert. **colorScheme** er ikke lenger required prop.
+  - Tabs: importert manglende komponenter; TabList, TabPanels, Tab, TabPanel
+
+## 1.4.0
+
+### Minor Changes
+
+- 0045b6ccf: Videreeksporterer useToastOptions
+
+## 1.3.1
+
+### Patch Changes
+
+- 1368ee9a0: Videresender et par funksjoner fra theme-utils (extendTheme og withDefaultColorScheme)
+
+## 1.3.0
+
+### Minor Changes
+
+- a9fc68200: Oppdaterte dokumentasjon for tab-komponenten
+
+## 1.2.0
+
+### Minor Changes
+
+- 58aefa8ea: Tabs-komponent er tilgjengelig med Kartverkets Design. Dokumentasjon er oppdatert.
+  Kritiske endringer:
+  - **colorScheme** tar verdiene: "green" (default) og "blue".
+
+## 1.1.0
+
+### Minor Changes
+
+- 403c6e020: Link-komponent er nå tilgjengelig med Kartverkets Design. Dokumemtasjon er oppdatert.
+  Kritiske endringer:
+  - **colorScheme** verdier er: "green", "blue".
+
+## 1.0.0
+
+### Major Changes
+
+- bd83d1b41: Designbiblioteket inneholder nå diverse komponenter som alle har Kartverkets farger og font. Komponentene er klare til bruk.
+- IconButton er tilgjengelig med Kartverkets Design. Dokumentasjon er oppdatert. Kritiske endringer:
+  - **variant** tar verdiene: "solid"(default),"outline", "link", "ghost"
+  - **colorScheme** tar verdiene: "green" (default), "blue", "gray", "red"
+  - **icon**: er av typen String, ikke lenger et element.
+
 ## 0.36.0
 
 ### Minor Changes
 
 - 7f6bda20d: AbsoluteCenter og StackDivider er tilgjengelig i Designbiblioteket.
 
-  Button-komponent er tilgjengelig med Kartverkets Design. Dokumentasjon er oppdatert.
-  Kritiske endringer: -**colorScheme** tar verdiene: "green" (default), "blue", "gray", "red". -**rightIcon**/ **leftIcon**: er av typen String, ikke lenger et element.
+- Button-komponent er tilgjengelig med Kartverkets Design. Dokumentasjon er oppdatert.
+  Kritiske endringer:
+  - **colorScheme** tar verdiene: "green" (default), "blue", "gray", "red".
+  - **rightIcon**/ **leftIcon**: er av typen String, ikke lenger et element.
 
 ## 0.35.0
 

@@ -1,7 +1,7 @@
 import { defineStyleConfig, defineStyle } from "@chakra-ui/react";
 import { colors } from "../tokens";
 
-const variantSolid = defineStyle((props) => {
+export const variantSolid = defineStyle((props) => {
   const { colorScheme: c } = props;
 
   if (c === "gray") {
@@ -10,9 +10,17 @@ const variantSolid = defineStyle((props) => {
       color: colors.black,
       _hover: {
         bg: colors.gray[200],
+        _disabled: {
+          bg: colors.gray[100],
+          color: colors.black,
+        },
       },
       _active: {
         bg: colors.gray[300],
+        _disabled: {
+          bg: colors.gray[100],
+          color: colors.black,
+        },
       },
     };
   }
@@ -21,18 +29,27 @@ const variantSolid = defineStyle((props) => {
     color: colors.white,
     _hover: {
       bg: `${c}.400`,
+      _disabled: {
+        bg: `${c}.500`,
+        color: colors.white,
+      },
     },
     _active: {
       bg: `${c}.600`,
+      _disabled: {
+        bg: `${c}.500`,
+        color: colors.white,
+      },
     },
   };
 });
 
-const variantOutline = defineStyle((props) => {
+export const variantOutline = defineStyle((props) => {
   const { colorScheme: c } = props;
 
   if (c === "gray") {
     return {
+      border: "1px",
       bg: colors.white,
       borderColor: colors.gray[200],
       color: colors.black,
@@ -53,29 +70,34 @@ const variantOutline = defineStyle((props) => {
     };
   }
   return {
+    border: "1px",
     bg: colors.white,
     borderColor: `${c}.500`,
     color: `${c}.500`,
     _hover: {
+      border: "0px",
       bg: `${c}.400`,
       color: colors.white,
       _disabled: {
         bg: colors.white,
         color: `${c}.500`,
+        border: "1px",
       },
     },
     _active: {
       bg: `${c}.600`,
+      border: "0px",
       color: colors.white,
       _disabled: {
         bg: colors.white,
         color: `${c}.500`,
+        border: "1px",
       },
     },
   };
 });
 
-const variantLink = defineStyle((props) => {
+export const variantLink = defineStyle((props) => {
   const { colorScheme: c } = props;
 
   if (c === "gray") {
@@ -166,6 +188,9 @@ const config = defineStyleConfig({
       gap: "6px",
       minWidth: "90px",
       minHeight: "24px",
+      ".material-symbols-rounded": {
+        fontSize: "12px",
+      },
     },
     sm: {
       fontSize: "14px",
@@ -174,6 +199,9 @@ const config = defineStyleConfig({
       paddingRight: "12px",
       minWidth: "100px",
       minHeight: "32px",
+      ".material-symbols-rounded": {
+        fontSize: "14px",
+      },
     },
     md: {
       fontSize: "16px",
@@ -182,6 +210,9 @@ const config = defineStyleConfig({
       paddingRight: "16px",
       minWidth: "100px",
       minHeight: "40px",
+      ".material-symbols-rounded": {
+        fontSize: "16px",
+      },
     },
     lg: {
       fontSize: "18px",
@@ -190,6 +221,9 @@ const config = defineStyleConfig({
       paddingRight: "24px",
       minWidth: "106px",
       minHeight: "48px",
+      ".material-symbols-rounded": {
+        fontSize: "16px",
+      },
     },
   },
   variants: {
