@@ -46,23 +46,25 @@ export const App = () => {
 ## Egen styling - inline styling og styled-components
 
 <KvibProvider>
-    <Alert status='error'>
-      <AlertIcon />
-      <AlertTitle>Your browser is outdated!</AlertTitle>
-      <AlertDescription>Your Chakra experience may be degraded.</AlertDescription>
-    </Alert>
-
-</KvibProvider>>
-
-<KvibProvider>
-  <Button>Klikk her</Button>
+  <Alert status="warning">
+    <AlertIcon />
+    <AlertDescription>Avklar med designer før du lager egen styling.</AlertDescription>
+  </Alert>
 </KvibProvider>
-
-I utgangspunktet skal man benytte komponentene fra Kartverkets designbibliotek med stylingen som er der.
-Er det funksjoner og design du synes mangler i dagens bibliotek, ønsker vi at du bidrar med dette til biblioteket istedenfor å overskrive stylingen i eget prosjekt- da kan fler enn deg ta det i bruk! Se [dokumentasjonen for hvordan bidra til designsystemet](/?path=/docs/bidra--docs) for guidelines.
-Dersom det likevel er nødvendig å gjøre egne tilpassninger av stylingen til eget prosjekt, kan dette gjøres med inline styling eller styled-components.
-
-**_OBS!_** Avklar med designer dersom dette skal gjøres.
+<br />
+<KvibProvider>
+  <Alert status="info">
+    <AlertIcon />
+    <AlertDescription>
+      I utgangspunktet skal man benytte komponentene fra Kartverkets designbibliotek med stylingen som er der. Er det
+      funksjoner og design du synes mangler i dagens bibliotek, ønsker vi at du bidrar med dette til biblioteket
+      istedenfor å overskrive stylingen i eget prosjekt- da kan fler enn deg ta det i bruk! Se [dokumentasjonen for
+      hvordan bidra til designsystemet](/?path=/docs/bidra--docs) for guidelines. Dersom det likevel er nødvendig å
+      gjøre egne tilpassninger av stylingen til eget prosjekt, kan dette gjøres med inline styling eller
+      styled-components.
+    </AlertDescription>
+  </Alert>
+</KvibProvider>
 
 La oss si du bruker en knapp fra Kartverkets designbibliotek, men du ønsker å tilpasse den litt.
 Et alternativ er å benytte inline-styling, som f.eks. `<Button background="red">Klikk her</Button>`. Et annet alternativ er styled-components, som noen team allerede benytter.
