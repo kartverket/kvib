@@ -1,4 +1,4 @@
-import { Button as KvibButton, HStack } from "@kvib/react/src";
+import { Button as KvibButton, VStack, StackDivider, ButtonGroup as KvibButtonGroup } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibButton> = {
@@ -11,10 +11,36 @@ const meta: Meta<typeof KvibButton> = {
     },
   },
   argTypes: {
+    size: {
+      description: "Size of the Button",
+      table: {
+        type: { summary: " xs| sm | md | lg" },
+        defaultValue: { summary: "md" },
+      },
+      options: ["xs", "sm", "md", "lg"],
+      control: { type: "radio" },
+    },
+    variant: {
+      description: "The variant of the Button.",
+      table: {
+        type: { summary: "solid | outline | link | ghost" },
+        defaultValue: { summary: "solid" },
+      },
+      options: ["solid", "outline", "link", "ghost"],
+      control: { type: "radio" },
+    },
     isDisabled: {
       description: "If true, the button will be disabled.",
       table: {
         type: { summary: Boolean },
+        defaultValue: { summary: false },
+      },
+      control: "boolean",
+    },
+    isLoading: {
+      description: "If true, the button will show a spinner.",
+      table: {
+        type: { summary: "boolean" },
         defaultValue: { summary: false },
       },
       control: "boolean",
@@ -33,14 +59,6 @@ const meta: Meta<typeof KvibButton> = {
       },
       control: "text",
     },
-    isLoading: {
-      description: "If true, the button will show a spinner.",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: false },
-      },
-      control: "boolean",
-    },
   },
 };
 
@@ -55,7 +73,7 @@ export const Button: Story = {
 export const ButtonVariants: Story = {
   args: { children: "Klikk her" },
   render: (args) => (
-    <HStack>
+    <KvibButtonGroup>
       <KvibButton {...args} variant="solid">
         {args.children}
       </KvibButton>
@@ -65,42 +83,45 @@ export const ButtonVariants: Story = {
       <KvibButton {...args} variant="link">
         {args.children}
       </KvibButton>
-    </HStack>
+      <KvibButton {...args} variant="ghost">
+        {args.children}
+      </KvibButton>
+    </KvibButtonGroup>
   ),
 };
 
 export const ButtonStates: Story = {
   args: { children: "Klikk her" },
   render: (args) => (
-    <HStack>
+    <KvibButtonGroup>
       <KvibButton {...args} isLoading>
         {args.children}
       </KvibButton>
       <KvibButton {...args} isDisabled>
         {args.children}
       </KvibButton>
-    </HStack>
+    </KvibButtonGroup>
   ),
 };
 
 export const ButtonWithIcon: Story = {
   args: { children: "Klikk her" },
   render: (args) => (
-    <HStack>
+    <KvibButtonGroup>
       <KvibButton {...args} leftIcon="add">
         {args.children}
       </KvibButton>
       <KvibButton {...args} rightIcon="add">
         {args.children}
       </KvibButton>
-    </HStack>
+    </KvibButtonGroup>
   ),
 };
 
 export const ButtonSizes: Story = {
   args: { children: "Klikk her" },
   render: (args) => (
-    <HStack>
+    <KvibButtonGroup>
       <KvibButton {...args} size="xs">
         {args.children}
       </KvibButton>
@@ -113,6 +134,24 @@ export const ButtonSizes: Story = {
       <KvibButton {...args} size="lg">
         {args.children}
       </KvibButton>
-    </HStack>
+    </KvibButtonGroup>
+  ),
+};
+
+export const ButtonGroup: Story = {
+  args: { children: "Klikk her" },
+  render: (args) => (
+    <VStack divider={<StackDivider borderColor="gray.200" />}>
+      <KvibButtonGroup orientation="vertical" variant="outline" spacing="4" size="sm">
+        <KvibButton {...args}>{args.children}</KvibButton>
+        <KvibButton {...args}>{args.children}</KvibButton>
+      </KvibButtonGroup>
+      <KvibButtonGroup colorScheme="blue" isAttached>
+        <KvibButton {...args}>{args.children}</KvibButton>
+        <KvibButton rightIcon="add" {...args}>
+          {args.children}
+        </KvibButton>
+      </KvibButtonGroup>
+    </VStack>
   ),
 };
