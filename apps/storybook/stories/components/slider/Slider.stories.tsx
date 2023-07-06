@@ -113,7 +113,6 @@ type Story = StoryObj<typeof KvibSlider>;
 export const Slider: Story = {
   args: {
     "aria-label": "sliderDefault",
-    defaultValue: 30,
     id: "slider",
   },
   render: (args) => (
@@ -129,6 +128,7 @@ export const Slider: Story = {
 export const SliderDiscrete: Story = {
   args: {
     "aria-label": "sliderDiscrete",
+    defaultValue: 30,
     id: "slider",
     step: 10,
   },
