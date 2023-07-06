@@ -1,4 +1,4 @@
-import { Alert, AlertIcon, KvibProvider } from "@kvib/react";
+import { Alert, AlertIcon, KvibProvider } from "@kvib/react/src";
 import { Meta } from "@storybook/addon-docs";
 
 <Meta title="Info/Bidra/Bygge" />
@@ -29,13 +29,13 @@ Link-komponenten brukes som eksempel under.
 
 - **Alternativ 2- definer egne props fra bunnen**: Her må man definere alle props fra bunnen av.
 
-          ```jsx
-          export type LinkProps = {
-              colorScheme? : "green" | "blue", //denne er ikke required pga. "?"
-              href: string, //denne er required. Kommer feilmelding dersom denne ikke settes i komponenten.
-              children? : string,
-          };
-          ```
+        ```jsx
+        export type LinkProps = {
+            colorScheme? : "green" | "blue", //denne er ikke required pga. "?"
+            href: string, //denne er required. Kommer feilmelding dersom denne ikke settes i komponenten.
+            children? : string,
+        };
+        ```
 
 <KvibProvider>
   <Alert status="info">
