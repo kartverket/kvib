@@ -11,7 +11,7 @@ import { KvibProvider } from "@kvib/react/src/provider/KvibProvider";
 ### Generelt 📌
 
 - Legg til oppgave i [KOMP Boardet i Jira](https://kartverket.atlassian.net/jira/software/projects/KOMP/boards/80) når du skal implementere, oppdatere, style, fikse en komponent eller andre oppgaver relatert til designsystemet. Pass på å holde oppgaven oppdatert; både hvor den er i prosessen og evt. dokumentasjon.
-  **_OBS!_** Sjekk om det allerede finnes en liknende ooppgave før du legger inn egen.
+  **Sjekk om det allerede finnes en liknende ooppgave før du legger inn egen.**
 - Mapper navngis med små bokstaver
 - .ts-filer navngis med små bokstaver, alle andre filer navngis med stor forbokstav. Eksempelvis vil det bli: link.ts og Link.tsx.
 - Alle gjeldende props til en komponent skal dokumenteres i Kvib, og ikke bare de props’ene vi definerer selv. Dette gjøres av to grunner:
@@ -42,8 +42,7 @@ Link-komponenten brukes som eksempel under.
 
       ```
 
-- **Alternativ 2- definer egne props fra bunnen**: Her må man definere alle props fra bunnen av. **OBS!** _required_ props er ikke det samme som å sette default.
-  Eksempelvis colorScheme er ikke required fordi man ønsker ikke at brukeren må sette colorScheme dersom hen vil ha default-verdien. Hvordan sette default-verdi kommer i senere steg i denne guiden.
+- **Alternativ 2- definer egne props fra bunnen**: Her må man definere alle props fra bunnen av.
 
   ````jsx
   export type LinkProps = {
@@ -54,10 +53,30 @@ Link-komponenten brukes som eksempel under.
         ```
   ````
 
+{" "}
+<br />
+<KvibProvider>
+  <Alert status="info">
+    <AlertIcon />
+    _required_ props er ikke det samme som å sette default. Eksempelvis colorScheme er ikke required fordi man ønsker ikke
+    at brukeren må sette colorScheme dersom hen vil ha default-verdien. Hvordan sette default-verdi kommer i senere steg
+    i denne guiden.
+  </Alert>
+</KvibProvider>
+
 4.  Videre i _Link.tsx_ skal du bygge opp komponenten ved å bruke propsa du definerte i steg 3. De propsene du endrer på sendes manuelt videre til Chakra-komponenten, de andre kan videresendes ved å bruke _“…props”_- syntaksen.
     Ved å tilegne props verdier settes default for komponenten, noe som må gjøres dersom propsen er satt som required.
 
-        - **_OBS!_** Under “Style komponenten” nevnes defaultProps som en del av .ts-filen. Default som settes i selve komponenten overkjører defaultPropsa som settes i styling-filen.
+{" "}
+<KvibProvider>
+  <Alert status="info">
+    <AlertIcon />
+    Under [“Style komponenten”](/docs/bidra--docs#style-komponenten-) nevnes defaultProps som en del av .ts-filen. Default
+    som settes i selve komponenten i.tsx-filen overkjører defaultPropsa som settes i styling .ts-filen.
+  </Alert>
+</KvibProvider>
+
+        <br/>
 
 5.  Flere av Chakra-komponentene har en litt annen variant for å kunne opprettes. Disse komponentene kan opprettes med funksjonen _forwardRef(props, ref)_ fra `@chakra-ui/react`.
     I tillegg til å ta imot _props_, tas det også imot en _ref_, som refererer til det underliggende html-element brukt i komponenten.
@@ -66,38 +85,41 @@ Link-komponenten brukes som eksempel under.
     Mer informasjon om forwardRef finner du på [forwardRef-react](https://react.dev/reference/react/forwardRef)
     og [The as prop and Custom component](https://chakra-ui.com/community/recipes/as-prop).
 
-````jsx
-export const Link = forwardRef<LinkProps, "a">(({ children, colorScheme = "green", ...props }, ref) => {
-  const isExternal = props.isExternal !== undefined ? props.isExternal : Boolean(props.href?.match(/^https?:\/\//));
-  return (
-    <ChakraLink {...props} ref={ref} colorScheme={colorScheme} isExternal={isExternal}>
-      {children}
-      {isExternal && (
-        <span
-          className="material-symbols-rounded"
-          style={{ fontSize: "18px", verticalAlign: "middle", marginLeft: "4px" }}
-          aria-label="Ekstern lenke"
-        >
-          launch
-        </span>
-      )}
-    </ChakraLink>
-  );
-});
-
+    ````jsx
+    export const Link = forwardRef<LinkProps, "a">(({ children, colorScheme = "green", ...props }, ref) => {
+      const isExternal = props.isExternal !== undefined ? props.isExternal : Boolean(props.href?.match(/^https?:\/\//));
+      return (
+        <ChakraLink {...props} ref={ref} colorScheme={colorScheme} isExternal={isExternal}>
+          {children}
+          {isExternal && (
+            <span
+              className="material-symbols-rounded"
+              style={{ fontSize: "18px", verticalAlign: "middle", marginLeft: "4px" }}
+              aria-label="Ekstern lenke"
+            >
+              launch
+            </span>
+          )}
+        </ChakraLink>
+      );
+    });
     ```
-    <KvibProvider>
-        <Alert status="warning">
-        <AlertIcon />
-        Viktig at forwardRef brukes fra chakra-ui og ikke fra react.
-        </Alert>
-    </KvibProvider>
+
+    ````
+
 6.  Tilslutt; eksporter alt fra _Link.tsx_ i _index.tsx_, og fjern komponenten og props som blir eksportert fra Chakra i denne filen. Hvis det er flere komponenter og props i _index.tsx_; fjern kun de du har overskrevet.
 
-<span
-    style={{color: "orange"}}>**_Tips:_**</span> _Når du skal bygge selve komponenten er det lurt å benytte [komponent-dokumentasjonen
+<span style={{ color: "orange" }}>**_Tips:_**</span> _Når du skal bygge selve komponenten er det lurt å benytte [komponent-dokumentasjonen
 til Chakra ](https://chakra-ui.com/docs/components)._ _I de fleste tilfeller kan du kopiere eksempelkoden deres, og tilpasse/bygge
 videre på denne._
+
+{" "}
+<KvibProvider>
+  <Alert status="warning">
+    <AlertIcon />
+    Viktig at forwardRef brukes fra chakra-ui og ikke fra react.
+  </Alert>
+</KvibProvider>
 
 ### Style komponenten 🎨
 
@@ -105,9 +127,10 @@ Under følger en beskrivelse av hvordan en komponent kan styles. Link-komponente
 
 1.  Gå til `packages/react/src/theme/components`: lag en ny fil, link.ts. Her skal stylingen til Chakra overskrives med Kartverkets eget design.
 2.  Følg [guiden til Chakra på hvordan style en komponent](https://chakra-ui.com/docs/styled-system/component-style).
-Du trenger ikke gjøre steget som omhandler “extendTheme”, da dette allerde er satt opp, så lenge du benytter mappestrukturen som allerede er satt opp.
+    Du trenger ikke gjøre steget som omhandler “extendTheme”, da dette allerde er satt opp, så lenge du benytter mappestrukturen som allerede er satt opp.
+3.  Eksporter themet fra _link.ts_ i `packages/react/src/theme/components/index.ts`.
 
-- **OBS!** Det kan være nødvendig å bygge styling av en komponent fra bunnen av, eksempelvis dersom komponenten ikke er del av Chakra UI, eller komponenten ikke har egen styling annet enn at den arver styling fra annen komponent.
+Enkelte ganger kan det være nødvendig å bygge styling av en komponent fra bunnen av, eksempelvis dersom komponenten ikke er del av Chakra UI, eller komponenten ikke har egen styling annet enn at den arver styling fra annen komponent.
 Benytt `useStyleConfig` hooken når komponenten defineres for å konsumere denne typen styling. Se [hvordan bruke useStyleConfig](https://chakra-ui.com/docs/styled-system/component-style#usestyleconfig-api) for eksempel.
 For at komponenten skal få en default-styling er det viktig å sette _defaultProps_ i _.ts_-filen (ikke bare som default i komponenten i _.tsx-filen_).
 IconButton er en komponent hvor useStyleConfig er benyttet, og under vises det hvordan _defaultProps_ settes, og hvordan useStyleConfig brukes i \*.tsx\*.
@@ -146,10 +169,7 @@ IconButton er en komponent hvor useStyleConfig er benyttet, og under vises det h
 
                 ```
 
-3.  Eksporter themet fra _link.ts_ i `packages/react/src/theme/components/index.ts`.
-
-<span
-    style={{color: "orange"}}>**_Tips:_**</span> _Chakra lenker til sin egen styling-kode for de fleste komponentene.For
+<span style={{ color: "orange" }}>**_Tips:_**</span> _Chakra lenker til sin egen styling-kode for de fleste komponentene.For
 eksempel kan stylingen av Button-komponenten sees ved å trykke på “Theme source” øverst på [Chakra sin dokumentasjonsside
 av Button](https://chakra-ui.com/docs/components/button/usage)._ _Mye av deres kode kan gjenbrukes ved å bytte ut med egne
 CSS-variabler._ _På denne måten kan man også se om komponenten arver fra andre, eksempelvis vil theme-source for IconButton
@@ -162,7 +182,7 @@ Under følger en beskrivelse av hvordan en komponent skal dokumenteres. Link-kom
 1.  Gå til `apps/storybook/stories/components/link` og lag filen: _Link.stories.tsx_. I denne filen skal du lage stories for komponenten, og i _.mdx_-filen (som ligger i denne mappen fra før av) skrives dokumentasjonen.
 2.  I _Link.stories.tsx_ sett følgende øverst i filen:
 
-```jsx
+````jsx
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibLink> = {
@@ -231,20 +251,20 @@ Slik vil storyen se ut i dokumentasjonen, og vil vise den minimale koden en bruk
 Velg de som er mest hensiktsmessig for komponenten. Bruk _HStack/VStack_ til å ordne flere komponenter ved siden av hverandre i en story, hvor du tilordner hver komponent forksjellige verdier.
 Dette tydeliggjør forskjellen samtidig som det gir en oversiktlig dokumentasjon. Under er det vist eksempel hvor ulike states (internal og external link) vises
 
-```jsx
-export const LinkStates: Story = {
-  args: { colorScheme: "blue" },
-  render: (args) => (
-    <VStack>
-      <KvibLink href="/?path=/docs/introduksjon--docs" {...args}>
-        Dette er en intern lenke
-      </KvibLink>
-      <KvibLink isExternal href="https://chakra-ui.com/docs/components" {...args}>
-        Dette er en ekstern lenke
-      </KvibLink>
-    </VStack>
-  ),
-};
+    ```jsx
+    export const LinkStates: Story = {
+      args: { colorScheme: "blue" },
+      render: (args) => (
+        <VStack>
+          <KvibLink href="/?path=/docs/introduksjon--docs" {...args}>
+            Dette er en intern lenke
+          </KvibLink>
+          <KvibLink isExternal href="https://chakra-ui.com/docs/components" {...args}>
+            Dette er en ekstern lenke
+          </KvibLink>
+        </VStack>
+      ),
+    };
     ```
 
 6.  I `apps/storybook/stories/components/link/Link.mdx`:
@@ -349,6 +369,11 @@ Designerne våre tenker på UU når en komponenent blir designet, og Chakra tilb
    Likevel er a11y konfigurert sammen med denne testen slik at det kjøres som tester i Github Actions.
    Alle tester må derav godkjennes før det er tillatt å merge til master. Dersom du ønsker å kjøre test runner lokalt, åpne termninalen og naviger til mappen `apps/storybook` og kjør her `npm run dev` for å kjøre storybook.
    Videre mens storybook kjører, åpne en ny terminal, naviger til samme mappe og kjør `npm run test-storybook`. Testene vil da vises i terminalen.
+
+6. Her er noen nyttige lenker som inneholder sjekklister for UU-testing av den spesifikke komponenten:
+   - [https://www.magentaa11y.com/web/](https://www.magentaa11y.com/web/)
+   - [https://a11y-101.com/development](https://a11y-101.com/development)
+   - [https://www.a11yproject.com/checklist/#appearance](https://www.a11yproject.com/checklist/#appearance)
 
 <KvibProvider>
   <Alert status="info">
