@@ -1,7 +1,7 @@
 import { defineStyleConfig } from "@chakra-ui/react";
 import { colors, borders, radii } from "../tokens";
 
-const config = defineStyleConfig({
+export const linkTheme = defineStyleConfig({
   baseStyle: ({ colorScheme }) => ({
     padding: "8px",
     textDecoration: "underline",
@@ -23,5 +23,3 @@ const config = defineStyleConfig({
     colorScheme: "green",
   },
 });
-
-export default config;

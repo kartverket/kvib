@@ -1,53 +1,5 @@
-// import { colors } from "../tokens";
-import { variantSolid, variantOutline, variantLink } from "./button";
-
-import { defineStyle, defineStyleConfig } from "@chakra-ui/react";
-import { colors } from "../tokens";
-
-export const variantGhost = defineStyle((props) => {
-  const { colorScheme: c } = props;
-
-  if (c === "gray") {
-    return {
-      bg: "transparent",
-      color: colors.gray[800],
-      _hover: {
-        bg: colors.gray[50],
-        color: colors.gray[500],
-        _disabled: {
-          bg: "transparent",
-          color: colors.gray[800],
-        },
-      },
-      _active: {
-        bg: colors.gray[100],
-        color: colors.gray[900],
-        _disabled: {
-          bg: "transparent",
-          color: colors.gray[800],
-        },
-      },
-    };
-  }
-  return {
-    bg: "transparent",
-    color: `${c}.500`,
-    _hover: {
-      bg: `${c}.50`,
-      _disabled: {
-        bg: "transparent",
-        color: `${c}.500`,
-      },
-    },
-    _active: {
-      bg: `${c}.100`,
-      _disabled: {
-        bg: "transparent",
-        color: `${c}.500`,
-      },
-    },
-  };
-});
+import { variantSolid, variantOutline, variantLink, variantGhost } from "./button";
+import { defineStyleConfig } from "@chakra-ui/react";
 
 export const IconButtonTheme = defineStyleConfig({
   baseStyle: () => ({
