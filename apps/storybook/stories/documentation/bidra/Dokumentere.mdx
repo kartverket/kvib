@@ -12,66 +12,65 @@ Under følger en beskrivelse av hvordan en komponent skal dokumenteres. Link-kom
 1.  Gå til `apps/storybook/stories/components/link` og lag filen: _Link.stories.tsx_. I denne filen skal du lage stories for komponenten, og i _.mdx_-filen (som ligger i denne mappen fra før av) skrives dokumentasjonen.
 2.  I _Link.stories.tsx_ sett følgende øverst i filen:
 
-````jsx
-import { Meta, StoryObj } from "@storybook/react";
+        ```jsx
+        import { Meta, StoryObj } from "@storybook/react";
 
-const meta: Meta<typeof KvibLink> = {
-  title: "Komponenter/Link<3 ",
-  component: KvibLink,
-  parameters: {
-    docs: {
-      story: { inline: true },
-      canvas: { sourceState: "shown" },
-    },
-  },
-  argTypes: {
-    isExternal: {
-      description: "If true, a icon will be included.",
-      table: {
-        type: { summary: Boolean },
-        defaultValue: { summary: false },
-      },
-      control: "boolean",
-    },
-  },
-};
-    ```
+        const meta: Meta<typeof KvibLink> = {
+          title: "Komponenter/Link<3 ",
+          component: KvibLink,
+          parameters: {
+            docs: {
+              story: { inline: true },
+              canvas: { sourceState: "shown" },
+            },
+          },
+          argTypes: {
+            isExternal: {
+              description: "If true, a icon will be included.",
+              table: {
+                type: { summary: Boolean },
+                defaultValue: { summary: false },
+              },
+              control: "boolean",
+            },
+          },
+        };
+        ```
 
 - `title` setter filstrukturen på selve [dokumentasjonssiden til Designbiblioteket](https://kartverket.github.io/kvib/storybook).
 - Hvis man ønsker å endre på sortertingen av filstrukturen på Storybook, gå til `apps/storybook/.storybook/preview.js`, og tilpass `order` som overskriver den ellers alfabetiske rekkefølgen.
 
 3.  På selve dokumentasjonssiden er det en _control-tabell_ som benyttes for å teste ulike props-verdier på komponenten.
-Beskrivelsen og default-verdien av egendefinerte props legges til som kommentar i _.tsx_-filen hvor propsene blir definert, altså i `packages/react/src/link/Link.tsx`.
-Videre generer Storybook control-tabellen automatisk. Under er eksempel på beskrivelse av propen `variant`.
+    Beskrivelsen og default-verdien av egendefinerte props legges til som kommentar i _.tsx_-filen hvor propsene blir definert, altså i `packages/react/src/link/Link.tsx`.
+    Videre generer Storybook control-tabellen automatisk. Under er eksempel på beskrivelse av propen `variant`.
 
-```jsx
-    //packages/react/src/link/Link.tsx.
+            ```jsx
+                //packages/react/src/link/Link.tsx.
 
-    export type LinkProps = Omit<ChakraLinkProps, "variant"> & {
+                export type LinkProps = Omit<ChakraLinkProps, "variant"> & {
 
-      /**The colorvariant of the link.
-      @default green*/
-      variant: "green" | "blue";
-    };
-
-````
+                  /**The colorvariant of the link.
+                  @default green*/
+                  variant: "green" | "blue";
+                };
+            ```
 
 4.  I `apps/storybook/stories/components/link/Link.stories.tsx` skal du videre definere stories for å vise komponenten med ulike props-verdier. Lag én story som viser default-verdiene til komponenten.
     Dvs. benytt bare de nødvendige propsa når du definerer komponenten slik at default-verdiene vises.
     Derav vil tilhørende kodesnutt vise minstekravet for at denne komponenten skal fungere. Under vises Link.
 
-```jsx
-export default meta;
-type Story = StoryObj<typeof KvibLink>;
+            ```jsx
+            export default meta;
+            type Story = StoryObj<typeof KvibLink>;
 
-export const Link: Story = {
-  args: {
-    children: "Dette er en lenke",
-    href: "/?path=/docs/introduksjon--docs",
-  },
-  render: (args) => <KvibLink {...args}>{args.children}</KvibLink>,
-};
-```
+            export const Link: Story = {
+              args: {
+                children: "Dette er en lenke",
+                href: "/?path=/docs/introduksjon--docs",
+              },
+              render: (args) => <KvibLink {...args}>{args.children}</KvibLink>,
+            };
+            ```
 
 Slik vil storyen se ut i dokumentasjonen, og vil vise den minimale koden en bruker trenger å skrive.
 
@@ -81,86 +80,83 @@ Slik vil storyen se ut i dokumentasjonen, og vil vise den minimale koden en bruk
     Velg de som er mest hensiktsmessig for komponenten. Bruk _HStack/VStack_ til å ordne flere komponenter ved siden av hverandre i en story, hvor du tilordner hver komponent forksjellige verdier.
     Dette tydeliggjør forskjellen samtidig som det gir en oversiktlig dokumentasjon. Under er det vist eksempel hvor ulike states (internal og external link) vises:
 
-```jsx
-export const LinkStates: Story = {
-  args: { colorScheme: "blue" },
-  render: (args) => (
-    <VStack>
-      <KvibLink href="/?path=/docs/introduksjon--docs" {...args}>
-        Dette er en intern lenke
-      </KvibLink>
-      <KvibLink isExternal href="https://chakra-ui.com/docs/components" {...args}>
-        Dette er en ekstern lenke
-      </KvibLink>
-    </VStack>
-  ),
-};
-```
+            ```jsx
+            export const LinkStates: Story = {
+              args: { colorScheme: "blue" },
+              render: (args) => (
+                <VStack>
+                  <KvibLink href="/?path=/docs/introduksjon--docs" {...args}>
+                    Dette er en intern lenke
+                  </KvibLink>
+                  <KvibLink isExternal href="https://chakra-ui.com/docs/components" {...args}>
+                    Dette er en ekstern lenke
+                  </KvibLink>
+                </VStack>
+              ),
+            };
+            ```
 
 6.  I `apps/storybook/stories/components/link/Link.mdx`:
 
 - Øverst i filen; bytt ut <Meta/> med: (Nå som du har definert en .stories.tsx fil settes tittelen her og ikke i .mdx)
 
-```jsx
-import * as LinkStories from "./Link.stories";
+          ```jsx
+          import * as LinkStories from "./Link.stories";
 
-<Meta of={LinkStories} />;
-```
+          <Meta of={LinkStories} />;
+          ```
 
 - Gi en beskrivelse av komponenten og hvordan den skal brukes. **Sjekk rettskriving og klarspråk**.
 - Etter “Ta i bruk”, sett inn den storyen som er default ( Her; Link), og sett inn controll-tabellen til denne storyen:
 
-```jsx
-## Props
+          ```jsx
+          ## Props
 
-<Canvas of={LinkStories.Link} />         //henter selve storien (default-komponenten)
+          <Canvas of={LinkStories.Link} />         //henter selve storien (default-komponenten)
 
-<Controls of={LinkStories.Link} />       //henter control- tabellen
+          <Controls of={LinkStories.Link} />       //henter control- tabellen
 
-```
+          ```
 
 - Sett inn de resterende storiesene med tilhørende titler (##).
 
-```jsx
-## States (intern og ekstern link)
+          ```jsx
+          ## States (intern og ekstern link)
 
-<Canvas of={LinkStories.LinkStates} />
+          <Canvas of={LinkStories.LinkStates} />
 
-## Farger
+          ## Farger
 
-<Canvas of={LinkStories.LinkColorscheme} />
-```
+          <Canvas of={LinkStories.LinkColorscheme} />
+          ```
 
 7.  Dersom du skal sette inn komponenter i dokumentasjon som er fra selve designbibliotek (eksempelvis Alert), så må komponenten wrappes inn i en `<KvibProvider/>`, slik som vist under:
 
-```jsx
-import { Alert, AlertIcon } from "@kvib/react";
-import { KvibProvider } from "@kvib/react/src/provider/KvibProvider";
+        ```jsx
+        import { Alert, AlertIcon } from "@kvib/react";
+        import { KvibProvider } from "@kvib/react/src/provider/KvibProvider";
 
-<KvibProvider>
-  <Alert status="info">
-    <AlertIcon />
-    <AlertDescription>Husk å oppdatere npm-pakken og changelog før du merger.</AlertDescription>
-  </Alert>
-</KvibProvider>;
-```
+        <KvibProvider>
+          <Alert status="info">
+            <AlertIcon />
+            <AlertDescription>Husk å oppdatere npm-pakken og changelog før du merger.</AlertDescription>
+          </Alert>
+        </KvibProvider>;
+        ```
 
-8. Dersom det er noen kjente feil ved komponenten, eksempelvis med a11y-tester, lag et avsnitt nederst i .mdx-filen slik som dette:
+8.  Dersom det er noen kjente feil ved komponenten, eksempelvis med a11y-tester, lag et avsnitt nederst i .mdx-filen slik som dette:
 
-````
-## Kjente feil
-- a11y-test har violations....
-- ....
-   ```
+         ```
+         ## Kjente feil
+         - a11y-test har violations....
+         - ....
+            ```
 
 🏁 **Nå kan du kjøre `npm run dev` for å se Storybook-dokumentasjonssiden lokalt. Videre må du gjøre ulike tester for å sjekke at alt stemmer.**
 
 <KvibProvider>
   <Alert status="info">
-      <AlertIcon/>
-      Husk å oppdatere npm-pakken og changelog før du merger.
+    <AlertIcon />
+    Husk å oppdatere npm-pakken og changelog før du merger.
   </Alert>
 </KvibProvider>
-
-<br/>
-````
