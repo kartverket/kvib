@@ -1,8 +1,11 @@
 import { Input as KvibInput } from "@kvib/react/src/input/Input";
+import { NumberInput as KvibNumberInput } from "@kvib/react/src/input/Number-Input";
+import { NumberInputField as KvibNumberInputField } from "@kvib/react/src/input/Number-Input-Field";
+import { NumberInputStepper as KvibNumberInputStepper } from "@kvib/react/src/input/Number-Input-Stepper";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibInput> = {
-  title: "Komponenter/Input",
+  title: "Komponenter/Input**",
   component: KvibInput,
   parameters: {
     docs: {
@@ -69,6 +72,7 @@ const meta: Meta<typeof KvibInput> = {
 
 export default meta;
 type InputStory = StoryObj<typeof KvibInput>;
+type NumberInputStory = StoryObj<typeof KvibNumberInput>;
 type InputDateStory = StoryObj<typeof KvibInput>;
 
 export const Input: InputStory = {
@@ -82,6 +86,21 @@ export const Input: InputStory = {
     isRequired: false,
   },
   render: (args) => <KvibInput {...args} />,
+};
+
+export const NumberInput: NumberInputStory = {
+  args: {
+    isDisabled: false,
+    isInvalid: false,
+    isReadOnly: false,
+    isRequired: false,
+  },
+  render: (args) => (
+    <KvibNumberInput {...args}>
+      <KvibNumberInputField />
+      <KvibNumberInputStepper />
+    </KvibNumberInput>
+  ),
 };
 
 export const InputDate: InputDateStory = {

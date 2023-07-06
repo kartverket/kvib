@@ -6,7 +6,7 @@ import { Input } from "@kvib/react/src/input/Input";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibFormControl> = {
-  title: "Komponenter/Form control",
+  title: "Komponenter/Form control**",
   component: KvibFormControl,
   parameters: {
     docs: {
