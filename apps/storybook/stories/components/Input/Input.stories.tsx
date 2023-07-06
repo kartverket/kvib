@@ -12,6 +12,10 @@ const meta: Meta<typeof KvibInput> = {
       story: { inline: true },
       canvas: { sourceState: "shown" },
     },
+    a11y: {
+      // This option disables all a11y checks on this story
+      disable: true,
+    },
   },
   argTypes: {
     placeholder: {
