@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 1.6.0
+
+### Minor Changes
+
+- 458e1a81d: Icon-komponent er tilgjengelig. Dokumentasjon er oppdatert.
+
 ## 1.5.0
 
 ### Minor Changes

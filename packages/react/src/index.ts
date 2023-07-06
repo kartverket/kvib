@@ -15,7 +15,7 @@ export * from "./drawer";
 export * from "./editable";
 export * from "./form-control";
 export * from "./hooks";
-export * from "./icons";
+export * from "./icon";
 export * from "./image";
 export * from "./input";
 export * from "./kbd";
