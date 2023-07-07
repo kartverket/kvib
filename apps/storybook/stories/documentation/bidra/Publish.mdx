@@ -2,7 +2,7 @@ import { Meta } from "@storybook/blocks";
 
 <Meta title="Info/Bidra/Publish" />
 
-## Oppdatere npm-pakken og changelog
+# Oppdatere npm-pakken og changelog
 
 Når komponenten er testet både for oppførsel og UU, kan den merges med master, og legges til i npm-pakken.
 Det er viktig å ha en god changelog for at brukere enkelt skal kunne se om endringer av pakken påvirker komponenter de eventuelt har tatt i bruk i egne prosjekt.
@@ -20,7 +20,7 @@ Slik gjør du det:
 1.  Kjør `npx changeset`. Det vil komme opp valg du må gjøre i terminal for å velge versjon-oppdatering av npm-pakken.
 2.  Bruk piltaster og space til å velge @kvib/react, som er den pakken vi ønsker å oppdatere (grønn stjerne viser at den er valgt). Trykk deretter enter for å komme videre.
 
-    <img alt="changeset- set package to include" src={require("../../../public/assets/changeset1.png")} />
+<img alt="changeset- set package to include" src={require("../../../public/assets/changeset1.png")} />
 
 3.  Du får videre valget om oppdateringen skal være av typen _major_. Hvis ja- bruk piltaster og enter til å velge riktig pakke. Hvis nei- trykk enter med engang uten å velge pakke.
     <img alt="changeset- set major bump" src={require("../../../public/assets/changeset2.png")} />
