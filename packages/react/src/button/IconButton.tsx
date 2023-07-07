@@ -5,6 +5,7 @@ import {
   Spinner,
 } from "@chakra-ui/react";
 import { useStyleConfig } from "@chakra-ui/system";
+import { Icon } from "../icon";
 
 export type IconButtonProps = Omit<ChakraIconButtonProps, "colorScheme" | "variant" | "isActive" | "icon"> & {
   /**The variant of the IconButton
@@ -17,18 +18,22 @@ export type IconButtonProps = Omit<ChakraIconButtonProps, "colorScheme" | "varia
   /**The visual color appearance of the component.
      @default green*/
   colorScheme?: "green" | "blue" | "gray" | "red";
+
+  /**If true, the icon will be filled.
+   @default false*/
+  iconFill?: boolean;
 };
 
 const IconSpinner = (props: IconButtonProps) => {
   if (props.isLoading) {
     return <Spinner size="sm" />;
   }
-  return <span className="material-symbols-rounded">{props.icon}</span>;
+  return <Icon icon={props.icon} isFilled={props.iconFill} />;
 };
 
 export const IconButton = forwardRef<IconButtonProps, "button">(
   (
-    { isDisabled, isLoading, ...props },
+    { isDisabled, isLoading, iconFill, ...props },
 
     ref
   ) => {
@@ -40,7 +45,7 @@ export const IconButton = forwardRef<IconButtonProps, "button">(
         __css={{ ...styles }}
         isDisabled={isDisabled || isLoading}
         aria-busy={isLoading}
-        icon={IconSpinner({ isLoading, ...props })}
+        icon={IconSpinner({ isLoading, iconFill, ...props })}
       ></ChakraIconButton>
     );
   }

@@ -59,6 +59,12 @@ const meta: Meta<typeof KvibButton> = {
       },
       control: "text",
     },
+    iconFill: {
+      table: {
+        type: { summary: "boolean" },
+      },
+      control: "boolean",
+    },
   },
 };
 
@@ -108,10 +114,13 @@ export const ButtonWithIcon: Story = {
   args: { children: "Klikk her" },
   render: (args) => (
     <KvibButtonGroup>
-      <KvibButton {...args} leftIcon="add">
+      <KvibButton {...args} leftIcon="favorite">
         {args.children}
       </KvibButton>
-      <KvibButton {...args} rightIcon="add">
+      <KvibButton {...args} rightIcon="favorite">
+        {args.children}
+      </KvibButton>
+      <KvibButton {...args} iconFill rightIcon="favorite">
         {args.children}
       </KvibButton>
     </KvibButtonGroup>
