@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 1.8.0
+
+### Minor Changes
+
+- b12dc0244: IconButton og Button komponentene har nå mulighet for å sette ikoner som fylt via propen: **iconFill**.
+
 ## 1.7.0
 
 ### Minor Changes
