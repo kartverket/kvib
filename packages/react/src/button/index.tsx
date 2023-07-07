@@ -1,4 +1,3 @@
-export { ButtonGroup } from "@chakra-ui/react";
-export type { ButtonGroupProps } from "@chakra-ui/react";
 export * from "./Button";
 export * from "./IconButton";
+export * from "./ButtonGroup";

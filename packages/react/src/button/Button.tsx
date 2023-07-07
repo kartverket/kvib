@@ -5,32 +5,17 @@ import {
   forwardRef,
   Spinner,
   HStack,
+  useButtonGroup,
 } from "@chakra-ui/react";
 import { Icon } from "../icon";
 
 export type ButtonProps = Omit<
   ChakraButtonProps,
-  | "colorScheme"
-  | "size"
-  | "variant"
-  | "leftIcon"
-  | "rightIcon"
-  | "iconSpacing"
-  | "isActive"
-  | "loadingText"
-  | "spinnerPlacement"
+  "colorScheme" | "leftIcon" | "rightIcon" | "iconSpacing" | "isActive" | "loadingText" | "spinnerPlacement"
 > & {
-  /**The size of the Button
-   * @default green */
-  size: "xs" | "sm" | "md" | "lg";
-
-  /**The variant of the Button
-   * @default solid */
-  variant: "solid" | "outline" | "link";
-
   /**The visual color appearance of the component
-   * @default green */
-  colorScheme: "green" | "blue" | "gray" | "red";
+   * @default green*/
+  colorScheme?: "green" | "blue" | "gray" | "red";
 
   /**If added, the button will show an icon before the button's label.*/
   leftIcon?: string;
@@ -44,28 +29,17 @@ export type ButtonProps = Omit<
 };
 
 export const Button = forwardRef<ButtonProps, "button">(
-  (
-    {
-      children,
-      size = "md",
-      variant = "solid",
-      colorScheme = "green",
-      isDisabled,
-      isLoading,
-      leftIcon,
-      rightIcon,
-      iconFill = false,
-      ...props
-    },
-    ref
-  ) => {
+  ({ children, iconFill, colorScheme, isDisabled, isLoading, leftIcon, rightIcon, ...props }, ref) => {
+    const buttonGroup = useButtonGroup();
+    const finalColorScheme = (colorScheme ?? buttonGroup?.colorScheme ?? "green") as Required<
+      ButtonProps["colorScheme"]
+    >;
+
     return (
       <ChakraButton
         {...props}
         ref={ref}
-        size={size}
-        variant={variant}
-        colorScheme={colorScheme}
+        colorScheme={finalColorScheme}
         isDisabled={isDisabled || isLoading}
         aria-busy={isLoading}
         iconFill={iconFill && (rightIcon || leftIcon)}
