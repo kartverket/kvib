@@ -5,60 +5,44 @@ import {
   forwardRef,
   Spinner,
   HStack,
+  useButtonGroup,
 } from "@chakra-ui/react";
+import { Icon } from "../icon";
 
 export type ButtonProps = Omit<
   ChakraButtonProps,
-  | "colorScheme"
-  | "size"
-  | "variant"
-  | "leftIcon"
-  | "rightIcon"
-  | "iconSpacing"
-  | "isActive"
-  | "loadingText"
-  | "spinnerPlacement"
+  "colorScheme" | "leftIcon" | "rightIcon" | "iconSpacing" | "isActive" | "loadingText" | "spinnerPlacement"
 > & {
-  /**The size of the Button*/
-  size: "xs" | "sm" | "md" | "lg";
-
-  /**The variant of the Button*/
-  variant: "solid" | "outline" | "link";
-
-  /**The visual color appearance of the component*/
-  colorScheme: "green" | "blue" | "gray" | "red";
+  /**The visual color appearance of the component
+   * @default green*/
+  colorScheme?: "green" | "blue" | "gray" | "red";
 
   /**If added, the button will show an icon before the button's label.*/
   leftIcon?: string;
 
   /**If added, the button will show an icon after the button's label.*/
   rightIcon?: string;
+
+  /**If true, the rightIcon/leftIcon in the button will be filled.
+   * @default false */
+  iconFill?: boolean;
 };
 
 export const Button = forwardRef<ButtonProps, "button">(
-  (
-    {
-      children,
-      size = "md",
-      variant = "solid",
-      colorScheme = "green",
-      isDisabled,
-      isLoading,
-      leftIcon,
-      rightIcon,
-      ...props
-    },
-    ref
-  ) => {
+  ({ children, iconFill, colorScheme, isDisabled, isLoading, leftIcon, rightIcon, ...props }, ref) => {
+    const buttonGroup = useButtonGroup();
+    const finalColorScheme = (colorScheme ?? buttonGroup?.colorScheme ?? "green") as Required<
+      ButtonProps["colorScheme"]
+    >;
+
     return (
       <ChakraButton
         {...props}
         ref={ref}
-        size={size}
-        variant={variant}
-        colorScheme={colorScheme}
+        colorScheme={finalColorScheme}
         isDisabled={isDisabled || isLoading}
         aria-busy={isLoading}
+        iconFill={iconFill && (rightIcon || leftIcon)}
       >
         {isLoading && (
           <Center position="absolute" right="0" left="0">
@@ -66,11 +50,11 @@ export const Button = forwardRef<ButtonProps, "button">(
           </Center>
         )}
         <HStack spacing={1} visibility={isLoading ? "hidden" : "visible"}>
-          {leftIcon && <span className="material-symbols-rounded">{leftIcon}</span>}
+          {leftIcon && <Icon icon={leftIcon} isFilled={iconFill} />}
           <Center className="text" as="span">
             {children}
           </Center>
-          {rightIcon && <span className="material-symbols-rounded">{rightIcon}</span>}
+          {rightIcon && <Icon icon={rightIcon} isFilled={iconFill} />}
         </HStack>
       </ChakraButton>
     );

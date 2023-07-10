@@ -12,9 +12,8 @@ export const parameters = {
     storySort: {
       method: "alphabetical",
       order: [
-        "Introduksjon",
-        "Oppsett",
-        "Bidra",
+        "Info",
+        ["Introduksjon", "Oppsett", "Bidra", ["Generelt", "Bygge", "Style", "Dokumentere", "Teste", "Publish"]],
         "Playground",
         "Design Fundament",
         "Hooks",

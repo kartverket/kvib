@@ -168,7 +168,53 @@ export const variantLink = defineStyle((props) => {
   };
 });
 
-const config = defineStyleConfig({
+export const variantGhost = defineStyle((props) => {
+  const { colorScheme: c } = props;
+
+  if (c === "gray") {
+    return {
+      bg: "transparent",
+      color: colors.gray[800],
+      _hover: {
+        bg: colors.gray[50],
+        _disabled: {
+          bg: "transparent",
+          color: colors.gray[800],
+        },
+      },
+      _active: {
+        bg: colors.gray[100],
+        color: colors.gray[900],
+        _disabled: {
+          bg: "transparent",
+          color: colors.gray[800],
+        },
+      },
+    };
+  }
+  return {
+    bg: "transparent",
+    color: `${c}.500`,
+    _hover: {
+      bg: `${c}.50`,
+      color: `${c}.400`,
+      _disabled: {
+        bg: "transparent",
+        color: `${c}.500`,
+      },
+    },
+    _active: {
+      bg: `${c}.100`,
+      color: `${c}.600`,
+      _disabled: {
+        bg: "transparent",
+        color: `${c}.500`,
+      },
+    },
+  };
+});
+
+export const buttonTheme = defineStyleConfig({
   baseStyle: () => ({
     fontStyle: "normal",
     fontWeight: "600",
@@ -230,11 +276,11 @@ const config = defineStyleConfig({
     solid: variantSolid,
     outline: variantOutline,
     link: variantLink,
+    ghost: variantGhost,
   },
   defaultProps: {
+    colorScheme: "green",
     variant: "solid",
     size: "md",
   },
 });
-
-export default config;

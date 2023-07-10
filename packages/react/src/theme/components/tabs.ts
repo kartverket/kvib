@@ -4,7 +4,7 @@ import { colors } from "../tokens";
 
 const helpers = createMultiStyleConfigHelpers(parts.keys);
 
-const config = helpers.defineMultiStyleConfig({
+export const tabsTheme = helpers.defineMultiStyleConfig({
   baseStyle: ({ colorScheme }) => {
     return {
       root: {
@@ -32,5 +32,3 @@ const config = helpers.defineMultiStyleConfig({
     size: "md",
   },
 });
-
-export default config;
