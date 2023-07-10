@@ -1,13 +1,92 @@
-import { Meta } from "@storybook/blocks";
+import { Title, Canvas, Meta, Story, Controls } from "@storybook/blocks";
+import * as SliderStories from "./Slider.stories";
+import { Alert, AlertIcon } from "@kvib/react/src";
+import { KvibProvider } from "@kvib/react/src/provider/KvibProvider";
 
-<Meta title="Komponenter/Slider" />
+<Meta of={SliderStories} />
 
 # Slider
 
-Se [https://chakra-ui.com/docs/components/slider](https://chakra-ui.com/docs/components/slider) for eksempler og dokumentasjon.
+Her er en oversikt over Slider-komponenten, og hvordan denne bygges opp av flere andre komponenter.
+
+    <KvibProvider>
+      <Alert status="warning">
+        <AlertIcon />
+        En Slider skal alltid stå sammen med en Label. Dersom det mot formodning avviker fra dette må aria-label benyttes.
+      </Alert>
+    </KvibProvider>
+
+{" "}
+
+<br />
 
 ## Ta i bruk
 
+    ```jsx
+    import {   Slider,
+               SliderTrack,
+               SliderFilledTrack,
+               SliderThumb,
+               SliderMark
+               } from "@kvib/react";
+    ```
+
+## Props
+
+### Slider
+
+<Canvas of={SliderStories.Slider} />
+<Controls of={SliderStories.Slider} />
+
+### SliderThumb Props
+
+SliderThumb er bygget på Box komponenten, så alle props til Box kan benyttes i SliderThumb for å endre styling. Se [dokumentasjonen for Box for beskrivelse og eksempler](/docs/komponenter-layout-box--docs).
+
+### SliderFilledTrack Props
+
+SliderFilledTrack er bygget på Box komponenten, så alle props til Box kan benyttes i SliderFilledTrack for å endre styling. Se [dokumentasjonen for Box for beskrivelse og eksempler](/docs/komponenter-layout-box--docs).
+
+### SliderTrack Props
+
+SliderTrack er bygget på Box komponenten, så alle props til Box kan benyttes i SliderTrack for å endre styling. Se [dokumentasjonen for Box for beskrivelse og eksempler](/docs/komponenter-layout-box--docs).
+
+## Diskret slider med step
+
+<Canvas of={SliderStories.SliderDiscrete} />
+
+## Slider med tooltip og marks
+
+<Canvas of={SliderStories.SliderTooltip} sourceState={false} />
+
 ```jsx
-import { Slider, SliderTrack, SliderFilledTrack, SliderThumb, SliderMark } from "@kvib/react";
+const SliderWithTooltip = () => {
+  const [sliderValue, setSliderValue] = React.useState(5);
+  const [showTooltip, setShowTooltip] = React.useState(false);
+  return (
+    <KvibSlider
+      id="slider"
+      aria-label="sliderWithTooltip"
+      defaultValue={5}
+      onChange={(v) => setSliderValue(v)}
+      onMouseEnter={() => setShowTooltip(true)}
+      onMouseLeave={() => setShowTooltip(false)}
+    >
+      <SliderMark value={25} mt="1" ml="-2.5" fontSize="sm">
+        25%
+      </SliderMark>
+      <SliderMark value={50} mt="1" ml="-2.5" fontSize="sm">
+        50%
+      </SliderMark>
+      <SliderMark value={75} mt="1" ml="-2.5" fontSize="sm">
+        75%
+      </SliderMark>
+      <SliderTrack>
+        <SliderFilledTrack />
+      </SliderTrack>
+      <Tooltip hasArrow placement="top" isOpen={showTooltip} label={`${sliderValue}%`}>
+        <SliderThumb />
+      </Tooltip>
+    </KvibSlider>
+  );
+};
 ```
