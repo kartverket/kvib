@@ -26,7 +26,7 @@ Fin artikkel om akkurat dette: [Use npm pack to test your packages locally](http
 For å sørge for at komponentene vi lager overholder krav til universell utforming, må de testes for accessibility.
 Designerne våre tenker på UU når en komponenent blir designet, og Chakra tilbyr accessibility-features, blant annet A11y. Likevel har vi noen manuelle tester for komponenten før den havner i designsystemet.
 
-1. **Skjermleser**:Test hvordan komponenten oppfører seg med skjermleser, eksempelvis NVDA. Det er særlig viktig at tab-navigering fungerer korrekt.
+1. **Skjermleser**:Test hvordan komponenten oppfører seg med skjermleser, eksempelvis NVDA. Det er særlig viktig at tastatur-navigering fungerer korrekt.
 2. **Zoom og skjermstørrelse**:Teste med 400% zoom på desktop, samt teste på små skjermer. I storybook er det en egen funksjon som gjør at en kan teste hvordan komponenten ville sett ut på liten skjerm.
 3. **a11y-synsnedsettelse**:I hver story kan det gjennomføres accessibility-tester for synet. Den finner du i menyen på toppen, merket med et accessibility-symbol. Test de ulike versjonene (Blurred vision, deutoranomaly, osv.) for å se om det er mulig å lese og forstå hva komponenten gjør.
 
@@ -36,7 +36,7 @@ Designerne våre tenker på UU når en komponenent blir designet, og Chakra tilb
 
 4. **a11y-andre UU-tester**: I en story/komponent på dokumentasjonssiden er det en accessibility-fane, hvor det kontinuerlig og automatisk blir testet for accessibility gjennom a11y.
    Ved å klikke på fanen, får du en oversikt over testene som er gjort; både de godkjente og de som har brudd på krav. Alle testene må godkjennes før en komponent kan bli lagt til i designsystemet.
-   {" "}
+   Dersom du ikke finner denne taben kan det være fordi browseren ikke støtter alle funksjonene i storybook. Prøv å bruke Chrome eller Vivaldi browser.
 
 <img alt="accessibility-test tab " src={require("../../../public/assets/tabsNavBarStory.png")} width="500px" />
 
@@ -55,7 +55,8 @@ Designerne våre tenker på UU når en komponenent blir designet, og Chakra tilb
   <Alert status="info">
     <AlertIcon />
     Det kan være enkelte tilfeller hvor a11y-testene feiler på grunn av noe underliggende i Chakra. Det er mulig å overkjøre
-    reglene og testingen til a11y, men dette skal kun gjøres dersom du ikke får endret det på noen annen måte. Følg [guiden
-    til Storybook på hvordan konfigurere a11y](https://storybook.js.org/docs/react/writing-tests/accessibility-testing#configure).
+    reglene og testingen til a11y, men dette skal kun gjøres dersom du ikke får endret det på noen annen måte. Dersom du
+    disabler en a11y-test pga en UU-feil vi ikke får rettet, må du dokumentere feilen i "Kjente feil" Følg [guiden til Storybook
+    på hvordan konfigurere a11y](https://storybook.js.org/docs/react/writing-tests/accessibility-testing#configure).
   </Alert>
 </KvibProvider>

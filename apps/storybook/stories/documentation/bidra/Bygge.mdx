@@ -16,24 +16,26 @@ Link-komponenten brukes som eksempel under.
 
 - **Alternativ 1- bygg på Chakras props**: Importer Chakra sine props (her; LinkProps), og fjern unødvendige props og legg evt. til egndefinerte props.
   Du må også definere en prop fra Chakra på nytt dersom du skal endre på hvilke verdier denne propen kan ta.
-  I koden under har vi fjernet chakra sin egen `variant`, og heller lagt til vår egendefinerte `variant` som kun tar verdiene “green” og “blue”.
+  I koden under har vi fjernet chakra sin egen `colorScheme`, og heller lagt til vår egendefinerte `colorScheme` som kun tar verdiene “green” og “blue”.
 
             ```jsx
             import {LinkProps as ChakraLinkProps} from "@chakra-ui/react";
 
-            export type LinkProps = Omit < ChakraLinkProps, "variant" >
-            & {colorScheme: "green" | "blue";};
+            export type LinkProps = Omit < ChakraLinkProps, "colorScheme" >
+            & {
+                colorScheme: "green" | "blue";
+            };
             ```
 
 - **Alternativ 2- definer egne props fra bunnen**: Her må man definere alle props fra bunnen av.
 
-        ```jsx
-        export type LinkProps = {
-            colorScheme? : "green" | "blue", //denne er ikke required pga. "?"
-            href: string, //denne er required. Kommer feilmelding dersom denne ikke settes i komponenten.
-            children? : string,
-        };
-        ```
+      ```jsx
+      export type LinkProps = {
+          colorScheme? : "green" | "blue", //denne er ikke required pga. "?"
+          href: string, //denne er required. Kommer feilmelding dersom denne ikke settes i komponenten.
+          children? : string,
+      };
+      ```
 
 <KvibProvider>
   <Alert status="info">
