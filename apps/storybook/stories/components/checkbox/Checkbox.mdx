@@ -1,6 +1,7 @@
 import { Meta } from "@storybook/blocks";
+import * as CheckboxStories from "./Checkbox.stories";
 
-<Meta title="Komponenter/Checkbox" />
+<Meta of={CheckboxStories} />;
 
 # Checkbox
 
@@ -11,3 +12,12 @@ Se [https://chakra-ui.com/docs/components/checkbox](https://chakra-ui.com/docs/c
 ```jsx
 import { Checkbox, CheckboxGroup } from "@kvib/react";
 ```
+
+## Props
+
+<Canvas of={CheckboxStories.Checkbox} />
+<Controls of={CheckboxStories.Checkbox} />
+
+## Farger
+
+<Canvas of={CheckboxStories.CheckboxColors} />
