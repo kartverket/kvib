@@ -1,12 +1,11 @@
-import { Input as KvibInput } from "@kvib/react/src/input/Input";
-import { InputGroup as KvibInputGroup } from "@kvib/react/src/input/Input-Group";
-import { InputLeftAddon as KvibInputLeftAddon } from "@kvib/react/src/input/Input-Left-Addon";
-import { InputRightAddon as KvibInputRightAddon } from "@kvib/react/src/input/Input-Right-Addon";
+import { NumberInput as KvibNumberInput } from "@kvib/react/src/number-input/Number-Input";
+import { NumberInputField as KvibNumberInputField } from "@kvib/react/src/number-input/Number-Input-Field";
+import { NumberInputStepper as KvibNumberInputStepper } from "@kvib/react/src/number-input/Number-Input-Stepper";
 import { Meta, StoryObj } from "@storybook/react";
 
-const meta: Meta<typeof KvibInput> = {
-  title: "Komponenter/Input**",
-  component: KvibInput,
+const meta: Meta<typeof KvibNumberInput> = {
+  title: "Komponenter/Input**/Number Input",
+  component: KvibNumberInput,
   parameters: {
     docs: {
       story: { inline: true },
@@ -18,13 +17,6 @@ const meta: Meta<typeof KvibInput> = {
     },
   },
   argTypes: {
-    placeholder: {
-      description: "Placeholder for text",
-      table: {
-        defaultValue: { summary: "Skriv her..." },
-      },
-      control: "text",
-    },
     size: {
       description: "Size of input",
       table: {
@@ -47,6 +39,7 @@ const meta: Meta<typeof KvibInput> = {
       description: "Toggles if input should be required",
       table: {
         type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -54,6 +47,7 @@ const meta: Meta<typeof KvibInput> = {
       description: "Toggles if input should be read-only",
       table: {
         type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -61,6 +55,7 @@ const meta: Meta<typeof KvibInput> = {
       description: "Toggles if input should be invalid",
       table: {
         type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -68,6 +63,7 @@ const meta: Meta<typeof KvibInput> = {
       description: "Toggles if input should be disabled",
       table: {
         type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -75,24 +71,9 @@ const meta: Meta<typeof KvibInput> = {
 };
 
 export default meta;
-type InputStory = StoryObj<typeof KvibInput>;
-type InputDateStory = StoryObj<typeof KvibInput>;
-type InputGroupStory = StoryObj<typeof KvibInputGroup>;
+type NumberInputStory = StoryObj<typeof KvibNumberInput>;
 
-export const Input: InputStory = {
-  args: {
-    placeholder: "Skriv her...",
-    size: "md",
-    variant: "outline",
-    isDisabled: false,
-    isInvalid: false,
-    isReadOnly: false,
-    isRequired: false,
-  },
-  render: (args) => <KvibInput {...args} />,
-};
-
-export const InputDate: InputDateStory = {
+export const NumberInput: NumberInputStory = {
   args: {
     size: "md",
     variant: "outline",
@@ -100,19 +81,11 @@ export const InputDate: InputDateStory = {
     isInvalid: false,
     isReadOnly: false,
     isRequired: false,
-  },
-  render: (args) => <KvibInput {...args} type={"date"} />,
-};
-
-export const InputGroup: InputGroupStory = {
-  args: {
-    size: "md",
   },
   render: (args) => (
-    <KvibInputGroup {...args}>
-      <KvibInputLeftAddon children={"https://"} />
-      <KvibInput placeholder={"minside"} />
-      <KvibInputRightAddon children={".no"} />
-    </KvibInputGroup>
+    <KvibNumberInput {...args}>
+      <KvibNumberInputField />
+      <KvibNumberInputStepper />
+    </KvibNumberInput>
   ),
 };

@@ -1,13 +1,17 @@
-import { Meta } from "@storybook/blocks";
+import { Canvas, Controls, Meta } from "@storybook/blocks";
+import * as PinInputStories from "./PinInput.stories";
 
-<Meta title="Komponenter/Pin Input" />
+<Meta of={PinInputStories} />
 
 # Pin Input
-
-Se [https://chakra-ui.com/docs/components/pin-input](https://chakra-ui.com/docs/components/pin-input) for eksempler og dokumentasjon.
 
 ## Ta i bruk
 
 ```jsx
 import { PinInput, PinInputField } from "@kvib/react";
 ```
+
+## Props
+
+<Canvas of={PinInputStories.PinInput} />
+<Controls of={PinInputStories.PinInput} />
