@@ -1,0 +1,99 @@
+import { Alert, AlertIcon, KvibProvider } from "@kvib/react/src";
+import { Meta } from "@storybook/addon-docs";
+
+<Meta title="Info/Bidra/Bygge" />
+
+# Bygge komponenten 🛠
+
+Under følger en beskrivelse av hvordan en komponent kan bygges.
+I de fleste tilfeller innebærer dette bare å justere på props, men i enkelte tilfeller kan det være ønskelig å bygge selve react-komponenten litt annerledes enn Chakra har gjort.
+Link-komponenten brukes som eksempel under.
+
+1.  I `packages/react/src`: finn mappen med navnet på komponenten, dvs link.
+2.  I denne mappen (`packages/react/src/link`) lag én fil, _Link.tsx_ (i tillegg til _index.tsx_ som ligger der fra før).
+    _Link.tsx_ skal brukes for å kvibifisere komponenten med f.eks. egne props, og index.tsx brukes for å eksportere alt fra _.tsx_-filen.
+3.  I _Link.tsx_: Begynn med å definere hvilke props som skal være gjeldende for din komponent, samt hvilke typer hver prop kan ta. Dette kan gjøres på to måter:
+
+- **Alternativ 1- bygg på Chakras props**: Importer Chakra sine props (her; LinkProps), og fjern unødvendige props og legg evt. til egendefinerte props.
+  Du må også definere en prop fra Chakra på nytt dersom du skal endre på hvilke verdier denne propen kan ta.
+  I koden under har vi fjernet chakra sin egen `colorScheme`, og heller lagt til vår egendefinerte `colorScheme` som kun tar verdiene “green” og “blue”.
+
+<span style={{ color: "orange" }}>**_Tips:_**</span> _Når du skal bygge selve komponenten er det lurt å benytte [komponent-dokumentasjonen
+til Chakra ](https://chakra-ui.com/docs/components)._ _I de fleste tilfeller kan du kopiere eksempelkoden deres, og tilpasse/bygge
+videre på denne._
+
+      ```jsx
+      import {LinkProps as ChakraLinkProps} from "@chakra-ui/react";
+
+      export type LinkProps = Omit < ChakraLinkProps, "colorScheme" >
+      & {
+          colorScheme: "green" | "blue";
+      };
+      ```
+
+- **Alternativ 2- definer egne props fra bunnen**: Her må man definere alle props fra bunnen av.
+
+  ```jsx
+  export type LinkProps = {
+    colorScheme?: "green" | "blue", //denne er ikke required pga. "?"
+    href: string, //denne er required. Kommer feilmelding dersom denne ikke settes i komponenten.
+    children?: string,
+  };
+  ```
+
+<KvibProvider>
+  <Alert status="info">
+    <AlertIcon />
+    _required_ props er ikke det samme som å sette default. Eksempelvis colorScheme er ikke required fordi man ønsker ikke
+    at brukeren må sette colorScheme dersom hen vil ha default-verdien. Hvordan sette default-verdi kommer i senere steg
+    i denne guiden.
+  </Alert>
+</KvibProvider>
+
+4.  Videre i _Link.tsx_ skal du bygge opp komponenten ved å bruke propsa du definerte i steg 3. De propsene du endrer på sendes manuelt videre til Chakra-komponenten, de andre kan videresendes ved å bruke _“…props”_- syntaksen.
+    Ved å tilegne props verdier settes default for komponenten, som er kjekt å gjøre dersom propen er satt som required.
+
+<KvibProvider>
+  <Alert status="info">
+    <AlertIcon />
+    Under [“Style komponenten”](/docs/bidra--docs#style-komponenten-) nevnes defaultProps som en del av .ts-filen. Default
+    som settes i selve komponenten i.tsx-filen overkjører defaultPropsa som settes i styling .ts-filen.
+  </Alert>
+</KvibProvider>
+
+5.  Flere av Chakra-komponentene har en litt annen variant for å kunne opprettes. Disse komponentene kan opprettes med funksjonen _forwardRef(props, ref)_ fra `@chakra-ui/react`.
+    I tillegg til å ta imot _props_, tas det også imot en _ref_, som refererer til det underliggende html-element brukt i komponenten.
+    _ref_ skal sendes uendret videre til den underliggende Chakra-komponenten (se eksempelet under).
+    På denne måten kan man manipulere DOM-en direkte, for eksempel for å flytte fokus til et element (dette har ikke react innebygget støtte for).
+    Mer informasjon om forwardRef finner du på [forwardRef-react](https://react.dev/reference/react/forwardRef)
+    og [The as prop and Custom component](https://chakra-ui.com/community/recipes/as-prop).
+
+````jsx
+export const Link = forwardRef < LinkProps, "a">(({children, colorScheme = "green", ...props}, ref) => {
+    const isExternal = props.isExternal !== undefined ? props.isExternal : Boolean(props.href?.match(/^https?:\/\//));
+    return (
+        <ChakraLink {...props} ref={ref} colorScheme={colorScheme} isExternal={isExternal}>
+            {children}
+            {isExternal && (
+                <span
+                    className="material-symbols-rounded"
+                    style={{fontSize: "18px", verticalAlign: "middle", marginLeft: "4px"}}
+                    aria-label="Ekstern lenke"
+                >
+          launch
+        </span>
+            )}
+        </ChakraLink>
+    );
+});
+    ```
+
+6.  Tilslutt; eksporter alt fra _Link.tsx_ i _index.tsx_, og fjern komponenten og props som blir eksportert fra Chakra i denne filen. Hvis det er flere komponenter og props i _index.tsx_; fjern kun de du har overskrevet.
+
+<KvibProvider>
+    <Alert status="warning">
+        <AlertIcon/>
+        Viktig at forwardRef brukes fra chakra-ui og ikke fra react.
+    </Alert>
+</KvibProvider>
+````

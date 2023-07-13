@@ -1,0 +1,57 @@
+import { Meta } from "@storybook/addon-docs";
+
+<Meta title="Info/Bidra/Style" />
+
+# Style komponenten 🎨
+
+Under følger en beskrivelse av hvordan en komponent kan styles. Link-komponenten brukes som eksempel.
+
+1.  Gå til `packages/react/src/theme/components`: lag en ny fil, link.ts. Her skal stylingen til Chakra overskrives med Kartverkets eget design.
+2.  Følg [guiden til Chakra på hvordan style en komponent](https://chakra-ui.com/docs/styled-system/component-style).
+    Du trenger ikke gjøre steget som omhandler “extendTheme”, da dette allerde er satt opp, så lenge du benytter mappestrukturen som allerede er satt opp.
+3.  Eksporter themet fra _link.ts_ i `packages/react/src/theme/components/index.ts`.
+
+Enkelte ganger kan det være nødvendig å bygge styling av en komponent fra bunnen av, eksempelvis dersom komponenten ikke er del av Chakra UI, eller komponenten ikke har egen styling annet enn at den arver styling fra annen komponent.
+Benytt `useStyleConfig` hooken når komponenten defineres for å konsumere denne typen styling. Se [hvordan bruke useStyleConfig](https://chakra-ui.com/docs/styled-system/component-style#usestyleconfig-api) for eksempel.
+For at komponenten skal få en default-styling er det viktig å sette _defaultProps_ i _.ts_-filen (ikke bare som default i komponenten i _.tsx-filen_).
+IconButton er en komponent hvor useStyleConfig er benyttet, og under vises det hvordan _defaultProps_ settes, og hvordan useStyleConfig brukes i \*.tsx\*.
+
+    ```jsx
+    //packages/react/src/theme/components/iconButton.ts
+
+    export const IconButtonTheme = defineStyleConfig({
+      baseStyle:{...},
+      sizes: {...},
+      variants: {...},
+      defaultProps: {
+        variant: "solid",
+        size: "md",
+        colorScheme: "green"},
+    });
+    ```
+
+    ```jsx
+    //packages/react/src/Button/IconButton.tsx
+
+    export const IconButton = forwardRef<IconButtonProps, "button">(
+      ({ isDisabled, isLoading, ...props },ref) => {
+        const styles = useStyleConfig("IconButton", props);
+        return (
+          <ChakraIconButton
+            {...props}
+            ref={ref}
+            __css={{ ...styles }}
+            isDisabled={isDisabled || isLoading}
+            aria-busy={isLoading}
+            icon={IconSpinner({ isLoading, ...props })}
+          ></ChakraIconButton>
+          );}
+    );
+
+    ```
+
+<span style={{ color: "orange" }}>**_Tips:_**</span> _Chakra lenker til sin egen styling-kode for de fleste komponentene.For
+eksempel kan stylingen av Button-komponenten sees ved å trykke på “Theme source” øverst på [Chakra sin dokumentasjonsside
+av Button](https://chakra-ui.com/docs/components/button/usage)._ _Mye av deres kode kan gjenbrukes ved å bytte ut med egne
+CSS-variabler._ _På denne måten kan man også se om komponenten arver fra andre, eksempelvis vil theme-source for IconButton
+lenkes til theming for Button, altså bruker de samme theming._

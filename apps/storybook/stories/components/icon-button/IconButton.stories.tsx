@@ -29,6 +29,13 @@ const meta: Meta<typeof KvibIconButton> = {
       },
       control: "boolean",
     },
+    iconFill: {
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: false },
+      },
+      control: "boolean",
+    },
     isLoading: {
       description: "If true, the button will show a spinner.",
       table: {
@@ -44,7 +51,7 @@ export default meta;
 type Story = StoryObj<typeof KvibIconButton>;
 
 export const IconButton: Story = {
-  args: { icon: "add", "aria-label": "IconButton default" },
+  args: { icon: "favorite", "aria-label": "IconButton default" },
   render: (args) => <KvibIconButton {...args}></KvibIconButton>,
 };
 
