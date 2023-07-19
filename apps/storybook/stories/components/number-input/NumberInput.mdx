@@ -1,10 +1,9 @@
-import { Meta } from "@storybook/blocks";
+import { Canvas, Controls, Meta } from "@storybook/blocks";
+import * as NumberInputStories from "./NumberInput.stories";
 
-<Meta title="Komponenter/Number Input" />
+<Meta of={NumberInputStories} />
 
 # Number Input
-
-Se [https://chakra-ui.com/docs/components/number-input](https://chakra-ui.com/docs/components/number-input) for eksempler og dokumentasjon.
 
 ## Ta i bruk
 
@@ -17,3 +16,8 @@ import {
   NumberDecrementStepper,
 } from "@kvib/react";
 ```
+
+## Props
+
+<Canvas of={NumberInputStories.NumberInput} />
+<Controls of={NumberInputStories.NumberInput} />

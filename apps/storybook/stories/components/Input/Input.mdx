@@ -1,0 +1,34 @@
+import { Canvas, Meta, Controls } from "@storybook/blocks";
+import { Alert, AlertIcon, AlertDescription } from "@kvib/react/src/alert";
+import * as InputStories from "./Input.stories";
+import { KvibProvider } from "@kvib/react/src";
+
+<Meta of={InputStories} />
+
+# Input\*\*
+
+## Ta i bruk
+
+```jsx
+import { Input } from "@kvib/react";
+```
+
+## Props
+
+<KvibProvider>
+    <Alert status="info">
+        <AlertIcon/>
+        <AlertDescription>
+            Label og validering håndteres av FormControl komponent.
+        </AlertDescription>
+
+    </Alert>
+
+</KvibProvider>
+
+<Canvas of={InputStories.Input} />
+<Controls of={InputStories.Input} />
+
+## Date picker
+
+<Canvas of={InputStories.InputDate} />

@@ -1,6 +1,7 @@
-import { Meta } from "@storybook/blocks";
+import { Canvas, Controls, Meta } from "@storybook/blocks";
+import * as FormControlStories from "./Form-control.stories";
 
-<Meta title="Komponenter/Form Control" />
+<Meta of={FormControlStories} />
 
 # Form Control
 
@@ -11,3 +12,24 @@ Se [https://chakra-ui.com/docs/components/form-control](https://chakra-ui.com/do
 ```jsx
 import { FormControl, FormLabel, FormErrorMessage, FormHelperText } from "@kvib/react";
 ```
+
+## Props
+
+<Canvas of={FormControlStories.FormControl} />
+<Controls of={FormControlStories.FormControl} />
+
+## Required Form Control
+
+<Canvas of={FormControlStories.RequiredInvalidFormControl} />
+
+## Invalid Form Control
+
+<Canvas of={FormControlStories.InvalidFormControl} />
+
+## Read Only Form Control
+
+<Canvas of={FormControlStories.ReadOnlyFormControl} />
+
+## Disabled Form Control
+
+<Canvas of={FormControlStories.DisabledFormControl} />
