@@ -4,7 +4,7 @@ import { HStack } from "@chakra-ui/layout";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibPinInput> = {
-  title: "Komponenter/Input**/Pin Input",
+  title: "Komponenter/Input**/Pin Input**",
   component: KvibPinInput,
   parameters: {
     docs: {
@@ -17,6 +17,37 @@ const meta: Meta<typeof KvibPinInput> = {
     },
   },
   argTypes: {
+    manageFocus: {
+      description: "If true, focus will move automatically to the next input once filled",
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: "true" },
+      },
+      control: "boolean",
+    },
+    mask: {
+      description: "If true, the input's value will be masked just like `type=password`",
+      table: {
+        type: { summary: "boolean" },
+      },
+      control: "boolean",
+    },
+    otp: {
+      description:
+        'If true, the pin input component signals to its fields that they should use `autocomplete="one-time-code"`.',
+      table: {
+        type: { summary: "boolean" },
+      },
+      control: "boolean",
+    },
+    type: {
+      description: "The type of values the pin-input should allow",
+      table: {
+        type: { summary: '"number" | "alphanumeric"' },
+      },
+      options: ["number", "alphanumeric"],
+      control: { type: "select" },
+    },
     size: {
       description: "Size of input",
       table: {
@@ -61,8 +92,6 @@ export const PinInput: PinInputStory = {
     variant: "outline",
     isDisabled: false,
     isInvalid: false,
-    isReadOnly: false,
-    isRequired: false,
   },
   render: (args) => (
     <HStack>
