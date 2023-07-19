@@ -1,11 +1,13 @@
-import { Meta } from "@storybook/blocks";
+import { Meta, Canvas, Controls } from "@storybook/blocks";
 import * as CheckboxStories from "./Checkbox.stories";
 
-<Meta of={CheckboxStories} />;
+<Meta of={CheckboxStories} />
 
 # Checkbox
 
-Se [https://chakra-ui.com/docs/components/checkbox](https://chakra-ui.com/docs/components/checkbox) for eksempler og dokumentasjon.
+Her er en oversikt over utvalget av ikonknapper i Kartverkets Designbibliotek. Disse er blant annet bygget opp ved bruk av design tokens fra biblioteket, eksempelvis farger og ikoner. I dokumentasjonen følger beskrivelse av komponenten og bruksområde, sammen med kodeeksempler.
+
+På [Chakra UI](https://chakra-ui.com/docs/components/checkbox/usage) sin nettside finnes det eksempel for hvordan man lager en "Velg alle" avmerkingsboks.
 
 ## Ta i bruk
 
@@ -21,3 +23,17 @@ import { Checkbox, CheckboxGroup } from "@kvib/react";
 ## Farger
 
 <Canvas of={CheckboxStories.CheckboxColors} />
+
+## Størrelser
+
+<Canvas of={CheckboxStories.CheckboxSizes} />
+
+## States
+
+<Canvas of={CheckboxStories.CheckboxStates} />
+
+## Grupper
+
+Man kan gruppere Checkbox i en CheckboxGroup for å gi alle styling-propsa videre til alle boksene i gruppen
+
+<Canvas of={CheckboxStories.CheckboxGroup} />
