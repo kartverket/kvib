@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 1.9.0
+
+### Minor Changes
+
+- 0d68e97e9: Added Input, FormControl, NumberInput, PinInput Components.
+
 ## 1.8.0
 
 ### Minor Changes
