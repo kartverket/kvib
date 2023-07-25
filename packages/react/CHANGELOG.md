@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 1.10.0
+
+### Minor Changes
+
+- e56e8e9a9: Enabled InputGroups, InputAddons, InputElements.
+
 ## 1.9.0
 
 ### Minor Changes
