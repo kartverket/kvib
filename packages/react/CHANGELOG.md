@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 1.10.1
+
+### Patch Changes
+
+- db3d130a4: Removed Input-Group, Element, Addon from Storybook. Enabled export from Chakra.
+
 ## 1.10.0
 
 ### Minor Changes
