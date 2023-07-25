@@ -1,5 +1,5 @@
-export * from "./Input";
 export {
+  Input,
   InputGroup,
   InputAddon,
   InputLeftAddon,
@@ -8,6 +8,7 @@ export {
   InputRightElement,
 } from "@chakra-ui/react";
 export type {
+  InputProps,
   InputGroupProps,
   InputAddonProps,
   InputLeftAddonProps,
