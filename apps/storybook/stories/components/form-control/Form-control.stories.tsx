@@ -2,11 +2,11 @@ import { FormControl as KvibFormControl } from "@kvib/react/src/form-control/For
 import { FormLabel } from "@kvib/react/src/form-control/Form-label";
 import { FormHelperText } from "@kvib/react/src/form-control/Form-helper-text";
 import { FormErrorMessage } from "@kvib/react/src/form-control/Form-error-message";
-import { Input } from "@kvib/react/src/input/Input";
+import { Input } from "@chakra-ui/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibFormControl> = {
-  title: "Komponenter/Form control**",
+  title: "Komponenter/Form Control**",
   component: KvibFormControl,
   parameters: {
     docs: {

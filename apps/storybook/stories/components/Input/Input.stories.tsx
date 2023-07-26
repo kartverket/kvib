@@ -1,20 +1,14 @@
-import { Input as KvibInput } from "@kvib/react/src/input/Input";
-import { InputGroup as KvibInputGroup } from "@kvib/react/src/input/Input-Group";
-import { InputLeftAddon as KvibInputLeftAddon } from "@kvib/react/src/input/Input-Left-Addon";
-import { InputRightAddon as KvibInputRightAddon } from "@kvib/react/src/input/Input-Right-Addon";
-import { InputLeftElement as KvibInputLeftElement } from "@kvib/react/src/input/Input-Left-Element";
-import { InputRightElement as KvibInputRightElement } from "@kvib/react/src/input/Input-Right-Element";
-// import { Input as KvibInput } from "@chakra-ui/react";
-// import { InputGroup as KvibInputGroup } from "@chakra-ui/react";
-// import { InputLeftAddon as KvibInputLeftAddon } from "@chakra-ui/react";
-// import { InputRightAddon as KvibInputRightAddon } from "@chakra-ui/react";
-// import { InputLeftElement as KvibInputLeftElement } from "@chakra-ui/react";
-// import { InputRightElement as KvibInputRightElement } from "@chakra-ui/react";
+import { Input as KvibInput } from "@chakra-ui/react";
+import { InputGroup as KvibInputGroup } from "@chakra-ui/react";
+import { InputLeftAddon as KvibInputLeftAddon } from "@chakra-ui/react";
+import { InputRightAddon as KvibInputRightAddon } from "@chakra-ui/react";
+import { InputLeftElement as KvibInputLeftElement } from "@chakra-ui/react";
+import { InputRightElement as KvibInputRightElement } from "@chakra-ui/react";
 import { Icon as KvibIcon } from "@kvib/react/src/icon/Icon";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibInput> = {
-  title: "Komponenter/Input**",
+  title: "Komponenter/Input",
   component: KvibInput,
   parameters: {
     docs: {
