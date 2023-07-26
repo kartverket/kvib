@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 1.10.2
+
+### Patch Changes
+
+- 9dde818c2: Changed Input Export.
+
 ## 1.10.1
 
 ### Patch Changes
