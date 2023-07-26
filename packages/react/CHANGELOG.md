@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 1.11.1
+
+### Patch Changes
+
+- 616ddd12b: Oppdaterer Link. Fjerner padding og endrer fra border til outline på :focus.
+
 ## 1.11.0
 
 ### Minor Changes
