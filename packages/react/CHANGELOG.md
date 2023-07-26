@@ -1,5 +1,17 @@
 # @kvib/react
 
+## 1.11.0
+
+### Minor Changes
+
+- 35f725bdd: Badge er lagt til og dokumentasjon er oppdatert. Kritiske endringer: -**colorScheme** tar verdiene: "green", "blue", "gray" (default), "red".
+
+## 1.10.2
+
+### Patch Changes
+
+- 9dde818c2: Changed Input Export.
+
 ## 1.10.1
 
 ### Patch Changes
