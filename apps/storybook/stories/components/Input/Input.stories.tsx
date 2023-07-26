@@ -1,8 +1,14 @@
-import { Input as KvibInput } from "@kvib/react/src/input/Input";
+import { Input as KvibInput } from "@chakra-ui/react";
+import { InputGroup as KvibInputGroup } from "@chakra-ui/react";
+import { InputLeftAddon as KvibInputLeftAddon } from "@chakra-ui/react";
+import { InputRightAddon as KvibInputRightAddon } from "@chakra-ui/react";
+import { InputLeftElement as KvibInputLeftElement } from "@chakra-ui/react";
+import { InputRightElement as KvibInputRightElement } from "@chakra-ui/react";
+import { Icon as KvibIcon } from "@kvib/react/src/icon/Icon";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibInput> = {
-  title: "Komponenter/Input**",
+  title: "Komponenter/Input",
   component: KvibInput,
   parameters: {
     docs: {
@@ -74,6 +80,9 @@ const meta: Meta<typeof KvibInput> = {
 export default meta;
 type InputStory = StoryObj<typeof KvibInput>;
 type InputDateStory = StoryObj<typeof KvibInput>;
+type InputGroupStory = StoryObj<typeof KvibInputGroup>;
+type InputLeftElementStory = StoryObj<typeof KvibInputLeftElement>;
+type InputRightElementStory = StoryObj<typeof KvibInputRightElement>;
 
 export const Input: InputStory = {
   args: {
@@ -98,4 +107,41 @@ export const InputDate: InputDateStory = {
     isRequired: false,
   },
   render: (args) => <KvibInput {...args} type={"date"} />,
+};
+
+export const InputGroup: InputGroupStory = {
+  args: {},
+  render: (args) => (
+    <KvibInputGroup {...args}>
+      <KvibInputLeftAddon children={"https://"} />
+      <KvibInput placeholder={"minside"} />
+      <KvibInputRightAddon children={".no"} />
+    </KvibInputGroup>
+  ),
+};
+
+export const InputLeftElement: InputLeftElementStory = {
+  args: {},
+  render: (args) => (
+    <KvibInputGroup {...args}>
+      <KvibInputLeftElement>
+        <KvibIcon icon={"add"} />
+      </KvibInputLeftElement>
+      <KvibInput placeholder={"Skriv her..."} />
+    </KvibInputGroup>
+  ),
+};
+
+export const InputRightElement: InputRightElementStory = {
+  args: {
+    size: "md",
+  },
+  render: (args) => (
+    <KvibInputGroup {...args}>
+      <KvibInput placeholder={"Skriv her..."} />
+      <KvibInputRightElement>
+        <KvibIcon icon={"add"} />
+      </KvibInputRightElement>
+    </KvibInputGroup>
+  ),
 };
