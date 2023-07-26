@@ -1,13 +1,27 @@
-import { Meta } from "@storybook/blocks";
+import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
+import * as BadgeStories from "./Badge.stories";
 
 <Meta title="Komponenter/Data Display/Badge" />
 
 # Badge
 
-Se [https://chakra-ui.com/docs/components/badge](https://chakra-ui.com/docs/components/badge) for eksempler og dokumentasjon.
+Et Badge brukes til å fremheve elementers status slik at brukeren raskt gjenkjenner tilstanden.
 
 ## Ta i bruk
 
 ```jsx
 import { Badge } from "@kvib/react";
 ```
+
+## Props
+
+<Canvas of={BadgeStories.Badge} />
+<Controls of={BadgeStories.Badge} />
+
+## Farger
+
+<Canvas of={BadgeStories.BadgeColors} />
+
+## Varianter
+
+<Canvas of={BadgeStories.BadgeVariants} />

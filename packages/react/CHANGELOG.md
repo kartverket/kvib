@@ -1,5 +1,41 @@
 # @kvib/react
 
+## 1.11.1
+
+### Patch Changes
+
+- 616ddd12b: Oppdaterer Link. Fjerner padding og endrer fra border til outline på :focus.
+
+## 1.11.0
+
+### Minor Changes
+
+- 35f725bdd: Badge er lagt til og dokumentasjon er oppdatert. Kritiske endringer: -**colorScheme** tar verdiene: "green", "blue", "gray" (default), "red".
+
+## 1.10.2
+
+### Patch Changes
+
+- 9dde818c2: Changed Input Export.
+
+## 1.10.1
+
+### Patch Changes
+
+- db3d130a4: Removed Input-Group, Element, Addon from Storybook. Enabled export from Chakra.
+
+## 1.10.0
+
+### Minor Changes
+
+- e56e8e9a9: Enabled InputGroups, InputAddons, InputElements.
+
+## 1.9.0
+
+### Minor Changes
+
+- 0d68e97e9: Added Input, FormControl, NumberInput, PinInput Components.
+
 ## 1.8.0
 
 ### Minor Changes
