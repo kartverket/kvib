@@ -16,7 +16,6 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "chromatic": "^6.20.0",
     "eslint-config-custom": "*",
     "husky": "^8.0.0",
     "prettier": "latest",
