@@ -7,7 +7,7 @@ name: "Chromatic"
 on:
   push:
     tags:
-      - chromatic
+      - chromatic-build
 
 # List of jobs
 jobs:
