@@ -5,8 +5,9 @@ name: "Chromatic"
 
 # Event for the workflow
 on:
-  pull_request:
-    branches: ["master"]
+  push:
+    tags:
+      - chromatic
 
 # List of jobs
 jobs:
@@ -17,9 +18,8 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Install dependencies
-        # 👇 Install dependencies with the same package manager used in the project (replace it as needed), e.g. yarn, npm, pnpm
         run: npm ci
-        # 👇 Adds Chromatic as a step in the workflow
+
       - name: Publish to Chromatic
         uses: chromaui/action@v1
         # Chromatic GitHub Action options
@@ -27,3 +27,4 @@ jobs:
           workingDir: ./apps/storybook
           # 👇 Chromatic projectToken, refer to the manage page to obtain it.
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          onlyChanged: true
