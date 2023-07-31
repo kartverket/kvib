@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 1.14.0
+
+### Minor Changes
+
+- 963ffeff8: la til Datepicker som eget komponent i npm-pakken.
+
 ## 1.13.0
 
 ### Minor Changes
