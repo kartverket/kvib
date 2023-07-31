@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 1.14.1
+
+### Patch Changes
+
+- 08d32385d: Rydder opp i button slik at den ikke lenger har en warning om iconFill.
+
 ## 1.14.0
 
 ### Minor Changes
