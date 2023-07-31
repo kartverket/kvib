@@ -1,13 +1,27 @@
-import { Meta } from "@storybook/blocks";
+import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
+import * as CodeStories from "./Code.stories";
 
 <Meta title="Komponenter/Data Display/Code" />
 
 # Code
 
-Se [https://chakra-ui.com/docs/components/code](https://chakra-ui.com/docs/components/code) for eksempler og dokumentasjon.
+Code er et komponent som skal brukes for å presentere inline kode.
 
 ## Ta i bruk
 
 ```jsx
 import { Code } from "@kvib/react";
 ```
+
+## Props
+
+<Canvas of={CodeStories.Code} />
+<Controls of={CodeStories.Code} />
+
+## Farger
+
+<Canvas of={CodeStories.CodeColors} />
+
+## Varianter
+
+<Canvas of={CodeStories.CodeVariants} />
