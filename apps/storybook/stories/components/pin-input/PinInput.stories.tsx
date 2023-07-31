@@ -46,7 +46,7 @@ const meta: Meta<typeof KvibPinInput> = {
         type: { summary: '"number" | "alphanumeric"' },
       },
       options: ["number", "alphanumeric"],
-      control: { type: "select" },
+      control: { type: "radio" },
     },
     size: {
       description: "Size of input",
@@ -55,7 +55,7 @@ const meta: Meta<typeof KvibPinInput> = {
         defaultValue: { summary: "md" },
       },
       options: ["lg", "md", "sm", "xs"],
-      control: { type: "select" },
+      control: { type: "radio" },
     },
     variant: {
       description: "Variant",
@@ -64,7 +64,7 @@ const meta: Meta<typeof KvibPinInput> = {
         defaultValue: { summary: "outline" },
       },
       options: ["outline", "filled", "flushed", "unstyled"],
-      control: { type: "select" },
+      control: { type: "radio" },
     },
     isInvalid: {
       description: "Toggles if input should be invalid",
