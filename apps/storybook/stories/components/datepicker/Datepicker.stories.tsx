@@ -22,7 +22,7 @@ const meta: Meta<typeof KvibDatepicker> = {
         defaultValue: { summary: "md" },
       },
       options: ["lg", "md", "sm", "xs"],
-      control: { type: "select" },
+      control: { type: "radio" },
     },
     variant: {
       description: "Variant",
@@ -31,7 +31,7 @@ const meta: Meta<typeof KvibDatepicker> = {
         defaultValue: { summary: "outline" },
       },
       options: ["outline", "filled", "flushed", "unstyled"],
-      control: { type: "select" },
+      control: { type: "radio" },
     },
     type: {
       description: "Type",
@@ -40,7 +40,7 @@ const meta: Meta<typeof KvibDatepicker> = {
         defaultValue: { summary: "date" },
       },
       options: ["date", "datetime-local"],
-      control: { type: "select" },
+      control: { type: "radio" },
     },
     isRequired: {
       description: "Toggles if input should be required",

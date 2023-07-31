@@ -35,7 +35,7 @@ const meta: Meta<typeof KvibInput> = {
         defaultValue: { summary: "md" },
       },
       options: ["lg", "md", "sm", "xs"],
-      control: { type: "select" },
+      control: { type: "radio" },
     },
     variant: {
       description: "Variant",
@@ -44,7 +44,7 @@ const meta: Meta<typeof KvibInput> = {
         defaultValue: { summary: "outline" },
       },
       options: ["outline", "filled", "flushed", "unstyled"],
-      control: { type: "select" },
+      control: { type: "radio" },
     },
     isRequired: {
       description: "Toggles if input should be required",
