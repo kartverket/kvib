@@ -1,11 +1,9 @@
-import { NumberInput as KvibNumberInput } from "@kvib/react/src/number-input/Number-Input";
-import { NumberInputField as KvibNumberInputField } from "@kvib/react/src/number-input/Number-Input-Field";
-import { NumberInputStepper as KvibNumberInputStepper } from "@kvib/react/src/number-input/Number-Input-Stepper";
+import { Datepicker as KvibDatepicker } from "@kvib/react/src/datepicker";
 import { Meta, StoryObj } from "@storybook/react";
 
-const meta: Meta<typeof KvibNumberInput> = {
-  title: "Komponenter/Input**/Number Input**",
-  component: KvibNumberInput,
+const meta: Meta<typeof KvibDatepicker> = {
+  title: "Komponenter/Datepicker",
+  component: KvibDatepicker,
   parameters: {
     docs: {
       story: { inline: true },
@@ -35,19 +33,19 @@ const meta: Meta<typeof KvibNumberInput> = {
       options: ["outline", "filled", "flushed", "unstyled"],
       control: { type: "radio" },
     },
+    type: {
+      description: "Type",
+      table: {
+        type: { summary: "date | datetime-local" },
+        defaultValue: { summary: "date" },
+      },
+      options: ["date", "datetime-local"],
+      control: { type: "radio" },
+    },
     isRequired: {
       description: "Toggles if input should be required",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
-      },
-      control: "boolean",
-    },
-    isReadOnly: {
-      description: "Toggles if input should be read-only",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -55,7 +53,6 @@ const meta: Meta<typeof KvibNumberInput> = {
       description: "Toggles if input should be invalid",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -63,7 +60,6 @@ const meta: Meta<typeof KvibNumberInput> = {
       description: "Toggles if input should be disabled",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -71,21 +67,16 @@ const meta: Meta<typeof KvibNumberInput> = {
 };
 
 export default meta;
-type NumberInputStory = StoryObj<typeof KvibNumberInput>;
+type DatepickerStory = StoryObj<typeof KvibDatepicker>;
 
-export const NumberInput: NumberInputStory = {
+export const Datepicker: DatepickerStory = {
   args: {
     size: "md",
     variant: "outline",
+    type: "date",
     isDisabled: false,
     isInvalid: false,
-    isReadOnly: false,
     isRequired: false,
   },
-  render: (args) => (
-    <KvibNumberInput {...args}>
-      <KvibNumberInputField />
-      <KvibNumberInputStepper />
-    </KvibNumberInput>
-  ),
+  render: (args) => <KvibDatepicker {...args} />,
 };
