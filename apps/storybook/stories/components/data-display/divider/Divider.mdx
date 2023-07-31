@@ -1,13 +1,37 @@
-import { Meta } from "@storybook/blocks";
+import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
+import * as DividerStories from "./Divider.stories";
 
 <Meta title="Komponenter/Data Display/Divider" />
 
 # Divider
 
-Se [https://chakra-ui.com/docs/components/divider](https://chakra-ui.com/docs/components/divider) for eksempler og dokumentasjon.
+Dividers brukes til å visuelt separere innhold i en liste eller gruppe.
 
 ## Ta i bruk
 
 ```jsx
 import { Divider } from "@kvib/react";
 ```
+
+## Props
+
+<Canvas of={DividerStories.Divider} />
+<Controls of={DividerStories.Divider} />
+
+## Varianter
+
+<Canvas of={DividerStories.DividerVariants} />
+
+## Farger og bredde
+
+Farger og bredde på Divider kan bli manipulert gjennom `borderColor` og `borderWidth`.
+
+<Canvas of={DividerStories.DividerColorsWidths} />
+
+## Vertikal Divider
+
+<Canvas of={DividerStories.DividerVertical} />
+
+## Innhold i Divider
+
+<Canvas of={DividerStories.DividerContent} />
