@@ -1,13 +1,23 @@
-import { Meta } from "@storybook/blocks";
+import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
+import * as ListStories from "./List.stories";
 
 <Meta title="Komponenter/Data Display/List" />
 
 # List
 
-Se [https://chakra-ui.com/docs/components/list](https://chakra-ui.com/docs/components/list) for eksempler og dokumentasjon.
+Liste for å vise elementer.
 
 ## Ta i bruk
 
 ```jsx
-import { List, ListItem, ListIcon, OrderedList, UnorderedList } from "@kvib/react";
+import { List, ListItem, OrderedList, UnorderedList } from "@kvib/react";
 ```
+
+## Props
+
+<Canvas of={ListStories.List} />
+<Controls of={ListStories.List} />
+
+## Ordered list
+
+<Canvas of={ListStories.ListOrdered} />
