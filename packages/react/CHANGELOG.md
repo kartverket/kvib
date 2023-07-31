@@ -1,5 +1,17 @@
 # @kvib/react
 
+## 1.13.0
+
+### Minor Changes
+
+- 01481680c: Oppdaterer dokumentasjon for Divider.
+
+## 1.12.0
+
+### Minor Changes
+
+- 8cedf7a75: Oppdaterer dokumentasjon for Code.
+
 ## 1.11.1
 
 ### Patch Changes
