@@ -1,5 +1,35 @@
 # @kvib/react
 
+## 1.15.0
+
+### Minor Changes
+
+- 27880d614: Oppdaterer dokumentasjon for Stat.
+
+## 1.14.1
+
+### Patch Changes
+
+- 08d32385d: Rydder opp i button slik at den ikke lenger har en warning om iconFill.
+
+## 1.14.0
+
+### Minor Changes
+
+- 963ffeff8: la til Datepicker som eget komponent i npm-pakken.
+
+## 1.13.0
+
+### Minor Changes
+
+- 01481680c: Oppdaterer dokumentasjon for Divider.
+
+## 1.12.0
+
+### Minor Changes
+
+- 8cedf7a75: Oppdaterer dokumentasjon for Code.
+
 ## 1.11.1
 
 ### Patch Changes
