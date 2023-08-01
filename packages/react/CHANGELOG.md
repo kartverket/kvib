@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 1.17.0
+
+### Minor Changes
+
+- 1ad5d14ba: Legger til Card og oppdaterer dokumentasjon.
+
 ## 1.16.0
 
 ### Minor Changes
