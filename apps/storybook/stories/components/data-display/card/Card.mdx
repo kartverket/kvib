@@ -1,5 +1,14 @@
-import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
+import { Meta, Canvas, Story, Controls, Source } from "@storybook/blocks";
 import * as CardStories from "./Card.stories";
+import {
+  CardString,
+  CardVariantsString,
+  CardSizesString,
+  CardImageString,
+  CardCenteringString,
+  CardHorizontalString,
+} from "./srcStrings.ts";
+import { Card, CardBody, KvibProvider } from "@kvib/react/src";
 
 <Meta title="Komponenter/Data Display/Card" />
 
@@ -15,29 +24,77 @@ import { Card, CardHeader, CardBody, CardFooter } from "@kvib/react";
 
 ## Props
 
-<Canvas of={CardStories.Card} />
+<KvibProvider>
+  <Card variant="outline">
+    <CardBody>
+      <Story of={CardStories.Card} />
+    </CardBody>
+  </Card>
+</KvibProvider>
+
+<Source code={CardString} dark />
 <Controls of={CardStories.Card} />
 
 ## Varianter
 
-<Canvas of={CardStories.CardVariants} />
+<KvibProvider>
+  <Card variant="outline">
+    <CardBody>
+      <Story of={CardStories.CardVariants} />
+    </CardBody>
+  </Card>
+</KvibProvider>
+
+<Source code={CardVariantsString} dark />
 
 ## Størrelser
 
-<Canvas of={CardStories.CardSizes} />
+<KvibProvider>
+  <Card variant="outline">
+    <CardBody>
+      <Story of={CardStories.CardSizes} />
+    </CardBody>
+  </Card>
+</KvibProvider>
+
+<Source code={CardSizesString} dark />
 
 ## Card med bilde og knapper
 
-<Canvas of={CardStories.CardImage} />
+<KvibProvider>
+  <Card variant="outline">
+    <CardBody>
+      <Story of={CardStories.CardImage} />
+    </CardBody>
+  </Card>
+</KvibProvider>
+
+<Source code={CardImageString} dark />
 
 ## Sentrering av innhold
 
 Sentrering av innhold gjøres ved å sette `align="center"` på Card.
 
-<Canvas of={CardStories.CardCentering} />
+<KvibProvider>
+  <Card variant="outline">
+    <CardBody>
+      <Story of={CardStories.CardCentering} />
+    </CardBody>
+  </Card>
+</KvibProvider>
+
+<Source code={CardCenteringString} dark />
 
 ## Horisontalt innhold
 
 For å vise innhold horisontalt settes `direction="row"` på Card.
 
-<Canvas of={CardStories.CardHorizontal} />
+<KvibProvider>
+  <Card variant="outline">
+    <CardBody>
+      <Story of={CardStories.CardHorizontal} />
+    </CardBody>
+  </Card>
+</KvibProvider>
+
+<Source code={CardHorizontalString} dark />
