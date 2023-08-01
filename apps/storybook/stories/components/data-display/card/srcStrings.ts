@@ -84,18 +84,15 @@ export const CardHorizontalString = `<Card direction="row" overflow="hidden" var
     src="https://images.unsplash.com/photo-1575520973439-9b31e3e0b6f0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80"
     alt="Boat dock with small boats"
   />
-
   <Stack>
     <CardBody>
       <Heading size="md">Digitalt løft i havn</Heading>
-
       <Text py="2">
         Kystverket har tildelt 10,5 millioner kroner til prosjektet «Digital tvilling i havn» for å styrke
         digitaliseringen av havneinfrastrukturen. Dette legger grunnlaget for en mer moderne og smartere
         havnevirksomhet.
       </Text>
     </CardBody>
-
     <CardFooter>
       <Button variant="solid" colorScheme="blue">
         Les artikkel
