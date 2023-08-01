@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 1.16.0
+
+### Minor Changes
+
+- c3a333378: Oppdaterer dokumentasjon for Table.
+
 ## 1.15.0
 
 ### Minor Changes
