@@ -1,6 +1,7 @@
 import { Meta, Canvas, Story, Controls, Source } from "@storybook/blocks";
 import * as TableStories from "./Table.stories";
 import { TableString, TableVariantsString, TableSizesString } from "./srcHelpers.ts";
+import { Card, CardBody, KvibProvider } from "@kvib/react/src";
 
 <Meta title="Komponenter/Data Display/Table" />
 
@@ -16,7 +17,14 @@ import { Table, Thead, Tbody, Tfoot, Tr, Th, Td, TableCaption, TableContainer } 
 
 ## Props
 
-<Canvas of={TableStories.Table} />
+<KvibProvider>
+  <Card variant="outline">
+    <CardBody>
+      <Story of={TableStories.Table} />
+    </CardBody>
+  </Card>
+</KvibProvider>
+
 <Source code={TableString} dark />
 <Controls of={TableStories.Table} />
 
@@ -24,12 +32,26 @@ import { Table, Thead, Tbody, Tfoot, Tr, Th, Td, TableCaption, TableContainer } 
 
 Table kommer med tre varianter: `simple`, `striped` og `unstyled`. Eksempel på striped table:
 
-<Canvas of={TableStories.TableVariants} />
+<KvibProvider>
+  <Card variant="outline">
+    <CardBody>
+      <Story of={TableStories.TableVariants} />
+    </CardBody>
+  </Card>
+</KvibProvider>
+
 <Source code={TableVariantsString} dark />
 
 ## Størrelser
 
 Table kommer med tre forskjellige størrelser: `sm`, `md` og `lg`. Eksempel på `sm` table:
 
-<Canvas of={TableStories.TableSizes} />
+<KvibProvider>
+  <Card variant="outline">
+    <CardBody>
+      <Story of={TableStories.TableSizes} />
+    </CardBody>
+  </Card>
+</KvibProvider>
+
 <Source code={TableSizesString} dark />
