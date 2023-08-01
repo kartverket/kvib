@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 1.15.0
+
+### Minor Changes
+
+- 27880d614: Oppdaterer dokumentasjon for Stat.
+
 ## 1.14.1
 
 ### Patch Changes
