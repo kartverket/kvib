@@ -1,6 +1,6 @@
 export const TableString = `  
 <TableContainer>
-  <Table {...args}>
+  <Table>
     <TableCaption>Imperial to metric conversion factors</TableCaption>
     <Thead>
       <Tr>
@@ -39,7 +39,7 @@ export const TableString = `
 
 export const TableVariantsString = `
 <TableContainer>
-  <Table {...args} variant="striped" colorScheme="green">
+  <Table variant="striped" colorScheme="green">
     <TableCaption>Imperial to metric conversion factors</TableCaption>
     <Thead>
       <Tr>
@@ -77,7 +77,7 @@ export const TableVariantsString = `
 
 export const TableSizesString = `
 <TableContainer>
-  <Table {...args} size="sm">
+  <Table size="sm">
     <TableCaption>Imperial to metric conversion factors</TableCaption>
     <Thead>
       <Tr>
