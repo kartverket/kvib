@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 1.18.0
+
+### Minor Changes
+
+- 976d2829c: Oppdaterer dokumentasjon for Kbd.
+
 ## 1.17.0
 
 ### Minor Changes
