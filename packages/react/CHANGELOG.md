@@ -1,5 +1,29 @@
 # @kvib/react
 
+## 1.18.0
+
+### Minor Changes
+
+- 976d2829c: Oppdaterer dokumentasjon for Kbd.
+
+## 1.17.0
+
+### Minor Changes
+
+- 1ad5d14ba: Legger til Card og oppdaterer dokumentasjon.
+
+## 1.16.0
+
+### Minor Changes
+
+- c3a333378: Oppdaterer dokumentasjon for Table.
+
+## 1.15.0
+
+### Minor Changes
+
+- 27880d614: Oppdaterer dokumentasjon for Stat.
+
 ## 1.14.1
 
 ### Patch Changes
