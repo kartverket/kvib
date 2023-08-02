@@ -21,7 +21,7 @@ const meta: Meta<typeof KvibBadge> = {
       control: "radio",
     },
     colorScheme: {
-      description: "The variant of the badge",
+      description: "The visual color appearance of the badge",
       table: {
         type: { summary: "green | blue | red | gray" },
         defultValue: { summary: "gray" },
