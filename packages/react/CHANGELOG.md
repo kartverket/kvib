@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 1.19.1
+
+### Patch Changes
+
+- 3588e9219: Button med variant="outline" vil ikke lenger endre størrelse ved hover.
+
 ## 1.19.0
 
 ### Minor Changes
