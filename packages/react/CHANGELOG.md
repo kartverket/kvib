@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 1.19.0
+
+### Minor Changes
+
+- e6b71f675: Oppdaterer dokumentasjon for List.
+
 ## 1.18.0
 
 ### Minor Changes
