@@ -2,7 +2,7 @@ import { Heading as KvibHeading, Stack as KvibStack } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibHeading> = {
-  title: "Komponenter/Data Display/Heading",
+  title: "Komponenter/Typografi/Heading",
   component: KvibHeading,
   parameters: {
     docs: {
