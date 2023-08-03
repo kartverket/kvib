@@ -4,6 +4,6 @@ import {
   forwardRef,
 } from "@chakra-ui/react";
 
-export const InputRightAddon = forwardRef<ChakraInputRightAddonProps, "input">(({ children, ...props }, ref) => {
+export const InputRightAddon = forwardRef<ChakraInputRightAddonProps, "div">(({ children, ...props }, ref) => {
   return <ChakraInputRightAddon {...props} ref={ref} children={children} />;
 });
