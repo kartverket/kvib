@@ -1,10 +1,12 @@
-import { Input as KvibInput } from "@chakra-ui/react";
-import { InputGroup as KvibInputGroup } from "@chakra-ui/react";
-import { InputLeftAddon as KvibInputLeftAddon } from "@chakra-ui/react";
-import { InputRightAddon as KvibInputRightAddon } from "@chakra-ui/react";
-import { InputLeftElement as KvibInputLeftElement } from "@chakra-ui/react";
-import { InputRightElement as KvibInputRightElement } from "@chakra-ui/react";
-import { Icon as KvibIcon } from "@kvib/react/src/icon/Icon";
+import {
+  Input as KvibInput,
+  InputGroup as KvibInputGroup,
+  InputLeftAddon as KvibInputLeftAddon,
+  InputRightAddon as KvibInputRightAddon,
+  InputLeftElement as KvibInputLeftElement,
+  InputRightElement as KvibInputRightElement,
+  Icon as KvibIcon,
+} from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibInput> = {
