@@ -10,7 +10,7 @@ export interface FormErrorMessageProps extends FormControlProps {
   errorMessage?: string;
 }
 
-export const FormErrorMessage = forwardRef<FormErrorMessageProps, "div">(({ errorMessage, ...props }, ref) => {
+export const FormErrorMessage = forwardRef<FormErrorMessageProps, "div">(({ errorMessage, children, ...props }, ref) => {
   return (
     <ChakraFormErrorMessage
       {...props}
@@ -23,7 +23,10 @@ export const FormErrorMessage = forwardRef<FormErrorMessageProps, "div">(({ erro
       borderRadius={"8px"}
     >
       <span className={"material-symbols-outlined"}>Error</span>
-      <ChakraText>{errorMessage}</ChakraText>
+      <ChakraText>
+        {errorMessage}
+        {children}
+      </ChakraText>
     </ChakraFormErrorMessage>
   );
 });
