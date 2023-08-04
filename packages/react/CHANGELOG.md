@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 1.19.2
+
+### Patch Changes
+
+- 57e033863: Oppdatert FormControl label, errorMessage og hjelpetekst til å kunne bruke både prop og skrive tekst i komponent eks. <FormLabel>Eksempel tekst</FormLabel> | <FormLabel label="Eksempel tekst"/>.
+
 ## 1.19.1
 
 ### Patch Changes
