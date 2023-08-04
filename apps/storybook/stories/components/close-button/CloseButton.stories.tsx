@@ -2,7 +2,7 @@ import { CloseButton as KvibCloseButton, Stack as KvibStack } from "@kvib/react/
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibCloseButton> = {
-  title: "Komponenter/CloseButton",
+  title: "Komponenter/Close Button",
   component: KvibCloseButton,
   parameters: {
     docs: {
