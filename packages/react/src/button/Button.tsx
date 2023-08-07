@@ -42,7 +42,6 @@ export const Button = forwardRef<ButtonProps, "button">(
         colorScheme={finalColorScheme}
         isDisabled={isDisabled || isLoading}
         aria-busy={isLoading}
-        iconFill={iconFill && (rightIcon || leftIcon)}
       >
         {isLoading && (
           <Center position="absolute" right="0" left="0">

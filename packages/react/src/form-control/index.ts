@@ -1,2 +1,4 @@
-export { FormControl, FormLabel, FormErrorMessage, FormHelperText } from "@chakra-ui/react";
-export type { FormHelperTextProps, FormLabelProps, FormErrorMessageProps } from "@chakra-ui/react";
+export * from "./Form-control";
+export * from "./Form-label";
+export * from "./Form-helper-text";
+export * from "./Form-error-message";

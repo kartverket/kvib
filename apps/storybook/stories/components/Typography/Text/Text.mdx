@@ -1,13 +1,27 @@
-import { Meta } from "@storybook/blocks";
+import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
+import * as TextStories from "./Text.stories";
 
 <Meta title="Komponenter/Typografi/Text" />
 
 # Text
 
-Se [https://chakra-ui.com/docs/components/text](https://chakra-ui.com/docs/components/text) for eksempler og dokumentasjon.
+Text skal brukes til render av tekst og paragrafer i et grensesnitt. Text inneholder `Box` så det er mulig å bruke alle style props derfra.
 
 ## Ta i bruk
 
 ```jsx
 import { Text } from "@kvib/react";
 ```
+
+## Props
+
+<Canvas of={TextStories.Text} />
+<Controls of={TextStories.Text} />
+
+## Størrelser
+
+<Canvas of={TextStories.TextSizes} />
+
+## Overstyring av stil
+
+<Canvas of={TextStories.TextOverride} />

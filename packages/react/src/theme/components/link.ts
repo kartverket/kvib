@@ -3,12 +3,12 @@ import { colors, borders, radii } from "../tokens";
 
 export const linkTheme = defineStyleConfig({
   baseStyle: ({ colorScheme }) => ({
-    padding: "8px",
     textDecoration: "underline",
-    _focus: {
-      border: borders["2px"],
-      borderRadius: radii.base,
-      borderColor: colors.blue[600],
+    _focusVisible: {
+      outline: borders["2px"],
+      borderRadius: "1px",
+      outlineColor: colors.blue[600],
+      boxShadow: "none",
     },
     color: `${colorScheme}.500`,
     _hover: {
@@ -17,6 +17,7 @@ export const linkTheme = defineStyleConfig({
     },
     _active: {
       color: `${colorScheme}.600`,
+      textDecoration: "underline",
     },
   }),
   defaultProps: {
