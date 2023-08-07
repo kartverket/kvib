@@ -1,4 +1,4 @@
-import { Checkbox as KvibCheckbox, CheckboxGroup as KvibCheckboxGroup } from "@kvib/react/src";
+import { Checkbox as KvibCheckbox, CheckboxGroup as KvibCheckboxGroup, Text } from "@kvib/react/src";
 import { Stack } from "@kvib/react/src/layout";
 import { Meta, StoryObj } from "@storybook/react";
 
@@ -110,12 +110,12 @@ export const CheckboxGroup: Story = {
   args: { size: "sm" },
   render: (args) => (
     <Stack>
-      <p>Grønn</p>
+      <Text>Grønn</Text>
       <KvibCheckboxGroup colorScheme="green" {...args}>
         <KvibCheckbox>Valg 1</KvibCheckbox>
         <KvibCheckbox>Valg 2</KvibCheckbox>
       </KvibCheckboxGroup>
-      <p>Blå</p>
+      <Text>Blå</Text>
       <KvibCheckboxGroup colorScheme="blue" {...args}>
         <KvibCheckbox>Valg 1</KvibCheckbox>
         <KvibCheckbox>Valg 2</KvibCheckbox>
