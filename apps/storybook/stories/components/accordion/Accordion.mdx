@@ -1,6 +1,7 @@
-import { Meta } from "@storybook/blocks";
+import { Canvas, Meta, Controls } from "@storybook/blocks";
+import * as AccordionStories from "./Accordion.stories";
 
-<Meta title="Komponenter/Accordion" />
+<Meta of={AccordionStories} />
 
 # Accordion
 
@@ -11,3 +12,8 @@ Se [https://chakra-ui.com/docs/components/accordion](https://chakra-ui.com/docs/
 ```jsx
 import { Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon } from "@kvib/react";
 ```
+
+## Props
+
+<Canvas of={AccordionStories.Accordion} />
+<Controls of={AccordionStories.Accordion} />
