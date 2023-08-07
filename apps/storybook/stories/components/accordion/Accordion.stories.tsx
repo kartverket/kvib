@@ -48,3 +48,33 @@ export const Accordion: Story = {
     </KvibAccordion>
   ),
 };
+
+export const AccordionItem: Story = {
+  argTypes: {
+    id: {
+      description: "Unique id for the AccordionItem.",
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: false },
+      },
+      control: "string",
+    },
+    isDisabled: {
+      description: "If true, the AccordionItem will be disabled.",
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: false },
+      },
+      control: "boolean",
+    },
+    isFocusable: {
+      description: "If true, the AccordionItem will be focusable.",
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: false },
+      },
+      control: "boolean",
+    },
+  },
+  args: { isDisabled: false, isFocusable: false },
+};
