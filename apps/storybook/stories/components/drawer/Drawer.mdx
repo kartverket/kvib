@@ -1,10 +1,20 @@
-import { Meta } from "@storybook/blocks";
+import { Meta, Canvas, Story, Controls, Source } from "@storybook/blocks";
+import * as DrawerStories from "./Drawer.stories";
+import { Card, CardBody, KvibProvider } from "@kvib/react/src";
+import {
+  DrawerString,
+  DrawerPlacementString,
+  DrawerFocusString,
+  DrawerSizesString,
+  DrawerFormString,
+} from "./srcStrings.ts";
 
 <Meta title="Komponenter/Drawer" />
 
 # Drawer
 
-Se [https://chakra-ui.com/docs/components/drawer](https://chakra-ui.com/docs/components/drawer) for eksempler og dokumentasjon.
+Drawer er et panel som sklir ut fra kanten av skjermen. Den kan være nyttig hvis du vil at brukeren skal se detaljer eller gjøre en oppgave
+uten å bytte side. Drawer kan komme ut fra alle kanter av skjermen.
 
 ## Ta i bruk
 
@@ -19,3 +29,58 @@ import {
   DrawerCloseButton,
 } from "@kvib/react";
 ```
+
+## Props
+
+<KvibProvider>
+  <Card variant="outline">
+    <CardBody>
+      <Story of={DrawerStories.Drawer} />
+    </CardBody>
+  </Card>
+</KvibProvider>
+
+<Source code={DrawerString} dark />
+<Controls of={DrawerStories.Drawer} />
+
+## Plassering
+
+<KvibProvider>
+  <Card variant="outline">
+    <CardBody>
+      <Story of={DrawerStories.DrawerPlacement} />
+    </CardBody>
+  </Card>
+</KvibProvider>
+
+<Source code={DrawerPlacementString} dark />
+
+## Fokus
+
+<KvibProvider>
+  <Card variant="outline">
+    <CardBody>
+      <Story of={DrawerStories.DrawerFocus} />
+    </CardBody>
+  </Card>
+</KvibProvider>
+
+<Source code={DrawerFocusString} dark />
+
+## Størrelser
+
+<KvibProvider>
+  <Card variant="outline">
+    <CardBody>
+      <Story of={DrawerStories.DrawerSizes} />
+    </CardBody>
+  </Card>
+</KvibProvider>
+
+<Source code={DrawerSizesString} dark />
+
+## Bruk av form i en Drawer
+
+Hvis du skal bruke form i en drawer må du bruke biblioteker som `react-hook-form` eller `formik`. Her er den anbefalte måten å gjøre det på:
+
+<Source code={DrawerFormString} dark />
