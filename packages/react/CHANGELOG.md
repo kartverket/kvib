@@ -1,5 +1,17 @@
 # @kvib/react
 
+## 1.21.0
+
+### Minor Changes
+
+- 453a2899d: Oppdatert dokumentasjon for FileUpload.
+
+## 1.20.0
+
+### Minor Changes
+
+- c5a75f839: Oppdatert dokumentasjon for Search.
+
 ## 1.19.2
 
 ### Patch Changes
