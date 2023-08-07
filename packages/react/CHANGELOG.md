@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 1.20.0
+
+### Minor Changes
+
+- c5a75f839: Oppdatert dokumentasjon for Search.
+
 ## 1.19.2
 
 ### Patch Changes
