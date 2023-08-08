@@ -1,13 +1,100 @@
-import { Meta } from "@storybook/blocks";
+import { Meta, Canvas, Story, Controls, Source } from "@storybook/blocks";
+import * as CardStories from "./Card.stories";
+import {
+  CardString,
+  CardVariantsString,
+  CardSizesString,
+  CardImageString,
+  CardCenteringString,
+  CardHorizontalString,
+} from "./srcStrings.ts";
+import { Card, CardBody, KvibProvider } from "@kvib/react/src";
 
 <Meta title="Komponenter/Data Display/Card" />
 
 # Card
 
-Se [https://chakra-ui.com/docs/components/card](https://chakra-ui.com/docs/components/card) for eksempler og dokumentasjon.
+Card er et fleksibelt komponent som brukes til å gruppere og vise innhold i et klart og konsist format.
 
 ## Ta i bruk
 
 ```jsx
 import { Card, CardHeader, CardBody, CardFooter } from "@kvib/react";
 ```
+
+## Props
+
+<KvibProvider>
+  <Card variant="outline">
+    <CardBody>
+      <Story of={CardStories.Card} />
+    </CardBody>
+  </Card>
+</KvibProvider>
+
+<Source code={CardString} dark />
+<Controls of={CardStories.Card} />
+
+## Varianter
+
+<KvibProvider>
+  <Card variant="outline">
+    <CardBody>
+      <Story of={CardStories.CardVariants} />
+    </CardBody>
+  </Card>
+</KvibProvider>
+
+<Source code={CardVariantsString} dark />
+
+## Størrelser
+
+<KvibProvider>
+  <Card variant="outline">
+    <CardBody>
+      <Story of={CardStories.CardSizes} />
+    </CardBody>
+  </Card>
+</KvibProvider>
+
+<Source code={CardSizesString} dark />
+
+## Card med bilde og knapper
+
+<KvibProvider>
+  <Card variant="outline">
+    <CardBody>
+      <Story of={CardStories.CardImage} />
+    </CardBody>
+  </Card>
+</KvibProvider>
+
+<Source code={CardImageString} dark />
+
+## Sentrering av innhold
+
+Sentrering av innhold gjøres ved å sette `align="center"` på Card.
+
+<KvibProvider>
+  <Card variant="outline">
+    <CardBody>
+      <Story of={CardStories.CardCentering} />
+    </CardBody>
+  </Card>
+</KvibProvider>
+
+<Source code={CardCenteringString} dark />
+
+## Horisontalt innhold
+
+For å vise innhold horisontalt settes `direction="row"` på Card.
+
+<KvibProvider>
+  <Card variant="outline">
+    <CardBody>
+      <Story of={CardStories.CardHorizontal} />
+    </CardBody>
+  </Card>
+</KvibProvider>
+
+<Source code={CardHorizontalString} dark />

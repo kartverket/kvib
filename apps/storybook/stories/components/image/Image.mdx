@@ -1,13 +1,31 @@
-import { Meta } from "@storybook/blocks";
+import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
+import * as ImageStories from "./Image.stories";
 
-<Meta title="Komponenter/Image" />
+<Meta of={ImageStories} />
 
 # Image
 
-Se [https://chakra-ui.com/docs/components/image](https://chakra-ui.com/docs/components/image) for eksempler og dokumentasjon.
+Image brukes til å vise frem bilder med støtte for fallback.
 
 ## Ta i bruk
 
 ```jsx
 import { Image } from "@kvib/react";
 ```
+
+## Props
+
+<Canvas of={ImageStories.Image} />
+<Controls of={ImageStories.Image} />
+
+## Størrelser
+
+<Canvas of={ImageStories.ImageSizes} />
+
+## Image med border radius
+
+<Canvas of={ImageStories.ImageBorderRadius} />
+
+## Fallback
+
+<Canvas of={ImageStories.ImageFallback} />

@@ -18,11 +18,12 @@ export interface FormLabelProps extends FormControlProps {
   optionalIndicator?: React.ReactNode;
 }
 
-export const FormLabel = forwardRef<FormLabelProps, "label">(({ label, ...props }, ref) => {
+export const FormLabel = forwardRef<FormLabelProps, "label">(({ label, children, ...props }, ref) => {
   return (
     <ChakraFormLabel {...props} ref={ref}>
       <ChakraText as={"b"} fontSize={"lg"}>
         {label}
+        {children}
       </ChakraText>
     </ChakraFormLabel>
   );

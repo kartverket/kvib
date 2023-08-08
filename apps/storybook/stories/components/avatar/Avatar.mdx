@@ -1,13 +1,40 @@
-import { Meta } from "@storybook/blocks";
+import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
+import * as AvatarStories from "./Avatar.stories";
 
 <Meta title="Komponenter/Avatar" />
 
 # Avatar
 
-Se [https://chakra-ui.com/docs/components/avatar](https://chakra-ui.com/docs/components/avatar) for eksempler og dokumentasjon.
+Avatar brukes til å representere brukere. Den viser frem profilbilde, initialer eller fallback-ikon.
 
 ## Ta i bruk
 
 ```jsx
-import { Avatar, AvatarBadge, AvatarGroup } from "@kvib/react";
+import { Avatar, AvatarAvatar, AvatarGroup } from "@kvib/react";
 ```
+
+## Props
+
+<Canvas of={AvatarStories.Avatar} />
+<Controls of={AvatarStories.Avatar} />
+
+## Størrelser
+
+<Canvas of={AvatarStories.AvatarSizes} />
+
+## Fallback Avatar
+
+Det er to fallbacks dersom det er en error når avataren skal lastes:
+
+- Dersom Avataren har proppen `name`, vil initialene vises.
+- Dersom Avataren ikke har `name`, vil default-avataren vises.
+
+<Canvas of={AvatarStories.AvatarFallback} />
+
+## Avatar med badge
+
+<Canvas of={AvatarStories.AvatarBadge} />
+
+## Avatar gruppering
+
+<Canvas of={AvatarStories.AvatarGrouping} />

@@ -4,7 +4,7 @@ import logo from "./kvib_logo.svg";
 export default create({
   base: "light",
   brandTitle: "KVIB",
-  brandUrl: "https://kartverket.github.io/kvib/storybook",
+  brandUrl: "https://kartverket.github.io/kvib/designsystem",
   brandImage: logo,
   brandTarget: "_self",
 });

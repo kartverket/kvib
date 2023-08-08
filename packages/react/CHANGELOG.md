@@ -1,5 +1,65 @@
 # @kvib/react
 
+## 1.21.0
+
+### Minor Changes
+
+- 453a2899d: Oppdatert dokumentasjon for FileUpload.
+
+## 1.20.0
+
+### Minor Changes
+
+- c5a75f839: Oppdatert dokumentasjon for Search.
+
+## 1.19.2
+
+### Patch Changes
+
+- 57e033863: Oppdatert FormControl label, errorMessage og hjelpetekst til å kunne bruke både prop og skrive tekst i komponent eks. <FormLabel>Eksempel tekst</FormLabel> | <FormLabel label="Eksempel tekst"/>.
+
+## 1.19.1
+
+### Patch Changes
+
+- 3588e9219: Button med variant="outline" vil ikke lenger endre størrelse ved hover.
+
+## 1.19.0
+
+### Minor Changes
+
+- e6b71f675: Oppdaterer dokumentasjon for List.
+
+## 1.18.0
+
+### Minor Changes
+
+- 976d2829c: Oppdaterer dokumentasjon for Kbd.
+
+## 1.17.0
+
+### Minor Changes
+
+- 1ad5d14ba: Legger til Card og oppdaterer dokumentasjon.
+
+## 1.16.0
+
+### Minor Changes
+
+- c3a333378: Oppdaterer dokumentasjon for Table.
+
+## 1.15.0
+
+### Minor Changes
+
+- 27880d614: Oppdaterer dokumentasjon for Stat.
+
+## 1.14.1
+
+### Patch Changes
+
+- 08d32385d: Rydder opp i button slik at den ikke lenger har en warning om iconFill.
+
 ## 1.14.0
 
 ### Minor Changes
