@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "storybook dev -p 6006",
     "build": "storybook build",
+    "build-storybook": "storybook build",
     "postbuild": "mv storybook-static/index.html storybook-static/storybook.html && cp index.html storybook-static/index.html",
     "test-storybook": "test-storybook"
   },
@@ -31,6 +32,7 @@
     "@types/react-dom": "^18.0.11",
     "axe-playwright": "^1.2.3",
     "babel-loader": "^9.1.2",
+    "chromatic": "^6.20.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "storybook": "^7.0.0-rc.4",
