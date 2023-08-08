@@ -35,9 +35,7 @@ export const LinkOverlay: Story = {
   args: {},
   render: (args) => (
     <KvibLinkBox as="article" maxW="sm" p="5" borderWidth="1px" rounded="md">
-      <KvibBox as="time" dateTime="2021-01-15 15:30:00 +0000 UTC">
-        13 timer siden
-      </KvibBox>
+      <KvibBox>13 timer siden</KvibBox>
       <KvibHeading size="md" my="2">
         <KvibLinkOverlay {...args} href="#">
           Ikke gå deg vill på bærtur
@@ -55,9 +53,7 @@ export const LinkOverlayNested: Story = {
   args: {},
   render: (args) => (
     <KvibLinkBox as="article" maxW="sm" p="5" borderWidth="1px" rounded="md">
-      <KvibBox as="time" dateTime="2021-01-15 15:30:00 +0000 UTC">
-        13 timer siden
-      </KvibBox>
+      <KvibBox>13 timer siden</KvibBox>
       <KvibHeading size="md" my="2">
         <KvibLinkOverlay {...args} href="#">
           Ikke gå deg vill på bærtur
@@ -67,7 +63,7 @@ export const LinkOverlayNested: Story = {
         Bær- og soppsesongen er i full gang til skogs og fjells. Last ned Kartverkets gratis mobil-app "Hvor?", så vet
         du hvor du er.
       </KvibText>
-      <KvibBox as="a" color="teal.400" href="#" fontWeight="bold">
+      <KvibBox as="a" color="green" href="#" fontWeight="bold">
         En ekstra link
       </KvibBox>
     </KvibLinkBox>
