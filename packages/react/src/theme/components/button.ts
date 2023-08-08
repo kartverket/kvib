@@ -75,7 +75,7 @@ export const variantOutline = defineStyle((props) => {
     borderColor: `${c}.500`,
     color: `${c}.500`,
     _hover: {
-      border: "0px",
+      borderColor: `${c}.400`,
       bg: `${c}.400`,
       color: colors.white,
       _disabled: {

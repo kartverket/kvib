@@ -1,13 +1,23 @@
-import { Meta } from "@storybook/blocks";
+import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
+import * as EditableStories from "./Editable.stories";
 
-<Meta title="Komponenter/Editable" />
+<Meta of={EditableStories} />
 
 # Editable
 
-Se [https://chakra-ui.com/docs/components/editable](https://chakra-ui.com/docs/components/editable) for eksempler og dokumentasjon.
+EditableText brukes til å endre på tekst inline. Teksten ser ut som normal tekst, men endres til å bli et text input field når brukeren klikker eller fokuserer på det.
 
 ## Ta i bruk
 
 ```jsx
 import { Editable, EditableInput, EditableTextarea, EditablePreview } from "@kvib/react";
 ```
+
+## Props
+
+<Canvas of={EditableStories.Editable} />
+<Controls of={EditableStories.Editable} />
+
+## Editable med textarea
+
+<Canvas of={EditableStories.EditableTextarea} />
