@@ -86,7 +86,7 @@ export const Accordionitem: Story = {
         type: { summary: "string" },
         defaultValue: { summary: false },
       },
-      control: "string",
+      control: "text",
     },
     isDisabled: {
       description: "If true, the AccordionItem will be disabled.",
