@@ -10,6 +10,12 @@ const meta: Meta<typeof KvibAccordion> = {
       canvas: { sourceState: "shown" },
     },
   },
+};
+
+export default meta;
+type Story = StoryObj<typeof KvibAccordion>;
+
+export const Accordion: Story = {
   argTypes: {
     allowMultiple: {
       description: "If true, multiple items can be expanded at once.",
@@ -22,18 +28,41 @@ const meta: Meta<typeof KvibAccordion> = {
     allowToggle: {
       description: "If true, expanded items may be collapsed again.",
       table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: false },
+      },
+      control: "boolean",
+    },
+    defaultIndex: {
+      description: "Sets the initial index for the expanded accordion item.",
+      table: {
+        type: { summary: "string" },
+      },
+      control: "text",
+    },
+    index: {
+      description: "Sets the index for the expanded accordion item.",
+      table: {
+        type: { summary: "string" },
+      },
+      control: "text",
+    },
+    onChange: {
+      description: "Callback for when the accordion expands/collapses.",
+      table: {
+        type: { summary: "function" },
+      },
+      control: "boolean",
+    },
+    reduceMotion: {
+      description: "If true, disables height animation and transition.",
+      table: {
         type: { summary: Boolean },
         defaultValue: { summary: false },
       },
       control: "boolean",
     },
   },
-};
-
-export default meta;
-type Story = StoryObj<typeof KvibAccordion>;
-
-export const Accordion: Story = {
   args: { allowMultiple: false, allowToggle: false },
   render: (args) => (
     <KvibAccordion {...args}>
@@ -49,7 +78,7 @@ export const Accordion: Story = {
   ),
 };
 
-export const AccordionItem: Story = {
+export const Accordionitem: Story = {
   argTypes: {
     id: {
       description: "Unique id for the AccordionItem.",
@@ -77,4 +106,12 @@ export const AccordionItem: Story = {
     },
   },
   args: { isDisabled: false, isFocusable: false },
+  render: (args) => (
+    <KvibAccordion>
+      <AccordionItem {...args}>
+        <AccordionButton>Klikk meg</AccordionButton>
+        <AccordionPanel>Tekst skrift tekst</AccordionPanel>
+      </AccordionItem>
+    </KvibAccordion>
+  ),
 };
