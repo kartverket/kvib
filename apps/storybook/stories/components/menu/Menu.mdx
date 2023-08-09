@@ -7,7 +7,7 @@ import { Card, CardBody, KvibProvider } from "@kvib/react/src";
 
 # Menu
 
-Se [https://chakra-ui.com/docs/components/menu](https://chakra-ui.com/docs/components/menu) for eksempler og dokumentasjon.
+Menu er en dropdown-meny for det vanlige dropdown menu button designmønsteret. Den bruker roving tabIndex for fokus. Det er mulig å søke i MenuItems ved å bruke tastaturet.
 
 ## Ta i bruk
 
@@ -39,3 +39,51 @@ import { Menu, MenuButton, MenuList, MenuItem, MenuItemOption, MenuGroup, MenuOp
 </KvibProvider>
 
 <Source code={MenuStrings.MenuStateString} dark />
+
+## Ikoner og kommandoer
+
+<KvibProvider>
+  <Card variant="outline">
+    <CardBody>
+      <Story of={MenuStories.MenuIconsCommands} />
+    </CardBody>
+  </Card>
+</KvibProvider>
+
+<Source code={MenuStrings.MenuIconsCommandsString} dark />
+
+## MenuGroup
+
+<KvibProvider>
+  <Card variant="outline">
+    <CardBody>
+      <Story of={MenuStories.MenuGroup} />
+    </CardBody>
+  </Card>
+</KvibProvider>
+
+<Source code={MenuStrings.MenuGroupString} dark />
+
+## MenuItem med link
+
+<KvibProvider>
+  <Card variant="outline">
+    <CardBody>
+      <Story of={MenuStories.MenuLink} />
+    </CardBody>
+  </Card>
+</KvibProvider>
+
+<Source code={MenuStrings.MenuLinkString} dark />
+
+## Menu option groups
+
+<KvibProvider>
+  <Card variant="outline">
+    <CardBody>
+      <Story of={MenuStories.MenuOptionGroups} />
+    </CardBody>
+  </Card>
+</KvibProvider>
+
+<Source code={MenuStrings.MenuOptionGroupsString} dark />
