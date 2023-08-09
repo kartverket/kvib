@@ -22,7 +22,7 @@ jobs:
       - name: Publish to Chromatic
         uses: chromaui/action@v1
         # Chromatic GitHub Action options
-        if: (contains(github.event.pull_request.labels.*.name, 'run_chromatic')
+        if: (contains(github.event.pull_request.labels.*.name, 'chromatic'))
         with:
           workingDir: ./apps/storybook
           # 👇 Chromatic projectToken, refer to the manage page to obtain it.
