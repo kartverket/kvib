@@ -6,7 +6,7 @@ name: "Chromatic"
 # Event for the workflow
 on:
   pull_request:
-    types: [opened, labeled, synchronize]
+    types: [labeled]
 
 # List of jobs
 jobs:

@@ -68,13 +68,7 @@ og sørge for at hvert nytt komponent samsvarer med våre designstandarder.
 
 Når et komponent er ferdig og klart til å bli sjekket av designer, kan et nytt build bli publisert til Chromatic:
 
-1. Lag en ny tag i git (Trenger bare å bli gjort første gang): `git tag -a chromatic-build -m "Build with Chromatic"`
-
-2. Add og commit endringer.
-
-3. Push endringer med tag: `git push origin <branch_name> chromatic-build`.
-
-- Dersom Chromatic-action ikke kjører, må du overskrive tag i remote: `git push origin chromatic-build -f`.
+**Dette gjøres ved å legge til `chromatic` som label i PRen.**
 
 Dette vil trigge en Github Action som vil publisere til Chromatic. I tillegg blir det lagt til en pull request check som inneholder link til Chromatic.
 Her må PRen godkjennes for at det skal være mulig å merge den inn i master.
