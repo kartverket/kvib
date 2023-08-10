@@ -1,6 +1,7 @@
-import { Meta } from "@storybook/blocks";
+import { Title, Canvas, Meta, Story, Controls } from "@storybook/blocks";
+import * as AlertStories from "./Alert.stories";
 
-<Meta title="Komponenter/Alert" />
+<Meta of={AlertStories} />
 
 # Alert
 
@@ -11,3 +12,30 @@ Se [https://chakra-ui.com/docs/components/alert](https://chakra-ui.com/docs/comp
 ```jsx
 import { Alert, AlertIcon, AlertTitle, AlertDescription } from "@kvib/react";
 ```
+
+## Props
+
+<Canvas of={AlertStories.Alert} />
+<Controls of={AlertStories.Alert} />
+
+## Statuser
+
+<Canvas of={AlertStories.AlertStatus} />
+
+## Farger
+
+<Canvas of={AlertStories.AlertColors} />
+
+## Varianter
+
+<Canvas of={AlertStories.AlertVariants} />
+
+## Egenkomponert alert
+
+<Canvas of={AlertStories.AlertComposition} />
+
+## Kjente feil og mangler
+
+Bruk av colorScheme="orange" og variant="solid" i sammen gir for lav kontrast. Dette fargetemaet er også brukt med status="warning", som dermed heller ikke kan brukes sammen med variant="solid".
+
+Det er foreløpig ikke mulig å bytte ut eller droppe status-ikonet for alerter.
