@@ -17,8 +17,15 @@ const meta: Meta<typeof KvibTabs> = {
       canvas: { sourceState: "shown" },
     },
     a11y: {
-      // This option disables all a11y checks on this story
-      disable: true,
+      config: {
+        rules: [
+          {
+            // Turned off aria value violation due to false error.
+            id: "aria-valid-attr-value",
+            reviewOnFail: true,
+          },
+        ],
+      },
     },
   },
 
