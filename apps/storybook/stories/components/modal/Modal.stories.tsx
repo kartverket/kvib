@@ -36,7 +36,6 @@ const meta: Meta<typeof KvibModal> = {
       control: "boolean",
     },
     onClose: {
-      name: "onClose*",
       description: "Callback invoked to close the modal.",
       table: {
         type: { summary: "() => void" },
@@ -210,6 +209,7 @@ const meta: Meta<typeof KvibModal> = {
     onCloseComplete: undefined,
     onEsc: undefined,
     onOverlayClick: undefined,
+    onClose: undefined,
   },
 };
 
