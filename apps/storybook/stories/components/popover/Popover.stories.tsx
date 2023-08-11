@@ -34,6 +34,17 @@ const meta: Meta<typeof KvibPopover> = {
       story: { inline: true },
       canvas: { sourceState: "shown" },
     },
+    a11y: {
+      config: {
+        rules: [
+          {
+            // Turned off aria value violation due to false error.
+            id: "aria-valid-attr-value",
+            reviewOnFail: true,
+          },
+        ],
+      },
+    },
   },
   argTypes: {
     arrowPadding: {
