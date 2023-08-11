@@ -1,10 +1,13 @@
-import { Meta } from "@storybook/blocks";
+import { Meta, Canvas, Story, Controls, Source } from "@storybook/blocks";
+import * as PopoverStories from "./Popover.stories";
+import { Card, CardBody, KvibProvider } from "@kvib/react/src";
+import * as PopoverStrings from "./srcStrings.ts";
 
-<Meta title="Komponenter/Popover" />
+<Meta of={PopoverStories} />
 
 # Popover
 
-Se [https://chakra-ui.com/docs/components/popover](https://chakra-ui.com/docs/components/popover) for eksempler og dokumentasjon.
+Popover er en dialog som flyter rundt en trigger.
 
 ## Ta i bruk
 
@@ -21,3 +24,63 @@ import {
   PopoverAnchor,
 } from "@kvib/react";
 ```
+
+## Props
+
+<Canvas of={PopoverStories.Popover} />
+<Controls of={PopoverStories.Popover} />
+
+## Fokus på element når Popover åpnes
+
+<KvibProvider>
+  <Card variant="outline">
+    <CardBody>
+      <Story of={PopoverStories.PopoverFocus} />
+    </CardBody>
+  </Card>
+</KvibProvider>
+
+<Source code={PopoverStrings.PopoverFocusString} dark />
+
+## Fange fokus i Popover
+
+Hvis Popover har en form, vil du kanskje fange fokus inne i Popoveren og lukke den når brukeren er ferdig og trykker på "Lagre".
+Bruk `react-focus-lock` for å fange fokus inne i `PopoveContent`
+
+<KvibProvider>
+  <Card variant="outline">
+    <CardBody>
+      <Story of={PopoverStories.PopoverTrappingFocus} />
+    </CardBody>
+  </Card>
+</KvibProvider>
+
+<Source code={PopoverStrings.PopoverTrappingFocusString} dark />
+
+## Kontrollert bruk
+
+<KvibProvider>
+  <Card variant="outline">
+    <CardBody>
+      <Story of={PopoverStories.PopoverControlled} />
+    </CardBody>
+  </Card>
+</KvibProvider>
+
+<Source code={PopoverStrings.PopoverControlledString} dark />
+
+## Popover Anchor
+
+<KvibProvider>
+  <Card variant="outline">
+    <CardBody>
+      <Story of={PopoverStories.PopoverAnchorExample} />
+    </CardBody>
+  </Card>
+</KvibProvider>
+
+<Source code={PopoverStrings.PopoverAnchorString} dark />
+
+## Tilpasse stil
+
+<Canvas of={PopoverStories.PopoverCustomizing} />
