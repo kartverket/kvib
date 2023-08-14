@@ -142,9 +142,17 @@ export const PopoverAnchorString = `const WithPopoverAnchor = ({ ...args }) => {
       isLazy
       lazyBehavior="keepMounted"
     >
+      <FormLabel htmlFor="anchor text">Prøv å redigere teksten</FormLabel>
       <HStack>
         <PopoverAnchor>
-          <Input color={color} w="auto" display="inline-flex" isDisabled={!isEditing} defaultValue="Popover Anchor" />
+          <Input
+            id="anchor text"
+            color={color}
+            w="auto"
+            display="inline-flex"
+            isDisabled={!isEditing}
+            defaultValue="Popover Anchor"
+          />
         </PopoverAnchor>
 
         <PopoverTrigger>
@@ -153,6 +161,7 @@ export const PopoverAnchorString = `const WithPopoverAnchor = ({ ...args }) => {
           </Button>
         </PopoverTrigger>
       </HStack>
+
       <PopoverContent>
         <PopoverBody>
           Farger:
