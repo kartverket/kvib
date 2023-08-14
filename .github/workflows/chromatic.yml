@@ -5,6 +5,8 @@ name: "Chromatic"
 
 # Event for the workflow
 on:
+  push:
+    branches: [master]
   pull_request:
     types: [labeled]
 
@@ -22,7 +24,7 @@ jobs:
       - name: Publish to Chromatic
         uses: chromaui/action@v1
         # Chromatic GitHub Action options
-        if: (contains(github.event.pull_request.labels.*.name, 'chromatic'))
+        if: (contains(github.event.pull_request.labels.*.name, 'chromatic') || github.ref == 'refs/heads/master')
         with:
           workingDir: ./apps/storybook
           # 👇 Chromatic projectToken, refer to the manage page to obtain it.
