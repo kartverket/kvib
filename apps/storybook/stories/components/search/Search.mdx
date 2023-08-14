@@ -1,11 +1,20 @@
 import * as SearchStories from "./Search.stories";
 import { Canvas, Controls, Meta } from "@storybook/blocks";
+import { Alert, AlertIcon, KvibProvider } from "@kvib/react/src";
 
 <Meta of={SearchStories} />
 
 # Search
 
-Søkefelt komponent
+<KvibProvider>
+  <Alert status="info">
+    <AlertIcon />
+    BorderRadius på Search har en bug for øyeblikket. Den bytter mellom å være rund og firkantet. Buggen ligger hos chakra
+    \- en issue er opprettet.
+  </Alert>
+</KvibProvider>
+
+Søkefelt komponent.
 
 ## Ta i bruk
 
