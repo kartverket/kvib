@@ -1,13 +1,101 @@
-import { Meta } from "@storybook/blocks";
+import { Meta, Canvas, Story, Controls, Source } from "@storybook/blocks";
+import * as ModalStories from "./Modal.stories";
+import { Card, CardBody, KvibProvider } from "@kvib/react/src";
+import * as ModalStrings from "./srcStrings.ts";
 
-<Meta title="Komponenter/Modal" />
+<Meta of={ModalStories} />
 
 # Modal
 
-Se [https://chakra-ui.com/docs/components/modal](https://chakra-ui.com/docs/components/modal) for eksempler og dokumentasjon.
+En modal er en dialog som fokuserer brukerens oppmerksomhet på informasjonen i vinduet.
 
 ## Ta i bruk
 
 ```jsx
 import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton } from "@kvib/react";
 ```
+
+## Props
+
+<KvibProvider>
+  <Card variant="outline">
+    <CardBody>
+      <Story of={ModalStories.Modal} />
+    </CardBody>
+  </Card>
+</KvibProvider>
+
+<Source code={ModalStrings.ModalString} dark />
+<Controls of={ModalStories.Modal} />
+
+## Block scrolling
+
+<KvibProvider>
+  <Card variant="outline">
+    <CardBody>
+      <Story of={ModalStories.ModalScrolling} />
+    </CardBody>
+  </Card>
+</KvibProvider>
+
+<Source code={ModalStrings.ModalScrollingString} dark />
+
+## Fokus
+
+<KvibProvider>
+  <Card variant="outline">
+    <CardBody>
+      <Story of={ModalStories.ModalFocus} />
+    </CardBody>
+  </Card>
+</KvibProvider>
+
+<Source code={ModalStrings.ModalFocusString} dark />
+
+## Sentrering
+
+<KvibProvider>
+  <Card variant="outline">
+    <CardBody>
+      <Story of={ModalStories.ModalCentered} />
+    </CardBody>
+  </Card>
+</KvibProvider>
+
+<Source code={ModalStrings.ModalCenteredString} dark />
+
+## Transition
+
+<KvibProvider>
+  <Card variant="outline">
+    <CardBody>
+      <Story of={ModalStories.ModalTransition} />
+    </CardBody>
+  </Card>
+</KvibProvider>
+
+<Source code={ModalStrings.ModalTransitionString} dark />
+
+## Størrelser
+
+<KvibProvider>
+  <Card variant="outline">
+    <CardBody>
+      <Story of={ModalStories.ModalSizes} />
+    </CardBody>
+  </Card>
+</KvibProvider>
+
+<Source code={ModalStrings.ModalSizesString} dark />
+
+## Bakteppe
+
+<KvibProvider>
+  <Card variant="outline">
+    <CardBody>
+      <Story of={ModalStories.ModalBackdrop} />
+    </CardBody>
+  </Card>
+</KvibProvider>
+
+<Source code={ModalStrings.ModalBackdropString} dark />

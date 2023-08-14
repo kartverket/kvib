@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 1.21.1
+
+### Patch Changes
+
+- 2ecee595d: Oppdatert komponent eksport fil.
+
 ## 1.21.0
 
 ### Minor Changes
