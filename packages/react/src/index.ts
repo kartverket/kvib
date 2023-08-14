@@ -53,3 +53,5 @@ export * from "./tooltip";
 export * from "./transitions";
 export * from "./typography";
 export * from "./visually-hidden";
+export * from "./datepicker";
+export * from "./file-upload";
