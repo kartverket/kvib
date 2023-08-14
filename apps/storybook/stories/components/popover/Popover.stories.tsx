@@ -34,17 +34,6 @@ const meta: Meta<typeof KvibPopover> = {
       story: { inline: true },
       canvas: { sourceState: "shown" },
     },
-    a11y: {
-      config: {
-        rules: [
-          {
-            // Turned off aria value violation due to false error.
-            id: "aria-valid-attr-value",
-            reviewOnFail: true,
-          },
-        ],
-      },
-    },
   },
   argTypes: {
     arrowPadding: {
@@ -510,9 +499,17 @@ const WithPopoverAnchor = ({ ...args }) => {
       isLazy
       lazyBehavior="keepMounted"
     >
+      <FormLabel htmlFor="anchor text">Prøv å redigere teksten</FormLabel>
       <HStack>
         <PopoverAnchor>
-          <Input color={color} w="auto" display="inline-flex" isDisabled={!isEditing} defaultValue="Popover Anchor" />
+          <Input
+            id="anchor text"
+            color={color}
+            w="auto"
+            display="inline-flex"
+            isDisabled={!isEditing}
+            defaultValue="Popover Anchor"
+          />
         </PopoverAnchor>
 
         <PopoverTrigger>
