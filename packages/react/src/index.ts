@@ -33,6 +33,7 @@ export * from "./progress";
 export * from "./provider";
 export * from "./radio";
 export * from "./range-slider";
+export * from "./search";
 export * from "./select";
 export * from "./show-hide";
 export * from "./skeleton";
