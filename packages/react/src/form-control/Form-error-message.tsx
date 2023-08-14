@@ -22,6 +22,7 @@ export const FormErrorMessage = forwardRef<FormErrorMessageProps, "div">(
         borderColor={"red.100"}
         borderWidth={"2px"}
         borderRadius={"8px"}
+        gap="5px"
       >
         <span className={"material-symbols-outlined"}>Error</span>
         <ChakraText>
