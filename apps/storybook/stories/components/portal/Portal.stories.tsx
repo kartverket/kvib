@@ -37,7 +37,7 @@ type Story = StoryObj<typeof KvibPortal>;
 export const Portal: Story = {
   args: {},
   render: (args) => (
-    <Box bg="red.400" color="white">
+    <Box bg="green.500" color="white">
       Dette er en Box
       <KvibPortal {...args}>Denne teksten er portaled til enden av document.body!</KvibPortal>
     </Box>
@@ -48,12 +48,12 @@ const PortalCustomExample = ({ ...args }) => {
   const ref = useRef<HTMLDivElement | null>(null);
 
   return (
-    <Box bg="red.400" color="white">
+    <Box bg="green.500" color="white">
       Dette er en box
       <KvibPortal {...args} containerRef={ref}>
         Portal: Denne teksten er portaled til den gule boksen!
       </KvibPortal>
-      <Box ref={ref} bg="yellow.500">
+      <Box ref={ref} bg="blue.400">
         <div>Container: Hei</div>
       </Box>
     </Box>
@@ -70,12 +70,12 @@ const PortalNestedExample = ({ ...args }) => {
   return (
     <div>
       <KvibPortal {...args} containerRef={ref}>
-        <Box bg="teal.500" color="white">
+        <Box bg="green.500" color="white">
           Parent: Hei, velkommen
           <KvibPortal {...args}>Child: Jeg er festet til min parent portal</KvibPortal>
         </Box>
       </KvibPortal>
-      <Box bg="red.400" color="white" ref={ref} />
+      <Box bg="red.500" color="white" ref={ref} />
     </div>
   );
 };
@@ -90,7 +90,7 @@ function PortalNotAppendedExample({ ...args }) {
   return (
     <div>
       <KvibPortal {...args} containerRef={ref}>
-        <Box bg="teal.500" color="white">
+        <Box bg="green.500" color="white">
           Parent: Hei, velkommen
           <KvibPortal {...args} appendToParentPortal={false}>
             Child: Jeg går til document.body
