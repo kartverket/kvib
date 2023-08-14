@@ -1,0 +1,53 @@
+import { Canvas, Meta, Controls } from "@storybook/blocks";
+import { Alert, AlertIcon, AlertDescription } from "@kvib/react/src/alert";
+import * as InputStories from "./Input.stories";
+import { KvibProvider } from "@kvib/react/src";
+
+<Meta of={InputStories} />
+
+# Input
+
+Input er en komponent som brukes til å få brukerinndata i et tekstfelt.
+
+## Ta i bruk
+
+```jsx
+import { Input } from "@kvib/react";
+```
+
+## Props
+
+<KvibProvider>
+    <Alert status="info">
+        <AlertIcon/>
+        <AlertDescription>
+            Label og validering håndteres av FormControl komponent.
+        </AlertDescription>
+
+    </Alert>
+
+</KvibProvider>
+
+<Canvas of={InputStories.Input} />
+<Controls of={InputStories.Input} />
+
+## Input Group and Input Elements
+
+## Ta i bruk
+
+```jsx
+import { Input, InputGroup, InputLeftElement, InputRightElement } from "@kvib/react";
+```
+
+<Canvas of={InputStories.InputLeftElement} />
+<Canvas of={InputStories.InputRightElement} />
+
+## Input Group and Input Addons
+
+## Ta i bruk
+
+```jsx
+import { Input, InputGroup, InputLeftAddon, InputRightAddon } from "@kvib/react";
+```
+
+<Canvas of={InputStories.InputGroup} />

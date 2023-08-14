@@ -1,13 +1,22 @@
-import { Meta } from "@storybook/blocks";
+import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
+import * as StatStories from "./Stat.stories";
 
 <Meta title="Komponenter/Data Display/Stat" />
 
 # Stat
 
-Se [https://chakra-ui.com/docs/components/stat](https://chakra-ui.com/docs/components/stat) for eksempler og dokumentasjon.
+Stat-komponentet brukes til å vise frem statistikk.
 
 ## Ta i bruk
 
 ```jsx
 import { Stat, StatLabel, StatNumber, StatHelpText, StatArrow, StatGroup } from "@kvib/react";
 ```
+
+## Props
+
+<Canvas of={StatStories.Stat} />
+
+## Stat med indikator
+
+<Canvas of={StatStories.StatIndicator} />

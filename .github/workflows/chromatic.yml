@@ -1,0 +1,32 @@
+# .github/workflows/chromatic.yml
+
+# Workflow name
+name: "Chromatic"
+
+# Event for the workflow
+on:
+  push:
+    branches: [master]
+  pull_request:
+    types: [labeled]
+
+# List of jobs
+jobs:
+  chromatic-deployment:
+    # Operating System
+    runs-on: ubuntu-latest
+    # Job steps
+    steps:
+      - uses: actions/checkout@v1
+      - name: Install dependencies
+        run: npm ci
+      # Chromatic
+      - name: Publish to Chromatic
+        uses: chromaui/action@v1
+        # Chromatic GitHub Action options
+        if: (contains(github.event.pull_request.labels.*.name, 'chromatic') || github.ref == 'refs/heads/master')
+        with:
+          workingDir: ./apps/storybook
+          # 👇 Chromatic projectToken, refer to the manage page to obtain it.
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          onlyChanged: true

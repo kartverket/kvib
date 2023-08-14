@@ -1,5 +1,125 @@
 # @kvib/react
 
+## 1.21.1
+
+### Patch Changes
+
+- 2ecee595d: Oppdatert komponent eksport fil.
+
+## 1.21.0
+
+### Minor Changes
+
+- 453a2899d: Oppdatert dokumentasjon for FileUpload.
+
+## 1.20.0
+
+### Minor Changes
+
+- c5a75f839: Oppdatert dokumentasjon for Search.
+
+## 1.19.2
+
+### Patch Changes
+
+- 57e033863: Oppdatert FormControl label, errorMessage og hjelpetekst til å kunne bruke både prop og skrive tekst i komponent eks. <FormLabel>Eksempel tekst</FormLabel> | <FormLabel label="Eksempel tekst"/>.
+
+## 1.19.1
+
+### Patch Changes
+
+- 3588e9219: Button med variant="outline" vil ikke lenger endre størrelse ved hover.
+
+## 1.19.0
+
+### Minor Changes
+
+- e6b71f675: Oppdaterer dokumentasjon for List.
+
+## 1.18.0
+
+### Minor Changes
+
+- 976d2829c: Oppdaterer dokumentasjon for Kbd.
+
+## 1.17.0
+
+### Minor Changes
+
+- 1ad5d14ba: Legger til Card og oppdaterer dokumentasjon.
+
+## 1.16.0
+
+### Minor Changes
+
+- c3a333378: Oppdaterer dokumentasjon for Table.
+
+## 1.15.0
+
+### Minor Changes
+
+- 27880d614: Oppdaterer dokumentasjon for Stat.
+
+## 1.14.1
+
+### Patch Changes
+
+- 08d32385d: Rydder opp i button slik at den ikke lenger har en warning om iconFill.
+
+## 1.14.0
+
+### Minor Changes
+
+- 963ffeff8: la til Datepicker som eget komponent i npm-pakken.
+
+## 1.13.0
+
+### Minor Changes
+
+- 01481680c: Oppdaterer dokumentasjon for Divider.
+
+## 1.12.0
+
+### Minor Changes
+
+- 8cedf7a75: Oppdaterer dokumentasjon for Code.
+
+## 1.11.1
+
+### Patch Changes
+
+- 616ddd12b: Oppdaterer Link. Fjerner padding og endrer fra border til outline på :focus.
+
+## 1.11.0
+
+### Minor Changes
+
+- 35f725bdd: Badge er lagt til og dokumentasjon er oppdatert. Kritiske endringer: -**colorScheme** tar verdiene: "green", "blue", "gray" (default), "red".
+
+## 1.10.2
+
+### Patch Changes
+
+- 9dde818c2: Changed Input Export.
+
+## 1.10.1
+
+### Patch Changes
+
+- db3d130a4: Removed Input-Group, Element, Addon from Storybook. Enabled export from Chakra.
+
+## 1.10.0
+
+### Minor Changes
+
+- e56e8e9a9: Enabled InputGroups, InputAddons, InputElements.
+
+## 1.9.0
+
+### Minor Changes
+
+- 0d68e97e9: Added Input, FormControl, NumberInput, PinInput Components.
+
 ## 1.8.0
 
 ### Minor Changes

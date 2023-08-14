@@ -1,13 +1,89 @@
-import { Meta } from "@storybook/blocks";
+import { Meta, Canvas, Story, Controls, Source } from "@storybook/blocks";
+import * as MenuStories from "./Menu.stories";
+import * as MenuStrings from "./srcStrings.ts";
+import { Card, CardBody, KvibProvider } from "@kvib/react/src";
 
-<Meta title="Komponenter/Menu" />
+<Meta of={MenuStories} />
 
 # Menu
 
-Se [https://chakra-ui.com/docs/components/menu](https://chakra-ui.com/docs/components/menu) for eksempler og dokumentasjon.
+Menu er en dropdown-meny for det vanlige dropdown menu button designmønsteret. Den bruker roving tabIndex for fokus. Det er mulig å søke i MenuItems ved å bruke tastaturet.
 
 ## Ta i bruk
 
 ```jsx
 import { Menu, MenuButton, MenuList, MenuItem, MenuItemOption, MenuGroup, MenuOptionGr } from "@kvib/react";
 ```
+
+## Props
+
+<KvibProvider>
+  <Card variant="outline">
+    <CardBody>
+      <Story of={MenuStories.Menu} />
+    </CardBody>
+  </Card>
+</KvibProvider>
+
+<Source code={MenuStrings.MenuString} dark />
+<Controls of={MenuStories.Menu} />
+
+## Internal state
+
+<KvibProvider>
+  <Card variant="outline">
+    <CardBody>
+      <Story of={MenuStories.MenuState} />
+    </CardBody>
+  </Card>
+</KvibProvider>
+
+<Source code={MenuStrings.MenuStateString} dark />
+
+## Ikoner og kommandoer
+
+<KvibProvider>
+  <Card variant="outline">
+    <CardBody>
+      <Story of={MenuStories.MenuIconsCommands} />
+    </CardBody>
+  </Card>
+</KvibProvider>
+
+<Source code={MenuStrings.MenuIconsCommandsString} dark />
+
+## MenuGroup
+
+<KvibProvider>
+  <Card variant="outline">
+    <CardBody>
+      <Story of={MenuStories.MenuGroup} />
+    </CardBody>
+  </Card>
+</KvibProvider>
+
+<Source code={MenuStrings.MenuGroupString} dark />
+
+## MenuItem med link
+
+<KvibProvider>
+  <Card variant="outline">
+    <CardBody>
+      <Story of={MenuStories.MenuLink} />
+    </CardBody>
+  </Card>
+</KvibProvider>
+
+<Source code={MenuStrings.MenuLinkString} dark />
+
+## Menu option groups
+
+<KvibProvider>
+  <Card variant="outline">
+    <CardBody>
+      <Story of={MenuStories.MenuOptionGroups} />
+    </CardBody>
+  </Card>
+</KvibProvider>
+
+<Source code={MenuStrings.MenuOptionGroupsString} dark />
