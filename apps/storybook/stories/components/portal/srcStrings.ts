@@ -1,4 +1,4 @@
-export const PortalCustomString = `const PortalCustomExample = ({ ...args }) => {
+export const PortalCustomString = `const PortalCustomExample = () => {
   const ref = useRef<HTMLDivElement | null>(null);
   return (
     <Box bg="green.500" color="white">
@@ -13,7 +13,7 @@ export const PortalCustomString = `const PortalCustomExample = ({ ...args }) => 
   );
 };`;
 
-export const PortalNestedString = `const PortalNestedExample = ({ ...args }) => {
+export const PortalNestedString = `const PortalNestedExample = () => {
   const ref = useRef(null);
   return (
     <div>
@@ -28,7 +28,7 @@ export const PortalNestedString = `const PortalNestedExample = ({ ...args }) => 
   );
 };`;
 
-export const PortalNotAppendedString = `function PortalNotAppendedExample({ ...args }) {
+export const PortalNotAppendedString = `function PortalNotAppendedExample() {
   const ref = useRef(null);
   return (
     <div>
