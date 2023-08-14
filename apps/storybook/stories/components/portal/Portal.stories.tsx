@@ -51,7 +51,7 @@ const PortalCustomExample = ({ ...args }) => {
     <Box bg="green.500" color="white">
       Dette er en box
       <KvibPortal {...args} containerRef={ref}>
-        Portal: Denne teksten er portaled til den gule boksen!
+        Portal: Denne teksten er portaled til den blå boksen!
       </KvibPortal>
       <Box ref={ref} bg="blue.400">
         <div>Container: Hei</div>
