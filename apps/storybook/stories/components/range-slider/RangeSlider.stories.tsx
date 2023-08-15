@@ -9,7 +9,7 @@ import {
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibRangeSlider> = {
-  title: "Komponenter/RangeSlider",
+  title: "Komponenter/Range Slider",
   component: KvibRangeSlider,
   parameters: {
     docs: {
@@ -177,9 +177,9 @@ export default meta;
 type Story = StoryObj<typeof KvibRangeSlider>;
 
 export const RangeSlider: Story = {
-  args: { ariaLabel: ["min", "max"], defaultValue: [10, 30] },
+  args: { defaultValue: [10, 30] },
   render: (args) => (
-    <KvibRangeSlider {...args}>
+    <KvibRangeSlider aria-label={["min", "max"]} {...args}>
       <RangeSliderTrack>
         <RangeSliderFilledTrack />
       </RangeSliderTrack>
@@ -190,10 +190,10 @@ export const RangeSlider: Story = {
 };
 
 export const RangeSliderColors: Story = {
-  args: { ariaLabel: ["min", "max"], defaultValue: [10, 40] },
+  args: { defaultValue: [10, 40] },
   render: (args) => (
     <KvibStack gap={5}>
-      <KvibRangeSlider {...args} colorScheme="green">
+      <KvibRangeSlider {...args} aria-label={["min", "max"]} colorScheme="green">
         <RangeSliderTrack>
           <RangeSliderFilledTrack />
         </RangeSliderTrack>
@@ -201,7 +201,7 @@ export const RangeSliderColors: Story = {
         <RangeSliderThumb index={1} />
       </KvibRangeSlider>
 
-      <KvibRangeSlider {...args} colorScheme="blue">
+      <KvibRangeSlider {...args} aria-label={["min", "max"]} colorScheme="blue">
         <RangeSliderTrack>
           <RangeSliderFilledTrack />
         </RangeSliderTrack>
@@ -209,7 +209,7 @@ export const RangeSliderColors: Story = {
         <RangeSliderThumb index={1} />
       </KvibRangeSlider>
 
-      <KvibRangeSlider {...args} colorScheme="red">
+      <KvibRangeSlider {...args} aria-label={["min", "max"]} colorScheme="red">
         <RangeSliderTrack>
           <RangeSliderFilledTrack />
         </RangeSliderTrack>
@@ -217,7 +217,7 @@ export const RangeSliderColors: Story = {
         <RangeSliderThumb index={1} />
       </KvibRangeSlider>
 
-      <KvibRangeSlider {...args} colorScheme="gray">
+      <KvibRangeSlider {...args} aria-label={["min", "max"]} colorScheme="gray">
         <RangeSliderTrack>
           <RangeSliderFilledTrack />
         </RangeSliderTrack>
@@ -230,14 +230,13 @@ export const RangeSliderColors: Story = {
 
 export const RangeSliderOrientation: Story = {
   args: {
-    ariaLabel: ["min", "max"],
     defaultValue: [20, 60],
     colorScheme: "green",
     minH: "32",
     orientation: "vertical",
   },
   render: (args) => (
-    <KvibRangeSlider {...args}>
+    <KvibRangeSlider aria-label={["min", "max"]} {...args}>
       <RangeSliderTrack>
         <RangeSliderFilledTrack />
       </RangeSliderTrack>
@@ -248,9 +247,9 @@ export const RangeSliderOrientation: Story = {
 };
 
 export const RangeSliderCustomizing: Story = {
-  args: { ariaLabel: ["min", "max"], defaultValue: [30, 80] },
+  args: { defaultValue: [30, 80] },
   render: (args) => (
-    <KvibRangeSlider {...args}>
+    <KvibRangeSlider {...args} aria-label={["min", "max"]}>
       <RangeSliderTrack bg="red.100">
         <RangeSliderFilledTrack bg="tomato" />
       </RangeSliderTrack>
@@ -267,7 +266,7 @@ export const RangeSliderCustomizing: Story = {
 export const RangeSliderDiscrete: Story = {
   args: { defaultValue: [120, 240], min: 0, max: 300, step: 30 },
   render: (args) => (
-    <KvibRangeSlider {...args}>
+    <KvibRangeSlider {...args} aria-label={["min", "max"]}>
       <RangeSliderTrack>
         <RangeSliderFilledTrack />
       </RangeSliderTrack>
