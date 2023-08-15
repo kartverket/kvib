@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 1.21.2
+
+### Patch Changes
+
+- 851fd8b38: Legger til gap i feilmelding på Form Control.
+
 ## 1.21.1
 
 ### Patch Changes
