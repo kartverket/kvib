@@ -77,7 +77,6 @@ const meta: Meta<typeof KvibRangeSlider> = {
         type: { summary: "(value: number) => string" },
       },
       control: "text",
-      // Note: This function may not be controlled from Storybook directly.
     },
 
     id: {
@@ -150,9 +149,6 @@ const meta: Meta<typeof KvibRangeSlider> = {
       },
       control: "array",
     },
-
-    // Note: onChange, onChangeEnd, and onChangeStart functions may not be controlled from Storybook directly,
-    // but you can still provide their types and descriptions for documentation purposes.
 
     step: {
       description: "The step in which increments/decrements have to be made",
