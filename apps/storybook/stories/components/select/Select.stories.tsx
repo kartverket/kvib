@@ -136,7 +136,7 @@ type Story = StoryObj<typeof KvibSelect>;
 export const Select: Story = {
   args: {},
   render: (args) => (
-    <KvibSelect {...args} placeholder="Velg alternativ">
+    <KvibSelect {...args} placeholder="Velg alternativ" aria-label="select">
       <option value="option1">Alternativ 1</option>
       <option value="option2">Alternativ 2</option>
       <option value="option3">Alternativ 3</option>
@@ -148,10 +148,10 @@ export const SelectSizes: Story = {
   args: {},
   render: (args) => (
     <KvibStack spacing={3}>
-      <KvibSelect {...args} placeholder="extra small" size="xs" />
-      <KvibSelect {...args} placeholder="small" size="sm" />
-      <KvibSelect {...args} placeholder="medium" size="md" />
-      <KvibSelect {...args} placeholder="large" size="lg" />
+      <KvibSelect {...args} placeholder="extra small" size="xs" aria-label="select extra small" />
+      <KvibSelect {...args} placeholder="small" size="sm" aria-label="select small" />
+      <KvibSelect {...args} placeholder="medium" size="md" aria-label="select medium" />
+      <KvibSelect {...args} placeholder="large" size="lg" aria-label="select large" />
     </KvibStack>
   ),
 };
@@ -160,10 +160,10 @@ export const SelectVariants: Story = {
   args: {},
   render: (args) => (
     <KvibStack spacing={3}>
-      <KvibSelect {...args} variant="outline" placeholder="Outline" />
-      <KvibSelect {...args} variant="filled" placeholder="Filled" />
-      <KvibSelect {...args} variant="flushed" placeholder="Flushed" />
-      <KvibSelect {...args} variant="unstyled" placeholder="Unstyled" />
+      <KvibSelect {...args} variant="outline" placeholder="Outline" aria-label="select outline" />
+      <KvibSelect {...args} variant="filled" placeholder="Filled" aria-label="select filled" />
+      <KvibSelect {...args} variant="flushed" placeholder="Flushed" aria-label="select flushed" />
+      <KvibSelect {...args} variant="unstyled" placeholder="Unstyled" aria-label="select unstyled" />
     </KvibStack>
   ),
 };
@@ -171,13 +171,25 @@ export const SelectVariants: Story = {
 export const SelectIcon: Story = {
   args: {},
   render: (args) => (
-    <KvibSelect {...args} icon={<Icon icon="expand_circle_down" weight={300} />} placeholder="Woohoo! Nytt ikon" />
+    <KvibSelect
+      {...args}
+      icon={<Icon icon="expand_circle_down" weight={300} />}
+      placeholder="Woohoo! Nytt ikon"
+      aria-label="select change Icon"
+    />
   ),
 };
 
 export const SelectStyles: Story = {
   args: {},
   render: (args) => (
-    <KvibSelect {...args} bg="tomato" borderColor="tomato" color="white" placeholder="Ny bakgrunnsfarge!" />
+    <KvibSelect
+      {...args}
+      bg="red.500"
+      borderColor="red.500"
+      color="white"
+      placeholder="Ny bakgrunnsfarge!"
+      aria-label="select override style"
+    />
   ),
 };
