@@ -2,6 +2,7 @@ import React, { ReactNode, useEffect, useRef } from "react";
 export { Text } from "@chakra-ui/react";
 import AsyncSelect from "react-select/async";
 import { GroupBase, OptionsOrGroups, SingleValue } from "chakra-react-select";
+import { Search } from "@mui/icons-material";
 
 export interface Props<T> {
   loadOptions: (inputValue: string, callback: (options: OptionsOrGroups<T, GroupBase<T>>) => void) => void;
@@ -24,6 +25,9 @@ function AsyncSelect<T>({ loadOptions, handleFromChange, placeholder, debounceTi
 
   return (
     <AsyncSelect
+      components={{
+        DropdownIndicator: () => <Search />,
+      }}
       autoFocus={autoFocus}
       focusBorderColor="none"
       className={className ? className : ""}
