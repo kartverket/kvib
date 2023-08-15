@@ -36,7 +36,6 @@ function AsyncSelect<T>({ loadOptions, handleFromChange, placeholder, debounceTi
       loadingMessage={() => <Text>Laster...</Text>}
       loadOptions={debounceTime ? loadOptionsDebounce : loadOptions}
       blurInputOnSelect={false}
-      controlShouldRenderValue={false}
       placeholder={placeholder ? placeholder : "Søk her"}
     />
   );
