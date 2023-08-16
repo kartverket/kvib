@@ -5,7 +5,6 @@ import {
   forwardRef,
   Spinner,
   HStack,
-  useButtonGroup,
 } from "@chakra-ui/react";
 import { Icon } from "../icon";
 
@@ -29,20 +28,9 @@ export type ButtonProps = Omit<
 };
 
 export const Button = forwardRef<ButtonProps, "button">(
-  ({ children, iconFill, colorScheme, isDisabled, isLoading, leftIcon, rightIcon, ...props }, ref) => {
-    const buttonGroup = useButtonGroup();
-    const finalColorScheme = (colorScheme ?? buttonGroup?.colorScheme ?? "green") as Required<
-      ButtonProps["colorScheme"]
-    >;
-
+  ({ children, iconFill, isDisabled, isLoading, leftIcon, rightIcon, ...props }, ref) => {
     return (
-      <ChakraButton
-        {...props}
-        ref={ref}
-        colorScheme={finalColorScheme}
-        isDisabled={isDisabled || isLoading}
-        aria-busy={isLoading}
-      >
+      <ChakraButton {...props} ref={ref} isDisabled={isDisabled || isLoading} aria-busy={isLoading}>
         {isLoading && (
           <Center position="absolute" right="0" left="0">
             <Spinner size="sm" />

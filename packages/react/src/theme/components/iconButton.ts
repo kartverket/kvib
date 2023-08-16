@@ -66,6 +66,5 @@ export const IconButtonTheme = defineStyleConfig({
   defaultProps: {
     variant: "solid",
     size: "md",
-    colorScheme: "green",
   },
 });

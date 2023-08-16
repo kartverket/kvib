@@ -11,10 +11,10 @@ export type LinkProps = Omit<ChakraLinkProps, "colorScheme" | "variant"> & {
  *
  * You can specify the `color` prop to get different link designs.
  */
-export const Link = forwardRef<LinkProps, "a">(({ children, colorScheme = "green", ...props }, ref) => {
+export const Link = forwardRef<LinkProps, "a">(({ children, ...props }, ref) => {
   const isExternal = props.isExternal !== undefined ? props.isExternal : Boolean(props.href?.match(/^https?:\/\//));
   return (
-    <ChakraLink {...props} ref={ref} colorScheme={colorScheme} isExternal={isExternal}>
+    <ChakraLink {...props} ref={ref} isExternal={isExternal}>
       {children}
       {isExternal && (
         <span

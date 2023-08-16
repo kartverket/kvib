@@ -1,15 +1,18 @@
-import { extendTheme } from "@chakra-ui/react";
-import { theme as defaultTheme } from "@chakra-ui/theme";
+import { extendTheme, withDefaultColorScheme } from "@chakra-ui/react";
 import * as components from "./components";
-
 import * as tokens from "./tokens";
 
-export const theme = extendTheme({
-  ...defaultTheme,
-  ...tokens,
+const defaultTheme = extendTheme(
+  withDefaultColorScheme({ colorScheme: "green" }),
+  withDefaultColorScheme({ colorScheme: "gray", components: ["Badge", "Code", "Table", "Tag"] })
+);
 
-  components: {
-    ...defaultTheme.components,
-    ...components,
+export const theme = extendTheme(
+  {
+    ...tokens,
+    components: {
+      ...components,
+    },
   },
-});
+  defaultTheme
+);

@@ -227,7 +227,6 @@ export const RangeSliderColors: Story = {
 export const RangeSliderOrientation: Story = {
   args: {
     defaultValue: [20, 60],
-    colorScheme: "green",
     minH: "32",
     orientation: "vertical",
   },
