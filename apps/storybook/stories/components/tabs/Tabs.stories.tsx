@@ -9,7 +9,7 @@ import {
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibTabs> = {
-  title: "Komponenter/Tabs**",
+  title: "Komponenter/Tabs",
   component: KvibTabs,
   parameters: {
     docs: {

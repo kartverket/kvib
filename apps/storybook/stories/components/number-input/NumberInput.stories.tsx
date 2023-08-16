@@ -4,7 +4,7 @@ import { NumberInputStepper as KvibNumberInputStepper } from "@kvib/react/src/nu
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibNumberInput> = {
-  title: "Komponenter/Input**/Number Input**",
+  title: "Komponenter/Input/Number Input",
   component: KvibNumberInput,
   parameters: {
     docs: {

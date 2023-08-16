@@ -3,7 +3,7 @@ import { IconButton as KvibIconButton, HStack } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibIconButton> = {
-  title: "Komponenter/Icon Button**",
+  title: "Komponenter/Icon Button",
   component: KvibIconButton,
   parameters: {
     docs: {
