@@ -75,12 +75,12 @@ export default meta;
 type Story = StoryObj<typeof KvibSkeleton>;
 
 export const Skeleton: Story = {
-  args: { height: "20px" },
+  args: {},
   render: (args) => (
     <KvibStack>
-      <KvibSkeleton {...args} />
-      <KvibSkeleton {...args} />
-      <KvibSkeleton {...args} />
+      <KvibSkeleton {...args} height="20px" />
+      <KvibSkeleton {...args} height="20px" />
+      <KvibSkeleton {...args} height="20px" />
     </KvibStack>
   ),
 };
