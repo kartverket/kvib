@@ -67,21 +67,12 @@ export const Accordion: Story = {
   render: (args) => (
     <KvibAccordion {...args}>
       <AccItem>
-        <AccordionButton>Hvordan søker jeg?</AccordionButton>
-        <AccordionPanel>
-          Du kan søke opp en eiendom ved å bruke eiendommens adresse eller matrikkelnummer. Søket starter når du har
-          skrevet inn minst tre tegn. Er du usikker på skrivemåten skriver du så langt du er sikker. For å snevre inn
-          antall treff, kan du fylle ut feltet for "Sted". Et matrikkelnummer består av tall i følgende rekkefølge:
-          kommunenummer, gårdsnummer, bruksnummer, festenummer, seksjonsnummer.{" "}
-        </AccordionPanel>
+        <AccordionButton>Tittel 1</AccordionButton>
+        <AccordionPanel>Innhold 1</AccordionPanel>
       </AccItem>
       <AccItem>
-        <AccordionButton>Kan jeg se informasjon om andre eiendommer enn min egen?</AccordionButton>
-        <AccordionPanel>
-          Ja. Eiendomsdata fra grunnbok og matrikkel er, med få unntak, tilgjengelig for alle. Det vil si at du kan søke
-          på hvilken som helst eiendom, og logge inn for å se en utskrift fra grunnboken. Informasjonen er offentlig
-          tilgjengelig og grunneier eller andre parter blir ikke varslet dersom det blir gjort søk på eiendommen.
-        </AccordionPanel>
+        <AccordionButton>Tittel 2</AccordionButton>
+        <AccordionPanel>Innhold 2</AccordionPanel>
       </AccItem>
     </KvibAccordion>
   ),
@@ -129,12 +120,21 @@ export const AccordionAllowMultiple: Story = {
   render: (args) => (
     <KvibAccordion {...args}>
       <AccItem>
-        <AccordionButton>Klikk meg</AccordionButton>
-        <AccordionPanel>Tekst tekst skrift</AccordionPanel>
+        <AccordionButton>Hvordan søker jeg?</AccordionButton>
+        <AccordionPanel>
+          Du kan søke opp en eiendom ved å bruke eiendommens adresse eller matrikkelnummer. Søket starter når du har
+          skrevet inn minst tre tegn. Er du usikker på skrivemåten skriver du så langt du er sikker. For å snevre inn
+          antall treff, kan du fylle ut feltet for "Sted". Et matrikkelnummer består av tall i følgende rekkefølge:
+          kommunenummer, gårdsnummer, bruksnummer, festenummer, seksjonsnummer.{" "}
+        </AccordionPanel>
       </AccItem>
       <AccItem>
-        <AccordionButton>Klikk meg</AccordionButton>
-        <AccordionPanel>Tekst tekst skrift</AccordionPanel>
+        <AccordionButton>Kan jeg se informasjon om andre eiendommer enn min egen?</AccordionButton>
+        <AccordionPanel>
+          Ja. Eiendomsdata fra grunnbok og matrikkel er, med få unntak, tilgjengelig for alle. Det vil si at du kan søke
+          på hvilken som helst eiendom, og logge inn for å se en utskrift fra grunnboken. Informasjonen er offentlig
+          tilgjengelig og grunneier eller andre parter blir ikke varslet dersom det blir gjort søk på eiendommen.
+        </AccordionPanel>
       </AccItem>
     </KvibAccordion>
   ),
@@ -145,12 +145,12 @@ export const AccordionReduceMotion: Story = {
   render: (args) => (
     <KvibAccordion {...args}>
       <AccItem>
-        <AccordionButton>Trykk her</AccordionButton>
-        <AccordionPanel>Tekst</AccordionPanel>
+        <AccordionButton>Overskrift 1</AccordionButton>
+        <AccordionPanel>Eksempel 1</AccordionPanel>
       </AccItem>
       <AccItem>
-        <AccordionButton>Trykk her</AccordionButton>
-        <AccordionPanel>Tekst</AccordionPanel>
+        <AccordionButton>Overskrift 2</AccordionButton>
+        <AccordionPanel>Eksempel 2</AccordionPanel>
       </AccItem>
     </KvibAccordion>
   ),
