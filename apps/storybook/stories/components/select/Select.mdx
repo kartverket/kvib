@@ -1,13 +1,35 @@
-import { Meta } from "@storybook/blocks";
+import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
+import * as SelectStories from "./Select.stories";
 
-<Meta title="Komponenter/Select" />
+<Meta of={SelectStories} />
 
 # Select
 
-Se [https://chakra-ui.com/docs/components/select](https://chakra-ui.com/docs/components/select) for eksempler og dokumentasjon.
+Select er et komponent som gjør at brukere kan velge verdier fra forhåndsdefinerte alternativer.
 
 ## Ta i bruk
 
 ```jsx
 import { Select } from "@kvib/react";
 ```
+
+## Props
+
+<Canvas of={SelectStories.Select} />
+<Controls of={SelectStories.Select} />
+
+## Størrelser
+
+<Canvas of={SelectStories.SelectSizes} />
+
+## Varianter
+
+<Canvas of={SelectStories.SelectVariants} />
+
+## Endre ikon
+
+<Canvas of={SelectStories.SelectIcon} />
+
+## Overstyring av stil
+
+<Canvas of={SelectStories.SelectStyles} />
