@@ -39,6 +39,7 @@
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@fontsource/mulish": "^4.5.14",
+    "chakra-react-select": "^4.7.0",
     "framer-motion": "^10.5.0",
     "material-symbols": "^0.5.4"
   }
