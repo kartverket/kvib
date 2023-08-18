@@ -235,7 +235,7 @@ export const buttonTheme = defineStyleConfig({
       minWidth: "90px",
       minHeight: "24px",
       ".material-symbols-rounded": {
-        fontSize: "12px",
+        fontSize: "20px",
       },
     },
     sm: {
@@ -246,7 +246,7 @@ export const buttonTheme = defineStyleConfig({
       minWidth: "100px",
       minHeight: "32px",
       ".material-symbols-rounded": {
-        fontSize: "14px",
+        fontSize: "20px",
       },
     },
     md: {
@@ -257,7 +257,7 @@ export const buttonTheme = defineStyleConfig({
       minWidth: "100px",
       minHeight: "40px",
       ".material-symbols-rounded": {
-        fontSize: "16px",
+        fontSize: "24px",
       },
     },
     lg: {
@@ -268,7 +268,7 @@ export const buttonTheme = defineStyleConfig({
       minWidth: "106px",
       minHeight: "48px",
       ".material-symbols-rounded": {
-        fontSize: "16px",
+        fontSize: "24px",
       },
     },
   },
