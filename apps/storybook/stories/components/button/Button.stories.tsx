@@ -2,7 +2,7 @@ import { Button as KvibButton, VStack, StackDivider, ButtonGroup as KvibButtonGr
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibButton> = {
-  title: "Komponenter/Button**",
+  title: "Komponenter/Button",
   component: KvibButton,
   parameters: {
     docs: {

@@ -1,13 +1,49 @@
-import { Meta } from "@storybook/blocks";
+import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
+import * as RangeSliderStories from "./RangeSlider.stories";
 
-<Meta title="Komponenter/Range Slider" />
+<Meta of={RangeSliderStories} />
 
 # Range Slider
 
-Se [https://chakra-ui.com/docs/components/range-slider](https://chakra-ui.com/docs/components/range-slider) for eksempler og dokumentasjon.
+RangeSlider er en slider med to dragbare knapper som brukes til å velge område med verdier.
 
 ## Ta i bruk
 
 ```jsx
 import { RangeSlider, RangeSliderTrack, RangeSliderFilledTrack, RangeSliderThumb } from "@kvib/react";
+```
+
+## Props
+
+<Canvas of={RangeSliderStories.RangeSlider} />
+<Controls of={RangeSliderStories.RangeSlider} />
+
+## Farger
+
+<Canvas of={RangeSliderStories.RangeSliderColors} />
+
+## Vertikal Range Slider
+
+<Canvas of={RangeSliderStories.RangeSliderOrientation} />
+
+## Tilpasset Range Slider
+
+<Canvas of={RangeSliderStories.RangeSliderCustomizing} />
+
+## Discrete Range Slider
+
+<Canvas of={RangeSliderStories.RangeSliderDiscrete} />
+
+## Få tak i siste valgte verdi på slider
+
+For å få tak i siste valgte verdi fra slideren etter den har blitt oppdatert flere ganger, kan man bruke `onChangeEnd`.
+
+```jsx
+<RangeSlider aria-label={["min", "max"]} onChangeEnd={(val) => console.log(val)}>
+  <RangeSliderTrack>
+    <RangeSliderFilledTrack />
+  </RangeSliderTrack>
+  <RangeSliderThumb index={0} />
+  <RangeSliderThumb index={1} />
+</RangeSlider>
 ```
