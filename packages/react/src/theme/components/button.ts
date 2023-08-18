@@ -279,7 +279,6 @@ export const buttonTheme = defineStyleConfig({
     ghost: variantGhost,
   },
   defaultProps: {
-    colorScheme: "green",
     variant: "solid",
     size: "md",
   },
