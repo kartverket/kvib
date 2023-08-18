@@ -1,4 +1,4 @@
-import { Box, Divider, Flex, FlexProps, Heading, Image, Link, Text } from "@chakra-ui/react";
+import { Box, Divider, Flex, FlexProps, Heading, Image, Link, Text } from "@kvib/react/src";
 
 export type FooterProps = {
   accessibilityUrl?: string;

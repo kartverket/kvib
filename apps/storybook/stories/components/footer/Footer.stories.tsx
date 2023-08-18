@@ -1,4 +1,3 @@
-// import { VStack, StackDivider } from "@kvib/react/src";
 import { Footer as KvibFooter } from "@kvib/react/src/footer/Footer";
 import { Meta, StoryObj } from "@storybook/react";
 
