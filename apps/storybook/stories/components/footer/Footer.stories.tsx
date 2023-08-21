@@ -61,14 +61,26 @@ const meta: Meta<typeof KvibFooter> = {
 export default meta;
 type Story = StoryObj<typeof KvibFooter>;
 
-export const Footer: Story = {
+export const FooterAll: Story = {
   args: {
-    accessibilityUrl: undefined,
+    accessibilityUrl: "/",
     excludeContactInfo: false,
     excludeHelp: false,
     excludeNews: false,
     excludeOpeningHours: false,
     excludeSocialMedia: false,
+  },
+  render: (args) => <KvibFooter {...args} />,
+};
+
+export const FooterNone: Story = {
+  args: {
+    accessibilityUrl: undefined,
+    excludeContactInfo: true,
+    excludeHelp: true,
+    excludeNews: true,
+    excludeOpeningHours: true,
+    excludeSocialMedia: true,
   },
   render: (args) => <KvibFooter {...args} />,
 };
