@@ -84,7 +84,7 @@ const radioArgTypes = {
   },
   isChecked: {
     description:
-      "If true,the radio will be set as checked. You need to pass onChange to update its value (since it is controlled)",
+      "If true, the radio will be set as checked. You need to pass onChange to update its value (since it is controlled)",
     table: {
       type: { summary: "boolean" },
     },
