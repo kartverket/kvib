@@ -40,7 +40,7 @@ export interface Props<T> {
   variant?: Variant;
 }
 
-// SearchAsync component uses the async version of react-select to fetch and display options.
+// SearchAsync uses the async version of react-select to fetch and display options.
 export const SearchAsync = <T extends unknown>({
   loadOptions,
   handleFromChange,
@@ -69,7 +69,8 @@ export const SearchAsync = <T extends unknown>({
     <ReactSearch
       components={{
         DropdownIndicator: () => dropdownIndicator ?? null,
-        IndicatorSeparator: () => null,
+        // Only use separator when there is a dropdownindicator
+        ...(!dropdownIndicator ? { IndicatorSeparator: () => null } : {}),
       }}
       isClearable={isClearable}
       autoFocus={autoFocus}
@@ -87,11 +88,9 @@ export const SearchAsync = <T extends unknown>({
   );
 };
 
-// Types for timer and the function we intend to debounce.
 type Timer = ReturnType<typeof setTimeout>;
 type SomeFunction<T> = (inputValue: string, callback: (options: OptionsOrGroups<T, GroupBase<T>>) => void) => void;
 
-// Custom hook to debounce a function.
 const useDebounce = <T extends unknown>(func: SomeFunction<T>, delay = 300) => {
   // useRef is used to hold a mutable reference to the timer which doesn't cause re-renders.
   const timer = useRef<Timer>();

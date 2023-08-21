@@ -1,4 +1,4 @@
-import { SearchAsync as KvibSearchAsync, Props, Stack as KvibStack, Box, Icon } from "@kvib/react/src";
+import { SearchAsync as KvibSearchAsync, Stack as KvibStack, Box, Icon } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibSearchAsync> = {
@@ -10,7 +10,72 @@ const meta: Meta<typeof KvibSearchAsync> = {
       canvas: { sourceState: "shown" },
     },
   },
-  argTypes: {},
+  argTypes: {
+    loadOptions: {
+      control: "text",
+    },
+    handleFromChange: {
+      control: "text",
+    },
+    placeholder: {
+      table: {
+        type: { summary: "string" },
+      },
+      control: "text",
+    },
+    autoFocus: {
+      table: {
+        type: { summary: "boolean" },
+      },
+      control: "boolean",
+    },
+    debounceTime: {
+      table: {
+        type: { summary: "number" },
+      },
+      control: "number",
+    },
+    className: {
+      table: {
+        type: { summary: "string" },
+      },
+      control: "text",
+    },
+    isClearable: {
+      table: {
+        type: { summary: "boolean" },
+      },
+      control: "boolean",
+    },
+    dropdownIndicator: {
+      table: {
+        type: { summary: "Element" },
+      },
+      control: "text",
+    },
+    size: {
+      table: {
+        type: { summary: "sm | md | lg" },
+        defaultValue: { summary: "md" },
+      },
+      options: ["sm", "md", "lg"],
+      control: { type: "radio" },
+    },
+    defaultOptions: {
+      table: {
+        type: { summary: "OptionsOrGroups<T, GroupBase<T>>" },
+      },
+      control: "array",
+    },
+    variant: {
+      table: {
+        type: { summary: "outline | filled | flushed | unstyled" },
+        defaultValue: { summary: "outline" },
+      },
+      options: ["outline", "filled", "flushed", "unstyled"],
+      control: { type: "radio" },
+    },
+  },
 };
 
 export default meta;
