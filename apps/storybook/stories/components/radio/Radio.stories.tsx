@@ -16,7 +16,16 @@ const radioArgTypes = {
   size: {
     description: "Size of the Radio",
     table: {
-      type: { summary: " sm | md | lg" },
+      type: { summary: "sm | md | lg" },
+      defaultValue: { summary: "md" },
+    },
+    options: ["sm", "md", "lg"],
+    control: { type: "radio" },
+  },
+  spacing: {
+    description: "The space between the radio icon and its text",
+    table: {
+      type: { summary: "sm | md | lg" },
       defaultValue: { summary: "md" },
     },
     options: ["sm", "md", "lg"],
@@ -27,6 +36,13 @@ const radioArgTypes = {
     table: {
       type: { summary: "string" },
       control: { type: "boolean" },
+    },
+  },
+  id: {
+    description: "Refers to the id of the radio",
+    table: {
+      type: { summary: "string" },
+      control: { type: "text" },
     },
   },
   defaultChecked: {
@@ -44,15 +60,31 @@ const radioArgTypes = {
     },
   },
   isDisabled: {
-    description: "If true, the radio will be disabeld",
+    description: "If true, the radio will be disabled",
     table: {
       type: { summary: "boolean" },
     },
     defaultValue: { summary: "false" },
     control: { type: "boolean" },
   },
+  variant: {
+    description: "The variant of the radio",
+    table: {
+      type: { summary: "string" },
+    },
+    control: { type: "text" },
+  },
   isFocusable: {
     description: "If true, and isDisabled is true, the radio will remain focusable but not interactive",
+    table: {
+      type: { summary: "boolean" },
+    },
+    defaultValue: { summary: "false" },
+    control: { type: "boolean" },
+  },
+  isChecked: {
+    description:
+      "If true,the radio will be set as checked. You need to pass onChange to update its value (since it is controlled)",
     table: {
       type: { summary: "boolean" },
     },
@@ -84,18 +116,18 @@ const radioArgTypes = {
     control: { type: "boolean" },
   },
   name: {
-    description: "The name of the input field ina  radio",
+    description: "The name of the input field in a radio",
     table: {
       type: { summary: "string" },
     },
-    defaultValue: { summary: "" },
+    control: { type: "text" },
   },
   onChange: {
     description: "The function that is ran when the state of the radio changes",
     table: {
-      type: { summary: "boolean" },
+      type: { summary: "callback()" },
     },
-    defaultValue: { summary: "false" },
+    defaultValue: { summary: "none" },
   },
   colorScheme: {
     description: "Color of the radio",
@@ -104,7 +136,7 @@ const radioArgTypes = {
         summary:
           "whiteAlpha | blackAlpha | gray | red | orange | yellow | green | teal | blue | cyan | purple | pink | linkedin | facebook | messenger | whatsapp | twitter | telegram",
       },
-      defaultValue: { summary: "green" },
+      defaultValue: { summary: "blue" },
     },
     options: [
       "whiteAlpha",
@@ -130,26 +162,28 @@ const radioArgTypes = {
   },
 };
 
-const radioGroupArgTypes = {};
+// const radioGroupArgTypes = {};
 
 export default meta;
 type Story = StoryObj<typeof KvibRadio>;
 
 export const Radio: Story = {
   argTypes: radioArgTypes,
-  args: { colorScheme: "green", size: "md" },
+  args: { onChange: undefined },
   render: (args) => <KvibRadio {...args}>Alternativ</KvibRadio>,
 };
 
-export const RadioGroup: Story = {
-  argTypes: radioGroupArgTypes,
-  args: {},
-  render: (args) => <KvibRadioGroup></KvibRadioGroup>,
-};
+// export const RadioGroup: Story = {
+//   argTypes: radioGroupArgTypes,
+//   args: {},
+//   render: (args) =>
+//     <KvibRadioGroup {...args}>
+//       <KvibRadio>Radioknapp</KvibRadio>
+//     </KvibRadioGroup>,
+// };
 
 export const Color: Story = {
-  argTypes: radioArgTypes,
-  args: { size: "md" },
+  args: { size: "lg" },
   render: (args) => (
     <KvibRadioGroup>
       <KvibStack direction={"column"}>
@@ -168,13 +202,20 @@ export const Color: Story = {
 };
 
 export const Size: Story = {
-  argTypes: radioArgTypes,
   args: { colorScheme: "green" },
   render: (args) => (
     <KvibRadioGroup defaultValue="3">
-      <KvibRadio {...args} size={"sm"} value="1"></KvibRadio>
-      <KvibRadio {...args} size={"md"} value="2"></KvibRadio>
-      <KvibRadio {...args} size={"lg"} value="3"></KvibRadio>
+      <KvibStack>
+        <KvibRadio {...args} size={"sm"} value="1">
+          sm
+        </KvibRadio>
+        <KvibRadio {...args} size={"md"} value="2">
+          md
+        </KvibRadio>
+        <KvibRadio {...args} size={"lg"} value="3">
+          lg
+        </KvibRadio>
+      </KvibStack>
     </KvibRadioGroup>
   ),
 };
