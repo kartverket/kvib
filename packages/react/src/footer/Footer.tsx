@@ -29,7 +29,6 @@ export const Footer = ({
 }: FooterProps) => {
   const onlyOneIncluded =
     (!excludeContactInfo || !excludeOpeningHours ? 1 : 0) + (!excludeHelp ? 1 : 0) + (!excludeNews ? 1 : 0) <= 1;
-  console.log(onlyOneIncluded);
 
   return (
     <Box marginTop="auto" alignSelf="flex-end" w="full" py="12" px="6" bg="#f5f2f2" borderTop="8px solid #1a833b">
