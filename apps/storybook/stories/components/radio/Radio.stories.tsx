@@ -1,4 +1,4 @@
-import { Radio as KvibRadio, RadioGroup as KvibRadioGroup } from "@kvib/react/src";
+import { Radio as KvibRadio, RadioGroup as KvibRadioGroup, Stack as KvibStack } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibRadio> = {
@@ -10,80 +10,171 @@ const meta: Meta<typeof KvibRadio> = {
       canvas: { sourceState: "shown" },
     },
   },
-  argTypes: {
-    size: {
-      description: "Size of the Radio",
-      table: {
-        type: { summary: " sm | md | lg" },
-        defaultValue: { summary: "md" },
-      },
-      options: ["sm", "md", "lg"],
-      control: { type: "radio" },
+};
+
+const radioArgTypes = {
+  size: {
+    description: "Size of the Radio",
+    table: {
+      type: { summary: " sm | md | lg" },
+      defaultValue: { summary: "md" },
     },
-    colorScheme: {
-      description: "Color of the radio",
-      table: {
-        type: {
-          summary:
-            "whiteAlpha | blackAlpha | gray | red | orange | yellow | green | teal | blue | cyan | purple | pink | linkedin | facebook | messenger | whatsapp | twitter | telegram",
-        },
-        defaultValue: { summary: "green" },
-      },
-      options: [
-        "whiteAlpha",
-        "blackAlpha",
-        "gray",
-        "red",
-        "orange",
-        "yellow",
-        "green",
-        "teal",
-        "blue",
-        "cyan",
-        "purple",
-        "pink",
-        "linkedin",
-        "facebook",
-        "messenger",
-        "whatsapp",
-        "twitter",
-        "telegram",
-      ],
-      control: { type: "select" },
+    options: ["sm", "md", "lg"],
+    control: { type: "radio" },
+  },
+  aria_describedby: {
+    description: "Refers to the id of the radio's label",
+    table: {
+      type: { summary: "string" },
+      control: { type: "boolean" },
     },
   },
+  defaultChecked: {
+    description: "If true, the radio wil be initially checked",
+    table: {
+      type: { summary: "boolean" },
+    },
+    defaultValue: { summary: "false" },
+    control: { type: "boolean" },
+  },
+  inputProps: {
+    description: "Additional props forwarded to the input element",
+    table: {
+      type: { summary: "" },
+    },
+  },
+  isDisabled: {
+    description: "If true, the radio will be disabeld",
+    table: {
+      type: { summary: "boolean" },
+    },
+    defaultValue: { summary: "false" },
+    control: { type: "boolean" },
+  },
+  isFocusable: {
+    description: "If true, and isDisabled is true, the radio will remain focusable but not interactive",
+    table: {
+      type: { summary: "boolean" },
+    },
+    defaultValue: { summary: "false" },
+    control: { type: "boolean" },
+  },
+  isInvalid: {
+    description: "If true, the radio will be invalid. Sets 'aria-invalid' to true",
+    table: {
+      type: { summary: "boolean" },
+    },
+    defaultValue: { summary: "false" },
+    control: { type: "boolean" },
+  },
+  isReadOnly: {
+    description: "If true, the radio will be read-only",
+    table: {
+      type: { summary: "boolean" },
+    },
+    defaultValue: { summary: "false" },
+    control: { type: "boolean" },
+  },
+  isRequired: {
+    description: "If true, the radio button will be required. Sets 'aria-required' to true",
+    table: {
+      type: { summary: "boolean" },
+    },
+    defaultValue: { summary: "false" },
+    control: { type: "boolean" },
+  },
+  name: {
+    description: "The name of the input field ina  radio",
+    table: {
+      type: { summary: "string" },
+    },
+    defaultValue: { summary: "" },
+  },
+  onChange: {
+    description: "The function that is ran when the state of the radio changes",
+    table: {
+      type: { summary: "boolean" },
+    },
+    defaultValue: { summary: "false" },
+  },
+  colorScheme: {
+    description: "Color of the radio",
+    table: {
+      type: {
+        summary:
+          "whiteAlpha | blackAlpha | gray | red | orange | yellow | green | teal | blue | cyan | purple | pink | linkedin | facebook | messenger | whatsapp | twitter | telegram",
+      },
+      defaultValue: { summary: "green" },
+    },
+    options: [
+      "whiteAlpha",
+      "blackAlpha",
+      "gray",
+      "red",
+      "orange",
+      "yellow",
+      "green",
+      "teal",
+      "blue",
+      "cyan",
+      "purple",
+      "pink",
+      "linkedin",
+      "facebook",
+      "messenger",
+      "whatsapp",
+      "twitter",
+      "telegram",
+    ],
+    control: { type: "select" },
+  },
 };
+
+const radioGroupArgTypes = {};
 
 export default meta;
 type Story = StoryObj<typeof KvibRadio>;
 
 export const Radio: Story = {
-  args: { colorScheme: "green", size: "md", isDisabled: false, isInvalid: false },
-  render: (args) => (
-    <KvibRadioGroup>
-      <KvibRadio {...args} />
-    </KvibRadioGroup>
-  ),
+  argTypes: radioArgTypes,
+  args: { colorScheme: "green", size: "md" },
+  render: (args) => <KvibRadio {...args}>Alternativ</KvibRadio>,
+};
+
+export const RadioGroup: Story = {
+  argTypes: radioGroupArgTypes,
+  args: {},
+  render: (args) => <KvibRadioGroup></KvibRadioGroup>,
 };
 
 export const Color: Story = {
+  argTypes: radioArgTypes,
   args: { size: "md" },
   render: (args) => (
     <KvibRadioGroup>
-      <KvibRadio {...args} colorScheme={"green"} />
-      <KvibRadio {...args} colorScheme={"blue"} />
-      <KvibRadio {...args} colorScheme={"red"} />
+      <KvibStack direction={"column"}>
+        <KvibRadio {...args} defaultChecked colorScheme={"green"}>
+          Grønn
+        </KvibRadio>
+        <KvibRadio {...args} defaultChecked colorScheme={"blue"}>
+          Blå
+        </KvibRadio>
+        <KvibRadio {...args} defaultChecked colorScheme={"red"}>
+          Rød
+        </KvibRadio>
+      </KvibStack>
     </KvibRadioGroup>
   ),
 };
 
 export const Size: Story = {
+  argTypes: radioArgTypes,
   args: { colorScheme: "green" },
   render: (args) => (
-    <KvibRadioGroup>
-      <KvibRadio {...args} size={"sm"} />
-      <KvibRadio {...args} size={"md"} />
-      <KvibRadio {...args} size={"lg"} />
+    <KvibRadioGroup defaultValue="3">
+      <KvibRadio {...args} size={"sm"} value="1"></KvibRadio>
+      <KvibRadio {...args} size={"md"} value="2"></KvibRadio>
+      <KvibRadio {...args} size={"lg"} value="3"></KvibRadio>
     </KvibRadioGroup>
   ),
 };
