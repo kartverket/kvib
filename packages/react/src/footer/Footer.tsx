@@ -13,7 +13,7 @@ const FooterToggleableFlex = (props: FlexProps) => {
   if (props.hidden) return null;
 
   return (
-    <Flex flexDir={props.flexDir || "column"} gap={1} {...props}>
+    <Flex flexDir={props.flexDir || "column"} gap={1} flex={1} {...props}>
       {props.children}
     </Flex>
   );
@@ -27,13 +27,17 @@ export const Footer = ({
   excludeNews,
   excludeSocialMedia,
 }: FooterProps) => {
+  const onlyOneIncluded =
+    (!excludeContactInfo || !excludeOpeningHours ? 1 : 0) + (!excludeHelp ? 1 : 0) + (!excludeNews ? 1 : 0) <= 1;
+  console.log(onlyOneIncluded);
+
   return (
     <Box marginTop="auto" alignSelf="flex-end" w="full" py="12" px="6" bg="#f5f2f2" borderTop="8px solid #1a833b">
       <Flex flexDir="column" gap={8} maxWidth={1200} mx="auto">
         <Flex alignItems="flex-start" justifyContent="space-between" gap={10} flexWrap="wrap">
           <Image src={"null"} alt="Kartverket Logo" w="140px" />
-          <Flex gap={8} justifyContent="space-between" flex="1" flexWrap="wrap">
-            <Flex flexDir="column" gap={8} justify="space-between">
+          <Flex gap={8} flex="1" flexWrap="wrap">
+            <Flex gap={8} flexDir={onlyOneIncluded ? "row" : "column"} justify="space-between">
               <FooterToggleableFlex hidden={excludeContactInfo}>
                 <Heading size="md" pb={2}>
                   Kontakt oss
@@ -126,7 +130,7 @@ export const Footer = ({
               </Link>
             </FooterToggleableFlex>
           )}
-          <Flex align="center" gap={3}>
+          <Flex align="center" gap={3} flexWrap="wrap">
             <Link href="https://kartverket.no/om-kartverket/personvern" fontWeight="bold">
               Personvern
             </Link>
