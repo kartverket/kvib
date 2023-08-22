@@ -1,4 +1,5 @@
 import { Meta } from "@storybook/blocks";
+import { Alert, AlertIcon, KvibProvider } from "@kvib/react/src";
 
 <Meta title="Info/Bidra/Publish" />
 
@@ -6,6 +7,15 @@ import { Meta } from "@storybook/blocks";
 
 Når komponenten er testet både for oppførsel og UU, kan den merges med master, og legges til i npm-pakken.
 Det er viktig å ha en god changelog for at brukere enkelt skal kunne se om endringer av pakken påvirker komponenter de eventuelt har tatt i bruk i egne prosjekt.
+
+<KvibProvider>
+  <Alert status="info">
+    <AlertIcon />
+    Stegene under gjennomføres kun for å publisere nye endringer i NPM-pakken (packages/react). Dersom du bare har gjort
+    endringer i apps/storybook mappen blir disse automatisk publisert med github-pages, og du trenger ikke foreta deg noe
+    mer.
+  </Alert>
+</KvibProvider>
 
 Under følger noen kjennetegn for versjonsoppdatering: (Informasjonen er hentet fra [Major.Minor.Patch artikkelen](https://medium.com/fiverr-engineering/major-minor-patch-a5298e2e1798))
 

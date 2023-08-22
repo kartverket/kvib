@@ -16,7 +16,7 @@ const meta: Meta<typeof KvibCheckbox> = {
       description: "The color of the Checkbox",
       table: {
         type: { summary: "green | blue" },
-        defaultValue: { summary: "blue" },
+        defaultValue: { summary: "green" },
       },
       control: "radio",
       options: ["green", "blue"],
@@ -55,9 +55,6 @@ type Story = StoryObj<typeof KvibCheckbox>;
 export const Checkbox: Story = {
   args: {
     children: "Dette er en avmerkingsboks",
-    colorScheme: "green",
-    size: "md",
-    isDisabled: false,
   },
   render: (args) => <KvibCheckbox {...args}>{args.children}</KvibCheckbox>,
 };

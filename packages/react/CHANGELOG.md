@@ -1,5 +1,19 @@
 # @kvib/react
 
+## 1.21.3
+
+### Patch Changes
+
+- 05d8140f1: Endret Ikon størrelse i Button. xs og sm 20px, md og lg 24px.
+- 2d0afc623: Samkjører standard fargetema på tvers av komponenter
+- 5880398ff: Legger til manglende className på Icon
+
+## 1.21.2
+
+### Patch Changes
+
+- 851fd8b38: Legger til gap i feilmelding på Form Control.
+
 ## 1.21.1
 
 ### Patch Changes

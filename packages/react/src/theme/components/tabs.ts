@@ -28,7 +28,6 @@ export const tabsTheme = helpers.defineMultiStyleConfig({
     };
   },
   defaultProps: {
-    colorScheme: "green",
     size: "md",
   },
 });
