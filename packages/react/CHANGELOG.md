@@ -1,5 +1,12 @@
 # @kvib/react
 
+## 1.21.4
+
+### Patch Changes
+
+- 31bc5e7a7: Øker størrelse på ikoner for IconButton
+- 4932a44bb: Fjern forwardRef for PinInput som ikke tar imot ref
+
 ## 1.21.3
 
 ### Patch Changes
