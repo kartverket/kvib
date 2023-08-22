@@ -1,7 +1,7 @@
 import { variantSolid, variantOutline, variantLink, variantGhost } from "./button";
 import { defineStyleConfig } from "@chakra-ui/react";
 
-export const IconButtonTheme = defineStyleConfig({
+export const iconButtonTheme = defineStyleConfig({
   baseStyle: () => ({
     borderRadius: "6px",
     outline: 0,
@@ -25,7 +25,7 @@ export const IconButtonTheme = defineStyleConfig({
       width: "24px",
       height: "24px",
       ".material-symbols-rounded": {
-        fontSize: "12px",
+        fontSize: "20px",
       },
     },
     sm: {
@@ -34,7 +34,7 @@ export const IconButtonTheme = defineStyleConfig({
       width: "32px",
       height: "32px",
       ".material-symbols-rounded": {
-        fontSize: "14px",
+        fontSize: "20px",
       },
     },
     md: {
@@ -43,7 +43,7 @@ export const IconButtonTheme = defineStyleConfig({
       width: "40px",
       height: "40px",
       ".material-symbols-rounded": {
-        fontSize: "16px",
+        fontSize: "24px",
       },
     },
     lg: {
@@ -53,7 +53,7 @@ export const IconButtonTheme = defineStyleConfig({
       width: "48px",
       height: "48px",
       ".material-symbols-rounded": {
-        fontSize: "18px",
+        fontSize: "24px",
       },
     },
   },
@@ -65,7 +65,7 @@ export const IconButtonTheme = defineStyleConfig({
   },
   defaultProps: {
     variant: "solid",
-    size: "md",
     colorScheme: "green",
+    size: "md",
   },
 });

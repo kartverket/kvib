@@ -9,7 +9,7 @@ import {
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibTabs> = {
-  title: "Komponenter/Tabs**",
+  title: "Komponenter/Tabs",
   component: KvibTabs,
   parameters: {
     docs: {
@@ -51,7 +51,7 @@ export default meta;
 type Story = StoryObj<typeof KvibTabs>;
 
 export const Tabs: Story = {
-  args: { colorScheme: "green", size: "md" },
+  args: { size: "md" },
   render: (args) => (
     <KvibTabs {...args}>
       <KvibTabList>
@@ -83,7 +83,7 @@ export const TabsColors: Story = {
 };
 
 export const TabsNumber: Story = {
-  args: { colorScheme: "green", size: "md" },
+  args: { size: "md" },
   render: (args) => (
     <KvibTabs {...args}>
       <KvibTabList>
@@ -99,7 +99,6 @@ export const TabsNumber: Story = {
 };
 
 export const TabsSizes: Story = {
-  args: { colorScheme: "green" },
   render: (args) => (
     <VStack alignItems="start">
       <KvibTabs {...args} aria-label="Tabs small" size="sm">
@@ -125,7 +124,7 @@ export const TabsSizes: Story = {
 };
 
 export const TabsPanels: Story = {
-  args: { colorScheme: "green", size: "md" },
+  args: { size: "md" },
   render: (args) => (
     <KvibTabs {...args}>
       <KvibTabList>
@@ -141,7 +140,7 @@ export const TabsPanels: Story = {
 };
 
 export const TabsStates: Story = {
-  args: { colorScheme: "green", size: "md" },
+  args: { size: "md" },
   render: (args) => (
     <KvibTabs {...args}>
       <KvibTabList>

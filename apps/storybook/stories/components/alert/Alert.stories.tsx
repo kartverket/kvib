@@ -3,7 +3,7 @@ import { colors } from "@kvib/react/src/theme/tokens";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof ChakraAlert> = {
-  title: "Komponenter/Alert<3 ",
+  title: "Komponenter/Alert",
   component: ChakraAlert,
   parameters: {
     docs: {

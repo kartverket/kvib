@@ -3,7 +3,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import { VStack } from "@chakra-ui/react";
 
 const meta: Meta<typeof KvibLink> = {
-  title: "Komponenter/Link**",
+  title: "Komponenter/Link",
   component: KvibLink,
   parameters: {
     docs: {

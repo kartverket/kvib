@@ -5,6 +5,7 @@ export const Icon = ({
   weight,
   grade,
   isFilled = false,
+  className = "",
 }: {
   /**The icon from Material symbols you want to display*/
   icon: string;
@@ -23,10 +24,12 @@ export const Icon = ({
 
   /**Decides whether the icon is filled or not*/
   isFilled?: boolean;
+
+  className?: string;
 }) => {
   return (
     <span
-      className="material-symbols-rounded"
+      className={`material-symbols-rounded ${className}`}
       style={{
         fontSize: size,
         color: color,
