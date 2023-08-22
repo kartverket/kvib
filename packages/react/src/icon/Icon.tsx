@@ -33,7 +33,7 @@ export const Icon = ({
       style={{
         fontSize: size,
         color: color,
-        fontVariationSettings: `'FILL' ${isFilled ? 1 : 0}, 'wght' ${weight ? weight : 600}, 'GRAD' ${
+        fontVariationSettings: `'FILL' ${isFilled ? 1 : 0}, 'wght' ${weight ? weight : 500}, 'GRAD' ${
           grade ? grade : 0
         }`,
       }}

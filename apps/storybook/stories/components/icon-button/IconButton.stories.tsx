@@ -24,7 +24,7 @@ const meta: Meta<typeof KvibIconButton> = {
     isDisabled: {
       description: "If true, the button will be disabled.",
       table: {
-        type: { summary: Boolean },
+        type: { summary: "boolean" },
         defaultValue: { summary: false },
       },
       control: "boolean",
@@ -84,17 +84,6 @@ export const IconButtonStates: Story = {
   render: (args) => (
     <HStack>
       <KvibIconButton {...args} aria-label="IconButton disabled" isDisabled></KvibIconButton>
-      <KvibIconButton {...args} aria-label="IconButton loading" isLoading></KvibIconButton>
-    </HStack>
-  ),
-};
-
-export const IconStatesTest: Story = {
-  args: { icon: "add" },
-  render: (args) => (
-    <HStack>
-      <KvibIconButton {...args} aria-label="IconButton disabled" isDisabled iconWeight={100}></KvibIconButton>
-      <KvibIconButton {...args} aria-label="IconButton disabled" isDisabled iconWeight={700}></KvibIconButton>
       <KvibIconButton {...args} aria-label="IconButton loading" isLoading></KvibIconButton>
     </HStack>
   ),
