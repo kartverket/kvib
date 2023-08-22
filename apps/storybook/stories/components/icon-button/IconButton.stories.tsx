@@ -88,3 +88,14 @@ export const IconButtonStates: Story = {
     </HStack>
   ),
 };
+
+export const IconStatesTest: Story = {
+  args: { icon: "add" },
+  render: (args) => (
+    <HStack>
+      <KvibIconButton {...args} aria-label="IconButton disabled" isDisabled iconWeight={100}></KvibIconButton>
+      <KvibIconButton {...args} aria-label="IconButton disabled" isDisabled iconWeight={700}></KvibIconButton>
+      <KvibIconButton {...args} aria-label="IconButton loading" isLoading></KvibIconButton>
+    </HStack>
+  ),
+};
