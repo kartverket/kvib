@@ -9,6 +9,10 @@ const meta: Meta<typeof KvibSearchAsync> = {
       story: { inline: true },
       canvas: { sourceState: "shown" },
     },
+    a11y: {
+      // Label warnings + contrast ratio because of chakra wrapper.
+      disable: true,
+    },
   },
   argTypes: {
     loadOptions: {

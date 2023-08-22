@@ -4,7 +4,7 @@ import { HStack } from "@chakra-ui/layout";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibPinInput> = {
-  title: "Komponenter/Input**/Pin Input**",
+  title: "Komponenter/Input/Pin Input",
   component: KvibPinInput,
   parameters: {
     docs: {

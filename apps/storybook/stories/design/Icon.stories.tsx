@@ -4,7 +4,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import { colors } from "@kvib/react/src/theme/tokens";
 
 const meta: Meta<typeof Icon> = {
-  title: "Design Fundament/Ikoner**",
+  title: "Design Fundament/Ikoner",
   component: Icon,
   parameters: {
     docs: {

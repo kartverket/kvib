@@ -1,13 +1,39 @@
-import { Meta } from "@storybook/blocks";
+import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
+import * as ProgressStories from "./Progress.stories";
 
-<Meta title="Komponenter/Progress" />
+<Meta of={ProgressStories} />
 
 # Progress
 
-Se [https://chakra-ui.com/docs/components/progress](https://chakra-ui.com/docs/components/progress) for eksempler og dokumentasjon.
+Progress brukes til å vise frem status på fremdrift for en oppgave som tar tid eller består av flere steg.
 
 ## Ta i bruk
 
 ```jsx
 import { Progress } from "@kvib/react";
 ```
+
+## Props
+
+<Canvas of={ProgressStories.Progress} />
+<Controls of={ProgressStories.Progress} />
+
+## Progress med striper
+
+<Canvas of={ProgressStories.ProgressStripe} />
+
+## Progress med animerte striper
+
+<Canvas of={ProgressStories.ProgressStripeAnimated} />
+
+## Størrelser
+
+<Canvas of={ProgressStories.ProgressSizes} />
+
+## Farger
+
+<Canvas of={ProgressStories.ProgressColors} />
+
+## Animert
+
+<Canvas of={ProgressStories.ProgressAnimated} />
