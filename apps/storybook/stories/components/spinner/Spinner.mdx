@@ -1,6 +1,7 @@
-import { Meta } from "@storybook/blocks";
+import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
+import * as SpinnerStories from "./Spinner.stories";
 
-<Meta title="Komponenter/Spinner" />
+<Meta of={SpinnerStories} />
 
 # Spinner
 
@@ -11,3 +12,8 @@ Se [https://chakra-ui.com/docs/components/spinner](https://chakra-ui.com/docs/co
 ```jsx
 import { Spinner } from "@kvib/react";
 ```
+
+## Props
+
+<Canvas of={SpinnerStories.Spinner} />
+<Controls of={SpinnerStories.Spinner} />
