@@ -47,9 +47,9 @@ export default meta;
 type Story = StoryObj<typeof KvibStepper>;
 
 const steps = [
-  { title: "First", description: "Contact Info" },
-  { title: "Second", description: "Date & Time" },
-  { title: "Third", description: "Select Rooms" },
+  { title: "Første", description: "Kontaktinfo" },
+  { title: "Andre", description: "Dato og tid" },
+  { title: "Tredje", description: "Velg rom" },
 ];
 
 const StepperExample = ({ ...args }) => {
