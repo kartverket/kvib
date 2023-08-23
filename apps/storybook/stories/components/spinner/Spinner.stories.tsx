@@ -10,19 +10,69 @@ const meta: Meta<typeof KvibSpinner> = {
       canvas: { sourceState: "shown" },
     },
   },
-  argTypes: {},
+  argTypes: {
+    color: {
+      description: "The color of the spinner",
+      table: {
+        type: { summary: "string" },
+      },
+      control: "text",
+    },
+    emptyColor: {
+      description: "The color of the empty area in the spinner",
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "transparent" },
+      },
+      control: "text",
+    },
+    label: {
+      description:
+        "For accessibility, it is important to add a fallback loading text. This text will be visible to screen readers.",
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "Loading..." },
+      },
+      control: "text",
+    },
+    size: {
+      description: "The size of the Spinner",
+      table: {
+        type: { summary: "xs | sm | md | lg | xl" },
+        defaultValue: { summary: "md" },
+      },
+      options: ["xs", "sm", "md", "lg", "xl"],
+      control: { type: "radio" },
+    },
+    speed: {
+      description: "The speed of the spinner",
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "0.45s" },
+      },
+      control: "text",
+    },
+    thickness: {
+      description: "The thickness of the spinner",
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "2px" },
+      },
+      control: "text",
+    },
+  },
 };
 
 export default meta;
 type Story = StoryObj<typeof KvibSpinner>;
 
 export const Spinner: Story = {
-  args: { children: "Spinner" },
+  args: {},
   render: (args) => <KvibSpinner {...args} />,
 };
 
 export const SpinnerColors: Story = {
-  args: { children: "Spinner" },
+  args: {},
   render: (args) => (
     <KvibStack>
       <KvibSpinner {...args} color="blue" />
@@ -31,4 +81,22 @@ export const SpinnerColors: Story = {
       <KvibSpinner {...args} color="gray" />
     </KvibStack>
   ),
+};
+
+export const SpinnerSizes: Story = {
+  args: {},
+  render: (args) => (
+    <KvibStack>
+      <KvibSpinner {...args} size="xs" />
+      <KvibSpinner {...args} size="sm" />
+      <KvibSpinner {...args} size="md" />
+      <KvibSpinner {...args} size="lg" />
+      <KvibSpinner {...args} size="xl" />
+    </KvibStack>
+  ),
+};
+
+export const SpinnerArea: Story = {
+  args: { size: "xl", emptyColor: "gray.200", speed: "0.65s", color: "green.500", thickness: "4px" },
+  render: (args) => <KvibSpinner {...args} />,
 };
