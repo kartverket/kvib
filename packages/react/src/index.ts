@@ -57,3 +57,4 @@ export * from "./visually-hidden";
 export * from "./datepicker";
 export * from "./file-upload";
 export * from "./logo";
+export * from "./search-async";

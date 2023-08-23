@@ -1,5 +1,18 @@
 # @kvib/react
 
+## 1.22.0
+
+### Minor Changes
+
+- c0c58a70b: Legger til SearchAsync-komponent - dette gjør at det er mulig med en dropdown i et søkefelt.
+
+## 1.21.4
+
+### Patch Changes
+
+- 31bc5e7a7: Øker størrelse på ikoner for IconButton
+- 4932a44bb: Fjern forwardRef for PinInput som ikke tar imot ref
+
 ## 1.21.3
 
 ### Patch Changes
