@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 1.23.0
+
+### Minor Changes
+
+- a0cb57e2e: Legger til logokomponent.
+
 ## 1.22.0
 
 ### Minor Changes
