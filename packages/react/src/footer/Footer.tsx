@@ -1,4 +1,4 @@
-import { Box, Divider, Flex, FlexProps, Heading, Image, Link, Text } from "@kvib/react/src";
+import { Box, Divider, Flex, FlexProps, Heading, Link, Logo, Text } from "@kvib/react/src";
 
 export type FooterProps = {
   accessibilityUrl?: string;
@@ -34,7 +34,7 @@ export const Footer = ({
     <Box marginTop="auto" alignSelf="flex-end" w="full" py="12" px="6" bg="#f5f2f2" borderTop="8px solid #1a833b">
       <Flex flexDir="column" gap={8} maxWidth={1200} mx="auto">
         <Flex alignItems="flex-start" justifyContent="space-between" gap={10} flexWrap="wrap">
-          <Image src={"null"} alt="Kartverket Logo" w="140px" />
+          <Logo size={200} variant="horizontal" />
           <Flex gap={8} flex="1" flexWrap="wrap">
             <Flex gap={8} flexDir={onlyOneIncluded ? "row" : "column"} justify="space-between">
               <FooterToggleableFlex hidden={excludeContactInfo}>
