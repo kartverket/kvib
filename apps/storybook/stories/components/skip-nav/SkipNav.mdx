@@ -1,13 +1,43 @@
-import { Meta } from "@storybook/blocks";
+import { Meta, Canvas, Story, Source } from "@storybook/blocks";
+import * as SkipNavStories from "./SkipNav.stories";
 
 <Meta title="Komponenter/Skip Nav" />
 
 # Skip Nav
 
-Se [https://chakra-ui.com/docs/components/skip-nav](https://chakra-ui.com/docs/components/skip-nav) for eksempler og dokumentasjon.
+Skip Nav Link muliggjør at tastaturbrukere kan hoppe til hovedinnholdet på siden.
 
 ## Ta i bruk
 
 ```jsx
 import { SkipNavLink, SkipNavContent } from "@kvib/react";
 ```
+
+## Bruk
+
+`SkipNavLink` burde være en av de første elementene en bruker møter på når de begynner å navigere på siden etter den er lastet inn.
+Det er derfor anbefalt at den er plassert så tidlig som mulig i appen. Den kan enten være et selvlukkende komponent, eller wrappe selve innholdet.
+
+<Source code={`<>
+  // If you want to make it the first element the user encounters
+  <SkipNavLink>Skip to content</SkipNavLink>
+  <App />
+</>
+
+// And inside another component, like App
+
+<div>
+  <SkipNavContent />
+  // The main content below
+</div>
+`} dark />
+
+## Test at det fungerer
+
+Du kan se hvordan SkipNavLink fungerer på denne siden:
+
+1. Plasser musen med et trykk i eksempelet under.
+2. Trykk på tab.
+3. Trykker du på enter vil du bli tatt til hovedinnholdet på siden.
+
+<Canvas of={SkipNavStories.SkipNavLink} />

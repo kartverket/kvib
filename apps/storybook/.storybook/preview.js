@@ -1,4 +1,5 @@
 import { KvibProvider } from "@kvib/react/src/provider/KvibProvider";
+import theme from "./theme";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -7,6 +8,9 @@ export const parameters = {
       color: /(background|color)$/i,
       date: /Date$/,
     },
+  },
+  docs: {
+    theme: theme,
   },
   options: {
     storySort: {

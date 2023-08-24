@@ -1,13 +1,35 @@
-import { Meta } from "@storybook/blocks";
+import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
+import * as SkeletonStories from "./Skeleton.stories";
 
-<Meta title="Komponenter/Skeleton" />
+<Meta of={SkeletonStories} />
 
 # Skeleton
 
-Se [https://chakra-ui.com/docs/components/skeleton](https://chakra-ui.com/docs/components/skeleton) for eksempler og dokumentasjon.
+Skeleton blir brukt til å vise innlastingstatus på en komponent.
 
 ## Ta i bruk
 
 ```jsx
 import { Skeleton, SkeletonCircle, SkeletonText } from "@kvib/react";
 ```
+
+## Props
+
+<Canvas of={SkeletonStories.Skeleton} />
+<Controls of={SkeletonStories.Skeleton} />
+
+## Wrapped rundt andre komponenter
+
+<Canvas of={SkeletonStories.SkeletonWrapped} />
+
+## Sirkel og tekst Skeleton
+
+<Canvas of={SkeletonStories.SkeletonCircle} />
+
+## Farger
+
+<Canvas of={SkeletonStories.SkeletonColors} />
+
+## Ferdiglastet Skeleton
+
+<Canvas of={SkeletonStories.SkeletonLoaded} />
