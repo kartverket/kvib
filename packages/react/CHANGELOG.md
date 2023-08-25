@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 1.23.1
+
+### Patch Changes
+
+- ed962be03: Fjerner hvit bakgrunn på outlined Button.
+
 ## 1.23.0
 
 ### Minor Changes
