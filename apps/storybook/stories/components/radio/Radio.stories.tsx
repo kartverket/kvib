@@ -133,36 +133,14 @@ const radioArgTypes = {
     description: "Color of the radio",
     table: {
       type: {
-        summary:
-          "whiteAlpha | blackAlpha | gray | red | orange | yellow | green | teal | blue | cyan | purple | pink | linkedin | facebook | messenger | whatsapp | twitter | telegram",
+        summary: "green | blue | gray | red | orange | purple",
       },
-      defaultValue: { summary: "blue" },
+      defaultValue: { summary: "Blue" },
     },
-    options: [
-      "whiteAlpha",
-      "blackAlpha",
-      "gray",
-      "red",
-      "orange",
-      "yellow",
-      "green",
-      "teal",
-      "blue",
-      "cyan",
-      "purple",
-      "pink",
-      "linkedin",
-      "facebook",
-      "messenger",
-      "whatsapp",
-      "twitter",
-      "telegram",
-    ],
+    options: ["green", "blue", "gray", "red", "orange", "purple"],
     control: { type: "select" },
   },
 };
-
-// const radioGroupArgTypes = {};
 
 export default meta;
 type Story = StoryObj<typeof KvibRadio>;
@@ -173,28 +151,28 @@ export const Radio: Story = {
   render: (args) => <KvibRadio {...args}>Alternativ</KvibRadio>,
 };
 
-// export const RadioGroup: Story = {
-//   argTypes: radioGroupArgTypes,
-//   args: {},
-//   render: (args) =>
-//     <KvibRadioGroup {...args}>
-//       <KvibRadio>Radioknapp</KvibRadio>
-//     </KvibRadioGroup>,
-// };
-
 export const Color: Story = {
   args: { size: "lg" },
   render: (args) => (
     <KvibRadioGroup>
-      <KvibStack direction={"column"}>
+      <KvibStack direction={"row"}>
         <KvibRadio {...args} defaultChecked colorScheme={"green"}>
           Grønn
         </KvibRadio>
         <KvibRadio {...args} defaultChecked colorScheme={"blue"}>
           Blå
         </KvibRadio>
+        <KvibRadio {...args} defaultChecked colorScheme={"gray"}>
+          Grå
+        </KvibRadio>
         <KvibRadio {...args} defaultChecked colorScheme={"red"}>
           Rød
+        </KvibRadio>
+        <KvibRadio {...args} defaultChecked colorScheme={"orange"}>
+          Oransje
+        </KvibRadio>
+        <KvibRadio {...args} defaultChecked colorScheme={"purple"}>
+          Lilla
         </KvibRadio>
       </KvibStack>
     </KvibRadioGroup>
