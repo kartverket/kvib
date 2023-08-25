@@ -1,13 +1,32 @@
-import { Meta } from "@storybook/blocks";
+import { Meta, Canvas, Controls } from "@storybook/blocks";
+import * as RadioStories from "./Radio.stories";
 
-<Meta title="Komponenter/Radio" />
+<Meta of={RadioStories} />
 
 # Radio
 
-Se [https://chakra-ui.com/docs/components/radio](https://chakra-ui.com/docs/components/radio) for eksempler og dokumentasjon.
+Radioknapper skal benyttes der en bruker kun skal kunne gjøre ett enkelt valg, og ikke flervalg.
+Ved et nytt valg skal eventuelle tidligere valg fjernes automatisk. Feilmelding radioknapp skal brukes for å visualisere
+feil i avkrysningen, dersom dette har skjedd (f.eks. ikke krysset av for et alternativ).
+
+Radio brukes med komponenten RadioGroup. Man må sette value på Radioknappene for at de skal kunne vise hvilken som er valgt.
+Hvis man setter isChecked til true, må man oppdatere knappene med onChange.
 
 ## Ta i bruk
 
 ```jsx
 import { Radio } from "@kvib/react";
 ```
+
+## Props
+
+<Canvas of={RadioStories.Radio} />
+<Controls of={RadioStories.Radio} />
+
+## Farge
+
+<Canvas of={RadioStories.Color} />
+
+## Størrelse
+
+<Canvas of={RadioStories.Size} />
