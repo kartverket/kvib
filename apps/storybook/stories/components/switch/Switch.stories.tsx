@@ -203,9 +203,9 @@ export const SwitchSizes: Story = {
   args: {},
   render: (args) => (
     <KvibStack align="center" direction="row">
-      <KvibSwitch {...args} size="sm" />
-      <KvibSwitch {...args} size="md" />
-      <KvibSwitch {...args} size="lg" />
+      <KvibSwitch {...args} aria-label="Switch small" size="sm" />
+      <KvibSwitch {...args} aria-label="Switch medium" size="md" />
+      <KvibSwitch {...args} aria-label="Switch large" size="lg" />
     </KvibStack>
   ),
 };
@@ -214,10 +214,10 @@ export const SwitchColors: Story = {
   args: { isChecked: true },
   render: (args) => (
     <KvibStack direction="row">
-      <KvibSwitch {...args} colorScheme="green" />
-      <KvibSwitch {...args} colorScheme="blue" />
-      <KvibSwitch {...args} colorScheme="red" />
-      <KvibSwitch {...args} colorScheme="gray" />
+      <KvibSwitch {...args} aria-label="Switch green" colorScheme="green" />
+      <KvibSwitch {...args} aria-label="Switch blue" colorScheme="blue" />
+      <KvibSwitch {...args} aria-label="Switch red" colorScheme="red" />
+      <KvibSwitch {...args} aria-label="Switch gray" colorScheme="gray" />
     </KvibStack>
   ),
 };
@@ -226,22 +226,34 @@ export const SwitchStates: Story = {
   args: {},
   render: (args) => (
     <FormControl>
-      <FormLabel htmlFor="isChecked">isChecked:</FormLabel>
+      <FormLabel id="isCheckedLabel" htmlFor="isChecked">
+        isChecked:
+      </FormLabel>
       <KvibSwitch {...args} id="isChecked" isChecked />
 
-      <FormLabel htmlFor="isDisabled">isDisabled:</FormLabel>
+      <FormLabel id="isDisabledLabel" htmlFor="isDisabled">
+        isDisabled:
+      </FormLabel>
       <KvibSwitch {...args} id="isDisabled" isDisabled defaultChecked />
 
-      <FormLabel htmlFor="isFocusable">isFocusable:</FormLabel>
+      <FormLabel id="isFocusableLabel" htmlFor="isFocusable">
+        isFocusable:
+      </FormLabel>
       <KvibSwitch {...args} id="isFocusable" isFocusable isDisabled />
 
-      <FormLabel htmlFor="isInvalid">isInvalid:</FormLabel>
+      <FormLabel id="isInvalidLabel" htmlFor="isInvalid">
+        isInvalid:
+      </FormLabel>
       <KvibSwitch {...args} id="isInvalid" isInvalid />
 
-      <FormLabel htmlFor="isReadOnly">isReadOnly:</FormLabel>
+      <FormLabel id="isReadOnlyLabel" htmlFor="isReadOnly">
+        isReadOnly:
+      </FormLabel>
       <KvibSwitch {...args} id="isReadOnly" isReadOnly />
 
-      <FormLabel htmlFor="isRequired">isRequired:</FormLabel>
+      <FormLabel id="isRequiredLabel" htmlFor="isRequired">
+        isRequired:
+      </FormLabel>
       <KvibSwitch {...args} id="isRequired" isRequired />
     </FormControl>
   ),
