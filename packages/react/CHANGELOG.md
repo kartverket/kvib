@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 1.24.0
+
+### Minor Changes
+
+- 0142d8f35: Footer-komponent lagt til
+
 ## 1.23.1
 
 ### Patch Changes
