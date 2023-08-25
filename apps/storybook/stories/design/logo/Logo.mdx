@@ -1,0 +1,25 @@
+import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
+import * as LogoStories from "./Logo.stories";
+
+<Meta of={LogoStories} />
+
+# Logo
+
+## Ta i bruk
+
+```jsx
+import { Logo } from "@kvib/react";
+```
+
+## Props
+
+<Canvas of={LogoStories.Logo} />
+<Controls of={LogoStories.Logo} />
+
+## Horisontal
+
+<Canvas of={LogoStories.LogoHorizontal} />
+
+## Størrelser
+
+<Canvas of={LogoStories.LogoSizes} />

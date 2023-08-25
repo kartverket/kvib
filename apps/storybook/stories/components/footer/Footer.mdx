@@ -1,0 +1,22 @@
+import { Title, Canvas, Meta, Story, Controls } from "@storybook/blocks";
+import * as FooterStories from "./Footer.stories";
+
+<Meta of={FooterStories} />
+
+# Footer
+
+## Ta i bruk
+
+```jsx
+import { Footer } from "@kvib/react";
+```
+
+## Med alt innhold
+
+<Canvas of={FooterStories.FooterAll} />
+<Controls of={FooterStories.FooterAll} />
+
+## Uten noe innhold
+
+<Canvas of={FooterStories.FooterNone} />
+<Controls of={FooterStories.FooterNone} />

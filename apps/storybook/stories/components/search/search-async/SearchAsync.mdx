@@ -1,0 +1,39 @@
+import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
+import * as SearchAsyncStories from "./SearchAsync.stories";
+
+<Meta of={SearchAsyncStories} />
+
+# SearchAsync
+
+SearchAsync er et søkefelt som laster inn søkeresultater fra en liste med objekter. Resultatene blir vist i en dropdown der brukeren kan velge hvilket resultat som skal bli valgt.
+
+## Ta i bruk
+
+```jsx
+import { SearchAsync } from "@kvib/react";
+```
+
+## Props
+
+<Canvas of={SearchAsyncStories.SearchAsync} />
+<Controls of={SearchAsyncStories.SearchAsync} />
+
+## Async søkeresultater
+
+<Canvas of={SearchAsyncStories.SearchAsyncResults} />
+
+## Søkeresultater med delay
+
+<Canvas of={SearchAsyncStories.SearchAsyncResultsDebounce} />
+
+## Standardalternativer
+
+<Canvas of={SearchAsyncStories.SearchAsyncDropdownIndicator} />
+
+## Størrelser
+
+<Canvas of={SearchAsyncStories.SearchAsyncSizes} />
+
+## Varianter
+
+<Canvas of={SearchAsyncStories.SearchAsyncVariants} />
