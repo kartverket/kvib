@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 1.24.1
+
+### Patch Changes
+
+- d45d542e3: Legger til footer i KVIB-pakka.
+
 ## 1.24.0
 
 ### Minor Changes
