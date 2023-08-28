@@ -50,7 +50,6 @@ export const variantOutline = defineStyle((props) => {
   if (c === "gray") {
     return {
       border: "1px",
-      bg: colors.white,
       borderColor: colors.gray[200],
       color: colors.black,
       _hover: {
@@ -71,7 +70,6 @@ export const variantOutline = defineStyle((props) => {
   }
   return {
     border: "1px",
-    bg: colors.white,
     borderColor: `${c}.500`,
     color: `${c}.500`,
     _hover: {

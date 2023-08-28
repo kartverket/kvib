@@ -16,30 +16,46 @@ $ yarn add @kvib/react
 
 Etterpå må du wrappe hele react-applikasjonen din `KvibProvider`-komponenten.
 
-```jsx
-// I din src/index.tsx fil for eksempel:
-import { App } from 'App';
-import { KvibProvider } from '@kvib/react';
+```tsx
+// I din src/app.tsx fil:
+import "./App.css";
+import { Button, KvibProvider } from "@kvib/react";
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement,
-);
+function App() {
+  return (
+    <KvibProvider>
+      <Button>Knapp</Button>
+    </KvibProvider>
+  );
+}
 
-root.render(
-  <KvibProvider>
-    <App />
-  </KvibProvider>
-);
+export default App;
 ```
 
-Nå kan du begynne å ta i bruk komponenter i applikasjonen din. For å ta i bruk for eksempel `Button`-komponenten gjør du slik:
+I eksempelet over har vi også lagt til en knapp som viser hvordan du tar i bruk et KVIB-komponent i applikasjonen din.
 
-```jsx
-import { Button } from "@kvib/react";
+## Endre default-farge
 
-export const App = () => {
-  return <Button variant="primary">Rediger</Button>;
-};
+Default farge-tema for KVIB er grønt. Dette skal gjelde for alle applikasjoner som skal ligne Kartverket.no i stylingen.
+For applikasjoner med skjema og karttjenester skal man imidlertid benytte blått fargetema.
+Dette gjøres ved å legge til et customTheme med colorScheme: "blue", og benytte det i KVIB-provideren slik:
+
+```tsx
+// I din src/app.tsx fil:
+import "./App.css";
+import { Button, KvibProvider, extendTheme, theme, withDefaultColorScheme } from "@kvib/react";
+
+const customTheme = extendTheme(withDefaultColorScheme({ colorScheme: "blue" }), theme);
+
+function App() {
+  return (
+    <KvibProvider theme={customTheme}>
+      <Button>Knapp</Button>
+    </KvibProvider>
+  );
+}
+
+export default App;
 ```
 
 ## Egen styling - inline styling og styled-components
@@ -97,4 +113,32 @@ export default function App() {
     </CacheProvider>
   );
 }
+```
+
+## Obs om import
+
+I og med at KVIB inneholder hele Chakra-biblioteket har noen brukere opplevd at de ved et
+uhell har tatt i brukt chakra-komponenter i steden for kvib-komponenter, og at dette har ført til uheldig oppførsel. Eks:
+
+```tsx
+import { NumberInput, NumberInputField } from "@kvib/react";
+import { NumberInputStepper, NumberIncrementStepper, NumberDecrementStepper } from "@chakra-ui/react";
+
+const Eksempel = () => (
+  <NumberInput>
+    <NumberInputField />
+    <NumberInputStepper>
+      <NumberIncrementStepper />
+      <NumberDecrementStepper />
+    </NumberInputStepper>
+  </NumberInput>
+);
+```
+
+Siden KVIB tilbyr alle de samme komponentene som Chakra skal ikke dette være nødvendig, men det kan fort skje ved en feil ved at
+VS-code eller Idea foreslår å importere fra feil pakke.
+For å unngå problemet er det mulig å sette innstillinger i editoren din til å hindre import forslag fra Chakra, eller å legge inn følgende regel i es-lint:
+
+```js
+"no-restricted-imports": ["error", { "patterns": ["@chakra-ui/*"] }]
 ```
