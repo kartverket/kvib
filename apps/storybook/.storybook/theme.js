@@ -7,7 +7,7 @@ export default create({
   fontBase: '"Mulish", "Open Sans", sans-serif',
   fontCode: "monospace",
   brandTitle: "KVIB",
-  brandUrl: "https://kartverket.github.io/kvib/storybook",
+  brandUrl: "/",
   brandImage: logo,
   brandTarget: "_self",
 
