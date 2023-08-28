@@ -37,11 +37,15 @@ export const Button = forwardRef<ButtonProps, "button">(
           </Center>
         )}
         <HStack spacing={1} visibility={isLoading ? "hidden" : "visible"}>
-          {leftIcon && <Icon icon={leftIcon} isFilled={iconFill} />}
+          {leftIcon && (
+            <Icon icon={leftIcon} isFilled={iconFill} size={props.size === "xs" || props.size === "sm" ? 20 : 24} />
+          )}
           <Center className="text" as="span">
             {children}
           </Center>
-          {rightIcon && <Icon icon={rightIcon} isFilled={iconFill} />}
+          {rightIcon && (
+            <Icon icon={rightIcon} isFilled={iconFill} size={props.size === "xs" || props.size === "sm" ? 20 : 24} />
+          )}
         </HStack>
       </ChakraButton>
     );

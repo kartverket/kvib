@@ -27,6 +27,8 @@ export type IconButtonProps = Omit<ChakraIconButtonProps, "colorScheme" | "varia
    @default false*/
   iconFill?: boolean;
 
+  /**The size of the icon
+   *@default undefined*/
   iconSize?: 20 | 24 | 40 | 48;
 
   iconWeight?: 100 | 200 | 300 | 400 | 500 | 600 | 700;
