@@ -1,4 +1,3 @@
-# .github/workflows/preview.yml
 name: Deploy PR previews
 
 on:
@@ -26,4 +25,4 @@ jobs:
       - name: Deploy preview
         uses: rossjrw/pr-preview-action@v1
         with:
-          source-dir: ./build/
+          source-dir: ./apps/storybook/storybook-static
