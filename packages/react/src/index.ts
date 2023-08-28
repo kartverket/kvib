@@ -58,3 +58,4 @@ export * from "./datepicker";
 export * from "./file-upload";
 export * from "./logo";
 export * from "./search-async";
+export * from "./footer";
