@@ -27,6 +27,7 @@ jobs:
         run: |
           npm install --frozen-lockfile
           npm run build
+          ls ./apps/storybook/storybook-static
 
       - name: Deploy preview
         uses: rossjrw/pr-preview-action@v1
