@@ -13,7 +13,7 @@ Dokumentasjonssiden for designsystemet er https://kartverket.github.io/kvib/stor
 @Farhad Ahmadhadi  
 @Sebastian Maro  
 @Bente Lien Nilsen  
-@Adrian Røstegård Flatner
+@Adrian Røstgård Flatner
 
 Har dere spørsmål relatert til kode på KVIB kan dere kontakte dem.  
 Har dere design spørsmål kan dere kontakte @Wanni eller @Erlend Stølan.
