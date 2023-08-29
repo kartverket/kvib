@@ -14,26 +14,36 @@ const meta: Meta<typeof Icon> = {
   },
   argTypes: {
     color: {
-      control: "color",
-      defaultValue: { summary: "black" },
+      table: { type: "string", defaultValue: { summary: "black" } },
+      control: "text",
     },
     weight: {
+      table: { type: { summary: "100 | 200 | 300 | 400 | 500 | 600 | 700" } },
       control: { type: "range", min: 100, max: 700, step: 100 },
       defaultValue: { summary: 600 },
     },
     grade: {
+      table: { type: { summary: "-25 | 0 | 200" } },
       control: "radio",
       options: [-25, 0, 200],
       defaultValue: { summary: 0 },
     },
     size: {
+      table: { type: { summary: "20 | 24 | 40 | 48" } },
       control: "radio",
       options: [20, 24, 40, 48],
       defaultValue: { summary: 24 },
     },
     isFilled: {
+      table: { type: { summary: "boolean" } },
       control: "boolean",
       defaultValue: { summary: false },
+    },
+    className: {
+      table: {
+        type: { summary: "string" },
+      },
+      control: "text",
     },
   },
 };

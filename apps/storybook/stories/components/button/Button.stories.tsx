@@ -45,20 +45,6 @@ const meta: Meta<typeof KvibButton> = {
       },
       control: "boolean",
     },
-    leftIcon: {
-      description: "If added, the button will show an icon before the button's label.",
-      table: {
-        type: { summary: String },
-      },
-      control: "text",
-    },
-    rightIcon: {
-      description: "If added, the button will show an icon after the button's label.",
-      table: {
-        type: { summary: String },
-      },
-      control: "text",
-    },
     iconFill: {
       table: {
         type: { summary: "boolean" },
