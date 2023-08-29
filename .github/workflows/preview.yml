@@ -32,4 +32,3 @@ jobs:
         uses: rossjrw/pr-preview-action@v1
         with:
           source-dir: ./apps/storybook/storybook-static
-          umbrella-dir: storybook/pr-preview
