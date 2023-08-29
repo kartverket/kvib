@@ -1,5 +1,12 @@
 # @kvib/react
 
+## 1.24.2
+
+### Patch Changes
+
+- 5b4b1735c: - Legger til typer på Icon.
+  - Fjerner google fonts kall.
+
 ## 1.24.1
 
 ### Patch Changes
