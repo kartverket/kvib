@@ -17,6 +17,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+          cache: "npm"
+
       - name: Install and Build
         run: |
           npm install --frozen-lockfile
@@ -25,4 +31,4 @@ jobs:
       - name: Deploy preview
         uses: rossjrw/pr-preview-action@v1
         with:
-          source-dir: ./build/
+          source-dir: ./apps/storybook/storybook-static
