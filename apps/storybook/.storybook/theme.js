@@ -1,10 +1,11 @@
 import { create } from "@storybook/theming";
 import logo from "./kvib_logo.svg";
+import "@fontsource-variable/mulish";
 
 export default create({
   base: "light",
   // Typography
-  fontBase: '"Mulish", "Open Sans", sans-serif',
+  fontBase: '"Mulish Variable", "Open Sans", sans-serif',
   fontCode: "monospace",
   brandTitle: "KVIB",
   brandUrl: "/",
