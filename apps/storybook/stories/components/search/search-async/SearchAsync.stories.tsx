@@ -79,6 +79,12 @@ const meta: Meta<typeof KvibSearchAsync> = {
       options: ["outline", "filled", "flushed", "unstyled"],
       control: { type: "radio" },
     },
+    id: {
+      table: {
+        type: { summary: "string" },
+      },
+      control: "text",
+    },
   },
 };
 
