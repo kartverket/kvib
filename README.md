@@ -1,14 +1,10 @@
 # KVIB - Kartverkets interaksjon- og designbibliotek
 
-Dokumentasjonssiden for designsystemet er https://kartverket.github.io/kvib/storybook
+Dokumentasjonssiden for designsystemet er https://kartverket.github.io/kvib/storybook. Der finner du bidragsløype, oppsett av designsystemet osv.
 
 ## 🚦 Viktig infomasjon eller kjøreregler for de som ønsker å bidra 🚦
 
-1. Per dags dato er det ikke klart til å gi flere skrivetilganger direkte i repoet.
-
-2. Alle som vil hjelpe til på KVIB må lage ny branch og åpne en pull request.
-
-3. Pull requesten vil bli sett på i løpet av **1 - 3 virkedager.** De som skal godkjenne pull requestene er:
+De som skal godkjenne pull requestene er:
 
 @Farhad Ahmadhadi  
 @Sebastian Maro  
@@ -17,5 +13,3 @@ Dokumentasjonssiden for designsystemet er https://kartverket.github.io/kvib/stor
 
 Har dere spørsmål relatert til kode på KVIB kan dere kontakte dem.  
 Har dere design spørsmål kan dere kontakte @Wanni eller @Erlend Stølan.
-
-Sjekk https://kartverket.github.io/kvib/storybook for hele bidragsløypa ❤
