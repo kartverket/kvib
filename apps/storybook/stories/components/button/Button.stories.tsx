@@ -14,7 +14,7 @@ const meta: Meta<typeof KvibButton> = {
     size: {
       description: "Size of the Button",
       table: {
-        type: { summary: " xs| sm | md | lg" },
+        type: { summary: "xs | sm | md | lg" },
         defaultValue: { summary: "md" },
       },
       options: ["xs", "sm", "md", "lg"],
@@ -23,10 +23,10 @@ const meta: Meta<typeof KvibButton> = {
     variant: {
       description: "The variant of the Button.",
       table: {
-        type: { summary: "solid | outline | link | ghost" },
-        defaultValue: { summary: "solid" },
+        type: { summary: "primary | secondary | tertiary | ghost" },
+        defaultValue: { summary: "primary" },
       },
-      options: ["solid", "outline", "link", "ghost"],
+      options: ["primary", "secondary", "tertiary", "ghost"],
       control: { type: "radio" },
     },
     isDisabled: {
@@ -66,13 +66,13 @@ export const ButtonVariants: Story = {
   args: { children: "Klikk her" },
   render: (args) => (
     <KvibButtonGroup>
-      <KvibButton {...args} variant="solid">
+      <KvibButton {...args} variant="primary">
         {args.children}
       </KvibButton>
-      <KvibButton {...args} variant="outline">
+      <KvibButton {...args} variant="secondary">
         {args.children}
       </KvibButton>
-      <KvibButton {...args} variant="link">
+      <KvibButton {...args} variant="tertiary">
         {args.children}
       </KvibButton>
       <KvibButton {...args} variant="ghost">
@@ -137,7 +137,7 @@ export const ButtonGroup: Story = {
   args: { children: "Klikk her" },
   render: (args) => (
     <VStack divider={<StackDivider borderColor="gray.200" />}>
-      <KvibButtonGroup orientation="vertical" variant="outline" spacing="4" size="sm">
+      <KvibButtonGroup orientation="vertical" variant="secondary" spacing="4" size="sm">
         <KvibButton {...args}>{args.children}</KvibButton>
         <KvibButton {...args}>{args.children}</KvibButton>
       </KvibButtonGroup>

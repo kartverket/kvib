@@ -15,7 +15,7 @@ const meta: Meta<typeof KvibIconButton> = {
     size: {
       description: "Size of Icon button",
       table: {
-        type: { summary: " xs| sm | md | lg" },
+        type: { summary: "xs | sm | md | lg" },
         defaultValue: { summary: "md" },
       },
       options: ["xs", "sm", "md", "lg"],
@@ -71,9 +71,9 @@ export const IconButtonVariants: Story = {
   args: { icon: "add" },
   render: (args) => (
     <HStack>
-      <KvibIconButton {...args} aria-label="IconButton solid" variant="solid"></KvibIconButton>
-      <KvibIconButton {...args} aria-label="IconButton outline" variant="outline"></KvibIconButton>
-      <KvibIconButton {...args} aria-label="IconButton link" variant="link"></KvibIconButton>
+      <KvibIconButton {...args} aria-label="IconButton solid" variant="primary"></KvibIconButton>
+      <KvibIconButton {...args} aria-label="IconButton outline" variant="secondary"></KvibIconButton>
+      <KvibIconButton {...args} aria-label="IconButton link" variant="tertiary"></KvibIconButton>
       <KvibIconButton {...args} aria-label="IconButton ghost" variant="ghost"></KvibIconButton>
     </HStack>
   ),

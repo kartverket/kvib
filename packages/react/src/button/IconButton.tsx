@@ -11,7 +11,7 @@ import { Icon } from "../icon";
 export type IconButtonProps = Omit<ChakraIconButtonProps, "colorScheme" | "variant" | "isActive" | "icon"> & {
   /**The variant of the IconButton
    * @default solid */
-  variant?: "solid" | "outline" | "link" | "ghost";
+  variant?: "primary" | "secondary" | "tertiary" | "ghost";
 
   /**The icon to be used in the button.*/
   icon: MaterialSymbol;

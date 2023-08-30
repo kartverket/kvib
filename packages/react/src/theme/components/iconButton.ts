@@ -58,13 +58,13 @@ export const iconButtonTheme = defineStyleConfig({
     },
   },
   variants: {
-    solid: variantSolid,
-    outline: variantOutline,
-    link: variantLink,
+    primary: variantSolid,
+    secondary: variantOutline,
+    tertiary: variantLink,
     ghost: variantGhost,
   },
   defaultProps: {
-    variant: "solid",
+    variant: "primary",
     colorScheme: "green",
     size: "md",
   },
