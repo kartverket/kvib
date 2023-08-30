@@ -38,6 +38,9 @@ export interface Props<T> {
 
   /** Visual style variant of the input. */
   variant?: Variant;
+
+  /** Id set to the SelectContainer component */
+  id?: string;
 }
 
 // SearchAsync uses the async version of react-select to fetch and display options.
@@ -53,6 +56,7 @@ export const SearchAsync = <T extends unknown>({
   size,
   defaultOptions,
   variant,
+  id,
 }: Props<T>) => {
   const noOptionsMessage = ({ inputValue }: { inputValue: string }): ReactNode => {
     if (inputValue.replaceAll(/\s/g, "").length < 1) {
@@ -84,6 +88,7 @@ export const SearchAsync = <T extends unknown>({
       size={size}
       defaultOptions={defaultOptions}
       variant={variant}
+      id={id}
     />
   );
 };
