@@ -10,7 +10,7 @@ export interface Props<T> {
   loadOptions: (inputValue: string, callback: (options: OptionsOrGroups<T, GroupBase<T>>) => void) => void;
 
   /** Callback for when the selection changes. */
-  handleFromChange: (newValue: T | null) => void;
+  onChange: (newValue: T | null) => void;
 
   /** Placeholder text for the input field. */
   placeholder?: string;
@@ -46,7 +46,7 @@ export interface Props<T> {
 // SearchAsync uses the async version of react-select to fetch and display options.
 export const SearchAsync = <T extends unknown>({
   loadOptions,
-  handleFromChange,
+  onChange,
   placeholder,
   debounceTime,
   autoFocus,
@@ -79,7 +79,7 @@ export const SearchAsync = <T extends unknown>({
       isClearable={isClearable}
       autoFocus={autoFocus}
       className={className ? className : ""}
-      onChange={handleFromChange}
+      onChange={onChange}
       noOptionsMessage={noOptionsMessage}
       loadingMessage={() => <Text>Laster...</Text>}
       loadOptions={debounceTime ? loadOptionsDebounce : loadOptions}
