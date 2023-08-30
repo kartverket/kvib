@@ -1,7 +1,7 @@
 import { ReactNode, useEffect, useRef } from "react";
 import { Text } from "@kvib/react/src";
 import { AsyncSelect as ReactSearch } from "chakra-react-select";
-import { GroupBase, OptionsOrGroups, SingleValue } from "chakra-react-select";
+import { GroupBase, OptionsOrGroups } from "chakra-react-select";
 import { SizeProp, Variant } from "chakra-react-select/dist/types/types";
 
 // Props interface is defined with a generic T to allow flexibility in the data type of options.
@@ -10,7 +10,7 @@ export interface Props<T> {
   loadOptions: (inputValue: string, callback: (options: OptionsOrGroups<T, GroupBase<T>>) => void) => void;
 
   /** Callback for when the selection changes. */
-  handleFromChange: (newValue: SingleValue<T>) => void;
+  handleFromChange: (newValue: T | null) => void;
 
   /** Placeholder text for the input field. */
   placeholder?: string;
