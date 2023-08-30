@@ -1,13 +1,60 @@
-import { Meta } from "@storybook/blocks";
+import { Meta, Canvas, Story, Controls, Source } from "@storybook/blocks";
+import * as TooltipStories from "./Tooltip.stories";
 
-<Meta title="Komponenter/Tooltip" />
+<Meta of={TooltipStories} />
 
 # Tooltip
 
-Se [https://chakra-ui.com/docs/components/tooltip](https://chakra-ui.com/docs/components/tooltip) for eksempler og dokumentasjon.
+Et tooltip er en informativ melding som dukker opp når en bruker samhandler med et element.
 
 ## Ta i bruk
 
 ```jsx
 import { Tooltip } from "@kvib/react";
 ```
+
+## Props
+
+<Canvas of={TooltipStories.Tooltip} />
+<Controls of={TooltipStories.Tooltip} />
+
+## Bruk av egne Komponenter
+
+Dersom Tooltip wrapper et funksjonelt komponent må komponentet ha en ref ved `forwardref`. Dette inkluderer også bruk av ikoner fra KVIB. Se eksempel:
+
+<Source code={`const CustomCard = React.forwardRef(({ children, ...rest }, ref) => (
+  <Box p="1">
+    <Tag ref={ref} {...rest}>
+      {children}
+    </Tag>
+  </Box>
+));
+
+const CustomToolTip = () => (
+
+<Tooltip label="Hover me">
+  <CustomCard>Tag Here</CustomCard>
+</Tooltip>
+);
+
+render(<CustomToolTip />);`} dark />
+
+## Tooltip med pil
+
+<Canvas of={TooltipStories.TooltipArrow} />
+
+## Tooltip med fokuserbart komponent
+
+<Canvas of={TooltipStories.TooltipFocusable} />
+
+## Disabled
+
+<Canvas of={TooltipStories.TooltipDisabled} />
+
+## Plassering
+
+<Canvas of={TooltipStories.TooltipPlacement} />
+
+## Flere eksempler
+
+<Canvas of={TooltipStories.TooltipExamples} />
