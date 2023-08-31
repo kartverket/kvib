@@ -11,7 +11,7 @@ import { Icon } from "../icon";
 
 export type ButtonProps = Omit<
   ChakraButtonProps,
-  "colorScheme" | "leftIcon" | "rightIcon" | "iconSpacing" | "isActive" | "loadingText" | "spinnerPlacement"
+  "variant" | "colorScheme" | "leftIcon" | "rightIcon" | "iconSpacing" | "isActive" | "loadingText" | "spinnerPlacement"
 > & {
   /**The visual color appearance of the component
    * @default green*/
@@ -26,6 +26,8 @@ export type ButtonProps = Omit<
   /**If true, the rightIcon/leftIcon in the button will be filled.
    * @default false */
   iconFill?: boolean;
+
+  variant?: "primary" | "secondary" | "tertiary" | "ghost";
 };
 
 export const Button = forwardRef<ButtonProps, "button">(
