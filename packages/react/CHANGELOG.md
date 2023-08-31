@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 1.25.0
+
+### Minor Changes
+
+- ddac6e33b: Oppdatert default størrelse for labelen i Form Control fra lg til md
+
 ## 1.24.2
 
 ### Patch Changes
