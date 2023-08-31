@@ -15,8 +15,7 @@ export type IconButtonProps = Omit<ChakraIconButtonProps, "colorScheme" | "varia
   /**The icon to be used in the button.*/
   icon: string;
 
-  /**The visual color appearance of the component.
-   @default green*/
+  /**The visual color appearance of the component.*/
   colorScheme?: "green" | "blue" | "gray" | "red";
 
   /**The visual color appearance of the component.
@@ -29,11 +28,6 @@ export type IconButtonProps = Omit<ChakraIconButtonProps, "colorScheme" | "varia
 
   /**The size of the icon
    *@default undefined*/
-  iconSize?: 20 | 24 | 40 | 48;
-
-  iconWeight?: 100 | 200 | 300 | 400 | 500 | 600 | 700;
-
-  iconGrade?: -25 | 0 | 200;
 };
 
 const IconSpinner = (props: IconButtonProps) => {
@@ -44,9 +38,8 @@ const IconSpinner = (props: IconButtonProps) => {
     <Icon
       icon={props.icon}
       isFilled={props.iconFill}
-      grade={props.iconGrade}
-      size={props.iconSize ? props.iconSize : props.size === "xs" || props.size === "sm" ? 20 : 24}
-      weight={props.iconWeight ? props.iconWeight : props.size === "xs" || props.size === "sm" ? 300 : 400}
+      size={props.size === "xs" || props.size === "sm" ? 20 : 24}
+      weight={props.size === "xs" || props.size === "sm" ? 300 : 400}
     />
   );
 };
