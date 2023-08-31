@@ -8,7 +8,6 @@
     "dev": "storybook dev -p 6006",
     "build": "storybook build",
     "build-storybook": "storybook build",
-    "postbuild": "mv storybook-static/index.html storybook-static/storybook.html && cp index.html storybook-static/index.html",
     "test-storybook": "test-storybook"
   },
   "keywords": [],
