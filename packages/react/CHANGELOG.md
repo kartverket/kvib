@@ -1,5 +1,15 @@
 # @kvib/react
 
+## 2.0.0
+
+### Major Changes
+
+- 7c58cd3e8: **Breaking changes på Button og IconButton:**
+
+  - Endrer navn på verdier i proppen "variant" på knapper.
+
+  Solid -> Primary, Outline -> Secondary, Link -> Tertiary, Ghost -> Ghost.
+
 ## 1.25.0
 
 ### Minor Changes
