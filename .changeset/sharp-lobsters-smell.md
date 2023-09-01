@@ -1,5 +1,5 @@
 ---
-"@kvib/react": major
+"@kvib/react": minor
 ---
 
 - Legger til id i SearchAsync.
