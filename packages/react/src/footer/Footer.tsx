@@ -54,7 +54,11 @@ export const Footer = ({
                 </Text>
                 <Text>
                   E-post:{" "}
-                  <Link fontWeight="bold" aria-label="Send e-post til Kartverket" href="mailto:post@kartverket.no">
+                  <Link
+                    fontWeight="bold"
+                    aria-label="Send e-post til Kartverket"
+                    href={"mailto:" + contactInfoEmailAddress}
+                  >
                     {" "}
                     {contactInfoEmailAddress}{" "}
                   </Link>
