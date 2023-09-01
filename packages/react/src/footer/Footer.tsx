@@ -7,7 +7,9 @@ export type FooterProps = {
   excludeContactInfo?: boolean;
   excludeHelp?: boolean;
   excludeNews?: boolean;
-  contactInfoEmailAddress?: string
+  /**The contact info email-adress
+   * @default post@kartverket.no*/
+  contactInfoEmailAddress?: string;
 };
 
 const FooterToggleableFlex = (props: FlexProps) => {
@@ -27,7 +29,7 @@ export const Footer = ({
   excludeHelp,
   excludeNews,
   excludeSocialMedia,
-  contactInfoEmailAddress,
+  contactInfoEmailAddress = "post@kartverket.no",
 }: FooterProps) => {
   const onlyOneIncluded =
     (!excludeContactInfo || !excludeOpeningHours ? 1 : 0) + (!excludeHelp ? 1 : 0) + (!excludeNews ? 1 : 0) <= 1;
@@ -54,7 +56,7 @@ export const Footer = ({
                   E-post:{" "}
                   <Link fontWeight="bold" aria-label="Send e-post til Kartverket" href="mailto:post@kartverket.no">
                     {" "}
-                    {contactInfoEmailAddress || "post@kartverket.no"}{" "}
+                    {contactInfoEmailAddress}{" "}
                   </Link>
                 </Text>
                 <Link
