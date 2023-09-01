@@ -1,5 +1,16 @@
 # @kvib/react
 
+## 2.1.0
+
+### Minor Changes
+
+- f105e5be6: - Legger til id i SearchAsync.
+
+  **Breaking changes på SearchAsync:**
+
+  - Endrer type på handleFromChange i SearchAsync. Trenger ikke lenger å importere SingleValue.
+  - Endrer navn på prop "handleFromChange" til "onChange".
+
 ## 2.0.0
 
 ### Major Changes
