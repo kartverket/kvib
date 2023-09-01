@@ -18,7 +18,7 @@ const meta: Meta<typeof KvibSearchAsync> = {
     loadOptions: {
       control: "text",
     },
-    handleFromChange: {
+    onChange: {
       control: "text",
     },
     placeholder: {
@@ -79,7 +79,14 @@ const meta: Meta<typeof KvibSearchAsync> = {
       options: ["outline", "filled", "flushed", "unstyled"],
       control: { type: "radio" },
     },
+    id: {
+      table: {
+        type: { summary: "string" },
+      },
+      control: "text",
+    },
   },
+  args: { onChange: undefined },
 };
 
 export default meta;
@@ -112,7 +119,7 @@ const mockLoadOptions = (inputValue: string, callback: (options: typeof fruits) 
 export const SearchAsyncResults: Story = {
   args: {
     loadOptions: mockLoadOptions,
-    handleFromChange: (selectedOption) => {
+    onChange: (selectedOption) => {
       console.log("Selected Option:", selectedOption);
     },
     placeholder: "Søk etter frukt...",
@@ -127,7 +134,7 @@ export const SearchAsyncResults: Story = {
 export const SearchAsyncResultsDebounce: Story = {
   args: {
     loadOptions: mockLoadOptions,
-    handleFromChange: (selectedOption) => {
+    onChange: (selectedOption) => {
       console.log("Selected Option:", selectedOption);
     },
     debounceTime: 3000,
@@ -143,7 +150,7 @@ export const SearchAsyncResultsDebounce: Story = {
 export const SearchAsyncDropdownIndicator: Story = {
   args: {
     loadOptions: mockLoadOptions,
-    handleFromChange: (selectedOption) => {
+    onChange: (selectedOption) => {
       console.log("Selected Option:", selectedOption);
     },
     dropdownIndicator: <Icon icon="expand_more" weight={400} />,
@@ -160,7 +167,7 @@ export const SearchAsyncDropdownIndicator: Story = {
 export const SearchAsyncSizes: Story = {
   args: {
     loadOptions: mockLoadOptions,
-    handleFromChange: (selectedOption) => {
+    onChange: (selectedOption) => {
       console.log("Selected Option:", selectedOption);
     },
     placeholder: "Søk etter frukt...",
@@ -177,7 +184,7 @@ export const SearchAsyncSizes: Story = {
 export const SearchAsyncVariants: Story = {
   args: {
     loadOptions: mockLoadOptions,
-    handleFromChange: (selectedOption) => {
+    onChange: (selectedOption) => {
       console.log("Selected Option:", selectedOption);
     },
     placeholder: "Søk etter frukt...",
