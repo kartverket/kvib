@@ -1,36 +1,42 @@
-import { Box, Icon, Logo, SearchAsync, Flex } from "@kvib/react/src";
+import { Box, Icon, Logo, SearchAsync, Flex, useMediaQuery } from "@kvib/react/src";
 import { GroupBase, OptionsOrGroups } from "chakra-react-select";
 
 export type HeaderProps<T> = {
   isSearch?: boolean;
   loadOptions?: (inputValue: string, callback: (options: OptionsOrGroups<T, GroupBase<T>>) => void) => void;
   onChange?: (newValue: T | null) => void;
+  isCentered?: boolean;
 };
 
-export const Header = <T extends unknown>({ isSearch, loadOptions, onChange }: HeaderProps<T>) => {
+const Header = <T extends unknown>({ isSearch, loadOptions, onChange, isCentered }: HeaderProps<T>) => {
+  const [sm] = useMediaQuery("(max-width: 30em)");
+
   return (
     <Flex
-      bg={"white"}
-      borderBottomWidth={"2px"}
-      borderBottomColor={"gray.200"}
-      py={"29px"}
-      paddingLeft={"70px"}
-      alignItems={"center"}
+      bg="white"
+      borderBottomWidth="2px"
+      borderBottomColor="gray.200"
+      padding={30}
+      alignItems="center"
+      justifyContent={isCentered ? "center" : undefined}
+      gap={90}
     >
       <Box>
-        <Logo variant={"horizontal"} size={170} />
+        <Logo variant="horizontal" size={sm ? 130 : 170} />
       </Box>
 
-      {loadOptions !== undefined && onChange !== undefined && isSearch ? (
-        <Box px={"90px"} w={700} paddingTop="10px">
+      {isSearch && loadOptions && onChange && !sm && (
+        <Box w={400} paddingTop="14px">
           <SearchAsync
             loadOptions={loadOptions}
             onChange={onChange}
-            size={"lg"}
+            size="md"
             dropdownIndicator={<Icon icon="search" weight={400} />}
           />
         </Box>
-      ) : null}
+      )}
     </Flex>
   );
 };
+
+export { Header };
