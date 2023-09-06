@@ -1,4 +1,4 @@
-import { Header as KvibHeader } from "@kvib/react/src";
+import { Box, Header as KvibHeader } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibHeader> = {
@@ -31,11 +31,31 @@ const mockLoadOptions = (inputValue: string, callback: (options: typeof fruits) 
 };
 
 export const Header: Story = {
-  args: {
-    loadOptions: mockLoadOptions,
-    onChange: (selectedOption) => {
-      console.log("Selected Option:", selectedOption);
-    },
-  },
-  render: (args) => <KvibHeader isSearch={true} isCentered={true} {...args}></KvibHeader>,
+  args: {},
+  render: (args) => <KvibHeader {...args} />,
+};
+
+export const HeaderSearch: Story = {
+  args: {},
+  render: (args) => <KvibHeader searchFieldType="regular" isSearch placeholder="SØK HER" />,
+};
+
+export const HeaderSearchAsync: Story = {
+  args: {},
+  render: (args) => (
+    <KvibHeader
+      searchFieldType="async"
+      isSearch
+      placeholder="SØK HER"
+      loadOptions={mockLoadOptions}
+      onChange={(selectedOption: any) => {
+        console.log("Selected Option:", selectedOption);
+      }}
+    />
+  ),
+};
+
+export const HeaderSearchCentered: Story = {
+  args: {},
+  render: (args) => <KvibHeader searchFieldType="regular" isSearch placeholder="SØK HER" isCentered />,
 };
