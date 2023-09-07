@@ -48,6 +48,10 @@ const meta: Meta<typeof KvibHeader> = {
       control: "function",
     },
   },
+  args: {
+    onChange: undefined,
+    onLogoClick: undefined,
+  },
 };
 
 export default meta;
@@ -79,38 +83,34 @@ export const HeaderSearch: Story = {
 };
 
 export const HeaderSearchAsync: Story = {
-  args: {},
-  render: (args) => (
-    <KvibHeader
-      searchFieldVariant="async"
-      isSearch
-      placeholder="Hva leter du etter?"
-      loadOptions={mockLoadOptions}
-      onChange={(selectedOption: any) => {
-        console.log("Selected Option:", selectedOption);
-      }}
-    />
-  ),
+  args: {
+    searchFieldVariant: "async",
+    isSearch: true,
+    placeholder: "Hva leter du etter?",
+    loadOptions: mockLoadOptions,
+    onChange: (selectedOption: any) => {
+      console.log("Selected Option:", selectedOption);
+    },
+  },
+  render: (args) => <KvibHeader {...args} />,
 };
 
 export const HeaderJustifyContent: Story = {
-  args: {},
+  args: { searchFieldVariant: "regular", isSearch: true },
   render: (args) => (
     <Stack>
-      <KvibHeader searchFieldVariant="regular" isSearch justifyContent="center" />
-      <KvibHeader searchFieldVariant="regular" isSearch justifyContent="space-between" />
-      <KvibHeader searchFieldVariant="regular" isSearch justifyContent="start" />
+      <KvibHeader {...args} justifyContent="center" />
+      <KvibHeader {...args} justifyContent="space-between" />
+      <KvibHeader {...args} justifyContent="start" />
     </Stack>
   ),
 };
 
 export const HeaderLogoButton: Story = {
-  args: {},
-  render: (args) => (
-    <KvibHeader
-      onLogoClick={() => {
-        console.log("Logo clicked");
-      }}
-    />
-  ),
+  args: {
+    onLogoClick: () => {
+      console.log("Logo clicked");
+    },
+  },
+  render: (args) => <KvibHeader {...args} />,
 };
