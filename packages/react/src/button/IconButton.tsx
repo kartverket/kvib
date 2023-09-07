@@ -16,7 +16,8 @@ export type IconButtonProps = Omit<ChakraIconButtonProps, "colorScheme" | "varia
   /**The icon to be used in the button.*/
   icon: MaterialSymbol;
 
-  /**The visual color appearance of the component.*/
+  /**The visual color appearance of the component.
+     @default green*/
   colorScheme?: "green" | "blue" | "gray" | "red";
 
   /**The size of the component.
