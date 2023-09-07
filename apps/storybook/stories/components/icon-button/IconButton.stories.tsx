@@ -1,4 +1,11 @@
-import { IconButton as KvibIconButton, HStack } from "@kvib/react/src";
+import {
+  IconButton as KvibIconButton,
+  HStack,
+  VStack,
+  ButtonGroup as KvibButtonGroup,
+  StackDivider,
+  Button as KvibButton,
+} from "@kvib/react/src";
 
 import { Meta, StoryObj } from "@storybook/react";
 
@@ -102,5 +109,21 @@ export const IconButtonStates: Story = {
       <KvibIconButton {...args} aria-label="IconButton disabled" isDisabled />
       <KvibIconButton {...args} aria-label="IconButton loading" isLoading />
     </HStack>
+  ),
+};
+
+export const IconButtonGroup: Story = {
+  args: { icon: "favorite", "aria-label": "IconButton default" },
+  render: (args) => (
+    <VStack divider={<StackDivider borderColor="gray.200" />}>
+      <KvibButtonGroup orientation="vertical" size="sm">
+        <KvibIconButton {...args} />
+        <KvibIconButton {...args} />
+      </KvibButtonGroup>
+      <KvibButtonGroup colorScheme="blue" isAttached variant={"outline"} size={"sm"}>
+        <KvibButton>Lagre</KvibButton>
+        <KvibIconButton icon={"add"} aria-label={"IconButton add"} />
+      </KvibButtonGroup>
+    </VStack>
   ),
 };
