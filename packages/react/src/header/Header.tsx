@@ -138,6 +138,7 @@ const SearchField = <T extends unknown>({
         onChange={onChange as (newValue: T | null) => void}
         size="md"
         dropdownIndicator={<Icon icon="search" weight={500} color={colors.green[500]} />}
+        aria-label="search async"
       />
     );
   }
