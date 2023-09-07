@@ -55,6 +55,9 @@ const meta: Meta<typeof KvibFooter> = {
       },
       control: "boolean",
     },
+    contactInfoEmailAddress: {
+      control: "text",
+    },
   },
 };
 

@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 2.1.1
+
+### Patch Changes
+
+- 331b7421f: Eksporterer MaterialSymbol-typen for ikoner.
+
 ## 2.1.0
 
 ### Minor Changes
