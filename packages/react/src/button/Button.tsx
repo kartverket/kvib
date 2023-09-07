@@ -6,25 +6,28 @@ import {
   Spinner,
   HStack,
 } from "@chakra-ui/react";
+import { MaterialSymbol } from "material-symbols";
 import { Icon } from "../icon";
 
 export type ButtonProps = Omit<
   ChakraButtonProps,
-  "colorScheme" | "leftIcon" | "rightIcon" | "iconSpacing" | "isActive" | "loadingText" | "spinnerPlacement"
+  "variant" | "colorScheme" | "leftIcon" | "rightIcon" | "iconSpacing" | "isActive" | "loadingText" | "spinnerPlacement"
 > & {
   /**The visual color appearance of the component
    * @default green*/
   colorScheme?: "green" | "blue" | "gray" | "red";
 
   /**If added, the button will show an icon before the button's label.*/
-  leftIcon?: string;
+  leftIcon?: MaterialSymbol;
 
   /**If added, the button will show an icon after the button's label.*/
-  rightIcon?: string;
+  rightIcon?: MaterialSymbol;
 
   /**If true, the rightIcon/leftIcon in the button will be filled.
    * @default false */
   iconFill?: boolean;
+
+  variant?: "primary" | "secondary" | "tertiary" | "ghost";
 };
 
 export const Button = forwardRef<ButtonProps, "button">(

@@ -144,7 +144,7 @@ export const TabsStates: Story = {
   render: (args) => (
     <KvibTabs {...args}>
       <KvibTabList>
-        <KvibTab isSelected>Selected</KvibTab>
+        <KvibTab>Enabled</KvibTab>
         <KvibTab isDisabled>Disabled</KvibTab>
       </KvibTabList>
     </KvibTabs>

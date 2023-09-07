@@ -1,5 +1,51 @@
 # @kvib/react
 
+## 2.1.1
+
+### Patch Changes
+
+- 331b7421f: Eksporterer MaterialSymbol-typen for ikoner.
+
+## 2.1.0
+
+### Minor Changes
+
+- f105e5be6: - Legger til id i SearchAsync.
+
+  **Breaking changes på SearchAsync:**
+
+  - Endrer type på handleFromChange i SearchAsync. Trenger ikke lenger å importere SingleValue.
+  - Endrer navn på prop "handleFromChange" til "onChange".
+
+## 2.0.0
+
+### Major Changes
+
+- 7c58cd3e8: **Breaking changes på Button og IconButton:**
+
+  - Endrer navn på verdier i proppen "variant" på knapper.
+
+  Solid -> Primary, Outline -> Secondary, Link -> Tertiary, Ghost -> Ghost.
+
+## 1.25.0
+
+### Minor Changes
+
+- ddac6e33b: Oppdatert default størrelse for labelen i Form Control fra lg til md
+
+## 1.24.2
+
+### Patch Changes
+
+- 5b4b1735c: - Legger til typer på Icon.
+  - Fjerner google fonts kall.
+
+## 1.24.1
+
+### Patch Changes
+
+- d45d542e3: Legger til footer i KVIB-pakka.
+
 ## 1.24.0
 
 ### Minor Changes

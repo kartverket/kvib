@@ -1,3 +1,5 @@
+import { MaterialSymbol } from "material-symbols";
+
 export const Icon = ({
   icon,
   size,
@@ -8,7 +10,7 @@ export const Icon = ({
   className = "",
 }: {
   /**The icon from Material symbols you want to display*/
-  icon: string;
+  icon: MaterialSymbol;
 
   /**The font size of the icon */
   size?: 20 | 24 | 40 | 48;

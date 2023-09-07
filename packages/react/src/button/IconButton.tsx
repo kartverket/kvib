@@ -5,15 +5,16 @@ import {
   Spinner,
 } from "@chakra-ui/react";
 import { useStyleConfig } from "@chakra-ui/system";
+import { MaterialSymbol } from "material-symbols";
 import { Icon } from "../icon";
 
 export type IconButtonProps = Omit<ChakraIconButtonProps, "colorScheme" | "variant" | "isActive" | "icon"> & {
   /**The variant of the IconButton
    * @default solid */
-  variant?: "solid" | "outline" | "link" | "ghost";
+  variant?: "primary" | "secondary" | "tertiary" | "ghost";
 
   /**The icon to be used in the button.*/
-  icon: string;
+  icon: MaterialSymbol;
 
   /**The visual color appearance of the component.*/
   colorScheme?: "green" | "blue" | "gray" | "red";
