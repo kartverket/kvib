@@ -35,7 +35,7 @@ type RegularSearchProps = WithSearchProps & {
 
 export type HeaderProps<T> = BaseHeaderProps & (AsyncSearchProps<T> | RegularSearchProps | WithoutSearchProps);
 
-const Header = <T extends unknown>(props: HeaderProps<T>) => {
+export const Header = <T extends unknown>(props: HeaderProps<T>) => {
   const {
     isSearch = false,
     loadOptions,
@@ -49,8 +49,8 @@ const Header = <T extends unknown>(props: HeaderProps<T>) => {
   const [isSm] = useMediaQuery("(max-width: 30em)");
   const [isSearching, setIsSearching] = useState<boolean>(false);
 
-  const logoSize = isSm ? 130 : 170;
-  const headerSize = isSm ? 90 : 110;
+  const logoSize = isSm ? 110 : 150;
+  const headerSize = isSm ? 70 : 90;
   const showLogo = !isSearching || !isSm;
   const showSearchField = isSearch && (!isSm || isSearching);
   const showSearchButton = isSearch && !isSearching && isSm;
@@ -69,13 +69,13 @@ const Header = <T extends unknown>(props: HeaderProps<T>) => {
       gap={90}
     >
       {showLogo && (
-        <Box onClick={onLogoClick}>
+        <Box onClick={onLogoClick} cursor={onLogoClick && "pointer"}>
           <Logo variant="horizontal" size={logoSize} />
         </Box>
       )}
 
       {showSearchField && (
-        <Flex w={400} paddingTop="15px">
+        <Flex w={400} paddingTop="8px">
           <Box w={"100%"}>
             <SearchField
               loadOptions={loadOptions}
@@ -100,7 +100,7 @@ const Header = <T extends unknown>(props: HeaderProps<T>) => {
           aria-label={"open search field"}
           icon="search"
           variant="ghost"
-          marginTop="15px"
+          marginTop="8px"
           onClick={() => setIsSearching(true)}
           justifySelf="right"
         />
@@ -133,5 +133,3 @@ const SearchField = <T extends unknown>({
   }
   return <Search placeholder={placeholder} onChange={onChange as ChangeEventHandler<HTMLInputElement>} />;
 };
-
-export { Header };

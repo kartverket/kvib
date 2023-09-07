@@ -37,7 +37,7 @@ export const Header: Story = {
 
 export const HeaderSearch: Story = {
   args: {},
-  render: (args) => <KvibHeader searchFieldType="regular" isSearch placeholder="SØK HER" />,
+  render: (args) => <KvibHeader searchFieldType="regular" isSearch placeholder="Søk her..." />,
 };
 
 export const HeaderSearchAsync: Story = {
@@ -46,7 +46,7 @@ export const HeaderSearchAsync: Story = {
     <KvibHeader
       searchFieldType="async"
       isSearch
-      placeholder="SØK HER"
+      placeholder="Søk her..."
       loadOptions={mockLoadOptions}
       onChange={(selectedOption: any) => {
         console.log("Selected Option:", selectedOption);
@@ -57,5 +57,16 @@ export const HeaderSearchAsync: Story = {
 
 export const HeaderSearchCentered: Story = {
   args: {},
-  render: (args) => <KvibHeader searchFieldType="regular" isSearch placeholder="SØK HER" isCentered />,
+  render: (args) => <KvibHeader searchFieldType="regular" isSearch placeholder="Søk her..." isCentered />,
+};
+
+export const HeaderLogoButton: Story = {
+  args: {},
+  render: (args) => (
+    <KvibHeader
+      onLogoClick={() => {
+        console.log("Logo clicked");
+      }}
+    />
+  ),
 };
