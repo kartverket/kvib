@@ -29,6 +29,11 @@ const meta: Meta<typeof KvibIconButton> = {
       },
       control: "boolean",
     },
+    colorScheme: {
+      table: {
+        defaultValue: { summary: "green" },
+      },
+    },
     iconFill: {
       table: {
         type: { summary: "boolean" },
