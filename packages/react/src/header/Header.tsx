@@ -4,32 +4,42 @@ import { ChangeEventHandler, useState } from "react";
 import { colors } from "../theme/tokens";
 
 type BaseHeaderProps = {
-  isCentered?: boolean;
+  /** Determines where the content in the header is displayed. */
+  justifyContent?: "space-between" | "center" | "start";
+  /** Callback for when the logo is clicked. */
   onLogoClick?: React.MouseEventHandler<HTMLDivElement>;
 };
 
 type WithSearchProps = {
+  /** Determines if the search field is displayed. */
   isSearch: true;
+  /** Placeholder text for the search field. */
   placeholder?: string;
 };
 
 type WithoutSearchProps = {
+  /** Determines if the search field is displayed. */
   isSearch?: false;
   placeholder?: never;
   loadOptions?: never;
   onChange?: never;
-  searchFieldType?: never;
+  searchFieldVariant?: never;
 };
 
 type AsyncSearchProps<T> = WithSearchProps & {
-  searchFieldType: "async";
+  /** "async" provides a dropdown list with results. */
+  searchFieldVariant: "async";
+  /** Only for "async" search field: Function to fetch/select options based on input. */
   loadOptions: (inputValue: string, callback: (options: OptionsOrGroups<T, GroupBase<T>>) => void) => void;
+  /** 2. Async: Callback for when the selection changes. */
   onChange: (newValue: T | null) => void;
 };
 
 type RegularSearchProps = WithSearchProps & {
-  searchFieldType?: "regular";
+  /** Determines which variant of searchfield to use. "regular" provides a simple input field. */
+  searchFieldVariant?: "regular";
   loadOptions?: never;
+  /** 1. Regular: Callback for when the input changes. */
   onChange?: ChangeEventHandler<HTMLInputElement>;
 };
 
@@ -40,9 +50,9 @@ export const Header = <T extends unknown>(props: HeaderProps<T>) => {
     isSearch = false,
     loadOptions,
     onChange,
-    isCentered = false,
-    placeholder,
-    searchFieldType = "regular",
+    justifyContent = "space-between",
+    placeholder = "Søk her...",
+    searchFieldVariant = "regular",
     onLogoClick,
   } = props;
 
@@ -55,7 +65,7 @@ export const Header = <T extends unknown>(props: HeaderProps<T>) => {
   const showSearchField = isSearch && (!isSm || isSearching);
   const showSearchButton = isSearch && !isSearching && isSm;
   const showExitButton = isSearching && isSm;
-  const justifyContent = isCentered ? (isSm ? "space-between" : "center") : "space-between";
+  const justify = justifyContent && isSm ? "space-between" : justifyContent;
 
   return (
     <Flex
@@ -65,7 +75,7 @@ export const Header = <T extends unknown>(props: HeaderProps<T>) => {
       padding={30}
       height={headerSize}
       alignItems="center"
-      justifyContent={justifyContent}
+      justifyContent={justify}
       gap={90}
     >
       {showLogo && (
@@ -81,7 +91,7 @@ export const Header = <T extends unknown>(props: HeaderProps<T>) => {
               loadOptions={loadOptions}
               onChange={onChange}
               placeholder={placeholder}
-              searchFieldType={searchFieldType}
+              searchFieldVariant={searchFieldVariant}
             />
           </Box>
           {showExitButton && (
@@ -113,14 +123,14 @@ const SearchField = <T extends unknown>({
   loadOptions,
   onChange,
   placeholder,
-  searchFieldType,
+  searchFieldVariant,
 }: {
   loadOptions?: (inputValue: string, callback: (options: OptionsOrGroups<T, GroupBase<T>>) => void) => void;
   onChange?: ((newValue: T | null) => void) | ChangeEventHandler<HTMLInputElement>;
   placeholder?: string;
-  searchFieldType: "regular" | "async";
+  searchFieldVariant: "regular" | "async";
 }) => {
-  if (searchFieldType === "async" && loadOptions && onChange) {
+  if (searchFieldVariant === "async" && loadOptions && onChange) {
     return (
       <SearchAsync
         placeholder={placeholder}

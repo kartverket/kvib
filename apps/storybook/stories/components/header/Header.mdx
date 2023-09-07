@@ -5,16 +5,40 @@ import * as HeaderStories from "./Header.stories";
 
 # Header
 
+Header er et sammensatt komponent som skal brukes øverst på Kartverkets sider. Arbeidet med Header er ikke ferdigstilt - endringer må påregnes.
+
 ## Ta i bruk
 
 ```jsx
-import { Fade, ScaleFade, Slide, SlideFade, Collapse } from "@kvib/react";
+import { Header, HeaderProps } from "@kvib/react";
 ```
 
+## Props
+
 <Canvas of={HeaderStories.Header} />
+<Controls of={HeaderStories.Header} />
+
+## Enkelt søkefelt
+
+`searchFieldType="regular"` legger ved et vanlig søkefelt. `onChange` er callback for når søkefeltet endrer seg.
 
 <Canvas of={HeaderStories.HeaderSearch} />
 
+## Async søkefelt - dropdown resultater
+
+`searchFieldType="async"` legger ved et AsyncSearch med dropdown resultater. Ved bruk av dette søkefeltet er `loadOptions` og `onChange` påkrevd. `loadOptions` er callback for å hente resultater.
+`onChange` er callback for når et valg fra resultatene er tatt.
+
 <Canvas of={HeaderStories.HeaderSearchAsync} />
 
-<Canvas of={HeaderStories.HeaderSearchCentered} />
+## Plassering av innhold
+
+Header kan ha innhold til venstre, med plass i mellom, eller sentrert. Ved skjermer mindre enn 30em(640px) vil søkefelt byttes ut med et søkeikon.
+
+<Canvas of={HeaderStories.HeaderJustifyContent} />
+
+## Logo onClick
+
+`onLogoClick` er callback for når logoen blir klikket på. I dette tilfellet logges det i konsollen.
+
+<Canvas of={HeaderStories.HeaderLogoButton} />
