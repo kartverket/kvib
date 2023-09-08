@@ -16,9 +16,12 @@ export type IconButtonProps = Omit<ChakraIconButtonProps, "colorScheme" | "varia
   /**The icon to be used in the button.*/
   icon: MaterialSymbol;
 
-  /**The visual color appearance of the component.
-     @default green*/
+  /**The visual color appearance of the component.*/
   colorScheme?: "green" | "blue" | "gray" | "red";
+
+  /**The size of the component.
+   @default md*/
+  size?: "xs" | "sm" | "md" | "lg";
 
   /**If true, the icon will be filled.
    @default false*/
@@ -29,15 +32,18 @@ const IconSpinner = (props: IconButtonProps) => {
   if (props.isLoading) {
     return <Spinner size="sm" />;
   }
-  return <Icon icon={props.icon} isFilled={props.iconFill} />;
+  return (
+    <Icon
+      icon={props.icon}
+      isFilled={props.iconFill}
+      size={props.size === "xs" || props.size === "sm" ? 20 : 24}
+      weight={props.size === "xs" || props.size === "sm" ? 300 : 400}
+    />
+  );
 };
 
 export const IconButton = forwardRef<IconButtonProps, "button">(
-  (
-    { isDisabled, isLoading, iconFill, ...props },
-
-    ref
-  ) => {
+  ({ isDisabled, isLoading, iconFill, ...props }, ref) => {
     const styles = useStyleConfig("IconButton", props);
     return (
       <ChakraIconButton
