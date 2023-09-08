@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 2.2.1
+
+### Patch Changes
+
+- 4bd8a6306: - Lagt til ny prop contactInfoEmailAddress i footer. Default verdi er post@kartverket.no
+
 ## 2.2.0
 
 ### Minor Changes
