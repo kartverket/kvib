@@ -1,5 +1,12 @@
 # @kvib/react
 
+## 2.2.0
+
+### Minor Changes
+
+- d37350658: - Ny defaultverdi for weight prop på ikon (600 -> 300)
+  - Ikon skalerer med størrelsen på IconButton og Button
+
 ## 2.1.1
 
 ### Patch Changes
