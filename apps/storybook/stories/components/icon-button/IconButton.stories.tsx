@@ -92,12 +92,10 @@ export const IconButtonVariants: Story = {
   args: { icon: "add" },
   render: (args) => (
     <HStack>
-      <KvibIconButton {...args} aria-label="IconButton solid" variant="primary" />
-      <KvibIconButton {...args} aria-label="IconButton outline" variant="secondary" />
-      <KvibIconButton {...args} aria-label="IconButton link" variant="tertiary" />
-      <KvibIconButton {...args} aria-label="IconButton ghost" variant="ghost">
-        /
-      </KvibIconButton>
+      <KvibIconButton {...args} aria-label="IconButton solid" variant="solid" />
+      <KvibIconButton {...args} aria-label="IconButton outline" variant="outline" />
+      <KvibIconButton {...args} aria-label="IconButton link" variant="link" />
+      <KvibIconButton {...args} aria-label="IconButton ghost" variant="ghost" />
     </HStack>
   ),
 };
@@ -120,7 +118,7 @@ export const IconButtonGroup: Story = {
         <KvibIconButton {...args} />
         <KvibIconButton {...args} />
       </KvibButtonGroup>
-      <KvibButtonGroup colorScheme="blue" isAttached variant={"solid"} size={"md"}>
+      <KvibButtonGroup colorScheme="blue" isAttached variant={"outline"} size={"sm"}>
         <KvibButton>Lagre</KvibButton>
         <KvibIconButton icon={"add"} aria-label={"IconButton add"} />
       </KvibButtonGroup>

@@ -43,7 +43,11 @@ const IconSpinner = (props: IconButtonProps) => {
 };
 
 export const IconButton = forwardRef<IconButtonProps, "button">(
-  ({ isDisabled, isLoading, iconFill, ...props }, ref) => {
+  (
+    { isDisabled, isLoading, iconFill, ...props },
+
+    ref
+  ) => {
     return (
       <ChakraIconButton
         {...props}
