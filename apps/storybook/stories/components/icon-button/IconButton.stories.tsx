@@ -120,7 +120,7 @@ export const IconButtonGroup: Story = {
         <KvibIconButton {...args} />
         <KvibIconButton {...args} />
       </KvibButtonGroup>
-      <KvibButtonGroup colorScheme="blue" isAttached variant={"outline"} size={"sm"}>
+      <KvibButtonGroup colorScheme="blue" isAttached variant={"solid"} size={"md"}>
         <KvibButton>Lagre</KvibButton>
         <KvibIconButton icon={"add"} aria-label={"IconButton add"} />
       </KvibButtonGroup>
