@@ -1,146 +1,89 @@
-import { Box, Icon, Logo, SearchAsync, Flex, useMediaQuery, Search, IconButton } from "@kvib/react/src";
-import { GroupBase, OptionsOrGroups } from "chakra-react-select";
-import { ChangeEventHandler, useState } from "react";
-import { colors } from "../theme/tokens";
+import {
+  Box,
+  Logo,
+  Flex,
+  useMediaQuery,
+  IconButton,
+  useDisclosure,
+  VStack,
+  Collapse,
+  theme,
+  Link,
+} from "@kvib/react/src";
 
-type BaseHeaderProps = {
+type HeaderProps = {
   /** Determines where the content in the header is displayed. */
   justifyContent?: "space-between" | "center" | "start";
-  /** Callback for when the logo is clicked. */
-  onLogoClick?: React.MouseEventHandler<HTMLDivElement>;
+  /** Href for logo link */
+  logoLink?: string;
+  /** Children to be displayed in the header. */
+  children?: React.ReactNode;
+  /** If true, a menu button will be displayed. */
+  showMenuButton?: boolean;
+  /** If true, the header children will be displayed in the dropdown menu. */
+  isChildrenInMenu?: boolean;
+  /** Custom children to be displayed in the dropdown menu. Also to modify dropdown layout. */
+  dropdownMenuChildren?: React.ReactNode;
+  /** Screen breakpoint for when the header should collapse and display menu button instead. */
+  collapseBreakpoint?: "sm" | "md" | "lg";
+  /** If provided: a custom function to be called when the menu button is clicked. */
+  onMenuButtonClick?: React.MouseEventHandler<HTMLButtonElement>;
+  /** Gap between header elements. */
+  gap?: number;
 };
 
-type WithSearchProps = {
-  /** Determines if the search field is displayed. */
-  isSearch: true;
-  /** Placeholder text for the search field. */
-  placeholder?: string;
-};
-
-type WithoutSearchProps = {
-  /** Determines if the search field is displayed. */
-  isSearch?: false;
-  placeholder?: never;
-  loadOptions?: never;
-  onChange?: never;
-  searchFieldVariant?: never;
-};
-
-type AsyncSearchProps<T> = WithSearchProps & {
-  /** "async" provides a dropdown list with results. */
-  searchFieldVariant: "async";
-  /** Only for "async" search field: Function to fetch/select options based on input. */
-  loadOptions: (inputValue: string, callback: (options: OptionsOrGroups<T, GroupBase<T>>) => void) => void;
-  /** 2. Async: Callback for when the selection changes. */
-  onChange: (newValue: T | null) => void;
-};
-
-type RegularSearchProps = WithSearchProps & {
-  /** Determines which variant of searchfield to use. "regular" provides a simple input field. */
-  searchFieldVariant?: "regular";
-  loadOptions?: never;
-  /** 1. Regular: Callback for when the input changes. */
-  onChange?: ChangeEventHandler<HTMLInputElement>;
-};
-
-export type HeaderProps<T> = BaseHeaderProps & (AsyncSearchProps<T> | RegularSearchProps | WithoutSearchProps);
-
-export const Header = <T extends unknown>(props: HeaderProps<T>) => {
+export const Header = (props: HeaderProps) => {
   const {
-    isSearch = false,
-    loadOptions,
-    onChange,
     justifyContent = "space-between",
-    placeholder = "Søk her...",
-    searchFieldVariant = "regular",
-    onLogoClick,
+    logoLink = "/",
+    children,
+    showMenuButton,
+    dropdownMenuChildren,
+    isChildrenInMenu = true,
+    collapseBreakpoint = "sm",
+    onMenuButtonClick,
+    gap = 90,
   } = props;
 
-  const [isSm] = useMediaQuery("(max-width: 30em)");
-  const [isSearching, setIsSearching] = useState<boolean>(false);
-
+  const [isCollapse] = useMediaQuery(`(max-width: ${theme.breakpoints[collapseBreakpoint]})`);
+  const [isSm] = useMediaQuery(`(max-width: ${theme.breakpoints["sm"]})`);
   const logoSize = isSm ? 110 : 150;
   const headerSize = isSm ? 70 : 90;
-  const showLogo = !isSearching || !isSm;
-  const showSearchField = isSearch && (!isSm || isSearching);
-  const showSearchButton = isSearch && !isSearching && isSm;
-  const showExitButton = isSearching && isSm;
-  const justify = justifyContent && isSm ? "space-between" : justifyContent;
+  const justify = justifyContent && isCollapse ? "space-between" : justifyContent;
+  const showChildren = !isCollapse;
+  const { isOpen, onToggle } = useDisclosure();
+  const showMenuButtonElement = (children && (isCollapse || isOpen)) || showMenuButton;
+  const handleClick = onMenuButtonClick || onToggle;
 
   return (
-    <Flex
-      bg="white"
-      borderBottomWidth="2px"
-      borderBottomColor="gray.200"
-      padding={30}
-      height={headerSize}
-      alignItems="center"
-      justifyContent={justify}
-      gap={90}
-    >
-      {showLogo && (
-        <Box onClick={onLogoClick} cursor={onLogoClick && "pointer"}>
+    <Box>
+      <Flex
+        bg="white"
+        borderBottomWidth="2px"
+        borderBottomColor="gray.200"
+        padding={30}
+        height={headerSize}
+        alignItems="center"
+        justifyContent={justify}
+        gap={gap}
+      >
+        <Link href={logoLink} isExternal={false}>
           <Logo variant="horizontal" size={logoSize} />
-        </Box>
-      )}
+        </Link>
 
-      {showSearchField && (
-        <Flex w={400} paddingTop="8px">
-          <Box w={"100%"}>
-            <SearchField
-              loadOptions={loadOptions}
-              onChange={onChange}
-              placeholder={placeholder}
-              searchFieldVariant={searchFieldVariant}
-            />
-          </Box>
-          {showExitButton && (
-            <IconButton
-              aria-label="close search field"
-              icon="close"
-              variant="ghost"
-              onClick={() => setIsSearching(false)}
-            ></IconButton>
-          )}
-        </Flex>
-      )}
+        {showChildren && children}
 
-      {showSearchButton && (
-        <IconButton
-          aria-label={"open search field"}
-          icon="search"
-          variant="ghost"
-          marginTop="8px"
-          onClick={() => setIsSearching(true)}
-          justifySelf="right"
-        />
-      )}
-    </Flex>
+        {showMenuButtonElement && (
+          <IconButton aria-label={"open menu"} icon={isOpen ? "close" : "menu"} variant="ghost" onClick={handleClick} />
+        )}
+      </Flex>
+      {/* Slide content */}
+      <Collapse in={isOpen} animateOpacity={false}>
+        <VStack bg="gray.50" shadow="md" borderBottomWidth="2px" borderBottomColor="gray.200" padding={30} gap={10}>
+          {isChildrenInMenu && children}
+          {dropdownMenuChildren}
+        </VStack>
+      </Collapse>
+    </Box>
   );
-};
-
-const SearchField = <T extends unknown>({
-  loadOptions,
-  onChange,
-  placeholder,
-  searchFieldVariant,
-}: {
-  loadOptions?: (inputValue: string, callback: (options: OptionsOrGroups<T, GroupBase<T>>) => void) => void;
-  onChange?: ((newValue: T | null) => void) | ChangeEventHandler<HTMLInputElement>;
-  placeholder?: string;
-  searchFieldVariant: "regular" | "async";
-}) => {
-  if (searchFieldVariant === "async" && loadOptions && onChange) {
-    return (
-      <SearchAsync
-        placeholder={placeholder}
-        loadOptions={loadOptions}
-        onChange={onChange as (newValue: T | null) => void}
-        size="md"
-        dropdownIndicator={<Icon icon="search" weight={500} color={colors.green[500]} />}
-        aria-label="search async"
-      />
-    );
-  }
-  return <Search placeholder={placeholder} onChange={onChange as ChangeEventHandler<HTMLInputElement>} />;
 };

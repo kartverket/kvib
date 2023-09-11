@@ -1,4 +1,17 @@
-import { Header as KvibHeader, Stack } from "@kvib/react/src";
+import {
+  Box,
+  Header as KvibHeader,
+  Heading,
+  HStack,
+  Icon,
+  Search,
+  SearchAsync,
+  Stack,
+  Tab,
+  TabList,
+  Tabs,
+} from "@kvib/react/src";
+import { colors } from "@kvib/react/src/theme/tokens";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibHeader> = {
@@ -15,21 +28,6 @@ const meta: Meta<typeof KvibHeader> = {
     },
   },
   argTypes: {
-    searchFieldVariant: {
-      table: {
-        type: { summary: "regular | async" },
-        defaultValue: { summary: "regular" },
-      },
-      options: ["regular", "async"],
-      control: { type: "radio" },
-    },
-    isSearch: {
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: false },
-      },
-      control: "boolean",
-    },
     justifyContent: {
       table: {
         type: { summary: "start | center | space-between" },
@@ -38,24 +36,44 @@ const meta: Meta<typeof KvibHeader> = {
       options: ["start", "center", "space-between"],
       control: { type: "radio" },
     },
-    placeholder: {
+    logoLink: {
       table: {
         type: { summary: "string" },
-        defaultValue: { summary: "Søk her..." },
+        defaulValue: { summary: "/" },
       },
       control: "text",
     },
-    onChange: {
-      control: "function",
+    showMenuButton: {
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: false },
+      },
+      control: "boolean",
     },
-    onLogoClick: {
-      control: "function",
+    isChildrenInMenu: {
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: true },
+      },
+      control: "boolean",
+    },
+    collapseBreakpoint: {
+      table: {
+        type: { summary: "sm | md | lg" },
+        defaultValue: { summary: "sm" },
+      },
+      options: ["sm", "md", "lg"],
+      control: { type: "radio" },
+    },
+    gap: {
+      table: {
+        type: { summary: "number" },
+        defaultValue: { summary: 90 },
+      },
+      control: "number",
     },
   },
-  args: {
-    onChange: undefined,
-    onLogoClick: undefined,
-  },
+  args: { onMenuButtonClick: undefined },
 };
 
 export default meta;
@@ -81,40 +99,104 @@ export const Header: Story = {
   render: (args) => <KvibHeader {...args} />,
 };
 
-export const HeaderSearch: Story = {
-  args: { searchFieldVariant: "regular", isSearch: true, placeholder: "Søk her..." },
-  render: (args) => <KvibHeader {...args} />,
-};
-
-export const HeaderSearchAsync: Story = {
-  args: {
-    searchFieldVariant: "async",
-    isSearch: true,
-    placeholder: "Hva leter du etter?",
-    loadOptions: mockLoadOptions,
-    onChange: (selectedOption: any) => {
-      console.log("Selected Option:", selectedOption);
-    },
-  },
-  render: (args) => <KvibHeader {...args} />,
+export const HeaderElements: Story = {
+  args: { justifyContent: "space-between", onMenuButtonClick: undefined, gap: 50, collapseBreakpoint: "md" },
+  render: (args) => (
+    <KvibHeader {...args}>
+      <Heading size="md">Eiendom</Heading>
+      <Search bgColor="white" maxWidth={400} placeholder="Søk her..."></Search>
+      <Tabs colorScheme="blue" size="md">
+        <TabList>
+          <Tab w={90}>Fane 1</Tab>
+          <Tab w={90}>Fane 2</Tab>
+        </TabList>
+      </Tabs>
+    </KvibHeader>
+  ),
 };
 
 export const HeaderJustifyContent: Story = {
-  args: { searchFieldVariant: "regular", isSearch: true },
+  args: {},
   render: (args) => (
     <Stack>
-      <KvibHeader {...args} justifyContent="center" />
-      <KvibHeader {...args} justifyContent="space-between" />
-      <KvibHeader {...args} justifyContent="start" />
+      <KvibHeader {...args} justifyContent="center">
+        <Search bgColor="white" maxWidth={400} placeholder="Søk her..."></Search>
+      </KvibHeader>
+      <KvibHeader {...args} justifyContent="space-between">
+        <Search bgColor="white" maxWidth={400} placeholder="Søk her..."></Search>
+      </KvibHeader>
+      <KvibHeader {...args} justifyContent="start">
+        <Search bgColor="white" maxWidth={400} placeholder="Søk her..."></Search>
+      </KvibHeader>
     </Stack>
+  ),
+};
+
+export const HeaderDropdownChildren: Story = {
+  args: {
+    logoLink: "https://kartverket.github.io/kvib/",
+    dropdownMenuChildren: (
+      <HStack wrap="wrap" align="center" justify="center" gap="10">
+        <Search maxWidth={400} placeholder="Søk her..."></Search>
+        <Tabs colorScheme="blue" size="md">
+          <TabList>
+            <Tab>Første fane</Tab>
+            <Tab>Andre fane</Tab>
+          </TabList>
+        </Tabs>
+      </HStack>
+    ),
+    showMenuButton: true,
+    onMenuButtonClick: undefined,
+    isChildrenInMenu: false,
+  },
+  render: (args) => (
+    <KvibHeader {...args}>
+      <Heading size="md">Eiendom</Heading>
+    </KvibHeader>
+  ),
+};
+
+export const HeaderBreakpoint: Story = {
+  args: { justifyContent: "center" },
+  render: (args) => (
+    <Stack>
+      <KvibHeader {...args} collapseBreakpoint="sm">
+        <Search bgColor="white" maxWidth={400} placeholder="Søk her..."></Search>
+      </KvibHeader>
+      <KvibHeader {...args} collapseBreakpoint="md">
+        <Search bgColor="white" maxWidth={400} placeholder="Søk her..."></Search>
+      </KvibHeader>
+      <KvibHeader {...args} collapseBreakpoint="lg">
+        <Search bgColor="white" maxWidth={400} placeholder="Søk her..."></Search>
+      </KvibHeader>
+    </Stack>
+  ),
+};
+
+export const HeaderSearchAsync: Story = {
+  args: {},
+  render: (args) => (
+    <KvibHeader {...args}>
+      <Box width={300}>
+        <SearchAsync
+          placeholder={"Søk etter frukt"}
+          loadOptions={mockLoadOptions}
+          onChange={(selectedOption: any) => {
+            console.log("Selected Option:", selectedOption);
+          }}
+          size="md"
+          dropdownIndicator={<Icon icon="search" weight={500} color={colors.green[500]} />}
+          aria-label="search async"
+        />
+      </Box>
+    </KvibHeader>
   ),
 };
 
 export const HeaderLogoButton: Story = {
   args: {
-    onLogoClick: () => {
-      console.log("Logo clicked");
-    },
+    logoLink: "https://kartverket.github.io/kvib/",
   },
   render: (args) => <KvibHeader {...args} />,
 };
