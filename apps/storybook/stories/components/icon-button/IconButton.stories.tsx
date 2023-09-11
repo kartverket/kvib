@@ -32,7 +32,7 @@ const meta: Meta<typeof KvibIconButton> = {
       description: "The variant of the IconButton.",
       table: {
         type: { summary: "primary | secondary | link | ghost" },
-        defaultValue: { summary: "solid" },
+        defaultValue: { summary: "primary" },
       },
       options: ["primary", "secondary", "link", "ghost"],
       control: { type: "radio" },
@@ -92,8 +92,8 @@ export const IconButtonVariants: Story = {
   args: { icon: "add" },
   render: (args) => (
     <HStack>
-      <KvibIconButton {...args} aria-label="IconButton solid" variant="solid" />
-      <KvibIconButton {...args} aria-label="IconButton outline" variant="outline" />
+      <KvibIconButton {...args} aria-label="IconButton solid" variant="primary" />
+      <KvibIconButton {...args} aria-label="IconButton outline" variant="secondary" />
       <KvibIconButton {...args} aria-label="IconButton link" variant="link" />
       <KvibIconButton {...args} aria-label="IconButton ghost" variant="ghost" />
     </HStack>
@@ -118,7 +118,7 @@ export const IconButtonGroup: Story = {
         <KvibIconButton {...args} />
         <KvibIconButton {...args} />
       </KvibButtonGroup>
-      <KvibButtonGroup colorScheme="blue" isAttached variant={"outline"} size={"sm"}>
+      <KvibButtonGroup colorScheme="blue" isAttached variant={"secondary"} size={"sm"}>
         <KvibButton>Lagre</KvibButton>
         <KvibIconButton icon={"add"} aria-label={"IconButton add"} />
       </KvibButtonGroup>
