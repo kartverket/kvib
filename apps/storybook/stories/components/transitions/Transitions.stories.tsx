@@ -30,21 +30,6 @@ const meta: Meta<typeof KvibFade> = {
 export default meta;
 type Story = StoryObj<typeof KvibFade>;
 
-const FadeEx = ({ ...args }: FadeProps) => {
-  const { isOpen, onToggle } = useDisclosure();
-
-  return (
-    <div>
-      <Button onClick={onToggle}>Trykk for Fade</Button>
-      <KvibFade in={isOpen} {...args}>
-        <Box color={"green"} w={150} h={30} bg={"pink"}>
-          Tittei
-        </Box>
-      </KvibFade>
-    </div>
-  );
-};
-
 export const ScaleFadeEx = ({ ...args }: ScaleFadeProps) => {
   const { isOpen, onToggle } = useDisclosure();
 
@@ -103,14 +88,4 @@ export const CollapseEx = ({ ...args }: CollapseProps) => {
       </KvibSlide>
     </div>
   );
-};
-
-export const Transitions: Story = {
-  render: () => (
-    <Stack>
-      <FadeEx></FadeEx>,<ScaleFadeEx></ScaleFadeEx>
-      <SlideEx></SlideEx>
-      <SlideFadeEx></SlideFadeEx>
-    </Stack>
-  ),
 };
