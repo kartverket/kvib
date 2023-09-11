@@ -50,7 +50,7 @@ const meta: Meta<typeof KvibHeader> = {
       },
       control: "boolean",
     },
-    isChildrenInMenu: {
+    showChildrenInMenu: {
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: true },
@@ -148,7 +148,7 @@ export const HeaderDropdownChildren: Story = {
     ),
     showMenuButton: true,
     onMenuButtonClick: undefined,
-    isChildrenInMenu: false,
+    showChildrenInMenu: false,
   },
   render: (args) => (
     <KvibHeader {...args}>

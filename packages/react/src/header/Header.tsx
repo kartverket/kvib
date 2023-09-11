@@ -21,7 +21,7 @@ type HeaderProps = {
   /** If true, a menu button will be displayed. */
   showMenuButton?: boolean;
   /** If true, the header children will be displayed in the dropdown menu. */
-  isChildrenInMenu?: boolean;
+  showChildrenInMenu?: boolean;
   /** Custom children to be displayed in the dropdown menu. Also to modify dropdown layout. */
   dropdownMenuChildren?: React.ReactNode;
   /** Screen breakpoint for when the header should collapse and display menu button instead. */
@@ -37,9 +37,9 @@ export const Header = (props: HeaderProps) => {
     justifyContent = "space-between",
     logoLink = "/",
     children,
-    showMenuButton,
+    showMenuButton = false,
     dropdownMenuChildren,
-    isChildrenInMenu = true,
+    showChildrenInMenu = true,
     collapseBreakpoint = "sm",
     onMenuButtonClick,
     gap = 90,
@@ -80,7 +80,7 @@ export const Header = (props: HeaderProps) => {
       {/* Slide content */}
       <Collapse in={isOpen} animateOpacity={false}>
         <VStack bg="gray.50" shadow="md" borderBottomWidth="2px" borderBottomColor="gray.200" padding={30} gap={10}>
-          {isChildrenInMenu && children}
+          {showChildrenInMenu && children}
           {dropdownMenuChildren}
         </VStack>
       </Collapse>
