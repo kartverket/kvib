@@ -31,10 +31,10 @@ const meta: Meta<typeof KvibIconButton> = {
     variant: {
       description: "The variant of the IconButton.",
       table: {
-        type: { summary: "primary | secondary | link | ghost" },
+        type: { summary: "primary | secondary | tertiary | ghost" },
         defaultValue: { summary: "primary" },
       },
-      options: ["primary", "secondary", "link", "ghost"],
+      options: ["primary", "secondary", "tertiary", "ghost"],
       control: { type: "radio" },
     },
     isDisabled: {
@@ -94,7 +94,7 @@ export const IconButtonVariants: Story = {
     <HStack>
       <KvibIconButton {...args} aria-label="IconButton solid" variant="primary" />
       <KvibIconButton {...args} aria-label="IconButton outline" variant="secondary" />
-      <KvibIconButton {...args} aria-label="IconButton link" variant="link" />
+      <KvibIconButton {...args} aria-label="IconButton link" variant="tertiary" />
       <KvibIconButton {...args} aria-label="IconButton ghost" variant="ghost" />
     </HStack>
   ),
