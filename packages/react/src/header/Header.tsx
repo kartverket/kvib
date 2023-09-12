@@ -30,7 +30,7 @@ type HeaderProps = {
   onMenuButtonClick?: React.MouseEventHandler<HTMLButtonElement>;
   /** Gap between header elements. */
   gap?: number;
-  logoVariant: "horizontal" | "vertical";
+  logoVariant?: "horizontal" | "vertical";
 };
 
 export const Header = (props: HeaderProps) => {
