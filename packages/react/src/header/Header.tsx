@@ -30,6 +30,7 @@ type HeaderProps = {
   onMenuButtonClick?: React.MouseEventHandler<HTMLButtonElement>;
   /** Gap between header elements. */
   gap?: number;
+  logoVariant: "horizontal" | "vertical";
 };
 
 export const Header = (props: HeaderProps) => {
@@ -43,11 +44,13 @@ export const Header = (props: HeaderProps) => {
     collapseBreakpoint = "sm",
     onMenuButtonClick,
     gap = 90,
+    logoVariant = "horizontal",
   } = props;
 
   const [isCollapse] = useMediaQuery(`(max-width: ${theme.breakpoints[collapseBreakpoint]})`);
   const [isSm] = useMediaQuery(`(max-width: ${theme.breakpoints["sm"]})`);
-  const logoSize = isSm ? 110 : 150;
+  const logoHorizontalSize = isSm ? 110 : 150;
+  const logoVerticalSize = isSm ? 70 : 100;
   const headerSize = isSm ? 70 : 90;
   const justify = justifyContent && isCollapse ? "space-between" : justifyContent;
   const showChildren = !isCollapse;
@@ -68,7 +71,7 @@ export const Header = (props: HeaderProps) => {
         gap={gap}
       >
         <Link href={logoLink} isExternal={false}>
-          <Logo variant="horizontal" size={logoSize} />
+          <Logo variant={logoVariant} size={logoVariant == "horizontal" ? logoHorizontalSize : logoVerticalSize} />
         </Link>
 
         {showChildren && children}
@@ -79,7 +82,7 @@ export const Header = (props: HeaderProps) => {
       </Flex>
       {/* Slide content */}
       <Collapse in={isOpen} animateOpacity={false}>
-        <VStack bg="gray.50" shadow="md" borderBottomWidth="2px" borderBottomColor="gray.200" padding={30} gap={10}>
+        <VStack bg="gray.50" borderBottomWidth="2px" borderBottomColor="gray.200" padding={30} gap={10}>
           {showChildrenInMenu && children}
           {dropdownMenuChildren}
         </VStack>

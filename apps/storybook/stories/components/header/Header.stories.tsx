@@ -137,7 +137,7 @@ export const HeaderDropdownChildren: Story = {
     logoLink: "https://kartverket.github.io/kvib/",
     dropdownMenuChildren: (
       <HStack wrap="wrap" align="center" justify="center" gap="10">
-        <Search maxWidth={400} placeholder="Søk her..."></Search>
+        <Search maxWidth={400} bgColor="white" placeholder="Søk her..."></Search>
         <Tabs colorScheme="blue" size="md">
           <TabList>
             <Tab>Første fane</Tab>
@@ -197,6 +197,13 @@ export const HeaderSearchAsync: Story = {
 export const HeaderLogoButton: Story = {
   args: {
     logoLink: "https://kartverket.github.io/kvib/",
+  },
+  render: (args) => <KvibHeader {...args} />,
+};
+
+export const HeaderLogoVariant: Story = {
+  args: {
+    logoVariant: "vertical",
   },
   render: (args) => <KvibHeader {...args} />,
 };
