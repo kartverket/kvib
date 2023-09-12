@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 2.3.0
+
+### Minor Changes
+
+- c40e50336: Legger til nytt komponent: Header🎉
+
 ## 2.2.1
 
 ### Patch Changes
