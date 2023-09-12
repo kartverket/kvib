@@ -24,7 +24,7 @@
     "@storybook/addon-links": "^7.3.2",
     "@storybook/cli": "^7.3.2",
     "@storybook/react": "^7.3.2",
-    "@storybook/react-webpack5": "^7.3.2",
+    "@storybook/react-webpack5": "^7.4.1",
     "@storybook/test-runner": "^0.13.0",
     "@storybook/testing-library": "^0.2.0",
     "@types/react": "^18.2.21",
