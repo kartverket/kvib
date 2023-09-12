@@ -72,6 +72,14 @@ const meta: Meta<typeof KvibHeader> = {
       },
       control: "number",
     },
+    logoVariant: {
+      table: {
+        type: { summary: "horizontal | vertical" },
+        defaultValue: { summary: "horizontal" },
+      },
+      options: ["horizontal", "vertical"],
+      control: { type: "radio" },
+    },
   },
   args: { onMenuButtonClick: undefined },
 };
