@@ -30,36 +30,6 @@ const meta: Meta<typeof KvibFade> = {
 export default meta;
 type Story = StoryObj<typeof KvibFade>;
 
-export const ScaleFadeEx = ({ ...args }: ScaleFadeProps) => {
-  const { isOpen, onToggle } = useDisclosure();
-
-  return (
-    <div>
-      <Button onClick={onToggle}>Trykk for ScaleFade!</Button>
-      <KvibScaleFade initialScale={0.9} in={isOpen} {...args}>
-        <Box p="40px" color="green" mt="4" bg={"teal.500g"} rounded="md" shadow="md">
-          Fade
-        </Box>
-      </KvibScaleFade>
-    </div>
-  );
-};
-
-export const SlideEx = ({ ...args }: SlideProps) => {
-  const { isOpen, onToggle } = useDisclosure();
-
-  return (
-    <div>
-      <Button onClick={onToggle}>Trykk for Slide!</Button>
-      <KvibSlide direction="bottom" in={isOpen} style={{ zIndex: 10 }} {...args}>
-        <Box p="40px" color="white" mt="4" bg="teal.500" rounded="md" shadow="md">
-          Fade
-        </Box>
-      </KvibSlide>
-    </div>
-  );
-};
-
 export const SlideFadeEx = ({ ...args }: SlideFadeProps) => {
   const { isOpen, onToggle } = useDisclosure();
 
@@ -71,21 +41,6 @@ export const SlideFadeEx = ({ ...args }: SlideFadeProps) => {
           Fade
         </Box>
       </KvibSlideFade>
-    </div>
-  );
-};
-
-export const CollapseEx = ({ ...args }: CollapseProps) => {
-  const { isOpen, onToggle } = useDisclosure();
-
-  return (
-    <div>
-      <Button onClick={onToggle}>Trykk for Slide!</Button>
-      <KvibSlide direction="bottom" in={isOpen} style={{ zIndex: 10 }} {...args}>
-        <Box p="40px" color="white" mt="4" bg="teal.500" rounded="md" shadow="md">
-          Fade
-        </Box>
-      </KvibSlide>
     </div>
   );
 };

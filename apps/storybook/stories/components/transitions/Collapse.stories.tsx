@@ -1,10 +1,10 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { ScaleFade as KvibScaleFade, ScaleFadeProps, Box } from "@kvib/react/src";
+import { Collapse as KvibCollapse, CollapseProps, Box } from "@kvib/react/src";
 import { colors } from "@kvib/react/src/theme/tokens";
 
-const meta: Meta<typeof KvibScaleFade> = {
-  title: "Komponenter/Transitions/ScaleFade",
-  component: KvibScaleFade,
+const meta: Meta<typeof KvibCollapse> = {
+  title: "Komponenter/Transitions/Collapse",
+  component: KvibCollapse,
   parameters: {
     docs: {
       story: { inline: true },
@@ -27,41 +27,48 @@ const meta: Meta<typeof KvibScaleFade> = {
       },
       control: "boolean",
     },
-    reverse: {
-      description: "If true, plays the animation in reverse on exit",
+    animateOpacity: {
+      description: "If true, will animate the opacity of the element",
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "true" },
       },
       control: "boolean",
     },
-    initialScale: {
-      description: "The size of the children at the start of the animation",
+    startingHeight: {
+      description: "The height of the element in its collapsed state",
       table: {
         type: { summary: "number" },
-        defaultValue: { summary: "0.95" },
+        defaultValue: { summary: "0" },
       },
-      control: { type: "number" },
+      control: "number",
+    },
+    endingHeight: {
+      description: "The height of the element in its expanded state",
+      table: {
+        type: { summary: "number" },
+        defaultValue: { summary: "auto" },
+      },
+      control: "number",
     },
   },
 };
 
 export default meta;
-type Story = StoryObj<typeof KvibScaleFade>;
+type Story = StoryObj<typeof KvibCollapse>;
 
-const ScaleFadeEx = ({ ...args }: ScaleFadeProps) => {
+const CollapseEx = ({ ...args }: CollapseProps) => {
   return (
-    <div>
-      <KvibScaleFade {...args}>
+    <>
+      <KvibCollapse {...args}>
         <Box p="40px" color="white" mt="4" bg={colors.green["400"]} rounded="md" shadow="md">
-          Fade
+          Skjera?
         </Box>
-      </KvibScaleFade>
-    </div>
+      </KvibCollapse>
+    </>
   );
 };
-
-export const ScaleFade: Story = {
-  args: { in: false, unmountOnExit: false, reverse: true },
-  render: (args) => <ScaleFadeEx {...args} />,
+export const Collapse: Story = {
+  args: { in: false },
+  render: (args) => <CollapseEx {...args} />,
 };

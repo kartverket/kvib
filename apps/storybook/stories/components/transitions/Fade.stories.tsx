@@ -17,12 +17,15 @@ const meta: Meta<typeof KvibFade> = {
       table: {
         type: { summary: "boolean" },
       },
+      control: "boolean",
     },
     unmountOnExit: {
       description: "If true, unmounts after 'in' is set to 'false' and animation is done",
       table: {
         type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
       },
+      control: "boolean",
     },
   },
 };
@@ -34,7 +37,7 @@ const FadeEx = ({ ...args }: FadeProps) => {
   return (
     <div>
       <KvibFade {...args}>
-        <Box color={"white"} w={150} h={30} bg={colors.green["400"]} pb="1" pl="2">
+        <Box color={"white"} w={150} h={30} bg={colors.green["400"]} pb="1" pl="2" rounded="md" shadow="md">
           Tittei
         </Box>
       </KvibFade>
