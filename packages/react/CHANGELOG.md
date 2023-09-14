@@ -1,5 +1,24 @@
 # @kvib/react
 
+## 2.3.0
+
+### Minor Changes
+
+- c40e50336: Legger til nytt komponent: Header🎉
+
+## 2.2.1
+
+### Patch Changes
+
+- 4bd8a6306: - Lagt til ny prop contactInfoEmailAddress i footer. Default verdi er post@kartverket.no
+
+## 2.2.0
+
+### Minor Changes
+
+- d37350658: - Ny defaultverdi for weight prop på ikon (600 -> 300)
+  - Ikon skalerer med størrelsen på IconButton og Button
+
 ## 2.1.1
 
 ### Patch Changes
