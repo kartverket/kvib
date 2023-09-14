@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 2.3.1
+
+### Patch Changes
+
+- 93836b893: Fikset IconButton kompatibilitet bug med ButtonGroups.
+
 ## 2.3.0
 
 ### Minor Changes
