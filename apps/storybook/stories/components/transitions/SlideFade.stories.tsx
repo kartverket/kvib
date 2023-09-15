@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { SlideFade as KvibSlideFade, SlideFadeProps, Box, Button, useDisclosure } from "@kvib/react/src";
+import { SlideFade as KvibSlideFade, SlideFadeProps, Box } from "@kvib/react/src";
+import { colors } from "@kvib/react/src/theme/tokens";
 
 const meta: Meta<typeof KvibSlideFade> = {
   title: "Komponenter/Transitions/SlideFade",
@@ -60,7 +61,7 @@ const SlideFadeEx = ({ ...args }: SlideFadeProps) => {
   return (
     <Box w={300} h={300}>
       <KvibSlideFade {...args}>
-        <Box p="40px" color="white" mt="4" bg="teal.500" rounded="md" shadow="md">
+        <Box p="40px" color="white" mt="4" bg={colors.green["400"]} rounded="md" shadow="md">
           Hei
         </Box>
       </KvibSlideFade>

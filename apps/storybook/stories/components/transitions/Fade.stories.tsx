@@ -35,13 +35,13 @@ type Story = StoryObj<typeof KvibFade>;
 
 const FadeEx = ({ ...args }: FadeProps) => {
   return (
-    <div>
+    <Box w={300} h={300}>
       <KvibFade {...args}>
-        <Box color={"white"} w={150} h={30} bg={colors.green["400"]} pb="1" pl="2" rounded="md" shadow="md">
+        <Box p="40px" color="white" mt="4" bg={colors.green["400"]} rounded="md" shadow="md">
           Tittei
         </Box>
       </KvibFade>
-    </div>
+    </Box>
   );
 };
 

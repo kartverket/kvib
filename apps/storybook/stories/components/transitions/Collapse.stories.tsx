@@ -59,13 +59,13 @@ type Story = StoryObj<typeof KvibCollapse>;
 
 const CollapseEx = ({ ...args }: CollapseProps) => {
   return (
-    <>
+    <Box w={300} h={300}>
       <KvibCollapse {...args}>
         <Box p="40px" color="white" mt="4" bg={colors.green["400"]} rounded="md" shadow="md">
           Skjera?
         </Box>
       </KvibCollapse>
-    </>
+    </Box>
   );
 };
 export const Collapse: Story = {

@@ -51,13 +51,13 @@ type Story = StoryObj<typeof KvibScaleFade>;
 
 const ScaleFadeEx = ({ ...args }: ScaleFadeProps) => {
   return (
-    <div>
+    <Box w={300} h={300}>
       <KvibScaleFade {...args}>
         <Box p="40px" color="white" mt="4" bg={colors.green["400"]} rounded="md" shadow="md">
           Fade
         </Box>
       </KvibScaleFade>
-    </div>
+    </Box>
   );
 };
 
