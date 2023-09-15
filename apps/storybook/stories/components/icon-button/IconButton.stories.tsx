@@ -24,10 +24,15 @@ const meta: Meta<typeof KvibIconButton> = {
     isDisabled: {
       description: "If true, the button will be disabled.",
       table: {
-        type: { summary: Boolean },
+        type: { summary: "boolean" },
         defaultValue: { summary: false },
       },
       control: "boolean",
+    },
+    colorScheme: {
+      table: {
+        defaultValue: { summary: "green" },
+      },
     },
     iconFill: {
       table: {
