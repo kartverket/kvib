@@ -70,7 +70,7 @@ const meta: Meta<typeof KvibSearchAsync> = {
     },
     defaultOptions: {
       table: {
-        type: { summary: "T[]" },
+        type: { summary: "T[] | boolean" },
       },
       control: "array",
     },
@@ -174,11 +174,11 @@ export const SearchAsyncDropdown: Story = {
     loadOptions: mockLoadOptions,
     onChange: handleChange,
     dropdownIndicator: <Icon icon="expand_more" weight={400} />,
-    defaultOptions: fruits,
+    defaultOptions: true,
     placeholder: "Søk etter frukt...",
   },
   render: (args) => (
-    <Box h={60}>
+    <Box h="20rem">
       <KvibSearchAsync {...args} />
     </Box>
   ),
@@ -192,7 +192,7 @@ const handleChangeMulti = (newValue: any, actionMeta: any) => {
 export const SearchAsyncMulti: Story = {
   args: { loadOptions: mockLoadOptions, onChange: handleChangeMulti, isMulti: true, placeholder: "Søk etter frukt..." },
   render: (args) => (
-    <Box h={20}>
+    <Box h={40}>
       <KvibSearchAsync {...args} />
     </Box>
   ),
@@ -204,11 +204,11 @@ export const SearchAsyncMultiDropdown: Story = {
     onChange: handleChangeMulti,
     isMulti: true,
     dropdownIndicator: <Icon icon="expand_more" weight={400} />,
-    defaultOptions: fruits,
+    defaultOptions: true,
     placeholder: "Søk etter frukt...",
   },
   render: (args) => (
-    <Box h={20}>
+    <Box h="20rem">
       <KvibSearchAsync {...args} />
     </Box>
   ),

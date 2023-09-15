@@ -30,8 +30,8 @@ export type BaseProps<T> = {
   /** Size of the input (e.g., "small", "medium"). */
   size?: SizeProp;
 
-  /** Default options shown when no input is given. */
-  defaultOptions?: T[];
+  /** Default options shown when no input is given. If true, all options will be shown. */
+  defaultOptions?: T[] | boolean;
 
   /** Visual style variant of the input. */
   variant?: Variant;
