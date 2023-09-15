@@ -1,0 +1,59 @@
+import { Meta, Canvas, Controls } from "@storybook/blocks";
+import * as HeaderStories from "./Header.stories";
+
+<Meta of={HeaderStories} />
+
+# Header
+
+Header er et sammensatt komponent som skal brukes øverst på Kartverkets sider. Arbeidet med Header er ikke ferdigstilt - endringer må påregnes.
+
+## Ta i bruk
+
+```jsx
+import { Header, HeaderProps } from "@kvib/react";
+```
+
+## Props
+
+<Canvas of={HeaderStories.Header} />
+<Controls of={HeaderStories.Header} />
+
+## Eksempel på header elementer
+
+For å legge til komponenter i Header legger man de inn som children. Ved hjelp av `gap` og `justifyContent` kan man endre på plassering.
+
+<Canvas of={HeaderStories.HeaderElements} />
+
+## Plassering av innhold
+
+Header kan ha innhold til venstre, med plass i mellom, eller sentrert. Default er "space-between".
+
+<Canvas of={HeaderStories.HeaderJustifyContent} />
+
+## Header breakpoint
+
+Header har et breakpoint for når elementene vil fjernes og bli erstattet av en menyknapp. Menyknappen aktiverer en dropdown som inneholder elementene som er fjernet.
+Default breakpoint for Header er "sm". Prøv å endre størrelsen på vinduet for å se hvordan det fungerer.
+
+<Canvas of={HeaderStories.HeaderBreakpoint} />
+
+## Header med tilpasset dropdown meny
+
+Defaultinnhold i dropdown menyen under headeren er samme children som headeren har. Dropdownen kan tilpasses slik du vil ha den ved hjelp av disse propsene: `showChildrenInMenu` og `dropdownMenuChildren`.
+`showChildrenInMenu=false` fjerner alt standardinnhold fra dropdownen og `dropdownMenuChildren` setter innholdet i dropdownen.
+
+<Canvas of={HeaderStories.HeaderDropdownChildren} />
+
+## Header med searchAsync søkefelt
+
+<Canvas of={HeaderStories.HeaderSearchAsync} />
+
+## Logo link
+
+Eksempel på logo link som går til Kvib. Default er "/".
+
+<Canvas of={HeaderStories.HeaderLogoButton} />
+
+## Logo vertical
+
+<Canvas of={HeaderStories.HeaderLogoVariant} />

@@ -249,7 +249,7 @@ const DrawerExample = ({ ...args }: DrawerProps) => {
           </DrawerBody>
 
           <DrawerFooter>
-            <Button variant="outline" mr={3} onClick={onClose}>
+            <Button variant="secondary" mr={3} onClick={onClose}>
               Avbryt
             </Button>
             <Button colorScheme="blue">Lagre</Button>
@@ -353,7 +353,7 @@ const DrawerFocusExample = ({ ...args }: DrawerProps) => {
           </DrawerBody>
 
           <DrawerFooter borderTopWidth="1px">
-            <Button variant="outline" mr={3} onClick={onClose}>
+            <Button variant="secondary" mr={3} onClick={onClose}>
               Avbryt
             </Button>
             <Button colorScheme="blue">Send inn</Button>

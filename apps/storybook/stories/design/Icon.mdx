@@ -14,10 +14,12 @@ Kartverkets designsystem tilbyr et ikonelement som viser og lar deg style ikoner
 Gå til [Material symbols rounded sine sider](https://fonts.google.com/icons?icon.set=Material+Symbols&icon.style=Rounded)
 for å få en oversikt over ikoner du kan benytte.
 
+**Importer `MaterialSymbol` dersom du trenger type til icon-proppen.**
+
 ## Ta i bruk
 
 ```jsx
-import { Icon } from "@kvib/react";
+import { Icon, MaterialSymbol } from "@kvib/react";
 ```
 
 ## Props
@@ -35,7 +37,7 @@ import { Icon, colors } from "@kvib/react";
 <Icon icon="home" color={colors.green[400]} />;
 ```
 
-OBS! Enkelte ikoner har ikke en "filled" variant.
+**_OBS! Enkelte ikoner har ikke en "filled" variant._**
 
 <Canvas of={IconStories.colorIcon} />
 
