@@ -1,16 +1,13 @@
 import { ReactNode, useEffect, useRef } from "react";
 import { Text } from "@kvib/react/src";
-import { AsyncSelect as ReactSearch } from "chakra-react-select";
+import { ActionMeta, AsyncSelect as ReactSearch } from "chakra-react-select";
 import { GroupBase, OptionsOrGroups } from "chakra-react-select";
 import { SizeProp, Variant } from "chakra-react-select/dist/types/types";
 
 // Props interface is defined with a generic T to allow flexibility in the data type of options.
-export interface Props<T> {
+export type BaseProps<T> = {
   /** Function to fetch/select options based on input. */
-  loadOptions: (inputValue: string, callback: (options: OptionsOrGroups<T, GroupBase<T>>) => void) => void;
-
-  /** Callback for when the selection changes. */
-  onChange: (newValue: T | null) => void;
+  loadOptions: (inputValue: string, callback: (options: T[]) => void) => void;
 
   /** Placeholder text for the input field. */
   placeholder?: string;
@@ -34,14 +31,31 @@ export interface Props<T> {
   size?: SizeProp;
 
   /** Default options shown when no input is given. */
-  defaultOptions?: OptionsOrGroups<T, GroupBase<T>>;
+  defaultOptions?: T[];
 
   /** Visual style variant of the input. */
   variant?: Variant;
 
   /** Id set to the SelectContainer component */
   id?: string;
-}
+};
+
+type WithMulti<T> = {
+  /** Determines if it is possible to choose several values. */
+  isMulti: true;
+  /** Callback for when the selection changes. If `isMulti=true` the type is `(newValue: readonly T[] | null, actionMeta: ActionMeta<T>) => void` */
+  onChange: (newValue: readonly T[] | null, actionMeta: ActionMeta<T>) => void;
+};
+
+type WithoutMulti<T> = {
+  isMulti?: false;
+  /** If `isMulti=false`, the type is `(newValue: T | null) => void` */
+  onChange: (newValue: T | null) => void;
+};
+
+export type Group<T> = { label: string; options: T[] };
+
+export type SearchAsyncProps<T> = BaseProps<T> & (WithMulti<T> | WithoutMulti<T>);
 
 // SearchAsync uses the async version of react-select to fetch and display options.
 export const SearchAsync = <T extends unknown>({
@@ -57,7 +71,8 @@ export const SearchAsync = <T extends unknown>({
   defaultOptions,
   variant,
   id,
-}: Props<T>) => {
+  isMulti = false,
+}: SearchAsyncProps<T>) => {
   const noOptionsMessage = ({ inputValue }: { inputValue: string }): ReactNode => {
     if (inputValue.replaceAll(/\s/g, "").length < 1) {
       return null;
@@ -69,6 +84,17 @@ export const SearchAsync = <T extends unknown>({
   // ensuring it doesn't get called too frequently.
   const loadOptionsDebounce = useDebounce(loadOptions, debounceTime);
 
+  // Cast onChange to the right type based on if isMulti is true
+  const onChangeWrapper = (newValue: readonly T[] | T | null, actionMeta?: ActionMeta<T>) => {
+    if (isMulti) {
+      const multiChange = onChange as (newValue: readonly T[] | null, actionMeta: ActionMeta<T>) => void;
+      multiChange(newValue as readonly T[], actionMeta!);
+    } else {
+      const singleChange = onChange as (newValue: T | null) => void;
+      singleChange(newValue as T | null);
+    }
+  };
+
   return (
     <ReactSearch
       components={{
@@ -79,7 +105,7 @@ export const SearchAsync = <T extends unknown>({
       isClearable={isClearable}
       autoFocus={autoFocus}
       className={className ? className : ""}
-      onChange={onChange}
+      onChange={onChangeWrapper}
       noOptionsMessage={noOptionsMessage}
       loadingMessage={() => <Text>Laster...</Text>}
       loadOptions={debounceTime ? loadOptionsDebounce : loadOptions}
@@ -89,6 +115,7 @@ export const SearchAsync = <T extends unknown>({
       defaultOptions={defaultOptions}
       variant={variant}
       id={id}
+      isMulti={isMulti}
     />
   );
 };
