@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { Slide as KvibSlide, SlideProps, Box, Button, useDisclosure } from "@kvib/react/src";
+import { colors } from "@kvib/react/src/theme/tokens";
 
 const meta: Meta<typeof KvibSlide> = {
   title: "Komponenter/Transitions/Slide",
@@ -45,7 +46,7 @@ const SlideEx = ({ ...args }: SlideProps) => {
   return (
     <Box w={300} h={300}>
       <KvibSlide {...args}>
-        <Box p="40px" color="white" mt="4" bg="teal.500" rounded="md" shadow="md">
+        <Box p="40px" color="white" mt="4" bg={colors.green["400"]} rounded="md" shadow="md">
           Halla
         </Box>
       </KvibSlide>
@@ -63,25 +64,25 @@ export const nonCanvasExample = () => {
     <Box>
       <Button onClick={onToggleT}>Toggle top</Button>
       <KvibSlide in={isOpenT} style={{ zIndex: -10 }} direction="top">
-        <Box p="40px" color="white" mt="4" bg="teal.500" rounded="md" shadow="md">
+        <Box p="40px" color="white" mt="4" bg={colors.green["400"]} rounded="md" shadow="md">
           Hall
         </Box>
       </KvibSlide>
       <Button onClick={onToggleB}>Toggle bottom</Button>
       <KvibSlide in={isOpenB} style={{ zIndex: -10 }} direction="bottom">
-        <Box p="40px" color="white" mt="4" bg="teal.500" rounded="md" shadow="md">
+        <Box p="40px" color="white" mt="4" bg={colors.green["400"]} rounded="md" shadow="md">
           Halla
         </Box>
       </KvibSlide>
       <Button onClick={onToggleR}>Toggle right</Button>
       <KvibSlide in={isOpenR} style={{ zIndex: -10 }} direction="right">
-        <Box p="40px" color="white" mt="4" bg="teal.500" rounded="md" shadow="md">
+        <Box p="40px" color="white" mt="4" bg={colors.green["400"]} rounded="md" shadow="md">
           Halla
         </Box>
       </KvibSlide>
       <Button onClick={onToggleL}>Toggle left</Button>
       <KvibSlide in={isOpenL} style={{ zIndex: -10 }} direction="left">
-        <Box p="40px" color="white" mt="4" bg="teal.500" rounded="md" shadow="md">
+        <Box p="40px" color="white" mt="4" bg={colors.green["400"]} rounded="md" shadow="md">
           Halla
         </Box>
       </KvibSlide>
