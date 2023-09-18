@@ -1,12 +1,8 @@
 name: Notify new version Slack
 
 on:
-  pull_request:
-    types: [opened, synchronize]
-
-# on:
-#   release:
-#   types: [published]
+  release:
+  types: [published]
 
 jobs:
   send_to_slack:
