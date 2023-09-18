@@ -4,9 +4,7 @@ import { Shadows } from "./Shadows";
 import { Breakpoints } from "./Breakpoints";
 import { Colors } from "./Colors";
 import { Borders } from "./Borders";
-import { Typography } from "./typography";
-import { HStack } from "@kvib/react/src";
-import * as tg from "@kvib/react/src/theme/tokens/typography";
+import { Spacings } from "./Spacings";
 
 <Meta title="Design Fundament/Design tokens" />
 
@@ -25,11 +23,70 @@ I komponenter brukes de slik: `backgroundColor={colors.green["500"]}`.
 
 ## Typografi
 
-<Typography />
-<HStack>
-  <img src={require("../../../public/assets/typografi1.png")} alt="Skjermbilde av typografifila, del 1" />
-  <img src={require("../../../public/assets/typografi2.png")} alt="Skjermbilde av typografifila, del 2" />
-</HStack>
+```tsx
+export const letterSpacings = {
+  tighter: "-0.05em",
+  tight: "-0.025em",
+  normal: "0",
+  wide: "0.025em",
+  wider: "0.05em",
+  widest: "0.1em",
+};
+
+export const lineHeights = {
+  normal: "normal",
+  none: 1,
+  shorter: 1.25,
+  short: 1.375,
+  base: 1.5,
+  tall: 1.625,
+  taller: "2",
+  "3": ".75rem",
+  "4": "1rem",
+  "5": "1.25rem",
+  "6": "1.5rem",
+  "7": "1.75rem",
+  "8": "2rem",
+  "9": "2.25rem",
+  "10": "2.5rem",
+};
+
+export const fontWeights = {
+  hairline: 100,
+  thin: 200,
+  light: 300,
+  normal: 400,
+  medium: 500,
+  semibold: 600,
+  bold: 700,
+  extrabold: 800,
+  black: 900,
+};
+
+export const fonts = {
+  body: `'Mulish', sans-serif`,
+  heading: `'Mulish', sans-serif`,
+  mono: `SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace`,
+};
+
+export const fontSizes = {
+  "3xs": "0.45rem",
+  "2xs": "0.625rem",
+  xs: "0.75rem",
+  sm: "0.875rem",
+  md: "1rem",
+  lg: "1.125rem",
+  xl: "1.25rem",
+  "2xl": "1.5rem",
+  "3xl": "1.875rem",
+  "4xl": "2.25rem",
+  "5xl": "3rem",
+  "6xl": "3.75rem",
+  "7xl": "4.5rem",
+  "8xl": "6rem",
+  "9xl": "8rem",
+};
+```
 
 [https://chakra-ui.com/docs/styled-system/theme#typography](https://chakra-ui.com/docs/styled-system/theme#typography)
 
@@ -38,6 +95,8 @@ I komponenter brukes de slik: `backgroundColor={colors.green["500"]}`.
 <Breakpoints />
 
 ## Spacings
+
+<Spacings />
 
 [https://chakra-ui.com/docs/styled-system/theme#spacing](https://chakra-ui.com/docs/styled-system/theme#spacing)
 
