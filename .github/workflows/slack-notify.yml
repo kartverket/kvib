@@ -2,7 +2,7 @@ name: Notify new version Slack
 
 on:
   release:
-  types: [published]
+    types: [published]
 
 jobs:
   send_to_slack:
