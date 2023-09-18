@@ -1,9 +1,12 @@
-import { Meta } from "@storybook/addon-docs";
+import { Markdown, Meta } from "@storybook/addon-docs";
 import { Radii } from "./Radii";
 import { Shadows } from "./Shadows";
 import { Breakpoints } from "./Breakpoints";
 import { Colors } from "./Colors";
 import { Borders } from "./Borders";
+import { Typography } from "./typography";
+import { HStack } from "@kvib/react/src";
+import * as tg from "@kvib/react/src/theme/tokens/typography";
 
 <Meta title="Design Fundament/Design tokens" />
 
@@ -13,8 +16,8 @@ Nedenfor finner du en oversikt over alle KVIBs design tokens.
 
 ## Farger
 
-Fargene brukes som CSS-variabler på følgende måte: `var(--kvib-colors-green-50)`.\
-I komponenter brukes de slik: `backgroundColor="green.50"`.
+Fargene brukes som CSS-variabler på følgende måte: `var(--kvib-colors-green-500)`.\
+I komponenter brukes de slik: `backgroundColor={colors.green["500"]}`.
 
 <Colors />
 
@@ -22,11 +25,17 @@ I komponenter brukes de slik: `backgroundColor="green.50"`.
 
 ## Typografi
 
+<Typography />
+<HStack>
+  <img src={require("../../../public/assets/typografi1.png")} alt="Skjermbilde av typografifila, del 1" />
+  <img src={require("../../../public/assets/typografi2.png")} alt="Skjermbilde av typografifila, del 2" />
+</HStack>
+
 [https://chakra-ui.com/docs/styled-system/theme#typography](https://chakra-ui.com/docs/styled-system/theme#typography)
 
 ## Breakpoints
 
-[https://chakra-ui.com/docs/styled-system/theme#breakpoints](https://chakra-ui.com/docs/styled-system/theme#breakpoints)
+<Breakpoints />
 
 ## Spacings
 
@@ -38,7 +47,7 @@ I komponenter brukes de slik: `backgroundColor="green.50"`.
 
 ## Radius
 
-[https://chakra-ui.com/docs/styled-system/theme#border-radius](https://chakra-ui.com/docs/styled-system/theme#border-radius)
+<Radii />
 
 ## Z-index
 
@@ -51,11 +60,11 @@ I komponenter brukes de slik: `backgroundColor="green.50"`.
 
 ## Borders
 
-[https://github.com/chakra-ui/chakra-ui/blob/main/packages/components/theme/src/foundations/borders.ts](https://github.com/chakra-ui/chakra-ui/blob/main/packages/components/theme/src/foundations/borders.ts)
+<Borders />
 
-## Skygger
+## Shadows
 
-[https://github.com/chakra-ui/chakra-ui/blob/main/packages/components/theme/src/foundations/shadows.ts](https://github.com/chakra-ui/chakra-ui/blob/main/packages/components/theme/src/foundations/shadows.ts)
+<Shadows />
 
 ## Blurs
 
