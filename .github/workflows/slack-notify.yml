@@ -25,7 +25,7 @@ jobs:
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": "(Test) En ny versjon av <https://kartverket.github.io/kvib|KVIB> har blitt publisert :kvib: Nyeste versjon: ${{ github.event.release.tag_name }}."
+                    "text": ":kvibbin: En ny versjon av <https://kartverket.github.io/kvib|KVIB> har blitt publisert! :kvibbin: \n\n\ Nyeste versjon: <http://localhost:6006/?path=/docs/info-changelog--docs|${{ github.event.release.tag_name }}>."
                   }
                 }
               ]
