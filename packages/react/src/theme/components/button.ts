@@ -1,7 +1,18 @@
 import { defineStyleConfig, defineStyle } from "@chakra-ui/react";
 import { colors } from "../tokens";
 
-export const variantSolid = defineStyle((props) => {
+const baseStyle = defineStyle({
+  fontStyle: "normal",
+  fontWeight: "600",
+  gap: "8px",
+  borderRadius: "6px",
+  _disabled: {
+    opacity: 0.5,
+    cursor: "not-allowed",
+  },
+});
+
+const variantSolid = defineStyle((props) => {
   const { colorScheme: c } = props;
 
   if (c === "gray") {
@@ -44,7 +55,7 @@ export const variantSolid = defineStyle((props) => {
   };
 });
 
-export const variantOutline = defineStyle((props) => {
+const variantOutline = defineStyle((props) => {
   const { colorScheme: c } = props;
 
   if (c === "gray") {
@@ -95,7 +106,7 @@ export const variantOutline = defineStyle((props) => {
   };
 });
 
-export const variantLink = defineStyle((props) => {
+const variantLink = defineStyle((props) => {
   const { colorScheme: c } = props;
 
   if (c === "gray") {
@@ -166,7 +177,7 @@ export const variantLink = defineStyle((props) => {
   };
 });
 
-export const variantGhost = defineStyle((props) => {
+const variantGhost = defineStyle((props) => {
   const { colorScheme: c } = props;
 
   if (c === "gray") {
@@ -212,70 +223,16 @@ export const variantGhost = defineStyle((props) => {
   };
 });
 
+const variants = {
+  primary: variantSolid,
+  secondary: variantOutline,
+  tertiary: variantLink,
+  ghost: variantGhost,
+};
+
 export const buttonTheme = defineStyleConfig({
-  baseStyle: () => ({
-    fontStyle: "normal",
-    fontWeight: "600",
-    gap: "8px",
-    borderRadius: "6px",
-    _disabled: {
-      opacity: 0.5,
-      cursor: "not-allowed",
-    },
-  }),
-  sizes: {
-    xs: {
-      fontSize: "12px",
-      lineHeight: "16px",
-      paddingLeft: "8px",
-      paddingRight: "8px",
-      gap: "6px",
-      minWidth: "90px",
-      minHeight: "24px",
-      ".material-symbols-rounded": {
-        fontSize: "20px",
-      },
-    },
-    sm: {
-      fontSize: "14px",
-      lineHeight: "20px",
-      paddingLeft: "12px",
-      paddingRight: "12px",
-      minWidth: "100px",
-      minHeight: "32px",
-      ".material-symbols-rounded": {
-        fontSize: "20px",
-      },
-    },
-    md: {
-      fontSize: "16px",
-      lineHeight: "24px",
-      paddingLeft: "16px",
-      paddingRight: "16px",
-      minWidth: "100px",
-      minHeight: "40px",
-      ".material-symbols-rounded": {
-        fontSize: "24px",
-      },
-    },
-    lg: {
-      fontSize: "18px",
-      lineHeight: "28px",
-      paddingLeft: "24px",
-      paddingRight: "24px",
-      minWidth: "106px",
-      minHeight: "48px",
-      ".material-symbols-rounded": {
-        fontSize: "24px",
-      },
-    },
-  },
-  variants: {
-    primary: variantSolid,
-    secondary: variantOutline,
-    tertiary: variantLink,
-    ghost: variantGhost,
-  },
+  baseStyle,
+  variants,
   defaultProps: {
     variant: "primary",
     size: "md",

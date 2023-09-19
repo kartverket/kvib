@@ -19,6 +19,9 @@ const meta: Meta<typeof KvibSearchAsync> = {
       control: "text",
     },
     onChange: {
+      table: {
+        type: { summary: "(newValue: T | null) => void" },
+      },
       control: "text",
     },
     placeholder: {
@@ -67,7 +70,7 @@ const meta: Meta<typeof KvibSearchAsync> = {
     },
     defaultOptions: {
       table: {
-        type: { summary: "OptionsOrGroups<T, GroupBase<T>>" },
+        type: { summary: "T[] | boolean" },
       },
       control: "array",
     },
@@ -85,8 +88,15 @@ const meta: Meta<typeof KvibSearchAsync> = {
       },
       control: "text",
     },
+    isMulti: {
+      table: {
+        type: { summary: "boolean" },
+        defualtValue: { summary: "false" },
+      },
+      control: "boolean",
+    },
   },
-  args: { onChange: undefined },
+  args: { onChange: undefined, loadOptions: undefined },
 };
 
 export default meta;
@@ -107,6 +117,16 @@ const fruits = [
   { label: "Kirsebær", value: "kirsebær" },
   { label: "Pære", value: "pære" },
   { label: "Svarthyll", value: "svarthyll" },
+  { label: "Mango", value: "mango" },
+  { label: "Ananas", value: "ananas" },
+  { label: "Kiwi", value: "kiwi" },
+  { label: "Papaya", value: "papaya" },
+  { label: "Blåbær", value: "blåbær" },
+  { label: "Jordbær", value: "jordbær" },
+  { label: "Appelsin", value: "appelsin" },
+  { label: "Druer", value: "druer" },
+  { label: "Sitron", value: "sitron" },
+  { label: "Melon", value: "melon" },
 ];
 
 const mockLoadOptions = (inputValue: string, callback: (options: typeof fruits) => void) => {
@@ -116,13 +136,17 @@ const mockLoadOptions = (inputValue: string, callback: (options: typeof fruits) 
   }, 500);
 };
 
+const handleChange = (selectedOption: any) => {
+  console.log("Selected Option:", selectedOption);
+};
+
 export const SearchAsyncResults: Story = {
   args: {
     loadOptions: mockLoadOptions,
-    onChange: (selectedOption) => {
-      console.log("Selected Option:", selectedOption);
-    },
+    onChange: handleChange,
+
     placeholder: "Søk etter frukt...",
+    isMulti: false,
   },
   render: (args) => (
     <Box h={40}>
@@ -134,9 +158,7 @@ export const SearchAsyncResults: Story = {
 export const SearchAsyncResultsDebounce: Story = {
   args: {
     loadOptions: mockLoadOptions,
-    onChange: (selectedOption) => {
-      console.log("Selected Option:", selectedOption);
-    },
+    onChange: handleChange,
     debounceTime: 3000,
     placeholder: "Søk etter frukt...",
   },
@@ -147,18 +169,46 @@ export const SearchAsyncResultsDebounce: Story = {
   ),
 };
 
-export const SearchAsyncDropdownIndicator: Story = {
+export const SearchAsyncDropdown: Story = {
   args: {
     loadOptions: mockLoadOptions,
-    onChange: (selectedOption) => {
-      console.log("Selected Option:", selectedOption);
-    },
+    onChange: handleChange,
     dropdownIndicator: <Icon icon="expand_more" weight={400} />,
-    defaultOptions: fruits,
+    defaultOptions: true,
     placeholder: "Søk etter frukt...",
   },
   render: (args) => (
-    <Box h={60}>
+    <Box h="20rem">
+      <KvibSearchAsync {...args} />
+    </Box>
+  ),
+};
+
+const handleChangeMulti = (newValue: any, actionMeta: any) => {
+  console.log("Changed value:", newValue);
+  console.log("Action:", actionMeta);
+};
+
+export const SearchAsyncMulti: Story = {
+  args: { loadOptions: mockLoadOptions, onChange: handleChangeMulti, isMulti: true, placeholder: "Søk etter frukt..." },
+  render: (args) => (
+    <Box h={40}>
+      <KvibSearchAsync {...args} />
+    </Box>
+  ),
+};
+
+export const SearchAsyncMultiDropdown: Story = {
+  args: {
+    loadOptions: mockLoadOptions,
+    onChange: handleChangeMulti,
+    isMulti: true,
+    dropdownIndicator: <Icon icon="expand_more" weight={400} />,
+    defaultOptions: true,
+    placeholder: "Søk etter frukt...",
+  },
+  render: (args) => (
+    <Box h="20rem">
       <KvibSearchAsync {...args} />
     </Box>
   ),
@@ -167,9 +217,7 @@ export const SearchAsyncDropdownIndicator: Story = {
 export const SearchAsyncSizes: Story = {
   args: {
     loadOptions: mockLoadOptions,
-    onChange: (selectedOption) => {
-      console.log("Selected Option:", selectedOption);
-    },
+    onChange: handleChange,
     placeholder: "Søk etter frukt...",
   },
   render: (args) => (
@@ -184,9 +232,7 @@ export const SearchAsyncSizes: Story = {
 export const SearchAsyncVariants: Story = {
   args: {
     loadOptions: mockLoadOptions,
-    onChange: (selectedOption) => {
-      console.log("Selected Option:", selectedOption);
-    },
+    onChange: handleChange,
     placeholder: "Søk etter frukt...",
   },
   render: (args) => (
