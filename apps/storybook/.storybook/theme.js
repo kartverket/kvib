@@ -30,6 +30,5 @@ export default create({
 
   // Toolbar default and active colors
   barTextColor: "#1A833B",
-
   barBg: "#E9F4EC",
 });
