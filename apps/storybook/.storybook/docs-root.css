@@ -1,0 +1,30 @@
+div[role="main"] > :first-child {
+  box-shadow: none;
+  border-radius: 0 !important;
+}
+
+.container.sidebar-container {
+  background: linear-gradient(to bottom right, #e4f1f8 0%, #ffffff 30%);
+}
+
+.sidebar-item.sidebar-item svg {
+  color: #156630;
+}
+
+.sidebar-item.sidebar-item[data-selected="false"]:hover,
+.sidebar-item.sidebar-item[data-nodetype="group"]:hover,
+.sidebar-item.sidebar-item[data-nodetype="component"]:hover {
+  background: #e9f4ec !important;
+}
+
+.search-result-item .search-result-item--label mark {
+  color: #2472c4;
+}
+
+.search-result-item svg {
+  color: #156630;
+}
+
+.sidebar-item.sidebar-item:focus {
+  background: #e9f4ec !important;
+}
