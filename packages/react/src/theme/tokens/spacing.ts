@@ -1,4 +1,8 @@
-export const spacing = {
+export type SpacingType = {
+  [key: string]: string;
+};
+
+export const spacing: SpacingType = {
   px: "1px",
   0.5: "0.125rem",
   1: "0.25rem",
@@ -33,3 +37,40 @@ export const spacing = {
   80: "20rem",
   96: "24rem",
 };
+
+export const spacingOrder: (keyof SpacingType)[] = [
+  // Define the order you want
+  "px",
+  0.5,
+  1,
+  1.5,
+  2,
+  2.5,
+  3,
+  3.5,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  12,
+  14,
+  16,
+  20,
+  24,
+  28,
+  32,
+  36,
+  40,
+  44,
+  48,
+  52,
+  56,
+  60,
+  64,
+  72,
+  80,
+  96,
+];

@@ -1,8 +1,32 @@
-import { Box, Center, Table, Thead, Tbody, Tr, Th, Td, TableContainer, Code } from "@kvib/react";
-import { colors, spacings } from "@kvib/react/src/theme/tokens";
+import { Box, Table, Thead, Tbody, Tr, Th, Td, TableContainer, Code } from "@kvib/react";
+import { colors, spacing, spacingOrder } from "@kvib/react/src/theme/tokens";
 
-const example = (spacings: any) => <Box backgroundColor={colors.blue["400"]} w={spacings} h="10" />;
+const example = (spacing: any) => <Box backgroundColor={colors.blue["400"]} w={spacing} h="10" />;
 
 export const Spacings = () => {
-  <>{example(spacings)}</>;
+  console.log(Object.entries(spacing));
+  return (
+    <TableContainer>
+      <Table variant="simple" width="100%">
+        <Thead textAlign="left">
+          <Tr>
+            <Th width="40%">Eksempel</Th>
+            <Th width="30%">Verdi</Th>
+            <Th width="30%">Kode</Th>
+          </Tr>
+        </Thead>
+        <Tbody>
+          {spacingOrder.map((key) => (
+            <Tr key={key}>
+              <Td backgroundColor="white">{example(spacing[key])}</Td>
+              <Td backgroundColor="white">{`${key} / ${spacing[key]}`}</Td>
+              <Td backgroundColor="white">
+                <Code>{`var(--kvib-spacing-${key})`}</Code>
+              </Td>
+            </Tr>
+          ))}
+        </Tbody>
+      </Table>
+    </TableContainer>
+  );
 };
