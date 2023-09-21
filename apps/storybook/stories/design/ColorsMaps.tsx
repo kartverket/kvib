@@ -10,7 +10,7 @@ const Color = ({ value }: { value: string }) => {
 export const ColorBox = ({ color, value }: { color: string; value: string }) => {
   console.log(color);
   return (
-    <Flex w={200}>
+    <Flex w={200} border={`2px ${value} solid`} gap="2px">
       {opacitiesHex.map((opacityHex) => (
         <Color key={opacityHex} value={`${value}${opacityHex}`} />
       ))}
