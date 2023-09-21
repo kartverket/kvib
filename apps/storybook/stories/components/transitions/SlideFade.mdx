@@ -1,5 +1,6 @@
 import { Meta, Canvas, Controls } from "@storybook/blocks";
 import * as SlideFadeStories from "./SlideFade.stories";
+import { KvibProvider, Alert, AlertIcon, AlertTitle, AlertDescription } from "@kvib/react";
 
 <Meta of={SlideFadeStories} />
 
@@ -14,6 +15,14 @@ import { SlideFade } from "@kvib/react";
 ```
 
 ## Props
+
+<KvibProvider>
+  <Alert status="info">
+    <AlertIcon />
+    <AlertTitle>OBS!</AlertTitle>
+    <AlertDescription>Trykk på ```in``` prop for å se animasjonen</AlertDescription>
+  </Alert>
+</KvibProvider>
 
 <Canvas of={SlideFadeStories.SlideFade} />
 <Controls of={SlideFadeStories.SlideFade} />
