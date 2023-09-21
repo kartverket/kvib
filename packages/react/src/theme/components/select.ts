@@ -1,6 +1,6 @@
 import { defineStyleConfig } from "@chakra-ui/react";
 
-export const inputTheme = defineStyleConfig({
+export const selectTheme = defineStyleConfig({
   baseStyle: {
     // Any base styles should go directly here
   },
