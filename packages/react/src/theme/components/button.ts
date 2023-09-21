@@ -106,7 +106,7 @@ const variantOutline = defineStyle((props) => {
   };
 });
 
-const variantLink = defineStyle((props) => {
+const variantTertiary = defineStyle((props) => {
   const { colorScheme: c } = props;
 
   if (c === "gray") {
@@ -114,8 +114,11 @@ const variantLink = defineStyle((props) => {
       color: colors.gray[800],
       backgroundColor: "transparent",
       _hover: {
-        textDecoration: "Underline",
+        textDecoration: "none",
         color: colors.gray[500],
+        ".text": {
+          textDecoration: "Underline",
+        },
         _disabled: {
           ".text": {
             textDecoration: "none",
@@ -125,7 +128,10 @@ const variantLink = defineStyle((props) => {
       },
       _active: {
         color: colors.gray[900],
-        textDecoration: "Underline",
+        textDecoration: "none",
+        ".text": {
+          textDecoration: "Underline",
+        },
         _disabled: {
           color: colors.gray[800],
         },
@@ -139,8 +145,11 @@ const variantLink = defineStyle((props) => {
     color: `${c}.500`,
     backgroundColor: "transparent",
     _hover: {
-      textDecoration: "Underline",
+      textDecoration: "none",
       color: `${c}.400`,
+      ".text": {
+        textDecoration: "Underline",
+      },
       _disabled: {
         ".text": {
           textDecoration: "none",
@@ -150,8 +159,11 @@ const variantLink = defineStyle((props) => {
       },
     },
     _active: {
-      textDecoration: "underline",
+      textDecoration: "none",
       color: `${c}.600`,
+      ".text": {
+        textDecoration: "underline",
+      },
       _disabled: {
         ".text": {
           textDecoration: "none",
@@ -214,7 +226,7 @@ const variantGhost = defineStyle((props) => {
 const variants = {
   primary: variantSolid,
   secondary: variantOutline,
-  tertiary: variantLink,
+  tertiary: variantTertiary,
   ghost: variantGhost,
 };
 
