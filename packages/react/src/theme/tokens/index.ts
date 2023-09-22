@@ -11,3 +11,4 @@ export * from "./spacing";
 export * from "./transitions";
 export * from "./typography";
 export * from "./z-index";
+export * from "./colorsMaps";
