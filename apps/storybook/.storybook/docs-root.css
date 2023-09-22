@@ -6,13 +6,13 @@ div[role="main"] > :first-child {
 
 /* Container for MDX files */
 .sbdocs.sbdocs-wrapper {
-  /* background: linear-gradient(to bottom right, #e9f4ec 0%, #ffffff 20%); */
-  /* background-attachment: fixed; */
+  background: linear-gradient(to bottom right, #e9f4ec 0%, #ffffff 20%);
+  background-attachment: fixed;
 }
 
 /* Sidebar */
-.container.sidebar-container {
-}
+/* .container.sidebar-container {
+} */
 
 /* Icons on sidebar */
 .sidebar-item.sidebar-item svg {
