@@ -1,30 +1,42 @@
+/* Main container outside MDX files - removing border */
 div[role="main"] > :first-child {
   box-shadow: none;
   border-radius: 0 !important;
 }
 
-.container.sidebar-container {
-  background: linear-gradient(to bottom right, #e4f1f8 0%, #ffffff 30%);
+/* Container for MDX files */
+.sbdocs.sbdocs-wrapper {
+  /* background: linear-gradient(to bottom right, #e9f4ec 0%, #ffffff 20%); */
+  /* background-attachment: fixed; */
 }
 
+/* Sidebar */
+.container.sidebar-container {
+}
+
+/* Icons on sidebar */
 .sidebar-item.sidebar-item svg {
   color: #156630;
 }
 
+/* Sidebar item */
 .sidebar-item.sidebar-item[data-selected="false"]:hover,
 .sidebar-item.sidebar-item[data-nodetype="group"]:hover,
 .sidebar-item.sidebar-item[data-nodetype="component"]:hover {
   background: #e9f4ec !important;
 }
 
+/* Color for searched term when searching */
 .search-result-item .search-result-item--label mark {
   color: #2472c4;
 }
 
+/* Icons when searching */
 .search-result-item svg {
   color: #156630;
 }
 
+/* Folder when open */
 .sidebar-item.sidebar-item:focus {
   background: #e9f4ec !important;
 }
