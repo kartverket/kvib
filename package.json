@@ -17,8 +17,7 @@
   },
   "devDependencies": {
     "eslint-config-custom": "*",
-    "husky": "^8.0.0",
-    "lint-staged": "^14.0.1",
+    "husky": "^8.0.3",
     "prettier": "^2.8.8",
     "turbo": "latest"
   },
