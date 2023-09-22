@@ -39,6 +39,6 @@
   },
   "dependencies": {
     "@fontsource-variable/mulish": "^5.0.9",
-    "@storybook/addon-a11y": "^7.0.23"
+    "@storybook/addon-a11y": "^7.4.2"
   }
 }
