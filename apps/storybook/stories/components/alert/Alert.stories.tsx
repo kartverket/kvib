@@ -1,4 +1,4 @@
-import { Alert as ChakraAlert, AlertIcon, AlertTitle, AlertDescription, VStack, Icon } from "@kvib/react/src";
+import { Alert as ChakraAlert, AlertIcon, AlertTitle, AlertDescription, VStack, Icon, Box } from "@kvib/react/src";
 import { colors } from "@kvib/react/src/theme/tokens";
 import { Meta, StoryObj } from "@storybook/react";
 
