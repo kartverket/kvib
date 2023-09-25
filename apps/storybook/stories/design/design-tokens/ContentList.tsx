@@ -17,10 +17,14 @@ const Links = () => {
   return h2.map((name) => {
     return (
       <div>
-        <div>
-          <Link href={`/?path=/docs/design-fundament-design-tokens--docs#${name.toLowerCase()}`}>{name}</Link>
-        </div>
-        <br />
+        <li>
+          <Link
+            href={`/?path=/docs/design-fundament-design-tokens--docs#${name.toLowerCase()}`}
+            style={{ fontSize: "11px" }}
+          >
+            {name}
+          </Link>
+        </li>
       </div>
     );
   });
@@ -28,8 +32,11 @@ const Links = () => {
 
 export const ContentList = () => {
   return (
-    <Box position="fixed" right="8%">
-      <Links />
+    <Box>
+      <h2>Kapitteloversikt</h2>
+      <ul>
+        <Links />
+      </ul>
     </Box>
   );
 };
