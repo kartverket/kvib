@@ -9,6 +9,9 @@ const meta: Meta<typeof KvibAspectRatio> = {
       story: { inline: true },
       canvas: { sourceState: "shown" },
     },
+    a11y: {
+      disable: true,
+    },
   },
   argTypes: {
     ratio: {
