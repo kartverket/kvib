@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 2.5.0
+
+### Minor Changes
+
+- d66501ace: Legger til fargepaletter til kart: `import { mapColors, mapColorsRGBA } from "@kvib/react/src/theme/tokens";`.
+
 ## 2.4.0
 
 ### Minor Changes
