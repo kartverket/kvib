@@ -1,4 +1,4 @@
-import { Box, Table, Thead, Tbody, Tr, Th, Td, TableContainer, Code } from "@kvib/react";
+import { Box, Table, Thead, Tbody, Tr, Th, Td, TableContainer, Code } from "@kvib/react/src";
 import { colors, spacing, spacingOrder } from "@kvib/react/src/theme/tokens";
 
 const example = (spacing: any) => <Box backgroundColor={colors.blue["400"]} w={spacing} h="10" />;
