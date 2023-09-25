@@ -1,4 +1,4 @@
-import { AspectRatio as KvibAspectRatio, Image } from "@kvib/react/src";
+import { AspectRatio as KvibAspectRatio } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibAspectRatio> = {
@@ -24,9 +24,5 @@ type Story = StoryObj<typeof KvibAspectRatio>;
 
 export const AspectRatio: Story = {
   args: { ratio: 4 / 3 },
-  render: (args) => (
-    <KvibAspectRatio {...args}>
-      <>hei</>
-    </KvibAspectRatio>
-  ),
+  render: (args) => <></>,
 };
