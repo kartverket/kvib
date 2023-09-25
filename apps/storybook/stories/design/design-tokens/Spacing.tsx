@@ -3,7 +3,7 @@ import { colors, spacing, spacingOrder } from "@kvib/react/src/theme/tokens";
 
 const example = (spacing: any) => <Box backgroundColor={colors.blue["400"]} w={spacing} h="10" />;
 
-export const Spacings = () => {
+export const Spacing = () => {
   console.log(Object.entries(spacing));
   return (
     <TableContainer>
