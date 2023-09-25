@@ -26,10 +26,7 @@ export const AspectRatio: Story = {
   args: { ratio: 4 / 3 },
   render: (args) => (
     <KvibAspectRatio {...args}>
-      <Image
-        alt="trees"
-        src="https://images.unsplash.com/photo-1477768663691-75454fd8e870?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3087&q=80"
-      />
+      <>hei</>
     </KvibAspectRatio>
   ),
 };
