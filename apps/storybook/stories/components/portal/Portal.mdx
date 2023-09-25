@@ -1,6 +1,6 @@
 import { Meta, Canvas, Story, Controls, Source } from "@storybook/blocks";
 import * as PortalStories from "./Portal.stories";
-import { Card, CardBody, KvibProvider } from "@kvib/react/src";
+import { Card, CardBody } from "@kvib/react/src";
 import * as PortalStrings from "./srcStrings";
 
 <Meta of={PortalStories} />
@@ -22,36 +22,30 @@ import { Portal } from "@kvib/react";
 
 ## Egendefinert container
 
-<KvibProvider>
-  <Card variant="outline">
-    <CardBody>
-      <Story of={PortalStories.PortalCustom} />
-    </CardBody>
-  </Card>
-</KvibProvider>
+<Card variant="outline">
+  <CardBody>
+    <Story of={PortalStories.PortalCustom} />
+  </CardBody>
+</Card>
 
 <Source code={PortalStrings.PortalCustomString} dark />
 
 ## Nested Portal
 
-<KvibProvider>
-  <Card variant="outline">
-    <CardBody>
-      <Story of={PortalStories.PortalNested} />
-    </CardBody>
-  </Card>
-</KvibProvider>
+<Card variant="outline">
+  <CardBody>
+    <Story of={PortalStories.PortalNested} />
+  </CardBody>
+</Card>
 
 <Source code={PortalStrings.PortalNestedString} dark />
 
 ## Separert nested portal
 
-<KvibProvider>
-  <Card variant="outline">
-    <CardBody>
-      <Story of={PortalStories.PortalNotAppended} />
-    </CardBody>
-  </Card>
-</KvibProvider>
+<Card variant="outline">
+  <CardBody>
+    <Story of={PortalStories.PortalNotAppended} />
+  </CardBody>
+</Card>
 
 <Source code={PortalStrings.PortalNotAppendedString} dark />
