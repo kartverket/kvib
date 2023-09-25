@@ -1,5 +1,29 @@
 # @kvib/react
 
+## 2.5.0
+
+### Minor Changes
+
+- d66501ace: Legger til fargepaletter til kart: `import { mapColors, mapColorsRGBA } from "@kvib/react/src/theme/tokens";`.
+
+## 2.4.0
+
+### Minor Changes
+
+- b413753fb: SearchAsync:
+
+  - Oppdateres til å støtte multiselect.
+  - Props har blitt oppdatert og typer forenklet (dobbeltsjekk i prosjektet ditt om det lager problemer):
+    - Alle typer for props er nå inkludert i KVIB.
+    - `isMulti` legges til.
+    - `onChange`: Ny type basert på om `isMulti=true`
+    - `loadOptions` er forenklet
+    - `defaultOptions` støtter nå boolean.
+
+### Patch Changes
+
+- 501a36e6b: Bumped @fontsource/mulish from 4.5.14 to 5.0.8
+
 ## 2.3.1
 
 ### Patch Changes

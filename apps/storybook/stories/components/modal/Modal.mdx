@@ -1,6 +1,6 @@
 import { Meta, Canvas, Story, Controls, Source } from "@storybook/blocks";
 import * as ModalStories from "./Modal.stories";
-import { Card, CardBody, KvibProvider } from "@kvib/react/src";
+import { Card, CardBody } from "@kvib/react/src";
 import * as ModalStrings from "./srcStrings.ts";
 
 <Meta of={ModalStories} />
@@ -17,85 +17,71 @@ import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody,
 
 ## Props
 
-<KvibProvider>
-  <Card variant="outline">
-    <CardBody>
-      <Story of={ModalStories.Modal} />
-    </CardBody>
-  </Card>
-</KvibProvider>
+<Card variant="outline">
+  <CardBody>
+    <Story of={ModalStories.Modal} />
+  </CardBody>
+</Card>
 
 <Source code={ModalStrings.ModalString} dark />
 <Controls of={ModalStories.Modal} />
 
 ## Block scrolling
 
-<KvibProvider>
-  <Card variant="outline">
-    <CardBody>
-      <Story of={ModalStories.ModalScrolling} />
-    </CardBody>
-  </Card>
-</KvibProvider>
+<Card variant="outline">
+  <CardBody>
+    <Story of={ModalStories.ModalScrolling} />
+  </CardBody>
+</Card>
 
 <Source code={ModalStrings.ModalScrollingString} dark />
 
 ## Fokus
 
-<KvibProvider>
-  <Card variant="outline">
-    <CardBody>
-      <Story of={ModalStories.ModalFocus} />
-    </CardBody>
-  </Card>
-</KvibProvider>
+<Card variant="outline">
+  <CardBody>
+    <Story of={ModalStories.ModalFocus} />
+  </CardBody>
+</Card>
 
 <Source code={ModalStrings.ModalFocusString} dark />
 
 ## Sentrering
 
-<KvibProvider>
-  <Card variant="outline">
-    <CardBody>
-      <Story of={ModalStories.ModalCentered} />
-    </CardBody>
-  </Card>
-</KvibProvider>
+<Card variant="outline">
+  <CardBody>
+    <Story of={ModalStories.ModalCentered} />
+  </CardBody>
+</Card>
 
 <Source code={ModalStrings.ModalCenteredString} dark />
 
 ## Transition
 
-<KvibProvider>
-  <Card variant="outline">
-    <CardBody>
-      <Story of={ModalStories.ModalTransition} />
-    </CardBody>
-  </Card>
-</KvibProvider>
+<Card variant="outline">
+  <CardBody>
+    <Story of={ModalStories.ModalTransition} />
+  </CardBody>
+</Card>
 
 <Source code={ModalStrings.ModalTransitionString} dark />
 
 ## Størrelser
 
-<KvibProvider>
-  <Card variant="outline">
-    <CardBody>
-      <Story of={ModalStories.ModalSizes} />
-    </CardBody>
-  </Card>
-</KvibProvider>
+<Card variant="outline">
+  <CardBody>
+    <Story of={ModalStories.ModalSizes} />
+  </CardBody>
+</Card>
 
 <Source code={ModalStrings.ModalSizesString} dark />
 
 ## Bakteppe
 
-<KvibProvider>
-  <Card variant="outline">
-    <CardBody>
-      <Story of={ModalStories.ModalBackdrop} />
-    </CardBody>
-  </Card>
-</KvibProvider>
+<Card variant="outline">
+  <CardBody>
+    <Story of={ModalStories.ModalBackdrop} />
+  </CardBody>
+</Card>
 
 <Source code={ModalStrings.ModalBackdropString} dark />

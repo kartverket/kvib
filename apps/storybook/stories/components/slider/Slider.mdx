@@ -1,7 +1,6 @@
 import { Title, Canvas, Meta, Story, Controls } from "@storybook/blocks";
 import * as SliderStories from "./Slider.stories";
 import { Alert, AlertIcon } from "@kvib/react/src";
-import { KvibProvider } from "@kvib/react/src/provider/KvibProvider";
 
 <Meta of={SliderStories} />
 
@@ -9,14 +8,10 @@ import { KvibProvider } from "@kvib/react/src/provider/KvibProvider";
 
 Her er en oversikt over Slider-komponenten, og hvordan denne bygges opp av flere andre komponenter.
 
-    <KvibProvider>
       <Alert status="warning">
         <AlertIcon />
         En Slider skal alltid stå sammen med en Label. Dersom det mot formodning avviker fra dette må aria-label benyttes.
       </Alert>
-    </KvibProvider>
-
-{" "}
 
 <br />
 

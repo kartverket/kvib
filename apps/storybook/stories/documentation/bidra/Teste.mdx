@@ -1,5 +1,5 @@
 import { Meta } from "@storybook/blocks";
-import { Alert, AlertIcon, KvibProvider } from "@kvib/react/src";
+import { Alert, AlertIcon } from "@kvib/react/src";
 
 <Meta title="Info/Bidra/Teste" />
 
@@ -51,7 +51,6 @@ Designerne våre tenker på UU når en komponenent blir designet, og Chakra tilb
 - [https://a11y-101.com/development](https://a11y-101.com/development)
 - [https://www.a11yproject.com/checklist/#appearance](https://www.a11yproject.com/checklist/#appearance)
 
-<KvibProvider>
   <Alert status="info">
     <AlertIcon />
     Det kan være enkelte tilfeller hvor a11y-testene feiler på grunn av noe underliggende i Chakra. Det er mulig å overkjøre
@@ -61,7 +60,6 @@ Designerne våre tenker på UU når en komponenent blir designet, og Chakra tilb
     over [WCAG A & AA regel og regel beskrivelse](https://github.com/dequelabs/axe-core/blob/develop/doc/rule-descriptions.md)
     for å finne fram "Rule id" for konfigurasjon av a11y.
   </Alert>
-</KvibProvider>
 
 ## Bruke Chromatic for visuelle tester og interaksjonstesting
 

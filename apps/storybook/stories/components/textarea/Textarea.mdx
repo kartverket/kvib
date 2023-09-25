@@ -1,6 +1,6 @@
 import { Meta, Canvas, Story, Controls, Source } from "@storybook/blocks";
 import * as TextareaStories from "./Textarea.stories";
-import { Card, CardBody, KvibProvider } from "@kvib/react/src";
+import { Card, CardBody } from "@kvib/react/src";
 
 <Meta of={TextareaStories} />
 
@@ -21,13 +21,11 @@ import { Textarea } from "@kvib/react";
 
 ## Controlled Textarea
 
-<KvibProvider>
-  <Card variant="outline">
-    <CardBody>
-      <Story of={TextareaStories.TextareaControlled} />
-    </CardBody>
-  </Card>
-</KvibProvider>
+<Card variant="outline">
+  <CardBody>
+    <Story of={TextareaStories.TextareaControlled} />
+  </CardBody>
+</Card>
 
 <Source
   code={`const TextAreaControlledExample = () => {

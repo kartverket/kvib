@@ -1,5 +1,5 @@
 import { Meta } from "@storybook/addon-docs";
-import { Alert, AlertIcon, KvibProvider } from "@kvib/react/src";
+import { Alert, AlertIcon } from "@kvib/react/src";
 
 <Meta title="Info/Bidra/Style" />
 
@@ -51,15 +51,13 @@ IconButton er en komponent hvor useStyleConfig er benyttet, og under vises det h
 
     ```
 
-<KvibProvider>
-  <Alert status="warning">
-    <AlertIcon />
-    Du skal ikke sette default farge for en komponent direkte i komponenten. Vi har valgt å bruke grønt som default farge-tema
-    for de aller fleste komponentene i KVIB. Dette kan imidlertid enkelt endres til blått (se under Oppsett). Dersom et komponent
-    skal ha et annet default fargetema, f.eks grå, settes dette i theme/index.ts. På denne måten er det enkelt å holde oversikt
-    over komponenter som avviker fra default fargetema.
-  </Alert>
-</KvibProvider>
+<Alert status="warning">
+  <AlertIcon />
+  Du skal ikke sette default farge for en komponent direkte i komponenten. Vi har valgt å bruke grønt som default farge-tema
+  for de aller fleste komponentene i KVIB. Dette kan imidlertid enkelt endres til blått (se under Oppsett). Dersom et komponent
+  skal ha et annet default fargetema, f.eks grå, settes dette i theme/index.ts. På denne måten er det enkelt å holde oversikt
+  over komponenter som avviker fra default fargetema.
+</Alert>
 
 <span style={{ color: "orange" }}>**_Tips:_**</span> _Chakra lenker til sin egen styling-kode for de fleste komponentene.For
 eksempel kan stylingen av Button-komponenten sees ved å trykke på “Theme source” øverst på [Chakra sin dokumentasjonsside

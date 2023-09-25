@@ -1,7 +1,6 @@
 import { Canvas, Meta, Controls } from "@storybook/blocks";
 import { Alert, AlertIcon, AlertDescription } from "@kvib/react/src/alert";
 import * as InputStories from "./Input.stories";
-import { KvibProvider } from "@kvib/react/src";
 
 <Meta of={InputStories} />
 
@@ -17,7 +16,6 @@ import { Input } from "@kvib/react";
 
 ## Props
 
-<KvibProvider>
     <Alert status="info">
         <AlertIcon/>
         <AlertDescription>
@@ -25,8 +23,6 @@ import { Input } from "@kvib/react";
         </AlertDescription>
 
     </Alert>
-
-</KvibProvider>
 
 <Canvas of={InputStories.Input} />
 <Controls of={InputStories.Input} />

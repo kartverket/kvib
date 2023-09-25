@@ -1,7 +1,7 @@
 import { Meta, Canvas, Story, Controls, Source } from "@storybook/blocks";
 import * as MenuStories from "./Menu.stories";
 import * as MenuStrings from "./srcStrings.ts";
-import { Card, CardBody, KvibProvider } from "@kvib/react/src";
+import { Card, CardBody } from "@kvib/react/src";
 
 <Meta of={MenuStories} />
 
@@ -17,73 +17,61 @@ import { Menu, MenuButton, MenuList, MenuItem, MenuItemOption, MenuGroup, MenuOp
 
 ## Props
 
-<KvibProvider>
-  <Card variant="outline">
-    <CardBody>
-      <Story of={MenuStories.Menu} />
-    </CardBody>
-  </Card>
-</KvibProvider>
+<Card variant="outline">
+  <CardBody>
+    <Story of={MenuStories.Menu} />
+  </CardBody>
+</Card>
 
 <Source code={MenuStrings.MenuString} dark />
 <Controls of={MenuStories.Menu} />
 
 ## Internal state
 
-<KvibProvider>
-  <Card variant="outline">
-    <CardBody>
-      <Story of={MenuStories.MenuState} />
-    </CardBody>
-  </Card>
-</KvibProvider>
+<Card variant="outline">
+  <CardBody>
+    <Story of={MenuStories.MenuState} />
+  </CardBody>
+</Card>
 
 <Source code={MenuStrings.MenuStateString} dark />
 
 ## Ikoner og kommandoer
 
-<KvibProvider>
-  <Card variant="outline">
-    <CardBody>
-      <Story of={MenuStories.MenuIconsCommands} />
-    </CardBody>
-  </Card>
-</KvibProvider>
+<Card variant="outline">
+  <CardBody>
+    <Story of={MenuStories.MenuIconsCommands} />
+  </CardBody>
+</Card>
 
 <Source code={MenuStrings.MenuIconsCommandsString} dark />
 
 ## MenuGroup
 
-<KvibProvider>
-  <Card variant="outline">
-    <CardBody>
-      <Story of={MenuStories.MenuGroup} />
-    </CardBody>
-  </Card>
-</KvibProvider>
+<Card variant="outline">
+  <CardBody>
+    <Story of={MenuStories.MenuGroup} />
+  </CardBody>
+</Card>
 
 <Source code={MenuStrings.MenuGroupString} dark />
 
 ## MenuItem med link
 
-<KvibProvider>
-  <Card variant="outline">
-    <CardBody>
-      <Story of={MenuStories.MenuLink} />
-    </CardBody>
-  </Card>
-</KvibProvider>
+<Card variant="outline">
+  <CardBody>
+    <Story of={MenuStories.MenuLink} />
+  </CardBody>
+</Card>
 
 <Source code={MenuStrings.MenuLinkString} dark />
 
 ## Menu option groups
 
-<KvibProvider>
-  <Card variant="outline">
-    <CardBody>
-      <Story of={MenuStories.MenuOptionGroups} />
-    </CardBody>
-  </Card>
-</KvibProvider>
+<Card variant="outline">
+  <CardBody>
+    <Story of={MenuStories.MenuOptionGroups} />
+  </CardBody>
+</Card>
 
 <Source code={MenuStrings.MenuOptionGroupsString} dark />
