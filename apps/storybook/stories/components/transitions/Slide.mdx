@@ -1,0 +1,28 @@
+import { Meta, Canvas, Controls } from "@storybook/blocks";
+import * as SlideStories from "./Slide.stories";
+import { KvibProvider, Alert, AlertIcon, AlertTitle, AlertDescription } from "@kvib/react/src";
+
+<Meta of={SlideStories} />
+
+# Slide
+
+Denne animasjonen sklir elementer inn fra valgt retning.
+
+## Ta i bruk
+
+```jsx
+import { Slide } from "@kvib/react";
+```
+
+## Props
+
+<KvibProvider>
+  <Alert status="info">
+    <AlertIcon />
+    <AlertTitle>OBS!</AlertTitle>
+    <AlertDescription>Trykk på ```in``` prop for å se animasjonen</AlertDescription>
+  </Alert>
+</KvibProvider>
+
+<Canvas of={SlideStories.Slide} />
+<Controls of={SlideStories.Slide} />

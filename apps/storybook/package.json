@@ -15,10 +15,10 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.22.0",
-    "@babel/preset-env": "^7.22.0",
-    "@babel/preset-react": "^7.22.0",
-    "@babel/preset-typescript": "^7.22.0",
-    "@storybook/addon-actions": "^7.3.2",
+    "@babel/preset-env": "^7.22.20",
+    "@babel/preset-react": "^7.22.15",
+    "@babel/preset-typescript": "^7.22.15",
+    "@storybook/addon-actions": "^7.4.1",
     "@storybook/addon-essentials": "^7.3.2",
     "@storybook/addon-interactions": "^7.3.2",
     "@storybook/addon-links": "^7.3.2",
@@ -39,6 +39,6 @@
   },
   "dependencies": {
     "@fontsource-variable/mulish": "^5.0.9",
-    "@storybook/addon-a11y": "^7.0.23"
+    "@storybook/addon-a11y": "^7.4.2"
   }
 }

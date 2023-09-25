@@ -1,0 +1,30 @@
+import { Meta, Canvas, Controls } from "@storybook/blocks";
+import * as ScaleFadeStories from "./ScaleFade.stories";
+import { KvibProvider, Alert, AlertIcon, AlertTitle, AlertDescription } from "@kvib/react/src";
+
+<Meta of={ScaleFadeStories} />
+
+# Fade
+
+<KvibProvider>
+  <Alert>OBS! Animasjonen kan være hakkete i Storybook </Alert>
+</KvibProvider>
+
+## Ta i bruk
+
+```jsx
+import { ScaleFade } from "@kvib/react";
+```
+
+## Props
+
+<KvibProvider>
+  <Alert status="info">
+    <AlertIcon />
+    <AlertTitle>OBS!</AlertTitle>
+    <AlertDescription>Trykk på ```in``` prop for å se animasjonen</AlertDescription>
+  </Alert>
+</KvibProvider>
+
+<Canvas of={ScaleFadeStories.ScaleFade} />
+<Controls of={ScaleFadeStories.ScaleFade} />
