@@ -31,10 +31,10 @@ const meta: Meta<typeof KvibIconButton> = {
     variant: {
       description: "The variant of the IconButton.",
       table: {
-        type: { summary: "primary | secondary | link | ghost" },
+        type: { summary: "primary | secondary | tertiary | ghost" },
         defaultValue: { summary: "primary" },
       },
-      options: ["primary", "secondary", "link", "ghost"],
+      options: ["primary", "secondary", "tertiary", "ghost"],
       control: { type: "radio" },
     },
     isDisabled: {

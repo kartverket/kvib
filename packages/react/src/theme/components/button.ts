@@ -106,7 +106,7 @@ const variantOutline = defineStyle((props) => {
   };
 });
 
-const variantLink = defineStyle((props) => {
+const variantTertiary = defineStyle((props) => {
   const { colorScheme: c } = props;
 
   if (c === "gray") {
@@ -226,7 +226,7 @@ const variantGhost = defineStyle((props) => {
 const variants = {
   primary: variantSolid,
   secondary: variantOutline,
-  tertiary: variantLink,
+  tertiary: variantTertiary,
   ghost: variantGhost,
 };
 
