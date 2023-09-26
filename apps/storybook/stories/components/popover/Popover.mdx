@@ -1,6 +1,6 @@
 import { Meta, Canvas, Story, Controls, Source } from "@storybook/blocks";
 import * as PopoverStories from "./Popover.stories";
-import { Card, CardBody, KvibProvider } from "@kvib/react/src";
+import { Card, CardBody } from "@kvib/react/src";
 import * as PopoverStrings from "./srcStrings.ts";
 
 <Meta of={PopoverStories} />
@@ -32,13 +32,11 @@ import {
 
 ## Fokus på element når Popover åpnes
 
-<KvibProvider>
-  <Card variant="outline">
-    <CardBody>
-      <Story of={PopoverStories.PopoverFocus} />
-    </CardBody>
-  </Card>
-</KvibProvider>
+<Card variant="outline">
+  <CardBody>
+    <Story of={PopoverStories.PopoverFocus} />
+  </CardBody>
+</Card>
 
 <Source code={PopoverStrings.PopoverFocusString} dark />
 
@@ -47,37 +45,31 @@ import {
 Hvis Popover har en form, vil du kanskje fange fokus inne i Popoveren og lukke den når brukeren er ferdig og trykker på "Lagre".
 Bruk `react-focus-lock` for å fange fokus inne i `PopoveContent`
 
-<KvibProvider>
-  <Card variant="outline">
-    <CardBody>
-      <Story of={PopoverStories.PopoverTrappingFocus} />
-    </CardBody>
-  </Card>
-</KvibProvider>
+<Card variant="outline">
+  <CardBody>
+    <Story of={PopoverStories.PopoverTrappingFocus} />
+  </CardBody>
+</Card>
 
 <Source code={PopoverStrings.PopoverTrappingFocusString} dark />
 
 ## Kontrollert bruk
 
-<KvibProvider>
-  <Card variant="outline">
-    <CardBody>
-      <Story of={PopoverStories.PopoverControlled} />
-    </CardBody>
-  </Card>
-</KvibProvider>
+<Card variant="outline">
+  <CardBody>
+    <Story of={PopoverStories.PopoverControlled} />
+  </CardBody>
+</Card>
 
 <Source code={PopoverStrings.PopoverControlledString} dark />
 
 ## Popover Anchor
 
-<KvibProvider>
-  <Card variant="outline">
-    <CardBody>
-      <Story of={PopoverStories.PopoverAnchorExample} />
-    </CardBody>
-  </Card>
-</KvibProvider>
+<Card variant="outline">
+  <CardBody>
+    <Story of={PopoverStories.PopoverAnchorExample} />
+  </CardBody>
+</Card>
 
 <Source code={PopoverStrings.PopoverAnchorString} dark />
 

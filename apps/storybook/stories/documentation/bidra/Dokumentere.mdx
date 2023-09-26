@@ -1,4 +1,4 @@
-import { Alert, AlertIcon, KvibProvider } from "@kvib/react/src";
+import { Alert, AlertIcon } from "@kvib/react/src";
 import { Meta } from "@storybook/addon-docs";
 
 <Meta title="Info/Bidra/Dokumentere" />
@@ -127,23 +127,7 @@ Slik vil storyen se ut i dokumentasjonen, og vil vise den minimale koden en bruk
           <Canvas of={LinkStories.LinkColorscheme} />
             ```
 
-7.  Dersom du skal sette inn komponenter i dokumentasjon som er fra selve designbibliotek (eksempelvis Alert), så må komponenten wrappes inn i en `<KvibProvider/>`, slik som vist under:
-
-    ````jsx
-    import { Alert, AlertIcon } from "@kvib/react";
-    import { KvibProvider } from "@kvib/react/src/provider/KvibProvider";
-
-    <KvibProvider>
-      <Alert status="info">
-        <AlertIcon />
-        <AlertDescription>Husk å oppdatere npm-pakken og changelog før du merger.</AlertDescription>
-      </Alert>
-    </KvibProvider>;
-        ```
-
-    ````
-
-8.  Dersom det er noen kjente feil ved komponenten, eksempelvis med a11y-tester, lag et avsnitt nederst i .mdx-filen slik som dette:
+7.  Dersom det er noen kjente feil ved komponenten, eksempelvis med a11y-tester, lag et avsnitt nederst i .mdx-filen slik som dette:
 
 ## Kjente feil
 
@@ -152,9 +136,7 @@ Slik vil storyen se ut i dokumentasjonen, og vil vise den minimale koden en bruk
 
 🏁 **Nå kan du kjøre `npm run dev` for å se Storybook-dokumentasjonssiden lokalt. Videre må du gjøre ulike tester for å sjekke at alt stemmer.**
 
-<KvibProvider>
-  <Alert status="info">
-    <AlertIcon />
-    Husk å oppdatere npm-pakken og changelog før du merger.
-  </Alert>
-</KvibProvider>
+<Alert status="info">
+  <AlertIcon />
+  Husk å oppdatere npm-pakken og changelog før du merger.
+</Alert>

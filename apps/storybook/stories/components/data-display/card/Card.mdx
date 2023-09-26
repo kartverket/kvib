@@ -8,7 +8,7 @@ import {
   CardCenteringString,
   CardHorizontalString,
 } from "./srcStrings.ts";
-import { Card, CardBody, KvibProvider } from "@kvib/react/src";
+import { Card, CardBody } from "@kvib/react/src";
 
 <Meta title="Komponenter/Data Display/Card" />
 
@@ -24,50 +24,42 @@ import { Card, CardHeader, CardBody, CardFooter } from "@kvib/react";
 
 ## Props
 
-<KvibProvider>
-  <Card variant="outline">
-    <CardBody>
-      <Story of={CardStories.Card} />
-    </CardBody>
-  </Card>
-</KvibProvider>
+<Card variant="outline">
+  <CardBody>
+    <Story of={CardStories.Card} />
+  </CardBody>
+</Card>
 
 <Source code={CardString} dark />
 <Controls of={CardStories.Card} />
 
 ## Varianter
 
-<KvibProvider>
-  <Card variant="outline">
-    <CardBody>
-      <Story of={CardStories.CardVariants} />
-    </CardBody>
-  </Card>
-</KvibProvider>
+<Card variant="outline">
+  <CardBody>
+    <Story of={CardStories.CardVariants} />
+  </CardBody>
+</Card>
 
 <Source code={CardVariantsString} dark />
 
 ## Størrelser
 
-<KvibProvider>
-  <Card variant="outline">
-    <CardBody>
-      <Story of={CardStories.CardSizes} />
-    </CardBody>
-  </Card>
-</KvibProvider>
+<Card variant="outline">
+  <CardBody>
+    <Story of={CardStories.CardSizes} />
+  </CardBody>
+</Card>
 
 <Source code={CardSizesString} dark />
 
 ## Card med bilde og knapper
 
-<KvibProvider>
-  <Card variant="outline">
-    <CardBody>
-      <Story of={CardStories.CardImage} />
-    </CardBody>
-  </Card>
-</KvibProvider>
+<Card variant="outline">
+  <CardBody>
+    <Story of={CardStories.CardImage} />
+  </CardBody>
+</Card>
 
 <Source code={CardImageString} dark />
 
@@ -75,13 +67,11 @@ import { Card, CardHeader, CardBody, CardFooter } from "@kvib/react";
 
 Sentrering av innhold gjøres ved å sette `align="center"` på Card.
 
-<KvibProvider>
-  <Card variant="outline">
-    <CardBody>
-      <Story of={CardStories.CardCentering} />
-    </CardBody>
-  </Card>
-</KvibProvider>
+<Card variant="outline">
+  <CardBody>
+    <Story of={CardStories.CardCentering} />
+  </CardBody>
+</Card>
 
 <Source code={CardCenteringString} dark />
 
@@ -89,12 +79,10 @@ Sentrering av innhold gjøres ved å sette `align="center"` på Card.
 
 For å vise innhold horisontalt settes `direction="row"` på Card.
 
-<KvibProvider>
-  <Card variant="outline">
-    <CardBody>
-      <Story of={CardStories.CardHorizontal} />
-    </CardBody>
-  </Card>
-</KvibProvider>
+<Card variant="outline">
+  <CardBody>
+    <Story of={CardStories.CardHorizontal} />
+  </CardBody>
+</Card>
 
 <Source code={CardHorizontalString} dark />
