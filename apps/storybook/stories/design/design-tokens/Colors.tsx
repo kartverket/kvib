@@ -1,4 +1,4 @@
-import { SimpleGrid, Box, VStack, Text, Heading } from "@chakra-ui/react";
+import { SimpleGrid, Box, VStack, Text, Heading } from "@kvib/react/src";
 import { colors, fontWeights, fontSizes } from "@kvib/react/src/theme/tokens";
 
 type ColorScaleType =
