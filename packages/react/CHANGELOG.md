@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 2.5.1
+
+### Patch Changes
+
+- 381ee4f64: Endret <IconButton/> variant fra "link" til "tertiary". Fikset styling bug.
+
 ## 2.5.0
 
 ### Minor Changes
