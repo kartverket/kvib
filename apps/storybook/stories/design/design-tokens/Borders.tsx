@@ -1,4 +1,4 @@
-import { Table, Thead, Tbody, Tr, Th, Td, TableContainer, Code } from "@chakra-ui/react";
+import { Table, Thead, Tbody, Tr, Th, Td, TableContainer, Code } from "@kvib/react/src";
 import { borders } from "@kvib/react/src/theme/tokens";
 
 export const Borders = () => {

@@ -1,11 +1,15 @@
-import { Box, Center, Table, Thead, Tbody, Tr, Th, Td, TableContainer, Code } from "@kvib/react/src";
-import { radii } from "@kvib/react/src/theme/tokens";
+import { Box, Logo, TableContainer, Table, Thead, Tr, Th, Tbody, Td, Code, Center } from "@kvib/react/src";
+import { blur } from "@kvib/react/src/theme/tokens";
 
-const example = (radii: any) => (
-  <Box border="2px solid #4DB450" backgroundColor="#E9F4EC" width="80px" height="80px" borderRadius={radii} />
-);
+export const example = (value) => {
+  return (
+    <Box filter="auto" blur={value} w="80px">
+      <Logo size={80} />
+    </Box>
+  );
+};
 
-export const Radii = () => {
+export const Blurs = () => {
   return (
     <TableContainer>
       <Table variant="simple" width="100%">
@@ -17,14 +21,14 @@ export const Radii = () => {
           </Tr>
         </Thead>
         <Tbody>
-          {Object.entries(radii).map(([size, value]) => (
+          {Object.entries(blur).map(([size, value]) => (
             <Tr key={size}>
-              <Td backgroundColor="white">
+              <Td backgroundColor="#F7FAFC">
                 <Center>{example(value)}</Center>
               </Td>
               <Td backgroundColor="white">{`${size} / ${value}`}</Td>
               <Td backgroundColor="white">
-                <Code>{`var(--kvib-radii-${size})`}</Code>
+                <Code>{`var(--kvib-blur-${size})`}</Code>
               </Td>
             </Tr>
           ))}
