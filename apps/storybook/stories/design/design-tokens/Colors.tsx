@@ -44,7 +44,12 @@ const renderColors = (name: string, colorScale: ColorScaleType) => {
       w={92}
     >
       <Box backgroundColor={hex} height="60px" width="100%" />
-      <Text fontWeight={fontWeights["bold"]} fontSize={fontSizes["sm"]} paddingLeft="6px">{`${name}-${value}`}</Text>
+      <Text
+        fontWeight={fontWeights["bold"]}
+        wordBreak={"break-word"}
+        fontSize={fontSizes["sm"]}
+        paddingLeft="6px"
+      >{`${name}-${value}`}</Text>
       <Text fontSize={fontSizes["xs"]} paddingLeft="6px">
         {hex}
       </Text>
