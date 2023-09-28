@@ -1,4 +1,4 @@
-import { FormLabel as ChakraFormLabel, Text as ChakraText, forwardRef } from "@chakra-ui/react";
+import { FormLabel as ChakraFormLabel, forwardRef } from "@chakra-ui/react";
 import { FormControlProps } from "./Form-control";
 
 export interface FormLabelProps extends FormControlProps {
@@ -20,11 +20,9 @@ export interface FormLabelProps extends FormControlProps {
 
 export const FormLabel = forwardRef<FormLabelProps, "label">(({ label, children, ...props }, ref) => {
   return (
-    <ChakraFormLabel {...props} ref={ref}>
-      <ChakraText as={"b"} fontSize={"md"}>
-        {label}
-        {children}
-      </ChakraText>
+    <ChakraFormLabel {...props} ref={ref} fontWeight={"bold"}>
+      {label}
+      {children}
     </ChakraFormLabel>
   );
 });
