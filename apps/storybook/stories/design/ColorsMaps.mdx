@@ -1,0 +1,49 @@
+import { Meta } from "@storybook/addon-docs";
+import { ColorPalettes, ExampleBox } from "./ColorPalettes";
+import { KvibProvider, Stack, Flex, Text } from "@kvib/react/src";
+import { mapColorsRGBA, ColorShades, mapColors } from "@kvib/react/src/theme/tokens";
+
+<Meta title="Design Fundament/Farger til kart" />
+
+# Fargepaletter til kart
+
+Fargekoder til kart er definert i variablene `mapColors` og `mapColorsRGBA`. Disse kan importeres direkte. Fargepalettene brukes ved å referere til fargevariablene i mapColors eller mapColorsRGBA.
+Eksempel: `mapColors.blue[1]` vil gi fargen #476ED4 (Den første fargen i visningen under). Opacity setter du for øyeblikket selv.
+
+```jsx
+import { mapColors, mapColorsRGBA } from "@kvib/react/src/theme/tokens";
+```
+
+<KvibProvider>
+  ## Opacity
+
+Fargene i hver boks i palettene under har én fargekode fordelt med opacity fra 90% til 10%. Eksempelboksene viser opacity og alphaverdier for palettene.
+Den første boksen viser prosent, den andre viser alphaverdi for HEX og den tredje viser alphaverdi for RGBA.
+
+<Stack>
+  <Flex alignItems="center">
+    <Text margin="0" fontWeight="semibold" w="20">
+      Prosent
+    </Text>
+    <ExampleBox value="#00A76C" />
+  </Flex>
+  <Flex alignItems="center">
+    <Text margin="0" fontWeight="semibold" w="20">
+      HEX
+    </Text>
+    <ExampleBox value="#00A76C" opacityFormat="HEX" />
+  </Flex>
+  <Flex alignItems="center">
+    <Text margin="0" fontWeight="semibold" w="20">
+      RGBA
+    </Text>
+    <ExampleBox value="#00A76C" opacityFormat="RGBA" />
+  </Flex>
+</Stack>
+
+## Paletter
+
+Kopier fargekodene fra palettene under ved å trykke på dem.
+
+  <ColorPalettes hexColors={mapColors} RGBAColors={mapColorsRGBA} />
+</KvibProvider>

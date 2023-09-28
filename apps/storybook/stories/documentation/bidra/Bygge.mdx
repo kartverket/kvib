@@ -41,25 +41,21 @@ videre på denne._
   };
   ```
 
-<KvibProvider>
   <Alert status="info">
     <AlertIcon />
     _required_ props er ikke det samme som å sette default. Eksempelvis colorScheme er ikke required fordi man ønsker ikke
     at brukeren må sette colorScheme dersom hen vil ha default-verdien. Hvordan sette default-verdi kommer i senere steg
     i denne guiden.
   </Alert>
-</KvibProvider>
 
 4.  Videre i _Link.tsx_ skal du bygge opp komponenten ved å bruke propsa du definerte i steg 3. De propsene du endrer på sendes manuelt videre til Chakra-komponenten, de andre kan videresendes ved å bruke _“…props”_- syntaksen.
     Ved å tilegne props verdier settes default for komponenten, som er kjekt å gjøre dersom propen er satt som required.
 
-<KvibProvider>
-  <Alert status="info">
-    <AlertIcon />
-    Under [“Style komponenten”](/docs/bidra--docs#style-komponenten-) nevnes defaultProps som en del av .ts-filen. Default
-    som settes i selve komponenten i.tsx-filen overkjører defaultPropsa som settes i styling .ts-filen.
-  </Alert>
-</KvibProvider>
+<Alert status="info">
+  <AlertIcon />
+  Under [“Style komponenten”](/docs/bidra--docs#style-komponenten-) nevnes defaultProps som en del av .ts-filen. Default
+  som settes i selve komponenten i.tsx-filen overkjører defaultPropsa som settes i styling .ts-filen.
+</Alert>
 
 5.  Flere av Chakra-komponentene har en litt annen variant for å kunne opprettes. Disse komponentene kan opprettes med funksjonen _forwardRef(props, ref)_ fra `@chakra-ui/react`.
     I tillegg til å ta imot _props_, tas det også imot en _ref_, som refererer til det underliggende html-element brukt i komponenten.

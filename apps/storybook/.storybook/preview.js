@@ -1,5 +1,7 @@
 import { KvibProvider } from "@kvib/react/src/provider/KvibProvider";
 import theme from "./theme";
+import MDXContainer from "./MDXContainer";
+import "./docs-root.css";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -11,6 +13,7 @@ export const parameters = {
   },
   docs: {
     theme: theme,
+    container: MDXContainer,
   },
   options: {
     storySort: {
