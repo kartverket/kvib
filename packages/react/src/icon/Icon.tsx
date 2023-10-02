@@ -1,4 +1,5 @@
 import { MaterialSymbol } from "material-symbols";
+import "material-symbols";
 
 export const Icon = ({
   icon,

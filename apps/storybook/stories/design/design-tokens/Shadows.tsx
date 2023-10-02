@@ -1,4 +1,4 @@
-import { Box, Center, Table, Thead, Tbody, Tr, Th, Td, TableContainer, Code } from "@chakra-ui/react";
+import { Box, Center, Table, Thead, Tbody, Tr, Th, Td, TableContainer, Code } from "@kvib/react/src";
 import { shadows } from "@kvib/react/src/theme/tokens";
 
 const example = (shadow: any) => (
