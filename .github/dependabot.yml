@@ -5,7 +5,21 @@
 
 version: 2
 updates:
-  - package-ecosystem: "npm" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: "npm"
+    directory: "/"
     schedule:
       interval: "daily"
+    groups:
+      patch-minor-dependencies:
+        update-types:
+          - "version-update:semver-patch"
+          - "version-update:semver-minor"
+
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    groups:
+      major-dependencies:
+        update-types:
+          - "version-update:semver-major"
