@@ -14,12 +14,6 @@ updates:
         update-types:
           - "patch"
           - "minor"
-
-  - package-ecosystem: "npm"
-    directory: "/"
-    schedule:
-      interval: "daily"
-    groups:
       major-dependencies:
         update-types:
           - "major"
