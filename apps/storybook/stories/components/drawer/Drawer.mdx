@@ -1,6 +1,6 @@
 import { Meta, Canvas, Story, Controls, Source } from "@storybook/blocks";
 import * as DrawerStories from "./Drawer.stories";
-import { Card, CardBody, KvibProvider } from "@kvib/react/src";
+import { Card, CardBody } from "@kvib/react/src";
 import {
   DrawerString,
   DrawerPlacementString,
@@ -32,50 +32,42 @@ import {
 
 ## Props
 
-<KvibProvider>
-  <Card variant="outline">
-    <CardBody>
-      <Story of={DrawerStories.Drawer} />
-    </CardBody>
-  </Card>
-</KvibProvider>
+<Card variant="outline">
+  <CardBody>
+    <Story of={DrawerStories.Drawer} />
+  </CardBody>
+</Card>
 
 <Source code={DrawerString} dark />
 <Controls of={DrawerStories.Drawer} />
 
 ## Plassering
 
-<KvibProvider>
-  <Card variant="outline">
-    <CardBody>
-      <Story of={DrawerStories.DrawerPlacement} />
-    </CardBody>
-  </Card>
-</KvibProvider>
+<Card variant="outline">
+  <CardBody>
+    <Story of={DrawerStories.DrawerPlacement} />
+  </CardBody>
+</Card>
 
 <Source code={DrawerPlacementString} dark />
 
 ## Fokus
 
-<KvibProvider>
-  <Card variant="outline">
-    <CardBody>
-      <Story of={DrawerStories.DrawerFocus} />
-    </CardBody>
-  </Card>
-</KvibProvider>
+<Card variant="outline">
+  <CardBody>
+    <Story of={DrawerStories.DrawerFocus} />
+  </CardBody>
+</Card>
 
 <Source code={DrawerFocusString} dark />
 
 ## Størrelser
 
-<KvibProvider>
-  <Card variant="outline">
-    <CardBody>
-      <Story of={DrawerStories.DrawerSizes} />
-    </CardBody>
-  </Card>
-</KvibProvider>
+<Card variant="outline">
+  <CardBody>
+    <Story of={DrawerStories.DrawerSizes} />
+  </CardBody>
+</Card>
 
 <Source code={DrawerSizesString} dark />
 
