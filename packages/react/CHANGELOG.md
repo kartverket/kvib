@@ -1,5 +1,19 @@
 # @kvib/react
 
+## 2.5.1
+
+### Patch Changes
+
+- 381ee4f64: Endret <IconButton/> variant fra "link" til "tertiary". Fikset styling bug.
+- 421da26e6: Fjernet <Text/> komponent i <FormLabel/>, endret struktur i dokumentasjon.
+- d538128e0: Legger til en manglende import som skal løse alle problemer med ikoner i noen prosjekter.
+
+## 2.5.0
+
+### Minor Changes
+
+- d66501ace: Legger til fargepaletter til kart: `import { mapColors, mapColorsRGBA } from "@kvib/react/src/theme/tokens";`.
+
 ## 2.4.0
 
 ### Minor Changes

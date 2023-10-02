@@ -1,6 +1,6 @@
 import { Meta, Canvas, Story, Controls, Source } from "@storybook/blocks";
 import * as StepperStories from "./Stepper.stories";
-import { Card, CardBody, KvibProvider } from "@kvib/react/src";
+import { Card, CardBody } from "@kvib/react/src";
 import * as StepperStrings from "./srcStrings.ts";
 
 <Meta of={StepperStories} />
@@ -28,73 +28,61 @@ import {
 
 ## Props
 
-<KvibProvider>
-  <Card variant="outline">
-    <CardBody>
-      <Story of={StepperStories.Stepper} />
-    </CardBody>
-  </Card>
-</KvibProvider>
+<Card variant="outline">
+  <CardBody>
+    <Story of={StepperStories.Stepper} />
+  </CardBody>
+</Card>
 
 <Source code={StepperStrings.stepperString} dark />
 <Controls of={StepperStories.Stepper} />
 
 ## Vertikal Stepper
 
-<KvibProvider>
-  <Card variant="outline">
-    <CardBody>
-      <Story of={StepperStories.StepperOrientation} />
-    </CardBody>
-  </Card>
-</KvibProvider>
+<Card variant="outline">
+  <CardBody>
+    <Story of={StepperStories.StepperOrientation} />
+  </CardBody>
+</Card>
 
 <Source code={StepperStrings.stepperOrientationString} dark />
 
 ## Størrelse
 
-<KvibProvider>
-  <Card variant="outline">
-    <CardBody>
-      <Story of={StepperStories.StepperSizes} />
-    </CardBody>
-  </Card>
-</KvibProvider>
+<Card variant="outline">
+  <CardBody>
+    <Story of={StepperStories.StepperSizes} />
+  </CardBody>
+</Card>
 
 <Source code={StepperStrings.stepperSizesString} dark />
 
 ## Farge
 
-<KvibProvider>
-  <Card variant="outline">
-    <CardBody>
-      <Story of={StepperStories.StepperColors} />
-    </CardBody>
-  </Card>
-</KvibProvider>
+<Card variant="outline">
+  <CardBody>
+    <Story of={StepperStories.StepperColors} />
+  </CardBody>
+</Card>
 
 <Source code={StepperStrings.stepperColorsString} dark />
 
 ## Endre step med klikk
 
-<KvibProvider>
-  <Card variant="outline">
-    <CardBody>
-      <Story of={StepperStories.StepperClick} />
-    </CardBody>
-  </Card>
-</KvibProvider>
+<Card variant="outline">
+  <CardBody>
+    <Story of={StepperStories.StepperClick} />
+  </CardBody>
+</Card>
 
 <Source code={StepperStrings.stepperClickString} dark />
 
 ## Progress bar
 
-<KvibProvider>
-  <Card variant="outline">
-    <CardBody>
-      <Story of={StepperStories.StepperProgressbar} />
-    </CardBody>
-  </Card>
-</KvibProvider>
+<Card variant="outline">
+  <CardBody>
+    <Story of={StepperStories.StepperProgressbar} />
+  </CardBody>
+</Card>
 
 <Source code={StepperStrings.stepperProgressbarString} dark />
