@@ -12,8 +12,8 @@ updates:
     groups:
       patch-minor-dependencies:
         update-types:
-          - "version-update:semver-patch"
-          - "version-update:semver-minor"
+          - "patch"
+          - "minor"
 
   - package-ecosystem: "npm"
     directory: "/"
@@ -22,4 +22,4 @@ updates:
     groups:
       major-dependencies:
         update-types:
-          - "version-update:semver-major"
+          - "major"
