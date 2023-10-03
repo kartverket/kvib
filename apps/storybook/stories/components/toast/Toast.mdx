@@ -1,13 +1,42 @@
-import { Meta } from "@storybook/blocks";
+import { Meta, Canvas, Controls, Source, Story } from "@storybook/blocks";
+import * as ToastStories from "./Toast.stories";
+import { Card, CardBody } from "@kvib/react/src"
+import * as ToastStrings from "./srcStrings"
 
-<Meta title="Komponenter/Toast" />
+<Meta of={ToastStories} />
 
 # Toast
 
-Se [https://chakra-ui.com/docs/components/toast](https://chakra-ui.com/docs/components/toast) for eksempler og dokumentasjon.
+Toast bruker for å gi brukeren tilbakemelding etter en handling. Toast skal forsvinne enten når den blir lukket,
+eller av selg selv etterhvert. Flere toasts kan være på skjermen samtidig.
 
 ## Ta i bruk
 
 ```jsx
-import { useToast } from "@kvib/react";
+import { Toast } from "@kvib/react";
 ```
+
+## Props
+
+<Card variant="outline">
+    <CardBody>
+        <Story of={ToastStories.Toast} />
+    </CardBody>
+</Card>
+
+<Source code={ToastStrings.ToastExample} dark />
+<Controls of={ToastStories.Toast} />
+
+## Status
+
+<Card variant="outline">
+    <CardBody>
+        <Story of={ToastStories.ToastStatus} />
+    </CardBody>
+</Card>
+
+<Source code={ToastStrings.ToastStatus} dark />
+
+## Positions
+
+<Canvas of={ToastStories.ToastPosition} />
