@@ -1,29 +1,77 @@
-import { AspectRatio as KvibAspectRatio } from "@kvib/react/src/layout";
-// import { Image } from "@kvib/react/src/";
+import { Box as KvibBox } from "@kvib/react/src/layout";
 import { Meta, StoryObj } from "@storybook/react";
 
-const meta: Meta<typeof KvibAspectRatio> = {
+const meta: Meta<typeof KvibBox> = {
   title: "Komponenter/Layout/AspectRatio",
-  component: KvibAspectRatio,
+  component: KvibBox,
   parameters: {
     docs: {
       story: { inline: true },
       canvas: { sourceState: "shown" },
     },
-    a11y: {
-      disable: true,
-    },
-  },
-  argTypes: {
-    ratio: {
-      description: "The aspect ratio of the Box. Common values are: `21/9`, `16/9`, `9/16`, `4/3`, `1.85/1`",
-      table: { type: { summary: "ResponsiveValue<number>" } },
-      control: "number",
-    },
   },
 };
 
 export default meta;
+type Story = StoryObj<typeof KvibBox>;
+
+export const SimpleBox: Story = {
+  args: { backgroundColor: "green.50" },
+  render: (args) => <KvibBox {...args}>En veldig enkel boks</KvibBox>,
+};
+
+export const BoxWithPadding: Story = {
+  args: { backgroundColor: "blue.50", borderRadius: "md", padding: "30px" },
+  render: (args) => <KvibBox {...args}>En litt mer kreativ boks</KvibBox>,
+};
+
+export const AdvancedBox: Story = {
+  render: (args) => (
+    <KvibBox
+      {...args}
+      _hover={{
+        backgroundColor: "yellow.200",
+      }}
+      as="a"
+      backgroundColor="yellow.50"
+      border="1px solid"
+      borderColor="gray.200"
+      display="block"
+      href="https://www.youtube.com/watch?v: Zvz6kFVJpwo&list: PLcU9Unqugm6YuG5NM_av57pJajVhgaV7w"
+      padding="2"
+      width="fit-content"
+    >
+      En lenke til en video
+    </KvibBox>
+  ),
+};
+
+// import { AspectRatio as KvibAspectRatio } from "@kvib/react/src/layout";
+// // import { Image } from "@kvib/react/src/";
+// import { Meta, StoryObj } from "@storybook/react";
+
+// const meta: Meta<typeof KvibAspectRatio> = {
+//   title: "Komponenter/Layout/AspectRatio",
+//   component: KvibAspectRatio,
+//   parameters: {
+//     docs: {
+//       story: { inline: true },
+//       canvas: { sourceState: "shown" },
+//     },
+//     a11y: {
+//       disable: true,
+//     },
+//   },
+//   argTypes: {
+//     ratio: {
+//       description: "The aspect ratio of the Box. Common values are: `21/9`, `16/9`, `9/16`, `4/3`, `1.85/1`",
+//       table: { type: { summary: "ResponsiveValue<number>" } },
+//       control: "number",
+//     },
+//   },
+// };
+
+// export default meta;
 // type Story = StoryObj<typeof KvibAspectRatio>;
 
 // export const AspectRatio: Story = {
