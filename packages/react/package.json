@@ -39,9 +39,9 @@
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@fontsource/mulish": "^5.0.8",
-    "chakra-react-select": "^4.7.0",
-    "framer-motion": "^10.5.0",
-    "material-symbols": "^0.5.4"
+    "chakra-react-select": "^4.7.2",
+    "framer-motion": "^10.16.4",
+    "material-symbols": "^0.13.0"
   },
   "lint-staged": {
     "*.{ts,tsx,md}": "prettier --write"
