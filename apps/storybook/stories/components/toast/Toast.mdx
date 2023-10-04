@@ -1,14 +1,19 @@
-import { Meta, Canvas, Controls, Source, Story } from "@storybook/blocks";
+import { Meta, Controls, Source, Story } from "@storybook/blocks";
 import * as ToastStories from "./Toast.stories";
-import { Card, CardBody } from "@kvib/react/src"
+import { Card, CardBody, Link, KvibProvider } from "@kvib/react/src"
 import * as ToastStrings from "./srcStrings"
 
 <Meta of={ToastStories} />
 
 # Toast
 
-Toast bruker for å gi brukeren tilbakemelding etter en handling. Toast skal forsvinne enten når den blir lukket,
-eller av selg selv etterhvert. Flere toasts kan være på skjermen samtidig.
+Toast brukes for å gi brukeren tilbakemelding etter en handling. Toast skal forsvinne enten når den blir lukket,
+eller av seg selv etterhvert. Flere toasts kan være på skjermen samtidig.
+
+På [Chakra-ui.com](https://chakra-ui.com/docs/components/toast) finner du noen niche bruksområder
+<KvibProvider>
+    På {<Link href="https://chakra-ui.com/docs/components/toast" isExternal={true}>Chakra-ui.com</Link>} finner du noen niche bruksområder
+</KvibProvider>
 
 ## Ta i bruk
 
@@ -39,4 +44,10 @@ import { Toast } from "@kvib/react";
 
 ## Positions
 
-<Canvas of={ToastStories.ToastPosition} />
+<Card variant="outline">
+    <CardBody>
+        <Story of={ToastStories.ToastPosition} />
+    </CardBody>
+</Card>
+
+<Source code={ToastStrings.ToastPosition} dark />

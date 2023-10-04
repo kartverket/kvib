@@ -1,4 +1,4 @@
-import { Toast as KvibToast, useToast, Button, Icon, Stack, HStack, Center } from "@kvib/react/src";
+import { Toast as KvibToast, useToast, Button, Icon, Stack, HStack, Center, Box } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibToast> = {
@@ -47,10 +47,10 @@ const meta: Meta<typeof KvibToast> = {
         type: { summary: "<Icon/>" },
         defaultValue: { summary: "none" },
       },
-      control: "string",
+      control: "text",
     },
     id: {
-      description: "Descriptive text on the toast",
+      description: "Unique html id",
       table: {
         type: { summary: "string" },
       },
@@ -94,7 +94,7 @@ const meta: Meta<typeof KvibToast> = {
       },
     },
     status: {
-      description: "The status of the toast",
+      description: "The status (color) of the toast",
       table: {
         type: { summary: "info | warning | success | error | loading" },
         defaultValue: { summary: "info" },
@@ -153,7 +153,7 @@ export const Toast: Story = {
 };
 
 export const ToastStatus: Story = {
-  args: { duration: 5000, btnW: "500px" },
+  args: { duration: 4000, btnW: "500px" },
   render: (args) => (
     <Stack>
       <ToastExample
@@ -180,7 +180,7 @@ export const ToastStatus: Story = {
 };
 
 export const ToastPosition: Story = {
-  args: { duration: 5000 },
+  args: { duration: 5000, btnW: "100px" },
   render: (args) => (
     <div>
       <HStack>
@@ -188,6 +188,7 @@ export const ToastPosition: Story = {
         <ToastExample {...args} position="top" title="Top" />,
         <ToastExample {...args} position="top-right" title="Top-right" />,
       </HStack>
+      <Box h="10px" />
       <HStack>
         <ToastExample {...args} position="bottom-left" title="Bottom-left" />,
         <ToastExample {...args} position="bottom" title="Bottom" />,
