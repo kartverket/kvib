@@ -6,6 +6,15 @@ module.exports = {
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
     "@storybook/addon-a11y",
+         {
+      name: '@storybook/addon-storysource',
+      options: {
+        loaderOptions: {
+          injectStoryParameters: true,
+        },
+      },
+    },
+
   ],
   framework: {
     name: "@storybook/react-webpack5",
