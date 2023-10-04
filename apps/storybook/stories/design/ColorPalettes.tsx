@@ -2,8 +2,8 @@ import { Box, Flex, Heading, Radio, RadioGroup, Stack, Text, useToast } from "@k
 import { MapColorsType } from "@kvib/react/src/theme/tokens";
 import { Dispatch, SetStateAction, useState } from "react";
 
-const opacitiesHex = ["E6", "B3", "80", "4D", "1A"];
-const opacitiesRGBA = ["0.9", "0.7", "0.5", "0.3", "0.1"];
+const opacitiesHex = ["FF", "E6", "B3", "80", "4D", "1A"];
+const opacitiesRGBA = ["1", "0.9", "0.7", "0.5", "0.3", "0.1"];
 
 const Sticker = ({ colorValue }: { colorValue: string }) => {
   return (
@@ -80,7 +80,7 @@ export const ColorBox = ({ value, format }: { value: string; format: string }) =
 
   return (
     <Flex
-      w={200}
+      w={240}
       border={`2px ${value} solid`}
       gap="2px"
       backgroundColor={value}
@@ -145,7 +145,7 @@ export const ExampleBox = ({
   };
 
   return (
-    <Flex w={200} border={`2px ${value} solid`} gap="2px" backgroundColor={value} position="relative">
+    <Flex w={240} border={`2px ${value} solid`} gap="2px" backgroundColor={value} position="relative">
       {opacitiesHex.map((opacity, index) => (
         <Box backgroundColor="white" height="60px" width="100%">
           <Flex

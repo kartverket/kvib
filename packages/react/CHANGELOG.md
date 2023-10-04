@@ -1,5 +1,33 @@
 # @kvib/react
 
+## 2.5.2
+
+### Patch Changes
+
+- 5a96c2ae7: Bumping packages major:
+
+  - @testing-library/jest-dom from 5.16.5 to 6.1.3
+  - @testing-library/react from 13.4.0 to 14.0.0
+  - clsx from 1.2.1 to 2.0.0
+  - tsup from 6.6.3 to 7.2.0
+
+- 34cc5ec20: Bump @chakra-ui/react from 2.8.0 to 2.8.1
+- 2522343ea: Bumping packages patch and minor:
+
+  - @types/react from 18.0.26 to 18.2.24.
+  - @types/react-dom from 18.0.9 to 18.2.8
+  - chakra-react-select from 4.7.0 to 4.7.2
+  - framer-motion from 10.5.0 to 10.16.4
+  - material-symbols from 0.5.4 to 0.13.0
+
+## 2.5.1
+
+### Patch Changes
+
+- 381ee4f64: Endret <IconButton/> variant fra "link" til "tertiary". Fikset styling bug.
+- 421da26e6: Fjernet <Text/> komponent i <FormLabel/>, endret struktur i dokumentasjon.
+- d538128e0: Legger til en manglende import som skal løse alle problemer med ikoner i noen prosjekter.
+
 ## 2.5.0
 
 ### Minor Changes
