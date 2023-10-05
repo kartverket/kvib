@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 2.5.3
+
+### Patch Changes
+
+- 5250e6567: Importerer material-symbols slik at man ikke trenger å gjøre det selv i prosjektet.
+
 ## 2.5.2
 
 ### Patch Changes
