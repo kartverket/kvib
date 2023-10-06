@@ -23,13 +23,13 @@ jobs:
           # For posting a rich message using Block Kit
           payload: |
             {
-              "text": "En ny versjon av KVIB har blitt publisert!",
+              "text": "En ny versjon av Kartverkets Designsystem har blitt publisert!",
               "blocks": [
                 {
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": ":kvibbing: *En ny versjon av <https://kartverket.github.io/kvib|KVIB> har blitt publisert!* :kvibbing: \n\n Nyeste versjon: <https://kartverket.github.io/kvib/?path=/docs/info-changelog--docs|${{ steps.set_message.outputs.version }}>."
+                    "text": ":mega: *En ny versjon av <https://kartverket.github.io/kvib|Kartverkets Designsystem> har blitt publisert!* :mega: \n\n Nyeste versjon: <https://kartverket.github.io/kvib/?path=/docs/info-changelog--docs|${{ steps.set_message.outputs.version }}>."
                   }
                 }
               ]
