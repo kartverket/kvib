@@ -21,7 +21,6 @@ export const parameters = {
       order: [
         "Info",
         ["Introduksjon", "Oppsett", "Bidra", ["Generelt", "Bygge", "Style", "Dokumentere", "Teste", "Publish"]],
-        "Playground",
         "Design Fundament",
         "Hooks",
         "Komponenter",
