@@ -23,7 +23,7 @@ jobs:
           # For posting a rich message using Block Kit
           payload: |
             {
-              "text": "En ny versjon av KVIB har blitt publisert!",
+              "text": "En ny versjon av Designsystemet har blitt publisert!",
               "blocks": [
                 {
                   "type": "section",
