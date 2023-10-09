@@ -1,4 +1,4 @@
-# Kartverkets Designsystem - Interaksjon- og designbibliotek
+# Kartverkets Designsystem
 
 Dokumentasjonssiden for designsystemet er https://kartverket.github.io/kvib. Der finner du bidragsløype, oppsett av designsystemet osv.
 
