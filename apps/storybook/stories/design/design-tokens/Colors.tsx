@@ -1,4 +1,4 @@
-import { SimpleGrid, Box, VStack, Text, Heading } from "@kvib/react/src";
+import { Box, VStack, Text, Heading, Flex } from "@kvib/react/src";
 import { colors, fontWeights, fontSizes } from "@kvib/react/src/theme/tokens";
 
 type ColorScaleType =
@@ -22,7 +22,7 @@ const renderColors = (name: string, colorScale: ColorScaleType) => {
   if (typeof colorScale === "string") {
     const hex = colorScale;
     return (
-      <VStack alignItems="flex-start" spacing="4px" borderRadius="6px" border={`1px solid ${colors.gray[100]}`}>
+      <VStack alignItems="flex-start" spacing="4px" borderRadius="6px" border={`1px solid ${colors.gray[100]}`} w={92}>
         <Box backgroundColor={hex} height="60px" width="100%"></Box>
         <Text fontWeight={fontWeights["bold"]} fontSize={fontSizes["sm"]} paddingLeft="6px">
           {name}
@@ -41,9 +41,15 @@ const renderColors = (name: string, colorScale: ColorScaleType) => {
       spacing="2px"
       borderRadius="6px"
       border={`1px solid ${colors.gray[100]}`}
+      w={92}
     >
-      <Box backgroundColor={hex} height="60px" width="100%"></Box>
-      <Text fontWeight={fontWeights["bold"]} fontSize={fontSizes["sm"]} paddingLeft="6px">{`${name}-${value}`}</Text>
+      <Box backgroundColor={hex} height="60px" width="100%" />
+      <Text
+        fontWeight={fontWeights["bold"]}
+        wordBreak={"break-word"}
+        fontSize={fontSizes["sm"]}
+        paddingLeft="6px"
+      >{`${name}-${value}`}</Text>
       <Text fontSize={fontSizes["xs"]} paddingLeft="6px">
         {hex}
       </Text>
@@ -56,10 +62,12 @@ export const Colors = () => {
     <Box marginBottom="40px">
       {Object.entries(colors).map(([name, colorScale]) => (
         <Box key={name} marginTop="20px">
-          <Heading as="h3">{capitalizeFirstLetter(name)}</Heading>
-          <SimpleGrid columns={10} spacing="8px">
+          <Heading size="md" as="h3">
+            {capitalizeFirstLetter(name)}
+          </Heading>
+          <Flex gap="8px" flexWrap="wrap">
             {renderColors(name, colorScale)}
-          </SimpleGrid>
+          </Flex>
         </Box>
       ))}
     </Box>

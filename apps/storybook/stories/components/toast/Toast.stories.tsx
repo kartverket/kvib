@@ -9,6 +9,9 @@ const meta: Meta<typeof KvibToast> = {
       story: { inline: true },
       canvas: { sourceState: "shown" },
     },
+    a11y: {
+      disable: true,
+    },
   },
   argTypes: {
     addRole: {

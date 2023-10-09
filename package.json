@@ -18,7 +18,7 @@
   "devDependencies": {
     "eslint-config-custom": "*",
     "husky": "^8.0.3",
-    "prettier": "^2.8.8",
+    "prettier": "^3.0.3",
     "turbo": "latest"
   },
   "engines": {
