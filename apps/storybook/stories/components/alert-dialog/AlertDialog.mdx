@@ -1,10 +1,13 @@
-import { Meta } from "@storybook/blocks";
+import { Meta, Canvas, Story, Controls, Source } from "@storybook/blocks";
+import * as AlertDialogStories from "./AlertDialog.stories";
+import { Card, CardBody } from "@kvib/react/src";
+import * as AlertDialogStrings from "./srcStrings.ts";
 
-<Meta title="Komponenter/Alert Dialog" />
+<Meta of={AlertDialogStories} />
 
 # Alert Dialog
 
-Se [https://chakra-ui.com/docs/components/alert-dialog](https://chakra-ui.com/docs/components/alert-dialog) for eksempler og dokumentasjon.
+AlertDialog er et komponent som brukes til å avbryte brukeren med en bekreftelesesdialog.
 
 ## Ta i bruk
 
@@ -19,3 +22,25 @@ import {
   AlertDialogCloseButton,
 } from "@kvib/react";
 ```
+
+## Props
+
+<Card variant="outline">
+  <CardBody>
+    <Story of={AlertDialogStories.AlertDialog} />
+  </CardBody>
+</Card>
+
+<Source code={AlertDialogStrings.AlertDialogString} dark />
+
+<Controls of={AlertDialogStories.AlertDialog} />
+
+## Endring av transition
+
+<Card variant="outline">
+  <CardBody>
+    <Story of={AlertDialogStories.AlertDialogTransition} />
+  </CardBody>
+</Card>
+
+<Source code={AlertDialogStrings.AlertDialogTransitionString} dark />

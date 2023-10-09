@@ -59,10 +59,10 @@ export const FormControl: FormControlStory = {
   args: { isRequired: false, isInvalid: false, isReadOnly: false, isDisabled: false },
   render: (args) => (
     <KvibFormControl {...args}>
-      <KvibFormLabel label={"Label (valgfri)"} />
-      <KvibFormHelperText helperText={"Hjelpetekst"} />
+      <KvibFormLabel>Label (valgfri)</KvibFormLabel>
+      <KvibFormHelperText>Hjelpetekst</KvibFormHelperText>
       <KvibInput placeholder={"Eksempel"} size={"md"} variant={"outline"} />
-      <KvibFormErrorMessage errorMessage={"Her er feilmelding"} />
+      <KvibFormErrorMessage>Her er feilmelding</KvibFormErrorMessage>
     </KvibFormControl>
   ),
 };
