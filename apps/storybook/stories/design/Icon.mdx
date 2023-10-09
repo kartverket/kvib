@@ -1,5 +1,6 @@
 import { Meta, Canvas, Controls } from "@storybook/addon-docs";
 import * as IconStories from "./Icon.stories";
+import { Alert, AlertIcon } from "@kvib/react/src";
 
 <Meta of={IconStories} />
 
@@ -17,6 +18,12 @@ for å få en oversikt over ikoner du kan benytte.
 **Importer `MaterialSymbol` dersom du trenger type til icon-proppen.**
 
 ## Ta i bruk
+
+  <Alert status="info">
+    <AlertIcon />
+    **Dersom ikoner ikke vises:** `import 'material-symbols';` i index.js.
+  </Alert>
+
 
 ```jsx
 import { Icon, MaterialSymbol } from "@kvib/react";
