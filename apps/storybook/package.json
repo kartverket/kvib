@@ -38,7 +38,7 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
-    "@fontsource-variable/mulish": "^5.0.13",
+    "@fontsource-variable/mulish": "^5.0.14",
     "@storybook/addon-a11y": "^7.4.6"
   },
   "lint-staged": {
