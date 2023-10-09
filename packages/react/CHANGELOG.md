@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 2.5.5
+
+### Patch Changes
+
+- 8f3dd0d95: Bumpet @fountsource/mulish og @types/react avhengigheter til siste versjon
+
 ## 2.5.4
 
 ### Patch Changes
