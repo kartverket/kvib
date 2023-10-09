@@ -1,6 +1,6 @@
 import { Meta, Controls, Source, Story } from "@storybook/blocks";
 import * as ToastStories from "./Toast.stories";
-import { Card, CardBody, Link, KvibProvider } from "@kvib/react/src"
+import { Card, CardBody, Alert, AlertTitle, AlertDescription, AlertIcon } from "@kvib/react/src"
 import * as ToastStrings from "./srcStrings"
 
 <Meta of={ToastStories} />
@@ -31,6 +31,15 @@ import { Toast } from "@kvib/react";
 
 ## Status
 
+<Alert status="warning">
+    <AlertIcon/>
+    <AlertTitle>
+        Feil farge
+    </AlertTitle>
+    <AlertDescription>
+        Farge for "warning" toast er ikke helt riktig enda (for lite kontrast mot hvit tekst)
+    </AlertDescription>
+</Alert>
 <Card variant="outline">
     <CardBody>
         <Story of={ToastStories.ToastStatus} />
