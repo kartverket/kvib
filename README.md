@@ -1,4 +1,4 @@
-# KVIB - Kartverkets interaksjon- og designbibliotek
+# Kartverkets Designsystem
 
 Dokumentasjonssiden for designsystemet er https://kartverket.github.io/kvib. Der finner du bidragsløype, oppsett av designsystemet osv.
 
@@ -11,5 +11,5 @@ De som skal godkjenne pull requestene er:
 @Bente Lien Nilsen  
 @Adrian Røstgård Flatner
 
-Har dere spørsmål relatert til kode på KVIB kan dere kontakte dem.  
+Har dere spørsmål relatert til kode på Designsystemet kan dere kontakte dem.  
 Har dere design spørsmål kan dere kontakte @Wanni eller @Erlend Stølan.
