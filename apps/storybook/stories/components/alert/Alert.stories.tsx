@@ -1,4 +1,4 @@
-import { Alert as KvibAlert, AlertIcon, AlertTitle, AlertDescription, VStack } from "@kvib/react/src";
+import { Alert as KvibAlert, AlertIcon, AlertTitle, AlertDescription, VStack, Box } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibAlert> = {
@@ -12,7 +12,8 @@ const meta: Meta<typeof KvibAlert> = {
   },
   argTypes: {
     colorScheme: {
-      description: "",
+      description: "The color scheme of the alert.",
+      table: { type: { summary: "green | blue | gray | red | orange | purple" } },
       options: ["green", "blue", "gray", "red", "orange", "purple"],
       defaultValue: { summary: "blue" },
       control: { type: "radio" },
@@ -20,12 +21,14 @@ const meta: Meta<typeof KvibAlert> = {
     status: {
       description:
         "This affects the color scheme and icon used. Setting the colorScheme prop will overide the colorScheme of the status.",
+      table: { type: { summary: "error | success | warning | info" } },
       options: ["error", "success", "warning", "info"],
       defaultValue: { summary: "info" },
       control: { type: "radio" },
     },
     variant: {
-      description: "",
+      description: "The variant of the alert.",
+      table: { type: { summary: "subtle | solid | left-accent | top-accent" } },
       options: ["subtle", "solid", "left-accent", "top-accent"],
       defaultValue: { summary: "subtle" },
       control: { type: "radio" },
@@ -41,8 +44,10 @@ export const Alert: Story = {
   render: (args) => (
     <KvibAlert {...args}>
       <AlertIcon />
-      <AlertTitle>This is the alert title!</AlertTitle>
-      <AlertDescription>This is the alert description.</AlertDescription>
+      <Box>
+        <AlertTitle>This is the alert title!</AlertTitle>
+        <AlertDescription>This is the alert description.</AlertDescription>
+      </Box>
     </KvibAlert>
   ),
 };
@@ -62,10 +67,12 @@ export const AlertInfo: Story = {
   render: (args) => (
     <KvibAlert {...args}>
       <AlertIcon />
-      <AlertTitle>Tips</AlertTitle>
-      <AlertDescription>
-        To insert a new picture, you can use the File Browser found in the menu at the top of the page.
-      </AlertDescription>
+      <Box>
+        <AlertTitle>Tips</AlertTitle>
+        <AlertDescription>
+          To insert a new picture, you can use the File Browser found in the menu at the top of the page.
+        </AlertDescription>
+      </Box>
     </KvibAlert>
   ),
 };
@@ -75,8 +82,10 @@ export const AlertWarning: Story = {
   render: (args) => (
     <KvibAlert {...args}>
       <AlertIcon />
-      <AlertTitle>You are about to permanently delete the file</AlertTitle>
-      <AlertDescription>You can not retrieve it after deletion</AlertDescription>
+      <Box>
+        <AlertTitle>You are about to permanently delete the file</AlertTitle>
+        <AlertDescription>You can not retrieve it after deletion</AlertDescription>
+      </Box>
     </KvibAlert>
   ),
 };
@@ -86,8 +95,10 @@ export const AlertError: Story = {
   render: (args) => (
     <KvibAlert {...args}>
       <AlertIcon />
-      <AlertTitle>Can't connect to the server</AlertTitle>
-      <AlertDescription>Try again in a few minutes, or contact us if the problem continues</AlertDescription>
+      <Box>
+        <AlertTitle>Can't connect to the server</AlertTitle>
+        <AlertDescription>Try again in a few minutes, or contact us if the problem continues</AlertDescription>
+      </Box>
     </KvibAlert>
   ),
 };
@@ -98,13 +109,17 @@ export const AlertEmphasisWarning: Story = {
     <VStack gap="1rem">
       <KvibAlert {...args}>
         <AlertIcon />
-        <AlertTitle>I'm an important warning</AlertTitle>
-        <AlertDescription>I'm important</AlertDescription>
+        <Box>
+          <AlertTitle>I'm an important warning</AlertTitle>
+          <AlertDescription>I'm important</AlertDescription>
+        </Box>
       </KvibAlert>
       <KvibAlert variant="solid" {...args}>
         <AlertIcon />
-        <AlertTitle>I'm an even more important warning</AlertTitle>
-        <AlertDescription>I'm more important that the alert above!</AlertDescription>
+        <Box>
+          <AlertTitle>I'm an even more important warning</AlertTitle>
+          <AlertDescription>I'm more important that the alert above!</AlertDescription>
+        </Box>
       </KvibAlert>
     </VStack>
   ),
