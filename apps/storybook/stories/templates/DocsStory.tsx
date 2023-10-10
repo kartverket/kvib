@@ -8,8 +8,8 @@ type DocsStoryProps = {
 
 export const DocsStory = ({ title, description, story }: DocsStoryProps) => {
   return (
-    <SimpleGrid columns={2} spacing="2rem">
-      <Box margin="25px 0 40px">
+    <SimpleGrid columns={[1, 1, 2]} spacing={[0, 0, "2rem"]}>
+      <Box marginTop="25px">
         <Heading size="md" as="h3">
           {title}
         </Heading>

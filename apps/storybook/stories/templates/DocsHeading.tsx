@@ -1,10 +1,10 @@
 import { Box, Heading } from "@kvib/react/src";
 
-type DocsStoryHeadingProps = {
+type DocsHeadingProps = {
   children: React.ReactNode;
 };
 
-export const DocsStoryHeading = ({ children }: DocsStoryHeadingProps) => {
+export const DocsHeading = ({ children }: DocsHeadingProps) => {
   return (
     <Box
       backgroundColor="gray.900"
