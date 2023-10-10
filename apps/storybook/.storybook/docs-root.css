@@ -40,3 +40,8 @@ div[role="main"] > :first-child {
 .sidebar-item.sidebar-item:focus {
   background: #e9f4ec !important;
 }
+
+/* Canvas */
+.sbdocs.sbdocs-preview.sb-unstyled.css-13gjv70 {
+  box-shadow: none !important;
+}

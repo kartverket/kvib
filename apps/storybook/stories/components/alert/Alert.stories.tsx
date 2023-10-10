@@ -1,14 +1,13 @@
-import { Alert as ChakraAlert, AlertIcon, AlertTitle, AlertDescription, VStack, Icon } from "@kvib/react/src";
-import { colors } from "@kvib/react/src/theme/tokens";
+import { Alert as KvibAlert, AlertIcon, AlertTitle, AlertDescription, VStack } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
-const meta: Meta<typeof ChakraAlert> = {
+const meta: Meta<typeof KvibAlert> = {
   title: "Komponenter/Alert",
-  component: ChakraAlert,
+  component: KvibAlert,
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "shown" },
+      canvas: { sourceState: "hidden" },
     },
   },
   argTypes: {
@@ -35,134 +34,78 @@ const meta: Meta<typeof ChakraAlert> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof ChakraAlert>;
+type Story = StoryObj<typeof KvibAlert>;
 
 export const Alert: Story = {
+  args: { status: "success" },
   render: (args) => (
-    <ChakraAlert {...args}>
+    <KvibAlert {...args}>
       <AlertIcon />
       <AlertTitle>This is the alert title!</AlertTitle>
       <AlertDescription>This is the alert description.</AlertDescription>
-    </ChakraAlert>
+    </KvibAlert>
   ),
 };
 
-export const AlertStatus: Story = {
+export const AlertSuccess: Story = {
+  args: { status: "success", variant: "left-accent" },
   render: (args) => (
-    <VStack>
-      <ChakraAlert status={"success"} {...args}>
-        <AlertIcon />
-        <AlertTitle>This is the alert title!</AlertTitle>
-        <AlertDescription>This is the alert description.</AlertDescription>
-      </ChakraAlert>
-      <ChakraAlert status={"info"} {...args}>
-        <AlertIcon />
-        <AlertTitle>This is the alert title!</AlertTitle>
-        <AlertDescription>This is the alert description.</AlertDescription>
-      </ChakraAlert>
-      <ChakraAlert status={"warning"} {...args}>
-        <AlertIcon />
-        <AlertTitle>This is the alert title!</AlertTitle>
-        <AlertDescription>This is the alert description.</AlertDescription>
-      </ChakraAlert>
-      <ChakraAlert status={"error"} {...args}>
-        <AlertIcon />
-        <AlertTitle>This is the alert title!</AlertTitle>
-        <AlertDescription>This is the alert description.</AlertDescription>
-      </ChakraAlert>
-    </VStack>
+    <KvibAlert status={"success"} {...args}>
+      <AlertIcon />
+      <AlertTitle>Settings saved</AlertTitle>
+    </KvibAlert>
   ),
 };
 
-export const AlertColors: Story = {
+export const AlertInfo: Story = {
+  args: { status: "info" },
   render: (args) => (
-    <VStack>
-      <ChakraAlert colorScheme={"green"} {...args}>
-        <AlertIcon />
-        <AlertTitle>This is the alert title!</AlertTitle>
-        <AlertDescription>This is the alert description.</AlertDescription>
-      </ChakraAlert>
-      <ChakraAlert colorScheme={"blue"} {...args}>
-        <AlertIcon />
-        <AlertTitle>This is the alert title!</AlertTitle>
-        <AlertDescription>This is the alert description.</AlertDescription>
-      </ChakraAlert>
-      <ChakraAlert colorScheme={"gray"} {...args}>
-        <AlertIcon />
-        <AlertTitle>This is the alert title!</AlertTitle>
-        <AlertDescription>This is the alert description.</AlertDescription>
-      </ChakraAlert>
-      <ChakraAlert colorScheme={"red"} {...args}>
-        <AlertIcon />
-        <AlertTitle>This is the alert title!</AlertTitle>
-        <AlertDescription>This is the alert description.</AlertDescription>
-      </ChakraAlert>
-      <ChakraAlert colorScheme={"orange"} {...args}>
-        <AlertIcon />
-        <AlertTitle>This is the alert title!</AlertTitle>
-        <AlertDescription>This is the alert description.</AlertDescription>
-      </ChakraAlert>
-      <ChakraAlert colorScheme={"purple"} {...args}>
-        <AlertIcon />
-        <AlertTitle>This is the alert title!</AlertTitle>
-        <AlertDescription>This is the alert description.</AlertDescription>
-      </ChakraAlert>
-    </VStack>
-  ),
-};
-
-export const AlertVariants: Story = {
-  render: (args) => (
-    <VStack>
-      <ChakraAlert variant={"subtle"} {...args}>
-        <AlertIcon />
-        <AlertTitle>This is the alert title!</AlertTitle>
-        <AlertDescription>This is the alert description.</AlertDescription>
-      </ChakraAlert>
-      <ChakraAlert variant={"solid"} {...args}>
-        <AlertIcon />
-        <AlertTitle>This is the alert title!</AlertTitle>
-        <AlertDescription>This is the alert description.</AlertDescription>
-      </ChakraAlert>
-      <ChakraAlert variant={"left-accent"} {...args}>
-        <AlertIcon />
-        <AlertTitle>This is the alert title!</AlertTitle>
-        <AlertDescription>This is the alert description.</AlertDescription>
-      </ChakraAlert>
-      <ChakraAlert variant={"top-accent"} {...args}>
-        <AlertIcon />
-        <AlertTitle>This is the alert title!</AlertTitle>
-        <AlertDescription>This is the alert description.</AlertDescription>
-      </ChakraAlert>
-    </VStack>
-  ),
-};
-
-export const AlertComposition: Story = {
-  args: { colorScheme: "blue" },
-  render: (args) => (
-    <ChakraAlert
-      status="success"
-      variant="subtle"
-      flexDirection="column"
-      alignItems="center"
-      justifyContent="center"
-      textAlign="center"
-      minHeight="200px"
-      {...args}
-    >
-      <AlertIcon boxSize="40px" mr={0} />
-      <AlertTitle mt={4} mb={1} fontSize="lg">
-        Sammensatt alert!
-      </AlertTitle>
-      <AlertDescription maxWidth="m">
-        <VStack>
-          <p>
-            Du kan sette sammen din egen alert, med egen layout, og til og med inkludere andre komponenter inni denne.
-          </p>
-          <Icon icon="favorite" size={48} color={colors.red[500]} isFilled />
-        </VStack>
+    <KvibAlert {...args}>
+      <AlertIcon />
+      <AlertTitle>Tips</AlertTitle>
+      <AlertDescription>
+        To insert a new picture, you can use the File Browser found in the menu at the top of the page.
       </AlertDescription>
-    </ChakraAlert>
+    </KvibAlert>
+  ),
+};
+
+export const AlertWarning: Story = {
+  args: { variant: "left-accent", status: "warning" },
+  render: (args) => (
+    <KvibAlert {...args}>
+      <AlertIcon />
+      <AlertTitle>You are about to permanently delete the file</AlertTitle>
+      <AlertDescription>You can not retrieve it after deletion</AlertDescription>
+    </KvibAlert>
+  ),
+};
+
+export const AlertError: Story = {
+  args: { status: "error" },
+  render: (args) => (
+    <KvibAlert {...args}>
+      <AlertIcon />
+      <AlertTitle>Can't connect to the server</AlertTitle>
+      <AlertDescription>Try again in a few minutes, or contact us if the problem continues</AlertDescription>
+    </KvibAlert>
+  ),
+};
+
+export const AlertEmphasisWarning: Story = {
+  args: { status: "warning" },
+  render: (args) => (
+    <VStack gap="1rem">
+      <KvibAlert {...args}>
+        <AlertIcon />
+        <AlertTitle>I'm an important warning</AlertTitle>
+        <AlertDescription>I'm important</AlertDescription>
+      </KvibAlert>
+      <KvibAlert variant="solid" {...args}>
+        <AlertIcon />
+        <AlertTitle>I'm an even more important warning</AlertTitle>
+        <AlertDescription>I'm more important that the alert above!</AlertDescription>
+      </KvibAlert>
+    </VStack>
   ),
 };
