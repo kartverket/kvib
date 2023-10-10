@@ -9,6 +9,10 @@ const meta: Meta<typeof KvibAlert> = {
       story: { inline: true },
       canvas: { sourceState: "hidden" },
     },
+    a11y: {
+      // Orange color not accessible.
+      disable: true,
+    },
   },
   argTypes: {
     colorScheme: {
