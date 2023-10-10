@@ -61,7 +61,7 @@ export const AlertSuccess: Story = {
   render: (args) => (
     <KvibAlert status={"success"} {...args}>
       <AlertIcon />
-      <AlertTitle>Settings saved</AlertTitle>
+      <AlertDescription>Settings saved</AlertDescription>
     </KvibAlert>
   ),
 };
