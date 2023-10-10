@@ -20,7 +20,6 @@
     "@babel/preset-typescript": "^7.23.0",
     "@storybook/addon-actions": "^7.4.6",
     "@storybook/addon-essentials": "^7.4.6",
-    "@storybook/addon-interactions": "^7.4.6",
     "@storybook/addon-links": "^7.4.6",
     "@storybook/cli": "^7.4.6",
     "@storybook/react": "^7.4.6",
