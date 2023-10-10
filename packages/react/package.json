@@ -1,6 +1,6 @@
 {
   "name": "@kvib/react",
-  "version": "2.5.4",
+  "version": "2.5.5",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "@types/react": "^18.2.25",
-    "@types/react-dom": "^18.2.10",
+    "@types/react-dom": "^18.2.11",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "tsup": "7.2.0",
@@ -35,7 +35,7 @@
     "@chakra-ui/skip-nav": "^2.0.15",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
-    "@fontsource/mulish": "^5.0.12",
+    "@fontsource/mulish": "^5.0.13",
     "chakra-react-select": "^4.7.3",
     "material-symbols": "^0.13.0"
   },
