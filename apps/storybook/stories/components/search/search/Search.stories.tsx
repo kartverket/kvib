@@ -22,15 +22,6 @@ const meta: Meta<typeof KvibSearch> = {
       },
       control: "text",
     },
-    type: {
-      description: "Input type",
-      table: {
-        type: { summary: "search" },
-        defaultValue: { summary: "search" },
-      },
-      options: ["search"],
-      control: { type: "radio" },
-    },
     size: {
       description: "Input size",
       table: {
@@ -47,6 +38,28 @@ const meta: Meta<typeof KvibSearch> = {
         defaultValue: { summary: "outline" },
       },
       options: ["outline", "filled", "flushed", "unstyled"],
+      control: { type: "radio" },
+    },
+    leftSearchIcon: {
+      description: "Enables Search IconButton",
+      table: {
+        type: { summary: "boolean" },
+      },
+      control: "boolean",
+    },
+    rightSearchIcon: {
+      description: "Enables Search IconButton",
+      table: {
+        type: { summary: "boolean" },
+      },
+      control: "boolean",
+    },
+    colorScheme: {
+      description: "Change Icon color",
+      table: {
+        defaultValue: { summary: "green" },
+      },
+      options: ["gray", "red", "green", "blue"],
       control: { type: "radio" },
     },
     isInvalid: {
@@ -72,9 +85,30 @@ type SearchStory = StoryObj<typeof KvibSearch>;
 export const Search: SearchStory = {
   args: {
     placeholder: "Søk her...",
-    type: "search",
     variant: "outline",
     isDisabled: false,
   },
-  render: (args) => <KvibSearch {...args} rightSearchIcon />,
+  render: (args) => <KvibSearch {...args} />,
+};
+
+export const SearchIconLeft: SearchStory = {
+  args: {
+    leftSearchIcon: true,
+    placeholder: "Søk her...",
+    variant: "outline",
+    isDisabled: false,
+    colorScheme: "blue",
+  },
+  render: (args) => <KvibSearch {...args} />,
+};
+
+export const SearchIconRight: SearchStory = {
+  args: {
+    rightSearchIcon: true,
+    placeholder: "Søk her...",
+    variant: "outline",
+    isDisabled: false,
+    colorScheme: "blue",
+  },
+  render: (args) => <KvibSearch {...args} />,
 };

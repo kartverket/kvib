@@ -8,20 +8,26 @@ import {
 } from "@chakra-ui/react";
 import { IconButton } from "../button";
 
-export type SearchProps = Omit<ChakraInputProps, "isInvalid" | "isRequired"> & {
+export type SearchProps = Omit<ChakraInputProps, "isInvalid" | "isRequired" | "colorScheme"> & {
   leftSearchIcon?: boolean;
-
   rightSearchIcon?: boolean;
+  colorScheme?: "gray" | "red" | "green" | "blue" | undefined;
 };
 
 export const Search = forwardRef<SearchProps, "input">(
-  ({ id, size, variant, type = "search", isDisabled, leftSearchIcon, rightSearchIcon, ...props }, ref) => {
+  ({ id, colorScheme, size, variant, type = "search", isDisabled, leftSearchIcon, rightSearchIcon, ...props }, ref) => {
     return (
       <>
         {leftSearchIcon ? (
           <ChakraInputGroup>
             <ChakraInputLeftElement>
-              <IconButton colorScheme={"blue"} variant={"tertiary"} aria-label={"search"} icon={"search"} />
+              <IconButton
+                colorScheme={colorScheme}
+                type={"submit"}
+                variant={"tertiary"}
+                aria-label={"search"}
+                icon={"search"}
+              />
             </ChakraInputLeftElement>
             <ChakraInput
               {...props}
@@ -36,7 +42,13 @@ export const Search = forwardRef<SearchProps, "input">(
         ) : rightSearchIcon ? (
           <ChakraInputGroup>
             <ChakraInputRightElement>
-              <IconButton colorScheme={"blue"} variant={"tertiary"} aria-label={"search"} icon={"search"} />
+              <IconButton
+                colorScheme={colorScheme}
+                type={"submit"}
+                variant={"tertiary"}
+                aria-label={"search"}
+                icon={"search"}
+              />
             </ChakraInputRightElement>
             <ChakraInput
               {...props}
