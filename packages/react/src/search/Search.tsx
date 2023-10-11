@@ -27,6 +27,7 @@ export const Search = forwardRef<SearchProps, "input">(
                 variant={"tertiary"}
                 aria-label={"search"}
                 icon={"search"}
+                isDisabled={isDisabled}
               />
             </ChakraInputLeftElement>
             <ChakraInput
@@ -48,6 +49,7 @@ export const Search = forwardRef<SearchProps, "input">(
                 variant={"tertiary"}
                 aria-label={"search"}
                 icon={"search"}
+                isDisabled={isDisabled}
               />
             </ChakraInputRightElement>
             <ChakraInput
