@@ -36,7 +36,7 @@
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@fontsource/mulish": "^5.0.13",
-    "chakra-react-select": "^4.7.3",
+    "chakra-react-select": "^4.7.4",
     "material-symbols": "^0.13.0"
   },
   "lint-staged": {
