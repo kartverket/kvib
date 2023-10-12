@@ -1,6 +1,6 @@
 # Kartverkets Designsystem
 
-Dokumentasjonssiden for designsystemet er https://kartverket.github.io/kvib. Der finner du bidragsløype, oppsett av designsystemet osv.
+Dokumentasjonssiden for designsystemet er https://kartverket.github.io/designsystem. Der finner du bidragsløype, oppsett av designsystemet osv.
 
 ## 🚦 Viktig infomasjon eller kjøreregler for de som ønsker å bidra 🚦
 
