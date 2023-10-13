@@ -9,7 +9,13 @@ type FooterInlineProps = {
 
 export const FooterInline = ({ logoLink, accessibilityUrl, children }: FooterInlineProps) => {
   return (
-    <Flex borderTop={`1px solid ${colors.gray[300]}`} justifyContent="space-between" paddingTop="10px" gap="2rem">
+    <Flex
+      borderTop={`1px solid ${colors.gray[300]}`}
+      marginTop="1rem"
+      justifyContent="space-between"
+      paddingTop="10px"
+      gap="2rem"
+    >
       <Link href={logoLink} isExternal={false}>
         <Logo size={130} variant="horizontal" />
       </Link>
