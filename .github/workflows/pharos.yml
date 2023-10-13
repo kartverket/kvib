@@ -1,0 +1,13 @@
+pharos-job:
+  name: Run Pharos with Required Permissions
+  permissions:
+    actions: read
+    packages: read
+    contents: read
+    security-events: write
+  runs-on: ubuntu-latest
+  steps:
+    - name: "Run Pharos"
+      uses: kartverket/pharos@v0.1.0
+      with:
+#        image_url: $IMAGE_URL
