@@ -13,6 +13,17 @@ const meta: Meta<typeof KvibFooterInline> = {
   argTypes: {
     accessibilityUrl: {
       description: "Link to accessibility statement",
+      table: {
+        type: { summary: "string" },
+      },
+      control: "text",
+    },
+    logoLink: {
+      description: "Href for logo link",
+      table: {
+        type: { summary: "string" },
+        defaulValue: { summary: "/" },
+      },
       control: "text",
     },
   },
