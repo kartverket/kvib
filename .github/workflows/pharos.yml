@@ -1,4 +1,4 @@
-Namname: "Pharos code scan"
+name: "Pharos code scan"
 on:
   push:
     branches: ["master"]
