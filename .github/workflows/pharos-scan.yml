@@ -16,5 +16,3 @@ jobs:
     steps:
       - name: "Run Pharos"
         uses: kartverket/pharos@v0.1.0
-#        with:
-#         image_url: $IMAGE_URL
