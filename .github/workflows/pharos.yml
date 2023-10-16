@@ -2,7 +2,8 @@ name: "Pharos code scan"
 on:
   push:
     branches: ["master"]
-
+  pull_request:
+    types: [opened, synchronize]
 jobs:
   pharos-job:
     name: Run Pharos with Required Permissions
