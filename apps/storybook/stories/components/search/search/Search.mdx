@@ -1,6 +1,8 @@
 import * as SearchStories from "./Search.stories";
-import { Canvas, Controls, Meta } from "@storybook/blocks";
-import { Alert, AlertIcon } from "@kvib/react/src";
+import * as SearchStrings from "./srcStrings";
+
+import { Canvas, Controls, Meta, Source, Story } from "@storybook/blocks";
+import { Alert, AlertIcon, Card, CardBody } from "@kvib/react/src";
 
 <Meta of={SearchStories} />
 
@@ -26,5 +28,16 @@ import { Search } from "@kvib/react";
 <Controls of={SearchStories.Search} />
 
 ## Search med Ikon knapp
-<Canvas of={SearchStories.SearchIconLeft} />
-<Canvas of={SearchStories.SearchIconRight} />
+<Card variant="outline">
+    <CardBody>
+        <Story of={SearchStories.SearchIconLeft} />
+    </CardBody>
+</Card>
+<Source code={SearchStrings.SearchIconLeftString} dark />
+
+<Card variant="outline">
+    <CardBody>
+        <Story of={SearchStories.SearchIconRight} />
+    </CardBody>
+</Card>
+<Source code={SearchStrings.SearchIconRightString} dark />

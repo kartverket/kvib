@@ -1,5 +1,6 @@
 import { Search as KvibSearch } from "@kvib/react/src/search";
 import { Meta, StoryObj } from "@storybook/react";
+import { IconButton, Input, InputGroup, InputRightElement, InputLeftElement } from "@kvib/react";
 
 const meta: Meta<typeof KvibSearch> = {
   title: "Komponenter/Search/Search",
@@ -93,22 +94,36 @@ export const Search: SearchStory = {
 
 export const SearchIconLeft: SearchStory = {
   args: {
-    leftSearchIcon: true,
     placeholder: "Søk her...",
     variant: "outline",
+    type: "search",
+    isInvalid: false,
     isDisabled: false,
-    colorScheme: "blue",
   },
-  render: (args) => <KvibSearch {...args} />,
+  render: (args) => (
+    <InputGroup>
+      <InputLeftElement>
+        <IconButton colorScheme={"blue"} variant={"tertiary"} aria-label={"search"} icon={"search"} />
+      </InputLeftElement>
+      <Input {...args} />
+    </InputGroup>
+  ),
 };
 
 export const SearchIconRight: SearchStory = {
   args: {
-    rightSearchIcon: true,
     placeholder: "Søk her...",
     variant: "outline",
+    type: "search",
+    isInvalid: false,
     isDisabled: false,
-    colorScheme: "blue",
   },
-  render: (args) => <KvibSearch {...args} />,
+  render: (args) => (
+    <InputGroup>
+      <InputRightElement>
+        <IconButton colorScheme={"blue"} variant={"tertiary"} aria-label={"search"} icon={"search"} />
+      </InputRightElement>
+      <Input {...args} />
+    </InputGroup>
+  ),
 };
