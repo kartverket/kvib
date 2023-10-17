@@ -10,6 +10,8 @@ import {
   Divider as KvibDivider,
   ButtonGroup as KvibButtonGroup,
   Button as KvibButton,
+  Icon as KvibIcon,
+  Box as KvibBox,
 } from "@kvib/react/src/";
 
 import { Meta, StoryObj } from "@storybook/react";
@@ -129,7 +131,7 @@ export const CardImage: Story = {
       <KvibDivider />
       <KvibCardFooter>
         <KvibButtonGroup spacing="2">
-          <KvibButton variant="solid" colorScheme="blue">
+          <KvibButton variant="primary" colorScheme="blue">
             Les artikkel
           </KvibButton>
           <KvibButton variant="ghost" colorScheme="blue">
@@ -181,11 +183,26 @@ export const CardHorizontal: Story = {
         </KvibCardBody>
 
         <KvibCardFooter>
-          <KvibButton variant="solid" colorScheme="blue">
+          <KvibButton variant="primary" colorScheme="blue">
             Les artikkel
           </KvibButton>
         </KvibCardFooter>
       </KvibStack>
+    </KvibCard>
+  ),
+};
+
+export const CardCustom: Story = {
+  args: { heading: "Label", text: "hjelpetekst hjelpetekst hjelpetekst" },
+  render: (args) => (
+    <KvibCard {...args} variant="outlined">
+      <KvibCardBody p="20px">
+        <KvibHeading size="md">{args.heading}</KvibHeading>
+        <KvibText py="2">{args.text}</KvibText>
+        <KvibBox position="absolute" top="50%" right="30px" transform="translate(-50%, -50%)">
+          <KvibIcon icon="chevron_right" size={48} weight={700} />
+        </KvibBox>
+      </KvibCardBody>
     </KvibCard>
   ),
 };
