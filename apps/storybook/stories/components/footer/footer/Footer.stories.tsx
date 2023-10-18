@@ -2,7 +2,7 @@ import { Footer as KvibFooter } from "@kvib/react/src/footer/Footer";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibFooter> = {
-  title: "Komponenter/Footer",
+  title: "Komponenter/Footer/Footer",
   component: KvibFooter,
   parameters: {
     docs: {
