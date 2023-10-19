@@ -9,10 +9,6 @@ const meta: Meta<typeof KvibAlert> = {
       story: { inline: true },
       canvas: { sourceState: "hidden" },
     },
-    a11y: {
-      // Orange color not accessible.
-      disable: true,
-    },
   },
   argTypes: {
     colorScheme: {
@@ -108,6 +104,7 @@ export const AlertError: Story = {
 };
 
 export const AlertEmphasisWarning: Story = {
+  parameters: { a11y: { disable: true } },
   args: { status: "warning" },
   render: (args) => (
     <VStack gap="1rem">
