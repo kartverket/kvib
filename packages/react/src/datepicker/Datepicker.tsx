@@ -140,7 +140,7 @@ const CustomDatepicker = forwardRef<DatepickerProps, "input">(
       >
         <InputGroup>
           <PopoverAnchor>
-            <ChakraInput ref={ref} className="custom-datepicker" {...restProps} {...inputProps} />
+            <ChakraInput type="date" ref={ref} className="custom-datepicker" {...restProps} {...inputProps} />
           </PopoverAnchor>
           <PopoverTrigger>
             <InputRightElement cursor="pointer" onClick={setPickerVisible.toggle}>

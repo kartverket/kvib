@@ -70,23 +70,12 @@ export default meta;
 type DatepickerStory = StoryObj<typeof KvibDatepicker>;
 
 export const Datepicker: DatepickerStory = {
-  args: {
-    size: "md",
-    variant: "outline",
-    type: "date",
-    isDisabled: false,
-    isInvalid: false,
-    isRequired: false,
-  },
+  args: {},
   render: (args) => <KvibDatepicker {...args} />,
 };
 
 export const DatepickerTest: DatepickerStory = {
   args: {
-    size: "md",
-    variant: "outline",
-    type: "date",
-
     defaultMonth: new Date(2022, 8),
 
     fromMonth: new Date("2022-01-01"),
