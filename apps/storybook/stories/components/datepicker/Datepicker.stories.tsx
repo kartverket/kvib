@@ -1,3 +1,4 @@
+import { Box } from "@kvib/react/src";
 import { Datepicker as KvibDatepicker } from "@kvib/react/src/datepicker";
 import { Meta, StoryObj } from "@storybook/react";
 
@@ -7,7 +8,7 @@ const meta: Meta<typeof KvibDatepicker> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "shown" },
+      canvas: { sourceState: "hidden" },
     },
     a11y: {
       // This option disables all a11y checks on this story
@@ -71,15 +72,17 @@ type DatepickerStory = StoryObj<typeof KvibDatepicker>;
 
 export const Datepicker: DatepickerStory = {
   args: {},
-  render: (args) => <KvibDatepicker {...args} />,
+  render: (args) => (
+    <Box h="25rem">
+      <KvibDatepicker {...args} />
+    </Box>
+  ),
 };
 
 export const DatepickerTest: DatepickerStory = {
   args: {
     defaultMonth: new Date(2022, 8),
-
     fromMonth: new Date("2022-01-01"),
-
     toDate: new Date("2022-11-15"),
     showDropdownMonthYear: true,
     disableNavigation: false,

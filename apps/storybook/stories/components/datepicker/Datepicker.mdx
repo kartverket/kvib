@@ -1,5 +1,6 @@
 import * as DatepickerStories from "./Datepicker.stories";
 import { Canvas, Meta, Controls } from "@storybook/blocks";
+import { DocsHeading, DocsAnatomy, DocsStoriesContainer, DocsStory } from "../../templates";
 
 <Meta of={DatepickerStories} />
 
@@ -11,7 +12,11 @@ import { Canvas, Meta, Controls } from "@storybook/blocks";
 import { Datepicker } from "@kvib/react";
 ```
 
-## Props
+<DocsHeading>Props</DocsHeading>
 
 <Canvas of={DatepickerStories.Datepicker} />
 <Controls of={DatepickerStories.Datepicker} />
+
+<DocsHeading>Alternativer</DocsHeading>
+
+<DocsStory title="Defaultverdier" description="" story={<Canvas of={DatepickerStories.DatepickerTest} />} />

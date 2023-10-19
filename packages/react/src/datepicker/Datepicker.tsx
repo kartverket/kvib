@@ -1,7 +1,6 @@
 import {
-  Input as ChakraInput,
-  InputProps as ChakraInputProps,
-  forwardRef,
+  Input as KVInput,
+  InputProps as KVInputProps,
   Popover,
   useBoolean,
   PopoverContent,
@@ -9,14 +8,15 @@ import {
   InputRightElement,
   PopoverTrigger,
   PopoverAnchor,
-} from "@chakra-ui/react";
+} from "@kvib/react/src";
+import { forwardRef } from "@chakra-ui/react";
 import { DayPicker, useInput } from "react-day-picker";
 import "react-day-picker/dist/style.css";
 import "./Datepicker.css";
 import { Icon } from "@kvib/react/src/icon";
 import { nb } from "date-fns/locale";
 
-type DatepickerProps = ChakraInputProps & {
+type DatepickerProps = KVInputProps & {
   /**
    * A default date to be selected when the picker is displayed.
    */
@@ -88,11 +88,12 @@ type DatepickerProps = ChakraInputProps & {
   useNative?: boolean;
 };
 
-export const Datepicker = forwardRef<DatepickerProps, "input">(({ useNative = false, ...props }, ref) => {
+export const Datepicker = forwardRef<DatepickerProps, "input">(({ useNative = true, ...props }, ref) => {
+  const KVInputProps = extractKVProps(props);
   const isClient = typeof window === "object";
   const isMobile = isClient ? window.innerWidth < 480 : false;
 
-  if (isMobile && useNative) return <ChakraInput {...props} />;
+  if (isMobile && useNative) return <KVInput type="date" {...KVInputProps} />;
 
   return <CustomDatepicker {...props} ref={ref} />;
 });
@@ -113,7 +114,7 @@ const CustomDatepicker = forwardRef<DatepickerProps, "input">(
       showOutsideDays,
       showWeekNumber,
       disabledDays,
-      ...restProps
+      ...KVInputProps
     },
     ref,
   ) => {
@@ -140,7 +141,7 @@ const CustomDatepicker = forwardRef<DatepickerProps, "input">(
       >
         <InputGroup>
           <PopoverAnchor>
-            <ChakraInput type="date" ref={ref} className="custom-datepicker" {...restProps} {...inputProps} />
+            <KVInput type="date" ref={ref} className="custom-datepicker" {...KVInputProps} {...inputProps} />
           </PopoverAnchor>
           <PopoverTrigger>
             <InputRightElement cursor="pointer" onClick={setPickerVisible.toggle}>
@@ -163,3 +164,25 @@ const CustomDatepicker = forwardRef<DatepickerProps, "input">(
     );
   },
 );
+
+function extractKVProps(props: DatepickerProps): KVInputProps {
+  const {
+    defaultSelected,
+    defaultMonth,
+    fromYear,
+    toYear,
+    fromMonth,
+    toMonth,
+    fromDate,
+    toDate,
+    showDropdownMonthYear,
+    disableNavigation,
+    showOutsideDays,
+    showWeekNumber,
+    disabledDays,
+    useNative,
+    ...chakraProps
+  } = props;
+
+  return chakraProps;
+}
