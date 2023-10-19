@@ -94,7 +94,7 @@ export const IconButtonVariants: Story = {
     <HStack>
       <KvibIconButton {...args} aria-label="IconButton primary" variant="primary" />
       <KvibIconButton {...args} aria-label="IconButton secondary" variant="secondary" />
-      <KvibIconButton {...args} aria-label="IconButton link" variant="link" />
+      <KvibIconButton {...args} aria-label="IconButton link" variant="tertiary" />
       <KvibIconButton {...args} aria-label="IconButton ghost" variant="ghost" />
     </HStack>
   ),

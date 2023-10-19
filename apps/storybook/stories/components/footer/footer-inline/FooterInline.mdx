@@ -1,0 +1,19 @@
+import { Title, Canvas, Meta, Story, Controls } from "@storybook/blocks";
+import * as FooterInlineStories from "./FooterInline.stories";
+
+<Meta of={FooterInlineStories} />
+
+# FooterInline
+
+## Ta i bruk
+
+```jsx
+import { FooterInline } from "@kvib/react";
+```
+
+<Canvas of={FooterInlineStories.FooterInline} />
+<Controls of={FooterInlineStories.FooterInline} />
+
+## Flere lenker
+
+<Canvas of={FooterInlineStories.FooterInlineCustom} />
