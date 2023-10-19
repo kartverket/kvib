@@ -8,7 +8,9 @@
     "dev": "storybook dev -p 6006",
     "build": "storybook build",
     "build-storybook": "storybook build",
-    "test-storybook": "test-storybook"
+    "test-storybook": "test-storybook",
+    "lost-pixel": "lost-pixel",
+    "lost-pixel:update": "lost-pixel update"
   },
   "keywords": [],
   "author": "",
@@ -31,6 +33,7 @@
     "axe-playwright": "^1.2.3",
     "babel-loader": "^9.1.3",
     "chromatic": "^7.4.0",
+    "lost-pixel": "^3.7.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "storybook": "^7.5.0",
