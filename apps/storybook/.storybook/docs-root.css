@@ -42,6 +42,16 @@ div[role="main"] > :first-child {
 }
 
 /* Canvas */
-.sbdocs.sbdocs-preview.sb-unstyled {
+.sbdocs {
+  box-shadow: none !important;
+}
+
+/* Controls */
+.docblock-argstable-body {
+  filter: none !important;
+}
+
+/* Source */
+.docblock-source {
   box-shadow: none !important;
 }

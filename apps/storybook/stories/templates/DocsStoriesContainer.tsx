@@ -6,7 +6,7 @@ type DocsStoriesContainerProps = {
 
 export const DocsStoriesContainer = ({ children }: DocsStoriesContainerProps) => {
   return (
-    <Box borderRadius="2xl" padding="0 2rem" backgroundColor="white">
+    <Box padding="0 2rem" backgroundColor="white">
       {children}
     </Box>
   );

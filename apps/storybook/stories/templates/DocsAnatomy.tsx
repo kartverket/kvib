@@ -5,5 +5,5 @@ type DocsAnatomyProps = {
 };
 
 export const DocsAnatomy = ({ imgPath }: DocsAnatomyProps) => {
-  return <Image width="100%" padding={[0, "1rem", "3rem"]} src={imgPath} backgroundColor="white" borderRadius="2xl" />;
+  return <Image width="100%" padding={[0, "1rem", "3rem"]} src={imgPath} backgroundColor="white" />;
 };
