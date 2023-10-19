@@ -42,7 +42,7 @@ div[role="main"] > :first-child {
 }
 
 /* Canvas */
-.sbdocs {
+.sbdocs.sbdocs-preview.sb-unstyled {
   box-shadow: none !important;
 }
 
@@ -54,4 +54,5 @@ div[role="main"] > :first-child {
 /* Source */
 .docblock-source {
   box-shadow: none !important;
+  border-radius: 0 !important;
 }
