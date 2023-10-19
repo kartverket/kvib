@@ -10,7 +10,7 @@ export const DocsHeading = ({ children }: DocsHeadingProps) => {
       backgroundColor="gray.900"
       height="3rem"
       borderRadius="none"
-      paddingLeft="2rem"
+      paddingLeft="1rem"
       alignItems="center"
       display="flex"
       marginBottom="2rem"
