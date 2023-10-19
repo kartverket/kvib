@@ -204,7 +204,7 @@ export const HeaderSearchAsync: Story = {
 
 export const HeaderLogoButton: Story = {
   args: {
-    logoLink: "https://kartverket.github.io/designsystem/",
+    logoLink: "https://kartverket.github.io/kvib/",
   },
   render: (args) => <KvibHeader {...args} />,
 };
