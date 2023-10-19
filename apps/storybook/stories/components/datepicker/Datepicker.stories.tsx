@@ -80,3 +80,23 @@ export const Datepicker: DatepickerStory = {
   },
   render: (args) => <KvibDatepicker {...args} />,
 };
+
+export const DatepickerTest: DatepickerStory = {
+  args: {
+    size: "md",
+    variant: "outline",
+    type: "date",
+
+    defaultMonth: new Date(2022, 8),
+
+    fromMonth: new Date("2022-01-01"),
+
+    toDate: new Date("2022-11-15"),
+    showDropdownMonthYear: true,
+    disableNavigation: false,
+    showOutsideDays: true,
+    showWeekNumber: true,
+    disabledDays: [new Date("2022-10-31"), new Date("2022-07-04")],
+  },
+  render: (args) => <KvibDatepicker {...args} />,
+};

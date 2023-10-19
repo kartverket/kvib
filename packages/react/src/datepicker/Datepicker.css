@@ -1,0 +1,11 @@
+/* Web */
+
+/* Hide the native dropdown icon for Webkit browsers */
+input[type="date"].custom-datepicker::-webkit-calendar-picker-indicator {
+  display: none !important;
+}
+
+/* Hide the native dropdown icon for Firefox */
+input[type="date"].custom-datepicker::-moz-calendar-picker-indicator {
+  display: none !important;
+}
