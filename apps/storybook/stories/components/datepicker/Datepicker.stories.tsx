@@ -149,13 +149,6 @@ export const Datepicker: DatepickerStory = {
   ),
 };
 
-export const DatepickerDefaultValue: DatepickerStory = {
-  args: {
-    defaultSelected: new Date("2022-08-01"),
-  },
-  render: (args) => <KvibDatepicker {...args} />,
-};
-
 export const DatepickerExample: DatepickerStory = {
   args: {
     defaultSelected: new Date("2022-08-01"),
