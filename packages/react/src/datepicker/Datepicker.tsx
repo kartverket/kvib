@@ -122,8 +122,8 @@ const CustomDatepicker = forwardRef<DatepickerProps, "input">(
             <KVInput type="date" ref={ref} className="custom-datepicker" {...KVInputProps} {...inputProps} />
           </PopoverAnchor>
           <PopoverTrigger>
-            <InputRightElement cursor="pointer" onClick={setPickerVisible.toggle}>
-              <Icon icon="calendar_today" />
+            <InputRightElement cursor="pointer" onClick={setPickerVisible.toggle} height="100%">
+              <Icon icon="calendar_today" size={KVInputProps.size === "xs" || KVInputProps.size === "sm" ? 20 : 24} />
             </InputRightElement>
           </PopoverTrigger>
         </InputGroup>
