@@ -22,7 +22,7 @@ export default create({
   appBg: "white",
   appContentBg: "white",
   appBorderColor: "#E3E0E0",
-  appBorderRadius: 16,
+  appBorderRadius: 0,
 
   // Text colors
   textColor: "#202020",
