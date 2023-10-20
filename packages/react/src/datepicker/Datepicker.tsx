@@ -88,14 +88,33 @@ type DatepickerProps = KVInputProps & {
   useNative?: boolean;
 };
 
-export const Datepicker = forwardRef<DatepickerProps, "input">(({ useNative = true, ...props }, ref) => {
+type ExcludedProps =
+  | "autocomplete"
+  | "autofocus"
+  | "disabled"
+  | "max"
+  | "min"
+  | "name"
+  | "readonly"
+  | "required"
+  | "step"
+  | "tabindex"
+  | "value"
+  | "defaultValue";
+
+type DatepickerPropsWithoutStandard = Omit<DatepickerProps, ExcludedProps>;
+
+export const Datepicker = forwardRef<DatepickerPropsWithoutStandard, "input">(({ useNative = true, ...props }, ref) => {
   const KVInputProps = extractKVProps(props);
   const isClient = typeof window === "object";
   const isMobile = isClient ? window.innerWidth < 480 : false;
+  const defaultValue = props.defaultSelected ? formatDateToLocalISO(props.defaultSelected) : undefined;
+  const commonProps = getCommonInputProps(props);
 
-  if (isMobile && useNative) return <KVInput type="date" {...KVInputProps} />;
+  if (isMobile && useNative)
+    return <KVInput type="date" defaultValue={defaultValue} {...KVInputProps} {...commonProps} />;
 
-  return <CustomDatepicker {...props} ref={ref} />;
+  return <CustomDatepicker {...props} ref={ref} {...commonProps} />;
 });
 
 const CustomDatepicker = forwardRef<DatepickerProps, "input">(
@@ -122,7 +141,6 @@ const CustomDatepicker = forwardRef<DatepickerProps, "input">(
     const { inputProps, dayPickerProps } = useInput({
       defaultSelected,
       format: "yyyy-MM-dd",
-      required: true,
       locale: nb,
       fromYear,
       toYear,
@@ -180,9 +198,34 @@ function extractKVProps(props: DatepickerProps): KVInputProps {
     showOutsideDays,
     showWeekNumber,
     disabledDays,
-    useNative,
     ...chakraProps
   } = props;
 
   return chakraProps;
 }
+
+function formatDateToLocalISO(date: Date): string {
+  const y = date.getFullYear().toString().padStart(4, "0");
+  const m = (date.getMonth() + 1).toString().padStart(2, "0"); // +1 because getMonth() is zero-based
+  const d = date.getDate().toString().padStart(2, "0");
+  return `${y}-${m}-${d}`;
+}
+
+const getCommonInputProps = (props: DatepickerProps) => {
+  const min = props.fromDate
+    ? formatDateToLocalISO(props.fromDate)
+    : props.fromMonth
+    ? formatDateToLocalISO(props.fromMonth)
+    : undefined;
+
+  const max = props.toDate
+    ? formatDateToLocalISO(props.toDate)
+    : props.toMonth
+    ? formatDateToLocalISO(props.toMonth)
+    : undefined;
+
+  return {
+    min,
+    max,
+  };
+};

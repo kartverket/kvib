@@ -81,9 +81,9 @@ export const Datepicker: DatepickerStory = {
 
 export const DatepickerTest: DatepickerStory = {
   args: {
-    defaultMonth: new Date(2022, 8),
-    fromMonth: new Date("2022-01-01"),
-    toDate: new Date("2022-11-15"),
+    defaultSelected: new Date("2022-08-01"),
+    fromMonth: new Date("2022-08-01"),
+    toDate: new Date("2022-08-15"),
     showDropdownMonthYear: true,
     disableNavigation: false,
     showOutsideDays: true,
