@@ -19,8 +19,8 @@
     "directory": "packages/react"
   },
   "devDependencies": {
-    "@types/react": "^18.2.28",
-    "@types/react-dom": "^18.2.13",
+    "@types/react": "^18.2.30",
+    "@types/react-dom": "^18.2.14",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "tsup": "7.2.0",
@@ -35,7 +35,7 @@
     "@chakra-ui/skip-nav": "^2.0.15",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
-    "@fontsource/mulish": "^5.0.13",
+    "@fontsource/mulish": "^5.0.14",
     "chakra-react-select": "^4.7.5",
     "material-symbols": "^0.13.1"
   },
