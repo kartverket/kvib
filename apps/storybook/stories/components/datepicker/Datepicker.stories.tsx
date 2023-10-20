@@ -158,7 +158,7 @@ export const DatepickerExample: DatepickerStory = {
     disableNavigation: false,
     showOutsideDays: true,
     showWeekNumber: true,
-    disabledDays: [new Date("2022-10-31"), new Date("2022-07-04")],
+    disabledDays: [new Date("2022-08-16")],
   },
   render: (args) => (
     <Box h="23rem">

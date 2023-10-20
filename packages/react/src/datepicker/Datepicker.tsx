@@ -85,7 +85,7 @@ export const Datepicker = forwardRef<DatepickerPropsWithoutStandard, "input">(({
   return <CustomDatepicker {...props} ref={ref} {...commonProps} />;
 });
 
-const CustomDatepicker = forwardRef<DatepickerProps, "input">(
+const CustomDatepicker = forwardRef<DatepickerPropsWithoutStandard, "input">(
   (
     {
       defaultSelected,
@@ -121,11 +121,12 @@ const CustomDatepicker = forwardRef<DatepickerProps, "input">(
           <PopoverAnchor>
             <KVInput type="date" ref={ref} className="custom-datepicker" {...KVInputProps} {...inputProps} />
           </PopoverAnchor>
-          <PopoverTrigger>
-            <InputRightElement cursor="pointer" onClick={setPickerVisible.toggle} height="100%">
+
+          <InputRightElement cursor="pointer" onClick={setPickerVisible.toggle} height="100%">
+            <PopoverTrigger>
               <Icon icon="calendar_today" size={KVInputProps.size === "xs" || KVInputProps.size === "sm" ? 20 : 24} />
-            </InputRightElement>
-          </PopoverTrigger>
+            </PopoverTrigger>
+          </InputRightElement>
         </InputGroup>
         <PopoverContent width="auto">
           <DayPicker
