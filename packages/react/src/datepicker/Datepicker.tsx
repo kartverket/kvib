@@ -28,26 +28,6 @@ type DatepickerProps = KVInputProps & {
   defaultMonth?: Date;
 
   /**
-   * The earliest year available for selection.
-   */
-  fromYear?: number;
-
-  /**
-   * The latest year available for selection.
-   */
-  toYear?: number;
-
-  /**
-   * The earliest month available for selection.
-   */
-  fromMonth?: Date;
-
-  /**
-   * The latest month available for selection.
-   */
-  toMonth?: Date;
-
-  /**
    * The earliest date available for selection.
    */
   fromDate?: Date;
@@ -88,28 +68,16 @@ type DatepickerProps = KVInputProps & {
   useNative?: boolean;
 };
 
-type ExcludedProps =
-  | "autocomplete"
-  | "autofocus"
-  | "disabled"
-  | "max"
-  | "min"
-  | "name"
-  | "readonly"
-  | "required"
-  | "step"
-  | "tabindex"
-  | "value"
-  | "defaultValue";
+type ExcludedProps = "max" | "min" | "defaultValue";
 
 type DatepickerPropsWithoutStandard = Omit<DatepickerProps, ExcludedProps>;
 
 export const Datepicker = forwardRef<DatepickerPropsWithoutStandard, "input">(({ useNative = true, ...props }, ref) => {
   const KVInputProps = extractKVProps(props);
+  const commonProps = getCommonInputProps(props);
+  const defaultValue = props.defaultSelected ? formatDateToLocalISO(props.defaultSelected) : undefined;
   const isClient = typeof window === "object";
   const isMobile = isClient ? window.innerWidth < 480 : false;
-  const defaultValue = props.defaultSelected ? formatDateToLocalISO(props.defaultSelected) : undefined;
-  const commonProps = getCommonInputProps(props);
 
   if (isMobile && useNative)
     return <KVInput type="date" defaultValue={defaultValue} {...KVInputProps} {...commonProps} />;
@@ -122,10 +90,6 @@ const CustomDatepicker = forwardRef<DatepickerProps, "input">(
     {
       defaultSelected,
       defaultMonth,
-      fromYear,
-      toYear,
-      fromMonth,
-      toMonth,
       fromDate,
       toDate,
       showDropdownMonthYear = true,
@@ -142,10 +106,6 @@ const CustomDatepicker = forwardRef<DatepickerProps, "input">(
       defaultSelected,
       format: "yyyy-MM-dd",
       locale: nb,
-      fromYear,
-      toYear,
-      fromMonth,
-      toMonth,
       fromDate,
       toDate,
     });
@@ -187,10 +147,6 @@ function extractKVProps(props: DatepickerProps): KVInputProps {
   const {
     defaultSelected,
     defaultMonth,
-    fromYear,
-    toYear,
-    fromMonth,
-    toMonth,
     fromDate,
     toDate,
     showDropdownMonthYear,
@@ -212,17 +168,8 @@ function formatDateToLocalISO(date: Date): string {
 }
 
 const getCommonInputProps = (props: DatepickerProps) => {
-  const min = props.fromDate
-    ? formatDateToLocalISO(props.fromDate)
-    : props.fromMonth
-    ? formatDateToLocalISO(props.fromMonth)
-    : undefined;
-
-  const max = props.toDate
-    ? formatDateToLocalISO(props.toDate)
-    : props.toMonth
-    ? formatDateToLocalISO(props.toMonth)
-    : undefined;
+  const min = props.fromDate ? formatDateToLocalISO(props.fromDate) : undefined;
+  const max = props.toDate ? formatDateToLocalISO(props.toDate) : undefined;
 
   return {
     min,
