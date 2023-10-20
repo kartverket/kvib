@@ -9,7 +9,7 @@ export default create({
   // Typography
   fontBase: '"Mulish Variable", "Open Sans", sans-serif',
   fontCode: "monospace",
-  brandTitle: "KVIB",
+  brandTitle: "Kartverkets Designsystem",
   brandUrl: isLocalhost ? "/" : "/kvib",
   brandImage: logo,
   brandTarget: "_self",
