@@ -15,6 +15,7 @@ import "react-day-picker/dist/style.css";
 import "./Datepicker.css";
 import { Icon } from "@kvib/react/src/icon";
 import { nb } from "date-fns/locale";
+import { colors } from "../theme/tokens";
 
 type DatepickerProps = KVInputProps & {
   /**
@@ -121,9 +122,24 @@ const CustomDatepicker = forwardRef<DatepickerPropsWithoutStandard, "input">(
           <PopoverAnchor>
             <KVInput ref={ref} className="custom-datepicker" {...KVInputProps} {...inputProps} />
           </PopoverAnchor>
-          <InputRightElement cursor="pointer" onClick={setPickerVisible.toggle} height="100%">
+          <InputRightElement height="100%">
             <PopoverTrigger>
-              <Icon icon="calendar_today" size={KVInputProps.size === "xs" || KVInputProps.size === "sm" ? 20 : 24} />
+              <button
+                style={{
+                  height: "90%",
+                  width: "100%",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+                onClick={setPickerVisible.toggle}
+              >
+                <Icon
+                  icon="calendar_today"
+                  size={KVInputProps.size === "xs" || KVInputProps.size === "sm" ? 20 : 24}
+                  color={colors.green[500]}
+                />
+              </button>
             </PopoverTrigger>
           </InputRightElement>
         </InputGroup>
