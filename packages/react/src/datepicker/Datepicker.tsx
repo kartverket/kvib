@@ -104,7 +104,7 @@ const CustomDatepicker = forwardRef<DatepickerPropsWithoutStandard, "input">(
     const [isPickerVisible, setPickerVisible] = useBoolean(false);
     const { inputProps, dayPickerProps } = useInput({
       defaultSelected,
-      format: "yyyy-MM-dd",
+      format: "dd.MM.yyyy",
       locale: nb,
       fromDate,
       toDate,
@@ -119,7 +119,7 @@ const CustomDatepicker = forwardRef<DatepickerPropsWithoutStandard, "input">(
       >
         <InputGroup>
           <PopoverAnchor>
-            <KVInput type="date" ref={ref} className="custom-datepicker" {...KVInputProps} {...inputProps} />
+            <KVInput ref={ref} className="custom-datepicker" {...KVInputProps} {...inputProps} />
           </PopoverAnchor>
 
           <InputRightElement cursor="pointer" onClick={setPickerVisible.toggle} height="100%">
