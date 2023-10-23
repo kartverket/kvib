@@ -4,7 +4,7 @@ import "./docs-root.css";
 
 addons.setConfig({
   theme,
-  title: "KVIB | Kartverket",
+  title: "Kartverkets Designsystem",
   showToolbar: false,
   panelPosition: "right",
 });
