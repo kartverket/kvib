@@ -144,7 +144,7 @@ export const Datepicker: DatepickerStory = {
   args: {},
   render: (args) => (
     <Box h="25rem">
-      <KvibDatepicker {...args} />
+      <KvibDatepicker aria-label="Datepicker" {...args} />
     </Box>
   ),
 };
@@ -162,7 +162,7 @@ export const DatepickerExample: DatepickerStory = {
   },
   render: (args) => (
     <Box h="23rem">
-      <KvibDatepicker {...args} />
+      <KvibDatepicker aria-label="Datepicker example" {...args} />
     </Box>
   ),
 };

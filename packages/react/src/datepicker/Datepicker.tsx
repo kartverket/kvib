@@ -162,7 +162,7 @@ function extractKVProps(props: DatepickerProps): KVInputProps {
 
 type ValidDateInput = number | Date | string;
 
-function formatDate(date: ValidDateInput): string | null {
+function formatDate(date: ValidDateInput): string {
   let dateObject: Date;
 
   if (typeof date === "number") {
