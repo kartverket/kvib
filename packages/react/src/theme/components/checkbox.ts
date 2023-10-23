@@ -1,10 +1,15 @@
-import { defineStyleConfig } from "@chakra-ui/react";
+import { defineStyleConfig, defineStyle } from "@chakra-ui/react";
 
-export const checkboxTheme = defineStyleConfig({
-  baseStyle: {
+const baseStyle = defineStyle((props) => {
+  const { colorScheme: c } = props;
+
+  return {
     control: {
-      borderColor: "gray.400", // Border color when unchecked
+      borderColor: `${c}.500`, // Border color when unchecked
     },
-  },
+  };
+});
+export const checkboxTheme = defineStyleConfig({
+  baseStyle,
   variants: {},
 });

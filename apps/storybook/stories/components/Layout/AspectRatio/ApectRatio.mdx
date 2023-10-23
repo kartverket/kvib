@@ -1,0 +1,27 @@
+import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
+import * as AspectRatioStories from "./AspectRatio.stories";
+
+<Meta of={AspectRatioStories} />
+
+# Aspect Ratio
+
+AspectRatio brukes to å legge inn responsive bilder, videoer, kart, osv.
+
+## Ta i bruk
+
+```jsx
+import { AspectRatio } from "@kvib/react";
+```
+
+## Props
+
+<Canvas of={AspectRatioStories.AspectRatio} />
+<Controls of={AspectRatioStories.AspectRatio} />
+
+## Kart 16 / 9 ratio
+
+<Canvas of={AspectRatioStories.AspectRatioMap} />
+
+## Video med maxWidth
+
+<Canvas of={AspectRatioStories.AspectRatioVideo} />

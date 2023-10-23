@@ -2,7 +2,7 @@ import { SkipNavLink as KvibSkipNavLink } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibSkipNavLink> = {
-  title: "Komponenter/Data Display/SkipNav",
+  title: "Komponenter/SkipNav",
   component: KvibSkipNavLink,
   parameters: {
     docs: {

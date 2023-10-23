@@ -22,15 +22,6 @@ const meta: Meta<typeof KvibSearch> = {
       },
       control: "text",
     },
-    type: {
-      description: "Input type",
-      table: {
-        type: { summary: "search" },
-        defaultValue: { summary: "search" },
-      },
-      options: ["search"],
-      control: { type: "radio" },
-    },
     size: {
       description: "Input size",
       table: {
@@ -67,15 +58,13 @@ const meta: Meta<typeof KvibSearch> = {
 };
 
 export default meta;
-type FileUploadStory = StoryObj<typeof KvibSearch>;
+type SearchStory = StoryObj<typeof KvibSearch>;
 
-export const Search: FileUploadStory = {
+export const Search: SearchStory = {
   args: {
     placeholder: "Søk her...",
-    type: "search",
     variant: "outline",
     isDisabled: false,
-    isInvalid: false,
   },
   render: (args) => <KvibSearch {...args} />,
 };

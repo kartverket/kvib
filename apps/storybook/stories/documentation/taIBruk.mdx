@@ -142,3 +142,231 @@ For å unngå problemet er det mulig å sette innstillinger i editoren din til �
 ```js
 "no-restricted-imports": ["error", { "patterns": ["@chakra-ui/*"] }]
 ```
+
+## Oppsett av Kartverkets Designsystem ved bruk av Remix
+
+### 1. Installer Kartverket Designsystem i repoet:
+
+```jsx
+$ npm install @kvib/react
+# eller
+$ yarn add @kvib/react
+```
+
+### 2. Sett opp provider:
+
+Legg til `context.tsx` i app-mappen og legg til følgende kode:
+
+```jsx
+// context.tsx
+import { createContext } from 'react'
+
+export interface ServerStyleContextData {
+  key: string
+  ids: Array<string>
+  css: string
+}
+
+export const ServerStyleContext = createContext<ServerStyleContextData[] | null>(null)
+
+export interface ClientStyleContextData {
+  reset: () => void
+}
+
+export const ClientStyleContext = createContext<ClientStyleContextData | null>(null)
+```
+
+Legg til `createEmotionCache.ts` i app-mappen og legg til følgende kode:
+
+```jsx
+// createEmotionCache.ts
+import createCache from "@emotion/cache";
+
+export const defaultCache = createEmotionCache();
+
+export default function createEmotionCache() {
+  return createCache({ key: "cha" });
+}
+```
+
+Etter det så må vi modifisere entry-filene for både client og server. Her skal vi bruke createEmotionCache-funksjonen:
+
+```tsx
+// entry.client.tsx
+import React, { useState } from "react";
+import { hydrate } from "react-dom";
+import { CacheProvider } from "@emotion/react";
+import { RemixBrowser } from "@remix-run/react";
+
+import { ClientStyleContext } from "./context";
+import createEmotionCache, { defaultCache } from "./createEmotionCache";
+
+interface ClientCacheProviderProps {
+  children: React.ReactNode;
+}
+
+function ClientCacheProvider({ children }: ClientCacheProviderProps) {
+  const [cache, setCache] = useState(defaultCache);
+
+  function reset() {
+    setCache(createEmotionCache());
+  }
+
+  return (
+    <ClientStyleContext.Provider value={{ reset }}>
+      <CacheProvider value={cache}>{children}</CacheProvider>
+    </ClientStyleContext.Provider>
+  );
+}
+
+hydrate(
+  <ClientCacheProvider>
+    <RemixBrowser />
+  </ClientCacheProvider>,
+  document
+);
+```
+
+```tsx
+// entry.server.tsx
+import { renderToString } from "react-dom/server";
+import { CacheProvider } from "@emotion/react";
+import createEmotionServer from "@emotion/server/create-instance";
+import { RemixServer } from "@remix-run/react";
+import type { EntryContext } from "@remix-run/node"; // Depends on the runtime you choose
+
+import { ServerStyleContext } from "./context";
+import createEmotionCache from "./createEmotionCache";
+
+export default function handleRequest(
+  request: Request,
+  responseStatusCode: number,
+  responseHeaders: Headers,
+  remixContext: EntryContext
+) {
+  const cache = createEmotionCache();
+  const { extractCriticalToChunks } = createEmotionServer(cache);
+
+  const html = renderToString(
+    <ServerStyleContext.Provider value={null}>
+      <CacheProvider value={cache}>
+        <RemixServer context={remixContext} url={request.url} />
+      </CacheProvider>
+    </ServerStyleContext.Provider>
+  );
+
+  const chunks = extractCriticalToChunks(html);
+
+  const markup = renderToString(
+    <ServerStyleContext.Provider value={chunks.styles}>
+      <CacheProvider value={cache}>
+        <RemixServer context={remixContext} url={request.url} />
+      </CacheProvider>
+    </ServerStyleContext.Provider>
+  );
+
+  responseHeaders.set("Content-Type", "text/html");
+
+  return new Response(`<!DOCTYPE html>${markup}`, {
+    status: responseStatusCode,
+    headers: responseHeaders,
+  });
+}
+```
+
+I `root.tsx` skal vi lage en `Document` wrapper:
+
+```tsx
+// root.tsx
+import React, { useContext, useEffect } from "react";
+import { withEmotionCache } from "@emotion/react";
+import { ChakraProvider } from "@chakra-ui/react";
+import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from "@remix-run/react";
+import { MetaFunction, LinksFunction } from "@remix-run/node"; // Depends on the runtime you choose
+import { cssBundleHref } from "@remix-run/css-bundle";
+
+import { ServerStyleContext, ClientStyleContext } from "./context";
+
+export const meta: MetaFunction = () => ({
+  charset: "utf-8",
+  title: "New Remix App",
+  viewport: "width=device-width,initial-scale=1",
+});
+
+export let links: LinksFunction = () => {
+  return [
+    { rel: "preconnect", href: "https://fonts.googleapis.com" },
+    { rel: "preconnect", href: "https://fonts.gstatic.com" },
+    {
+      rel: "stylesheet",
+      href: "https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap",
+    },
+    ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
+  ];
+};
+
+interface DocumentProps {
+  children: React.ReactNode;
+}
+
+const Document = withEmotionCache(({ children }: DocumentProps, emotionCache) => {
+  const serverStyleData = useContext(ServerStyleContext);
+  const clientStyleData = useContext(ClientStyleContext);
+
+  // Only executed on client
+  useEffect(() => {
+    // re-link sheet container
+    emotionCache.sheet.container = document.head;
+    // re-inject tags
+    const tags = emotionCache.sheet.tags;
+    emotionCache.sheet.flush();
+    tags.forEach((tag) => {
+      (emotionCache.sheet as any)._insertTag(tag);
+    });
+    // reset cache to reapply global styles
+    clientStyleData?.reset();
+  }, []);
+
+  return (
+    <html lang="en">
+      <head>
+        <Meta />
+        <Links />
+        {serverStyleData?.map(({ key, ids, css }) => (
+          <style key={key} data-emotion={`${key} ${ids.join(" ")}`} dangerouslySetInnerHTML={{ __html: css }} />
+        ))}
+      </head>
+      <body>
+        {children}
+        <ScrollRestoration />
+        <Scripts />
+        <LiveReload />
+      </body>
+    </html>
+  );
+});
+```
+
+Legg til `serverDependenciesToBundle: [/^@kvib\\/react/, /^material-symbols/]` i `remix.config.js`
+
+Til slutt må du wrappe appen:
+
+```tsx
+const customTheme = extendTheme(withDefaultColorScheme({ colorScheme: "blue" }), theme);
+
+export default function App() {
+  return (
+    <Document>
+      <KvibProvider theme={customTheme}>
+        <Outlet />
+      </KvibProvider>
+    </Document>
+  );
+}
+```
+
+### 3. Importer material symbols for å bruke ikoner:
+
+```tsx
+import "material-symbols/rounded.css";
+```

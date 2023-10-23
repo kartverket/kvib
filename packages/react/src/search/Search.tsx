@@ -1,7 +1,7 @@
 import { Input as ChakraInput, InputProps as ChakraInputProps, forwardRef } from "@chakra-ui/react";
 
 export const Search = forwardRef<ChakraInputProps, "input">(
-  ({ size, variant, type = "search", isRequired, isInvalid, isDisabled, ...props }, ref) => {
+  ({ id, size, variant, type = "search", isDisabled, isInvalid, ...props }, ref) => {
     return (
       <ChakraInput
         {...props}
@@ -9,10 +9,9 @@ export const Search = forwardRef<ChakraInputProps, "input">(
         size={size}
         type={type}
         variant={variant}
-        isRequired={isRequired}
         isInvalid={isInvalid}
         isDisabled={isDisabled}
       />
     );
-  }
+  },
 );

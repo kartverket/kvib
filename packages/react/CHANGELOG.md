@@ -1,5 +1,40 @@
 # @kvib/react
 
+## 2.5.6
+
+### Patch Changes
+
+- c195cadec: Bumping packages patch and minor:
+
+  - @types/react from 18.2.25 to 18.2.28.
+  - @types/react-dom from 18.2.11 to 18.2.13.
+  - chakra-react-select from 4.7.3 to 4.7.4.
+
+## 2.5.5
+
+### Patch Changes
+
+- 8f3dd0d95: Bumpet @fountsource/mulish og @types/react avhengigheter til siste versjon
+
+## 2.5.4
+
+### Patch Changes
+
+- 2329a2f71: Bumping packages patch and minor:
+
+  - @fontsource-variable/mulish from 5.0.8 to 5.0.12
+  - @types/react from 18.0.26 to 18.2.25
+  - @types/react-dom from 18.0.9 to 18.2.10
+  - chakra-react-select from 4.7.2 to 4.7.3
+
+- 1a7fe9433: **Resolving moderate severity:** Bumping postcss from 8.4.28 to 8.4.31
+
+## 2.5.3
+
+### Patch Changes
+
+- 5250e6567: Importerer material-symbols slik at man ikke trenger å gjøre det selv i prosjektet.
+
 ## 2.5.2
 
 ### Patch Changes

@@ -1,10 +1,15 @@
-import { defineStyleConfig } from "@chakra-ui/react";
+import { defineStyle, defineStyleConfig } from "@chakra-ui/react";
 
-export const radioTheme = defineStyleConfig({
-  baseStyle: {
+const baseStyle = defineStyle((props) => {
+  const { colorScheme: c } = props;
+
+  return {
     control: {
-      borderColor: "gray.400", // Border color when unchecked
+      borderColor: `${c}.500`, // Border color when unchecked
     },
-  },
+  };
+});
+export const radioTheme = defineStyleConfig({
+  baseStyle,
   variants: {},
 });
