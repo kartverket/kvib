@@ -1,6 +1,7 @@
 import * as DatepickerStories from "./Datepicker.stories";
 import { Canvas, Meta, Controls } from "@storybook/blocks";
 import { DocsHeading, DocsAnatomy, DocsStoriesContainer, DocsStory } from "../../templates";
+import { Alert, AlertIcon, AlertDescription } from "@kvib/react/src/alert";
 
 <Meta of={DatepickerStories} />
 
@@ -11,6 +12,15 @@ Datepicker kombinerer et inputfelt med en popoverkalender hvor brukere kan velge
 ```jsx
 import { Datepicker } from "@kvib/react";
 ```
+
+<Alert status="info">
+  <AlertIcon />
+  <AlertDescription>
+    Datepicker er i en testfase. Utfyllende dokumentasjon kommer på et senere tidspunkt. Dersom du har innspill eller
+    tilbakemeldinger, ta kontakt med oss i #gen-designsystem i Slack. Hvis du vil bruke den gamle versjonen kan du bruke
+    `<Input type="date" /> `.
+  </AlertDescription>
+</Alert>
 
 <DocsHeading>Props</DocsHeading>
 
