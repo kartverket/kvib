@@ -1,22 +1,16 @@
-on:
-  push:
-    branches:
-      - master
-  pull_request:
-    branches:
-      - master
+# on:
+#   push:
+#     branches:
+#       - master
+#   pull_request:
+#     branches:
+#       - master
+
+on: [push]
 
 jobs:
   lost_pixel:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        config:
-          - {
-              package: "apps/storybook",
-              name: "Lost Pixel for Storybook",
-              command: "npm run dev",
-            }
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -39,15 +33,15 @@ jobs:
             ${{ runner.os }}-build-${{ github.sha }}
 
       - name: Start App
-        run: cd ${{ matrix.config.package }} && ${{ matrix.config.command }} &
+        run: cd "apps/storybook" && "npm run dev" &
         env:
           CI: true
 
-      - name: ${{ matrix.config.name }}
+      - name: "Lost Pixel for Storybook"
         uses: lost-pixel/lost-pixel@v3.4.0
         env:
           LOST_PIXEL_API_KEY: ${{ secrets.LOST_PIXEL_API_KEY }}
-          LOST_PIXEL_CONFIG_DIR: ${{ matrix.config.package }}
+          LOST_PIXEL_CONFIG_DIR: "apps/storybook"
   finalize:
     needs: [lost_pixel]
     runs-on: ubuntu-latest
