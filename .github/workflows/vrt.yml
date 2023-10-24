@@ -1,11 +1,22 @@
-
-on: [push]
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
 
 jobs:
-  build:
+  lost_pixel:
     runs-on: ubuntu-latest
-    name: Lost Pixel
-
+    strategy:
+      matrix:
+        config:
+          - {
+              package: "apps/storybook",
+              name: "Lost Pixel for Storybook",
+              command: "npm run dev",
+            }
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -17,15 +28,38 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-    
-      - name: Build Storybook
-        run: npm run build-storybook
-        with:
-          workingDir: ./apps/storybook
 
-      - name: Lost Pixel
+      - name: Cache Build
+        uses: actions/cache@v2
+        with:
+          path: |
+            apps/storybook/.lostpixel
+          key: ${{ runner.os }}-build-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ github.sha }}
+
+      - name: Start App
+        run: cd ${{ matrix.config.package }} && ${{ matrix.config.command }} &
+        env:
+          CI: true
+
+      - name: ${{ matrix.config.name }}
         uses: lost-pixel/lost-pixel@v3.4.0
         env:
           LOST_PIXEL_API_KEY: ${{ secrets.LOST_PIXEL_API_KEY }}
+          LOST_PIXEL_CONFIG_DIR: ${{ matrix.config.package }}
+  finalize:
+    needs: [lost_pixel]
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Lost Pixel Finalize
+        uses: lost-pixel/lost-pixel@v3.4.0
+        env:
+          LOST_PIXEL_API_KEY: ${{ secrets.LOST_PIXEL_API_KEY }}
+          LOST_PIXEL_CONFIG_DIR: apps/web
         with:
-          workingDir: ./apps/storybook
+          FINALIZE: true
