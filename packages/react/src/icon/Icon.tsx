@@ -1,15 +1,8 @@
+import { forwardRef } from "@chakra-ui/react";
 import { MaterialSymbol } from "material-symbols";
 import "material-symbols";
 
-export const Icon = ({
-  icon,
-  size,
-  color,
-  weight,
-  grade,
-  isFilled = false,
-  className = "",
-}: {
+type IconProps = {
   /**The icon from Material symbols you want to display*/
   icon: MaterialSymbol;
 
@@ -29,19 +22,24 @@ export const Icon = ({
   isFilled?: boolean;
 
   className?: string;
-}) => {
-  return (
-    <span
-      className={`material-symbols-rounded ${className}`}
-      style={{
-        fontSize: size,
-        color: color,
-        fontVariationSettings: `'FILL' ${isFilled ? 1 : 0}, 'wght' ${weight ? weight : 300}, 'GRAD' ${
-          grade ? grade : 0
-        }`,
-      }}
-    >
-      {icon}
-    </span>
-  );
 };
+
+export const Icon = forwardRef<IconProps, "span">(
+  ({ icon, size, color, weight, grade, isFilled = false, className = "" }, ref) => {
+    return (
+      <span
+        ref={ref}
+        className={`material-symbols-rounded ${className}`}
+        style={{
+          fontSize: size,
+          color: color,
+          fontVariationSettings: `'FILL' ${isFilled ? 1 : 0}, 'wght' ${weight ? weight : 300}, 'GRAD' ${
+            grade ? grade : 0
+          }`,
+        }}
+      >
+        {icon}
+      </span>
+    );
+  },
+);
