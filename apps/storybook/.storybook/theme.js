@@ -9,7 +9,7 @@ export default create({
   // Typography
   fontBase: '"Mulish Variable", "Open Sans", sans-serif',
   fontCode: "monospace",
-  brandTitle: "KVIB",
+  brandTitle: "Kartverkets Designsystem",
   brandUrl: isLocalhost ? "/" : "/kvib",
   brandImage: logo,
   brandTarget: "_self",
@@ -22,7 +22,7 @@ export default create({
   appBg: "white",
   appContentBg: "white",
   appBorderColor: "#E3E0E0",
-  appBorderRadius: 16,
+  appBorderRadius: 0,
 
   // Text colors
   textColor: "#202020",
