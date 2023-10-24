@@ -30,6 +30,50 @@ const meta: Meta<typeof KvibTabs> = {
   },
 
   argTypes: {
+    size: {
+      description: "The size of the tabs",
+      table: {
+        type: { summary: "sm | md | lg" },
+        defaultValue: { summary: "md" },
+      },
+      options: ["sm", "md", "lg"],
+      control: { type: "radio" },
+    },
+    colorScheme: {
+      description: "The visual color appearance of the tabs",
+      table: {
+        type: { summary: "green | blue | undefined" },
+        defaultValue: { summary: "green" },
+      },
+      options: ["green", "blue", "undefined"],
+      control: { type: "radio" },
+    },
+    orientation: {
+      description: "The orientation of the tab.",
+      table: {
+        type: { summary: "vertical | horizontal" },
+        defaultValue: { summary: "horizontal" },
+      },
+      options: ["vertical", "horizontal"],
+      control: { type: "radio" },
+    },
+    variant: {
+      description: "The variant of the tab.",
+      table: {
+        type: { summary: "line | enclosed | enclosed-colored | soft-rounded | solid-rounded | unstyled" },
+        defaultValue: { summary: "line" },
+      },
+      options: ["line", "enclosed", "enclosed-colored", "soft-rounded", "solid-rounded", "unstyled"],
+      control: { type: "radio" },
+    },
+    isFitted: {
+      description: "If true, tabs will stretch to width of the tablist.",
+      table: {
+        type: { summary: Boolean },
+        defaultValue: { summary: false },
+      },
+      control: { type: "boolean" },
+    },
     id: {
       description: "The id of the tab",
       table: {
@@ -43,6 +87,14 @@ const meta: Meta<typeof KvibTabs> = {
         type: { summary: Number },
       },
       control: "number",
+    },
+    isDisabled: {
+      description: "If true, tabs will no longer be able to toggle.",
+      table: {
+        type: { summary: Boolean },
+        defaultValue: { summary: false },
+      },
+      control: { type: "boolean" },
     },
   },
 };

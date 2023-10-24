@@ -1,0 +1,8 @@
+.rdp {
+  --rdp-cell-size: 40px; /* Size of the day cells. */
+  --rdp-caption-font-size: 18px; /* Font size for the caption labels. */
+  --rdp-accent-color: var(--kvib-colors-green-500); /* Accent color for the background of selected days. */
+  --rdp-background-color: var(--kvib-colors-green-50); /* Background color for the hovered/focused elements. */
+  --rdp-outline: 2px solid var(--rdp-accent-color); /* Outline border for focused elements */
+  --rdp-selected-color: #fff; /* Color of selected day text */
+}
