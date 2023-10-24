@@ -20,8 +20,12 @@ jobs:
     
       - name: Build Storybook
         run: npm run build-storybook
+        with:
+          workingDir: ./apps/storybook
 
       - name: Lost Pixel
         uses: lost-pixel/lost-pixel@v3.4.0
         env:
           LOST_PIXEL_API_KEY: ${{ secrets.LOST_PIXEL_API_KEY }}
+        with:
+          workingDir: ./apps/storybook
