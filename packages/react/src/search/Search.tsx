@@ -8,7 +8,7 @@ import {
 } from "@chakra-ui/react";
 import { IconButton } from "../button";
 
-export type SearchProps = Omit<ChakraInputProps, "isInvalid" | "isRequired" | "colorScheme"> & {
+export type SearchProps = Omit<ChakraInputProps, "isRequired" | "colorScheme"> & {
   leftSearchIcon?: boolean;
   rightSearchIcon?: boolean;
   colorScheme?: "gray" | "red" | "green" | "blue" | undefined;

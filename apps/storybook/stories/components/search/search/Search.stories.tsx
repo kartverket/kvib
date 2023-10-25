@@ -44,6 +44,7 @@ const meta: Meta<typeof KvibSearch> = {
       description: "Enables Search IconButton",
       table: {
         type: { summary: "boolean" },
+        defaultValue: { summary: false },
       },
       control: "boolean",
     },
@@ -51,6 +52,7 @@ const meta: Meta<typeof KvibSearch> = {
       description: "Enables Search IconButton",
       table: {
         type: { summary: "boolean" },
+        defaultValue: { summary: false },
       },
       control: "boolean",
     },
@@ -66,6 +68,7 @@ const meta: Meta<typeof KvibSearch> = {
       description: "Toggles if input should be invalid",
       table: {
         type: { summary: "boolean" },
+        defaultValue: { summary: false },
       },
       control: "boolean",
     },
@@ -73,6 +76,7 @@ const meta: Meta<typeof KvibSearch> = {
       description: "Toggles if input should be disabled",
       table: {
         type: { summary: "boolean" },
+        defaultValue: { summary: false },
       },
       control: "boolean",
     },
@@ -108,7 +112,7 @@ export const SearchIconRight: SearchStory = {
     placeholder: "Søk her...",
     variant: "outline",
     isDisabled: false,
-    colorScheme: "blue",
+    colorScheme: "green",
   },
   render: (args) => <KvibSearch {...args} />,
 };
