@@ -33,7 +33,7 @@ jobs:
       #       ${{ runner.os }}-build-${{ github.sha }}
 
       - name: Build storybook
-        run: cd "apps/storybook" && "npm run build"
+        run: cd "apps/storybook" && "npm run build" &
 
       - name: "Lost Pixel for Storybook"
         uses: lost-pixel/lost-pixel@v3.4.0
