@@ -18,42 +18,40 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 16.x
+          node-version: 18.x
 
       - name: Install dependencies
         run: npm install
 
-      - name: Cache Build
-        uses: actions/cache@v2
-        with:
-          path: |
-            apps/storybook/.lostpixel
-          key: ${{ runner.os }}-build-${{ github.sha }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ github.sha }}
+      # - name: Cache Build
+      #   uses: actions/cache@v2
+      #   with:
+      #     path: |
+      #       apps/storybook/.lostpixel
+      #     key: ${{ runner.os }}-build-${{ github.sha }}
+      #     restore-keys: |
+      #       ${{ runner.os }}-build-${{ github.sha }}
 
-      - name: Start App
-        run: cd "apps/storybook" && "npm run build" &
-        env:
-          CI: true
+      - name: Build storybook
+        run: cd "apps/storybook" && "npm run build"
 
       - name: "Lost Pixel for Storybook"
         uses: lost-pixel/lost-pixel@v3.4.0
         env:
           LOST_PIXEL_API_KEY: ${{ secrets.LOST_PIXEL_API_KEY }}
           LOST_PIXEL_CONFIG_DIR: "apps/storybook"
-  finalize:
-    needs: [lost_pixel]
-    runs-on: ubuntu-latest
+  # finalize:
+  #   needs: [lost_pixel]
+  #   runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v3
 
-      - name: Lost Pixel Finalize
-        uses: lost-pixel/lost-pixel@v3.4.0
-        env:
-          LOST_PIXEL_API_KEY: ${{ secrets.LOST_PIXEL_API_KEY }}
-          LOST_PIXEL_CONFIG_DIR: apps/web
-        with:
-          FINALIZE: true
+  #     - name: Lost Pixel Finalize
+  #       uses: lost-pixel/lost-pixel@v3.4.0
+  #       env:
+  #         LOST_PIXEL_API_KEY: ${{ secrets.LOST_PIXEL_API_KEY }}
+  #         LOST_PIXEL_CONFIG_DIR: apps/web
+  #       with:
+  #         FINALIZE: true
