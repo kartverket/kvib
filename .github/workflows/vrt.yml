@@ -33,7 +33,7 @@ jobs:
             ${{ runner.os }}-build-${{ github.sha }}
 
       - name: Start App
-        run: cd "apps/storybook" && "npm run dev" &
+        run: cd "apps/storybook" && "npm run build" &
         env:
           CI: true
 
