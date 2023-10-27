@@ -1,3 +1,4 @@
+import { Box } from "@kvib/react/src";
 import { Datepicker as KvibDatepicker } from "@kvib/react/src/datepicker";
 import { Meta, StoryObj } from "@storybook/react";
 
@@ -7,11 +8,10 @@ const meta: Meta<typeof KvibDatepicker> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "shown" },
+      canvas: { sourceState: "hidden" },
     },
     a11y: {
       // This option disables all a11y checks on this story
-      disable: true,
     },
   },
   argTypes: {
@@ -33,15 +33,7 @@ const meta: Meta<typeof KvibDatepicker> = {
       options: ["outline", "filled", "flushed", "unstyled"],
       control: { type: "radio" },
     },
-    type: {
-      description: "Type",
-      table: {
-        type: { summary: "date | datetime-local" },
-        defaultValue: { summary: "date" },
-      },
-      options: ["date", "datetime-local"],
-      control: { type: "radio" },
-    },
+
     isRequired: {
       description: "Toggles if input should be required",
       table: {
@@ -63,6 +55,85 @@ const meta: Meta<typeof KvibDatepicker> = {
       },
       control: "boolean",
     },
+    defaultSelected: {
+      description: "A default date to be selected when the picker is displayed.",
+      table: {
+        type: { summary: "Date" },
+      },
+      control: "date",
+    },
+
+    defaultMonth: {
+      description: "The month to display in the calendar by default.",
+      table: {
+        type: { summary: "Date" },
+      },
+      control: "date",
+    },
+
+    fromDate: {
+      description: "The earliest date available for selection.",
+      table: {
+        type: { summary: "Date" },
+      },
+      control: "date",
+    },
+
+    toDate: {
+      description: "The latest date available for selection.",
+      table: {
+        type: { summary: "Date" },
+      },
+      control: "date",
+    },
+
+    showDropdownMonthYear: {
+      description: "Whether or not to show dropdowns for month and year selection.",
+      table: {
+        type: { summary: "boolean" },
+      },
+      control: "boolean",
+    },
+
+    disableNavigation: {
+      description: "If set to true, navigation buttons (next/previous month) are hidden.",
+      table: {
+        type: { summary: "boolean" },
+      },
+      control: "boolean",
+    },
+
+    showOutsideDays: {
+      description: "Whether or not to show the days that fall outside the current month.",
+      table: {
+        type: { summary: "boolean" },
+      },
+      control: "boolean",
+    },
+
+    showWeekNumber: {
+      description: "Whether or not to display the week numbers.",
+      table: {
+        type: { summary: "boolean" },
+      },
+      control: "boolean",
+    },
+
+    disabledDays: {
+      description: "A list of dates that should be disabled for selection.",
+      table: {
+        type: { summary: "Date[]" },
+      },
+      control: "array",
+    },
+
+    useNative: {
+      description: "Whether or not to use the native datepicker on mobile devices.",
+      table: {
+        type: { summary: "boolean" },
+      },
+      control: "boolean",
+    },
   },
 };
 
@@ -70,13 +141,28 @@ export default meta;
 type DatepickerStory = StoryObj<typeof KvibDatepicker>;
 
 export const Datepicker: DatepickerStory = {
+  args: {},
+  render: (args) => (
+    <Box h="25rem">
+      <KvibDatepicker aria-label="Datepicker" {...args} />
+    </Box>
+  ),
+};
+
+export const DatepickerExample: DatepickerStory = {
   args: {
-    size: "md",
-    variant: "outline",
-    type: "date",
-    isDisabled: false,
-    isInvalid: false,
-    isRequired: false,
+    defaultSelected: new Date("2022-08-01"),
+    fromDate: new Date("2022-08-01"),
+    toDate: new Date("2022-12-15"),
+    showDropdownMonthYear: true,
+    disableNavigation: false,
+    showOutsideDays: true,
+    showWeekNumber: true,
+    disabledDays: [new Date("2022-08-16")],
   },
-  render: (args) => <KvibDatepicker {...args} />,
+  render: (args) => (
+    <Box h="23rem">
+      <KvibDatepicker aria-label="Datepicker example" {...args} />
+    </Box>
+  ),
 };
