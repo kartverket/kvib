@@ -2,15 +2,13 @@ import { create } from "@storybook/theming";
 import logo from "./kvib_logo.svg";
 import "@fontsource-variable/mulish";
 
-const isLocalhost = window.location.hostname === "localhost";
-
 export default create({
   base: "light",
   // Typography
   fontBase: '"Mulish Variable", "Open Sans", sans-serif',
   fontCode: "monospace",
   brandTitle: "Kartverkets Designsystem",
-  brandUrl: isLocalhost ? "/" : "/kvib",
+  brandUrl: "/",
   brandImage: logo,
   brandTarget: "_self",
 
