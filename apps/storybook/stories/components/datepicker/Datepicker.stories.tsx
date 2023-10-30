@@ -141,7 +141,14 @@ export default meta;
 type DatepickerStory = StoryObj<typeof KvibDatepicker>;
 
 export const Datepicker: DatepickerStory = {
-  args: {},
+  args: { onChange: (v) => console.log("Datepicker changed", v) },
+  parameters: {
+    docs: {
+      canvas: {
+        sourceState: "shown",
+      },
+    },
+  },
   render: (args) => (
     <Box h="25rem">
       <KvibDatepicker aria-label="Datepicker" {...args} />
@@ -149,15 +156,33 @@ export const Datepicker: DatepickerStory = {
   ),
 };
 
-export const DatepickerExample: DatepickerStory = {
+export const DatepickerDetails: DatepickerStory = {
+  args: {
+    showOutsideDays: true,
+    showWeekNumber: true,
+  },
+  render: (args) => (
+    <Box h="25rem">
+      <KvibDatepicker aria-label="Datepicker example" {...args} />
+    </Box>
+  ),
+};
+
+export const DatepickerAppearance: DatepickerStory = {
+  args: { variant: "flushed", size: "lg" },
+  render: (args) => (
+    <Box h="25rem">
+      <KvibDatepicker aria-label="Datepicker" {...args} />
+    </Box>
+  ),
+};
+
+export const DatepickerArea: DatepickerStory = {
   args: {
     defaultSelected: new Date("2022-08-01"),
     fromDate: new Date("2022-08-01"),
     toDate: new Date("2022-12-15"),
     showDropdownMonthYear: true,
-    disableNavigation: false,
-    showOutsideDays: true,
-    showWeekNumber: true,
     disabledDays: [new Date("2022-08-16")],
   },
   render: (args) => (
