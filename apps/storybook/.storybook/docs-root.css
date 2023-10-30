@@ -1,3 +1,4 @@
+
 /* Main container outside MDX files - removing border */
 div[role="main"] > :first-child {
   box-shadow: none;
@@ -56,3 +57,33 @@ div[role="main"] > :first-child {
   box-shadow: none !important;
   border-radius: 0 !important;
 }
+
+/* Common properties for both Firefox and Chrome */
+input[type="range"]::-moz-range-thumb {
+  background: #1A833B;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  background: #1A833B;
+}
+
+/* Firefox specific hover effect */
+input[type="range"]::-moz-range-thumb:hover {
+  background:  #156630;
+}
+
+/* Chrome specific hover effect */
+input[type="range"]::-webkit-slider-thumb:hover {
+  background:  #156630;
+}
+
+/* Firefox specific hover effect */
+input[type="range"]::-moz-range-thumb:active {
+  background:  #156630;
+}
+
+/* Chrome specific hover effect */
+input[type="range"]::-webkit-slider-thumb:active {
+  background:  #156630;
+}
+
