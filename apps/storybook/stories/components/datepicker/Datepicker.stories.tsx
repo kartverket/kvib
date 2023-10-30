@@ -134,6 +134,13 @@ const meta: Meta<typeof KvibDatepicker> = {
       },
       control: "boolean",
     },
+    onChange: {
+      description: "Sideeffect to be run when a date is selected.",
+      table: {
+        type: { summary: "(date: Date | undefined) => void" },
+      },
+      control: "function",
+    },
   },
 };
 
