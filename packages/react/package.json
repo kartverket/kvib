@@ -19,7 +19,7 @@
     "directory": "packages/react"
   },
   "devDependencies": {
-    "@types/react": "^18.2.31",
+    "@types/react": "^18.2.33",
     "@types/react-dom": "^18.2.14",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -36,8 +36,8 @@
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@fontsource/mulish": "^5.0.15",
-    "chakra-react-select": "^4.7.5",
-    "material-symbols": "^0.13.1"
+    "chakra-react-select": "^4.7.6",
+    "material-symbols": "^0.13.2"
   },
   "lint-staged": {
     "*.{ts,tsx,md}": "prettier --write"
