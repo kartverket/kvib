@@ -15,6 +15,8 @@ import "react-day-picker/dist/style.css";
 import "./Datepicker.css";
 import { Icon } from "@kvib/react/src/icon";
 import { nb } from "date-fns/locale";
+import { ChangeEvent, useEffect } from "react";
+import { isValid } from "date-fns";
 
 type DatepickerProps = KVInputProps & {
   /**
@@ -66,28 +68,51 @@ type DatepickerProps = KVInputProps & {
    * Whether or not to use the native datepicker on mobile devices.
    */
   useNative?: boolean;
+
+  /**
+   * Sideeffect to be run when a date is selected.
+   */
+  onChange?: (date: Date | undefined) => void;
 };
 
 type ExcludedProps = "max" | "min" | "defaultValue";
 
 type DatepickerPropsWithoutStandard = Omit<DatepickerProps, ExcludedProps>;
 
-export const Datepicker = forwardRef<DatepickerPropsWithoutStandard, "input">(({ useNative = true, ...props }, ref) => {
-  const KVInputProps = extractKVProps(props);
-  const commonProps = getCommonInputProps(props);
-  const defaultValue = props.defaultSelected ? formatDate(props.defaultSelected) : undefined;
-  const isClient = typeof window === "object";
-  const isMobile = isClient ? window.innerWidth < 480 : false;
+export const Datepicker = forwardRef<DatepickerPropsWithoutStandard, "input">(
+  ({ onChange, useNative = true, ...props }, ref) => {
+    const KVInputProps = extractKVProps(props);
+    const commonProps = getCommonInputProps(props);
+    const defaultValue = props.defaultSelected ? formatDate(props.defaultSelected) : undefined;
+    const isClient = typeof window === "object";
+    const isMobile = isClient ? window.innerWidth < 480 : false;
 
-  if (isMobile && useNative)
-    return <KVInput type="date" defaultValue={defaultValue} {...KVInputProps} {...commonProps} />;
+    const handleNativeChange = (event: ChangeEvent<HTMLInputElement>) => {
+      const date = new Date(event.target.value);
+      if (isValid(date)) {
+        onChange?.(date);
+      }
+    };
 
-  return <CustomDatepicker {...props} ref={ref} {...commonProps} />;
-});
+    if (isMobile && useNative)
+      return (
+        <KVInput
+          type="date"
+          defaultValue={defaultValue}
+          {...KVInputProps}
+          {...commonProps}
+          onChange={handleNativeChange}
+        />
+      );
+
+    return <CustomDatepicker {...props} ref={ref} {...commonProps} onChange={onChange} />;
+  },
+);
 
 const CustomDatepicker = forwardRef<DatepickerPropsWithoutStandard, "input">(
   (
     {
+      onChange,
       defaultSelected,
       defaultMonth,
       fromDate,
@@ -109,6 +134,13 @@ const CustomDatepicker = forwardRef<DatepickerPropsWithoutStandard, "input">(
       fromDate,
       toDate,
     });
+
+    useEffect(() => {
+      // Check if the selected date in the day picker has changed
+      if (dayPickerProps.selected) {
+        onChange?.(dayPickerProps.selected);
+      }
+    }, [dayPickerProps.selected, onChange]);
 
     return (
       <Popover

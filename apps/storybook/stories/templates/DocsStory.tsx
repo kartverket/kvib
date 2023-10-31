@@ -2,7 +2,7 @@ import { Box, Heading, SimpleGrid, Text } from "@kvib/react/src";
 
 type DocsStoryProps = {
   title: string;
-  description: string;
+  description: string | JSX.Element;
   story: any;
 };
 

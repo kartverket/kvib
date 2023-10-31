@@ -41,6 +41,13 @@ type Story = StoryObj<typeof KvibAlert>;
 
 export const Alert: Story = {
   args: { status: "success" },
+  parameters: {
+    docs: {
+      canvas: {
+        sourceState: "shown",
+      },
+    },
+  },
   render: (args) => (
     <KvibAlert {...args}>
       <AlertIcon />
