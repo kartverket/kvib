@@ -1,5 +1,6 @@
-import { Meta, Canvas, Story, Controls, Source } from "@storybook/blocks";
+import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
 import * as CardStories from "./Card.stories";
+import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory } from "../../../templates";
 import {
   CardString,
   CardVariantsString,
@@ -8,7 +9,7 @@ import {
   CardCenteringString,
   CardHorizontalString,
 } from "./srcStrings.ts";
-import { Card, CardBody } from "@kvib/react/src";
+import { Card, CardBody, Text, Code, Box, Alert, AlertIcon, AlertDescription } from "@kvib/react/src";
 
 <Meta title="Komponenter/Data Display/Card" />
 
@@ -16,73 +17,94 @@ import { Card, CardBody } from "@kvib/react/src";
 
 Card er et fleksibelt komponent som brukes til å gruppere og vise innhold i et klart og konsist format.
 
-## Ta i bruk
-
 ```jsx
 import { Card, CardHeader, CardBody, CardFooter } from "@kvib/react";
 ```
 
-## Props
+**Egnet til:**
 
-<Card variant="outline" borderRadius="0">
-  <CardBody>
-    <Story of={CardStories.Card} />
-  </CardBody>
-</Card>
+- Gruppere innhold
+- Gruppere innhold og handlinger som hører sammen
+- Inngangspunkt til mer kompleks og detaljert informasjon
 
-<Source code={CardString} dark />
+**Uegnet til:**
+
+- Kompleks og detaljert informasjon som krever mye plass
+
+<DocsHeading>Kontekst</DocsHeading>
+
+<DocsContainer>
+
+**Card er bygget opp av fire komponenter:**
+
+- Card
+- CardHeader
+- CardBody
+- CardFooter.
+
+`Card` skal alltid være ytterst. `CardBody` skal inneholde hoveddelen av innholdet. `CardHeader` og `CardFooter` er valgfrie.
+
+</DocsContainer>
+
+<DocsHeading>Alternativer</DocsHeading>
+
+<Alert status="info" padding="0.3rem 1rem">
+<AlertIcon />
+<AlertDescription>
+  Kodevisningen viser `<CardHeader2>`/`<CardBody2>`/`<CardFooter2>` - dette skal være `<CardHeader>`/`<CardBody>`/`<CardFooter>` i faktisk bruk av komponentet.
+</AlertDescription>
+</Alert>
+
+<DocsContainer>
+
+<DocsStory
+  title="Utseende"
+  description={
+    <Text>
+      Det er mulig å velge mellom fire forskjellige varianter av Card. Disse er elevated, outline, filled og unstyled. I
+      de fleste tilfeller vil elevated outline være passende. Det er tre forskjellige størrelser fra sm til lg. Her vil
+      md passe i de fleste tilfeller.
+    </Text>
+  }
+  story={<Canvas of={CardStories.CardVariants} />}
+/>
+
+<DocsStory
+  title="Komposisjon"
+  description={
+    <Box>
+      <Text>
+        Du kan komponere Card med komponenter som <Code>Button</Code>, <Code>Image</Code> og <Code>Divider</Code> for et
+        mer avansert oppsett.
+      </Text>
+
+      <Text>
+        Dersom du skal ha padding på elementer må de plasseres inne i en av child elementene til Card. Vil du derimot
+        at bildet skal ta hele bredden til Card må du plassere det rett under
+        <Code>Card</Code>. Actions som <Code>Button</Code> skal plasseres i <Code>CardFooter</Code>.
+      </Text>
+    </Box>
+
+}
+story={<Canvas of={CardStories.CardComposition} />}
+/>
+
+<DocsStory
+  title="Retning og plassering"
+  description={
+    <Text>
+      Card har <Code>display: flex</Code> som standard. Det betyr at du kan sette innholdet horisontalt ved å sette
+      <Code>direction="row"</Code>. Dersom du ønsker å sentrere innholdet vertikalt kan du sette <Code>
+        align="center"
+      </Code> for <Code>Card</Code>.
+    </Text>
+  }
+  story={<Canvas of={CardStories.CardHorizontal} />}
+/>
+
+</DocsContainer>
+
+<DocsHeading>Props</DocsHeading>
+
+<Canvas of={CardStories.Card} />
 <Controls of={CardStories.Card} />
-
-## Varianter
-
-<Card variant="outline" borderRadius="0">
-  <CardBody>
-    <Story of={CardStories.CardVariants} />
-  </CardBody>
-</Card>
-
-<Source code={CardVariantsString} dark />
-
-## Størrelser
-
-<Card variant="outline" borderRadius="0">
-  <CardBody>
-    <Story of={CardStories.CardSizes} />
-  </CardBody>
-</Card>
-
-<Source code={CardSizesString} dark />
-
-## Card med bilde og knapper
-
-<Card variant="outline" borderRadius="0">
-  <CardBody>
-    <Story of={CardStories.CardImage} />
-  </CardBody>
-</Card>
-
-<Source code={CardImageString} dark />
-
-## Sentrering av innhold
-
-Sentrering av innhold gjøres ved å sette `align="center"` på Card.
-
-<Card variant="outline" borderRadius="0">
-  <CardBody>
-    <Story of={CardStories.CardCentering} />
-  </CardBody>
-</Card>
-
-<Source code={CardCenteringString} dark />
-
-## Horisontalt innhold
-
-For å vise innhold horisontalt settes `direction="row"` på Card.
-
-<Card variant="outline" borderRadius="0">
-  <CardBody>
-    <Story of={CardStories.CardHorizontal} />
-  </CardBody>
-</Card>
-
-<Source code={CardHorizontalString} dark />

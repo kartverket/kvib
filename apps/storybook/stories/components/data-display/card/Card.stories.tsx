@@ -20,20 +20,20 @@ const meta: Meta<typeof KvibCard> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "shown" },
+      canvas: { sourceState: "hidden" },
     },
   },
   argTypes: {
     direction: {
-      table: { type: { summary: String } },
+      table: { type: { summary: "ResponsiveValue<FlexDirection>" } },
       control: "text",
     },
     align: {
-      table: { type: { summary: String } },
+      table: { type: { summary: "ResponsiveValue<AlignItems>" } },
       control: "text",
     },
     justify: {
-      table: { type: { summary: String } },
+      table: { type: { summary: "ResponsiveValue<JustifyContent>" } },
       control: "text",
     },
     size: {
@@ -62,6 +62,13 @@ type Story = StoryObj<typeof KvibCard>;
 
 export const Card: Story = {
   args: {},
+  parameters: {
+    docs: {
+      canvas: {
+        sourceState: "shown",
+      },
+    },
+  },
   render: (args) => (
     <KvibCard {...args}>
       <KvibCardBody>
@@ -72,7 +79,7 @@ export const Card: Story = {
 };
 
 export const CardVariants: Story = {
-  args: {},
+  args: { size: "sm" },
   render: (args) => (
     <KvibStack spacing="4">
       {["elevated", "outline", "filled", "unstyled"].map((variant) => (
@@ -107,7 +114,7 @@ export const CardSizes: Story = {
   ),
 };
 
-export const CardImage: Story = {
+export const CardComposition: Story = {
   args: {},
   render: (args) => (
     <KvibCard {...args} maxW="sm">
@@ -129,7 +136,7 @@ export const CardImage: Story = {
       <KvibDivider />
       <KvibCardFooter>
         <KvibButtonGroup spacing="2">
-          <KvibButton variant="solid" colorScheme="blue">
+          <KvibButton variant="primary" colorScheme="blue">
             Les artikkel
           </KvibButton>
           <KvibButton variant="ghost" colorScheme="blue">
