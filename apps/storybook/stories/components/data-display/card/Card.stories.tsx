@@ -188,7 +188,7 @@ export const CardHorizontal: Story = {
         </KvibCardBody>
 
         <KvibCardFooter>
-          <KvibButton variant="solid" colorScheme="blue">
+          <KvibButton variant="primary" colorScheme="blue">
             Les artikkel
           </KvibButton>
         </KvibCardFooter>
