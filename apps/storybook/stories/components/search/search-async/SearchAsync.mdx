@@ -1,4 +1,4 @@
-import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
+import { Meta, Canvas, Story, Controls, Source } from "@storybook/blocks";
 import * as SearchAsyncStories from "./SearchAsync.stories";
 
 <Meta of={SearchAsyncStories} />
@@ -21,6 +21,37 @@ import { SearchAsync } from "@kvib/react";
 ## Async søkeresultater
 
 <Canvas of={SearchAsyncStories.SearchAsyncResults} />
+
+## Egendefinert tilbakemelding ved ingen resultater
+
+Det er mulig å endre på tilbakemeldingen som dukker opp i dropdown ved å bruke propen `noOptionsMessage`. Denne tar inn en funksjon som returnerer en React-komponent. Funksjonen tar inn et objekt med `inputValue` som inneholder det brukeren har skrevet i søkefeltet.
+Kodeblokken under eksempelet viser hvordan man kan bruke `noOptionsMessage` og `loadOptions` til å sørge for at brukeren skriver inn minst tre tegn før vi starter et søk.
+
+<Canvas of={SearchAsyncStories.SearchAsyncNoOptions} />
+
+<Source
+  code={`const mockLoadOptions = (inputValue: string, callback: (options: typeof fruits) => void) => {
+  if (inputValue.length <= 2) {
+    callback([]);
+    return;
+  }
+  setTimeout(() => {
+    const filteredFruits = fruits.filter((fruit) => fruit.label.toLowerCase().includes(inputValue.toLowerCase()));
+    callback(filteredFruits);
+  }, 500);
+};
+const noOptionsMessage = ({ inputValue }: { inputValue: string }) => {
+  if (inputValue.length > 0) {
+    if (inputValue.length <= 2) {
+      return <Text>Søket må inneholde minst 3 tegn</Text>;
+    } else {
+      return <Text>Fant ingen resultater</Text>;
+    }
+  }
+  return null;
+};`}
+  dark
+/>
 
 ## Søkeresultater med delay
 
