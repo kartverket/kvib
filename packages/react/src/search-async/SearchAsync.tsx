@@ -40,7 +40,7 @@ export type BaseProps<T> = {
   id?: string;
 
   /** Function to map inputValue to a text output when no options are loaded */
-  noOptionsMessage?: ((obj: { inputValue: string; }) => ReactNode) | undefined
+  noOptionsMessage?: ((obj: { inputValue: string }) => ReactNode) | undefined;
 };
 
 type WithMulti<T> = {
@@ -73,7 +73,7 @@ export const SearchAsync = <T extends unknown>({
   variant,
   id,
   isMulti = false,
-  noOptionsMessage
+  noOptionsMessage,
 }: SearchAsyncProps<T>) => {
   const noOptionsMessageDefault = ({ inputValue }: { inputValue: string }): ReactNode => {
     if (inputValue.replaceAll(/\s/g, "").length < 1) {
