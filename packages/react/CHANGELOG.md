@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 2.6.2
+
+### Patch Changes
+
+- 66849b68d: Datepicker: Endrer onChange til å returnere Date på både desktop og mobil (native).
+
 ## 2.6.1
 
 ### Patch Changes
