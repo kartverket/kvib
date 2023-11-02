@@ -1,5 +1,34 @@
 # @kvib/react
 
+## 2.6.1
+
+### Patch Changes
+
+- b0581f12c: SearchAsync: Legger til noOptionsMessage-prop.
+- 4fe2942fc: Bumping packages patch and minor:
+
+  - @types/react from 18.2.31 to 18.2.33
+  - chakra-react-select from 4.7.5 to 4.7.6
+  - material-symbols from 0.13.1 to 0.13.2
+
+## 2.6.0
+
+### Minor Changes
+
+- 8ffcc7faa: Legger til ikoner i Search.
+- 690def8f5: Nytt komponent: FooterInline - Footer til bunnen av en nettside som ikke skal ta hele bredden.
+- e8b7660a9: Ny versjon av datepicker.
+
+### Patch Changes
+
+- a0361e91f: Oppdatert @types/react, @types/react-dom og @fontsource/mulish
+- 6cfa0c41e: Bumping packages patch and minor:
+
+  - Chakra-react-select from 4.7.4 to 4.7.5.
+  - material-symbols from 0.13.0 to 0.13.1
+  - @types/react from 18.2.30 to 18.2.31
+  - @fontsource/mulish from 5.0.14 to 5.0.15
+
 ## 2.5.6
 
 ### Patch Changes
