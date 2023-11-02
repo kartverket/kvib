@@ -1,13 +1,48 @@
-import { Meta } from "@storybook/blocks";
+import { Meta, Controls, Source, Story, } from "@storybook/blocks";
+import { Card, CardBody } from "@kvib/react/src";
+import * as VisuallyHiddenStories from "./VisuallyHidden.stories";
+import * as VisuallyHiddenStrings from "./srcStrings.ts";
 
 <Meta title="Komponenter/Visually Hidden" />
 
 # Visually Hidden
 
-Se [https://chakra-ui.com/docs/components/visually-hidden](https://chakra-ui.com/docs/components/visually-hidden) for eksempler og dokumentasjon.
+Visually Hidden er en vanlig teknikk som brukes i netttilgjengelighet for å skjule innhold fra den visuelle klienten, men holde det lesbart for skjermlesere.
 
 ## Ta i bruk
 
 ```jsx
 import { VisuallyHidden, VisuallyHiddenInput } from "@kvib/react";
 ```
+
+## Props
+<Card variant="outline">
+    <CardBody>
+        <Story of={VisuallyHiddenStories.VisuallyHidden} />
+    </CardBody>
+</Card>
+
+<Source code={VisuallyHiddenStrings.VisuallyHiddenString} dark/>
+<Controls of={VisuallyHiddenStories.VisuallyHidden} />
+
+## Eksempel med tekst
+
+<Card variant="outline">
+    <CardBody>
+        <Story of={VisuallyHiddenStories.VisuallyHiddenTextExample} />
+    </CardBody>
+</Card>
+
+<Source code={VisuallyHiddenStrings.VisuallyHiddenTxtString} dark />
+
+
+## Visually Hidden Input
+Visually Hidden input brukes til å designe tilpassede inputkomponenter ved å bruke HTML-input som en proxy.
+
+<Card variant = "outline">
+    <CardBody>
+        <Story of={VisuallyHiddenStories.VisuallyHiddenInput} />
+    </CardBody>
+</Card>
+
+<Source code={VisuallyHiddenStrings.VisuallyHiddenInputString} dark/>
