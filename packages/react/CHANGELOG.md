@@ -1,5 +1,22 @@
 # @kvib/react
 
+## 2.6.2
+
+### Patch Changes
+
+- 66849b68d: Datepicker: Endrer onChange til å returnere Date på både desktop og mobil (native).
+
+## 2.6.1
+
+### Patch Changes
+
+- b0581f12c: SearchAsync: Legger til noOptionsMessage-prop.
+- 4fe2942fc: Bumping packages patch and minor:
+
+  - @types/react from 18.2.31 to 18.2.33
+  - chakra-react-select from 4.7.5 to 4.7.6
+  - material-symbols from 0.13.1 to 0.13.2
+
 ## 2.6.0
 
 ### Minor Changes
