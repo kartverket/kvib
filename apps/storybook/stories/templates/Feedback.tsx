@@ -25,7 +25,7 @@ export const Feedback = ({ component, width }: FeedbackProps) => {
         alignItems={["flex-start", "flex-start", "center"]}
       >
         <Flex gap=".5rem">
-          <Image src="/assets/Lightbulb.svg"></Image>
+          <Image src="assets/Lightbulb.svg"></Image>
           <Text margin="0" fontWeight="medium" fontSize="md">
             Har du innspill til komponenten?
           </Text>
