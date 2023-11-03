@@ -1,6 +1,6 @@
 import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
 import * as CardStories from "./Card.stories";
-import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory } from "../../../templates";
+import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
 import {
   CardString,
   CardVariantsString,
@@ -21,6 +21,8 @@ Card er et fleksibelt komponent som brukes til å gruppere og vise innhold i et 
 import { Card, CardHeader, CardBody, CardFooter } from "@kvib/react";
 ```
 
+<DocsContainer>
+
 **Egnet til:**
 
 - Gruppere innhold
@@ -30,6 +32,10 @@ import { Card, CardHeader, CardBody, CardFooter } from "@kvib/react";
 **Uegnet til:**
 
 - Kompleks og detaljert informasjon som krever mye plass
+
+<Feedback component="Card" />
+
+</DocsContainer>
 
 <DocsHeading>Kontekst</DocsHeading>
 

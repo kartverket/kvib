@@ -5,15 +5,14 @@ module.exports = {
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-a11y",
-         {
-      name: '@storybook/addon-storysource',
+    {
+      name: "@storybook/addon-storysource",
       options: {
         loaderOptions: {
           injectStoryParameters: true,
         },
       },
     },
-
   ],
   framework: {
     name: "@storybook/react-webpack5",
