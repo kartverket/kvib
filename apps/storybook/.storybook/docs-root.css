@@ -1,4 +1,3 @@
-
 /* Main container outside MDX files - removing border */
 div[role="main"] > :first-child {
   box-shadow: none;
@@ -15,12 +14,31 @@ div[role="main"] > :first-child {
 /* .container.sidebar-container {
 } */
 
+/* Sidebar item */
+.sidebar-item {
+  border-radius: 2px !important;
+  margin: 0 5px !important;
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+button.sidebcar-item.sidebar-item {
+  height: 30px !important;
+}
+
+/* Folder when open */
+.sidebar-item.sidebar-item:focus {
+  background: #e9f4ec !important;
+}
+
 /* Icons on sidebar */
 .sidebar-item.sidebar-item svg {
   color: #156630;
 }
 
-/* Sidebar item */
+/* Sidebar item on hover */
 .sidebar-item.sidebar-item[data-selected="false"]:hover,
 .sidebar-item.sidebar-item[data-nodetype="group"]:hover,
 .sidebar-item.sidebar-item[data-nodetype="component"]:hover {
@@ -35,11 +53,6 @@ div[role="main"] > :first-child {
 /* Icons when searching */
 .search-result-item svg {
   color: #156630;
-}
-
-/* Folder when open */
-.sidebar-item.sidebar-item:focus {
-  background: #e9f4ec !important;
 }
 
 /* Canvas */
@@ -60,30 +73,29 @@ div[role="main"] > :first-child {
 
 /* Common properties for both Firefox and Chrome */
 input[type="range"]::-moz-range-thumb {
-  background: #1A833B;
+  background: #1a833b;
 }
 
 input[type="range"]::-webkit-slider-thumb {
-  background: #1A833B;
+  background: #1a833b;
 }
 
 /* Firefox specific hover effect */
 input[type="range"]::-moz-range-thumb:hover {
-  background:  #156630;
+  background: #156630;
 }
 
 /* Chrome specific hover effect */
 input[type="range"]::-webkit-slider-thumb:hover {
-  background:  #156630;
+  background: #156630;
 }
 
 /* Firefox specific hover effect */
 input[type="range"]::-moz-range-thumb:active {
-  background:  #156630;
+  background: #156630;
 }
 
 /* Chrome specific hover effect */
 input[type="range"]::-webkit-slider-thumb:active {
-  background:  #156630;
+  background: #156630;
 }
-
