@@ -10,22 +10,29 @@ div[role="main"] > :first-child {
   background-attachment: fixed;
 }
 
+#storybook-explorer-searchfield {
+  border-radius: 4px !important;
+}
+
 /* Sidebar */
 /* .container.sidebar-container {
 } */
 
 /* Sidebar item */
 .sidebar-item {
-  border-radius: 2px !important;
-  margin: 0 5px !important;
+  border-radius: 4px !important;
+  margin: 0 auto !important;
   padding-top: 5px !important;
   padding-bottom: 5px !important;
   display: flex !important;
   align-items: center !important;
+  width: 90% !important;
 }
 
-button.sidebcar-item.sidebar-item {
-  height: 30px !important;
+button.sidebar-item.sidebar-item {
+  height: 32.5px !important;
+  width: 90% !important;
+  margin: 0 auto !important;
 }
 
 /* Folder when open */
@@ -43,6 +50,14 @@ button.sidebcar-item.sidebar-item {
 .sidebar-item.sidebar-item[data-nodetype="group"]:hover,
 .sidebar-item.sidebar-item[data-nodetype="component"]:hover {
   background: #e9f4ec !important;
+}
+
+/* Sidebar subheadings */
+.sidebar-subheading {
+  color: black !important;
+  margin: auto;
+  width: 90%;
+  height: 32.5px !important;
 }
 
 /* Color for searched term when searching */
