@@ -57,7 +57,8 @@ button.sidebar-item.sidebar-item {
   color: black !important;
   margin: auto;
   width: 90%;
-  height: 32.5px !important;
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
 }
 
 /* Color for searched term when searching */
