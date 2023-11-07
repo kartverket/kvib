@@ -69,6 +69,18 @@ export const Button: Story = {
   render: (args) => <KvibButton {...args}>{args.children}</KvibButton>,
 };
 
+export const ButtonColors: Story = {
+  args: {},
+  render: (args) => (
+    <KvibButtonGroup orientation="vertical">
+      <KvibButton {...args}>Nettside</KvibButton>
+      <KvibButton colorScheme="blue" {...args}>
+        Forvaltning
+      </KvibButton>
+    </KvibButtonGroup>
+  ),
+};
+
 export const ButtonVariants: Story = {
   args: { children: "Klikk her" },
   render: (args) => (
