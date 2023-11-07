@@ -1,5 +1,7 @@
 import { Title, Canvas, Meta, Story, Controls } from "@storybook/blocks";
 import * as ButtonStories from "./Button.stories";
+import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../templates";
+import { Text, Code, Box } from "@kvib/react/src/";
 
 <Meta of={ButtonStories} />
 
@@ -23,28 +25,82 @@ I tillegg til knappestiler har vi også knappetyper. Dette er for å få et tyde
 import { Button } from "@kvib/react";
 ```
 
-## Props
+<DocsContainer>
 
-<Canvas of={ButtonStories.Button} />
-<Controls of={ButtonStories.Button} />
+**Egnet til:**
+
+- Innsending av skjema
+- Beregning av resultater
+- Trigger for åpning av modal
+
+**Uegnet til:**
+
+- Trigger for vis/skjul av innhold (bruk heller Accordion)
+- Navigasjon (bruk heller Link)
+
+<Feedback component="Komponentnavn" />
+
+</DocsContainer>
+
+<DocsHeading>Alternativer</DocsHeading>
+<DocsContainer>
+
+<DocsStory
+  title="Varianter"
+  description={
+    <Box>
+      <Text as="b">Primary</Text>
+      <Text>
+        Denne varianten skal brukes der løsningen har en tydelig primærfunksjon. Det kan være "Lagre" eller "Send
+        søknad". Som en hovedregel burde det bare være én hovedknapp på hver side.
+      </Text>
+      <Text as="b">Secondary</Text>
+      <Text>
+        Secondary-varianten brukes som regel alle andre steder som ikke er primærfunksjon. Det betyr at de fleste
+        knappene i løsningene til Kartverket vil se slik ut.
+      </Text>
+      <Text as="b">Tertiary</Text>
+      <Text>Tertiary kan brukes som et ustylet alternativ for handlinger som ikke trenger like mye oppmerksomhet.</Text>
+      <Text as="b">Ghost</Text>
+      <Text>Ghost-varianten kan brukes som et alternativ til Secondary-varianten ved behov.</Text>
+    </Box>
+  }
+  story={<Canvas of={ButtonStories.ButtonVariants} />}
+/>
+
+<DocsStory title="Ikoner" description={<Text></Text>} story={<Canvas of={ButtonStories.ButtonIcons} />} />
+
+<DocsStory
+  title="Gruppering"
+  description={
+    <Text>
+      Dersom flere Button-komponenter skal stå samlet og grupperes, kan en bruke Stack eller ButtonGroup. Sistnevnte er
+      spesialisert for knapper og inneholder relevante props:
+      <Code>size</Code>,<Code>colorScheme</Code>,<Code>variant</Code>,<Code>isDisabled</Code>,<Code>isAttached</Code>,<Code>
+        orientation
+      </Code>,<Code>spacing</Code>.
+    </Text>
+  }
+  story={<Canvas of={ButtonStories.ButtonGroup} />}
+/>
+
+</DocsContainer>
+
+<DocsHeading>Retningslinjer</DocsHeading>
+
+<DocsContainer>
+
+Skriv retningslinjer her
+
+</DocsContainer>
 
 ## Størrelser
 
 <Canvas of={ButtonStories.ButtonSizes} />
 
-## Varianter
-
-<Canvas of={ButtonStories.ButtonVariants} />
-
 ## States
 
 <Canvas of={ButtonStories.ButtonStates} />
-
-## Button med tekst og ikon
-
-<Canvas of={ButtonStories.ButtonWithIcon} />
-
-## Gruppering av Buttons (ButtonGroup)
 
 Dersom flere Button-komponenter skal stå samlet og grupperes, kan en bruke _Stack_ eller _ButtonGroup_.
 ButtonGroup har noen flere props som er tilpasset til å gruppere Buttons fremfor hva Stack har.
@@ -57,3 +113,8 @@ Følgende props er gjeldende for ButtonGroup:
 - **spacing** _Type: Number (default '0.5rem')_: legger til space mellom knappene.
 
 <Canvas of={ButtonStories.ButtonGroup} />
+
+<DocsHeading>Props</DocsHeading>
+
+<Canvas of={ButtonStories.Button} />
+<Controls of={ButtonStories.Button} />
