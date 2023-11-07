@@ -1,4 +1,4 @@
-import { SearchAsync as KvibSearchAsync, Stack as KvibStack, Box, Icon } from "@kvib/react/src";
+import { SearchAsync as KvibSearchAsync, Stack as KvibStack, Box, Icon, Text } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibSearchAsync> = {
@@ -95,6 +95,12 @@ const meta: Meta<typeof KvibSearchAsync> = {
       },
       control: "boolean",
     },
+    noOptionsMessage: {
+      table: {
+        type: { summary: "(obj: { inputValue: string; }) => ReactNode" },
+      },
+      control: "text",
+    },
   },
   args: { onChange: undefined, loadOptions: undefined },
 };
@@ -144,7 +150,43 @@ export const SearchAsyncResults: Story = {
   args: {
     loadOptions: mockLoadOptions,
     onChange: handleChange,
+    placeholder: "Søk etter frukt...",
+    isMulti: false,
+  },
+  render: (args) => (
+    <Box h={40}>
+      <KvibSearchAsync {...args} />
+    </Box>
+  ),
+};
 
+const mockLoadOptionsWithRule = (inputValue: string, callback: (options: typeof fruits) => void) => {
+  if (inputValue.length <= 2) {
+    callback([]);
+    return;
+  }
+  setTimeout(() => {
+    const filteredFruits = fruits.filter((fruit) => fruit.label.toLowerCase().includes(inputValue.toLowerCase()));
+    callback(filteredFruits);
+  }, 500);
+};
+
+const noOptionsMessage = ({ inputValue }: { inputValue: string }) => {
+  if (inputValue.length > 0) {
+    if (inputValue.length <= 2) {
+      return <Text>Søket må inneholde minst 3 tegn</Text>;
+    } else {
+      return <Text>Fant ingen resultater</Text>;
+    }
+  }
+  return null;
+};
+
+export const SearchAsyncNoOptions: Story = {
+  args: {
+    loadOptions: mockLoadOptionsWithRule,
+    onChange: handleChange,
+    noOptionsMessage: noOptionsMessage,
     placeholder: "Søk etter frukt...",
     isMulti: false,
   },

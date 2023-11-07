@@ -38,6 +38,9 @@ export type BaseProps<T> = {
 
   /** Id set to the SelectContainer component */
   id?: string;
+
+  /** Function to map inputValue to a text output when no options are loaded */
+  noOptionsMessage?: ((obj: { inputValue: string }) => ReactNode) | undefined;
 };
 
 type WithMulti<T> = {
@@ -52,8 +55,6 @@ type WithoutMulti<T> = {
   /** If `isMulti=false`, the type is `(newValue: T | null) => void` */
   onChange: (newValue: T | null) => void;
 };
-
-export type Group<T> = { label: string; options: T[] };
 
 export type SearchAsyncProps<T> = BaseProps<T> & (WithMulti<T> | WithoutMulti<T>);
 
@@ -72,8 +73,9 @@ export const SearchAsync = <T extends unknown>({
   variant,
   id,
   isMulti = false,
+  noOptionsMessage,
 }: SearchAsyncProps<T>) => {
-  const noOptionsMessage = ({ inputValue }: { inputValue: string }): ReactNode => {
+  const noOptionsMessageDefault = ({ inputValue }: { inputValue: string }): ReactNode => {
     if (inputValue.replaceAll(/\s/g, "").length < 1) {
       return null;
     }
@@ -106,7 +108,7 @@ export const SearchAsync = <T extends unknown>({
       autoFocus={autoFocus}
       className={className ? className : ""}
       onChange={onChangeWrapper}
-      noOptionsMessage={noOptionsMessage}
+      noOptionsMessage={noOptionsMessage || noOptionsMessageDefault}
       loadingMessage={() => <Text>Laster...</Text>}
       loadOptions={debounceTime ? loadOptionsDebounce : loadOptions}
       blurInputOnSelect={false}
