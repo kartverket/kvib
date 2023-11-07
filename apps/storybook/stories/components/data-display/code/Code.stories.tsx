@@ -7,7 +7,7 @@ const meta: Meta<typeof KvibCode> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "shown" },
+      canvas: { sourceState: "hidden" },
     },
   },
   argTypes: {
@@ -29,13 +29,6 @@ const meta: Meta<typeof KvibCode> = {
       options: ["green", "blue", "red", "gray", "orange"],
       control: "radio",
     },
-    size: {
-      description: "The size of the Code",
-      table: {
-        type: { summary: String },
-      },
-      control: "text",
-    },
   },
 };
 
@@ -44,29 +37,23 @@ type Story = StoryObj<typeof KvibCode>;
 
 export const Code: Story = {
   args: {},
+  parameters: {
+    docs: {
+      canvas: {
+        sourceState: "shown",
+      },
+    },
+  },
   render: (args) => <KvibCode {...args}>$ npm install @kvib/react</KvibCode>,
 };
 
-export const CodeColors: Story = {
-  args: {},
+export const CodeAppearance: Story = {
+  args: { width: "fit-content" },
   render: (args) => (
-    <KvibStack direction="row">
-      <KvibCode {...args} colorScheme="orange" children="Hello world" />
-      <KvibCode {...args} children="var kartverket = 'Hønefoss'" />
-      <KvibCode {...args} colorScheme="red" children="console.log(kartverket)" />
-      <KvibCode {...args} colorScheme="green" children="<Code>Eiendom</Code>" />
-      <KvibCode {...args} colorScheme="blue" children="$ yarn add @kvib/react" />
-    </KvibStack>
-  ),
-};
-
-export const CodeVariants: Story = {
-  args: {},
-  render: (args) => (
-    <KvibStack direction="row">
-      <KvibCode {...args} children="Hello world" variant="outline" />
-      <KvibCode {...args} children="var kartverket = 'Hønefoss'" variant="solid" />
+    <KvibStack gap="1rem">
       <KvibCode {...args} children="console.log(kartverket)" variant="subtle" />
+      <KvibCode {...args} colorScheme="blue" children="Hello world" variant="outline" />
+      <KvibCode {...args} colorScheme="red" children="var kartverket = 'Hønefoss'" variant="solid" />
     </KvibStack>
   ),
 };
