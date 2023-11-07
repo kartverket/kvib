@@ -73,6 +73,7 @@ export const BadgeHensikt: Story = {
     </>
   ),
 };
+
 export const BadgeGreen: Story = {
   args: {},
   render: (args) => <KvibBadge colorScheme="green">Success</KvibBadge>,
