@@ -13,7 +13,7 @@ komponenter under utviklingsfasen. For bugs på komponentnivå, se nederst i doc
 
 ### Subcomponents i argTypes (controls)
 
-#### Problem
+**Problem**
 
 Mange komponenter fra Chakra består av en sammensetning av flere komponenter. Et eksempel er `Breadcrumb` som består av
 `Breadcrumb`, `BreadcrumbItem`, `BreadcrumbLink` og `BreadcrumbSeparator`. I de fleste tilfeller har child-komponentene
@@ -22,13 +22,13 @@ ved å ta i bruk `subcomponents: { BreadcrumbItem }` i `Meta`, men dette ser ut 
 
 Relevant: [https://github.com/storybookjs/storybook/issues/20782](https://github.com/storybookjs/storybook/issues/20782)
 
-#### Løsning
+**Løsning**
 
 For øyeblikket er det ikke funnet en løsning på dette.
 
 ### Feil render av kode i Canvas
 
-#### Problem
+**Problem**
 
 Storybook viser koden til en Story automatisk gjennom `Canvas`. Et problem som ofte oppstår når komponenter er importert
 fra andre biblioteker (f.eks. Chakra) er at `Canvas` ikke klarer å oversette riktig, eller at den oversetter koden feil.
@@ -66,7 +66,7 @@ Et annet eksempel er når Storybook ikke klarer å kjenne igjen komponentene fra
 </[object Object]>
 ```
 
-#### Løsning
+**Løsning**
 
 Løsningen er å ikke bruke `Canvas` for å vise frem komponentet, men heller `Story` sammen med `Source`.
 Story viser frem storyen uten noen form for ramme eller kode. Derfor må man bruke `Card` for å lage rammen selv.
@@ -86,23 +86,36 @@ Ta en titt på [Table](https://kartverket.github.io/kvib/?path=/docs/komponenter
 
 ### Feil med visning av Addon panel
 
-#### Problem
+**Problem**
 
 Av og til vises ikke Addon panelet for å få tilgang til Accessibility testing eller annet.
 
-#### Løsning
+**Løsning**
 
 Kjør følgende kommando i nettleser konsolen: `localStorage.clear`.
+
+### Icon fungerer ikke i docs
+
+**Problem**
+
+`<Icon />` fra designsystemet fungerer ikke i docs. Finner ingen løsning som gjør at det fungerer.
+
+**Løsning**
+
+Løsningen er å gjøre en av to workarounds:
+
+- Bruk en `<Story />` for å vise frem det du vil, fordi storiene ikke har noe problem med å rendre ikoner ved hjelp av KvibProvider. Det som ikke fungerer med denne løsningen er å bruke `of={IconStory}` dersom man skal bruke stories fra andre mapper enn den du er i. Da må man bruke id: `<Story id="komponenter-footer-footer-inline--footer-inline-custom" />`. Se på eksempelet på footeren som ligger i “.storybook/MDXContainer.jsx”.
+- Den andre løsningen er å legge til ikonet som en svg og bruke `<Image />`. Dette er for eksempel gjort for `<Feedback />` i "/templates". Denne løsningen er bare ønskelig om man lager et komponent som skal brukes mange steder.
 
 ## Chakra
 
 ### Feil dokumentasjon av props
 
-#### Problem
+**Problem**
 
 Chakra har mange komponenter som inneholder feil dokumentasjon av props. Mange av de er rett og slett feil,
 mens andre har props inkludert som er der for at man kan utvikle dem selv i theme.
 
-#### Løsning
+**Løsning**
 
 Ikke inkluder props som ikke endrer på komponentet eller har et annet formål i dokumentasjonen til KVIB.
