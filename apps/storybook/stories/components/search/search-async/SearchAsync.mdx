@@ -1,5 +1,7 @@
 import { Meta, Canvas, Story, Controls, Source } from "@storybook/blocks";
 import * as SearchAsyncStories from "./SearchAsync.stories";
+import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
+import { Text, Code, Box } from "@kvib/react/src/";
 
 <Meta of={SearchAsyncStories} />
 
@@ -7,27 +9,63 @@ import * as SearchAsyncStories from "./SearchAsync.stories";
 
 SearchAsync er et søkefelt som laster inn søkeresultater fra en liste med objekter. Resultatene blir vist i en dropdown der brukeren kan velge hvilket resultat som skal bli valgt.
 
-## Ta i bruk
-
 ```jsx
 import { SearchAsync } from "@kvib/react";
 ```
 
-## Props
+<DocsContainer>
 
-<Canvas of={SearchAsyncStories.SearchAsync} />
-<Controls of={SearchAsyncStories.SearchAsync} />
+**Egnet til:**
 
-## Async søkeresultater
+- Raskt finne relevant innhold
 
-<Canvas of={SearchAsyncStories.SearchAsyncResults} />
+**Uegnet til:**
 
-## Egendefinert tilbakemelding ved ingen resultater
+- Innhold som lett kan navigeres til uten søk
 
-Det er mulig å endre på tilbakemeldingen som dukker opp i dropdown ved å bruke propen `noOptionsMessage`. Denne tar inn en funksjon som returnerer en React-komponent. Funksjonen tar inn et objekt med `inputValue` som inneholder det brukeren har skrevet i søkefeltet.
-Kodeblokken under eksempelet viser hvordan man kan bruke `noOptionsMessage` og `loadOptions` til å sørge for at brukeren skriver inn minst tre tegn før vi starter et søk.
+<Feedback component="SearchAsync" />
 
-<Canvas of={SearchAsyncStories.SearchAsyncNoOptions} />
+</DocsContainer>
+
+<DocsHeading>Alternativer</DocsHeading>
+<DocsContainer>
+
+<DocsStory
+  title="Utseende"
+  description={<Text></Text>}
+  story={<Canvas of={SearchAsyncStories.SearchAsyncVariants} />}
+/>
+
+<DocsStory
+  title="Standardalternativer"
+  description={<Text></Text>}
+  story={<Canvas of={SearchAsyncStories.SearchAsyncDropdown} />}
+/>
+
+<DocsStory
+  title="Multi"
+  description={<Text></Text>}
+  story={<Canvas of={SearchAsyncStories.SearchAsyncMultiDropdown} />}
+/>
+
+<DocsStory
+  title="Egendefinert feedback ved ingen resultater"
+  description={
+    <Box>
+      <Text>
+        Det er mulig å endre på tilbakemeldingen som dukker opp i dropdown ved å bruke propen{" "}
+        <Code>noOptionsMessage</Code>. Denne tar inn en funksjon som returnerer en React-komponent. Funksjonen tar inn
+        et objekt med <Code>inputValue</Code> som inneholder det brukeren har skrevet i søkefeltet.
+      </Text>
+      <Text>
+        Kodeblokken under viser hvordan man kan bruke
+        <Code>noOptionsMessage</Code> og <Code>loadOptions</Code> til å sørge for at brukeren skriver inn minst tre tegn
+        før vi starter et søk.
+      </Text>
+    </Box>
+  }
+  story={<Canvas of={SearchAsyncStories.SearchAsyncNoOptions} />}
+/>
 
 <Source
   code={`const mockLoadOptions = (inputValue: string, callback: (options: typeof fruits) => void) => {
@@ -53,26 +91,16 @@ const noOptionsMessage = ({ inputValue }: { inputValue: string }) => {
   dark
 />
 
-## Søkeresultater med delay
+</DocsContainer>
 
-<Canvas of={SearchAsyncStories.SearchAsyncResultsDebounce} />
+<DocsHeading>Retningslinjer</DocsHeading>
 
-## Standardalternativer
+<DocsContainer>
 
-<Canvas inline of={SearchAsyncStories.SearchAsyncDropdown} />
+Skriv retningslinjer her
 
-## Multi
+</DocsContainer>
 
-<Canvas of={SearchAsyncStories.SearchAsyncMulti} />
-
-## Multi med dropdown
-
-<Canvas of={SearchAsyncStories.SearchAsyncMultiDropdown} />
-
-## Størrelser
-
-<Canvas of={SearchAsyncStories.SearchAsyncSizes} />
-
-## Varianter
-
-<Canvas of={SearchAsyncStories.SearchAsyncVariants} />
+<DocsHeading>Props</DocsHeading>
+<Canvas of={SearchAsyncStories.SearchAsync} />
+<Controls of={SearchAsyncStories.SearchAsync} />

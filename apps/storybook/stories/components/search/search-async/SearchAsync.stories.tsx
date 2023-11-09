@@ -7,7 +7,7 @@ const meta: Meta<typeof KvibSearchAsync> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "shown" },
+      canvas: { sourceState: "hidden" },
     },
     a11y: {
       // Label warnings + contrast ratio because of chakra wrapper.
@@ -217,7 +217,7 @@ export const SearchAsyncDropdown: Story = {
     onChange: handleChange,
     dropdownIndicator: <Icon icon="expand_more" weight={400} />,
     defaultOptions: true,
-    placeholder: "Søk etter frukt...",
+    placeholder: "Søk eller velg frukt...",
   },
   render: (args) => (
     <Box h="20rem">
@@ -247,7 +247,7 @@ export const SearchAsyncMultiDropdown: Story = {
     isMulti: true,
     dropdownIndicator: <Icon icon="expand_more" weight={400} />,
     defaultOptions: true,
-    placeholder: "Søk etter frukt...",
+    placeholder: "Søk eller velg frukt...",
   },
   render: (args) => (
     <Box h="20rem">
@@ -278,7 +278,7 @@ export const SearchAsyncVariants: Story = {
     placeholder: "Søk etter frukt...",
   },
   render: (args) => (
-    <KvibStack h={60}>
+    <KvibStack h={"12rem"}>
       <KvibSearchAsync {...args} variant="outline" />
       <KvibSearchAsync {...args} variant="filled" />
       <KvibSearchAsync {...args} variant="flushed" />
