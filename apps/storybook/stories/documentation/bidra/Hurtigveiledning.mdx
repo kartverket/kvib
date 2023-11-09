@@ -29,7 +29,7 @@ import { Image } from "@kvib/react/src";
 
 ### Utvikling
 
-Repoet inneholder både kode for komponentpakka og dokumentasjon på storybook. For å jobbe på komponenter i pakka må du inn i `packages/react/src/<komponent>`. For dokumentasjon på storybook er det `apps/storybook/stories/components/<komponent>` som gjelder.
+Repoet inneholder både kode for komponentpakka og dokumentasjon på storybook. For å jobbe på komponenter i pakka må du inn i `packages/react/src/<komponent>`.
 
 **Tips og triks:**
 
@@ -40,9 +40,19 @@ Repoet inneholder både kode for komponentpakka og dokumentasjon på storybook. 
 
   > [Styling av komponent](/docs/info-bidra-style--docs)
 
-  > [Dokumentasjon av komponent](/docs/info-bidra-dokumentere--docs)
+- Ta en titt på kjente problemer for å unngå å gjøre de samme feilene som andre har gjort før deg:
 
-- Ta en titt på [Kjente Problemer](/docs/info-bidra-kjente-problemer--docs) for å unngå å gjøre de samme feilene som andre har gjort før deg.
+  > [Kjente Problemer](/docs/info-bidra-kjente-problemer--docs)
+
+### Dokumentasjon
+
+For dokumentasjon på storybook er det `apps/storybook/stories/components/<komponent>` som gjelder.
+Nye features skal dokumenteres med stories og dokumentasjon i docs-filen for komponentet. Det er utviklet en mal for hvordan komponentene skal dokumenteres. Malen ligger
+i `apps/storybook/templates/Template.txt`. Den benytter seg av ferdige komponenter som ligger i samme mappe. For utfyllende informasjon, sjekk ut:
+
+> [Dokumentasjon av komponent](/docs/info-bidra-dokumentere--docs)
+
+> [Kjente Problemer](/docs/info-bidra-kjente-problemer--docs)
 
 ### Testing
 
@@ -56,7 +66,9 @@ For at endringene dine skal bli godkjent er det tre hovedområder av tester som 
 3. Github-actions tester:
    > Github-actions sjekker at komponentet bygges riktig og at alle testene går gjennom.
 
-Sjekk ut den detaljerte beskrivelsen av [Testing](/docs/info-bidra-teste--docs) for mer informasjon.
+Sjekk ut den detaljerte beskrivelsen av testing for mer informasjon.
+
+> [Testing](/docs/info-bidra-teste--docs)
 
 ### Leveranse
 
