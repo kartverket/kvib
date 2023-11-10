@@ -95,7 +95,7 @@ const variantOutline = defineStyle((props) => {
     },
     _active: {
       bg: `${c}.600`,
-      border: "0px",
+      borderColor: `${c}.600`,
       color: colors.white,
       _disabled: {
         bg: colors.white,

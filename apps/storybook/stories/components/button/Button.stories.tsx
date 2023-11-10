@@ -7,7 +7,7 @@ const meta: Meta<typeof KvibButton> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "shown" },
+      canvas: { sourceState: "hidden" },
     },
   },
   argTypes: {
@@ -59,13 +59,37 @@ type Story = StoryObj<typeof KvibButton>;
 
 export const Button: Story = {
   args: { children: "Klikk her" },
+  parameters: {
+    docs: {
+      canvas: {
+        sourceState: "shown",
+      },
+    },
+  },
   render: (args) => <KvibButton {...args}>{args.children}</KvibButton>,
+};
+
+export const ButtonColors: Story = {
+  args: {},
+  render: (args) => (
+    <KvibButtonGroup orientation="vertical">
+      <KvibButton {...args}>Nettside</KvibButton>
+      <KvibButton colorScheme="blue" {...args}>
+        Forvaltning
+      </KvibButton>
+    </KvibButtonGroup>
+  ),
 };
 
 export const ButtonVariants: Story = {
   args: { children: "Klikk her" },
   render: (args) => (
-    <KvibButtonGroup>
+    <KvibButtonGroup
+      justifyContent="space-between"
+      height={["fit-content", "fit-content", "28rem"]}
+      orientation="vertical"
+      gap="1rem"
+    >
       <KvibButton {...args} variant="primary">
         {args.children}
       </KvibButton>
@@ -96,7 +120,7 @@ export const ButtonStates: Story = {
   ),
 };
 
-export const ButtonWithIcon: Story = {
+export const ButtonIcons: Story = {
   args: { children: "Klikk her" },
   render: (args) => (
     <KvibButtonGroup>
