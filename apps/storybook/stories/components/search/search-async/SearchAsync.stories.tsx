@@ -101,6 +101,20 @@ const meta: Meta<typeof KvibSearchAsync> = {
       },
       control: "text",
     },
+    isDisabled: {
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
+      },
+      control: "boolean",
+    },
+    focusBorderColor: {
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "blue.500" },
+      },
+      control: "text",
+    },
   },
   args: { onChange: undefined, loadOptions: undefined },
 };
@@ -110,6 +124,13 @@ type Story = StoryObj<typeof KvibSearchAsync>;
 
 export const SearchAsync: Story = {
   args: {},
+  parameters: {
+    docs: {
+      canvas: {
+        sourceState: "shown",
+      },
+    },
+  },
   render: (args) => (
     <Box h={20}>
       <KvibSearchAsync {...args} />
@@ -154,7 +175,7 @@ export const SearchAsyncResults: Story = {
     isMulti: false,
   },
   render: (args) => (
-    <Box h={40}>
+    <Box h="20rem">
       <KvibSearchAsync {...args} />
     </Box>
   ),
@@ -276,6 +297,7 @@ export const SearchAsyncVariants: Story = {
     loadOptions: mockLoadOptions,
     onChange: handleChange,
     placeholder: "Søk etter frukt...",
+    focusBorderColor: "green.500",
   },
   render: (args) => (
     <KvibStack h={"12rem"}>
