@@ -7,18 +7,56 @@ import { mapColorsRGBA, ColorShades, mapColors } from "@kvib/react/src/theme/tok
 
 # Fargepaletter til kart
 
-Fargekoder til kart er definert i variablene `mapColors` og `mapColorsRGBA`. Disse kan importeres direkte. Fargepalettene brukes ved å referere til fargevariablene i mapColors eller mapColorsRGBA.
-Eksempel: `mapColors.blue[1]` vil gi fargen #476ED4 (Den første fargen i visningen under). Opacity setter du for øyeblikket selv.
+Vi har utviklet en rekke kartfarger for å gjøre det enklere for deg å lage konsistente og estetisk tiltalende kartløsninger. Disse fargene er nøye testet og tilpasset for å fungere godt med ulike bakgrunnskart. Fargekoder til kart er definert i variablene `mapColors` og `mapColorsRGBA`. Disse kan importeres direkte. Fargepalettene brukes ved å referere til fargevariablene i mapColors eller mapColorsRGBA.
+
+## Ta i bruk
 
 ```jsx
 import { mapColors, mapColorsRGBA } from "@kvib/react/src/theme/tokens";
 ```
 
+Eksempel: `mapColors.blue[1]` vil gi fargen #476ED4 (Den første fargen i visningen under). Opacity setter du for øyeblikket selv.
+
+**Vær oppmerksom på at disse fargene ikke er spesifikt gruppert i forhold til bakgrunnskart, og derfor er det viktig å dobbeltsjekke kompatibiliteten med det aktuelle bakgrunnskartet i din implementering.**
+
+## Brukstips
+
+1. **Hovedkartfarge:**
+   Dette bør være deres primære kartfarge, og den bør brukes som hovedfarge i kartløsninger. Den gir sterke kontraster og er ideell for markering av viktige elementer og områder på kartet.
+
+1. **Sekundærkartfarge:**
+   Denne fargen fungerer godt som en sekundær markør på kartet. Bruk den til å fremheve mindre fremtredende elementer eller til å skille mellom ulike kategorier på kartet.
+
+1. **Tertiærkartfarge:**
+   Denne fargen er flott for å legge til detaljer og subtilt skille ulike områder på kartet. Den gir en balansert visuell opplevelse og er egnet for mindre fremtredende informasjon.
+
+1. **Aksentkartfarge:**
+   Aksentfargen skal brukes for å legge til ekstra fokus på spesifikke områder eller funksjoner på kartet. Den kan også brukes for å indikere interaktive elementer eller handlinger.
+
+**Husk:**
+
+- Vurder å kombinere hovedkartfargen med sekundær- eller tertiærkartfargen for å oppnå visuell hierarki på kartet.
+- Aksentkartfargen kan brukes til å markere spesielle hendelser, destinasjoner eller funksjoner.
+- Husk å tilpasse tekstfargen i forhold til bakgrunnskartet for best mulig lesbarhet.
+
+## Eksempel på feil bruk
+
+**Primærfarge (Hovedkartfarge)**: #F15D4E (Red)
+**Sekundærfarge (Sekundærkartfarge)**: #E56D31 (Brown)
+
+I dette eksempelet er det en utfordring med tilgjengelighet fordi både den primære og sekundære fargen har lignende metningsnivåer, og de er begge lyse og sterke. Dette kan føre til at informasjon på kartet, som markeringer eller tekst, blir vanskelig å skille fra bakgrunnen, spesielt for personer med nedsatt fargesyn. For eksempel kan personer som lider av rød-grønn fargesvakhet, ha problemer med å skille mellom disse fargene.
+
+For å forbedre tilgjengeligheten, bør du vurdere å bruke farger som har mer kontrast mellom seg, for eksempel en kombinasjon av en lys og en mørk farge, eller to farger som har ulike metningsnivåer. Det kan være mye når du må forholde deg til bakgrunnkart også, men test uansett fargekontraster her før du bruker det: [https://webaim.org/resources/contrastchecker/](https://webaim.org/resources/contrastchecker/).
+
+Ved å følge disse retningslinjene for bruk av kartfargene, kan du enkelt opprette kartløsninger som er både visuelt tiltalende og funksjonelle. Vi oppfordrer deg til å bruke disse fargene i designsystemet, slik at du slipper å lage egne fargeløsninger for kartprosjekter.
+
 <KvibProvider>
   ## Opacity
 
-Fargene i hver boks i palettene under har én fargekode fordelt med opacity fra 90% til 10%. Eksempelboksene viser opacity og alphaverdier for palettene.
+Fargene i hver boks i palettene under har én fargekode fordelt med opacity fra 100% til 10%. Eksempelboksene viser opacity og alphaverdier for palettene.
 Den første boksen viser prosent, den andre viser alphaverdi for HEX og den tredje viser alphaverdi for RGBA.
+
+**Om du skal markere et område burde du velge farge med opacity som ikke er 100% for da kan du se bakgrunnskartet. Skal du bare jobbe med punktobjekter i kart kan du velge opacity på 100% for da blir det mer synlig sammen med bakgrunnskartet. Sørg for at de valgte fargene fungerer godt med bakgrunnskartet du har implementert i din løsning. Dette er viktig for å opprettholde visuell konsistens og lesebarhet.**
 
 <Stack>
   <Flex alignItems="center">

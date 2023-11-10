@@ -1,0 +1,93 @@
+import { Meta } from "@storybook/addon-docs";
+import { Image } from "@kvib/react/src";
+
+<Meta title="Info/Bidra/Hurtigveiledning" />
+
+# Hurtigveiledning for bidragsytere
+
+### Oppsett
+
+1. Sjekk at du har tilgang til [KOMP Boardet i Jira](https://kartverket.atlassian.net/jira/software/projects/KOMP/boards/80) og [Github](https://github.com/kartverket/kvib). Ta kontakt i #gen-designsystem på slack dersom du ikke har tilgang.
+2. Legg til oppgave i [KOMP Boardet i Jira](https://kartverket.atlassian.net/jira/software/projects/KOMP/boards/80) i kolonnen "under utvikling".
+3. Clone repoet fra Github:
+
+   > ```zsh
+   >    $ git clone git@github.com:kartverket/kvib.git
+   > ```
+
+4. Lag en ny branch for oppgaven i KOMP-boardet:
+
+   > ```zsh
+   >    $ git checkout -b komp-<oppgavenummer>
+   > ```
+
+5. Kjør opp prosjektet lokalt:
+   > ```zsh
+   >    $ npm install
+   >    $ npm run dev
+   > ```
+
+### Utvikling
+
+Repoet inneholder både kode for komponentpakka og dokumentasjon på storybook. For å jobbe på komponenter i pakka må du inn i `packages/react/src/<komponent>`.
+
+**Tips og triks:**
+
+- Se på andre komponenter for å se hvordan de er bygd opp. Noen komponenter er hentet direkte fra chakra, mens andre er mer tilpasset. Dersom du skal lage et komplekst komponent kan du ta en titt på for eksempel `Datepicker`, `Footer` og `Header`.
+- For detaljerte gjennomganger for utvikling av komponenter, se:
+
+  > [Bygging av komponent](/docs/info-bidra-bygge--docs)
+
+  > [Styling av komponent](/docs/info-bidra-style--docs)
+
+- Ta en titt på kjente problemer for å unngå å gjøre de samme feilene som andre har gjort før deg:
+
+  > [Kjente Problemer](/docs/info-bidra-kjente-problemer--docs)
+
+### Dokumentasjon
+
+For dokumentasjon på storybook er det `apps/storybook/stories/components/<komponent>` som gjelder.
+Nye features skal dokumenteres med stories og dokumentasjon i docs-filen for komponentet. Det er utviklet en mal for hvordan komponentene skal dokumenteres. Malen ligger
+i `apps/storybook/templates/Template.txt`. Den benytter seg av ferdige komponenter som ligger i samme mappe. For utfyllende informasjon, sjekk ut:
+
+> [Dokumentasjon av komponent](/docs/info-bidra-dokumentere--docs)
+
+> [Kjente Problemer](/docs/info-bidra-kjente-problemer--docs)
+
+### Testing
+
+For at endringene dine skal bli godkjent er det tre hovedområder av tester som må tilfredsstilles:
+
+1. Accessibility test i Storybook:
+   > På hver story er det en meny som inneholder en Accessibility-fane. Testene i denne fanen må gå gjennom for at komponentet skal bli godkjent.
+   >
+   > <Image src="assets/tabsNavBarStory.png" width="400px" />
+2. Test at komponentet bygges riktig i NPM-pakken ved å importere pakken i et testprosjekt.
+3. Github-actions tester:
+   > Github-actions sjekker at komponentet bygges riktig og at alle testene går gjennom.
+
+Sjekk ut den detaljerte beskrivelsen av testing for mer informasjon.
+
+> [Testing](/docs/info-bidra-teste--docs)
+
+### Leveranse
+
+1. Dersom du har gjort endringer på et komponent må du legge til et changeset som oppdaterer pakken:
+
+   > ```zsh
+   >    $ npx changeset
+   > ```
+   >
+   > 1. Bruk piltastene til å navigere til @kvib/react og trykk på space, deretter enter.
+   > 2. Velg semver bump type: major (breaking change), minor (new feature) eller patch (bugfix). Navigering til neste versjon gjøres ved å trykke enter. Versjon velges ved å trykke på space og enter.
+   > 3. Skriv inn en kort beskrivelse av endringene du har gjort og trykk enter.
+
+   > Sjekk ut [Publish](/docs/info-bidra-publish--docs) hvis du vil vite mer om hvordan dette fungerer.
+
+2. Commit og push endringene.
+3. Lag en pull request fra branch til master.
+4. Sjekk at alle tester går gjennom.
+5. Bruk pr-preview linken på pren til å sjekke at alt er som det skal.
+6. Gå til [KOMP Boardet i Jira](https://kartverket.atlassian.net/jira/software/projects/KOMP/boards/80) og flytt oppgaven til kolonnen "Code review".
+
+Da er du ferdig og kan vente på review!
