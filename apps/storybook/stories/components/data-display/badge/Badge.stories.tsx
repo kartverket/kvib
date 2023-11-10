@@ -92,37 +92,70 @@ export const BadgeBlue: Story = {
 export const BadgeCard: Story = {
   args: {},
   render: (args) => (
-    <KvibCard {...args} maxW="sm">
-      <KvibCardBody>
-        <KvibBadge colorScheme="blue" ml="300px" mb="10px">
-          Ny
-        </KvibBadge>
-        <KvibImage
-          src="https://images.unsplash.com/photo-1575520973439-9b31e3e0b6f0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80"
-          alt="Boat dock with small boats"
-          borderRadius="md"
-        />
-        <KvibStack mt="6" spacing="3">
-          <KvibHeading size="md">Digitalt løft i havn</KvibHeading>
-          <KvibText>
-            Kystverket har tildelt 10,5 millioner kroner til prosjektet «Digital tvilling i havn» for å styrke
-            digitaliseringen av havneinfrastrukturen. Dette legger grunnlaget for en mer moderne og smartere
-            havnevirksomhet.
-          </KvibText>
-        </KvibStack>
-      </KvibCardBody>
-      <KvibDivider />
-      <KvibCardFooter>
-        <KvibButtonGroup spacing="2">
-          <KvibButton variant="primary" colorScheme="blue">
-            Les artikkel
-          </KvibButton>
-          <KvibButton variant="ghost" colorScheme="blue">
-            Legg til i leseliste
-          </KvibButton>
-        </KvibButtonGroup>
-      </KvibCardFooter>
-    </KvibCard>
+    <KvibStack direction="column">
+      <KvibCard {...args} maxW="sm">
+        <KvibCardBody>
+          <KvibBadge colorScheme="green" ml="300px" mb="10px">
+            Åpen
+          </KvibBadge>
+          <KvibImage
+            src="https://media.istockphoto.com/id/637589830/photo/electrical-engineer-while-working-laptopl.webp?b=1&s=170667a&w=0&k=20&c=FG3lM0bqCk6In10R9cCIbilzvO0PkwXKDmzeXCCQAkU="
+            alt="Boat dock with small boats"
+            borderRadius="md"
+          />
+          <KvibStack mt="6" spacing="3">
+            <KvibHeading size="md">NRL gir tryggare luftfart</KvibHeading>
+            <KvibText>
+              Helikopter og andre som flyg lågt, treng detaljert og påliteleg oversyn over kor det finst hinder for
+              luftfarta. Derfor må alle som eig eit luftfartshinder melde inn dette til Nasjonalt register over
+              luftfartshinder (NRL), som Kartverket driv.
+            </KvibText>
+          </KvibStack>
+        </KvibCardBody>
+        <KvibDivider />
+        <KvibCardFooter>
+          <KvibButtonGroup spacing="2">
+            <KvibButton variant="primary" colorScheme="blue">
+              Les artikkel
+            </KvibButton>
+            <KvibButton variant="ghost" colorScheme="blue">
+              Legg til i leseliste
+            </KvibButton>
+          </KvibButtonGroup>
+        </KvibCardFooter>
+      </KvibCard>
+      <KvibCard {...args} maxW="sm">
+        <KvibCardBody>
+          <KvibBadge colorScheme="red" ml="300px" mb="10px">
+            Lukket
+          </KvibBadge>
+          <KvibImage
+            src="https://images.unsplash.com/photo-1575520973439-9b31e3e0b6f0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80"
+            alt="Boat dock with small boats"
+            borderRadius="md"
+          />
+          <KvibStack mt="6" spacing="3">
+            <KvibHeading size="md">Digitalt løft i havn</KvibHeading>
+            <KvibText>
+              Kystverket har tildelt 10,5 millioner kroner til prosjektet «Digital tvilling i havn» for å styrke
+              digitaliseringen av havneinfrastrukturen. Dette legger grunnlaget for en mer moderne og smartere
+              havnevirksomhet.
+            </KvibText>
+          </KvibStack>
+        </KvibCardBody>
+        <KvibDivider />
+        <KvibCardFooter>
+          <KvibButtonGroup spacing="2">
+            <KvibButton variant="primary" colorScheme="blue">
+              Les artikkel
+            </KvibButton>
+            <KvibButton variant="ghost" colorScheme="blue">
+              Legg til i leseliste
+            </KvibButton>
+          </KvibButtonGroup>
+        </KvibCardFooter>
+      </KvibCard>
+    </KvibStack>
   ),
 };
 

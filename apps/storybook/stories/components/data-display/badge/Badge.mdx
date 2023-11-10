@@ -12,11 +12,19 @@ Et Badge brukes til å fremheve elementers status slik at brukeren raskt gjenkje
 ```jsx
 import { Badge } from "@kvib/react";
 ```
-## Kontekst
+<DocsContainer>
+
+**Egnet til:**
+
+- Vise statusen til et element
+
+**Uegnet til:**
+
+- Kategorisering av elementer (bruk heller tag)
+
+</DocsContainer>
 
 <DocsHeading>Alternativer</DocsHeading>
-
-
 <DocsContainer>
     <DocsStory
         title="Beskrivelse"
@@ -25,16 +33,10 @@ import { Badge } from "@kvib/react";
     />
 
     <DocsStory
-        title="Farge"
-        description="Fargebruk hjelper mye. Ser du noe rødt er det galt, grønt er bra. Solid versjon fanger oppmerksomheten mer."
-        story={
-            <Canvas of={BadgeStories.BadgeGreen}/>
-        }
-    />
-
-    <DocsStory
         title="Hensikt"
-        description="Hensikten med Badge-en kan vises med bruk av farge/varianter. Sterkere farger er viktigere enn svakere. Det "
+        description="Hensikten med Badge kan forsterkes med farge og varianter.
+        Sterkere farger fanger blikket til brukeren og vil automatisk bli oppfattet som viktig.
+        Derfor rangerer vi variantene solid, subtle og outline fra viktigst til mindre viktig."
         story={
             <Canvas>
                 <Story of={BadgeStories.BadgeCard}/>
@@ -57,5 +59,3 @@ Solid variant brukes for å fremheve Badgen mer. Vær konsekvent med fargebruk.
 
 <Canvas of={BadgeStories.Badge} />
 <Controls of={BadgeStories.Badge} />
-
-<DocsHeading>Kjente feil</DocsHeading>
