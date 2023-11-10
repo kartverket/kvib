@@ -39,6 +39,12 @@ export type BaseProps<T> = {
   /** Id set to the SelectContainer component */
   id?: string;
 
+  /** Determines if the input is disabled */
+  isDisabled?: boolean;
+
+  /** Determines the color of the border when focused. Use color keys in `theme.colors`. */
+  focusBorderColor?: string;
+
   /** Function to map inputValue to a text output when no options are loaded */
   noOptionsMessage?: ((obj: { inputValue: string }) => ReactNode) | undefined;
 };
@@ -74,6 +80,8 @@ export const SearchAsync = <T extends unknown>({
   id,
   isMulti = false,
   noOptionsMessage,
+  isDisabled,
+  focusBorderColor,
 }: SearchAsyncProps<T>) => {
   const noOptionsMessageDefault = ({ inputValue }: { inputValue: string }): ReactNode => {
     if (inputValue.replaceAll(/\s/g, "").length < 1) {
@@ -118,6 +126,8 @@ export const SearchAsync = <T extends unknown>({
       variant={variant}
       id={id}
       isMulti={isMulti}
+      isDisabled={isDisabled}
+      focusBorderColor={focusBorderColor}
     />
   );
 };
