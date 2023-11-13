@@ -19,7 +19,7 @@
     "esbuild": "^0.19.5",
     "eslint-config-custom": "*",
     "husky": "^8.0.3",
-    "prettier": "^3.0.3",
+    "prettier": "^3.1.0",
     "turbo": "latest"
   },
   "engines": {

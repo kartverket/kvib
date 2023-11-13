@@ -1,5 +1,7 @@
 import { Meta, Canvas, Story, Controls, Source } from "@storybook/blocks";
 import * as SearchAsyncStories from "./SearchAsync.stories";
+import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
+import { Text, Code, Box, Link, UnorderedList, ListItem } from "@kvib/react/src/";
 
 <Meta of={SearchAsyncStories} />
 
@@ -7,27 +9,144 @@ import * as SearchAsyncStories from "./SearchAsync.stories";
 
 SearchAsync er et søkefelt som laster inn søkeresultater fra en liste med objekter. Resultatene blir vist i en dropdown der brukeren kan velge hvilket resultat som skal bli valgt.
 
-## Ta i bruk
-
 ```jsx
 import { SearchAsync } from "@kvib/react";
 ```
 
-## Props
+<DocsContainer>
 
-<Canvas of={SearchAsyncStories.SearchAsync} />
-<Controls of={SearchAsyncStories.SearchAsync} />
+**Egnet til:**
 
-## Async søkeresultater
+- Raskt finne relevant innhold
+- Laste inn innhold asynkront
+- Select med søk
 
-<Canvas of={SearchAsyncStories.SearchAsyncResults} />
+**Uegnet til:**
 
-## Egendefinert tilbakemelding ved ingen resultater
+- Innhold som lett kan navigeres til uten søk
 
-Det er mulig å endre på tilbakemeldingen som dukker opp i dropdown ved å bruke propen `noOptionsMessage`. Denne tar inn en funksjon som returnerer en React-komponent. Funksjonen tar inn et objekt med `inputValue` som inneholder det brukeren har skrevet i søkefeltet.
-Kodeblokken under eksempelet viser hvordan man kan bruke `noOptionsMessage` og `loadOptions` til å sørge for at brukeren skriver inn minst tre tegn før vi starter et søk.
+<Feedback component="SearchAsync" />
 
-<Canvas of={SearchAsyncStories.SearchAsyncNoOptions} />
+</DocsContainer>
+
+<DocsHeading>Alternativer</DocsHeading>
+<DocsContainer>
+
+<DocsStory
+  title="Required props"
+  description={
+    <Box>
+  <Text as="b">loadOptions</Text>
+  <Text>SearchAsync komponentens prop <Code>loadOptions</Code> er en funksjon ment for asynkron lasting av alternativer basert på brukerinput i inputfeltet. Den tar to parametere:</Text>
+  <UnorderedList>
+    <ListItem>
+      <Text><Code>inputValue</Code>: Teksten brukeren skriver inn.</Text>
+    </ListItem>
+    <ListItem>
+      <Text>
+        <Code>callback</Code>: En funksjon som tar en liste av objekter (<Code>options</Code>) og brukes til å returnere søkeresultatene. Hvert objekt i <Code>options</Code> må ha en <Code>label</Code> (tekst vist i dropdown) og en <Code>value</Code> (verdien returnert ved valg).
+      </Text>
+    </ListItem>
+  </UnorderedList>
+
+  <Text as="b">onChange</Text>
+  <Text><Code>onChange</Code> er en funksjon som håndterer endringer i valgt verdi. Den tar ett parameter:</Text>
+  <UnorderedList>
+    <ListItem>
+      <Text>
+        <Code>newValue</Code>: Den nye verdien som er valgt av brukeren. Denne verdien er av typen <Code>T</Code> eller <Code>null</Code>. <Code>T</Code> representerer typen av objektene i dine <Code>options</Code>, og <Code>null</Code> brukes når det ikke er noen valgt verdi.
+      </Text>
+    </ListItem>
+  </UnorderedList>
+</Box>
+}
+story={<Canvas of={SearchAsyncStories.SearchAsyncResults} />}
+/>
+
+<DocsStory
+  title="Utseende"
+  description={
+    <Box>
+      <Text>
+        SearchAsync har fire varianter. <Code>outline</Code> er standardvarianten og skal brukes i de fleste tilfeller.
+        <Code>filled</Code> kan brukes som et alternativ til outline. For mindre viktige søkefelt kan
+        <Code>flushed</Code> og
+        <Code>unstyled</Code> brukes.
+      </Text>
+      <Text>
+        Det er mulig å velge mellom tre forskjellige størrelser: <Code>sm</Code>, <Code>md</Code> og <Code>lg</Code>.
+        <Code>md</Code> er standard.
+      </Text>
+      <Text>
+        For å endre borderColor når søkefeltet er i fokus kan du sette farge med color-token (f.eks. green.500) i{" "}
+        <Code>focusBorderColor</Code>.
+      </Text>
+    </Box>
+  }
+  story={<Canvas of={SearchAsyncStories.SearchAsyncVariants} />}
+/>
+
+<DocsStory
+  title="Standardalternativer"
+  description={
+    <Box>
+      <Text>
+        SearchAsync har mulighet for å legge inn standardalternativer for resultater ved hjelp av proppen{" "}
+        <Code>defaultOptions</Code>. Det betyr at brukeren vil få muligheten til å velge resultat basert på en
+        dropdown-liste i komponenten, i tillegg til å kunne søke. Du kan velge mellom å inkludere alle søkealternativer
+        som standardalternativer (<Code>defaultOptions="true"</Code>), eller bare legge til noen (
+        <Code>defaultOptions=["eple", "banan"]</Code>). Dersom det forekommer et høyt antall av søkealternativer
+        anbefales det å ikke legge til alle.
+      </Text>
+      <Text>
+        Legg til et <Code>Icon</Code> i <Code>dropDownIndicator</Code> for å poengtere at det er en dropdown, dersom det
+        er ønskelig.
+      </Text>
+    </Box>
+  }
+  story={<Canvas of={SearchAsyncStories.SearchAsyncDropdown} />}
+/>
+
+<DocsStory
+  title="Multi"
+  description={
+    <Box>
+      <Text>
+        Det er mulig å la brukeren velge flere resultater med <Code>isMulti</Code>. Her er det også mulig å legge inn
+        standardalternativer, slik at brukeren kan velge fra dropdown - som i eksempelet.
+      </Text>
+      <Text>
+        Typen til
+        <Code>onChange</Code> endrer seg ved <Code>isMulti=true</Code> for å kunne håndtere flere resultater: <Code>{`(newValue: readonly T[] | null,`}</Code> <Code>{`actionMeta: ActionMeta<T>) => void`}</Code>
+
+        .<Code>newValue</Code> er en liste med valgte resultater, og <Code>actionMeta</Code> er en liste med objekter
+        som inneholder informasjon om handlingen som ble utført. Disse to blir logget til konsollen i eksempelet,
+        inspiser siden for å se.
+      </Text>
+    </Box>
+
+}
+story={<Canvas of={SearchAsyncStories.SearchAsyncMultiDropdown} />}
+/>
+
+<DocsStory
+  title="Egendefinert feedback ved ingen resultater"
+  description={
+    <Box>
+      <Text>
+        Det er mulig å endre på tilbakemeldingen som dukker opp i dropdown ved å bruke propen{" "}
+        <Code>noOptionsMessage</Code>. Denne tar inn en funksjon som returnerer en React-komponent. Funksjonen tar inn
+        et objekt med <Code>inputValue</Code> som inneholder det brukeren har skrevet i søkefeltet.
+      </Text>
+      <Text>
+        Kodeblokken under viser hvordan man kan bruke
+        <Code>noOptionsMessage</Code> og <Code>loadOptions</Code> til å sørge for at brukeren skriver inn minst tre tegn
+        før vi starter et søk.
+      </Text>
+    </Box>
+  }
+  story={<Canvas of={SearchAsyncStories.SearchAsyncNoOptions} />}
+/>
 
 <Source
   code={`const mockLoadOptions = (inputValue: string, callback: (options: typeof fruits) => void) => {
@@ -53,26 +172,44 @@ const noOptionsMessage = ({ inputValue }: { inputValue: string }) => {
   dark
 />
 
-## Søkeresultater med delay
+</DocsContainer>
 
-<Canvas of={SearchAsyncStories.SearchAsyncResultsDebounce} />
+<DocsHeading>Retningslinjer</DocsHeading>
 
-## Standardalternativer
+<DocsContainer>
 
-<Canvas inline of={SearchAsyncStories.SearchAsyncDropdown} />
+### Bredde
 
-## Multi
+Søkefeltets bredde bør tilsvare lengden på søkeordene som brukes. Feltets størrelse er et viktig signal til brukeren om hva de kan skrive inn. Et søkefelt som brukes til å søke på personnumre bør ha en bredde som tilsvarer et personnummer, mens hovedsøket for et nettsted bør ha et bredere felt som lar brukerne se flere ord samtidig.
 
-<Canvas of={SearchAsyncStories.SearchAsyncMulti} />
+Ta gjerne en kikk på søkeloggene dine for å se hvordan brukerne dine ordlegger seg når de søker på sidene dine. Unngå at teksten i søkefeltet må scrolles for å romme typiske søk.
 
-## Multi med dropdown
+### Innsending av query
 
-<Canvas of={SearchAsyncStories.SearchAsyncMultiDropdown} />
+Det er anbefalt å bruke `<form>` rundt SearchAsync dersom du skal bruke det valgte resultatet. Dette gjør det mulig å bruke `<button type="submit">` for å sende inn søket.
+`FormControl` kan hjelpe til med å gi SearchAsync kontekst.
 
-## Størrelser
+<Source
+  code={`
+  <form onSubmit={handleSubmit}>
+      <FormControl>
+        <FormLabel htmlFor="async-search">Søk etter frukt</FormLabel>
+          <SearchAsync
+            loadOptions={mockLoadOptions}
+            onChange={handleChange}
+            placeholder="Søk etter frukt..."
+            isMulti={false}
+          />
+        <Button mt={4} colorScheme="blue" type="submit">
+          Send
+        </Button>
+      </FormControl>
+    </form>`}
+  dark
+/>
 
-<Canvas of={SearchAsyncStories.SearchAsyncSizes} />
+</DocsContainer>
 
-## Varianter
-
-<Canvas of={SearchAsyncStories.SearchAsyncVariants} />
+<DocsHeading>Props</DocsHeading>
+<Canvas of={SearchAsyncStories.SearchAsync} />
+<Controls of={SearchAsyncStories.SearchAsync} />
