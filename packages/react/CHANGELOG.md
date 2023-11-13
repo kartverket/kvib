@@ -1,5 +1,12 @@
 # @kvib/react
 
+## 2.6.3
+
+### Patch Changes
+
+- bbe7e0cc9: Bumping @types/react from 18.2.33 to 18.2.36
+- d913e50cd: Fikser bug hvor secondary Button endret størrelse på "focus".
+
 ## 2.6.2
 
 ### Patch Changes
