@@ -4,11 +4,12 @@ type DocsStoryProps = {
   title: string;
   description: string | JSX.Element;
   story: any;
+  isVertical?: boolean;
 };
 
-export const DocsStory = ({ title, description, story }: DocsStoryProps) => {
+export const DocsStory = ({ title, description, story, isVertical }: DocsStoryProps) => {
   return (
-    <SimpleGrid columns={[1, 1, 2]} spacing={[0, 0, "2rem"]}>
+    <SimpleGrid columns={[1, 1, isVertical ? 1 : 2]} spacing={[0, 0, isVertical ? 0 : "2rem"]}>
       <Box marginTop="25px">
         <Heading size="md" as="h3">
           {title}
