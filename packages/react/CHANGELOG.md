@@ -1,5 +1,17 @@
 # @kvib/react
 
+## 2.6.4
+
+### Patch Changes
+
+- e013f34f8: SearchAsync - Legger til to nye props: isDisabled og focusBorderColor.
+- c325a9326: Bumping packages patch and minor:
+
+  - @types/react from 18.2.36 to 18.2.37
+  - @types/react-dom from 18.2.14 to 18.2.15
+  - @chakra-ui/react from 2.8.1 to 2.8.2
+  - material-symbols from 0.13.2 to 0.14.0
+
 ## 2.6.3
 
 ### Patch Changes
