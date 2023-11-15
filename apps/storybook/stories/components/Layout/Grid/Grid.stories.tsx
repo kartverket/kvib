@@ -138,7 +138,7 @@ export const GridTemplateAreas: Story = {
     gridTemplateColumns: "150px 1fr",
     h: "200px",
     gap: "1",
-    color: "blackAlpha.700",
+    color: "black",
     fontWeight: "bold",
   },
   render: (args) => (
