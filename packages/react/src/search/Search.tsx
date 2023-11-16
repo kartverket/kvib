@@ -36,7 +36,7 @@ export const Search = forwardRef<SearchProps, "input">(
     return (
       <>
         {leftSearchIcon ? (
-          <ChakraInputGroup>
+          <ChakraInputGroup size={size}>
             <ChakraInput
               {...props}
               id={id}
