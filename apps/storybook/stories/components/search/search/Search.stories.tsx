@@ -116,3 +116,16 @@ export const SearchIconRight: SearchStory = {
   },
   render: (args) => <KvibSearch {...args} />,
 };
+
+export const SearchButtonVariant: SearchStory = {
+  args: {
+    rightSearchIcon: true,
+    placeholder: "Søk her...",
+    variant: "outline",
+    isDisabled: false,
+    colorScheme: "green",
+    buttonVariant: "primary",
+    buttonWidth: "4rem",
+  },
+  render: (args) => <KvibSearch {...args} />,
+};
