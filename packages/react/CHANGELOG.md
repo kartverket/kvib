@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 2.6.6
+
+### Patch Changes
+
+- 21691c4c9: Search: Legger til muligheten for å velge variant på søkeknapp.
+
 ## 2.6.5
 
 ### Patch Changes
