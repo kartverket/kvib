@@ -1,39 +1,59 @@
 import { Title, Canvas, Meta, Story, Controls } from "@storybook/blocks";
+import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
+import { Text, Code, Box } from "@kvib/react/src/";
+
 import * as BoxStories from "./Box.stories";
 
 <Meta of={BoxStories} />
 
 # Box
 
-Box er grunnpillaren til alle komponentene i KVIB.
-
-<Canvas of={BoxStories.SimpleBox} />
-
-## Ta i bruk
+Box er grunnpillaren til alle komponentene i Kartverkets Designsystem. Du kan tenke på den som en `<div />` som du kan style med props og design tokens.
 
 ```jsx
 import { Box } from "@kvib/react";
 ```
 
-## Props
+<DocsContainer>
 
-Box-komponenten aksepterer alle styling props man kan sende til en div eller et View.
+**Egnet til:**
 
-I React-implementasjonen kan man også spesifisere hva slags DOM-element man ønsker rendret.
+- Enkle containers
+- Wrapper for mer komplekse komponenter
 
-## Retningslinjer
+**Uegnet til:**
 
-Box er en ganske spesiell komponent. Du kan tenke på den som en `<div />` som du kan style med props og design tokens.
+- Avanserte layout-justeringer
 
-## Flere eksempler
+<Feedback component="Box" />
 
-<br />
-### En Box med padding
+</DocsContainer>
 
-<Canvas of={BoxStories.BoxWithPadding} />
+<DocsHeading>Alternativer</DocsHeading>
+<DocsContainer>
 
-### En Box som egentlig er en lenke
+<DocsStory
+    title="Props"
+    description={
+      <Text>
+        Box-komponenten aksepterer alle styling props man kan sende til en div eller et View. Dette omfatter en mengde props som dekker de fleste brukstilfeller. Det er også lagt til forkortelser for de vanligste propsene (f.eks. <Code>bg</Code> istedenfor <Code>backgroundColor</Code>).
+      </Text>
+    }
+    story={<Canvas of={BoxStories.BoxExample} />}
 
-<Canvas of={BoxStories.AdvancedBox} />
+/>
 
-Se [Chakra sine dokumentasjonssider](https://chakra-ui.com/docs/components/box) for flere eksempler og info.
+<DocsStory
+    title="Override med as-prop"
+    description={
+      <Text>
+        Box har en <Code>as</Code>-prop som lar deg overstyre hvilket DOM-element som rendres. Dette kan være nyttig hvis du ønsker å bruke en annen type element enn <Code>div</Code>, men starte fra "scratch" når det kommer til styling av komponentet.
+        Det vil si at det er mulig å dra nytte av egenskapene til en link ("a"), uten å måtte bruke stylingen til <Code>Link</Code>.
+        I de fleste tilfeller vil det være mer hensiktsmessig å bruke en av de andre komponentene som er bygget på Box, men i komplekse situasjoner kan det være nyttig.
+      </Text>
+    }
+    story={<Canvas of={BoxStories.BoxAsLink} />}
+
+/>
+
+</DocsContainer>
