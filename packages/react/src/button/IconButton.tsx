@@ -2,6 +2,7 @@ import {
   IconButton as ChakraIconButton,
   IconButtonProps as ChakraIconButtonProps,
   forwardRef,
+  ResponsiveValue,
   Spinner,
 } from "@chakra-ui/react";
 import { MaterialSymbol } from "material-symbols";
@@ -21,7 +22,7 @@ export type IconButtonProps = Omit<ChakraIconButtonProps, "colorScheme" | "varia
 
   /**The size of the component.
    @default md*/
-  size?: "xs" | "sm" | "md" | "lg";
+  size?: ResponsiveValue<string>;
 
   /**If true, the icon will be filled.
    @default false*/
@@ -46,7 +47,7 @@ export const IconButton = forwardRef<IconButtonProps, "button">(
   (
     { isDisabled, isLoading, iconFill, ...props },
 
-    ref
+    ref,
   ) => {
     return (
       <ChakraIconButton
@@ -57,5 +58,5 @@ export const IconButton = forwardRef<IconButtonProps, "button">(
         icon={IconSpinner({ isLoading, iconFill, ...props })}
       ></ChakraIconButton>
     );
-  }
+  },
 );
