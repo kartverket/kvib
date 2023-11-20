@@ -1,42 +1,21 @@
 import { Meta } from "@storybook/addon-docs";
 import { Banner } from "./Banner";
+import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../templates";
+import { Text, Code, Box, Heading, SimpleGrid } from "@kvib/react/src/";
+import * as IntroCards from "./IntroCard";
 
 <Meta title="Info/Introduksjon" />
 
 <Banner />
 
-## Ledestjerner🌟:
+<SimpleGrid columns={[1, 1, 2]} spacing={5}>
 
-- 👨‍👨‍👦‍👦 Brukerrettet og imøtekomme universell utforming
-- 💸 Redusere design- og tekniskgjeld
-- 🎨 Bidra til merkevarekonsistens og skalerbarhet
-- 📋 Gode beskrivelser over retningslinjer
-- 🚀 Komme raskere i gang!
+<IntroCards.StarCard />
 
-## Ta en titt 👩‍💻
+<IntroCards.LinksCard />
 
-Du kan følge teamet på [confluence](https://kartverket.atlassian.net/wiki/spaces/TB/overview?homepageId=325713953) eller du kan benytte deg av [Håndboken i interaksjonsdesign](https://kartverket.atlassian.net/wiki/spaces/UX/overview) for nyttige tips.
+<IntroCards.SurveyCard />
 
-I [Figma](https://www.figma.com/file/j0OBUEuQZlrbQOV6ariHTo/Designsystem?type=design&node-id=0-1&t=Er7EiYPjkcDK55oR-0) finner du komponenter og tokens som er klare til bruk, med beskrivelser. Vi anbefaler at du er i kanalene #laug-design og i #gen-kvib på slack for å hold deg oppdatert🧠
+<IntroCards.FeedbackCard />
 
-[Github-repoet](https://github.com/kartverket/kvib) er et monorepo som består av:
-
-- apps/storybook: dokumentasjonssiden for designsystemet
-- packages/react: komponentbiblioteket i React
-
-## Ser du noe som mangler? 💬
-
-Et designsystem er i kontinuerlig utvikling. Send oss slackmelding på #gen-kvib eller kontakt teamet og bidra med at systemet blir enda bedre!
-
-## Gi oss tilbakemelding - ta spørreundersøkelsen 📊
-
-Team Designsystem ønsker å kontinuerlig forbedre designystemet (KVIB) for å bedre møte dine behov. Som et verdsatt medlem av fellesskapet vårt, inviterer vi deg til å dele innsikten din gjennom vårt tilbakemeldingsskjema for designsystemet.
-Ved å besvare dette spørreskjemaet vil du ha en direkte innvirkning på hvordan designsystemet vårt utvikler seg. Dine tanker og erfaringer vil hjelpe oss å forstå hva som fungerer bra og identifisere områder der vi kan gjøre forbedringer.
-Ditt bidrag vil gjøre oss i stand til å lage et designsystem som er enklere å bruke, bidrar til høyere konsistens og til slutt forbedrer arbeidsflyten din.
-
-Beregnet tid: 10-15min 🕒
-
-På forhånd takk for at du tok deg tid til å forme fremtiden til designsystemet vårt. Dine innspill er uvurderlige for oss, og vi kan ikke love alt men vi ser frem til å gjøre meningsfulle forbedringer basert på din innsikt. ❤
-
-Gå til
-[Spørreundersøkelse i Microsoft Forms](https://forms.office.com/Pages/ResponsePage.aspx?id=osh0f85Dskaw6LYwbLpzo2TDj9LhmetKqqmL3qbrXF5UQjVGMkVNVFZFVUQ0WElFNFo1N1dQUFVNRi4u)
+</SimpleGrid>
