@@ -54,6 +54,17 @@ export const LinksCard = () => {
       </Element>
 
       <Element>
+        <Link
+          fontWeight="bold"
+          href="https://kartverket.atlassian.net/jira/software/projects/KOMP/boards/80"
+          isExternal={false}
+        >
+          Oppgaveboardet i Jira
+        </Link>
+        Se status på designsystemet og oppgaver som er under arbeid på oppgaveboardet i Jira.
+      </Element>
+
+      <Element>
         <Link fontWeight="bold" href="https://github.com/kartverket/kvib" isExternal={false}>
           Github
         </Link>
