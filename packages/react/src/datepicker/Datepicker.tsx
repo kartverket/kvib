@@ -14,7 +14,7 @@ import { DayPicker, useInput } from "react-day-picker";
 import "react-day-picker/dist/style.css";
 import "./Datepicker.css";
 import { Icon } from "@kvib/react/src/icon";
-import { nb } from "date-fns/locale";
+import nb from "date-fns/locale/nb/index.js";
 import { ChangeEvent, useEffect } from "react";
 import { isValid } from "date-fns";
 
