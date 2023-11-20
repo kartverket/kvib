@@ -1,29 +1,75 @@
 import { Title, Canvas, Meta, Story, Controls } from "@storybook/blocks";
 import * as SimpleGridStories from "./SimpleGrid.stories";
+import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
+import { Text, Code, Box } from "@kvib/react/src/";
 
 <Meta of={SimpleGridStories} />
 
-# Grid
+# SimpleGrid
 
-Grid er en layout for å lage grid layouts.
-
-<Canvas of={SimpleGridStories.SimpleGrid} />
-
-## Ta i bruk
+SimpleGrid er en enkel komponent for å bygge opp layout. Den er basert på css grid og har støtte for responsivitet.
 
 ```jsx
 import { SimpleGrid } from "@kvib/react";
 ```
 
-## Props
+<DocsContainer>
 
-Se [Chakras dokumentasjonsside for Simple Grid](https://chakra-ui.com/docs/components/simple-grid/props) for tillate props.
+**Egnet til:**
 
-## Flere eksempler
+- Oppbygging av enkel sidelayout
+- Gruppering av elementer (f.eks. knapper, cards)
 
-<br />
-### Responsive Simple Grid
+**Uegnet til:**
 
-<Canvas of={SimpleGridStories.ResponsiveSimpleGrid} />
+- Komplekse layouter (bruk heller Grid)
 
-Se [Chakra sine dokumentasjonssider](https://chakra-ui.com/docs/components/simple-grid/usage) for flere eksempler og info.
+<Feedback component="SimpleGrid" />
+
+</DocsContainer>
+
+<DocsHeading>Alternativer</DocsHeading>
+<DocsContainer>
+
+<DocsStory
+  title="Columns"
+  description={
+    <Text>
+      <Code>columns</Code>-proppen styrer antall kolonner i gridet. Den kan enten være et tall eller et array med tall.
+      Hvis den er et array vil gridet automatisk justere seg etter skjermstørrelse. For eksempel
+      <Code>{`columns={[2, null, 3]}`}</Code> eller <Code>{`columns={{ sm: 2, md: 3 }}`}</Code>.
+    </Text>
+  }
+  story={<Canvas of={SimpleGridStories.SimpleGridResponsiveArray} />}
+/>
+
+<DocsStory
+  title="Auto-responsive grid"
+  description={
+    <Text>
+      For å gjøre gridet responsive og justere seg automatisk uten å bruke <Code>columns</Code> kan man bruke
+      <Code>minChildWidth</Code> til å spesifisere <Code>min-width</Code> på hvert element. Gridet vil da automatisk justere
+      seg når elementene ikke får plass. Løsningen benytter seg av css grid <Code>auto-fit</Code> og <Code>
+        minmax()
+      </Code>.
+    </Text>
+  }
+  story={<Canvas of={SimpleGridStories.SimpleGridResponsive} />}
+/>
+
+<DocsStory
+  title="Spacing for columns og rows"
+  description={
+    <Text>
+      <Code>spacing</Code>-proppen styrer avstanden mellom kolonner og rader. SimpleGrid lar deg også spesifisere
+      plassen mellom columns og rows med <Code>spacingX</Code> og <Code>spacingY</Code>.
+    </Text>
+  }
+  story={<Canvas of={SimpleGridStories.SimpleGridSpacing} />}
+/>
+
+</DocsContainer>
+
+<DocsHeading>Props</DocsHeading>
+<Canvas of={SimpleGridStories.SimpleGrid} />
+<Controls of={SimpleGridStories.SimpleGrid} />
