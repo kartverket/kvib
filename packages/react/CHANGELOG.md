@@ -1,5 +1,17 @@
 # @kvib/react
 
+## 2.6.6
+
+### Patch Changes
+
+- 21691c4c9: Search: Legger til muligheten for å velge variant på søkeknapp.
+
+## 2.6.5
+
+### Patch Changes
+
+- 85a15c2cd: Fikser import bug i Datepicker.
+
 ## 2.6.4
 
 ### Patch Changes
