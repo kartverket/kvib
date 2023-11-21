@@ -1,11 +1,5 @@
 # @kvib/storybook
 
-## 1.1.1
-
-### Patch Changes
-
-- fe2ac20c2: Bumping tsup from 7.2.0 to 8.0.0
-
 ## 1.1.0
 
 ### Minor Changes

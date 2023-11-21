@@ -1,11 +1,5 @@
 # @kvib/react
 
-## 2.6.7
-
-### Patch Changes
-
-- 6fd7d5774: Bumping material-symbols from 0.14.0 to 0.14.1.
-
 ## 2.6.6
 
 ### Patch Changes
