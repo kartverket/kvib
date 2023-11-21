@@ -37,7 +37,7 @@ export const Feedback = ({ component, width }: FeedbackProps) => {
           <Text margin="0" fontSize="md">
             eller
           </Text>
-          <Button as="a" href="/?path=/docs/info-bidra-generelt--docs" colorScheme="blue" variant="secondary">
+          <Button as="a" href="/?path=/docs/info-bidra-hurtigveiledning--docs" colorScheme="blue" variant="secondary">
             Bidra med PR
           </Button>
         </Flex>

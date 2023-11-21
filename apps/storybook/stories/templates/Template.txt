@@ -1,6 +1,6 @@
-import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from ".";
+import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../templates";
 
-<Meta />
+<Meta of={KomponentStories}/>
 
 # Komponentnavn
 

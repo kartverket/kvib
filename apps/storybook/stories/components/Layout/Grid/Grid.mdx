@@ -1,23 +1,83 @@
 import { Title, Canvas, Meta, Story, Controls } from "@storybook/blocks";
 import * as GridStories from "./Grid.stories";
+import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
+import { Text, Code, Box } from "@kvib/react/src/";
 
 <Meta of={GridStories} />
 
 # Grid
 
-Grid er en layout for å lage grid layouts.
-
-<Canvas of={GridStories.Grid} />
-
-## Ta i bruk
+Grid er en layout for å lage grid layouts. Den brukes til å fordele elementer horisontalt eller vertikalt med samme spacing mellom elementene.
+Den er lett å bruke for å dynamisk plassere elementer slik du vil. Løsningen er basert på CSS Grid.
 
 ```jsx
 import { Grid, GridItem } from "@kvib/react";
 ```
 
-**Grid:** Hovedwrapper med `display: grid`.\
-**GridItem:** Brukes som et underelement til `Grid` til å kontrollere `span` og startposisjoner i griddet.
+<DocsContainer>
 
-## Props
+**Egnet til:**
 
-Se [Chakras dokumentasjonsside for Grid](https://chakra-ui.com/docs/components/grid/props) for tillate props.
+- Oppbygging av sidelayout
+- Gruppering av elementer (eks. knapper, cards)
+
+Grid er bygget opp av `Grid` og `GridItem`. `Grid` er containeren som definerer layouten, mens `GridItem` er elementene som skal plasseres i gridet. For props til `Grid`, se nederst på denne siden. For props til `GridItem`, se [GridItem](?path=/docs/komponenter-layout-grid-griditem--docs).
+
+<Feedback component="Grid" />
+
+</DocsContainer>
+
+<DocsHeading>Alternativer</DocsHeading>
+<DocsContainer>
+  <DocsStory
+    title="Template columns"
+    description={
+      <Text>
+        Grid kan brukes med <Code>templateColumns</Code> for å definere antall kolonner og bredden på hver kolonne. Det er også mulig å bruke <Code>auto</Code> for å definere en kolonne som skal ta opp resten av plassen. Dette er samme oppsett som i CSS Grid.
+        <Code>gap</Code> kan brukes for å definere avstanden mellom kolonnene.
+      </Text>
+    }
+    story={<Canvas of={GridStories.Grid} />}
+    />
+
+{" "}
+
+<DocsStory
+  title="Ta opp flere kolonner eller rader"
+  description={
+    <Text>
+      I noen layouter må man kunne definere at et element skal ta opp flere kolonner eller rader. Dette kan gjøres ved å
+      bruke <Code>colSpan</Code> eller <Code>rowSpan</Code> propene på <Code>GridItem</Code>. I disse tilfellene må også{" "}
+      <Code>templateColumns</Code> og <Code>templateRows</Code> defineres.
+    </Text>
+  }
+  story={<Canvas of={GridStories.GridSpanning} />}
+/>
+
+    <DocsStory
+    title="Start og slutt"
+    description={
+      <Text>
+        Bruk <Code>colStart</Code> og <Code>colEnd</Code> på <Code>GridItem</Code> for å gjøre at elementet starter eller slutter på nth grid posisjon.
+      </Text>
+    }
+    story={<Canvas of={GridStories.GridStartEnd} />}
+
+/>
+
+    <DocsStory
+    title="Template areas"
+    description={
+      <Text>
+        <Code>templateAreas</Code>-proppen spesifiserer områder inne i gridet. Bruk template literals for å definere områdene. Nå er det mulig å referere til områdene ved å bruke <Code>area</Code>-proppen på <Code>GridItem</Code>.
+      </Text>
+    }
+    story={<Canvas of={GridStories.GridTemplateAreas} />}
+
+/>
+
+</DocsContainer>
+
+<DocsHeading>Props</DocsHeading>
+<Canvas of={GridStories.Grid} />
+<Controls of={GridStories.Grid} />
