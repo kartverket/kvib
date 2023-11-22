@@ -1,5 +1,6 @@
 import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
 import * as SpinnerStories from "./Spinner.stories";
+import { DocsHeading, DocsContainer, DocsStory, Feedback } from "../../templates/"
 
 <Meta of={SpinnerStories} />
 
@@ -7,13 +8,37 @@ import * as SpinnerStories from "./Spinner.stories";
 
 Spinner gir et visuelt signal om at en oppgave prosseseres og vil gi en endring eller et resultat.
 
-## Ta i bruk
-
 ```jsx
 import { Spinner } from "@kvib/react";
 ```
 
-## Props
+<DocsContainer>
+
+**Egnet til:**
+
+- Vise
+
+**Uegnet til:**
+
+-
+
+</DocsContainer>
+
+<DocsHeading>Alternativer</DocsHeading>
+<DocsContainer>
+    <DocsStory
+        title="Utseende"
+        description="Badge skal inneholde en kort tekst som beskrivelse."
+    />
+
+    <DocsStory
+        title="Hensikt"
+        description="Hensikten med Badge kan forsterkes med farge og varianter.
+        Sterkere farger fanger blikket til brukeren og vil automatisk bli oppfattet som viktig.
+        Derfor rangerer vi variantene solid, subtle og outline fra viktigst til mindre viktig."
+    />
+
+</DocsContainer>
 
 <Canvas of={SpinnerStories.Spinner} />
 <Controls of={SpinnerStories.Spinner} />
@@ -29,3 +54,8 @@ import { Spinner } from "@kvib/react";
 ## Spinner med farge på hele ringen
 
 <Canvas of={SpinnerStories.SpinnerArea} />
+
+<DocsHeading>Props</DocsHeading>
+
+<Canvas of={SpinnerStories.Spinner} />
+<Controls of={SpinnerStories.Spinner} />
