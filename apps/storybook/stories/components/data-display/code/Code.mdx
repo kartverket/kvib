@@ -1,5 +1,7 @@
 import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
 import * as CodeStories from "./Code.stories";
+import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
+import { Text, Box, Code } from "@kvib/react/src/";
 
 <Meta title="Komponenter/Data Display/Code" />
 
@@ -7,21 +9,47 @@ import * as CodeStories from "./Code.stories";
 
 Code er et komponent som skal brukes for å presentere inline kode.
 
-## Ta i bruk
-
 ```jsx
 import { Code } from "@kvib/react";
 ```
 
-## Props
+<DocsContainer>
+
+**Egnet til:**
+
+- Presentere kode i en tekst
+
+**Uegnet til:**
+
+- Varsling av brukeren - må ikke forveksles med `Alert`
+
+<Feedback component="Code" />
+
+</DocsContainer>
+
+<DocsHeading>Alternativer</DocsHeading>
+<DocsContainer>
+
+<DocsStory
+  title="Utseende og vektlegging"
+  description={
+    <Box>
+      <Text>
+        Code har tre varianter: solid, subtle og outline. Bruk disse for å vektlegge hvor viktig det er at brukeren får
+        med seg kodelinja. Subtle brukes som regel i et avsnitt, mens solid og outline fint kan stå alene.
+      </Text>
+      <Text>
+        Bruken av colorScheme skal passe kontekst. Det kan også utnyttes til å vektlegge viktighet. For eksempel så vil
+        <Code>variant="solid"</Code> med rødt colorscheme lett fange oppmerksomheten til brukeren.
+      </Text>
+    </Box>
+  }
+  story={<Canvas of={CodeStories.CodeAppearance} />}
+/>
+ 
+</DocsContainer>
+
+<DocsHeading>Props</DocsHeading>
 
 <Canvas of={CodeStories.Code} />
 <Controls of={CodeStories.Code} />
-
-## Farger
-
-<Canvas of={CodeStories.CodeColors} />
-
-## Varianter
-
-<Canvas of={CodeStories.CodeVariants} />

@@ -1,5 +1,49 @@
 # @kvib/react
 
+## 2.6.7
+
+### Patch Changes
+
+- d5127a8a1: Bumping tsup from 7.2.0 to 8.0.0
+- d5127a8a1: Bumping material-symbols from 0.14.0 to 0.14.1.
+
+## 2.6.6
+
+### Patch Changes
+
+- 21691c4c9: Search: Legger til muligheten for å velge variant på søkeknapp.
+
+## 2.6.5
+
+### Patch Changes
+
+- 85a15c2cd: Fikser import bug i Datepicker.
+
+## 2.6.4
+
+### Patch Changes
+
+- e013f34f8: SearchAsync - Legger til to nye props: isDisabled og focusBorderColor.
+- c325a9326: Bumping packages patch and minor:
+
+  - @types/react from 18.2.36 to 18.2.37
+  - @types/react-dom from 18.2.14 to 18.2.15
+  - @chakra-ui/react from 2.8.1 to 2.8.2
+  - material-symbols from 0.13.2 to 0.14.0
+
+## 2.6.3
+
+### Patch Changes
+
+- bbe7e0cc9: Bumping @types/react from 18.2.33 to 18.2.36
+- d913e50cd: Fikser bug hvor secondary Button endret størrelse på "focus".
+
+## 2.6.2
+
+### Patch Changes
+
+- 66849b68d: Datepicker: Endrer onChange til å returnere Date på både desktop og mobil (native).
+
 ## 2.6.1
 
 ### Patch Changes

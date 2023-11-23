@@ -1,4 +1,4 @@
-import { Search as KvibSearch } from "@kvib/react/src/search";
+import { Search as KvibSearch, Stack } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibSearch> = {
@@ -7,7 +7,7 @@ const meta: Meta<typeof KvibSearch> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "shown" },
+      canvas: { sourceState: "hidden" },
     },
     a11y: {
       // This option disables all a11y checks on this story
@@ -80,6 +80,22 @@ const meta: Meta<typeof KvibSearch> = {
       },
       control: "boolean",
     },
+    buttonVariant: {
+      description: "Button variant if an icon is enabled",
+      table: {
+        type: { summary: "primary | secondary | tertiary | ghost" },
+        defaultValue: { summary: "tertiary" },
+      },
+      options: ["primary", "secondary", "tertiary", "ghost"],
+      control: { type: "radio" },
+    },
+    buttonWidth: {
+      description: "Button width if an icon is enabled",
+      table: {
+        type: { summary: "string" },
+      },
+      control: "text",
+    },
   },
 };
 
@@ -87,12 +103,35 @@ export default meta;
 type SearchStory = StoryObj<typeof KvibSearch>;
 
 export const Search: SearchStory = {
+  parameters: {
+    docs: {
+      canvas: {
+        sourceState: "shown",
+      },
+    },
+  },
   args: {
     placeholder: "Søk her...",
     variant: "outline",
     isDisabled: false,
   },
   render: (args) => <KvibSearch {...args} />,
+};
+
+export const SearchVariants: SearchStory = {
+  args: {
+    placeholder: "Søk her...",
+
+    colorScheme: "green",
+  },
+  render: (args) => (
+    <Stack h={"12rem"}>
+      <KvibSearch {...args} variant="outline" />
+      <KvibSearch {...args} variant="filled" />
+      <KvibSearch {...args} variant="flushed" />
+      <KvibSearch {...args} variant="unstyled" />
+    </Stack>
+  ),
 };
 
 export const SearchIconLeft: SearchStory = {
@@ -102,6 +141,7 @@ export const SearchIconLeft: SearchStory = {
     variant: "outline",
     isDisabled: false,
     colorScheme: "blue",
+    buttonVariant: "secondary",
   },
   render: (args) => <KvibSearch {...args} />,
 };
@@ -113,6 +153,19 @@ export const SearchIconRight: SearchStory = {
     variant: "outline",
     isDisabled: false,
     colorScheme: "green",
+  },
+  render: (args) => <KvibSearch {...args} />,
+};
+
+export const SearchButtonVariant: SearchStory = {
+  args: {
+    rightSearchIcon: true,
+    placeholder: "Søk her...",
+    variant: "outline",
+    isDisabled: false,
+    colorScheme: "green",
+    buttonVariant: "primary",
+    buttonWidth: "4rem",
   },
   render: (args) => <KvibSearch {...args} />,
 };

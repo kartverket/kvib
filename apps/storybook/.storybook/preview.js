@@ -20,7 +20,7 @@ export const parameters = {
       method: "alphabetical",
       order: [
         "Info",
-        ["Introduksjon", "Oppsett", "Bidra", ["Generelt", "Bygge", "Style", "Dokumentere", "Teste", "Publish"]],
+        ["Introduksjon", "Oppsett", "Bidra", ["Hurtigveiledning", "Bygge", "Style", "Dokumentere", "Teste", "Publish"]],
         "Design Fundament",
         "Hooks",
         "Komponenter",

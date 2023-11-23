@@ -1,30 +1,105 @@
 import * as SearchStories from "./Search.stories";
-import { Canvas, Controls, Meta } from "@storybook/blocks";
-import { Alert, AlertIcon } from "@kvib/react/src";
+import { Canvas, Controls, Meta, Story } from "@storybook/blocks";
+import { Alert, AlertIcon, Text, Code, Box, Stack } from "@kvib/react/src";
+import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
 
 <Meta of={SearchStories} />
 
 # Search
 
-<Alert status="info">
-    <AlertIcon />
-    BorderRadius på Search har en bug for øyeblikket. Den bytter mellom å være rund og firkantet. Buggen ligger hos chakra
-    \- en issue er opprettet.
-</Alert>
-
-Søkefelt komponent.
-
-## Ta i bruk
+Search lar brukerne utforske et nettsted eller en applikasjon ved å skrive nøkkelord eller setninger som leter frem det mest relevante innholdet for dem.
 
 ```jsx
 import { Search } from "@kvib/react";
 ```
 
-## Props
+<Alert status="info">
+  <AlertIcon />
+  BorderRadius på Search for iOS har en bug. Den bytter mellom å være rund og firkantet. Buggen ligger hos chakra \- [en
+  PR er opprettet](https://github.com/chakra-ui/chakra-ui/pull/7959).
+</Alert>
 
+<DocsContainer>
+
+**Egnet til:**
+
+- Raskt finne relevant innhold
+
+**Uegnet til:**
+
+- Innhold som lett kan navigeres til uten søk
+
+<Feedback component="Search" />
+
+</DocsContainer>
+
+<DocsHeading>Alternativer</DocsHeading>
+<DocsContainer>
+
+<DocsStory
+  title="Utseende"
+  description={
+    <Box>
+      <Text>
+        Search har fire varianter. <Code>outline</Code> er standardvarianten og skal brukes i de fleste tilfeller.
+        <Code>filled</Code> kan brukes som et alternativ til outline. For mindre viktige søkefelt kan
+        <Code>flushed</Code> og
+        <Code>unstyled</Code> brukes.
+      </Text>
+      <Text>
+        Det er mulig å velge mellom fire forskjellige størrelser: <Code>xs</Code>, <Code>sm</Code>, <Code>md</Code> og{" "}
+        <Code>lg</Code>.<Code>md</Code> er standard.
+      </Text>
+    </Box>
+  }
+  story={<Canvas of={SearchStories.SearchVariants} />}
+/>
+
+<DocsStory
+  title="Søkeknapp/ikon"
+  description={
+    <Box>
+      <Text>
+        Search har muligheten til å legge inn knapp med søkeikon ved å benytte enten <Code>leftSearchIcon</Code> eller
+        <Code>rightSearchIcon</Code>. Disse har <Code>type="submit"</Code> som gjør at de passer inn i et form.
+      </Text>
+      <Text>
+        Søkeknappen kan tilpasses ved å legge verdier til <Code>buttonVariant</Code> og <Code>buttonWidth</Code>.
+        Knappen er en <Code>IconButton</Code> og har tilsvarende varianter.
+      </Text>
+    </Box>
+  }
+  story={
+    <Canvas>
+      <Stack gap="1rem">
+        <Story of={SearchStories.SearchIconRight} />
+        <Story of={SearchStories.SearchIconLeft} />
+        <Story of={SearchStories.SearchButtonVariant} />
+      </Stack>
+    </Canvas>
+  }
+/>
+
+</DocsContainer>
+
+<DocsHeading>Retningslinjer</DocsHeading>
+
+<DocsContainer>
+
+### Bredde
+
+Søkefeltets bredde bør tilsvare lengden på søkeordene som brukes. Feltets størrelse er et viktig signal til brukeren om hva de kan skrive inn. Et søkefelt som brukes til å søke på personnumre bør ha en bredde som tilsvarer et personnummer, mens hovedsøket for et nettsted bør ha et bredere felt som lar brukerne se flere ord samtidig.
+
+Ta gjerne en kikk på søkeloggene dine for å se hvordan brukerne dine ordlegger seg når de søker på sidene dine. Unngå at teksten i søkefeltet må scrolles for å romme typiske søk.
+
+### Innsending av query
+
+Det er anbefalt å bruke `<form>` rundt Search dersom du skal bruke det valgte resultatet. Dette gjør det mulig å bruke `<button type="submit">` for å sende inn søket.
+Det gjøres enten med en av ikonknappene i props, eller egen knapp.
+`FormControl` kan hjelpe til med å gi Search kontekst.
+
+</DocsContainer>
+
+<DocsHeading>Props</DocsHeading>
 <Canvas of={SearchStories.Search} />
 <Controls of={SearchStories.Search} />
-
-## Search med Ikon knapp
-<Canvas of={SearchStories.SearchIconLeft} />
-<Canvas of={SearchStories.SearchIconRight} />

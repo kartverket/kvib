@@ -1,0 +1,24 @@
+name: Nytt komponent
+description: Send et ønske om en eller flere nye komponenter
+title: "[Nytt komponent]: "
+labels: ["nytt ✨", "komponenter 🧩"]
+assignees:
+  - KVIB
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Takk for at du bidrar inn i Kartverkets Designsystem!
+  - type: input
+    id: title
+    attributes:
+      label: Navn på komponent
+      description: Hva er navnet på komponentet du ønsker deg?
+      placeholder: eks. datepicker
+    validations:
+      required: true
+  - type: textarea
+    id: examples
+    attributes:
+      label: Eksempel på komponentet
+      description: Send en lenke til eksempler på komponentet

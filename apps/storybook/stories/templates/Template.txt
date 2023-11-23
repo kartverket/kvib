@@ -1,0 +1,44 @@
+import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../templates";
+
+<Meta of={KomponentStories}/>
+
+# Komponentnavn
+
+Skriv litt info om komponentet her.
+
+```jsx
+import { Komponentnavn } from "@kvib/react";
+```
+
+<DocsContainer>
+
+**Egnet til:**
+
+- Skriv hva det er egnet til her
+
+**Uegnet til:**
+
+- Skriv hva det er uegnet til her
+
+<Feedback component="Komponentnavn" />
+
+</DocsContainer>
+
+<DocsHeading>Alternativer</DocsHeading>
+<DocsContainer>
+
+Legg til flere `<DocsStory />` som beskriver hvilke alternativer man har her.
+
+</DocsContainer>
+
+<DocsHeading>Retningslinjer</DocsHeading>
+
+<DocsContainer>
+
+Skriv retningslinjer her
+
+</DocsContainer>
+
+<DocsHeading>Props</DocsHeading>
+<Canvas of={Story} />
+<Controls of={Story} />
