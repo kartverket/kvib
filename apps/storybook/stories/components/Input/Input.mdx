@@ -1,49 +1,137 @@
-import { Canvas, Meta, Controls } from "@storybook/blocks";
+import { Canvas, Meta, Controls, Story } from "@storybook/blocks";
 import { Alert, AlertIcon, AlertDescription } from "@kvib/react/src/alert";
 import * as InputStories from "./Input.stories";
+import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../templates";
+import { Text, Code, Box, Stack } from "@kvib/react/src/";
 
 <Meta of={InputStories} />
 
 # Input
 
-Input er en komponent som brukes til å få brukerinndata i et tekstfelt.
-
-## Ta i bruk
+Input brukes til å la brukere skrive inn tekst, tall, datoer, etc. i et skjema.
 
 ```jsx
-import { Input } from "@kvib/react";
+import { Input, InputGroup, InputLeftElement, InputRightElement, InputLeftAddon, InputRightAddon } from "@kvib/react";
 ```
 
-## Props
+<DocsContainer>
 
-    <Alert status="info">
-        <AlertIcon/>
-        <AlertDescription>
-            Label og validering håndteres av FormControl komponent.
-        </AlertDescription>
+**Egnet til:**
 
-    </Alert>
+- Korte tekster
+- Svar
+- Tekst, url, epost, etc. (de fleste [`<input>-typer`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#Form_%3Cinput%3E_types))
+- Tall uten interaktive knapper
+- Enkel datoinput uten interaktiv datepicker
 
+**Uegnet til:**
+
+- Lengre tekster (Bruk heller `TextArea`)
+- Tall med interaktive knapper (bruk heller `NumberInput`)
+- Søk (bruk heller `Search` eller `SearchAsync`)
+- Interaktiv datepicker (bruk heller `DatePicker`)
+
+<Feedback component="Input" />
+
+</DocsContainer>
+
+<DocsHeading>Alternativer</DocsHeading>
+<DocsContainer>
+
+<DocsStory
+  title="Utseende"
+  description={
+    <Box>
+      <Text>
+        Input har fire varianter. <Code>outline</Code> er standardvarianten og skal brukes i de fleste tilfeller.
+        <Code>filled</Code> kan brukes som et alternativ til outline. For mindre viktige inputfelt kan
+        <Code>flushed</Code> og
+        <Code>unstyled</Code> brukes.
+      </Text>
+      <Text>
+        Det er mulig å velge mellom fire forskjellige størrelser: <Code>xs</Code>, <Code>sm</Code>, <Code>md</Code> og{" "}
+        <Code>lg</Code>.<Code>md</Code> er standard.
+      </Text>
+    </Box>
+  }
+  story={<Canvas of={InputStories.InputVariants} />}
+/>
+
+<DocsStory
+  title="Input i FormControl"
+  description={
+    <Text>
+      Ved å benytte seg av Input sammen med <Code>Form Control</Code> vil du få kontekst som <Code>isInvalid</Code>,
+      <Code>isDisabled</Code> og
+      <Code>isRequired</Code>. Slik vil det også være enkelt å legge til en label.
+    </Text>
+  }
+  story={<Canvas of={InputStories.InputForm} />}
+/>
+
+<DocsStory
+  title="Ikoner og addons"
+  description={
+    <Text>
+      Input kan ha ikoner og addons på venstre og høyre side. Disse kan brukes til å vise tilleggsinformasjon eller
+      funksjonalitet. For å benytte seg av dette må <Code>Input</Code> plasseres i en <Code>InputGroup</Code>. Da er det
+      mulig å bruke <Code>InputLeftElement</Code> og <Code>InputRightElement</Code> for å legge til ikoner/knapper og{" "}
+      <Code>InputLeftAddon</Code> og <Code>InputRightAddon</Code> for å legge til addons.
+    </Text>
+  }
+  story={<Canvas of={InputStories.InputGroup} />}
+/>
+
+</DocsContainer>
+
+<DocsHeading>Retningslinjer</DocsHeading>
+
+<DocsContainer>
+
+### isReadOnly
+
+Readonly-attributtet spesifiserer at et inputfelt i et skjema er skrivebeskyttet.
+Et skrivebeskyttet felt kan ikke endres, men brukere kan tabbe til det, markere det og kopiere tekst (tekst kan settes med `value`-proppen) fra det. Til forskjell fra disabled-felter vil innholdet i readonly-felter inkluderes når et skjema sendes inn.
+
+### Label
+
+Input skal alltid ha en label. Dersom Input av en eller annen grunn ikke har label må en `aria-label` legges til for å tilfredsstille tilgjengelighetskrav.
+
+### Autocomplete
+
+Bruk [autocomplete](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete) for felter som mottar personlig informasjon. For at nettleseren skal kunne fylle ut felter med personlig informasjon må ofte det følgende være til stede:
+
+- `name` og/eller `id` på `Input`
+- Være i et `<form>`-element
+- Formet har en `submit`-knapp
+
+Verdier for `autocomplete` på hvert input-element kan også settes ved f.eks: `autocomplete="given-name"`. Verdiene er spesifisert hos [mdn](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete).
+
+**For felter som etterspør personlig informasjon om en annen person enn brukeren, skru av autocomplete - `autocomplete="off"`.**
+
+### Input og formatering
+
+- Bruk gjerne inputtyper som tilsvarer informasjonstypen du ber om (`tel`, `email`, `url`, osv.). Disse tilbyr mobilbrukere et tastatur som er tilpasset inputtypen, men ta i betraktning at de kan også utløse client-side validering av feltets input.
+- Vær generøs i hva du aksepterer av data. Godta input fra brukeren så lenge den er forståelig, f.eks. telefonnumre med mellomrom, personnumre med punktum, epost-adresser med mellomrom til slutt.
+- Dersom input blir automatisk formattert, må dette være synlig for brukere slik at de kan kontrollere om det ble riktig.
+- Feltets `name` må inkludere og starte med teksten i `label`.
+- Unngå bruk av all-caps og kursiv tekst til labels. Disse er vanskeligere å lese.
+
+### Number input
+
+**Sjekk ut `NumberInput`-komponentet dersom du skal bruke et inputfelt for tall med interaktive knapper for å styre.**
+
+Unngå å bruke `Input` med `type="number"`. [Denne bloggposten](https://stackoverflow.blog/2022/12/26/why-the-number-input-is-the-worst-input/) på stackoverflow belyser problemene et number input kan ha.
+[Gov.uk](https://technology.blog.gov.uk/2020/02/24/why-the-gov-uk-design-system-team-changed-the-input-type-for-numbers/) har laget en enkel løsning dersom man bare trenger heltall:
+
+```HTML
+    type="text" inputMode="numeric" pattern="[0-9]*"
+```
+
+Trenger man muligheten til å bruke desimaltall vil `type="text"` med js-validering være enklest.
+
+</DocsContainer>
+
+<DocsHeading>Props</DocsHeading>
 <Canvas of={InputStories.Input} />
 <Controls of={InputStories.Input} />
-
-## Input Group and Input Elements
-
-## Ta i bruk
-
-```jsx
-import { Input, InputGroup, InputLeftElement, InputRightElement } from "@kvib/react";
-```
-
-<Canvas of={InputStories.InputLeftElement} />
-<Canvas of={InputStories.InputRightElement} />
-
-## Input Group and Input Addons
-
-## Ta i bruk
-
-```jsx
-import { Input, InputGroup, InputLeftAddon, InputRightAddon } from "@kvib/react";
-```
-
-<Canvas of={InputStories.InputGroup} />
