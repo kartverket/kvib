@@ -1,6 +1,6 @@
-import { Canvas, Meta, Controls } from "@storybook/blocks";
-import { DocsHeading, DocsContainer, Feedback } from "../../../templates";
-import * as StackStories from "./Stack.stories";
+import {Canvas, Meta, Controls, Story} from "@storybook/blocks";
+import { DocsHeading, DocsContainer, DocsStory, Feedback } from "../../../templates";
+import * as StackStories from "./Stack.stories"
 
 <Meta of={StackStories} />
 
@@ -26,12 +26,45 @@ import { Stack, HStack, VStack } from "@kvib/react";
 
 - Lage tabeller. Bruk heller Table komponenten.
 
+Stack og Flex er veldig like, med at begge distanserer Children like langt fra hverandre. Den største forskjellen er at Stack ikke fyller bredden til hele containeren, mens Flex fyller hele bredden til containeren.
+
 </DocsContainer>
 
 <Feedback component="Stack" />
+
+<DocsHeading>Alternativer</DocsHeading>
+
+<DocsContainer>
+    <DocsStory
+        title="Retning"
+        description="Row passer for lister, mens column passer til Cards. Responsiv retning tilpasser seg størrelsen på synsfeltet. Å sette direction={['column', 'row']},
+        vil sette retning til column, helt til synsfeltet blir for lite, og skifter til row."
+        story={<Canvas of={StackStories.ResponsiveStack} />}
+    />
+
+    <DocsStory
+        title="Utseende"
+        description="Du kan sette Dividers og Spacing for å endre hvordan innholdet i Stack ser ut"
+        story={
+            <Canvas>
+                <Story of={StackStories.StackStyled} />
+            </Canvas>
+        }
+    />
+
+    <DocsStory
+        title="Andre komponenter"
+        description="Det finnes andre komponenter som også kan gjøre jobben. HStack og Vstack er Stack, bare at de er begrenset til hver sin retning."
+        story={
+            <Canvas>
+                <Story of={StackStories.VStackDemo} />
+                <Story of={StackStories.HStackDemo} />
+            </Canvas>
+        }
+    />
+</DocsContainer>
 
 <DocsHeading>Props</DocsHeading>
 
 <Canvas of={StackStories.Stack}/>
 <Controls of={StackStories.Stack}/>
-

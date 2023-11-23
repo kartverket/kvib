@@ -1,4 +1,4 @@
-import { Stack as KvibStack, Box } from "@kvib/react/src/layout";
+import { Stack as KvibStack, Box, HStack, VStack, StackDivider } from "@kvib/react/src/layout";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibStack> = {
@@ -52,9 +52,9 @@ const meta: Meta<typeof KvibStack> = {
     },
     divider: {
       description: "If true, each stack item will be followed by a divider",
-      table: { type: { summary: "boolean" } },
-      defaultValue: { summary: "false" },
-      control: { type: "boolean" },
+      table: { type: { summary: "StackDivider" } },
+      defaultValue: { summary: "" },
+      // control: { type: "text" },
     },
     isInline: {
       description: "If true, the items will be stacked horizontally",
@@ -149,5 +149,53 @@ export const ResponsiveStack: Story = {
         3
       </Box>
     </KvibStack>
+  ),
+};
+
+export const StackStyled: Story = {
+  render: (args) => (
+    <KvibStack divider={<StackDivider borderColor="gray.200" />} spacing={12}>
+      <Box width="40px" height="40px" backgroundColor="green.200">
+        1
+      </Box>
+      <Box width="40px" height="40px" backgroundColor="blue.200">
+        2
+      </Box>
+      <Box width="40px" height="40px" backgroundColor="red.200">
+        3
+      </Box>
+    </KvibStack>
+  ),
+};
+
+export const HStackDemo: Story = {
+  render: (args) => (
+    <HStack>
+      <Box width="40px" height="40px" backgroundColor="green.200">
+        1
+      </Box>
+      <Box width="40px" height="40px" backgroundColor="blue.200">
+        2
+      </Box>
+      <Box width="40px" height="40px" backgroundColor="red.200">
+        3
+      </Box>
+    </HStack>
+  ),
+};
+
+export const VStackDemo: Story = {
+  render: (args) => (
+    <VStack>
+      <Box width="40px" height="40px" backgroundColor="green.200">
+        1
+      </Box>
+      <Box width="40px" height="40px" backgroundColor="blue.200">
+        2
+      </Box>
+      <Box width="40px" height="40px" backgroundColor="red.200">
+        3
+      </Box>
+    </VStack>
   ),
 };
