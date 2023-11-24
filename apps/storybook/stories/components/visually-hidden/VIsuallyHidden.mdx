@@ -1,48 +1,43 @@
-import { Meta, Controls, Source, Story, } from "@storybook/blocks";
-import { Card, CardBody } from "@kvib/react/src";
+import { Meta, Controls } from "@storybook/blocks";
+import { DocsContainer, DocsHeading, Feedback } from "../../templates";
 import * as VisuallyHiddenStories from "./VisuallyHidden.stories";
-import * as VisuallyHiddenStrings from "./srcStrings.ts";
+import {Canvas} from "@storybook/addon-docs";
 
 <Meta title="Komponenter/Visually Hidden" />
 
 # Visually Hidden
 
-Visually Hidden er en vanlig teknikk som brukes i netttilgjengelighet for å skjule innhold fra den visuelle klienten, men holde det lesbart for skjermlesere.
-
-## Ta i bruk
+Visually Hidden brukes til å skjule innhold fra den visuelle klienten, men holde det lesbart for skjermlesere.
 
 ```jsx
 import { VisuallyHidden, VisuallyHiddenInput } from "@kvib/react";
 ```
+<DocsContainer>
+**Egnet til:**
+- Å skjule innhold på siden som skal være lesbart for folk som bruker skjermlesere.
+- Å gi informasjon til skjermlesere der man ikke vil eller kan vise denne informasjonen til alle brukere.
 
-## Props
-<Card variant="outline">
-    <CardBody>
-        <Story of={VisuallyHiddenStories.VisuallyHidden} />
-    </CardBody>
-</Card>
+**Uegnet til:**
+- Å skjule interaktivt innhold
 
-<Source code={VisuallyHiddenStrings.VisuallyHiddenString} dark/>
-<Controls of={VisuallyHiddenStories.VisuallyHidden} />
+<Feedback component="Visually Hidden"  />
 
-## Eksempel med tekst
+</DocsContainer>
 
-<Card variant="outline">
-    <CardBody>
-        <Story of={VisuallyHiddenStories.VisuallyHiddenTextExample} />
-    </CardBody>
-</Card>
+<DocsHeading>Alternativer</DocsHeading>
+<DocsContainer>
+### Visually Hidden Input
+Visually Hidden Input brukes til å designe tilpassede inputkomponener ved å bruke html-input som en proxy.
 
-<Source code={VisuallyHiddenStrings.VisuallyHiddenTxtString} dark />
+</DocsContainer>
 
+<DocsHeading>Retningslinjer</DocsHeading>
+<DocsContainer>
+Kommer
+</DocsContainer>
 
-## Visually Hidden Input
-Visually Hidden input brukes til å designe tilpassede inputkomponenter ved å bruke HTML-input som en proxy.
+<DocsHeading>Props</DocsHeading>
 
-<Card variant = "outline">
-    <CardBody>
-        <Story of={VisuallyHiddenStories.VisuallyHiddenInput} />
-    </CardBody>
-</Card>
+<Canvas of={VisuallyHiddenStories.VisuallyHidden} />
+<Controls of ={VisuallyHiddenStories.VisuallyHidden} />
 
-<Source code={VisuallyHiddenStrings.VisuallyHiddenInputString} dark/>
