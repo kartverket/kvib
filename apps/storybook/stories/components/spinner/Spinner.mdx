@@ -16,11 +16,14 @@ import { Spinner } from "@kvib/react";
 
 **Egnet til:**
 
-- Vise
+- Vise lasting eller ubestemt ventetid
 
 **Uegnet til:**
 
--
+- Vise framgang i prosesser
+
+- Lengre ventetid
+
 
 </DocsContainer>
 
@@ -28,32 +31,16 @@ import { Spinner } from "@kvib/react";
 <DocsContainer>
     <DocsStory
         title="Utseende"
-        description="Badge skal inneholde en kort tekst som beskrivelse."
-    />
-
-    <DocsStory
-        title="Hensikt"
-        description="Hensikten med Badge kan forsterkes med farge og varianter.
-        Sterkere farger fanger blikket til brukeren og vil automatisk bli oppfattet som viktig.
-        Derfor rangerer vi variantene solid, subtle og outline fra viktigst til mindre viktig."
+        description="Fargene burde bli valgt med tanke på kontrast. Farten kan justeres for å gjenspeile estimert ventetid. "
+        story={
+            <Canvas>
+               <Story of={SpinnerStories.SpinnerSizes} />
+               <Story of={SpinnerStories.SpinnerColors} />
+            </Canvas>
+        }
     />
 
 </DocsContainer>
-
-<Canvas of={SpinnerStories.Spinner} />
-<Controls of={SpinnerStories.Spinner} />
-
-## Farger
-
-<Canvas of={SpinnerStories.SpinnerColors} />
-
-## Størrelser
-
-<Canvas of={SpinnerStories.SpinnerSizes} />
-
-## Spinner med farge på hele ringen
-
-<Canvas of={SpinnerStories.SpinnerArea} />
 
 <DocsHeading>Props</DocsHeading>
 
