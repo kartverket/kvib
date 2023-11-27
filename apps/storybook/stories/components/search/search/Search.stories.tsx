@@ -90,13 +90,22 @@ const meta: Meta<typeof KvibSearch> = {
       control: { type: "radio" },
     },
     buttonWidth: {
-      description: "Button width if an icon is enabled",
+      description:
+        "Button width if an icon is enabled. Cannot be smaller than default, e.g. needs to be more than 2.5rem with size md",
+      table: {
+        type: { summary: "string" },
+      },
+      control: "text",
+    },
+    buttonText: {
+      description: "Button text if an icon is enabled",
       table: {
         type: { summary: "string" },
       },
       control: "text",
     },
   },
+  args: {},
 };
 
 export default meta;
@@ -168,4 +177,32 @@ export const SearchButtonVariant: SearchStory = {
     buttonWidth: "4rem",
   },
   render: (args) => <KvibSearch {...args} />,
+};
+
+export const SearchButtonText: SearchStory = {
+  args: {
+    rightSearchIcon: true,
+    placeholder: "Søk her...",
+    variant: "outline",
+    isDisabled: false,
+    colorScheme: "blue",
+    buttonVariant: "primary",
+    buttonText: "Søk",
+  },
+  render: (args) => <KvibSearch {...args} />,
+};
+
+export const SearchButtonAppearance: SearchStory = {
+  args: {
+    placeholder: "Søk her...",
+    variant: "outline",
+  },
+  render: (args) => (
+    <Stack>
+      <KvibSearch {...args} rightSearchIcon={true} colorScheme="green" />
+      <KvibSearch {...args} leftSearchIcon={true} colorScheme="blue" buttonVariant="secondary" buttonText="Search" />
+      <KvibSearch {...args} rightSearchIcon={true} colorScheme="green" buttonWidth="4rem" buttonVariant="primary" />
+      <KvibSearch {...args} rightSearchIcon={true} colorScheme="blue" buttonVariant="primary" buttonText="Søk" />
+    </Stack>
+  ),
 };

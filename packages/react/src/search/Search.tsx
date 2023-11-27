@@ -5,8 +5,11 @@ import {
   InputGroup as ChakraInputGroup,
   InputLeftElement as ChakraInputLeftElement,
   InputRightElement as ChakraInputRightElement,
+  Box,
+  useDimensions,
 } from "@chakra-ui/react";
-import { IconButton } from "../button";
+import { IconButton, Button } from "../button";
+import { useRef } from "react";
 
 export type SearchProps = Omit<ChakraInputProps, "isRequired" | "colorScheme"> & {
   leftSearchIcon?: boolean;
@@ -14,6 +17,11 @@ export type SearchProps = Omit<ChakraInputProps, "isRequired" | "colorScheme"> &
   colorScheme?: "gray" | "red" | "green" | "blue" | undefined;
   buttonVariant?: "primary" | "secondary" | "tertiary" | "ghost";
   buttonWidth?: string;
+  buttonText?: string;
+};
+
+type RenderProps = {
+  position: "left" | "right";
 };
 
 export const Search = forwardRef<SearchProps, "input">(
@@ -29,69 +37,80 @@ export const Search = forwardRef<SearchProps, "input">(
       rightSearchIcon,
       buttonWidth,
       buttonVariant = "tertiary",
+      buttonText,
       ...props
     },
     ref,
   ) => {
+    // Used to calculate width of button if no buttonWidth is given and there is text in the button
+    const elementRef = useRef(null);
+    const dimensions = useDimensions(elementRef);
+
+    // Use IconButton when there is no text in the button
+    const RenderButton = ({ position }: RenderProps) => {
+      const borderRadiusProps =
+        position === "left"
+          ? { borderBottomRightRadius: 0, borderTopRightRadius: 0 }
+          : { borderBottomLeftRadius: 0, borderTopLeftRadius: 0 };
+
+      const buttonProps = {
+        ...borderRadiusProps,
+        colorScheme,
+        variant: buttonVariant,
+        isDisabled,
+        width: buttonWidth,
+        size,
+        borderRadius: size === "sm" || size === "xs" ? "0.125rem" : undefined,
+      };
+
+      return buttonText ? (
+        <Button ref={elementRef} {...buttonProps} rightIcon="search">
+          {buttonText}
+        </Button>
+      ) : (
+        <IconButton {...buttonProps} aria-label="search" type="submit" icon="search" />
+      );
+    };
+
+    // Padding on inputfield based on the width of the button
+    const inputPadding = buttonWidth
+      ? `calc(${buttonWidth} + 0.5rem)`
+      : buttonText && dimensions
+        ? `calc(${dimensions.borderBox.width}px + 0.5rem)`
+        : "3rem";
+
+    const paddingProp = (position: "left" | "right") => (position === "left" ? "paddingLeft" : "paddingRight");
+
+    const RenderInputGroup = ({ position }: RenderProps) => (
+      <Box as={ChakraInputGroup} size={size} gap={"4rem"}>
+        <ChakraInput
+          {...props}
+          id={id}
+          ref={ref}
+          size={size}
+          type={type}
+          variant={variant}
+          isDisabled={isDisabled}
+          {...{ [paddingProp(position)]: inputPadding }}
+        />
+        {position === "left" && (
+          <ChakraInputLeftElement width={buttonWidth}>
+            <RenderButton position={"left"} />
+          </ChakraInputLeftElement>
+        )}
+        {position === "right" && (
+          <ChakraInputRightElement width={buttonWidth}>
+            <RenderButton position={"right"} />
+          </ChakraInputRightElement>
+        )}
+      </Box>
+    );
+
     return (
       <>
-        {leftSearchIcon ? (
-          <ChakraInputGroup size={size}>
-            <ChakraInput
-              {...props}
-              id={id}
-              ref={ref}
-              size={size}
-              type={type}
-              variant={variant}
-              isDisabled={isDisabled}
-              paddingLeft={buttonWidth ? `calc(${buttonWidth} + 0.5rem)` : "3rem"}
-            />
-            <ChakraInputLeftElement width={buttonWidth}>
-              <IconButton
-                colorScheme={colorScheme}
-                type={"submit"}
-                variant={buttonVariant}
-                aria-label={"search"}
-                icon={"search"}
-                isDisabled={isDisabled}
-                width={buttonWidth}
-                size={size}
-                borderRadius={size === "sm" || size === "xs" ? "0.125rem" : undefined}
-                borderBottomRightRadius={0}
-                borderTopRightRadius={0}
-              />
-            </ChakraInputLeftElement>
-          </ChakraInputGroup>
-        ) : rightSearchIcon ? (
-          <ChakraInputGroup size={size}>
-            <ChakraInput
-              {...props}
-              id={id}
-              ref={ref}
-              variant={variant}
-              size={size}
-              type={type}
-              isDisabled={isDisabled}
-              paddingRight={buttonWidth ? `calc(${buttonWidth} + 0.5rem)` : "3rem"}
-            />
-            <ChakraInputRightElement width={buttonWidth}>
-              <IconButton
-                colorScheme={colorScheme}
-                type={"submit"}
-                variant={buttonVariant}
-                aria-label={"search"}
-                icon={"search"}
-                isDisabled={isDisabled}
-                width={buttonWidth}
-                size={size}
-                borderRadius={size === "sm" || size === "xs" ? "0.125rem" : undefined}
-                borderBottomLeftRadius={0}
-                borderTopLeftRadius={0}
-              />
-            </ChakraInputRightElement>
-          </ChakraInputGroup>
-        ) : (
+        {leftSearchIcon && <RenderInputGroup position="left" />}
+        {rightSearchIcon && <RenderInputGroup position="right" />}
+        {!leftSearchIcon && !rightSearchIcon && (
           <ChakraInput {...props} id={id} ref={ref} size={size} type={type} variant={variant} isDisabled={isDisabled} />
         )}
       </>
