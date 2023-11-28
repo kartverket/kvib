@@ -11,8 +11,7 @@ import { IconButton, Button } from "../button";
 import { useRef } from "react";
 
 export type SearchProps = Omit<ChakraInputProps, "isRequired" | "colorScheme"> & {
-  leftSearchIcon?: boolean;
-  rightSearchIcon?: boolean;
+  searchButton?: "left" | "right" | "none";
   colorScheme?: "gray" | "red" | "green" | "blue" | undefined;
   buttonVariant?: "primary" | "secondary" | "tertiary" | "ghost";
   buttonWidth?: string;
@@ -32,8 +31,7 @@ export const Search = forwardRef<SearchProps, "input">(
       variant,
       type = "search",
       isDisabled,
-      leftSearchIcon,
-      rightSearchIcon,
+      searchButton = "none",
       buttonWidth,
       buttonVariant = "tertiary",
       buttonText,
@@ -63,7 +61,7 @@ export const Search = forwardRef<SearchProps, "input">(
       };
 
       return buttonText ? (
-        <Button ref={elementRef} {...buttonProps} rightIcon="search">
+        <Button ref={elementRef} {...buttonProps} rightIcon="search" type="submit" aria-label="search">
           {buttonText}
         </Button>
       ) : (
@@ -110,9 +108,9 @@ export const Search = forwardRef<SearchProps, "input">(
 
     return (
       <>
-        {leftSearchIcon && <RenderInputGroup position="left" />}
-        {rightSearchIcon && <RenderInputGroup position="right" />}
-        {!leftSearchIcon && !rightSearchIcon && (
+        {searchButton === "left" && <RenderInputGroup position="left" />}
+        {searchButton === "right" && <RenderInputGroup position="right" />}
+        {searchButton === "none" && (
           <ChakraInput {...props} id={id} ref={ref} size={size} type={type} variant={variant} isDisabled={isDisabled} />
         )}
       </>
