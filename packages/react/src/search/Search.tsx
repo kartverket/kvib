@@ -76,9 +76,7 @@ export const Search = forwardRef<SearchProps, "input">(
         ? `calc(${dimensions.borderBox.width}px + 0.5rem)`
         : "3rem";
 
-    const paddingProp = (position: "left" | "right") => (position === "left" ? "paddingLeft" : "paddingRight");
-
-    const RenderInputGroup = ({ position }: RenderProps) => (
+    const RenderInputGroup = () => (
       <ChakraInputGroup size={size} width={props.width}>
         <ChakraInput
           {...props}
@@ -88,14 +86,15 @@ export const Search = forwardRef<SearchProps, "input">(
           type={type}
           variant={variant}
           isDisabled={isDisabled}
-          {...{ [paddingProp(position)]: inputPadding }}
+          paddingLeft={searchButton === "left" ? inputPadding : undefined}
+          paddingRight={searchButton === "right" ? inputPadding : undefined}
         />
-        {position === "left" && (
+        {searchButton === "left" && (
           <ChakraInputLeftElement width="auto">
             <RenderButton position={"left"} />
           </ChakraInputLeftElement>
         )}
-        {position === "right" && (
+        {searchButton === "right" && (
           <ChakraInputRightElement width="auto">
             <RenderButton position={"right"} />
           </ChakraInputRightElement>
@@ -103,14 +102,6 @@ export const Search = forwardRef<SearchProps, "input">(
       </ChakraInputGroup>
     );
 
-    return (
-      <>
-        {searchButton === "left" && <RenderInputGroup position="left" />}
-        {searchButton === "right" && <RenderInputGroup position="right" />}
-        {searchButton === "none" && (
-          <ChakraInput {...props} id={id} ref={ref} size={size} type={type} variant={variant} isDisabled={isDisabled} />
-        )}
-      </>
-    );
+    return <RenderInputGroup />;
   },
 );
