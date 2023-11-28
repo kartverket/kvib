@@ -76,9 +76,6 @@ export const Search = forwardRef<SearchProps, "input">(
         ? `calc(${dimensions.borderBox.width}px + 0.5rem)`
         : "3rem";
 
-    console.log("inputPadding", inputPadding);
-    console.log("dimensions", dimensions?.borderBox.width);
-
     const paddingProp = (position: "left" | "right") => (position === "left" ? "paddingLeft" : "paddingRight");
 
     const RenderInputGroup = ({ position }: RenderProps) => (
