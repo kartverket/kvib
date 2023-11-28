@@ -31,6 +31,7 @@ export const Icon = forwardRef<IconProps, "span">(
         ref={ref}
         className={`material-symbols-rounded ${className}`}
         style={{
+          width: size,
           fontSize: size,
           color: color,
           fontVariationSettings: `'FILL' ${isFilled ? 1 : 0}, 'wght' ${weight ? weight : 300}, 'GRAD' ${
