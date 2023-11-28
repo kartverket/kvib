@@ -181,7 +181,7 @@ export const SearchButtonVariant: SearchStory = {
 
 export const SearchButtonText: SearchStory = {
   args: {
-    rightSearchIcon: true,
+    leftSearchIcon: true,
     placeholder: "Søk her...",
     variant: "outline",
     isDisabled: false,

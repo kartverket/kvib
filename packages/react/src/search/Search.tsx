@@ -5,7 +5,6 @@ import {
   InputGroup as ChakraInputGroup,
   InputLeftElement as ChakraInputLeftElement,
   InputRightElement as ChakraInputRightElement,
-  Box,
   useDimensions,
 } from "@chakra-ui/react";
 import { IconButton, Button } from "../button";
@@ -79,10 +78,13 @@ export const Search = forwardRef<SearchProps, "input">(
         ? `calc(${dimensions.borderBox.width}px + 0.5rem)`
         : "3rem";
 
+    console.log("inputPadding", inputPadding);
+    console.log("dimensions", dimensions?.borderBox.width);
+
     const paddingProp = (position: "left" | "right") => (position === "left" ? "paddingLeft" : "paddingRight");
 
     const RenderInputGroup = ({ position }: RenderProps) => (
-      <Box as={ChakraInputGroup} size={size} gap={"4rem"}>
+      <ChakraInputGroup size={size} width={props.width}>
         <ChakraInput
           {...props}
           id={id}
@@ -94,16 +96,16 @@ export const Search = forwardRef<SearchProps, "input">(
           {...{ [paddingProp(position)]: inputPadding }}
         />
         {position === "left" && (
-          <ChakraInputLeftElement width={buttonWidth}>
+          <ChakraInputLeftElement width="auto">
             <RenderButton position={"left"} />
           </ChakraInputLeftElement>
         )}
         {position === "right" && (
-          <ChakraInputRightElement width={buttonWidth}>
+          <ChakraInputRightElement width="auto">
             <RenderButton position={"right"} />
           </ChakraInputRightElement>
         )}
-      </Box>
+      </ChakraInputGroup>
     );
 
     return (
