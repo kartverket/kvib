@@ -40,21 +40,14 @@ const meta: Meta<typeof KvibSearch> = {
       options: ["outline", "filled", "flushed", "unstyled"],
       control: { type: "radio" },
     },
-    leftSearchIcon: {
-      description: "Enables Search IconButton",
+
+    searchButton: {
+      description: "Add search button to input",
       table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "none" },
       },
-      control: "boolean",
-    },
-    rightSearchIcon: {
-      description: "Enables Search IconButton",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: false },
-      },
-      control: "boolean",
+      options: ["none", "left", "right"],
+      control: { type: "radio" },
     },
     colorScheme: {
       description: "Change Icon color",
@@ -90,13 +83,22 @@ const meta: Meta<typeof KvibSearch> = {
       control: { type: "radio" },
     },
     buttonWidth: {
-      description: "Button width if an icon is enabled",
+      description:
+        "Button width if an icon is enabled. Cannot be smaller than default, e.g. needs to be more than 2.5rem with size md",
+      table: {
+        type: { summary: "string" },
+      },
+      control: "text",
+    },
+    buttonText: {
+      description: "Button text if an icon is enabled",
       table: {
         type: { summary: "string" },
       },
       control: "text",
     },
   },
+  args: {},
 };
 
 export default meta;
@@ -136,7 +138,7 @@ export const SearchVariants: SearchStory = {
 
 export const SearchIconLeft: SearchStory = {
   args: {
-    leftSearchIcon: true,
+    searchButton: "left",
     placeholder: "Søk her...",
     variant: "outline",
     isDisabled: false,
@@ -148,7 +150,7 @@ export const SearchIconLeft: SearchStory = {
 
 export const SearchIconRight: SearchStory = {
   args: {
-    rightSearchIcon: true,
+    searchButton: "right",
     placeholder: "Søk her...",
     variant: "outline",
     isDisabled: false,
@@ -159,7 +161,7 @@ export const SearchIconRight: SearchStory = {
 
 export const SearchButtonVariant: SearchStory = {
   args: {
-    rightSearchIcon: true,
+    searchButton: "right",
     placeholder: "Søk her...",
     variant: "outline",
     isDisabled: false,
@@ -168,4 +170,32 @@ export const SearchButtonVariant: SearchStory = {
     buttonWidth: "4rem",
   },
   render: (args) => <KvibSearch {...args} />,
+};
+
+export const SearchButtonText: SearchStory = {
+  args: {
+    searchButton: "right",
+    placeholder: "Søk her...",
+    variant: "outline",
+    isDisabled: false,
+    colorScheme: "blue",
+    buttonVariant: "primary",
+    buttonText: "Søk",
+  },
+  render: (args) => <KvibSearch {...args} />,
+};
+
+export const SearchButtonAppearance: SearchStory = {
+  args: {
+    placeholder: "Søk her...",
+    variant: "outline",
+  },
+  render: (args) => (
+    <Stack>
+      <KvibSearch {...args} searchButton="right" colorScheme="green" />
+      <KvibSearch {...args} searchButton="left" colorScheme="blue" buttonVariant="secondary" />
+      <KvibSearch {...args} searchButton="right" colorScheme="green" buttonWidth="4rem" buttonVariant="primary" />
+      <KvibSearch {...args} searchButton="right" colorScheme="blue" buttonVariant="primary" buttonText="Søk" />
+    </Stack>
+  ),
 };
