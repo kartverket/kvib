@@ -1,6 +1,6 @@
 import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
 import * as BadgeStories from "./Badge.stories";
-import { DocsHeading, DocsContainer, DocsStory } from "../../../templates/"
+import { DocsHeading, DocsContainer, DocsStory, Feedback } from "../../../templates/"
 
 <Meta of={BadgeStories} />
 
@@ -21,6 +21,8 @@ import { Badge } from "@kvib/react";
 **Uegnet til:**
 
 - Kategorisering av elementer (bruk heller tag)
+
+<Feedback component="Badge" />
 
 </DocsContainer>
 
@@ -51,9 +53,6 @@ import { Badge } from "@kvib/react";
 
 Ikke bli forvirret av Badge og Tag. Badge skal brukes for å raskt kunne se statusen på noe. Bruk grønn for positive og rød for negative statuser.
 Solid variant brukes for å fremheve Badgen mer. Vær konsekvent med fargebruk.
-
-<DocsHeading>Tilgjengelighet</DocsHeading>
-
 
 <DocsHeading>Props</DocsHeading>
 

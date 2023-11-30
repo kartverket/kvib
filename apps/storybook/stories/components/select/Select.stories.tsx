@@ -1,4 +1,4 @@
-import { Icon, Select as KvibSelect, Stack as KvibStack } from "@kvib/react/src";
+import { FormControl, FormLabel, Icon, Select as KvibSelect, Stack as KvibStack } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibSelect> = {
@@ -7,21 +7,10 @@ const meta: Meta<typeof KvibSelect> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "shown" },
+      canvas: { sourceState: "hidden" },
     },
   },
   argTypes: {
-    colorScheme: {
-      description: "The visual color appearance of the component",
-      table: {
-        type: {
-          summary: '"green" | "blue" | "red" | "gray"',
-        },
-      },
-      options: ["green", "blue", "red", "gray"],
-      control: "select",
-    },
-
     errorBorderColor: {
       description: "The border color when the select is invalid. Use color keys in `theme.colors`",
       table: {
@@ -81,15 +70,6 @@ const meta: Meta<typeof KvibSelect> = {
       control: "boolean",
     },
 
-    isReadOnly: {
-      description: "If true, the form control will be readonly",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: false },
-      },
-      control: "boolean",
-    },
-
     isRequired: {
       description:
         "If true, the form control will be required. This has 2 side effects: - The FormLabel will show a required indicator - The form element (e.g, Input) will have `aria-required` set to true",
@@ -134,6 +114,13 @@ export default meta;
 type Story = StoryObj<typeof KvibSelect>;
 
 export const Select: Story = {
+  parameters: {
+    docs: {
+      canvas: {
+        sourceState: "shown",
+      },
+    },
+  },
   args: {},
   render: (args) => (
     <KvibSelect {...args} placeholder="Velg alternativ" aria-label="select">
@@ -141,6 +128,20 @@ export const Select: Story = {
       <option value="option2">Alternativ 2</option>
       <option value="option3">Alternativ 3</option>
     </KvibSelect>
+  ),
+};
+
+export const SelectForm: Story = {
+  args: { "aria-label": "select form" },
+  render: (args) => (
+    <FormControl>
+      <FormLabel htmlFor="select">Velg alternativ</FormLabel>
+      <KvibSelect {...args}>
+        <option value="option1">Alternativ 1</option>
+        <option value="option2">Alternativ 2</option>
+        <option value="option3">Alternativ 3</option>
+      </KvibSelect>
+    </FormControl>
   ),
 };
 
@@ -181,15 +182,12 @@ export const SelectIcon: Story = {
 };
 
 export const SelectStyles: Story = {
-  args: {},
-  render: (args) => (
-    <KvibSelect
-      {...args}
-      bg="red.500"
-      borderColor="red.500"
-      color="white"
-      placeholder="Ny bakgrunnsfarge!"
-      aria-label="select override style"
-    />
-  ),
+  args: {
+    borderColor: "green.500",
+    color: "blue.700",
+    focusBorderColor: "blue.300",
+    "aria-label": "select override style",
+    placeholder: "Overstyring av stil",
+  },
+  render: (args) => <KvibSelect {...args} />,
 };
