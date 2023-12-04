@@ -110,7 +110,7 @@ export const InputForm: InputStory = {
   render: (args) => (
     <FormControl isRequired>
       <FormLabel>Fornavn</FormLabel>
-      <KvibInput autoComplete="given-name" {...args} />
+      <KvibInput isInvalid autoComplete="given-name" {...args} />
     </FormControl>
   ),
 };
