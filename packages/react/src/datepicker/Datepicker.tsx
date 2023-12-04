@@ -139,6 +139,7 @@ const CustomDatepicker = forwardRef<DatepickerPropsWithoutStandard, "input">(
       // Check if the selected date in the day picker has changed
       if (dayPickerProps.selected) {
         onChange?.(dayPickerProps.selected);
+        setPickerVisible.off();
       }
     }, [dayPickerProps.selected, onChange]);
 
