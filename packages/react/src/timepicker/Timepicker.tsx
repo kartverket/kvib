@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { IconButton, Input, theme } from "@kvib/react";
+import { IconButton, Input, theme } from "@kvib/react/src";
 import { useTimeFieldState } from "react-stately";
 import { TimeValue } from "@react-types/datepicker";
 import { CalendarDateTime, parseTime } from "@internationalized/date";

@@ -1,4 +1,4 @@
-import { Box, Flex } from "@chakra-ui/react";
+import { Box, Flex } from "@kvib/react/src";
 import { CalendarDateTime, Time } from "@internationalized/date";
 import { useRef } from "react";
 import { AriaTimeFieldProps, useTimeField } from "react-aria";

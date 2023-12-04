@@ -1,4 +1,4 @@
-import { Box } from "@kvib/react";
+import { Box } from "@kvib/react/src";
 import { useRef } from "react";
 import { useDateSegment } from "react-aria";
 import { DateFieldState, DateSegment } from "react-stately";
