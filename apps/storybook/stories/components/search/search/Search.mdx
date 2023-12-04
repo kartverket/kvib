@@ -56,28 +56,22 @@ import { Search } from "@kvib/react";
 />
 
 <DocsStory
-  title="Søkeknapp/ikon"
+  title="Søkeknapp"
   description={
     <Box>
       <Text>
-        Search har muligheten til å legge inn knapp med søkeikon ved å benytte enten <Code>leftSearchIcon</Code> eller
-        <Code>rightSearchIcon</Code>. Disse har <Code>type="submit"</Code> som gjør at de passer inn i et form.
+        Search har muligheten til å legge inn knapp med søkeikon ved å benytte <Code>searchButton</Code>-proppen med
+        verdiene <Code>"left"</Code> eller <Code>"right"</Code> - standard er <Code>"none"</Code>. Disse har{" "}
+        <Code>type="submit"</Code> som gjør at de passer inn i et form. Det er også mulig å legge til tekst på knappen
+        ved bruk av <Code>buttonText</Code>.
       </Text>
       <Text>
         Søkeknappen kan tilpasses ved å legge verdier til <Code>buttonVariant</Code> og <Code>buttonWidth</Code>.
-        Knappen er en <Code>IconButton</Code> og har tilsvarende varianter.
+        Knappen er en <Code>IconButton</Code>/<Code>Button</Code> og har tilsvarende varianter.
       </Text>
     </Box>
   }
-  story={
-    <Canvas>
-      <Stack gap="1rem">
-        <Story of={SearchStories.SearchIconRight} />
-        <Story of={SearchStories.SearchIconLeft} />
-        <Story of={SearchStories.SearchButtonVariant} />
-      </Stack>
-    </Canvas>
-  }
+  story={<Canvas of={SearchStories.SearchButtonAppearance} />}
 />
 
 </DocsContainer>
@@ -101,5 +95,11 @@ Det gjøres enten med en av ikonknappene i props, eller egen knapp.
 </DocsContainer>
 
 <DocsHeading>Props</DocsHeading>
+
+<Alert status="info">
+  <AlertIcon />
+  Padding på søkeinput regnes ut ved rerender noe som gjør at endring av props på dokumentasjonssiden kan gjøre at søkefeltet
+  ser rart ut. Bytt mellom stories for å se en rerender.
+</Alert>
 <Canvas of={SearchStories.Search} />
 <Controls of={SearchStories.Search} />
