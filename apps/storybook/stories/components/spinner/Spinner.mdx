@@ -18,11 +18,15 @@ import { Spinner } from "@kvib/react";
 
 - Vise lasting eller ubestemt ventetid
 
+- Indikere lasting som tar mer enn ett sekund
+
 **Uegnet til:**
 
 - Vise framgang i prosesser
 
-- Lengre ventetid
+- Indekere lasting kortere enn ett sekund
+
+- Indikere over 5 minutters ventetid
 
 
 </DocsContainer>
@@ -31,7 +35,8 @@ import { Spinner } from "@kvib/react";
 <DocsContainer>
     <DocsStory
         title="Utseende"
-        description="Fargene burde bli valgt med tanke på kontrast. Farten kan justeres for å gjenspeile estimert ventetid. "
+        description="Fargene burde bli valgt med tanke på kontrast. Velg size og thickness slik at den gir mening til komponentet eller innholdet som skal lastes..
+        Farten kan justeres for å gjenspeile estimert ventetid. "
         story={
             <Canvas>
                <Story of={SpinnerStories.SpinnerSizes} />
@@ -39,6 +44,17 @@ import { Spinner } from "@kvib/react";
             </Canvas>
         }
     />
+
+</DocsContainer>
+
+<DocsHeading>Retningslinjer</DocsHeading>
+
+<DocsContainer>
+
+### Spinner vs. Progress
+
+Progress burde velges over spinner hvis man kan se prosentvis framgang, som f.eks. upload/download av filer, eller skjema med flere steg
+(Der kan stepper vurderes også). Spinner burde brukes over Progress uansett, så lenge ventetiden er minimal.
 
 </DocsContainer>
 
