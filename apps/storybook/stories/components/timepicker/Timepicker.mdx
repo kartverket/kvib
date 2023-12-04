@@ -5,9 +5,9 @@ import { Text, Code, Box } from "@kvib/react/src/";
 
 <Meta of={TimepickerStories} />
 
-# Komponentnavn
+# Timepicker
 
-Skriv litt info om komponentet her.
+Timepicker lar brukeren velge et tidspunkt på en brukervennlig måte.
 
 ```jsx
 import { Timepicker } from "@kvib/react";
@@ -17,13 +17,15 @@ import { Timepicker } from "@kvib/react";
 
 **Egnet til:**
 
-- Skriv hva det er egnet til her
+- Velge tidspunkt
+- Skrive inn tidspunkt
+- Velge tidspunkt med klikk eller tastatur
 
 **Uegnet til:**
 
-- Skriv hva det er uegnet til her
+- Om brukeren ikke kan endre tidspunkt selv burde den ikke brukes
 
-<Feedback component="Komponentnavn" />
+<Feedback component="Timepicker" />
 
 </DocsContainer>
 
@@ -90,7 +92,9 @@ import { Timepicker } from "@kvib/react";
 
 <DocsContainer>
 
-Skriv retningslinjer her
+### Label
+
+Timepicker skal alltid ha en label. Dersom Input av en eller annen grunn ikke har label må en `aria-label` legges til for å tilfredsstille tilgjengelighetskrav.
 
 </DocsContainer>
 

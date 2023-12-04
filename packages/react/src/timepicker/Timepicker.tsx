@@ -17,6 +17,7 @@ type TimepickerProps = {
   isDisabled?: boolean;
   isInvalid?: boolean;
   minuteInterval?: number;
+  ariaLabel?: string;
 };
 
 export const Timepicker = ({
@@ -30,6 +31,7 @@ export const Timepicker = ({
   isDisabled: isDisabledExternally = false,
   isInvalid: isInvalidExternally = false,
   minuteInterval = 30,
+  ariaLabel,
 }: TimepickerProps) => {
   // Get state from form control context
   const formControlContext = useFormControlContext();
@@ -74,16 +76,12 @@ export const Timepicker = ({
   };
 
   // Focus styles for the input
-  const focusStyles = isFocused
-    ? {
-        borderColor: "blue.500",
-        boxShadow: `0 0 0 1px ${theme.colors.blue[500]}`,
-        _hover: { borderColor: isInvalid ?? "blue.500" },
-      }
-    : {};
+  const focusStyles = getFocusStyles(isFocused, isInvalid, variant);
+
   return (
     <Input
       as="div"
+      aria-label={ariaLabel || "timepicker"}
       display="flex"
       variant={variant}
       size={size}
@@ -125,3 +123,34 @@ export const Timepicker = ({
 
 export const getCurrentTime = () => parseTime(new Date().toTimeString().split(" ")[0]);
 export const getTimestampFromTime = (time: CalendarDateTime | null) => `${time?.hour ?? 0}:${time?.minute ?? 0}`;
+
+const getFocusStyles = (
+  isFocused: boolean,
+  isInvalid: boolean,
+  variant: "outline" | "filled" | "flushed" | "unstyled",
+) => {
+  if (isFocused) {
+    // Check the variant and apply corresponding styles
+    switch (variant) {
+      case "outline":
+        return {
+          borderColor: "blue.500",
+          boxShadow: `0 0 0 1px ${theme.colors.blue[500]}`,
+          _hover: { borderColor: isInvalid ?? "blue.500" },
+        };
+      case "flushed":
+        return {
+          borderColor: "blue.500",
+          boxShadow: `0 1px 0 0 ${theme.colors.blue[500]}`,
+          _hover: { borderColor: isInvalid ?? "blue.500" },
+        };
+      default:
+        return {
+          borderColor: "blue.500",
+          _hover: { borderColor: isInvalid ?? "blue.500" },
+        };
+    }
+  } else {
+    return {}; // Return an empty object when not focused
+  }
+};
