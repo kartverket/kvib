@@ -88,7 +88,8 @@ const meta: Meta<typeof KvibDatepicker> = {
     },
 
     showDropdownMonthYear: {
-      description: "Whether or not to show dropdowns for month and year selection.",
+      description:
+        "Whether or not to show dropdowns for month and year selection. `fromDate` and `toDate` must be set.",
       table: {
         type: { summary: "boolean" },
       },

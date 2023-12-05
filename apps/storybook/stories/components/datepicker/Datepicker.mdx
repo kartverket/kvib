@@ -60,8 +60,8 @@ import { Datepicker } from "@kvib/react";
   title="Datepicker i form"
   description={
     <Text>
-      Ved å benytte seg av Datepicker sammen med <Code>Form Control</Code> vil du få kontekst som <Code>isInvalid</Code>,
-      <Code>isDisabled</Code> og
+      Ved å benytte seg av Datepicker sammen med <Code>Form Control</Code> vil du få kontekst som <Code>isInvalid</Code>
+      ,<Code>isDisabled</Code> og
       <Code>isRequired</Code>. Slik vil det også være enkelt å legge til en label.
     </Text>
   }
@@ -90,6 +90,10 @@ import { Datepicker } from "@kvib/react";
 Datepicker gjør det enkelt for brukere å navigere gjennom datoer innenfor en bestemt tidsperiode. Imidlertid kan det oppstå utfordringer når den skal dekke lengre tidsrom. For eksempel, når brukeren skal velge et år som ligger langt frem eller tilbake i tid, kan det bli nødvendig å bla gjennom en lang liste med 50 eller flere alternativer i en nedtrekksmeny.
 
 Datovelgere er komplekse komponenter, og i noen tilfeller kan det være mer brukervennlig å la brukeren skrive inn datoen manuelt i en vanlig input. [Forskning utført av Gov.uk](https://design-system.service.gov.uk/patterns/dates/) viser at det kan være en fordel å tilby et enkelt tekstfelt fremfor en interaktiv datovelger.
+
+### Label
+
+Datepicker skal alltid ha en label. Dersom Datepicker av en eller annen grunn ikke har label må en `aria-label` legges til for å tilfredsstille tilgjengelighetskrav.
 
 ### Native datepicker på mobil
 
