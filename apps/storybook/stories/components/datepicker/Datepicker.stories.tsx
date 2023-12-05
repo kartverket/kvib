@@ -193,8 +193,8 @@ export const DatepickerAppearance: DatepickerStory = {
     <Stack gap="1rem" h="30rem">
       <KvibDatepicker aria-label="Datepicker" variant="outline" {...args} />
       <KvibDatepicker aria-label="Datepicker" variant="filled" {...args} />
-      <KvibDatepicker aria-label="Datepicker" variant="flushed" {...args} />
-      <KvibDatepicker aria-label="Datepicker" variant="unstyled" {...args} />
+      <KvibDatepicker aria-label="Datepicker" colorScheme="blue" variant="flushed" {...args} />
+      <KvibDatepicker aria-label="Datepicker" colorScheme="blue" variant="unstyled" {...args} />
     </Stack>
   ),
 };
