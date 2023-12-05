@@ -1,4 +1,4 @@
-import { Box, FormControl, FormLabel } from "@kvib/react/src";
+import { Box, FormControl, FormLabel, Stack } from "@kvib/react/src";
 import { Datepicker as KvibDatepicker } from "@kvib/react/src/datepicker";
 import { Meta, StoryObj } from "@storybook/react";
 
@@ -33,11 +33,11 @@ const meta: Meta<typeof KvibDatepicker> = {
       options: ["outline", "filled", "flushed", "unstyled"],
       control: { type: "radio" },
     },
-
     isRequired: {
       description: "Toggles if input should be required",
       table: {
         type: { summary: "boolean" },
+        defaultValue: { summary: false },
       },
       control: "boolean",
     },
@@ -45,6 +45,7 @@ const meta: Meta<typeof KvibDatepicker> = {
       description: "Toggles if input should be invalid",
       table: {
         type: { summary: "boolean" },
+        defaultValue: { summary: false },
       },
       control: "boolean",
     },
@@ -52,6 +53,7 @@ const meta: Meta<typeof KvibDatepicker> = {
       description: "Toggles if input should be disabled",
       table: {
         type: { summary: "boolean" },
+        defaultValue: { summary: false },
       },
       control: "boolean",
     },
@@ -186,11 +188,14 @@ export const DatepickerDetails: DatepickerStory = {
 };
 
 export const DatepickerAppearance: DatepickerStory = {
-  args: { variant: "flushed", size: "lg" },
+  args: {},
   render: (args) => (
-    <Box h="25rem">
-      <KvibDatepicker aria-label="Datepicker" {...args} />
-    </Box>
+    <Stack gap="1rem" h="30rem">
+      <KvibDatepicker aria-label="Datepicker" variant="outline" {...args} />
+      <KvibDatepicker aria-label="Datepicker" variant="filled" {...args} />
+      <KvibDatepicker aria-label="Datepicker" variant="flushed" {...args} />
+      <KvibDatepicker aria-label="Datepicker" variant="unstyled" {...args} />
+    </Stack>
   ),
 };
 

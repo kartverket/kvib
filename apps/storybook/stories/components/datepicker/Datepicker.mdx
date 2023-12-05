@@ -71,11 +71,18 @@ import { Datepicker } from "@kvib/react";
 <DocsStory
   title="Utseende"
   description={
-    <Text>
-      Datepicker har fire forskjellige varianter for inputfeltet. Disse er outline, filled, flushed og unstyled. I de
-      fleste tilfeller vil outline være passende. Det er fire forskjellige størrelser fra xs til lg. Her vil md passe i
-      de fleste tilfeller.
-    </Text>
+    <Box>
+      <Text>
+        Datepicker har fire forskjellige varianter for inputfeltet. Disse er <Code>"outline"</Code>,{" "}
+        <Code>"filled"</Code>, <Code>"flushed"</Code> og
+        <Code>"unstyled"</Code>. I de fleste tilfeller vil <Code>outline</Code> være passende. Det er fire forskjellige størrelser
+        fra <Code>"xs"</Code> til
+        <Code>"lg"</Code>. Her vil md passe i de fleste tilfeller.
+      </Text>
+      <Text>
+        Det er mulig å velge mellom to colorSchemes: <Code>"blue"</Code> og <Code>"green"</Code>
+      </Text>
+    </Box>
   }
   story={<Canvas of={DatepickerStories.DatepickerAppearance} />}
 />

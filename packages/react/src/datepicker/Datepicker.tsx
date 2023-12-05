@@ -9,12 +9,11 @@ import {
   PopoverTrigger,
   PopoverAnchor,
   theme,
+  IconButton,
 } from "@kvib/react/src";
 import { forwardRef, useFormControlContext } from "@chakra-ui/react";
 import { DayPicker, useInput } from "react-day-picker";
 import "react-day-picker/dist/style.css";
-
-import { Icon } from "@kvib/react/src/icon";
 import nb from "date-fns/locale/nb/index.js";
 import { ChangeEvent, useEffect } from "react";
 import { isValid } from "date-fns";
@@ -75,10 +74,24 @@ type DatepickerProps = KVInputProps & {
    */
   onChange?: (date: Date | undefined) => void;
 
+  /**
+   * Whether or not the input is disabled.
+   */
   isDisabled?: boolean;
 
+  /**
+   * Whether or not the input is invalid.
+   */
   isInvalid?: boolean;
 
+  /**
+   * Whether or not the input is required.
+   */
+  isRequired?: boolean;
+
+  /**
+   * The colorScheme for the Datepicker.
+   */
   colorScheme?: "blue" | "green";
 };
 
@@ -137,7 +150,9 @@ const CustomDatepicker = forwardRef<DatepickerPropsWithoutStandard, "input">(
     },
     ref,
   ) => {
-    const style = css(colorScheme);
+    // Style for the day picker
+    const uniqueClassName = generateUniqueClassName("kvib-datepicker");
+    const style = css(uniqueClassName, colorScheme);
 
     // Get state from form control context
     const formControlContext = useFormControlContext();
@@ -150,6 +165,7 @@ const CustomDatepicker = forwardRef<DatepickerPropsWithoutStandard, "input">(
     const isInvalid = isInvalidExternally || isInvalidFromForm;
     const isRequired = isRequiredExternally || isRequiredFromForm;
 
+    // State for the day picker
     const [isPickerVisible, setPickerVisible] = useBoolean(false);
     const { inputProps, dayPickerProps } = useInput({
       defaultSelected,
@@ -182,28 +198,25 @@ const CustomDatepicker = forwardRef<DatepickerPropsWithoutStandard, "input">(
               className="custom-datepicker"
               isDisabled={isDisabled}
               isInvalid={isInvalid}
+              isRequired={isRequired}
               {...KVInputProps}
               {...inputProps}
             />
           </PopoverAnchor>
           <InputRightElement opacity={isDisabled ? 0.5 : 1} pointerEvents={isDisabled ? "none" : "auto"} height="100%">
             <PopoverTrigger>
-              <button
-                style={{
-                  height: "90%",
-                  width: "100%",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
+              <IconButton
+                icon="calendar_today"
+                colorScheme={colorScheme as "blue" | "green"}
+                size={KVInputProps.size}
+                aria-label="open datepicker"
                 onClick={setPickerVisible.toggle}
-              >
-                <Icon icon="calendar_today" size={KVInputProps.size === "xs" || KVInputProps.size === "sm" ? 20 : 24} />
-              </button>
+                variant="tertiary"
+              />
             </PopoverTrigger>
           </InputRightElement>
         </InputGroup>
-        <PopoverContent width="auto">
+        <PopoverContent width="auto" padding="1rem">
           <style>{style}</style>
           <DayPicker
             captionLayout={showDropdownMonthYear ? "dropdown-buttons" : undefined}
@@ -212,6 +225,7 @@ const CustomDatepicker = forwardRef<DatepickerPropsWithoutStandard, "input">(
             showOutsideDays={showOutsideDays}
             showWeekNumber={showWeekNumber}
             disabled={disabledDays}
+            classNames={{ root: uniqueClassName }}
             {...dayPickerProps}
           />
         </PopoverContent>
@@ -220,6 +234,7 @@ const CustomDatepicker = forwardRef<DatepickerPropsWithoutStandard, "input">(
   },
 );
 
+// Function to extract the props that are used by the KVInput (native) component
 function extractKVProps(props: DatepickerProps): KVInputProps {
   const {
     defaultSelected,
@@ -239,6 +254,7 @@ function extractKVProps(props: DatepickerProps): KVInputProps {
 
 type ValidDateInput = number | Date | string;
 
+// Function to format a date to the format used by the datepicker
 function formatDate(date: ValidDateInput): string {
   let dateObject: Date;
 
@@ -261,6 +277,7 @@ function formatDate(date: ValidDateInput): string {
   return `${y}-${m}-${d}`;
 }
 
+// Function to get the common input props the native and custom datepicker
 const getCommonInputProps = (props: DatepickerProps) => {
   const min = props.fromDate ? formatDate(props.fromDate) : undefined;
   const max = props.toDate ? formatDate(props.toDate) : undefined;
@@ -271,9 +288,10 @@ const getCommonInputProps = (props: DatepickerProps) => {
   };
 };
 
-const css = (colorScheme: "blue" | "green") => {
+// Function to generate the css for the day picker
+const css = (className: string, colorScheme: "blue" | "green") => {
   return `
- .rdp {
+ .${className} {
   --rdp-cell-size: 40px; /* Size of the day cells. */
   --rdp-caption-font-size: 18px; /* Font size for the caption labels. */
   --rdp-accent-color: ${theme.colors[colorScheme][500]}; /* Accent color for the background of selected days. */
@@ -281,6 +299,11 @@ const css = (colorScheme: "blue" | "green") => {
   --rdp-outline: 2px solid var(--rdp-accent-color); /* Outline border for focused elements */
   --rdp-selected-color: #fff; /* Color of selected day text */
 }
-
 `;
+};
+
+// Function to generate a unique class name
+const generateUniqueClassName = (baseName: string) => {
+  const uniquePart = Math.random().toString(36).substring(2, 7); // Generates a random string
+  return `${baseName}-${uniquePart}`;
 };
