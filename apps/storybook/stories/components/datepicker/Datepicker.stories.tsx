@@ -203,7 +203,7 @@ export const DatepickerForm: DatepickerStory = {
   args: {},
   render: (args) => (
     <Box h="25rem">
-      <FormControl>
+      <FormControl isRequired>
         <FormLabel>Velg dato</FormLabel>
         <KvibDatepicker aria-label="Datepicker" {...args} />
       </FormControl>

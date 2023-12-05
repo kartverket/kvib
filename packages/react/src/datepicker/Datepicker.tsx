@@ -128,6 +128,7 @@ const CustomDatepicker = forwardRef<DatepickerPropsWithoutStandard, "input">(
       disabledDays,
       isDisabled: isDisabledExternally = false,
       isInvalid: isInvalidExternally = false,
+      isRequired: isRequiredExternally = false,
       ...KVInputProps
     },
     ref,
@@ -136,10 +137,12 @@ const CustomDatepicker = forwardRef<DatepickerPropsWithoutStandard, "input">(
     const formControlContext = useFormControlContext();
     const isDisabledFromForm = formControlContext?.isDisabled || false;
     const isInvalidFromForm = formControlContext?.isInvalid || false;
+    const isRequiredFromForm = formControlContext?.isRequired || false;
 
-    // Determine the effective isDisabled and isInvalid states
+    // Determine the effective isDisabled, isInvalid and isRequired states
     const isDisabled = isDisabledExternally || isDisabledFromForm;
     const isInvalid = isInvalidExternally || isInvalidFromForm;
+    const isRequired = isRequiredExternally || isRequiredFromForm;
 
     const [isPickerVisible, setPickerVisible] = useBoolean(false);
     const { inputProps, dayPickerProps } = useInput({
@@ -148,6 +151,7 @@ const CustomDatepicker = forwardRef<DatepickerPropsWithoutStandard, "input">(
       locale: nb,
       fromDate,
       toDate,
+      required: isRequired,
     });
 
     useEffect(() => {
