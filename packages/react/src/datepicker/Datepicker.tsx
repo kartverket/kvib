@@ -8,11 +8,12 @@ import {
   InputRightElement,
   PopoverTrigger,
   PopoverAnchor,
+  theme,
 } from "@kvib/react/src";
 import { forwardRef, useFormControlContext } from "@chakra-ui/react";
 import { DayPicker, useInput } from "react-day-picker";
 import "react-day-picker/dist/style.css";
-import "./Datepicker.css";
+
 import { Icon } from "@kvib/react/src/icon";
 import nb from "date-fns/locale/nb/index.js";
 import { ChangeEvent, useEffect } from "react";
@@ -77,6 +78,8 @@ type DatepickerProps = KVInputProps & {
   isDisabled?: boolean;
 
   isInvalid?: boolean;
+
+  colorScheme?: "blue" | "green";
 };
 
 type ExcludedProps = "max" | "min" | "defaultValue";
@@ -129,10 +132,13 @@ const CustomDatepicker = forwardRef<DatepickerPropsWithoutStandard, "input">(
       isDisabled: isDisabledExternally = false,
       isInvalid: isInvalidExternally = false,
       isRequired: isRequiredExternally = false,
+      colorScheme = "green",
       ...KVInputProps
     },
     ref,
   ) => {
+    const style = css(colorScheme);
+
     // Get state from form control context
     const formControlContext = useFormControlContext();
     const isDisabledFromForm = formControlContext?.isDisabled || false;
@@ -198,6 +204,7 @@ const CustomDatepicker = forwardRef<DatepickerPropsWithoutStandard, "input">(
           </InputRightElement>
         </InputGroup>
         <PopoverContent width="auto">
+          <style>{style}</style>
           <DayPicker
             captionLayout={showDropdownMonthYear ? "dropdown-buttons" : undefined}
             disableNavigation={disableNavigation}
@@ -262,4 +269,18 @@ const getCommonInputProps = (props: DatepickerProps) => {
     min,
     max,
   };
+};
+
+const css = (colorScheme: "blue" | "green") => {
+  return `
+ .rdp {
+  --rdp-cell-size: 40px; /* Size of the day cells. */
+  --rdp-caption-font-size: 18px; /* Font size for the caption labels. */
+  --rdp-accent-color: ${theme.colors[colorScheme][500]}; /* Accent color for the background of selected days. */
+  --rdp-background-color: ${theme.colors[colorScheme][50]}; /* Background color for the hovered/focused elements. */
+  --rdp-outline: 2px solid var(--rdp-accent-color); /* Outline border for focused elements */
+  --rdp-selected-color: #fff; /* Color of selected day text */
+}
+
+`;
 };

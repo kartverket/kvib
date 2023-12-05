@@ -142,6 +142,15 @@ const meta: Meta<typeof KvibDatepicker> = {
       },
       control: "function",
     },
+    colorScheme: {
+      description: "Color scheme",
+      table: {
+        type: { summary: "blue | green" },
+        defaultValue: { summary: "blue" },
+      },
+      options: ["blue", "green"],
+      control: { type: "radio" },
+    },
   },
 };
 
