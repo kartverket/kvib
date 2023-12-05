@@ -97,7 +97,7 @@ type DatepickerProps = KVInputProps & {
 
 type ExcludedProps = "max" | "min" | "defaultValue";
 
-type DatepickerPropsWithoutStandard = Omit<DatepickerProps, ExcludedProps>;
+export type DatepickerPropsWithoutStandard = Omit<DatepickerProps, ExcludedProps>;
 
 export const Datepicker = forwardRef<DatepickerPropsWithoutStandard, "input">(
   ({ onChange, useNative = true, ...props }, ref) => {
