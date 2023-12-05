@@ -9,7 +9,7 @@ import {
   PopoverTrigger,
   PopoverAnchor,
 } from "@kvib/react/src";
-import { forwardRef } from "@chakra-ui/react";
+import { forwardRef, useFormControlContext } from "@chakra-ui/react";
 import { DayPicker, useInput } from "react-day-picker";
 import "react-day-picker/dist/style.css";
 import "./Datepicker.css";
@@ -73,6 +73,10 @@ type DatepickerProps = KVInputProps & {
    * Sideeffect to be run when a date is selected.
    */
   onChange?: (date: Date | undefined) => void;
+
+  isDisabled?: boolean;
+
+  isInvalid?: boolean;
 };
 
 type ExcludedProps = "max" | "min" | "defaultValue";
@@ -122,10 +126,21 @@ const CustomDatepicker = forwardRef<DatepickerPropsWithoutStandard, "input">(
       showOutsideDays,
       showWeekNumber,
       disabledDays,
+      isDisabled: isDisabledExternally = false,
+      isInvalid: isInvalidExternally = false,
       ...KVInputProps
     },
     ref,
   ) => {
+    // Get state from form control context
+    const formControlContext = useFormControlContext();
+    const isDisabledFromForm = formControlContext?.isDisabled || false;
+    const isInvalidFromForm = formControlContext?.isInvalid || false;
+
+    // Determine the effective isDisabled and isInvalid states
+    const isDisabled = isDisabledExternally || isDisabledFromForm;
+    const isInvalid = isInvalidExternally || isInvalidFromForm;
+
     const [isPickerVisible, setPickerVisible] = useBoolean(false);
     const { inputProps, dayPickerProps } = useInput({
       defaultSelected,
@@ -152,9 +167,16 @@ const CustomDatepicker = forwardRef<DatepickerPropsWithoutStandard, "input">(
       >
         <InputGroup>
           <PopoverAnchor>
-            <KVInput ref={ref} className="custom-datepicker" {...KVInputProps} {...inputProps} />
+            <KVInput
+              ref={ref}
+              className="custom-datepicker"
+              isDisabled={isDisabled}
+              isInvalid={isInvalid}
+              {...KVInputProps}
+              {...inputProps}
+            />
           </PopoverAnchor>
-          <InputRightElement height="100%">
+          <InputRightElement opacity={isDisabled ? 0.5 : 1} pointerEvents={isDisabled ? "none" : "auto"} height="100%">
             <PopoverTrigger>
               <button
                 style={{

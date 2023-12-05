@@ -56,17 +56,30 @@ import { Datepicker } from "@kvib/react";
 
 />
 
-  <DocsStory
-    title="Utseende"
-    description={
-      <Text>
-        Datepicker har fire forskjellige varianter for inputfeltet. Disse er outline, filled, flushed og unstyled. I de
-        fleste tilfeller vil outline være passende. Det er fire forskjellige størrelser fra xs til lg. Her vil md passe
-        i de fleste tilfeller.
-      </Text>
-    }
-    story={<Canvas of={DatepickerStories.DatepickerAppearance} />}
-  />
+<DocsStory
+  title="Datepicker i form"
+  description={
+    <Text>
+      Ved å benytte seg av Datepicker sammen med <Code>Form Control</Code> vil du få kontekst som <Code>isInvalid</Code>,
+      <Code>isDisabled</Code> og
+      <Code>isRequired</Code>. Slik vil det også være enkelt å legge til en label.
+    </Text>
+  }
+  story={<Canvas of={DatepickerStories.DatepickerForm} />}
+/>
+
+<DocsStory
+  title="Utseende"
+  description={
+    <Text>
+      Datepicker har fire forskjellige varianter for inputfeltet. Disse er outline, filled, flushed og unstyled. I de
+      fleste tilfeller vil outline være passende. Det er fire forskjellige størrelser fra xs til lg. Her vil md passe i
+      de fleste tilfeller.
+    </Text>
+  }
+  story={<Canvas of={DatepickerStories.DatepickerAppearance} />}
+/>
+
 </DocsContainer>
 
 <DocsHeading>Retningslinjer</DocsHeading>

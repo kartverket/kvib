@@ -1,4 +1,4 @@
-import { Box } from "@kvib/react/src";
+import { Box, FormControl, FormLabel } from "@kvib/react/src";
 import { Datepicker as KvibDatepicker } from "@kvib/react/src/datepicker";
 import { Meta, StoryObj } from "@storybook/react";
 
@@ -195,6 +195,18 @@ export const DatepickerArea: DatepickerStory = {
   render: (args) => (
     <Box h="23rem">
       <KvibDatepicker aria-label="Datepicker example" {...args} />
+    </Box>
+  ),
+};
+
+export const DatepickerForm: DatepickerStory = {
+  args: {},
+  render: (args) => (
+    <Box h="25rem">
+      <FormControl>
+        <FormLabel>Velg dato</FormLabel>
+        <KvibDatepicker aria-label="Datepicker" {...args} />
+      </FormControl>
     </Box>
   ),
 };
