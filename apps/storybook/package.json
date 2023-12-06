@@ -39,7 +39,8 @@
   "dependencies": {
     "@fontsource-variable/mulish": "^5.0.16",
     "@storybook/addon-a11y": "^7.6.3",
-    "@storybook/addon-storysource": "^7.6.3"
+    "@storybook/addon-storysource": "^7.6.3",
+    "@storybook/source-loader": "^7.6.3"
   },
   "lint-staged": {
     "*.{ts,tsx,md}": "prettier --write"
