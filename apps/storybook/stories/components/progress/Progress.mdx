@@ -1,5 +1,6 @@
 import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
 import * as ProgressStories from "./Progress.stories";
+import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory } from "../../templates";
 
 <Meta of={ProgressStories} />
 
@@ -7,33 +8,22 @@ import * as ProgressStories from "./Progress.stories";
 
 Progress brukes til å vise frem status på fremdrift for en oppgave som tar tid eller består av flere steg.
 
-## Ta i bruk
-
 ```jsx
 import { Progress } from "@kvib/react";
 ```
 
-## Props
+<DocsHeading>Alternativer</DocsHeading>
+
+<DocsContainer>
+
+    <DocsStory
+    title="Størrelse"
+    description="Det er mulig å velge mellom fire forskjellige størrelser: xs, sm, md og lg. md er standard."
+    />
+
+</DocsContainer>
+
+<DocsHeading>Props</DocsHeading>
 
 <Canvas of={ProgressStories.Progress} />
 <Controls of={ProgressStories.Progress} />
-
-## Progress med striper
-
-<Canvas of={ProgressStories.ProgressStripe} />
-
-## Progress med animerte striper
-
-<Canvas of={ProgressStories.ProgressStripeAnimated} />
-
-## Størrelser
-
-<Canvas of={ProgressStories.ProgressSizes} />
-
-## Farger
-
-<Canvas of={ProgressStories.ProgressColors} />
-
-## Animert
-
-<Canvas of={ProgressStories.ProgressAnimated} />
