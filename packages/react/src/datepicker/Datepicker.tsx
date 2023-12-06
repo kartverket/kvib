@@ -18,7 +18,7 @@ import nb from "date-fns/locale/nb/index.js";
 import { ChangeEvent, useEffect } from "react";
 import { isValid } from "date-fns";
 
-type DatepickerProps = KVInputProps & {
+type DatepickerBaseProps = KVInputProps & {
   /**
    * A default date to be selected when the picker is displayed.
    */
@@ -97,39 +97,38 @@ type DatepickerProps = KVInputProps & {
 
 type ExcludedProps = "max" | "min" | "defaultValue";
 
-export type DatepickerPropsWithoutStandard = Omit<DatepickerProps, ExcludedProps>;
+export type DatepickerProps = Omit<DatepickerBaseProps, ExcludedProps>;
 
-export const Datepicker = forwardRef<DatepickerPropsWithoutStandard, "input">(
-  ({ onChange, useNative = true, ...props }, ref) => {
-    const KVInputProps = extractKVProps(props);
-    const commonProps = getCommonInputProps(props);
-    const defaultValue = props.defaultSelected ? formatDate(props.defaultSelected) : undefined;
-    const isClient = typeof window === "object";
-    const isMobile = isClient ? window.innerWidth < 480 : false;
+export const Datepicker = forwardRef<DatepickerProps, "input">(({ onChange, useNative = true, ...props }, ref) => {
+  const KVInputProps = extractKVProps(props);
+  const commonProps = getCommonInputProps(props);
+  const defaultValue = props.defaultSelected ? formatDate(props.defaultSelected) : undefined;
+  const isClient = typeof window === "object";
+  const isMobile = isClient ? window.innerWidth < 480 : false;
 
-    const handleNativeChange = (event: ChangeEvent<HTMLInputElement>) => {
-      const date = new Date(event.target.value);
-      if (isValid(date)) {
-        onChange?.(date);
-      }
-    };
+  const handleNativeChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const date = new Date(event.target.value);
+    if (isValid(date)) {
+      onChange?.(date);
+    }
+  };
 
-    if (isMobile && useNative)
-      return (
-        <KVInput
-          type="date"
-          defaultValue={defaultValue}
-          {...KVInputProps}
-          {...commonProps}
-          onChange={handleNativeChange}
-        />
-      );
+  if (isMobile && useNative)
+    return (
+      <KVInput
+        ref={ref}
+        type="date"
+        defaultValue={defaultValue}
+        {...KVInputProps}
+        {...commonProps}
+        onChange={handleNativeChange}
+      />
+    );
 
-    return <CustomDatepicker {...props} ref={ref} {...commonProps} onChange={onChange} />;
-  },
-);
+  return <CustomDatepicker {...props} ref={ref} {...commonProps} onChange={onChange} />;
+});
 
-const CustomDatepicker = forwardRef<DatepickerPropsWithoutStandard, "input">(
+const CustomDatepicker = forwardRef<DatepickerProps, "input">(
   (
     {
       onChange,
@@ -235,7 +234,7 @@ const CustomDatepicker = forwardRef<DatepickerPropsWithoutStandard, "input">(
 );
 
 // Function to extract the props that are used by the KVInput (native) component
-function extractKVProps(props: DatepickerProps): KVInputProps {
+function extractKVProps(props: DatepickerBaseProps): KVInputProps {
   const {
     defaultSelected,
     defaultMonth,
@@ -278,7 +277,7 @@ function formatDate(date: ValidDateInput): string {
 }
 
 // Function to get the common input props the native and custom datepicker
-const getCommonInputProps = (props: DatepickerProps) => {
+const getCommonInputProps = (props: DatepickerBaseProps) => {
   const min = props.fromDate ? formatDate(props.fromDate) : undefined;
   const max = props.toDate ? formatDate(props.toDate) : undefined;
 
