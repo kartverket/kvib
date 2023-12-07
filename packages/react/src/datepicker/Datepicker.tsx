@@ -1,6 +1,6 @@
 import {
   Input as KVInput,
-  InputProps as KVInputProps,
+  InputProps,
   Popover,
   useBoolean,
   PopoverContent,
@@ -18,7 +18,7 @@ import nb from "date-fns/locale/nb/index.js";
 import { ChangeEvent, useEffect } from "react";
 import { isValid } from "date-fns";
 
-export type DatepickerProps = Omit<KVInputProps, "colorScheme" | "max" | "min" | "defaultValue"> & {
+export type DatepickerProps = Omit<InputProps, "colorScheme" | "max" | "min" | "defaultValue"> & {
   /**
    * A default date to be selected when the picker is displayed.
    */
@@ -230,7 +230,7 @@ const CustomDatepicker = forwardRef<DatepickerProps, "input">(
 );
 
 // Function to extract the props that are used by the KVInput (native) component
-function extractKVProps(props: DatepickerProps): KVInputProps {
+function extractKVProps(props: DatepickerProps): InputProps {
   const {
     defaultSelected,
     defaultMonth,
