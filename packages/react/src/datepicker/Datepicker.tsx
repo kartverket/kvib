@@ -18,7 +18,7 @@ import nb from "date-fns/locale/nb/index.js";
 import { ChangeEvent, useEffect } from "react";
 import { isValid } from "date-fns";
 
-type DatepickerBaseProps = KVInputProps & {
+export type DatepickerProps = Omit<KVInputProps, "colorScheme" | "max" | "min" | "defaultValue"> & {
   /**
    * A default date to be selected when the picker is displayed.
    */
@@ -95,10 +95,6 @@ type DatepickerBaseProps = KVInputProps & {
   colorScheme?: "blue" | "green";
 };
 
-type ExcludedProps = "max" | "min" | "defaultValue";
-
-export type DatepickerProps = Omit<DatepickerBaseProps, ExcludedProps>;
-
 export const Datepicker = forwardRef<DatepickerProps, "input">(({ onChange, useNative = true, ...props }, ref) => {
   const KVInputProps = extractKVProps(props);
   const commonProps = getCommonInputProps(props);
@@ -125,7 +121,7 @@ export const Datepicker = forwardRef<DatepickerProps, "input">(({ onChange, useN
       />
     );
 
-  return <CustomDatepicker {...props} ref={ref} {...commonProps} onChange={onChange} />;
+  return <CustomDatepicker {...props} {...commonProps} onChange={onChange} />;
 });
 
 const CustomDatepicker = forwardRef<DatepickerProps, "input">(
@@ -234,7 +230,7 @@ const CustomDatepicker = forwardRef<DatepickerProps, "input">(
 );
 
 // Function to extract the props that are used by the KVInput (native) component
-function extractKVProps(props: DatepickerBaseProps): KVInputProps {
+function extractKVProps(props: DatepickerProps): KVInputProps {
   const {
     defaultSelected,
     defaultMonth,
@@ -277,7 +273,7 @@ function formatDate(date: ValidDateInput): string {
 }
 
 // Function to get the common input props the native and custom datepicker
-const getCommonInputProps = (props: DatepickerBaseProps) => {
+const getCommonInputProps = (props: DatepickerProps) => {
   const min = props.fromDate ? formatDate(props.fromDate) : undefined;
   const max = props.toDate ? formatDate(props.toDate) : undefined;
 
