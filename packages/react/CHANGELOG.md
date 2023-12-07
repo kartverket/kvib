@@ -1,5 +1,15 @@
 # @kvib/react
 
+## 3.2.0
+
+### Minor Changes
+
+- 6515b4c: Legger til Timepicker.
+
+### Patch Changes
+
+- 0b341a4: Legger til autofill av props i Datepicker.
+
 ## 3.1.0
 
 ### Minor Changes
