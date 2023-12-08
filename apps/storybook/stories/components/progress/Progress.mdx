@@ -1,6 +1,7 @@
 import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
 import * as ProgressStories from "./Progress.stories";
 import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory } from "../../templates";
+import { Text, Code } from "@kvib/react/src"
 
 <Meta of={ProgressStories} />
 
@@ -17,8 +18,17 @@ import { Progress } from "@kvib/react";
 <DocsContainer>
 
     <DocsStory
+        title="Utseende"
+        description={
+            <Text>Progress har fem farger: <Code>gray</Code><Code>red</Code><Code>green</Code><Code>blue</Code></Text>
+        }
+        story={<Canvas of={ProgressStories.ProgressSizes}/>}
+    />
+
+    <DocsStory
     title="Størrelse"
     description="Det er mulig å velge mellom fire forskjellige størrelser: xs, sm, md og lg. md er standard."
+    story={<Canvas of={ProgressStories.ProgressSizes}/>}
     />
 
 </DocsContainer>

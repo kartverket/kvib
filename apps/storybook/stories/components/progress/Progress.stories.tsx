@@ -7,7 +7,7 @@ const meta: Meta<typeof KvibProgress> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "shown" },
+      canvas: { sourceState: "hidden" },
     },
   },
   argTypes: {
@@ -15,7 +15,7 @@ const meta: Meta<typeof KvibProgress> = {
       description: "The visual color appearance of the component",
       table: {
         type: {
-          summary: '"gray" | "red" | "green" | "blue"',
+          summary: '"gray" | "red" | "green" | "blue" | "yellow"',
         },
         defaultValue: { summary: "blue" },
       },
@@ -130,6 +130,7 @@ export const ProgressColors: Story = {
       <KvibProgress {...args} colorScheme="blue" aria-label="progress bar blue" />
       <KvibProgress {...args} colorScheme="red" aria-label="progress bar red" />
       <KvibProgress {...args} colorScheme="gray" aria-label="progress bar gray" />
+      <KvibProgress {...args} colorScheme="yellow" aria-label="progress bar yellow" />
     </KvibStack>
   ),
 };
