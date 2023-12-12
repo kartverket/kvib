@@ -56,17 +56,37 @@ import { Datepicker } from "@kvib/react";
 
 />
 
-  <DocsStory
-    title="Utseende"
-    description={
+<DocsStory
+  title="Datepicker i form"
+  description={
+    <Text>
+      Ved å benytte seg av Datepicker sammen med <Code>Form Control</Code> vil du få kontekst som <Code>isInvalid</Code>
+      ,<Code>isDisabled</Code> og
+      <Code>isRequired</Code>. Slik vil det også være enkelt å legge til en label.
+    </Text>
+  }
+  story={<Canvas of={DatepickerStories.DatepickerForm} />}
+/>
+
+<DocsStory
+  title="Utseende"
+  description={
+    <Box>
       <Text>
-        Datepicker har fire forskjellige varianter for inputfeltet. Disse er outline, filled, flushed og unstyled. I de
-        fleste tilfeller vil outline være passende. Det er fire forskjellige størrelser fra xs til lg. Her vil md passe
-        i de fleste tilfeller.
+        Datepicker har fire forskjellige varianter for inputfeltet. Disse er <Code>"outline"</Code>,{" "}
+        <Code>"filled"</Code>, <Code>"flushed"</Code> og
+        <Code>"unstyled"</Code>. I de fleste tilfeller vil <Code>outline</Code> være passende. Det er fire forskjellige størrelser
+        fra <Code>"xs"</Code> til
+        <Code>"lg"</Code>. Her vil md passe i de fleste tilfeller.
       </Text>
-    }
-    story={<Canvas of={DatepickerStories.DatepickerAppearance} />}
-  />
+      <Text>
+        Det er mulig å velge mellom to colorSchemes: <Code>"blue"</Code> og <Code>"green"</Code>
+      </Text>
+    </Box>
+  }
+  story={<Canvas of={DatepickerStories.DatepickerAppearance} />}
+/>
+
 </DocsContainer>
 
 <DocsHeading>Retningslinjer</DocsHeading>
@@ -77,6 +97,10 @@ import { Datepicker } from "@kvib/react";
 Datepicker gjør det enkelt for brukere å navigere gjennom datoer innenfor en bestemt tidsperiode. Imidlertid kan det oppstå utfordringer når den skal dekke lengre tidsrom. For eksempel, når brukeren skal velge et år som ligger langt frem eller tilbake i tid, kan det bli nødvendig å bla gjennom en lang liste med 50 eller flere alternativer i en nedtrekksmeny.
 
 Datovelgere er komplekse komponenter, og i noen tilfeller kan det være mer brukervennlig å la brukeren skrive inn datoen manuelt i en vanlig input. [Forskning utført av Gov.uk](https://design-system.service.gov.uk/patterns/dates/) viser at det kan være en fordel å tilby et enkelt tekstfelt fremfor en interaktiv datovelger.
+
+### Label
+
+Datepicker skal alltid ha en label. Dersom Datepicker av en eller annen grunn ikke har label må en `aria-label` legges til for å tilfredsstille tilgjengelighetskrav.
 
 ### Native datepicker på mobil
 

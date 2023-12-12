@@ -1,4 +1,4 @@
-import { Box } from "@kvib/react/src";
+import { Box, FormControl, FormLabel, Stack } from "@kvib/react/src";
 import { Datepicker as KvibDatepicker } from "@kvib/react/src/datepicker";
 import { Meta, StoryObj } from "@storybook/react";
 
@@ -33,11 +33,11 @@ const meta: Meta<typeof KvibDatepicker> = {
       options: ["outline", "filled", "flushed", "unstyled"],
       control: { type: "radio" },
     },
-
     isRequired: {
       description: "Toggles if input should be required",
       table: {
         type: { summary: "boolean" },
+        defaultValue: { summary: false },
       },
       control: "boolean",
     },
@@ -45,6 +45,7 @@ const meta: Meta<typeof KvibDatepicker> = {
       description: "Toggles if input should be invalid",
       table: {
         type: { summary: "boolean" },
+        defaultValue: { summary: false },
       },
       control: "boolean",
     },
@@ -52,6 +53,7 @@ const meta: Meta<typeof KvibDatepicker> = {
       description: "Toggles if input should be disabled",
       table: {
         type: { summary: "boolean" },
+        defaultValue: { summary: false },
       },
       control: "boolean",
     },
@@ -88,7 +90,8 @@ const meta: Meta<typeof KvibDatepicker> = {
     },
 
     showDropdownMonthYear: {
-      description: "Whether or not to show dropdowns for month and year selection.",
+      description:
+        "Whether or not to show dropdowns for month and year selection. `fromDate` and `toDate` must be set.",
       table: {
         type: { summary: "boolean" },
       },
@@ -141,6 +144,15 @@ const meta: Meta<typeof KvibDatepicker> = {
       },
       control: "function",
     },
+    colorScheme: {
+      description: "Color scheme",
+      table: {
+        type: { summary: "blue | green" },
+        defaultValue: { summary: "blue" },
+      },
+      options: ["blue", "green"],
+      control: { type: "radio" },
+    },
   },
 };
 
@@ -176,11 +188,14 @@ export const DatepickerDetails: DatepickerStory = {
 };
 
 export const DatepickerAppearance: DatepickerStory = {
-  args: { variant: "flushed", size: "lg" },
+  args: {},
   render: (args) => (
-    <Box h="25rem">
-      <KvibDatepicker aria-label="Datepicker" {...args} />
-    </Box>
+    <Stack gap="1rem" h="30rem">
+      <KvibDatepicker aria-label="Datepicker" variant="outline" {...args} />
+      <KvibDatepicker aria-label="Datepicker" variant="filled" {...args} />
+      <KvibDatepicker aria-label="Datepicker" colorScheme="blue" variant="flushed" {...args} />
+      <KvibDatepicker aria-label="Datepicker" colorScheme="blue" variant="unstyled" {...args} />
+    </Stack>
   ),
 };
 
@@ -195,6 +210,18 @@ export const DatepickerArea: DatepickerStory = {
   render: (args) => (
     <Box h="23rem">
       <KvibDatepicker aria-label="Datepicker example" {...args} />
+    </Box>
+  ),
+};
+
+export const DatepickerForm: DatepickerStory = {
+  args: {},
+  render: (args) => (
+    <Box h="25rem">
+      <FormControl isRequired>
+        <FormLabel>Velg dato</FormLabel>
+        <KvibDatepicker aria-label="Datepicker" {...args} />
+      </FormControl>
     </Box>
   ),
 };

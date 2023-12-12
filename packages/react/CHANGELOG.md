@@ -1,5 +1,29 @@
 # @kvib/react
 
+## 3.2.0
+
+### Minor Changes
+
+- 6515b4c: Legger til Timepicker.
+
+### Patch Changes
+
+- 0b341a4: Legger til autofill av props i Datepicker.
+
+## 3.1.0
+
+### Minor Changes
+
+- dd3ce42: Forbedrer datepicker:
+
+  - Fikser opp i oppførsel med og uten form (isDisabled, isRequired, isInvalid).
+  - Lukker Datepicker etter valgt dato.
+  - Legger til colorscheme + bedre fargevalg.
+
+### Patch Changes
+
+- f806798: Bumping @types/react from 18.2.38 to 18.2.41
+
 ## 3.0.0
 
 ### Major Changes
