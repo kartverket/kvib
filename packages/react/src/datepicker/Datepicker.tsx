@@ -16,7 +16,7 @@ import { DayPicker, useInput } from "react-day-picker";
 import "react-day-picker/dist/style.css";
 import nb from "date-fns/locale/nb/index.js";
 import { ChangeEvent, useEffect } from "react";
-import { isValid } from "date-fns";
+import { isValid, parse } from "date-fns";
 
 export type DatepickerProps = Omit<InputProps, "colorScheme" | "max" | "min" | "defaultValue"> & {
   /**
@@ -72,7 +72,7 @@ export type DatepickerProps = Omit<InputProps, "colorScheme" | "max" | "min" | "
   /**
    * Sideeffect to be run when a date is selected.
    */
-  onChange?: (date: Date | undefined) => void;
+  onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
 
   /**
    * Whether or not the input is disabled.
@@ -102,13 +102,6 @@ export const Datepicker = forwardRef<DatepickerProps, "input">(({ onChange, useN
   const isClient = typeof window === "object";
   const isMobile = isClient ? window.innerWidth < 480 : false;
 
-  const handleNativeChange = (event: ChangeEvent<HTMLInputElement>) => {
-    const date = new Date(event.target.value);
-    if (isValid(date)) {
-      onChange?.(date);
-    }
-  };
-
   if (isMobile && useNative)
     return (
       <KVInput
@@ -117,7 +110,7 @@ export const Datepicker = forwardRef<DatepickerProps, "input">(({ onChange, useN
         defaultValue={defaultValue}
         {...KVInputProps}
         {...commonProps}
-        onChange={handleNativeChange}
+        onChange={onChange}
       />
     );
 
@@ -174,10 +167,30 @@ const CustomDatepicker = forwardRef<DatepickerProps, "input">(
     useEffect(() => {
       // Check if the selected date in the day picker has changed
       if (dayPickerProps.selected) {
-        onChange?.(dayPickerProps.selected);
+        // Call onChange to update the input value
+        effectiveOnChange({
+          target: {
+            value: formatDate(dayPickerProps.selected),
+          },
+          bubbles: true,
+          type: "change",
+          persist: () => {},
+          nativeEvent: {},
+        } as ChangeEvent<HTMLInputElement>);
+
         setPickerVisible.off();
       }
-    }, [dayPickerProps.selected, onChange]);
+    }, [dayPickerProps.selected, setPickerVisible]);
+
+    // Only call onChange if the input is a valid date
+    const effectiveOnChange = (event: ChangeEvent<HTMLInputElement>) => {
+      // Then, call the onChange from props if it the input is valid
+      const dateStr = event.target.value;
+      const parsedDate = parse(dateStr, "yyyy-MM-dd", new Date());
+      if (isValid(parsedDate)) {
+        onChange?.(event);
+      }
+    };
 
     return (
       <Popover
@@ -250,7 +263,7 @@ function extractKVProps(props: DatepickerProps): InputProps {
 type ValidDateInput = number | Date | string;
 
 // Function to format a date to the format used by the datepicker
-function formatDate(date: ValidDateInput): string {
+function formatDate(date: ValidDateInput, format?: "no" | "en"): string {
   let dateObject: Date;
 
   if (typeof date === "number") {
@@ -269,7 +282,7 @@ function formatDate(date: ValidDateInput): string {
   const y = dateObject.getFullYear().toString().padStart(4, "0");
   const m = (dateObject.getMonth() + 1).toString().padStart(2, "0");
   const d = dateObject.getDate().toString().padStart(2, "0");
-  return `${y}-${m}-${d}`;
+  return format === "no" ? `${d}.${m}.${y}` : `${y}-${m}-${d}`;
 }
 
 // Function to get the common input props the native and custom datepicker
