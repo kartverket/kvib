@@ -13,3 +13,5 @@ De som skal godkjenne pull requestene er:
 
 Har dere spørsmål relatert til kode på Designsystemet kan dere kontakte dem.  
 Har dere design spørsmål kan dere kontakte @Wanni eller @Erlend Stølan.
+
+Eller bare #gen-designsystem på slack😊
