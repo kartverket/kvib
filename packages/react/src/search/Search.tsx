@@ -34,6 +34,7 @@ export const Search = forwardRef<SearchProps, "input">(
       buttonWidth,
       buttonVariant = "tertiary",
       buttonText,
+      role = "search",
       ...props
     },
     ref,
@@ -81,6 +82,7 @@ export const Search = forwardRef<SearchProps, "input">(
           {...props}
           id={id}
           ref={ref}
+          role={role}
           size={size}
           variant={variant}
           isDisabled={isDisabled}
