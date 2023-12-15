@@ -125,3 +125,8 @@ input[type="range"]::-webkit-slider-thumb:active {
   max-height: 0;
   overflow: hidden;
 }
+
+/* Table of contents with no content */
+.toc-no-children {
+  display: none;
+}
