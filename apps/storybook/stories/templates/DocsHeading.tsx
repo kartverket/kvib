@@ -1,7 +1,7 @@
 import { Box, Heading } from "@kvib/react/src";
 
 type DocsHeadingProps = {
-  children: React.ReactNode;
+  children: string;
 };
 
 export const DocsHeading = ({ children }: DocsHeadingProps) => {
@@ -16,7 +16,7 @@ export const DocsHeading = ({ children }: DocsHeadingProps) => {
       marginBottom="2rem"
       marginTop="4rem"
     >
-      <Heading margin="0" color="white" size="sm" as="h3">
+      <Heading margin="0" color="white" size="sm" as="h2" id={children}>
         {children}
       </Heading>
     </Box>

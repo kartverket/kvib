@@ -62,7 +62,7 @@ export const Colors = () => {
     <Box marginBottom="40px">
       {Object.entries(colors).map(([name, colorScale]) => (
         <Box key={name} marginTop="20px">
-          <Heading size="md" as="h3">
+          <Heading size="md" as="h3" id={name}>
             {capitalizeFirstLetter(name)}
           </Heading>
           <Flex gap="8px" flexWrap="wrap">
