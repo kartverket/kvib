@@ -130,3 +130,9 @@ input[type="range"]::-webkit-slider-thumb:active {
 .toc-no-children {
   display: none;
 }
+
+/* Headings for sections in docs */
+.docs-heading h2 {
+  border: none;
+  padding: 0;
+}

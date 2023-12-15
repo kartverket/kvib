@@ -15,6 +15,7 @@ export const DocsHeading = ({ children }: DocsHeadingProps) => {
       display="flex"
       marginBottom="2rem"
       marginTop="4rem"
+      className="docs-heading"
     >
       <Heading margin="0" color="white" size="sm" as="h2" id={children}>
         {children}
