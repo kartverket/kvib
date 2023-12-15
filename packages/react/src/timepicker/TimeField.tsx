@@ -9,7 +9,7 @@ import { getTimestampFromTime } from "./Timepicker";
 type TimeFieldProps = AriaTimeFieldProps<Time> & {
   state: TimeFieldState;
   name?: string;
-  colorScheme: "green" | "blue";
+  colorScheme?: "green" | "blue";
 };
 /** A time field component.
  *
