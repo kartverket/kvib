@@ -115,3 +115,24 @@ input[type="range"]::-moz-range-thumb:active {
 input[type="range"]::-webkit-slider-thumb:active {
   background: #156630;
 }
+
+/* Table of contents */
+.is-collapsible {
+  max-height: 1000px;
+  transition: all 300ms ease-in-out;
+}
+.is-collapsed {
+  max-height: 0;
+  overflow: hidden;
+}
+
+/* Table of contents with no content */
+.toc-no-children {
+  display: none;
+}
+
+/* Headings for sections in docs */
+.docs-heading h2 {
+  border: none;
+  padding: 0;
+}

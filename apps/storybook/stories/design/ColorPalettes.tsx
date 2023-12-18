@@ -50,7 +50,7 @@ const Color = ({ value }: { value: string }) => {
           duration: 2000,
           isClosable: true,
         });
-      }
+      },
     );
   };
 
@@ -110,7 +110,7 @@ export const ColorPalettes = ({ hexColors, RGBAColors }: { hexColors: MapColorsT
       {RGBAColors !== undefined && <ColorFormatPicker format={format} setFormat={setFormat} />}
       {Object.entries(colors).map(([colorName, shades]) => (
         <Box key={colorName}>
-          <Heading as="h3" size="md">
+          <Heading as="h3" size="md" id={colorName}>
             {capitalizeFirstLetter(colorName)}
           </Heading>
           <Flex gap={5} flexWrap="wrap">

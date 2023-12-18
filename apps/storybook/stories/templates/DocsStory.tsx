@@ -11,7 +11,7 @@ export const DocsStory = ({ title, description, story, isVertical }: DocsStoryPr
   return (
     <SimpleGrid columns={[1, 1, isVertical ? 1 : 2]} spacing={[0, 0, isVertical ? 0 : "2rem"]}>
       <Box marginTop="25px">
-        <Heading size="md" as="h3">
+        <Heading size="md" as="h3" id={title}>
           {title}
         </Heading>
         <Text>{description}</Text>
