@@ -123,7 +123,7 @@ export const ProgressSizes: Story = {
 };
 
 export const ProgressColors: Story = {
-  args: { value: 40, size: "sm" },
+  args: { value: 40, size: "md" },
   render: (args) => (
     <KvibStack spacing={5}>
       <KvibProgress {...args} colorScheme="green" aria-label="progress bar green" />

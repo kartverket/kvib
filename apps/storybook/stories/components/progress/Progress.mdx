@@ -16,18 +16,25 @@ import { Progress } from "@kvib/react";
 <DocsHeading>Alternativer</DocsHeading>
 
 <DocsContainer>
-
     <DocsStory
         title="Utseende"
         description={
-            <Text>Progress har fem farger: <Code>gray</Code><Code>red</Code><Code>green</Code><Code>blue</Code></Text>
-        }
-        story={<Canvas of={ProgressStories.ProgressSizes}/>}
+            <Text>Progress har fem farger å velge mellom: <Code>gray</Code>, <Code>red</Code>, <Code>green</Code>, <Code>blue</Code>.
+            Velg farge med tanke på kontekst og kontrast.
+            Det er mulig å velge mellom fire forskjellige størrelser:
+            <Code>xs</Code>, <Code>sm</Code>, <Code>md</Code> og <Code>lg</Code>. <Code>md</Code> er standard.</Text>
+    }
+        story={<Canvas>
+              <Story of={ProgressStories.ProgressColors} />
+              <Story of={ProgressStories.ProgressSizes} />
+            </Canvas>
+    }
     />
 
     <DocsStory
-    title="Størrelse"
-    description="Det er mulig å velge mellom fire forskjellige størrelser: xs, sm, md og lg. md er standard."
+    title="Variasjoner"
+    description="Progress har mange forskjellige ekstra props for utseende. hasStripe og isAnimated kan gi brukeren følelse
+    at de ikke står stille"
     story={<Canvas of={ProgressStories.ProgressSizes}/>}
     />
 
