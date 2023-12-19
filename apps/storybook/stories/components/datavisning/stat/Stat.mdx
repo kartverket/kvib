@@ -1,0 +1,22 @@
+import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
+import * as StatStories from "./Stat.stories";
+
+<Meta of={StatStories} />
+
+# Stat
+
+Stat-komponentet brukes til å vise frem statistikk.
+
+## Ta i bruk
+
+```jsx
+import { Stat, StatLabel, StatNumber, StatHelpText, StatArrow, StatGroup } from "@kvib/react";
+```
+
+## Props
+
+<Canvas of={StatStories.Stat} />
+
+## Stat med indikator
+
+<Canvas of={StatStories.StatIndicator} />

@@ -1,0 +1,39 @@
+import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
+import * as CircularProgressStories from "./CircularProgress.stories";
+
+<Meta of={CircularProgressStories} />
+
+# Circular Progress
+
+Circular Progress brukes til å indikere framgang i en prosess.
+
+## Ta i bruk
+
+```jsx
+import { CircularProgress, CircularProgressLabel } from "@kvib/react";
+```
+
+## Props
+
+<Canvas of={CircularProgressStories.CircularProgress} />
+<Controls of={CircularProgressStories.CircularProgress} />
+
+## Størrelser
+
+<Canvas of={CircularProgressStories.CircularProgressSizes} />
+
+## Tykkelse
+
+<Canvas of={CircularProgressStories.CircularProgressThickness} />
+
+## Farger
+
+<Canvas of={CircularProgressStories.CircularProgressColors} />
+
+## Label
+
+<Canvas of={CircularProgressStories.CircularProgressLabel} />
+
+## Ubestemt Progress
+
+<Canvas of={CircularProgressStories.CircularProgressIndeterminate} />

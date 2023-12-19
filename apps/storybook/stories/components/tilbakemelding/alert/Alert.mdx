@@ -1,0 +1,66 @@
+import { Title, Canvas, Meta, Story, Controls } from "@storybook/blocks";
+import * as AlertStories from "./Alert.stories";
+import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory } from "../../../templates";
+import { Box } from "@kvib/react/src";
+
+<Meta of={AlertStories} />
+
+# Alert
+
+Alert brukes til meldinger som kommuniserer informasjon uten at brukeren trenger å gjøre noe.
+
+```jsx
+import { Alert, AlertIcon, AlertTitle, AlertDescription } from "@kvib/react";
+```
+
+<DocsHeading>Props</DocsHeading>
+
+<Canvas of={AlertStories.Alert} />
+<Controls of={AlertStories.Alert} />
+
+<DocsHeading>Anatomy</DocsHeading>
+
+<DocsAnatomy imgPath="assets/AlertAnatomy.svg" />
+
+<DocsHeading>Options</DocsHeading>
+
+<DocsContainer>
+<DocsStory
+  title="Title"
+  description="The title is optional, but should, when used, always convey a concise and descriptive message."
+  story={<Canvas of={AlertStories.AlertError} />}
+/>
+
+<DocsStory
+  title="Description"
+  description="The description is required for all alerts. If paired with a title, use it to emphasize the information in the title, and/or describe the next step that the user can take."
+  story={
+    <Canvas>
+      <Story of={AlertStories.AlertWarning} />
+      <Story of={AlertStories.AlertSuccess} />
+    </Canvas>
+  }
+/>
+
+<DocsStory
+  title="Intent"
+  description="Let the intent reflect the kind of message you want the user to perceive. Use info for additional information or helpful tips, success to let the users know they have completed an action, warnings to inform the user before they take a crucial or irreversible action, and error for letting the user know that something has gone wrong."
+  story={<Canvas of={AlertStories.AlertInfo} />}
+/>
+
+<DocsStory
+  title="Appearance"
+  description="Use the apperance to convey different levels of emphasis, or to direct the alert towards a certain direction."
+  story={<Canvas of={AlertStories.AlertEmphasisWarning} />}
+/>
+</DocsContainer>
+
+<DocsHeading>Kjente feil</DocsHeading>
+
+<DocsContainer>
+
+Bruk av colorScheme="orange" og variant="solid" sammen gir for lav kontrast. Dette fargetemaet er også brukt med status="warning", som dermed heller ikke kan brukes sammen med variant="solid".
+
+Det er foreløpig ikke mulig å bytte ut eller droppe status-ikonet for alerter.
+
+</DocsContainer>

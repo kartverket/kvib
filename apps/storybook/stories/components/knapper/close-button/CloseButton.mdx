@@ -1,0 +1,23 @@
+import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
+import * as CloseButtonStories from "./CloseButton.stories";
+
+<Meta of={CloseButtonStories} />
+
+# Close Button
+
+CloseButton er en knapp med et lukkeikon. Den skal brukes til å lukke funksjonalitet i komponenter.
+
+## Ta i bruk
+
+```jsx
+import { CloseButton } from "@kvib/react";
+```
+
+## Props
+
+<Canvas of={CloseButtonStories.CloseButton} />
+<Controls of={CloseButtonStories.CloseButton} />
+
+## Størrelser
+
+<Canvas of={CloseButtonStories.CloseButtonSizes} />
