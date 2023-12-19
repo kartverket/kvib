@@ -37,7 +37,7 @@ export const parameters = {
 export const decorators = [
   (Story) => (
     <KvibProvider>
-    // <KvibProvider theme={customTheme}>
+    {/* <KvibProvider theme={customTheme}> */}
       <Story />
     </KvibProvider>
   ),
