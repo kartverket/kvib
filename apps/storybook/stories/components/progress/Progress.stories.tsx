@@ -86,6 +86,7 @@ const meta: Meta<typeof KvibProgress> = {
       description: "The value of the progress indicator. If undefined the progress bar will be in indeterminate state",
       table: {
         type: { summary: "number" },
+        defaultValue: { summary: "0" },
       },
       control: "number",
     },
