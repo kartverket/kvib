@@ -1,0 +1,32 @@
+import { Meta } from "@storybook/addon-docs";
+import {DocsStory,DocsContainer, Feedback} from "../templates";
+import {Canvas, Source} from "@storybook/blocks";
+import {BreakPointValueExample} from "./BreakPointValueExample";
+import {breakpointStrings} from "./srcBreakpointStrings";
+
+<Meta title="Hooks/useBreakpointValue" />
+
+# useBreakpointValue
+
+**useBoolean** UseBreakpointValue-hook returnerer verdien for gjeldende breakpoint.
+
+```jsx
+import { useBreakpointValue } from "@kvib/react";
+```
+
+<Feedback component="useBreakpointValue"/>
+
+<DocsContainer>
+
+    <DocsStory
+        title="Return value"
+        description="UseBreakpointValue-hook returnerer verdien for gjeldende breakpoint. Sørg for å oppgi en basisverdi når du bruker useBreakpointValue, slik at den ikke returnerer udefinert i den første gjengivelsen.
+"
+        story={
+            <Canvas>
+                <BreakPointValueExample/>
+                <Source code={breakpointStrings} dark/>
+            </Canvas>
+        }
+    />
+</DocsContainer>
