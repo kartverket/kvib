@@ -1,6 +1,8 @@
-import { Box, Card, CardBody, Heading, SimpleGrid, Stack, Text, Flex, Badge, Link } from "@kvib/react/src";
+import { Box, Card, Heading, SimpleGrid, Stack, Text, Flex, Badge, Link } from "@kvib/react/src";
 import { ComponentsBanner } from "./ComponentsBanner";
 import { ComponentList } from "./ComponentList";
+import { Story } from "@storybook/blocks";
+import { useEffect, useRef, useState } from "react";
 
 export const Components = () => {
   return (
@@ -20,9 +22,8 @@ export const Components = () => {
                     description={component.description}
                     tag={component.tag}
                     link={component.link}
-                  >
-                    {component.code}
-                  </ComponentCard>
+                    story={component.code}
+                  ></ComponentCard>
                 );
               })}
             </ComponentCategory>
@@ -35,13 +36,13 @@ export const Components = () => {
 
 const ComponentCard = ({
   title,
-  children,
+  story,
   tag,
   link,
 }: {
   title: string;
   description: string;
-  children: React.ReactNode;
+  story: string;
   tag?: string;
   link: string;
 }) => {
@@ -67,7 +68,9 @@ const ComponentCard = ({
         borderTopRadius="xl"
         overflow="hidden"
       >
-        {children}
+        <Box width="100%" margin="auto">
+          <LazyStory id={story} key={story} />
+        </Box>
       </Flex>
 
       <Stack _hover={{ boxShadow: "0 2px 0 0 green inset" }}>
@@ -101,4 +104,33 @@ const ComponentCategory = ({
       </SimpleGrid>
     </Box>
   );
+};
+
+const LazyStory = ({ id }: { id: string }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const storyRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect(); // Optionally disconnect once visible
+        }
+      },
+      { threshold: 0.1 },
+    ); // Adjust threshold as needed
+
+    if (storyRef.current) {
+      observer.observe(storyRef.current);
+    }
+
+    return () => {
+      if (storyRef.current) {
+        observer.disconnect();
+      }
+    };
+  }, [id]);
+
+  return <div ref={storyRef}>{isVisible && <Story inline id={id} />}</div>;
 };

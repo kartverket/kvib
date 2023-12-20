@@ -1,70 +1,3 @@
-import {
-  Box,
-  Button,
-  Card,
-  CardBody,
-  Heading,
-  IconButton,
-  Input,
-  Select,
-  SimpleGrid,
-  Stack,
-  Textarea,
-  Text,
-  Flex,
-  Search,
-  SearchAsync,
-  Badge,
-  Table,
-  Code,
-  Alert,
-  Container,
-  Grid,
-  Avatar,
-  Icon,
-  Image,
-  NumberInput,
-  Breadcrumb,
-  Tabs,
-  Drawer,
-  Tooltip,
-  CloseButton,
-  Checkbox,
-  Datepicker,
-  Timepicker,
-  Editable,
-  Radio,
-  RangeSlider,
-  Slider,
-  PinInput,
-  PinInputField,
-  FileUpload,
-  FormControl,
-  FormLabel,
-  Tag,
-  Stat,
-  Kbd,
-  List,
-  ListItem,
-  UnorderedList,
-  Accordion,
-  Progress,
-  CircularProgress,
-  Skeleton,
-  Spinner,
-  Stepper,
-  Step,
-  AspectRatio,
-  Wrap,
-  Center,
-  Highlight,
-  Header,
-  Footer,
-  Divider,
-  Logo,
-  Link,
-} from "@kvib/react/src";
-
 interface ComponentProps {
   children?: string;
   icon?: string;
@@ -74,7 +7,7 @@ interface ComponentProps {
 interface ComponentDetails {
   name: string;
   description: string;
-  code: JSX.Element;
+  code: string;
   props?: ComponentProps;
   tag?: string;
   link: string;
@@ -86,36 +19,6 @@ interface Category {
   components: Record<string, ComponentDetails>;
 }
 
-// SearchAsync mock data
-const fruits = [
-  { label: "Eple", value: "eple" },
-  { label: "Banan", value: "banan" },
-  { label: "Kirsebær", value: "kirsebær" },
-  { label: "Pære", value: "pære" },
-  { label: "Svarthyll", value: "svarthyll" },
-  { label: "Mango", value: "mango" },
-  { label: "Ananas", value: "ananas" },
-  { label: "Kiwi", value: "kiwi" },
-  { label: "Papaya", value: "papaya" },
-  { label: "Blåbær", value: "blåbær" },
-  { label: "Jordbær", value: "jordbær" },
-  { label: "Appelsin", value: "appelsin" },
-  { label: "Druer", value: "druer" },
-  { label: "Sitron", value: "sitron" },
-  { label: "Melon", value: "melon" },
-];
-
-const mockLoadOptions = (inputValue: string, callback: (options: typeof fruits) => void) => {
-  setTimeout(() => {
-    const filteredFruits = fruits.filter((fruit) => fruit.label.toLowerCase().includes(inputValue.toLowerCase()));
-    callback(filteredFruits);
-  }, 500);
-};
-
-const handleChange = (selectedOption: any) => {
-  console.log("Selected Option:", selectedOption);
-};
-
 export const ComponentList: Record<string, Category> = {
   Buttons: {
     name: "Knapper",
@@ -123,7 +26,7 @@ export const ComponentList: Record<string, Category> = {
       Button: {
         name: "Button",
         description: "Button",
-        code: <Button>Button</Button>,
+        code: "knapper-button--button",
         props: {
           children: "Button",
         },
@@ -132,11 +35,7 @@ export const ComponentList: Record<string, Category> = {
       IconButton: {
         name: "IconButton",
         description: "IconButton",
-        code: (
-          <IconButton aria-label={""} icon="10k">
-            IconButton
-          </IconButton>
-        ),
+        code: "knapper-icon-button--icon-button",
         props: {
           icon: "arrowRight",
           children: "IconButton",
@@ -146,8 +45,8 @@ export const ComponentList: Record<string, Category> = {
       CloseButteon: {
         name: "CloseButton",
         description: "CloseButton",
-        code: <CloseButton />,
-        props: undefined,
+        code: "knapper-close-button--close-button",
+
         link: "close-button",
       },
     },
@@ -160,19 +59,14 @@ export const ComponentList: Record<string, Category> = {
       FormControl: {
         name: "FormControl",
         description: "FormControl",
-        code: (
-          <FormControl>
-            <FormLabel>FormControl</FormLabel>
-            <Input placeholder="FormControl" />
-          </FormControl>
-        ),
-        props: undefined,
+        code: "skjemaelementer-form-control--form-control",
+
         link: "",
       },
       Input: {
         name: "Input",
         description: "Input",
-        code: <Input placeholder="Input" />,
+        code: "skjemaelementer-input--input",
         props: {
           placeholder: "Input",
         },
@@ -181,7 +75,7 @@ export const ComponentList: Record<string, Category> = {
       Select: {
         name: "Select",
         description: "Select",
-        code: <Select placeholder="Select" />,
+        code: "skjemaelementer-select--select",
         props: {
           placeholder: "Select",
         },
@@ -190,7 +84,7 @@ export const ComponentList: Record<string, Category> = {
       Textarea: {
         name: "Textarea",
         description: "Textarea",
-        code: <Textarea placeholder="Textarea" />,
+        code: "skjemaelementer-textarea--textarea",
         props: {
           placeholder: "Textarea",
         },
@@ -199,7 +93,7 @@ export const ComponentList: Record<string, Category> = {
       NumberInput: {
         name: "NumberInput",
         description: "NumberInput",
-        code: <NumberInput placeholder="NumberInput" />,
+        code: "skjemaelementer-number-input--number-input",
         props: {
           placeholder: "NumberInput",
         },
@@ -208,71 +102,64 @@ export const ComponentList: Record<string, Category> = {
       CheckBox: {
         name: "CheckBox",
         description: "CheckBox",
-        code: <Checkbox isChecked />,
-        props: undefined,
+        code: "skjemaelementer-checkbox--checkbox",
+
         link: "",
       },
       DatePicker: {
         name: "DatePicker",
         description: "DatePicker",
-        code: <Datepicker />,
-        props: undefined,
+        code: "skjemaelementer-datepicker--datepicker",
+
         link: "",
       },
       TimePicker: {
         name: "TimePicker",
         description: "TimePicker",
-        code: <Timepicker />,
-        props: undefined,
+        code: "skjemaelementer-timepicker--timepicker",
+
         link: "",
       },
       Editable: {
         name: "Editable",
         description: "Editable",
-        code: <Editable>Editable</Editable>,
-        props: undefined,
+        code: "skjemaelementer-editable--editable",
+
         link: "",
       },
       Radio: {
         name: "Radio",
         description: "Radio",
-        code: <Radio>Radio</Radio>,
-        props: undefined,
+        code: "skjemaelementer-radio--radio",
+
         link: "",
       },
       RangeSlider: {
         name: "RangeSlider",
         description: "RangeSlider",
-        code: <RangeSlider />,
-        props: undefined,
+        code: "skjemaelementer-range-slider--range-slider",
+
         link: "",
       },
       Slider: {
         name: "Slider",
         description: "Slider",
-        code: <Slider />,
-        props: undefined,
+        code: "skjemaelementer-slider--slider",
+
         link: "",
       },
       PinInput: {
         name: "PinInput",
         description: "PinInput",
-        code: (
-          <PinInput>
-            <PinInputField />
-            <PinInputField />
-            <PinInputField />
-            <PinInputField />
-          </PinInput>
-        ),
-        props: undefined,
+        code: "skjemaelementer-pin-input--pin-input",
+
         link: "",
       },
       FileUpload: {
         name: "FileUpload",
         description: "FileUpload",
-        code: <FileUpload />,
-        props: undefined,
+        code: "skjemaelementer-file-upload--file-upload",
+
         link: "",
       },
     },
@@ -283,20 +170,14 @@ export const ComponentList: Record<string, Category> = {
       Search: {
         name: "Search",
         description: "Search",
-        code: <Search placeholder="Search" />,
-        props: {
-          placeholder: "Search",
-        },
-        link: "",
+        code: "søk-search--search",
+        link: "search",
       },
       SearchAsync: {
         name: "SearchAsync",
         description: "SearchAsync",
-        code: <SearchAsync loadOptions={mockLoadOptions} onChange={handleChange} placeholder="SearchAsync" />,
-        props: {
-          placeholder: "SearchAsync",
-        },
-        link: "",
+        code: "søk-searchasync--search-async",
+        link: "searchAsync",
         tag: "beta",
       },
     },
@@ -307,203 +188,133 @@ export const ComponentList: Record<string, Category> = {
       Badge: {
         name: "Badge",
         description: "",
-        code: <Badge>Badge</Badge>,
-        props: undefined,
+        code: "datavisning-badge--badge",
+
         link: "",
       },
       Table: {
         name: "Table",
         description: "",
-        code: <Table>Table</Table>,
-        props: undefined,
+        code: "datavisning-table--table",
+
         link: "",
       },
       Code: {
         name: "Code",
         description: "",
-        code: <Code>Code</Code>,
-        props: undefined,
+        code: "datavisning-code--code",
+
         link: "",
       },
       Tag: {
         name: "Tag",
         description: "",
-        code: <Tag>Tag</Tag>,
-        props: undefined,
+        code: "datavisning-tag--tag",
+
         link: "",
       },
       Stat: {
         name: "Stat",
         description: "",
-        code: <Stat>Stat</Stat>,
-        props: undefined,
+        code: "datavisning-stat--stat",
+
         link: "",
       },
       Card: {
         name: "Card",
         description: "",
-        code: (
-          <Card>
-            <CardBody>Card</CardBody>
-          </Card>
-        ),
-        props: undefined,
+        code: "datavisning-card--card",
+
         link: "",
       },
       Kbd: {
         name: "Kbd",
         description: "",
-        code: <Kbd>Kbd</Kbd>,
-        props: undefined,
+        code: "datavisning-kbd--kbd",
+
         link: "",
       },
       List: {
         name: "List",
         description: "",
-        code: (
-          <UnorderedList>
-            <ListItem>Punkt</ListItem>
-            <ListItem>Punkt</ListItem>
-          </UnorderedList>
-        ),
-        props: undefined,
+        code: "datavisning-list--list",
+
         link: "",
       },
       Accordion: {
         name: "Accordion",
         description: "",
-        code: <Accordion>Accordion</Accordion>,
-        props: undefined,
+        code: "datavisning-accordion--accordion",
+
         link: "",
       },
     },
   },
-  Feedback: {
-    name: "Tilbakemelding",
-    components: {
-      Alert: {
-        name: "Alert",
-        description: "",
-        code: <Alert>Alert</Alert>,
-        props: undefined,
-        link: "",
-      },
-      Toast: {
-        name: "Toast",
-        description: "",
-        code: <Box>Todo</Box>,
-        props: undefined,
-        link: "",
-      },
-      Progress: {
-        name: "Progress",
-        description: "",
-        code: <Progress>Progress</Progress>,
-        props: undefined,
-        link: "",
-      },
-      CircularProgress: {
-        name: "CircularProgress",
-        description: "",
-        code: <CircularProgress>Progress</CircularProgress>,
-        props: undefined,
-        link: "",
-      },
-      Skeleton: {
-        name: "Skeleton",
-        description: "",
-        code: <Skeleton>Skeleton</Skeleton>,
-        props: undefined,
-        link: "",
-      },
-      Spinner: {
-        name: "Spinner",
-        description: "",
-        code: <Spinner />,
-        props: undefined,
-        link: "",
-      },
-      Stepper: {
-        name: "Stepper",
-        description: "",
-        code: (
-          <Stepper index={0}>
-            <Step></Step>
-          </Stepper>
-        ),
-        props: undefined,
-        link: "",
-      },
-    },
-  },
+
   Layout: {
     name: "Layout",
     components: {
       Box: {
         name: "Box",
         description: "",
-        code: <Box>Box</Box>,
-        props: undefined,
+        code: "layout-box--simple-box",
+
         link: "",
       },
       Container: {
         name: "Container",
         description: "",
-        code: <Container>Container</Container>,
-        props: undefined,
+        code: "layout-container--container",
+
         link: "",
       },
       Flex: {
         name: "FlexBox",
         description: "",
-        code: <Flex>Flex</Flex>,
-        props: undefined,
+        code: "layout-flex--flex",
+
         link: "",
       },
       Grid: {
         name: "Grid",
         description: "",
-        code: <Grid>Grid</Grid>,
-        props: undefined,
+        code: "layout-grid--grid",
+
         link: "",
       },
       AspectRatio: {
         name: "AspectRatio",
         description: "",
-        code: (
-          <AspectRatio>
-            <Box>AspectRatio</Box>
-          </AspectRatio>
-        ),
-        props: undefined,
+        code: "layout-aspect-ratio--aspect-ratio",
+
         link: "",
       },
       Stack: {
         name: "Stack",
         description: "",
-        code: <Stack>Stack</Stack>,
-        props: undefined,
+        code: "layout-stack--stack",
+
         link: "",
       },
       SimpleGrid: {
         name: "SimpleGrid",
         description: "",
-        code: <SimpleGrid>SimpleGrid</SimpleGrid>,
-        props: undefined,
+        code: "layout-simplegrid--simple-grid",
+
         link: "",
       },
       Wrap: {
         name: "Wrap",
         description: "",
-        code: <Wrap>Wrap</Wrap>,
-        props: undefined,
+        code: "layout-wrap--wrap",
+
         link: "",
       },
       Center: {
         name: "Center",
         description: "",
-        code: <Center>Center</Center>,
-        props: undefined,
+        code: "layout-center--center",
+
         link: "",
       },
     },
@@ -514,22 +325,22 @@ export const ComponentList: Record<string, Category> = {
       Heading: {
         name: "Heading",
         description: "",
-        code: <Heading>Heading</Heading>,
-        props: undefined,
+        code: "typografi-heading--heading",
+
         link: "",
       },
       Text: {
         name: "Text",
         description: "",
-        code: <Text>Text</Text>,
-        props: undefined,
+        code: "typografi-text--text",
+
         link: "",
       },
       Highlight: {
         name: "Highlight",
         description: "",
-        code: <Highlight query="Fremhev">Fremhev ord</Highlight>,
-        props: undefined,
+        code: "typografi-highlight--highlight",
+
         link: "",
       },
     },
@@ -540,29 +351,29 @@ export const ComponentList: Record<string, Category> = {
       Logo: {
         name: "Logo",
         description: "",
-        code: <Logo />,
-        props: undefined,
+        code: "sideelementer-logo--logo",
+
         link: "",
       },
       Header: {
         name: "Header",
         description: "",
-        code: <Header></Header>,
-        props: undefined,
+        code: "sideelementer-header--header",
+
         link: "header",
       },
       Footer: {
         name: "Footer",
         description: "",
-        code: <Footer excludeContactInfo excludeHelp excludeNews excludeOpeningHours excludeSocialMedia />,
-        props: undefined,
+        code: "sideelementer-footer-footer--footer-none",
+
         link: "footer",
       },
       Divider: {
         name: "Divider",
         description: "",
-        code: <Divider />,
-        props: undefined,
+        code: "sideelementer-divider--divider",
+
         link: "divider",
       },
     },
@@ -573,24 +384,22 @@ export const ComponentList: Record<string, Category> = {
       Image: {
         name: "Image",
         description: "",
-        code: (
-          <Image src="https://images.unsplash.com/photo-1619468129361-605ebea04b44?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2942&q=80" />
-        ),
-        props: undefined,
+        code: "media-image--image",
+
         link: "",
       },
       Icon: {
         name: "Icon",
         description: "",
-        code: <Icon icon={"function"} />,
-        props: undefined,
+        code: "media-ikoner--default-icon",
+
         link: "",
       },
       Avatar: {
         name: "Avatar",
         description: "",
-        code: <Avatar>Avatar</Avatar>,
-        props: undefined,
+        code: "media-avatar--avatar",
+
         link: "",
       },
     },
@@ -602,72 +411,72 @@ export const ComponentList: Record<string, Category> = {
       Breadcrumbs: {
         name: "Breadcrumb",
         description: "",
-        code: <Breadcrumb>Breadcrumb</Breadcrumb>,
+        code: "navigasjon-breadcrumb--breadcrumb",
         link: "breadcrumb",
       },
       Tabs: {
         name: "Tabs",
         description: "",
-        code: <Box>Todo</Box>,
+        code: "navigasjon-tabs--tabs",
         link: "tabs",
       },
       Menu: {
         name: "Menu",
         description: "",
-        code: <Box>Todo</Box>,
+        code: "navigasjon-menu--menu",
         link: "menu",
       },
       Link: {
         name: "Link",
         description: "",
-        code: <Link>Link</Link>,
+        code: "navigasjon-link--link",
         link: "link",
       },
       LinkOverlay: {
         name: "LinkOverlay",
         description: "",
-        code: <Box>Todo</Box>,
+        code: "navigasjon-linkoverlay--link-overlay",
         link: "link-overlay",
       },
       SkipNav: {
         name: "SkipNav",
         description: "",
-        code: <Box>Todo</Box>,
+        code: "navigasjon-skipnav--skip-nav-link",
         link: "skip-nav",
       },
     },
   },
-  Popups: {
-    name: "Popups",
+  Overlay: {
+    name: "Overlay",
     components: {
       Tooltip: {
         name: "Tooltip",
         description: "",
-        code: <Tooltip label="Tooltip">Tooltip</Tooltip>,
+        code: "overlay-tooltip--tooltip",
         link: "",
       },
       Modal: {
         name: "Modal",
         description: "",
-        code: <Box>Todo</Box>,
+        code: "overlay-modal--modal",
         link: "",
       },
       Popover: {
         name: "Popover",
         description: "",
-        code: <Box>Todo</Box>,
+        code: "overlay-popover--popover",
         link: "",
       },
       AlertDialog: {
         name: "Alert Dialog",
         description: "",
-        code: <Box>Todo</Box>,
+        code: "overlay-alert-dialog--alert-dialog",
         link: "",
       },
       Drawer: {
         name: "Drawer",
         description: "",
-        code: <Box>Todo</Box>,
+        code: "overlay-drawer--drawer",
         link: "",
       },
     },
@@ -678,25 +487,19 @@ export const ComponentList: Record<string, Category> = {
       VisuallyHidden: {
         name: "Visually Hidden",
         description: "",
-        code: <Box>Todo</Box>,
+        code: "annet-visually-hidden--visually-hidden",
         link: "",
       },
       ShowHide: {
         name: "Show/Hide",
         description: "",
-        code: <Box>Todo</Box>,
-        link: "",
-      },
-      SkipNav: {
-        name: "Skip Nav",
-        description: "",
-        code: <Box>Todo</Box>,
+        code: "annet-show-hide--show-hide",
         link: "",
       },
       Portal: {
         name: "Portal",
         description: "",
-        code: <Box>Todo</Box>,
+        code: "annet-portal--portal",
         link: "",
       },
     },
