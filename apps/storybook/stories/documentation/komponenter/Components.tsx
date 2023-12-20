@@ -23,6 +23,7 @@ export const Components = () => {
                     tag={component.tag}
                     link={component.link}
                     story={component.code}
+                    category={category.name}
                   ></ComponentCard>
                 );
               })}
@@ -39,12 +40,14 @@ const ComponentCard = ({
   story,
   tag,
   link,
+  category,
 }: {
   title: string;
   description: string;
   story: string;
   tag?: string;
   link: string;
+  category: string;
 }) => {
   return (
     <Card
@@ -68,13 +71,13 @@ const ComponentCard = ({
         borderTopRadius="xl"
         overflow="hidden"
       >
-        <Box width="100%" margin="auto">
+        <Box width="100%" maxH="6rem">
           <LazyStory id={story} key={story} />
         </Box>
       </Flex>
 
       <Stack _hover={{ boxShadow: "0 2px 0 0 green inset" }}>
-        <Link fontWeight="bold" padding="1rem" href={`/?path=/docs/komponenter-${link}--docs`}>
+        <Link fontWeight="bold" padding="1rem" href={`/?path=/docs/${category}-${link}--docs`}>
           {title}
         </Link>
       </Stack>
@@ -132,5 +135,5 @@ const LazyStory = ({ id }: { id: string }) => {
     };
   }, [id]);
 
-  return <div ref={storyRef}>{isVisible && <Story inline id={id} />}</div>;
+  return <div ref={storyRef}>{isVisible && <Story id={id} />}</div>;
 };

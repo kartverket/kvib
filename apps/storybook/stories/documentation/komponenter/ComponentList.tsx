@@ -1,14 +1,8 @@
-interface ComponentProps {
-  children?: string;
-  icon?: string;
-  placeholder?: string;
-}
-
 interface ComponentDetails {
   name: string;
   description: string;
   code: string;
-  props?: ComponentProps;
+
   tag?: string;
   link: string;
 }
@@ -27,140 +21,115 @@ export const ComponentList: Record<string, Category> = {
         name: "Button",
         description: "Button",
         code: "knapper-button--button",
-        props: {
-          children: "Button",
-        },
         link: "button",
       },
       IconButton: {
         name: "IconButton",
         description: "IconButton",
         code: "knapper-icon-button--icon-button",
-        props: {
-          icon: "arrowRight",
-          children: "IconButton",
-        },
         link: "icon-button",
       },
       CloseButteon: {
         name: "CloseButton",
         description: "CloseButton",
         code: "knapper-close-button--close-button",
-
         link: "close-button",
       },
     },
   },
   Form: {
     name: "Skjemaelementer",
-    description:
-      "Skjemaelementer er komponenter som brukes i skjemaer. De kan brukes alene eller i kombinasjon med andre komponenter.",
+
     components: {
       FormControl: {
         name: "FormControl",
         description: "FormControl",
         code: "skjemaelementer-form-control--form-control",
-
-        link: "",
+        link: "form-control",
       },
       Input: {
         name: "Input",
         description: "Input",
         code: "skjemaelementer-input--input",
-        props: {
-          placeholder: "Input",
-        },
-        link: "input-input",
+        link: "input",
       },
       Select: {
         name: "Select",
         description: "Select",
         code: "skjemaelementer-select--select",
-        props: {
-          placeholder: "Select",
-        },
-        link: "",
+        link: "select",
       },
       Textarea: {
         name: "Textarea",
         description: "Textarea",
         code: "skjemaelementer-textarea--textarea",
-        props: {
-          placeholder: "Textarea",
-        },
-        link: "",
+        link: "textarea",
       },
       NumberInput: {
         name: "NumberInput",
         description: "NumberInput",
         code: "skjemaelementer-number-input--number-input",
-        props: {
-          placeholder: "NumberInput",
-        },
-        link: "",
+        link: "number-input",
       },
       CheckBox: {
-        name: "CheckBox",
-        description: "CheckBox",
+        name: "Checkbox",
+        description: "Checkbox",
         code: "skjemaelementer-checkbox--checkbox",
-
-        link: "",
+        link: "checkbox",
       },
       DatePicker: {
         name: "DatePicker",
         description: "DatePicker",
         code: "skjemaelementer-datepicker--datepicker",
-
-        link: "",
+        link: "datepicker",
       },
       TimePicker: {
-        name: "TimePicker",
-        description: "TimePicker",
+        name: "Timepicker",
+        description: "Timepicker",
         code: "skjemaelementer-timepicker--timepicker",
-
-        link: "",
+        link: "timepicker",
       },
       Editable: {
         name: "Editable",
         description: "Editable",
         code: "skjemaelementer-editable--editable",
 
-        link: "",
+        link: "editable",
       },
       Radio: {
         name: "Radio",
         description: "Radio",
         code: "skjemaelementer-radio--radio",
 
-        link: "",
+        link: "radio",
       },
       RangeSlider: {
         name: "RangeSlider",
         description: "RangeSlider",
         code: "skjemaelementer-range-slider--range-slider",
 
-        link: "",
+        link: "range-slider",
       },
       Slider: {
         name: "Slider",
         description: "Slider",
         code: "skjemaelementer-slider--slider",
 
-        link: "",
+        link: "slider",
       },
       PinInput: {
         name: "PinInput",
         description: "PinInput",
         code: "skjemaelementer-pin-input--pin-input",
 
-        link: "",
+        link: "pin-input",
       },
       FileUpload: {
         name: "FileUpload",
         description: "FileUpload",
         code: "skjemaelementer-file-upload--file-upload",
 
-        link: "",
+        link: "file-upload",
       },
     },
   },
@@ -190,63 +159,63 @@ export const ComponentList: Record<string, Category> = {
         description: "",
         code: "datavisning-badge--badge",
 
-        link: "",
+        link: "badge",
       },
       Table: {
         name: "Table",
         description: "",
         code: "datavisning-table--table",
 
-        link: "",
+        link: "table",
       },
       Code: {
         name: "Code",
         description: "",
         code: "datavisning-code--code",
 
-        link: "",
+        link: "code",
       },
       Tag: {
         name: "Tag",
         description: "",
         code: "datavisning-tag--tag",
 
-        link: "",
+        link: "tag",
       },
       Stat: {
         name: "Stat",
         description: "",
         code: "datavisning-stat--stat",
 
-        link: "",
+        link: "stat",
       },
       Card: {
         name: "Card",
         description: "",
         code: "datavisning-card--card",
 
-        link: "",
+        link: "card",
       },
       Kbd: {
         name: "Kbd",
         description: "",
         code: "datavisning-kbd--kbd",
 
-        link: "",
+        link: "kbd",
       },
       List: {
         name: "List",
         description: "",
         code: "datavisning-list--list",
 
-        link: "",
+        link: "list",
       },
       Accordion: {
         name: "Accordion",
         description: "",
         code: "datavisning-accordion--accordion",
 
-        link: "",
+        link: "accordion",
       },
     },
   },
@@ -259,63 +228,63 @@ export const ComponentList: Record<string, Category> = {
         description: "",
         code: "layout-box--simple-box",
 
-        link: "",
+        link: "box",
       },
       Container: {
         name: "Container",
         description: "",
         code: "layout-container--container",
 
-        link: "",
+        link: "container",
       },
       Flex: {
-        name: "FlexBox",
+        name: "Flex",
         description: "",
         code: "layout-flex--flex",
 
-        link: "",
+        link: "flex",
       },
       Grid: {
         name: "Grid",
         description: "",
         code: "layout-grid--grid",
 
-        link: "",
+        link: "grid",
       },
       AspectRatio: {
         name: "AspectRatio",
         description: "",
         code: "layout-aspect-ratio--aspect-ratio",
 
-        link: "",
+        link: "aspect-ratio",
       },
       Stack: {
         name: "Stack",
         description: "",
         code: "layout-stack--stack",
 
-        link: "",
+        link: "stack",
       },
       SimpleGrid: {
         name: "SimpleGrid",
         description: "",
         code: "layout-simplegrid--simple-grid",
 
-        link: "",
+        link: "simple-grid",
       },
       Wrap: {
         name: "Wrap",
         description: "",
         code: "layout-wrap--wrap",
 
-        link: "",
+        link: "wrap",
       },
       Center: {
         name: "Center",
         description: "",
         code: "layout-center--center",
 
-        link: "",
+        link: "center",
       },
     },
   },
@@ -327,21 +296,21 @@ export const ComponentList: Record<string, Category> = {
         description: "",
         code: "typografi-heading--heading",
 
-        link: "",
+        link: "heading",
       },
       Text: {
         name: "Text",
         description: "",
         code: "typografi-text--text",
 
-        link: "",
+        link: "text",
       },
       Highlight: {
         name: "Highlight",
         description: "",
         code: "typografi-highlight--highlight",
 
-        link: "",
+        link: "highlight",
       },
     },
   },
@@ -353,7 +322,7 @@ export const ComponentList: Record<string, Category> = {
         description: "",
         code: "sideelementer-logo--logo",
 
-        link: "",
+        link: "logo",
       },
       Header: {
         name: "Header",
@@ -386,21 +355,21 @@ export const ComponentList: Record<string, Category> = {
         description: "",
         code: "media-image--image",
 
-        link: "",
+        link: "image",
       },
       Icon: {
         name: "Icon",
         description: "",
         code: "media-ikoner--default-icon",
 
-        link: "",
+        link: "icon",
       },
       Avatar: {
         name: "Avatar",
         description: "",
         code: "media-avatar--avatar",
 
-        link: "",
+        link: "avatar",
       },
     },
   },
@@ -453,31 +422,31 @@ export const ComponentList: Record<string, Category> = {
         name: "Tooltip",
         description: "",
         code: "overlay-tooltip--tooltip",
-        link: "",
+        link: "tooltip",
       },
       Modal: {
         name: "Modal",
         description: "",
         code: "overlay-modal--modal",
-        link: "",
+        link: "modal",
       },
       Popover: {
         name: "Popover",
         description: "",
         code: "overlay-popover--popover",
-        link: "",
+        link: "popover",
       },
       AlertDialog: {
         name: "Alert Dialog",
         description: "",
         code: "overlay-alert-dialog--alert-dialog",
-        link: "",
+        link: "alert-dialog",
       },
       Drawer: {
         name: "Drawer",
         description: "",
         code: "overlay-drawer--drawer",
-        link: "",
+        link: "drawer",
       },
     },
   },
@@ -488,19 +457,19 @@ export const ComponentList: Record<string, Category> = {
         name: "Visually Hidden",
         description: "",
         code: "annet-visually-hidden--visually-hidden",
-        link: "",
+        link: "visually-hidden",
       },
       ShowHide: {
         name: "Show/Hide",
         description: "",
         code: "annet-show-hide--show-hide",
-        link: "",
+        link: "show-hide",
       },
       Portal: {
         name: "Portal",
         description: "",
         code: "annet-portal--portal",
-        link: "",
+        link: "portal",
       },
     },
   },
