@@ -135,7 +135,28 @@ export const ProgressColors: Story = {
   ),
 };
 
-export const ProgressAnimated: Story = {
-  args: { isIndeterminate: true, size: "xs" },
-  render: (args) => <KvibProgress {...args} aria-label="progress bar indeterminate" />,
+export const ProgressLook: Story = {
+  args: { value: 40, size: "md" },
+  render: (args) => (
+    <KvibStack spacing={5}>
+      <KvibProgress {...args} colorScheme="blue" aria-label="progress bar blue" />
+      <KvibProgress {...args} colorScheme="red" aria-label="progress bar red" />
+      <KvibProgress {...args} colorScheme="gray" aria-label="progress bar gray" />
+      <KvibProgress {...args} colorScheme="yellow" aria-label="progress bar yellow" />
+      <KvibProgress {...args} size="sm" aria-label="progress bar small" />
+      <KvibProgress {...args} size="md" aria-label="progress bar medium" />
+      <KvibProgress {...args} size="lg" aria-label="progress bar large" />
+      <KvibProgress {...args} height="32px" aria-label="progress bar 32px" />
+    </KvibStack>
+  ),
+};
+
+export const ProgressVariation: Story = {
+  args: { size: "md" },
+  render: (args) => (
+    <KvibStack>
+      <KvibProgress {...args} isIndeterminate aria-label="progress bar indeterminate" />,
+      <KvibProgress {...args} hasStripe isAnimated aria-label="progress bar animated stripe" value={40} />,
+    </KvibStack>
+  ),
 };

@@ -1,6 +1,6 @@
 import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
 import * as ProgressStories from "./Progress.stories";
-import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory } from "../../templates";
+import {DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback} from "../../templates";
 import { Text, Code } from "@kvib/react/src"
 
 <Meta of={ProgressStories} />
@@ -13,29 +13,37 @@ Progress brukes til å vise frem status på fremdrift for en oppgave som tar tid
 import { Progress } from "@kvib/react";
 ```
 
+**Egnet til:**
+- Vise framgang i en prosess
+
+**Uegnet til:**
+- Vise lasting som nesten er umiddelbar
+- vise lasting for prosesser som ikke er så viktige for brukeropplevelsen
+
+<Feedback component="Progress"/>
+
 <DocsHeading>Alternativer</DocsHeading>
 
 <DocsContainer>
     <DocsStory
         title="Utseende"
-        description={
-            <Text>Progress har fem farger å velge mellom: <Code>gray</Code>, <Code>red</Code>, <Code>green</Code>, <Code>blue</Code>.
+        story={
+            <Canvas>
+                <Story of={ProgressStories.ProgressLook} />
+            </Canvas>
+        }
+        description={<Text>Progress har fem farger å velge mellom: <Code>gray</Code>, <Code>red</Code>, <Code>green</Code>, <Code>blue</Code>.
             Velg farge med tanke på kontekst og kontrast.
             Det er mulig å velge mellom fire forskjellige størrelser:
-            <Code>xs</Code>, <Code>sm</Code>, <Code>md</Code> og <Code>lg</Code>. <Code>md</Code> er standard.</Text>
-    }
-        story={<Canvas>
-              <Story of={ProgressStories.ProgressColors} />
-              <Story of={ProgressStories.ProgressSizes} />
-            </Canvas>
-    }
+            <Code>xs</Code>, <Code>sm</Code>, <Code>md</Code> og <Code>lg</Code>. <Code>md</Code> er standard.</Text>}
     />
 
     <DocsStory
-    title="Variasjoner"
-    description="Progress har mange forskjellige ekstra props for utseende. hasStripe og isAnimated kan gi brukeren følelse
-    at de ikke står stille"
-    story={<Canvas of={ProgressStories.ProgressSizes}/>}
+    title="Varianter"
+    description="Progress har noen ekstra props for utseende. hasStripe og isAnimated kan gi brukeren følelse
+    at prosessen ikke står stille. isIndeterminate bruker du hvis du ikke vet hvor lenge det tar å laste, eller hvis det
+    er usikkert hvor lang tid lastingen vil ta, basert på nettforhold og lignende."
+    story={<Canvas of={ProgressStories.ProgressVariation}/>}
     />
 
 </DocsContainer>
