@@ -29,7 +29,9 @@ export const IntroButton = ({
     >
       <Flex gap="0.5rem" fontWeight="bold" marginBottom="0.5rem">
         <Image src={icon} />
-        <Link sx={{ textDecoration: isHovered ? "none" : "underline" }}>{title}</Link>
+        <Link sx={{ textDecoration: isHovered ? "none" : "underline", color: isHovered ? "green.400" : "green.500" }}>
+          {title}
+        </Link>
       </Flex>
       <Text fontWeight="500" margin="0">
         {description}

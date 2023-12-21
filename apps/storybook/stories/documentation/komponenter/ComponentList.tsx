@@ -82,12 +82,14 @@ export const ComponentList: Record<string, Category> = {
         description: "DatePicker",
         code: "skjemaelementer-datepicker--datepicker",
         link: "datepicker",
+        tag: "beta",
       },
       TimePicker: {
         name: "Timepicker",
         description: "Timepicker",
         code: "skjemaelementer-timepicker--timepicker",
         link: "timepicker",
+        tag: "beta",
       },
       Editable: {
         name: "Editable",
@@ -328,15 +330,15 @@ export const ComponentList: Record<string, Category> = {
         name: "Header",
         description: "",
         code: "sideelementer-header--header",
-
         link: "header",
+        tag: "beta",
       },
       Footer: {
         name: "Footer",
         description: "",
         code: "sideelementer-footer-footer--footer-none",
-
         link: "footer-footer",
+        tag: "beta",
       },
       Divider: {
         name: "Divider",
@@ -361,14 +363,12 @@ export const ComponentList: Record<string, Category> = {
         name: "Icon",
         description: "",
         code: "media-ikoner--default-icon",
-
         link: "ikoner",
       },
       Avatar: {
         name: "Avatar",
         description: "",
         code: "media-avatar--avatar",
-
         link: "avatar",
       },
     },

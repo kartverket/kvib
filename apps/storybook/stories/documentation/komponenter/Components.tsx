@@ -57,7 +57,7 @@ const ComponentCard = ({
       borderRadius="xl"
       size="sm"
     >
-      <Badge variant="solid" colorScheme="green" css={{ position: "absolute", left: "1rem", top: "1rem" }}>
+      <Badge variant="solid" colorScheme="green" css={{ position: "absolute", left: "0.8rem", top: "0.8rem" }}>
         {tag}
       </Badge>
       <Flex
@@ -65,13 +65,13 @@ const ComponentCard = ({
         border="none"
         height="10rem"
         alignItems="center"
-        justifyContent="center"
         padding="2rem"
         width="100%"
         borderTopRadius="xl"
         overflow="hidden"
       >
-        <Box width="100%" maxH="6rem">
+        {/* The width needs to be set because some of the stories fills the container */}
+        <Box width="100%" maxH="100%">
           <LazyStory id={story} key={story} />
         </Box>
       </Flex>
@@ -109,6 +109,7 @@ const ComponentCategory = ({
   );
 };
 
+// Don't render the story until it's visible in the viewport
 const LazyStory = ({ id }: { id: string }) => {
   const [isVisible, setIsVisible] = useState(false);
   const storyRef = useRef<HTMLDivElement>(null);
