@@ -7,7 +7,7 @@ const meta: Meta<typeof KvibSpinner> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "shown" },
+      canvas: { sourceState: "hidden" },
     },
   },
   argTypes: {
@@ -87,11 +87,11 @@ export const SpinnerSizes: Story = {
   args: {},
   render: (args) => (
     <KvibStack>
-      <KvibSpinner {...args} size="xs" />
-      <KvibSpinner {...args} size="sm" />
-      <KvibSpinner {...args} size="md" />
-      <KvibSpinner {...args} size="lg" />
       <KvibSpinner {...args} size="xl" />
+      <KvibSpinner {...args} size="lg" />
+      <KvibSpinner {...args} size="md" />
+      <KvibSpinner {...args} size="sm" />
+      <KvibSpinner {...args} size="xs" />
     </KvibStack>
   ),
 };

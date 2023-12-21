@@ -29,12 +29,12 @@ export const Search = forwardRef<SearchProps, "input">(
       colorScheme,
       size,
       variant,
-      type = "search",
       isDisabled,
       searchButton = "none",
       buttonWidth,
       buttonVariant = "tertiary",
       buttonText,
+      role = "search",
       ...props
     },
     ref,
@@ -82,8 +82,8 @@ export const Search = forwardRef<SearchProps, "input">(
           {...props}
           id={id}
           ref={ref}
+          role={role}
           size={size}
-          type={type}
           variant={variant}
           isDisabled={isDisabled}
           paddingLeft={searchButton === "left" ? inputPadding : undefined}
