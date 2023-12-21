@@ -270,7 +270,7 @@ export const ComponentList: Record<string, Category> = {
         description: "",
         code: "layout-simplegrid--simple-grid",
 
-        link: "simple-grid",
+        link: "simplegrid",
       },
       Wrap: {
         name: "Wrap",
@@ -336,7 +336,7 @@ export const ComponentList: Record<string, Category> = {
         description: "",
         code: "sideelementer-footer-footer--footer-none",
 
-        link: "footer",
+        link: "footer-footer",
       },
       Divider: {
         name: "Divider",
@@ -362,7 +362,7 @@ export const ComponentList: Record<string, Category> = {
         description: "",
         code: "media-ikoner--default-icon",
 
-        link: "icon",
+        link: "ikoner",
       },
       Avatar: {
         name: "Avatar",
@@ -405,13 +405,13 @@ export const ComponentList: Record<string, Category> = {
         name: "LinkOverlay",
         description: "",
         code: "navigasjon-linkoverlay--link-overlay",
-        link: "link-overlay",
+        link: "linkoverlay",
       },
       SkipNav: {
         name: "SkipNav",
         description: "",
         code: "navigasjon-skipnav--skip-nav-link",
-        link: "skip-nav",
+        link: "skipnav",
       },
     },
   },
