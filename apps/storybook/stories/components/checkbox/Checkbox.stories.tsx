@@ -38,6 +38,14 @@ const meta: Meta<typeof KvibCheckbox> = {
       },
       control: "boolean",
     },
+    isInvalid: {
+      description: "If true, the checkbox will be invalid",
+      table: {
+        type: { summary: "true | false" },
+        defaultValue: { summary: false },
+      },
+      control: "boolean",
+    },
     iconColor: {
       description: "The color of the checkmark",
       table: {
@@ -104,18 +112,18 @@ export const CheckboxStates: Story = {
 };
 
 export const CheckboxGroup: Story = {
-  args: { size: "sm" },
+  args: {},
   render: (args) => (
     <Stack>
       <Text>Grønn</Text>
-      <KvibCheckboxGroup colorScheme="green" {...args}>
-        <KvibCheckbox>Valg 1</KvibCheckbox>
-        <KvibCheckbox>Valg 2</KvibCheckbox>
+      <KvibCheckboxGroup colorScheme="green">
+        <KvibCheckbox {...args}>Valg 1</KvibCheckbox>
+        <KvibCheckbox {...args}>Valg 2</KvibCheckbox>
       </KvibCheckboxGroup>
       <Text>Blå</Text>
-      <KvibCheckboxGroup colorScheme="blue" {...args}>
-        <KvibCheckbox>Valg 1</KvibCheckbox>
-        <KvibCheckbox>Valg 2</KvibCheckbox>
+      <KvibCheckboxGroup colorScheme="blue">
+        <KvibCheckbox {...args}>Valg 1</KvibCheckbox>
+        <KvibCheckbox {...args}>Valg 2</KvibCheckbox>
       </KvibCheckboxGroup>
     </Stack>
   ),
