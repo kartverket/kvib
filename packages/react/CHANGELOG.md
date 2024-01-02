@@ -1,5 +1,16 @@
 # @kvib/react
 
+## 3.4.0
+
+### Minor Changes
+
+- a5cade9: La til mulighet for alle størrelser på ikoner
+
+### Patch Changes
+
+- fb8f5ca: Timepicker får nå riktig farge ved bruke av blått fargetema i KVIB-provider.
+- 64cb7e1: Oppdatert @babel/core, @babel/preset-env, @types/react og chromatic.
+
 ## 3.3.0
 
 ### Minor Changes
