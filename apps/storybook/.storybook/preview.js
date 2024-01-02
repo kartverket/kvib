@@ -1,6 +1,6 @@
 import { KvibProvider} from "@kvib/react/src";
 // import { extendTheme, theme as KvibTheme, withDefaultColorScheme } from "@kvib/react/src";
-// import theme from "./theme";
+import theme from "./theme";
 import MDXContainer from "./MDXContainer";
 import "./docs-root.css";
 
@@ -37,7 +37,7 @@ export const parameters = {
 export const decorators = [
   (Story) => (
     <KvibProvider>
-    // <KvibProvider theme={customTheme}>
+    {/* <KvibProvider theme={customTheme}> */}
       <Story />
     </KvibProvider>
   ),
