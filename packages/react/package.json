@@ -19,7 +19,7 @@
     "directory": "packages/react"
   },
   "devDependencies": {
-    "@types/react": "^18.2.45",
+    "@types/react": "^18.2.46",
     "@types/react-dom": "^18.2.18",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -33,7 +33,7 @@
   "dependencies": {
     "@chakra-ui/react": "^2.8.2",
     "@chakra-ui/skip-nav": "^2.0.15",
-    "@emotion/react": "^11.10.6",
+    "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.10.6",
     "@fontsource/mulish": "^5.0.16",
     "@react-stately/datepicker": "^3.9.1",
@@ -42,7 +42,7 @@
     "date-fns": "^2.30.0",
     "material-symbols": "^0.14.3",
     "react-aria": "^3.31.0",
-    "react-day-picker": "^8.9.1",
+    "react-day-picker": "^8.10.0",
     "react-stately": "^3.29.0"
   },
   "lint-staged": {
