@@ -7,7 +7,7 @@ type IconProps = {
   icon: MaterialSymbol;
 
   /**The font size of the icon */
-  size?: 20 | 24 | 40 | 48;
+  size?: 20 | 24 | 40 | 48 | number;
 
   /**The color of the icon*/
   color?: string;
