@@ -1,0 +1,113 @@
+import {Meta} from "@storybook/addon-docs";
+import {DocsHeading, DocsStory,DocsContainer, Feedback} from "../templates";
+import {Canvas, Source, Story} from "@storybook/blocks";
+import {ClipboardExample} from "./ClipboardExample";
+import {ClipboardStrings} from "./srcClipboardStrings";
+import {TableContainer, Table, Thead, Tr, Th, Tbody, Td} from "@kvib/react";
+
+<Meta title="Hooks/useClipboard" />
+
+# useClipboard
+
+**useClipboard** er en tilpasset hook som håndterer kopiering av innhold til utklippstavlen.
+
+```jsx
+import { useClipboard } from "@kvib/react";
+```
+
+<Feedback component="useClipboard"/>
+
+<DocsContainer>
+
+    <DocsStory
+        title="Bruk"
+        description="useClipboard er en tilpasset hook som håndterer kopiering av innhold til utklippstavlen"
+        story={
+            <Canvas>
+                <ClipboardExample/>
+                <Source code={ClipboardStrings} dark/>
+            </Canvas>
+        }
+    />
+</DocsContainer>
+
+<DocsContainer>
+
+    <DocsHeading>Arguments</DocsHeading>
+
+    **useClipboard** hook tar imot følgende argumenter:
+
+    <TableContainer>
+        <Table>
+            <Thead>
+                <Tr>
+                    <Th>Name</Th>
+                    <Th>Type</Th>
+                    <Th>Required</Th>
+                    <Th>Description</Th>
+                </Tr>
+            </Thead>
+            <Tbody>
+                <Tr>
+                    <Td><code>text</code></Td>
+                    <Td><code>string</code></Td>
+                    <Td><code>true</code></Td>
+                    <Td>Teksten eller verdien som skal kopieres.</Td>
+                </Tr>
+                <Tr>
+                    <Td><code>optionsOrTimeout</code></Td>
+                    <Td><code>number</code> eller <code>object</code></Td>
+                    <Td><code>false</code></Td>
+                    <Td>Tidsavbruddet som et tall eller et objekt som inneholder 2 egenskaper: <br/> <code>timeout</code> og <code>format</code> for MIME-typen. <br/>Tidsavbruddet måles i millisekunder og har en standard på 1500ms.</Td>
+                </Tr>
+
+            </Tbody>
+        </Table>
+    </TableContainer>
+
+    <DocsHeading>Return value</DocsHeading>
+
+    **useClipboard** hook returnerer et objekt med følgende felt:
+
+    <TableContainer>
+        <Table>
+            <Thead>
+                <Tr>
+                    <Th>Name</Th>
+                    <Th>Type</Th>
+                    <Th>Default</Th>
+                    <Th>Description</Th>
+                </Tr>
+            </Thead>
+            <Tbody>
+                <Tr>
+                    <Td><code>value</code></Td>
+                    <Td><code>string</code></Td>
+                    <Td><code></code></Td>
+                    <Td>Verdien som er kopiert.</Td>
+                </Tr>
+                <Tr>
+                    <Td><code>setValue</code></Td>
+                    <Td><code>function</code></Td>
+                    <Td><code></code></Td>
+                    <Td>Angi handling for å endre den kopierte verdien.</Td>
+                </Tr>
+                <Tr>
+                    <Td><code>onCopy</code></Td>
+                    <Td><code>function</code></Td>
+                    <Td><code></code></Td>
+                    <Td>Callback funksjon for å kopiere innhold</Td>
+                </Tr>
+                <Tr>
+                    <Td><code>hasCopied</code></Td>
+                    <Td><code>boolean</code></Td>
+                    <Td><code>false</code></Td>
+                    <Td>Hvis <code>true</code>, har innholder blitt kopiert i løpet av de siste <code>timeout</code>-millisekundene. <br/> Det vil si at den settes til <code>true</code> rett etter at onCopy er kalt, og <code>false</code> etter at <code>timeout</code> har gått</Td>
+                </Tr>
+            </Tbody>
+        </Table>
+    </TableContainer>
+
+</DocsContainer>
+
+
