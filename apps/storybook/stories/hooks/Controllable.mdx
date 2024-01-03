@@ -1,0 +1,67 @@
+import {Meta} from "@storybook/addon-docs";
+import {DocsHeading, DocsStory, DocsContainer, Feedback} from "../templates";
+import {Canvas, Source, Story} from "@storybook/blocks";
+import {ControllableExample, UnControllableExample} from "./ControllableExample";
+import {ControllableStrings, UnControllableStrings} from "./srcControllableStrings";
+
+<Meta title="Hooks/useControllable"/>
+
+# useControllable
+
+**useControllable** React-hook som lar hvilken som helst komponent håndtere kontrollerte og ukontrollerte modi, og gir kontroll over sin interne tilstand.
+De fleste Chakra-komponentene bruker useControllableState for sømløst å håndtere både kontrollerte og ukontrollerte tilstandsscenarioer.
+
+```jsx
+import { useControllable } from "@kvib/react";
+```
+
+<Feedback component="useControllable"/>
+
+## useControllableProp
+Gitt en egenskapsverdi (prop value) og en tilstandsverdi (state value), brukes **useControllableProp**-hooken til å avgjøre om en komponent er kontrollert eller ukontrollert, og returnerer også den beregnede verdien.
+-  Den returnerer egenskapsverdien hvis komponenten er kontrollert.
+- Den returnerer tilstandsverdien hvis komponenten er ukontrollert.
+
+### Bruk
+
+```jsx
+const [isControlled, value] = useControllableProp(propValue, stateValue)
+```
+
+## useControllableState
+**useControllableState** returnerer tilstanden og funksjonen som oppdaterer tilstanden, akkurat som **React.useState** gjør.
+```jsx
+const [value, setValue] = useControllableState(options)
+```
+
+<DocsContainer>
+### Bruk
+    <DocsStory
+        title=""
+        description="Med useControllableState kan du sende en initiell tilstand (ved å bruke defaultValue), som antyder at komponenten er ukontrollert, eller du kan sende en kontrollert verdi (ved å bruke value), som antyder at komponenten er kontrollert.
+            Her er et eksempel på en ukontrollert tilstand:"
+        isVertical
+        story={
+            <Canvas>
+                <UnControllableExample/>
+                <Source code={UnControllableStrings} dark/>
+            </Canvas>
+        }
+    />
+
+    <DocsStory
+        title=""
+        description="Her er et eksempel på en kontrollert tilstand:"
+        isVertical
+        story={
+            <Canvas>
+                <ControllableExample/>
+                <Source code={ControllableStrings} dark/>
+            </Canvas>
+        }
+    />
+</DocsContainer>
+
+## Kontekstuell tilbakemelding og Tilstand-oppdateringer
+
+Dette hooket gir nyttige feil- eller advarselmeldinger når du bytter mellom kontrollerte og ukontrollerte moduser, eller når du prøver å oppdatere den sendte defaultValue.
