@@ -96,7 +96,7 @@ const ComponentCategory = ({
 }) => {
   return (
     <Box>
-      <Heading as="h3" size="md">
+      <Heading as="h3" size="md" id={title}>
         {title}
       </Heading>
       <Text marginBottom={"1.5rem"} fontSize="md">
