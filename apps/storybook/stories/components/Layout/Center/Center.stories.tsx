@@ -3,7 +3,7 @@ import { Text } from "@kvib/react/src/typography";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibCenter> = {
-  title: "Komponenter/Layout/Center",
+  title: "Layout/Center",
   component: KvibCenter,
   parameters: {
     docs: {

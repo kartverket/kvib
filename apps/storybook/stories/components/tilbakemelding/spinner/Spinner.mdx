@@ -1,0 +1,71 @@
+import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
+import * as SpinnerStories from "./Spinner.stories";
+import { DocsHeading, DocsContainer, DocsStory, Feedback } from "../../../templates/";
+
+<Meta of={SpinnerStories} />
+
+# Spinner
+
+Spinner gir et visuelt signal om at en oppgave prosseseres og vil gi en endring eller et resultat.
+
+```jsx
+import { Spinner } from "@kvib/react";
+```
+
+<DocsContainer>
+
+**Egnet til:**
+
+- Vise lasting eller ubestemt ventetid
+
+- Indikere lasting som tar mer enn ett sekund
+
+**Uegnet til:**
+
+- Vise framgang i prosesser
+
+- Indikere lasting kortere enn ett sekund
+
+- Indikere over 5 minutters ventetid
+
+<Feedback component="Spinner" />
+
+</DocsContainer>
+
+<DocsHeading>Alternativer</DocsHeading>
+<DocsContainer>
+    <DocsStory
+        title="Utseende"
+        description="Fargene burde bli valgt med tanke på kontrast. Velg size og thickness slik at den gir mening til komponentet eller innholdet som skal lastes..
+        Farten kan justeres for å gjenspeile estimert ventetid. "
+        story={
+            <Canvas>
+               <Story of={SpinnerStories.SpinnerSizes} />
+               <Story of={SpinnerStories.SpinnerColors} />
+            </Canvas>
+        }
+    />
+
+</DocsContainer>
+
+<DocsHeading>Retningslinjer</DocsHeading>
+
+<DocsContainer>
+
+### Spinner vs. Progress
+
+Progress burde velges over spinner hvis man kan se prosentvis framgang, som f.eks. upload/download av filer, eller skjema med flere steg
+(Der kan stepper vurderes også). Spinner burde brukes over Progress uansett, så lenge ventetiden er minimal.
+
+### Ventetid
+
+Om bruker må vente, vil spinner bidra til å redusere usikkerhet. Det tar ikke lang tid før folk blir
+utålmodige og/eller forvirra over at ingenting skjer. Hvis ventetiden overstiger 9 sekunder, bør bruker se en
+forklaring sammen med Progress, og tekst som forklarer hva maskinen jobber med.
+
+</DocsContainer>
+
+<DocsHeading>Props</DocsHeading>
+
+<Canvas of={SpinnerStories.Spinner} />
+<Controls of={SpinnerStories.Spinner} />

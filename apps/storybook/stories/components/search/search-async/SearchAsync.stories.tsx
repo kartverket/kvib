@@ -2,7 +2,7 @@ import { SearchAsync as KvibSearchAsync, Stack as KvibStack, Box, Icon, Text } f
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibSearchAsync> = {
-  title: "Komponenter/Search/SearchAsync",
+  title: "Søk/SearchAsync",
   component: KvibSearchAsync,
   parameters: {
     docs: {

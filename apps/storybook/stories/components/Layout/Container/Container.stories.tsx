@@ -2,7 +2,7 @@ import { Container as KvibContainer } from "@kvib/react/src/layout";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibContainer> = {
-  title: "Komponenter/Layout/Container",
+  title: "Layout/Container",
   component: KvibContainer,
   parameters: {
     docs: {

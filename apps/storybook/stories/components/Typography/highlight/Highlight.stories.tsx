@@ -2,7 +2,7 @@ import { Box as KvibBox, Heading as KvibHeading, Highlight as KvibHighlight, Tex
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibHighlight> = {
-  title: "Komponenter/Typografi/Highlight",
+  title: "Typografi/Highlight",
   component: KvibHighlight,
   parameters: {
     docs: {

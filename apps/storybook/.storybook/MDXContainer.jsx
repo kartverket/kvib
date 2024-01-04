@@ -20,7 +20,7 @@ const MDXContainer = ({ children, ...props }) => {
     <KvibProvider>
       <DocsContainer {...props}>
         {children}
-        <Story id="komponenter-footer-footer-inline--footer-inline-custom" />
+        <Story id="sideelementer-footer-footer-inline--footer-inline-custom" />
       </DocsContainer>
     </KvibProvider>
   );

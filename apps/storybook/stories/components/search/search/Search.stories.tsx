@@ -2,7 +2,7 @@ import { Search as KvibSearch, Stack } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibSearch> = {
-  title: "Komponenter/Search/Search",
+  title: "Søk/Search",
   component: KvibSearch,
   parameters: {
     docs: {

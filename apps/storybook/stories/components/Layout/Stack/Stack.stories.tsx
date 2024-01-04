@@ -2,7 +2,7 @@ import { Stack as KvibStack, Box, HStack, VStack, StackDivider } from "@kvib/rea
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibStack> = {
-  title: "Komponenter/Layout/Stack",
+  title: "Layout/Stack",
   component: KvibStack,
   parameters: {
     docs: {
