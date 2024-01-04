@@ -29,7 +29,7 @@ const meta: Meta<typeof Icon> = {
       defaultValue: { summary: 0 },
     },
     size: {
-      table: { type: { summary: "20 | 24 | 40 | 48" } },
+      table: { type: { summary: "20 | 24 | 40 | 48 | number" } },
       control: "radio",
       options: [20, 24, 40, 48],
       defaultValue: { summary: 24 },

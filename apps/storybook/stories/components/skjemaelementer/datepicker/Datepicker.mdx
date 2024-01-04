@@ -81,6 +81,13 @@ import { Datepicker } from "@kvib/react";
       </Text>
       <Text>
         Det er mulig å velge mellom to colorSchemes: <Code>"blue"</Code> og <Code>"green"</Code>
+        <Alert status="warning">
+          <AlertIcon/>
+          <AlertDescription>
+            De fleste komponentene bytter automatisk til riktig colorScheme basert på colorScheme valgt i oppsett av KvibProvider. 
+            På data-picker må dette foreløpig settes manuelt hver gang den brukes for å få blått colorScheme!
+          </AlertDescription>      
+        </Alert>
       </Text>
     </Box>
   }

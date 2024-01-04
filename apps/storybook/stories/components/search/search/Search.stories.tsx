@@ -192,7 +192,7 @@ export const SearchButtonAppearance: SearchStory = {
   },
   render: (args) => (
     <Stack>
-      <KvibSearch {...args} searchButton="right" colorScheme="green" />
+      <KvibSearch {...args} searchButton="right" />
       <KvibSearch {...args} searchButton="left" colorScheme="blue" buttonVariant="secondary" />
       <KvibSearch {...args} searchButton="right" colorScheme="green" buttonWidth="4rem" buttonVariant="primary" />
       <KvibSearch {...args} searchButton="right" colorScheme="blue" buttonVariant="primary" buttonText="Søk" />
