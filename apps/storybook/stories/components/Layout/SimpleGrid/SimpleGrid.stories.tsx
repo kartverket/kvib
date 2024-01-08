@@ -2,7 +2,7 @@ import { SimpleGrid as KvibSimpleGrid, Box } from "@kvib/react/src/layout";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibSimpleGrid> = {
-  title: "Komponenter/Layout/SimpleGrid",
+  title: "Layout/SimpleGrid",
   component: KvibSimpleGrid,
   parameters: {
     docs: {

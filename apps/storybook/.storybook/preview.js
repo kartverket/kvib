@@ -1,4 +1,5 @@
-import { KvibProvider } from "@kvib/react/src/provider/KvibProvider";
+import { KvibProvider} from "@kvib/react/src";
+// import { extendTheme, theme as KvibTheme, withDefaultColorScheme } from "@kvib/react/src";
 import theme from "./theme";
 import MDXContainer from "./MDXContainer";
 import "./docs-root.css";
@@ -30,15 +31,31 @@ export const parameters = {
         "Design Fundament",
         "Hooks",
         "Komponenter",
-        ["Data Display", "Layout", "Typografi"],
+        "Typografi",
+        "Knapper",
+        "Sideelementer",
+        "Layout",
+        "Datavisning",
+        "Media",
+        "Skjemaelementer",
+        "Navigasjon",
+        "Søk",
+        "Tilbakemelding",
+        "Overlay",
+        "Animasjoner",
+        "Annet",
       ],
     },
   },
 };
 
+// For å teste storyene slik de vil se ut med endret default-farge kan du kommentere inn denne linja, og bruke themet i KVIBProvideren. Husk å kommentere inn importer også!
+// const customTheme = extendTheme(withDefaultColorScheme({ colorScheme: "blue" }), KvibTheme);
+
 export const decorators = [
   (Story) => (
     <KvibProvider>
+    {/* <KvibProvider theme={customTheme}> */}
       <Story />
     </KvibProvider>
   ),

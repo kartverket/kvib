@@ -6,7 +6,7 @@ import { DateFieldState, DateSegment } from "react-stately";
 type DateTimeSegmentProps = {
   segment: DateSegment;
   state: DateFieldState;
-  colorScheme: "green" | "blue";
+  colorScheme?: "green" | "blue";
 };
 /**
  * A date time segment is a part of a date or a time stamp.

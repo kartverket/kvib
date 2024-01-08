@@ -1,4 +1,4 @@
-import { Card, Text, Heading, Link, SimpleGrid, LinkBox, Flex, UnorderedList, Box, Stack } from "@kvib/react/src";
+import { Card, Text, Link, Flex, Box, Stack } from "@kvib/react/src";
 
 export const StarCard = () => {
   return (

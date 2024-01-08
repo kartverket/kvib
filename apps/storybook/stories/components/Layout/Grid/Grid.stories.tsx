@@ -2,7 +2,7 @@ import { Grid as KvibGrid, GridItem } from "@kvib/react/src/layout";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibGrid> = {
-  title: "Komponenter/Layout/Grid",
+  title: "Layout/Grid",
   component: KvibGrid,
   parameters: {
     docs: {
