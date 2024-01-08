@@ -14,7 +14,7 @@ import {
 import { forwardRef, useFormControlContext } from "@chakra-ui/react";
 import { DayPicker, useInput } from "react-day-picker";
 import "react-day-picker/dist/style.css";
-import nb from "date-fns/locale/nb/index.js";
+import { nb } from "date-fns/locale/nb";
 import { ChangeEvent, useEffect } from "react";
 import { isValid, parse } from "date-fns";
 
