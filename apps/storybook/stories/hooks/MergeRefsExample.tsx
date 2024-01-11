@@ -1,4 +1,4 @@
-import { useMergeRefs, useOutsideClick, useDisclosure, Box } from "@kvib/react";
+import { useMergeRefs, useOutsideClick, useDisclosure, Box } from "@kvib/react/src";
 import { usePopper } from "@chakra-ui/react";
 import React from "react";
 

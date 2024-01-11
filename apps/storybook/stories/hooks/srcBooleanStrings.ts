@@ -5,9 +5,9 @@ function Example() {
   return (
     <>
       <p>Boolean state: {flag.toString()}</p>
-      <button onClick={setFlag.toggle}>
+      <Button onClick={setFlag.toggle}>
         Click me to toggle the boolean value
-      </button>
+      </Button>
     </>
   )
 }

@@ -1,4 +1,4 @@
-import { Box, Code, useToken } from "@kvib/react";
+import { Box, Code, useToken } from "@kvib/react/src";
 export const TokenExample = () => {
   const [red100, blue200] = useToken(
     // the key within the theme, in this case `theme.colors`

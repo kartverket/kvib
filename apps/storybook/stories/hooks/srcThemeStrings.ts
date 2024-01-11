@@ -1,5 +1,10 @@
 export const ThemeStrings = `function Example() {
-  const theme = useTheme()
+  const theme = useTheme();
 
-  return <div>{/* Do something with the theme */}</div>
-}`;
+  return (
+      <Box style={{backgroundColor: theme.colors.red[500]}} 
+      width={'450px'} 
+      height={'100px'} 
+      p={4} 
+      color='white'/>
+  }`;

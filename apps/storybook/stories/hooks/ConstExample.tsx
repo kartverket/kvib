@@ -1,4 +1,4 @@
-import { useConst } from "@kvib/react";
+import { useConst } from "@kvib/react/src";
 import { useState } from "react";
 
 export const ConstExample = () => {

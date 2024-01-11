@@ -1,4 +1,4 @@
-import { useControllableState, Button, Box } from "@kvib/react";
+import { useControllableState, Button, Box } from "@kvib/react/src";
 import React from "react";
 export const UnControllableExample = () => {
   const [value, setValue] = useControllableState({ defaultValue: 40 });

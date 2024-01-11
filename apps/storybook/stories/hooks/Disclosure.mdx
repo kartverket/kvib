@@ -3,7 +3,7 @@ import {DocsHeading, DocsStory, DocsContainer, Feedback} from "../templates";
 import {Canvas, Source} from "@storybook/blocks";
 import {DisclosureExample, DisclosurePropsExample} from "./DisclosureExample";
 import {DisclosurePropsStrings, DisclosureStrings} from "./srcDisclosureStrings";
-import {TableContainer, Table, Thead, Tr, Th, Tbody, Td} from "@kvib/react";
+import {TableContainer, Table, Thead, Tr, Th, Tbody, Td} from "@kvib/react/src";
 
 
 <Meta title="Hooks/useDisclosure"/>
@@ -42,13 +42,13 @@ import { useDisclosure } from "@kvib/react";
                 <Td><code>onClose</code></Td>
                 <Td><code>function</code></Td>
                 <Td><code></code></Td>
-                <Td>Callback-funksjon for å sette en falsk verdi for **isOpen**-parameteren.</Td>
+                <Td>Callback-funksjon for å sette **isOpen**-parameteren til false.</Td>
             </Tr>
             <Tr>
                 <Td><code>onOpen</code></Td>
                 <Td><code>function</code></Td>
                 <Td><code></code></Td>
-                <Td>Callback-funksjon for å sette en sann verdi for **isOpen**-parameteren.</Td>
+                <Td>Callback-funksjon for å sette **isOpen**-parameteren til true.</Td>
             </Tr>
             <Tr>
                 <Td><code>onToggle</code></Td>
@@ -138,12 +138,12 @@ import { useDisclosure } from "@kvib/react";
             <Tr>
                 <Td><code>onClose (Optional)</code></Td>
                 <Td><code>function</code></Td>
-                <Td>Funksjon for å sette en falsk verdi for isOpen-parameteren.</Td>
+                <Td>Funksjon for å sette isOpen-parameteren til false.</Td>
             </Tr>
             <Tr>
                 <Td><code>onOpen (Optional)</code></Td>
                 <Td><code>function</code></Td>
-                <Td>Funksjon for å sette en sann verdi for isOpen-parameteren.</Td>
+                <Td>Funksjon for å sette isOpen-parameteren til true.</Td>
             </Tr>
             <Tr>
                 <Td><code>id (Optional)</code></Td>

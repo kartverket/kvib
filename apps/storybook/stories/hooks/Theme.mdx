@@ -1,7 +1,8 @@
 import { Meta } from "@storybook/addon-docs";
-import {DocsHeading, Feedback} from "../templates";
-import {Source} from "@storybook/blocks";
+import {DocsHeading, DocsStory,DocsContainer, Feedback} from "../templates";
+import {Canvas, Source} from "@storybook/blocks";
 import {ThemeStrings} from "./srcThemeStrings";
+import { ThemeExample } from "./ThemeExample";
 
 <Meta title="Hooks/useTheme" />
 
@@ -15,8 +16,18 @@ import { useTheme } from "@kvib/react";
 
 <Feedback component="useTheme"/>
 
-<DocsHeading>Return value</DocsHeading>
-**useTheme** returnerer temaobjektet.
+<DocsContainer>
 
-<DocsHeading>Bruk</DocsHeading>
-<Source code={ThemeStrings} dark/>
+<DocsStory
+  title="Bruk"
+  description="useTheme returnerer temaobjektet."
+  isVertical
+  story={
+    <Canvas>
+      <ThemeExample/>
+      <Source code={ThemeStrings} dark/>
+    </Canvas>
+  }
+/>
+
+</DocsContainer>

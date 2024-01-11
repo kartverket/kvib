@@ -7,7 +7,7 @@ import {
   DrawerHeader,
   DrawerContent,
   DrawerBody,
-} from "@kvib/react";
+} from "@kvib/react/src";
 export const DisclosureExample = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (

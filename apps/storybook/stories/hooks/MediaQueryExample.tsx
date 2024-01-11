@@ -1,4 +1,4 @@
-import { useMediaQuery, Text } from "@kvib/react";
+import { useMediaQuery, Text } from "@kvib/react/src";
 export const MediaQueryExample = () => {
   const [isLargerThan1280] = useMediaQuery("(min-width: 1280px)");
 

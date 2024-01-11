@@ -1,4 +1,4 @@
-import { useClipboard, Flex, Input, Button, Editable, EditablePreview, EditableInput } from "@kvib/react";
+import { useClipboard, Flex, Input, Button, Editable, EditablePreview, EditableInput } from "@kvib/react/src";
 export const ClipboardExample = () => {
   const placeholder = "text to be copied...";
   const { onCopy, value, setValue, hasCopied } = useClipboard("");

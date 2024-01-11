@@ -1,4 +1,4 @@
-import { useOutsideClick } from "@kvib/react";
+import { useOutsideClick } from "@kvib/react/src";
 import React from "react";
 
 export const OutsideClickExample = () => {
