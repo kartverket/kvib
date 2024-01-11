@@ -18,6 +18,13 @@ const meta: Meta<typeof KvibFooterInline> = {
       },
       control: "text",
     },
+    privacyUrl: {
+      description: "Link to privacy statement",
+      table: {
+        type: { summary: "string" },
+      },
+      control: "text",
+    },
     logoLink: {
       description: "Href for logo link",
       table: {

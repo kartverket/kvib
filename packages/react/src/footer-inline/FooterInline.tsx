@@ -4,10 +4,18 @@ import { colors } from "../theme/tokens";
 type FooterInlineProps = {
   logoLink?: string;
   accessibilityUrl?: string;
+  /**The contact info email-adress
+   * @default https://kartverket.no/om-kartverket/personvern*/
+  privacyUrl?: string;
   children?: React.ReactNode;
 };
 
-export const FooterInline = ({ logoLink, accessibilityUrl, children }: FooterInlineProps) => {
+export const FooterInline = ({
+  logoLink,
+  accessibilityUrl,
+  privacyUrl = "https://kartverket.no/om-kartverket/personvern",
+  children,
+}: FooterInlineProps) => {
   return (
     <Flex
       borderTop={`1px solid ${colors.gray[300]}`}
@@ -26,11 +34,7 @@ export const FooterInline = ({ logoLink, accessibilityUrl, children }: FooterInl
             Tilgjengelighetserklæring
           </Link>
         )}
-        <Link
-          href="https://kartverket.no/om-kartverket/personvern"
-          aria-label="Besøk Kartverket sin personvernserklæring"
-          fontWeight="bold"
-        >
+        <Link href={privacyUrl} aria-label="Besøk Kartverket sin personvernserklæring" fontWeight="bold">
           Personvern
         </Link>
       </Flex>
