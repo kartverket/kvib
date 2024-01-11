@@ -1,5 +1,13 @@
 # @kvib/react
 
+## 3.4.1
+
+### Patch Changes
+
+- 42672ed: Lagt til prop for personvernerklæring i footer-inline
+- 178bf2a: Oppdaterer @types/react til v 18.2.47, data-fns til v 3.1.0 og material-symbols til v 0.14.4
+- 8ce5869: Oppdatert date-fns til versjon 3.0.6
+
 ## 3.4.0
 
 ### Minor Changes
