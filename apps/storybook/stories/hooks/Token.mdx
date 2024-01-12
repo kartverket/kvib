@@ -1,0 +1,42 @@
+import {Meta} from "@storybook/addon-docs";
+import {DocsHeading, DocsStory, DocsContainer, Feedback} from "../templates";
+import {Canvas, Source} from "@storybook/blocks";
+import {Alert, AlertIcon, Box, AlertDescription} from "@kvib/react/src"
+import {TokenExample} from "./TokenExample";
+import {TokenStrings} from "./srcTokenStrings";
+
+<Meta title="Hooks/useToken"/>
+
+# useToken
+
+**useToken**
+
+```jsx
+import { useToken } from "@kvib/react";
+```
+
+<Feedback component="useToken"/>
+
+<DocsContainer>
+
+<DocsHeading>Return value</DocsHeading>
+**useToken** henter det som er i temaet på de gitte stiene (paths).
+
+<DocsHeading>Bruk</DocsHeading>
+
+
+    <Canvas>
+        <TokenExample/>
+    </Canvas>
+    <Source code={TokenStrings} dark/>
+</DocsContainer>
+
+<Alert status="info">
+    <AlertIcon/>
+    <Box>
+        <AlertDescription>
+            Merk at du også kan bruke **sx**-egenskapen for å skrive stiler fritt ved å bruke temaets tokens
+        </AlertDescription>
+    </Box>
+</Alert>
+
