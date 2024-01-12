@@ -1,4 +1,5 @@
 import { Title, Canvas, Meta, Story, Controls } from "@storybook/blocks";
+import { DocsHeading, DocsContainer, DocsStory, Feedback } from "../../../templates";
 import * as LinkStories from "./Link.stories";
 
 <Meta of={LinkStories} />
@@ -11,11 +12,34 @@ Hvis lenken man trykker på tar deg ut av siden, eller åpner et nytt vindu, ska
 Dersom _Link_ skal benyttes sammen med et routing bibliotek, se [Chakras dokumentasjon om 'Usage with Routing Library'](https://chakra-ui.com/docs/components/link/usage#usage-with-routing-library) for eksempler og dokumentasjon.
 For bruk av _Link_ med Next.js, se [Chakras dokumentasjon om 'Usage with Next.js'](https://chakra-ui.com/docs/components/link/usage#usage-with-nextjs) for eksempler og dokumentasjon.
 
-## Ta i bruk
-
 ```jsx
 import { Link } from "@kvib/react";
 ```
+
+<DocsContainer>
+    **Egnet til:**
+
+    - Henvise til andre nettsider
+    -
+
+    **Uegnet til:**
+
+    - Bli brukt som knapp
+    -
+
+    <Feedback component="Link" />
+</DocsContainer>
+
+<DocsContainer>
+    <DocsHeading>Alternativer</DocsHeading>
+
+    <DocsStory
+    title="Ikon"
+    description="Bruk ikon i lenken hvis den tar deg til et annet domene. Hvis lenken bare tar deg til en overkrift
+    eller en annen side, trengs det ikke ikon."
+    />
+
+</DocsContainer>
 
 ## Props
 
