@@ -105,12 +105,12 @@ export default meta;
 type Story = StoryObj<typeof KvibTimepicker>;
 
 export const Timepicker: Story = {
-  args: {},
+  args: { colorScheme: "green" },
   render: (args) => <KvibTimepicker {...args} />,
 };
 
 export const TimepickerInterval: Story = {
-  args: {},
+  args: { colorScheme: "green" },
   render: (args) => (
     <Stack>
       <KvibTimepicker {...args} minuteInterval={15} />
@@ -120,19 +120,19 @@ export const TimepickerInterval: Story = {
 };
 
 export const TimepickerAppearance: Story = {
-  args: {},
+  args: { colorScheme: "green" },
   render: (args) => (
     <Stack>
       <KvibTimepicker {...args} variant="outline" />
       <KvibTimepicker {...args} variant="filled" />
-      <KvibTimepicker {...args} variant="flushed" colorScheme="blue" />
-      <KvibTimepicker {...args} variant="unstyled" colorScheme="blue" />
+      <KvibTimepicker {...args} variant="flushed" />
+      <KvibTimepicker {...args} variant="unstyled" />
     </Stack>
   ),
 };
 
 export const TimepickerSize: Story = {
-  args: {},
+  args: { colorScheme: "green" },
   render: (args) => (
     <Stack>
       <KvibTimepicker {...args} size="xs" />
@@ -145,7 +145,7 @@ export const TimepickerSize: Story = {
 };
 
 export const TimepickerForm: Story = {
-  args: {},
+  args: { colorScheme: "green" },
   render: (args) => (
     <FormControl>
       <FormLabel>Tid</FormLabel>
