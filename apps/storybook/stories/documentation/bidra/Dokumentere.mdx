@@ -35,8 +35,8 @@ Under følger en beskrivelse av hvordan en komponent skal dokumenteres. Link-kom
     };
     ```
 
-- `title` setter filstrukturen på selve [dokumentasjonssiden til Designbiblioteket](https://kartverket.github.io/kvib). (Putt to stjerner bak navnet på komponenten dersom den er endret)
-- Hvis man ønsker å endre på sortertingen av filstrukturen på Storybook, gå til `apps/storybook/.storybook/preview.js`, og tilpass `order` som overskriver den ellers alfabetiske rekkefølgen.
+- `title` setter filstrukturen på selve [dokumentasjonssiden til Designbiblioteket](https://design.kartverket.no).
+- Hvis man ønsker å endre på sorteringen av filstrukturen på Storybook, gå til `apps/storybook/.storybook/preview.js`, og tilpass `order` som overskriver den ellers alfabetiske rekkefølgen.
 
 3.  På selve dokumentasjonssiden er det en _control-tabell_ som benyttes for å teste ulike props-verdier på komponenten.
     Beskrivelsen og default-verdien av egendefinerte props legges til som kommentar i _.tsx_-filen hvor propsene blir definert, altså i `packages/react/src/link/Link.tsx`.
@@ -105,7 +105,13 @@ Slik vil storyen se ut i dokumentasjonen, og vil vise den minimale koden en bruk
             ```
 
 - Gi en beskrivelse av komponenten og hvordan den skal brukes. **Sjekk rettskriving og klarspråk**.
-- Etter “Ta i bruk”, sett inn den storyen som er default ( Her; Link), og sett inn controll-tabellen til denne storyen:
+- Lag en liten oversikt for hva komponenten er **Egnet/Uegnet** til.
+- Legg til Feedback komponent fra apps/storybook/stories/templates
+- Lag kategoriene **Options, Tilgjengelighet, props, Kjente feil**. Bruk DocsHeading, DocsAnatomy, DocsContainer og DocsStory
+fra samme fil. Props skal være beskrevet på engelsk.
+
+
+- Sett inn den storyen som er default ( Her; Link), og sett inn controll-tabellen til denne storyen:
 
           ```jsx
           ## Props
