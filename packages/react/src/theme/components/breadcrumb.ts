@@ -8,8 +8,7 @@ const helpers = createMultiStyleConfigHelpers(parts.keys);
 export const breadcrumbTheme = helpers.defineMultiStyleConfig({
   baseStyle: ({ colorScheme }) => ({
     link: {
-      color: "pink",
-      backgroundColor: "green",
+      color: `${colorScheme}.500`,
       textDecoration: "underline",
       _focusVisible: {
         outline: borders["2px"],
