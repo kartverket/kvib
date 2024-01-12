@@ -1,4 +1,13 @@
-import { Box, FormControl, FormLabel, Stack } from "@kvib/react/src";
+import {
+  Box,
+  FormControl,
+  FormLabel,
+  KvibProvider,
+  Stack,
+  extendTheme,
+  theme,
+  withDefaultColorScheme,
+} from "@kvib/react/src";
 import { Datepicker as KvibDatepicker } from "@kvib/react/src/datepicker";
 import { Meta, StoryObj } from "@storybook/react";
 
@@ -172,6 +181,15 @@ export const Datepicker: DatepickerStory = {
     <Box h="25rem">
       <KvibDatepicker aria-label="Datepicker" {...args} />
     </Box>
+  ),
+};
+
+const customTheme = extendTheme(withDefaultColorScheme({ colorScheme: "blue" }), theme);
+export const DatepickerBlueTheme: DatepickerStory = {
+  render: (args) => (
+    <KvibProvider theme={customTheme}>
+      <KvibDatepicker aria-label="Datepicker example" {...args} />
+    </KvibProvider>
   ),
 };
 
