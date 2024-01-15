@@ -10,6 +10,7 @@ import {
 } from "@kvib/react/src";
 import { Datepicker as KvibDatepicker } from "@kvib/react/src/datepicker";
 import { Meta, StoryObj } from "@storybook/react";
+import { userEvent, within } from "@storybook/testing-library";
 
 const meta: Meta<typeof KvibDatepicker> = {
   title: "Skjemaelementer/Datepicker",
@@ -242,4 +243,21 @@ export const DatepickerForm: DatepickerStory = {
       </FormControl>
     </Box>
   ),
+};
+
+export const DatepickerOpen: DatepickerStory = {
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    await userEvent.click(canvas.getByRole("button"));
+  },
+};
+
+export const DatepickerSelectDate: DatepickerStory = {
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    await DatepickerOpen.play({ canvasElement });
+    await userEvent.click(canvas.getByText("10"));
+  },
 };
