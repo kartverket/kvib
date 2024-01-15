@@ -1,0 +1,155 @@
+import {Meta} from "@storybook/addon-docs";
+import {DocsHeading, DocsStory, DocsContainer, Feedback} from "../templates";
+import {Canvas, Source} from "@storybook/blocks";
+import {DisclosureExample, DisclosurePropsExample} from "./DisclosureExample";
+import {DisclosurePropsStrings, DisclosureStrings} from "./srcDisclosureStrings";
+import {TableContainer, Table, Thead, Tr, Th, Tbody, Td} from "@kvib/react/src";
+
+
+<Meta title="Hooks/useDisclosure"/>
+
+# useDisclosure
+
+**useDisclosure** er en tilpasset hook som brukes for å hjelpe med å håndtere vanlige **open**, **close** eller **toggle**. Den kan brukes til å kontrollere tilbakemeldingskomponenter som **Modal**, **AlertDialog**, **Drawer**, osv.
+
+```jsx
+import { useDisclosure } from "@kvib/react";
+```
+
+<Feedback component="useDisclosure"/>
+
+<DocsHeading>Return value</DocsHeading>
+
+**useDisclosure** hook returnerer et objekt med følgende felter:
+<TableContainer>
+    <Table>
+        <Thead>
+            <Tr>
+                <Th>Name</Th>
+                <Th>Type</Th>
+                <Th>Default</Th>
+                <Th>Description</Th>
+            </Tr>
+        </Thead>
+        <Tbody>
+            <Tr>
+                <Td><code>isOpen</code></Td>
+                <Td><code>boolean</code></Td>
+                <Td><code>false</code></Td>
+                <Td>Hvis **true**, setter det den kontrollerte komponenten til sin synlige tilstand.</Td>
+            </Tr>
+            <Tr>
+                <Td><code>onClose</code></Td>
+                <Td><code>function</code></Td>
+                <Td><code></code></Td>
+                <Td>Callback-funksjon for å sette **isOpen**-parameteren til false.</Td>
+            </Tr>
+            <Tr>
+                <Td><code>onOpen</code></Td>
+                <Td><code>function</code></Td>
+                <Td><code></code></Td>
+                <Td>Callback-funksjon for å sette **isOpen**-parameteren til true.</Td>
+            </Tr>
+            <Tr>
+                <Td><code>onToggle</code></Td>
+                <Td><code>function</code></Td>
+                <Td><code></code></Td>
+                <Td>Callback-funksjon for å bytte verdien av **isOpen**-parameteren.</Td>
+            </Tr>
+            <Tr>
+                <Td><code>getDisclosureProps</code></Td>
+                <Td><code>function</code></Td>
+                <Td><code></code></Td>
+                <Td>Callback-funksjon for å hente en rekke egenskaper (props) for den kontrollerte komponenten.</Td>
+            </Tr>
+            <Tr>
+                <Td><code>getButtonProps</code></Td>
+                <Td><code>function</code></Td>
+                <Td><code></code></Td>
+                <Td>Callback-funksjon for å hente en rekke egenskaper (props) for knappen som utløser visningen (disclosure).</Td>
+            </Tr>
+        </Tbody>
+    </Table>
+</TableContainer>
+
+
+<DocsContainer>
+
+    <DocsStory
+        title="Bruk"
+        description="Du kan bruke en kombinasjon av metodene og verdiene som returneres av hooken for å styre ulike komponenter påvirket av avsløringen.
+            Nedenfor er bruken av returnerte felt fra hooken uten en hentefunksjon for å styre Drawer-komponenten ved knappetoggling."
+        story={
+            <Canvas>
+                <DisclosureExample/>
+            </Canvas>
+        }
+    />
+    <Source code={DisclosureStrings} dark/>
+
+    Ved å bruke metodene **getDisclosureProps** og **getButtonProps** som returneres av hooken, får du nødvendige attributter og hendler til den respektive komponenten og knappen for synlighetstoggling og tilgjengelighet.
+
+    Komponenten som bruker **getDisclosureProps** mottar følgende egenskaper (props):
+    - En **id** (kan valgfritt passere denne som en prop til hooken for å rendere en tilpasset verdi).
+    - Et dynamisk rendret **hidden** attributt.
+    **getDisclosureProps** kan direkte akseptere eventuelle ekstra props for komponenten."
+
+    Knappen som bruker **getButtonProps** for toggling mottar følgende egenskaper (props):
+    - Dynamisk rendret **aria-expanded** attributt for å informere en skjermleser om hvorvidt avsløringskomponenten er synlig.
+    - **aria-controls** attributtet bruker **id** (kan valgfritt passere **id** som en prop til hooken for å rendere en tilpasset verdi). Dette forteller en skjermleser hvilken komponent som kontrolleres av knappen.
+    - En onClick-handler som bruker **onToggle** callback sammen med eventuelle andre click events som passerer som en **onClick**-prop til **getButtonProps**.
+
+    <DocsStory
+        title=""
+        description="getButtonProps kan også direkte akseptere eventuelle ekstra props for knappen."
+        story={
+            <Canvas>
+                <DisclosurePropsExample/>
+            </Canvas>
+        }
+    />
+    <Source code={DisclosurePropsStrings} dark/>
+
+</DocsContainer>
+
+<DocsHeading>Parametere</DocsHeading>
+**useDisclosure** hooken aksepterer et valgfritt objekt med følgende egenskaper:
+
+<TableContainer>
+    <Table>
+        <Thead>
+            <Tr>
+                <Th>Parameter</Th>
+                <Th>Type</Th>
+                <Th>Description</Th>
+            </Tr>
+        </Thead>
+        <Tbody>
+            <Tr>
+                <Td><code>isOpen (Optional)</code></Td>
+                <Td><code>boolean</code></Td>
+                <Td>Hvis true, er den kontrollerte komponenten ansvarlig for å endre synlighetstilstanden via onClose- og onOpen-egenskapene.</Td>
+            </Tr>
+            <Tr>
+                <Td><code>defaultIsOpen (Optional)</code></Td>
+                <Td><code>boolean</code></Td>
+                <Td>Hvis true, setter initialt den kontrollerte komponenten til sin synlige tilstand.</Td>
+            </Tr>
+            <Tr>
+                <Td><code>onClose (Optional)</code></Td>
+                <Td><code>function</code></Td>
+                <Td>Funksjon for å sette isOpen-parameteren til false.</Td>
+            </Tr>
+            <Tr>
+                <Td><code>onOpen (Optional)</code></Td>
+                <Td><code>function</code></Td>
+                <Td>Funksjon for å sette isOpen-parameteren til true.</Td>
+            </Tr>
+            <Tr>
+                <Td><code>id (Optional)</code></Td>
+                <Td><code>string</code></Td>
+                <Td>Streng som lar deg knytte avsløringsstatusen til en bestemt komponent eller element på siden din.</Td>
+            </Tr>
+        </Tbody>
+    </Table>
+</TableContainer>

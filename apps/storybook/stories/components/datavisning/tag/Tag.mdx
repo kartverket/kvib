@@ -1,0 +1,35 @@
+import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
+import * as TagStories from "./Tag.stories";
+
+<Meta of={TagStories} />
+
+# Tag
+
+Tag skal brukes til elementer som trenger å bli merket, kategorisert eller organisert med nøkkelord som beskriver dem.
+
+## Ta i bruk
+
+```jsx
+import { Tag, TagLabel, TagLeftIcon, TagRightIcon, TagCloseButton } from "@kvib/react";
+```
+
+## Props
+
+<Canvas of={TagStories.Tag} />
+<Controls of={TagStories.Tag} />
+
+## Farger
+
+<Canvas of={TagStories.TagColors} />
+
+## Størrelser
+
+<Canvas of={TagStories.TagSizes} />
+
+## Varianter
+
+<Canvas of={TagStories.TagVariants} />
+
+## Tag med lukkeknapp
+
+<Canvas of={TagStories.TagClose} />

@@ -1,12 +1,38 @@
 import { Meta } from "@storybook/addon-docs";
 import { Banner } from "./Banner";
 import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../templates";
-import { Text, Code, Box, Heading, SimpleGrid } from "@kvib/react/src/";
+import { Text, Code, Box, Heading, SimpleGrid, Grid } from "@kvib/react/src/";
+import { IntroButton, IntroCardGrid } from "./IntroButton";
 import * as IntroCards from "./IntroCard";
 
 <Meta title="Info/Introduksjon" />
 
 <Banner />
+
+<IntroCardGrid >
+
+<IntroButton
+  icon="assets/Grid.svg"
+  href="/?path=/docs/komponenter-komponentoversikt--docs"
+  title="Komponenter"
+  description="Alle komponentene i designsystemet"
+/>
+
+<IntroButton
+  icon="assets/Palette.svg"
+  href="/?path=/docs/design-fundament-design-tokens--docs"
+  title="Design tokens"
+  description="Farger, breakpoints, spacing, etc."
+/>
+
+<IntroButton
+  icon="assets/Compass.svg"
+  href="/?path=/docs/media-ikoner--docs"
+  title="Ikoner"
+  description="Oversikt over ikoner"
+/>
+
+</IntroCardGrid>
 
 <SimpleGrid columns={[1, 1, 2]} spacing={5}>
 

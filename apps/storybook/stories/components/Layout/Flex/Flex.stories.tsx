@@ -3,7 +3,7 @@ import { Text } from "@kvib/react/src/typography";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibFlex> = {
-  title: "Komponenter/Layout/Flex",
+  title: "Layout/Flex",
   component: KvibFlex,
   parameters: {
     docs: {

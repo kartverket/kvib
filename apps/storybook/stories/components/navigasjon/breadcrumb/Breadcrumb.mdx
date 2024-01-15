@@ -1,0 +1,49 @@
+import { Meta, Canvas, Controls, Source } from "@storybook/blocks";
+import * as BreadcrumbStories from "./Breadcrumb.stories";
+
+<Meta of={BreadcrumbStories} />
+
+# Breadcrumb
+
+Breadcrumb er et navigasjonsmønster som hjelper brukerne å forstå hierarkiet på en nettside. Legg til `ìsCurrentPage`-proppen på `BreacrumbItem` brukeren står i.
+Breadcrumb inneholder `Box` så det er mulig å bruke alle style props derfra.
+
+## Ta i bruk
+
+```jsx
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator } from "@kvib/react";
+```
+
+## Props
+
+<Canvas of={BreadcrumbStories.Breadcrumb} />
+<Controls of={BreadcrumbStories.Breadcrumb} />
+
+## Separator
+
+<Canvas of={BreadcrumbStories.BreadcrumbSeparator} />
+
+## Bruk av Breadcrumb med et Routing Library
+
+For å bruke Breadcrumb med et routing library som React Router må du legge til `as`-proppen på `BreadcrumbLink`.
+Dermed vil `a`-taggen bli byttet ut med Reacts `Link`
+
+<Source
+  code={`// import { Link } from "@react/router"
+
+<Breadcrumb>
+  <BreadcrumbItem>
+    <BreadcrumbLink as={Link} to="#">
+      Home
+    </BreadcrumbLink>
+  </BreadcrumbItem>
+  <BreadcrumbItem>
+    <BreadcrumbLink as={Link} to="#">
+      About
+    </BreadcrumbLink>
+  </BreadcrumbItem>
+  <BreadcrumbItem isCurrentPage>
+    <BreadcrumbLink>Contact</BreadcrumbLink>
+  </BreadcrumbItem>
+</Breadcrumb>
+`} dark />
