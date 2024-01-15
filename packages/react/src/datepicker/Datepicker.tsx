@@ -179,6 +179,17 @@ const CustomDatepicker = forwardRef<DatepickerProps, "input">(
         } as ChangeEvent<HTMLInputElement>);
 
         setPickerVisible.off();
+      } else {
+        onChange?.({
+          target: {
+            value: "",
+          },
+          bubbles: true,
+          type: "change",
+          persist: () => {
+          },
+          nativeEvent: {},
+        } as ChangeEvent<HTMLInputElement>);
       }
     }, [dayPickerProps.selected, setPickerVisible]);
 
@@ -189,6 +200,17 @@ const CustomDatepicker = forwardRef<DatepickerProps, "input">(
       const parsedDate = parse(dateStr, "yyyy-MM-dd", new Date());
       if (isValid(parsedDate)) {
         onChange?.(event);
+      } else {
+        onChange?.({
+          target: {
+            value: "",
+          },
+          bubbles: true,
+          type: "change",
+          persist: () => {
+          },
+          nativeEvent: {},
+        } as ChangeEvent<HTMLInputElement>);
       }
     };
 
