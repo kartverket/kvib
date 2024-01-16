@@ -20,39 +20,38 @@ import { Link } from "@kvib/react";
     **Egnet til:**
 
     - Henvise til andre nettsider
-    -
 
     **Uegnet til:**
 
     - Bli brukt som knapp
-    -
 
     <Feedback component="Link" />
 </DocsContainer>
 
+<DocsHeading>Alternativer</DocsHeading>
 <DocsContainer>
-    <DocsHeading>Alternativer</DocsHeading>
-
     <DocsStory
     title="Ikon"
-    description="Bruk ikon i lenken hvis den tar deg til et annet domene. Hvis lenken bare tar deg til en overkrift
-    eller en annen side, trengs det ikke ikon."
+    description="Bruk ikon i lenken hvis den tar deg til et annet nettsted. Hvis lenken bare tar deg til en overskrift
+    eller en annen side på domenet, trengs det ikke ikon."
+    story={<Canvas of={LinkStories.LinkStates} />}
     />
+
+    <DocsStory
+        title="Utseende"
+        description="Link har bare én størrelse og to farger. Blå farge burde brukes på kartløsninger."
+        story={<Canvas of={LinkStories.LinkColorscheme} />}
+    />
+</DocsContainer>
+
+<DocsHeading>Retningslinjer</DocsHeading>
+<DocsContainer>
+    Hvis lenken man trykker på tar deg ut av siden, eller åpnet et nytt vindu, skal de vises med ikon.
 
 </DocsContainer>
 
-## Props
+<DocsHeading>Props</DocsHeading>
 
 <Canvas of={LinkStories.Link} />
-
 <Controls of={LinkStories.Link} />
 
-## States (intern og ekstern lenke)
-
-Hvis lenken man trykker på tar deg ut av siden, eller åpnet et nytt vindu, skal de vises med ikon.
-
-<Canvas of={LinkStories.LinkStates} />
-
-## Farger
-
-<Canvas of={LinkStories.LinkColorscheme} />
