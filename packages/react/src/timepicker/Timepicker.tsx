@@ -24,7 +24,7 @@ export const Timepicker = ({
   size,
   width = "fit-content",
   variant = "outline",
-  colorScheme,
+  colorScheme = "green",
   value,
   defaultValue = getCurrentTime(),
   onChange = () => {},
