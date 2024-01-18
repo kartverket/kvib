@@ -74,7 +74,7 @@ Slik vil storyen se ut i dokumentasjonen, og vil vise den minimale koden en bruk
 
 <img alt="example of codesnippet" src={require("../../../public/assets/deafultCompDocs.png")} width="700px" />
 
-5.  Lag videre stories som viser verdier for de ulike propsa, f.eks. size, variant, colorScheme, states (loading, disabled, ...).
+5.  Lag videre stories som viser ulik bruk av komponenten, f.eks. hensikt, ikoner og addons, utseende (se for eksempel på Alert).
     Velg de som er mest hensiktsmessig for komponenten. Bruk _HStack/VStack_ til å ordne flere komponenter ved siden av hverandre i en story, hvor du tilordner hver komponent forksjellige verdier.
     Dette tydeliggjør forskjellen samtidig som det gir en oversiktlig dokumentasjon. Under er det vist eksempel hvor ulike states (internal og external link) vises:
 
@@ -105,40 +105,40 @@ Slik vil storyen se ut i dokumentasjonen, og vil vise den minimale koden en bruk
             ```
 
 - Gi en beskrivelse av komponenten og hvordan den skal brukes. **Sjekk rettskriving og klarspråk**.
-- Lag en liten oversikt for hva komponenten er **Egnet/Uegnet** til.
-- Legg til Feedback komponent fra apps/storybook/stories/templates
-- Lag kategoriene **Options, Tilgjengelighet, props, Kjente feil**. Bruk DocsHeading, DocsAnatomy, DocsContainer og DocsStory
-fra samme fil. Props skal være beskrevet på engelsk.
+- Lag en liten oversikt for hva komponenten er **Egnet/Uegnet** til. Hvis Komponentene trenger noe kontekst
+(f.eks input med labels) kommer det på neste linje. Legg til Feedback komponent fra apps/storybook/stories/templates på slutten
 
+7.  Lag kategoriene **Alternativer, Tilgjengelighet, props, Kjente feil**. Bruk DocsHeading, DocsAnatomy, DocsContainer og DocsStory
+fra samme fil som Feedback. Props skal være beskrevet på engelsk. Eksempel for Alternativer:
+        ```jsx
+        <DocsHeading>Alternativer</DocsHeading>
+        <DocsContainer>
+            <DocsStory
+                title="Utseende"
+                description="Link har bare én størrelse og to farger. Blå farge burde brukes på kartløsninger."
+                story={<Canvas of={LinkStories.LinkColorscheme} />}
+            />
+            <DocsStory
+            ...
+            />
+        </DocsContainer>
+          ```
 
-- Sett inn den storyen som er default ( Her; Link), og sett inn controll-tabellen til denne storyen:
+8. Sett inn den storyen som er default ( Her; Link), og sett inn controll-tabellen til denne storyen:
 
           ```jsx
-          ## Props
+          <DocsHeading>Props</DocsHeading>
 
           <Canvas of={LinkStories.Link} />         //henter selve storien (default-komponenten)
 
           <Controls of={LinkStories.Link} />       //henter control- tabellen
             ```
 
-- Sett inn de resterende storiesene med tilhørende titler (##).
-
-          ```jsx
-          ## States (intern og ekstern link)
-
-          <Canvas of={LinkStories.LinkStates} />
-
-          ## Farger
-
-          <Canvas of={LinkStories.LinkColorscheme} />
-            ```
-
-7.  Dersom det er noen kjente feil ved komponenten, eksempelvis med a11y-tester, lag et avsnitt nederst i .mdx-filen slik som dette:
+9.  Dersom det er noen kjente feil ved komponenten, eksempelvis med a11y-tester, lag et avsnitt nederst i .mdx-filen slik som dette:
 
 ## Kjente feil
 
 - a11y-test har violations....
-- ....
 
 🏁 **Nå kan du kjøre `npm run dev` for å se Storybook-dokumentasjonssiden lokalt. Videre må du gjøre ulike tester for å sjekke at alt stemmer.**
 
