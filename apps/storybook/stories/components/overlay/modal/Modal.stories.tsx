@@ -233,7 +233,7 @@ const ModalExample = ({ ...args }) => {
           </ModalBody>
 
           <ModalFooter>
-            <Button colorScheme="blue" mr={3} onClick={onClose}>
+            <Button colorScheme="green" variant="secondary" mr={3} onClick={onClose}>
               Lukk
             </Button>
             <Button>Ta en kikk</Button>

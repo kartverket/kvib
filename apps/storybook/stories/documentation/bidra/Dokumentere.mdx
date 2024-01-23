@@ -14,7 +14,7 @@ Under følger en beskrivelse av hvordan en komponent skal dokumenteres. Link-kom
     import { Meta, StoryObj } from "@storybook/react";
 
     const meta: Meta<typeof KvibLink> = {
-      title: "Komponenter/Link<3 ",
+      title: "Komponenter/Link",
       component: KvibLink,
       parameters: {
         docs: {
@@ -94,7 +94,8 @@ Slik vil storyen se ut i dokumentasjonen, og vil vise den minimale koden en bruk
             };
             ```
 
-6.  I `apps/storybook/stories/components/link/Link.mdx`:
+6.  Åpne `apps/storybook/stories/components/link/Link.mdx`: (hvis du dokumenterer en ny komponent, må du lage en fil
+inne i samme components mappe)
 
 - Øverst i filen; bytt ut <Meta/> med: (Nå som du har definert en .stories.tsx fil settes tittelen her og ikke i .mdx)
 
