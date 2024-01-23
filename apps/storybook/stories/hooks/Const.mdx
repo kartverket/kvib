@@ -1,0 +1,67 @@
+import { Meta } from "@storybook/addon-docs";
+import {DocsHeading, DocsStory,DocsContainer, Feedback} from "../templates";
+import {Canvas, Source, Story} from "@storybook/blocks";
+import {ConstExample, StateExample} from "./ConstExample";
+import {ConstStrings, StateStrings} from "./srcConstStrings";
+
+
+<Meta title="Hooks/useConst" />
+
+# useConst
+
+**useConst** er en tilpasset hook brukt for å initialisere og returnere en konstant verdi.
+I motsetning til useMemo, vil dette alltid returnere den samme verdien, og hvis initialisatoren er en funksjon, blir den bare kalt én gang.
+
+```jsx
+import { useConst } from "@kvib/react";
+```
+
+<DocsHeading>Parametere</DocsHeading>
+
+**useConst** hooken aksepterer enten den initielle verdien eller en funksjon for å hente den initielle verdien.
+
+
+<Feedback component="useConst"/>
+
+<DocsContainer>
+
+    <DocsStory
+        title="Bruk"
+        description=""
+        isVertical
+        story={
+            <Canvas>
+                <ConstExample/>
+                <Source code={ConstStrings} dark/>
+            </Canvas>
+        }
+    />
+</DocsContainer>
+
+<DocsContainer>
+
+## Hvorfor ikke bruke useMemo?
+
+    React-dokumentasjonen sier at motoren kan velge å 'glemme' noen tidligere memoiserte verdier og beregne dem på nytt ved neste gjengivelse, og du bør skrive koden din slik at den fortsatt fungerer uten **useMemo** og deretter legge det til for å optimalisere ytelsen.
+
+    Du bør bruke **useMemo** bare når du trenger å beregne verdien basert på avhengigheter.
+
+## Hvorfor ikke bruke useState?
+
+    <DocsStory
+        title=""
+        description="Dette vil fungere som en konstant, men det er semantisk feil, og det er dyrt på grunn av reduksjonshåndteringen som vi ikke trenger."
+        isVertical
+        story={
+            <Canvas>
+                <StateExample/>
+                <Source code={StateStrings} dark/>
+            </Canvas>
+        }
+    />
+</DocsContainer>
+
+
+
+
+

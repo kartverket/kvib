@@ -1,0 +1,35 @@
+import { Meta } from "@storybook/addon-docs";
+import { Alert, AlertIcon, Box, AlertDescription } from "@kvib/react/src"
+import {Source} from "@storybook/blocks";
+import {PrefersReducedMotionStrings} from "./srcPrefersReducedMotion";
+import {Feedback} from "../templates";
+
+
+
+
+<Meta title="Hooks/usePrefersReducedMotion" />
+
+# usePrefersReducedMotion
+
+**usePrefersReducedMotion** er en tilpasset hook som brukes til å hjelpe med å oppdage brukerens bevegelsespreferanse.
+
+```jsx
+import { usePrefersReducedMotion } from "@kvib/react";
+```
+
+<Feedback component="usePrefersReducedMotion"/>
+
+# Return value
+**usePrefersReducedMotion** returnerer en boolsk verdi som indikerer om brukeren foretrekker redusert bevegelse.
+
+<Alert status="warning">
+    <AlertIcon />
+    <Box>
+        <AlertDescription>
+            Husk at denne API-en er avhengig av nettleserens støtte for **window.matchMedia**, og vil alltid returnere **false** hvis det ikke støttes eller ikke eksisterer (for eksempel under serverside rendering).
+        </AlertDescription>
+    </Box>
+</Alert>
+
+# Bruk
+<Source code={PrefersReducedMotionStrings} dark/>

@@ -1,0 +1,37 @@
+import {Meta} from "@storybook/addon-docs";
+import {DocsHeading, DocsStory, DocsContainer, Feedback} from "../templates";
+import {Canvas, Source} from "@storybook/blocks";
+import {MergeRefsExample, MergeRefsOtherExample} from "./MergeRefsExample";
+import {MergeRefsOtherStrings, MergeRefsStrings} from "./srcMergeRefsStrings";
+
+<Meta title="Hooks/useMergeRefs"/>
+
+# useMergeRefs
+
+**useMergeRefs** er en tilpasset hook som brukes til å slå sammen flere React-refs til en enkelt ref.
+
+```jsx
+import { useMergeRefs } from "@kvib/react";
+```
+<Feedback component="useMergeRefs"/>
+
+<DocsContainer>
+
+    <DocsHeading>Return value</DocsHeading>
+    useMergeRefs hooken returnerer en funksjon som mottar elementet og tildeler verdien til de gitte React-refs-ene.
+
+
+    ## Bruk
+    <Canvas>
+        <MergeRefsExample/>
+    </Canvas>
+    <Source code={MergeRefsStrings} dark/>
+
+    ## Bruk i kombinasjon med andre hooks
+    <Canvas>
+        <MergeRefsOtherExample/>
+    </Canvas>
+    <Source code={MergeRefsOtherStrings} dark/>
+
+</DocsContainer>
+

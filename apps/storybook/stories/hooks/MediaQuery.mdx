@@ -1,0 +1,66 @@
+import { Meta } from "@storybook/addon-docs";
+import {DocsHeading, DocsStory, DocsContainer, Feedback} from "../templates";
+import {Canvas, Source} from "@storybook/blocks";
+import {MediaQueryAPIRefStrings, MediaQueryBrowserStrings, MediaQueryStrings} from "./srcMediaQueryStrings";
+import { Alert, AlertIcon, Box, AlertDescription } from "@kvib/react/src"
+import {MediaQueryBrowserExample, MediaQueryExample} from "./MediaQueryExample";
+
+<Meta title="Hooks/useMediaQuery" />
+
+# useMediaQuery
+
+**useMediaQuery** er en tilpasset hook som brukes for å hjelpe med å oppdage om en enkelt medieforespørsel eller flere medieforespørsler matcher individuelt.
+
+```jsx
+import { useMediaQuery } from "@kvib/react";
+```
+
+<Feedback component="useMediaQuery"/>
+
+<DocsHeading>API Reference</DocsHeading>
+**useMediaQuery** aksepterer enten en enkelt medieforespørsel eller en rekke medieforespørsler, og valgfritt et objekt som inneholder en **ssr** boolean og en **fallback**-streng.
+
+<Source code={MediaQueryAPIRefStrings} dark/>
+Hvis vi er på serveren, vil **ssr**-alternativet avgjøre om vi skal returnere **fallback**-verdien eller utføre forespørselen direkte. **fallback**-eigenskapen er det som vil bli returnert hvis **ssr** er satt til **true** og vi er i en serverkontekst.
+
+<DocsHeading>Return value</DocsHeading>
+**useMediaQuery** returnerer en array av booleans, som indikerer om den gitte forespørselen matcher eller om forespørslene matcher.
+
+Hvorfor en array? **useMediaQuery** aksepterer både en streng og en array av strenger, men vil alltid returnere en array. På denne måten kan du kombinere flere medieforespørsler som vil bli individuelt matchet i ett kall.
+
+<Alert status="warning">
+    <AlertIcon />
+    <Box>
+        <AlertDescription>
+            Husk at denne API-en er avhengig av nettleserens støtte for **window.matchMedia**, og vil alltid returnere **false** hvis det ikke støttes eller ikke eksisterer (for eksempel under serverside rendering).
+        </AlertDescription>
+    </Box>
+</Alert>
+
+<DocsContainer>
+    <DocsStory
+        title="Bruk"
+        description=""
+        isVertical
+        story={
+            <Canvas>
+                <MediaQueryExample/>
+                <Source code={MediaQueryStrings} dark/>
+            </Canvas>
+        }
+    />
+    <DocsStory
+        title=""
+        description=""
+        isVertical
+        story={
+            <Canvas>
+                <MediaQueryBrowserExample/>
+                <Source code={MediaQueryBrowserStrings} dark/>
+            </Canvas>
+        }
+    />
+</DocsContainer>
+
+
+
