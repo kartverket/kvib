@@ -47,6 +47,8 @@ export type BaseProps<T> = {
 
   /** Function to map inputValue to a text output when no options are loaded */
   noOptionsMessage?: ((obj: { inputValue: string }) => ReactNode) | undefined;
+
+  value?: T | null;
 };
 
 type WithMulti<T> = {
@@ -82,6 +84,7 @@ export const SearchAsync = <T extends unknown>({
   noOptionsMessage,
   isDisabled,
   focusBorderColor,
+  value,
 }: SearchAsyncProps<T>) => {
   const noOptionsMessageDefault = ({ inputValue }: { inputValue: string }): ReactNode => {
     if (inputValue.replaceAll(/\s/g, "").length < 1) {
@@ -128,6 +131,7 @@ export const SearchAsync = <T extends unknown>({
       isMulti={isMulti}
       isDisabled={isDisabled}
       focusBorderColor={focusBorderColor}
+      value={value}
     />
   );
 };
