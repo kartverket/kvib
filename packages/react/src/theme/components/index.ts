@@ -10,3 +10,4 @@ export { radioTheme as Radio } from "./radio";
 export { sliderTheme as Slider } from "./slider";
 export { switchTheme as Switch } from "./switch";
 export { textareaTheme as Textarea } from "./textarea";
+export { breadcrumbTheme as Breadcrumb } from "./breadcrumb";
