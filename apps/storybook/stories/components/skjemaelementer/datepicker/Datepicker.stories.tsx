@@ -259,5 +259,53 @@ export const DatepickerSelectDate: DatepickerStory = {
 
     await DatepickerOpen.play({ canvasElement });
     await userEvent.click(canvas.getByText("10"));
+
+    //Kontroller at onChange blir kalt med riktig dato
+  },
+};
+
+export const DatepickerUnselectDate: DatepickerStory = {
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    await DatepickerSelectDate.play({ canvasElement });
+    await DatepickerOpen.play({ canvasElement });
+    await userEvent.click(canvas.getByText("10"));
+
+    //Kontroller at onChange blir kalt med tom string
+  },
+};
+
+export const DatepickerTypeDate: DatepickerStory = {
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    await userEvent.type(canvas.getByRole("textbox"), "02.01.2024");
+
+    //Kontroller at onChange blir kalt med riktig dato
+  },
+};
+
+export const DatepickerInvalidUpdate: DatepickerStory = {
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    //Skriv inn ugyldig dato i input-feltet
+    await userEvent.type(canvas.getByRole("textbox"), "02.21.2024");
+
+    //Kontroller at onChange blir kalt med ??
+    //Sende både date og input?
+  },
+};
+
+export const DatepickerEmptyUpdate: DatepickerStory = {
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    await DatepickerSelectDate.play({ canvasElement });
+
+    //Skriv inn tom dato i input-feltet
+    await userEvent.type(canvas.getByRole("textbox"), "{Backspace>10/}");
+
+    //Kontroller at onChange blir kalt med tom string
   },
 };
