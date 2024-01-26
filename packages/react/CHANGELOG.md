@@ -1,5 +1,15 @@
 # @kvib/react
 
+## 3.5.0
+
+### Minor Changes
+
+- 7b894c3: Breadcrumbs har nå samme styling som lenker, med grønn eller blå styling farge avhengig av valgt theme.
+
+### Patch Changes
+
+- 43d234f: Oppdatert @types/react til 18.2.48 og date-fns til 3.3.0
+
 ## 3.4.2
 
 ### Patch Changes

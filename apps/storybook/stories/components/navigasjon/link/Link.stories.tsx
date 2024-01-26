@@ -20,7 +20,7 @@ const meta: Meta<typeof KvibLink> = {
       control: "text",
     },
     isExternal: {
-      description: "If true, a icon will be included.",
+      description: "If true, an icon will be included.",
       table: {
         type: { summary: Boolean },
         defaultValue: { summary: false },
