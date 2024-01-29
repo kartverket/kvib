@@ -18,7 +18,7 @@
   "devDependencies": {
     "esbuild": "^0.19.11",
     "eslint-config-custom": "*",
-    "husky": "^8.0.3",
+    "husky": "^9.0.6",
     "prettier": "^3.2.4",
     "turbo": "latest"
   },
