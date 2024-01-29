@@ -98,7 +98,7 @@ export type DatepickerProps = Omit<InputProps, "colorScheme" | "max" | "min" | "
 export const Datepicker = forwardRef<DatepickerProps, "input">(({ onChange, useNative = true, ...props }, ref) => {
   const KVInputProps = extractKVProps(props);
   const commonProps = getCommonInputProps(props);
-  const defaultValue = props.defaultSelected ? formatDate(props.defaultSelected) : undefined;
+  const defaultValue = props.defaultSelected;
   const isClient = typeof window === "object";
   const isMobile = isClient ? window.innerWidth < 480 : false;
 
@@ -107,7 +107,7 @@ export const Datepicker = forwardRef<DatepickerProps, "input">(({ onChange, useN
       <KVInput
         ref={ref}
         type="date"
-        defaultValue={defaultValue}
+        defaultValue={defaultValue ? formatDate(defaultValue) : undefined}
         {...KVInputProps}
         {...commonProps}
         onChange={onChange}
@@ -260,28 +260,11 @@ function extractKVProps(props: DatepickerProps): InputProps {
   return chakraProps;
 }
 
-type ValidDateInput = number | Date | string;
-
 // Function to format a date to the format used by the datepicker
-function formatDate(date: ValidDateInput, format?: "no" | "en"): string {
-  let dateObject: Date;
-
-  if (typeof date === "number") {
-    dateObject = new Date(date);
-  } else if (date instanceof Date) {
-    dateObject = date;
-  } else if (typeof date === "string") {
-    dateObject = new Date(date);
-    if (isNaN(dateObject.getTime())) {
-      throw new Error("Invalid date format.");
-    }
-  } else {
-    throw new Error("Invalid date format.");
-  }
-
-  const y = dateObject.getFullYear().toString().padStart(4, "0");
-  const m = (dateObject.getMonth() + 1).toString().padStart(2, "0");
-  const d = dateObject.getDate().toString().padStart(2, "0");
+function formatDate(date: Date, format?: "no" | "en"): string {
+  const y = date.getFullYear().toString().padStart(4, "0");
+  const m = (date.getMonth() + 1).toString().padStart(2, "0");
+  const d = date.getDate().toString().padStart(2, "0");
   return format === "no" ? `${d}.${m}.${y}` : `${y}-${m}-${d}`;
 }
 

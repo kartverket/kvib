@@ -11,6 +11,7 @@ import {
 import { Datepicker as KvibDatepicker } from "@kvib/react/src/datepicker";
 import { Meta, StoryObj } from "@storybook/react";
 import { userEvent, within } from "@storybook/testing-library";
+import { fn, expect } from "@storybook/test";
 
 const meta: Meta<typeof KvibDatepicker> = {
   title: "Skjemaelementer/Datepicker",
@@ -254,13 +255,17 @@ export const DatepickerOpen: DatepickerStory = {
 };
 
 export const DatepickerSelectDate: DatepickerStory = {
-  play: async ({ canvasElement }) => {
+  args: {
+    onChange: fn(),
+    defaultSelected: new Date("01.01.2023"),
+  },
+  play: async ({ args, canvasElement }) => {
     const canvas = within(canvasElement);
 
     await DatepickerOpen.play({ canvasElement });
     await userEvent.click(canvas.getByText("10"));
-
     //Kontroller at onChange blir kalt med riktig dato
+    await expect(args.onChange).toHaveBeenCalled();
   },
 };
 
