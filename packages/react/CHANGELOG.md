@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 3.5.1
+
+### Patch Changes
+
+- fd97efe: Bump date-fns to 3.31 and material-symbols to 0.14.6
+
 ## 3.5.0
 
 ### Minor Changes
