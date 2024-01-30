@@ -48,6 +48,7 @@ export type BaseProps<T> = {
   /** Function to map inputValue to a text output when no options are loaded */
   noOptionsMessage?: ((obj: { inputValue: string }) => ReactNode) | undefined;
 
+  /** Variable to override the selected value of the component. Null resets the component and undefined  is ignored. When in use update value from the onChange function */
   value?: T | null;
 };
 
