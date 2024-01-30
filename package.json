@@ -13,7 +13,7 @@
     "test": "turbo run test",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "publish-packages": "turbo run build --filter=./packages/* && changeset version && changeset publish",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "devDependencies": {
     "esbuild": "^0.19.11",
