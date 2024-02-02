@@ -82,7 +82,7 @@ export const Footer = ({
             <FooterToggleableFlex hidden={excludeHelp}>
               <Heading size="md"> Hjelp </Heading>
               <Link
-                href="http://status.kartverket.no/"
+                href="https://status.kartverket.no/"
                 aria-label="Besøk Kartverket sine driftsmeldinger"
                 fontWeight="bold"
               >

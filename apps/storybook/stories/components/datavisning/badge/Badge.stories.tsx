@@ -54,7 +54,7 @@ export const Badge: Story = {
 
 export const BadgeTexts: Story = {
   args: {},
-  render: (args) => (
+  render: () => (
     <>
       <KvibBadge colorScheme="green">Success</KvibBadge>
       <KvibBadge colorScheme="red">Rejected</KvibBadge>
@@ -64,7 +64,7 @@ export const BadgeTexts: Story = {
 
 export const BadgeHensikt: Story = {
   args: {},
-  render: (args) => (
+  render: () => (
     <>
       <KvibBadge colorScheme="blue">New</KvibBadge>
       <KvibBadge colorScheme="red" variant="solid">
@@ -76,17 +76,17 @@ export const BadgeHensikt: Story = {
 
 export const BadgeGreen: Story = {
   args: {},
-  render: (args) => <KvibBadge colorScheme="green">Success</KvibBadge>,
+  render: () => <KvibBadge colorScheme="green">Success</KvibBadge>,
 };
 
 export const BadgeRed: Story = {
   args: {},
-  render: (args) => <KvibBadge colorScheme="red">Removed</KvibBadge>,
+  render: () => <KvibBadge colorScheme="red">Removed</KvibBadge>,
 };
 
 export const BadgeBlue: Story = {
   args: {},
-  render: (args) => <KvibBadge colorScheme="blue">New</KvibBadge>,
+  render: () => <KvibBadge colorScheme="blue">New</KvibBadge>,
 };
 
 export const BadgeCard: Story = {

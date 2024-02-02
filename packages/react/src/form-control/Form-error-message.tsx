@@ -31,5 +31,5 @@ export const FormErrorMessage = forwardRef<FormErrorMessageProps, "div">(
         </ChakraText>
       </ChakraFormErrorMessage>
     );
-  }
+  },
 );

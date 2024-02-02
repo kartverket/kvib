@@ -88,7 +88,7 @@ export const DrawerFocusString = `const DrawerFocusExample = () => {
               <Box>
                 <FormLabel htmlFor="url">Url</FormLabel>
                 <InputGroup>
-                  <InputLeftAddon>http://</InputLeftAddon>
+                  <InputLeftAddon>https://</InputLeftAddon>
                   <Input type="url" id="url" placeholder="Domene" />
                   <InputRightAddon>.com</InputRightAddon>
                 </InputGroup>

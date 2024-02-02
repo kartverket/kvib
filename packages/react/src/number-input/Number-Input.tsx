@@ -11,5 +11,5 @@ export const NumberInput = forwardRef<ChakraNumberInputProps, "div">(
         {children}
       </ChakraNumberInput>
     );
-  }
+  },
 );
