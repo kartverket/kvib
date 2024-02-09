@@ -1,4 +1,13 @@
-import { FormControl, Timepicker as KvibTimepicker, FormLabel, Stack } from "@kvib/react/src";
+import {
+  FormControl,
+  Timepicker as KvibTimepicker,
+  FormLabel,
+  Stack,
+  extendTheme,
+  withDefaultColorScheme,
+  KvibProvider,
+  theme,
+} from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibTimepicker> = {
@@ -152,4 +161,28 @@ export const TimepickerForm: Story = {
       <KvibTimepicker {...args} />
     </FormControl>
   ),
+};
+
+const greenTheme = extendTheme(withDefaultColorScheme({ colorScheme: "green" }), theme);
+
+export const TimepickerGreenProvider: Story = {
+  decorators: [
+    (Story) => (
+      <KvibProvider theme={greenTheme}>
+        <Story />
+      </KvibProvider>
+    ),
+  ],
+};
+
+const blueTheme = extendTheme(withDefaultColorScheme({ colorScheme: "blue" }), theme);
+
+export const TimepickerBlueProvider: Story = {
+  decorators: [
+    (Story) => (
+      <KvibProvider theme={blueTheme}>
+        <Story />
+      </KvibProvider>
+    ),
+  ],
 };
