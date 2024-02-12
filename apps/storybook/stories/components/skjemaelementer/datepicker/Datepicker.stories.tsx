@@ -262,21 +262,27 @@ export const DatepickerSelectDate: DatepickerStory = {
   play: async ({ args, canvasElement }) => {
     const canvas = within(canvasElement);
 
+    // @ts-ignore
     await DatepickerOpen.play({ canvasElement });
     await userEvent.click(canvas.getByText("10"));
 
-    await expect(args.onChange).toHaveBeenCalled();
-
     //Kontroller at onChange blir kalt med riktig dato
+    await expect(args.onChange).toHaveBeenCalled();
   },
 };
 
 export const DatepickerUnselectDate: DatepickerStory = {
-  play: async ({ canvasElement }) => {
+  args: {
+    onChange: fn(),
+  },
+  play: async ({ args, canvasElement }) => {
     const canvas = within(canvasElement);
 
-    await DatepickerSelectDate.play({ canvasElement });
-    await DatepickerOpen.play({ canvasElement });
+    await userEvent.click(canvas.getByRole("button"));
+    await userEvent.click(canvas.getByText("10"));
+    await expect(args.onChange).toHaveBeenCalled();
+
+    await userEvent.click(canvas.getByRole("button")); //Todo: Denne blir kalt før boksen har rukket å lukke seg.
     await userEvent.click(canvas.getByText("10"));
 
     //Kontroller at onChange blir kalt med tom string
@@ -308,7 +314,7 @@ export const DatepickerInvalidUpdate: DatepickerStory = {
 export const DatepickerEmptyUpdate: DatepickerStory = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    await DatepickerSelectDate.play({ canvasElement });
+    await userEvent.type(canvas.getByRole("textbox"), "02.21.2024");
 
     //Skriv inn tom dato i input-feltet
     await userEvent.type(canvas.getByRole("textbox"), "{Backspace>10/}");
