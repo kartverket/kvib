@@ -23,7 +23,7 @@ type TimepickerProps = {
 export const Timepicker = ({
   size,
   width = "fit-content",
-  variant,
+  variant = "outline",
   colorScheme,
   value,
   defaultValue = getCurrentTime(),
