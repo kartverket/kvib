@@ -1,18 +1,6 @@
 import { defineStyle, defineStyleConfig } from "@chakra-ui/react";
-import { colors } from "../tokens";
 
-const baseStyle = defineStyle((props) => {
-  const { colorScheme: c } = props;
-  return {
-    borderColor: `${colors.green[500]}`,
-    color: "black",
-    _hover: { borderColor: `${c}.500` },
-    _focus: {
-      backgroundColor: `${c}.100`,
-      color: `${c}.500`,
-    },
-  };
-});
+const baseStyle = defineStyle({});
 
 const variantOutline = defineStyle((props) => {
   const { colorScheme: c } = props;
@@ -20,7 +8,7 @@ const variantOutline = defineStyle((props) => {
     bg: "transparent",
     color: "black",
     _hover: {
-      bg: `${c}.50`,
+      backgroundColor: `${c}.50`,
       color: `${c}.400`,
       _disabled: {
         bg: "transparent",
@@ -49,5 +37,7 @@ const variants = {
 export const timepickerTheme = defineStyleConfig({
   baseStyle,
   variants,
-  defaultProps: {},
+  defaultProps: {
+    variant: "outline",
+  },
 });
