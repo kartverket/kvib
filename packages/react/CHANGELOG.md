@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 3.5.2
+
+### Patch Changes
+
+- d1b84dc: Oppdatert @types/react til 18.2.55, @types/react-dom til 18.2.19, @tsup til 8.0.2 ig @material-symbols til 0.14.7
+
 ## 3.5.1
 
 ### Patch Changes
