@@ -1,7 +1,8 @@
 // .storybook/MDXWrapper.tsx
 import React, { useEffect } from "react";
-import { KvibProvider } from "@kvib/react/src";
+import { KvibProvider, theme } from "@kvib/react/src";
 import { DocsContainer, Story } from "@storybook/blocks";
+import { ColorModeScript } from "@chakra-ui/react";
 
 const MDXContainer = ({ children, ...props }) => {
   // Remove table of contents if there are no h2 or h3 elements on the page
@@ -20,6 +21,7 @@ const MDXContainer = ({ children, ...props }) => {
     <KvibProvider>
       <DocsContainer {...props}>
         {children}
+        <ColorModeScript initialColorMode={theme.config.initialColorMode} />
         <Story id="sideelementer-footer-footer-inline--footer-inline-custom" />
       </DocsContainer>
     </KvibProvider>
