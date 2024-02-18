@@ -20,8 +20,8 @@ const MDXContainer = ({ children, ...props }) => {
   return (
     <KvibProvider>
       <DocsContainer {...props}>
-        {children}
         <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+        {children}
         <Story id="sideelementer-footer-footer-inline--footer-inline-custom" />
       </DocsContainer>
     </KvibProvider>
