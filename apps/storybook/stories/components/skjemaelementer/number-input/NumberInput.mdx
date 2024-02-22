@@ -1,11 +1,13 @@
 import { Canvas, Controls, Meta } from "@storybook/blocks";
 import * as NumberInputStories from "./NumberInput.stories";
+import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
+import { Text, Code, Box, Stack } from "@kvib/react/src/";
 
 <Meta of={NumberInputStories} />
 
-# Number Input
+# NumberInput
 
-## Ta i bruk
+NumberInput ligner på Input-komponenten, men den har kontroller for å øke eller redusere numeriske verdier.
 
 ```jsx
 import {
@@ -17,7 +19,58 @@ import {
 } from "@kvib/react";
 ```
 
-## Props
+<DocsContainer>
 
+**Egnet til:**
+
+- Svar
+- Tall med eller uten interaktive knapper
+
+**Uegnet til:**
+
+- Søk (bruk heller `Search` eller `SearchAsync`)
+- Interaktiv datepicker (bruk heller `DatePicker`)
+
+<Feedback component="NumberInput" />
+
+</DocsContainer>
+
+<DocsHeading>Alternativer</DocsHeading>
+<DocsContainer>
+
+<DocsStory
+  title="Utseende"
+  description={
+    <Box>
+      <Text>
+        Input har fire varianter. <Code>outline</Code> er standardvarianten og skal brukes i de fleste tilfeller.
+        <Code>filled</Code> kan brukes som et alternativ til outline. For mindre viktige inputfelt kan
+        <Code>flushed</Code> og
+        <Code>unstyled</Code> brukes.
+      </Text>
+      <Text>
+        Det er mulig å velge mellom fire forskjellige størrelser: <Code>xs</Code>, <Code>sm</Code>, <Code>md</Code> og{" "}
+        <Code>lg</Code>.<Code>md</Code> er standard.
+      </Text>
+    </Box>
+  }
+  story={<Canvas of={NumberInputStories.NumberInputVariants} />}
+/>
+
+<DocsStory
+  title="NumberInput i FormControl"
+  description={
+    <Text>
+      Ved å benytte seg av NumberInput sammen med <Code>Form Control</Code> vil du få kontekst som{" "}
+      <Code>isInvalid</Code>,<Code>isDisabled</Code> og
+      <Code>isRequired</Code>. Slik vil det også være enkelt å legge til en label.
+    </Text>
+  }
+  story={<Canvas of={NumberInputStories.NumberInputForm} />}
+/>
+
+</DocsContainer>
+
+<DocsHeading>Props</DocsHeading>
 <Canvas of={NumberInputStories.NumberInput} />
 <Controls of={NumberInputStories.NumberInput} />
