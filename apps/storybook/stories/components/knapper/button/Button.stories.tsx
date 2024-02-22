@@ -1,5 +1,12 @@
-import { Button as KvibButton, VStack, StackDivider, ButtonGroup as KvibButtonGroup } from "@kvib/react/src";
+import {
+  Button as KvibButton,
+  VStack,
+  StackDivider,
+  ButtonGroup as KvibButtonGroup,
+  KvibProvider,
+} from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
+import { extendTheme, theme as KvibTheme, withDefaultColorScheme } from "@kvib/react/src";
 
 const meta: Meta<typeof KvibButton> = {
   title: "Knapper/Button",
@@ -56,6 +63,19 @@ const meta: Meta<typeof KvibButton> = {
 
 export default meta;
 type Story = StoryObj<typeof KvibButton>;
+
+const customTheme = extendTheme(withDefaultColorScheme({ colorScheme: "blue" }), KvibTheme);
+
+export const ButtonBlueTheme: Story = {
+  decorators: [
+    (Story) => (
+      <KvibProvider theme={customTheme}>
+        <Story />
+      </KvibProvider>
+    ),
+  ],
+  args: { children: "Når tema er blått er knappen blå" },
+};
 
 export const Button: Story = {
   args: { children: "Klikk her" },
