@@ -52,5 +52,5 @@ export const Button = forwardRef<ButtonProps, "button">(
         </HStack>
       </ChakraButton>
     );
-  }
+  },
 );

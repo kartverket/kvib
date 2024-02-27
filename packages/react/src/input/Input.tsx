@@ -14,5 +14,5 @@ export const Input = forwardRef<ChakraInputProps, "input">(
         isDisabled={isDisabled}
       />
     );
-  }
+  },
 );

@@ -8,5 +8,5 @@ export const theme = extendTheme(
   {
     ...tokens,
     components: { ...components },
-  }
+  },
 );

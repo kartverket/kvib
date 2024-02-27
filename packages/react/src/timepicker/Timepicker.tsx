@@ -49,7 +49,7 @@ export const Timepicker = ({
     onChange,
     locale: "nb",
     isDisabled,
-    validationState: isInvalid ? "invalid" : "valid",
+    isInvalid,
   });
   const dateTime = state.value as CalendarDateTime | null;
   const buttonSize = size === "lg" ? "sm" : "xs";

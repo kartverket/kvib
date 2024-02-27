@@ -47,5 +47,5 @@ export const FormControl = forwardRef<FormControlProps, "div">(
         {children}
       </ChakraFormControl>
     );
-  }
+  },
 );
