@@ -1,3 +1,4 @@
+import { FormControl, FormLabel, Stack } from "@kvib/react/src";
 import { NumberInput as KvibNumberInput } from "@kvib/react/src/number-input/Number-Input";
 import { NumberInputField as KvibNumberInputField } from "@kvib/react/src/number-input/Number-Input-Field";
 import { NumberInputStepper as KvibNumberInputStepper } from "@kvib/react/src/number-input/Number-Input-Stepper";
@@ -17,6 +18,28 @@ const meta: Meta<typeof KvibNumberInput> = {
     },
   },
   argTypes: {
+    max: {
+      description: "Maximum value of the counter",
+      table: {
+        type: { summary: "number" },
+      },
+      control: "text",
+    },
+    min: {
+      description: "Minimum value of the counter",
+      table: {
+        type: { summary: "number" },
+      },
+      control: "text",
+    },
+    keepWithinRange: {
+      description: "Toggles if value should be kept within the range of max and min.",
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
+      },
+      control: "boolean",
+    },
     size: {
       description: "Size of input",
       table: {
@@ -34,6 +57,14 @@ const meta: Meta<typeof KvibNumberInput> = {
       },
       options: ["outline", "filled", "flushed", "unstyled"],
       control: { type: "radio" },
+    },
+    allowMouseWheel: {
+      description: "If true, the input's value will change based on mouse wheel scrolling",
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
+      },
+      control: "boolean",
     },
     isRequired: {
       description: "Toggles if input should be required",
@@ -87,5 +118,47 @@ export const NumberInput: NumberInputStory = {
       <KvibNumberInputField />
       <KvibNumberInputStepper />
     </KvibNumberInput>
+  ),
+};
+
+export const NumberInputVariants: NumberInputStory = {
+  args: {
+    defaultValue: 1234,
+  },
+  render: (args) => (
+    <Stack gap={5}>
+      <KvibNumberInput {...args} variant={"outline"}>
+        <KvibNumberInputField />
+        <KvibNumberInputStepper />
+      </KvibNumberInput>
+
+      <KvibNumberInput {...args} variant={"filled"}>
+        <KvibNumberInputField />
+        <KvibNumberInputStepper />
+      </KvibNumberInput>
+
+      <KvibNumberInput {...args} variant={"flushed"}>
+        <KvibNumberInputField />
+        <KvibNumberInputStepper />
+      </KvibNumberInput>
+
+      <KvibNumberInput {...args} variant={"unstyled"}>
+        <KvibNumberInputField />
+        <KvibNumberInputStepper />
+      </KvibNumberInput>
+    </Stack>
+  ),
+};
+
+export const NumberInputForm: NumberInputStory = {
+  args: {},
+  render: (args) => (
+    <FormControl isRequired>
+      <FormLabel>Årstall</FormLabel>
+      <KvibNumberInput {...args}>
+        <KvibNumberInputField />
+        <KvibNumberInputStepper />
+      </KvibNumberInput>
+    </FormControl>
   ),
 };
