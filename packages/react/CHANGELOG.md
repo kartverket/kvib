@@ -1,5 +1,12 @@
 # @kvib/react
 
+## 3.5.3
+
+### Patch Changes
+
+- 942e0e6: Oppdatert @types/react til 18.2.58, @react-stately/datepicker til 3.9.2, material-symbols til 0.15.0, react-aria til 3.32.1 og react-stately til 3.30.1
+- 1fcef91: Changed default theme for Timepicker component, background bugfix.
+
 ## 3.5.2
 
 ### Patch Changes
