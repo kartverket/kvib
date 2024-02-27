@@ -1,8 +1,6 @@
 import { defineStyle, defineStyleConfig } from "@chakra-ui/react";
 
-const baseStyle = defineStyle({});
-
-const variantOutline = defineStyle((props) => {
+const baseStyle = defineStyle((props) => {
   const { colorScheme: c } = props;
   return {
     bg: "transparent",
@@ -30,13 +28,8 @@ const variantOutline = defineStyle((props) => {
   };
 });
 
-const variants = {
-  outline: variantOutline,
-};
-
 export const timepickerTheme = defineStyleConfig({
   baseStyle,
-  variants,
   defaultProps: {
     variant: "outline",
   },
