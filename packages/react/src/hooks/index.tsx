@@ -21,3 +21,5 @@ export type {
   UseDisclosureReturn,
   UseOutsideClickProps,
 } from "@chakra-ui/react";
+
+export { forwardRef } from "@chakra-ui/react";

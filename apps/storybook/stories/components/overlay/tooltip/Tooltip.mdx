@@ -1,6 +1,8 @@
 import { Meta, Canvas, Story, Controls, Source } from "@storybook/blocks";
+import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
 import * as TooltipStories from "./Tooltip.stories";
-import { Alert, AlertIcon } from "@kvib/react/src";
+import { Alert, AlertIcon, Text, Code, Box } from "@kvib/react/src";
+import { TooltipStrings } from "./srcTooltipStrings";
 
 <Meta of={TooltipStories} />
 
@@ -26,9 +28,26 @@ import { Tooltip } from "@kvib/react";
 
 ## Bruk av egne Komponenter
 
-Dersom Tooltip wrapper et funksjonelt komponent må komponentet ha en ref ved `forwardref`. Dette inkluderer også bruk av ikoner fra KVIB. Se eksempel:
+<DocsContainer>
 
-<Source code={`const CustomCard = React.forwardRef(({ children, ...rest }, ref) => (
+<DocsStory
+  title="Bruk av egne komponenter"
+  description={
+    <Text>
+      Dersom Tooltip wrapper et funksjonelt komponent må komponentet ha en ref ved `forwardref`. Dette inkluderer også
+      bruk av ikoner fra KVIB. Se eksempel:
+    </Text>
+  }
+  story={
+    <>
+      <Canvas of={TooltipStories.CustomToolTip} />
+      <Source code={TooltipStrings} dark />
+    </>
+  }
+/>
+
+<Canvas of={TooltipStories.CustomToolTip} />
+<Source code={`const CustomCard = forwardRef(({ children, ...rest }, ref) => (
   <Box p="1">
     <Tag ref={ref} {...rest}>
       {children}
@@ -64,3 +83,5 @@ render(<CustomToolTip />);`} dark />
 ## Flere eksempler
 
 <Canvas of={TooltipStories.TooltipExamples} />
+
+</DocsContainer>

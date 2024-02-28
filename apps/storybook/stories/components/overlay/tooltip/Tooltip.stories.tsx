@@ -1,4 +1,4 @@
-import { Tooltip as KvibTooltip, Button, VStack, HStack, Wrap, WrapItem } from "@kvib/react/src";
+import { Tooltip as KvibTooltip, Button, VStack, HStack, Wrap, WrapItem, Box, forwardRef, Tag } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibTooltip> = {
@@ -372,5 +372,22 @@ export const TooltipExamples: Story = {
         </KvibTooltip>
       </WrapItem>
     </Wrap>
+  ),
+};
+
+const CustomCard = forwardRef(({ children, ...rest }, ref) => (
+  <Box p="1">
+    <Tag ref={ref} {...rest}>
+      {children}
+    </Tag>
+  </Box>
+));
+
+export const CustomToolTip: Story = {
+  args: { label: "Hover me! (CustomCard)" },
+  render: (args) => (
+    <KvibTooltip {...args}>
+      <CustomCard>Tag Here</CustomCard>
+    </KvibTooltip>
   ),
 };
