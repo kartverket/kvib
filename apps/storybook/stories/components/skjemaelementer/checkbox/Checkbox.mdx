@@ -1,7 +1,10 @@
 import { Meta, Canvas, Controls } from "@storybook/blocks";
 import * as CheckboxStories from "./Checkbox.stories";
+import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
 
 <Meta of={CheckboxStories} />
+
+<DocsContainer>
 
 # Checkbox
 
@@ -17,25 +20,23 @@ På [Chakra UI](https://chakra-ui.com/docs/components/checkbox/usage) sin nettsi
 import { Checkbox, CheckboxGroup } from "@kvib/react";
 ```
 
+<Feedback component={"Checkbox"} />
+
+<DocsStory title={"Farger"} description={""} story={<Canvas of={CheckboxStories.CheckboxColors} />} />
+<DocsStory title="Størrelser" description="" story={<Canvas of={CheckboxStories.CheckboxSizes} />} />
+<DocsStory title={"States"} description={""} story={<Canvas of={CheckboxStories.CheckboxStates} />} />
+
+<DocsStory
+  title={"Grupper"}
+  description={
+    "Man kan gruppere Checkbox i en CheckboxGroup for å gi alle styling-propsa videre til alle boksene i gruppen"
+  }
+  story={<Canvas of={CheckboxStories.CheckboxGroup} />}
+/>
+
 ## Props
 
 <Canvas of={CheckboxStories.Checkbox} />
 <Controls of={CheckboxStories.Checkbox} />
 
-## Farger
-
-<Canvas of={CheckboxStories.CheckboxColors} />
-
-## Størrelser
-
-<Canvas of={CheckboxStories.CheckboxSizes} />
-
-## States
-
-<Canvas of={CheckboxStories.CheckboxStates} />
-
-## Grupper
-
-Man kan gruppere Checkbox i en CheckboxGroup for å gi alle styling-propsa videre til alle boksene i gruppen
-
-<Canvas of={CheckboxStories.CheckboxGroup} />
+</DocsContainer>

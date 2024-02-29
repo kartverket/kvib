@@ -21,12 +21,13 @@ Et tooltip er en informativ melding som dukker opp når en bruker samhandler med
 import { Tooltip } from "@kvib/react";
 ```
 
-## Props
+<DocsContainer>
 
-<Canvas of={TooltipStories.Tooltip} />
-<Controls of={TooltipStories.Tooltip} />
+<Feedback component={"Tooltip"} />
 
-## Bruk av egne Komponenter
+</DocsContainer>
+
+<DocsHeading>Alternativer</DocsHeading>
 
 <DocsContainer>
 
@@ -46,24 +47,22 @@ import { Tooltip } from "@kvib/react";
   }
 />
 
-## Tooltip med pil
+<DocsStory title={"Tooltip med pil"} description={""} story={<Canvas of={TooltipStories.TooltipArrow} />} />
 
-<Canvas of={TooltipStories.TooltipArrow} />
+<DocsStory
+  title={"Tooltip med fokuserbart komponent"}
+  description={""}
+  story={<Canvas of={TooltipStories.TooltipFocusable} />}
+/>
 
-## Tooltip med fokuserbart komponent
+<DocsStory title={"Disabled state"} description={""} story={<Canvas of={TooltipStories.TooltipDisabled} />} />
 
-<Canvas of={TooltipStories.TooltipFocusable} />
+<DocsStory title={"Plassering"} description={""} story={<Canvas of={TooltipStories.TooltipPlacement} />} />
 
-## Disabled
-
-<Canvas of={TooltipStories.TooltipDisabled} />
-
-## Plassering
-
-<Canvas of={TooltipStories.TooltipPlacement} />
-
-## Flere eksempler
-
-<Canvas of={TooltipStories.TooltipExamples} />
+<DocsStory title={"Flere eksempler"} description={""} story={<Canvas of={TooltipStories.TooltipExamples} />} />
 
 </DocsContainer>
+
+<DocsHeading>Props</DocsHeading>
+<Canvas of={TooltipStories.Tooltip} />
+<Controls of={TooltipStories.Tooltip} />

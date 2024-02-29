@@ -1,7 +1,10 @@
 import { Meta, Canvas, Controls } from "@storybook/blocks";
 import * as RadioStories from "./Radio.stories";
+import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
 
 <Meta of={RadioStories} />
+
+<DocsContainer>
 
 # Radio
 
@@ -18,15 +21,15 @@ Hvis man setter isChecked til true, må man oppdatere knappene med onChange.
 import { Radio } from "@kvib/react";
 ```
 
-## Props
+<Feedback component="Radio" />
 
+<DocsHeading>Alternativer</DocsHeading>
+<DocsStory title="Radio" description={""} story={<Canvas of={RadioStories.Radio} />} />
+<DocsStory title="Farger" description={""} story={<Canvas of={RadioStories.Color} />} />
+<DocsStory title="Størrelse" description={""} story={<Canvas of={RadioStories.Size} />} />
+
+<DocsHeading>Props</DocsHeading>
 <Canvas of={RadioStories.Radio} />
 <Controls of={RadioStories.Radio} />
 
-## Farge
-
-<Canvas of={RadioStories.Color} />
-
-## Størrelse
-
-<Canvas of={RadioStories.Size} />
+</DocsContainer>

@@ -1,7 +1,10 @@
 import { Canvas, Controls, Meta } from "@storybook/blocks";
 import * as FormControlStories from "./Form-control.stories";
+import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
 
 <Meta of={FormControlStories} />
+
+<DocsContainer>
 
 # Form Control
 
@@ -13,23 +16,31 @@ Form Control gir kontekst som «isInvalid», «isDisabled» og «isRequired» ti
 import { FormControl, FormLabel, FormErrorMessage, FormHelperText } from "@kvib/react";
 ```
 
-## Props
+<Feedback component="FormControl" />
 
+<DocsStory
+  title="Required Form Control"
+  description={""}
+  story={<Canvas of={FormControlStories.RequiredInvalidFormControl} />}
+/>
+<DocsStory
+  title="Invalid Form Control"
+  description={""}
+  story={<Canvas of={FormControlStories.InvalidFormControl} />}
+/>
+<DocsStory
+  title="Read Only Form Control"
+  description={""}
+  story={<Canvas of={FormControlStories.ReadOnlyFormControl} />}
+/>
+<DocsStory
+  title="Disabled Form Control"
+  description={""}
+  story={<Canvas of={FormControlStories.DisabledFormControl} />}
+/>
+
+<DocsHeading>Props</DocsHeading>
 <Canvas of={FormControlStories.FormControl} />
 <Controls of={FormControlStories.FormControl} />
 
-## Required Form Control
-
-<Canvas of={FormControlStories.RequiredInvalidFormControl} />
-
-## Invalid Form Control
-
-<Canvas of={FormControlStories.InvalidFormControl} />
-
-## Read Only Form Control
-
-<Canvas of={FormControlStories.ReadOnlyFormControl} />
-
-## Disabled Form Control
-
-<Canvas of={FormControlStories.DisabledFormControl} />
+</DocsContainer>

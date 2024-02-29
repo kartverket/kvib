@@ -1,7 +1,10 @@
 import { Canvas, Controls, Meta } from "@storybook/blocks";
 import * as PinInputStories from "./PinInput.stories";
+import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
 
 <Meta of={PinInputStories} />
+
+<DocsContainer>
 
 # Pin Input
 
@@ -11,7 +14,13 @@ import * as PinInputStories from "./PinInput.stories";
 import { PinInput, PinInputField } from "@kvib/react";
 ```
 
-## Props
+<Feedback component="PinInput" />
 
+<DocsHeading>Alternativer</DocsHeading>
+<DocsStory title="Pin Input" description={"Pin input for pin koder"} story={<Canvas of={PinInputStories.PinInput} />} />
+
+<DocsHeading>Props</DocsHeading>
 <Canvas of={PinInputStories.PinInput} />
 <Controls of={PinInputStories.PinInput} />
+
+</DocsContainer>

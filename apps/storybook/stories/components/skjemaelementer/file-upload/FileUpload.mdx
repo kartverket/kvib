@@ -1,7 +1,10 @@
 import * as FileUploadStories from "./FileUpload.stories";
 import { Canvas, Controls, Meta } from "@storybook/blocks";
+import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
 
 <Meta of={FileUploadStories} />
+
+<DocsContainer>
 
 # File upload
 
@@ -13,7 +16,13 @@ Filopplasting komponent for å velge fil og laste opp.
 import { FileUpload } from "@kvib/react";
 ```
 
-## Props
+<Feedback component="FileUpload" />
 
+<DocsHeading>Alternativer</DocsHeading>
+<DocsStory title={"FileUpload"} description={""} story={<Canvas of={FileUploadStories.FileUpload} />} />
+
+<DocsHeading>Props</DocsHeading>
 <Canvas of={FileUploadStories.FileUpload} />
 <Controls of={FileUploadStories.FileUpload} />
+
+</DocsContainer>
