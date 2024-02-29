@@ -41,7 +41,7 @@ import { Tooltip } from "@kvib/react";
   }
   story={
     <>
-      <Canvas of={TooltipStories.CustomToolTip} />
+      <Canvas of={TooltipStories.CustomToolTip} sourceState="none" />
       <Source code={TooltipStrings} dark />
     </>
   }
@@ -57,9 +57,17 @@ import { Tooltip } from "@kvib/react";
 
 <DocsStory title={"Disabled state"} description={""} story={<Canvas of={TooltipStories.TooltipDisabled} />} />
 
-<DocsStory title={"Plassering"} description={""} story={<Canvas of={TooltipStories.TooltipPlacement} />} />
+<DocsStory
+  title={"Plassering"}
+  description={""}
+  story={<Canvas of={TooltipStories.TooltipPlacement} sourceState="hidden" />}
+/>
 
-<DocsStory title={"Flere eksempler"} description={""} story={<Canvas of={TooltipStories.TooltipExamples} />} />
+<DocsStory
+  title={"Flere eksempler"}
+  description={""}
+  story={<Canvas of={TooltipStories.TooltipExamples} sourceState="hidden" />}
+/>
 
 </DocsContainer>
 
