@@ -36,8 +36,6 @@
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.10.6",
     "@fontsource/mulish": "^5.0.16",
-    "@react-stately/datepicker": "^3.9.2",
-    "@types/react-day-picker": "^5.3.0",
     "chakra-react-select": "^4.7.6",
     "date-fns": "^3.3.1",
     "material-symbols": "^0.15.0",
