@@ -1,6 +1,9 @@
-import { Meta, Canvas, Controls } from "@storybook/blocks";
+import { Meta, Canvas, Controls, Source } from "@storybook/blocks";
 import * as CheckboxStories from "./Checkbox.stories";
 import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
+import { Alert, AlertIcon, Text, Code, Box } from "@kvib/react/src";
+import { IndeterminateExample } from "./IndeterminateExample";
+import { IndeterminateStrings } from "./srcIndeterminateStrings";
 
 <Meta of={CheckboxStories} />
 
@@ -8,11 +11,7 @@ import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "..
 
 # Checkbox
 
-Her er en oversikt over utvalget av ikonknapper i Kartverkets Designbibliotek. Disse er blant annet bygget opp ved bruk av design tokens fra biblioteket, eksempelvis farger og ikoner. I dokumentasjonen følger beskrivelse av komponenten og bruksområde, sammen med kodeeksempler.
-
 Avmerkingsboks blir brukt der man vil gi brukeren mulighet til å velge flere enn bare ett svaralternativ.
-
-På [Chakra UI](https://chakra-ui.com/docs/components/checkbox/usage) sin nettside finnes det eksempel for hvordan man lager en "Velg alle" avmerkingsboks.
 
 ## Ta i bruk
 
@@ -22,16 +21,57 @@ import { Checkbox, CheckboxGroup } from "@kvib/react";
 
 <Feedback component={"Checkbox"} />
 
-<DocsStory title={"Farger"} description={""} story={<Canvas of={CheckboxStories.CheckboxColors} />} />
-<DocsStory title="Størrelser" description="" story={<Canvas of={CheckboxStories.CheckboxSizes} />} />
-<DocsStory title={"States"} description={""} story={<Canvas of={CheckboxStories.CheckboxStates} />} />
+<DocsStory
+  title={"Checkbox"}
+  description={
+    "Her er en oversikt over utvalget av ikonknapper i Kartverkets Designbibliotek. Disse er blant annet bygget opp ved bruk av design tokens fra biblioteket, eksempelvis farger og ikoner. I dokumentasjonen følger beskrivelse av komponenten og bruksområde, sammen med kodeeksempler."
+  }
+  story={<Canvas of={CheckboxStories.Checkbox} sourceState={"hidden"} />}
+/>
+<DocsStory
+  title={"Farger"}
+  description={
+    <Text>
+      Farge kan endres ved å bruke <Code>colorScheme</Code>.
+    </Text>
+  }
+  story={<Canvas of={CheckboxStories.CheckboxColors} sourceState={"hidden"} />}
+/>
+<DocsStory
+  title="Størrelser"
+  description={
+    <Text>
+      Checkbox kommer i 3 størrelser som kan endres og settes ved å bruke <Code>size</Code> proppen. Standard størrelse
+      er medium.
+    </Text>
+  }
+  story={<Canvas of={CheckboxStories.CheckboxSizes} sourceState={"hidden"} />}
+/>
+<DocsStory
+  title={"States"}
+  isVertical
+  description={""}
+  story={<Canvas of={CheckboxStories.CheckboxStates} sourceState={"hidden"} />}
+/>
 
 <DocsStory
   title={"Grupper"}
   description={
     "Man kan gruppere Checkbox i en CheckboxGroup for å gi alle styling-propsa videre til alle boksene i gruppen"
   }
-  story={<Canvas of={CheckboxStories.CheckboxGroup} />}
+  story={<Canvas of={CheckboxStories.CheckboxGroup} sourceState={"hidden"} />}
+/>
+
+<DocsStory
+  title={"Indeterminate"}
+  isVertical
+  description={""}
+  story={
+    <>
+      <Canvas of={CheckboxStories.CheckboxIndeterminate} sourceState={"none"} />
+      <Source code={IndeterminateStrings} dark />
+    </>
+  }
 />
 
 ## Props

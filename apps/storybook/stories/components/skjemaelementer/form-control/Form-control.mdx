@@ -1,6 +1,7 @@
 import { Canvas, Controls, Meta } from "@storybook/blocks";
 import * as FormControlStories from "./Form-control.stories";
 import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
+import { Alert, AlertIcon, Text, Code, Box } from "@kvib/react/src";
 
 <Meta of={FormControlStories} />
 
@@ -19,24 +20,30 @@ import { FormControl, FormLabel, FormErrorMessage, FormHelperText } from "@kvib/
 <Feedback component="FormControl" />
 
 <DocsStory
-  title="Required Form Control"
-  description={""}
-  story={<Canvas of={FormControlStories.RequiredInvalidFormControl} />}
+  title="FormControl"
+  description={
+    <Text>
+      Form Control gir kontekst som <Code>isInvalid</Code>, <Code>isDisabled</Code> og <Code>isRequired</Code> til
+      skjema elementer
+    </Text>
+  }
+  story={<Canvas of={FormControlStories.FormControl} sourceState={"hidden"} />}
 />
 <DocsStory
-  title="Invalid Form Control"
+  title="FormControl States"
   description={""}
-  story={<Canvas of={FormControlStories.InvalidFormControl} />}
+  story={<Canvas of={FormControlStories.State} sourceState={"hidden"} />}
 />
+
 <DocsStory
-  title="Read Only Form Control"
-  description={""}
-  story={<Canvas of={FormControlStories.ReadOnlyFormControl} />}
-/>
-<DocsStory
-  title="Disabled Form Control"
-  description={""}
-  story={<Canvas of={FormControlStories.DisabledFormControl} />}
+  title="FormControl Invalid State"
+  description={
+    <Text>
+      <Code>FormErrorMessage</Code> vil kun vises når <Code>isInvalid</Code> i <Code>FormControl</Code> er
+      <Code>true</Code>
+    </Text>
+  }
+  story={<Canvas of={FormControlStories.Error} sourceState={"hidden"} />}
 />
 
 <DocsHeading>Props</DocsHeading>
