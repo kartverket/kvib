@@ -9,10 +9,13 @@ import type { TestRunnerConfig } from "@storybook/test-runner";
  * to learn more about the test-runner hooks API.
  */
 const a11yConfig: TestRunnerConfig = {
-  async preRender(page) {
+  tags: {
+    exclude: ["no-tests"],
+  },
+  async preVisit(page) {
     await injectAxe(page);
   },
-  async postRender(page, context) {
+  async postVisit(page, context) {
     // Get the entire context of a story, including parameters, args, argTypes, etc.
     const storyContext = await getStoryContext(page, context);
 

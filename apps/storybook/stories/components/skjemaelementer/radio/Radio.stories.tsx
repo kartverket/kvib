@@ -148,31 +148,33 @@ type Story = StoryObj<typeof KvibRadio>;
 export const Radio: Story = {
   argTypes: radioArgTypes,
   args: { onChange: undefined },
-  render: (args) => <KvibRadio {...args}>Alternativ</KvibRadio>,
+  render: (args) => (
+    <KvibRadioGroup defaultValue={"1"}>
+      <KvibStack direction={"row"}>
+        <KvibRadio {...args} value={"1"}>
+          En
+        </KvibRadio>
+        <KvibRadio {...args} value={"2"}>
+          To
+        </KvibRadio>
+        <KvibRadio {...args} value={"3"}>
+          Tre
+        </KvibRadio>
+      </KvibStack>
+    </KvibRadioGroup>
+  ),
 };
 
 export const Color: Story = {
   args: { size: "lg" },
   render: (args) => (
-    <KvibRadioGroup>
+    <KvibRadioGroup defaultValue="green">
       <KvibStack direction={"row"}>
-        <KvibRadio {...args} defaultChecked colorScheme={"green"}>
+        <KvibRadio {...args} value={"green"} colorScheme={"green"}>
           Grønn
         </KvibRadio>
-        <KvibRadio {...args} defaultChecked colorScheme={"blue"}>
+        <KvibRadio {...args} value={"blue"} colorScheme={"blue"}>
           Blå
-        </KvibRadio>
-        <KvibRadio {...args} defaultChecked colorScheme={"gray"}>
-          Grå
-        </KvibRadio>
-        <KvibRadio {...args} defaultChecked colorScheme={"red"}>
-          Rød
-        </KvibRadio>
-        <KvibRadio {...args} defaultChecked colorScheme={"orange"}>
-          Oransje
-        </KvibRadio>
-        <KvibRadio {...args} defaultChecked colorScheme={"purple"}>
-          Lilla
         </KvibRadio>
       </KvibStack>
     </KvibRadioGroup>
@@ -192,6 +194,26 @@ export const Size: Story = {
         </KvibRadio>
         <KvibRadio {...args} size={"lg"} value="3">
           lg
+        </KvibRadio>
+      </KvibStack>
+    </KvibRadioGroup>
+  ),
+};
+
+export const State: Story = {
+  argTypes: radioArgTypes,
+  args: { onChange: undefined },
+  render: (args) => (
+    <KvibRadioGroup defaultValue={"disabled"}>
+      <KvibStack direction={"row"}>
+        <KvibRadio {...args} value={"1"}>
+          Vanlig
+        </KvibRadio>
+        <KvibRadio {...args} value={"disabled"} isDisabled>
+          Disabled
+        </KvibRadio>
+        <KvibRadio {...args} value={"3"} isInvalid>
+          Invalid
         </KvibRadio>
       </KvibStack>
     </KvibRadioGroup>

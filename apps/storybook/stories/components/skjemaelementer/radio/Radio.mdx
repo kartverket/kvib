@@ -1,7 +1,11 @@
-import { Meta, Canvas, Controls } from "@storybook/blocks";
+import { Meta, Canvas, Controls, Source } from "@storybook/blocks";
 import * as RadioStories from "./Radio.stories";
+import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
+import { Alert, AlertIcon, Text, Code, Box } from "@kvib/react/src";
 
 <Meta of={RadioStories} />
+
+<DocsContainer>
 
 # Radio
 
@@ -9,24 +13,69 @@ Radioknapper skal benyttes der en bruker kun skal kunne gjøre ett enkelt valg, 
 Ved et nytt valg skal eventuelle tidligere valg fjernes automatisk. Feilmelding radioknapp skal brukes for å visualisere
 feil i avkrysningen, dersom dette har skjedd (f.eks. ikke krysset av for et alternativ).
 
-Radio brukes med komponenten RadioGroup. Man må sette value på Radioknappene for at de skal kunne vise hvilken som er valgt.
-Hvis man setter isChecked til true, må man oppdatere knappene med onChange.
-
 ## Ta i bruk
 
 ```jsx
 import { Radio } from "@kvib/react";
 ```
 
-## Props
+<Feedback component="Radio" />
 
+<DocsHeading>Alternativer</DocsHeading>
+<DocsStory
+  title="Radio"
+  description={
+    <Text>
+      Radio brukes med komponenten <Code>RadioGroup</Code>. Man må sette <Code>value</Code> på Radioknappene for at de
+      skal kunne vise hvilken som er valgt. Hvis man setter <Code>isChecked</Code> til true, må man oppdatere knappene
+      med <Code>onChange</Code>.
+    </Text>
+  }
+  story={<Canvas of={RadioStories.Radio} sourceState={"hidden"} />}
+/>
+<DocsStory
+  title="Farger"
+  description={
+    <Text>
+      Farge kan endres ved å bruke <Code>colorScheme</Code>.
+    </Text>
+  }
+  story={<Canvas of={RadioStories.Color} sourceState={"hidden"} />}
+/>
+<DocsStory
+  title="Størrelse"
+  description={
+    <Text>
+      Radio knapp kommer i 3 størrelser som kan endres og settes ved å bruke <Code>size</Code> prop. Standard størrelse
+      er medium.
+    </Text>
+  }
+  story={<Canvas of={RadioStories.Size} sourceState={"hidden"} />}
+/>
+
+<DocsStory
+  title="States"
+  isVertical
+  description={""}
+  story={<Canvas of={RadioStories.State} sourceState={"hidden"} />}
+/>
+
+  <DocsStory title={"Notat om name Prop"} isVertical description={<Text>Det er anbefalt å bruke <Code>name</Code> prop i <Code>RadioGroup</Code> komponenten, istedet om å bruke det i hvert <Code>Radio</Code> komponent.</Text>} story={  <Source code={`
+    // Do this ✅
+    <RadioGroup name="form-name">
+    <Radio>Radio 1</Radio>
+    <Radio>Radio 2</Radio>
+    </RadioGroup>
+
+    // Don't do this ❌
+    <RadioGroup >
+    <Radio name="form-name">Radio 1</Radio>
+    <Radio name="form-name">Radio 2</Radio>
+    </RadioGroup>
+    `} dark/>}/>
+
+<DocsHeading>Props</DocsHeading>
 <Canvas of={RadioStories.Radio} />
 <Controls of={RadioStories.Radio} />
 
-## Farge
-
-<Canvas of={RadioStories.Color} />
-
-## Størrelse
-
-<Canvas of={RadioStories.Size} />
+</DocsContainer>

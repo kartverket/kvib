@@ -1,6 +1,6 @@
-import { forwardRef } from "@chakra-ui/react";
 import { MaterialSymbol } from "material-symbols";
 import "material-symbols";
+import { forwardRef } from "../hooks";
 
 type IconProps = {
   /**The icon from Material symbols you want to display*/
