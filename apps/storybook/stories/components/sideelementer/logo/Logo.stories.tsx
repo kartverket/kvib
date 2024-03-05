@@ -11,6 +11,12 @@ const meta: Meta<typeof KvibLogo> = {
     },
   },
   argTypes: {
+    label: {
+      table: {
+        type: { summary: "string" },
+      },
+      control: "text",
+    },
     variant: {
       table: {
         type: { summary: "vertical | horizontal" },
