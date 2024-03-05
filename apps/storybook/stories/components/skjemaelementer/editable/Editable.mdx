@@ -1,7 +1,10 @@
-import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
+import { Meta, Canvas, Controls } from "@storybook/blocks";
 import * as EditableStories from "./Editable.stories";
+import { DocsHeading, DocsContainer, DocsStory, Feedback } from "../../../templates";
 
 <Meta of={EditableStories} />
+
+<DocsContainer>
 
 # Editable
 
@@ -13,11 +16,18 @@ EditableText brukes til å endre på tekst inline. Teksten ser ut som normal tek
 import { Editable, EditableInput, EditableTextarea, EditablePreview } from "@kvib/react";
 ```
 
-## Props
+<Feedback component="Editable" />
 
+<DocsHeading>Alternativer</DocsHeading>
+<DocsStory title="Editable Input" description={"Editable input"} story={<Canvas of={EditableStories.Editable} />} />
+<DocsStory
+  title="Editable Textarea"
+  description={"Editable Textarea"}
+  story={<Canvas of={EditableStories.EditableTextarea} />}
+/>
+
+<DocsHeading>Props</DocsHeading>
 <Canvas of={EditableStories.Editable} />
 <Controls of={EditableStories.Editable} />
 
-## Editable med textarea
-
-<Canvas of={EditableStories.EditableTextarea} />
+</DocsContainer>
