@@ -32,6 +32,13 @@ const meta: Meta<typeof KvibNumberInput> = {
       },
       control: "text",
     },
+    precision: {
+      description: "The number of decimal points used to round the value.",
+      table: {
+        type: { summary: "number" },
+      },
+      control: "text",
+    },
     keepWithinRange: {
       description: "Toggles if value should be kept within the range of max and min.",
       table: {
@@ -40,11 +47,17 @@ const meta: Meta<typeof KvibNumberInput> = {
       },
       control: "boolean",
     },
+    step: {
+      description: "The step used to increment of decrement the value.",
+      table: {
+        type: { summary: "number" },
+      },
+      control: "text",
+    },
     size: {
       description: "Size of input",
       table: {
         type: { summary: "lg | md | sm | xs" },
-        defaultValue: { summary: "md" },
       },
       options: ["lg", "md", "sm", "xs"],
       control: { type: "radio" },
@@ -106,7 +119,6 @@ type NumberInputStory = StoryObj<typeof KvibNumberInput>;
 
 export const NumberInput: NumberInputStory = {
   args: {
-    size: "md",
     variant: "outline",
     isDisabled: false,
     isInvalid: false,
@@ -131,17 +143,14 @@ export const NumberInputVariants: NumberInputStory = {
         <KvibNumberInputField />
         <KvibNumberInputStepper />
       </KvibNumberInput>
-
       <KvibNumberInput {...args} variant={"filled"}>
         <KvibNumberInputField />
         <KvibNumberInputStepper />
       </KvibNumberInput>
-
       <KvibNumberInput {...args} variant={"flushed"}>
         <KvibNumberInputField />
         <KvibNumberInputStepper />
       </KvibNumberInput>
-
       <KvibNumberInput {...args} variant={"unstyled"}>
         <KvibNumberInputField />
         <KvibNumberInputStepper />
@@ -160,5 +169,51 @@ export const NumberInputForm: NumberInputStory = {
         <KvibNumberInputStepper />
       </KvibNumberInput>
     </FormControl>
+  ),
+};
+
+export const NumberInputMinMaxValue: NumberInputStory = {
+  args: { defaultValue: 12, min: 10, max: 20 },
+  render: (args) => (
+    <KvibNumberInput {...args}>
+      <KvibNumberInputField />
+      <KvibNumberInputStepper />
+    </KvibNumberInput>
+  ),
+};
+
+export const NumberInputPrecision: NumberInputStory = {
+  args: { precision: 2 },
+  render: (args) => (
+    <KvibNumberInput {...args}>
+      <KvibNumberInputField />
+      <KvibNumberInputStepper />
+    </KvibNumberInput>
+  ),
+};
+
+export const NumberInputSizes: NumberInputStory = {
+  render: () => (
+    <Stack>
+      <KvibNumberInput size={"xs"}>
+        <KvibNumberInputField />
+        <KvibNumberInputStepper />
+      </KvibNumberInput>
+      <hr />
+      <KvibNumberInput size={"sm"}>
+        <KvibNumberInputField />
+        <KvibNumberInputStepper />
+      </KvibNumberInput>
+      <hr />
+      <KvibNumberInput size={"md"}>
+        <KvibNumberInputField />
+        <KvibNumberInputStepper />
+      </KvibNumberInput>
+      <hr />
+      <KvibNumberInput size={"lg"}>
+        <KvibNumberInputField />
+        <KvibNumberInputStepper />
+      </KvibNumberInput>
+    </Stack>
   ),
 };
