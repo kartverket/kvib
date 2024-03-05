@@ -9,7 +9,7 @@ const baseStyle = defineStyle((props) => {
       borderColor: `${c}.500`, // Border color when unchecked
       _invalid: {
         _checked: {
-          backgroundColor: colors.red[400],
+          backgroundColor: colors.red[500],
         },
       },
     },
