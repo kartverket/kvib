@@ -1,8 +1,12 @@
 import { Meta, Canvas, Story, Controls, Source } from "@storybook/blocks";
 import * as TextareaStories from "./Textarea.stories";
 import { Card, CardBody } from "@kvib/react/src";
+import { DocsHeading, DocsContainer, DocsStory, Feedback } from "../../../templates";
+import { TextAreaStrings } from "./srcTextAreaStrings";
 
 <Meta of={TextareaStories} />
+
+<DocsContainer>
 
 # Textarea
 
@@ -14,55 +18,28 @@ Textarea brukes til å lage multi-line input tekst.
 import { Textarea } from "@kvib/react";
 ```
 
-## Props
+<Feedback component={"Textarea"} />
 
+<DocsHeading>Alternativer</DocsHeading>
+
+<DocsStory
+  title={"Controlled Textarea"}
+  description={""}
+  story={
+    <>
+      <Canvas of={TextareaStories.TextareaControlled} sourceState={"none"} />
+      <Source code={TextAreaStrings} dark />
+    </>
+  }
+/>
+
+<DocsStory title={"Størrelser"} description={""} story={<Canvas of={TextareaStories.TextareaSizes} />} />
+<DocsStory title={"Varianter"} description={""} story={<Canvas of={TextareaStories.TextareaVariants} />} />
+<DocsStory title={"Disabled"} description={""} story={<Canvas of={TextareaStories.TextareaDisabled} />} />
+<DocsStory title={"Invalid"} description={""} story={<Canvas of={TextareaStories.TextareaInvalid} />} />
+
+<DocsHeading>Props</DocsHeading>
 <Canvas of={TextareaStories.Textarea} />
 <Controls of={TextareaStories.Textarea} />
 
-## Controlled Textarea
-
-<Card variant="outline" borderRadius="0">
-  <CardBody>
-    <Story of={TextareaStories.TextareaControlled} />
-  </CardBody>
-</Card>
-
-<Source
-  code={`const TextAreaControlledExample = () => {
-    const [value, setValue] = useState<string>("");
-    const handleInputChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
-        const inputValue = e.target.value;
-        setValue(inputValue);
-    };
-    return (
-        <>
-            <Text mb="8px">Value: {value}</Text>
-            <KvibTextarea
-                value={value}
-                onChange={handleInputChange}
-                placeholder="Placeholder"
-                size="sm"
-            />
-        </>
-    );
-
-};
-`}
-dark
-/>
-
-## Størrelser
-
-<Canvas of={TextareaStories.TextareaSizes} />
-
-## Varianter
-
-<Canvas of={TextareaStories.TextareaVariants} />
-
-## Disabled
-
-<Canvas of={TextareaStories.TextareaDisabled} />
-
-## Invalid
-
-<Canvas of={TextareaStories.TextareaInvalid} />
+</DocsContainer>
