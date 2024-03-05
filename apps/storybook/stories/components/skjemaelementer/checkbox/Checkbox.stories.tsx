@@ -1,6 +1,7 @@
 import { Checkbox as KvibCheckbox, CheckboxGroup as KvibCheckboxGroup, Text } from "@kvib/react/src";
 import { Stack } from "@kvib/react/src/layout";
 import { Meta, StoryObj } from "@storybook/react";
+import { IndeterminateExample } from "./IndeterminateExample";
 
 const meta: Meta<typeof KvibCheckbox> = {
   title: "Skjemaelementer/Checkbox",
@@ -64,7 +65,11 @@ export const Checkbox: Story = {
   args: {
     children: "Dette er en avmerkingsboks",
   },
-  render: (args) => <KvibCheckbox {...args}>{args.children}</KvibCheckbox>,
+  render: (args) => (
+    <KvibCheckbox {...args} defaultChecked>
+      {args.children}
+    </KvibCheckbox>
+  ),
 };
 
 export const CheckboxColors: Story = {
@@ -103,7 +108,7 @@ export const CheckboxSizes: Story = {
 export const CheckboxStates: Story = {
   args: {},
   render: (args) => (
-    <Stack>
+    <Stack direction={"row"} gap={4}>
       <KvibCheckbox {...args}>Normal</KvibCheckbox>
       <KvibCheckbox isDisabled>Disabled</KvibCheckbox>
       <KvibCheckbox isInvalid>Invalid</KvibCheckbox>
@@ -115,16 +120,21 @@ export const CheckboxGroup: Story = {
   args: {},
   render: (args) => (
     <Stack>
-      <Text>Grønn</Text>
+      <Text as={"b"}>Grønn</Text>
       <KvibCheckboxGroup colorScheme="green">
         <KvibCheckbox {...args}>Valg 1</KvibCheckbox>
         <KvibCheckbox {...args}>Valg 2</KvibCheckbox>
       </KvibCheckboxGroup>
-      <Text>Blå</Text>
+      <Text as={"b"}>Blå</Text>
       <KvibCheckboxGroup colorScheme="blue">
         <KvibCheckbox {...args}>Valg 1</KvibCheckbox>
         <KvibCheckbox {...args}>Valg 2</KvibCheckbox>
       </KvibCheckboxGroup>
     </Stack>
   ),
+};
+
+export const CheckboxIndeterminate: Story = {
+  args: {},
+  render: (args) => <IndeterminateExample {...args} />,
 };
