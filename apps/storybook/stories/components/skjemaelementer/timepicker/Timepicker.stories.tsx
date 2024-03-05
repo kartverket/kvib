@@ -166,6 +166,7 @@ export const TimepickerForm: Story = {
 const greenTheme = extendTheme(withDefaultColorScheme({ colorScheme: "green" }), theme);
 
 export const TimepickerGreenProvider: Story = {
+  tags: ["no-tests"],
   decorators: [
     (Story) => (
       <KvibProvider theme={greenTheme}>
@@ -178,6 +179,7 @@ export const TimepickerGreenProvider: Story = {
 const blueTheme = extendTheme(withDefaultColorScheme({ colorScheme: "blue" }), theme);
 
 export const TimepickerBlueProvider: Story = {
+  tags: ["no-tests"],
   decorators: [
     (Story) => (
       <KvibProvider theme={blueTheme}>

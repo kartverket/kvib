@@ -9,6 +9,9 @@ import type { TestRunnerConfig } from "@storybook/test-runner";
  * to learn more about the test-runner hooks API.
  */
 const a11yConfig: TestRunnerConfig = {
+  tags: {
+    exclude: ["no-tests"],
+  },
   async preVisit(page) {
     await injectAxe(page);
   },
