@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 3.5.5
+
+### Patch Changes
+
+- 20caf33: Workflow Test, Opprettet theme fil for FileUpload.
+
 ## 3.5.4
 
 ### Patch Changes
