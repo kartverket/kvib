@@ -32,6 +32,14 @@ const meta: Meta<typeof KvibNumberInput> = {
       },
       control: "text",
     },
+    clampValueOnBlur: {
+      description: "This controls the value update when you blur out of the input. - If true and the value is greater than max, the value will be reset to max - Else, the value remains the same.",
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: "true" },
+      },
+      control: "boolean",
+    },
     precision: {
       description: "The number of decimal points used to round the value.",
       table: {
