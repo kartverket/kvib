@@ -187,8 +187,7 @@ export const Size: PinInputStory = {
 };
 
 export const Focus: PinInputStory = {
-  args: { manageFocus: false },
-  render: (args) => (
+  render: () => (
     <HStack>
       <KvibPinInput manageFocus={false}>
         <KvibPinInputField />
