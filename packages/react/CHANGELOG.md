@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 3.5.4
+
+### Patch Changes
+
+- 4f31802: Justert Hover og Invalid theme farger på Radio og Checkbox komponent.
+
 ## 3.5.3
 
 ### Patch Changes
