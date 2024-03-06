@@ -13,6 +13,7 @@ jobs:
         run: |
           if [[ "${{ github.event_name }}" == "release" ]]; then
             echo "::set-output name=version::${{ github.event.release.tag_name }}"
+            echo "::set-output name=changelog::${{ github.event.release.body }}"
           else
             echo "::set-output name=version::unknown"
           fi
