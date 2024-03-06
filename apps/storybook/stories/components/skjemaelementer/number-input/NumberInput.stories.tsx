@@ -217,3 +217,13 @@ export const NumberInputSizes: NumberInputStory = {
     </Stack>
   ),
 };
+
+export const NumberInputBlur: NumberInputStory = {
+  args: { defaultValue: 12, min: 10, max: 20 },
+  render: (args) => (
+    <KvibNumberInput {...args} clampValueOnBlur={false}>
+      <KvibNumberInputField />
+      <KvibNumberInputStepper />
+    </KvibNumberInput>
+  ),
+};

@@ -67,7 +67,7 @@ import {
 />
 
 <DocsStory
-  title="NumberInput minimum og maximum value"
+  title="Minimum og maximum value"
   description={
     <Text>
       Tillat minst og maks verdier kan settes ved å bruke <Code>min</Code> og <Code>max</Code> props.
@@ -77,7 +77,19 @@ import {
 />
 
 <DocsStory
-  title="NumberInput precision"
+  title="Clamp value when user blurs the input"
+  description={
+    <Text>
+      I de fleste tilfeller kan brukere skrive inn egendefinerte verdier i inndatafeltet. Hvis den innskrevne verdien er
+      større enn <code>max</code>, tilbakestilles verdien til <code>max</code> når brukeren trykke ut av inputfeltet.
+      For å deaktivere denne virkemåten, sett <code>clampValueOnBlur</code> prop til <code>false</code>.
+    </Text>
+  }
+  story={<Canvas of={NumberInputStories.NumberInputBlur} sourceState={"hidden"} />}
+/>
+
+<DocsStory
+  title="Precision"
   description={
     <Text>
       Desimaltall kan justeres ved å bruke <Code>precision</Code> prop.
@@ -87,7 +99,7 @@ import {
 />
 
 <DocsStory
-  title="NumberInput størrelser"
+  title="Størrelser"
   description={""}
   story={<Canvas of={NumberInputStories.NumberInputSizes} sourceState={"hidden"} />}
 />
