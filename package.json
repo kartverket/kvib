@@ -24,7 +24,7 @@
     "turbo": "^1.12.5"
   },
   "engines": {
-    "node": "18.15.0"
+    "node": "^18.15.0"
   },
   "dependencies": {
     "@changesets/cli": "^2.27.1"
