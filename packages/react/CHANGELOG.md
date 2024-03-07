@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 3.5.6
+
+### Patch Changes
+
+- 0ab5cef: TEST! Changed Slack Workflow, updated turbo.
+
 ## 3.5.5
 
 ### Patch Changes
