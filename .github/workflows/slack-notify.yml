@@ -15,7 +15,6 @@ jobs:
         run: |
           if [[ "${{ github.event_name }}" == "release" ]]; then
             echo "::set-output name=version::${{ github.event.release.tag_name }}"
-            echo "::set-output name=body::$(echo -n "${{ github.event.release.body }}" | jq -Rs .)"
           else
             echo "::set-output name=version::unknown"
           fi
@@ -32,7 +31,7 @@ jobs:
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": ":mega: *En ny versjon av <https://kartverket.github.io/kvib|Kartverkets Designsystem> har blitt publisert!* :mega: \n\n Nyeste versjon: <https://kartverket.github.io/kvib/?path=/docs/info-changelog--docs|${{ steps.set_message.outputs.version }}>. \n\n ${{ steps.set_message.outputs.body }}"
+                    "text": ":mega: *En ny versjon av <https://kartverket.github.io/kvib|Kartverkets Designsystem> har blitt publisert!* :mega: \n\n Nyeste versjon: <https://kartverket.github.io/kvib/?path=/docs/info-changelog--docs|${{ steps.set_message.outputs.version }}>."
                   }
                 }
               ]
