@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 3.5.7
+
+### Patch Changes
+
+- a730232: Added Alt Text to Header component, added Aria-label and role to Logo component.
+
 ## 3.5.6
 
 ### Patch Changes
