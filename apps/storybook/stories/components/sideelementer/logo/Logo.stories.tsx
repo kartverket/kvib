@@ -38,17 +38,17 @@ export default meta;
 type Story = StoryObj<typeof KvibLogo>;
 
 export const Logo: Story = {
-  args: {},
+  args: { label: "Logo" },
   render: (args) => <KvibLogo {...args} />,
 };
 
 export const LogoHorizontal: Story = {
-  args: { variant: "horizontal" },
+  args: { label: "Logo", variant: "horizontal" },
   render: (args) => <KvibLogo {...args} />,
 };
 
 export const LogoSizes: Story = {
-  args: { variant: "horizontal" },
+  args: { label: "Logo", variant: "horizontal" },
   render: (args) => (
     <KvibStack>
       <KvibLogo {...args} size={100} />
