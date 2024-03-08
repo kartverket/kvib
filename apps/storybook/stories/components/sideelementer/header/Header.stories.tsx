@@ -24,7 +24,7 @@ const meta: Meta<typeof KvibHeader> = {
     },
     a11y: {
       // Label warnings + contrast ratio because of chakra wrapper.
-      disable: false,
+      disable: true,
     },
   },
   argTypes: {
