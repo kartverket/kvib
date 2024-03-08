@@ -23,14 +23,6 @@ const meta: Meta<typeof KvibTab> = {
   },
 
   argTypes: {
-    isSelected: {
-      description: "If tab is selected or not.",
-      table: {
-        type: { summary: Boolean },
-        defaultValue: { summary: false },
-      },
-      control: { type: "boolean" },
-    },
     panelId: {
       description: "The id of the panel.",
       table: {
