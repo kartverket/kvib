@@ -1,8 +1,8 @@
 import { Meta, Canvas, Story, Controls, Source } from "@storybook/blocks";
 import * as TextareaStories from "./Textarea.stories";
-import { Card, CardBody } from "@kvib/react/src";
+import { Card, CardBody, Text } from "@kvib/react/src";
 import { DocsHeading, DocsContainer, DocsStory, Feedback } from "../../../templates";
-import { TextAreaStrings } from "./srcTextAreaStrings";
+import { TextAreaStrings, TextAreaResizeStrings } from "./srcTextAreaStrings";
 
 <Meta of={TextareaStories} />
 
@@ -20,11 +20,10 @@ import { Textarea } from "@kvib/react";
 
 <Feedback component={"Textarea"} />
 
-<DocsHeading>Alternativer</DocsHeading>
-
 <DocsStory
   title={"Controlled Textarea"}
   description={""}
+  isVertical
   story={
     <>
       <Canvas of={TextareaStories.TextareaControlled} sourceState={"none"} />
@@ -33,10 +32,50 @@ import { Textarea } from "@kvib/react";
   }
 />
 
-<DocsStory title={"Størrelser"} description={""} story={<Canvas of={TextareaStories.TextareaSizes} />} />
-<DocsStory title={"Varianter"} description={""} story={<Canvas of={TextareaStories.TextareaVariants} />} />
-<DocsStory title={"Disabled"} description={""} story={<Canvas of={TextareaStories.TextareaDisabled} />} />
-<DocsStory title={"Invalid"} description={""} story={<Canvas of={TextareaStories.TextareaInvalid} />} />
+<DocsStory
+  title={"Resize atferd"}
+  description={
+    <Text>
+      <code>resize</code> prop can brukes for å endre <code>Textarea</code> størrelse atferdsendring
+    </Text>
+  }
+  isVertical
+  story={
+    <>
+      <Canvas of={TextareaStories.TextareaResize} sourceState={"none"} />
+      <Source code={TextAreaResizeStrings} dark />
+    </>
+  }
+/>
+
+<DocsStory
+  title={"Størrelser"}
+  description={
+    <Text>
+      Størrelsen kan endres ved å bruke <code>size</code> prop.
+    </Text>
+  }
+  story={<Canvas of={TextareaStories.TextareaSizes} sourceState="hidden" />}
+/>
+<DocsStory
+  title={"Varianter"}
+  description={
+    <Text>
+      Variant kan endres ved å bruke <code>variant</code> prop.
+    </Text>
+  }
+  story={<Canvas of={TextareaStories.TextareaVariants} sourceState="hidden" />}
+/>
+
+<DocsStory
+  title={"States"}
+  description={
+    <Text>
+      Tilstand eksempel: <code>isInvalid</code>,<code>isReadOnly</code> og <code>isDisabled</code>.
+    </Text>
+  }
+  story={<Canvas of={TextareaStories.TextareaStates} sourceState="hidden" />}
+/>
 
 <DocsHeading>Props</DocsHeading>
 <Canvas of={TextareaStories.Textarea} />
