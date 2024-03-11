@@ -16,6 +16,8 @@ type HeaderProps = {
   justifyContent?: "space-between" | "center" | "start";
   /** Href for logo link */
   logoLink?: string;
+  /** Alt Text for logo */
+  logoAltText?: string;
   /** Children to be displayed in the header. */
   children?: React.ReactNode;
   /** If true, a menu button will be displayed. */
@@ -37,6 +39,7 @@ export const Header = (props: HeaderProps) => {
   const {
     justifyContent = "space-between",
     logoLink = "/",
+    logoAltText,
     children,
     showMenuButton = false,
     dropdownMenuChildren,
@@ -71,7 +74,11 @@ export const Header = (props: HeaderProps) => {
         gap={gap}
       >
         <Link href={logoLink} isExternal={false}>
-          <Logo variant={logoVariant} size={logoVariant == "horizontal" ? logoHorizontalSize : logoVerticalSize} />
+          <Logo
+            label={logoAltText}
+            variant={logoVariant}
+            size={logoVariant == "horizontal" ? logoHorizontalSize : logoVerticalSize}
+          />
         </Link>
 
         {showChildren && children}

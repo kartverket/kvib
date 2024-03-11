@@ -103,12 +103,18 @@ const mockLoadOptions = (inputValue: string, callback: (options: typeof fruits) 
 };
 
 export const Header: Story = {
-  args: {},
+  args: { logoAltText: "Kartverket Logo" },
   render: (args) => <KvibHeader {...args} />,
 };
 
 export const HeaderElements: Story = {
-  args: { justifyContent: "space-between", onMenuButtonClick: undefined, gap: 50, collapseBreakpoint: "md" },
+  args: {
+    justifyContent: "space-between",
+    onMenuButtonClick: undefined,
+    gap: 50,
+    collapseBreakpoint: "md",
+    logoAltText: "Kartverket Logo",
+  },
   render: (args) => (
     <KvibHeader {...args}>
       <Heading size="md">Eiendom</Heading>
@@ -124,7 +130,7 @@ export const HeaderElements: Story = {
 };
 
 export const HeaderJustifyContent: Story = {
-  args: {},
+  args: { logoAltText: "Kartverket Logo" },
   render: (args) => (
     <Stack>
       <KvibHeader {...args} justifyContent="center">
@@ -143,6 +149,7 @@ export const HeaderJustifyContent: Story = {
 export const HeaderDropdownChildren: Story = {
   args: {
     logoLink: "https://kartverket.github.io/kvib/",
+    logoAltText: "Kartverket Logo",
     dropdownMenuChildren: (
       <HStack wrap="wrap" align="center" justify="center" gap="10">
         <Search maxWidth={400} bgColor="white" placeholder="Søk her..."></Search>
@@ -166,7 +173,7 @@ export const HeaderDropdownChildren: Story = {
 };
 
 export const HeaderBreakpoint: Story = {
-  args: { justifyContent: "center" },
+  args: { justifyContent: "center", logoAltText: "Kartverket Logo" },
   render: (args) => (
     <Stack>
       <KvibHeader {...args} collapseBreakpoint="sm">
@@ -183,7 +190,7 @@ export const HeaderBreakpoint: Story = {
 };
 
 export const HeaderSearchAsync: Story = {
-  args: {},
+  args: { logoAltText: "Kartverket Logo" },
   render: (args) => (
     <KvibHeader {...args}>
       <Box width={300}>
@@ -205,6 +212,7 @@ export const HeaderSearchAsync: Story = {
 export const HeaderLogoButton: Story = {
   args: {
     logoLink: "https://design.kartverket.no",
+    logoAltText: "Kartverket Logo",
   },
   render: (args) => <KvibHeader {...args} />,
 };
@@ -212,6 +220,7 @@ export const HeaderLogoButton: Story = {
 export const HeaderLogoVariant: Story = {
   args: {
     logoVariant: "vertical",
+    logoAltText: "Kartverket Logo",
   },
   render: (args) => <KvibHeader {...args} />,
 };
