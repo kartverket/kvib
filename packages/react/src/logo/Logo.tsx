@@ -8,15 +8,18 @@ export type LogoProps = {
   /** The size of the logo. Width in pixels.
    * @default 184/125*/
   size?: number;
+  /** Aria-label for the logo.
+   * @default "logo"*/
+  label?: string;
 };
 
-export const Logo = ({ variant = "vertical", size }: LogoProps) => {
+export const Logo = ({ variant = "vertical", size, label }: LogoProps) => {
   const { width, height } = computeDimensions(variant, size);
 
   if (variant === "horizontal") {
-    return <LogoHorizontal width={width} height={height} />;
+    return <LogoHorizontal label={label} width={width} height={height} />;
   }
-  return <LogoVertical width={width} height={height} />;
+  return <LogoVertical label={label} width={width} height={height} />;
 };
 
 const computeDimensions = (variant: "vertical" | "horizontal", size?: number) => {
