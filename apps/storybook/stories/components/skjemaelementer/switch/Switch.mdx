@@ -1,6 +1,7 @@
 import { Meta, Canvas, Controls } from "@storybook/blocks";
 import * as SwitchStories from "./Switch.stories";
 import { DocsHeading, DocsContainer, DocsStory, Feedback } from "../../../templates";
+import { Text } from "@kvib/react/src";
 
 <Meta of={SwitchStories} />
 
@@ -18,12 +19,43 @@ import { Switch } from "@kvib/react";
 
 <Feedback component={"Switch"} />
 
-<DocsHeading>Alternativer</DocsHeading>
-<DocsStory title={"Størrelser"} description={""} story={<Canvas of={SwitchStories.SwitchSizes} />} />
-<DocsStory title={"Farger"} description={""} story={<Canvas of={SwitchStories.SwitchColors} />} />
+<DocsStory
+  title={"Bruk"}
+  description={
+    <Text>
+      <code>Switch</code> må alltid følge med et <code>label</code>, og følge den samme tastaturarbeidsflyten som en{" "}
+      <code>checkbox</code>.
+    </Text>
+  }
+  story={<Canvas of={SwitchStories.Switch} sourceState="hidden" />}
+/>
+<DocsStory
+  title={"Størrelser"}
+  description={
+    <Text>
+      <code>Switch</code> har 3 størrelser, bruk <code>size</code> prop for å endre størrelsen på komponenten.
+    </Text>
+  }
+  story={<Canvas of={SwitchStories.SwitchSizes} sourceState="hidden" />}
+/>
+<DocsStory
+  title={"Farger"}
+  description={
+    <Text>
+      Bakgrunnsfarge kan endres ved å bruke <code>colorScheme</code> prop.
+    </Text>
+  }
+  story={<Canvas of={SwitchStories.SwitchColors} sourceState="hidden" />}
+/>
 <DocsStory
   title={"States"}
-  description={""}
+  description={
+    <Text>
+      <code>Switch</code> tilstand som <code>isDisabled</code> har en innvirkning på brukervennligheten og på stilen av{" "}
+      <code>Switch</code>, bortsett fra <code>isInvalid</code> og <code>isRequired</code> props
+    </Text>
+  }
+  isVertical
   story={<Canvas of={SwitchStories.SwitchStates} sourceState={"hidden"} />}
 />
 
