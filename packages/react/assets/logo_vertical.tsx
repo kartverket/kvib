@@ -1,8 +1,16 @@
 import { LogoProps } from "./logo_horizontal";
 
-export const LogoVertical = ({ width, height }: LogoProps) => {
+export const LogoVertical = ({ label, width, height }: LogoProps) => {
   return (
-    <svg width={width} height={height} fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 125 91">
+    <svg
+      aria-label={label}
+      width={width}
+      height={height}
+      role="img"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 125 91"
+    >
       <path
         d="M77.334 2.1h-34.5c-1.7 0-3.1 1.4-3.1 3.1v21.2c2.7-2.1 6.1-4.9 12.2-3.4 5.3 1.3 6.4 5.4 14.8 10 5.1 2.8 9.9.6 13.8-1.6V5.3c0-1.8-1.4-3.2-3.2-3.2z"
         fill="#1A833B"

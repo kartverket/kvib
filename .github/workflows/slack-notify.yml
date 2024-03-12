@@ -8,6 +8,8 @@ jobs:
   send_to_slack:
     runs-on: ubuntu-latest
     steps:
+      - name: Install jq
+        run: sudo apt-get update && sudo apt-get install -y jq
       - name: Set message based on event
         id: set_message
         run: |
@@ -29,7 +31,7 @@ jobs:
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": ":mega: *En ny versjon av <https://kartverket.github.io/kvib|Kartverkets Designsystem> har blitt publisert!* :mega: \n\n Nyeste versjon: <https://kartverket.github.io/kvib/?path=/docs/info-changelog--docs|${{ steps.set_message.outputs.version }}>. \n\n ${{ steps.set_message.outputs.changelog }}"
+                    "text": ":mega: *En ny versjon av <https://kartverket.github.io/kvib|Kartverkets Designsystem> har blitt publisert!* :mega: \n\n Nyeste versjon: <https://kartverket.github.io/kvib/?path=/docs/info-changelog--docs|${{ steps.set_message.outputs.version }}>."
                   }
                 }
               ]

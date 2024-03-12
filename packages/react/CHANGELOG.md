@@ -1,5 +1,29 @@
 # @kvib/react
 
+## 3.5.7
+
+### Patch Changes
+
+- a730232: Added Alt Text to Header component, added Aria-label and role to Logo component.
+
+## 3.5.6
+
+### Patch Changes
+
+- 0ab5cef: TEST! Changed Slack Workflow, updated turbo.
+
+## 3.5.5
+
+### Patch Changes
+
+- 20caf33: Workflow Test, Opprettet theme fil for FileUpload.
+
+## 3.5.4
+
+### Patch Changes
+
+- 4f31802: Justert Hover og Invalid theme farger på Radio og Checkbox komponent.
+
 ## 3.5.3
 
 ### Patch Changes

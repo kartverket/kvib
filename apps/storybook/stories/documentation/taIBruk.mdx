@@ -32,11 +32,11 @@ function App() {
 export default App;
 ```
 
-I eksempelet over har vi også lagt til en knapp som viser hvordan du tar i bruk et KVIB-komponent i applikasjonen din.
+I eksempelet over har vi også lagt til en knapp som viser hvordan du tar i bruk et designsystem-komponent i applikasjonen din.
 
 ## Endre default-farge
 
-Default farge-tema for KVIB er grønt. Dette skal gjelde for alle applikasjoner som skal ligne Kartverket.no i stylingen.
+Default farge-tema for Kartverkets designsystem er grønt. Dette skal gjelde for alle applikasjoner som skal ligne Kartverket.no i stylingen.
 For applikasjoner med skjema og karttjenester skal man imidlertid benytte blått fargetema.
 Dette gjøres ved å legge til et customTheme med colorScheme: "blue", og benytte det i KVIB-provideren slik:
 
@@ -64,7 +64,7 @@ export default App;
     <Alert status="info">
         <AlertIcon/>
         <AlertDescription>
-            I utgangspunktet skal man benytte komponentene fra Kartverkets designbibliotek med stylingen som er der. Er
+            I utgangspunktet skal man benytte komponentene fra Kartverkets designsystem med stylingen som er der. Er
             det
             funksjoner og design du synes mangler i dagens bibliotek, ønsker vi at du bidrar med dette til biblioteket
             istedenfor å overskrive stylingen i eget prosjekt- da kan fler enn deg ta det i bruk! Se [dokumentasjonen
@@ -117,8 +117,8 @@ export default function App() {
 
 ## Obs om import
 
-I og med at KVIB inneholder hele Chakra-biblioteket har noen brukere opplevd at de ved et
-uhell har tatt i brukt chakra-komponenter i steden for kvib-komponenter, og at dette har ført til uheldig oppførsel. Eks:
+I og med at Kartverkets designsystem inneholder hele Chakra-biblioteket har noen brukere opplevd at de ved et
+uhell har tatt i brukt chakra-komponenter i steden for designsystem-komponenter, og at dette har ført til uheldig oppførsel. Eks:
 
 ```tsx
 import { NumberInput, NumberInputField } from "@kvib/react";
@@ -135,7 +135,7 @@ const Eksempel = () => (
 );
 ```
 
-Siden KVIB tilbyr alle de samme komponentene som Chakra skal ikke dette være nødvendig, men det kan fort skje ved en feil ved at
+Siden Kartverkets designsystem tilbyr alle de samme komponentene som Chakra skal ikke dette være nødvendig, men det kan fort skje ved en feil ved at
 VS-code eller Idea foreslår å importere fra feil pakke.
 For å unngå problemet er det mulig å sette innstillinger i editoren din til å hindre import forslag fra Chakra, eller å legge inn følgende regel i es-lint:
 
