@@ -1,6 +1,7 @@
 import { Canvas, Controls, Meta } from "@storybook/blocks";
 import * as PinInputStories from "./PinInput.stories";
 import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
+import { Text, Code } from "@kvib/react/src";
 
 <Meta of={PinInputStories} />
 
@@ -16,8 +17,58 @@ import { PinInput, PinInputField } from "@kvib/react";
 
 <Feedback component="PinInput" />
 
-<DocsHeading>Alternativer</DocsHeading>
-<DocsStory title="Pin Input" description={"Pin input for pin koder"} story={<Canvas of={PinInputStories.PinInput} />} />
+<DocsStory
+  title="Alphanumeric values"
+  description={
+    <Text>
+      Som standard godtar pin input bare tallverdier. For å legge til støtte for alfanumeriske verdier, angi
+      <Code>type</Code> og setter verdien til <Code>alphanumeric</Code>.
+    </Text>
+  }
+  story={<Canvas of={PinInputStories.Alphanumeric} sourceState="hidden" />}
+/>
+<DocsStory
+  title="One-time password (OTP)"
+  description={
+    <Text>
+      Bruk <code>otp</code> prop på <code>PinInput</code> for å angi <code>autocomplete="one-time-code"</code> for alle
+      <code>PinInputField</code>
+      komponenter.
+    </Text>
+  }
+  story={<Canvas of={PinInputStories.OTP} sourceState="hidden" />}
+/>
+<DocsStory
+  title="Masking input value"
+  description={
+    <Text>
+      Når du samler inn privat eller sensitiv informasjon ved hjelp av <code>PinInput</code>, må du kanskje maskere
+      verdien som er angitt, på samme måte som <code>input type="password"</code>. Bruk <code>mask</code> prop i
+      <code>PinInput</code> for å oppnå dette.
+    </Text>
+  }
+  story={<Canvas of={PinInputStories.Mask} sourceState="hidden" />}
+/>
+<DocsStory
+  title="Størrelser"
+  description={
+    <Text>
+      <code>PinInput</code> har 4 størrelser. Standard er <code>md</code>
+    </Text>
+  }
+  story={<Canvas of={PinInputStories.Size} sourceState="hidden" />}
+/>
+<DocsStory
+  title="Fokus håndtering"
+  description={
+    <Text>
+      Som standard flytter <code>PinInput</code> fokus automatisk til neste felt når et felt er fylt ut. Den overfører
+      også fokus til en tidligere felt når <code>Delete</code> trykkes med fokus på en tom felt. For å deaktivere denne
+      virkemåten, sett <code>manageFocus</code> prop til <code>false</code>.
+    </Text>
+  }
+  story={<Canvas of={PinInputStories.Focus} sourceState="hidden" />}
+/>
 
 <DocsHeading>Props</DocsHeading>
 <Canvas of={PinInputStories.PinInput} />
