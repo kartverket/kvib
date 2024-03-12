@@ -1,4 +1,4 @@
-import { Textarea as KvibTextarea, Stack as KvibStack, Text } from "@kvib/react/src";
+import { Textarea as KvibTextarea, Stack as KvibStack, Text, Stack, RadioGroup, Radio } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 import { ChangeEvent, useState } from "react";
 
@@ -110,6 +110,28 @@ export const TextareaControlled: Story = {
   render: (args) => <TextAreaControlledExample {...args} />,
 };
 
+const TextareaResizeExample = () => {
+  const [resize, setResize] = useState("horizontal");
+
+  return (
+    <>
+      <RadioGroup defaultValue={resize} onChange={setResize} mb={6}>
+        <Stack direction="row" spacing={5}>
+          <Radio value="horizontal">Horizontal</Radio>
+          <Radio value="vertical">Vertical</Radio>
+          <Radio value="none">None</Radio>
+        </Stack>
+      </RadioGroup>
+
+      <KvibTextarea placeholder="Here is a sample placeholder" size="sm" resize={resize} />
+    </>
+  );
+};
+
+export const TextareaResize: Story = {
+  render: () => <TextareaResizeExample />,
+};
+
 export const TextareaSizes: Story = {
   args: {},
   render: (args) => (
@@ -134,12 +156,12 @@ export const TextareaVariants: Story = {
   ),
 };
 
-export const TextareaDisabled: Story = {
-  args: { placeholder: "Placeholder", isDisabled: true },
-  render: (args) => <KvibTextarea {...args} />,
-};
-
-export const TextareaInvalid: Story = {
-  args: { placeholder: "Placeholder", isInvalid: true },
-  render: (args) => <KvibTextarea {...args} />,
+export const TextareaStates: Story = {
+  render: () => (
+    <Stack>
+      <KvibTextarea placeholder="isInvalid" isInvalid />
+      <KvibTextarea placeholder="isReadOnly" isReadOnly />
+      <KvibTextarea placeholder="isDisabled" isDisabled />
+    </Stack>
+  ),
 };
