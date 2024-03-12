@@ -19,11 +19,10 @@ for å få en oversikt over ikoner du kan benytte.
 
 ## Ta i bruk
 
-  <Alert status="info">
-    <AlertIcon />
-    **Dersom ikoner ikke vises:** `import 'material-symbols';` i index.js.
-  </Alert>
-
+<Alert status="info">
+  <AlertIcon />
+  **Dersom ikoner ikke vises:** `import 'material-symbols';` i index.js.
+</Alert>
 
 ```jsx
 import { Icon, MaterialSymbol } from "@kvib/react";
@@ -39,9 +38,11 @@ import { Icon, MaterialSymbol } from "@kvib/react";
 Man kan enten bruke vanlige css argumenter (fargenavn, hex-koder, RGBA osv.), men det er også mulig å hente farger fra Designsystemet på denne måten:
 
 ```jsx
-import { Icon, colors } from "@kvib/react";
+import { Icon, useTheme } from "@kvib/react";
 
-<Icon icon="home" color={colors.green[400]} />;
+const theme = useTheme();
+
+<Icon icon="home" color={theme.colors.green[400]} />;
 ```
 
 **_OBS! Enkelte ikoner har ikke en "filled" variant._**
