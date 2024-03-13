@@ -1,7 +1,11 @@
 import { Meta, Canvas, Controls } from "@storybook/blocks";
 import * as AvatarStories from "./Avatar.stories";
+import { Feedback, DocsHeading, DocsStory, DocsContainer } from "../../../templates";
+import { Text, List, ListItem } from "@kvib/react/src";
 
 <Meta of={AvatarStories} />
+
+<DocsContainer>
 
 # Avatar
 
@@ -13,28 +17,67 @@ Avatar brukes til å representere brukere. Den viser frem profilbilde, initialer
 import { Avatar, AvatarAvatar, AvatarGroup } from "@kvib/react";
 ```
 
-## Props
+<Feedback component="Avatar" />
 
-<Canvas of={AvatarStories.Avatar} />
-<Controls of={AvatarStories.Avatar} />
+<DocsStory
+  title="Fallback Avatar"
+  description={
+    <>
+      <Text>Det er to fallbacks dersom det er en error når avataren skal lastes:</Text>
+      <ul>
+        <li>
+          Dersom Avataren har proppen <code>name</code>, vil initialene vises.
+        </li>
+        <li>
+          Dersom Avataren ikke har <code>name</code>, vil default-avataren vises.
+        </li>
+      </ul>
+    </>
+  }
+  story={<Canvas of={AvatarStories.AvatarFallback} sourceState="hidden" />}
+/>
 
-## Størrelser
+<DocsStory
+  isVertical
+  title="Størrelser"
+  description={
+    <Text>
+      Bruk <code>size</code> prop for å endre på Avatar størrelsen.
+    </Text>
+  }
+  story={<Canvas of={AvatarStories.AvatarSizes} sourceState="hidden" />}
+/>
 
-<Canvas of={AvatarStories.AvatarSizes} />
+<DocsStory
+  title="Avatar med badge"
+  description={
+    <Text>
+      <code>AvatarBadge</code> kan brukes for å sette på status ikon på <code>Avatar</code>.
+    </Text>
+  }
+  story={<Canvas of={AvatarStories.AvatarBadge} sourceState="hidden" />}
+/>
 
-## Fallback Avatar
+<DocsStory
+  title="Avatar gruppering"
+  description={
+    <Text>
+      <code>Avatar</code> kan grupperes ved å bruke <code>AvatarGroup</code>.
+    </Text>
+  }
+  story={<Canvas of={AvatarStories.AvatarGrouping} sourceState="hidden" />}
+/>
 
-Det er to fallbacks dersom det er en error når avataren skal lastes:
+<DocsStory
+  isVertical
+  title="Props"
+  description={""}
+  story={
+    <>
+      <Canvas of={AvatarStories.Avatar} />
+      <Controls of={AvatarStories.Avatar} />
+    </>
+  }
+/>
 
-- Dersom Avataren har proppen `name`, vil initialene vises.
-- Dersom Avataren ikke har `name`, vil default-avataren vises.
-
-<Canvas of={AvatarStories.AvatarFallback} />
-
-## Avatar med badge
-
-<Canvas of={AvatarStories.AvatarBadge} />
-
-## Avatar gruppering
-
-<Canvas of={AvatarStories.AvatarGrouping} />
+</DocsContainer>

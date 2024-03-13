@@ -1,7 +1,10 @@
 import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
 import * as ImageStories from "./Image.stories";
+import { Feedback, DocsContainer, DocsStory } from "../../../templates";
 
 <Meta of={ImageStories} />
+
+<DocsContainer>
 
 # Image
 
@@ -13,19 +16,39 @@ Image brukes til å vise frem bilder med støtte for fallback.
 import { Image } from "@kvib/react";
 ```
 
-## Props
+<Feedback component="Image" />
 
-<Canvas of={ImageStories.Image} />
-<Controls of={ImageStories.Image} />
+<DocsStory
+  isVertical
+  title="Image med border radius"
+  description={""}
+  story={<Canvas of={ImageStories.ImageBorderRadius} sourceState="hidden" />}
+/>
 
-## Størrelser
+<DocsStory
+  isVertical
+  title="Fallback"
+  description={""}
+  story={<Canvas of={ImageStories.ImageFallback} sourceState="hidden" />}
+/>
 
-<Canvas of={ImageStories.ImageSizes} />
+<DocsStory
+  isVertical
+  title="Størrelser"
+  description={""}
+  story={<Canvas of={ImageStories.ImageSizes} sourceState="hidden" />}
+/>
 
-## Image med border radius
+<DocsStory
+  isVertical
+  title="Props"
+  description={""}
+  story={
+    <>
+      <Canvas of={ImageStories.Image} />
+      <Controls of={ImageStories.Image} />
+    </>
+  }
+/>
 
-<Canvas of={ImageStories.ImageBorderRadius} />
-
-## Fallback
-
-<Canvas of={ImageStories.ImageFallback} />
+</DocsContainer>

@@ -6,5 +6,9 @@ addons.setConfig({
   theme,
   title: "Kartverkets Designsystem",
   showToolbar: false,
-  panelPosition: "right",
+  panelPosition: "bottom",
+  sidebar: {
+    showRoots: false,
+    collapsedRoots: ["other"],
+  },
 });
