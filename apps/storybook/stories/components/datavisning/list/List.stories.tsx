@@ -3,6 +3,7 @@ import {
   ListItem as KvibListItem,
   OrderedList as KvibOrderedList,
   UnorderedList as KvibUnorderedList,
+  Stack,
 } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
@@ -41,14 +42,23 @@ export const List: Story = {
   ),
 };
 
-export const ListOrdered: Story = {
+export const Order: Story = {
   args: {},
   render: (args) => (
-    <KvibOrderedList {...args}>
-      <KvibListItem>Kartgrunnlag for Fastlands-Noreg</KvibListItem>
-      <KvibListItem>Eigedomsdata</KvibListItem>
-      <KvibListItem>Tidevatn og vasstand</KvibListItem>
-      <KvibListItem>Høgdedata og djupnedata</KvibListItem>
-    </KvibOrderedList>
+    <Stack gap={4}>
+      <KvibOrderedList {...args}>
+        <KvibListItem>Kartgrunnlag for Fastlands-Noreg</KvibListItem>
+        <KvibListItem>Eigedomsdata</KvibListItem>
+        <KvibListItem>Tidevatn og vasstand</KvibListItem>
+        <KvibListItem>Høgdedata og djupnedata</KvibListItem>
+      </KvibOrderedList>
+      <hr />
+      <KvibUnorderedList {...args}>
+        <KvibListItem>Kartgrunnlag for Fastlands-Noreg</KvibListItem>
+        <KvibListItem>Eigedomsdata</KvibListItem>
+        <KvibListItem>Tidevatn og vasstand</KvibListItem>
+        <KvibListItem>Høgdedata og djupnedata</KvibListItem>
+      </KvibUnorderedList>
+    </Stack>
   ),
 };

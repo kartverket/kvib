@@ -1,7 +1,10 @@
 import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
 import * as ListStories from "./List.stories";
+import { DocsHeading, DocsContainer, DocsStory, Feedback } from "../../../templates/";
 
 <Meta of={ListStories} />
+
+<DocsContainer>
 
 # List
 
@@ -13,11 +16,17 @@ Liste for å vise elementer. Den render en `<ul>` som standard.
 import { List, ListItem, OrderedList, UnorderedList } from "@kvib/react";
 ```
 
-## Props
+<Feedback component="List" />
 
+<DocsStory
+  isVertical
+  title="Ordered og Unordered list"
+  description={""}
+  story={<Canvas of={ListStories.Order} sourceState="hidden" />}
+/>
+
+<DocsHeading>Props</DocsHeading>
 <Canvas of={ListStories.List} />
 <Controls of={ListStories.List} />
 
-## Ordered list
-
-<Canvas of={ListStories.ListOrdered} />
+</DocsContainer>

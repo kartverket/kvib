@@ -1,29 +1,20 @@
 import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
 import * as KbdStories from "./Kbd.stories";
+import { DocsHeading, DocsContainer, DocsStory, Feedback } from "../../../templates/";
 import { Kbd } from "@kvib/react/src";
 
 <Meta of={KbdStories} />
+<DocsContainer>
 
 # Keyboard Key (Kbd)
 
 Kbd brukes til å vise hvilken tast eller kombinasjon av taster på tastaturet som vil sette i gang en handling.
 
-## Ta i bruk
-
 ```jsx
 import { Kbd } from "@kvib/react";
 ```
 
-## Props
-
-<Canvas of={KbdStories.Kbd} />
-
-## Guideline
-
-Alle snarveier skal prøve å passe tastene på brukerens tastatur.
-
-- Alle single bokstaver A-Å skal ha stor bokstav.
-- Alle taster uten bokstaver (enter, esc, shift, osv.) skal ha små bokstaver.
+<Feedback component="Kbd" />
 
 ## Modifikator
 
@@ -33,4 +24,13 @@ Alle snarveier skal prøve å passe tastene på brukerens tastatur.
 
 **_"or"_** brukes dersom flere taster fungerer likt eller hvis tasten ser annerledes ut på forskjellige tastatur.
 
-<Canvas of={KbdStories.KbdModifier} />
+<Canvas of={KbdStories.KbdModifier} sourceState="hidden" />
+
+<DocsHeading>Guideline</DocsHeading>
+
+Alle snarveier skal prøve å passe tastene på brukerens tastatur.
+
+- Alle single bokstaver A-Å skal ha stor bokstav.
+- Alle taster uten bokstaver (enter, esc, shift, osv.) skal ha små bokstaver.
+
+</DocsContainer>
