@@ -1,7 +1,11 @@
 import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
 import * as HighlightStories from "./Highlight.stories";
+import { Feedback, DocsStory, DocsContainer } from "../../../templates";
+import { Text } from "@kvib/react/src";
 
 <Meta of={HighlightStories} />
+
+<DocsContainer>
 
 # Highlight
 
@@ -13,15 +17,32 @@ Highlight lar deg fremheve substrings i en tekst.
 import { Highlight } from "@kvib/react";
 ```
 
-## Props
+<Feedback components="Highlight" />
 
-<Canvas of={HighlightStories.Highlight} />
-<Controls of={HighlightStories.Highlight} />
+<DocsStory
+  isVertical
+  title="Highlight flere ord"
+  description={""}
+  story={<Canvas of={HighlightStories.HighlightMultiple} sourceState="hidden" />}
+/>
 
-## Highlight flere ord
+<DocsStory
+  isVertical
+  title="Highlight substring"
+  description={""}
+  story={<Canvas of={HighlightStories.HighlightSubstring} sourceState="hidden" />}
+/>
 
-<Canvas of={HighlightStories.HighlightMultiple} />
+<DocsStory
+  isVertical
+  title="Props"
+  description={""}
+  story={
+    <>
+      <Canvas of={HighlightStories.Highlight} />
+      <Controls of={HighlightStories.Highlight} />
+    </>
+  }
+/>
 
-## Highlight substring
-
-<Canvas of={HighlightStories.HighlightSubstring} />
+</DocsContainer>
