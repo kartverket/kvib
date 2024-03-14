@@ -1,25 +1,70 @@
 import { Title, Canvas, Meta, Story, Controls } from "@storybook/blocks";
 import * as WrapStories from "./Wrap.stories";
+import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
+import { Text } from "@kvib/react/src/";
 
 <Meta of={WrapStories} />
+
+<DocsContainer>
 
 # Wrap
 
 Wrap er en layout-komponent som brukes til å legge til spacing mellom elements og wrappe dem automatisk hvis det ikke er plass i bredden.
 
-<Canvas of={WrapStories.Wrap} />
-
-## Ta i bruk
+**Wrap:** Wrap består av en Box-komponent og rendrer en `<ul>` tag\
+**WrapItem:** WrapItem består av en Box-komponent og rendrer en `<li>` tag.
 
 ```jsx
 import { Wrap, WrapItem } from "@kvib/react";
 ```
 
-**Wrap:** Wrap består av en Box-komponent og rendrer en `<ul>` tag\
-**WrapItem:** WrapItem består av en Box-komponent og rendrer en `<li>` tag.
+<Feedback component="Wrap" />
 
-## Props
+<DocsStory
+  isVertical
+  title="Wrap eksempel:"
+  description={
+    <Text>
+Tenk på <code>Wrap</code>-komponenten som en <code>flex</code>box container med støtte for <code>flex-wrap</code> og <code>spacing</code>. Den fungerer veldig bra med ting som dialogknapper, tags og chips.
+I eksempelet nedenfor ser du at den siste <code>Box</code> ble pakket inn på neste linje.
+</Text>
 
-Se [Chakras dokumentasjonsside for Wrap](https://chakra-ui.com/docs/components/wrap/props) for tillate props.
+}
+story={<Canvas of={WrapStories.Wrap} sourceState="hidden" />}
+/>
 
-Se [Chakra sine dokumentasjonssider](https://chakra-ui.com/docs/components/wrap/usage) for flere eksempler og info.
+<DocsStory
+  isVertical
+  title="Wrap spacing"
+  description={
+    <Text>
+      Pass på å bruke <code>spacing</code>-attributtet for å anvende jevn avstand mellom hvert element, selv om de
+      pakkes inn på neste linje.
+    </Text>
+  }
+  story={<Canvas of={WrapStories.WrapSpacing} sourceState="hidden" />}
+/>
+
+<DocsStory
+  isVertical
+  title="Wrap alignment"
+  description={
+    <Text>
+      Bruk <code>align</code>-attributtet for å endre justeringen av child elementene langs tversaksen.
+    </Text>
+  }
+  story={<Canvas of={WrapStories.WrapAlignment} sourceState="hidden" />}
+/>
+
+<DocsStory
+  isVertical
+  title="Wrap alignment justify"
+  description={
+    <Text>
+      Bruk <code>justify</code>-attributtet for å endre justeringen av child elementene langs hovedaksen.
+    </Text>
+  }
+  story={<Canvas of={WrapStories.WrapAlignmentJustify} sourceState="hidden" />}
+/>
+
+</DocsContainer>

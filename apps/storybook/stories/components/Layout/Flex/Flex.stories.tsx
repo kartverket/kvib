@@ -1,4 +1,4 @@
-import { Center, Box, Flex as KvibFlex, Spacer } from "@kvib/react/src/layout";
+import { Center, Box, Flex as KvibFlex, Spacer, Grid, HStack } from "@kvib/react/src/layout";
 import { Text } from "@kvib/react/src/typography";
 import { Meta, StoryObj } from "@storybook/react";
 
@@ -43,5 +43,34 @@ export const FlexWithSpacer: Story = {
         Box 2
       </Box>
     </KvibFlex>
+  ),
+};
+
+export const FlexGridStack: Story = {
+  render: () => (
+    <>
+      <Box>
+        <Text>Flex and Spacer: Full width, equal Spacing</Text>
+        <KvibFlex>
+          <Box w="70px" h="10" bg="red.500" />
+          <Spacer />
+          <Box w="170px" h="10" bg="red.500" />
+          <Spacer />
+          <Box w="180px" h="10" bg="red.500" />
+        </KvibFlex>
+        <Text>Grid: The children start at the beginning, the 1/3 mark and 2/3 mark</Text>
+        <Grid templateColumns="repeat(3, 1fr)" gap={6}>
+          <Box w="70px" h="10" bg="blue.500" />
+          <Box w="170px" h="10" bg="blue.500" />
+          <Box w="180px" h="10" bg="blue.500" />
+        </Grid>
+        <Text>HStack: The children have equal spacing but don't span the whole container</Text>
+        <HStack spacing="24px">
+          <Box w="70px" h="10" bg="teal.500" />
+          <Box w="170px" h="10" bg="teal.500" />
+          <Box w="180px" h="10" bg="teal.500" />
+        </HStack>
+      </Box>
+    </>
   ),
 };

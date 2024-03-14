@@ -1,32 +1,69 @@
 import { Title, Canvas, Meta, Story, Controls } from "@storybook/blocks";
 import * as FlexStories from "./Flex.stories";
+import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
+import { Text } from "@kvib/react/src/";
 
 <Meta of={FlexStories} />
 
+<DocsContainer>
+
 # Flex
-
-Flex er en boks med display satt til flex og kommer med en rekke hjelpsomme forkortelser. Den rendres som et `div` element.
-
-<Canvas of={FlexStories.Flex} />
-
-## Ta i bruk
 
 ```jsx
 import { Flex, Spacer } from "@kvib/react";
 ```
 
-**Flex:** En `Box` with `display: flex`.\
-**Spacer:** Er en justerbar tomt rom som kan brukes til å justere avstanden mellom underelementene i `Flex`.
+<Feedback component="Flex, Spacer" />
 
-## Props
+<DocsStory
+  title="Flex"
+  description={
+    <>
+      <Text>
+        Flex er en boks med display satt til flex og kommer med en rekke hjelpsomme forkortelser. Den rendres som et{" "}
+        <code>div</code> element.
+      </Text>
+      <Text>
+        <Text as="b">Flex:</Text> En <code>Box</code> med <code>display: flex</code>.
+      </Text>
+      <Text>
+        <Text as="b">Spacer:</Text> Er en justerbar tomt rom som kan brukes til å justere avstanden mellom
+        underelementene i <code>Flex</code>.
+      </Text>
+    </>
+  }
+  story={<Canvas of={FlexStories.Flex} sourceState="hidden" />}
+/>
 
-Se [Chakras dokumentasjonsside for Flex](https://chakra-ui.com/docs/components/flex/props) for tillate props.
+<DocsStory
+  title="Flex med Spacer"
+  description={""}
+  story={<Canvas of={FlexStories.FlexWithSpacer} sourceState="hidden" />}
+/>
 
-## Flere eksempler
-
-<br />
-### Flex med Spacer
-
-<Canvas of={FlexStories.FlexWithSpacer} />
-
-Se [Chakra sine dokumentasjonssider](https://chakra-ui.com/docs/components/flex/usage) for flere eksempler og info.
+<DocsStory
+  isVertical
+  title="Flex med Spacer vs Grid vs Stack"
+  description={
+    <Text>
+      <code>Flex</code> og <code>Spacer</code> komponentene, <code>Grid</code> og <code>HStack</code> behandler children
+      med ulik bredde ulikt.
+      <ul>
+        <li>
+          I <code>HStack</code> vil children ha lik avstand mellom dem, men de vil ikke dekke hele bredden på
+          beholderen.
+        </li>
+        <li>
+          I <code>Grid</code> vil startpunktene til children være like avstand fra hverandre, men gapene mellom dem vil
+          ikke være like.
+        </li>
+        <li>
+          Med <code>Flex</code> og <code>Spacer</code> vil children dekke hele bredden på beholderen og også ha lik
+          avstand mellom seg.
+        </li>
+      </ul>
+    </Text>
+  }
+  story={<Canvas of={FlexStories.FlexGridStack} sourceState="hidden" />}
+/>
+</DocsContainer>
