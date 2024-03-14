@@ -1,7 +1,11 @@
 import { Canvas, Meta, Controls } from "@storybook/blocks";
 import * as AccordionStories from "./Accordion.stories";
+import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
+import { Text, Code, Box } from "@kvib/react/src/";
 
 <Meta of={AccordionStories} />
+
+<DocsContainer>
 
 # Accordion
 
@@ -11,26 +15,44 @@ import * as AccordionStories from "./Accordion.stories";
 
     Husk, det er mange myter om at brukere “ikke scroller nedover“. Så lenge innholdet oppleves relevant er bruker villig til å scrolle videre - Opplever du at det er mye innhold, se om dere kan gjøre en innholdsjobb i steden for. Når det er sagt, test ut og bruk komponenten til det behovet du ønsker å møte.
 
-## Ta i bruk
-
 ```jsx
 import { Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon } from "@kvib/react";
 ```
 
-## Props
+<DocsStory
+  title="Eksempel for allowMultiple"
+  description={""}
+  story={<Canvas of={AccordionStories.AccordionAllowMultiple} sourceState="hidden" />}
+/>
 
-<Canvas of={AccordionStories.Accordion} />
-<Controls of={AccordionStories.Accordion} />
+<DocsStory
+  title="Eksempel for reduceMotion"
+  description={""}
+  story={<Canvas of={AccordionStories.AccordionReduceMotion} sourceState="hidden" />}
+/>
 
-## Props for AccordionItem
+<DocsStory
+  isVertical
+  title="Props"
+  description={""}
+  story={
+    <>
+      <Canvas of={AccordionStories.Accordion} sourceState="hidden" />
+      <Controls of={AccordionStories.Accordion} />
+    </>
+  }
+/>
 
-<Canvas of={AccordionStories.AccordionItem} />
-<Controls of={AccordionStories.AccordionItem} />
+<DocsStory
+  isVertical
+  title="Props for AccordionItem"
+  description={""}
+  story={
+    <>
+      <Canvas of={AccordionStories.AccordionItem} sourceState="hidden" />
+      <Controls of={AccordionStories.AccordionItem} />
+    </>
+  }
+/>
 
-## Eksempel for allowMultiple
-
-<Canvas of={AccordionStories.AccordionAllowMultiple} />
-
-## Eksempel for reduceMotion
-
-<Canvas of={AccordionStories.AccordionReduceMotion} />
+</DocsContainer>
