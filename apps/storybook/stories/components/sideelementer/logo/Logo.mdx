@@ -1,25 +1,50 @@
 import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
 import * as LogoStories from "./Logo.stories";
+import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
+import { Text, Code, Box } from "@kvib/react/src/";
 
 <Meta of={LogoStories} />
 
-# Logo
+<DocsContainer>
 
-## Ta i bruk
+# Logo
 
 ```jsx
 import { Logo } from "@kvib/react";
 ```
 
-## Props
+<Feedback component="Logo" />
 
-<Canvas of={LogoStories.Logo} />
-<Controls of={LogoStories.Logo} />
+<DocsStory
+  title="Horisontal"
+  description={
+    <Text>
+      Bruk <code>variant</code> prop for å endre til horizontal logo.
+    </Text>
+  }
+  story={<Canvas of={LogoStories.LogoHorizontal} sourceState="hidden" />}
+/>
 
-## Horisontal
+<DocsStory
+  title="Størrelser"
+  description={
+    <Text>
+      Bruk <code>size</code> prop for å endre på størrelse.
+    </Text>
+  }
+  story={<Canvas of={LogoStories.LogoSizes} sourceState="hidden" />}
+/>
 
-<Canvas of={LogoStories.LogoHorizontal} />
+<DocsStory
+  isVertical
+  title="Props"
+  description={""}
+  story={
+    <>
+      <Canvas of={LogoStories.Logo} />
+      <Controls of={LogoStories.Logo} />
+    </>
+  }
+/>
 
-## Størrelser
-
-<Canvas of={LogoStories.LogoSizes} />
+</DocsContainer>

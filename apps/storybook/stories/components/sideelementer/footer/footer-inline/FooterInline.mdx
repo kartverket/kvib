@@ -1,19 +1,36 @@
 import { Title, Canvas, Meta, Story, Controls } from "@storybook/blocks";
 import * as FooterInlineStories from "./FooterInline.stories";
+import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../../templates";
+import { Text, Code, Box } from "@kvib/react/src/";
 
 <Meta of={FooterInlineStories} />
 
-# FooterInline
+<DocsContainer>
 
-## Ta i bruk
+# FooterInline
 
 ```jsx
 import { FooterInline } from "@kvib/react";
 ```
 
-<Canvas of={FooterInlineStories.FooterInline} />
-<Controls of={FooterInlineStories.FooterInline} />
+<Feedback components="FooterInline" />
 
-## Flere lenker
+<DocsStory
+  isVertical
+  title="Footer Inline med flere lenker"
+  description={""}
+  story={<Canvas of={FooterInlineStories.FooterInlineCustom} sourceState="hidden" />}
+/>
 
-<Canvas of={FooterInlineStories.FooterInlineCustom} />
+<DocsStory
+  isVertical
+  title="Props"
+  description={""}
+  story={
+    <>
+        <Canvas of={FooterInlineStories.FooterInline} />
+        <Controls of={FooterInlineStories.FooterInline} />
+    </>
+  }
+/>
+</DocsContainer>
