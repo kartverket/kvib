@@ -1,35 +1,64 @@
 import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
 import * as TagStories from "./Tag.stories";
+import { DocsHeading, DocsContainer, DocsStory, Feedback } from "../../../templates/";
+import { Text } from "@kvib/react/src";
 
 <Meta of={TagStories} />
+
+<DocsContainer>
 
 # Tag
 
 Tag skal brukes til elementer som trenger å bli merket, kategorisert eller organisert med nøkkelord som beskriver dem.
 
-## Ta i bruk
-
 ```jsx
 import { Tag, TagLabel, TagLeftIcon, TagRightIcon, TagCloseButton } from "@kvib/react";
 ```
 
-## Props
+<Feedback components="Tag" />
 
+<DocsStory
+  title="Farger"
+  description={
+    <Text>
+      Farge kan endres ved å bruke <code>colorScheme</code> prop.
+    </Text>
+  }
+  story={<Canvas of={TagStories.TagColors} sourceState="hidden" />}
+/>
+
+<DocsStory
+  title="Størrelser"
+  description={
+    <Text>
+      Størrelse kan endres ved bruk av <code>size</code> prop.
+    </Text>
+  }
+  story={<Canvas of={TagStories.TagSizes} sourceState="hidden" />}
+/>
+
+<DocsStory
+  title="Varianter"
+  description={
+    <Text>
+      Varianten av <code>Tag</code> kan endres ved bruk av <code>variant</code> prop.
+    </Text>
+  }
+  story={<Canvas of={TagStories.TagVariants} sourceState="hidden" />}
+/>
+
+<DocsStory
+  title="Tag med lukkeknapp"
+  description={
+    <Text>
+      <code>TagCloseButton</code> kan brukes for å legge til et lukkeknapp i <code>Tag</code>.
+    </Text>
+  }
+  story={<Canvas of={TagStories.TagClose} sourceState="hidden" />}
+/>
+
+<DocsHeading light>Props</DocsHeading>
 <Canvas of={TagStories.Tag} />
 <Controls of={TagStories.Tag} />
 
-## Farger
-
-<Canvas of={TagStories.TagColors} />
-
-## Størrelser
-
-<Canvas of={TagStories.TagSizes} />
-
-## Varianter
-
-<Canvas of={TagStories.TagVariants} />
-
-## Tag med lukkeknapp
-
-<Canvas of={TagStories.TagClose} />
+</DocsContainer>

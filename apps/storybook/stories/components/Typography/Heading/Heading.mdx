@@ -1,7 +1,11 @@
 import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
 import * as HeadingStories from "./Heading.stories";
+import { Feedback, DocsStory, DocsContainer } from "../../../templates";
+import { Text } from "@kvib/react/src";
 
 <Meta of={HeadingStories} />
+
+<DocsContainer>
 
 # Heading
 
@@ -14,11 +18,29 @@ Den render en `<h2>`som standard. Dersom du ønsker at overskriften skal avkorte
 import { Heading } from "@kvib/react";
 ```
 
-## Props
+<Feedback component="Heading" />
 
-<Canvas of={HeadingStories.Heading} />
-<Controls of={HeadingStories.Heading} />
+<DocsStory
+  isVertical
+  title="Størrelser"
+  description={
+    <Text>
+      Bruk <code>size</code> prop for å endre størrelse på <code>Heading</code>.
+    </Text>
+  }
+  story={<Canvas of={HeadingStories.HeadingSizes} sourceState="hidden" />}
+/>
 
-## Størrelser
+<DocsStory
+  isVertical
+  title="Props"
+  description={""}
+  story={
+    <>
+      <Canvas of={HeadingStories.Heading} />
+      <Controls of={HeadingStories.Heading} />
+    </>
+  }
+/>
 
-<Canvas of={HeadingStories.HeadingSizes} />
+</DocsContainer>

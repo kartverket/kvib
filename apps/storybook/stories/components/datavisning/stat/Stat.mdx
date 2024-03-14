@@ -1,22 +1,27 @@
 import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
 import * as StatStories from "./Stat.stories";
+import { DocsHeading, DocsContainer, DocsStory, Feedback } from "../../../templates/";
 
 <Meta of={StatStories} />
+
+<DocsContainer>
 
 # Stat
 
 Stat-komponentet brukes til å vise frem statistikk.
 
-## Ta i bruk
-
 ```jsx
 import { Stat, StatLabel, StatNumber, StatHelpText, StatArrow, StatGroup } from "@kvib/react";
 ```
 
-## Props
+<Feedback component="Stat" />
 
-<Canvas of={StatStories.Stat} />
+<DocsStory title="Stat eksempel" description={""} story={<Canvas of={StatStories.Stat} sourceState="hidden" />} />
 
-## Stat med indikator
+<DocsStory
+  title="Stat med indikator"
+  description={""}
+  story={<Canvas of={StatStories.StatIndicator} sourceState="hidden" />}
+/>
 
-<Canvas of={StatStories.StatIndicator} />
+</DocsContainer>

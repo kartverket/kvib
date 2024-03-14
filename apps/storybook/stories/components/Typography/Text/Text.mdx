@@ -1,7 +1,11 @@
 import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
 import * as TextStories from "./Text.stories";
+import { Feedback, DocsStory, DocsContainer } from "../../../templates";
+import { Text } from "@kvib/react/src";
 
 <Meta of={TextStories} />
+
+<DocsContainer>
 
 # Text
 
@@ -13,15 +17,39 @@ Text skal brukes til render av tekst og paragrafer i et grensesnitt. Text inneho
 import { Text } from "@kvib/react";
 ```
 
-## Props
+<Feedback components="Text" />
 
-<Canvas of={TextStories.Text} />
-<Controls of={TextStories.Text} />
+<DocsStory
+  title="Overstyring av stil"
+  description={
+    <Text>
+      <code>Text</code> har flere stiler å velge mellom. Bruk <code>as</code> prop for å sette stil.
+    </Text>
+  }
+  story={<Canvas of={TextStories.TextOverride} sourceState="hidden" />}
+/>
 
-## Størrelser
+<DocsStory
+  isVertical
+  title="Størrelser"
+  description={
+    <Text>
+      Bruk <code>fontSize</code> prop for å endre størrelse på <code>Text</code>.
+    </Text>
+  }
+  story={<Canvas of={TextStories.TextSizes} sourceState="hidden" />}
+/>
 
-<Canvas of={TextStories.TextSizes} />
+<DocsStory
+  isVertical
+  title="Props"
+  description={""}
+  story={
+    <>
+      <Canvas of={TextStories.Text} />
+      <Controls of={TextStories.Text} />
+    </>
+  }
+/>
 
-## Overstyring av stil
-
-<Canvas of={TextStories.TextOverride} />
+</DocsContainer>

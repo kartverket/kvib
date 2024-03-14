@@ -1,4 +1,4 @@
-import { KvibProvider} from "@kvib/react/src";
+import { KvibProvider } from "@kvib/react/src";
 // import { extendTheme, theme as KvibTheme, withDefaultColorScheme } from "@kvib/react/src";
 import theme from "./theme";
 import MDXContainer from "./MDXContainer";
@@ -26,8 +26,10 @@ export const parameters = {
     storySort: {
       method: "alphabetical",
       order: [
+        "Introduksjon",
+        "Changelog",
         "Info",
-        ["Introduksjon", "Oppsett", "Bidra", ["Hurtigveiledning", "Bygge", "Style", "Dokumentere", "Teste", "Publish"]],
+        ["Oppsett", "Bidra", ["Hurtigveiledning", "Bygge", "Style", "Dokumentere", "Teste", "Publish"]],
         "Design Fundament",
         "Hooks",
         "Komponenter",
@@ -55,7 +57,7 @@ export const parameters = {
 export const decorators = [
   (Story) => (
     <KvibProvider>
-    {/* <KvibProvider theme={customTheme}> */}
+      {/* <KvibProvider theme={customTheme}> */}
       <Story />
     </KvibProvider>
   ),

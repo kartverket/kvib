@@ -1,59 +1,113 @@
 import { Meta, Canvas, Controls } from "@storybook/blocks";
 import * as HeaderStories from "./Header.stories";
+import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
+import { Alert, AlertIcon, Text, Code, Box } from "@kvib/react/src/";
 
 <Meta of={HeaderStories} />
+
+<DocsContainer>
 
 # Header
 
 Header er et sammensatt komponent som skal brukes øverst på Kartverkets sider. Arbeidet med Header er ikke ferdigstilt - endringer må påregnes.
 
-## Ta i bruk
-
 ```jsx
 import { Header, HeaderProps } from "@kvib/react";
 ```
 
-## Props
+<Feedback components="Header" />
 
-<Canvas of={HeaderStories.Header} />
-<Controls of={HeaderStories.Header} />
+<Alert status="warning">
+  <AlertIcon />
+  **Obs!** Header logo link sender bruker til design.kartverket.no i eksemplene under.
+</Alert>
 
-## Eksempel på header elementer
+<DocsStory
+  isVertical
+  title="Eksempel på header elementer"
+  description={
+    <Text>
+      For å legge til komponenter i Header legger man de inn som children. Ved hjelp av <code>gap</code> og
+      <code>justifyContent</code> kan man endre på plassering.
+    </Text>
+  }
+  story={<Canvas of={HeaderStories.HeaderElements} sourceState="hidden" />}
+/>
 
-For å legge til komponenter i Header legger man de inn som children. Ved hjelp av `gap` og `justifyContent` kan man endre på plassering.
+<DocsStory
+  isVertical
+  title="Plassering av innhold"
+  description={
+    <Text>
+      <code>Header</code> kan ha innhold til venstre, med plass i mellom, eller sentrert. Default er
+      <code>space-between</code>.
+    </Text>
+  }
+  story={<Canvas of={HeaderStories.HeaderJustifyContent} sourceState="hidden" />}
+/>
 
-<Canvas of={HeaderStories.HeaderElements} />
+<DocsStory
+  isVertical
+  title="Header breakpoint"
+  description={
+    <Text>
+      <code>Header</code> har et breakpoint for når elementene vil fjernes og bli erstattet av en meny-knapp.
+      Meny-knappen aktiverer en dropdown som inneholder elementene som er fjernet. Default breakpoint for
+      <code>Header</code> er <code>sm</code>. Prøv å endre størrelsen på vinduet for å se hvordan det fungerer.
+    </Text>
+  }
+  story={<Canvas of={HeaderStories.HeaderBreakpoint} sourceState="hidden" />}
+/>
 
-## Plassering av innhold
+<DocsStory
+  isVertical
+  title="Header med tilpasset dropdown meny"
+  description={
+    <Text>
+      Defaultinnhold i dropdown menyen under headeren er samme children som headeren har. Dropdownen kan tilpasses slik
+      du vil ha den ved hjelp av disse propsene: <code>showChildrenInMenu</code> og <code>dropdownMenuChildren</code>.
+      <code>showChildrenInMenu=false</code> fjerner alt standardinnhold fra dropdownen og
+      <code>dropdownMenuChildren</code> setter innholdet i dropdownen.
+    </Text>
+  }
+  story={<Canvas of={HeaderStories.HeaderDropdownChildren} sourceState="hidden" />}
+/>
 
-Header kan ha innhold til venstre, med plass i mellom, eller sentrert. Default er "space-between".
+<DocsStory
+  isVertical
+  title="Header med søkefelt"
+  description={
+    <Text>
+      <code>Header</code> med <code>searchAsync</code> søkefelt
+    </Text>
+  }
+  story={<Canvas of={HeaderStories.HeaderSearchAsync} sourceState="hidden" />}
+/>
 
-<Canvas of={HeaderStories.HeaderJustifyContent} />
+<DocsStory
+  isVertical
+  title="Logo link"
+  description={<Text>Eksempel på logo link som går til Kartverkets designsystem. Default er "/".</Text>}
+  story={<Canvas of={HeaderStories.HeaderLogoButton} sourceState="hidden" />}
+/>
 
-## Header breakpoint
+<DocsStory
+  isVertical
+  title="Logo vertical"
+  description={"Vertikalt logo variant."}
+  story={<Canvas of={HeaderStories.HeaderLogoVariant} sourceState="hidden" />}
+/>
 
-Header har et breakpoint for når elementene vil fjernes og bli erstattet av en menyknapp. Menyknappen aktiverer en dropdown som inneholder elementene som er fjernet.
-Default breakpoint for Header er "sm". Prøv å endre størrelsen på vinduet for å se hvordan det fungerer.
+<DocsStory
+  isVertical
+  title="Props"
+  description={""}
+  story={
+    <>
+      <Canvas of={HeaderStories.Header} />
+      <Controls of={HeaderStories.Header} />
+    </>
+  }
+/>
 
-<Canvas of={HeaderStories.HeaderBreakpoint} />
-
-## Header med tilpasset dropdown meny
-
-Defaultinnhold i dropdown menyen under headeren er samme children som headeren har. Dropdownen kan tilpasses slik du vil ha den ved hjelp av disse propsene: `showChildrenInMenu` og `dropdownMenuChildren`.
-`showChildrenInMenu=false` fjerner alt standardinnhold fra dropdownen og `dropdownMenuChildren` setter innholdet i dropdownen.
-
-<Canvas of={HeaderStories.HeaderDropdownChildren} />
-
-## Header med searchAsync søkefelt
-
-<Canvas of={HeaderStories.HeaderSearchAsync} />
-
-## Logo link
-
-Eksempel på logo link som går til Kartverkets designsystem. Default er "/".
-
-<Canvas of={HeaderStories.HeaderLogoButton} />
-
-## Logo vertical
-
-<Canvas of={HeaderStories.HeaderLogoVariant} />
+</DocsContainer>
