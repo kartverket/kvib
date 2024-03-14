@@ -1,51 +1,59 @@
 import { Meta, Canvas, Story, Controls, Source } from "@storybook/blocks";
 import * as TableStories from "./Table.stories";
 import { TableString, TableVariantsString, TableSizesString } from "./srcStrings.ts";
-import { Card, CardBody } from "@kvib/react/src";
+import { Card, CardBody, Text } from "@kvib/react/src";
+import { DocsHeading, DocsContainer, DocsStory, Feedback } from "../../../templates/";
 
 <Meta of={TableStories} />
+
+<DocsContainer>
 
 # Table
 
 Table brukes til å organiserer og vise frem data på en effektiv måte. Den render et `<table>` element som standard.
 
-## Ta i bruk
-
 ```jsx
 import { Table, Thead, Tbody, Tfoot, Tr, Th, Td, TableCaption, TableContainer } from "@kvib/react";
 ```
 
-## Props
+<Feedback component="Table" />
 
-<Card variant="outline" borderRadius="0">
-  <CardBody>
-    <Story of={TableStories.Table} />
-  </CardBody>
-</Card>
+<DocsStory
+  isVertical
+  title="Varianter"
+  description={
+    <Text>
+      Table kommer med tre varianter: <code>simple</code>, <code>striped</code> og <code>unstyled</code>. Eksempel på
+      <code>striped</code> table:
+    </Text>
+  }
+  story={
+    <>
+      <Canvas of={TableStories.TableVariants} sourceState="none" />
+      <Source code={TableVariantsString} dark />
+    </>
+  }
+/>
 
-<Source code={TableString} dark />
+<DocsStory
+  isVertical
+  title="Størrelser"
+  description={
+    <Text>
+      Table kommer med tre forskjellige størrelser: <code>sm</code>, <code>md</code> og <code>lg</code>. Eksempel på
+      <code>sm</code> table:
+    </Text>
+  }
+  story={
+    <>
+      <Canvas of={TableStories.TableSizes} sourceState="none" />
+      <Source code={TableSizesString} dark />
+    </>
+  }
+/>
+
+<DocsHeading light>Props</DocsHeading>
+<Canvas of={TableStories.Table} sourceState="hidden" />
 <Controls of={TableStories.Table} />
 
-## Varianter
-
-Table kommer med tre varianter: `simple`, `striped` og `unstyled`. Eksempel på striped table:
-
-<Card variant="outline" borderRadius="0">
-  <CardBody>
-    <Story of={TableStories.TableVariants} />
-  </CardBody>
-</Card>
-
-<Source code={TableVariantsString} dark />
-
-## Størrelser
-
-Table kommer med tre forskjellige størrelser: `sm`, `md` og `lg`. Eksempel på `sm` table:
-
-<Card variant="outline" borderRadius="0">
-  <CardBody>
-    <Story of={TableStories.TableSizes} />
-  </CardBody>
-</Card>
-
-<Source code={TableSizesString} dark />
+</DocsContainer>

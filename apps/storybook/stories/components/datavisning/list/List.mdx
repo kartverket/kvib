@@ -20,13 +20,16 @@ import { List, ListItem, OrderedList, UnorderedList } from "@kvib/react";
 
 <DocsStory
   isVertical
-  title="Ordered og Unordered list"
+  title="Unordered list"
   description={""}
-  story={<Canvas of={ListStories.Order} sourceState="hidden" />}
+  story={<Canvas of={ListStories.List} sourceState="hidden" />}
 />
 
-<DocsHeading>Props</DocsHeading>
-<Canvas of={ListStories.List} />
-<Controls of={ListStories.List} />
+<DocsStory
+  isVertical
+  title="Ordered list"
+  description={""}
+  story={<Canvas of={ListStories.Ordered} sourceState="hidden" />}
+/>
 
 </DocsContainer>
