@@ -1,27 +1,54 @@
 import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
 import * as AspectRatioStories from "./AspectRatio.stories";
+import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
+import { Text, Code, Box } from "@kvib/react/src/";
 
 <Meta of={AspectRatioStories} />
+
+<DocsContainer>
 
 # Aspect Ratio
 
 AspectRatio brukes to å legge inn responsive bilder, videoer, kart, osv.
 
-## Ta i bruk
-
 ```jsx
 import { AspectRatio } from "@kvib/react";
 ```
 
-## Props
+<Feedback component="AspectRatio" />
 
-<Canvas of={AspectRatioStories.AspectRatio} />
-<Controls of={AspectRatioStories.AspectRatio} />
+<DocsStory
+  isVertical
+  title="Kart med 16 / 9 ratio"
+  description={
+    <Text>
+      Bruk <code>ratio</code> prop for å sette på ratio.
+    </Text>
+  }
+  story={<Canvas of={AspectRatioStories.AspectRatioMap} sourceState="hidden" />}
+/>
 
-## Kart 16 / 9 ratio
+<DocsStory
+  isVertical
+  title="Video med maxWidth"
+  description={
+    <Text>
+      Bruk <code>maxW</code> prop for å sette på maxWidth.
+    </Text>
+  }
+  story={<Canvas of={AspectRatioStories.AspectRatioVideo} sourceState="hidden" />}
+/>
 
-<Canvas of={AspectRatioStories.AspectRatioMap} />
+<DocsStory
+  isVertical
+  title="Props"
+  description={""}
+  story={
+    <>
+      <Canvas of={AspectRatioStories.AspectRatio} />
+      <Controls of={AspectRatioStories.AspectRatio} />
+    </>
+  }
+/>
 
-## Video med maxWidth
-
-<Canvas of={AspectRatioStories.AspectRatioVideo} />
+</DocsContainer>

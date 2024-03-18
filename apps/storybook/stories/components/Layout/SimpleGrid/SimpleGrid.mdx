@@ -5,6 +5,8 @@ import { Text, Code, Box } from "@kvib/react/src/";
 
 <Meta of={SimpleGridStories} />
 
+<DocsContainer>
+
 # SimpleGrid
 
 SimpleGrid er en enkel komponent for å bygge opp layout. Den er basert på css grid og har støtte for responsivitet.
@@ -12,8 +14,6 @@ SimpleGrid er en enkel komponent for å bygge opp layout. Den er basert på css 
 ```jsx
 import { SimpleGrid } from "@kvib/react";
 ```
-
-<DocsContainer>
 
 **Egnet til:**
 
@@ -25,11 +25,6 @@ import { SimpleGrid } from "@kvib/react";
 - Komplekse layouter (bruk heller Grid)
 
 <Feedback component="SimpleGrid" />
-
-</DocsContainer>
-
-<DocsHeading>Alternativer</DocsHeading>
-<DocsContainer>
 
 <DocsStory
   title="Columns"
@@ -68,8 +63,16 @@ import { SimpleGrid } from "@kvib/react";
   story={<Canvas of={SimpleGridStories.SimpleGridSpacing} />}
 />
 
-</DocsContainer>
+<DocsStory
+  isVertical
+  title="Props"
+  description=""
+  story={
+    <>
+      <Canvas of={SimpleGridStories.SimpleGrid} />
+      <Controls of={SimpleGridStories.SimpleGrid} />
+    </>
+  }
+/>
 
-<DocsHeading>Props</DocsHeading>
-<Canvas of={SimpleGridStories.SimpleGrid} />
-<Controls of={SimpleGridStories.SimpleGrid} />
+</DocsContainer>

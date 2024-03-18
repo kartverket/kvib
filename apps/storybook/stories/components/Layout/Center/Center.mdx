@@ -1,32 +1,37 @@
 import { Title, Canvas, Meta, Story, Controls } from "@storybook/blocks";
 import * as CenterStories from "./Center.stories";
+import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
+import { Text } from "@kvib/react/src/";
 
 <Meta of={CenterStories} />
 
+<DocsContainer>
+
 # Center
-
-Center er en boks der innholdet sentreres.
-
-<Canvas of={CenterStories.Center} />
-
-## Ta i bruk
 
 ```jsx
 import { Center, Square, Circle } from "@kvib/react";
 ```
 
-## Props
+<Feedback component="Center" />
 
-`Center`, `Square` og `Circle` arver alle props fra `Box`.
+<DocsStory
+  title="Komponent eksempel:"
+  description={
+    <Text>
+      <code>Center</code> er en boks der innholdet sentreres. Det finnes også andre varianter:<code>Square</code> og
+      <code>Circle</code>.<br />
+      <br />
+      <code>Center</code>, <code>Square</code> og <code>Circle</code> arver alle props fra <code>Box</code>.
+    </Text>
+  }
+  story={
+    <>
+      <Canvas of={CenterStories.Center} sourceState="hidden" />
+      <Canvas of={CenterStories.Square} sourceState="hidden" />
+      <Canvas of={CenterStories.Circle} sourceState="hidden" />
+    </>
+  }
+/>
 
-## Flere eksempler
-
-<br />
-
-### Square
-
-<Canvas of={CenterStories.Square} />
-
-### Circle
-
-<Canvas of={CenterStories.Circle} />
+</DocsContainer>
