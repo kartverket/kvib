@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 3.6.0
+
+### Minor Changes
+
+- e1338be: Added option for disabling aria for Icon
+
 ## 3.5.7
 
 ### Patch Changes
