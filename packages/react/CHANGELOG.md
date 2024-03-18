@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 3.7.0
+
+### Minor Changes
+
+- baec367: Added option for disabling aria for Icon inside Button component
+
 ## 3.6.0
 
 ### Minor Changes
