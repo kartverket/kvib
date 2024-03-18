@@ -13,3 +13,4 @@ export { textareaTheme as Textarea } from "./textarea";
 export { breadcrumbTheme as Breadcrumb } from "./breadcrumb";
 export { timepickerTheme as Timepicker } from "./timepicker";
 export { fileUploadTheme as FileUpload } from "./fileUpload";
+export { alertTheme as Alert } from "./alert";

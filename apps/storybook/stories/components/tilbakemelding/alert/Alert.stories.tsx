@@ -11,13 +11,6 @@ const meta: Meta<typeof KvibAlert> = {
     },
   },
   argTypes: {
-    colorScheme: {
-      description: "The color scheme of the alert.",
-      table: { type: { summary: "green | blue | gray | red | orange | purple" } },
-      options: ["green", "blue", "gray", "red", "orange", "purple"],
-      defaultValue: { summary: "blue" },
-      control: { type: "radio" },
-    },
     status: {
       description:
         "This affects the color scheme and icon used. Setting the colorScheme prop will overide the colorScheme of the status.",
@@ -40,7 +33,7 @@ export default meta;
 type Story = StoryObj<typeof KvibAlert>;
 
 export const Alert: Story = {
-  args: { status: "success" },
+  args: { status: "info" },
   parameters: {
     docs: {
       canvas: {
