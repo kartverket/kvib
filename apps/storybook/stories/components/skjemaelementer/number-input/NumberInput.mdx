@@ -33,8 +33,6 @@ import {
 
 <Feedback component="NumberInput" />
 
-<DocsHeading>Alternativer</DocsHeading>
-
 <DocsStory
   title="Utseende"
   description={
@@ -64,6 +62,44 @@ import {
     </Text>
   }
   story={<Canvas of={NumberInputStories.NumberInputForm} sourceState={"hidden"} />}
+/>
+
+<DocsStory
+  title="Minimum og maximum value"
+  description={
+    <Text>
+      Tillat minst og maks verdier kan settes ved å bruke <Code>min</Code> og <Code>max</Code> props.
+    </Text>
+  }
+  story={<Canvas of={NumberInputStories.NumberInputMinMaxValue} sourceState={"hidden"} />}
+/>
+
+<DocsStory
+  title="Clamp value when user blurs the input"
+  description={
+    <Text>
+      I de fleste tilfeller kan brukere skrive inn egendefinerte verdier i inndatafeltet. Hvis den innskrevne verdien er
+      større enn <code>max</code>, tilbakestilles verdien til <code>max</code> når brukeren trykke ut av inputfeltet.
+      For å deaktivere denne virkemåten, sett <code>clampValueOnBlur</code> prop til <code>false</code>.
+    </Text>
+  }
+  story={<Canvas of={NumberInputStories.NumberInputBlur} sourceState={"hidden"} />}
+/>
+
+<DocsStory
+  title="Precision"
+  description={
+    <Text>
+      Desimaltall kan justeres ved å bruke <Code>precision</Code> prop.
+    </Text>
+  }
+  story={<Canvas of={NumberInputStories.NumberInputPrecision} sourceState={"hidden"} />}
+/>
+
+<DocsStory
+  title="Størrelser"
+  description={""}
+  story={<Canvas of={NumberInputStories.NumberInputSizes} sourceState={"hidden"} />}
 />
 
 <DocsHeading>Props</DocsHeading>

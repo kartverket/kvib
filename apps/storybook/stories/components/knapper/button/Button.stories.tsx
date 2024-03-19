@@ -1,4 +1,4 @@
-import { Button as KvibButton, VStack, StackDivider, ButtonGroup as KvibButtonGroup } from "@kvib/react/src";
+import { Button as KvibButton, ButtonGroup as KvibButtonGroup, StackDivider, VStack } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibButton> = {
@@ -50,6 +50,11 @@ const meta: Meta<typeof KvibButton> = {
         type: { summary: "boolean" },
       },
       control: "boolean",
+    },
+    iconAriaIsHidden: {
+      table: { type: { summary: "boolean" } },
+      control: "boolean",
+      defaultValue: { summary: false },
     },
   },
 };

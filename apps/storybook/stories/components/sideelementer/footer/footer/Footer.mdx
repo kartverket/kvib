@@ -1,22 +1,44 @@
 import { Title, Canvas, Meta, Story, Controls } from "@storybook/blocks";
 import * as FooterStories from "./Footer.stories";
+import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../../templates";
+import { Text, Code, Box } from "@kvib/react/src/";
 
 <Meta of={FooterStories} />
 
-# Footer
+<DocsContainer>
 
-## Ta i bruk
+# Footer
 
 ```jsx
 import { Footer } from "@kvib/react";
 ```
 
-## Med alt innhold
+<Feedback components="Footer" />
 
-<Canvas of={FooterStories.FooterAll} />
-<Controls of={FooterStories.FooterAll} />
+<DocsStory
+  isVertical
+  title="Footer med innhold"
+  description={""}
+  story={
+    <>
+      <Canvas of={FooterStories.FooterAll} sourceState="hidden" />
+      Props
+      <Controls of={FooterStories.FooterAll} />
+    </>
+  }
+/>
 
-## Uten noe innhold
+<DocsStory
+  isVertical
+  title="Footer uten innhold"
+  description={""}
+  story={
+    <>
+      <Canvas of={FooterStories.FooterNone} sourceState="hidden" />
+      Props
+      <Controls of={FooterStories.FooterNone} />
+    </>
+  }
+/>
 
-<Canvas of={FooterStories.FooterNone} />
-<Controls of={FooterStories.FooterNone} />
+</DocsContainer>

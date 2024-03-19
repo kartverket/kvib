@@ -1,5 +1,5 @@
-import { MaterialSymbol } from "material-symbols";
 import "material-symbols";
+import { MaterialSymbol } from "material-symbols";
 import { forwardRef } from "../hooks";
 
 type IconProps = {
@@ -21,15 +21,19 @@ type IconProps = {
   /**Decides whether the icon is filled or not*/
   isFilled?: boolean;
 
+  /**Decides whether a screen reader will vocalize the icon name or not */
+  ariaIsHidden?: boolean;
+
   className?: string;
 };
 
 export const Icon = forwardRef<IconProps, "span">(
-  ({ icon, size, color, weight, grade, isFilled = false, className = "" }, ref) => {
+  ({ icon, size, color, weight, grade, isFilled = false, ariaIsHidden = false, className = "" }, ref) => {
     return (
       <span
         ref={ref}
         className={`material-symbols-rounded ${className}`}
+        aria-hidden={ariaIsHidden}
         style={{
           width: size,
           fontSize: size,

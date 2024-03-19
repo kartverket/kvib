@@ -1,20 +1,29 @@
 import { Title, Canvas, Meta, Story, Controls } from "@storybook/blocks";
 import * as ContainerStories from "./Container.stories";
+import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
+import { Text } from "@kvib/react/src/";
 
 <Meta of={ContainerStories} />
 
+<DocsContainer>
+
 # Container
-
-Containere brukes til å avgrense innholdets bredde til et breakpoint.
-
-<Canvas of={ContainerStories.Container} />
-
-## Ta i bruk
 
 ```jsx
 import { Container } from "@kvib/react";
 ```
 
-## Props
+<Feedback component="Container" />
 
-`Container` arver alle props fra `Box`.
+<DocsStory
+  title="Komponent Eksempel:"
+  description={
+    <Text>
+      Containere brukes til å avgrense innholdets bredde til et breakpoint. <br />
+      <code>Container</code> arver alle props fra <code>Box</code>.
+    </Text>
+  }
+  story={<Canvas of={ContainerStories.Container} sourceState="hidden" />}
+/>
+
+</DocsContainer>

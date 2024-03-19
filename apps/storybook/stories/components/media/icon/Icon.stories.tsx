@@ -1,7 +1,5 @@
-import { Icon } from "@kvib/react/src/icon";
-import { HStack } from "@kvib/react/src/layout";
+import { HStack, Icon, useTheme } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
-import { colors } from "@kvib/react/src/theme/tokens";
 
 const meta: Meta<typeof Icon> = {
   title: "Media/Ikoner",
@@ -39,6 +37,11 @@ const meta: Meta<typeof Icon> = {
       control: "boolean",
       defaultValue: { summary: false },
     },
+    ariaIsHidden: {
+      table: { type: { summary: "boolean" } },
+      control: "boolean",
+      defaultValue: { summary: false },
+    },
     className: {
       table: {
         type: { summary: "string" },
@@ -58,30 +61,35 @@ export const defaultIcon: Story = {
 
 export const colorIcon: Story = {
   args: { size: 40 },
-  render: (args) => (
-    <HStack>
-      <Icon {...args} icon="home" color={colors.green[400]} />
-      // #1A833B er colors.green[400]
-      <Icon {...args} icon="home" color={colors.green[400]} isFilled={true} />
-      <Icon {...args} icon="warning" color="orange" isFilled={true} />
-    </HStack>
-  ),
+  render: (args) => {
+    const theme = useTheme();
+    return (
+      <HStack>
+        <Icon {...args} icon="home" color={theme.colors.green[400]} />
+        // #1A833B er theme.colors.green[400]
+        <Icon {...args} icon="home" color={theme.colors.green[400]} isFilled={true} />
+        <Icon {...args} icon="warning" color="orange" isFilled={true} />
+      </HStack>
+    );
+  },
 };
 
 export const sizeIcon: Story = {
-  args: { color: colors.green[400], icon: "map" },
-  render: (args) => (
-    <HStack>
-      <Icon {...args} size={20} />
-      <Icon {...args} size={24} />
-      <Icon {...args} size={40} />
-      <Icon {...args} size={48} />
-    </HStack>
-  ),
+  args: { icon: "map" },
+  render: (args) => {
+    return (
+      <HStack>
+        <Icon {...args} size={20} />
+        <Icon {...args} size={24} />
+        <Icon {...args} size={40} />
+        <Icon {...args} size={48} />
+      </HStack>
+    );
+  },
 };
 
 export const weightIcon: Story = {
-  args: { color: colors.green[400], icon: "database" },
+  args: { icon: "database" },
   render: (args) => (
     <HStack>
       <Icon {...args} weight={100} />
@@ -96,7 +104,7 @@ export const weightIcon: Story = {
 };
 
 export const gradeIcon: Story = {
-  args: { color: colors.green[400], icon: "contactless" },
+  args: { icon: "contactless" },
   render: (args) => (
     <HStack>
       <Icon {...args} grade={-25} />

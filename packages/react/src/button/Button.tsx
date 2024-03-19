@@ -1,10 +1,10 @@
 import {
+  Center,
   Button as ChakraButton,
   ButtonProps as ChakraButtonProps,
-  Center,
-  forwardRef,
-  Spinner,
   HStack,
+  Spinner,
+  forwardRef,
 } from "@chakra-ui/react";
 import { MaterialSymbol } from "material-symbols";
 import { Icon } from "../icon";
@@ -28,10 +28,13 @@ export type ButtonProps = Omit<
   iconFill?: boolean;
 
   variant?: "primary" | "secondary" | "tertiary" | "ghost";
+
+  /**Decides whether a screen reader will vocalize the icon name or not */
+  iconAriaIsHidden?: boolean;
 };
 
 export const Button = forwardRef<ButtonProps, "button">(
-  ({ children, iconFill, isDisabled, isLoading, leftIcon, rightIcon, ...props }, ref) => {
+  ({ children, iconFill, isDisabled, isLoading, leftIcon, rightIcon, iconAriaIsHidden, ...props }, ref) => {
     return (
       <ChakraButton {...props} ref={ref} isDisabled={isDisabled || isLoading} aria-busy={isLoading}>
         {isLoading && (
@@ -41,13 +44,23 @@ export const Button = forwardRef<ButtonProps, "button">(
         )}
         <HStack spacing={1} visibility={isLoading ? "hidden" : "visible"}>
           {leftIcon && (
-            <Icon icon={leftIcon} isFilled={iconFill} size={props.size === "xs" || props.size === "sm" ? 20 : 24} />
+            <Icon
+              icon={leftIcon}
+              ariaIsHidden={iconAriaIsHidden}
+              isFilled={iconFill}
+              size={props.size === "xs" || props.size === "sm" ? 20 : 24}
+            />
           )}
           <Center className="text" as="span">
             {children}
           </Center>
           {rightIcon && (
-            <Icon icon={rightIcon} isFilled={iconFill} size={props.size === "xs" || props.size === "sm" ? 20 : 24} />
+            <Icon
+              icon={rightIcon}
+              ariaIsHidden={iconAriaIsHidden}
+              isFilled={iconFill}
+              size={props.size === "xs" || props.size === "sm" ? 20 : 24}
+            />
           )}
         </HStack>
       </ChakraButton>

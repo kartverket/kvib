@@ -1,37 +1,74 @@
 import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
 import * as DividerStories from "./Divider.stories";
+import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
+import { Text, Code, Box } from "@kvib/react/src/";
 
 <Meta of={DividerStories} />
+
+<DocsContainer>
 
 # Divider
 
 Dividers brukes til å visuelt separere innhold i en liste eller gruppe.
 
-## Ta i bruk
-
 ```jsx
 import { Divider } from "@kvib/react";
 ```
 
-## Props
+<Feedback components="Divider" />
 
-<Canvas of={DividerStories.Divider} />
-<Controls of={DividerStories.Divider} />
+<DocsStory
+  title="Devider Varianter"
+  description={
+    <Text>
+      Bruk <code>variant</code> prop for å endre <code>Divider</code> varianten.
+    </Text>
+  }
+  story={<Canvas of={DividerStories.DividerVariants} sourceState="hidden" />}
+/>
 
-## Varianter
+<DocsStory
+  title="Farger og bredde"
+  description={
+    <Text>
+      Farger og bredde på <code>Divider</code> kan bli manipulert gjennom <code>borderColor</code>og{" "}
+      <code>borderWidth</code> prop.
+    </Text>
+  }
+  story={<Canvas of={DividerStories.DividerColorsWidths} sourceState="hidden" />}
+/>
 
-<Canvas of={DividerStories.DividerVariants} />
+<DocsStory
+  title="Orientation"
+  description={
+    <Text>
+      Bruk <code>orientation</code>prop for å sette vertikal <code>Divider</code>.
+    </Text>
+  }
+  story={<Canvas of={DividerStories.DividerVertical} sourceState="hidden" />}
+/>
 
-## Farger og bredde
+<DocsStory
+  title="Innhold i Divider"
+  description={
+    <Text>
+      Eksempel på innhold i <code>Divider</code> ved bruk av <code>Box</code>, <code>Divider</code>,{" "}
+      <code>AbsoluteCenter</code> og <code>Text</code> komponenter.
+    </Text>
+  }
+  story={<Canvas of={DividerStories.DividerContent} sourceState="hidden" />}
+/>
 
-Farger og bredde på Divider kan bli manipulert gjennom `borderColor` og `borderWidth`.
+<DocsStory
+  isVertical
+  title="Props"
+  description={""}
+  story={
+    <>
+      <Canvas of={DividerStories.Divider} />
+      <Controls of={DividerStories.Divider} />
+    </>
+  }
+/>
 
-<Canvas of={DividerStories.DividerColorsWidths} />
-
-## Vertikal Divider
-
-<Canvas of={DividerStories.DividerVertical} />
-
-## Innhold i Divider
-
-<Canvas of={DividerStories.DividerContent} />
+</DocsContainer>

@@ -1,6 +1,6 @@
-import {Canvas, Meta, Controls, Story} from "@storybook/blocks";
+import { Canvas, Meta, Controls, Story } from "@storybook/blocks";
 import { DocsHeading, DocsContainer, DocsStory, Feedback } from "../../../templates";
-import * as StackStories from "./Stack.stories"
+import * as StackStories from "./Stack.stories";
 
 <Meta of={StackStories} />
 
@@ -15,6 +15,7 @@ Stack er en layout komponent brukt til å gruppere sammen elementer og legge til
 ```jsx
 import { Stack, HStack, VStack } from "@kvib/react";
 ```
+
 <DocsContainer>
 
 **Egnet til**
@@ -31,8 +32,6 @@ Stack og Flex er veldig like, med at begge distanserer Children like langt fra h
 </DocsContainer>
 
 <Feedback component="Stack" />
-
-<DocsHeading>Alternativer</DocsHeading>
 
 <DocsContainer>
     <DocsStory
@@ -62,9 +61,17 @@ Stack og Flex er veldig like, med at begge distanserer Children like langt fra h
             </Canvas>
         }
     />
+
+<DocsStory
+  isVertical
+  title="Props"
+  description=""
+  story={
+    <>
+      <Canvas of={StackStories.Stack} />
+      <Controls of={StackStories.Stack} />
+    </>
+  }
+/>
+
 </DocsContainer>
-
-<DocsHeading>Props</DocsHeading>
-
-<Canvas of={StackStories.Stack}/>
-<Controls of={StackStories.Stack}/>

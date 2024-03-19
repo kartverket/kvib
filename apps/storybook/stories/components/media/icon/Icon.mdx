@@ -1,8 +1,11 @@
-import { Meta, Canvas, Controls } from "@storybook/addon-docs";
+import { Meta, Canvas, Controls, Source } from "@storybook/addon-docs";
 import * as IconStories from "./Icon.stories";
-import { Alert, AlertIcon } from "@kvib/react/src";
+import { Alert, AlertIcon, Text } from "@kvib/react/src";
+import { Feedback, DocsContainer, DocsStory } from "../../../templates";
 
 <Meta of={IconStories} />
+
+<DocsContainer>
 
 # Icon
 
@@ -19,43 +22,60 @@ for å få en oversikt over ikoner du kan benytte.
 
 ## Ta i bruk
 
-  <Alert status="info">
-    <AlertIcon />
-    **Dersom ikoner ikke vises:** `import 'material-symbols';` i index.js.
-  </Alert>
-
+<Alert status="info">
+  <AlertIcon />
+  **Dersom ikoner ikke vises:** `import 'material-symbols';` i index.js.
+</Alert>
 
 ```jsx
 import { Icon, MaterialSymbol } from "@kvib/react";
 ```
 
-## Props
+<Feedback component="Icon" />
 
-<Canvas of={IconStories.defaultIcon} />
-<Controls of={IconStories.defaultIcon} />
+<DocsStory title="Fill og farger" description={"Man kan enten bruke vanlige css argumenter (fargenavn, hex-koder, RGBA osv.), men det er også mulig å hente farger fra Designsystemet på denne måten:"}
+story={<>
+<Source code={`
+import { Icon, useTheme } from "@kvib/react";
 
-# Eksempel for fill og farger
+const theme = useTheme();
 
-Man kan enten bruke vanlige css argumenter (fargenavn, hex-koder, RGBA osv.), men det er også mulig å hente farger fra Designsystemet på denne måten:
+<Icon icon="home" color={theme.colors.green[400]} />; ` }/>
+<Text as="b">OBS! Enkelte ikoner har ikke en "filled" variant.</Text>
+<Canvas of={IconStories.colorIcon} sourceState="hidden"/>
+</>}/>
 
-```jsx
-import { Icon, colors } from "@kvib/react";
+<DocsStory
+  isVertical
+  title="Størrelser"
+  description={""}
+  story={<Canvas of={IconStories.sizeIcon} sourceState="hidden" />}
+/>
 
-<Icon icon="home" color={colors.green[400]} />;
-```
+<DocsStory
+  isVertical
+  title="Weight prop"
+  description={""}
+  story={<Canvas of={IconStories.weightIcon} sourceState="hidden" />}
+/>
 
-**_OBS! Enkelte ikoner har ikke en "filled" variant._**
+<DocsStory
+  isVertical
+  title="Grade prop"
+  description={""}
+  story={<Canvas of={IconStories.gradeIcon} sourceState="hidden" />}
+/>
 
-<Canvas of={IconStories.colorIcon} />
+<DocsStory
+  isVertical
+  title="Props"
+  description={""}
+  story={
+    <>
+      <Canvas of={IconStories.defaultIcon} />
+      <Controls of={IconStories.defaultIcon} />
+    </>
+  }
+/>
 
-# Eksempel for størrelser
-
-<Canvas of={IconStories.sizeIcon} />
-
-# Eksempel for weight prop
-
-<Canvas of={IconStories.weightIcon} />
-
-# Eksempel for grade prop
-
-<Canvas of={IconStories.gradeIcon} />
+</DocsContainer>

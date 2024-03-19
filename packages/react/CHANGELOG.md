@@ -1,5 +1,23 @@
 # @kvib/react
 
+## 3.7.0
+
+### Minor Changes
+
+- baec367: Added option for disabling aria for Icon inside Button component
+
+## 3.6.0
+
+### Minor Changes
+
+- e1338be: Added option for disabling aria for Icon
+
+## 3.5.7
+
+### Patch Changes
+
+- a730232: Added Alt Text to Header component, added Aria-label and role to Logo component.
+
 ## 3.5.6
 
 ### Patch Changes

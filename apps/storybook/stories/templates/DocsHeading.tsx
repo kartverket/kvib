@@ -2,12 +2,13 @@ import { Box, Heading } from "@kvib/react/src";
 
 type DocsHeadingProps = {
   children: string;
+  light?: boolean;
 };
 
-export const DocsHeading = ({ children }: DocsHeadingProps) => {
+export const DocsHeading = ({ children, light }: DocsHeadingProps) => {
   return (
     <Box
-      backgroundColor="gray.900"
+      backgroundColor={light ? "white" : "gray.900"}
       height="3rem"
       borderRadius="none"
       paddingLeft="1rem"
@@ -17,7 +18,7 @@ export const DocsHeading = ({ children }: DocsHeadingProps) => {
       marginTop="4rem"
       className="docs-heading"
     >
-      <Heading margin="0" color="white" size="sm" as="h2" id={children}>
+      <Heading margin="0" color={light ? "gray.900" : "white"} size={light ? "md" : "sm"} as="h2" id={children}>
         {children}
       </Heading>
     </Box>

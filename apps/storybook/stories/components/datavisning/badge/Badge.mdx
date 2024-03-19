@@ -1,18 +1,19 @@
 import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
 import * as BadgeStories from "./Badge.stories";
-import { DocsHeading, DocsContainer, DocsStory, Feedback } from "../../../templates/"
+import { DocsHeading, DocsContainer, DocsStory, Feedback } from "../../../templates/";
+import { Text } from "@kvib/react/src/";
 
 <Meta of={BadgeStories} />
+
+<DocsContainer>
 
 # Badge
 
 Et Badge brukes til å fremheve elementers status slik at brukeren raskt gjenkjenner tilstanden.
 
-
 ```jsx
 import { Badge } from "@kvib/react";
 ```
-<DocsContainer>
 
 **Egnet til:**
 
@@ -26,7 +27,6 @@ import { Badge } from "@kvib/react";
 
 </DocsContainer>
 
-<DocsHeading>Alternativer</DocsHeading>
 <DocsContainer>
     <DocsStory
         title="Beskrivelse"
@@ -46,15 +46,15 @@ import { Badge } from "@kvib/react";
         }
     />
 
-</DocsContainer>
+<DocsHeading light>Retningslinjer</DocsHeading>
 
+<Text paddingLeft={"1rem"}>
+  Ikke bli forvirret av Badge og Tag. Badge skal brukes for å raskt kunne se statusen på noe. Bruk grønn for positive og
+  rød for negative statuser. Solid variant brukes for å fremheve Badgen mer. Vær konsekvent med fargebruk.
+</Text>
 
-<DocsHeading>Retningslinjer</DocsHeading>
-
-Ikke bli forvirret av Badge og Tag. Badge skal brukes for å raskt kunne se statusen på noe. Bruk grønn for positive og rød for negative statuser.
-Solid variant brukes for å fremheve Badgen mer. Vær konsekvent med fargebruk.
-
-<DocsHeading>Props</DocsHeading>
-
+<DocsHeading light>Props</DocsHeading>
 <Canvas of={BadgeStories.Badge} />
 <Controls of={BadgeStories.Badge} />
+
+</DocsContainer>
