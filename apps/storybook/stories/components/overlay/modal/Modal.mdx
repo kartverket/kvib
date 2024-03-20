@@ -2,8 +2,11 @@ import { Meta, Canvas, Story, Controls, Source } from "@storybook/blocks";
 import * as ModalStories from "./Modal.stories";
 import { Card, CardBody } from "@kvib/react/src";
 import * as ModalStrings from "./srcStrings.ts";
+import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
 
 <Meta of={ModalStories} />
+
+<DocsContainer>
 
 # Modal
 
@@ -15,18 +18,9 @@ En modal er en dialog som fokuserer brukerens oppmerksomhet på informasjonen i 
 import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton } from "@kvib/react";
 ```
 
-## Props
+<Feedback component="Modal" />
 
-<Card variant="outline" borderRadius="0">
-  <CardBody>
-    <Story of={ModalStories.Modal} />
-  </CardBody>
-</Card>
-
-<Source code={ModalStrings.ModalString} dark />
-<Controls of={ModalStories.Modal} />
-
-## Block scrolling
+<DocsHeading light children="Block scrolling" />
 
 <Card variant="outline" borderRadius="0">
   <CardBody>
@@ -36,7 +30,7 @@ import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody,
 
 <Source code={ModalStrings.ModalScrollingString} dark />
 
-## Fokus
+<DocsHeading light children="Fokus" />
 
 <Card variant="outline" borderRadius="0">
   <CardBody>
@@ -46,7 +40,7 @@ import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody,
 
 <Source code={ModalStrings.ModalFocusString} dark />
 
-## Sentrering
+<DocsHeading light children="Sentrering" />
 
 <Card variant="outline" borderRadius="0">
   <CardBody>
@@ -56,7 +50,7 @@ import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody,
 
 <Source code={ModalStrings.ModalCenteredString} dark />
 
-## Transition
+<DocsHeading light children="Transition" />
 
 <Card variant="outline" borderRadius="0">
   <CardBody>
@@ -66,7 +60,7 @@ import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody,
 
 <Source code={ModalStrings.ModalTransitionString} dark />
 
-## Størrelser
+<DocsHeading light children="Størrelser" />
 
 <Card variant="outline" borderRadius="0">
   <CardBody>
@@ -76,7 +70,7 @@ import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody,
 
 <Source code={ModalStrings.ModalSizesString} dark />
 
-## Bakteppe
+<DocsHeading light children="Bakteppe" />
 
 <Card variant="outline" borderRadius="0">
   <CardBody>
@@ -85,3 +79,15 @@ import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody,
 </Card>
 
 <Source code={ModalStrings.ModalBackdropString} dark />
+
+<DocsHeading light children="Props" />
+<Card variant="outline" borderRadius="0">
+  <CardBody>
+    <Story of={ModalStories.Modal} />
+  </CardBody>
+</Card>
+
+<Source code={ModalStrings.ModalString} dark />
+<Controls of={ModalStories.Modal} />
+
+</DocsContainer>

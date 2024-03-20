@@ -1,7 +1,7 @@
 import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
 import * as KbdStories from "./Kbd.stories";
 import { DocsHeading, DocsContainer, DocsStory, Feedback } from "../../../templates/";
-import { Kbd } from "@kvib/react/src";
+import { Kbd, Text } from "@kvib/react/src";
 
 <Meta of={KbdStories} />
 <DocsContainer>
@@ -16,17 +16,26 @@ import { Kbd } from "@kvib/react";
 
 <Feedback component="Kbd" />
 
-## Modifikator
+<DocsStory
+  title="Modifikator"
+  description={
+    <>
+      <Text>
+        <Text as="b">"+"</Text> brukes når en kombinasjon av taster vil aktivere snarveien.
+      </Text>
+      <Text>
+        <Text as="b">"then"</Text> brukes når en sekvens av taster må følge en rekkefølge.
+      </Text>
+      <Text>
+        <Text as="b">"or"</Text> brukes dersom flere taster fungerer likt eller hvis tasten ser annerledes ut på
+        forskjellige tastatur.
+      </Text>
+    </>
+  }
+  story={<Canvas of={KbdStories.KbdModifier} sourceState="hidden" />}
+/>
 
-**_"+"_** brukes når en kombinasjon av taster vil aktivere snarveien.
-
-**_"then"_** brukes når en sekvens av taster må følge en rekkefølge.
-
-**_"or"_** brukes dersom flere taster fungerer likt eller hvis tasten ser annerledes ut på forskjellige tastatur.
-
-<Canvas of={KbdStories.KbdModifier} sourceState="hidden" />
-
-<DocsHeading>Guideline</DocsHeading>
+<DocsHeading light>Guideline</DocsHeading>
 
 Alle snarveier skal prøve å passe tastene på brukerens tastatur.
 

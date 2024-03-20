@@ -27,8 +27,6 @@ import { Tooltip } from "@kvib/react";
 
 </DocsContainer>
 
-<DocsHeading>Alternativer</DocsHeading>
-
 <DocsContainer>
 
 <DocsStory
@@ -47,23 +45,36 @@ import { Tooltip } from "@kvib/react";
   }
 />
 
-<DocsStory title={"Tooltip med pil"} description={""} story={<Canvas of={TooltipStories.TooltipArrow} />} />
-
 <DocsStory
-  title={"Tooltip med fokuserbart komponent"}
+  isVertical
+  title={"Tooltip med pil"}
   description={""}
-  story={<Canvas of={TooltipStories.TooltipFocusable} />}
+  story={<Canvas of={TooltipStories.TooltipArrow} sourceState="hidden" />}
 />
 
-<DocsStory title={"Disabled state"} description={""} story={<Canvas of={TooltipStories.TooltipDisabled} />} />
+<DocsStory
+  isVertical
+  title={"Tooltip med fokuserbart komponent"}
+  description={""}
+  story={<Canvas of={TooltipStories.TooltipFocusable} sourceState="hidden" />}
+/>
 
 <DocsStory
+  isVertical
+  title={"Disabled state"}
+  description={""}
+  story={<Canvas of={TooltipStories.TooltipDisabled} sourceState="hidden" />}
+/>
+
+<DocsStory
+  isVertical
   title={"Plassering"}
   description={""}
   story={<Canvas of={TooltipStories.TooltipPlacement} sourceState="hidden" />}
 />
 
 <DocsStory
+  isVertical
   title={"Flere eksempler"}
   description={""}
   story={<Canvas of={TooltipStories.TooltipExamples} sourceState="hidden" />}
@@ -71,6 +82,6 @@ import { Tooltip } from "@kvib/react";
 
 </DocsContainer>
 
-<DocsHeading>Props</DocsHeading>
+<DocsHeading light>Props</DocsHeading>
 <Canvas of={TooltipStories.Tooltip} />
 <Controls of={TooltipStories.Tooltip} />

@@ -2,14 +2,15 @@ import { Meta, Canvas, Story, Controls, Source } from "@storybook/blocks";
 import * as PopoverStories from "./Popover.stories";
 import { Card, CardBody } from "@kvib/react/src";
 import * as PopoverStrings from "./srcStrings.ts";
+import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
 
 <Meta of={PopoverStories} />
+
+<DocsContainer>
 
 # Popover
 
 Popover er en dialog som flyter rundt en trigger.
-
-## Ta i bruk
 
 ```jsx
 import {
@@ -25,13 +26,9 @@ import {
 } from "@kvib/react";
 ```
 
-## Props
+<Feedback component="Popover" />
 
-<Canvas of={PopoverStories.Popover} />
-<Controls of={PopoverStories.Popover} />
-
-## Fokus på element når Popover åpnes
-
+<DocsHeading light children="Fokus på element når Popover åpnes" />
 <Card variant="outline" borderRadius="0">
   <CardBody>
     <Story of={PopoverStories.PopoverFocus} />
@@ -40,7 +37,7 @@ import {
 
 <Source code={PopoverStrings.PopoverFocusString} dark />
 
-## Fange fokus i Popover
+<DocsHeading light children="Fange fokus i Popover" />
 
 Hvis Popover har en form, vil du kanskje fange fokus inne i Popoveren og lukke den når brukeren er ferdig og trykker på "Lagre".
 Bruk `react-focus-lock` for å fange fokus inne i `PopoveContent`
@@ -53,7 +50,7 @@ Bruk `react-focus-lock` for å fange fokus inne i `PopoveContent`
 
 <Source code={PopoverStrings.PopoverTrappingFocusString} dark />
 
-## Kontrollert bruk
+<DocsHeading light children="Kontrollert bruk" />
 
 <Card variant="outline" borderRadius="0">
   <CardBody>
@@ -63,7 +60,7 @@ Bruk `react-focus-lock` for å fange fokus inne i `PopoveContent`
 
 <Source code={PopoverStrings.PopoverControlledString} dark />
 
-## Popover Anchor
+<DocsHeading light children="Popover Anchor" />
 
 <Card variant="outline" borderRadius="0">
   <CardBody>
@@ -73,6 +70,13 @@ Bruk `react-focus-lock` for å fange fokus inne i `PopoveContent`
 
 <Source code={PopoverStrings.PopoverAnchorString} dark />
 
-## Tilpasse stil
+<DocsStory
+  title="Tilpasse stil"
+  description={""}
+  story={<Canvas of={PopoverStories.PopoverCustomizing} sourceState="hidden" />}
+/>
 
-<Canvas of={PopoverStories.PopoverCustomizing} />
+<DocsHeading light children="Props"/>
+<Canvas of={PopoverStories.Popover} />
+<Controls of={PopoverStories.Popover} />
+</DocsContainer>

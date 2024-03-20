@@ -8,7 +8,7 @@ type DocsHeadingProps = {
 export const DocsHeading = ({ children, light }: DocsHeadingProps) => {
   return (
     <Box
-      backgroundColor={light ? "white" : "gray.900"}
+      backgroundColor={light ? "transparent" : "gray.900"}
       height="3rem"
       borderRadius="none"
       paddingLeft="1rem"
