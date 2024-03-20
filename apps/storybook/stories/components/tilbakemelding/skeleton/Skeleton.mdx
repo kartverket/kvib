@@ -1,7 +1,11 @@
 import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
 import * as SkeletonStories from "./Skeleton.stories";
+import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
+import { Text } from "@kvib/react/src";
 
 <Meta of={SkeletonStories} />
+
+<DocsContainer>
 
 # Skeleton
 
@@ -13,23 +17,38 @@ Skeleton blir brukt til å vise innlastingstatus på en komponent.
 import { Skeleton, SkeletonCircle, SkeletonText } from "@kvib/react";
 ```
 
-## Props
+<Feedback component="Skeleton" />
 
+<DocsStory
+  isVertical
+  title="Wrapped rundt andre komponenter"
+  description={""}
+  story={<Canvas of={SkeletonStories.SkeletonWrapped} sourceState="hidden" />}
+/>
+
+<DocsStory
+  isVertical
+  title="Sirkel og tekst Skeleton"
+  description={""}
+  story={<Canvas of={SkeletonStories.SkeletonCircle} sourceState="hidden" />}
+/>
+
+<DocsStory
+  isVertical
+  title="Farger"
+  description={""}
+  story={<Canvas of={SkeletonStories.SkeletonColors} sourceState="hidden" />}
+/>
+
+<DocsStory
+  isVertical
+  title="Ferdiglastet Skeleton"
+  description={""}
+  story={<Canvas of={SkeletonStories.SkeletonLoaded} sourceState="hidden" />}
+/>
+
+<DocsHeading light children="Props" />
 <Canvas of={SkeletonStories.Skeleton} />
 <Controls of={SkeletonStories.Skeleton} />
 
-## Wrapped rundt andre komponenter
-
-<Canvas of={SkeletonStories.SkeletonWrapped} />
-
-## Sirkel og tekst Skeleton
-
-<Canvas of={SkeletonStories.SkeletonCircle} />
-
-## Farger
-
-<Canvas of={SkeletonStories.SkeletonColors} />
-
-## Ferdiglastet Skeleton
-
-<Canvas of={SkeletonStories.SkeletonLoaded} />
+</DocsContainer>

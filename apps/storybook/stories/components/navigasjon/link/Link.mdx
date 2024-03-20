@@ -26,25 +26,24 @@ import { Link } from "@kvib/react";
     - Bli brukt som knapp
 
     <Feedback component="Link" />
+
 </DocsContainer>
 
-<DocsHeading>Alternativer</DocsHeading>
 <DocsContainer>
-    <DocsStory
-        title="Utseende"
-        description="Link har bare én størrelse og to farger. Blå farge burde brukes på kartløsninger."
-        story={<Canvas of={LinkStories.LinkColorscheme} />}
-    />
+  <DocsStory
+    title="Utseende"
+    description="Link har bare én størrelse og to farger. Blå farge burde brukes på kartløsninger."
+    story={<Canvas of={LinkStories.LinkColorscheme} />}
+  />
 </DocsContainer>
 
-<DocsHeading>Retningslinjer</DocsHeading>
+<DocsHeading light>Retningslinjer</DocsHeading>
 <DocsContainer>
     Hvis lenken man trykker på tar deg ut av siden, eller åpnet et nytt vindu, skal de vises med ikon.
 
 </DocsContainer>
 
-<DocsHeading>Props</DocsHeading>
+<DocsHeading light>Props</DocsHeading>
 
 <Canvas of={LinkStories.Link} />
 <Controls of={LinkStories.Link} />
-

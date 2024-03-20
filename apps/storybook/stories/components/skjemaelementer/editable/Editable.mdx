@@ -10,15 +10,12 @@ import { DocsHeading, DocsContainer, DocsStory, Feedback } from "../../../templa
 
 EditableText brukes til å endre på tekst inline. Teksten ser ut som normal tekst, men endres til å bli et text input field når brukeren klikker eller fokuserer på det.
 
-## Ta i bruk
-
 ```jsx
 import { Editable, EditableInput, EditableTextarea, EditablePreview } from "@kvib/react";
 ```
 
 <Feedback component="Editable" />
 
-<DocsHeading>Alternativer</DocsHeading>
 <DocsStory title="Editable Input" description={"Editable input"} story={<Canvas of={EditableStories.Editable} />} />
 <DocsStory
   title="Editable Textarea"
@@ -26,7 +23,7 @@ import { Editable, EditableInput, EditableTextarea, EditablePreview } from "@kvi
   story={<Canvas of={EditableStories.EditableTextarea} />}
 />
 
-<DocsHeading>Props</DocsHeading>
+<DocsHeading light>Props</DocsHeading>
 <Canvas of={EditableStories.Editable} />
 <Controls of={EditableStories.Editable} />
 

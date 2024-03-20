@@ -27,28 +27,31 @@ import { Slider, SliderTrack, SliderFilledTrack, SliderThumb, SliderMark } from 
 
 <Feedback component={"Slider"} />
 
-<DocsHeading>Alternativer</DocsHeading>
-<DocsStory title={"Slider"} description={""} story={<Canvas of={SliderStories.Slider} />} />
+<DocsHeading light>SliderThumb Props</DocsHeading>
 
-<DocsHeading>SliderThumb Props</DocsHeading>
+<DocsContainer>
+  SliderThumb er bygget på Box komponenten, så alle props til Box kan benyttes i SliderThumb for å endre styling. Se
+  [dokumentasjonen for Box for beskrivelse og eksempler](/docs/komponenter-layout-box--docs).
+</DocsContainer>
 
-SliderThumb er bygget på Box komponenten, så alle props til Box kan benyttes i SliderThumb for å endre styling. Se
-[dokumentasjonen for Box for beskrivelse og eksempler](/docs/komponenter-layout-box--docs).
+<DocsHeading light>SliderFilledTrack Props</DocsHeading>
 
-<DocsHeading>SliderFilledTrack Props</DocsHeading>
+<DocsContainer>
+  SliderFilledTrack er bygget på Box komponenten, så alle props til Box kan benyttes i SliderFilledTrack for å endre
+  styling. Se [dokumentasjonen for Box for beskrivelse og eksempler](/docs/komponenter-layout-box--docs).
+</DocsContainer>
 
-SliderFilledTrack er bygget på Box komponenten, så alle props til Box kan benyttes i SliderFilledTrack for å endre
-styling. Se [dokumentasjonen for Box for beskrivelse og eksempler](/docs/komponenter-layout-box--docs).
+<DocsHeading light>SliderTrack Props</DocsHeading>
 
-<DocsHeading>SliderTrack Props</DocsHeading>
-
-SliderTrack er bygget på Box komponenten, så alle props til Box kan benyttes i SliderTrack for å endre styling. Se
-[dokumentasjonen for Box for beskrivelse og eksempler](/docs/komponenter-layout-box--docs).
+<DocsContainer>
+  SliderTrack er bygget på Box komponenten, så alle props til Box kan benyttes i SliderTrack for å endre styling. Se
+  [dokumentasjonen for Box for beskrivelse og eksempler](/docs/komponenter-layout-box--docs).
+</DocsContainer>
 
 <DocsStory
   title={"Diskret slider med step"}
   description={""}
-  story={<Canvas of={SliderStories.SliderDiscrete} />}
+  story={<Canvas of={SliderStories.SliderDiscrete} sourceState="hidden" />}
   isVertical
 />
 
@@ -64,7 +67,7 @@ SliderTrack er bygget på Box komponenten, så alle props til Box kan benyttes i
   isVertical
 />
 
-<DocsHeading>Props</DocsHeading>
+<DocsHeading light>Props</DocsHeading>
 <Canvas of={SliderStories.Slider} />
 <Controls of={SliderStories.Slider} />
 
