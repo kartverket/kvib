@@ -29,6 +29,15 @@ const meta: Meta<typeof KvibButton> = {
       options: ["primary", "secondary", "tertiary", "ghost"],
       control: { type: "radio" },
     },
+    colorScheme: {
+      description: "The visual color appearance of the component.",
+      table: {
+        type: { summary: "green | blue | gray | red" },
+        defaultValue: { summary: "green" },
+      },
+      options: ["green", "blue", "gray", "red"],
+      control: { type: "radio" },
+    },
     isDisabled: {
       description: "If true, the button will be disabled.",
       table: {

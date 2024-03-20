@@ -236,5 +236,6 @@ export const buttonTheme = defineStyleConfig({
   defaultProps: {
     variant: "primary",
     size: "md",
+    colorScheme: "green",
   },
 });
