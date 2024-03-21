@@ -8,7 +8,7 @@ addons.setConfig({
   showToolbar: false,
   panelPosition: "bottom",
   sidebar: {
-    showRoots: false,
+    showRoots: true,
     collapsedRoots: ["other"],
   },
 });

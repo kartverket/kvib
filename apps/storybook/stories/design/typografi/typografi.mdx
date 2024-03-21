@@ -1,0 +1,24 @@
+import { Meta, Source } from "@storybook/blocks";
+import { DocsContainer, Feedback } from "../../templates";
+import {
+  lineHeightsStrings,
+  letterSpacingsStrings,
+  fontWeightsStrings,
+  fontStrings,
+  fontSizesStrings,
+} from "./exampleStrings";
+
+<Meta title="Design Fundament/Typografi" />
+
+<DocsContainer>
+  
+## Typografi
+<Feedback component={"Typografi"} />
+
+<Source code={letterSpacingsStrings} dark />
+<Source code={lineHeightsStrings} dark />
+<Source code={fontStrings} dark />
+<Source code={fontWeightsStrings} dark />
+<Source code={fontSizesStrings} dark />
+
+</DocsContainer>

@@ -1,0 +1,47 @@
+import { Meta, Canvas, Controls } from "@storybook/blocks";
+import * as HighlightStories from "./Highlight.stories";
+import { Feedback, DocsStory, DocsContainer } from "../../../templates";
+
+<Meta of={HighlightStories} />
+
+<DocsContainer>
+
+# Highlight
+
+Highlight lar deg fremheve substrings i en tekst.
+
+## Ta i bruk
+
+```jsx
+import { Highlight } from "@kvib/react";
+```
+
+<Feedback components="Highlight" />
+
+<DocsStory
+  isVertical
+  title="Highlight flere ord"
+  description={""}
+  story={<Canvas of={HighlightStories.HighlightMultiple} sourceState="hidden" />}
+/>
+
+<DocsStory
+  isVertical
+  title="Highlight substring"
+  description={""}
+  story={<Canvas of={HighlightStories.HighlightSubstring} sourceState="hidden" />}
+/>
+
+<DocsStory
+  isVertical
+  title="Props"
+  description={""}
+  story={
+    <>
+      <Canvas of={HighlightStories.Highlight} />
+      <Controls of={HighlightStories.Highlight} />
+    </>
+  }
+/>
+
+</DocsContainer>
