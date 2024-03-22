@@ -17,13 +17,13 @@ import { useMediaQuery } from "@kvib/react";
 
 <Feedback component="useMediaQuery"/>
 
-<DocsHeading>API Reference</DocsHeading>
+<DocsHeading light>API Reference</DocsHeading>
 **useMediaQuery** aksepterer enten en enkelt medieforespørsel eller en rekke medieforespørsler, og valgfritt et objekt som inneholder en **ssr** boolean og en **fallback**-streng.
 
 <Source code={MediaQueryAPIRefStrings} dark/>
 Hvis vi er på serveren, vil **ssr**-alternativet avgjøre om vi skal returnere **fallback**-verdien eller utføre forespørselen direkte. **fallback**-eigenskapen er det som vil bli returnert hvis **ssr** er satt til **true** og vi er i en serverkontekst.
 
-<DocsHeading>Return value</DocsHeading>
+<DocsHeading light>Return value</DocsHeading>
 **useMediaQuery** returnerer en array av booleans, som indikerer om den gitte forespørselen matcher eller om forespørslene matcher.
 
 Hvorfor en array? **useMediaQuery** aksepterer både en streng og en array av strenger, men vil alltid returnere en array. På denne måten kan du kombinere flere medieforespørsler som vil bli individuelt matchet i ett kall.

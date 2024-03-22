@@ -24,14 +24,13 @@ import { Komponentnavn } from "@kvib/react";
 
 </DocsContainer>
 
-<DocsHeading>Alternativer</DocsHeading>
 <DocsContainer>
 
 Legg til flere `<DocsStory />` som beskriver hvilke alternativer man har her.
 
 </DocsContainer>
 
-<DocsHeading>Retningslinjer</DocsHeading>
+<DocsHeading light>Retningslinjer</DocsHeading>
 
 <DocsContainer>
 
@@ -39,6 +38,6 @@ Skriv retningslinjer her
 
 </DocsContainer>
 
-<DocsHeading>Props</DocsHeading>
+<DocsHeading light>Props</DocsHeading>
 <Canvas of={Story} />
 <Controls of={Story} />

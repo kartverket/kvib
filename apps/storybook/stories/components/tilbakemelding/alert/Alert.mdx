@@ -1,6 +1,6 @@
 import { Title, Canvas, Meta, Story, Controls } from "@storybook/blocks";
 import * as AlertStories from "./Alert.stories";
-import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory } from "../../../templates";
+import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
 import { Box } from "@kvib/react/src";
 
 <Meta of={AlertStories} />
@@ -13,16 +13,13 @@ Alert brukes til meldinger som kommuniserer informasjon uten at brukeren trenger
 import { Alert, AlertIcon, AlertTitle, AlertDescription } from "@kvib/react";
 ```
 
-<DocsHeading>Props</DocsHeading>
+<Feedback component="Alert" />
 
-<Canvas of={AlertStories.Alert} />
-<Controls of={AlertStories.Alert} />
-
-<DocsHeading>Anatomy</DocsHeading>
+<DocsHeading light>Anatomy</DocsHeading>
 
 <DocsAnatomy imgPath="assets/AlertAnatomy.svg" />
 
-<DocsHeading>Options</DocsHeading>
+<DocsHeading light>Options</DocsHeading>
 
 <DocsContainer>
 <DocsStory
@@ -55,7 +52,7 @@ import { Alert, AlertIcon, AlertTitle, AlertDescription } from "@kvib/react";
 />
 </DocsContainer>
 
-<DocsHeading>Kjente feil</DocsHeading>
+<DocsHeading light>Kjente feil</DocsHeading>
 
 <DocsContainer>
 
@@ -64,3 +61,7 @@ Bruk av colorScheme="orange" og variant="solid" sammen gir for lav kontrast. Det
 Det er foreløpig ikke mulig å bytte ut eller droppe status-ikonet for alerter.
 
 </DocsContainer>
+
+<DocsHeading light>Props</DocsHeading>
+<Canvas of={AlertStories.Alert} />
+<Controls of={AlertStories.Alert} />

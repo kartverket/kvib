@@ -16,15 +16,12 @@
     "prepare": "husky"
   },
   "devDependencies": {
-    "esbuild": "^0.20.1",
+    "esbuild": "^0.20.2",
     "eslint-config-custom": "*",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
     "turbo": "^1.12.5"
-  },
-  "engines": {
-    "node": "18.15.0"
   },
   "dependencies": {
     "@changesets/cli": "^2.27.1"

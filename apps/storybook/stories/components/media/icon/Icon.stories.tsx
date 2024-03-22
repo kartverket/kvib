@@ -1,4 +1,4 @@
-import { Icon, HStack, useTheme } from "@kvib/react/src";
+import { HStack, Icon, useTheme } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Icon> = {
@@ -33,6 +33,11 @@ const meta: Meta<typeof Icon> = {
       defaultValue: { summary: 24 },
     },
     isFilled: {
+      table: { type: { summary: "boolean" } },
+      control: "boolean",
+      defaultValue: { summary: false },
+    },
+    ariaIsHidden: {
       table: { type: { summary: "boolean" } },
       control: "boolean",
       defaultValue: { summary: false },

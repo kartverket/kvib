@@ -1,15 +1,16 @@
 import { Meta, Canvas, Story, Controls, Source } from "@storybook/blocks";
 import * as StepperStories from "./Stepper.stories";
-import { Card, CardBody } from "@kvib/react/src";
+import { Card, CardBody, Text } from "@kvib/react/src";
 import * as StepperStrings from "./srcStrings.ts";
+import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
 
 <Meta of={StepperStories} />
+
+<DocsContainer>
 
 # Stepper
 
 En Stepper brukes til å vise fremgang i en prosess med flere steg.
-
-## Ta i bruk
 
 ```jsx
 import {
@@ -26,13 +27,7 @@ import {
 } from "@kvib/react";
 ```
 
-## Props
-
-<Card variant="outline" borderRadius="0">
-  <CardBody>
-    <Story of={StepperStories.Stepper} />
-  </CardBody>
-</Card>
+<Feedback component="Step" />
 
 <Source code={StepperStrings.stepperString} dark />
 <Controls of={StepperStories.Stepper} />
@@ -86,3 +81,13 @@ import {
 </Card>
 
 <Source code={StepperStrings.stepperProgressbarString} dark />
+
+<DocsHeading light children="Props" />
+
+<Card variant="outline" borderRadius="0">
+  <CardBody>
+    <Story of={StepperStories.Stepper} />
+  </CardBody>
+</Card>
+
+</DocsContainer>

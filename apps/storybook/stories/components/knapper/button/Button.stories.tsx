@@ -1,4 +1,4 @@
-import { Button as KvibButton, VStack, StackDivider, ButtonGroup as KvibButtonGroup } from "@kvib/react/src";
+import { Button as KvibButton, ButtonGroup as KvibButtonGroup, StackDivider, VStack } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibButton> = {
@@ -29,6 +29,15 @@ const meta: Meta<typeof KvibButton> = {
       options: ["primary", "secondary", "tertiary", "ghost"],
       control: { type: "radio" },
     },
+    colorScheme: {
+      description: "The visual color appearance of the component.",
+      table: {
+        type: { summary: "green | blue | gray | red" },
+        defaultValue: { summary: "green" },
+      },
+      options: ["green", "blue", "gray", "red"],
+      control: { type: "radio" },
+    },
     isDisabled: {
       description: "If true, the button will be disabled.",
       table: {
@@ -50,6 +59,11 @@ const meta: Meta<typeof KvibButton> = {
         type: { summary: "boolean" },
       },
       control: "boolean",
+    },
+    iconAriaIsHidden: {
+      table: { type: { summary: "boolean" } },
+      control: "boolean",
+      defaultValue: { summary: false },
     },
   },
 };

@@ -1,9 +1,12 @@
 import { Meta, Controls, Source, Story } from "@storybook/blocks";
 import * as ToastStories from "./Toast.stories";
 import { Card, CardBody, Alert, AlertTitle, AlertDescription, AlertIcon } from "@kvib/react/src";
+import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
 import * as ToastStrings from "./srcStrings";
 
 <Meta of={ToastStories} />
+
+<DocsContainer>
 
 # Toast
 
@@ -12,22 +15,9 @@ eller av seg selv etterhvert. Flere toasts kan være på skjermen samtidig.
 
 På [Chakra-ui.com](https://chakra-ui.com/docs/components/toast) finner du noen niche brukseksempler.
 
-## Ta i bruk
-
 ```jsx
 import { useToast } from "@kvib/react";
 ```
-
-## Props
-
-<Card variant="outline">
-  <CardBody>
-    <Story of={ToastStories.Toast} />
-  </CardBody>
-</Card>
-
-<Source code={ToastStrings.ToastExample} dark />
-<Controls of={ToastStories.Toast} />
 
 ## Status
 
@@ -55,3 +45,15 @@ import { useToast } from "@kvib/react";
 </Card>
 
 <Source code={ToastStrings.ToastPosition} dark />
+
+## Props
+
+<Card variant="outline">
+  <CardBody>
+    <Story of={ToastStories.Toast} />
+  </CardBody>
+</Card>
+
+<Source code={ToastStrings.ToastExample} dark />
+<Controls of={ToastStories.Toast} />
+</DocsContainer>

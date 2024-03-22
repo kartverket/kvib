@@ -8,15 +8,16 @@ import {
   DrawerSizesString,
   DrawerFormString,
 } from "./srcStrings.ts";
+import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
 
 <Meta of={DrawerStories} />
+
+<DocsContainer>
 
 # Drawer
 
 Drawer er et panel som sklir ut fra kanten av skjermen. Den kan være nyttig hvis du vil at brukeren skal se detaljer eller gjøre en oppgave
 uten å bytte side. Drawer kan komme ut fra alle kanter av skjermen.
-
-## Ta i bruk
 
 ```jsx
 import {
@@ -30,19 +31,9 @@ import {
 } from "@kvib/react";
 ```
 
-## Props
+<Feedback component="Drawer" />
 
-<Card variant="outline" borderRadius="0">
-  <CardBody>
-    <Story of={DrawerStories.Drawer} />
-  </CardBody>
-</Card>
-
-<Source code={DrawerString} dark />
-<Controls of={DrawerStories.Drawer} />
-
-## Plassering
-
+<DocsHeading light children="Plassering" />
 <Card variant="outline" borderRadius="0">
   <CardBody>
     <Story of={DrawerStories.DrawerPlacement} />
@@ -51,8 +42,7 @@ import {
 
 <Source code={DrawerPlacementString} dark />
 
-## Fokus
-
+<DocsHeading light children="Fokus" />
 <Card variant="outline" borderRadius="0">
   <CardBody>
     <Story of={DrawerStories.DrawerFocus} />
@@ -61,8 +51,7 @@ import {
 
 <Source code={DrawerFocusString} dark />
 
-## Størrelser
-
+<DocsHeading light children="Størrelser" />
 <Card variant="outline" borderRadius="0">
   <CardBody>
     <Story of={DrawerStories.DrawerSizes} />
@@ -71,8 +60,19 @@ import {
 
 <Source code={DrawerSizesString} dark />
 
-## Bruk av form i en Drawer
+<DocsHeading light children="Bruk av form i en Drawer" />
 
 Hvis du skal bruke form i en drawer må du bruke biblioteker som `react-hook-form` eller `formik`. Her er den anbefalte måten å gjøre det på:
 
 <Source code={DrawerFormString} dark />
+
+<DocsHeading light children="Props" />
+<Card variant="outline" borderRadius="0">
+  <CardBody>
+    <Story of={DrawerStories.Drawer} />
+  </CardBody>
+</Card>
+
+<Source code={DrawerString} dark />
+<Controls of={DrawerStories.Drawer} />
+</DocsContainer>
