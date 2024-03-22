@@ -1,0 +1,55 @@
+import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
+import * as TextStories from "./Text.stories";
+import { Feedback, DocsStory, DocsContainer } from "../../templates";
+import { Text } from "@kvib/react/src";
+
+<Meta of={TextStories} />
+
+<DocsContainer>
+
+# Text
+
+Text skal brukes til render av tekst og paragrafer i et grensesnitt. Text inneholder `Box` så det er mulig å bruke alle style props derfra.
+
+## Ta i bruk
+
+```jsx
+import { Text } from "@kvib/react";
+```
+
+<Feedback components="Text" />
+
+<DocsStory
+  title="Overstyring av stil"
+  description={
+    <Text>
+      <code>Text</code> har flere stiler å velge mellom. Bruk <code>as</code> prop for å sette stil.
+    </Text>
+  }
+  story={<Canvas of={TextStories.TextOverride} sourceState="hidden" />}
+/>
+
+<DocsStory
+  isVertical
+  title="Størrelser"
+  description={
+    <Text>
+      Bruk <code>fontSize</code> prop for å endre størrelse på <code>Text</code>.
+    </Text>
+  }
+  story={<Canvas of={TextStories.TextSizes} sourceState="hidden" />}
+/>
+
+<DocsStory
+  isVertical
+  title="Props"
+  description={""}
+  story={
+    <>
+      <Canvas of={TextStories.Text} />
+      <Controls of={TextStories.Text} />
+    </>
+  }
+/>
+
+</DocsContainer>

@@ -1,0 +1,11 @@
+import { Meta } from "@storybook/addon-docs";
+import { Colors } from "./Colors";
+
+<Meta title="Design Fundament/Farger" />
+
+## Farger
+
+Fargene brukes som CSS-variabler på følgende måte: `var(--kvib-colors-green-500)`.\
+I komponenter, bruk `useTheme` hook og sett farger slik: `backgroundColor={theme.colors.green[500]}`se eksempel [her](/docs/hooks-usetheme--docs).
+
+<Colors />

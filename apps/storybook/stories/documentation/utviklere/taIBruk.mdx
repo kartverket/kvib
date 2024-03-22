@@ -1,0 +1,372 @@
+import { Meta } from "@storybook/addon-docs";
+import { Alert, AlertIcon, AlertDescription } from "@kvib/react/src/alert";
+import { KvibProvider } from "@kvib/react/src/provider/KvibProvider";
+
+<Meta title="For utviklere/Kom i gang" />
+
+# Oppsett
+
+For å ta i bruk komponentbiblioteket må du installere `@kvib/react`.
+
+```jsx
+$ npm install @kvib/react
+# eller
+$ yarn add @kvib/react
+```
+
+Etterpå må du wrappe hele react-applikasjonen din `KvibProvider`-komponenten.
+
+```tsx
+// I din src/app.tsx fil:
+import "./App.css";
+import { Button, KvibProvider } from "@kvib/react";
+
+function App() {
+  return (
+    <KvibProvider>
+      <Button>Knapp</Button>
+    </KvibProvider>
+  );
+}
+
+export default App;
+```
+
+I eksempelet over har vi også lagt til en knapp som viser hvordan du tar i bruk et designsystem-komponent i applikasjonen din.
+
+## Endre default-farge
+
+Default farge-tema for Kartverkets designsystem er grønt. Dette skal gjelde for alle applikasjoner som skal ligne Kartverket.no i stylingen.
+For applikasjoner med skjema og karttjenester skal man imidlertid benytte blått fargetema.
+Dette gjøres ved å legge til et customTheme med colorScheme: "blue", og benytte det i KVIB-provideren slik:
+
+```tsx
+// I din src/app.tsx fil:
+import "./App.css";
+import { Button, KvibProvider, extendTheme, theme, withDefaultColorScheme } from "@kvib/react";
+
+const customTheme = extendTheme(withDefaultColorScheme({ colorScheme: "blue" }), theme);
+
+function App() {
+  return (
+    <KvibProvider theme={customTheme}>
+      <Button>Knapp</Button>
+    </KvibProvider>
+  );
+}
+
+export default App;
+```
+
+## Egen styling - inline styling og styled-components
+
+<KvibProvider>
+    <Alert status="info">
+        <AlertIcon/>
+        <AlertDescription>
+            I utgangspunktet skal man benytte komponentene fra Kartverkets designsystem med stylingen som er der. Er
+            det
+            funksjoner og design du synes mangler i dagens bibliotek, ønsker vi at du bidrar med dette til biblioteket
+            istedenfor å overskrive stylingen i eget prosjekt- da kan fler enn deg ta det i bruk! Se [dokumentasjonen
+            for
+            hvordan bidra til designsystemet](/?path=/docs/bidra--docs) for guidelines. Dersom det likevel er nødvendig
+            å
+            gjøre egne tilpassninger av stylingen til eget prosjekt, kan dette gjøres med inline styling eller
+            styled-components.
+
+            **Avklar med designer før du lager egen styling.**
+        </AlertDescription>
+
+    </Alert>
+
+</KvibProvider>
+
+La oss si du bruker en knapp fra Kartverkets designbibliotek, men du ønsker å tilpasse den litt.
+Et alternativ er å benytte inline-styling, som f.eks. `<Button background="red">Klikk her</Button>`. Et annet alternativ er styled-components, som noen team allerede benytter.
+For å endre farge med sistnevnte kan man skrive: `const RedButton = styled(Button)`background: red`; `. En fordel med styled-components er at stylingen er samlet.
+Likevel må noen ekstra konfigurasjoner gjøres for at dette skal fungere. Under følger beskrivelse av hvorfor og hvordan du setter det opp styled-components med Kartverkets komponenter.
+
+Både Chakra UI (bygd på emotion) og styled-components (nesten det samme som emotion) genererer klassenavn som settes på elementene som skal styles, også settes en lang rekke med stylesheets i `<head>` der stilene er definert.
+Chakra sine stylesheets blir appendet på `<head>` , altså de kommer alltid sist. Videre har selectorene samme grunnleggende specificity (de targeter bare et klassenavn), og derfor blir det stilen som er definert sist som blir gjeldende, altså Chakra sitt.
+Med andre ord kan man ikke style Chakra-komponenter (som våres komponenter igjen bygger på) med styled-components uten å gjøre noen konfigurasjoner.
+
+Det første åpenbare alternativet er å bruke `!important`, men dette kan fort bli rot dersom du skal overstyre dette igjen og må bruke `!!important`.
+Det andre alternativet er å lure seg til en mer spesifikk selector som dette: `&&& { background: red; }`, men det er uintuitivt og er ikke tydelig på når man trenger å bruke selectoren, hva den egentlig gjør, at man må bruke den alle steder man ønsker å overstyre chakra, osv.
+Et tredje alternativ kunne vært CSS Layers som nå får støtte i nettleserne. Likevel kan man møte på noen av de samme problemene her ved at man må gjøre det overalt, og at man plutselig trenger å overstyre den også.
+Problemet er rekkefølgen på stylesheets i `<head>` , noe Chakra ikke har en konfigurasjonsmulighet for per nå. Det kan likevel løses med en cache for Chakra sin styling som lages gjennom emotion (som er mulig ettersom Chakra, og derav våre komponenter, bygger på emotion).
+
+Slik setter du Chakra sin styling øverst i `<head>` i ditt eget prosjekt: (all styling som defineres etterpå med samme eller sterkere specificity vil overskrive det)
+
+```jsx
+import createCache from "@emotion/cache";
+import { CacheProvider } from "@emotion/react";
+
+const emotionCache = createCache({
+  key: "emotion-cache",
+  prepend: true, // ensures styles are prepended to the <head>, instead of appended
+});
+
+export default function App() {
+  return (
+    <CacheProvider value={emotionCache}>
+      <KvibProvider>{children}</KvibProvider>
+    </CacheProvider>
+  );
+}
+```
+
+## Obs om import
+
+I og med at Kartverkets designsystem inneholder hele Chakra-biblioteket har noen brukere opplevd at de ved et
+uhell har tatt i brukt chakra-komponenter i steden for designsystem-komponenter, og at dette har ført til uheldig oppførsel. Eks:
+
+```tsx
+import { NumberInput, NumberInputField } from "@kvib/react";
+import { NumberInputStepper, NumberIncrementStepper, NumberDecrementStepper } from "@chakra-ui/react";
+
+const Eksempel = () => (
+  <NumberInput>
+    <NumberInputField />
+    <NumberInputStepper>
+      <NumberIncrementStepper />
+      <NumberDecrementStepper />
+    </NumberInputStepper>
+  </NumberInput>
+);
+```
+
+Siden Kartverkets designsystem tilbyr alle de samme komponentene som Chakra skal ikke dette være nødvendig, men det kan fort skje ved en feil ved at
+VS-code eller Idea foreslår å importere fra feil pakke.
+For å unngå problemet er det mulig å sette innstillinger i editoren din til å hindre import forslag fra Chakra, eller å legge inn følgende regel i es-lint:
+
+```js
+"no-restricted-imports": ["error", { "patterns": ["@chakra-ui/*"] }]
+```
+
+## Oppsett av Kartverkets Designsystem ved bruk av Remix
+
+### 1. Installer Kartverket Designsystem i repoet:
+
+```jsx
+$ npm install @kvib/react
+# eller
+$ yarn add @kvib/react
+```
+
+### 2. Sett opp provider:
+
+Legg til `context.tsx` i app-mappen og legg til følgende kode:
+
+```jsx
+// context.tsx
+import { createContext } from 'react'
+
+export interface ServerStyleContextData {
+  key: string
+  ids: Array<string>
+  css: string
+}
+
+export const ServerStyleContext = createContext<ServerStyleContextData[] | null>(null)
+
+export interface ClientStyleContextData {
+  reset: () => void
+}
+
+export const ClientStyleContext = createContext<ClientStyleContextData | null>(null)
+```
+
+Legg til `createEmotionCache.ts` i app-mappen og legg til følgende kode:
+
+```jsx
+// createEmotionCache.ts
+import createCache from "@emotion/cache";
+
+export const defaultCache = createEmotionCache();
+
+export default function createEmotionCache() {
+  return createCache({ key: "cha" });
+}
+```
+
+Etter det så må vi modifisere entry-filene for både client og server. Her skal vi bruke createEmotionCache-funksjonen:
+
+```tsx
+// entry.client.tsx
+import React, { useState } from "react";
+import { hydrate } from "react-dom";
+import { CacheProvider } from "@emotion/react";
+import { RemixBrowser } from "@remix-run/react";
+
+import { ClientStyleContext } from "./context";
+import createEmotionCache, { defaultCache } from "./createEmotionCache";
+
+interface ClientCacheProviderProps {
+  children: React.ReactNode;
+}
+
+function ClientCacheProvider({ children }: ClientCacheProviderProps) {
+  const [cache, setCache] = useState(defaultCache);
+
+  function reset() {
+    setCache(createEmotionCache());
+  }
+
+  return (
+    <ClientStyleContext.Provider value={{ reset }}>
+      <CacheProvider value={cache}>{children}</CacheProvider>
+    </ClientStyleContext.Provider>
+  );
+}
+
+hydrate(
+  <ClientCacheProvider>
+    <RemixBrowser />
+  </ClientCacheProvider>,
+  document,
+);
+```
+
+```tsx
+// entry.server.tsx
+import { renderToString } from "react-dom/server";
+import { CacheProvider } from "@emotion/react";
+import createEmotionServer from "@emotion/server/create-instance";
+import { RemixServer } from "@remix-run/react";
+import type { EntryContext } from "@remix-run/node"; // Depends on the runtime you choose
+
+import { ServerStyleContext } from "./context";
+import createEmotionCache from "./createEmotionCache";
+
+export default function handleRequest(
+  request: Request,
+  responseStatusCode: number,
+  responseHeaders: Headers,
+  remixContext: EntryContext,
+) {
+  const cache = createEmotionCache();
+  const { extractCriticalToChunks } = createEmotionServer(cache);
+
+  const html = renderToString(
+    <ServerStyleContext.Provider value={null}>
+      <CacheProvider value={cache}>
+        <RemixServer context={remixContext} url={request.url} />
+      </CacheProvider>
+    </ServerStyleContext.Provider>,
+  );
+
+  const chunks = extractCriticalToChunks(html);
+
+  const markup = renderToString(
+    <ServerStyleContext.Provider value={chunks.styles}>
+      <CacheProvider value={cache}>
+        <RemixServer context={remixContext} url={request.url} />
+      </CacheProvider>
+    </ServerStyleContext.Provider>,
+  );
+
+  responseHeaders.set("Content-Type", "text/html");
+
+  return new Response(`<!DOCTYPE html>${markup}`, {
+    status: responseStatusCode,
+    headers: responseHeaders,
+  });
+}
+```
+
+I `root.tsx` skal vi lage en `Document` wrapper:
+
+```tsx
+// root.tsx
+import React, { useContext, useEffect } from "react";
+import { withEmotionCache } from "@emotion/react";
+import { ChakraProvider } from "@chakra-ui/react";
+import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from "@remix-run/react";
+import { MetaFunction, LinksFunction } from "@remix-run/node"; // Depends on the runtime you choose
+import { cssBundleHref } from "@remix-run/css-bundle";
+
+import { ServerStyleContext, ClientStyleContext } from "./context";
+
+export const meta: MetaFunction = () => ({
+  charset: "utf-8",
+  title: "New Remix App",
+  viewport: "width=device-width,initial-scale=1",
+});
+
+export let links: LinksFunction = () => {
+  return [
+    { rel: "preconnect", href: "https://fonts.googleapis.com" },
+    { rel: "preconnect", href: "https://fonts.gstatic.com" },
+    {
+      rel: "stylesheet",
+      href: "https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap",
+    },
+    ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
+  ];
+};
+
+interface DocumentProps {
+  children: React.ReactNode;
+}
+
+const Document = withEmotionCache(({ children }: DocumentProps, emotionCache) => {
+  const serverStyleData = useContext(ServerStyleContext);
+  const clientStyleData = useContext(ClientStyleContext);
+
+  // Only executed on client
+  useEffect(() => {
+    // re-link sheet container
+    emotionCache.sheet.container = document.head;
+    // re-inject tags
+    const tags = emotionCache.sheet.tags;
+    emotionCache.sheet.flush();
+    tags.forEach((tag) => {
+      (emotionCache.sheet as any)._insertTag(tag);
+    });
+    // reset cache to reapply global styles
+    clientStyleData?.reset();
+  }, []);
+
+  return (
+    <html lang="en">
+      <head>
+        <Meta />
+        <Links />
+        {serverStyleData?.map(({ key, ids, css }) => (
+          <style key={key} data-emotion={`${key} ${ids.join(" ")}`} dangerouslySetInnerHTML={{ __html: css }} />
+        ))}
+      </head>
+      <body>
+        {children}
+        <ScrollRestoration />
+        <Scripts />
+        <LiveReload />
+      </body>
+    </html>
+  );
+});
+```
+
+Legg til `serverDependenciesToBundle: [/^@kvib\\/react/, /^material-symbols/]` i `remix.config.js`
+
+Til slutt må du wrappe appen:
+
+```tsx
+const customTheme = extendTheme(withDefaultColorScheme({ colorScheme: "blue" }), theme);
+
+export default function App() {
+  return (
+    <Document>
+      <KvibProvider theme={customTheme}>
+        <Outlet />
+      </KvibProvider>
+    </Document>
+  );
+}
+```
+
+### 3. Importer material symbols for å bruke ikoner:
+
+```tsx
+import "material-symbols/rounded.css";
+```

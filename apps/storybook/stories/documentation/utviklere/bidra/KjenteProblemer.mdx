@@ -1,0 +1,121 @@
+import { Meta } from "@storybook/addon-docs";
+
+<Meta title="For utviklere/Bidra med kode/Kjente Problemer" />
+
+# Kjente problemer
+
+Storybook og Chakra er to hjelpemidler som gjør det enklere og raskere for oss å utvikle et designsystem for kartverket.
+Under utvikling vil det likevel dukke opp problemer eller utfordringer hvor rammeverkene ikke støtter det vi har lyst til å gjøre,
+eller inneholder bugs som ikke har blitt fikset. Denne siden vil ta for seg slike overordnede bugs og problemmer som man kan møte på i alle
+komponenter under utviklingsfasen. For bugs på komponentnivå, se nederst i docs på hvert komponent.
+
+## Storybook
+
+### Subcomponents i argTypes (controls)
+
+**Problem**
+
+Mange komponenter fra Chakra består av en sammensetning av flere komponenter. Et eksempel er `Breadcrumb` som består av
+`Breadcrumb`, `BreadcrumbItem`, `BreadcrumbLink` og `BreadcrumbSeparator`. I de fleste tilfeller har child-komponentene
+også egne props. Disse skulle man gjerne vist sammen med propsene i parent-komponentet i controls på en story. Storybook hadde støtte for dette
+ved å ta i bruk `subcomponents: { BreadcrumbItem }` i `Meta`, men dette ser ut til å være deprecated.
+
+Relevant: [https://github.com/storybookjs/storybook/issues/20782](https://github.com/storybookjs/storybook/issues/20782)
+
+**Løsning**
+
+For øyeblikket er det ikke funnet en løsning på dette.
+
+### Feil render av kode i Canvas
+
+**Problem**
+
+Storybook viser koden til en Story automatisk gjennom `Canvas`. Et problem som ofte oppstår når komponenter er importert
+fra andre biblioteker (f.eks. Chakra) er at `Canvas` ikke klarer å oversette riktig, eller at den oversetter koden feil.
+På den måten kan det bli feil navn på komponenter.
+
+For eksempel endret `CardBody` seg til `CardBody2`, selv om navnet fortsatt
+er `CardBody` i KVIB-pakken:
+
+```jsx
+<Card>
+  <CardBody2>
+    <Text>Se alle endringer på eiendomsgrenser i år.</Text>
+  </CardBody2>
+</Card>
+```
+
+Et annet eksempel er når Storybook ikke klarer å kjenne igjen komponentene fra pakken:
+
+```jsx
+<[object Object]>
+  <Table>
+    <TableCaption>
+      Imperial to metric conversion factors
+    </TableCaption>
+    <[object Object]>
+      <[object Object]>
+        <[object Object]>
+          To convert
+        </[object Object]>
+        <[object Object]>
+
+        ...
+
+  </Table>
+</[object Object]>
+```
+
+**Løsning**
+
+Løsningen er å ikke bruke `Canvas` for å vise frem komponentet, men heller `Story` sammen med `Source`.
+Story viser frem storyen uten noen form for ramme eller kode. Derfor må man bruke `Card` for å lage rammen selv.
+I `source` må man legge inn den koden man har lyst til å vise som en String.
+
+```jsx
+  <Card variant="outline" borderRadius="0">
+    <CardBody>
+      <Story of={TableStories.Table} />
+    </CardBody>
+  </Card>
+
+<Source code={TableString} dark />
+```
+
+Ta en titt på [Table](https://kartverket.github.io/kvib/?path=/docs/komponenter-data-display-table--docs) for å se hvordan det gjøres.
+
+### Feil med visning av Addon panel
+
+**Problem**
+
+Av og til vises ikke Addon panelet for å få tilgang til Accessibility testing eller annet.
+
+**Løsning**
+
+Kjør følgende kommando i nettleser konsolen: `localStorage.clear`.
+
+### Icon fungerer ikke i docs
+
+**Problem**
+
+`<Icon />` fra designsystemet fungerer ikke i docs. Finner ingen løsning som gjør at det fungerer.
+
+**Løsning**
+
+Løsningen er å gjøre en av to workarounds:
+
+- Bruk en `<Story />` for å vise frem det du vil, fordi storiene ikke har noe problem med å rendre ikoner ved hjelp av KvibProvider. Det som ikke fungerer med denne løsningen er å bruke `of={IconStory}` dersom man skal bruke stories fra andre mapper enn den du er i. Da må man bruke id: `<Story id="komponenter-footer-footer-inline--footer-inline-custom" />`. Se på eksempelet på footeren som ligger i “.storybook/MDXContainer.jsx”.
+- Den andre løsningen er å legge til ikonet som en svg og bruke `<Image />`. Dette er for eksempel gjort for `<Feedback />` i "/templates". Denne løsningen er bare ønskelig om man lager et komponent som skal brukes mange steder.
+
+## Chakra
+
+### Feil dokumentasjon av props
+
+**Problem**
+
+Chakra har mange komponenter som inneholder feil dokumentasjon av props. Mange av de er rett og slett feil,
+mens andre har props inkludert som er der for at man kan utvikle dem selv i theme.
+
+**Løsning**
+
+Ikke inkluder props som ikke endrer på komponentet eller har et annet formål i dokumentasjonen til Kartverkets designsystem.
