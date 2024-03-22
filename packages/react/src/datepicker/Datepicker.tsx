@@ -130,17 +130,18 @@ const CustomDatepicker = forwardRef<DatepickerProps, "input">(
       showOutsideDays,
       showWeekNumber,
       disabledDays,
+      colorScheme,
       isDisabled: isDisabledExternally = false,
       isInvalid: isInvalidExternally = false,
       isRequired: isRequiredExternally = false,
-      colorScheme = "green",
       ...KVInputProps
     },
     ref,
   ) => {
     // Style for the day picker
     const uniqueClassName = generateUniqueClassName("kvib-datepicker");
-    const style = css(uniqueClassName, colorScheme);
+    const themeColorScheme = theme.components.Datepicker.defaultProps.colorScheme;
+    const style = css(uniqueClassName, colorScheme ?? themeColorScheme);
 
     // Get state from form control context
     const formControlContext = useFormControlContext();
