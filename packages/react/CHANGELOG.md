@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 3.7.3
+
+### Patch Changes
+
+- 9eaa877: Setter default datepicker colorscheme på theme-nivå
+
 ## 3.7.2
 
 ### Patch Changes

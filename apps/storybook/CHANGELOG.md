@@ -1,5 +1,11 @@
 # @kvib/storybook
 
+## 1.1.1
+
+### Patch Changes
+
+- 9eaa877: Setter default datepicker colorscheme på theme-nivå
+
 ## 1.1.0
 
 ### Minor Changes
