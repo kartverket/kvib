@@ -7,7 +7,7 @@ import {
   useDisclosure,
   VStack,
   Collapse,
-  theme,
+  defaultKvibTheme,
   Link,
 } from "@kvib/react/src";
 
@@ -50,8 +50,8 @@ export const Header = (props: HeaderProps) => {
     logoVariant = "horizontal",
   } = props;
 
-  const [isCollapse] = useMediaQuery(`(max-width: ${theme.breakpoints[collapseBreakpoint]})`);
-  const [isSm] = useMediaQuery(`(max-width: ${theme.breakpoints["sm"]})`);
+  const [isCollapse] = useMediaQuery(`(max-width: ${defaultKvibTheme.breakpoints[collapseBreakpoint]})`);
+  const [isSm] = useMediaQuery(`(max-width: ${defaultKvibTheme.breakpoints["sm"]})`);
   const logoHorizontalSize = isSm ? 110 : 150;
   const logoVerticalSize = isSm ? 70 : 100;
   const headerSize = isSm ? 70 : 90;
