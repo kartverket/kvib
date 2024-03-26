@@ -8,7 +8,7 @@ import {
   InputRightElement,
   PopoverTrigger,
   PopoverAnchor,
-  theme,
+  useTheme,
   IconButton,
 } from "@kvib/react/src";
 import { forwardRef, useFormControlContext } from "@chakra-ui/react";
@@ -138,10 +138,14 @@ const CustomDatepicker = forwardRef<DatepickerProps, "input">(
     },
     ref,
   ) => {
+    const theme = useTheme();
+
     // Style for the day picker
     const uniqueClassName = generateUniqueClassName("kvib-datepicker");
-    const themeColorScheme = theme.components.Datepicker.defaultProps.colorScheme;
-    const style = css(uniqueClassName, colorScheme ?? themeColorScheme);
+    const style = css(
+      uniqueClassName,
+      theme.colors[colorScheme ?? theme.components.Datepicker.defaultProps.colorScheme],
+    );
 
     // Get state from form control context
     const formControlContext = useFormControlContext();
@@ -216,7 +220,7 @@ const CustomDatepicker = forwardRef<DatepickerProps, "input">(
             <PopoverTrigger>
               <IconButton
                 icon="calendar_today"
-                colorScheme={colorScheme as "blue" | "green"}
+                colorScheme={colorScheme}
                 size={KVInputProps.size}
                 aria-label="open datepicker"
                 onClick={setPickerVisible.toggle}
@@ -298,13 +302,13 @@ const getCommonInputProps = (props: DatepickerProps) => {
 };
 
 // Function to generate the css for the day picker
-const css = (className: string, colorScheme: "blue" | "green") => {
+const css = (className: string, colorPalette: Record<number, string>) => {
   return `
  .${className} {
   --rdp-cell-size: 40px; /* Size of the day cells. */
   --rdp-caption-font-size: 18px; /* Font size for the caption labels. */
-  --rdp-accent-color: ${theme.colors[colorScheme][500]}; /* Accent color for the background of selected days. */
-  --rdp-background-color: ${theme.colors[colorScheme][50]}; /* Background color for the hovered/focused elements. */
+  --rdp-accent-color: ${colorPalette[500]}; /* Accent color for the background of selected days. */
+  --rdp-background-color: ${colorPalette[50]}; /* Background color for the hovered/focused elements. */
   --rdp-outline: 2px solid var(--rdp-accent-color); /* Outline border for focused elements */
   --rdp-selected-color: #fff; /* Color of selected day text */
 }

@@ -6,7 +6,7 @@ import {
   extendTheme,
   withDefaultColorScheme,
   KvibProvider,
-  theme,
+  defaultKvibTheme,
 } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
@@ -163,7 +163,7 @@ export const TimepickerForm: Story = {
   ),
 };
 
-const greenTheme = extendTheme(withDefaultColorScheme({ colorScheme: "green" }), theme);
+const greenTheme = extendTheme(withDefaultColorScheme({ colorScheme: "green" }), defaultKvibTheme);
 
 export const TimepickerGreenProvider: Story = {
   tags: ["no-tests"],
@@ -176,7 +176,7 @@ export const TimepickerGreenProvider: Story = {
   ],
 };
 
-const blueTheme = extendTheme(withDefaultColorScheme({ colorScheme: "blue" }), theme);
+const blueTheme = extendTheme(withDefaultColorScheme({ colorScheme: "blue" }), defaultKvibTheme);
 
 export const TimepickerBlueProvider: Story = {
   tags: ["no-tests"],
