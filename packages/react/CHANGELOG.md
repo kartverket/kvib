@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 4.0.0
+
+### Major Changes
+
+- 13dfd78: Omdøp theme og fiks bruk av theme til datepickers
+
 ## 3.7.3
 
 ### Patch Changes

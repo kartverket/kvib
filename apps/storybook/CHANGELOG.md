@@ -1,5 +1,11 @@
 # @kvib/storybook
 
+## 1.1.2
+
+### Patch Changes
+
+- 13dfd78: Omdøp theme og fiks bruk av theme til datepickers
+
 ## 1.1.1
 
 ### Patch Changes
