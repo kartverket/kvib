@@ -197,8 +197,7 @@ export const SearchAsyncResults: Story = {
   ),
 };
 
-const boldAndBadgeLabelFormatter = (data: Fruit, formatOptionLabelMeta: FormatOptionLabelMeta<Fruit>) => {
-  console.log(data, formatOptionLabelMeta);
+const boldAndBadgeLabelFormatter = (data: Fruit) => {
   return (
     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", width: "100%" }}>
       <b>{data.label}</b>
