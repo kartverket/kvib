@@ -1,6 +1,6 @@
 import { ReactNode, useEffect, useRef } from "react";
 import { Text } from "@kvib/react/src";
-import { ActionMeta, AsyncSelect as ReactSearch } from "chakra-react-select";
+import { ActionMeta, FormatOptionLabelMeta, AsyncSelect as ReactSearch } from "chakra-react-select";
 import { GroupBase, OptionsOrGroups } from "chakra-react-select";
 import { SizeProp, Variant } from "chakra-react-select/dist/types/types";
 
@@ -50,6 +50,9 @@ export type BaseProps<T> = {
 
   /** Variable to override the selected value of the component. Null resets the component and undefined  is ignored. When in use update value from the onChange function */
   value?: T | null;
+
+  /** Function for formatting the labels in the dropdown menu */
+  optionLabelFormatter?: (data: T, formatOptionLabelMeta: FormatOptionLabelMeta<T>) => ReactNode;
 };
 
 type WithMulti<T> = {
@@ -86,6 +89,7 @@ export const SearchAsync = <T extends unknown>({
   isDisabled,
   focusBorderColor,
   value,
+  optionLabelFormatter,
 }: SearchAsyncProps<T>) => {
   const noOptionsMessageDefault = ({ inputValue }: { inputValue: string }): ReactNode => {
     if (inputValue.replaceAll(/\s/g, "").length < 1) {
@@ -116,6 +120,7 @@ export const SearchAsync = <T extends unknown>({
         // Only use separator when there is a dropdownindicator
         ...(!dropdownIndicator ? { IndicatorSeparator: () => null } : {}),
       }}
+      formatOptionLabel={optionLabelFormatter}
       isClearable={isClearable}
       autoFocus={autoFocus}
       className={className ? className : ""}
