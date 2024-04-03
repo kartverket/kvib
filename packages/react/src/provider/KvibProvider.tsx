@@ -4,7 +4,7 @@ import "@fontsource/mulish/700.css";
 import "material-symbols";
 
 import { ChakraProvider, ChakraProviderProps } from "@chakra-ui/react";
-import { theme as defaultKvibTheme } from "../";
+import { defaultKvibTheme } from "../";
 
 /**
  * KVIBProvider er komponenten som gir de andre komponentene riktig tema og stil

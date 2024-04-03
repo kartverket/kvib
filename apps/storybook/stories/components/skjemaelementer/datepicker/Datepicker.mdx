@@ -25,11 +25,12 @@ import { Datepicker } from "@kvib/react";
 - Valg av dato langt tilbake eller frem i tid
 
 <Alert status="warning">
-          <AlertIcon/>
-          <AlertDescription>
-            Datepicker er fremdeles noe uferdig. Vi jobber fortløpende med å rette feil og forbedre funksjonaliteten, og det vil derfor forekomme noen api-endringer fremover.
-            Kjente problemer er at vi ikke gir feilmelding dersom bruker taster inn ugyldig dato, og at onChange ikke trigges når brukeren fjerner en inntastet dato.
-          </AlertDescription>
+  <AlertIcon />
+  <AlertDescription>
+    Datepicker er fremdeles noe uferdig. Vi jobber fortløpende med å rette feil og forbedre funksjonaliteten, og det vil
+    derfor forekomme noen api-endringer fremover. Kjente problemer er at vi ikke gir feilmelding dersom bruker taster
+    inn ugyldig dato, og at onChange ikke trigges når brukeren fjerner en inntastet dato.
+  </AlertDescription>
 </Alert>
 
 <Feedback component="Datepicker" />
@@ -67,8 +68,8 @@ import { Datepicker } from "@kvib/react";
   title="Datepicker i form"
   description={
     <Text>
-      Ved å benytte seg av Datepicker sammen med <Code>Form Control</Code> vil du få kontekst som <Code>isInvalid</Code>,
-      <Code>isDisabled</Code> og
+      Ved å benytte seg av Datepicker sammen med <Code>Form Control</Code> vil du få kontekst som <Code>isInvalid</Code>
+      ,<Code>isDisabled</Code> og
       <Code>isRequired</Code>. Slik vil det også være enkelt å legge til en label.
     </Text>
   }
@@ -88,13 +89,6 @@ import { Datepicker } from "@kvib/react";
       </Text>
       <Text>
         Det er mulig å velge mellom to colorSchemes: <Code>"blue"</Code> og <Code>"green"</Code>
-        <Alert status="warning">
-          <AlertIcon/>
-          <AlertDescription>
-            De fleste komponentene bytter automatisk til riktig colorScheme basert på colorScheme valgt i oppsett av KvibProvider. 
-            På data-picker må dette foreløpig settes manuelt hver gang den brukes for å få blått colorScheme!
-          </AlertDescription>      
-        </Alert>
       </Text>
     </Box>
   }

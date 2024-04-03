@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { IconButton, Input, theme } from "@kvib/react/src";
+import { IconButton, Input, defaultKvibTheme } from "@kvib/react/src";
 import { useTimeFieldState } from "react-stately";
 import { TimeValue } from "@react-types/datepicker";
 import { CalendarDateTime, parseTime } from "@internationalized/date";
@@ -135,13 +135,13 @@ const getFocusStyles = (
       case "outline":
         return {
           borderColor: "blue.500",
-          boxShadow: `0 0 0 1px ${theme.colors.blue[500]}`,
+          boxShadow: `0 0 0 1px ${defaultKvibTheme.colors.blue[500]}`,
           _hover: { borderColor: isInvalid ?? "blue.500" },
         };
       case "flushed":
         return {
           borderColor: "blue.500",
-          boxShadow: `0 1px 0 0 ${theme.colors.blue[500]}`,
+          boxShadow: `0 1px 0 0 ${defaultKvibTheme.colors.blue[500]}`,
           _hover: { borderColor: isInvalid ?? "blue.500" },
         };
       default:

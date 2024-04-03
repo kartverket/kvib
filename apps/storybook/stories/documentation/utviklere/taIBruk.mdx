@@ -43,9 +43,9 @@ Dette gjøres ved å legge til et customTheme med colorScheme: "blue", og benytt
 ```tsx
 // I din src/app.tsx fil:
 import "./App.css";
-import { Button, KvibProvider, extendTheme, theme, withDefaultColorScheme } from "@kvib/react";
+import { Button, KvibProvider, extendTheme, defaultKvibTheme, withDefaultColorScheme } from "@kvib/react";
 
-const customTheme = extendTheme(withDefaultColorScheme({ colorScheme: "blue" }), theme);
+const customTheme = extendTheme(withDefaultColorScheme({ colorScheme: "blue" }), defaultKvibTheme);
 
 function App() {
   return (
