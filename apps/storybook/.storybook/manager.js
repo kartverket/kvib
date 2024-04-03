@@ -9,6 +9,8 @@ addons.setConfig({
   panelPosition: "bottom",
   sidebar: {
     showRoots: true,
-    collapsedRoots: ["other"],
+    collapsedRoots: ["for-utviklere", "for-designere", "design-fundament", 
+    "layout", "media", "hooks", "sideelementer", "navigasjon", "søk", "datavisning", "skjemaelementer",
+    "tilbakemelding", "overlay", "animasjoner", "annet",  "other"],
   },
 });

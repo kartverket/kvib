@@ -32,7 +32,7 @@ export const parameters = {
         ["Bidra med kode", ["Hurtigveiledning", "Bygge", "Style", "Dokumentere", "Teste", "Publish"], "Kom i gang"],
         "For designere",
         ["Bidra med design", "Kom i gang"],
-        "Design Fundament",
+        "Designfundament",
         "Layout",
         "Media",
         "Hooks",

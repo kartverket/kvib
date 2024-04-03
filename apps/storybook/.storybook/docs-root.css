@@ -21,8 +21,8 @@ div[role="main"] > :first-child {
 .sidebar-item {
   border-radius: 4px !important;
   margin: 0 auto !important;
-  padding-top: 5px !important;
-  padding-bottom: 5px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
   display: flex !important;
   align-items: center !important;
   width: 90% !important;
@@ -30,17 +30,23 @@ div[role="main"] > :first-child {
 
 .sidebar-item.sidebar-item a {
   font-family: Mulish, sans-serif !important;
-  font-size: 14px !important;
+  font-size: 18px !important;
   font-style: normal !important;
+  line-height: 28px !important;
+  font-weight: 400 !important;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
 }
 
 button.sidebar-item.sidebar-item {
-  height: 32.5px !important;
-  width: 90% !important;
   margin: 0 auto !important;
   font-family: Mulish, sans-serif !important;
-  font-size: 14px !important;
+  font-size: 18px !important;
   font-style: normal !important;
+  line-height: 28px !important;
+  font-weight: 400 !important;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
 }
 
 /* Folder when open */
@@ -63,15 +69,17 @@ button.sidebar-item.sidebar-item {
 /* Sidebar subheadings */
 .sidebar-subheading {
   color: black !important;
-  margin: auto;
+  margin: 6px auto !important;
   width: 90%;
-  padding-top: 5px !important;
-  padding-bottom: 5px !important;
-  text-transform: capitalize !important;
+  /* padding-top: 5px !important; */
+  /* padding-bottom: 5px !important; */
+  text-transform: none !important;
   font-family: Mulish, sans-serif !important;
   font-style: normal !important;
-  font-size: 14px !important;
+  font-size: 16px !important;
   letter-spacing: normal !important;
+  font-weight: 600 !important;
+  line-height: 24px !important;
 }
 
 /* Color for searched term when searching */
