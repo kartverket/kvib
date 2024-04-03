@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 4.1.0
+
+### Minor Changes
+
+- db17c98: La til optionLabelFormatter for AsyncSearch
+
 ## 4.0.0
 
 ### Major Changes
