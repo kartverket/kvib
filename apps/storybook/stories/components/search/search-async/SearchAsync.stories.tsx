@@ -1,5 +1,14 @@
-import { SearchAsync as KvibSearchAsync, Stack as KvibStack, Box, Icon, Text } from "@kvib/react/src";
+import {
+  SearchAsync as KvibSearchAsync,
+  Stack as KvibStack,
+  Box,
+  Icon,
+  Text,
+  SearchAsyncProps,
+  Badge,
+} from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
+import { FormatOptionLabelMeta } from "chakra-react-select";
 
 const meta: Meta<typeof KvibSearchAsync> = {
   title: "Søk/SearchAsync",
@@ -101,6 +110,12 @@ const meta: Meta<typeof KvibSearchAsync> = {
       },
       control: "text",
     },
+    optionLabelFormatter: {
+      table: {
+        type: { summary: "(data: T, formatOptionLabelMeta: FormatOptionLabelMeta<T>) => ReactNode" },
+      },
+      control: "text",
+    },
     isDisabled: {
       table: {
         type: { summary: "boolean" },
@@ -120,7 +135,8 @@ const meta: Meta<typeof KvibSearchAsync> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof KvibSearchAsync>;
+type Fruit = { label: string; value: string };
+type Story = StoryObj<typeof KvibSearchAsync<Fruit>>;
 
 export const SearchAsync: Story = {
   args: {},
@@ -138,7 +154,7 @@ export const SearchAsync: Story = {
   ),
 };
 
-const fruits = [
+const fruits: Fruit[] = [
   { label: "Eple", value: "eple" },
   { label: "Banan", value: "banan" },
   { label: "Kirsebær", value: "kirsebær" },
@@ -174,7 +190,31 @@ export const SearchAsyncResults: Story = {
     placeholder: "Søk etter frukt...",
     isMulti: false,
   },
-  render: (args) => (
+  render: (args: SearchAsyncProps<Fruit>) => (
+    <Box h="20rem">
+      <KvibSearchAsync {...args} />
+    </Box>
+  ),
+};
+
+const boldAndBadgeLabelFormatter = (data: Fruit) => {
+  return (
+    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", width: "100%" }}>
+      <b>{data.label}</b>
+      {data.label === "Kiwi" ? <Badge>Frukt (ekkel)</Badge> : <Badge>Frukt</Badge>}
+    </div>
+  );
+};
+
+export const SearchAsyncResultsFormatted: Story = {
+  args: {
+    loadOptions: mockLoadOptions,
+    onChange: handleChange,
+    optionLabelFormatter: boldAndBadgeLabelFormatter,
+    placeholder: "Søk etter frukt...",
+    isMulti: false,
+  },
+  render: (args: SearchAsyncProps<Fruit>) => (
     <Box h="20rem">
       <KvibSearchAsync {...args} />
     </Box>

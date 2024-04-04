@@ -15,3 +15,4 @@ export { timepickerTheme as Timepicker } from "./timepicker";
 export { fileUploadTheme as FileUpload } from "./fileUpload";
 export { alertTheme as Alert } from "./alert";
 export { datepickerTheme as Datepicker } from "./datepicker";
+export { modalTheme as Modal } from "./modal";

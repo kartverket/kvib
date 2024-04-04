@@ -1,5 +1,17 @@
 # @kvib/react
 
+## 4.1.1
+
+### Patch Changes
+
+- bed2965: Modal overlay fra blackAlpha 600 til blackAlpha 700
+
+## 4.1.0
+
+### Minor Changes
+
+- db17c98: La til optionLabelFormatter for AsyncSearch
+
 ## 4.0.0
 
 ### Major Changes
