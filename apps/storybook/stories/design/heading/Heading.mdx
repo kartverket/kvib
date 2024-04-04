@@ -1,0 +1,46 @@
+import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
+import * as HeadingStories from "./Heading.stories";
+import { Feedback, DocsStory, DocsContainer } from "../../templates";
+import { Text } from "@kvib/react/src";
+
+<Meta of={HeadingStories} />
+
+<DocsContainer>
+
+# Heading
+
+Heading skal brukes til overskrifter. Heading inneholder `Box` så det er mulig å bruke alle style props derfra.
+Den render en `<h2>`som standard. Dersom du ønsker at overskriften skal avkortes etter et spesifikt antall linjer, kan du bruke `noOfLines`-propen.
+
+## Ta i bruk
+
+```jsx
+import { Heading } from "@kvib/react";
+```
+
+<Feedback component="Heading" />
+
+<DocsStory
+  isVertical
+  title="Størrelser"
+  description={
+    <Text>
+      Bruk <code>size</code> prop for å endre størrelse på <code>Heading</code>.
+    </Text>
+  }
+  story={<Canvas of={HeadingStories.HeadingSizes} sourceState="hidden" />}
+/>
+
+<DocsStory
+  isVertical
+  title="Props"
+  description={""}
+  story={
+    <>
+      <Canvas of={HeadingStories.Heading} />
+      <Controls of={HeadingStories.Heading} />
+    </>
+  }
+/>
+
+</DocsContainer>
