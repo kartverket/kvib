@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 4.1.2
+
+### Patch Changes
+
+- c208564: Håndterer isCurrentPage-styling for Breadcrumb
+
 ## 4.1.1
 
 ### Patch Changes
