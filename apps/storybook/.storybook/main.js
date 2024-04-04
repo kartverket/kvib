@@ -1,4 +1,8 @@
 module.exports = {
+  framework: {
+    name: "@storybook/react-webpack5",
+    options: {},
+  },
   staticDirs: ["../public"],
   stories: ["../stories/**/*.mdx", "../stories/**/*.stories.@(js|jsx|ts|tsx)"],
   addons: [
@@ -14,10 +18,6 @@ module.exports = {
       },
     },
   ],
-  framework: {
-    name: "@storybook/react-webpack5",
-    options: {},
-  },
   typescript: {
     check: false,
     checkOptions: {},
@@ -39,6 +39,6 @@ module.exports = {
     return config;
   },
   docs: {
-    autodocs: true,
+    autoDocs: true,
   },
 };
