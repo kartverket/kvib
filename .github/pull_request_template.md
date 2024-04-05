@@ -4,12 +4,11 @@
 
 # Sjekkliste
 
-<!-- Sjekk av disse punktene for hver endring -->
+<!-- Sjekk av disse punktene for hver endring. Disse utgjør et minimum av sjekker som skal være gjennomført før PR-en merges. -->
 
-- [ ] Sjekket at komponenten matcher designet i Figma
-- [ ] Har fått design review med en designer
-- [ ] Sjekket universell utforming for komponenten. Se for eksempel:
-  - https://www.magentaa11y.com/web/
-  - https://a11y-101.com/development
-  - https://www.a11yproject.com/checklist/#appearance
-- [ ] Denne PR-en inneholder en enkelt komponent
+- [ ] Alle tester har kjørt, og er grønne.
+- [ ] Dersom det er lagt til ny funksjonalitet er det også lagt til stories og dokumentasjon på denne i storybook. Stories skal dekke de viktigste tilstandene visuelt, og blir blant annet brukt til å kjøre automatisk testing av universell utforming, i tillegg til dokumentasjon.
+- [ ] Har sjekket PR-preview, som kommer som en egen lenke lenger ned i pull-request og gjort manuell testing av de viktigste endringene.
+- [ ] Har lagt ut melding med lenke til PR i kanalen #gen-designsystem på slack.
+- [ ] Har fått PR-en godkjent av et teammedlemm i designsystemteamet eller et annet produktteam som bruker designsystemet (ikke eget team).
+- [ ] Ved store endringer, eller mulighet for utilsiktede sideeffekter: Har kjørt Chromatic-action, og sett igjennom at endringene ikke har uønskede sideeffekter. Se https://kartverket.atlassian.net/l/cp/MG5W191b for mer info om bruk av Chromatic.
