@@ -1,6 +1,6 @@
+import { VStack } from "@chakra-ui/react";
 import { Link as KvibLink } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
-import { VStack } from "@chakra-ui/react";
 
 const meta: Meta<typeof KvibLink> = {
   title: "Navigasjon/Link",
@@ -33,6 +33,11 @@ const meta: Meta<typeof KvibLink> = {
         type: { summary: "string" },
       },
       control: "text",
+    },
+    iconAriaIsHidden: {
+      table: { type: { summary: "boolean" } },
+      control: "boolean",
+      defaultValue: { summary: false },
     },
   },
 };
