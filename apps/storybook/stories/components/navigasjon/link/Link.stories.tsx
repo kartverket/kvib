@@ -34,11 +34,6 @@ const meta: Meta<typeof KvibLink> = {
       },
       control: "text",
     },
-    iconAriaIsHidden: {
-      table: { type: { summary: "boolean" } },
-      control: "boolean",
-      defaultValue: { summary: false },
-    },
   },
 };
 

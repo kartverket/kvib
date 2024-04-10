@@ -2,4 +2,4 @@
 "@kvib/react": minor
 ---
 
-Option for hiding aria on external link icon
+Remove aria-label for launch icon on external links

@@ -5,9 +5,6 @@ export type LinkProps = Omit<ChakraLinkProps, "colorScheme" | "variant"> & {
    * @default green
    */
   colorScheme?: "green" | "blue";
-
-  /**Decides whether a screen reader will vocalize the icon name or not */
-  iconAriaIsHidden?: boolean;
 };
 
 /** Link to different sites or parts of site
@@ -23,9 +20,8 @@ export const Link = forwardRef<LinkProps, "a">(({ children, ...props }, ref) => 
         <span
           className="material-symbols-rounded"
           style={{ fontSize: "18px", verticalAlign: "middle", marginLeft: "4px" }}
-          aria-label="launch-ikon"
-          aria-hidden={props.iconAriaIsHidden}
           role="link"
+          aria-hidden
         >
           launch
         </span>
