@@ -20,19 +20,19 @@ export const ComponentList: Record<string, Category> = {
       Button: {
         name: "Button",
         description: "Button",
-        code: "knapper-button--button",
+        code: "skjemaelementer-button--button",
         link: "button",
       },
       IconButton: {
         name: "IconButton",
         description: "IconButton",
-        code: "knapper-icon-button--icon-button",
+        code: "skjemaelementer-icon-button--icon-button",
         link: "icon-button",
       },
       CloseButteon: {
         name: "CloseButton",
         description: "CloseButton",
-        code: "knapper-close-button--close-button",
+        code: "skjemaelementer-close-button--close-button",
         link: "close-button",
       },
     },
@@ -296,21 +296,21 @@ export const ComponentList: Record<string, Category> = {
       Heading: {
         name: "Heading",
         description: "",
-        code: "typografi-heading--heading",
+        code: "designfundament-heading--heading",
 
         link: "heading",
       },
       Text: {
         name: "Text",
         description: "",
-        code: "typografi-text--text",
+        code: "designfundament-text--text",
 
         link: "text",
       },
       Highlight: {
         name: "Highlight",
         description: "",
-        code: "typografi-highlight--highlight",
+        code: "datavisning-highlight--highlight",
 
         link: "highlight",
       },
