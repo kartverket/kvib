@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 4.3.0
+
+### Minor Changes
+
+- fd76200: Legg til mulighet for bruk av ref på SearchAsync
+
 ## 4.2.0
 
 ### Minor Changes
