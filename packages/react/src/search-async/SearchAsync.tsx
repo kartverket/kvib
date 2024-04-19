@@ -11,7 +11,7 @@ import {
 } from "chakra-react-select";
 import { SizeProp, Variant } from "chakra-react-select/dist/types/types";
 
-export type { ActionMeta, SelectInstance, GroupBase } from "chakra-react-select";
+export type SearchAsyncElement<T> = SelectInstance<T, boolean, GroupBase<T>>;
 
 // Props interface is defined with a generic T to allow flexibility in the data type of options.
 export type BaseProps<T> = {
@@ -66,7 +66,7 @@ export type BaseProps<T> = {
   /** Reference to the instance of the select element. Note that this is not a default HTMLSelectElement, but a class from the react-select package. As such, the
    * type must be imported from KVIB.
    */
-  ref?: Ref<SelectInstance<T, boolean, GroupBase<T>>>;
+  ref?: Ref<SearchAsyncElement<T>>;
 };
 
 type WithMulti<T> = {
