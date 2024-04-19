@@ -8,7 +8,6 @@ import {
   Badge,
 } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
-import { FormatOptionLabelMeta } from "chakra-react-select";
 
 const meta: Meta<typeof KvibSearchAsync> = {
   title: "Søk/SearchAsync",
