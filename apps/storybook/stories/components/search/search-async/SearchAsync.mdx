@@ -183,11 +183,11 @@ I dette eksempelet så setter vi opp en enkel SearchAsync, hvor vi ønsker at ko
 
 <Source
   code={`
-import { SearchAsync, SelectInstance, GroupBase } from "@kvib/react";
+import { SearchAsync, SearchAsyncElement } from "@kvib/react";
 import { useEffect, useRef, useState } from "react";
 
 const Component = (isOpen: boolean) => {
-  const searchRef = useRef<SelectInstance<number, boolean, GroupBase<number>>>(null);
+  const searchRef = useRef<SearchAsyncElement<number>>(null);
   const [currentValue, setCurrentValue] = useState<number | null>(-1);
 
   useEffect(() => {
