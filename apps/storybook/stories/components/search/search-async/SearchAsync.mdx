@@ -187,8 +187,8 @@ import { SearchAsync, SelectInstance, GroupBase } from "@kvib/react";
 import { useEffect, useRef, useState } from "react";
 
 const Component = (isOpen: boolean) => {
-const searchRef = useRef<SelectInstance<number, boolean, GroupBase<number>>>(null);
-const [currentValue, setCurrentValue] = useState<number | null>(-1);
+  const searchRef = useRef<SelectInstance<number, boolean, GroupBase<number>>>(null);
+  const [currentValue, setCurrentValue] = useState<number | null>(-1);
 
     useEffect(() => {
       if (isOpen && searchRef.current != null) {
@@ -208,7 +208,6 @@ const [currentValue, setCurrentValue] = useState<number | null>(-1);
         ref={searchRef}
       />
     );
-
 };`}
 dark
 />
