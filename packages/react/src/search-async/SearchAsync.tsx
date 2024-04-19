@@ -1,8 +1,17 @@
-import { ReactNode, useEffect, useRef } from "react";
+import { ReactNode, Ref, useEffect, useRef } from "react";
 import { Text } from "@kvib/react/src";
-import { ActionMeta, FormatOptionLabelMeta, AsyncSelect as ReactSearch } from "chakra-react-select";
-import { GroupBase, OptionsOrGroups } from "chakra-react-select";
+import { forwardRef } from "@chakra-ui/react";
+import {
+  ActionMeta,
+  SelectInstance,
+  GroupBase,
+  OptionsOrGroups,
+  FormatOptionLabelMeta,
+  AsyncSelect as ReactSearch,
+} from "chakra-react-select";
 import { SizeProp, Variant } from "chakra-react-select/dist/types/types";
+
+export type { ActionMeta, SelectInstance, GroupBase } from "chakra-react-select";
 
 // Props interface is defined with a generic T to allow flexibility in the data type of options.
 export type BaseProps<T> = {
@@ -53,6 +62,11 @@ export type BaseProps<T> = {
 
   /** Function for formatting the labels in the dropdown menu */
   optionLabelFormatter?: (data: T, formatOptionLabelMeta: FormatOptionLabelMeta<T>) => ReactNode;
+
+  /** Reference to the instance of the select element. Note that this is not a default HTMLSelectElement, but a class from the react-select package. As such, the
+   * type must be imported from KVIB.
+   */
+  ref?: Ref<SelectInstance<T, boolean, GroupBase<T>>>;
 };
 
 type WithMulti<T> = {
@@ -70,27 +84,36 @@ type WithoutMulti<T> = {
 
 export type SearchAsyncProps<T> = BaseProps<T> & (WithMulti<T> | WithoutMulti<T>);
 
+function genericForwardRef<T, P = {}>(
+  render: (props: P, ref: React.Ref<T>) => React.ReactNode,
+): (props: P, ref: React.Ref<T>) => React.ReactNode {
+  return forwardRef(render) as any;
+}
+
 // SearchAsync uses the async version of react-select to fetch and display options.
-export const SearchAsync = <T extends unknown>({
-  loadOptions,
-  onChange,
-  placeholder,
-  debounceTime,
-  autoFocus,
-  className,
-  isClearable = true,
-  dropdownIndicator,
-  size,
-  defaultOptions,
-  variant,
-  id,
-  isMulti = false,
-  noOptionsMessage,
-  isDisabled,
-  focusBorderColor,
-  value,
-  optionLabelFormatter,
-}: SearchAsyncProps<T>) => {
+const SearchAsyncNoRef = <T extends unknown>(
+  {
+    loadOptions,
+    onChange,
+    placeholder,
+    debounceTime,
+    autoFocus,
+    className,
+    isClearable = true,
+    dropdownIndicator,
+    size,
+    defaultOptions,
+    variant,
+    id,
+    isMulti = false,
+    noOptionsMessage,
+    isDisabled,
+    focusBorderColor,
+    value,
+    optionLabelFormatter,
+  }: SearchAsyncProps<T>,
+  ref: Ref<SelectInstance<T, boolean, GroupBase<T>>> | undefined,
+) => {
   const noOptionsMessageDefault = ({ inputValue }: { inputValue: string }): ReactNode => {
     if (inputValue.replaceAll(/\s/g, "").length < 1) {
       return null;
@@ -138,9 +161,12 @@ export const SearchAsync = <T extends unknown>({
       isDisabled={isDisabled}
       focusBorderColor={focusBorderColor}
       value={value}
+      ref={ref}
     />
   );
 };
+
+export const SearchAsync = genericForwardRef(SearchAsyncNoRef);
 
 type Timer = ReturnType<typeof setTimeout>;
 type SomeFunction<T> = (inputValue: string, callback: (options: OptionsOrGroups<T, GroupBase<T>>) => void) => void;
