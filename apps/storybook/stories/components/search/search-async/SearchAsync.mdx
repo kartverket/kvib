@@ -190,24 +190,24 @@ const Component = (isOpen: boolean) => {
   const searchRef = useRef<SelectInstance<number, boolean, GroupBase<number>>>(null);
   const [currentValue, setCurrentValue] = useState<number | null>(-1);
 
-    useEffect(() => {
-      if (isOpen && searchRef.current != null) {
-        searchRef.current.focus();
-      }
-    }, [isOpen]);
+  useEffect(() => {
+    if (isOpen && searchRef.current != null) {
+      searchRef.current.focus();
+    }
+  }, [isOpen]);
 
-    return (
-      <SearchAsync
-        onChange={(number: number | null) => {
-          setCurrentValue(number);
-        }}
-        value={currentValue}
-        loadOptions={() => {
-          return [1, 2, 3];
-        }}
-        ref={searchRef}
-      />
-    );
+  return (
+    <SearchAsync
+      onChange={(number: number | null) => {
+        setCurrentValue(number);
+      }}
+      value={currentValue}
+      loadOptions={() => {
+        return [1, 2, 3];
+      }}
+      ref={searchRef}
+    />
+  );
 };`}
 dark
 />
