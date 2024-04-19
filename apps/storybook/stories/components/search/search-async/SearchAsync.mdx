@@ -173,6 +173,51 @@ const noOptionsMessage = ({ inputValue }: { inputValue: string }) => {
 
 </DocsContainer>
 
+<DocsHeading light>Bruk av ref</DocsHeading>
+<DocsContainer>
+  Ref kan brukes dersom det er nødvendig å interagere med selve select elementet. Merk at dette ikke er et standard{" "}
+  <Code>HTMLSelectElement</Code>, men en instans av en klasse fra en av pakkene KVIB bruker. Ettersom ref er av en litt
+  spesiell type så viser vi et eksempel på bruk her.
+
+I dette eksempelet så setter vi opp en enkel SearchAsync, hvor vi ønsker at komponenten skal legge fokus på SearchAsync input-feltet når komponenten er åpen:
+
+<Source
+  code={`
+import { SearchAsync, SelectInstance, GroupBase } from "@kvib/react";
+import { useEffect, useRef, useState } from "react";
+
+const Component = (isOpen: boolean) => {
+const searchRef = useRef<SelectInstance<number, boolean, GroupBase<number>>>(null);
+const [currentValue, setCurrentValue] = useState<number | null>(-1);
+
+    useEffect(() => {
+      if (isOpen && searchRef.current != null) {
+        searchRef.current.focus();
+      }
+    }, [isOpen]);
+
+    return (
+      <SearchAsync
+        onChange={(number: number | null) => {
+          setCurrentValue(number);
+        }}
+        value={currentValue}
+        loadOptions={() => {
+          return [1, 2, 3];
+        }}
+        ref={searchRef}
+      />
+    );
+
+};`}
+dark
+/>
+
+Legg merke til her at `useRef` sin type bruker genericen T som også blir brukt et par andre steder i props.
+Så når du skal sette typen for `useRef` må du være bevisst på hvilken type du bruker som options for resten av komponenten.
+
+</DocsContainer>
+
 <DocsHeading light>Retningslinjer</DocsHeading>
 
 <DocsContainer>
@@ -191,19 +236,19 @@ Det er anbefalt å bruke `<form>` rundt SearchAsync dersom du skal bruke det val
 <Source
   code={`
   <form onSubmit={handleSubmit}>
-      <FormControl>
-        <FormLabel htmlFor="async-search">Søk etter frukt</FormLabel>
-          <SearchAsync
-            loadOptions={mockLoadOptions}
-            onChange={handleChange}
-            placeholder="Søk etter frukt..."
-            isMulti={false}
-          />
-        <Button mt={4} colorScheme="blue" type="submit">
-          Send
-        </Button>
-      </FormControl>
-    </form>`}
+    <FormControl>
+      <FormLabel htmlFor="async-search">Søk etter frukt</FormLabel>
+        <SearchAsync
+          loadOptions={mockLoadOptions}
+          onChange={handleChange}
+          placeholder="Søk etter frukt..."
+          isMulti={false}
+        />
+      <Button mt={4} colorScheme="blue" type="submit">
+        Send
+      </Button>
+    </FormControl>
+  </form>`}
   dark
 />
 
