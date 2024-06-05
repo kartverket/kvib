@@ -1,37 +1,63 @@
 import { Meta } from "@storybook/addon-docs";
 import { Banner } from "./documentation/utils/Banner";
-import { SimpleGrid } from "@kvib/react/src/";
+import { SimpleGrid, Box } from "@kvib/react/src/";
 import { IntroButton, IntroCardGrid } from "./documentation/utils/IntroButton";
 import * as IntroCards from "./documentation/utils/IntroCard";
 
 <Meta title="Oversikt/Introduksjon" />
 
-<Banner />
+<Banner>
 
-<IntroCardGrid >
-
+<Box>
+<IntroCardGrid>
 <IntroButton
-  icon="assets/Grid.svg"
+  icon="grid_on"
   href="/?path=/docs/oversikt-komponentoversikt--docs"
   title="Komponenter"
-  description="Alle komponentene i designsystemet"
+  description="Et bibliotek med komponenter, forhåndsvisninger, kildekode og retningslinjer for bruk."
 />
 
 <IntroButton
-  icon="assets/Palette.svg"
+  icon="palette"
   href="/?path=/docs/designfundament-farger--docs"
-  title="Design tokens"
-  description="Farger, breakpoints, spacing, etc."
+  title="Tokens"
+  description="Alt av farger, størrelser og andre tokens som brukes i designsystemet."
 />
 
 <IntroButton
-  icon="assets/Compass.svg"
+  icon="insert_emoticon"
   href="/?path=/docs/media-ikoner--docs"
   title="Ikoner"
-  description="Oversikt over ikoner"
+  description="En oversikt over ikonbiblioteket som Kartverket bruker."
+/>
+</IntroCardGrid>
+
+<IntroCardGrid>
+<IntroButton
+  icon="grid_on"
+  href="https://www.kartverket.no/om-kartverket/kartverkets-identitet"
+  title="Visuell identitet"
+  isExternal
+  description="Bli kjent med Kartverket sin merkevare. Veiledning og retningslinjer til deg som skal ta identiteten i bruk."
+/>
+
+<IntroButton
+  icon="palette"
+  href="/?path=/docs/for-utviklere-kom-i-gang--docs"
+  title="For utviklere"
+  description="Kom i gang som utvikler som skal ta i bruk designsystemet."
+/>
+
+<IntroButton
+  icon="insert_emoticon"
+  href="/?path=/docs/for-designere-bidra-med-design--docs"
+  title="For designere"
+  description="Kom i gang som designer som skal ta i bruk designsystemet."
 />
 
 </IntroCardGrid>
+</Box>
+</Banner>
 
 <SimpleGrid columns={[1, 1, 2]} spacing={5}>
 
@@ -44,4 +70,3 @@ import * as IntroCards from "./documentation/utils/IntroCard";
 <IntroCards.FeedbackCard />
 
 </SimpleGrid>
-./documentation/Banner./templates./documentation/IntroButton./documentation/IntroCard

@@ -15,7 +15,7 @@ export const DocsHeading = ({ children, light }: DocsHeadingProps) => {
       alignItems="center"
       display="flex"
       marginBottom="2rem"
-      marginTop="4rem"
+      marginTop="1rem"
       className="docs-heading"
     >
       <Heading margin="0" color={light ? "gray.900" : "white"} size={light ? "md" : "sm"} as="h2" id={children}>

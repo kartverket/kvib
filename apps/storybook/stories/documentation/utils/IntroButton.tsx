@@ -1,39 +1,35 @@
-import { Card, Link, Text, Image, Flex, Grid } from "@kvib/react/src";
-import { useState } from "react";
+import { Card, Text, Flex, Grid, Icon, Box } from "@kvib/react/src";
 
 export const IntroButton = ({
-  icon,
   href,
   title,
   description,
+  isExternal,
 }: {
-  icon: "string";
+  icon: "home";
   href: string;
   title: string;
   description: string;
+  isExternal: boolean;
 }) => {
-  const [isHovered, setIsHovered] = useState(false);
   return (
     <Card
       as="a"
       variant="outline"
-      _hover={{ shadow: "md" }}
-      _focus={{ borderColor: "green.400", boxShadow: "0 0 0 1px green" }}
-      borderColor="gray.300"
-      shadow="sm"
-      backgroundColor={"green.50"}
+      _hover={{ background: "green.50" }}
       padding="1rem"
       href={href}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      target={isExternal ? "_blank" : ""}
     >
-      <Flex gap="0.5rem" fontWeight="bold" marginBottom="0.5rem">
-        <Image src={icon} />
-        <Link sx={{ textDecoration: isHovered ? "none" : "underline", color: isHovered ? "green.400" : "green.500" }}>
-          {title}
-        </Link>
+      <Flex gap="0.5rem" fontWeight="bold" marginBottom="0.5rem" alignItems="center">
+        <Text fontSize="lg" as="b" color="green.500">
+          {title}{" "}
+          <Box sx={{ display: isExternal ? "inline-block" : "none" }}>
+            <Icon icon="open_in_new" className="docs-icon" size={18} weight={400} />
+          </Box>
+        </Text>
       </Flex>
-      <Text fontWeight="500" margin="0">
+      <Text fontWeight="500" margin="0" color="green.500">
         {description}
       </Text>
     </Card>
@@ -42,7 +38,7 @@ export const IntroButton = ({
 
 export const IntroCardGrid = ({ children }: { children: React.ReactNode }) => {
   return (
-    <Grid gap="1rem" templateColumns={["repeat(1, 1fr)", "repeat(1, 1fr)", "repeat(3, 1fr)"]} marginBottom={"2rem"}>
+    <Grid gap="1rem" templateColumns={["repeat(1, 1fr)", "repeat(1, 1fr)", "repeat(3, 1fr)"]} marginBottom="1rem">
       {children}
     </Grid>
   );
