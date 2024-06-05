@@ -14,8 +14,9 @@ interface Category {
 }
 
 export const ComponentList: Record<string, Category> = {
-  Buttons: {
-    name: "Knapper",
+  Form: {
+    name: "Skjemaelementer",
+
     components: {
       Button: {
         name: "Button",
@@ -35,12 +36,6 @@ export const ComponentList: Record<string, Category> = {
         code: "skjemaelementer-close-button--close-button",
         link: "close-button",
       },
-    },
-  },
-  Form: {
-    name: "Skjemaelementer",
-
-    components: {
       FormControl: {
         name: "FormControl",
         description: "FormControl",
