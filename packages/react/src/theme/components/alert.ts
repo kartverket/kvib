@@ -54,7 +54,7 @@ const variantSolid = defineStyle((props) => {
       },
     };
   }
-  if (s === "info" || s === "loading") {
+  if (s === "info") {
     return {
       title: {
         color: colors.white,
