@@ -1,5 +1,5 @@
-import { Box, Card, Heading, SimpleGrid, Stack, Text, Flex, Badge, Link } from "@kvib/react/src";
-import { ComponentsBanner } from "./ComponentsBanner";
+import { Box, Card, Heading, SimpleGrid, Stack, Text, Flex, Badge, Link, Icon } from "@kvib/react/src";
+import { ComponentsBanner } from "../../templates/ComponentsBanner";
 import { ComponentList } from "./ComponentList";
 import { Story } from "@storybook/blocks";
 import { useEffect, useRef, useState } from "react";
@@ -7,7 +7,7 @@ import { useEffect, useRef, useState } from "react";
 export const Components = () => {
   return (
     <Box>
-      <ComponentsBanner />
+      <ComponentsBanner title="Komponenter" description="Se en full oversikt over komponentene i designsystemet." />
       <Stack gap="3rem">
         {Object.keys(ComponentList).map((categoryKey) => {
           const category = ComponentList[categoryKey];
@@ -50,24 +50,18 @@ const ComponentCard = ({
   category: string;
 }) => {
   return (
-    <Card
-      variant="outline"
-      _hover={{ shadow: "md" }}
-      _focus={{ borderColor: "green.400", boxShadow: "0 0 0 1px green" }}
-      borderRadius="xl"
-      size="sm"
-    >
+    <Card variant="unstyled" size="sm">
       <Badge variant="solid" colorScheme="green" css={{ position: "absolute", left: "0.8rem", top: "0.8rem" }}>
         {tag}
       </Badge>
       <Flex
-        bg="blue.50"
+        bg="gray.50"
         border="none"
         height="10rem"
         alignItems="center"
         padding="2rem"
         width="100%"
-        borderTopRadius="xl"
+        borderRadius="md"
         overflow="hidden"
       >
         {/* The width needs to be set because some of the stories fills the container */}
@@ -76,9 +70,16 @@ const ComponentCard = ({
         </Box>
       </Flex>
 
-      <Stack _hover={{ boxShadow: "0 2px 0 0 green inset" }}>
-        <Link fontWeight="bold" padding="1rem" href={`/?path=/docs/${category}-${link}--docs`}>
-          {title}
+      <Stack align="center">
+        <Link
+          padding="1rem"
+          href={`/?path=/docs/${category}-${link}--docs`}
+          display="flex"
+          alignItems="center"
+          gap="4px"
+          textDecoration="none"
+        >
+          Gå til {title} <Icon icon="arrow_forward" className="docs-icon" weight={300} size={18} aria-hidden />
         </Link>
       </Stack>
     </Card>

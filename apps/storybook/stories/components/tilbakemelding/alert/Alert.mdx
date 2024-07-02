@@ -1,13 +1,16 @@
 import { Title, Canvas, Meta, Story, Controls } from "@storybook/blocks";
 import * as AlertStories from "./Alert.stories";
+import { ComponentsBanner } from "../../../templates/ComponentsBanner";
 import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
 import { Box } from "@kvib/react/src";
 
 <Meta of={AlertStories} />
 
-# Alert
-
-Alert brukes til meldinger som kommuniserer informasjon uten at brukeren trenger å gjøre noe.
+      <ComponentsBanner
+        title="Alert"
+        description="Alert brukes til meldinger som kommuniserer viktig informasjon sammen med, eller i, andre komponenter som brukeren interagerer med, for eksempel underveis i utfylling av skjema."
+        hasCodeBelow
+      />
 
 ```jsx
 import { Alert, AlertIcon, AlertTitle, AlertDescription } from "@kvib/react";

@@ -20,8 +20,8 @@ export const Link = forwardRef<LinkProps, "a">(({ children, ...props }, ref) => 
         <span
           className="material-symbols-rounded"
           style={{ fontSize: "18px", verticalAlign: "middle", marginLeft: "4px" }}
-          aria-label="launch-ikon"
           role="link"
+          aria-hidden
         >
           launch
         </span>

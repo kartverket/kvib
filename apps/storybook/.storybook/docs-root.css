@@ -6,11 +6,28 @@ div[role="main"] > :first-child {
 
 /* Container for MDX files */
 .sbdocs.sbdocs-wrapper {
-  background: linear-gradient(to bottom right, #e9f4ec 0%, #ffffff 20%) fixed;
+  padding: 20px !important;
+}
+
+.docblock-source {
+  margin: 0 !important;
 }
 
 #storybook-explorer-searchfield {
   border-radius: 4px !important;
+}
+
+.ComponentsBanner {
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.chakra-card {
+  transition: box-shadow 0.2s ease;
+}
+
+.docs-icon {
+  font-family: "Material Symbols Rounded" !important;
 }
 
 /* Sidebar */
@@ -25,28 +42,52 @@ div[role="main"] > :first-child {
   padding-bottom: 0 !important;
   display: flex !important;
   align-items: center !important;
-  width: 90% !important;
+  width: 100% !important;
+  font-size: 14px !important;
+  padding-right: 0 !important;
+}
+
+.sidebar-header > div > a {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.sidebar-header > a {
+  box-shadow: initial !important;
+}
+
+.sidebar-header > div > button {
+  color: #156630;
+}
+
+.sidebar-header > div > button:hover {
+  background-color: #e9f4ec;
+  color: #156630;
+}
+
+.sidebar-header > div > button:active,
+.sidebar-header > div > button:focus {
+  color: white;
+  background-color: #156630;
 }
 
 .sidebar-item.sidebar-item a {
-  font-family: Mulish, sans-serif !important;
-  font-size: 18px !important;
+  font-size: 14px !important;
   font-style: normal !important;
   line-height: 28px !important;
   font-weight: 400 !important;
-  padding-top: 0px !important;
-  padding-bottom: 0px !important;
+  padding: 0 12px !important;
 }
 
 button.sidebar-item.sidebar-item {
   margin: 0 auto !important;
-  font-family: Mulish, sans-serif !important;
-  font-size: 18px !important;
+  font-size: 14px !important;
   font-style: normal !important;
   line-height: 28px !important;
   font-weight: 400 !important;
   padding-top: 0px !important;
   padding-bottom: 0px !important;
+  align-items: center;
 }
 
 /* Folder when open */
@@ -63,23 +104,54 @@ button.sidebar-item.sidebar-item {
 .sidebar-item.sidebar-item[data-selected="false"]:hover,
 .sidebar-item.sidebar-item[data-nodetype="group"]:hover,
 .sidebar-item.sidebar-item[data-nodetype="component"]:hover {
-  background: #e9f4ec !important;
+  background: #ece9e9 !important;
 }
 
 /* Sidebar subheadings */
 .sidebar-subheading {
   color: black !important;
   margin: 6px auto !important;
-  width: 90%;
-  /* padding-top: 5px !important; */
-  /* padding-bottom: 5px !important; */
+  width: 100%;
   text-transform: none !important;
-  font-family: Mulish, sans-serif !important;
   font-style: normal !important;
-  font-size: 16px !important;
+  font-size: 14px !important;
   letter-spacing: normal !important;
   font-weight: 600 !important;
   line-height: 24px !important;
+  padding: 0 !important;
+}
+.sidebar-container {
+  padding: 16px 0 16px 12px !important;
+}
+
+.sidebar-container > div > div,
+.sidebar-container > div > div > div,
+.sidebar-container > div > div > div > div {
+  display: block !important;
+  padding: 0 8px 0 0;
+}
+
+.sidebar-subheading button {
+  margin: 0 !important;
+}
+
+#storybook-explorer-menu,
+#storybook-explorer-tree {
+  width: 100% !important;
+}
+
+#storybook-explorer-tree > div > div,
+#storybook-explorer-tree > div {
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+.sidebar-subheading button {
+  align-items: center;
+}
+
+.sidebar-subheading button span {
+  margin-top: 0;
 }
 
 /* Color for searched term when searching */
@@ -147,6 +219,11 @@ input[type="range"]::-webkit-slider-thumb:active {
   overflow: hidden;
 }
 
+#downshift-0-menu {
+  margin-left: -15px !important; /* storybook setter -20px her, det er alt for mye */
+  margin-right: -20px !important; /* storybook setter -20px her, det er alt for mye */
+}
+
 /* Table of contents with no content */
 .toc-no-children {
   display: none;
@@ -156,4 +233,13 @@ input[type="range"]::-webkit-slider-thumb:active {
 .docs-heading h2 {
   border: none;
   padding: 0;
+}
+
+/**
+ * Remove banner-img if window width is 770px or less 
+ */
+@media all and (max-width: 770px) {
+  .frontpage-banner {
+    background-image: none !important;
+  }
 }

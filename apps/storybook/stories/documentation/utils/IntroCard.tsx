@@ -168,7 +168,7 @@ type IntroCardProps = {
 
 export const IntroCard = ({ children }: IntroCardProps) => {
   return (
-    <Card variant="outline" padding="3rem" borderColor="gray.300">
+    <Card variant="outline" padding="2rem 2.5rem">
       {children}
     </Card>
   );

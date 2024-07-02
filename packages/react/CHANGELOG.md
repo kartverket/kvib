@@ -1,5 +1,23 @@
 # @kvib/react
 
+## 4.4.0
+
+### Minor Changes
+
+- 316feaf: Endret farge på "loading"-toast slik at den matcher farge på "info"
+
+## 4.3.0
+
+### Minor Changes
+
+- fd76200: Legg til mulighet for bruk av ref på SearchAsync
+
+## 4.2.0
+
+### Minor Changes
+
+- 88f0b86: Remove aria-label for launch icon on external links
+
 ## 4.1.2
 
 ### Patch Changes

@@ -10,11 +10,11 @@ export const Feedback = ({ component, width }: FeedbackProps) => {
 
   return (
     <Card
-      variant="outline"
-      backgroundColor="gray.100"
-      borderColor="gray.400"
+      variant="unstyled"
+      backgroundColor="green.50"
       width={width || ["fit-content", "fit-content", "auto"]}
       margin={"2rem 0"}
+      padding={"1rem"}
     >
       <CardBody
         display="flex"
@@ -25,19 +25,21 @@ export const Feedback = ({ component, width }: FeedbackProps) => {
         alignItems={["flex-start", "flex-start", "center"]}
       >
         <Flex gap=".5rem">
-          <Image src="assets/Lightbulb.svg"></Image>
           <Text margin="0" fontWeight="medium" fontSize="md">
-            Har du innspill til komponenten?
+            Har du ris, ros eller innspill?
           </Text>
         </Flex>
         <Flex gap=".5rem" alignItems="center" flexWrap="wrap">
-          <Button href={issueUrl} as="a" target="_blank" colorScheme="blue" variant="secondary">
-            Send forslag
+          <Button href={issueUrl} as="a" target="_blank" colorScheme="green" variant="tertiary" size="xs">
+            Send inn et forslag
           </Button>
-          <Text margin="0" fontSize="md">
-            eller
-          </Text>
-          <Button as="a" href="/?path=/docs/info-bidra-hurtigveiledning--docs" colorScheme="blue" variant="secondary">
+          <Button
+            as="a"
+            href="/?path=/docs/info-bidra-hurtigveiledning--docs"
+            colorScheme="green"
+            variant="tertiary"
+            size="xs"
+          >
             Bidra med PR
           </Button>
         </Flex>
