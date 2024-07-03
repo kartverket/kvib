@@ -1,6 +1,78 @@
 import { Meta } from "@storybook/addon-docs";
-import { ComingSoon } from "../utils/ComingSoon";
+import { ContributeButtons } from "../utils/ContributeButtons";
+import { Text } from "@kvib/react/src/typography";
+import { Image } from "@kvib/react/src";
 
 <Meta title="For designere/Kom i gang" />
 
-<ComingSoon />
+<Text as="bold" fontSize="2xl">For designere</Text>
+# Kom i gang med design
+Kartverkets Designsystem skal hjelpe deg med å bygge digitale løsninger og inneholder alt som er felles på tvers av team og produkter. 
+Ved å følge designsystemet sikrer vi at alle våre produkter har et enhetlig uttrykk og god brukeropplevelse. 
+Nedenfor finner du en liten guide for å komme i gang med design i Kartverket.
+
+## Bli kjent med Kartverket sin visuelle identitet
+Før du begynner å designe løsninger for Kartverket, bør du bli kjent med vår visuelle identitet for å lære mer om Kartverkets mål, visjon og designprinsipper.
+
+## Figma
+Vi bruker Figma som hovedverktøy. Opprett en Figmabruker når du har fått tildelt e-post fra Kartverket. 
+Dersom du ønsker Editor-tilgang kan du sende en forespørsel via Figma eller ta kontakt med @Wanni på slack, eller mail @Wanwisa Wanpake Johnsrud.
+
+* **Full editor-tilgang:** Primært for designere. Begrenset antall lisenser.
+* **Dev-mode:** For utviklere som vil jobbe direkte ut fra skissene.
+* **Viewer-restricted:** For utviklere og andre som ønsker å se skissene.
+
+## Opprett prosjekt
+Bruk vår cover template når du oppretter et nytt prosjekt i Figma. 
+1. Kopier template til ditt prosjekt. Denne finner du i Kartverkets Designsystem.
+2. Legg til prosjektnavn og eier av prosjektet
+3. Høyreklikk på cover og trykk “set as thumbnail”
+
+<Image src="assets/FigmaOpprettProsjekt.svg" width="500px" margin="auto"/>
+
+## Aktiver biblioteket
+1. Gå til panelet på venstre siden trykk på assets
+2. Åpne Libraires
+3. Huk av på Kartverkets Designsystem
+4. Nå er det bare å ta i bruk de komponentene du trenger til dine skisser
+
+<Image src="assets/FigmaAktiverBibliotek.svg" width="710px" margin="auto"/>
+
+## Komponentbiblioteket
+Kartverket sitt bibliotek i Figma er en fil med alle våre UI-komponenter som er klare til bruk. 
+Ved å koble seg til biblioteket får du tilgang til universale komponenter som farger, typografi, knapper, inputfelter, navigasjon og lignende. 
+Slik kommer du raskt og effektivt i gang med å sette opp brukergrensensitt til ditt prosjekt.
+
+<Image src="assets/FigmaKomponentbiblioteket.svg" width="689px" margin="auto"/>
+
+## Design i Figma - et par ting som er verdt å tenke på
+Før du setter i gang er det et par ting som er verdt å tenke på. 
+Når du har aktivert biblioteket har du nå tilgang til en rekke stiler i designsystemet (design tokens) som vi ønsker at dere bruker, 
+istedenfor egendefinerte verdier på f.eks farger og typografi. 
+Å bruke [variables](https://help.figma.com/hc/en-us/articles/15339657135383-Guide-to-variables-in-Figma)
+ gjør det enkelt å oppdatere hele systemet, og vil også gjøre at du benytter deg av korrekte farger.
+
+<Image src="assets/FigmaVariables.svg" width="696px" margin="auto"/>
+
+Kartverket sine hovedfarger er grønn og blå og er lagt inn som to “themes” i Figma. 
+Dette gjør det enkelt å f.eks skifte fargene på alle komponenter i et større designelement.
+
+<Image src="assets/FigmaThemes.svg" width="926px" margin="auto"/>
+
+Komponentene er satt opp med autolayout og variants. 
+Vi anbefaler alle som bruker Figma regelmessig å gjøre seg kjent med AutoLayout, dette vil redusere tiden du bruker på å lage detaljerte skisser.
+
+<Image src="assets/FigmaAutolayout.svg" width="926px" margin="auto"/>
+
+## Nyttige lenker
+* [Storybook](https://design.kartverket.no): vår dokumentasjonsside, hvor du finner alt som tilhører vårt designsystem.
+* [Jira](https://kartverket.atlassian.net/jira/software/projects/KOMP/boards/80?atlOrigin=eyJpIjoiYjlmOGFmN2E5ODkwNGNmMjhjYTZkNTRhOTVlZGYwMDciLCJwIjoiaiJ9): vi bruker Jira til å legge opp oppgaver for hele teamet.
+* [Miro](https://miro.com/app/dashboard/): vårt samhandlingsverktøy. Benyttes i retro, felles planleging, idemyldring og fasilitering.
+* [Github](https://github.com/kartverket/kvib): dokumentasjonssiden til designsystemet i Storybook og komponentbiblioteket i React.
+* Slack:  #gen-designsystem, #designsystem-status, #laug-design
+* [Innsida](https://kartverket.sharepoint.com): Vi bruker Innsida til å synligjøre designsystemet for hele organisasjonen.
+
+## Vil du bidra?
+Vi setter pris på alle tilbakemeldinger, ideer og innspill, så ikke nøl med å ta kontakt.
+
+<ContributeButtons/>

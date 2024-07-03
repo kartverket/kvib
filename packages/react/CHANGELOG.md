@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 4.4.0
+
+### Minor Changes
+
+- 316feaf: Endret farge på "loading"-toast slik at den matcher farge på "info"
+
 ## 4.3.0
 
 ### Minor Changes
