@@ -39,9 +39,13 @@ const meta: Meta<typeof KvibHeader> = {
     logoLink: {
       table: {
         type: { summary: "string" },
-        defaulValue: { summary: "/" },
+        defaultValue: { summary: "/" },
       },
       control: "text",
+    },
+    logoLinkProps: {
+      table: { summary: "object" },
+      defaultValue: { summary: undefined },
     },
     showMenuButton: {
       table: {
