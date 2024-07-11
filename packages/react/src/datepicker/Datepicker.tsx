@@ -15,7 +15,7 @@ import { forwardRef, useFormControlContext } from "@chakra-ui/react";
 import { DayPicker, useInput } from "react-day-picker";
 import "react-day-picker/dist/style.css";
 import { nb } from "date-fns/locale/nb";
-import { ChangeEvent, useEffect } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 import { isValid, parse } from "date-fns";
 
 export type DatepickerProps = Omit<InputProps, "colorScheme" | "max" | "min" | "defaultValue"> & {
@@ -159,6 +159,7 @@ const CustomDatepicker = forwardRef<DatepickerProps, "input">(
     const isRequired = isRequiredExternally || isRequiredFromForm;
 
     // State for the day picker
+    const [selected, setSelected] = useState<Date>();
     const [isPickerVisible, setPickerVisible] = useBoolean(false);
     const { inputProps, dayPickerProps } = useInput({
       defaultSelected,
@@ -171,11 +172,11 @@ const CustomDatepicker = forwardRef<DatepickerProps, "input">(
 
     useEffect(() => {
       // Check if the selected date in the day picker has changed
-      if (dayPickerProps.selected) {
+      if (selected) {
         // Call onChange to update the input value
         effectiveOnChange({
           target: {
-            value: formatDate(dayPickerProps.selected),
+            value: formatDate(selected),
           },
           bubbles: true,
           type: "change",
@@ -185,7 +186,7 @@ const CustomDatepicker = forwardRef<DatepickerProps, "input">(
 
         setPickerVisible.off();
       }
-    }, [dayPickerProps.selected, setPickerVisible]);
+    }, [selected, setPickerVisible]);
 
     // Only call onChange if the input is a valid date
     const effectiveOnChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -194,6 +195,8 @@ const CustomDatepicker = forwardRef<DatepickerProps, "input">(
       const parsedDate = parse(dateStr, "yyyy-MM-dd", new Date());
       if (isValid(parsedDate)) {
         onChange?.(event);
+        setSelected(parsedDate);
+        setPickerVisible.off();
       }
     };
 
@@ -239,6 +242,7 @@ const CustomDatepicker = forwardRef<DatepickerProps, "input">(
             showWeekNumber={showWeekNumber}
             disabled={disabledDays}
             classNames={{ root: uniqueClassName }}
+            selected={selected}
             {...dayPickerProps}
           />
         </PopoverContent>

@@ -2,7 +2,7 @@ import * as DatepickerStories from "./Datepicker.stories";
 import { Canvas, Meta, Controls, Story } from "@storybook/blocks";
 import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
 import { Alert, AlertIcon, AlertDescription } from "@kvib/react/src/alert";
-import { Text, Code, Box } from "@kvib/react/src/";
+import { Text, Code, Box } from "@kvib/react/src/"; import {Datepicker} from "@kvib/react";
 
 <Meta of={DatepickerStories} />
 
@@ -61,8 +61,7 @@ import { Datepicker } from "@kvib/react";
       </Text>
     }
     story={<Canvas of={DatepickerStories.DatepickerArea} />}
-
-/>
+    />
 
 <DocsStory
   title="Datepicker i form"
