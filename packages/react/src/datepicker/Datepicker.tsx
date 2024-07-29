@@ -93,6 +93,12 @@ export type DatepickerProps = Omit<InputProps, "colorScheme" | "max" | "min" | "
    * The colorScheme for the Datepicker.
    */
   colorScheme?: "blue" | "green";
+  /**
+   * useState
+   */
+  selected?: Date;
+
+  onSelect?: () => void;
 };
 
 export const Datepicker = forwardRef<DatepickerProps, "input">(({ onChange, useNative = true, ...props }, ref) => {
@@ -134,6 +140,8 @@ const CustomDatepicker = forwardRef<DatepickerProps, "input">(
       isDisabled: isDisabledExternally = false,
       isInvalid: isInvalidExternally = false,
       isRequired: isRequiredExternally = false,
+      selected,
+      onSelect,
       ...KVInputProps
     },
     ref,
@@ -159,7 +167,7 @@ const CustomDatepicker = forwardRef<DatepickerProps, "input">(
     const isRequired = isRequiredExternally || isRequiredFromForm;
 
     // State for the day picker
-    const [selected, setSelected] = useState<Date>();
+    const [currentSelected, setCurrentSelected] = useState<Date>(selected);
     const [isPickerVisible, setPickerVisible] = useBoolean(false);
     const { inputProps, dayPickerProps } = useInput({
       defaultSelected,
@@ -171,12 +179,12 @@ const CustomDatepicker = forwardRef<DatepickerProps, "input">(
     });
 
     useEffect(() => {
-      // Check if the selected date in the day picker has changed
-      if (selected) {
+      // Check if the currentSelected date in the day picker has changed
+      if (currentSelected) {
         // Call onChange to update the input value
         effectiveOnChange({
           target: {
-            value: formatDate(selected),
+            value: formatDate(currentSelected),
           },
           bubbles: true,
           type: "change",
@@ -186,16 +194,16 @@ const CustomDatepicker = forwardRef<DatepickerProps, "input">(
 
         setPickerVisible.off();
       }
-    }, [selected, setPickerVisible]);
+    }, [currentSelected, setPickerVisible]);
 
     // Only call onChange if the input is a valid date
     const effectiveOnChange = (event: ChangeEvent<HTMLInputElement>) => {
-      // Then, call the onChange from props if it the input is valid
+      // Then, call the onChange from props if the input is valid
       const dateStr = event.target.value;
       const parsedDate = parse(dateStr, "yyyy-MM-dd", new Date());
       if (isValid(parsedDate)) {
         onChange?.(event);
-        setSelected(parsedDate);
+        setCurrentSelected(parsedDate);
         setPickerVisible.off();
       }
     };
@@ -242,7 +250,7 @@ const CustomDatepicker = forwardRef<DatepickerProps, "input">(
             showWeekNumber={showWeekNumber}
             disabled={disabledDays}
             classNames={{ root: uniqueClassName }}
-            selected={selected}
+            selected={currentSelected}
             {...dayPickerProps}
           />
         </PopoverContent>

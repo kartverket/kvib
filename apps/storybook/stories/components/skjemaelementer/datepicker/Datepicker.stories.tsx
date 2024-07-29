@@ -1,6 +1,6 @@
-import { Box, FormControl, FormLabel, Stack } from "@kvib/react/src";
-import { Datepicker as KvibDatepicker } from "@kvib/react/src/datepicker";
+import { Box, FormControl, FormLabel, Stack, Datepicker as KvibDatepicker, IconButton } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
+import { useState } from "react";
 
 const meta: Meta<typeof KvibDatepicker> = {
   title: "Skjemaelementer/Datepicker",
@@ -224,4 +224,34 @@ export const DatepickerForm: DatepickerStory = {
       </FormControl>
     </Box>
   ),
+};
+export const ArrowPickerEx = (args) => {
+  const [currentDate, setCurrentDate] = useState(new Date());
+  const dateChange = (direction: string, step: number) => {
+    const newDate = new Date(currentDate);
+
+    if (direction == "left") {
+      newDate.setDate(currentDate.getDate() - step);
+    }
+    if (direction == "right") {
+      newDate.setDate(currentDate.getDate() + step);
+    }
+    console.log(newDate.toDateString());
+    setCurrentDate(newDate);
+    console.log(currentDate);
+  };
+  return (
+    <>
+      <Box display="flex">
+        <IconButton icon="chevron_left" aria-label="pil venstre" onClick={() => dateChange("left", 1)}></IconButton>
+        <KvibDatepicker {...args} px="15px" selected={currentDate} onSelect={setCurrentDate} />
+        <IconButton icon="chevron_right" aria-label="pil høyre" onClick={() => dateChange("right", 1)}></IconButton>
+      </Box>
+      <p>{currentDate.toDateString()}</p>
+    </>
+  );
+};
+export const DatepickerWithArrows: DatepickerStory = {
+  args: {},
+  render: (args) => <ArrowPickerEx args={args} />,
 };

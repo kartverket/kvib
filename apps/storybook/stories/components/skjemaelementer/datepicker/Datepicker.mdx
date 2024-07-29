@@ -2,7 +2,10 @@ import * as DatepickerStories from "./Datepicker.stories";
 import { Canvas, Meta, Controls, Story } from "@storybook/blocks";
 import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
 import { Alert, AlertIcon, AlertDescription } from "@kvib/react/src/alert";
-import { Text, Code, Box } from "@kvib/react/src/"; import {Datepicker} from "@kvib/react";
+import { Text, Code, Box } from "@kvib/react/src/";
+import {Datepicker} from "@kvib/react/src";
+import {ArrowPickerEx} from "./Datepicker.stories"
+
 
 <Meta of={DatepickerStories} />
 
@@ -13,6 +16,7 @@ Datepicker kombinerer et inputfelt med en popoverkalender hvor brukere kan velge
 ```jsx
 import { Datepicker } from "@kvib/react";
 ```
+
 
 <DocsContainer>
 
@@ -37,7 +41,13 @@ import { Datepicker } from "@kvib/react";
 
 </DocsContainer>
 
+<ArrowPickerEx/>
+
 <DocsContainer>
+    <DocsStory
+        title="Piler TEST TEST TEST TEST!!!"
+        story={<Canvas of={DatepickerStories.DatepickerWithArrows} />}
+    />
   <DocsStory
     title="Flere detaljer"
     description={
