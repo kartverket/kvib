@@ -11,6 +11,7 @@ import {
   Link,
   LinkProps,
 } from "@kvib/react/src";
+import React from "react";
 
 type HeaderProps = {
   /** Determines where the content in the header is displayed. */
@@ -65,6 +66,16 @@ export const Header = (props: HeaderProps) => {
   const showMenuButtonElement = (children && (isCollapse || isOpen)) || showMenuButton;
   const handleClick = onMenuButtonClick || onToggle;
 
+  const enhancedChildren = () => {
+    return React.Children.map(props.children, (child: React.ReactNode) => {
+      if (child.type === Link) {
+        return React.cloneElement(child, {
+          onClick: handleClick,
+        });
+      }
+    });
+  };
+
   return (
     <Box>
       <Flex
@@ -85,7 +96,7 @@ export const Header = (props: HeaderProps) => {
           />
         </Link>
 
-        {showChildren && children}
+        {showChildren && enhancedChildren}
 
         {showMenuButtonElement && (
           <IconButton aria-label={"open menu"} icon={isOpen ? "close" : "menu"} variant="ghost" onClick={handleClick} />

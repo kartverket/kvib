@@ -10,6 +10,7 @@ import {
   Tab,
   TabList,
   Tabs,
+  Link,
 } from "@kvib/react/src";
 import { colors } from "@kvib/react/src/theme/tokens";
 import { Meta, StoryObj } from "@storybook/react";
@@ -123,6 +124,9 @@ export const HeaderElements: Story = {
     <KvibHeader {...args}>
       <Heading size="md">Eiendom</Heading>
       <Search bgColor="white" maxWidth={400} placeholder="Søk her..."></Search>
+      <Link href="http://localhost:6006/?path=/docs/sideelementer-header--docs" isExternal={false}>
+        LenkeTESTEST
+      </Link>
       <Tabs colorScheme="blue" size="md">
         <TabList>
           <Tab w={90}>Fane 1</Tab>
