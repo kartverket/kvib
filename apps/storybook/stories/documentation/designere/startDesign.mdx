@@ -1,18 +1,25 @@
 import { Meta } from "@storybook/addon-docs";
-import { ContributeButtons } from "../utils/ContributeButtons";
+import { ContributeLinks } from "../utils/ContributeLinks";
 import { Text } from "@kvib/react/src/typography";
-import { Image } from "@kvib/react/src";
+import { Image, Box, Button } from "@kvib/react/src";
 
 <Meta title="For designere/Kom i gang" />
 
 <Text as="bold" fontSize="2xl">For designere</Text>
+
 # Kom i gang med design
-Kartverkets Designsystem skal hjelpe deg med å bygge digitale løsninger og inneholder alt som er felles på tvers av team og produkter. 
+
+Kartverkets Designsystem skal hjelpe deg med å bygge digitale løsninger og inneholder alt som er felles på tvers av team og produkter.
 Ved å følge designsystemet sikrer vi at alle våre produkter har et enhetlig uttrykk og god brukeropplevelse. 
 Nedenfor finner du en liten guide for å komme i gang med design i Kartverket.
 
-## Bli kjent med Kartverket sin visuelle identitet
+[//]: # (Padding 16px fra tekst + Box med padding 41 på top og bunn = 98px)
+<Box py="41px"/>
+
+## Bli kjent
 Før du begynner å designe løsninger for Kartverket, bør du bli kjent med vår visuelle identitet for å lære mer om Kartverkets mål, visjon og designprinsipper.
+
+<Box py="41px"/>
 
 ## Figma
 Vi bruker Figma som hovedverktøy. Opprett en Figmabruker når du har fått tildelt e-post fra Kartverket. 
@@ -22,13 +29,17 @@ Dersom du ønsker Editor-tilgang kan du sende en forespørsel via Figma eller ta
 * **Dev-mode:** For utviklere som vil jobbe direkte ut fra skissene.
 * **Viewer-restricted:** For utviklere og andre som ønsker å se skissene.
 
+<Box py="41px"/>
+
 ## Opprett prosjekt
 Bruk vår cover template når du oppretter et nytt prosjekt i Figma. 
 1. Kopier template til ditt prosjekt. Denne finner du i Kartverkets Designsystem.
 2. Legg til prosjektnavn og eier av prosjektet
 3. Høyreklikk på cover og trykk “set as thumbnail”
 
-<Image src="assets/FigmaOpprettProsjekt.svg" width="500px" margin="auto"/>
+<Image src="assets/FigmaOpprettProsjekt.svg" width="926px" margin="auto"/>
+
+<Box py="41px"/>
 
 ## Aktiver biblioteket
 1. Gå til panelet på venstre siden trykk på assets
@@ -36,23 +47,27 @@ Bruk vår cover template når du oppretter et nytt prosjekt i Figma.
 3. Huk av på Kartverkets Designsystem
 4. Nå er det bare å ta i bruk de komponentene du trenger til dine skisser
 
-<Image src="assets/FigmaAktiverBibliotek.svg" width="710px" margin="auto"/>
+<Image src="assets/FigmaAktiverBibliotek.svg" width="926px" margin="auto"/>
+
+<Box py="41px"/>
 
 ## Komponentbiblioteket
 Kartverket sitt bibliotek i Figma er en fil med alle våre UI-komponenter som er klare til bruk. 
 Ved å koble seg til biblioteket får du tilgang til universale komponenter som farger, typografi, knapper, inputfelter, navigasjon og lignende. 
 Slik kommer du raskt og effektivt i gang med å sette opp brukergrensensitt til ditt prosjekt.
 
-<Image src="assets/FigmaKomponentbiblioteket.svg" width="689px" margin="auto"/>
+<Image src="assets/FigmaKomponentbiblioteket.svg" width="926px" margin="auto"/>
 
-## Design i Figma - et par ting som er verdt å tenke på
-Før du setter i gang er det et par ting som er verdt å tenke på. 
+<Box py="41px"/>
+
+## Design i Figma
+Før du setter i gang er det et par ting som er verdt å tenke på.
 Når du har aktivert biblioteket har du nå tilgang til en rekke stiler i designsystemet (design tokens) som vi ønsker at dere bruker, 
 istedenfor egendefinerte verdier på f.eks farger og typografi. 
 Å bruke [variables](https://help.figma.com/hc/en-us/articles/15339657135383-Guide-to-variables-in-Figma)
  gjør det enkelt å oppdatere hele systemet, og vil også gjøre at du benytter deg av korrekte farger.
 
-<Image src="assets/FigmaVariables.svg" width="696px" margin="auto"/>
+<Image src="assets/FigmaVariables.svg" width="926px" margin="auto"/>
 
 Kartverket sine hovedfarger er grønn og blå og er lagt inn som to “themes” i Figma. 
 Dette gjør det enkelt å f.eks skifte fargene på alle komponenter i et større designelement.
@@ -64,6 +79,8 @@ Vi anbefaler alle som bruker Figma regelmessig å gjøre seg kjent med AutoLayou
 
 <Image src="assets/FigmaAutolayout.svg" width="926px" margin="auto"/>
 
+<Box py="41px"/>
+
 ## Nyttige lenker
 * [Storybook](https://design.kartverket.no): vår dokumentasjonsside, hvor du finner alt som tilhører vårt designsystem.
 * [Jira](https://kartverket.atlassian.net/jira/software/projects/KOMP/boards/80?atlOrigin=eyJpIjoiYjlmOGFmN2E5ODkwNGNmMjhjYTZkNTRhOTVlZGYwMDciLCJwIjoiaiJ9): vi bruker Jira til å legge opp oppgaver for hele teamet.
@@ -72,7 +89,15 @@ Vi anbefaler alle som bruker Figma regelmessig å gjøre seg kjent med AutoLayou
 * Slack:  #gen-designsystem, #designsystem-status, #laug-design
 * [Innsida](https://kartverket.sharepoint.com): Vi bruker Innsida til å synligjøre designsystemet for hele organisasjonen.
 
+<Box py="41px"/>
+
+<Button rightIcon="chevron_right" mb="9px" w="926px" size="lg">Les mer om hvorda du kan bidra med design</Button>
+<br/>
+<Button rightIcon="chevron_right" mt="9px" w="926px">Les om Universell utforming</Button>
+
+<Box py="41px"/>
+
 ## Vil du bidra?
 Vi setter pris på alle tilbakemeldinger, ideer og innspill, så ikke nøl med å ta kontakt.
 
-<ContributeButtons/>
+<ContributeLinks/>

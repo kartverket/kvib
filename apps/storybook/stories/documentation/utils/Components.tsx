@@ -79,7 +79,7 @@ const ComponentCard = ({
           gap="4px"
           textDecoration="none"
         >
-          Gå til {title} <Icon icon="arrow_forward" className="docs-icon" weight={300} size={18} aria-hidden />
+          Gå til {title} <Icon icon="arrow_forward" weight={300} size={18} aria-hidden />
         </Link>
       </Stack>
     </Card>

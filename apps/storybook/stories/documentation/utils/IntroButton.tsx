@@ -25,7 +25,7 @@ export const IntroButton = ({
         <Text fontSize="lg" as="b" color="green.500">
           {title}{" "}
           <Box sx={{ display: isExternal ? "inline-block" : "none" }}>
-            <Icon icon="open_in_new" className="docs-icon" size={18} weight={400} />
+            <Icon icon="open_in_new" size={18} weight={400} />
           </Box>
         </Text>
       </Flex>
