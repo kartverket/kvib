@@ -45,8 +45,8 @@ export const Alert: Story = {
     <KvibAlert {...args}>
       <AlertIcon />
       <Box>
-        <AlertTitle>This is the alert title!</AlertTitle>
-        <AlertDescription>This is the alert description.</AlertDescription>
+        <AlertTitle>Dette er tittelen!</AlertTitle>
+        <AlertDescription>Dette er beskrivelsen.</AlertDescription>
       </Box>
     </KvibAlert>
   ),
@@ -57,7 +57,7 @@ export const AlertSuccess: Story = {
   render: (args) => (
     <KvibAlert status={"success"} {...args}>
       <AlertIcon />
-      <AlertDescription>Settings saved</AlertDescription>
+      <AlertDescription>Endringer lagret</AlertDescription>
     </KvibAlert>
   ),
 };
@@ -70,7 +70,7 @@ export const AlertInfo: Story = {
       <Box>
         <AlertTitle>Tips</AlertTitle>
         <AlertDescription>
-          To insert a new picture, you can use the File Browser found in the menu at the top of the page.
+          For å sette inn et nytt bilde, kan du bruke filutforskjeren fra menyen på toppen av siden.
         </AlertDescription>
       </Box>
     </KvibAlert>
@@ -83,8 +83,8 @@ export const AlertWarning: Story = {
     <KvibAlert {...args}>
       <AlertIcon />
       <Box>
-        <AlertTitle>You are about to permanently delete the file</AlertTitle>
-        <AlertDescription>You can not retrieve it after deletion</AlertDescription>
+        <AlertTitle>Du er i ferd med å slette fila permanent</AlertTitle>
+        <AlertDescription>Du kan ikke hente den i etterkant</AlertDescription>
       </Box>
     </KvibAlert>
   ),
@@ -96,8 +96,8 @@ export const AlertError: Story = {
     <KvibAlert {...args}>
       <AlertIcon />
       <Box>
-        <AlertTitle>Can't connect to the server</AlertTitle>
-        <AlertDescription>Try again in a few minutes, or contact us if the problem continues</AlertDescription>
+        <AlertTitle>Får ikke opprettet forbindelse med serveren</AlertTitle>
+        <AlertDescription>Prøv igjen om et par minutter, eller ta kontakt hvis problemet forsetter</AlertDescription>
       </Box>
     </KvibAlert>
   ),
@@ -111,15 +111,15 @@ export const AlertEmphasisWarning: Story = {
       <KvibAlert {...args}>
         <AlertIcon />
         <Box>
-          <AlertTitle>I'm an important warning</AlertTitle>
-          <AlertDescription>I'm important</AlertDescription>
+          <AlertTitle>Jeg er en viktig 'warning'</AlertTitle>
+          <AlertDescription>Jeg er viktig</AlertDescription>
         </Box>
       </KvibAlert>
       <KvibAlert variant="solid" {...args}>
         <AlertIcon />
         <Box>
-          <AlertTitle>I'm an even more important warning</AlertTitle>
-          <AlertDescription>I'm more important that the alert above!</AlertDescription>
+          <AlertTitle>Jeg er en enda viktigere 'warning'</AlertTitle>
+          <AlertDescription>Jeg er viktigere enn 'waning'-en over!</AlertDescription>
         </Box>
       </KvibAlert>
     </VStack>

@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 4.4.1
+
+### Patch Changes
+
+- 13440cb: Added linkProps as a prop to be able to change the functionality for the link within the header.
+
 ## 4.4.0
 
 ### Minor Changes
