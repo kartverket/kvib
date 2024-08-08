@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 4.4.2
+
+### Patch Changes
+
+- 1565ac2: Oppdaterer react stately (critical package dependency).
+
 ## 4.4.1
 
 ### Patch Changes
