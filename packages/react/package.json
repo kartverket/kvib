@@ -39,7 +39,7 @@
     "chakra-react-select": "^4.7.6",
     "date-fns": "^3.6.0",
     "material-symbols": "^0.17.0",
-    "react-aria": "^3.32.1",
+    "react-aria": "^3.34.1",
     "react-day-picker": "^8.10.0",
     "react-stately": "^3.32.1"
   },
