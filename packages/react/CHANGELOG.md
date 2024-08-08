@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 4.4.3
+
+### Patch Changes
+
+- ac5677c: Oppdaterer react aria (critical avhengighet).
+
 ## 4.4.2
 
 ### Patch Changes
