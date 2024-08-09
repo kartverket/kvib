@@ -1,5 +1,23 @@
 # @kvib/react
 
+## 4.4.3
+
+### Patch Changes
+
+- ac5677c: Oppdaterer react aria (critical avhengighet).
+
+## 4.4.2
+
+### Patch Changes
+
+- 1565ac2: Oppdaterer react stately (critical package dependency).
+
+## 4.4.1
+
+### Patch Changes
+
+- 13440cb: Added linkProps as a prop to be able to change the functionality for the link within the header.
+
 ## 4.4.0
 
 ### Minor Changes

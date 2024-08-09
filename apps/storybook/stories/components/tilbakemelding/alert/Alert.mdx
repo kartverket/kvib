@@ -1,8 +1,7 @@
-import { Title, Canvas, Meta, Story, Controls } from "@storybook/blocks";
+import { Canvas, Meta, Story, Controls } from "@storybook/blocks";
 import * as AlertStories from "./Alert.stories";
 import { ComponentsBanner } from "../../../templates/ComponentsBanner";
 import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
-import { Box } from "@kvib/react/src";
 
 <Meta of={AlertStories} />
 
@@ -18,22 +17,22 @@ import { Alert, AlertIcon, AlertTitle, AlertDescription } from "@kvib/react";
 
 <Feedback component="Alert" />
 
-<DocsHeading light>Anatomy</DocsHeading>
+<DocsHeading light>Anatomi</DocsHeading>
 
 <DocsAnatomy imgPath="assets/AlertAnatomy.svg" />
 
-<DocsHeading light>Options</DocsHeading>
+<DocsHeading light>Varianter</DocsHeading>
 
 <DocsContainer>
 <DocsStory
   title="Title"
-  description="The title is optional, but should, when used, always convey a concise and descriptive message."
+  description="Tittelen er valgfri, men hvis brukt, skal den formidle en kort og beskrivende beskjed."
   story={<Canvas of={AlertStories.AlertError} />}
 />
 
 <DocsStory
   title="Description"
-  description="The description is required for all alerts. If paired with a title, use it to emphasize the information in the title, and/or describe the next step that the user can take."
+  description="Beskrivelse er alltid nødvendig. Hvis den er brukt med en tittel, skal den understreke informasjonen i tittelen, og/eller beskrive neste steg brukeren kan ta."
   story={
     <Canvas>
       <Story of={AlertStories.AlertWarning} />
@@ -43,14 +42,14 @@ import { Alert, AlertIcon, AlertTitle, AlertDescription } from "@kvib/react";
 />
 
 <DocsStory
-  title="Intent"
-  description="Let the intent reflect the kind of message you want the user to perceive. Use info for additional information or helpful tips, success to let the users know they have completed an action, warnings to inform the user before they take a crucial or irreversible action, and error for letting the user know that something has gone wrong."
+  title="Hensikt"
+  description="La hensikten reflektere typen beskjed brukeren skal oppfatte. Bruk 'info' for ekstra informasjon eller tips, 'success' for å informere brukeren om at en handling var vellykket, 'warning' f.eks før en viktig avgjørelse eller enveishandling, og 'error' for å fortelle brukeren om at noe gikk galt."
   story={<Canvas of={AlertStories.AlertInfo} />}
 />
 
 <DocsStory
-  title="Appearance"
-  description="Use the apperance to convey different levels of emphasis, or to direct the alert towards a certain direction."
+  title="Utseende"
+  description="Bruk utseende for å formidle forskjellige nivå av understreking, eller for å rette 'alert' mot en bestemt retning."
   story={<Canvas of={AlertStories.AlertEmphasisWarning} />}
 />
 </DocsContainer>
