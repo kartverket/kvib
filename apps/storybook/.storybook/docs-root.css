@@ -26,6 +26,10 @@ div[role="main"] > :first-child {
   transition: box-shadow 0.2s ease;
 }
 
+.material-symbols-rounded {
+  font-family: "Material Symbols Rounded" !important;
+}
+
 /* Sidebar */
 /* .container.sidebar-container {
 } */
@@ -238,8 +242,4 @@ input[type="range"]::-webkit-slider-thumb:active {
   .frontpage-banner {
     background-image: none !important;
   }
-}
-
-.material-symbols-rounded {
-  font-family: "Material Symbols Rounded" !important;
 }
