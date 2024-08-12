@@ -43,7 +43,7 @@ type Story = StoryObj<typeof KvibLink>;
 export const Link: Story = {
   args: {
     children: "Dette er en lenke",
-    href: "/?path=/docs/introduksjon--docs",
+    href: "/?path=/",
   },
   render: (args) => <KvibLink {...args}>{args.children}</KvibLink>,
 };
@@ -54,7 +54,7 @@ export const LinkStates: Story = {
   },
   render: (args) => (
     <VStack>
-      <KvibLink href="/?path=/docs/introduksjon--docs" {...args}>
+      <KvibLink href="/?path=/" {...args}>
         Dette er en intern lenke
       </KvibLink>
       <KvibLink isExternal href="https://chakra-ui.com/docs/components" {...args}>
@@ -67,7 +67,7 @@ export const LinkStates: Story = {
 export const LinkColorscheme: Story = {
   args: {
     children: "Dette er en lenke",
-    href: "/?path=/docs/introduksjon--docs",
+    href: "/?path=/",
   },
   render: (args) => (
     <VStack>

@@ -152,7 +152,7 @@ export const HeaderJustifyContent: Story = {
 
 export const HeaderDropdownChildren: Story = {
   args: {
-    logoLink: "https://kartverket.github.io/kvib/",
+    logoLink: "https://design.kartverket.no",
     logoAltText: "Kartverket Logo",
     dropdownMenuChildren: (
       <HStack wrap="wrap" align="center" justify="center" gap="10">
