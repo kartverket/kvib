@@ -1,7 +1,7 @@
 import { Meta } from "@storybook/addon-docs";
 import { ContributeLinks } from "../utils/ContributeLinks";
 import { Text } from "@kvib/react/src/typography";
-import { Image, Box, Button } from "@kvib/react/src";
+import { Image, Box, Button, Link } from "@kvib/react/src";
 
 <Meta title="For designere/Kom i gang" />
 
@@ -17,7 +17,9 @@ Nedenfor finner du en liten guide for å komme i gang med design i Kartverket.
 <Box py="41px"/>
 
 ## Bli kjent
-Før du begynner å designe løsninger for Kartverket, bør du bli kjent med vår [visuelle identitet](https://www.kartverket.no/om-kartverket/kartverkets-identitet) for å lære mer om Kartverkets mål, visjon og designprinsipper.
+Før du begynner å designe løsninger for Kartverket, bør du bli kjent med vår
+<Link href="https://www.kartverket.no/om-kartverket/kartverkets-identitet">visuelle identitet</Link>
+for å lære mer om Kartverkets mål, visjon og designprinsipper.
 
 <Box py="41px"/>
 
@@ -33,7 +35,9 @@ Dersom du ønsker Editor-tilgang kan du sende en forespørsel via Figma eller ta
 
 ## Opprett prosjekt
 Bruk vår cover template når du oppretter et nytt prosjekt i Figma. 
-1. Kopier template til ditt prosjekt. Denne finner du i [Kartverkets Designsystem](https://design.kartverket.no).
+1. Kopier template til ditt prosjekt. Denne finner du i
+<Link href="https://design.kartverket.no" isExternal={false}>Kartverkets Designsystem</Link>.
+
 2. Legg til prosjektnavn og eier av prosjektet
 3. Høyreklikk på cover og trykk “set as thumbnail”
 
@@ -64,7 +68,8 @@ Slik kommer du raskt og effektivt i gang med å sette opp brukergrensensitt til 
 Før du setter i gang er det et par ting som er verdt å tenke på.
 Når du har aktivert biblioteket har du nå tilgang til en rekke stiler i designsystemet (design tokens) som vi ønsker at dere bruker, 
 istedenfor egendefinerte verdier på f.eks farger og typografi. 
-Å bruke [variables](https://help.figma.com/hc/en-us/articles/15339657135383-Guide-to-variables-in-Figma)
+Å bruke
+<Link href="https://help.figma.com/hc/en-us/articles/15339657135383-Guide-to-variables-in-Figma">variables</Link>
  gjør det enkelt å oppdatere hele systemet, og vil også gjøre at du benytter deg av korrekte farger.
 
 <Image src="assets/FigmaVariables.svg" width="926px" margin="auto"/>
@@ -74,8 +79,10 @@ Dette gjør det enkelt å f.eks skifte fargene på alle komponenter i et større
 
 <Image src="assets/FigmaThemes.svg" width="926px" margin="auto"/>
 
-Komponentene er satt opp med [autolayout](https://help.figma.com/hc/en-us/articles/5731482952599-Add-auto-layout-to-a-design)
-og [variants](https://help.figma.com/hc/en-us/articles/360056440594-Create-and-use-variants).
+Komponentene er satt opp med
+<Link href="https://help.figma.com/hc/en-us/articles/5731482952599-Add-auto-layout-to-a-design">autolayout</Link>
+og
+<Link href="https://help.figma.com/hc/en-us/articles/360056440594-Create-and-use-variants">variants</Link>
 Vi anbefaler alle som bruker Figma regelmessig å gjøre seg kjent med AutoLayout, dette vil redusere tiden du bruker på å lage detaljerte skisser.
 
 <Image src="assets/FigmaAutolayout.svg" width="926px" margin="auto"/>
@@ -83,12 +90,12 @@ Vi anbefaler alle som bruker Figma regelmessig å gjøre seg kjent med AutoLayou
 <Box py="41px"/>
 
 ## Nyttige lenker
-* [Storybook](https://design.kartverket.no): vår dokumentasjonsside, hvor du finner alt som tilhører vårt designsystem.
-* [Jira](https://kartverket.atlassian.net/jira/software/projects/KOMP/boards/80?atlOrigin=eyJpIjoiYjlmOGFmN2E5ODkwNGNmMjhjYTZkNTRhOTVlZGYwMDciLCJwIjoiaiJ9): vi bruker Jira til å legge opp oppgaver for hele teamet.
-* [Miro](https://miro.com/app/dashboard/): vårt samhandlingsverktøy. Benyttes i retro, felles planleging, idemyldring og fasilitering.
-* [Github](https://github.com/kartverket/kvib): dokumentasjonssiden til designsystemet i Storybook og komponentbiblioteket i React.
+* <Link href="https://design.kartverket.no">Storybook</Link>: vår dokumentasjonsside, hvor du finner alt som tilhører vårt designsystem.
+* <Link href="https://kartverket.atlassian.net/jira/software/projects/KOMP/boards/80?atlOrigin=eyJpIjoiYjlmOGFmN2E5ODkwNGNmMjhjYTZkNTRhOTVlZGYwMDciLCJwIjoiaiJ9">Jira</Link>: vi bruker Jira til å legge opp oppgaver for hele teamet.
+* <Link href="https://miro.com/app/dashboard/">Miro</Link>: vårt samhandlingsverktøy. Benyttes i retro, felles planleging, idemyldring og fasilitering.
+* <Link href="https://github.com/kartverket/kvib">Github</Link>: dokumentasjonssiden til designsystemet i Storybook og komponentbiblioteket i React.
 * Slack:  #gen-designsystem, #designsystem-status, #laug-design
-* [Innsida](https://kartverket.sharepoint.com): Vi bruker Innsida til å synligjøre designsystemet for hele organisasjonen.
+* <Link href="https://kartverket.sharepoint.com">Innsida</Link>: Vi bruker Innsida til å synligjøre designsystemet for hele organisasjonen.
 
 <Box py="41px"/>
 
