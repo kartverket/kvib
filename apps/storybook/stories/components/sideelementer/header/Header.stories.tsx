@@ -36,6 +36,13 @@ const meta: Meta<typeof KvibHeader> = {
       options: ["start", "center", "space-between"],
       control: { type: "radio" },
     },
+    logoLinkDisabled: {
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: false },
+      },
+      control: "boolean",
+    },
     logoLink: {
       table: {
         type: { summary: "string" },
