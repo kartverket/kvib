@@ -235,3 +235,8 @@ export const HeaderLogoVariant: Story = {
   },
   render: (args) => <KvibHeader {...args} />,
 };
+
+export const HeaderWithoutLink: Story = {
+  args: { logoLinkDisabled: true },
+  render: (args) => <KvibHeader {...args} />,
+};
