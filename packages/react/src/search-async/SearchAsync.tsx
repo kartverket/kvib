@@ -8,8 +8,9 @@ import {
   OptionsOrGroups,
   FormatOptionLabelMeta,
   AsyncSelect as ReactSearch,
+  SizeProp,
+  Variant,
 } from "chakra-react-select";
-import { SizeProp, Variant } from "chakra-react-select/dist/types/types";
 
 export type SearchAsyncElement<T> = SelectInstance<T, boolean, GroupBase<T>>;
 
