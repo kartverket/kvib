@@ -40,7 +40,7 @@
     "date-fns": "^3.6.0",
     "material-symbols": "^0.17.0",
     "react-aria": "^3.34.1",
-    "react-day-picker": "^8.10.0",
+    "react-day-picker": "^9.0.9",
     "react-stately": "^3.32.1"
   },
   "lint-staged": {
