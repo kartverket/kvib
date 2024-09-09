@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 4.5.0
+
+### Minor Changes
+
+- 46d1128: Added property to the header component to allow for a logo without a link wrapping it
+
 ## 4.4.3
 
 ### Patch Changes
