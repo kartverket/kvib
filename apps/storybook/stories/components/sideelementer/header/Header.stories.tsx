@@ -36,6 +36,13 @@ const meta: Meta<typeof KvibHeader> = {
       options: ["start", "center", "space-between"],
       control: { type: "radio" },
     },
+    logoLinkDisabled: {
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: false },
+      },
+      control: "boolean",
+    },
     logoLink: {
       table: {
         type: { summary: "string" },
@@ -226,5 +233,10 @@ export const HeaderLogoVariant: Story = {
     logoVariant: "vertical",
     logoAltText: "Kartverket Logo",
   },
+  render: (args) => <KvibHeader {...args} />,
+};
+
+export const HeaderWithoutLink: Story = {
+  args: { logoLinkDisabled: true },
   render: (args) => <KvibHeader {...args} />,
 };
