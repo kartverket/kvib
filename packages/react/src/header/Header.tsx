@@ -15,6 +15,8 @@ import {
 type HeaderProps = {
   /** Determines where the content in the header is displayed. */
   justifyContent?: "space-between" | "center" | "start";
+  /**If set, the link around the logo will not be rendered and clickable.  */
+  logoLinkDisabled?: boolean;
   /** Href for logo link */
   logoLink?: string;
   /** As for logo link */
@@ -41,6 +43,7 @@ type HeaderProps = {
 export const Header = (props: HeaderProps) => {
   const {
     justifyContent = "space-between",
+    logoLinkDisabled = false,
     logoLink = "/",
     logoLinkProps,
     logoAltText,
@@ -65,6 +68,16 @@ export const Header = (props: HeaderProps) => {
   const showMenuButtonElement = (children && (isCollapse || isOpen)) || showMenuButton;
   const handleClick = onMenuButtonClick || onToggle;
 
+  const HeaderLogo = () => {
+    return (
+      <Logo
+        label={logoAltText}
+        variant={logoVariant}
+        size={logoVariant == "horizontal" ? logoHorizontalSize : logoVerticalSize}
+      />
+    );
+  };
+
   return (
     <Box>
       <Flex
@@ -77,13 +90,13 @@ export const Header = (props: HeaderProps) => {
         justifyContent={justify}
         gap={gap}
       >
-        <Link href={logoLink} isExternal={false} {...logoLinkProps}>
-          <Logo
-            label={logoAltText}
-            variant={logoVariant}
-            size={logoVariant == "horizontal" ? logoHorizontalSize : logoVerticalSize}
-          />
-        </Link>
+        {logoLinkDisabled ? (
+          <HeaderLogo />
+        ) : (
+          <Link href={logoLink} isExternal={false} {...logoLinkProps}>
+            <HeaderLogo />
+          </Link>
+        )}
 
         {showChildren && children}
 
