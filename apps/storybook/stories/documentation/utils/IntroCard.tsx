@@ -149,7 +149,7 @@ export const FeedbackCard = () => {
       <Element>
         <Link
           fontWeight="bold"
-          href="/apps/storybook/public?path=/docs/info-bidra-hurtigveiledning--docs"
+          href="/?path=/docs/for-utviklere-bidra-med-kode-hurtigveiledning--docs"
           isExternal={false}
         >
           Bidra med en PR

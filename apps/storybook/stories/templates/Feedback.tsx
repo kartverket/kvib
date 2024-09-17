@@ -35,7 +35,7 @@ export const Feedback = ({ component, width }: FeedbackProps) => {
           </Button>
           <Button
             as="a"
-            href="/?path=/docs/info-bidra-hurtigveiledning--docs"
+            href="/?path=/docs/for-utviklere-bidra-med-kode-hurtigveiledning--docs"
             colorScheme="green"
             variant="tertiary"
             size="xs"
