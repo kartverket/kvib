@@ -4,7 +4,7 @@
 
 # Sjekkliste
 
-<!-- Sjekk av disse punktene for hver endring. Disse utgjør et minimum av sjekker som skal være gjennomført før PR-en merges. For mer informasjon om hvordan du kan bidra med kode til designbiblioteket, se https://design.kartverket.no/?path=/docs/for-utviklere-bidra-med-kode-hurtigveiledning--docs-->
+<!-- Sjekk av disse punktene for hver endring. Disse utgjør et minimum av sjekker som skal være gjennomført før PR-en merges. For mer informasjon om hvordan du kan bidra med kode til designbiblioteket, se https://design.kartverket.no/?path=/docs/for-utviklere-bidra-med-kode-hurtigveiledning--docs>
 
 - [ ] Alle tester har kjørt, og er grønne.
 - [ ] Dersom det er lagt til ny funksjonalitet er det også lagt til stories og dokumentasjon på denne i storybook. Stories skal dekke de viktigste tilstandene visuelt, og blir blant annet brukt til å kjøre automatisk testing av universell utforming, i tillegg til dokumentasjon.
