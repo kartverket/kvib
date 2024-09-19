@@ -31,7 +31,7 @@ jobs:
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": ":mega: *En ny versjon av <https://kartverket.github.io/kvib|Kartverkets Designsystem> har blitt publisert!* :mega: \n\n Nyeste versjon: <https://kartverket.github.io/kvib/?path=/docs/changelog--docs|${{ steps.set_message.outputs.version }}>."
+                    "text": ":mega: *En ny versjon av <https://design.kartverket.no|Kartverkets Designsystem> har blitt publisert!* :mega: \n\n Nyeste versjon: <https://design.kartverket.no/kvib/?path=/docs/changelog--docs|${{ steps.set_message.outputs.version }}>."
                   }
                 }
               ]

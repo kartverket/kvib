@@ -29,5 +29,8 @@
   "packageManager": "npm@9.5.0",
   "lint-staged": {
     "*.{ts,tsx,md}": "prettier --write"
+  },
+  "overrides": {
+    "axios": "^1.7.4"
   }
 }

@@ -64,7 +64,7 @@ Under følger en beskrivelse av hvordan en komponent skal dokumenteres. Link-kom
             export const Link: Story = {
               args: {
                 children: "Dette er en lenke",
-                href: "/?path=/docs/introduksjon--docs",
+                href: "/?path=/",
               },
               render: (args) => <KvibLink {...args}>{args.children}</KvibLink>,
             };
@@ -83,7 +83,7 @@ Slik vil storyen se ut i dokumentasjonen, og vil vise den minimale koden en bruk
               args: { colorScheme: "blue" },
               render: (args) => (
                 <VStack>
-                  <KvibLink href="/?path=/docs/introduksjon--docs" {...args}>
+                  <KvibLink href="/?path=/" {...args}>
                     Dette er en intern lenke
                   </KvibLink>
                   <KvibLink isExternal href="https://chakra-ui.com/docs/components" {...args}>
