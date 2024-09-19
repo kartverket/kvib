@@ -22,10 +22,7 @@
     "turbo": "^2.1.2"
   },
   "dependencies": {
-    "@changesets/cli": "^2.27.1",
-    "chromatic": "^11.10.2",
-    "date-fns": "^4.1.0",
-    "react-day-picker": "^9.0.9"
+    "@changesets/cli": "^2.27.1"
   },
   "packageManager": "npm@9.5.0",
   "lint-staged": {
