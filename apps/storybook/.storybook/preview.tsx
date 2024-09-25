@@ -1,11 +1,10 @@
 import { KvibProvider } from "@kvib/react/src";
-// import { extendTheme, defaultKvibTheme, withDefaultColorScheme } from "@kvib/react/src";
-import theme from "./theme";
-import MDXContainer from "./MDXContainer";
+import React from "react";
 import "./docs-root.css";
+import MDXContainer from "./MDXContainer";
+import theme from "./theme";
 
 export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
     matchers: {
       color: /(background|color)$/i,
@@ -128,3 +127,4 @@ export const argTypes = {
   _vertical: STORYBOOK_DISABLE_CONTROL,
   _horizontal: STORYBOOK_DISABLE_CONTROL,
 };
+export const tags = ["autodocs", "autodocs"];
