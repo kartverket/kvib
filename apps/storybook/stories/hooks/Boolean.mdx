@@ -1,8 +1,8 @@
-import {Meta} from "@storybook/addon-docs";
-import {DocsHeading, DocsStory,DocsContainer, Feedback} from "../templates";
-import {Canvas, Source, Story} from "@storybook/blocks";
-import {BooleanStrings} from "./srcBooleanStrings";
-import {BooleanStringExample} from "./BooleanStringExample";
+import { Meta, Source, Story } from "@storybook/blocks";
+import { DocsContainer, DocsHeading, DocsStory, Feedback } from "../templates";
+import * as Wrapper from "./../templates/DocsCanvas";
+import { BooleanStringExample } from "./BooleanStringExample";
+import { BooleanStrings } from "./srcBooleanStrings";
 
 <Meta title="Hooks/useBoolean"/>
 
@@ -16,14 +16,15 @@ import { useBoolean } from "@kvib/react";
 
 <Feedback component="useBoolean"/>
 
+
 <DocsContainer>
 
     <DocsStory
         title="Return value"
-        description="UseBoolean hook returnerer en stateful boolean verdi og et objekt med følgende funksjon for å oppdatere den"
+        description="useBoolean returnerer en stateful boolean verdi og et objekt med følgende funksjon for å oppdatere den"
         story={
             <>
-            <Canvas><BooleanStringExample/></Canvas>
+            <BooleanStringExample />
             <Source code={BooleanStrings} dark/>
             </>
         }
