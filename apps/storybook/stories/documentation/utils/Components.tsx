@@ -1,8 +1,8 @@
-import { Box, Card, Heading, SimpleGrid, Stack, Text, Flex, Badge, Link, Icon } from "@kvib/react/src";
-import { ComponentsBanner } from "../../templates/ComponentsBanner";
-import { ComponentList } from "./ComponentList";
+import { Badge, Box, Card, Flex, Heading, Icon, Link, SimpleGrid, Stack, Text } from "@kvib/react/src";
 import { Story } from "@storybook/blocks";
 import { useEffect, useRef, useState } from "react";
+import { ComponentsBanner } from "../../templates/ComponentsBanner";
+import { ComponentList } from "./ComponentList";
 
 export const Components = () => {
   return (

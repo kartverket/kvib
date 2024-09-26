@@ -1,8 +1,8 @@
-import {Meta} from "@storybook/addon-docs";
-import {DocsHeading, DocsStory, DocsContainer, Feedback} from "../templates";
-import {Canvas, Source, Story} from "@storybook/blocks";
-import {ControllableExample, UnControllableExample} from "./ControllableExample";
-import {ControllableStrings, UnControllableStrings} from "./srcControllableStrings";
+import { Meta } from "@storybook/addon-docs";
+import { Canvas, Source, Story } from "@storybook/blocks";
+import { DocsContainer, DocsHeading, DocsStory, Feedback } from "../templates";
+import { ControllableExample, UnControllableExample } from "./ControllableExample";
+import { ControllableStrings, UnControllableStrings } from "./srcControllableStrings";
 
 <Meta title="Hooks/useControllable"/>
 
@@ -34,34 +34,28 @@ const [isControlled, value] = useControllableProp(propValue, stateValue)
 const [value, setValue] = useControllableState(options)
 ```
 
-<DocsContainer>
 ### Bruk
-    <DocsStory
-        title=""
-        description="Med useControllableState kan du sende en initiell tilstand (ved å bruke defaultValue), som antyder at komponenten er ukontrollert, eller du kan sende en kontrollert verdi (ved å bruke value), som antyder at komponenten er kontrollert.
-            Her er et eksempel på en ukontrollert tilstand:"
-        isVertical
-        story={
-            <Canvas>
-                <UnControllableExample/>
-                <Source code={UnControllableStrings} dark/>
-            </Canvas>
-        }
-    />
 
-    <DocsStory
-        title=""
-        description="Her er et eksempel på en kontrollert tilstand:"
-        isVertical
-        story={
-            <Canvas>
-                <ControllableExample/>
-                <Source code={ControllableStrings} dark/>
-            </Canvas>
-        }
-    />
-</DocsContainer>
+<DocsStory
+    title=""
+    description="Med useControllableState kan du sende en initiell tilstand (ved å bruke defaultValue), som antyder at komponenten er ukontrollert, eller du kan sende en kontrollert verdi (ved å bruke value), som antyder at komponenten er kontrollert.
+        Her er et eksempel på en ukontrollert tilstand:"
+    isVertical
+    story={
+        <UnControllableExample/>
+    }
+/>
 
-## Kontekstuell tilbakemelding og Tilstand-oppdateringer
+<DocsStory
+    title=""
+    description="Her er et eksempel på en kontrollert tilstand:"
+    isVertical
+    story={
+        <ControllableExample/>
+    }
+/>
+
+
+## Kontekstuell tilbakemelding og tilstandsoppdateringer
 
 Dette hooket gir nyttige feil- eller advarselmeldinger når du bytter mellom kontrollerte og ukontrollerte moduser, eller når du prøver å oppdatere den sendte defaultValue.

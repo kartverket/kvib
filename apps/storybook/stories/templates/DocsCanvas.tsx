@@ -1,6 +1,6 @@
-import { Box } from "@kvib/react/src";
+import { Box, Stack, StackProps } from "@kvib/react/src";
 
-export const DocsCanvas = ({ children }: { children: React.ReactNode }) => (
+export const DocsCanvas = (props: StackProps) => (
   <Box
     display="block"
     p="40px"
@@ -10,7 +10,9 @@ export const DocsCanvas = ({ children }: { children: React.ReactNode }) => (
     className="sbdocs sbdocs-preview sb-unstyled"
   >
     <Box className="docs-story">
-      <Box className="innerZoomElementWrapper">{children}</Box>
+      <Stack className="innerZoomElementWrapper" {...props}>
+        {props.children}
+      </Stack>
     </Box>
   </Box>
 );

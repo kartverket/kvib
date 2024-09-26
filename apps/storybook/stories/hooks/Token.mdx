@@ -1,9 +1,9 @@
-import {Meta} from "@storybook/addon-docs";
-import {DocsHeading, DocsStory, DocsContainer, Feedback} from "../templates";
-import {Canvas, Source} from "@storybook/blocks";
-import {Alert, AlertIcon, Box, AlertDescription} from "@kvib/react/src"
-import {TokenExample} from "./TokenExample";
-import {TokenStrings} from "./srcTokenStrings";
+import { Alert, AlertDescription, AlertIcon, Box } from "@kvib/react/src";
+import { Meta } from "@storybook/addon-docs";
+import { Canvas, Source } from "@storybook/blocks";
+import { DocsContainer, DocsHeading, DocsStory, Feedback } from "../templates";
+import { TokenExample } from "./TokenExample";
+import { TokenStrings } from "./srcTokenStrings";
 
 <Meta title="Hooks/useToken"/>
 
@@ -24,10 +24,7 @@ import { useToken } from "@kvib/react";
 
 <DocsHeading light>Bruk</DocsHeading>
 
-
-    <Canvas>
-        <TokenExample/>
-    </Canvas>
+    <TokenExample/>
     <Source code={TokenStrings} dark/>
 </DocsContainer>
 
