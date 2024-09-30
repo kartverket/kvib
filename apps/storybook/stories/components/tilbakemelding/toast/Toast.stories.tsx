@@ -1,4 +1,4 @@
-import { Toast as KvibToast, useToast, Button, Icon, Stack, HStack, Center, Box } from "@kvib/react/src";
+import { Box, Button, Center, HStack, Icon, Toast as KvibToast, Stack, useToast } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibToast> = {
@@ -22,7 +22,7 @@ const meta: Meta<typeof KvibToast> = {
       },
       control: "boolean",
     },
-    containerSyle: {
+    containerStyle: {
       description: "Style for the outer container",
       table: {
         type: { summary: "styleProps" },
@@ -40,7 +40,7 @@ const meta: Meta<typeof KvibToast> = {
       description: "Time for the toast to disappear, in milliseconds. Set to null for infinite",
       table: {
         type: { summary: "number" },
-        defaultValue: { summary: 9000 },
+        defaultValue: { summary: "9000" },
       },
       control: { type: "number" },
     },
@@ -63,7 +63,7 @@ const meta: Meta<typeof KvibToast> = {
       description: "if true, the toast will show a close button",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -72,14 +72,12 @@ const meta: Meta<typeof KvibToast> = {
       table: {
         type: { summary: "() => void" },
       },
-      control: "",
     },
     onCloseComplete: {
       description: "Callback function to run side effects after the toast has closed.",
       table: {
         type: { summary: "() => void" },
       },
-      control: "",
     },
     position: {
       description: "Placement of the toast",

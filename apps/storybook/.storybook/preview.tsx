@@ -12,6 +12,7 @@ export const parameters = {
     },
   },
   docs: {
+    autodocs: true,
     theme: theme,
     container: MDXContainer,
     toc: {
@@ -26,7 +27,7 @@ export const parameters = {
       method: "alphabetical",
       order: [
         "Oversikt",
-        ["Introduksjon", "Komponentoversikt", "Changelog"],
+        ["Introduksjon", "Changelog"],
         "For utviklere",
         ["Bidra med kode", ["Hurtigveiledning", "Bygge", "Style", "Dokumentere", "Teste", "Publish"], "Kom i gang"],
         "For designere",

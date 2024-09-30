@@ -1,5 +1,5 @@
-import { Meta } from "@storybook/blocks";
 import { Alert, AlertIcon } from "@kvib/react/src";
+import { Meta } from "@storybook/blocks";
 
 <Meta title="For utviklere/Bidra med kode/Publish" />
 
@@ -26,15 +26,13 @@ Slik gjør du det:
 
 1.  Kjør `npx changeset`. Det vil komme opp valg du må gjøre i terminal for å velge versjon-oppdatering av npm-pakken.
 2.  Bruk piltaster og space til å velge @kvib/react, som er den pakken vi ønsker å oppdatere (grønn stjerne viser at den er valgt). Trykk deretter enter for å komme videre.
-
-<img alt="changeset- set package to include" src={require("../../../../public/assets/changeset1.png")} />
-
+    <img alt="changeset- set package to include" src={"../../../../public/assets/changeset1.png"} />
 3.  Du får videre valget om oppdateringen skal være av typen _major_. Hvis ja- bruk piltaster og enter til å velge riktig pakke. Hvis nei- trykk enter med engang uten å velge pakke.
-    <img alt="changeset- set major bump" src={require("../../../../public/assets/changeset2.png")} />
+    <img alt="changeset- set major bump" src={"../../../../public/assets/changeset2.png"} />
 4.  Videre setter du oppdatering av typen minor. Bruk piltaster og enter til å velge riktig pakke.
-    <img alt="changeset- set minor bump" src={require("../../../../public/assets/changeset3.png")} />
+    <img alt="changeset- set minor bump" src={"../../../../public/assets/changeset3.png"} />
 5.  Tilslutt skriver du oppsummering av oppdateringen som er gjort av pakken.
-    <img alt="changeset- set summary" src={require("../../../../public/assets/changeset4.png")} />
+    <img alt="changeset- set summary" src={"../../../../public/assets/changeset4.png"} />
 6.  I mappen _changeset_ vil det nå automatisk legges til en fil med et tilfeldig generert navn. Der kan du redigere _summary_ som du skrev av oppdateringen.
     Det er særlig viktig at kritiske endringer blir dokumentert, f.eks. dersom gyldig verdier til en prop endres. Under er et eksempel på changelog av Button-komponenten:
 
