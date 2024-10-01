@@ -1,0 +1,1 @@
+import{c as r}from"./chunk-ZJJGQIVY-CoI1iMVy.js";import{j as i}from"./extends-CwFRzn3r.js";var t=a=>i.jsx(r.div,{className:"chakra-stack__divider",...a,__css:{...a.__css,borderWidth:0,alignSelf:"stretch",borderColor:"inherit",width:"auto",height:"auto"}});t.displayName="StackDivider";export{t as S};
