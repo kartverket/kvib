@@ -1,9 +1,9 @@
+import { Alert, AlertDescription, AlertIcon, Box } from "@kvib/react/src";
 import { Meta } from "@storybook/addon-docs";
-import {DocsHeading, DocsStory, DocsContainer, Feedback} from "../templates";
-import {Canvas, Source} from "@storybook/blocks";
-import {MediaQueryAPIRefStrings, MediaQueryBrowserStrings, MediaQueryStrings} from "./srcMediaQueryStrings";
-import { Alert, AlertIcon, Box, AlertDescription } from "@kvib/react/src"
-import {MediaQueryBrowserExample, MediaQueryExample} from "./MediaQueryExample";
+import { Canvas, Source } from "@storybook/blocks";
+import { DocsContainer, DocsHeading, DocsStory, Feedback } from "../templates";
+import { MediaQueryBrowserExample, MediaQueryExample } from "./MediaQueryExample";
+import { MediaQueryAPIRefStrings, MediaQueryBrowserStrings, MediaQueryStrings } from "./srcMediaQueryStrings";
 
 <Meta title="Hooks/useMediaQuery" />
 
@@ -37,30 +37,25 @@ Hvorfor en array? **useMediaQuery** aksepterer både en streng og en array av st
     </Box>
 </Alert>
 
-<DocsContainer>
-    <DocsStory
-        title="Bruk"
-        description=""
-        isVertical
-        story={
-            <Canvas>
-                <MediaQueryExample/>
-                <Source code={MediaQueryStrings} dark/>
-            </Canvas>
-        }
-    />
-    <DocsStory
-        title=""
-        description=""
-        isVertical
-        story={
-            <Canvas>
-                <MediaQueryBrowserExample/>
-                <Source code={MediaQueryBrowserStrings} dark/>
-            </Canvas>
-        }
-    />
-</DocsContainer>
+
+### Bruk
+
+<DocsStory
+    title=""
+    description=""
+    isVertical
+    story={
+        <MediaQueryExample/>
+    }
+/>
+<DocsStory
+    title=""
+    description=""
+    isVertical
+    story={
+        <MediaQueryBrowserExample/>
+    }
+/>
 
 
 

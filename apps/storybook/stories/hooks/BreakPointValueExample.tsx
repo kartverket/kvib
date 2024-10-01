@@ -1,4 +1,7 @@
-import { useBreakpointValue, VStack, Text, Button } from "@kvib/react/src";
+import { Button, Text, useBreakpointValue, VStack } from "@kvib/react/src";
+import { Source } from "@storybook/blocks";
+import { DocsCanvas } from "../templates/DocsCanvas";
+import { breakpointStrings } from "./srcBreakpointStrings";
 
 export const BreakPointValueExample = () => {
   const size = useBreakpointValue(
@@ -14,9 +17,12 @@ export const BreakPointValueExample = () => {
   );
 
   return (
-    <VStack align="flex-start">
-      <Text>Resize your window to see the button size change</Text>
-      <Button size={size}>Button</Button>
-    </VStack>
+    <DocsCanvas gap="20px">
+      <VStack align="flex-start">
+        <Text>Resize your window to see the button size change</Text>
+        <Button size={size}>Button</Button>
+      </VStack>
+      <Source code={breakpointStrings} dark />
+    </DocsCanvas>
   );
 };

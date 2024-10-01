@@ -1,9 +1,8 @@
-import { Toast as KvibToast, useToast, Button, Icon, Stack, HStack, Center, Box } from "@kvib/react/src";
+import { Box, Button, Center, HStack, Icon, UseToastOptions as KvibToast, Stack, useToast } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
-const meta: Meta<typeof KvibToast> = {
+const meta: Meta<KvibToast> = {
   title: "Tilbakemelding/Toast",
-  component: KvibToast,
   parameters: {
     docs: {
       story: { inline: true },
@@ -142,7 +141,7 @@ const ToastExample = ({ ...args }) => {
   );
 };
 
-type Story = StoryObj<typeof KvibToast>;
+type Story = StoryObj<KvibToast>;
 
 export const Toast: Story = {
   args: {

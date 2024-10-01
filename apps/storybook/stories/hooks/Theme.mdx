@@ -1,7 +1,7 @@
 import { Meta } from "@storybook/addon-docs";
-import {DocsHeading, DocsStory,DocsContainer, Feedback} from "../templates";
-import {Canvas, Source} from "@storybook/blocks";
-import {ThemeStrings} from "./srcThemeStrings";
+import { Canvas, Source } from "@storybook/blocks";
+import { DocsContainer, DocsHeading, DocsStory, Feedback } from "../templates";
+import { ThemeStrings } from "./srcThemeStrings";
 import { ThemeExample } from "./ThemeExample";
 
 <Meta title="Hooks/useTheme" />
@@ -23,10 +23,7 @@ import { useTheme } from "@kvib/react";
   description="useTheme returnerer temaobjektet."
   isVertical
   story={
-    <Canvas>
       <ThemeExample/>
-      <Source code={ThemeStrings} dark/>
-    </Canvas>
   }
 />
 

@@ -1,8 +1,16 @@
-import { useMediaQuery, Text } from "@kvib/react/src";
+import { Text, useMediaQuery } from "@kvib/react/src";
+import { Source } from "@storybook/blocks";
+import { DocsCanvas } from "../templates/DocsCanvas";
+import { MediaQueryBrowserStrings, MediaQueryStrings } from "./srcMediaQueryStrings";
 export const MediaQueryExample = () => {
   const [isLargerThan1280] = useMediaQuery("(min-width: 1280px)");
 
-  return <Text>{isLargerThan1280 ? "larger than 1280px" : "smaller than 1280px"}</Text>;
+  return (
+    <DocsCanvas>
+      <Text>{isLargerThan1280 ? "larger than 1280px" : "smaller than 1280px"}</Text>
+      <Source code={MediaQueryStrings} dark />
+    </DocsCanvas>
+  );
 };
 
 export const MediaQueryBrowserExample = () => {
@@ -16,5 +24,10 @@ export const MediaQueryBrowserExample = () => {
     return isDisplayingInBrowser ? "rendering in a browser" : "rendering on something else, e.g. PWA";
   };
 
-  return <Text>{determineText()}</Text>;
+  return (
+    <DocsCanvas>
+      <Text>{determineText()}</Text>
+      <Source code={MediaQueryBrowserStrings} dark />
+    </DocsCanvas>
+  );
 };

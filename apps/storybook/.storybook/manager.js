@@ -1,6 +1,6 @@
-import { addons } from "@storybook/addons";
-import theme from "./theme";
+import { addons } from "@storybook/manager-api";
 import "./docs-root.css";
+import theme from "./theme";
 
 addons.setConfig({
   theme,
@@ -9,8 +9,23 @@ addons.setConfig({
   panelPosition: "bottom",
   sidebar: {
     showRoots: true,
-    collapsedRoots: ["for-utviklere", "for-designere", "designfundament", 
-    "layout", "media", "hooks", "sideelementer", "navigasjon", "søk", "datavisning", "skjemaelementer",
-    "tilbakemelding", "overlay", "animasjoner", "annet",  "other"],
+    collapsedRoots: [
+      "for-utviklere",
+      "for-designere",
+      "designfundament",
+      "layout",
+      "media",
+      "hooks",
+      "sideelementer",
+      "navigasjon",
+      "søk",
+      "datavisning",
+      "skjemaelementer",
+      "tilbakemelding",
+      "overlay",
+      "animasjoner",
+      "annet",
+      "other",
+    ],
   },
 });

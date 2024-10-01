@@ -1,10 +1,13 @@
-import { useClipboard, Flex, Input, Button, Editable, EditablePreview, EditableInput } from "@kvib/react/src";
+import { Button, Editable, EditableInput, EditablePreview, Flex, Input, useClipboard } from "@kvib/react/src";
+import { Source } from "@storybook/blocks";
+import { DocsCanvas } from "../templates/DocsCanvas";
+import { ClipboardStrings } from "./srcClipboardStrings";
 export const ClipboardExample = () => {
   const placeholder = "text to be copied...";
   const { onCopy, value, setValue, hasCopied } = useClipboard("");
 
   return (
-    <>
+    <DocsCanvas>
       <Flex mb={2}>
         <Input
           placeholder={placeholder}
@@ -20,6 +23,7 @@ export const ClipboardExample = () => {
         <EditablePreview width="100%" />
         <EditableInput />
       </Editable>
-    </>
+      <Source code={ClipboardStrings} dark />
+    </DocsCanvas>
   );
 };

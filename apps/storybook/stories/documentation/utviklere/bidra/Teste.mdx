@@ -1,5 +1,5 @@
-import { Meta } from "@storybook/blocks";
 import { Alert, AlertIcon } from "@kvib/react/src";
+import { Meta } from "@storybook/blocks";
 
 <Meta title="For utviklere/Bidra med kode/Teste" />
 
@@ -30,7 +30,7 @@ Designerne våre tenker på UU når en komponenent blir designet, og Chakra tilb
 2. **Zoom og skjermstørrelse**:Teste med 400% zoom på desktop, samt teste på små skjermer. I storybook er det en egen funksjon som gjør at en kan teste hvordan komponenten ville sett ut på liten skjerm.
 3. **a11y-synsnedsettelse**:I hver story kan det gjennomføres accessibility-tester for synet. Den finner du i menyen på toppen, merket med et accessibility-symbol. Test de ulike versjonene (Blurred vision, deutoranomaly, osv.) for å se om det er mulig å lese og forstå hva komponenten gjør.
 
-<img alt="navBar in story" src={require("../../../../public/assets/navBarStory.png")} width="500px" />
+<img alt="navBar in story" src={"../../../../public/assets/navBarStory.png"} width="500px" />
 
 <br />
 
@@ -38,7 +38,7 @@ Designerne våre tenker på UU når en komponenent blir designet, og Chakra tilb
    Ved å klikke på fanen, får du en oversikt over testene som er gjort; både de godkjente og de som har brudd på krav. Alle testene må godkjennes før en komponent kan bli lagt til i designsystemet.
    Dersom du ikke finner denne taben kan det være fordi browseren ikke støtter alle funksjonene i storybook. Prøv å bruke Chrome eller Vivaldi browser.
 
-<img alt="accessibility-test tab " src={require("../../../../public/assets/tabsNavBarStory.png")} width="500px" />
+<img alt="accessibility-test tab " src={"../../../../public/assets/tabsNavBarStory.png"} width="500px" />
 
 5. **Test Runner**: Storybook sin Test Runner sjekker om storyene kjører uten feil, og er derav ikke en direkte UU-test.
    Likevel er a11y konfigurert sammen med denne testen slik at det kjøres som tester i Github Actions.

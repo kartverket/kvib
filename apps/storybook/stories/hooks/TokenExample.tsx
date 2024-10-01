@@ -1,4 +1,5 @@
 import { Box, Code, useToken } from "@kvib/react/src";
+import { DocsCanvas } from "../templates/DocsCanvas";
 export const TokenExample = () => {
   const [red100, blue200] = useToken(
     // the key within the theme, in this case `theme.colors`
@@ -9,8 +10,10 @@ export const TokenExample = () => {
   );
 
   return (
-    <Box p={4} boxShadow={`inset 0 4px 0 ${red100}, 0 0 8px ${blue200}`}>
-      You can utilize <Code>useToken</Code> to create a <Code>boxShadow</Code> with colors from your theme.
-    </Box>
+    <DocsCanvas>
+      <Box p={4} boxShadow={`inset 0 4px 0 ${red100}, 0 0 8px ${blue200}`}>
+        You can utilize <Code>useToken</Code> to create a <Code>boxShadow</Code> with colors from your theme.
+      </Box>
+    </DocsCanvas>
   );
 };

@@ -1,7 +1,6 @@
-// .storybook/MDXWrapper.tsx
+import { FooterInline, KvibProvider, Link } from "@kvib/react/src";
+import { DocsContainer } from "@storybook/blocks";
 import React, { useEffect } from "react";
-import { KvibProvider } from "@kvib/react/src";
-import { DocsContainer, Story } from "@storybook/blocks";
 
 const MDXContainer = ({ children, ...props }) => {
   // Remove table of contents if there are no h2 or h3 elements on the page
@@ -20,7 +19,15 @@ const MDXContainer = ({ children, ...props }) => {
     <KvibProvider>
       <DocsContainer {...props}>
         {children}
-        <Story id="sideelementer-footer-footer-inline--footer-inline-custom" />
+        <FooterInline accessibilityUrl="https://uustatus.no/nb/erklaringer/publisert/f048c5ff-2167-48c5-b706-bd106c15e9c9">
+          <Link
+            href="https://github.com/kartverket/kvib"
+            aria-label="Besøk Kartverkets Designsystem på Github"
+            fontWeight="bold"
+          >
+            Github
+          </Link>
+        </FooterInline>
       </DocsContainer>
     </KvibProvider>
   );
