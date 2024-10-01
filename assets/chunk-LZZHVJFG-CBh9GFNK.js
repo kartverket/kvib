@@ -1,0 +1,1 @@
+import{u as r}from"./chunk-DMO4EI7P-D6u3hnqn.js";import{f as c,o as t,c as m,a as i}from"./chunk-ZJJGQIVY-CoI1iMVy.js";import{j as n}from"./extends-CwFRzn3r.js";var d=c(function(s,a){const o=r("Code",s),{className:f,...e}=t(s);return n.jsx(m.code,{ref:a,className:i("chakra-code",s.className),...e,__css:{display:"inline-block",...o}})});d.displayName="Code";export{d as C};
