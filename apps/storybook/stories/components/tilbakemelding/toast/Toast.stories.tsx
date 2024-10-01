@@ -1,4 +1,4 @@
-import { Box, Button, Center, HStack, Icon, Toast as KvibToast, Stack, useToast } from "@kvib/react/src";
+import { Toast as KvibToast, useToast, Button, Icon, Stack, HStack, Center, Box } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibToast> = {
