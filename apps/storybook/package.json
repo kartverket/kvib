@@ -37,7 +37,7 @@
     "@types/react-dom": "^18.2.22",
     "axe-playwright": "^2.0.1",
     "babel-loader": "^9.1.3",
-    "chromatic": "^10.9.3",
+    "chromatic": "^11.11.0",
     "raw-loader": "^4.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
