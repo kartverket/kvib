@@ -1,4 +1,4 @@
-import { Card, Text, Link, Flex, Box, Stack } from "@kvib/react/src";
+import { Box, Card, Flex, Link, Stack, Text } from "@kvib/react/src";
 
 export const StarCard = () => {
   return (
@@ -92,7 +92,7 @@ export const LinksCard = () => {
     </IntroCard>
   );
 };
-
+/*
 export const SurveyCard = () => {
   return (
     <IntroCard>
@@ -121,7 +121,7 @@ export const SurveyCard = () => {
       </Element>
     </IntroCard>
   );
-};
+}; */
 
 export const FeedbackCard = () => {
   return (
