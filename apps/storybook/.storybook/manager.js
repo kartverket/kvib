@@ -1,5 +1,4 @@
 import { addons } from "@storybook/manager-api";
-import "./docs-root.css";
 import theme from "./theme";
 
 addons.setConfig({
