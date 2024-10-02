@@ -1,10 +1,9 @@
-import { KvibProvider } from "@kvib/react/src";
-import React from "react";
+import { Preview } from "@storybook/react";
 import "./docs-root.css";
 import MDXContainer from "./MDXContainer";
 import theme from "./theme";
 
-export const parameters = {
+const parameters = {
   controls: {
     matchers: {
       color: /(background|color)$/i,
@@ -49,18 +48,6 @@ export const parameters = {
     },
   },
 };
-
-// For å teste storyene slik de vil se ut med endret default-farge kan du kommentere inn denne linja, og bruke themet i KVIBProvideren. Husk å kommentere inn importer også!
-// const customTheme = extendTheme(withDefaultColorScheme({ colorScheme: "blue" }), defaultKvibTheme);
-
-export const decorators = [
-  (Story) => (
-    <KvibProvider>
-      {/* <KvibProvider theme={customTheme}> */}
-      <Story />
-    </KvibProvider>
-  ),
-];
 
 const STORYBOOK_DISABLE_CONTROL = { table: { disable: true } };
 export const argTypes = {
@@ -129,3 +116,9 @@ export const argTypes = {
   _horizontal: STORYBOOK_DISABLE_CONTROL,
 };
 export const tags = ["autodocs", "autodocs"];
+
+const preview: Preview = {
+  parameters: parameters,
+};
+
+export default preview;
