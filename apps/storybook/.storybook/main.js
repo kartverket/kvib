@@ -12,7 +12,6 @@ module.exports = {
     getAbsolutePath("@storybook/addon-links"),
     getAbsolutePath("@storybook/addon-essentials"),
     getAbsolutePath("@storybook/addon-a11y"),
-    getAbsolutePath("storybook-css-modules"),
     {
       name: "@storybook/addon-storysource",
       options: {
