@@ -1,10 +1,11 @@
 import { KvibProvider } from "@kvib/react/src";
+import { Preview } from "@storybook/react";
 import React from "react";
 import "./docs-root.css";
 import MDXContainer from "./MDXContainer";
 import theme from "./theme";
 
-export const parameters = {
+const parameters = {
   controls: {
     matchers: {
       color: /(background|color)$/i,
@@ -129,3 +130,9 @@ export const argTypes = {
   _horizontal: STORYBOOK_DISABLE_CONTROL,
 };
 export const tags = ["autodocs", "autodocs"];
+
+const preview: Preview = {
+  parameters: parameters,
+};
+
+export default preview;
