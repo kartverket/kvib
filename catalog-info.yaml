@@ -1,0 +1,37 @@
+# nonk8s
+apiVersion: "backstage.io/v1alpha1"
+kind: "Component"
+metadata:
+  name: "kvib"
+  tags:
+  - "public"
+spec:
+  type: "website"
+  lifecycle: "production"
+  owner: "designsystem"
+---
+apiVersion: "backstage.io/v1alpha1"
+kind: "Group"
+metadata:
+  name: "security_champion_kvib"
+  title: "Security Champion kvib"
+spec:
+  type: "security_champion"
+  parent: "it_security_champions"
+  members:
+  - "nilben"
+  children:
+  - "resource:kvib"
+---
+apiVersion: "backstage.io/v1alpha1"
+kind: "Resource"
+metadata:
+  name: "kvib"
+  links:
+  - url: "https://github.com/kartverket/kvib"
+    title: "kvib på GitHub"
+spec:
+  type: "repo"
+  owner: "security_champion_kvib"
+  dependencyOf:
+  - "component:kvib"
