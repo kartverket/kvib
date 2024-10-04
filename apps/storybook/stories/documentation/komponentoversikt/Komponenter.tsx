@@ -1,7 +1,15 @@
 import {
+  Accordion,
+  AccordionButton,
+  AccordionItem,
+  AccordionPanel,
+  Badge,
   Button,
+  Card,
+  CardBody,
   Checkbox,
   CloseButton,
+  Code,
   Datepicker,
   Editable,
   EditableInput,
@@ -10,11 +18,15 @@ import {
   FormControl,
   FormErrorMessage,
   FormHelperText,
+  HStack,
   IconButton,
   Input,
+  Kbd,
+  ListItem,
   NumberInput,
   NumberInputField,
   NumberInputStepper,
+  OrderedList,
   PinInput,
   PinInputField,
   Radio,
@@ -23,12 +35,15 @@ import {
   RangeSliderFilledTrack,
   RangeSliderThumb,
   RangeSliderTrack,
+  Search,
   Select,
   Slider,
   SliderFilledTrack,
   SliderThumb,
   SliderTrack,
   Stack,
+  Stat,
+  Tag,
   Textarea,
   Timepicker,
 } from "@kvib/react/src";
@@ -211,93 +226,115 @@ export const Komponenter: Record<string, Kategori> = {
       },
     },
   },
-  /* Search: {
+  Search: {
     navn: "Søk",
     komponenter: {
       Search: {
         navn: "Search",
         beskrivelse: "Search",
-        komponent: "søk-search--search",
+        komponent: <Search placeholder="Søk her..." />,
         link: "search",
       },
-      SearchAsync: {
+      /* SearchAsync: {
         navn: "SearchAsync",
         beskrivelse: "SearchAsync",
-        komponent: "søk-searchasync--search-async",
+        komponent: (
+          <Box h={20}>
+            <SearchAsync placeholder="Søk her..." />
+          </Box>
+        ),
         link: "searchAsync",
         tag: "beta",
-      },
+      }, */
     },
   },
+
   DataDisplay: {
     navn: "Datavisning",
     komponenter: {
       Badge: {
         navn: "Badge",
         beskrivelse: "",
-        komponent: "datavisning-badge--badge",
-
+        komponent: <Badge>Badge</Badge>,
         link: "badge",
       },
-      Table: {
+      /* Table: {
         navn: "Table",
         beskrivelse: "",
-        komponent: "datavisning-table--table",
-
+        komponent: <Table.render />,
         link: "table",
-      },
+      }, */
       Code: {
         navn: "Code",
         beskrivelse: "",
-        komponent: "datavisning-code--code",
-
+        komponent: <Code children="Hello world" />,
         link: "code",
       },
       Tag: {
         navn: "Tag",
         beskrivelse: "",
-        komponent: "datavisning-tag--tag",
-
+        komponent: <Tag>Tag</Tag>,
         link: "tag",
       },
       Stat: {
         navn: "Stat",
         beskrivelse: "",
-        komponent: "datavisning-stat--stat",
-
+        komponent: <Stat>Metrikk</Stat>,
         link: "stat",
       },
       Card: {
         navn: "Card",
         beskrivelse: "",
-        komponent: "datavisning-card--card",
-
+        komponent: (
+          <Card>
+            <CardBody>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec nunc.</CardBody>
+          </Card>
+        ),
         link: "card",
       },
       Kbd: {
         navn: "Kbd",
         beskrivelse: "",
-        komponent: "datavisning-kbd--kbd",
-
+        komponent: (
+          <HStack>
+            <Kbd>Ctrl</Kbd>
+            <Kbd>Alt</Kbd>
+            <Kbd>Delete</Kbd>
+          </HStack>
+        ),
         link: "kbd",
       },
       List: {
         navn: "List",
         beskrivelse: "",
-        komponent: "datavisning-list--list",
-
+        komponent: (
+          <OrderedList>
+            <ListItem>Første punkt i listen</ListItem>
+            <ListItem>Andre punkt</ListItem>
+          </OrderedList>
+        ),
         link: "list",
       },
       Accordion: {
         navn: "Accordion",
         beskrivelse: "",
-        komponent: "datavisning-accordion--accordion",
-
+        komponent: (
+          <Accordion allowMultiple minW="12rem">
+            <AccordionItem>
+              <AccordionButton>Tittel 1</AccordionButton>
+              <AccordionPanel>Innhold 1</AccordionPanel>
+            </AccordionItem>
+            <AccordionItem>
+              <AccordionButton>Tittel 2</AccordionButton>
+              <AccordionPanel>Innhold 2</AccordionPanel>
+            </AccordionItem>
+          </Accordion>
+        ),
         link: "accordion",
       },
     },
   },
-
+  /*
   Layout: {
     navn: "Layout",
     komponenter: {

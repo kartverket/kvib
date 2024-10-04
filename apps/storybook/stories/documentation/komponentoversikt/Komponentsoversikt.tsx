@@ -1,5 +1,18 @@
-import { Badge, Box, Card, Flex, Heading, Icon, Link, SimpleGrid, Stack, Text } from "@kvib/react/src";
-import { ReactElement, useEffect, useRef, useState } from "react";
+import {
+  Badge,
+  Box,
+  Card,
+  Flex,
+  FormLabel,
+  Heading,
+  Icon,
+  Link,
+  Select,
+  SimpleGrid,
+  Stack,
+  Text,
+} from "@kvib/react/src";
+import { cloneElement, ReactElement, useEffect, useRef, useState } from "react";
 import { ComponentsBanner } from "../../templates/ComponentsBanner";
 import { Komponenter } from "./Komponenter";
 
@@ -8,9 +21,17 @@ export const Komponentsoversikt = () => {
 };
 
 export const Components = () => {
+  const [theme, setTheme] = useState("green");
   return (
     <Box>
       <ComponentsBanner title="Komponenter" description="Se en full oversikt over komponentene i designsystemet." />
+      <Box>
+        <FormLabel htmlFor="theme">Velg fargetema</FormLabel>
+        <Select value={theme} onChange={(e) => setTheme(e.target.value)} marginBottom="2rem" maxW="12rem">
+          <option value="green">Grønn</option>
+          <option value="blue">Blå</option>
+        </Select>
+      </Box>
       <Stack gap="3rem">
         {Object.keys(Komponenter).map((categoryKey) => {
           const category = Komponenter[categoryKey];
@@ -25,9 +46,11 @@ export const Components = () => {
                     description={component.beskrivelse}
                     tag={component.tag}
                     link={component.link}
-                    component={component.komponent}
+                    component={cloneElement(component.komponent, {
+                      colorScheme: theme,
+                    })}
                     category={category.navn}
-                  ></ComponentCard>
+                  />
                 );
               })}
             </ComponentCategory>
