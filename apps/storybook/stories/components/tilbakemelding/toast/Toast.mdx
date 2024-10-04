@@ -1,8 +1,8 @@
-import { Meta, Controls, Source, Story } from "@storybook/blocks";
-import * as ToastStories from "./Toast.stories";
-import { Card, CardBody, Alert, AlertTitle, AlertDescription, AlertIcon } from "@kvib/react/src";
-import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
+import { Alert, AlertDescription, AlertIcon, AlertTitle, Card, CardBody } from "@kvib/react/src";
+import { Controls, Meta, Source, Story } from "@storybook/blocks";
+import { DocsAnatomy, DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
 import * as ToastStrings from "./srcStrings";
+import * as ToastStories from "./Toast.stories";
 
 <Meta of={ToastStories} />
 
@@ -21,13 +21,6 @@ import { useToast } from "@kvib/react";
 
 ## Status
 
-<Alert status="warning">
-  <AlertIcon />
-  <AlertTitle>Feil farge</AlertTitle>
-  <AlertDescription>
-    Farge for "warning" toast er ikke helt riktig enda (for lite kontrast mot hvit tekst)
-  </AlertDescription>
-</Alert>
 <Card variant="outline">
   <CardBody>
     <Story of={ToastStories.ToastStatus} />
