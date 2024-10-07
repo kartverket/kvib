@@ -2,4 +2,4 @@
 "@kvib/react": minor
 ---
 
-Justerer grå bakgrunsfarge på Slider og Switch fra 500 til 300
+Justerer grå track-bakgrunnsfarge på Slider og Switch fra 500 til 300
