@@ -204,7 +204,7 @@ const meta: Meta<typeof KvibAlertDialog> = {
 export default meta;
 type Story = StoryObj<typeof KvibAlertDialog>;
 
-const AlertDialogExample = ({ ...args }) => {
+export const AlertDialogExample = ({ ...args }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const cancelRef = useRef<HTMLButtonElement>(null);
 

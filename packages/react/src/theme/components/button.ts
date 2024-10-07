@@ -1,4 +1,4 @@
-import { defineStyleConfig, defineStyle } from "@chakra-ui/react";
+import { defineStyle, defineStyleConfig } from "@chakra-ui/react";
 import { colors } from "../tokens";
 
 const baseStyle = defineStyle({
@@ -205,7 +205,7 @@ const variantGhost = defineStyle((props) => {
     bg: "transparent",
     color: `${c}.500`,
     _hover: {
-      bg: `${c}.50`,
+      bg: `${c}.100`,
       color: `${c}.400`,
       _disabled: {
         bg: "transparent",

@@ -28,7 +28,8 @@ const parameters = {
       method: "alphabetical",
       order: [
         "Oversikt",
-        ["Introduksjon", "Changelog"],
+        "Komponentoversikt",
+        "Endringslogg",
         "For utviklere",
         ["Bidra med kode", ["Hurtigveiledning", "Bygge", "Style", "Dokumentere", "Teste", "Publish"], "Kom i gang"],
         "For designere",

@@ -1,7 +1,14 @@
 import {
   Box,
   Button,
+  ButtonGroup,
+  FormControl,
+  FormLabel,
+  HStack,
+  IconButton,
+  Input,
   Popover as KvibPopover,
+  PopoverAnchor,
   PopoverArrow,
   PopoverBody,
   PopoverCloseButton,
@@ -9,21 +16,14 @@ import {
   PopoverFooter,
   PopoverHeader,
   PopoverTrigger,
-  ButtonGroup,
-  FormControl,
-  FormLabel,
-  Input,
-  Stack,
-  useDisclosure,
-  IconButton,
-  useBoolean,
-  HStack,
-  PopoverAnchor,
-  RadioGroup,
   Radio,
+  RadioGroup,
+  Stack,
+  useBoolean,
+  useDisclosure,
 } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
-import { forwardRef, useRef, Ref, FC, useState } from "react";
+import { FC, forwardRef, Ref, useRef, useState } from "react";
 import FocusLock from "react-focus-lock";
 
 const meta: Meta<typeof KvibPopover> = {

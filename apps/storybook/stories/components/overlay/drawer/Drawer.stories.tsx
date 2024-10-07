@@ -1,7 +1,6 @@
 import {
   Box,
   Button,
-  Drawer as KvibDrawer,
   DrawerBody,
   DrawerCloseButton,
   DrawerContent,
@@ -14,10 +13,11 @@ import {
   InputGroup,
   InputLeftAddon,
   InputRightAddon,
+  Drawer as KvibDrawer,
+  Stack as KvibStack,
   Radio,
   RadioGroup,
   Select,
-  Stack as KvibStack,
   Textarea,
   useDisclosure,
 } from "@kvib/react/src";
@@ -231,7 +231,7 @@ const meta: Meta<typeof KvibDrawer> = {
 export default meta;
 type Story = StoryObj<typeof KvibDrawer>;
 
-const DrawerExample = ({ ...args }: DrawerProps) => {
+export const DrawerExample = ({ ...args }: DrawerProps) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>

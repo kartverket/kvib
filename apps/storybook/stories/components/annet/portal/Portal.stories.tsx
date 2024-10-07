@@ -65,7 +65,7 @@ export const PortalCustom: Story = {
   render: (args) => <PortalCustomExample {...args} />,
 };
 
-const PortalNestedExample = ({ ...args }) => {
+export const PortalNestedExample = ({ ...args }) => {
   const ref = useRef(null);
   return (
     <div>
