@@ -1,13 +1,13 @@
 import {
   Table as KvibTable,
-  Thead as KvibThead,
-  Tbody as KvibTbody,
-  Tfoot as KvibTfoot,
-  Tr as KvibTr,
-  Th as KvibTh,
-  Td as KvibTd,
   TableCaption as KvibTableCaption,
   TableContainer as KvibTableContainer,
+  Tbody as KvibTbody,
+  Td as KvibTd,
+  Tfoot as KvibTfoot,
+  Th as KvibTh,
+  Thead as KvibThead,
+  Tr as KvibTr,
 } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
@@ -97,7 +97,7 @@ export const Table: Story = {
 };
 
 export const TableVariants: Story = {
-  args: { variant: "striped", colorScheme: "green" },
+  args: { variant: "striped", colorScheme: "green", size: "md" },
   render: (args) => (
     <KvibTableContainer>
       <KvibTable {...args}>
