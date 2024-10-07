@@ -1,5 +1,8 @@
 import {
   Button,
+  FormControl,
+  FormLabel,
+  Input,
   Modal as KvibModal,
   ModalBody,
   ModalCloseButton,
@@ -7,11 +10,8 @@ import {
   ModalFooter,
   ModalHeader,
   ModalOverlay,
-  useDisclosure,
   Text,
-  FormControl,
-  FormLabel,
-  Input,
+  useDisclosure,
 } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 import { SetStateAction, useRef, useState } from "react";
@@ -216,7 +216,7 @@ const meta: Meta<typeof KvibModal> = {
 export default meta;
 type Story = StoryObj<typeof KvibModal>;
 
-const ModalExample = ({ ...args }) => {
+export const ModalExample = ({ ...args }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>

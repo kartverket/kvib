@@ -1,7 +1,14 @@
 import {
   Box,
   Button,
+  ButtonGroup,
+  FormControl,
+  FormLabel,
+  HStack,
+  IconButton,
+  Input,
   Popover as KvibPopover,
+  PopoverAnchor,
   PopoverArrow,
   PopoverBody,
   PopoverCloseButton,
@@ -9,21 +16,14 @@ import {
   PopoverFooter,
   PopoverHeader,
   PopoverTrigger,
-  ButtonGroup,
-  FormControl,
-  FormLabel,
-  Input,
-  Stack,
-  useDisclosure,
-  IconButton,
-  useBoolean,
-  HStack,
-  PopoverAnchor,
-  RadioGroup,
   Radio,
+  RadioGroup,
+  Stack,
+  useBoolean,
+  useDisclosure,
 } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
-import { forwardRef, useRef, Ref, FC, useState } from "react";
+import { FC, forwardRef, Ref, useRef, useState } from "react";
 import FocusLock from "react-focus-lock";
 
 const meta: Meta<typeof KvibPopover> = {
@@ -406,7 +406,7 @@ const Form: FC<FormProps> = ({ firstFieldRef, onCancel }) => {
   );
 };
 
-const PopoverForm = ({ ...args }) => {
+export const PopoverForm = ({ ...args }) => {
   const { onOpen, onClose, isOpen } = useDisclosure();
   const firstFieldRef = useRef<HTMLInputElement>(null);
 
@@ -485,7 +485,7 @@ export const PopoverControlled: Story = {
   render: (args) => <ControlledUsage {...args} />,
 };
 
-const WithPopoverAnchor = ({ ...args }) => {
+export const WithPopoverAnchor = ({ ...args }) => {
   const [isEditing, setIsEditing] = useBoolean();
   const [color, setColor] = useState("red");
 

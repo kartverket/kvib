@@ -1,12 +1,12 @@
 import {
-  Input as KvibInput,
   Checkbox,
+  FormControl as KvibFormControl,
+  FormErrorMessage as KvibFormErrorMessage,
+  FormHelperText as KvibFormHelperText,
+  FormLabel as KvibFormLabel,
+  Input as KvibInput,
   Radio,
   Select,
-  FormControl as KvibFormControl,
-  FormLabel as KvibFormLabel,
-  FormHelperText as KvibFormHelperText,
-  FormErrorMessage as KvibFormErrorMessage,
   Stack,
 } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
