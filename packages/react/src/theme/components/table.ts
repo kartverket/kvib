@@ -9,11 +9,11 @@ const variantStriped = defineStyle((props) => {
         "&:nth-of-type(odd)": {
           "td, th": {
             bg: `${c}.50`,
-            borderBottomColor: `${c}.50`,
+            borderBottomColor: `${c}.50`, // må ha denne to steder
           },
         },
         "td, th": {
-          borderBottomColor: `${c}.50`, // må visst ha denne to ganger
+          borderBottomColor: `${c}.50`,
         },
       },
     },
@@ -25,17 +25,8 @@ const variantStriped = defineStyle((props) => {
   };
 });
 
-const variants = {
-  simple: {},
-  striped: variantStriped,
-  unstyled: {},
-};
-
 export const tableTheme = defineStyleConfig({
-  baseStyle: {},
-  variants,
-  defaultProps: {
-    variant: "striped",
-    colorScheme: "green",
+  variants: {
+    striped: variantStriped,
   },
 });
