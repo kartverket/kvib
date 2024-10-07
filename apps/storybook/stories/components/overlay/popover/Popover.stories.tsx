@@ -406,7 +406,7 @@ const Form: FC<FormProps> = ({ firstFieldRef, onCancel }) => {
   );
 };
 
-export const PopoverForm = ({ ...args }) => {
+const PopoverForm = ({ ...args }) => {
   const { onOpen, onClose, isOpen } = useDisclosure();
   const firstFieldRef = useRef<HTMLInputElement>(null);
 
@@ -485,7 +485,7 @@ export const PopoverControlled: Story = {
   render: (args) => <ControlledUsage {...args} />,
 };
 
-export const WithPopoverAnchor = ({ ...args }) => {
+const WithPopoverAnchor = ({ ...args }) => {
   const [isEditing, setIsEditing] = useBoolean();
   const [color, setColor] = useState("red");
 
