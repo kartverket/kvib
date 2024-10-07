@@ -1,22 +1,22 @@
-import {
-  Input as KVInput,
-  InputProps,
-  Popover,
-  useBoolean,
-  PopoverContent,
-  InputGroup,
-  InputRightElement,
-  PopoverTrigger,
-  PopoverAnchor,
-  useTheme,
-  IconButton,
-} from "@kvib/react/src";
 import { forwardRef, useFormControlContext } from "@chakra-ui/react";
-import { DayPicker, useInput } from "react-day-picker";
-import "react-day-picker/dist/style.css";
+import {
+  IconButton,
+  InputGroup,
+  InputProps,
+  InputRightElement,
+  Input as KVInput,
+  Popover,
+  PopoverAnchor,
+  PopoverContent,
+  PopoverTrigger,
+  useBoolean,
+  useTheme,
+} from "@kvib/react/src";
+import { isValid, parse } from "date-fns";
 import { nb } from "date-fns/locale/nb";
 import { ChangeEvent, useEffect } from "react";
-import { isValid, parse } from "date-fns";
+import { DayPicker, useInput } from "react-day-picker";
+import "react-day-picker/dist/style.css";
 
 export type DatepickerProps = Omit<InputProps, "colorScheme" | "max" | "min" | "defaultValue"> & {
   /**
@@ -308,7 +308,7 @@ const css = (className: string, colorPalette: Record<number, string>) => {
   --rdp-cell-size: 40px; /* Size of the day cells. */
   --rdp-caption-font-size: 18px; /* Font size for the caption labels. */
   --rdp-accent-color: ${colorPalette[500]}; /* Accent color for the background of selected days. */
-  --rdp-background-color: ${colorPalette[50]}; /* Background color for the hovered/focused elements. */
+  --rdp-background-color: ${colorPalette[100]}; /* Background color for the hovered/focused elements. */
   --rdp-outline: 2px solid var(--rdp-accent-color); /* Outline border for focused elements */
   --rdp-selected-color: #fff; /* Color of selected day text */
 }

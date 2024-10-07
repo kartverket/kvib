@@ -3,7 +3,6 @@ import {
   AccordionButton,
   AccordionItem,
   AccordionPanel,
-  AspectRatio,
   Avatar,
   Badge,
   Box,
@@ -449,18 +448,6 @@ export const Komponenter: Record<string, Kategori> = {
         ),
         link: "grid",
       },
-      AspectRatio: {
-        navn: "AspectRatio",
-        beskrivelse: "",
-        komponent: (
-          <Box>
-            <AspectRatio ratio={16 / 9}>
-              <Image src="https://images.unsplash.com/photo-1477768663691-75454fd8e870?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3087&q=80" />
-            </AspectRatio>
-          </Box>
-        ),
-        link: "aspect-ratio",
-      },
       Stack: {
         navn: "Stack",
         beskrivelse: "",
@@ -573,7 +560,7 @@ export const Komponenter: Record<string, Kategori> = {
         navn: "Image",
         beskrivelse: "",
         komponent: (
-          <Image src="https://images.unsplash.com/photo-1477768663691-75454fd8e870?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3087&q=80" />
+          <Image src="https://images.unsplash.com/photo-1477768663691-75454fd8e870?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" />
         ),
         link: "image",
       },
@@ -758,7 +745,7 @@ export const Komponenter: Record<string, Kategori> = {
         komponent: (
           <>
             <Show above="md">Denne teksten vises på skjermer større enn "md".</Show>
-            <Show below="md">Denne teksten vises på skjerme mindre enn "md".</Show>
+            <Show below="md">Denne teksten vises på skjermer mindre enn "md".</Show>
           </>
         ),
         link: "show-hide",
