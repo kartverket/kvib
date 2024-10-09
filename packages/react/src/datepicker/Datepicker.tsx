@@ -250,22 +250,22 @@ const CustomDatepicker = forwardRef<DatepickerProps, "input">(
             locale={nb}
             showOutsideDays={showOutsideDays}
             showWeekNumber={showWeekNumber}
-            disabled={disabledDays}
             disableNavigation={disableNavigation}
             defaultMonth={defaultMonth}
             captionLayout={showDropdownMonthYear ? "dropdown" : "label"}
             startMonth={fromDate}
             endMonth={toDate}
+            required={isRequired}
             {...(fromDate
               ? {
-                  hidden: {
+                  disabled: {
                     before: fromDate,
                   },
                 }
               : {})}
             {...(toDate
               ? {
-                  hidden: {
+                  disabled: {
                     after: toDate,
                   },
                 }
