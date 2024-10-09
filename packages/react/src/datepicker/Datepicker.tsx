@@ -254,6 +254,22 @@ const CustomDatepicker = forwardRef<DatepickerProps, "input">(
             disableNavigation={disableNavigation}
             defaultMonth={defaultMonth}
             captionLayout={showDropdownMonthYear ? "dropdown" : "label"}
+            startMonth={fromDate}
+            endMonth={toDate}
+            {...(fromDate
+              ? {
+                  hidden: {
+                    before: fromDate,
+                  },
+                }
+              : {})}
+            {...(toDate
+              ? {
+                  hidden: {
+                    after: toDate,
+                  },
+                }
+              : {})}
           />
         </PopoverContent>
       </Popover>
@@ -333,7 +349,8 @@ const css = (className: string, colorPalette: Record<number, string>) => {
   --rdp-day_button-height: var(--rdp-day-height); /* Height of the day buttons. */
   --rdp-day_button-width: var(--rdp-day-width); /* Width of the day buttons. */
   --rdp-day_button-border-radius: 50%;
-  --rdp-outside-opacity: 0.6; /* Opacity of the days outside the current month. */
+  --rdp-outside-opacity: 0.4; /* Opacity of the days outside the current month. */
+  --rdp-disabled-opacity: 0.25; /* Opacity of the disabled days. */
 
   /* Week numbers */
   --rdp-weekday-text-align: center;
@@ -343,7 +360,7 @@ const css = (className: string, colorPalette: Record<number, string>) => {
     font-weight: 700;
   }
 
-  .rdp-day:hover:not(.rdp-selected) {
+  .rdp-day:hover:not(.rdp-selected):not(.rdp-disabled) {
     border-radius: var(--rdp-day_button-border-radius);
     background-color: var(--rdp-accent-background-color);
   }
@@ -354,17 +371,27 @@ const css = (className: string, colorPalette: Record<number, string>) => {
     border-radius: var(--rdp-day_button-border-radius);
   }
 
-  /* Navigation chevrons */
-  .rdp-chevron {
+  /* Navigation buttons */
+  .rdp-button_next,
+  .rdp-button_previous {
     box-sizing: border-box;
     padding: 8px;
     height: var(--rdp-day_button-height);
     width: var(--rdp-day_button-width);
   }
 
-  .rdp-chevron:hover {
+  .rdp-button_next:not(:disabled):hover,
+  .rdp-button_previous:not(:disabled):hover {
     border-radius: var(--rdp-day_button-border-radius);
     background-color: var(--rdp-accent-background-color);
+  }
+
+  .rdp-button_next:disabled,
+  .rdp-button_previous:disabled,
+  .rdp-day_button:disabled
+   {
+    cursor: not-allowed;
+    opacity: 0.5;
   }
 
   /* Weekday and week number styles */
