@@ -12,10 +12,9 @@ import {
   useBoolean,
   useTheme,
 } from "@kvib/react/src";
-import { isValid, parse } from "date-fns";
-import { nb } from "date-fns/locale/nb";
-import { ChangeEvent, useEffect } from "react";
-import { DayPicker, useInput } from "react-day-picker";
+import { format, isValid, parse } from "date-fns";
+import { ChangeEvent, useEffect, useId, useState } from "react";
+import { DayPicker } from "react-day-picker";
 import "react-day-picker/dist/style.css";
 
 export type DatepickerProps = Omit<InputProps, "colorScheme" | "max" | "min" | "defaultValue"> & {
@@ -160,22 +159,18 @@ const CustomDatepicker = forwardRef<DatepickerProps, "input">(
 
     // State for the day picker
     const [isPickerVisible, setPickerVisible] = useBoolean(false);
-    const { inputProps, dayPickerProps } = useInput({
-      defaultSelected,
-      format: "dd.MM.yyyy",
-      locale: nb,
-      fromDate,
-      toDate,
-      required: isRequired,
-    });
+    const inputId = useId();
+    const [month, setMonth] = useState(new Date());
+    const [selectedDate, setSelectedDate] = useState<Date | undefined>(undefined);
+    const [inputValue, setInputValue] = useState("");
 
     useEffect(() => {
       // Check if the selected date in the day picker has changed
-      if (dayPickerProps.selected) {
+      if (selectedDate) {
         // Call onChange to update the input value
         effectiveOnChange({
           target: {
-            value: formatDate(dayPickerProps.selected),
+            value: formatDate(selectedDate),
           },
           bubbles: true,
           type: "change",
@@ -185,7 +180,31 @@ const CustomDatepicker = forwardRef<DatepickerProps, "input">(
 
         setPickerVisible.off();
       }
-    }, [dayPickerProps.selected, setPickerVisible]);
+    }, [selectedDate, setPickerVisible]);
+
+    const handleDayPickerSelect = (date: Date | undefined) => {
+      if (!date) {
+        setInputValue("");
+        setSelectedDate(undefined);
+      } else {
+        setSelectedDate(date);
+        setMonth(date);
+        setInputValue(format(date, "MM/dd/yyyy"));
+      }
+    };
+
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+      setInputValue(e.target.value); // keep the input value in sync
+
+      const parsedDate = parse(e.target.value, "MM/dd/yyyy", new Date());
+
+      if (isValid(parsedDate)) {
+        setSelectedDate(parsedDate);
+        setMonth(parsedDate);
+      } else {
+        setSelectedDate(undefined);
+      }
+    };
 
     // Only call onChange if the input is a valid date
     const effectiveOnChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -212,8 +231,8 @@ const CustomDatepicker = forwardRef<DatepickerProps, "input">(
               isDisabled={isDisabled}
               isInvalid={isInvalid}
               isRequired={isRequired}
+              onChange={handleInputChange}
               {...KVInputProps}
-              {...inputProps}
             />
           </PopoverAnchor>
           <InputRightElement opacity={isDisabled ? 0.5 : 1} pointerEvents={isDisabled ? "none" : "auto"} height="100%">
@@ -239,7 +258,8 @@ const CustomDatepicker = forwardRef<DatepickerProps, "input">(
             showWeekNumber={showWeekNumber}
             disabled={disabledDays}
             classNames={{ root: uniqueClassName }}
-            {...dayPickerProps}
+            selected={selectedDate}
+            onSelect={handleDayPickerSelect}
           />
         </PopoverContent>
       </Popover>
