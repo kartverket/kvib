@@ -1,1 +1,0 @@
-import{r as t}from"./index-BwDkhjyp.js";function o(e){return e!=null&&typeof e=="object"&&"nodeType"in e&&e.nodeType===Node.ELEMENT_NODE}function f(e){var n;return o(e)&&(n=e.ownerDocument)!=null?n:document}function u(){return!!(typeof window<"u"&&window.document&&window.document.createElement)}var r=u(),a=r?t.useLayoutEffect:t.useEffect;export{f as g,a as u};
