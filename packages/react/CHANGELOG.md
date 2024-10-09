@@ -1,5 +1,14 @@
 # @kvib/react
 
+## 4.6.0
+
+### Minor Changes
+
+- 6483306: Lysere farger for odde rader i Table med striped variant
+- d6be029: Endrer alle fargepaletter til WCAG-godkjente farger
+- a4fb5b2: Justerer grå track-bakgrunnsfarge på Slider og Switch fra 500 til 300
+- 4afb9fa: Justerer hoverfarge for Ghost-variant i Button fra 50 til 100
+
 ## 4.5.0
 
 ### Minor Changes
