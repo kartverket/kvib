@@ -1,1 +1,0 @@
-import{u as r,a as l}from"./chunk-3KCBMPN5-Dapgpkcw.js";import{f as i,c as o,a as c}from"./chunk-ZJJGQIVY-CoI1iMVy.js";import{j as m}from"./extends-CwFRzn3r.js";var u=i(function(t,s){const a=r(),{status:e}=l();return m.jsx(o.div,{ref:s,"data-status":e,...t,className:c("chakra-alert__title",t.className),__css:a.title})});u.displayName="AlertTitle";export{u as A};
