@@ -1,0 +1,1 @@
+import{u as c}from"./chunk-724WJZW4-D7beLSYm.js";import{r as t}from"./index-BwDkhjyp.js";function l(e,u=[]){const r=t.useRef(e);return c(()=>{r.current=e}),t.useCallback((...o)=>{var a;return(a=r.current)==null?void 0:a.call(r,...o)},u)}export{l as u};

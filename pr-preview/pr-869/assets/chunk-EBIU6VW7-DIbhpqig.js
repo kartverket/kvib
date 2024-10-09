@@ -1,0 +1,1 @@
+import{u as m}from"./chunk-DMO4EI7P-D6u3hnqn.js";import{f as e,o as c,c as i,a as n}from"./chunk-ZJJGQIVY-CoI1iMVy.js";import{j as f}from"./extends-CwFRzn3r.js";var d=e(function(s,a){const o=m("Kbd",s),{className:r,...t}=c(s);return f.jsx(i.kbd,{ref:a,className:n("chakra-kbd",r),...t,__css:{fontFamily:"mono",...o}})});d.displayName="Kbd";export{d as K};
