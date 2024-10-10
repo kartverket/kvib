@@ -1,0 +1,1 @@
+import{j as t}from"./extends-CwFRzn3r.js";import{S as a}from"./stack-Crl0JO1i.js";import{f as s}from"./forward-ref-BWI-Phbn.js";const i=s((r,o)=>t.jsx(a,{align:"center",...r,direction:"row",ref:o}));i.displayName="HStack";export{i as H};
