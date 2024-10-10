@@ -356,15 +356,18 @@ const css = (className: string, colorPalette: Record<number, string>) => {
     font-weight: 700;
   }
 
-  .rdp-day:hover:not(.rdp-selected):not(.rdp-disabled) {
+  .rdp-day {
     border-radius: var(--rdp-day_button-border-radius);
+  }
+
+
+  .rdp-day:hover:not(.rdp-selected):not(.rdp-disabled) {
     background-color: var(--rdp-accent-background-color);
   }
 
   .rdp-selected {
     background-color: var(--rdp-accent-color);
     color: white;
-    border-radius: var(--rdp-day_button-border-radius);
   }
 
   /* Navigation buttons */
