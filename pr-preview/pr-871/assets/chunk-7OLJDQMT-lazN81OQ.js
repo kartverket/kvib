@@ -1,1 +1,0 @@
-import{u as i}from"./chunk-DMO4EI7P-D6u3hnqn.js";import{f as o,o as t,c as m,a as n}from"./chunk-ZJJGQIVY-CoI1iMVy.js";import{j as c}from"./extends-CwFRzn3r.js";var f=o(function(a,s){const e=i("Heading",a),{className:g,...r}=t(a);return c.jsx(m.h2,{ref:s,className:n("chakra-heading",a.className),...r,__css:e})});f.displayName="Heading";export{f as H};
