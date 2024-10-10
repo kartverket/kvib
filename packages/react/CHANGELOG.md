@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 4.6.3
+
+### Patch Changes
+
+- 79d9ef2: Oppdaterer Chakra og erstatter useDimensions som er deprecated i versjon 2.10 med useSize
+
 ## 4.6.2
 
 ### Patch Changes
