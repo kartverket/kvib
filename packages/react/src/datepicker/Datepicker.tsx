@@ -256,20 +256,16 @@ const CustomDatepicker = forwardRef<DatepickerProps, "input">(
             startMonth={fromDate}
             endMonth={toDate}
             required={isRequired}
-            {...(fromDate
-              ? {
-                  disabled: {
-                    before: fromDate,
-                  },
-                }
-              : {})}
-            {...(toDate
-              ? {
-                  disabled: {
-                    after: toDate,
-                  },
-                }
-              : {})}
+            {...(fromDate && {
+              disabled: {
+                before: fromDate,
+              },
+            })}
+            {...(toDate && {
+              disabled: {
+                after: toDate,
+              },
+            })}
           />
         </PopoverContent>
       </Popover>
@@ -418,6 +414,10 @@ const css = (className: string, colorPalette: Record<number, string>) => {
     padding: 0.25em;
     font-weight: 700;
     font-size: 18px;
+  }
+
+  .rdp-dropdowns {
+    gap: 0.5em;
   }
 
 }
