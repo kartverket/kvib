@@ -213,7 +213,6 @@ const CustomDatepicker = forwardRef<DatepickerProps, "input">(
         <InputGroup>
           <PopoverAnchor>
             <KVInput
-              placeholder="Velg dato"
               value={inputValue}
               ref={ref}
               className="custom-datepicker"

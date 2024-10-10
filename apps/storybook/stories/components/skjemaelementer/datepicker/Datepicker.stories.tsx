@@ -160,7 +160,7 @@ export default meta;
 type DatepickerStory = StoryObj<typeof KvibDatepicker>;
 
 export const Datepicker: DatepickerStory = {
-  args: { onChange: (v) => console.log("Datepicker changed", v) },
+  args: { placeholder: "Velg dato", onChange: (v) => console.log("Datepicker changed", v) },
   parameters: {
     docs: {
       canvas: {
@@ -179,6 +179,7 @@ export const DatepickerDetails: DatepickerStory = {
   args: {
     showOutsideDays: true,
     showWeekNumber: true,
+    placeholder: "Velg dato",
   },
   render: (args) => (
     <Box h="25rem">
@@ -188,7 +189,9 @@ export const DatepickerDetails: DatepickerStory = {
 };
 
 export const DatepickerAppearance: DatepickerStory = {
-  args: {},
+  args: {
+    placeholder: "Velg dato",
+  },
   render: (args) => (
     <Stack gap="1rem" h="30rem">
       <KvibDatepicker aria-label="Datepicker" variant="outline" {...args} />
@@ -206,6 +209,7 @@ export const DatepickerArea: DatepickerStory = {
     toDate: new Date("2022-12-15"),
     showDropdownMonthYear: true,
     disabledDays: [new Date("2022-08-16")],
+    placeholder: "Velg dato",
   },
   render: (args) => (
     <Box h="23rem">
@@ -215,7 +219,7 @@ export const DatepickerArea: DatepickerStory = {
 };
 
 export const DatepickerForm: DatepickerStory = {
-  args: {},
+  args: { placeholder: "Velg dato" },
   render: (args) => (
     <Box h="25rem">
       <FormControl isRequired>
