@@ -5,7 +5,6 @@ export {
   useConst,
   useControllableProp,
   useControllableState,
-  useDimensions,
   useDisclosure,
   useMediaQuery,
   useMergeRefs,
@@ -14,6 +13,8 @@ export {
   useTheme,
   useToken,
 } from "@chakra-ui/react";
+
+export { useSize } from "@chakra-ui/react-use-size";
 
 export type {
   UseControllableStateProps,
