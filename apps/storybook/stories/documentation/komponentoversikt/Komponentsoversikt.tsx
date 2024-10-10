@@ -49,7 +49,7 @@ export const Components = () => {
                     component={cloneElement(component.komponent, {
                       colorScheme: theme,
                     })}
-                    category={category.navn}
+                    category={categoryKey as string}
                   />
                 );
               })}
