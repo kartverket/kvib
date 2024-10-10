@@ -414,6 +414,7 @@ const css = (className: string, colorPalette: Record<number, string>) => {
     padding: 0.25em;
     font-weight: 700;
     font-size: 18px;
+    text-transform: capitalize;
   }
 
   .rdp-dropdowns {
