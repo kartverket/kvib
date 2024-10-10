@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 4.6.2
+
+### Patch Changes
+
+- 8318367: Retter feil som førte til tap av fokus i Search
+
 ## 4.6.1
 
 ### Patch Changes
