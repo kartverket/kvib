@@ -31,7 +31,7 @@
     "react-dom": "^18.2.0"
   },
   "dependencies": {
-    "@chakra-ui/react": "^2.8.2",
+    "@chakra-ui/react": "^2.10.2",
     "@chakra-ui/react-use-size": "^2.1.0",
     "@chakra-ui/skip-nav": "^2.0.15",
     "@emotion/react": "^11.11.4",
