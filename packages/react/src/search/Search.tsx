@@ -1,14 +1,14 @@
 import {
   Input as ChakraInput,
-  InputProps as ChakraInputProps,
-  forwardRef,
   InputGroup as ChakraInputGroup,
   InputLeftElement as ChakraInputLeftElement,
+  InputProps as ChakraInputProps,
   InputRightElement as ChakraInputRightElement,
+  forwardRef,
   useDimensions,
 } from "@chakra-ui/react";
-import { IconButton, Button } from "../button";
 import { useRef } from "react";
+import { Button, IconButton } from "../button";
 
 export type SearchProps = Omit<ChakraInputProps, "isRequired" | "colorScheme"> & {
   searchButton?: "left" | "right" | "none";
@@ -76,7 +76,7 @@ export const Search = forwardRef<SearchProps, "input">(
         ? `calc(${dimensions.borderBox.width}px + 0.5rem)`
         : "3rem";
 
-    const RenderInputGroup = () => (
+    return (
       <ChakraInputGroup size={size} width={props.width}>
         <ChakraInput
           {...props}
@@ -101,7 +101,5 @@ export const Search = forwardRef<SearchProps, "input">(
         )}
       </ChakraInputGroup>
     );
-
-    return <RenderInputGroup />;
   },
 );
