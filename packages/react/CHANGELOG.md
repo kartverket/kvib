@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 4.6.1
+
+### Patch Changes
+
+- 4d829af: Oppdaterer avhengighetene til Datepicker som krevde refaktorering av selve komponenten
+
 ## 4.6.0
 
 ### Minor Changes
