@@ -117,9 +117,8 @@ interface Kategori {
 }
 
 export const Komponenter: Record<string, Kategori> = {
-  Form: {
+  Skjemaelementer: {
     navn: "Skjemaelementer",
-
     komponenter: {
       Button: {
         navn: "Button",
@@ -262,12 +261,14 @@ export const Komponenter: Record<string, Kategori> = {
         navn: "PinInput",
         beskrivelse: "PinInput",
         komponent: (
-          <PinInput>
-            <PinInputField />
-            <PinInputField />
-            <PinInputField />
-            <PinInputField />
-          </PinInput>
+          <HStack gap="0.5em">
+            <PinInput>
+              <PinInputField />
+              <PinInputField />
+              <PinInputField />
+              <PinInputField />
+            </PinInput>
+          </HStack>
         ),
         link: "pin-input",
       },
@@ -279,7 +280,7 @@ export const Komponenter: Record<string, Kategori> = {
       },
     },
   },
-  Search: {
+  Søk: {
     navn: "Søk",
     komponenter: {
       Search: {
@@ -290,8 +291,7 @@ export const Komponenter: Record<string, Kategori> = {
       },
     },
   },
-
-  DataDisplay: {
+  Datavisning: {
     navn: "Datavisning",
     komponenter: {
       Badge: {
@@ -397,7 +397,6 @@ export const Komponenter: Record<string, Kategori> = {
       },
     },
   },
-
   Layout: {
     navn: "Layout",
     komponenter: {
@@ -498,8 +497,7 @@ export const Komponenter: Record<string, Kategori> = {
       },
     },
   },
-
-  Typography: {
+  Designfundament: {
     navn: "Typografi",
     komponenter: {
       Heading: {
@@ -517,12 +515,23 @@ export const Komponenter: Record<string, Kategori> = {
       Highlight: {
         navn: "Highlight",
         beskrivelse: "",
-        komponent: <Highlight query={"fremheve"}>Det er mulig å fremheve ord.</Highlight>,
+        komponent: (
+          <Highlight
+            query={"fremheve"}
+            styles={{
+              bg: "orange.100",
+              px: "1",
+              py: "1",
+            }}
+          >
+            Det er mulig å fremheve ord.
+          </Highlight>
+        ),
         link: "highlight",
       },
     },
   },
-  PageElements: {
+  Sideelementer: {
     navn: "Sideelementer",
     komponenter: {
       Logo: {
@@ -583,14 +592,23 @@ export const Komponenter: Record<string, Kategori> = {
       },
     },
   },
-  Navigation: {
+  Navigasjon: {
     navn: "Navigasjon",
     komponenter: {
       Breadcrumbs: {
         navn: "Breadcrumb",
         beskrivelse: "",
         komponent: (
-          <Breadcrumb>
+          <Breadcrumb
+            sx={{
+              ol: {
+                padding: 0,
+              },
+              li: {
+                marginTop: 0,
+              },
+            }}
+          >
             <BreadcrumbItem>
               <BreadcrumbLink href="#">Home</BreadcrumbLink>
             </BreadcrumbItem>
@@ -648,13 +666,19 @@ export const Komponenter: Record<string, Kategori> = {
       Link: {
         navn: "Link",
         beskrivelse: "",
-        komponent: <Link href="/?path=/">Lenke</Link>,
+        komponent: <Link href={`/?path=/docs/navigasjon-link--docs`}>Lenke</Link>,
         link: "link",
       },
       LinkOverlay: {
         navn: "LinkOverlay",
         beskrivelse: "",
-        komponent: <LinkOverlay href="/?path=/">Lenke hvor man kan klikke i hele boksen</LinkOverlay>,
+        komponent: (
+          <Box>
+            <LinkOverlay href={`/?path=/docs/navigasjon-linkoverlay--docs`}>
+              Lenke hvor man kan klikke i hele boksen
+            </LinkOverlay>
+          </Box>
+        ),
         link: "linkoverlay",
       },
       SkipNav: {
@@ -725,7 +749,7 @@ export const Komponenter: Record<string, Kategori> = {
       },
     },
   },
-  Others: {
+  Annet: {
     navn: "Annet",
     komponenter: {
       VisuallyHidden: {
