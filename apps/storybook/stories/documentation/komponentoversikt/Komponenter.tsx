@@ -76,6 +76,7 @@ import {
   SliderTrack,
   Stack,
   Stat,
+  Switch,
   Tab,
   Table,
   TableContainer,
@@ -229,6 +230,12 @@ export const Komponenter: Record<string, Kategori> = {
           </RadioGroup>
         ),
         link: "radio",
+      },
+      Switch: {
+        navn: "Switch",
+        beskrivelse: "Switch",
+        komponent: <Switch />,
+        link: "switch",
       },
       Slider: {
         navn: "Slider",
@@ -606,6 +613,7 @@ export const Komponenter: Record<string, Kategori> = {
               },
               li: {
                 marginTop: 0,
+                fontSize: "16px",
               },
             }}
           >
