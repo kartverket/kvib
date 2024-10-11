@@ -195,7 +195,15 @@ export const Komponenter: (colorScheme: "green" | "blue") => Record<string, Kate
       DatePicker: {
         navn: "DatePicker",
         beskrivelse: "DatePicker",
-        komponent: <Datepicker colorScheme={colorScheme} />,
+        komponent: (
+          <Datepicker
+            aria-label="Datepicker-eksempel"
+            placeholder="Velg dato"
+            showOutsideDays
+            showWeekNumber
+            colorScheme={colorScheme}
+          />
+        ),
         link: "datepicker",
         tag: "beta",
       },
@@ -619,13 +627,31 @@ export const Komponenter: (colorScheme: "green" | "blue") => Record<string, Kate
             colorScheme={colorScheme}
           >
             <BreadcrumbItem>
-              <BreadcrumbLink href="#">Home</BreadcrumbLink>
+              <BreadcrumbLink
+                onClick={() => {
+                  console.log("Klikket på hjem-brødsmule");
+                }}
+              >
+                Home
+              </BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbItem>
-              <BreadcrumbLink href="#">Docs</BreadcrumbLink>
+              <BreadcrumbLink
+                onClick={() => {
+                  console.log("Klikket på docs-brødsmule");
+                }}
+              >
+                Docs
+              </BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbItem isCurrentPage>
-              <BreadcrumbLink href="#">Breadcrumb</BreadcrumbLink>
+              <BreadcrumbLink
+                onClick={() => {
+                  console.log("Klikket på breadcrumb-brødsmule");
+                }}
+              >
+                Breadcrumb
+              </BreadcrumbLink>
             </BreadcrumbItem>
           </Breadcrumb>
         ),
@@ -676,7 +702,14 @@ export const Komponenter: (colorScheme: "green" | "blue") => Record<string, Kate
         navn: "Link",
         beskrivelse: "",
         komponent: (
-          <Link href={`/?path=/docs/navigasjon-link--docs`} colorScheme={colorScheme}>
+          <Link
+            href="#"
+            onClick={e => {
+              e.preventDefault();
+              console.log("Klikket på lenke");
+            }}
+            colorScheme={colorScheme}
+          >
             Lenke
           </Link>
         ),
@@ -687,7 +720,14 @@ export const Komponenter: (colorScheme: "green" | "blue") => Record<string, Kate
         beskrivelse: "",
         komponent: (
           <Box>
-            <LinkOverlay href={`/?path=/docs/navigasjon-linkoverlay--docs`} color={`${colorScheme}.500`}>
+            <LinkOverlay
+              href="#"
+              onClick={e => {
+                e.preventDefault();
+                console.log("Klikket på lenke");
+              }}
+              color={`${colorScheme}.500`}
+            >
               Lenke hvor man kan klikke i hele boksen
             </LinkOverlay>
           </Box>

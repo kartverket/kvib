@@ -1,17 +1,4 @@
-import {
-  Badge,
-  Box,
-  Card,
-  Flex,
-  FormLabel,
-  Heading,
-  Icon,
-  Link,
-  Select,
-  SimpleGrid,
-  Stack,
-  Text,
-} from "@kvib/react/src";
+import { Badge, Box, Card, Flex, FormLabel, Heading, Link, Select, SimpleGrid, Stack, Text } from "@kvib/react/src";
 import { ReactElement, useEffect, useRef, useState } from "react";
 import { ComponentsBanner } from "../../templates/ComponentsBanner";
 import { Komponenter } from "./Komponenter";
@@ -97,13 +84,10 @@ const ComponentCard = ({
       <Link
         padding="1rem"
         href={`/?path=/docs/${category}-${link}--docs`}
-        display="flex"
         alignItems="center"
-        gap="4px"
-        textDecoration="none"
         colorScheme={colorScheme}
       >
-        Gå til {title} <Icon icon="arrow_forward" weight={300} size={18} aria-hidden />
+        Gå til {title}
       </Link>
     </Stack>
   </Card>
@@ -115,7 +99,7 @@ const ComponentCategory = ({
   description,
 }: {
   title: string;
-  children: React.ReactNode;
+  children: ReactElement[];
   description?: string;
 }) => (
   <Box>
@@ -158,5 +142,9 @@ const LazyStory = ({ component }: { component: ReactElement }) => {
     };
   }, [component]);
 
-  return <div ref={storyRef}>{isVisible && component}</div>;
+  return (
+    <div ref={storyRef} className="sb-unstyled">
+      {isVisible && component}
+    </div>
+  );
 };

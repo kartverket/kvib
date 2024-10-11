@@ -1,8 +1,8 @@
 import { KvibProvider } from "@kvib/react/src";
 import { Preview } from "@storybook/react";
 import React from "react";
-import "./docs-root.css";
 import MDXContainer from "./MDXContainer";
+import "./docs-root.css";
 import theme from "./theme";
 
 const parameters = {
@@ -56,7 +56,7 @@ const parameters = {
 // const customTheme = extendTheme(withDefaultColorScheme({ colorScheme: "blue" }), defaultKvibTheme);
 
 export const decorators = [
-  (Story) => (
+  Story => (
     <KvibProvider>
       {/* <KvibProvider theme={customTheme}> */}
       <Story />
