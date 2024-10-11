@@ -220,9 +220,11 @@ export const ModalExample = ({ ...args }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <Button onClick={onOpen}>Åpne Modal</Button>
+      <Button onClick={onOpen} colorScheme={args.colorScheme}>
+        Åpne Modal
+      </Button>
 
-      <KvibModal {...args} isOpen={isOpen} onClose={onClose}>
+      <KvibModal {...args} isOpen={isOpen} onClose={onClose} colorScheme={args.colorScheme}>
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>Historiske kart</ModalHeader>
@@ -233,10 +235,10 @@ export const ModalExample = ({ ...args }) => {
           </ModalBody>
 
           <ModalFooter>
-            <Button colorScheme="green" variant="secondary" mr={3} onClick={onClose}>
+            <Button colorScheme={args.colorScheme} variant="secondary" mr={3} onClick={onClose}>
               Lukk
             </Button>
-            <Button>Ta en kikk</Button>
+            <Button colorScheme={args.colorScheme}>Ta en kikk</Button>
           </ModalFooter>
         </ModalContent>
       </KvibModal>
@@ -246,7 +248,7 @@ export const ModalExample = ({ ...args }) => {
 
 export const Modal: Story = {
   args: {},
-  render: (args) => <ModalExample {...args} />,
+  render: args => <ModalExample {...args} />,
 };
 
 const ModalScrollingExample = ({ ...args }) => {
@@ -280,7 +282,7 @@ const ModalScrollingExample = ({ ...args }) => {
 
 export const ModalScrolling: Story = {
   args: {},
-  render: (args) => <ModalScrollingExample {...args} />,
+  render: args => <ModalScrollingExample {...args} />,
 };
 
 const ModalFocusExample = ({ ...args }) => {
@@ -327,7 +329,7 @@ const ModalFocusExample = ({ ...args }) => {
 
 export const ModalFocus: Story = {
   args: {},
-  render: (args) => <ModalFocusExample {...args} />,
+  render: args => <ModalFocusExample {...args} />,
 };
 
 const ModalCenteredExample = ({ ...args }) => {
@@ -357,7 +359,7 @@ const ModalCenteredExample = ({ ...args }) => {
 
 export const ModalCentered: Story = {
   args: {},
-  render: (args) => <ModalCenteredExample {...args} />,
+  render: args => <ModalCenteredExample {...args} />,
 };
 
 const ModalTransitionExample = ({ ...args }) => {
@@ -388,7 +390,7 @@ const ModalTransitionExample = ({ ...args }) => {
 
 export const ModalTransition: Story = {
   args: {},
-  render: (args) => <ModalTransitionExample {...args} />,
+  render: args => <ModalTransitionExample {...args} />,
 };
 
 const ModalSizeExample = ({ ...args }) => {
@@ -404,7 +406,7 @@ const ModalSizeExample = ({ ...args }) => {
 
   return (
     <>
-      {sizes.map((size) => (
+      {sizes.map(size => (
         <Button onClick={() => handleSizeClick(size)} key={size} m={4}>{`Åpne ${size} Modal`}</Button>
       ))}
 
@@ -428,7 +430,7 @@ const ModalSizeExample = ({ ...args }) => {
 
 export const ModalSizes: Story = {
   args: {},
-  render: (args) => <ModalSizeExample {...args} />,
+  render: args => <ModalSizeExample {...args} />,
 };
 
 const ModalBackdropExample = ({ ...args }) => {
@@ -477,5 +479,5 @@ const ModalBackdropExample = ({ ...args }) => {
 
 export const ModalBackdrop: Story = {
   args: {},
-  render: (args) => <ModalBackdropExample {...args} />,
+  render: args => <ModalBackdropExample {...args} />,
 };

@@ -231,11 +231,15 @@ const meta: Meta<typeof KvibDrawer> = {
 export default meta;
 type Story = StoryObj<typeof KvibDrawer>;
 
-export const DrawerExample = ({ ...args }: DrawerProps) => {
+interface CustomDrawerProps extends DrawerProps {
+  colorScheme: "green" | "blue";
+}
+
+export const DrawerExample = ({ ...args }: CustomDrawerProps) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <Button colorScheme="green" onClick={onOpen}>
+      <Button colorScheme={args.colorScheme} onClick={onOpen}>
         Åpne
       </Button>
       <KvibDrawer {...args} isOpen={isOpen} onClose={onClose}>
@@ -249,10 +253,10 @@ export const DrawerExample = ({ ...args }: DrawerProps) => {
           </DrawerBody>
 
           <DrawerFooter>
-            <Button variant="secondary" mr={3} onClick={onClose}>
+            <Button colorScheme={args.colorScheme} variant="secondary" mr={3} onClick={onClose}>
               Avbryt
             </Button>
-            <Button colorScheme="blue">Lagre</Button>
+            <Button colorScheme={args.colorScheme}>Lagre</Button>
           </DrawerFooter>
         </DrawerContent>
       </KvibDrawer>
@@ -262,7 +266,7 @@ export const DrawerExample = ({ ...args }: DrawerProps) => {
 
 export const Drawer: Story = {
   args: {},
-  render: (args) => <DrawerExample {...args} />,
+  render: args => <DrawerExample {...args} />,
 };
 
 const PlacementExample = ({ ...args }: DrawerProps) => {
@@ -303,7 +307,7 @@ const PlacementExample = ({ ...args }: DrawerProps) => {
 
 export const DrawerPlacement: Story = {
   args: {},
-  render: (args) => <PlacementExample {...args} />,
+  render: args => <PlacementExample {...args} />,
 };
 
 const DrawerFocusExample = ({ ...args }: DrawerProps) => {
@@ -366,7 +370,7 @@ const DrawerFocusExample = ({ ...args }: DrawerProps) => {
 
 export const DrawerFocus: Story = {
   args: {},
-  render: (args) => <DrawerFocusExample {...args} />,
+  render: args => <DrawerFocusExample {...args} />,
 };
 
 const SizeExample = ({ ...args }: DrawerProps) => {
@@ -382,7 +386,7 @@ const SizeExample = ({ ...args }: DrawerProps) => {
 
   return (
     <>
-      {sizes.map((size) => (
+      {sizes.map(size => (
         <Button onClick={() => handleClick(size)} key={size} m={4}>{`Åpne ${size} Drawer`}</Button>
       ))}
 
@@ -406,5 +410,5 @@ const SizeExample = ({ ...args }: DrawerProps) => {
 
 export const DrawerSizes: Story = {
   args: {},
-  render: (args) => <SizeExample {...args} />,
+  render: args => <SizeExample {...args} />,
 };

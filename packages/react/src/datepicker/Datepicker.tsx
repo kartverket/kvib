@@ -373,7 +373,6 @@ const css = (className: string, colorPalette: Record<number, string>) => {
   .rdp-button_next,
   .rdp-button_previous {
     box-sizing: border-box;
-    padding: 8px;
     height: var(--rdp-day_button-height);
     width: var(--rdp-day_button-width);
   }
