@@ -117,20 +117,20 @@ interface Kategori {
   komponenter: Record<string, Komponentdetaljer>;
 }
 
-export const Komponenter: Record<string, Kategori> = {
+export const Komponenter: (colorScheme: "green" | "blue") => Record<string, Kategori> = colorScheme => ({
   Skjemaelementer: {
     navn: "Skjemaelementer",
     komponenter: {
       Button: {
         navn: "Button",
         beskrivelse: "Button",
-        komponent: <Button>Button</Button>,
+        komponent: <Button colorScheme={colorScheme}>Button</Button>,
         link: "button",
       },
       IconButton: {
         navn: "IconButton",
         beskrivelse: "IconButton",
-        komponent: <IconButton icon="search" aria-label="Forhåndsvisning av IconButton" />,
+        komponent: <IconButton icon="search" aria-label="Forhåndsvisning av IconButton" colorScheme={colorScheme} />,
         link: "icon-button",
       },
       CloseButteon: {
@@ -189,20 +189,20 @@ export const Komponenter: Record<string, Kategori> = {
       CheckBox: {
         navn: "Checkbox",
         beskrivelse: "Checkbox",
-        komponent: <Checkbox>Denne kan hukes av</Checkbox>,
+        komponent: <Checkbox colorScheme={colorScheme}>Denne kan hukes av</Checkbox>,
         link: "checkbox",
       },
       DatePicker: {
         navn: "DatePicker",
         beskrivelse: "DatePicker",
-        komponent: <Datepicker />,
+        komponent: <Datepicker colorScheme={colorScheme} />,
         link: "datepicker",
         tag: "beta",
       },
       TimePicker: {
         navn: "Timepicker",
         beskrivelse: "Timepicker",
-        komponent: <Timepicker ariaLabel="Demo av Timepicker" />,
+        komponent: <Timepicker ariaLabel="Demo av Timepicker" colorScheme={colorScheme} />,
         link: "timepicker",
         tag: "beta",
       },
@@ -221,7 +221,7 @@ export const Komponenter: Record<string, Kategori> = {
         navn: "Radio",
         beskrivelse: "Radio",
         komponent: (
-          <RadioGroup defaultValue={"1"}>
+          <RadioGroup defaultValue={"1"} colorScheme={colorScheme}>
             <Stack direction={"row"}>
               <Radio value={"1"}>En</Radio>
               <Radio value={"2"}>To</Radio>
@@ -234,14 +234,14 @@ export const Komponenter: Record<string, Kategori> = {
       Switch: {
         navn: "Switch",
         beskrivelse: "Switch",
-        komponent: <Switch />,
+        komponent: <Switch colorScheme={colorScheme} />,
         link: "switch",
       },
       Slider: {
         navn: "Slider",
         beskrivelse: "Slider",
         komponent: (
-          <Slider minW={"12rem"}>
+          <Slider minW={"12rem"} colorScheme={colorScheme}>
             <SliderTrack>
               <SliderFilledTrack />
             </SliderTrack>
@@ -254,7 +254,7 @@ export const Komponenter: Record<string, Kategori> = {
         navn: "RangeSlider",
         beskrivelse: "RangeSlider",
         komponent: (
-          <RangeSlider aria-label={["min", "max"]} colorScheme="green" defaultValue={[10, 40]} minW={"12rem"}>
+          <RangeSlider aria-label={["min", "max"]} defaultValue={[10, 40]} minW={"12rem"} colorScheme={colorScheme}>
             <RangeSliderTrack>
               <RangeSliderFilledTrack />
             </RangeSliderTrack>
@@ -269,7 +269,7 @@ export const Komponenter: Record<string, Kategori> = {
         beskrivelse: "PinInput",
         komponent: (
           <HStack gap="0.5em">
-            <PinInput>
+            <PinInput colorScheme={colorScheme}>
               <PinInputField />
               <PinInputField />
               <PinInputField />
@@ -293,7 +293,7 @@ export const Komponenter: Record<string, Kategori> = {
       Search: {
         navn: "Search",
         beskrivelse: "Search",
-        komponent: <Search placeholder="Søk her..." />,
+        komponent: <Search placeholder="Søk her..." colorScheme={colorScheme} />,
         link: "search",
       },
     },
@@ -304,7 +304,7 @@ export const Komponenter: Record<string, Kategori> = {
       Badge: {
         navn: "Badge",
         beskrivelse: "",
-        komponent: <Badge>Badge</Badge>,
+        komponent: <Badge colorScheme={colorScheme}>Badge</Badge>,
         link: "badge",
       },
       Table: {
@@ -312,7 +312,7 @@ export const Komponenter: Record<string, Kategori> = {
         beskrivelse: "",
         komponent: (
           <TableContainer>
-            <Table>
+            <Table colorScheme={colorScheme}>
               <Thead>
                 <Tr>
                   <Th>Header 1</Th>
@@ -337,26 +337,26 @@ export const Komponenter: Record<string, Kategori> = {
       Code: {
         navn: "Code",
         beskrivelse: "",
-        komponent: <Code children="Hello world" />,
+        komponent: <Code children="Hello world" colorScheme={colorScheme} />,
         link: "code",
       },
       Tag: {
         navn: "Tag",
         beskrivelse: "",
-        komponent: <Tag>Tag</Tag>,
+        komponent: <Tag colorScheme={colorScheme}>Tag</Tag>,
         link: "tag",
       },
       Stat: {
         navn: "Stat",
         beskrivelse: "",
-        komponent: <Stat>Metrikk</Stat>,
+        komponent: <Stat colorScheme={colorScheme}>Metrikk</Stat>,
         link: "stat",
       },
       Card: {
         navn: "Card",
         beskrivelse: "",
         komponent: (
-          <Card>
+          <Card colorScheme={colorScheme}>
             <CardBody>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </CardBody>
           </Card>
         ),
@@ -496,7 +496,7 @@ export const Komponenter: Record<string, Kategori> = {
         navn: "Center",
         beskrivelse: "",
         komponent: (
-          <Center bg="green.100" p="2rem">
+          <Center bg={`${colorScheme}.100`} p="2rem">
             Sentrert innhold
           </Center>
         ),
@@ -616,6 +616,7 @@ export const Komponenter: Record<string, Kategori> = {
                 fontSize: "16px",
               },
             }}
+            colorScheme={colorScheme}
           >
             <BreadcrumbItem>
               <BreadcrumbLink href="#">Home</BreadcrumbLink>
@@ -634,7 +635,7 @@ export const Komponenter: Record<string, Kategori> = {
         navn: "Tabs",
         beskrivelse: "",
         komponent: (
-          <Tabs size="sm">
+          <Tabs size="sm" colorScheme={colorScheme}>
             <TabList>
               <Tab>Tab 1</Tab>
               <Tab>Tab 2</Tab>
@@ -660,7 +661,7 @@ export const Komponenter: Record<string, Kategori> = {
         beskrivelse: "",
         komponent: (
           <Menu>
-            <MenuButton as={Button} rightIcon={"expand_more"}>
+            <MenuButton as={Button} rightIcon={"expand_more"} colorScheme={colorScheme}>
               Meny
             </MenuButton>
             <MenuList>
@@ -674,7 +675,11 @@ export const Komponenter: Record<string, Kategori> = {
       Link: {
         navn: "Link",
         beskrivelse: "",
-        komponent: <Link href={`/?path=/docs/navigasjon-link--docs`}>Lenke</Link>,
+        komponent: (
+          <Link href={`/?path=/docs/navigasjon-link--docs`} colorScheme={colorScheme}>
+            Lenke
+          </Link>
+        ),
         link: "link",
       },
       LinkOverlay: {
@@ -682,7 +687,7 @@ export const Komponenter: Record<string, Kategori> = {
         beskrivelse: "",
         komponent: (
           <Box>
-            <LinkOverlay href={`/?path=/docs/navigasjon-linkoverlay--docs`}>
+            <LinkOverlay href={`/?path=/docs/navigasjon-linkoverlay--docs`} color={`${colorScheme}.500`}>
               Lenke hvor man kan klikke i hele boksen
             </LinkOverlay>
           </Box>
@@ -695,7 +700,7 @@ export const Komponenter: Record<string, Kategori> = {
         komponent: (
           <div>
             Trykk her + tab
-            <SkipNavLink>SkipNav</SkipNavLink>
+            <SkipNavLink color={`${colorScheme}.500`}>SkipNav</SkipNavLink>
           </div>
         ),
         link: "skipnav",
@@ -714,7 +719,7 @@ export const Komponenter: Record<string, Kategori> = {
       Modal: {
         navn: "Modal",
         beskrivelse: "",
-        komponent: <ModalExample />,
+        komponent: <ModalExample colorScheme={colorScheme} />,
         link: "modal",
       },
       Popover: {
@@ -723,7 +728,7 @@ export const Komponenter: Record<string, Kategori> = {
         komponent: (
           <Popover>
             <PopoverTrigger>
-              <Button>Klikk for popover</Button>
+              <Button colorScheme={colorScheme}>Klikk for popover</Button>
             </PopoverTrigger>
             <PopoverContent>
               <PopoverArrow />
@@ -746,6 +751,7 @@ export const Komponenter: Record<string, Kategori> = {
         beskrivelse: "",
         komponent: (
           <DrawerExample
+            colorScheme={colorScheme}
             children={undefined}
             onClose={function (): void {
               return;
@@ -790,4 +796,4 @@ export const Komponenter: Record<string, Kategori> = {
       },
     },
   },
-};
+});
