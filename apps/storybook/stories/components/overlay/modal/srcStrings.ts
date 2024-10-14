@@ -2,55 +2,60 @@ export const ModalString = `const ModalExample = ({ ...args }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <Button onClick={onOpen}>Åpne Modal</Button>
+      <Button onClick={onOpen}>
+        Åpne Modal
+      </Button>
 
-      <Modal isOpen={isOpen} onClose={onClose}>
+      <KvibModal {...args} isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Historiske kart</ModalHeader>
+          <ModalHeader>Her er en modal</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            Vil du ha eit gammalt kart på hytteveggen? Historiske kart kan lastast ned og skrivast ut gratis. Ta ein
-            kikk i vårt arkiv!
+            Modaler må kun vises etter en brukerinteraksjon, og skal ikke avbryte brukeren på noe vis.
           </ModalBody>
 
-          <ModalFooter>
-            <Button colorScheme="blue" mr={3} onClick={onClose}>
-              Lukk
+          <ModalFooter justifyContent="space-between">
+            <Button onClick={onClose} variant="tertiary">
+              Tertiær
             </Button>
-            <Button>Ta en kikk</Button>
+            <Box mr={3}>
+              <Button mr={3} onClick={onClose} variant="secondary">
+                Sekundær
+              </Button>
+              <Button variant="primary">Primær</Button>
+            </Box>
           </ModalFooter>
         </ModalContent>
-      </Modal>
+      </KvibModal>
     </>
   );
 };`;
 
 export const ModalScrollingString = `const ModalScrollingExample = ({ ...args }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-
   return (
     <>
       <Button onClick={onOpen}>Åpne modal</Button>
 
-      <Modal blockScrollOnMount={false} isOpen={isOpen} onClose={onClose}>
+      <KvibModal {...args} blockScrollOnMount={false} isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Modal tittel</ModalHeader>
+          <ModalHeader>Modal med scroll</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
             <Text fontWeight="bold" mb="1rem">
-              Du kan scrolle i innholdet bak modalen
+              Her er en modal hvor du kan scrolle innholdet bak.
             </Text>
           </ModalBody>
           <ModalFooter>
-            <Button colorScheme="blue" mr={3} onClick={onClose}>
-              Lukk
+            <Button mr={3} onClick={onClose} variant="secondary">
+              Avbryt
             </Button>
-            <Button variant="ghost">Annen handling</Button>
+            <Button variant="primary">Bekreft</Button>
           </ModalFooter>
         </ModalContent>
-      </Modal>
+      </KvibModal>
     </>
   );
 };`;
@@ -68,46 +73,42 @@ export const ModalFocusString = `const ModalFocusExample = ({ ...args }) => {
         Jeg får fokus på close
       </Button>
 
-      <Modal initialFocusRef={initialRef} finalFocusRef={finalRef} isOpen={isOpen} onClose={onClose}>
+      <KvibModal {...args} initialFocusRef={initialRef} finalFocusRef={finalRef} isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Lag konto</ModalHeader>
+          <ModalHeader>Modal med skjema</ModalHeader>
           <ModalCloseButton />
           <ModalBody pb={6}>
             <FormControl>
-              <FormLabel>Fornavn</FormLabel>
+              <FormLabel>Navn</FormLabel>
               <Input ref={initialRef} placeholder="Fornavn" />
-            </FormControl>
-
-            <FormControl>
-              <FormLabel>Etternavn</FormLabel>
-              <Input placeholder="Etternavn" />
             </FormControl>
           </ModalBody>
 
           <ModalFooter>
-            <Button colorScheme="blue" mr={3}>
-              Lagre
+            <Button colorScheme={args.colorScheme} mr={3} variant="secondary">
+              Avbryt
             </Button>
-            <Button onClick={onClose}>Avbryt</Button>
+            <Button colorScheme={args.colorScheme} onClick={onClose} variant="primary">
+              Send inn skjema
+            </Button>
           </ModalFooter>
         </ModalContent>
-      </Modal>
+      </KvibModal>
     </>
   );
 };`;
 
 export const ModalCenteredString = `const ModalCenteredExample = ({ ...args }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-
   return (
     <>
       <Button onClick={onOpen}>Åpne modal</Button>
 
-      <Modal onClose={onClose} isOpen={isOpen} isCentered>
+      <KvibModal {...args} onClose={onClose} isOpen={isOpen} isCentered>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Modal Sentrering</ModalHeader>
+          <ModalHeader>Sentrert modal</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
             Modalen har 3.75rem vertical offset. Den kan endres ved å legge "top" til ModalContent. Hvis du skal
@@ -117,7 +118,7 @@ export const ModalCenteredString = `const ModalCenteredExample = ({ ...args }) =
             <Button onClick={onClose}>Lukk</Button>
           </ModalFooter>
         </ModalContent>
-      </Modal>
+      </KvibModal>
     </>
   );
 };`;
@@ -127,23 +128,23 @@ export const ModalTransitionString = `const ModalTransitionExample = ({ ...args 
   return (
     <>
       <Button onClick={onOpen}>Åpne modal</Button>
-      <Modal isCentered onClose={onClose} isOpen={isOpen} motionPreset="slideInBottom">
+      <KvibModal {...args} isCentered onClose={onClose} isOpen={isOpen} motionPreset="slideInBottom">
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>Modal Transition</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            Modal kommer med scale transition, men du kan endre den med motionPreset-propen. Sett verdien til
-            "slideInBottom", "slideInRight", "scale" eller "none".
+            Modal kommer med en scale transition som du kan endre med motionPreset-propen. Sett verdien til
+            “slidelnBottom”, “slidelnRight”, “scale” eller “none”.
           </ModalBody>
           <ModalFooter>
-            <Button colorScheme="blue" mr={3} onClick={onClose}>
-              Lukk
+            <Button mr={3} onClick={onClose} variant="secondary">
+              Avbryt
             </Button>
-            <Button variant="ghost">Annen handling</Button>
+            <Button variant="primary">Bekreft</Button>
           </ModalFooter>
         </ModalContent>
-      </Modal>
+      </KvibModal>
     </>
   );
 };`;
