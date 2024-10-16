@@ -211,7 +211,7 @@ const meta: Meta<typeof KvibModal> = {
 export default meta;
 type Story = StoryObj<typeof KvibModal>;
 
-export const ModalExample = ({ ...args }) => {
+const ModalExample = ({ ...args }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>

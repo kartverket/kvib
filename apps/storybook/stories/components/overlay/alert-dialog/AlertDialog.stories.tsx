@@ -11,6 +11,7 @@ import {
 } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 import { useRef } from "react";
+import { AlertDialogCenteredString, AlertDialogString, AlertDialogTransitionString } from "./srcStrings";
 
 const meta: Meta<typeof KvibAlertDialog> = {
   title: "Overlay/Alert Dialog",
@@ -18,7 +19,7 @@ const meta: Meta<typeof KvibAlertDialog> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "shown" },
+      canvas: { sourceState: "hidden" },
     },
   },
   argTypes: {
@@ -204,30 +205,31 @@ const meta: Meta<typeof KvibAlertDialog> = {
 export default meta;
 type Story = StoryObj<typeof KvibAlertDialog>;
 
-export const AlertDialogExample = ({ ...args }) => {
+const AlertDialogExample = ({ ...args }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const cancelRef = useRef<HTMLButtonElement>(null);
 
   return (
     <>
       <Button colorScheme="red" onClick={onOpen}>
-        Slett
+        Åpne alert dialog
       </Button>
 
       <KvibAlertDialog {...args} isOpen={isOpen} leastDestructiveRef={cancelRef} onClose={onClose}>
         <AlertDialogOverlay>
           <AlertDialogContent>
             <AlertDialogHeader fontSize="lg" fontWeight="bold">
-              Slett
+              Bekreft sletting
+              <AlertDialogCloseButton />
             </AlertDialogHeader>
 
-            <AlertDialogBody>Er du sikker? Du kan ikke angre senere.</AlertDialogBody>
+            <AlertDialogBody>Er du sikker på at du vil slette?</AlertDialogBody>
 
             <AlertDialogFooter>
-              <Button ref={cancelRef} onClick={onClose}>
+              <Button ref={cancelRef} onClick={onClose} variant="secondary" colorScheme="blue">
                 Avbryt
               </Button>
-              <Button colorScheme="red" onClick={onClose} ml={3}>
+              <Button onClick={onClose} ml={3} colorScheme="red">
                 Slett
               </Button>
             </AlertDialogFooter>
@@ -239,36 +241,49 @@ export const AlertDialogExample = ({ ...args }) => {
 };
 
 export const AlertDialog: Story = {
-  args: {},
-  render: (args) => <AlertDialogExample {...args} />,
+  render: args => <AlertDialogExample {...args} />,
+  parameters: {
+    docs: {
+      source: {
+        type: "code",
+        language: "tsx",
+        code: AlertDialogString,
+      },
+    },
+  },
 };
 
-const TransitionExample = ({ ...args }) => {
+const AlertDialogTransitionExample = ({ ...args }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const cancelRef = useRef<HTMLButtonElement>(null);
 
   return (
     <>
-      <Button onClick={onOpen}>Forkast endringer</Button>
+      <Button colorScheme="red" onClick={onOpen}>
+        Åpne alert dialog
+      </Button>
       <KvibAlertDialog
         {...args}
         motionPreset="slideInBottom"
         leastDestructiveRef={cancelRef}
         onClose={onClose}
         isOpen={isOpen}
-        isCentered
       >
         <AlertDialogOverlay />
         <AlertDialogContent>
-          <AlertDialogHeader>Forkast endringer?</AlertDialogHeader>
-          <AlertDialogCloseButton />
-          <AlertDialogBody>Er du sikker på at du vil forkaste notatene? 44 ord vil bli slettet.</AlertDialogBody>
+          <AlertDialogHeader fontSize="lg" fontWeight="bold">
+            Bekreft sletting
+            <AlertDialogCloseButton />
+          </AlertDialogHeader>
+
+          <AlertDialogBody>Er du sikker på at du vil slette?</AlertDialogBody>
+
           <AlertDialogFooter>
-            <Button ref={cancelRef} onClick={onClose}>
-              Nei
+            <Button ref={cancelRef} onClick={onClose} variant="secondary" colorScheme="blue">
+              Avbryt
             </Button>
-            <Button colorScheme="red" ml={3}>
-              Ja
+            <Button onClick={onClose} ml={3} colorScheme="red">
+              Slett
             </Button>
           </AlertDialogFooter>
         </AlertDialogContent>
@@ -278,6 +293,60 @@ const TransitionExample = ({ ...args }) => {
 };
 
 export const AlertDialogTransition: Story = {
-  args: {},
-  render: (args) => <TransitionExample {...args} />,
+  render: args => <AlertDialogTransitionExample {...args} />,
+  parameters: {
+    docs: {
+      source: {
+        type: "code",
+        language: "tsx",
+        code: AlertDialogTransitionString,
+      },
+    },
+  },
+};
+
+const AlertDialogCenteredExample = ({ ...args }) => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const cancelRef = useRef<HTMLButtonElement>(null);
+
+  return (
+    <>
+      <Button colorScheme="red" onClick={onOpen}>
+        Åpne alert dialog
+      </Button>
+      <KvibAlertDialog {...args} leastDestructiveRef={cancelRef} onClose={onClose} isOpen={isOpen} isCentered>
+        <AlertDialogOverlay />
+        <AlertDialogContent>
+          <AlertDialogHeader fontSize="lg" fontWeight="bold">
+            Bekreft sletting
+            <AlertDialogCloseButton />
+          </AlertDialogHeader>
+
+          <AlertDialogBody>Er du sikker på at du vil slette?</AlertDialogBody>
+
+          <AlertDialogFooter>
+            <Button ref={cancelRef} onClick={onClose} variant="secondary" colorScheme="blue">
+              Avbryt
+            </Button>
+            <Button onClick={onClose} ml={3} colorScheme="red">
+              Slett
+            </Button>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </KvibAlertDialog>
+    </>
+  );
+};
+
+export const AlertDialogCentered: Story = {
+  render: args => <AlertDialogCenteredExample {...args} />,
+  parameters: {
+    docs: {
+      source: {
+        type: "code",
+        language: "tsx",
+        code: AlertDialogCenteredString,
+      },
+    },
+  },
 };
