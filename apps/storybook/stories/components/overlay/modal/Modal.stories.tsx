@@ -431,23 +431,24 @@ const ModalSizeExample = ({ ...args }) => {
 
   return (
     <>
-      <Flex gap="1rem" alignItems="center">
-        <Select onChange={e => setSize(e.target.value)} value={size} w="8rem">
-          {sizes.map(size => (
-            <option key={size} value={size}>
-              {size}
-            </option>
-          ))}
-        </Select>
-        <Button onClick={onOpen} m={4}>
-          Åpne modal
-        </Button>
-      </Flex>
+      <FormControl>
+        <FormLabel htmlFor="select">Velg størrelse for modal</FormLabel>
+        <Flex gap="0.5rem">
+          <Select aria-label="Velg størrelse for modal" onChange={e => setSize(e.target.value)} value={size} w="8rem">
+            {sizes.map(size => (
+              <option key={size} value={size}>
+                {size}
+              </option>
+            ))}
+          </Select>
+          <Button onClick={onOpen}>Åpne modal</Button>
+        </Flex>
+      </FormControl>
 
       <KvibModal {...args} onClose={onClose} size={size} isOpen={isOpen}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Modal Størrelser</ModalHeader>
+          <ModalHeader>Modal i forskjellige størrelser</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
             Du har åpnet modalen i størrelse <b>{size}</b>.
