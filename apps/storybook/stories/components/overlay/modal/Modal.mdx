@@ -1,8 +1,7 @@
-import { Meta, Canvas, Story, Controls, Source } from "@storybook/blocks";
+import { Canvas, Controls, Meta, Primary, Source, Story } from "@storybook/blocks";
+import { DocsAnatomy, DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
 import * as ModalStories from "./Modal.stories";
-import { Card, CardBody } from "@kvib/react/src";
-import * as ModalStrings from "./srcStrings.ts";
-import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
+
 
 <Meta of={ModalStories} />
 
@@ -12,82 +11,43 @@ import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "..
 
 En modal er en dialog som fokuserer brukerens oppmerksomhet på informasjonen i vinduet.
 
-## Ta i bruk
+<Canvas of={ModalStories.Modal} />
 
-```jsx
+## Slik bruker du `Modal`
+Modalen består av flere komponenter som kan brukes sammen for å lage en modal. Disse komponentene er `Modal`, `ModalOverlay`, `ModalContent`, `ModalHeader`, `ModalFooter`, `ModalBody` og `ModalCloseButton` og importeres på følgende måte:
+
+```tsx
 import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton } from "@kvib/react";
 ```
+<br/><br/>
 
-<Feedback component="Modal" />
+### Bruk av modal med sentrert posisjon
+Modaler kan plasseres vertikalt og horisontalt sentrert i forhold til skjermen. Dette gjør man med å sende inn `isCentered`-propen til `Modal`-komponenten.
+<Canvas of={ModalStories.ModalCentered} />
 
-<DocsHeading light children="Block scrolling" />
 
-<Card variant="outline" borderRadius="0">
-  <CardBody>
-    <Story of={ModalStories.ModalScrolling} />
-  </CardBody>
-</Card>
+### Bruk av modal med ulike størrelser
+Modaler kan ha ulike størrelser. Dette gjøres ved å sende inn `size`-propen til `Modal`-komponenten, og støtter verdiene `xs`, `sm`, `md`, `lg`, `xl` og `full`. Den siste verdien `full` gjør at modalen tar opp hele skjermen.
+<Canvas of={ModalStories.ModalSizes} />
 
-<Source code={ModalStrings.ModalScrollingString} dark />
 
-<DocsHeading light children="Fokus" />
+### Bruk av modal med animert overgang
+Modaler støtter overganger som animerer åpningen og lukkingen av modalen. Disse overgangene kan endres ved å sende inn `motionPreset`-propen til `Modal`-komponenten, og støtter verdiene `slideInBottom`, `slideInRight`, `scale` og `none`.
+<Canvas of={ModalStories.ModalTransition} />
 
-<Card variant="outline" borderRadius="0">
-  <CardBody>
-    <Story of={ModalStories.ModalFocus} />
-  </CardBody>
-</Card>
 
-<Source code={ModalStrings.ModalFocusString} dark />
+### Bruk av modal med fokus
+Man kan rette fokus på spesifikke elementer når en modal åpnes eller lukkes. Dette gjøres ved å sende inn `initialFocusRef`- og `finalRef`-propsene.
+<Canvas of={ModalStories.ModalFocus} />
 
-<DocsHeading light children="Sentrering" />
+### Bruk av modal med egendefinert bakgrunn
+Modaler har en bakgrunn som dekker hele skjermen. Denne bakgrunnen kan endres ved å sende inn `overlayColor`-propen til `ModalOverlay`-komponenten.
+<Canvas of={ModalStories.ModalBackdrop} />
 
-<Card variant="outline" borderRadius="0">
-  <CardBody>
-    <Story of={ModalStories.ModalCentered} />
-  </CardBody>
-</Card>
 
-<Source code={ModalStrings.ModalCenteredString} dark />
+### Bruk av modal med mulighet for å scrolle innholdet bak modalen
+Standarden er at modalen hindrer scrolling på innholdet bak modalen. Dette kan endres ved å sende inn `scrollBehavior`-propen til `Modal`-komponenten.
+<Canvas of={ModalStories.ModalScrolling} />
 
-<DocsHeading light children="Transition" />
-
-<Card variant="outline" borderRadius="0">
-  <CardBody>
-    <Story of={ModalStories.ModalTransition} />
-  </CardBody>
-</Card>
-
-<Source code={ModalStrings.ModalTransitionString} dark />
-
-<DocsHeading light children="Størrelser" />
-
-<Card variant="outline" borderRadius="0">
-  <CardBody>
-    <Story of={ModalStories.ModalSizes} />
-  </CardBody>
-</Card>
-
-<Source code={ModalStrings.ModalSizesString} dark />
-
-<DocsHeading light children="Bakteppe" />
-
-<Card variant="outline" borderRadius="0">
-  <CardBody>
-    <Story of={ModalStories.ModalBackdrop} />
-  </CardBody>
-</Card>
-
-<Source code={ModalStrings.ModalBackdropString} dark />
-
-<DocsHeading light children="Props" />
-<Card variant="outline" borderRadius="0">
-  <CardBody>
-    <Story of={ModalStories.Modal} />
-  </CardBody>
-</Card>
-
-<Source code={ModalStrings.ModalString} dark />
-<Controls of={ModalStories.Modal} />
 
 </DocsContainer>

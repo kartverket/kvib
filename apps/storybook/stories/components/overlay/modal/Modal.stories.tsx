@@ -1,6 +1,7 @@
 import {
   Box,
   Button,
+  Flex,
   FormControl,
   FormLabel,
   Input,
@@ -11,28 +12,32 @@ import {
   ModalFooter,
   ModalHeader,
   ModalOverlay,
+  Select,
   Text,
   useDisclosure,
 } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
-import { SetStateAction, useRef, useState } from "react";
+import { useRef, useState } from "react";
+import {
+  ModalBackdropString,
+  ModalCenteredString,
+  ModalFocusString,
+  ModalScrollingString,
+  ModalSizesString,
+  ModalString,
+  ModalTransitionString,
+} from "./srcStrings";
 
 const meta: Meta<typeof KvibModal> = {
   title: "Overlay/Modal",
   component: KvibModal,
-  parameters: {
-    docs: {
-      story: { inline: true },
-      canvas: { sourceState: "shown" },
-    },
-  },
+
   argTypes: {
     isOpen: {
       name: "isOpen*",
       description: "If true, the modal will be open.",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
       },
       control: "boolean",
     },
@@ -48,7 +53,6 @@ const meta: Meta<typeof KvibModal> = {
       description: "Handle zoom/pinch gestures on iOS devices when scroll locking is enabled.",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
       },
       control: "boolean",
     },
@@ -57,7 +61,6 @@ const meta: Meta<typeof KvibModal> = {
         "If true, the modal will autofocus the first enabled and interactive element within the ModalContent",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: true },
       },
       control: "boolean",
     },
@@ -65,7 +68,6 @@ const meta: Meta<typeof KvibModal> = {
       description: "If true, scrolling will be disabled on the body when the modal opens.",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: true },
       },
       control: "boolean",
     },
@@ -73,7 +75,6 @@ const meta: Meta<typeof KvibModal> = {
       description: "If true, the modal will close when the Esc key is pressed",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: true },
       },
       control: "boolean",
     },
@@ -81,7 +82,6 @@ const meta: Meta<typeof KvibModal> = {
       description: "If true, the modal will close when the overlay is clicked",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: true },
       },
       control: "boolean",
     },
@@ -103,7 +103,6 @@ const meta: Meta<typeof KvibModal> = {
       description: "If true, the modal will be centered on screen.",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
       },
       control: "boolean",
     },
@@ -112,7 +111,6 @@ const meta: Meta<typeof KvibModal> = {
         "Enables aggressive focus capturing within iframes. - If true: keep focus in the lock, no matter where lock is active - If false: allows focus to move outside of iframe",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
       },
       control: "boolean",
     },
@@ -157,7 +155,6 @@ const meta: Meta<typeof KvibModal> = {
         "If true, a `padding-right` will be applied to the body element that's equal to the width of the scrollbar. This can help prevent some unpleasant flickering effect and content adjustment when the modal opens",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: true },
       },
       control: "boolean",
     },
@@ -165,7 +162,6 @@ const meta: Meta<typeof KvibModal> = {
       description: "If true, the modal will return focus to the element that triggered it when it closes.",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: true },
       },
       control: "boolean",
     },
@@ -192,7 +188,6 @@ const meta: Meta<typeof KvibModal> = {
         "If false, focus lock will be disabled completely. This is useful in situations where you still need to interact with other surrounding elements. 🚨Warning: We don't recommend doing this because it hurts the accessibility of the modal, based on WAI-ARIA specifications.",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: true },
       },
       control: "boolean",
     },
@@ -201,7 +196,6 @@ const meta: Meta<typeof KvibModal> = {
         "A11y: If true, the siblings of the modal will have `aria-hidden` set to true so that screen readers can only see the modal. This is commonly known as making the other elements **inert**",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: true },
       },
       control: "boolean",
     },
@@ -222,10 +216,10 @@ export const ModalExample = ({ ...args }) => {
   return (
     <>
       <Button onClick={onOpen} colorScheme={args.colorScheme}>
-        Åpne Modal
+        Åpne modal
       </Button>
 
-      <KvibModal {...args} isOpen={isOpen} onClose={onClose} colorScheme={args.colorScheme}>
+      <KvibModal {...args} isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>Her er en modal</ModalHeader>
@@ -238,13 +232,11 @@ export const ModalExample = ({ ...args }) => {
             <Button onClick={onClose} variant="tertiary" colorScheme={args.colorScheme}>
               Tertiær
             </Button>
-            <Box mr={3}>
+            <Box>
               <Button mr={3} onClick={onClose} variant="secondary" colorScheme={args.colorScheme}>
                 Sekundær
               </Button>
-              <Button variant="primary" colorScheme={args.colorScheme}>
-                Primær
-              </Button>
+              <Button colorScheme={args.colorScheme}>Primær</Button>
             </Box>
           </ModalFooter>
         </ModalContent>
@@ -254,17 +246,25 @@ export const ModalExample = ({ ...args }) => {
 };
 
 export const Modal: Story = {
-  args: {},
   render: args => <ModalExample {...args} />,
+  parameters: {
+    docs: {
+      source: {
+        type: "code",
+        language: "tsx",
+        code: ModalString,
+      },
+    },
+  },
 };
 
 const ModalScrollingExample = ({ ...args }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <Button onClick={onOpen}>Åpne modal</Button>
+      <Button onClick={onOpen}>Åpne modal med scroll</Button>
 
-      <KvibModal {...args} blockScrollOnMount={false} isOpen={isOpen} onClose={onClose}>
+      <KvibModal {...args} isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>Modal med scroll</ModalHeader>
@@ -287,8 +287,19 @@ const ModalScrollingExample = ({ ...args }) => {
 };
 
 export const ModalScrolling: Story = {
-  args: {},
   render: args => <ModalScrollingExample {...args} />,
+  args: {
+    blockScrollOnMount: false,
+  },
+  parameters: {
+    docs: {
+      source: {
+        type: "code",
+        language: "tsx",
+        code: ModalScrollingString,
+      },
+    },
+  },
 };
 
 const ModalFocusExample = ({ ...args }) => {
@@ -311,8 +322,8 @@ const ModalFocusExample = ({ ...args }) => {
           <ModalCloseButton />
           <ModalBody pb={6}>
             <FormControl>
-              <FormLabel>Navn</FormLabel>
-              <Input ref={initialRef} placeholder="Fornavn" />
+              <FormLabel>Skriv inn noe</FormLabel>
+              <Input ref={initialRef} placeholder="Placeholder" />
             </FormControl>
           </ModalBody>
 
@@ -331,8 +342,16 @@ const ModalFocusExample = ({ ...args }) => {
 };
 
 export const ModalFocus: Story = {
-  args: {},
   render: args => <ModalFocusExample {...args} />,
+  parameters: {
+    docs: {
+      source: {
+        type: "code",
+        language: "tsx",
+        code: ModalFocusString,
+      },
+    },
+  },
 };
 
 const ModalCenteredExample = ({ ...args }) => {
@@ -346,10 +365,7 @@ const ModalCenteredExample = ({ ...args }) => {
         <ModalContent>
           <ModalHeader>Sentrert modal</ModalHeader>
           <ModalCloseButton />
-          <ModalBody>
-            Modalen har 3.75rem vertical offset. Den kan endres ved å legge "top" til ModalContent. Hvis du skal
-            sentrere vertikalt legger du isCentered i Modal.
-          </ModalBody>
+          <ModalBody>Denne modalen vises i midten av skjermen.</ModalBody>
           <ModalFooter>
             <Button onClick={onClose}>Lukk</Button>
           </ModalFooter>
@@ -360,8 +376,16 @@ const ModalCenteredExample = ({ ...args }) => {
 };
 
 export const ModalCentered: Story = {
-  args: {},
   render: args => <ModalCenteredExample {...args} />,
+  parameters: {
+    docs: {
+      source: {
+        type: "code",
+        language: "tsx",
+        code: ModalCenteredString,
+      },
+    },
+  },
 };
 
 const ModalTransitionExample = ({ ...args }) => {
@@ -374,15 +398,12 @@ const ModalTransitionExample = ({ ...args }) => {
         <ModalContent>
           <ModalHeader>Modal Transition</ModalHeader>
           <ModalCloseButton />
-          <ModalBody>
-            Modal kommer med en scale transition som du kan endre med motionPreset-propen. Sett verdien til
-            “slidelnBottom”, “slidelnRight”, “scale” eller “none”.
-          </ModalBody>
+          <ModalBody>Denne modalen skyves inn med animasjon.</ModalBody>
           <ModalFooter>
             <Button mr={3} onClick={onClose} variant="secondary">
               Avbryt
             </Button>
-            <Button variant="primary">Bekreft</Button>
+            <Button>Bekreft</Button>
           </ModalFooter>
         </ModalContent>
       </KvibModal>
@@ -391,26 +412,37 @@ const ModalTransitionExample = ({ ...args }) => {
 };
 
 export const ModalTransition: Story = {
-  args: {},
   render: args => <ModalTransitionExample {...args} />,
+  parameters: {
+    docs: {
+      source: {
+        type: "code",
+        language: "tsx",
+        code: ModalTransitionString,
+      },
+    },
+  },
 };
 
 const ModalSizeExample = ({ ...args }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [size, setSize] = useState("md");
-
-  const handleSizeClick = (newSize: SetStateAction<string>) => {
-    setSize(newSize);
-    onOpen();
-  };
-
   const sizes = ["xs", "sm", "md", "lg", "xl", "full"];
 
   return (
     <>
-      {sizes.map(size => (
-        <Button onClick={() => handleSizeClick(size)} key={size} m={4}>{`Åpne ${size} Modal`}</Button>
-      ))}
+      <Flex gap="1rem" alignItems="center">
+        <Select onChange={e => setSize(e.target.value)} value={size} w="8rem">
+          {sizes.map(size => (
+            <option key={size} value={size}>
+              {size}
+            </option>
+          ))}
+        </Select>
+        <Button onClick={onOpen} m={4}>
+          Åpne modal
+        </Button>
+      </Flex>
 
       <KvibModal {...args} onClose={onClose} size={size} isOpen={isOpen}>
         <ModalOverlay />
@@ -418,8 +450,7 @@ const ModalSizeExample = ({ ...args }) => {
           <ModalHeader>Modal Størrelser</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            Bruk size-proppen hvis du vil endre størrelse. Verdiene du kan velge mellom er xs, sm, md, lg, xl, eller
-            full.
+            Du har åpnet modalen i størrelse <b>{size}</b>.
           </ModalBody>
           <ModalFooter>
             <Button onClick={onClose}>Lukk</Button>
@@ -431,8 +462,16 @@ const ModalSizeExample = ({ ...args }) => {
 };
 
 export const ModalSizes: Story = {
-  args: {},
   render: args => <ModalSizeExample {...args} />,
+  parameters: {
+    docs: {
+      source: {
+        type: "code",
+        language: "tsx",
+        code: ModalSizesString,
+      },
+    },
+  },
 };
 
 const ModalBackdropExample = ({ ...args }) => {
@@ -451,7 +490,7 @@ const ModalBackdropExample = ({ ...args }) => {
           onOpen();
         }}
       >
-        Bruk overlay 1
+        Åpne modal med blurry bakgrunn
       </Button>
       <Button
         ml="4"
@@ -460,7 +499,7 @@ const ModalBackdropExample = ({ ...args }) => {
           onOpen();
         }}
       >
-        Bruk overlay 2
+        Åpne modal med inverterte farger
       </Button>
       <KvibModal {...args} isCentered isOpen={isOpen} onClose={onClose}>
         {overlay}
@@ -480,6 +519,14 @@ const ModalBackdropExample = ({ ...args }) => {
 };
 
 export const ModalBackdrop: Story = {
-  args: {},
   render: args => <ModalBackdropExample {...args} />,
+  parameters: {
+    docs: {
+      source: {
+        type: "code",
+        language: "tsx",
+        code: ModalBackdropString,
+      },
+    },
+  },
 };
