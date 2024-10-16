@@ -434,7 +434,7 @@ const ModalSizeExample = ({ ...args }) => {
       <FormControl>
         <FormLabel htmlFor="select">Velg størrelse for modal</FormLabel>
         <Flex gap="0.5rem">
-          <Select id="select" onChange={e => setSize(e.target.value)} value={size} w="8rem">
+          <Select id="select" onChange={e => setSize(e.target.value)} value={size} w="12rem">
             {sizes.map(size => (
               <option key={size} value={size}>
                 {size}
