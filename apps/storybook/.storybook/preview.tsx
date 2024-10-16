@@ -6,6 +6,7 @@ import "./docs-root.css";
 import theme from "./theme";
 
 const parameters = {
+  layout: "centered",
   controls: {
     matchers: {
       color: /(background|color)$/i,
@@ -130,7 +131,6 @@ export const argTypes = {
   _vertical: STORYBOOK_DISABLE_CONTROL,
   _horizontal: STORYBOOK_DISABLE_CONTROL,
 };
-export const tags = ["autodocs", "autodocs"];
 
 const preview: Preview = {
   parameters: parameters,
