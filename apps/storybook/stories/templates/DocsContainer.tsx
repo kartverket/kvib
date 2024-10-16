@@ -1,7 +1,8 @@
 import { Box } from "@kvib/react/src";
+import { ReactNode } from "react";
 
 type DocsStoriesContainerProps = {
-  children: React.ReactNode;
+  children: ReactNode;
 };
 
 export const DocsContainer = ({ children }: DocsStoriesContainerProps) => {

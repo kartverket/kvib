@@ -99,9 +99,7 @@ import {
 } from "@kvib/react/src";
 import { ReactElement } from "react";
 import { PortalNestedExample } from "../../components/annet/portal/Portal.stories";
-import { AlertDialogExample } from "../../components/overlay/alert-dialog/AlertDialog.stories";
 import { DrawerExample } from "../../components/overlay/drawer/Drawer.stories";
-import { ModalExample } from "../../components/overlay/modal/Modal.stories";
 
 interface Komponentdetaljer {
   navn: string;
@@ -756,12 +754,13 @@ export const Komponenter: (colorScheme: "green" | "blue") => Record<string, Kate
         komponent: <Tooltip label="Dette er en tooltip">Hover over meg</Tooltip>,
         link: "tooltip",
       },
-      Modal: {
+      // TODO: Legg til modal direkte fra Story
+      /* Modal: {
         navn: "Modal",
         beskrivelse: "",
         komponent: <ModalExample colorScheme={colorScheme} />,
         link: "modal",
-      },
+      }, */
       Popover: {
         navn: "Popover",
         beskrivelse: "",
@@ -780,12 +779,13 @@ export const Komponenter: (colorScheme: "green" | "blue") => Record<string, Kate
         ),
         link: "popover",
       },
-      AlertDialog: {
+      // TODO: Legg til AlertDialog direkte fra Story
+      /* AlertDialog: {
         navn: "Alert Dialog",
         beskrivelse: "",
-        komponent: <AlertDialogExample />,
+        komponent:
         link: "alert-dialog",
-      },
+      }, */
       Drawer: {
         navn: "Drawer",
         beskrivelse: "",
