@@ -19,7 +19,7 @@ const meta: Meta<typeof KvibFooter> = {
       description: "Exclude contact information",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -27,7 +27,7 @@ const meta: Meta<typeof KvibFooter> = {
       description: "Exclude help",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -35,7 +35,7 @@ const meta: Meta<typeof KvibFooter> = {
       description: "Exclude news",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -43,7 +43,15 @@ const meta: Meta<typeof KvibFooter> = {
       description: "Exclude opening hours",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
+      },
+      control: "boolean",
+    },
+    excludePrivacyLink: {
+      description: "Exclude privacy link",
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -51,7 +59,7 @@ const meta: Meta<typeof KvibFooter> = {
       description: "Exclude social media",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -71,6 +79,7 @@ export const Preview: Story = {
     excludeHelp: false,
     excludeNews: false,
     excludeOpeningHours: false,
+    excludePrivacyLink: false,
     excludeSocialMedia: false,
   },
   render: args => <KvibFooter {...args} />,
@@ -83,6 +92,7 @@ export const FooterNone: Story = {
     excludeHelp: true,
     excludeNews: true,
     excludeOpeningHours: true,
+    excludePrivacyLink: true,
     excludeSocialMedia: true,
   },
   render: args => <KvibFooter {...args} />,

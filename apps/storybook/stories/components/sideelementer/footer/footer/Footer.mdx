@@ -9,36 +9,26 @@ import * as FooterStories from "./Footer.stories";
 
 # Footer
 
-```jsx
-import { Footer } from "@kvib/react";
-```
+En footer er en seksjon som vises nederst på en nettside. Rett ut av boksen inneholder den en logo sammen med Kartverkets kontaktopplysninger og lenker til relevante sider.
+
+<Canvas of={FooterStories.Preview} sourceState="hidden" />
 
 <Feedback components="Footer" />
 
-<DocsStory
-  isVertical
-  title="Footer med innhold"
-  description={""}
-  story={
-    <>
-      <Canvas of={FooterStories.Preview} sourceState="hidden" />
-      Props
-      <Controls of={FooterStories.Preview} />
-    </>
-  }
-/>
+## Slik bruker du Footer
+For å bruke Footer, importerer du den fra `@kvib/react`-pakken på følgende måte:
+```tsx
+import { Footer } from "@kvib/react";
+```
+<br/><br/>
 
-<DocsStory
-  isVertical
-  title="Footer uten innhold"
-  description={""}
-  story={
-    <>
-      <Canvas of={FooterStories.FooterNone} sourceState="hidden" />
-      Props
-      <Controls of={FooterStories.FooterNone} />
-    </>
-  }
-/>
+### Fjern elementer fra Footer
+Footeren er satt opp slik at den inneholder alt rett ut av boksen. Dersom man ønsker å fjerne elementer finnes det en rekke `exclude*`-props som kan brukes til dette.
+<Canvas of={FooterStories.FooterNone} sourceState="hidden" />
+
+
+## Props
+<Canvas of={FooterStories.Preview} sourceState="hidden" />
+<Controls of={FooterStories.Preview} />
 
 </DocsContainer>
