@@ -2,6 +2,7 @@ import { Box, Divider, Flex, FlexProps, Heading, Link, Logo, Text } from "@kvib/
 
 export type FooterProps = {
   accessibilityUrl?: string;
+  excludePrivacyLink?: boolean;
   excludeSocialMedia?: boolean;
   excludeOpeningHours?: boolean;
   excludeContactInfo?: boolean;
@@ -29,6 +30,7 @@ export const Footer = ({
   excludeHelp,
   excludeNews,
   excludeSocialMedia,
+  excludePrivacyLink,
   contactInfoEmailAddress = "post@kartverket.no",
 }: FooterProps) => {
   const onlyOneIncluded =
@@ -195,13 +197,15 @@ export const Footer = ({
             </FooterToggleableFlex>
           )}
           <Flex align="center" gap={3} flexWrap="wrap">
-            <Link
-              href="https://kartverket.no/om-kartverket/personvern"
-              aria-label="Besøk Kartverket sin personvernserklæring"
-              fontWeight="bold"
-            >
-              Personvern
-            </Link>
+            {!excludePrivacyLink && (
+              <Link
+                href="https://kartverket.no/om-kartverket/personvern"
+                aria-label="Besøk Kartverket sin personvernserklæring"
+                fontWeight="bold"
+              >
+                Personvern
+              </Link>
+            )}
             {accessibilityUrl && (
               <Link href={accessibilityUrl} aria-label="Besøk denne sidens tilgjengelighetserklæring" fontWeight="bold">
                 {" "}
