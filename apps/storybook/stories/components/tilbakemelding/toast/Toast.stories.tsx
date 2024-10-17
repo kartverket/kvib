@@ -115,6 +115,7 @@ const meta: Meta<KvibToast> = {
 };
 
 export default meta;
+
 const ToastExample = ({ ...args }) => {
   const toast = useToast();
 
@@ -143,7 +144,7 @@ const ToastExample = ({ ...args }) => {
 
 type Story = StoryObj<KvibToast>;
 
-export const Toast: Story = {
+export const Preview: Story = {
   args: {
     title: "Skjema innsendt",
     description: "Takk for opplysningene",
@@ -151,12 +152,12 @@ export const Toast: Story = {
     duration: 9000,
     icon: "check",
   },
-  render: (args) => <ToastExample {...args} />,
+  render: args => <ToastExample {...args} />,
 };
 
 export const ToastStatus: Story = {
   args: { duration: 4000, btnW: "500px" },
-  render: (args) => (
+  render: args => (
     <Stack>
       <ToastExample
         {...args}
@@ -183,7 +184,7 @@ export const ToastStatus: Story = {
 
 export const ToastPosition: Story = {
   args: { duration: 5000, btnW: "100px" },
-  render: (args) => (
+  render: args => (
     <div>
       <HStack>
         <ToastExample {...args} position="top-left" title="Top-left" />,

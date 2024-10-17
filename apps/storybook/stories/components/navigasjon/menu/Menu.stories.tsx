@@ -4,13 +4,13 @@ import {
   Icon,
   IconButton,
   Menu as KvibMenu,
-  MenuButton,
-  MenuItem,
-  MenuList,
   MenuGroup as KvibMenuGroup,
+  MenuButton,
   MenuDivider,
-  MenuOptionGroup,
+  MenuItem,
   MenuItemOption,
+  MenuList,
+  MenuOptionGroup,
 } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
@@ -215,9 +215,8 @@ const meta: Meta<typeof KvibMenu> = {
 export default meta;
 type Story = StoryObj<typeof KvibMenu>;
 
-export const Menu: Story = {
-  args: {},
-  render: (args) => (
+export const Preview: Story = {
+  render: args => (
     <Box h="60">
       <KvibMenu {...args}>
         <MenuButton as={Button} rightIcon={"expand_more"}>
@@ -236,8 +235,7 @@ export const Menu: Story = {
 };
 
 export const MenuState: Story = {
-  args: {},
-  render: (args) => (
+  render: args => (
     <Box h="40">
       <KvibMenu {...args}>
         {({ isOpen }) => (
@@ -257,8 +255,7 @@ export const MenuState: Story = {
 };
 
 export const MenuIconsCommands: Story = {
-  args: {},
-  render: (args) => (
+  render: args => (
     <Box h="40">
       <KvibMenu {...args}>
         <MenuButton as={IconButton} aria-label="Options" icon={"menu"} variant="primary" />
@@ -282,8 +279,7 @@ export const MenuIconsCommands: Story = {
 };
 
 export const MenuGroup: Story = {
-  args: {},
-  render: (args) => (
+  render: args => (
     <Box h="60">
       <KvibMenu {...args}>
         <MenuButton as={Button} colorScheme="green">
@@ -306,8 +302,7 @@ export const MenuGroup: Story = {
 };
 
 export const MenuLink: Story = {
-  args: {},
-  render: (args) => (
+  render: args => (
     <Box h="20">
       <KvibMenu {...args}>
         <MenuButton>Åpne meny</MenuButton>
@@ -325,8 +320,7 @@ export const MenuLink: Story = {
 };
 
 export const MenuOptionGroups: Story = {
-  args: {},
-  render: (args) => (
+  render: args => (
     <Box h="80">
       <KvibMenu {...args} closeOnSelect={false}>
         <MenuButton as={Button} colorScheme="blue">

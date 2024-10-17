@@ -66,14 +66,12 @@ const meta: Meta<typeof KvibSpinner> = {
 export default meta;
 type Story = StoryObj<typeof KvibSpinner>;
 
-export const Spinner: Story = {
-  args: {},
-  render: (args) => <KvibSpinner {...args} />,
+export const Preview: Story = {
+  render: args => <KvibSpinner {...args} />,
 };
 
 export const SpinnerColors: Story = {
-  args: {},
-  render: (args) => (
+  render: args => (
     <KvibStack>
       <KvibSpinner {...args} color="blue" />
       <KvibSpinner {...args} color="green" />
@@ -84,8 +82,7 @@ export const SpinnerColors: Story = {
 };
 
 export const SpinnerSizes: Story = {
-  args: {},
-  render: (args) => (
+  render: args => (
     <KvibStack>
       <KvibSpinner {...args} size="xl" />
       <KvibSpinner {...args} size="lg" />
@@ -98,5 +95,5 @@ export const SpinnerSizes: Story = {
 
 export const SpinnerArea: Story = {
   args: { size: "xl", emptyColor: "gray.200", speed: "0.65s", color: "green.500", thickness: "4px" },
-  render: (args) => <KvibSpinner {...args} />,
+  render: args => <KvibSpinner {...args} />,
 };

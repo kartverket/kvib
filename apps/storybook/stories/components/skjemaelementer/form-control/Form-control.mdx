@@ -1,7 +1,7 @@
+import { Alert, AlertIcon, Box, Code, Text } from "@kvib/react/src";
 import { Canvas, Controls, Meta } from "@storybook/blocks";
+import { DocsAnatomy, DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
 import * as FormControlStories from "./Form-control.stories";
-import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
-import { Alert, AlertIcon, Text, Code, Box } from "@kvib/react/src";
 
 <Meta of={FormControlStories} />
 
@@ -27,7 +27,7 @@ import { FormControl, FormLabel, FormErrorMessage, FormHelperText } from "@kvib/
       skjema elementer
     </Text>
   }
-  story={<Canvas of={FormControlStories.FormControl} sourceState={"hidden"} />}
+  story={<Canvas of={FormControlStories.Preview} sourceState={"hidden"} />}
 />
 <DocsStory
   title="FormControl States"
@@ -47,7 +47,7 @@ import { FormControl, FormLabel, FormErrorMessage, FormHelperText } from "@kvib/
 />
 
 <DocsHeading light>Props</DocsHeading>
-<Canvas of={FormControlStories.FormControl} />
-<Controls of={FormControlStories.FormControl} />
+<Canvas of={FormControlStories.Preview} />
+<Controls of={FormControlStories.Preview} />
 
 </DocsContainer>

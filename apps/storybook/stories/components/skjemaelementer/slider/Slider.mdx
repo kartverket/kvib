@@ -1,7 +1,7 @@
-import { Canvas, Meta, Controls, Source } from "@storybook/blocks";
-import * as SliderStories from "./Slider.stories";
 import { Alert, AlertIcon } from "@kvib/react/src";
-import { DocsHeading, DocsContainer, DocsStory, Feedback } from "../../../templates";
+import { Canvas, Controls, Meta, Source } from "@storybook/blocks";
+import { DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
+import * as SliderStories from "./Slider.stories";
 import { SliderStrings } from "./srcSliderStrings";
 
 <Meta of={SliderStories} />
@@ -54,7 +54,7 @@ import { Slider, SliderTrack, SliderFilledTrack, SliderThumb, SliderMark } from 
 />
 
 <DocsHeading light>Props</DocsHeading>
-<Canvas of={SliderStories.Slider} />
-<Controls of={SliderStories.Slider} />
+<Canvas of={SliderStories.Preview} />
+<Controls of={SliderStories.Preview} />
 
 </DocsContainer>

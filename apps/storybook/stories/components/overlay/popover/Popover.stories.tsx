@@ -315,9 +315,8 @@ const meta: Meta<typeof KvibPopover> = {
 export default meta;
 type Story = StoryObj<typeof KvibPopover>;
 
-export const Popover: Story = {
-  args: {},
-  render: (args) => (
+export const Preview: Story = {
+  render: args => (
     <Box h="40">
       <KvibPopover {...args}>
         <PopoverTrigger>
@@ -363,8 +362,7 @@ const PopoverFocusExample = ({ ...args }) => {
 };
 
 export const PopoverFocus: Story = {
-  args: {},
-  render: (args) => <PopoverFocusExample {...args} />,
+  render: args => <PopoverFocusExample {...args} />,
 };
 
 type TextInputProps = {
@@ -440,8 +438,7 @@ const PopoverForm = ({ ...args }) => {
 };
 
 export const PopoverTrappingFocus: Story = {
-  args: {},
-  render: (args) => <PopoverForm {...args} />,
+  render: args => <PopoverForm {...args} />,
 };
 
 const ControlledUsage = ({ ...args }) => {
@@ -481,8 +478,7 @@ const ControlledUsage = ({ ...args }) => {
 };
 
 export const PopoverControlled: Story = {
-  args: {},
-  render: (args) => <ControlledUsage {...args} />,
+  render: args => <ControlledUsage {...args} />,
 };
 
 const WithPopoverAnchor = ({ ...args }) => {
@@ -522,7 +518,7 @@ const WithPopoverAnchor = ({ ...args }) => {
       <PopoverContent>
         <PopoverBody>
           Farger:
-          <RadioGroup value={color} onChange={(newColor) => setColor(newColor)}>
+          <RadioGroup value={color} onChange={newColor => setColor(newColor)}>
             <Stack direction="row">
               <Radio value="red">rød</Radio>
               <Radio value="blue">blå</Radio>
@@ -537,13 +533,11 @@ const WithPopoverAnchor = ({ ...args }) => {
 };
 
 export const PopoverAnchorExample: Story = {
-  args: {},
-  render: (args) => <WithPopoverAnchor {...args} />,
+  render: args => <WithPopoverAnchor {...args} />,
 };
 
 export const PopoverCustomizing: Story = {
-  args: {},
-  render: (args) => (
+  render: args => (
     <Box h="40">
       <KvibPopover {...args}>
         <PopoverTrigger>

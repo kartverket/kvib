@@ -71,7 +71,7 @@ const meta: Meta<typeof KvibButton> = {
 export default meta;
 type Story = StoryObj<typeof KvibButton>;
 
-export const Button: Story = {
+export const Preview: Story = {
   args: { children: "Klikk her" },
   parameters: {
     docs: {
@@ -80,12 +80,11 @@ export const Button: Story = {
       },
     },
   },
-  render: (args) => <KvibButton {...args}>{args.children}</KvibButton>,
+  render: args => <KvibButton {...args}>{args.children}</KvibButton>,
 };
 
 export const ButtonColors: Story = {
-  args: {},
-  render: (args) => (
+  render: args => (
     <KvibButtonGroup orientation="vertical">
       <KvibButton {...args}>Nettside</KvibButton>
       <KvibButton colorScheme="blue" {...args}>
@@ -97,7 +96,7 @@ export const ButtonColors: Story = {
 
 export const ButtonVariants: Story = {
   args: { children: "Klikk her" },
-  render: (args) => (
+  render: args => (
     <KvibButtonGroup
       justifyContent="space-between"
       height={["fit-content", "fit-content", "28rem"]}
@@ -122,7 +121,7 @@ export const ButtonVariants: Story = {
 
 export const ButtonStates: Story = {
   args: { children: "Klikk her" },
-  render: (args) => (
+  render: args => (
     <KvibButtonGroup>
       <KvibButton {...args} isLoading>
         {args.children}
@@ -136,7 +135,7 @@ export const ButtonStates: Story = {
 
 export const ButtonIcons: Story = {
   args: { children: "Klikk her" },
-  render: (args) => (
+  render: args => (
     <KvibButtonGroup>
       <KvibButton {...args} leftIcon="favorite">
         {args.children}
@@ -153,7 +152,7 @@ export const ButtonIcons: Story = {
 
 export const ButtonSizes: Story = {
   args: { children: "Klikk her" },
-  render: (args) => (
+  render: args => (
     <KvibButtonGroup>
       <KvibButton {...args} size="xs">
         {args.children}
@@ -173,7 +172,7 @@ export const ButtonSizes: Story = {
 
 export const ButtonGroup: Story = {
   args: { children: "Klikk her" },
-  render: (args) => (
+  render: args => (
     <VStack divider={<StackDivider borderColor="gray.200" />}>
       <KvibButtonGroup orientation="vertical" variant="secondary" spacing="4" size="sm">
         <KvibButton {...args}>{args.children}</KvibButton>

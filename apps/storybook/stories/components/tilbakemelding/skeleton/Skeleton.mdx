@@ -1,7 +1,7 @@
-import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
-import * as SkeletonStories from "./Skeleton.stories";
-import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
 import { Text } from "@kvib/react/src";
+import { Canvas, Controls, Meta, Story } from "@storybook/blocks";
+import { DocsAnatomy, DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
+import * as SkeletonStories from "./Skeleton.stories";
 
 <Meta of={SkeletonStories} />
 
@@ -48,7 +48,7 @@ import { Skeleton, SkeletonCircle, SkeletonText } from "@kvib/react";
 />
 
 <DocsHeading light children="Props" />
-<Canvas of={SkeletonStories.Skeleton} />
-<Controls of={SkeletonStories.Skeleton} />
+<Canvas of={SkeletonStories.Preview} />
+<Controls of={SkeletonStories.Preview} />
 
 </DocsContainer>

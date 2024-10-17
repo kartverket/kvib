@@ -1,15 +1,15 @@
-import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
+import { Alert, AlertDescription, AlertIcon, Box, Card, CardBody, Code, Text } from "@kvib/react/src";
+import { Canvas, Controls, Meta, Story } from "@storybook/blocks";
+import { DocsAnatomy, DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
 import * as CardStories from "./Card.stories";
-import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
 import {
-  CardString,
-  CardVariantsString,
-  CardSizesString,
-  CardImageString,
   CardCenteringString,
   CardHorizontalString,
+  CardImageString,
+  CardSizesString,
+  CardString,
+  CardVariantsString,
 } from "./srcStrings.ts";
-import { Card, CardBody, Text, Code, Box, Alert, AlertIcon, AlertDescription } from "@kvib/react/src";
 
 <Meta of={CardStories} />
 
@@ -110,5 +110,5 @@ story={<Canvas of={CardStories.CardComposition} />}
 
 <DocsHeading light>Props</DocsHeading>
 
-<Canvas of={CardStories.Card} />
-<Controls of={CardStories.Card} />
+<Canvas of={CardStories.Preview} />
+<Controls of={CardStories.Preview} />

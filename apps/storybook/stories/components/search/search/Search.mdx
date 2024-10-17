@@ -1,7 +1,7 @@
-import * as SearchStories from "./Search.stories";
+import { Alert, AlertIcon, Box, Code, Stack, Text } from "@kvib/react/src";
 import { Canvas, Controls, Meta, Story } from "@storybook/blocks";
-import { Alert, AlertIcon, Text, Code, Box, Stack } from "@kvib/react/src";
-import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
+import { DocsAnatomy, DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
+import * as SearchStories from "./Search.stories";
 
 <Meta of={SearchStories} />
 
@@ -100,5 +100,5 @@ Det gjøres enten med en av ikonknappene i props, eller egen knapp.
   Padding på søkeinput regnes ut ved rerender noe som gjør at endring av props på dokumentasjonssiden kan gjøre at søkefeltet
   ser rart ut. Bytt mellom stories for å se en rerender.
 </Alert>
-<Canvas of={SearchStories.Search} />
-<Controls of={SearchStories.Search} />
+<Canvas of={SearchStories.Preview} />
+<Controls of={SearchStories.Preview} />

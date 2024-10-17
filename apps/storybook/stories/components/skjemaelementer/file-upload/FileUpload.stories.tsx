@@ -62,14 +62,12 @@ const meta: Meta<typeof KvibFileUpload> = {
 export default meta;
 type FileUploadStory = StoryObj<typeof KvibFileUpload>;
 
-export const FileUpload: FileUploadStory = {
-  args: {},
-  render: (args) => <KvibFileUpload {...args} />,
+export const Preview: FileUploadStory = {
+  render: args => <KvibFileUpload {...args} />,
 };
 
 export const Variant: FileUploadStory = {
-  args: {},
-  render: (args) => (
+  render: args => (
     <Stack gap={4}>
       <KvibFileUpload {...args} variant={"outline"} />
       <KvibFileUpload {...args} variant={"filled"} />
@@ -80,8 +78,7 @@ export const Variant: FileUploadStory = {
 };
 
 export const Size: FileUploadStory = {
-  args: {},
-  render: (args) => (
+  render: args => (
     <Stack gap={4}>
       <KvibFileUpload {...args} size={"xs"} />
       <KvibFileUpload {...args} size={"sm"} />
@@ -92,8 +89,7 @@ export const Size: FileUploadStory = {
 };
 
 export const State: FileUploadStory = {
-  args: {},
-  render: (args) => (
+  render: args => (
     <Stack gap={4}>
       <KvibFileUpload {...args} />
       <KvibFileUpload {...args} isDisabled />

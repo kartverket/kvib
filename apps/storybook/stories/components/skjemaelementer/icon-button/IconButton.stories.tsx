@@ -1,10 +1,10 @@
 import {
-  IconButton as KvibIconButton,
   HStack,
-  VStack,
-  ButtonGroup as KvibButtonGroup,
-  StackDivider,
   Button as KvibButton,
+  ButtonGroup as KvibButtonGroup,
+  IconButton as KvibIconButton,
+  StackDivider,
+  VStack,
 } from "@kvib/react/src";
 
 import { Meta, StoryObj } from "@storybook/react";
@@ -71,14 +71,14 @@ const meta: Meta<typeof KvibIconButton> = {
 export default meta;
 type Story = StoryObj<typeof KvibIconButton>;
 
-export const IconButton: Story = {
+export const Preview: Story = {
   args: { icon: "favorite", "aria-label": "IconButton default" },
-  render: (args) => <KvibIconButton {...args} />,
+  render: args => <KvibIconButton {...args} />,
 };
 
 export const IconButtonSizes: Story = {
   args: { icon: "add" },
-  render: (args) => (
+  render: args => (
     <HStack>
       <KvibIconButton {...args} aria-label="IconButton xs" size="xs" />
       <KvibIconButton {...args} aria-label="IconButton sm" size="sm" />
@@ -90,7 +90,7 @@ export const IconButtonSizes: Story = {
 
 export const IconButtonVariants: Story = {
   args: { icon: "add" },
-  render: (args) => (
+  render: args => (
     <HStack>
       <KvibIconButton {...args} aria-label="IconButton primary" variant="primary" />
       <KvibIconButton {...args} aria-label="IconButton secondary" variant="secondary" />
@@ -102,7 +102,7 @@ export const IconButtonVariants: Story = {
 
 export const IconButtonStates: Story = {
   args: { icon: "add" },
-  render: (args) => (
+  render: args => (
     <HStack>
       <KvibIconButton {...args} aria-label="IconButton disabled" isDisabled />
       <KvibIconButton {...args} aria-label="IconButton loading" isLoading />
@@ -112,7 +112,7 @@ export const IconButtonStates: Story = {
 
 export const IconButtonGroup: Story = {
   args: { icon: "favorite", "aria-label": "IconButton default" },
-  render: (args) => (
+  render: args => (
     <VStack divider={<StackDivider borderColor="gray.200" />}>
       <KvibButtonGroup orientation="vertical" size="sm">
         <KvibIconButton {...args} />

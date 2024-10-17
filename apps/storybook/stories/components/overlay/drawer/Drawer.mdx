@@ -1,14 +1,14 @@
-import { Meta, Story, Controls, Source } from "@storybook/blocks";
-import * as DrawerStories from "./Drawer.stories";
 import { Card, CardBody } from "@kvib/react/src";
+import { Controls, Meta, Source, Story } from "@storybook/blocks";
+import { DocsAnatomy, DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
+import * as DrawerStories from "./Drawer.stories";
 import {
-  DrawerString,
-  DrawerPlacementString,
   DrawerFocusString,
-  DrawerSizesString,
   DrawerFormString,
+  DrawerPlacementString,
+  DrawerSizesString,
+  DrawerString,
 } from "./srcStrings.ts";
-import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
 
 <Meta of={DrawerStories} />
 
@@ -69,10 +69,10 @@ Hvis du skal bruke form i en drawer må du bruke biblioteker som `react-hook-for
 <DocsHeading light children="Props" />
 <Card variant="outline" borderRadius="0">
   <CardBody>
-    <Story of={DrawerStories.Drawer} />
+    <Story of={DrawerStories.Preview} />
   </CardBody>
 </Card>
 
 <Source code={DrawerString} dark />
-<Controls of={DrawerStories.Drawer} />
+<Controls of={DrawerStories.Preview} />
 </DocsContainer>

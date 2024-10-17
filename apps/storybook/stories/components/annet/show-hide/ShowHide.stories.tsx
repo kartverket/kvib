@@ -1,4 +1,4 @@
-import { Show as KvibShow, Hide as KvibHide, Box } from "@kvib/react/src";
+import { Box, Hide as KvibHide, Show as KvibShow } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibShow> = {
@@ -47,9 +47,8 @@ const meta: Meta<typeof KvibShow> = {
 export default meta;
 type Story = StoryObj<typeof KvibShow>;
 
-export const Show: Story = {
-  args: {},
-  render: (args) => (
+export const Preview: Story = {
+  render: args => (
     <KvibShow {...args} breakpoint="(max-width: 400px)">
       <Box>Teksten dukker opp på skjermer med 400px eller mindre.</Box>
     </KvibShow>
@@ -57,8 +56,7 @@ export const Show: Story = {
 };
 
 export const ShowHide: Story = {
-  args: {},
-  render: (args) => (
+  render: args => (
     <>
       <KvibShow {...args} above="sm">
         <Box>Denne teksten dukker opp på skjermer med "sm" eller større bredde.</Box>

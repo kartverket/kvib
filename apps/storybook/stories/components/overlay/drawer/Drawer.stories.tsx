@@ -264,8 +264,7 @@ export const DrawerExample = ({ ...args }: CustomDrawerProps) => {
   );
 };
 
-export const Drawer: Story = {
-  args: {},
+export const Preview: Story = {
   render: args => <DrawerExample {...args} />,
 };
 

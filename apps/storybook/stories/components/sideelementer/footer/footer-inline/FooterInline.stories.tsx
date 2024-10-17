@@ -39,14 +39,13 @@ const meta: Meta<typeof KvibFooterInline> = {
 export default meta;
 type Story = StoryObj<typeof KvibFooterInline>;
 
-export const FooterInline: Story = {
-  args: {},
-  render: (args) => <KvibFooterInline {...args} />,
+export const Preview: Story = {
+  render: args => <KvibFooterInline {...args} />,
 };
 
 export const FooterInlineCustom: Story = {
   args: { accessibilityUrl: "https://uustatus.no/nb/erklaringer/publisert/f048c5ff-2167-48c5-b706-bd106c15e9c9" },
-  render: (args) => (
+  render: args => (
     <KvibFooterInline {...args}>
       <Link
         href="https://github.com/kartverket/kvib"

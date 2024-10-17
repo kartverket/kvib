@@ -131,13 +131,13 @@ const meta: Meta<typeof KvibImage> = {
 export default meta;
 type Story = StoryObj<typeof KvibImage>;
 
-export const Image: Story = {
+export const Preview: Story = {
   args: {
     boxSize: "400px",
     fit: "contain",
     src: "https://images.unsplash.com/photo-1619468129361-605ebea04b44?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2942&q=80",
   },
-  render: (args) => <KvibImage {...args} alt="Map with pins" />,
+  render: args => <KvibImage {...args} alt="Map with pins" />,
 };
 
 export const ImageSizes: Story = {
@@ -145,7 +145,7 @@ export const ImageSizes: Story = {
     fit: "cover",
     src: "https://images.unsplash.com/photo-1619468129361-605ebea04b44?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2942&q=80",
   },
-  render: (args) => (
+  render: args => (
     <KvibStack direction="row">
       <KvibImage boxSize="100px" {...args} alt="Map with pins" />
       <KvibImage boxSize="150px" {...args} alt="Map with pins" />
@@ -161,12 +161,12 @@ export const ImageBorderRadius: Story = {
     fit: "cover",
     src: "https://images.unsplash.com/photo-1619468129361-605ebea04b44?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2942&q=80",
   },
-  render: (args) => <KvibImage {...args} alt="Map with pins" />,
+  render: args => <KvibImage {...args} alt="Map with pins" />,
 };
 
 export const ImageFallback: Story = {
   args: {},
-  render: (args) => (
+  render: args => (
     <KvibImage {...args} alt="Map with pins" src="utilgjengelig.png" fallbackSrc="https://via.placeholder.com/150" />
   ),
 };

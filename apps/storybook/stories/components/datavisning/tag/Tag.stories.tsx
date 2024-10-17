@@ -1,8 +1,8 @@
 import {
-  Tag as KvibTag,
   HStack as KvibHStack,
-  TagLabel as KvibTagLabel,
+  Tag as KvibTag,
   TagCloseButton as KvibTagCloseButton,
+  TagLabel as KvibTagLabel,
 } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
@@ -49,16 +49,14 @@ const meta: Meta<typeof KvibTag> = {
 export default meta;
 type Story = StoryObj<typeof KvibTag>;
 
-export const Tag: Story = {
-  args: {},
-  render: (args) => <KvibTag {...args}>Eksempeltag</KvibTag>,
+export const Preview: Story = {
+  render: args => <KvibTag {...args}>Eksempeltag</KvibTag>,
 };
 
 export const TagColors: Story = {
-  args: {},
-  render: (args) => (
+  render: args => (
     <KvibHStack spacing={4}>
-      {["green", "blue", "red", "gray"].map((colorScheme) => (
+      {["green", "blue", "red", "gray"].map(colorScheme => (
         <KvibTag {...args} key={colorScheme} colorScheme={colorScheme}>
           {colorScheme}
         </KvibTag>
@@ -69,9 +67,9 @@ export const TagColors: Story = {
 
 export const TagSizes: Story = {
   args: { variant: "solid", colorScheme: "green" },
-  render: (args) => (
+  render: args => (
     <KvibHStack spacing={4}>
-      {["sm", "md", "lg"].map((size) => (
+      {["sm", "md", "lg"].map(size => (
         <KvibTag {...args} size={size} key={size}>
           {size}
         </KvibTag>
@@ -82,9 +80,9 @@ export const TagSizes: Story = {
 
 export const TagVariants: Story = {
   args: { colorScheme: "blue" },
-  render: (args) => (
+  render: args => (
     <KvibHStack spacing={4}>
-      {["subtle", "solid", "outline"].map((variant) => (
+      {["subtle", "solid", "outline"].map(variant => (
         <KvibTag {...args} variant={variant} key={variant}>
           {variant}
         </KvibTag>
@@ -95,7 +93,7 @@ export const TagVariants: Story = {
 
 export const TagClose: Story = {
   args: { colorScheme: "green", variant: "solid", size: "lg" },
-  render: (args) => (
+  render: args => (
     <KvibTag {...args}>
       <KvibTagLabel>Green</KvibTagLabel>
       <KvibTagCloseButton />

@@ -1,14 +1,14 @@
-import { Meta, StoryObj } from "@storybook/react";
 import {
-  Button,
-  Icon,
-  FormLabel,
-  FormControl,
   Box,
+  Button,
+  FormControl,
+  FormLabel,
   Heading,
+  Icon,
   VisuallyHidden as KvibVisuallyHidden,
   VisuallyHiddenInput as KvibVisuallyHiddenInput,
 } from "@kvib/react/src";
+import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibVisuallyHidden> = {
   title: "Annet/Visually Hidden",
@@ -36,9 +36,9 @@ const VisuallyHiddenExample = ({ ...args }) => {
   );
 };
 
-export const VisuallyHidden: Story = {
+export const Preview: Story = {
   args: { children: "VisuallyHidden" },
-  render: (args) => <VisuallyHiddenExample {...args} />,
+  render: args => <VisuallyHiddenExample {...args} />,
 };
 
 const VisuallyHiddenText = ({ ...args }) => {
@@ -52,7 +52,7 @@ const VisuallyHiddenText = ({ ...args }) => {
 
 export const VisuallyHiddenTextExample: Story = {
   args: { children: "VisuallyHidden" },
-  render: (args) => <VisuallyHiddenText {...args} />,
+  render: args => <VisuallyHiddenText {...args} />,
 };
 
 const VisuallyHiddenInputExample = ({ ...args }) => {
@@ -64,7 +64,7 @@ const VisuallyHiddenInputExample = ({ ...args }) => {
           placeholder="Visually Hidden Input"
           {...args}
           defaultChecked
-          onChange={(event) => {
+          onChange={event => {
             console.log(event.target.checked);
           }}
         />
@@ -75,5 +75,5 @@ const VisuallyHiddenInputExample = ({ ...args }) => {
 
 export const VisuallyHiddenInput: Story = {
   args: {},
-  render: (args) => <VisuallyHiddenInputExample {...args} />,
+  render: args => <VisuallyHiddenInputExample {...args} />,
 };

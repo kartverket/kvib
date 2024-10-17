@@ -34,9 +34,8 @@ const meta: Meta<typeof KvibPortal> = {
 export default meta;
 type Story = StoryObj<typeof KvibPortal>;
 
-export const Portal: Story = {
-  args: {},
-  render: (args) => (
+export const Preview: Story = {
+  render: args => (
     <Box bg="green.500" color="white">
       Dette er en Box
       <KvibPortal {...args}>Denne teksten er portaled til enden av document.body!</KvibPortal>
@@ -61,8 +60,7 @@ const PortalCustomExample = ({ ...args }) => {
 };
 
 export const PortalCustom: Story = {
-  args: {},
-  render: (args) => <PortalCustomExample {...args} />,
+  render: args => <PortalCustomExample {...args} />,
 };
 
 export const PortalNestedExample = ({ ...args }) => {
@@ -81,8 +79,7 @@ export const PortalNestedExample = ({ ...args }) => {
 };
 
 export const PortalNested: Story = {
-  args: {},
-  render: (args) => <PortalNestedExample {...args} />,
+  render: args => <PortalNestedExample {...args} />,
 };
 
 function PortalNotAppendedExample({ ...args }) {
@@ -103,6 +100,5 @@ function PortalNotAppendedExample({ ...args }) {
 }
 
 export const PortalNotAppended: Story = {
-  args: {},
-  render: (args) => <PortalNotAppendedExample {...args} />,
+  render: args => <PortalNotAppendedExample {...args} />,
 };

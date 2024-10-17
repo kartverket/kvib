@@ -1,17 +1,17 @@
 import {
-  Stepper as KvibStepper,
+  Box,
   Stack as KvibStack,
-  useSteps,
+  Stepper as KvibStepper,
   Step,
+  StepDescription,
+  StepIcon,
   StepIndicator,
+  StepNumber,
+  StepSeparator,
   StepStatus,
   StepTitle,
-  StepDescription,
-  StepSeparator,
-  Box,
-  StepIcon,
-  StepNumber,
   Text,
+  useSteps,
 } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
@@ -77,9 +77,8 @@ const StepperExample = ({ ...args }) => {
   );
 };
 
-export const Stepper: Story = {
-  args: {},
-  render: (args) => <StepperExample {...args} />,
+export const Preview: Story = {
+  render: args => <StepperExample {...args} />,
 };
 
 const StepperOrientationExample = ({ ...args }) => {
@@ -108,8 +107,7 @@ const StepperOrientationExample = ({ ...args }) => {
 };
 
 export const StepperOrientation: Story = {
-  args: {},
-  render: (args) => <StepperOrientationExample {...args} />,
+  render: args => <StepperOrientationExample {...args} />,
 };
 
 const StepperSizeExample = ({ ...args }) => {
@@ -137,8 +135,7 @@ const StepperSizeExample = ({ ...args }) => {
 };
 
 export const StepperSizes: Story = {
-  args: {},
-  render: (args) => <StepperSizeExample {...args} />,
+  render: args => <StepperSizeExample {...args} />,
 };
 
 const StepperColorExample = ({ ...args }) => {
@@ -166,8 +163,7 @@ const StepperColorExample = ({ ...args }) => {
 };
 
 export const StepperColors: Story = {
-  args: {},
-  render: (args) => <StepperColorExample {...args} />,
+  render: args => <StepperColorExample {...args} />,
 };
 
 const StepperClickExample = ({ ...args }) => {
@@ -195,8 +191,7 @@ const StepperClickExample = ({ ...args }) => {
 };
 
 export const StepperClick: Story = {
-  args: {},
-  render: (args) => <StepperClickExample {...args} />,
+  render: args => <StepperClickExample {...args} />,
 };
 
 const StepperProgressbarExample = ({ ...args }) => {
@@ -227,6 +222,5 @@ const StepperProgressbarExample = ({ ...args }) => {
 };
 
 export const StepperProgressbar: Story = {
-  args: {},
-  render: (args) => <StepperProgressbarExample {...args} />,
+  render: args => <StepperProgressbarExample {...args} />,
 };

@@ -1,8 +1,8 @@
-import { Canvas, Meta, Controls, Story } from "@storybook/blocks";
-import { Alert, AlertIcon, AlertDescription } from "@kvib/react/src/alert";
+import { Box, Code, Stack, Text } from "@kvib/react/src/";
+import { Alert, AlertDescription, AlertIcon } from "@kvib/react/src/alert";
+import { Canvas, Controls, Meta, Story } from "@storybook/blocks";
+import { DocsAnatomy, DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
 import * as InputStories from "./Input.stories";
-import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
-import { Text, Code, Box, Stack } from "@kvib/react/src/";
 
 <Meta of={InputStories} />
 
@@ -128,5 +128,5 @@ Trenger man muligheten til å bruke desimaltall vil `type="text"` med js-valider
 </DocsContainer>
 
 <DocsHeading light>Props</DocsHeading>
-<Canvas of={InputStories.Input} />
-<Controls of={InputStories.Input} />
+<Canvas of={InputStories.Preview} />
+<Controls of={InputStories.Preview} />

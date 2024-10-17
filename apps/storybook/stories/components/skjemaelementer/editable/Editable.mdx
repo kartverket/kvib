@@ -1,6 +1,6 @@
-import { Meta, Canvas, Controls } from "@storybook/blocks";
+import { Canvas, Controls, Meta } from "@storybook/blocks";
+import { DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
 import * as EditableStories from "./Editable.stories";
-import { DocsHeading, DocsContainer, DocsStory, Feedback } from "../../../templates";
 
 <Meta of={EditableStories} />
 
@@ -16,7 +16,7 @@ import { Editable, EditableInput, EditableTextarea, EditablePreview } from "@kvi
 
 <Feedback component="Editable" />
 
-<DocsStory title="Editable Input" description={"Editable input"} story={<Canvas of={EditableStories.Editable} />} />
+<DocsStory title="Editable Input" description={"Editable input"} story={<Canvas of={EditableStories.Preview} />} />
 <DocsStory
   title="Editable Textarea"
   description={"Editable Textarea"}
@@ -24,7 +24,7 @@ import { Editable, EditableInput, EditableTextarea, EditablePreview } from "@kvi
 />
 
 <DocsHeading light>Props</DocsHeading>
-<Canvas of={EditableStories.Editable} />
-<Controls of={EditableStories.Editable} />
+<Canvas of={EditableStories.Preview} />
+<Controls of={EditableStories.Preview} />
 
 </DocsContainer>

@@ -1,10 +1,10 @@
 import {
   Stat as KvibStat,
-  StatLabel as KvibStatLabel,
-  StatNumber as KvibStatNumber,
-  StatHelpText as KvibStatHelpText,
   StatArrow as KvibStatArrow,
   StatGroup as KvibStatGroup,
+  StatHelpText as KvibStatHelpText,
+  StatLabel as KvibStatLabel,
+  StatNumber as KvibStatNumber,
 } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
@@ -22,9 +22,8 @@ const meta: Meta<typeof KvibStat> = {
 export default meta;
 type Story = StoryObj<typeof KvibStat>;
 
-export const Stat: Story = {
-  args: {},
-  render: (args) => (
+export const Preview: Story = {
+  render: args => (
     <KvibStat {...args}>
       <KvibStatLabel>Utgifter</KvibStatLabel>
       <KvibStatNumber>3200kr</KvibStatNumber>
@@ -34,8 +33,7 @@ export const Stat: Story = {
 };
 
 export const StatIndicator: Story = {
-  args: {},
-  render: (args) => (
+  render: args => (
     <KvibStatGroup>
       <KvibStat {...args}>
         <KvibStatLabel>Sendt</KvibStatLabel>

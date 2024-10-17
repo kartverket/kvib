@@ -54,9 +54,8 @@ const meta: Meta<typeof KvibTable> = {
 export default meta;
 type Story = StoryObj<typeof KvibTable>;
 
-export const Table: Story = {
-  args: {},
-  render: (args) => (
+export const Preview: Story = {
+  render: args => (
     <KvibTableContainer>
       <KvibTable {...args}>
         <KvibTableCaption>Imperial to metric conversion factors</KvibTableCaption>
@@ -98,7 +97,7 @@ export const Table: Story = {
 
 export const TableVariants: Story = {
   args: { variant: "striped", colorScheme: "green", size: "md" },
-  render: (args) => (
+  render: args => (
     <KvibTableContainer>
       <KvibTable {...args}>
         <KvibTableCaption>Imperial to metric conversion factors</KvibTableCaption>
@@ -140,7 +139,7 @@ export const TableVariants: Story = {
 
 export const TableSizes: Story = {
   args: { size: "sm" },
-  render: (args) => (
+  render: args => (
     <KvibTableContainer>
       <KvibTable {...args}>
         <KvibTableCaption>Imperial to metric conversion factors</KvibTableCaption>

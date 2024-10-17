@@ -1,7 +1,7 @@
-import { Meta, Canvas, Controls, Source } from "@storybook/blocks";
+import { Code, Text } from "@kvib/react/src";
+import { Canvas, Controls, Meta, Source } from "@storybook/blocks";
+import { DocsAnatomy, DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
 import * as CheckboxStories from "./Checkbox.stories";
-import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
-import { Text, Code } from "@kvib/react/src";
 import { IndeterminateStrings } from "./srcIndeterminateStrings";
 
 <Meta of={CheckboxStories} />
@@ -69,7 +69,7 @@ import { Checkbox, CheckboxGroup } from "@kvib/react";
 
 ## Props
 
-<Canvas of={CheckboxStories.Checkbox} />
-<Controls of={CheckboxStories.Checkbox} />
+<Canvas of={CheckboxStories.Preview} />
+<Controls of={CheckboxStories.Preview} />
 
 </DocsContainer>

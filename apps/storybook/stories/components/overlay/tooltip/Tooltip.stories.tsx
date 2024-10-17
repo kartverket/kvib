@@ -1,4 +1,4 @@
-import { Tooltip as KvibTooltip, Button, VStack, HStack, Wrap, WrapItem, Box, forwardRef, Tag } from "@kvib/react/src";
+import { Box, Button, forwardRef, HStack, Tooltip as KvibTooltip, Tag, VStack, Wrap, WrapItem } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibTooltip> = {
@@ -217,9 +217,8 @@ const meta: Meta<typeof KvibTooltip> = {
 export default meta;
 type Story = StoryObj<typeof KvibTooltip>;
 
-export const Tooltip: Story = {
-  args: {},
-  render: (args) => (
+export const Preview: Story = {
+  render: args => (
     <KvibTooltip {...args} label="Et tooltip!" aria-label="Et tooltip">
       Hover meg
     </KvibTooltip>
@@ -228,7 +227,7 @@ export const Tooltip: Story = {
 
 export const TooltipArrow: Story = {
   args: { label: "Søk", hasArrow: true },
-  render: (args) => (
+  render: args => (
     <KvibTooltip {...args} bg="gray.600">
       Hover meg
     </KvibTooltip>
@@ -237,7 +236,7 @@ export const TooltipArrow: Story = {
 
 export const TooltipFocusable: Story = {
   args: { label: "Søk", hasArrow: true },
-  render: (args) => (
+  render: args => (
     <KvibTooltip {...args} bg="red.600">
       <Button>Button</Button>
     </KvibTooltip>
@@ -246,12 +245,11 @@ export const TooltipFocusable: Story = {
 
 export const TooltipDisabled: Story = {
   args: { isDisabled: true },
-  render: (args) => <KvibTooltip {...args}>Dette er et disabled tooltip</KvibTooltip>,
+  render: args => <KvibTooltip {...args}>Dette er et disabled tooltip</KvibTooltip>,
 };
 
 export const TooltipPlacement: Story = {
-  args: {},
-  render: (args) => (
+  render: args => (
     <VStack spacing={6}>
       <HStack spacing={6}>
         <KvibTooltip {...args} label="Auto start" placement="auto-start">
@@ -327,8 +325,7 @@ export const TooltipPlacement: Story = {
 };
 
 export const TooltipExamples: Story = {
-  args: {},
-  render: (args) => (
+  render: args => (
     <Wrap spacing={6}>
       <WrapItem>
         <KvibTooltip {...args} label="I close on click">
@@ -385,7 +382,7 @@ const CustomCard = forwardRef(({ children, ...rest }, ref) => (
 
 export const CustomToolTip: Story = {
   args: { label: "Hover me! (CustomCard)" },
-  render: (args) => (
+  render: args => (
     <KvibTooltip {...args}>
       <CustomCard>Tag Here</CustomCard>
     </KvibTooltip>

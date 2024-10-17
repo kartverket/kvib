@@ -31,9 +31,8 @@ const meta: Meta<typeof KvibLinkOverlay> = {
 export default meta;
 type Story = StoryObj<typeof KvibLinkOverlay>;
 
-export const LinkOverlay: Story = {
-  args: {},
-  render: (args) => (
+export const Preview: Story = {
+  render: args => (
     <KvibLinkBox as="article" maxW="sm" p="5" borderWidth="1px" rounded="md">
       <KvibBox>13 timer siden</KvibBox>
       <KvibHeading size="md" my="2">
@@ -50,8 +49,7 @@ export const LinkOverlay: Story = {
 };
 
 export const LinkOverlayNested: Story = {
-  args: {},
-  render: (args) => (
+  render: args => (
     <KvibLinkBox as="article" maxW="sm" p="5" borderWidth="1px" rounded="md">
       <KvibBox>13 timer siden</KvibBox>
       <KvibHeading size="md" my="2">

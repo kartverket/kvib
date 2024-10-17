@@ -1,6 +1,6 @@
-import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
+import { Canvas, Controls, Meta, Story } from "@storybook/blocks";
+import { DocsContainer, DocsStory, Feedback } from "../../../templates";
 import * as ImageStories from "./Image.stories";
-import { Feedback, DocsContainer, DocsStory } from "../../../templates";
 
 <Meta of={ImageStories} />
 
@@ -45,8 +45,8 @@ import { Image } from "@kvib/react";
   description={""}
   story={
     <>
-      <Canvas of={ImageStories.Image} />
-      <Controls of={ImageStories.Image} />
+      <Canvas of={ImageStories.Preview} />
+      <Controls of={ImageStories.Preview} />
     </>
   }
 />

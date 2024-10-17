@@ -1,15 +1,15 @@
 import {
+  Button as KvibButton,
+  ButtonGroup as KvibButtonGroup,
   Card as KvibCard,
-  CardHeader as KvibCardHeader,
   CardBody as KvibCardBody,
   CardFooter as KvibCardFooter,
+  CardHeader as KvibCardHeader,
+  Divider as KvibDivider,
+  Heading as KvibHeading,
+  Image as KvibImage,
   Stack as KvibStack,
   Text as KvibText,
-  Image as KvibImage,
-  Heading as KvibHeading,
-  Divider as KvibDivider,
-  ButtonGroup as KvibButtonGroup,
-  Button as KvibButton,
 } from "@kvib/react/src/";
 
 import { Meta, StoryObj } from "@storybook/react";
@@ -60,8 +60,7 @@ const meta: Meta<typeof KvibCard> = {
 export default meta;
 type Story = StoryObj<typeof KvibCard>;
 
-export const Card: Story = {
-  args: {},
+export const Preview: Story = {
   parameters: {
     docs: {
       canvas: {
@@ -69,7 +68,7 @@ export const Card: Story = {
       },
     },
   },
-  render: (args) => (
+  render: args => (
     <KvibCard {...args}>
       <KvibCardBody>
         <KvibText>Se alle endringer på eiendomsgrenser i år.</KvibText>
@@ -80,9 +79,9 @@ export const Card: Story = {
 
 export const CardVariants: Story = {
   args: { size: "sm" },
-  render: (args) => (
+  render: args => (
     <KvibStack spacing="4">
-      {["elevated", "outline", "filled", "unstyled"].map((variant) => (
+      {["elevated", "outline", "filled", "unstyled"].map(variant => (
         <KvibCard {...args} key={variant} variant={variant}>
           <KvibCardHeader>
             <KvibHeading size="md">{variant}</KvibHeading>
@@ -97,10 +96,9 @@ export const CardVariants: Story = {
 };
 
 export const CardSizes: Story = {
-  args: {},
-  render: (args) => (
+  render: args => (
     <KvibStack spacing="4">
-      {["sm", "md", "lg"].map((size) => (
+      {["sm", "md", "lg"].map(size => (
         <KvibCard {...args} key={size} size={size}>
           <KvibCardHeader>
             <KvibHeading size="md">{size}</KvibHeading>
@@ -115,8 +113,7 @@ export const CardSizes: Story = {
 };
 
 export const CardComposition: Story = {
-  args: {},
-  render: (args) => (
+  render: args => (
     <KvibCard {...args} maxW="sm">
       <KvibCardBody>
         <KvibImage
@@ -149,8 +146,7 @@ export const CardComposition: Story = {
 };
 
 export const CardCentering: Story = {
-  args: {},
-  render: (args) => (
+  render: args => (
     <KvibCard {...args} align="center">
       <KvibCardHeader>
         <KvibHeading size="md">Kundeportal</KvibHeading>
@@ -166,8 +162,7 @@ export const CardCentering: Story = {
 };
 
 export const CardHorizontal: Story = {
-  args: {},
-  render: (args) => (
+  render: args => (
     <KvibCard {...args} direction="row" overflow="hidden" variant="outline">
       <KvibImage
         objectFit="cover"

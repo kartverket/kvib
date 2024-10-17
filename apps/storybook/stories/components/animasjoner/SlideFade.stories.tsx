@@ -1,6 +1,6 @@
-import { Meta, StoryObj } from "@storybook/react";
-import { SlideFade as KvibSlideFade, SlideFadeProps, Box } from "@kvib/react/src";
+import { Box, SlideFade as KvibSlideFade, SlideFadeProps } from "@kvib/react/src";
 import { colors } from "@kvib/react/src/theme/tokens";
+import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibSlideFade> = {
   title: "Animasjoner/SlideFade",
@@ -69,7 +69,7 @@ const SlideFadeEx = ({ ...args }: SlideFadeProps) => {
   );
 };
 
-export const SlideFade: Story = {
+export const Preview: Story = {
   args: { in: false },
-  render: (args) => <SlideFadeEx {...args} />,
+  render: args => <SlideFadeEx {...args} />,
 };

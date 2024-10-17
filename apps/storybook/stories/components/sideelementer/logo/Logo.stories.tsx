@@ -37,19 +37,19 @@ const meta: Meta<typeof KvibLogo> = {
 export default meta;
 type Story = StoryObj<typeof KvibLogo>;
 
-export const Logo: Story = {
+export const Preview: Story = {
   args: { label: "Logo" },
-  render: (args) => <KvibLogo {...args} />,
+  render: args => <KvibLogo {...args} />,
 };
 
 export const LogoHorizontal: Story = {
   args: { label: "Logo", variant: "horizontal" },
-  render: (args) => <KvibLogo {...args} />,
+  render: args => <KvibLogo {...args} />,
 };
 
 export const LogoSizes: Story = {
   args: { label: "Logo", variant: "horizontal" },
-  render: (args) => (
+  render: args => (
     <KvibStack>
       <KvibLogo {...args} size={100} />
       <KvibLogo {...args} size={200} />

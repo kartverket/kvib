@@ -1,4 +1,4 @@
-import { Textarea as KvibTextarea, Stack as KvibStack, Text, Stack, RadioGroup, Radio } from "@kvib/react/src";
+import { Stack as KvibStack, Textarea as KvibTextarea, Radio, RadioGroup, Stack, Text } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 import { ChangeEvent, useState } from "react";
 
@@ -85,9 +85,9 @@ const meta: Meta<typeof KvibTextarea> = {
 export default meta;
 type Story = StoryObj<typeof KvibTextarea>;
 
-export const Textarea: Story = {
+export const Preview: Story = {
   args: { placeholder: "Dette er et eksempel på placeholder" },
-  render: (args) => <KvibTextarea {...args} />,
+  render: args => <KvibTextarea {...args} />,
 };
 
 const TextAreaControlledExample = ({ ...args }) => {
@@ -107,7 +107,7 @@ const TextAreaControlledExample = ({ ...args }) => {
 
 export const TextareaControlled: Story = {
   args: { placeholder: "Placeholder", size: "sm" },
-  render: (args) => <TextAreaControlledExample {...args} />,
+  render: args => <TextAreaControlledExample {...args} />,
 };
 
 const TextareaResizeExample = () => {
@@ -134,7 +134,7 @@ export const TextareaResize: Story = {
 
 export const TextareaSizes: Story = {
   args: {},
-  render: (args) => (
+  render: args => (
     <KvibStack>
       <KvibTextarea {...args} size="xs" placeholder="xs" />
       <KvibTextarea {...args} size="sm" placeholder="sm" />
@@ -146,7 +146,7 @@ export const TextareaSizes: Story = {
 
 export const TextareaVariants: Story = {
   args: {},
-  render: (args) => (
+  render: args => (
     <KvibStack>
       <KvibTextarea {...args} variant="outline" placeholder="outline" />
       <KvibTextarea {...args} variant="filled" placeholder="filled" />

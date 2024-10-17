@@ -1,10 +1,10 @@
 import { HStack, VStack } from "@chakra-ui/layout";
 import {
-  Tabs as KvibTabs,
   Tab as KvibTab,
   TabList as KvibTabList,
-  TabPanels as KvibTabPanels,
   TabPanel as KvibTabPanel,
+  TabPanels as KvibTabPanels,
+  Tabs as KvibTabs,
 } from "@kvib/react/src/tabs";
 import { Meta, StoryObj } from "@storybook/react";
 
@@ -102,9 +102,9 @@ const meta: Meta<typeof KvibTabs> = {
 export default meta;
 type Story = StoryObj<typeof KvibTabs>;
 
-export const Tabs: Story = {
+export const Preview: Story = {
   args: { size: "md" },
-  render: (args) => (
+  render: args => (
     <KvibTabs {...args}>
       <KvibTabList>
         <KvibTab>Første fane</KvibTab>
@@ -116,7 +116,7 @@ export const Tabs: Story = {
 
 export const TabsColors: Story = {
   args: { size: "md" },
-  render: (args) => (
+  render: args => (
     <HStack spacing="2rem">
       <KvibTabs {...args} colorScheme="blue">
         <KvibTabList>
@@ -136,7 +136,7 @@ export const TabsColors: Story = {
 
 export const TabsNumber: Story = {
   args: { size: "md" },
-  render: (args) => (
+  render: args => (
     <KvibTabs {...args}>
       <KvibTabList>
         <KvibTab>Første fane</KvibTab>
@@ -151,7 +151,7 @@ export const TabsNumber: Story = {
 };
 
 export const TabsSizes: Story = {
-  render: (args) => (
+  render: args => (
     <VStack alignItems="start">
       <KvibTabs {...args} aria-label="Tabs small" size="sm">
         <KvibTabList>
@@ -177,7 +177,7 @@ export const TabsSizes: Story = {
 
 export const TabsPanels: Story = {
   args: { size: "md" },
-  render: (args) => (
+  render: args => (
     <KvibTabs {...args}>
       <KvibTabList>
         <KvibTab>Første fane</KvibTab>
@@ -193,7 +193,7 @@ export const TabsPanels: Story = {
 
 export const TabsStates: Story = {
   args: { size: "md" },
-  render: (args) => (
+  render: args => (
     <KvibTabs {...args}>
       <KvibTabList>
         <KvibTab>Enabled</KvibTab>

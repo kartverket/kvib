@@ -1,7 +1,7 @@
-import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
-import * as BadgeStories from "./Badge.stories";
-import { DocsHeading, DocsContainer, DocsStory, Feedback } from "../../../templates/";
 import { Text } from "@kvib/react/src/";
+import { Canvas, Controls, Meta, Story } from "@storybook/blocks";
+import { DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates/";
+import * as BadgeStories from "./Badge.stories";
 
 <Meta of={BadgeStories} />
 
@@ -54,7 +54,7 @@ import { Badge } from "@kvib/react";
 </Text>
 
 <DocsHeading light>Props</DocsHeading>
-<Canvas of={BadgeStories.Badge} />
-<Controls of={BadgeStories.Badge} />
+<Canvas of={BadgeStories.Preview} />
+<Controls of={BadgeStories.Preview} />
 
 </DocsContainer>

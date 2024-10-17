@@ -1,6 +1,6 @@
-import { Meta, Canvas, Controls, Source } from "@storybook/blocks";
+import { Canvas, Controls, Meta, Source } from "@storybook/blocks";
+import { DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
 import * as RangeSliderStories from "./RangeSlider.stories";
-import { DocsHeading, DocsContainer, DocsStory, Feedback } from "../../../templates";
 import { RangeSliderStrings } from "./srcRangeSliderStrings";
 
 <Meta of={RangeSliderStories} />
@@ -49,7 +49,7 @@ import { RangeSlider, RangeSliderTrack, RangeSliderFilledTrack, RangeSliderThumb
 />
 
 <DocsHeading light>Props</DocsHeading>
-<Canvas of={RangeSliderStories.RangeSlider} />
-<Controls of={RangeSliderStories.RangeSlider} />
+<Canvas of={RangeSliderStories.Preview} />
+<Controls of={RangeSliderStories.Preview} />
 
 </DocsContainer>

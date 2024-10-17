@@ -38,9 +38,8 @@ const meta: Meta<typeof KvibBreadcrumb> = {
 export default meta;
 type Story = StoryObj<typeof KvibBreadcrumb>;
 
-export const Breadcrumb: Story = {
-  args: {},
-  render: (args) => (
+export const Preview: Story = {
+  render: args => (
     <KvibBreadcrumb {...args}>
       <KvibBreadcrumbItem>
         <KvibBreadcrumbLink href="#">Home</KvibBreadcrumbLink>
@@ -58,8 +57,7 @@ export const Breadcrumb: Story = {
 };
 
 export const BreadcrumbSeparator: Story = {
-  args: {},
-  render: (args) => (
+  render: args => (
     <KvibBreadcrumb {...args} separator="-">
       <KvibBreadcrumbItem>
         <KvibBreadcrumbLink href="#">Home</KvibBreadcrumbLink>

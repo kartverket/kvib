@@ -113,7 +113,7 @@ const meta: Meta<typeof KvibSelect> = {
 export default meta;
 type Story = StoryObj<typeof KvibSelect>;
 
-export const Select: Story = {
+export const Preview: Story = {
   parameters: {
     docs: {
       canvas: {
@@ -122,7 +122,7 @@ export const Select: Story = {
     },
   },
   args: {},
-  render: (args) => (
+  render: args => (
     <KvibSelect {...args} placeholder="Velg alternativ" aria-label="select">
       <option value="option1">Alternativ 1</option>
       <option value="option2">Alternativ 2</option>
@@ -133,7 +133,7 @@ export const Select: Story = {
 
 export const SelectForm: Story = {
   args: { "aria-label": "select form" },
-  render: (args) => (
+  render: args => (
     <FormControl>
       <FormLabel htmlFor="select">Velg alternativ</FormLabel>
       <KvibSelect {...args}>
@@ -147,7 +147,7 @@ export const SelectForm: Story = {
 
 export const SelectSizes: Story = {
   args: {},
-  render: (args) => (
+  render: args => (
     <KvibStack spacing={3}>
       <KvibSelect {...args} placeholder="extra small" size="xs" aria-label="select extra small" />
       <KvibSelect {...args} placeholder="small" size="sm" aria-label="select small" />
@@ -159,7 +159,7 @@ export const SelectSizes: Story = {
 
 export const SelectVariants: Story = {
   args: {},
-  render: (args) => (
+  render: args => (
     <KvibStack spacing={3}>
       <KvibSelect {...args} variant="outline" placeholder="Outline" aria-label="select outline" />
       <KvibSelect {...args} variant="filled" placeholder="Filled" aria-label="select filled" />
@@ -171,7 +171,7 @@ export const SelectVariants: Story = {
 
 export const SelectIcon: Story = {
   args: {},
-  render: (args) => (
+  render: args => (
     <KvibSelect
       {...args}
       icon={<Icon icon="expand_circle_down" weight={300} />}
@@ -189,5 +189,5 @@ export const SelectStyles: Story = {
     "aria-label": "select override style",
     placeholder: "Overstyring av stil",
   },
-  render: (args) => <KvibSelect {...args} />,
+  render: args => <KvibSelect {...args} />,
 };

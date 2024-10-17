@@ -240,7 +240,7 @@ const AlertDialogExample = ({ ...args }) => {
   );
 };
 
-export const AlertDialog: Story = {
+export const Preview: Story = {
   render: args => <AlertDialogExample {...args} />,
   parameters: {
     docs: {

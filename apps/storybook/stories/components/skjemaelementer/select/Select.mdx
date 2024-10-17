@@ -1,7 +1,7 @@
-import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
+import { Box, Code, Text } from "@kvib/react/src/";
+import { Canvas, Controls, Meta, Story } from "@storybook/blocks";
+import { DocsAnatomy, DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
 import * as SelectStories from "./Select.stories";
-import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
-import { Text, Code, Box } from "@kvib/react/src/";
 
 <Meta of={SelectStories} />
 
@@ -80,5 +80,5 @@ Select skal alltid ha en label. Dersom Input av en eller annen grunn ikke har la
 </DocsContainer>
 
 <DocsHeading light>Props</DocsHeading>
-<Canvas of={SelectStories.Select} />
-<Controls of={SelectStories.Select} />
+<Canvas of={SelectStories.Preview} />
+<Controls of={SelectStories.Preview} />

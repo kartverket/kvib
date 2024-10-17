@@ -104,7 +104,7 @@ const meta: Meta<typeof KvibSearch> = {
 export default meta;
 type SearchStory = StoryObj<typeof KvibSearch>;
 
-export const Search: SearchStory = {
+export const Preview: SearchStory = {
   parameters: {
     docs: {
       canvas: {
@@ -117,7 +117,7 @@ export const Search: SearchStory = {
     variant: "outline",
     isDisabled: false,
   },
-  render: (args) => <KvibSearch {...args} />,
+  render: args => <KvibSearch {...args} />,
 };
 
 export const SearchVariants: SearchStory = {
@@ -126,7 +126,7 @@ export const SearchVariants: SearchStory = {
 
     colorScheme: "green",
   },
-  render: (args) => (
+  render: args => (
     <Stack h={"12rem"}>
       <KvibSearch {...args} variant="outline" />
       <KvibSearch {...args} variant="filled" />
@@ -145,7 +145,7 @@ export const SearchIconLeft: SearchStory = {
     colorScheme: "blue",
     buttonVariant: "secondary",
   },
-  render: (args) => <KvibSearch {...args} />,
+  render: args => <KvibSearch {...args} />,
 };
 
 export const SearchIconRight: SearchStory = {
@@ -156,7 +156,7 @@ export const SearchIconRight: SearchStory = {
     isDisabled: false,
     colorScheme: "green",
   },
-  render: (args) => <KvibSearch {...args} />,
+  render: args => <KvibSearch {...args} />,
 };
 
 export const SearchButtonVariant: SearchStory = {
@@ -169,7 +169,7 @@ export const SearchButtonVariant: SearchStory = {
     buttonVariant: "primary",
     buttonWidth: "4rem",
   },
-  render: (args) => <KvibSearch {...args} />,
+  render: args => <KvibSearch {...args} />,
 };
 
 export const SearchButtonText: SearchStory = {
@@ -182,7 +182,7 @@ export const SearchButtonText: SearchStory = {
     buttonVariant: "primary",
     buttonText: "Søk",
   },
-  render: (args) => <KvibSearch {...args} />,
+  render: args => <KvibSearch {...args} />,
 };
 
 export const SearchButtonAppearance: SearchStory = {
@@ -190,7 +190,7 @@ export const SearchButtonAppearance: SearchStory = {
     placeholder: "Søk her...",
     variant: "outline",
   },
-  render: (args) => (
+  render: args => (
     <Stack>
       <KvibSearch {...args} searchButton="right" />
       <KvibSearch {...args} searchButton="left" colorScheme="blue" buttonVariant="secondary" />

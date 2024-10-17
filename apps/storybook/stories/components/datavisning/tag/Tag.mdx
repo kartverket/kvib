@@ -1,7 +1,7 @@
-import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
-import * as TagStories from "./Tag.stories";
-import { DocsHeading, DocsContainer, DocsStory, Feedback } from "../../../templates/";
 import { Text } from "@kvib/react/src";
+import { Canvas, Controls, Meta, Story } from "@storybook/blocks";
+import { DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates/";
+import * as TagStories from "./Tag.stories";
 
 <Meta of={TagStories} />
 
@@ -58,7 +58,7 @@ import { Tag, TagLabel, TagLeftIcon, TagRightIcon, TagCloseButton } from "@kvib/
 />
 
 <DocsHeading light>Props</DocsHeading>
-<Canvas of={TagStories.Tag} />
-<Controls of={TagStories.Tag} />
+<Canvas of={TagStories.Preview} />
+<Controls of={TagStories.Preview} />
 
 </DocsContainer>

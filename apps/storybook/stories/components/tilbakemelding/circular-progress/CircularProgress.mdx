@@ -1,7 +1,7 @@
-import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
-import * as CircularProgressStories from "./CircularProgress.stories";
-import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
 import { Text } from "@kvib/react/src";
+import { Canvas, Controls, Meta, Story } from "@storybook/blocks";
+import { DocsAnatomy, DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
+import * as CircularProgressStories from "./CircularProgress.stories";
 
 <Meta of={CircularProgressStories} />
 
@@ -68,7 +68,7 @@ import { CircularProgress, CircularProgressLabel } from "@kvib/react";
 />
 
 <DocsHeading light>Props</DocsHeading>
-<Canvas of={CircularProgressStories.CircularProgress} />
-<Controls of={CircularProgressStories.CircularProgress} />
+<Canvas of={CircularProgressStories.Preview} />
+<Controls of={CircularProgressStories.Preview} />
 
 </DocsContainer>

@@ -1,8 +1,8 @@
 import {
   Box,
   Skeleton as KvibSkeleton,
-  SkeletonText as KvibSkeletonText,
   SkeletonCircle as KvibSkeletonCircle,
+  SkeletonText as KvibSkeletonText,
   Stack as KvibStack,
 } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
@@ -74,9 +74,8 @@ const meta: Meta<typeof KvibSkeleton> = {
 export default meta;
 type Story = StoryObj<typeof KvibSkeleton>;
 
-export const Skeleton: Story = {
-  args: {},
-  render: (args) => (
+export const Preview: Story = {
+  render: args => (
     <KvibStack>
       <KvibSkeleton {...args} height="20px" />
       <KvibSkeleton {...args} height="20px" />
@@ -87,7 +86,7 @@ export const Skeleton: Story = {
 
 export const SkeletonWrapped: Story = {
   args: { fitContent: true },
-  render: (args) => (
+  render: args => (
     <KvibSkeleton {...args}>
       <div>Det som er wrapped i Skeleton</div>
       <div>vil ikke være synlig.</div>
@@ -96,8 +95,7 @@ export const SkeletonWrapped: Story = {
 };
 
 export const SkeletonCircle: Story = {
-  args: {},
-  render: (args) => (
+  render: args => (
     <Box padding="6" boxShadow="lg" bg="white">
       <KvibSkeletonCircle {...args} size="10" />
       <KvibSkeletonText {...args} mt="4" noOfLines={4} spacing="4" skeletonHeight="2" />
@@ -107,12 +105,12 @@ export const SkeletonCircle: Story = {
 
 export const SkeletonColors: Story = {
   args: { startColor: "blue.500", endColor: "green.500", height: "20px" },
-  render: (args) => <KvibSkeleton {...args} />,
+  render: args => <KvibSkeleton {...args} />,
 };
 
 export const SkeletonLoaded: Story = {
   args: { isLoaded: true },
-  render: (args) => (
+  render: args => (
     <KvibSkeleton {...args}>
       <span>Denne teksten er ferdiglastet.</span>
     </KvibSkeleton>
