@@ -1,7 +1,7 @@
-import { Title, Canvas, Meta, Story, Controls } from "@storybook/blocks";
+import { Box, Code, Text } from "@kvib/react/src/";
+import { Canvas, Controls, Meta, Story, Title } from "@storybook/blocks";
+import { DocsAnatomy, DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
 import * as GridStories from "./Grid.stories";
-import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
-import { Text, Code, Box } from "@kvib/react/src/";
 
 <Meta of={GridStories} />
 
@@ -35,7 +35,7 @@ Grid er bygget opp av `Grid` og `GridItem`. `Grid` er containeren som definerer 
       <Code>gap</Code> kan brukes for å definere avstanden mellom kolonnene.
     </Text>
   }
-  story={<Canvas of={GridStories.Grid} />}
+  story={<Canvas of={GridStories.Preview} />}
 />
 
 <DocsStory
@@ -78,8 +78,8 @@ Grid er bygget opp av `Grid` og `GridItem`. `Grid` er containeren som definerer 
   description=""
   story={
     <>
-      <Canvas of={GridStories.Grid} />
-      <Controls of={GridStories.Grid} />
+      <Canvas of={GridStories.Preview} />
+      <Controls of={GridStories.Preview} />
     </>
   }
 />

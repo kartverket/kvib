@@ -1,4 +1,4 @@
-import { Wrap as KvibWrap, WrapItem as KvibWrapItem, Center } from "@kvib/react/src/layout";
+import { Center, Wrap as KvibWrap, WrapItem as KvibWrapItem } from "@kvib/react/src/layout";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibWrap> = {
@@ -15,8 +15,8 @@ const meta: Meta<typeof KvibWrap> = {
 export default meta;
 type Story = StoryObj<typeof KvibWrap>;
 
-export const Wrap: Story = {
-  render: (args) => (
+export const Preview: Story = {
+  render: args => (
     <KvibWrap {...args}>
       <KvibWrapItem>
         <Center width="180px" height="80px" bg="red.100">
@@ -49,7 +49,7 @@ export const Wrap: Story = {
 
 export const WrapSpacing: Story = {
   args: { spacing: "30px" },
-  render: (args) => (
+  render: args => (
     <KvibWrap {...args}>
       <KvibWrapItem>
         <Center width="180px" height="80px" bg="red.100">
@@ -82,7 +82,7 @@ export const WrapSpacing: Story = {
 
 export const WrapAlignment: Story = {
   args: { spacing: "30px", align: "center" },
-  render: (args) => (
+  render: args => (
     <KvibWrap {...args}>
       <KvibWrapItem>
         <Center width="180px" height="80px" bg="red.100">
@@ -120,7 +120,7 @@ export const WrapAlignment: Story = {
 
 export const WrapAlignmentJustify: Story = {
   args: { spacing: "30px", justify: "center" },
-  render: (args) => (
+  render: args => (
     <KvibWrap {...args}>
       <KvibWrapItem>
         <Center width="180px" height="80px" bg="red.100">

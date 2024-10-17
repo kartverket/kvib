@@ -15,9 +15,9 @@ const meta: Meta<typeof KvibContainer> = {
 export default meta;
 type Story = StoryObj<typeof KvibContainer>;
 
-export const Container: Story = {
+export const Preview: Story = {
   args: { backgroundColor: "green.50", padding: "6" },
-  render: (args) => (
+  render: args => (
     <KvibContainer {...args}>
       There are many benefits to a joint design and development system. Not only does it bring benefits to the design
       team, but it also brings benefits to engineering teams. It makes sure that our experiences have a consistent look

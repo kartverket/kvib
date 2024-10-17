@@ -1,7 +1,7 @@
-import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
-import * as HeadingStories from "./Heading.stories";
-import { Feedback, DocsStory, DocsContainer } from "../../templates";
 import { Text } from "@kvib/react/src";
+import { Canvas, Controls, Meta, Story } from "@storybook/blocks";
+import { DocsContainer, DocsStory, Feedback } from "../../templates";
+import * as HeadingStories from "./Heading.stories";
 
 <Meta of={HeadingStories} />
 
@@ -37,8 +37,8 @@ import { Heading } from "@kvib/react";
   description={""}
   story={
     <>
-      <Canvas of={HeadingStories.Heading} />
-      <Controls of={HeadingStories.Heading} />
+      <Canvas of={HeadingStories.Preview} />
+      <Controls of={HeadingStories.Preview} />
     </>
   }
 />

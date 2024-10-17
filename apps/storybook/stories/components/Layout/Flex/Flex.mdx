@@ -1,7 +1,7 @@
-import { Title, Canvas, Meta, Story, Controls } from "@storybook/blocks";
-import * as FlexStories from "./Flex.stories";
-import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
 import { Text } from "@kvib/react/src/";
+import { Canvas, Controls, Meta, Story, Title } from "@storybook/blocks";
+import { DocsAnatomy, DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
+import * as FlexStories from "./Flex.stories";
 
 <Meta of={FlexStories} />
 
@@ -32,7 +32,7 @@ import { Flex, Spacer } from "@kvib/react";
       </Text>
     </>
   }
-  story={<Canvas of={FlexStories.Flex} sourceState="hidden" />}
+  story={<Canvas of={FlexStories.Preview} sourceState="hidden" />}
 />
 
 <DocsStory

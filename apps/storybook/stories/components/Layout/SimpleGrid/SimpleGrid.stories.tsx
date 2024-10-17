@@ -1,4 +1,4 @@
-import { SimpleGrid as KvibSimpleGrid, Box } from "@kvib/react/src/layout";
+import { Box, SimpleGrid as KvibSimpleGrid } from "@kvib/react/src/layout";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibSimpleGrid> = {
@@ -130,12 +130,12 @@ const meta: Meta<typeof KvibSimpleGrid> = {
 export default meta;
 type Story = StoryObj<typeof KvibSimpleGrid>;
 
-export const SimpleGrid: Story = {
+export const Preview: Story = {
   args: {
     columns: 3,
     spacing: 10,
   },
-  render: (args) => (
+  render: args => (
     <KvibSimpleGrid {...args}>
       <Box bg="green.100" height="80px"></Box>
       <Box bg="green.100" height="80px"></Box>
@@ -151,7 +151,7 @@ export const SimpleGridResponsiveArray: Story = {
     columns: [2, null, 3],
     spacing: 5,
   },
-  render: (args) => (
+  render: args => (
     <KvibSimpleGrid {...args}>
       <Box bg="blue.100" height="80px"></Box>
       <Box bg="blue.100" height="80px"></Box>
@@ -167,7 +167,7 @@ export const SimpleGridResponsive: Story = {
     minChildWidth: "120px",
     spacing: "40px",
   },
-  render: (args) => (
+  render: args => (
     <KvibSimpleGrid {...args}>
       <Box bg="red.100" height="80px"></Box>
       <Box bg="red.100" height="80px"></Box>
@@ -185,7 +185,7 @@ export const SimpleGridSpacing: Story = {
     spacingX: "60px",
     spacingY: "10px",
   },
-  render: (args) => (
+  render: args => (
     <KvibSimpleGrid {...args}>
       <Box bg="purple.100" height="80px"></Box>
       <Box bg="purple.100" height="80px"></Box>

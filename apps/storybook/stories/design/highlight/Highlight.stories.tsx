@@ -31,9 +31,9 @@ const meta: Meta<typeof KvibHighlight> = {
 export default meta;
 type Story = StoryObj<typeof KvibHighlight>;
 
-export const Highlight: Story = {
+export const Preview: Story = {
   args: { query: "fremheve", styles: { px: "1", py: "1", bg: "orange.100" } },
-  render: (args) => <KvibHighlight {...args}>Det er mulig å fremheve ord med Highlight.</KvibHighlight>,
+  render: args => <KvibHighlight {...args}>Det er mulig å fremheve ord med Highlight.</KvibHighlight>,
 };
 
 export const HighlightMultiple: Story = {
@@ -41,7 +41,7 @@ export const HighlightMultiple: Story = {
     query: ["skjøte", "hjemmelserklæring", "hjemmelsoverføring"],
     styles: { px: "2", py: "1", rounded: "full", bg: "teal.100" },
   },
-  render: (args) => (
+  render: args => (
     <KvibHeading lineHeight="tall" size="lg">
       <KvibHighlight {...args}>
         Du kan tinglyse et eierskifte i grunneboken ved å fylle ut et skjøte, en hjemmelserklæring ved arv, skifte og
@@ -53,7 +53,7 @@ export const HighlightMultiple: Story = {
 
 export const HighlightSubstring: Story = {
   args: { query: "kart", styles: { py: "1", fontWeight: "normal" } },
-  render: (args) => (
+  render: args => (
     <KvibBox>
       <KvibText>Søkeresultat for: "kart"</KvibText>
       <KvibText mt="6" fontWeight="bold">

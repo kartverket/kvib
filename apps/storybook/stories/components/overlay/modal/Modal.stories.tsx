@@ -245,7 +245,7 @@ const ModalExample = ({ ...args }) => {
   );
 };
 
-export const Modal: Story = {
+export const Preview: Story = {
   render: args => <ModalExample {...args} />,
   parameters: {
     docs: {

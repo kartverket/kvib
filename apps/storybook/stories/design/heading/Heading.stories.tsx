@@ -26,14 +26,13 @@ const meta: Meta<typeof KvibHeading> = {
 export default meta;
 type Story = StoryObj<typeof KvibHeading>;
 
-export const Heading: Story = {
-  args: {},
-  render: (args) => <KvibHeading {...args}>Dette er en overskrift</KvibHeading>,
+export const Preview: Story = {
+  render: args => <KvibHeading {...args}>Dette er en overskrift</KvibHeading>,
 };
 
 export const HeadingSizes: Story = {
   args: {},
-  render: (args) => (
+  render: args => (
     <KvibStack spacing={6}>
       <KvibHeading {...args} as="h1" size="4xl" noOfLines={1}>
         (4xl) Kartverkets interaksjon- og designbibliotek

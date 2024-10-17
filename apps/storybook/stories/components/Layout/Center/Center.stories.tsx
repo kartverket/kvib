@@ -1,4 +1,4 @@
-import { Center as KvibCenter, Square as KvibSquare, Circle as KvibCircle } from "@kvib/react/src/layout";
+import { Center as KvibCenter, Circle as KvibCircle, Square as KvibSquare } from "@kvib/react/src/layout";
 import { Text } from "@kvib/react/src/typography";
 import { Meta, StoryObj } from "@storybook/react";
 
@@ -18,14 +18,14 @@ type CenterStory = StoryObj<typeof KvibCenter>;
 type SquareStory = StoryObj<typeof KvibSquare>;
 type CircleStory = StoryObj<typeof KvibCircle>;
 
-export const Center: CenterStory = {
+export const Preview: CenterStory = {
   args: { backgroundColor: "green.50", padding: "6" },
-  render: (args) => <KvibCenter {...args}>En boks med sentrert innhold</KvibCenter>,
+  render: args => <KvibCenter {...args}>En boks med sentrert innhold</KvibCenter>,
 };
 
 export const Square: SquareStory = {
   args: { size: "40px", backgroundColor: "green.400", color: "white" },
-  render: (args) => (
+  render: args => (
     <KvibSquare {...args}>
       <Text>S</Text>
     </KvibSquare>
@@ -34,7 +34,7 @@ export const Square: SquareStory = {
 
 export const Circle: CircleStory = {
   args: { size: "40px", backgroundColor: "red.400", color: "white" },
-  render: (args) => (
+  render: args => (
     <KvibCircle {...args}>
       <Text>C</Text>
     </KvibCircle>

@@ -1,5 +1,5 @@
-import { Canvas, Meta, Controls, Story } from "@storybook/blocks";
-import { DocsHeading, DocsContainer, DocsStory, Feedback } from "../../../templates";
+import { Canvas, Controls, Meta, Story } from "@storybook/blocks";
+import { DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
 import * as StackStories from "./Stack.stories";
 
 <Meta of={StackStories} />
@@ -68,8 +68,8 @@ Stack og Flex er veldig like, med at begge distanserer Children like langt fra h
   description=""
   story={
     <>
-      <Canvas of={StackStories.Stack} />
-      <Controls of={StackStories.Stack} />
+      <Canvas of={StackStories.Preview} />
+      <Controls of={StackStories.Preview} />
     </>
   }
 />

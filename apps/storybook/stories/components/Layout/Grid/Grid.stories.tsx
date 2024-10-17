@@ -1,4 +1,4 @@
-import { Grid as KvibGrid, GridItem } from "@kvib/react/src/layout";
+import { GridItem, Grid as KvibGrid } from "@kvib/react/src/layout";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibGrid> = {
@@ -94,9 +94,9 @@ const meta: Meta<typeof KvibGrid> = {
 export default meta;
 type Story = StoryObj<typeof KvibGrid>;
 
-export const Grid: Story = {
+export const Preview: Story = {
   args: { templateColumns: "repeat(5, 1fr)", gap: 6 },
-  render: (args) => (
+  render: args => (
     <KvibGrid {...args}>
       <GridItem w="100%" h={10} bgColor="blue.100" />
       <GridItem w="100%" h={10} bgColor="blue.100" />
@@ -109,7 +109,7 @@ export const Grid: Story = {
 
 export const GridSpanning: Story = {
   args: { h: "200px", templateRows: "repeat(2, 1fr)", templateColumns: "repeat(5, 1fr)", gap: 4 },
-  render: (args) => (
+  render: args => (
     <KvibGrid {...args}>
       <GridItem rowSpan={2} colSpan={1} bg="red.400" />
       <GridItem colSpan={2} bg="orange.200" />
@@ -121,7 +121,7 @@ export const GridSpanning: Story = {
 
 export const GridStartEnd: Story = {
   args: { templateColumns: "repeat(5, 1fr)", gap: 4 },
-  render: (args) => (
+  render: args => (
     <KvibGrid {...args}>
       <GridItem colSpan={2} h="10" bg="red.400" />
       <GridItem colStart={4} colEnd={6} h="10" bg="orange.200" />
@@ -141,7 +141,7 @@ export const GridTemplateAreas: Story = {
     color: "black",
     fontWeight: "bold",
   },
-  render: (args) => (
+  render: args => (
     <KvibGrid {...args}>
       <GridItem pl="2" bg="orange.300" area={"header"}>
         Header

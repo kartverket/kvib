@@ -1,4 +1,4 @@
-import { Text as KvibText, Stack as KvibStack } from "@kvib/react/src";
+import { Stack as KvibStack, Text as KvibText } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibText> = {
@@ -31,14 +31,14 @@ const meta: Meta<typeof KvibText> = {
 export default meta;
 type Story = StoryObj<typeof KvibText>;
 
-export const Text: Story = {
+export const Preview: Story = {
   args: { children: "Dette er en eksempeltekst" },
-  render: (args) => <KvibText {...args} />,
+  render: args => <KvibText {...args} />,
 };
 
 export const TextSizes: Story = {
   args: {},
-  render: (args) => (
+  render: args => (
     <KvibStack spacing={3}>
       <KvibText {...args} fontSize="6xl" noOfLines={1}>
         (6xl) Kartverkets interaksjon- og designbibliotek
@@ -76,7 +76,7 @@ export const TextSizes: Story = {
 
 export const TextOverride: Story = {
   args: {},
-  render: (args) => (
+  render: args => (
     <>
       <KvibText {...args} as="b">
         Bold
