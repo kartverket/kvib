@@ -1,7 +1,7 @@
-import { Title, Canvas, Meta, Story, Controls } from "@storybook/blocks";
+import { Box, Code, Text } from "@kvib/react/src/";
+import { Canvas, Controls, Meta, Story, Title } from "@storybook/blocks";
+import { DocsAnatomy, DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
 import * as ButtonStories from "./Button.stories";
-import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
-import { Text, Code, Box } from "@kvib/react/src/";
 
 <Meta of={ButtonStories} />
 
@@ -121,5 +121,5 @@ Bruk forskjellige varianter på knappene dersom handlingene har motsatt hensikt.
 
 <DocsHeading light>Props</DocsHeading>
 
-<Canvas of={ButtonStories.Button} />
-<Controls of={ButtonStories.Button} />
+<Canvas of={ButtonStories.Preview} />
+<Controls of={ButtonStories.Preview} />

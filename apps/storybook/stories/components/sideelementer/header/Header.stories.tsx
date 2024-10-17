@@ -1,9 +1,9 @@
 import {
   Box,
-  Header as KvibHeader,
   Heading,
   HStack,
   Icon,
+  Header as KvibHeader,
   Search,
   SearchAsync,
   Stack,
@@ -108,14 +108,14 @@ const fruits = [
 
 const mockLoadOptions = (inputValue: string, callback: (options: typeof fruits) => void) => {
   setTimeout(() => {
-    const filteredFruits = fruits.filter((fruit) => fruit.label.toLowerCase().includes(inputValue.toLowerCase()));
+    const filteredFruits = fruits.filter(fruit => fruit.label.toLowerCase().includes(inputValue.toLowerCase()));
     callback(filteredFruits);
   }, 500);
 };
 
-export const Header: Story = {
+export const Preview: Story = {
   args: { logoAltText: "Kartverket Logo" },
-  render: (args) => <KvibHeader {...args} />,
+  render: args => <KvibHeader {...args} />,
 };
 
 export const HeaderElements: Story = {
@@ -126,7 +126,7 @@ export const HeaderElements: Story = {
     collapseBreakpoint: "md",
     logoAltText: "Kartverket Logo",
   },
-  render: (args) => (
+  render: args => (
     <KvibHeader {...args}>
       <Heading size="md">Eiendom</Heading>
       <Search bgColor="white" maxWidth={400} placeholder="Søk her..."></Search>
@@ -142,7 +142,7 @@ export const HeaderElements: Story = {
 
 export const HeaderJustifyContent: Story = {
   args: { logoAltText: "Kartverket Logo" },
-  render: (args) => (
+  render: args => (
     <Stack>
       <KvibHeader {...args} justifyContent="center">
         <Search bgColor="white" maxWidth={400} placeholder="Søk her..."></Search>
@@ -176,7 +176,7 @@ export const HeaderDropdownChildren: Story = {
     onMenuButtonClick: undefined,
     showChildrenInMenu: false,
   },
-  render: (args) => (
+  render: args => (
     <KvibHeader {...args}>
       <Heading size="md">Eiendom</Heading>
     </KvibHeader>
@@ -185,7 +185,7 @@ export const HeaderDropdownChildren: Story = {
 
 export const HeaderBreakpoint: Story = {
   args: { justifyContent: "center", logoAltText: "Kartverket Logo" },
-  render: (args) => (
+  render: args => (
     <Stack>
       <KvibHeader {...args} collapseBreakpoint="sm">
         <Search bgColor="white" maxWidth={400} placeholder="Søk her..."></Search>
@@ -202,7 +202,7 @@ export const HeaderBreakpoint: Story = {
 
 export const HeaderSearchAsync: Story = {
   args: { logoAltText: "Kartverket Logo" },
-  render: (args) => (
+  render: args => (
     <KvibHeader {...args}>
       <Box width={300}>
         <SearchAsync
@@ -225,7 +225,7 @@ export const HeaderLogoButton: Story = {
     logoLink: "https://design.kartverket.no",
     logoAltText: "Kartverket Logo",
   },
-  render: (args) => <KvibHeader {...args} />,
+  render: args => <KvibHeader {...args} />,
 };
 
 export const HeaderLogoVariant: Story = {
@@ -233,10 +233,10 @@ export const HeaderLogoVariant: Story = {
     logoVariant: "vertical",
     logoAltText: "Kartverket Logo",
   },
-  render: (args) => <KvibHeader {...args} />,
+  render: args => <KvibHeader {...args} />,
 };
 
 export const HeaderWithoutLink: Story = {
   args: { logoLinkDisabled: true },
-  render: (args) => <KvibHeader {...args} />,
+  render: args => <KvibHeader {...args} />,
 };

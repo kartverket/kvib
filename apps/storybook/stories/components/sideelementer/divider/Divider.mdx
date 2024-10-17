@@ -1,7 +1,7 @@
-import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
+import { Box, Code, Text } from "@kvib/react/src/";
+import { Canvas, Controls, Meta, Story } from "@storybook/blocks";
+import { DocsAnatomy, DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
 import * as DividerStories from "./Divider.stories";
-import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
-import { Text, Code, Box } from "@kvib/react/src/";
 
 <Meta of={DividerStories} />
 
@@ -18,7 +18,7 @@ import { Divider } from "@kvib/react";
 <Feedback components="Divider" />
 
 <DocsStory
-  title="Devider Varianter"
+  title="Divider Varianter"
   description={
     <Text>
       Bruk <code>variant</code> prop for å endre <code>Divider</code> varianten.
@@ -65,8 +65,8 @@ import { Divider } from "@kvib/react";
   description={""}
   story={
     <>
-      <Canvas of={DividerStories.Divider} />
-      <Controls of={DividerStories.Divider} />
+      <Canvas of={DividerStories.Preview} />
+      <Controls of={DividerStories.Preview} />
     </>
   }
 />

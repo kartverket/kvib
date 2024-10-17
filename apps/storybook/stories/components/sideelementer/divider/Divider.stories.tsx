@@ -42,14 +42,13 @@ const meta: Meta<typeof KvibDivider> = {
 export default meta;
 type Story = StoryObj<typeof KvibDivider>;
 
-export const Divider: Story = {
-  args: {},
-  render: (args) => <KvibDivider {...args} />,
+export const Preview: Story = {
+  render: args => <KvibDivider {...args} />,
 };
 
 export const DividerVariants: Story = {
   args: { borderColor: "blue.600" },
-  render: (args) => (
+  render: args => (
     <KvibStack spacing="4">
       <KvibDivider {...args} variant="solid" />
       <KvibDivider {...args} variant="dashed" />
@@ -58,8 +57,7 @@ export const DividerVariants: Story = {
 };
 
 export const DividerColorsWidths: Story = {
-  args: {},
-  render: (args) => (
+  render: args => (
     <KvibStack spacing="4">
       <KvibDivider {...args} borderWidth="1px" borderColor="blue.500" />
       <KvibDivider {...args} borderWidth="2px" borderColor="green.500" />
@@ -69,7 +67,7 @@ export const DividerColorsWidths: Story = {
 
 export const DividerVertical: Story = {
   args: { borderColor: "blue.600" },
-  render: (args) => (
+  render: args => (
     <KvibCenter height="50px">
       <KvibDivider {...args} orientation="vertical" />
     </KvibCenter>
@@ -78,7 +76,7 @@ export const DividerVertical: Story = {
 
 export const DividerContent: Story = {
   args: { borderColor: "blue.600" },
-  render: (args) => (
+  render: args => (
     <KvibBox position="relative" padding="10">
       <KvibDivider {...args} />
       <KvibAbsoluteCenter bg="white" px="4">

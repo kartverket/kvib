@@ -1,6 +1,6 @@
-import { Meta, StoryObj } from "@storybook/react";
-import { Slide as KvibSlide, SlideProps, Box, Button, useDisclosure } from "@kvib/react/src";
+import { Box, Button, Slide as KvibSlide, SlideProps, useDisclosure } from "@kvib/react/src";
 import { colors } from "@kvib/react/src/theme/tokens";
+import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibSlide> = {
   title: "Animasjoner/Slide",
@@ -90,7 +90,7 @@ export const nonCanvasExample = () => {
   );
 };
 
-export const Slide: Story = {
+export const Preview: Story = {
   args: { in: false },
-  render: (args) => <SlideEx {...args} />,
+  render: args => <SlideEx {...args} />,
 };

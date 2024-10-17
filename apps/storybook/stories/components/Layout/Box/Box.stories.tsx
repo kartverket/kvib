@@ -15,14 +15,14 @@ const meta: Meta<typeof KvibBox> = {
 export default meta;
 type Story = StoryObj<typeof KvibBox>;
 
-export const SimpleBox: Story = {
+export const Preview: Story = {
   args: { backgroundColor: "green.50" },
-  render: (args) => <KvibBox {...args}>En veldig enkel boks</KvibBox>,
+  render: args => <KvibBox {...args}>En veldig enkel boks</KvibBox>,
 };
 
 export const BoxExample: Story = {
   args: { bg: "blue.50", borderRadius: "md", p: "20px", color: "green.900" },
-  render: (args) => <KvibBox {...args}>En box med bruk av diverse props</KvibBox>,
+  render: args => <KvibBox {...args}>En box med bruk av diverse props</KvibBox>,
 };
 
 export const BoxAsLink: Story = {
@@ -39,5 +39,5 @@ export const BoxAsLink: Story = {
     padding: "2",
     width: "fit-content",
   },
-  render: (args) => <KvibBox {...args}>En lenke til en video</KvibBox>,
+  render: args => <KvibBox {...args}>En lenke til en video</KvibBox>,
 };

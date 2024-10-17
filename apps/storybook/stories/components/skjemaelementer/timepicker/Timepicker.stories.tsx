@@ -1,12 +1,12 @@
 import {
   FormControl,
-  Timepicker as KvibTimepicker,
   FormLabel,
+  KvibProvider,
+  Timepicker as KvibTimepicker,
   Stack,
+  defaultKvibTheme,
   extendTheme,
   withDefaultColorScheme,
-  KvibProvider,
-  defaultKvibTheme,
 } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
@@ -113,14 +113,12 @@ const meta: Meta<typeof KvibTimepicker> = {
 export default meta;
 type Story = StoryObj<typeof KvibTimepicker>;
 
-export const Timepicker: Story = {
-  args: {},
-  render: (args) => <KvibTimepicker {...args} />,
+export const Preview: Story = {
+  render: args => <KvibTimepicker {...args} />,
 };
 
 export const TimepickerInterval: Story = {
-  args: {},
-  render: (args) => (
+  render: args => (
     <Stack>
       <KvibTimepicker {...args} minuteInterval={15} />
       <KvibTimepicker {...args} minuteInterval={60} />
@@ -129,8 +127,7 @@ export const TimepickerInterval: Story = {
 };
 
 export const TimepickerAppearance: Story = {
-  args: {},
-  render: (args) => (
+  render: args => (
     <Stack>
       <KvibTimepicker {...args} variant="outline" />
       <KvibTimepicker {...args} variant="filled" />
@@ -141,8 +138,7 @@ export const TimepickerAppearance: Story = {
 };
 
 export const TimepickerSize: Story = {
-  args: {},
-  render: (args) => (
+  render: args => (
     <Stack>
       <KvibTimepicker {...args} size="xs" />
       <KvibTimepicker {...args} size="sm" />
@@ -154,8 +150,7 @@ export const TimepickerSize: Story = {
 };
 
 export const TimepickerForm: Story = {
-  args: {},
-  render: (args) => (
+  render: args => (
     <FormControl>
       <FormLabel>Tid</FormLabel>
       <KvibTimepicker {...args} />
@@ -168,7 +163,7 @@ const greenTheme = extendTheme(withDefaultColorScheme({ colorScheme: "green" }),
 export const TimepickerGreenProvider: Story = {
   tags: ["no-tests"],
   decorators: [
-    (Story) => (
+    Story => (
       <KvibProvider theme={greenTheme}>
         <Story />
       </KvibProvider>
@@ -181,7 +176,7 @@ const blueTheme = extendTheme(withDefaultColorScheme({ colorScheme: "blue" }), d
 export const TimepickerBlueProvider: Story = {
   tags: ["no-tests"],
   decorators: [
-    (Story) => (
+    Story => (
       <KvibProvider theme={blueTheme}>
         <Story />
       </KvibProvider>

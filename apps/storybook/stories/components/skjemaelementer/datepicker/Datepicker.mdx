@@ -1,8 +1,8 @@
+import { Box, Code, Text } from "@kvib/react/src/";
+import { Alert, AlertDescription, AlertIcon } from "@kvib/react/src/alert";
+import { Canvas, Controls, Meta, Story } from "@storybook/blocks";
+import { DocsAnatomy, DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
 import * as DatepickerStories from "./Datepicker.stories";
-import { Canvas, Meta, Controls, Story } from "@storybook/blocks";
-import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
-import { Alert, AlertIcon, AlertDescription } from "@kvib/react/src/alert";
-import { Text, Code, Box } from "@kvib/react/src/";
 
 <Meta of={DatepickerStories} />
 
@@ -122,5 +122,5 @@ Datepicker returnerer datoer i [Date](https://developer.mozilla.org/en-US/docs/W
 </DocsContainer>
 
 <DocsHeading light>Props</DocsHeading>
-<Canvas of={DatepickerStories.Datepicker} />
-<Controls of={DatepickerStories.Datepicker} />
+<Canvas of={DatepickerStories.Preview} />
+<Controls of={DatepickerStories.Preview} />

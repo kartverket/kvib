@@ -1,6 +1,6 @@
-import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
+import { Canvas, Controls, Meta, Story } from "@storybook/blocks";
+import { DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates/";
 import * as ListStories from "./List.stories";
-import { DocsHeading, DocsContainer, DocsStory, Feedback } from "../../../templates/";
 
 <Meta of={ListStories} />
 
@@ -22,7 +22,7 @@ import { List, ListItem, OrderedList, UnorderedList } from "@kvib/react";
   isVertical
   title="Unordered list"
   description={""}
-  story={<Canvas of={ListStories.List} sourceState="hidden" />}
+  story={<Canvas of={ListStories.Preview} sourceState="hidden" />}
 />
 
 <DocsStory

@@ -1,13 +1,13 @@
 import {
+  FormControl,
+  FormLabel,
+  Icon as KvibIcon,
   Input as KvibInput,
   InputGroup as KvibInputGroup,
   InputLeftAddon as KvibInputLeftAddon,
   InputRightAddon as KvibInputRightAddon,
   InputRightElement as KvibInputRightElement,
-  Icon as KvibIcon,
   Stack,
-  FormControl,
-  FormLabel,
 } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
@@ -78,7 +78,7 @@ export default meta;
 type InputStory = StoryObj<typeof KvibInput>;
 type InputGroupStory = StoryObj<typeof KvibInputGroup>;
 
-export const Input: InputStory = {
+export const Preview: InputStory = {
   parameters: {
     docs: {
       canvas: {
@@ -86,8 +86,7 @@ export const Input: InputStory = {
       },
     },
   },
-  args: {},
-  render: (args) => <KvibInput placeholder="Skriv her..." {...args} />,
+  render: args => <KvibInput placeholder="Skriv her..." {...args} />,
 };
 
 export const InputVariants: InputStory = {
@@ -95,7 +94,7 @@ export const InputVariants: InputStory = {
     placeholder: "Skriv her...",
     colorScheme: "green",
   },
-  render: (args) => (
+  render: args => (
     <Stack h="12rem">
       <KvibInput {...args} variant="outline" />
       <KvibInput {...args} variant="filled" />
@@ -106,8 +105,7 @@ export const InputVariants: InputStory = {
 };
 
 export const InputForm: InputStory = {
-  args: {},
-  render: (args) => (
+  render: args => (
     <FormControl isRequired>
       <FormLabel>Fornavn</FormLabel>
       <KvibInput autoComplete="given-name" {...args} />
@@ -116,8 +114,7 @@ export const InputForm: InputStory = {
 };
 
 export const InputGroup: InputGroupStory = {
-  args: {},
-  render: (args) => (
+  render: args => (
     <Stack gap="1rem">
       <KvibInputGroup {...args}>
         <KvibInput placeholder={"Skriv her..."} />

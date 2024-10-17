@@ -61,11 +61,11 @@ const meta: Meta<typeof KvibCheckbox> = {
 export default meta;
 type Story = StoryObj<typeof KvibCheckbox>;
 
-export const Checkbox: Story = {
+export const Preview: Story = {
   args: {
     children: "Dette er en avmerkingsboks",
   },
-  render: (args) => (
+  render: args => (
     <KvibCheckbox {...args} defaultChecked>
       {args.children}
     </KvibCheckbox>
@@ -74,7 +74,7 @@ export const Checkbox: Story = {
 
 export const CheckboxColors: Story = {
   args: {},
-  render: (args) => (
+  render: args => (
     <Stack>
       <KvibCheckbox {...args} colorScheme="blue">
         Blå
@@ -90,7 +90,7 @@ export const CheckboxSizes: Story = {
   args: {
     children: "Huk av",
   },
-  render: (args) => (
+  render: args => (
     <Stack>
       <KvibCheckbox {...args} size="sm">
         {args.children}
@@ -107,7 +107,7 @@ export const CheckboxSizes: Story = {
 
 export const CheckboxStates: Story = {
   args: {},
-  render: (args) => (
+  render: args => (
     <Stack direction={"row"} gap={4}>
       <KvibCheckbox {...args}>Normal</KvibCheckbox>
       <KvibCheckbox isDisabled>Disabled</KvibCheckbox>
@@ -118,7 +118,7 @@ export const CheckboxStates: Story = {
 
 export const CheckboxGroup: Story = {
   args: {},
-  render: (args) => (
+  render: args => (
     <Stack>
       <Text as={"b"}>Grønn</Text>
       <KvibCheckboxGroup colorScheme="green">
@@ -136,5 +136,5 @@ export const CheckboxGroup: Story = {
 
 export const CheckboxIndeterminate: Story = {
   args: {},
-  render: (args) => <IndeterminateExample {...args} />,
+  render: args => <IndeterminateExample {...args} />,
 };

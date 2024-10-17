@@ -15,9 +15,8 @@ const meta: Meta<typeof KvibKbd> = {
 export default meta;
 type Story = StoryObj<typeof KvibKbd>;
 
-export const Kbd: Story = {
-  args: {},
-  render: (args) => (
+export const Preview: Story = {
+  render: args => (
     <span>
       <KvibKbd {...args}>shift</KvibKbd> + <KvibKbd {...args}>H</KvibKbd>
     </span>
@@ -25,8 +24,7 @@ export const Kbd: Story = {
 };
 
 export const KbdModifier: Story = {
-  args: {},
-  render: (args) => (
+  render: args => (
     <KvibStack>
       <span>
         <KvibKbd {...args}>shift</KvibKbd> + <KvibKbd {...args}>H</KvibKbd>

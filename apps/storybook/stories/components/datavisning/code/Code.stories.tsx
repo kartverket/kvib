@@ -35,8 +35,7 @@ const meta: Meta<typeof KvibCode> = {
 export default meta;
 type Story = StoryObj<typeof KvibCode>;
 
-export const Code: Story = {
-  args: {},
+export const Preview: Story = {
   parameters: {
     docs: {
       canvas: {
@@ -44,12 +43,12 @@ export const Code: Story = {
       },
     },
   },
-  render: (args) => <KvibCode {...args}>$ npm install @kvib/react</KvibCode>,
+  render: args => <KvibCode {...args}>$ npm install @kvib/react</KvibCode>,
 };
 
 export const CodeAppearance: Story = {
   args: { width: "fit-content" },
-  render: (args) => (
+  render: args => (
     <KvibStack gap="1rem">
       <KvibCode {...args} children="console.log(kartverket)" variant="subtle" />
       <KvibCode {...args} colorScheme="blue" children="Hello world" variant="outline" />

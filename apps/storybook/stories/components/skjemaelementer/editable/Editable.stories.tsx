@@ -117,9 +117,9 @@ const meta: Meta<typeof KvibEditable> = {
 export default meta;
 type Story = StoryObj<typeof KvibEditable>;
 
-export const Editable: Story = {
+export const Preview: Story = {
   args: { defaultValue: "Redigerbar tekst" },
-  render: (args) => (
+  render: args => (
     <KvibEditable {...args}>
       <KvibEditablePreview />
       <KvibEditableInput />
@@ -129,7 +129,7 @@ export const Editable: Story = {
 
 export const EditableTextarea: Story = {
   args: { defaultValue: "Redigerbar tekst" },
-  render: (args) => (
+  render: args => (
     <KvibEditable {...args}>
       <KvibEditablePreview />
       <KvibEditableTextarea />

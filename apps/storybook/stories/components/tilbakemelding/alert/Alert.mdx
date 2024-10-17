@@ -1,7 +1,7 @@
-import { Canvas, Meta, Story, Controls } from "@storybook/blocks";
-import * as AlertStories from "./Alert.stories";
+import { Canvas, Controls, Meta, Story } from "@storybook/blocks";
+import { DocsAnatomy, DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
 import { ComponentsBanner } from "../../../templates/ComponentsBanner";
-import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
+import * as AlertStories from "./Alert.stories";
 
 <Meta of={AlertStories} />
 
@@ -65,5 +65,5 @@ Det er foreløpig ikke mulig å bytte ut eller droppe status-ikonet for alerter.
 </DocsContainer>
 
 <DocsHeading light>Props</DocsHeading>
-<Canvas of={AlertStories.Alert} />
-<Controls of={AlertStories.Alert} />
+<Canvas of={AlertStories.Preview} />
+<Controls of={AlertStories.Preview} />

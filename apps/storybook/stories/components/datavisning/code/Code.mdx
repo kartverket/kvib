@@ -1,7 +1,7 @@
-import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
+import { Box, Code, Text } from "@kvib/react/src/";
+import { Canvas, Controls, Meta, Story } from "@storybook/blocks";
+import { DocsAnatomy, DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
 import * as CodeStories from "./Code.stories";
-import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
-import { Text, Box, Code } from "@kvib/react/src/";
 
 <Meta of={CodeStories} />
 
@@ -45,10 +45,10 @@ import { Code } from "@kvib/react";
   }
   story={<Canvas of={CodeStories.CodeAppearance} />}
 />
- 
+
 </DocsContainer>
 
 <DocsHeading light>Props</DocsHeading>
 
-<Canvas of={CodeStories.Code} />
-<Controls of={CodeStories.Code} />
+<Canvas of={CodeStories.Preview} />
+<Controls of={CodeStories.Preview} />

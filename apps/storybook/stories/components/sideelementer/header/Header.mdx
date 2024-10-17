@@ -1,7 +1,7 @@
-import { Meta, Canvas, Controls } from "@storybook/blocks";
+import { Alert, AlertIcon, Box, Code, Text } from "@kvib/react/src/";
+import { Canvas, Controls, Meta } from "@storybook/blocks";
+import { DocsAnatomy, DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
 import * as HeaderStories from "./Header.stories";
-import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
-import { Alert, AlertIcon, Text, Code, Box } from "@kvib/react/src/";
 
 <Meta of={HeaderStories} />
 
@@ -111,8 +111,8 @@ description={<Text><code>logoLinkDisabled</code>satt, slik at det ikke er noen l
   description={""}
   story={
     <>
-      <Canvas of={HeaderStories.Header} />
-      <Controls of={HeaderStories.Header} />
+      <Canvas of={HeaderStories.Preview} />
+      <Controls of={HeaderStories.Preview} />
     </>
   }
 />

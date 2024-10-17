@@ -86,12 +86,12 @@ const meta: Meta<typeof KvibAvatar> = {
 export default meta;
 type Story = StoryObj<typeof KvibAvatar>;
 
-export const Avatar: Story = {
+export const Preview: Story = {
   args: {
     name: "Eksempel Navn",
     src: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80",
   },
-  render: (args) => <KvibAvatar {...args} name="Eksempel Navn" />,
+  render: args => <KvibAvatar {...args} name="Eksempel Navn" />,
 };
 
 export const AvatarSizes: Story = {
@@ -99,7 +99,7 @@ export const AvatarSizes: Story = {
     name: "Eksempel Navn",
     src: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80",
   },
-  render: (args) => (
+  render: args => (
     <KvibWrap>
       <KvibWrapItem>
         <KvibAvatar {...args} size="2xs" />
@@ -128,7 +128,7 @@ export const AvatarSizes: Story = {
 
 export const AvatarFallback: Story = {
   args: {},
-  render: (args) => (
+  render: args => (
     <KvibStack direction="row">
       <KvibAvatar {...args} name="Eksempel Navn" src="https://bit.ly/broken-link" bg="green.500" />
       <KvibAvatar {...args} name="Annet Eksempel" src="https://bit.ly/broken-link" />
@@ -139,7 +139,7 @@ export const AvatarFallback: Story = {
 
 export const AvatarBadge: Story = {
   args: {},
-  render: (args) => (
+  render: args => (
     <KvibAvatar {...args}>
       <KvibAvatarBadge boxSize="1.25em" bg="green.500" />
     </KvibAvatar>
@@ -148,7 +148,7 @@ export const AvatarBadge: Story = {
 
 export const AvatarGrouping: Story = {
   args: { name: "Eksempel Navn" },
-  render: (args) => (
+  render: args => (
     <KvibAvatarGroup size="md" max={2}>
       <KvibAvatar
         {...args}

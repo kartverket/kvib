@@ -1,6 +1,6 @@
-import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
+import { Canvas, Controls, Meta, Story } from "@storybook/blocks";
+import { DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates/";
 import * as StatStories from "./Stat.stories";
-import { DocsHeading, DocsContainer, DocsStory, Feedback } from "../../../templates/";
 
 <Meta of={StatStories} />
 
@@ -16,7 +16,7 @@ import { Stat, StatLabel, StatNumber, StatHelpText, StatArrow, StatGroup } from 
 
 <Feedback component="Stat" />
 
-<DocsStory title="Stat eksempel" description={""} story={<Canvas of={StatStories.Stat} sourceState="hidden" />} />
+<DocsStory title="Stat eksempel" description={""} story={<Canvas of={StatStories.Preview} sourceState="hidden" />} />
 
 <DocsStory
   title="Stat med indikator"

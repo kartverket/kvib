@@ -126,7 +126,7 @@ const meta: Meta<typeof KvibNumberInput> = {
 export default meta;
 type NumberInputStory = StoryObj<typeof KvibNumberInput>;
 
-export const NumberInput: NumberInputStory = {
+export const Preview: NumberInputStory = {
   args: {
     variant: "outline",
     isDisabled: false,
@@ -134,7 +134,7 @@ export const NumberInput: NumberInputStory = {
     isReadOnly: false,
     isRequired: false,
   },
-  render: (args) => (
+  render: args => (
     <KvibNumberInput {...args}>
       <KvibNumberInputField />
       <KvibNumberInputStepper />
@@ -146,7 +146,7 @@ export const NumberInputVariants: NumberInputStory = {
   args: {
     defaultValue: 1234,
   },
-  render: (args) => (
+  render: args => (
     <Stack gap={5}>
       <KvibNumberInput {...args} variant={"outline"}>
         <KvibNumberInputField />
@@ -170,7 +170,7 @@ export const NumberInputVariants: NumberInputStory = {
 
 export const NumberInputForm: NumberInputStory = {
   args: {},
-  render: (args) => (
+  render: args => (
     <FormControl isRequired>
       <FormLabel>Årstall</FormLabel>
       <KvibNumberInput {...args}>
@@ -183,7 +183,7 @@ export const NumberInputForm: NumberInputStory = {
 
 export const NumberInputMinMaxValue: NumberInputStory = {
   args: { defaultValue: 12, min: 10, max: 20 },
-  render: (args) => (
+  render: args => (
     <KvibNumberInput {...args}>
       <KvibNumberInputField />
       <KvibNumberInputStepper />
@@ -193,7 +193,7 @@ export const NumberInputMinMaxValue: NumberInputStory = {
 
 export const NumberInputPrecision: NumberInputStory = {
   args: { precision: 2 },
-  render: (args) => (
+  render: args => (
     <KvibNumberInput {...args}>
       <KvibNumberInputField />
       <KvibNumberInputStepper />
@@ -229,7 +229,7 @@ export const NumberInputSizes: NumberInputStory = {
 
 export const NumberInputBlur: NumberInputStory = {
   args: { defaultValue: 12, min: 10, max: 20 },
-  render: (args) => (
+  render: args => (
     <KvibNumberInput {...args} clampValueOnBlur={false}>
       <KvibNumberInputField />
       <KvibNumberInputStepper />

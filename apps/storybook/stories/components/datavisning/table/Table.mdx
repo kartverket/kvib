@@ -1,8 +1,8 @@
-import { Meta, Canvas, Story, Controls, Source } from "@storybook/blocks";
-import * as TableStories from "./Table.stories";
-import { TableString, TableVariantsString, TableSizesString } from "./srcStrings.ts";
 import { Card, CardBody, Text } from "@kvib/react/src";
-import { DocsHeading, DocsContainer, DocsStory, Feedback } from "../../../templates/";
+import { Canvas, Controls, Meta, Source, Story } from "@storybook/blocks";
+import { DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates/";
+import * as TableStories from "./Table.stories";
+import { TableSizesString, TableString, TableVariantsString } from "./srcStrings.ts";
 
 <Meta of={TableStories} />
 
@@ -53,7 +53,7 @@ import { Table, Thead, Tbody, Tfoot, Tr, Th, Td, TableCaption, TableContainer } 
 />
 
 <DocsHeading light>Props</DocsHeading>
-<Canvas of={TableStories.Table} sourceState="hidden" />
-<Controls of={TableStories.Table} />
+<Canvas of={TableStories.Preview} sourceState="hidden" />
+<Controls of={TableStories.Preview} />
 
 </DocsContainer>

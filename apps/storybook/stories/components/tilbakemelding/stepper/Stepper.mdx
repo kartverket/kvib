@@ -1,8 +1,8 @@
-import { Meta, Canvas, Story, Controls, Source } from "@storybook/blocks";
-import * as StepperStories from "./Stepper.stories";
 import { Card, CardBody, Text } from "@kvib/react/src";
+import { Canvas, Controls, Meta, Source, Story } from "@storybook/blocks";
+import { DocsAnatomy, DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
 import * as StepperStrings from "./srcStrings.ts";
-import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
+import * as StepperStories from "./Stepper.stories";
 
 <Meta of={StepperStories} />
 
@@ -30,7 +30,7 @@ import {
 <Feedback component="Step" />
 
 <Source code={StepperStrings.stepperString} dark />
-<Controls of={StepperStories.Stepper} />
+<Controls of={StepperStories.Preview} />
 
 ## Vertikal Stepper
 
@@ -86,7 +86,7 @@ import {
 
 <Card variant="outline" borderRadius="0">
   <CardBody>
-    <Story of={StepperStories.Stepper} />
+    <Story of={StepperStories.Preview} />
   </CardBody>
 </Card>
 

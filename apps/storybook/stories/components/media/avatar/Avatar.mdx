@@ -1,7 +1,7 @@
-import { Meta, Canvas, Controls } from "@storybook/blocks";
+import { List, ListItem, Text } from "@kvib/react/src";
+import { Canvas, Controls, Meta } from "@storybook/blocks";
+import { DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
 import * as AvatarStories from "./Avatar.stories";
-import { Feedback, DocsHeading, DocsStory, DocsContainer } from "../../../templates";
-import { Text, List, ListItem } from "@kvib/react/src";
 
 <Meta of={AvatarStories} />
 
@@ -74,8 +74,8 @@ import { Avatar, AvatarAvatar, AvatarGroup } from "@kvib/react";
   description={""}
   story={
     <>
-      <Canvas of={AvatarStories.Avatar} />
-      <Controls of={AvatarStories.Avatar} />
+      <Canvas of={AvatarStories.Preview} />
+      <Controls of={AvatarStories.Preview} />
     </>
   }
 />

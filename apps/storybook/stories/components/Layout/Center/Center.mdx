@@ -1,7 +1,7 @@
-import { Title, Canvas, Meta, Story, Controls } from "@storybook/blocks";
-import * as CenterStories from "./Center.stories";
-import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
 import { Text } from "@kvib/react/src/";
+import { Canvas, Controls, Meta, Story, Title } from "@storybook/blocks";
+import { DocsAnatomy, DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
+import * as CenterStories from "./Center.stories";
 
 <Meta of={CenterStories} />
 
@@ -27,7 +27,7 @@ import { Center, Square, Circle } from "@kvib/react";
   }
   story={
     <>
-      <Canvas of={CenterStories.Center} sourceState="hidden" />
+      <Canvas of={CenterStories.Preview} sourceState="hidden" />
       <Canvas of={CenterStories.Square} sourceState="hidden" />
       <Canvas of={CenterStories.Circle} sourceState="hidden" />
     </>

@@ -1,8 +1,8 @@
-import { Slider as KvibSlider, SliderTrack, SliderFilledTrack, SliderThumb, SliderMark } from "@kvib/react/src/slider";
+import { Slider as KvibSlider, SliderFilledTrack, SliderMark, SliderThumb, SliderTrack } from "@kvib/react/src/slider";
 import { Tooltip } from "@kvib/react/src/tooltip";
 
-import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
+import React from "react";
 
 const meta: Meta<typeof KvibSlider> = {
   title: "Skjemaelementer/Slider",
@@ -110,12 +110,12 @@ const meta: Meta<typeof KvibSlider> = {
 export default meta;
 type Story = StoryObj<typeof KvibSlider>;
 
-export const Slider: Story = {
+export const Preview: Story = {
   args: {
     "aria-label": "sliderDefault",
     id: "slider",
   },
-  render: (args) => (
+  render: args => (
     <KvibSlider {...args}>
       <SliderTrack>
         <SliderFilledTrack />
@@ -132,7 +132,7 @@ export const SliderDiscrete: Story = {
     id: "slider",
     step: 10,
   },
-  render: (args) => (
+  render: args => (
     <KvibSlider {...args}>
       <SliderTrack>
         <SliderFilledTrack />
@@ -150,7 +150,7 @@ const SliderWithTooltip = () => {
       id="slider"
       aria-label="sliderWithTooltip"
       defaultValue={5}
-      onChange={(v) => setSliderValue(v)}
+      onChange={v => setSliderValue(v)}
       onMouseEnter={() => setShowTooltip(true)}
       onMouseLeave={() => setShowTooltip(false)}
     >

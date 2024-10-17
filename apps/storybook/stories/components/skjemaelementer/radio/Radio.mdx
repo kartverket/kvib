@@ -1,7 +1,7 @@
-import { Meta, Canvas, Controls, Source } from "@storybook/blocks";
+import { Alert, AlertIcon, Box, Code, Text } from "@kvib/react/src";
+import { Canvas, Controls, Meta, Source } from "@storybook/blocks";
+import { DocsAnatomy, DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
 import * as RadioStories from "./Radio.stories";
-import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
-import { Alert, AlertIcon, Text, Code, Box } from "@kvib/react/src";
 
 <Meta of={RadioStories} />
 
@@ -30,7 +30,7 @@ import { Radio } from "@kvib/react";
       med <Code>onChange</Code>.
     </Text>
   }
-  story={<Canvas of={RadioStories.Radio} sourceState={"hidden"} />}
+  story={<Canvas of={RadioStories.Preview} sourceState={"hidden"} />}
 />
 <DocsStory
   title="Farger"
@@ -74,7 +74,7 @@ import { Radio } from "@kvib/react";
     `} dark/>}/>
 
 <DocsHeading light>Props</DocsHeading>
-<Canvas of={RadioStories.Radio} />
-<Controls of={RadioStories.Radio} />
+<Canvas of={RadioStories.Preview} />
+<Controls of={RadioStories.Preview} />
 
 </DocsContainer>

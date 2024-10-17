@@ -1,8 +1,8 @@
-import { Meta, Canvas, Story, Controls, Source } from "@storybook/blocks";
-import * as TextareaStories from "./Textarea.stories";
 import { Card, CardBody, Text } from "@kvib/react/src";
-import { DocsHeading, DocsContainer, DocsStory, Feedback } from "../../../templates";
-import { TextAreaStrings, TextAreaResizeStrings } from "./srcTextAreaStrings";
+import { Canvas, Controls, Meta, Source, Story } from "@storybook/blocks";
+import { DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
+import { TextAreaResizeStrings, TextAreaStrings } from "./srcTextAreaStrings";
+import * as TextareaStories from "./Textarea.stories";
 
 <Meta of={TextareaStories} />
 
@@ -78,7 +78,7 @@ import { Textarea } from "@kvib/react";
 />
 
 <DocsHeading light>Props</DocsHeading>
-<Canvas of={TextareaStories.Textarea} />
-<Controls of={TextareaStories.Textarea} />
+<Canvas of={TextareaStories.Preview} />
+<Controls of={TextareaStories.Preview} />
 
 </DocsContainer>

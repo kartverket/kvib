@@ -34,14 +34,12 @@ const meta: Meta<typeof KvibCloseButton> = {
 export default meta;
 type Story = StoryObj<typeof KvibCloseButton>;
 
-export const CloseButton: Story = {
-  args: {},
-  render: (args) => <KvibCloseButton {...args} />,
+export const Preview: Story = {
+  render: args => <KvibCloseButton {...args} />,
 };
 
 export const CloseButtonSizes: Story = {
-  args: {},
-  render: (args) => (
+  render: args => (
     <KvibStack direction="row" spacing={6}>
       <KvibCloseButton {...args} size="sm" />
       <KvibCloseButton {...args} size="md" />

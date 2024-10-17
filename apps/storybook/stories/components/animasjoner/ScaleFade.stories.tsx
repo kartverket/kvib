@@ -1,6 +1,6 @@
-import { Meta, StoryObj } from "@storybook/react";
-import { ScaleFade as KvibScaleFade, ScaleFadeProps, Box } from "@kvib/react/src";
+import { Box, ScaleFade as KvibScaleFade, ScaleFadeProps } from "@kvib/react/src";
 import { colors } from "@kvib/react/src/theme/tokens";
+import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibScaleFade> = {
   title: "Animasjoner/ScaleFade",
@@ -61,7 +61,7 @@ const ScaleFadeEx = ({ ...args }: ScaleFadeProps) => {
   );
 };
 
-export const ScaleFade: Story = {
+export const Preview: Story = {
   args: { in: false, unmountOnExit: false, reverse: true },
-  render: (args) => <ScaleFadeEx {...args} />,
+  render: args => <ScaleFadeEx {...args} />,
 };

@@ -1,7 +1,7 @@
-import { Meta, Canvas, Story, Controls, Source } from "@storybook/blocks";
+import { Box, Code, Link, ListItem, Text, UnorderedList } from "@kvib/react/src/";
+import { Canvas, Controls, Meta, Source, Story } from "@storybook/blocks";
+import { DocsAnatomy, DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
 import * as SearchAsyncStories from "./SearchAsync.stories";
-import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
-import { Text, Code, Box, Link, UnorderedList, ListItem } from "@kvib/react/src/";
 
 <Meta of={SearchAsyncStories} />
 
@@ -254,5 +254,5 @@ Det er anbefalt å bruke `<form>` rundt SearchAsync dersom du skal bruke det val
 </DocsContainer>
 
 <DocsHeading light>Props</DocsHeading>
-<Canvas of={SearchAsyncStories.SearchAsync} />
-<Controls of={SearchAsyncStories.SearchAsync} />
+<Canvas of={SearchAsyncStories.Preview} />
+<Controls of={SearchAsyncStories.Preview} />

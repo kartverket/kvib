@@ -157,10 +157,10 @@ const meta: Meta<typeof KvibDatepicker> = {
 };
 
 export default meta;
-type DatepickerStory = StoryObj<typeof KvibDatepicker>;
+type Story = StoryObj<typeof KvibDatepicker>;
 
-export const Datepicker: DatepickerStory = {
-  args: { placeholder: "Velg dato", onChange: (v) => console.log("Datepicker changed", v) },
+export const Preview: Story = {
+  args: { placeholder: "Velg dato", onChange: v => console.log("Datepicker changed", v) },
   parameters: {
     docs: {
       canvas: {
@@ -168,31 +168,31 @@ export const Datepicker: DatepickerStory = {
       },
     },
   },
-  render: (args) => (
+  render: args => (
     <Box h="25rem">
       <KvibDatepicker aria-label="Datepicker" {...args} />
     </Box>
   ),
 };
 
-export const DatepickerDetails: DatepickerStory = {
+export const DatepickerDetails: Story = {
   args: {
     showOutsideDays: true,
     showWeekNumber: true,
     placeholder: "Velg dato",
   },
-  render: (args) => (
+  render: args => (
     <Box h="25rem">
       <KvibDatepicker aria-label="Datepicker example" {...args} />
     </Box>
   ),
 };
 
-export const DatepickerAppearance: DatepickerStory = {
+export const DatepickerAppearance: Story = {
   args: {
     placeholder: "Velg dato",
   },
-  render: (args) => (
+  render: args => (
     <Stack gap="1rem" h="30rem">
       <KvibDatepicker aria-label="Datepicker" variant="outline" {...args} />
       <KvibDatepicker aria-label="Datepicker" variant="filled" {...args} />
@@ -202,7 +202,7 @@ export const DatepickerAppearance: DatepickerStory = {
   ),
 };
 
-export const DatepickerArea: DatepickerStory = {
+export const DatepickerArea: Story = {
   args: {
     defaultSelected: new Date("2022-08-01"),
     fromDate: new Date("2022-08-01"),
@@ -211,16 +211,16 @@ export const DatepickerArea: DatepickerStory = {
     disabledDays: [new Date("2022-08-16")],
     placeholder: "Velg dato",
   },
-  render: (args) => (
+  render: args => (
     <Box h="23rem">
       <KvibDatepicker aria-label="Datepicker example" {...args} />
     </Box>
   ),
 };
 
-export const DatepickerForm: DatepickerStory = {
+export const DatepickerForm: Story = {
   args: { placeholder: "Velg dato" },
-  render: (args) => (
+  render: args => (
     <Box h="25rem">
       <FormControl isRequired>
         <FormLabel>Velg dato</FormLabel>

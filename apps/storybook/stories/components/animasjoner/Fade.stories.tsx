@@ -1,6 +1,6 @@
-import { Meta, StoryObj } from "@storybook/react";
-import { Fade as KvibFade, FadeProps, Box } from "@kvib/react/src";
+import { Box, FadeProps, Fade as KvibFade } from "@kvib/react/src";
 import { colors } from "@kvib/react/src/theme/tokens";
+import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibFade> = {
   title: "Animasjoner/Fade",
@@ -45,7 +45,7 @@ const FadeEx = ({ ...args }: FadeProps) => {
   );
 };
 
-export const Fade: Story = {
+export const Preview: Story = {
   args: { in: false, unmountOnExit: false },
-  render: (args) => <FadeEx {...args} />,
+  render: args => <FadeEx {...args} />,
 };

@@ -1,6 +1,6 @@
-import { Meta, Canvas, Controls } from "@storybook/blocks";
+import { Alert, AlertDescription, AlertIcon, AlertTitle, KvibProvider } from "@kvib/react/src";
+import { Canvas, Controls, Meta } from "@storybook/blocks";
 import * as SlideFadeStories from "./SlideFade.stories";
-import { KvibProvider, Alert, AlertIcon, AlertTitle, AlertDescription } from "@kvib/react/src";
 
 <Meta of={SlideFadeStories} />
 
@@ -24,5 +24,5 @@ import { SlideFade } from "@kvib/react";
   </Alert>
 </KvibProvider>
 
-<Canvas of={SlideFadeStories.SlideFade} />
-<Controls of={SlideFadeStories.SlideFade} />
+<Canvas of={SlideFadeStories.Preview} />
+<Controls of={SlideFadeStories.Preview} />

@@ -1,5 +1,5 @@
+import { AccordionItem as AccItem, AccordionButton, AccordionPanel, Accordion as KvibAccordion } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
-import { Accordion as KvibAccordion, AccordionItem as AccItem, AccordionButton, AccordionPanel } from "@kvib/react/src";
 
 const meta: Meta<typeof KvibAccordion> = {
   title: "Datavisning/Accordion",
@@ -15,7 +15,7 @@ const meta: Meta<typeof KvibAccordion> = {
 export default meta;
 type Story = StoryObj<typeof KvibAccordion>;
 
-export const Accordion: Story = {
+export const Preview: Story = {
   argTypes: {
     allowMultiple: {
       description: "If true, multiple items can be expanded at once.",
@@ -64,7 +64,7 @@ export const Accordion: Story = {
     },
   },
   args: { allowMultiple: true, allowToggle: false, onChange: undefined },
-  render: (args) => (
+  render: args => (
     <KvibAccordion {...args}>
       <AccItem>
         <AccordionButton>Tittel 1</AccordionButton>
@@ -105,7 +105,7 @@ export const AccordionItem: Story = {
     },
   },
   args: { isDisabled: false, isFocusable: false },
-  render: (args) => (
+  render: args => (
     <KvibAccordion>
       <AccItem {...args}>
         <AccordionButton>Klikk meg</AccordionButton>
@@ -117,7 +117,7 @@ export const AccordionItem: Story = {
 
 export const AccordionAllowMultiple: Story = {
   args: { allowMultiple: true },
-  render: (args) => (
+  render: args => (
     <KvibAccordion {...args}>
       <AccItem>
         <AccordionButton>Hvordan søker jeg?</AccordionButton>
@@ -142,7 +142,7 @@ export const AccordionAllowMultiple: Story = {
 
 export const AccordionReduceMotion: Story = {
   args: { reduceMotion: true },
-  render: (args) => (
+  render: args => (
     <KvibAccordion {...args}>
       <AccItem>
         <AccordionButton>Overskrift 1</AccordionButton>

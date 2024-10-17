@@ -1,7 +1,7 @@
-import { Meta, Canvas, Story, Controls } from "@storybook/blocks";
+import { Box, Code, Text } from "@kvib/react/src/";
+import { Canvas, Controls, Meta, Story } from "@storybook/blocks";
+import { DocsAnatomy, DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
 import * as AspectRatioStories from "./AspectRatio.stories";
-import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
-import { Text, Code, Box } from "@kvib/react/src/";
 
 <Meta of={AspectRatioStories} />
 
@@ -11,11 +11,13 @@ import { Text, Code, Box } from "@kvib/react/src/";
 
 AspectRatio brukes to å legge inn responsive bilder, videoer, kart, osv.
 
+<Canvas of={AspectRatioStories.Preview} />
+
 ```jsx
 import { AspectRatio } from "@kvib/react";
 ```
 
-<Feedback component="AspectRatio" />
+<Feedback component="Aspect Ratio" />
 
 <DocsStory
   isVertical
@@ -45,8 +47,8 @@ import { AspectRatio } from "@kvib/react";
   description={""}
   story={
     <>
-      <Canvas of={AspectRatioStories.AspectRatio} />
-      <Controls of={AspectRatioStories.AspectRatio} />
+      <Canvas of={AspectRatioStories.Preview} />
+      <Controls of={AspectRatioStories.Preview} />
     </>
   }
 />

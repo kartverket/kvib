@@ -1,7 +1,7 @@
-import { Meta, Canvas, Story, Controls, Source } from "@storybook/blocks";
+import { Card, CardBody } from "@kvib/react/src";
+import { Canvas, Controls, Meta, Source, Story } from "@storybook/blocks";
 import * as MenuStories from "./Menu.stories";
 import * as MenuStrings from "./srcStrings.ts";
-import { Card, CardBody } from "@kvib/react/src";
 
 <Meta of={MenuStories} />
 
@@ -19,12 +19,12 @@ import { Menu, MenuButton, MenuList, MenuItem, MenuItemOption, MenuGroup, MenuOp
 
 <Card variant="outline" borderRadius="0">
   <CardBody>
-    <Story of={MenuStories.Menu} />
+    <Story of={MenuStories.Preview} />
   </CardBody>
 </Card>
 
 <Source code={MenuStrings.MenuString} dark />
-<Controls of={MenuStories.Menu} />
+<Controls of={MenuStories.Preview} />
 
 ## Internal state
 

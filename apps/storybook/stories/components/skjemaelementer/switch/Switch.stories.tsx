@@ -1,4 +1,4 @@
-import { Switch as KvibSwitch, Stack as KvibStack, FormControl, FormLabel, SimpleGrid } from "@kvib/react/src";
+import { FormControl, FormLabel, Stack as KvibStack, Switch as KvibSwitch, SimpleGrid } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibSwitch> = {
@@ -189,9 +189,8 @@ const meta: Meta<typeof KvibSwitch> = {
 export default meta;
 type Story = StoryObj<typeof KvibSwitch>;
 
-export const Switch: Story = {
-  args: {},
-  render: (args) => (
+export const Preview: Story = {
+  render: args => (
     <FormControl display="flex" alignItems="center">
       <FormLabel htmlFor="email-alerts" mb="0">
         Skru på varsler via mail?
@@ -202,8 +201,7 @@ export const Switch: Story = {
 };
 
 export const SwitchSizes: Story = {
-  args: {},
-  render: (args) => (
+  render: args => (
     <KvibStack align="center" direction="row">
       <KvibSwitch {...args} aria-label="Switch small" size="sm" />
       <KvibSwitch {...args} aria-label="Switch medium" size="md" />
@@ -214,7 +212,7 @@ export const SwitchSizes: Story = {
 
 export const SwitchColors: Story = {
   args: { isChecked: true },
-  render: (args) => (
+  render: args => (
     <KvibStack direction="row">
       <KvibSwitch {...args} aria-label="Switch green" colorScheme="green" />
       <KvibSwitch {...args} aria-label="Switch blue" colorScheme="blue" />
@@ -226,7 +224,7 @@ export const SwitchColors: Story = {
 
 export const SwitchStates: Story = {
   args: {},
-  render: (args) => (
+  render: args => (
     <FormControl as={SimpleGrid} columns={{ base: 2, lg: 4 }}>
       <FormLabel id="isCheckedLabel" htmlFor="isChecked">
         isChecked:

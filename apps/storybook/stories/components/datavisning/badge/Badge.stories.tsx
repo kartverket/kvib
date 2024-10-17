@@ -1,17 +1,17 @@
-import { Meta, StoryObj } from "@storybook/react";
 import {
   Badge as KvibBadge,
-  Stack as KvibStack,
+  Button as KvibButton,
+  ButtonGroup as KvibButtonGroup,
   Card as KvibCard,
   CardBody as KvibCardBody,
   CardFooter as KvibCardFooter,
-  Heading as KvibHeading,
-  Text as KvibText,
-  Image as KvibImage,
   Divider as KvibDivider,
-  Button as KvibButton,
-  ButtonGroup as KvibButtonGroup,
+  Heading as KvibHeading,
+  Image as KvibImage,
+  Stack as KvibStack,
+  Text as KvibText,
 } from "@kvib/react/src";
+import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibBadge> = {
   title: "Datavisning/Badge",
@@ -47,13 +47,12 @@ const meta: Meta<typeof KvibBadge> = {
 export default meta;
 type Story = StoryObj<typeof KvibBadge>;
 
-export const Badge: Story = {
+export const Preview: Story = {
   args: { children: "Badge" },
-  render: (args) => <KvibBadge {...args} />,
+  render: args => <KvibBadge {...args} />,
 };
 
 export const BadgeTexts: Story = {
-  args: {},
   render: () => (
     <>
       <KvibBadge colorScheme="green">Success</KvibBadge>
@@ -63,7 +62,6 @@ export const BadgeTexts: Story = {
 };
 
 export const BadgeHensikt: Story = {
-  args: {},
   render: () => (
     <>
       <KvibBadge colorScheme="blue">New</KvibBadge>
@@ -75,23 +73,19 @@ export const BadgeHensikt: Story = {
 };
 
 export const BadgeGreen: Story = {
-  args: {},
   render: () => <KvibBadge colorScheme="green">Success</KvibBadge>,
 };
 
 export const BadgeRed: Story = {
-  args: {},
   render: () => <KvibBadge colorScheme="red">Removed</KvibBadge>,
 };
 
 export const BadgeBlue: Story = {
-  args: {},
   render: () => <KvibBadge colorScheme="blue">New</KvibBadge>,
 };
 
 export const BadgeCard: Story = {
-  args: {},
-  render: (args) => (
+  render: args => (
     <KvibStack direction="column">
       <KvibCard {...args} maxW="sm">
         <KvibCardBody>
@@ -161,7 +155,7 @@ export const BadgeCard: Story = {
 
 export const BadgeVariants: Story = {
   args: { colorScheme: "green" },
-  render: (args) => (
+  render: args => (
     <KvibStack direction="row">
       <KvibBadge {...args} variant="outline">
         Default

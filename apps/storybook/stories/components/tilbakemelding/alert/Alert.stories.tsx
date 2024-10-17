@@ -1,4 +1,4 @@
-import { Alert as KvibAlert, AlertIcon, AlertTitle, AlertDescription, VStack, Box } from "@kvib/react/src";
+import { AlertDescription, AlertIcon, AlertTitle, Box, Alert as KvibAlert, VStack } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibAlert> = {
@@ -32,7 +32,7 @@ const meta: Meta<typeof KvibAlert> = {
 export default meta;
 type Story = StoryObj<typeof KvibAlert>;
 
-export const Alert: Story = {
+export const Preview: Story = {
   args: { status: "info" },
   parameters: {
     docs: {
@@ -41,7 +41,7 @@ export const Alert: Story = {
       },
     },
   },
-  render: (args) => (
+  render: args => (
     <KvibAlert {...args}>
       <AlertIcon />
       <Box>
@@ -54,7 +54,7 @@ export const Alert: Story = {
 
 export const AlertSuccess: Story = {
   args: { status: "success", variant: "left-accent" },
-  render: (args) => (
+  render: args => (
     <KvibAlert status={"success"} {...args}>
       <AlertIcon />
       <AlertDescription>Endringer lagret</AlertDescription>
@@ -64,7 +64,7 @@ export const AlertSuccess: Story = {
 
 export const AlertInfo: Story = {
   args: { status: "info" },
-  render: (args) => (
+  render: args => (
     <KvibAlert {...args}>
       <AlertIcon />
       <Box>
@@ -79,7 +79,7 @@ export const AlertInfo: Story = {
 
 export const AlertWarning: Story = {
   args: { variant: "left-accent", status: "warning" },
-  render: (args) => (
+  render: args => (
     <KvibAlert {...args}>
       <AlertIcon />
       <Box>
@@ -92,7 +92,7 @@ export const AlertWarning: Story = {
 
 export const AlertError: Story = {
   args: { status: "error" },
-  render: (args) => (
+  render: args => (
     <KvibAlert {...args}>
       <AlertIcon />
       <Box>
@@ -106,7 +106,7 @@ export const AlertError: Story = {
 export const AlertEmphasisWarning: Story = {
   parameters: { a11y: { disable: true } },
   args: { status: "warning" },
-  render: (args) => (
+  render: args => (
     <VStack gap="1rem">
       <KvibAlert {...args}>
         <AlertIcon />

@@ -1,4 +1,4 @@
-import { Center, Box, Flex as KvibFlex, Spacer, Grid, HStack } from "@kvib/react/src/layout";
+import { Box, Center, Grid, HStack, Flex as KvibFlex, Spacer } from "@kvib/react/src/layout";
 import { Text } from "@kvib/react/src/typography";
 import { Meta, StoryObj } from "@storybook/react";
 
@@ -16,8 +16,8 @@ const meta: Meta<typeof KvibFlex> = {
 export default meta;
 type Story = StoryObj<typeof KvibFlex>;
 
-export const Flex: Story = {
-  render: (args) => (
+export const Preview: Story = {
+  render: args => (
     <KvibFlex {...args}>
       <Center width="100px" backgroundColor="green.100">
         <Text>Text 1</Text>
@@ -33,7 +33,7 @@ export const Flex: Story = {
 };
 
 export const FlexWithSpacer: Story = {
-  render: (args) => (
+  render: args => (
     <KvibFlex {...args}>
       <Box padding="4" backgroundColor="green.100">
         Box 1

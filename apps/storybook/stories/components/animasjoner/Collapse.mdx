@@ -1,6 +1,6 @@
-import { Meta, Canvas, Controls } from "@storybook/blocks";
+import { Alert, AlertDescription, AlertIcon, AlertTitle, KvibProvider } from "@kvib/react/src";
+import { Canvas, Controls, Meta } from "@storybook/blocks";
 import * as CollapseStories from "./Collapse.stories";
-import { KvibProvider, Alert, AlertIcon, AlertTitle, AlertDescription } from "@kvib/react/src";
 
 <Meta of={CollapseStories} />
 
@@ -24,5 +24,5 @@ import { Collapse } from "@kvib/react";
   </Alert>
 </KvibProvider>
 
-<Canvas of={CollapseStories.Collapse} />
-<Controls of={CollapseStories.Collapse} />
+<Canvas of={CollapseStories.Preview} />
+<Controls of={CollapseStories.Preview} />

@@ -1,11 +1,11 @@
 import {
-  SearchAsync as KvibSearchAsync,
-  Stack as KvibStack,
+  Badge,
   Box,
   Icon,
-  Text,
+  SearchAsync as KvibSearchAsync,
+  Stack as KvibStack,
   SearchAsyncProps,
-  Badge,
+  Text,
 } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
@@ -137,8 +137,7 @@ export default meta;
 type Fruit = { label: string; value: string };
 type Story = StoryObj<typeof KvibSearchAsync<Fruit>>;
 
-export const SearchAsync: Story = {
-  args: {},
+export const Preview: Story = {
   parameters: {
     docs: {
       canvas: {
@@ -146,7 +145,7 @@ export const SearchAsync: Story = {
       },
     },
   },
-  render: (args) => (
+  render: args => (
     <Box h={20}>
       <KvibSearchAsync {...args} />
     </Box>
@@ -173,7 +172,7 @@ const fruits: Fruit[] = [
 
 const mockLoadOptions = (inputValue: string, callback: (options: typeof fruits) => void) => {
   setTimeout(() => {
-    const filteredFruits = fruits.filter((fruit) => fruit.label.toLowerCase().includes(inputValue.toLowerCase()));
+    const filteredFruits = fruits.filter(fruit => fruit.label.toLowerCase().includes(inputValue.toLowerCase()));
     callback(filteredFruits);
   }, 500);
 };
@@ -226,7 +225,7 @@ const mockLoadOptionsWithRule = (inputValue: string, callback: (options: typeof 
     return;
   }
   setTimeout(() => {
-    const filteredFruits = fruits.filter((fruit) => fruit.label.toLowerCase().includes(inputValue.toLowerCase()));
+    const filteredFruits = fruits.filter(fruit => fruit.label.toLowerCase().includes(inputValue.toLowerCase()));
     callback(filteredFruits);
   }, 500);
 };
@@ -250,7 +249,7 @@ export const SearchAsyncNoOptions: Story = {
     placeholder: "Søk etter frukt...",
     isMulti: false,
   },
-  render: (args) => (
+  render: args => (
     <Box h={40}>
       <KvibSearchAsync {...args} />
     </Box>
@@ -264,7 +263,7 @@ export const SearchAsyncResultsDebounce: Story = {
     debounceTime: 3000,
     placeholder: "Søk etter frukt...",
   },
-  render: (args) => (
+  render: args => (
     <Box h={40}>
       <KvibSearchAsync {...args} />
     </Box>
@@ -279,7 +278,7 @@ export const SearchAsyncDropdown: Story = {
     defaultOptions: true,
     placeholder: "Søk eller velg frukt...",
   },
-  render: (args) => (
+  render: args => (
     <Box h="20rem">
       <KvibSearchAsync {...args} />
     </Box>
@@ -293,7 +292,7 @@ const handleChangeMulti = (newValue: any, actionMeta: any) => {
 
 export const SearchAsyncMulti: Story = {
   args: { loadOptions: mockLoadOptions, onChange: handleChangeMulti, isMulti: true, placeholder: "Søk etter frukt..." },
-  render: (args) => (
+  render: args => (
     <Box h={40}>
       <KvibSearchAsync {...args} />
     </Box>
@@ -309,7 +308,7 @@ export const SearchAsyncMultiDropdown: Story = {
     defaultOptions: true,
     placeholder: "Søk eller velg frukt...",
   },
-  render: (args) => (
+  render: args => (
     <Box h="20rem">
       <KvibSearchAsync {...args} />
     </Box>
@@ -322,7 +321,7 @@ export const SearchAsyncSizes: Story = {
     onChange: handleChange,
     placeholder: "Søk etter frukt...",
   },
-  render: (args) => (
+  render: args => (
     <KvibStack>
       <KvibSearchAsync {...args} size="sm" />
       <KvibSearchAsync {...args} size="md" />
@@ -338,7 +337,7 @@ export const SearchAsyncVariants: Story = {
     placeholder: "Søk etter frukt...",
     focusBorderColor: "green.500",
   },
-  render: (args) => (
+  render: args => (
     <KvibStack h={"12rem"}>
       <KvibSearchAsync {...args} variant="outline" />
       <KvibSearchAsync {...args} variant="filled" />

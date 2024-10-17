@@ -1,5 +1,5 @@
-import { AspectRatio as KvibAspectRatio } from "@kvib/react/src/layout";
 import { Image } from "@kvib/react/src/";
+import { AspectRatio as KvibAspectRatio } from "@kvib/react/src/layout";
 
 import { Meta, StoryObj } from "@storybook/react";
 
@@ -27,9 +27,9 @@ const meta: Meta<typeof KvibAspectRatio> = {
 export default meta;
 type Story = StoryObj<typeof KvibAspectRatio>;
 
-export const AspectRatio: Story = {
+export const Preview: Story = {
   args: { ratio: 4 / 3 },
-  render: (args) => (
+  render: args => (
     <KvibAspectRatio {...args}>
       <Image
         alt="trees"
@@ -41,7 +41,7 @@ export const AspectRatio: Story = {
 
 export const AspectRatioMap: Story = {
   args: { ratio: 16 / 9 },
-  render: (args) => (
+  render: args => (
     <KvibAspectRatio {...args}>
       <iframe
         title="hønefoss kart"
@@ -53,7 +53,7 @@ export const AspectRatioMap: Story = {
 
 export const AspectRatioVideo: Story = {
   args: { maxW: "560px", ratio: 1 },
-  render: (args) => (
+  render: args => (
     <KvibAspectRatio {...args}>
       <iframe
         title="kart og kompass"

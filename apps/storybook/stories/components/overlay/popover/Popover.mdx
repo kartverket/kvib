@@ -1,8 +1,8 @@
-import { Meta, Canvas, Story, Controls, Source } from "@storybook/blocks";
-import * as PopoverStories from "./Popover.stories";
 import { Card, CardBody } from "@kvib/react/src";
+import { Canvas, Controls, Meta, Source, Story } from "@storybook/blocks";
+import { DocsAnatomy, DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
+import * as PopoverStories from "./Popover.stories";
 import * as PopoverStrings from "./srcStrings.ts";
-import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
 
 <Meta of={PopoverStories} />
 
@@ -77,6 +77,6 @@ Bruk `react-focus-lock` for å fange fokus inne i `PopoveContent`
 />
 
 <DocsHeading light children="Props"/>
-<Canvas of={PopoverStories.Popover} />
-<Controls of={PopoverStories.Popover} />
+<Canvas of={PopoverStories.Preview} />
+<Controls of={PopoverStories.Preview} />
 </DocsContainer>

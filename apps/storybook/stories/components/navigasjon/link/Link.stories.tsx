@@ -40,19 +40,19 @@ const meta: Meta<typeof KvibLink> = {
 export default meta;
 type Story = StoryObj<typeof KvibLink>;
 
-export const Link: Story = {
+export const Preview: Story = {
   args: {
     children: "Dette er en lenke",
     href: "/?path=/",
   },
-  render: (args) => <KvibLink {...args}>{args.children}</KvibLink>,
+  render: args => <KvibLink {...args}>{args.children}</KvibLink>,
 };
 
 export const LinkStates: Story = {
   args: {
     colorScheme: "blue",
   },
-  render: (args) => (
+  render: args => (
     <VStack>
       <KvibLink href="/?path=/" {...args}>
         Dette er en intern lenke
@@ -69,7 +69,7 @@ export const LinkColorscheme: Story = {
     children: "Dette er en lenke",
     href: "/?path=/",
   },
-  render: (args) => (
+  render: args => (
     <VStack>
       <KvibLink {...args}>{args.children}</KvibLink>
       <KvibLink colorScheme="blue" {...args}>

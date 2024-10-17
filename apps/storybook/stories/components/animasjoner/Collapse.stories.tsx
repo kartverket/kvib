@@ -1,6 +1,6 @@
-import { Meta, StoryObj } from "@storybook/react";
-import { Collapse as KvibCollapse, CollapseProps, Box } from "@kvib/react/src";
+import { Box, CollapseProps, Collapse as KvibCollapse } from "@kvib/react/src";
 import { colors } from "@kvib/react/src/theme/tokens";
+import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibCollapse> = {
   title: "Animasjoner/Collapse",
@@ -68,7 +68,7 @@ const CollapseEx = ({ ...args }: CollapseProps) => {
     </Box>
   );
 };
-export const Collapse: Story = {
+export const Preview: Story = {
   args: { in: false },
-  render: (args) => <CollapseEx {...args} />,
+  render: args => <CollapseEx {...args} />,
 };

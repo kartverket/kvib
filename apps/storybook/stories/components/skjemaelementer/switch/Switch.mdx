@@ -1,7 +1,7 @@
-import { Meta, Canvas, Controls } from "@storybook/blocks";
-import * as SwitchStories from "./Switch.stories";
-import { DocsHeading, DocsContainer, DocsStory, Feedback } from "../../../templates";
 import { Text } from "@kvib/react/src";
+import { Canvas, Controls, Meta } from "@storybook/blocks";
+import { DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
+import * as SwitchStories from "./Switch.stories";
 
 <Meta of={SwitchStories} />
 
@@ -27,7 +27,7 @@ import { Switch } from "@kvib/react";
       <code>checkbox</code>.
     </Text>
   }
-  story={<Canvas of={SwitchStories.Switch} sourceState="hidden" />}
+  story={<Canvas of={SwitchStories.Preview} sourceState="hidden" />}
 />
 <DocsStory
   title={"Størrelser"}
@@ -60,7 +60,7 @@ import { Switch } from "@kvib/react";
 />
 
 <DocsHeading light>Props</DocsHeading>
-<Canvas of={SwitchStories.Switch} />
-<Controls of={SwitchStories.Switch} />
+<Canvas of={SwitchStories.Preview} />
+<Controls of={SwitchStories.Preview} />
 
 </DocsContainer>

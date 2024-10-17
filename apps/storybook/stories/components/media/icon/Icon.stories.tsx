@@ -2,7 +2,7 @@ import { HStack, Icon, useTheme } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Icon> = {
-  title: "Media/Ikoner",
+  title: "Media/Icon",
   component: Icon,
   parameters: {
     docs: {
@@ -54,14 +54,14 @@ const meta: Meta<typeof Icon> = {
 export default meta;
 type Story = StoryObj<typeof Icon>;
 
-export const defaultIcon: Story = {
+export const Preview: Story = {
   args: { icon: "favorite" },
-  render: (args) => <Icon {...args} />,
+  render: args => <Icon {...args} />,
 };
 
-export const colorIcon: Story = {
+export const ColorIcon: Story = {
   args: { size: 40 },
-  render: (args) => {
+  render: args => {
     const theme = useTheme();
     return (
       <HStack>
@@ -74,9 +74,9 @@ export const colorIcon: Story = {
   },
 };
 
-export const sizeIcon: Story = {
+export const SizeIcon: Story = {
   args: { icon: "map" },
-  render: (args) => {
+  render: args => {
     return (
       <HStack>
         <Icon {...args} size={20} />
@@ -88,9 +88,9 @@ export const sizeIcon: Story = {
   },
 };
 
-export const weightIcon: Story = {
+export const WeightIcon: Story = {
   args: { icon: "database" },
-  render: (args) => (
+  render: args => (
     <HStack>
       <Icon {...args} weight={100} />
       <Icon {...args} weight={200} />
@@ -103,9 +103,9 @@ export const weightIcon: Story = {
   ),
 };
 
-export const gradeIcon: Story = {
+export const GradeIcon: Story = {
   args: { icon: "contactless" },
-  render: (args) => (
+  render: args => (
     <HStack>
       <Icon {...args} grade={-25} />
       <Icon {...args} grade={0} />

@@ -1,13 +1,10 @@
 import {
   List as KvibList,
   ListItem as KvibListItem,
-  ListIcon as KvibListIcon,
   OrderedList as KvibOrderedList,
   UnorderedList as KvibUnorderedList,
   Stack,
-  Icon,
 } from "@kvib/react/src";
-import { colors } from "@kvib/react/src/theme/tokens";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibList> = {
@@ -33,9 +30,8 @@ const meta: Meta<typeof KvibList> = {
 export default meta;
 type Story = StoryObj<typeof KvibList>;
 
-export const List: Story = {
-  args: {},
-  render: (args) => (
+export const Preview: Story = {
+  render: args => (
     <KvibUnorderedList {...args}>
       <KvibListItem>Kartgrunnlag for Fastlands-Noreg</KvibListItem>
       <KvibListItem>Eigedomsdata</KvibListItem>
@@ -46,8 +42,7 @@ export const List: Story = {
 };
 
 export const Ordered: Story = {
-  args: {},
-  render: (args) => (
+  render: args => (
     <Stack gap={4}>
       <KvibOrderedList {...args}>
         <KvibListItem>Kartgrunnlag for Fastlands-Noreg</KvibListItem>

@@ -16,9 +16,9 @@ const meta: Meta<typeof KvibSkipNavLink> = {
 export default meta;
 type Story = StoryObj<typeof KvibSkipNavLink>;
 
-export const SkipNavLink: Story = {
+export const Preview: Story = {
   args: { children: "SkipNav" },
-  render: (args) => (
+  render: args => (
     <div>
       Trykk her + tab
       <KvibSkipNavLink {...args} />

@@ -1,7 +1,7 @@
-import { Title, Canvas, Meta, Story, Controls } from "@storybook/blocks";
-import * as WrapStories from "./Wrap.stories";
-import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
 import { Text } from "@kvib/react/src/";
+import { Canvas, Controls, Meta, Story, Title } from "@storybook/blocks";
+import { DocsAnatomy, DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
+import * as WrapStories from "./Wrap.stories";
 
 <Meta of={WrapStories} />
 
@@ -30,7 +30,7 @@ I eksempelet nedenfor ser du at den siste <code>Box</code> ble pakket inn på ne
 </Text>
 
 }
-story={<Canvas of={WrapStories.Wrap} sourceState="hidden" />}
+story={<Canvas of={WrapStories.Preview} sourceState="hidden" />}
 />
 
 <DocsStory

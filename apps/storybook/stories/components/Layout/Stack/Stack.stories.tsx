@@ -1,4 +1,4 @@
-import { Stack as KvibStack, Box, HStack, VStack, StackDivider } from "@kvib/react/src/layout";
+import { Box, HStack, Stack as KvibStack, StackDivider, VStack } from "@kvib/react/src/layout";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibStack> = {
@@ -119,9 +119,9 @@ const meta: Meta<typeof KvibStack> = {
 export default meta;
 type Story = StoryObj<typeof KvibStack>;
 
-export const Stack: Story = {
+export const Preview: Story = {
   args: { direction: "row" },
-  render: (args) => (
+  render: args => (
     <KvibStack {...args} spacing="24px">
       <Box width="40px" height="40px" backgroundColor="green.200">
         1
@@ -137,7 +137,7 @@ export const Stack: Story = {
 };
 
 export const ResponsiveStack: Story = {
-  render: (args) => (
+  render: args => (
     <KvibStack {...args} direction={["column", "row"]} spacing="24px">
       <Box width="40px" height="40px" backgroundColor="green.200">
         1
@@ -153,7 +153,7 @@ export const ResponsiveStack: Story = {
 };
 
 export const StackStyled: Story = {
-  render: (args) => (
+  render: args => (
     <KvibStack divider={<StackDivider borderColor="gray.200" />} spacing={12}>
       <Box width="40px" height="40px" backgroundColor="green.200">
         1
@@ -169,7 +169,7 @@ export const StackStyled: Story = {
 };
 
 export const HStackDemo: Story = {
-  render: (args) => (
+  render: args => (
     <HStack>
       <Box width="40px" height="40px" backgroundColor="green.200">
         1
@@ -185,7 +185,7 @@ export const HStackDemo: Story = {
 };
 
 export const VStackDemo: Story = {
-  render: (args) => (
+  render: args => (
     <VStack>
       <Box width="40px" height="40px" backgroundColor="green.200">
         1

@@ -1,7 +1,7 @@
+import { Alert, AlertIcon, Box, Code, Text } from "@kvib/react/src";
+import { Canvas, Controls, Meta } from "@storybook/blocks";
+import { DocsAnatomy, DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
 import * as FileUploadStories from "./FileUpload.stories";
-import { Meta, Canvas, Controls } from "@storybook/blocks";
-import { Alert, AlertIcon, Text, Code, Box } from "@kvib/react/src";
-import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
 
 <Meta of={FileUploadStories} />
 
@@ -42,7 +42,7 @@ import { FileUpload } from "@kvib/react";
 <DocsStory title={"States"} description={""} story={<Canvas of={FileUploadStories.State} sourceState={"hidden"} />} />
 
 <DocsHeading light>Props</DocsHeading>
-<Canvas of={FileUploadStories.FileUpload} />
-<Controls of={FileUploadStories.FileUpload} />
+<Canvas of={FileUploadStories.Preview} />
+<Controls of={FileUploadStories.Preview} />
 
 </DocsContainer>

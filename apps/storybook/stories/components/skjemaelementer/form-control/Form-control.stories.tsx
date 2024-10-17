@@ -55,9 +55,8 @@ const meta: Meta<typeof KvibFormControl> = {
 export default meta;
 type Story = StoryObj<typeof KvibFormControl>;
 
-export const FormControl: Story = {
-  args: {},
-  render: (args) => (
+export const Preview: Story = {
+  render: args => (
     <Stack gap={4}>
       <KvibFormControl {...args}>
         <KvibFormLabel>Label (valgfri)</KvibFormLabel>
@@ -95,8 +94,7 @@ export const FormControl: Story = {
 };
 
 export const State: Story = {
-  args: {},
-  render: (args) => (
+  render: args => (
     <Stack gap={4}>
       <KvibFormControl {...args}>
         <KvibFormLabel label={"Label (valgfri)"} />
@@ -138,7 +136,7 @@ export const State: Story = {
 
 export const Error: Story = {
   args: { isInvalid: true },
-  render: (args) => (
+  render: args => (
     <Stack gap={4} direction={"row"}>
       <KvibFormControl {...args}>
         <KvibFormLabel>Label (valgfri)</KvibFormLabel>

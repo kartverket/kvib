@@ -1,7 +1,7 @@
-import { Canvas, Meta, Controls } from "@storybook/blocks";
+import { Box, Code, Text } from "@kvib/react/src/";
+import { Canvas, Controls, Meta } from "@storybook/blocks";
+import { DocsAnatomy, DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
 import * as AccordionStories from "./Accordion.stories";
-import { DocsHeading, DocsAnatomy, DocsContainer, DocsStory, Feedback } from "../../../templates";
-import { Text, Code, Box } from "@kvib/react/src/";
 
 <Meta of={AccordionStories} />
 
@@ -37,8 +37,8 @@ import { Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIco
   description={""}
   story={
     <>
-      <Canvas of={AccordionStories.Accordion} sourceState="hidden" />
-      <Controls of={AccordionStories.Accordion} />
+      <Canvas of={AccordionStories.Preview} sourceState="hidden" />
+      <Controls of={AccordionStories.Preview} />
     </>
   }
 />
