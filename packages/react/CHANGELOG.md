@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 4.6.4
+
+### Patch Changes
+
+- 87f8e88: Legger til valg for å fjerne personvernslenke i Footer
+
 ## 4.6.3
 
 ### Patch Changes
