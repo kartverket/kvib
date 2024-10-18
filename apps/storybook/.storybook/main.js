@@ -5,7 +5,7 @@ module.exports = {
     name: getAbsolutePath("@storybook/react-vite"),
   },
 
-  staticDirs: ["../assets"],
+  staticDirs: ["../public"],
   stories: ["../stories/**/*.mdx", "../stories/**/*.stories.@(js|jsx|ts|tsx)"],
 
   addons: [

@@ -29,7 +29,7 @@ const meta: Meta<typeof KvibProgress> = {
       description: "If true, the progress bar will show stripe",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -38,7 +38,7 @@ const meta: Meta<typeof KvibProgress> = {
       description: "If true, and hasStripe is true, the stripes will be animated",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -47,7 +47,7 @@ const meta: Meta<typeof KvibProgress> = {
       description: "If true, the progress will be indeterminate and the value prop will be ignored",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -56,7 +56,7 @@ const meta: Meta<typeof KvibProgress> = {
       description: "The maximum value of the progress",
       table: {
         type: { summary: "number" },
-        defaultValue: { summary: 100 },
+        defaultValue: { summary: "100" },
       },
       control: "number",
     },
@@ -65,7 +65,7 @@ const meta: Meta<typeof KvibProgress> = {
       description: "The minimum value of the progress",
       table: {
         type: { summary: "number" },
-        defaultValue: { summary: 0 },
+        defaultValue: { summary: "0" },
       },
       control: "number",
     },
@@ -97,22 +97,22 @@ export default meta;
 type Story = StoryObj<typeof KvibProgress>;
 
 export const Preview: Story = {
-  args: { value: 80 },
+  args: { value: 80, h: "1rem", w: "16rem" },
   render: args => <KvibProgress {...args} aria-label="progress bar" />,
 };
 
 export const ProgressStripe: Story = {
-  args: { value: 60, hasStripe: true },
+  args: { value: 60, hasStripe: true, h: "1rem", w: "16rem" },
   render: args => <KvibProgress {...args} aria-label="progress bar striped" />,
 };
 
 export const ProgressStripeAnimated: Story = {
-  args: { value: 60, hasStripe: true, isAnimated: true },
+  args: { value: 60, hasStripe: true, isAnimated: true, h: "1rem", w: "16rem" },
   render: args => <KvibProgress {...args} aria-label="progress bar striped animated" />,
 };
 
 export const ProgressSizes: Story = {
-  args: { value: 20, colorScheme: "green" },
+  args: { value: 20, colorScheme: "green", h: "1rem", w: "16rem" },
   render: args => (
     <KvibStack spacing={5}>
       <KvibProgress {...args} size="sm" aria-label="progress bar small" />
@@ -124,7 +124,7 @@ export const ProgressSizes: Story = {
 };
 
 export const ProgressColors: Story = {
-  args: { value: 40, size: "md" },
+  args: { value: 40, size: "md", h: "1rem", w: "16rem" },
   render: args => (
     <KvibStack spacing={5}>
       <KvibProgress {...args} colorScheme="green" aria-label="progress bar green" />
@@ -137,7 +137,7 @@ export const ProgressColors: Story = {
 };
 
 export const ProgressLook: Story = {
-  args: { value: 40, size: "md" },
+  args: { value: 40, size: "md", h: "1rem", w: "16rem" },
   render: args => (
     <KvibStack spacing={5}>
       <KvibProgress {...args} colorScheme="blue" aria-label="progress bar blue" />
@@ -153,7 +153,7 @@ export const ProgressLook: Story = {
 };
 
 export const ProgressVariation: Story = {
-  args: { size: "md" },
+  args: { size: "md", h: "1rem", w: "16rem" },
   render: args => (
     <KvibStack>
       <KvibProgress {...args} isIndeterminate aria-label="progress bar indeterminate" />,
