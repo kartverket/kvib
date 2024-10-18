@@ -28,19 +28,19 @@ export default meta;
 type Story = StoryObj<typeof KvibAspectRatio>;
 
 export const Preview: Story = {
-  args: { ratio: 4 / 3 },
+  args: { ratio: 4 / 3, w: "560px" },
   render: args => (
     <KvibAspectRatio {...args}>
       <Image
         alt="trees"
-        src="https://images.unsplash.com/photo-1477768663691-75454fd8e870?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3087&q=80"
+        src="https://images.unsplash.com/photo-1477768663691-75454fd8e870?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
       />
     </KvibAspectRatio>
   ),
 };
 
 export const AspectRatioMap: Story = {
-  args: { ratio: 16 / 9 },
+  args: { ratio: 16 / 9, w: "560px" },
   render: args => (
     <KvibAspectRatio {...args}>
       <iframe
@@ -52,7 +52,7 @@ export const AspectRatioMap: Story = {
 };
 
 export const AspectRatioVideo: Story = {
-  args: { maxW: "560px", ratio: 1 },
+  args: { w: "400px", maxW: "560px", ratio: 1 },
   render: args => (
     <KvibAspectRatio {...args}>
       <iframe
