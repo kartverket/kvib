@@ -57,14 +57,14 @@ const meta: Meta<typeof KvibHeader> = {
     showMenuButton: {
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
     showChildrenInMenu: {
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: true },
+        defaultValue: { summary: "true" },
       },
       control: "boolean",
     },
@@ -79,7 +79,7 @@ const meta: Meta<typeof KvibHeader> = {
     gap: {
       table: {
         type: { summary: "number" },
-        defaultValue: { summary: 90 },
+        defaultValue: { summary: "90" },
       },
       control: "number",
     },
@@ -147,12 +147,6 @@ export const HeaderJustifyContent: Story = {
       <KvibHeader {...args} justifyContent="center">
         <Search bgColor="white" maxWidth={400} placeholder="Søk her..."></Search>
       </KvibHeader>
-      <KvibHeader {...args} justifyContent="space-between">
-        <Search bgColor="white" maxWidth={400} placeholder="Søk her..."></Search>
-      </KvibHeader>
-      <KvibHeader {...args} justifyContent="start">
-        <Search bgColor="white" maxWidth={400} placeholder="Søk her..."></Search>
-      </KvibHeader>
     </Stack>
   ),
 };
@@ -188,12 +182,6 @@ export const HeaderBreakpoint: Story = {
   render: args => (
     <Stack>
       <KvibHeader {...args} collapseBreakpoint="sm">
-        <Search bgColor="white" maxWidth={400} placeholder="Søk her..."></Search>
-      </KvibHeader>
-      <KvibHeader {...args} collapseBreakpoint="md">
-        <Search bgColor="white" maxWidth={400} placeholder="Søk her..."></Search>
-      </KvibHeader>
-      <KvibHeader {...args} collapseBreakpoint="lg">
         <Search bgColor="white" maxWidth={400} placeholder="Søk her..."></Search>
       </KvibHeader>
     </Stack>
