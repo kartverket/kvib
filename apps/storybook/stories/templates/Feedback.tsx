@@ -1,4 +1,4 @@
-import { Button, Card, CardBody, Flex, Text, Image } from "@kvib/react/src";
+import { Card, CardBody, Flex, Link, Text } from "@kvib/react/src";
 
 type FeedbackProps = {
   component: string;
@@ -30,18 +30,12 @@ export const Feedback = ({ component, width }: FeedbackProps) => {
           </Text>
         </Flex>
         <Flex gap=".5rem" alignItems="center" flexWrap="wrap">
-          <Button href={issueUrl} as="a" target="_blank" colorScheme="green" variant="tertiary" size="xs">
+          <Link href={issueUrl} target="_blank" size="xs">
             Send inn et forslag
-          </Button>
-          <Button
-            as="a"
-            href="/?path=/docs/for-utviklere-bidra-med-kode-hurtigveiledning--docs"
-            colorScheme="green"
-            variant="tertiary"
-            size="xs"
-          >
+          </Link>
+          <Link href="/?path=/docs/for-utviklere-bidra-med-kode-hurtigveiledning--docs" colorScheme="green" size="xs">
             Bidra med PR
-          </Button>
+          </Link>
         </Flex>
       </CardBody>
     </Card>
