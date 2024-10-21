@@ -60,7 +60,9 @@ export const decorators = [
   Story => (
     <KvibProvider>
       {/* <KvibProvider theme={customTheme}> */}
-      <Story />
+      <div style={{ overflow: "visible", position: "relative" }}>
+        <Story />
+      </div>
     </KvibProvider>
   ),
 ];

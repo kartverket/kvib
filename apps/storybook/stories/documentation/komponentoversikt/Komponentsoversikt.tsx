@@ -2,16 +2,19 @@ import { Badge, Box, Card, Flex, FormLabel, Heading, Link, Select, SimpleGrid, S
 import { ReactElement, useEffect, useRef, useState } from "react";
 import { ComponentsBanner } from "../../templates/ComponentsBanner";
 import { Komponenter } from "./Komponenter";
+import { ColorScheme } from "./StoryRendering";
 
 export const Komponentsoversikt = () => <Components />;
-
-type ColorScheme = "green" | "blue";
 
 export const Components = () => {
   const [theme, setTheme] = useState<ColorScheme>("green");
   return (
     <Box>
-      <ComponentsBanner title="Komponenter" description="Se en full oversikt over komponentene i designsystemet." />
+      <ComponentsBanner
+        title="Komponenter"
+        description="Se en full oversikt over komponentene i designsystemet."
+        bg={`${theme}.500`}
+      />
       <Box>
         <FormLabel htmlFor="theme">Velg fargetema</FormLabel>
         <Select value={theme} onChange={e => setTheme(e.target.value as ColorScheme)} marginBottom="2rem" maxW="12rem">
@@ -33,7 +36,7 @@ export const Components = () => {
                     colorScheme={theme}
                     tag={component.tag}
                     link={component.link}
-                    component={component.komponent}
+                    component={component.story}
                     category={categoryKey as string}
                   />
                 );
@@ -61,24 +64,12 @@ const ComponentCard = ({
   link: string;
   category: string;
 }) => (
-  <Card variant="unstyled" size="sm">
+  <Card variant="unstyled" size="md">
     <Badge variant="solid" colorScheme={colorScheme} css={{ position: "absolute", left: "0.8rem", top: "0.8rem" }}>
       {tag}
     </Badge>
-    <Flex
-      bg="gray.50"
-      border="none"
-      height="10rem"
-      justifyContent={"center"}
-      alignItems="center"
-      padding="2rem"
-      width="100%"
-      borderRadius="md"
-      overflow="hidden"
-    >
-      {/* The width needs to be set because some of the stories fills the container */}
-      <LazyStory component={component} />
-    </Flex>
+    {/* The width needs to be set because some of the stories fills the container */}
+    <LazyStory component={component} />
 
     <Stack align="center">
       <Link
@@ -143,8 +134,21 @@ const LazyStory = ({ component }: { component: ReactElement }) => {
   }, [component]);
 
   return (
-    <div ref={storyRef} className="sb-unstyled">
+    <Flex
+      ref={storyRef}
+      className="sb-unstyled"
+      bg="gray.50"
+      border="none"
+      height="11rem"
+      justifyContent={"center"}
+      alignItems="center"
+      padding="2rem"
+      width="100%"
+      borderRadius="md"
+      overflow="hidden"
+      boxSizing="border-box"
+    >
       {isVisible && component}
-    </div>
+    </Flex>
   );
 };

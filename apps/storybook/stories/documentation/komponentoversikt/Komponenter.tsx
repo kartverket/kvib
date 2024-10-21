@@ -1,110 +1,30 @@
+import { ReactElement } from "react";
 import {
-  Accordion,
-  AccordionButton,
-  AccordionItem,
-  AccordionPanel,
-  Avatar,
-  Badge,
-  Box,
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
   Button,
-  Card,
-  CardBody,
-  Center,
   Checkbox,
   CloseButton,
-  Code,
-  Container,
+  ColorScheme,
   Datepicker,
-  Divider,
   Editable,
-  EditableInput,
-  EditablePreview,
   FileUpload,
-  Flex,
-  FooterInline,
   FormControl,
-  FormErrorMessage,
-  FormHelperText,
-  Grid,
-  Header,
-  Heading,
-  Highlight,
-  HStack,
-  Icon,
   IconButton,
-  Image,
   Input,
-  Kbd,
-  Link,
-  LinkOverlay,
-  ListItem,
-  Logo,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuList,
   NumberInput,
-  NumberInputField,
-  NumberInputStepper,
-  OrderedList,
   PinInput,
-  PinInputField,
-  Popover,
-  PopoverArrow,
-  PopoverBody,
-  PopoverCloseButton,
-  PopoverContent,
-  PopoverHeader,
-  PopoverTrigger,
   Radio,
-  RadioGroup,
   RangeSlider,
-  RangeSliderFilledTrack,
-  RangeSliderThumb,
-  RangeSliderTrack,
-  Search,
   Select,
-  Show,
-  SimpleGrid,
-  SkipNavLink,
   Slider,
-  SliderFilledTrack,
-  SliderThumb,
-  SliderTrack,
-  Stack,
-  Stat,
   Switch,
-  Tab,
-  Table,
-  TableContainer,
-  TabList,
-  TabPanel,
-  TabPanels,
-  Tabs,
-  Tag,
-  Tbody,
-  Td,
-  Text,
-  Textarea,
-  Th,
-  Thead,
+  TextArea,
   Timepicker,
-  Tooltip,
-  Tr,
-  VisuallyHidden,
-  Wrap,
-} from "@kvib/react/src";
-import { ReactElement } from "react";
-import { PortalNestedExample } from "../../components/annet/portal/Portal.stories";
-import { DrawerExample } from "../../components/overlay/drawer/Drawer.stories";
+} from "./StoryRendering";
 
 interface Komponentdetaljer {
   navn: string;
   beskrivelse: string;
-  komponent: ReactElement;
+  story: ReactElement;
   tag?: string;
   link: string;
 }
@@ -115,184 +35,123 @@ interface Kategori {
   komponenter: Record<string, Komponentdetaljer>;
 }
 
-export const Komponenter: (colorScheme: "green" | "blue") => Record<string, Kategori> = colorScheme => ({
+export const Komponenter: (colorScheme: ColorScheme) => Record<string, Kategori> = colorScheme => ({
   Skjemaelementer: {
     navn: "Skjemaelementer",
     komponenter: {
       Button: {
         navn: "Button",
         beskrivelse: "Button",
-        komponent: <Button colorScheme={colorScheme}>Button</Button>,
+        story: Button(colorScheme),
         link: "button",
       },
       IconButton: {
         navn: "IconButton",
         beskrivelse: "IconButton",
-        komponent: <IconButton icon="search" aria-label="Forhåndsvisning av IconButton" colorScheme={colorScheme} />,
+        story: IconButton(colorScheme),
         link: "icon-button",
       },
-      CloseButteon: {
+      CloseButton: {
         navn: "CloseButton",
         beskrivelse: "CloseButton",
-        komponent: <CloseButton />,
+        story: CloseButton(colorScheme),
         link: "close-button",
       },
       Input: {
         navn: "Input",
         beskrivelse: "Input",
-        komponent: <Input placeholder="Skriv her..." />,
+        story: Input(colorScheme),
         link: "input",
       },
       FormControl: {
         navn: "FormControl",
         beskrivelse: "FormControl",
-        komponent: (
-          <FormControl>
-            <FormHelperText>Validering av innputt</FormHelperText>
-            <Input placeholder="Skriv her..." />
-            <FormErrorMessage>Feilmelding</FormErrorMessage>
-          </FormControl>
-        ),
+        story: FormControl(colorScheme),
         link: "form-control",
       },
       Select: {
         navn: "Select",
         beskrivelse: "Select",
-        komponent: (
-          <Select placeholder="Velg alternativ" aria-label="select">
-            <option value="option1">Alternativ 1</option>
-            <option value="option2">Alternativ 2</option>
-            <option value="option3">Alternativ 3</option>
-          </Select>
-        ),
+        story: Select(colorScheme),
         link: "select",
       },
       Textarea: {
         navn: "Textarea",
         beskrivelse: "Textarea",
-        komponent: <Textarea placeholder="Dette er et større tekstfelt" />,
+        story: TextArea(colorScheme),
         link: "textarea",
       },
       NumberInput: {
         navn: "NumberInput",
         beskrivelse: "NumberInput",
-        komponent: (
-          <NumberInput defaultValue={3507}>
-            <NumberInputField />
-            <NumberInputStepper />
-          </NumberInput>
-        ),
+        story: NumberInput(colorScheme),
         link: "number-input",
       },
       CheckBox: {
         navn: "Checkbox",
         beskrivelse: "Checkbox",
-        komponent: <Checkbox colorScheme={colorScheme}>Denne kan hukes av</Checkbox>,
+        story: Checkbox(colorScheme),
         link: "checkbox",
       },
       DatePicker: {
-        navn: "DatePicker",
-        beskrivelse: "DatePicker",
-        komponent: (
-          <Datepicker
-            aria-label="Datepicker-eksempel"
-            placeholder="Velg dato"
-            showOutsideDays
-            showWeekNumber
-            colorScheme={colorScheme}
-          />
-        ),
+        navn: "Datepicker",
+        beskrivelse: "Datepicker",
+        story: Datepicker(colorScheme),
         link: "datepicker",
         tag: "beta",
       },
       TimePicker: {
         navn: "Timepicker",
         beskrivelse: "Timepicker",
-        komponent: <Timepicker ariaLabel="Demo av Timepicker" colorScheme={colorScheme} />,
+        story: Timepicker(colorScheme),
         link: "timepicker",
         tag: "beta",
       },
       Editable: {
         navn: "Editable",
         beskrivelse: "Editable",
-        komponent: (
-          <Editable defaultValue="Klikk for å redigere">
-            <EditableInput />
-            <EditablePreview />
-          </Editable>
-        ),
+        story: Editable(colorScheme),
         link: "editable",
       },
       Radio: {
         navn: "Radio",
         beskrivelse: "Radio",
-        komponent: (
-          <RadioGroup defaultValue={"1"} colorScheme={colorScheme}>
-            <Stack direction={"row"}>
-              <Radio value={"1"}>En</Radio>
-              <Radio value={"2"}>To</Radio>
-              <Radio value={"3"}>Tre</Radio>
-            </Stack>
-          </RadioGroup>
-        ),
+        story: Radio(colorScheme),
         link: "radio",
       },
       Switch: {
         navn: "Switch",
         beskrivelse: "Switch",
-        komponent: <Switch colorScheme={colorScheme} />,
+        story: Switch(colorScheme),
         link: "switch",
       },
       Slider: {
         navn: "Slider",
         beskrivelse: "Slider",
-        komponent: (
-          <Slider minW={"12rem"} colorScheme={colorScheme}>
-            <SliderTrack>
-              <SliderFilledTrack />
-            </SliderTrack>
-            <SliderThumb />
-          </Slider>
-        ),
+        story: Slider(colorScheme),
         link: "slider",
       },
       RangeSlider: {
         navn: "RangeSlider",
         beskrivelse: "RangeSlider",
-        komponent: (
-          <RangeSlider aria-label={["min", "max"]} defaultValue={[10, 40]} minW={"12rem"} colorScheme={colorScheme}>
-            <RangeSliderTrack>
-              <RangeSliderFilledTrack />
-            </RangeSliderTrack>
-            <RangeSliderThumb index={0} />
-            <RangeSliderThumb index={1} />
-          </RangeSlider>
-        ),
+        story: RangeSlider(colorScheme),
         link: "range-slider",
       },
       PinInput: {
         navn: "PinInput",
         beskrivelse: "PinInput",
-        komponent: (
-          <HStack gap="0.5em">
-            <PinInput colorScheme={colorScheme}>
-              <PinInputField />
-              <PinInputField />
-              <PinInputField />
-              <PinInputField />
-            </PinInput>
-          </HStack>
-        ),
+        story: PinInput(colorScheme),
         link: "pin-input",
       },
       FileUpload: {
         navn: "FileUpload",
         beskrivelse: "FileUpload",
-        komponent: <FileUpload />,
+        story: FileUpload(colorScheme),
         link: "file-upload",
       },
     },
   },
+  /*
   Søk: {
     navn: "Søk",
     komponenter: {
@@ -755,12 +614,12 @@ export const Komponenter: (colorScheme: "green" | "blue") => Record<string, Kate
         link: "tooltip",
       },
       // TODO: Legg til modal direkte fra Story
-      /* Modal: {
+      Modal: {
         navn: "Modal",
         beskrivelse: "",
         komponent: <ModalExample colorScheme={colorScheme} />,
         link: "modal",
-      }, */
+      },
       Popover: {
         navn: "Popover",
         beskrivelse: "",
@@ -780,12 +639,12 @@ export const Komponenter: (colorScheme: "green" | "blue") => Record<string, Kate
         link: "popover",
       },
       // TODO: Legg til AlertDialog direkte fra Story
-      /* AlertDialog: {
+      AlertDialog: {
         navn: "Alert Dialog",
         beskrivelse: "",
         komponent:
         link: "alert-dialog",
-      }, */
+      },
       Drawer: {
         navn: "Drawer",
         beskrivelse: "",
@@ -836,4 +695,5 @@ export const Komponenter: (colorScheme: "green" | "blue") => Record<string, Kate
       },
     },
   },
+  */
 });

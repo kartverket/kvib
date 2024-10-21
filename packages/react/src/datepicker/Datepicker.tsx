@@ -9,6 +9,7 @@ import {
   PopoverAnchor,
   PopoverContent,
   PopoverTrigger,
+  Portal,
   useBoolean,
   useTheme,
 } from "@kvib/react/src";
@@ -237,36 +238,38 @@ const CustomDatepicker = forwardRef<DatepickerProps, "input">(
             </PopoverTrigger>
           </InputRightElement>
         </InputGroup>
-        <PopoverContent width="auto" padding="1rem">
-          <style>{style}</style>
-          <DayPicker
-            mode="single"
-            month={month}
-            onMonthChange={setMonth}
-            selected={selectedDate}
-            onSelect={handleDayPickerSelect}
-            classNames={{ root: uniqueClassName }}
-            locale={nb}
-            showOutsideDays={showOutsideDays}
-            showWeekNumber={showWeekNumber}
-            disableNavigation={disableNavigation}
-            defaultMonth={defaultMonth}
-            captionLayout={showDropdownMonthYear ? "dropdown" : "label"}
-            startMonth={fromDate}
-            endMonth={toDate}
-            required={isRequired}
-            {...(fromDate && {
-              disabled: {
-                before: fromDate,
-              },
-            })}
-            {...(toDate && {
-              disabled: {
-                after: toDate,
-              },
-            })}
-          />
-        </PopoverContent>
+        <Portal>
+          <PopoverContent width="auto" padding="1rem">
+            <style>{style}</style>
+            <DayPicker
+              mode="single"
+              month={month}
+              onMonthChange={setMonth}
+              selected={selectedDate}
+              onSelect={handleDayPickerSelect}
+              classNames={{ root: uniqueClassName }}
+              locale={nb}
+              showOutsideDays={showOutsideDays}
+              showWeekNumber={showWeekNumber}
+              disableNavigation={disableNavigation}
+              defaultMonth={defaultMonth}
+              captionLayout={showDropdownMonthYear ? "dropdown" : "label"}
+              startMonth={fromDate}
+              endMonth={toDate}
+              required={isRequired}
+              {...(fromDate && {
+                disabled: {
+                  before: fromDate,
+                },
+              })}
+              {...(toDate && {
+                disabled: {
+                  after: toDate,
+                },
+              })}
+            />
+          </PopoverContent>
+        </Portal>
       </Popover>
     );
   },

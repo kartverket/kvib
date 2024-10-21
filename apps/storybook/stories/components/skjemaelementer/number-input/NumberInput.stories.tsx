@@ -133,6 +133,7 @@ export const Preview: NumberInputStory = {
     isInvalid: false,
     isReadOnly: false,
     isRequired: false,
+    defaultValue: 3507,
   },
   render: args => (
     <KvibNumberInput {...args}>

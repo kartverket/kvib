@@ -80,7 +80,9 @@ export const Preview: Story = {
       },
     },
   },
-  render: args => <KvibButton {...args}>{args.children}</KvibButton>,
+  render: function Render(args) {
+    return <KvibButton {...args}>{args.children}</KvibButton>;
+  },
 };
 
 export const ButtonColors: Story = {

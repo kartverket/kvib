@@ -1,12 +1,9 @@
 import {
-  Checkbox,
   FormControl as KvibFormControl,
   FormErrorMessage as KvibFormErrorMessage,
   FormHelperText as KvibFormHelperText,
   FormLabel as KvibFormLabel,
   Input as KvibInput,
-  Radio,
-  Select,
   Stack,
 } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
@@ -57,39 +54,12 @@ type Story = StoryObj<typeof KvibFormControl>;
 
 export const Preview: Story = {
   render: args => (
-    <Stack gap={4}>
-      <KvibFormControl {...args}>
-        <KvibFormLabel>Label (valgfri)</KvibFormLabel>
-        <KvibFormHelperText>Hjelpetekst</KvibFormHelperText>
-        <KvibInput placeholder={"Eksempel"} size={"md"} variant={"outline"} />
-        <KvibFormErrorMessage>Her er feilmelding</KvibFormErrorMessage>
-      </KvibFormControl>
-      <hr />
-      <KvibFormControl {...args}>
-        <KvibFormLabel>Label (valgfri)</KvibFormLabel>
-        <KvibFormHelperText>Hjelpetekst</KvibFormHelperText>
-        <Checkbox>Checkbox</Checkbox>
-        <KvibFormErrorMessage>Her er feilmelding</KvibFormErrorMessage>
-      </KvibFormControl>
-      <hr />
-      <KvibFormControl {...args}>
-        <KvibFormLabel>Label (valgfri)</KvibFormLabel>
-        <KvibFormHelperText>Hjelpetekst</KvibFormHelperText>
-        <Radio>Radio</Radio>
-        <KvibFormErrorMessage>Her er feilmelding</KvibFormErrorMessage>
-      </KvibFormControl>
-      <hr />
-      <KvibFormControl {...args}>
-        <KvibFormLabel>Label (valgfri)</KvibFormLabel>
-        <KvibFormHelperText>Hjelpetekst</KvibFormHelperText>
-        <Select aria-label="select form">
-          <option value="option1">Alternativ 1</option>
-          <option value="option2">Alternativ 2</option>
-          <option value="option3">Alternativ 3</option>
-        </Select>
-        <KvibFormErrorMessage>Her er feilmelding</KvibFormErrorMessage>
-      </KvibFormControl>
-    </Stack>
+    <KvibFormControl {...args}>
+      <KvibFormLabel>Label (valgfri)</KvibFormLabel>
+      <KvibFormHelperText>Hjelpetekst</KvibFormHelperText>
+      <KvibInput placeholder={"Eksempel"} size={"md"} variant={"outline"} />
+      <KvibFormErrorMessage>Her er feilmelding</KvibFormErrorMessage>
+    </KvibFormControl>
   ),
 };
 

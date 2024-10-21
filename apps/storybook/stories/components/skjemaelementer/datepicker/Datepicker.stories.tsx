@@ -1,4 +1,4 @@
-import { Box, FormControl, FormLabel, Stack } from "@kvib/react/src";
+import { FormControl, FormLabel, Stack } from "@kvib/react/src";
 import { Datepicker as KvibDatepicker } from "@kvib/react/src/datepicker";
 import { Meta, StoryObj } from "@storybook/react";
 
@@ -37,7 +37,7 @@ const meta: Meta<typeof KvibDatepicker> = {
       description: "Toggles if input should be required",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -45,7 +45,7 @@ const meta: Meta<typeof KvibDatepicker> = {
       description: "Toggles if input should be invalid",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -53,7 +53,7 @@ const meta: Meta<typeof KvibDatepicker> = {
       description: "Toggles if input should be disabled",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -160,19 +160,12 @@ export default meta;
 type Story = StoryObj<typeof KvibDatepicker>;
 
 export const Preview: Story = {
-  args: { placeholder: "Velg dato", onChange: v => console.log("Datepicker changed", v) },
-  parameters: {
-    docs: {
-      canvas: {
-        sourceState: "shown",
-      },
-    },
+  args: {
+    placeholder: "Velg dato",
+    onChange: v => console.log("Datepicker changed", v),
+    "aria-label": "Datepicker example",
   },
-  render: args => (
-    <Box h="25rem">
-      <KvibDatepicker aria-label="Datepicker" {...args} />
-    </Box>
-  ),
+  render: args => <KvibDatepicker {...args} />,
 };
 
 export const DatepickerDetails: Story = {
@@ -180,24 +173,22 @@ export const DatepickerDetails: Story = {
     showOutsideDays: true,
     showWeekNumber: true,
     placeholder: "Velg dato",
+    "aria-label": "Datepicker example",
   },
-  render: args => (
-    <Box h="25rem">
-      <KvibDatepicker aria-label="Datepicker example" {...args} />
-    </Box>
-  ),
+  render: args => <KvibDatepicker {...args} />,
 };
 
 export const DatepickerAppearance: Story = {
   args: {
     placeholder: "Velg dato",
+    "aria-label": "Datepicker example",
   },
   render: args => (
-    <Stack gap="1rem" h="30rem">
-      <KvibDatepicker aria-label="Datepicker" variant="outline" {...args} />
-      <KvibDatepicker aria-label="Datepicker" variant="filled" {...args} />
-      <KvibDatepicker aria-label="Datepicker" colorScheme="blue" variant="flushed" {...args} />
-      <KvibDatepicker aria-label="Datepicker" colorScheme="blue" variant="unstyled" {...args} />
+    <Stack gap="1rem">
+      <KvibDatepicker variant="outline" {...args} />
+      <KvibDatepicker variant="filled" {...args} />
+      <KvibDatepicker colorScheme="blue" variant="flushed" {...args} />
+      <KvibDatepicker colorScheme="blue" variant="unstyled" {...args} />
     </Stack>
   ),
 };
@@ -210,22 +201,17 @@ export const DatepickerArea: Story = {
     showDropdownMonthYear: true,
     disabledDays: [new Date("2022-08-16")],
     placeholder: "Velg dato",
+    "aria-label": "Datepicker example",
   },
-  render: args => (
-    <Box h="23rem">
-      <KvibDatepicker aria-label="Datepicker example" {...args} />
-    </Box>
-  ),
+  render: args => <KvibDatepicker {...args} />,
 };
 
 export const DatepickerForm: Story = {
-  args: { placeholder: "Velg dato" },
+  args: { placeholder: "Velg dato", "aria-label": "Datepicker example" },
   render: args => (
-    <Box h="25rem">
-      <FormControl isRequired>
-        <FormLabel>Velg dato</FormLabel>
-        <KvibDatepicker aria-label="Datepicker" {...args} />
-      </FormControl>
-    </Box>
+    <FormControl isRequired>
+      <FormLabel>Velg dato</FormLabel>
+      <KvibDatepicker {...args} />
+    </FormControl>
   ),
 };

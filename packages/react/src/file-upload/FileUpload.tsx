@@ -14,7 +14,6 @@ export const FileUpload = forwardRef<ChakraInputProps, "input">(
         variant={variant}
         isRequired={isRequired}
         isInvalid={isInvalid}
-        isDisabled={isDisabled}
       />
     );
   },

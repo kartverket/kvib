@@ -243,3 +243,5 @@ input[type="range"]::-webkit-slider-thumb:active {
     background-image: none !important;
   }
 }
+
+ .DayPickerInput-Overlay { z-index: 99; }
