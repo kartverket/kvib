@@ -1,0 +1,1 @@
+import{i}from"./is-element-C52yPwBl.js";function r(e){var n;return((n=t(e))==null?void 0:n.defaultView)??window}function t(e){return i(e)?e.ownerDocument:document}function u(e){return e.view??window}function w(e){return t(e).activeElement}export{w as a,u as b,r as g};
