@@ -1,0 +1,1 @@
+import{r as e}from"./index-BwDkhjyp.js";const o=(u,s)=>{const t=e.useRef(!1),r=e.useRef(!1);e.useEffect(()=>{if(t.current&&r.current)return u();r.current=!0},s),e.useEffect(()=>(t.current=!0,()=>{t.current=!1}),[])};export{o as u};
