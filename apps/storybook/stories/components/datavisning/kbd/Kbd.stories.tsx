@@ -16,6 +16,9 @@ export default meta;
 type Story = StoryObj<typeof KvibKbd>;
 
 export const Preview: Story = {
+  args: {
+    fontSize: "sm",
+  },
   render: args => (
     <span>
       <KvibKbd {...args}>shift</KvibKbd> + <KvibKbd {...args}>H</KvibKbd>

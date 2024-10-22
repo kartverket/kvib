@@ -58,38 +58,22 @@ export const Preview: Story = {
   render: args => (
     <KvibTableContainer>
       <KvibTable {...args}>
-        <KvibTableCaption>Imperial to metric conversion factors</KvibTableCaption>
         <KvibThead>
           <KvibTr>
-            <KvibTh>To convert</KvibTh>
-            <KvibTh>into</KvibTh>
-            <KvibTh isNumeric>multiply by</KvibTh>
+            <KvibTh>Tekstkolonne</KvibTh>
+            <KvibTh isNumeric>Numerisk</KvibTh>
           </KvibTr>
         </KvibThead>
         <KvibTbody>
           <KvibTr>
-            <KvibTd>inches</KvibTd>
-            <KvibTd>millimetres (mm)</KvibTd>
-            <KvibTd isNumeric>25.4</KvibTd>
+            <KvibTd>Rad 1</KvibTd>
+            <KvibTd isNumeric>1</KvibTd>
           </KvibTr>
           <KvibTr>
-            <KvibTd>feet</KvibTd>
-            <KvibTd>centimetres (cm)</KvibTd>
-            <KvibTd isNumeric>30.48</KvibTd>
-          </KvibTr>
-          <KvibTr>
-            <KvibTd>yards</KvibTd>
-            <KvibTd>metres (m)</KvibTd>
-            <KvibTd isNumeric>0.91444</KvibTd>
+            <KvibTd>Rad 2</KvibTd>
+            <KvibTd isNumeric>2</KvibTd>
           </KvibTr>
         </KvibTbody>
-        <KvibTfoot>
-          <KvibTr>
-            <KvibTh>To convert</KvibTh>
-            <KvibTh>into</KvibTh>
-            <KvibTh isNumeric>multiply by</KvibTh>
-          </KvibTr>
-        </KvibTfoot>
       </KvibTable>
     </KvibTableContainer>
   ),

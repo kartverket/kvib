@@ -145,8 +145,11 @@ export const Preview: Story = {
       },
     },
   },
+  args: {
+    placeholder: "Søk i resultater asynkront...",
+  },
   render: args => (
-    <Box h={20}>
+    <Box w="100%">
       <KvibSearchAsync {...args} />
     </Box>
   ),

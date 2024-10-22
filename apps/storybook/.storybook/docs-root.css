@@ -5,8 +5,18 @@ div[role="main"] > :first-child {
 }
 
 /* Container for MDX files */
-.sbdocs.sbdocs-wrapper {
-  padding: 20px !important;
+.sbdocs-wrapper {
+  padding: 20px 40px !important;
+  display: grid;
+  grid-template-columns: 82% 18%;
+  grid-gap: 12px;
+  background-color: gold;
+}
+
+.sbdocs-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .docblock-source {
@@ -224,6 +234,10 @@ input[type="range"]::-webkit-slider-thumb:active {
   margin-right: -20px !important; /* storybook setter -20px her, det er alt for mye */
 }
 
+.toc-wrapper {
+  padding: 0 12px;
+}
+
 /* Table of contents with no content */
 .toc-no-children {
   display: none;
@@ -243,3 +257,5 @@ input[type="range"]::-webkit-slider-thumb:active {
     background-image: none !important;
   }
 }
+
+

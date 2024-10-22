@@ -1,4 +1,5 @@
 import {
+  Box,
   Stat as KvibStat,
   StatArrow as KvibStatArrow,
   StatGroup as KvibStatGroup,
@@ -24,11 +25,13 @@ type Story = StoryObj<typeof KvibStat>;
 
 export const Preview: Story = {
   render: args => (
-    <KvibStat {...args}>
-      <KvibStatLabel>Utgifter</KvibStatLabel>
-      <KvibStatNumber>3200kr</KvibStatNumber>
-      <KvibStatHelpText>Feb 12 - Feb 28</KvibStatHelpText>
-    </KvibStat>
+    <Box>
+      <KvibStat {...args}>
+        <KvibStatLabel>Utgifter</KvibStatLabel>
+        <KvibStatNumber>3200kr</KvibStatNumber>
+        <KvibStatHelpText>Feb 12 - Feb 28</KvibStatHelpText>
+      </KvibStat>
+    </Box>
   ),
 };
 

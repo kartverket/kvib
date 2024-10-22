@@ -28,7 +28,7 @@ const meta: Meta<typeof KvibMenu> = {
       description: "The padding required to prevent the arrow from reaching the very edge of the popper.",
       table: {
         type: { summary: "number" },
-        defaultValue: { summary: 8 },
+        defaultValue: { summary: "8" },
       },
       control: "number",
     },
@@ -36,7 +36,7 @@ const meta: Meta<typeof KvibMenu> = {
       description: "If true, the first enabled menu item will receive focus and be selected when the menu opens.",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: true },
+        defaultValue: { summary: "true" },
       },
       control: "boolean",
     },
@@ -52,7 +52,7 @@ const meta: Meta<typeof KvibMenu> = {
       description: "If true, the menu will close when you click outside the menu list",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: true },
+        defaultValue: { summary: "true" },
       },
       control: "boolean",
     },
@@ -60,7 +60,7 @@ const meta: Meta<typeof KvibMenu> = {
       description: "If true, the menu will close when a menu item is clicked",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: true },
+        defaultValue: { summary: "true" },
       },
       control: "boolean",
     },
@@ -90,7 +90,7 @@ const meta: Meta<typeof KvibMenu> = {
         type: {
           summary: "type ONLY_FOR_FORMAT = | boolean | { scroll?: boolean | undefined resize?: boolean | undefined }",
         },
-        defaultValue: { summary: true },
+        defaultValue: { summary: "true" },
       },
       control: "text",
     },
@@ -99,7 +99,7 @@ const meta: Meta<typeof KvibMenu> = {
         "If true, the popper will change its placement and flip when it's about to overflow its boundary area.",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: true },
+        defaultValue: { summary: "true" },
       },
       control: "boolean",
     },
@@ -108,7 +108,7 @@ const meta: Meta<typeof KvibMenu> = {
         "The distance or margin between the reference and popper. It is used internally to create an offset modifier. NB: If you define offset prop, it'll override the gutter.",
       table: {
         type: { summary: "number" },
-        defaultValue: { summary: 8 },
+        defaultValue: { summary: "8" },
       },
       control: "number",
     },
@@ -129,7 +129,7 @@ const meta: Meta<typeof KvibMenu> = {
       description: "Performance 🚀: If true, the MenuItem rendering will be deferred until the menu is open.",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: true },
+        defaultValue: { summary: "true" },
       },
       control: "boolean",
     },
@@ -152,7 +152,7 @@ const meta: Meta<typeof KvibMenu> = {
         "If true, the popper will match the width of the reference at all times. It's useful for autocomplete, `date-picker` and select patterns.",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -195,7 +195,7 @@ const meta: Meta<typeof KvibMenu> = {
         "If true, will prevent the popper from being cut off and ensure it's visible within the boundary area.",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: true },
+        defaultValue: { summary: "true" },
       },
       control: "boolean",
     },
@@ -217,20 +217,18 @@ type Story = StoryObj<typeof KvibMenu>;
 
 export const Preview: Story = {
   render: args => (
-    <Box h="60">
-      <KvibMenu {...args}>
-        <MenuButton as={Button} rightIcon={"expand_more"}>
-          Handlinger
-        </MenuButton>
-        <MenuList>
-          <MenuItem>Nedlast</MenuItem>
-          <MenuItem>Lag en kopi</MenuItem>
-          <MenuItem>Marker som utkast</MenuItem>
-          <MenuItem>Slett</MenuItem>
-          <MenuItem>Bli med på en workshop</MenuItem>
-        </MenuList>
-      </KvibMenu>
-    </Box>
+    <KvibMenu {...args}>
+      <MenuButton as={Button} rightIcon={"expand_more"}>
+        Handlinger
+      </MenuButton>
+      <MenuList>
+        <MenuItem>Nedlast</MenuItem>
+        <MenuItem>Lag en kopi</MenuItem>
+        <MenuItem>Marker som utkast</MenuItem>
+        <MenuItem>Slett</MenuItem>
+        <MenuItem>Bli med på en workshop</MenuItem>
+      </MenuList>
+    </KvibMenu>
   ),
 };
 

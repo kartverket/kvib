@@ -95,14 +95,14 @@ export default meta;
 type Story = StoryObj<typeof KvibGrid>;
 
 export const Preview: Story = {
-  args: { templateColumns: "repeat(5, 1fr)", gap: 6 },
+  args: { templateColumns: "repeat(5, 1fr)", gap: 4, minH: "2rem", minW: "12rem" },
   render: args => (
     <KvibGrid {...args}>
-      <GridItem w="100%" h={10} bgColor="blue.100" />
-      <GridItem w="100%" h={10} bgColor="blue.100" />
-      <GridItem w="100%" h={10} bgColor="blue.100" />
-      <GridItem w="100%" h={10} bgColor="blue.100" />
-      <GridItem w="100%" h={10} bgColor="blue.100" />
+      <GridItem w="100%" h="10" bg="blue.500" />
+      <GridItem w="100%" h="10" bg="blue.500" />
+      <GridItem w="100%" h="10" bg="blue.500" />
+      <GridItem w="100%" h="10" bg="blue.500" />
+      <GridItem w="100%" h="10" bg="blue.500" />
     </KvibGrid>
   ),
 };

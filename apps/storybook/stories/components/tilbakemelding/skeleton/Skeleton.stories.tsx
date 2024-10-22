@@ -76,11 +76,13 @@ type Story = StoryObj<typeof KvibSkeleton>;
 
 export const Preview: Story = {
   render: args => (
-    <KvibStack>
-      <KvibSkeleton {...args} height="20px" />
-      <KvibSkeleton {...args} height="20px" />
-      <KvibSkeleton {...args} height="20px" />
-    </KvibStack>
+    <Box w="100%">
+      <KvibStack>
+        <KvibSkeleton {...args} height="20px" />
+        <KvibSkeleton {...args} height="20px" />
+        <KvibSkeleton {...args} height="20px" />
+      </KvibStack>
+    </Box>
   ),
 };
 

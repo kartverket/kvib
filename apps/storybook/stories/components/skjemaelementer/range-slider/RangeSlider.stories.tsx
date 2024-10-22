@@ -173,7 +173,9 @@ export default meta;
 type Story = StoryObj<typeof KvibRangeSlider>;
 
 export const Preview: Story = {
-  args: { defaultValue: [10, 30] },
+  args: {
+    defaultValue: [10, 30],
+  },
   render: args => (
     <KvibRangeSlider aria-label={["min", "max"]} {...args}>
       <RangeSliderTrack>

@@ -19,27 +19,27 @@ export const Preview: Story = {
   render: args => (
     <KvibWrap {...args}>
       <KvibWrapItem>
-        <Center width="180px" height="80px" bg="red.100">
+        <Center width="4rem" height="4rem" bg="red.100">
           Box 1
         </Center>
       </KvibWrapItem>
       <KvibWrapItem>
-        <Center width="180px" height="80px" bg="green.100">
+        <Center width="4rem" height="4rem" bg="green.100">
           Box 2
         </Center>
       </KvibWrapItem>
       <KvibWrapItem>
-        <Center width="180px" height="80px" bg="yellow.100">
+        <Center width="4rem" height="4rem" bg="yellow.100">
           Box 3
         </Center>
       </KvibWrapItem>
       <KvibWrapItem>
-        <Center width="180px" height="80px" bg="blue.100">
+        <Center width="4rem" height="4rem" bg="blue.100">
           Box 4
         </Center>
       </KvibWrapItem>
       <KvibWrapItem>
-        <Center width="180px" height="80px" bg="purple.100">
+        <Center width="4rem" height="4rem" bg="purple.100">
           Box 5
         </Center>
       </KvibWrapItem>

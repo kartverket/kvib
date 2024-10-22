@@ -133,15 +133,15 @@ type Story = StoryObj<typeof KvibSimpleGrid>;
 export const Preview: Story = {
   args: {
     columns: 3,
-    spacing: 10,
+    spacing: 5,
   },
   render: args => (
     <KvibSimpleGrid {...args}>
-      <Box bg="green.100" height="80px"></Box>
-      <Box bg="green.100" height="80px"></Box>
-      <Box bg="green.100" height="80px"></Box>
-      <Box bg="green.100" height="80px"></Box>
-      <Box bg="green.100" height="80px"></Box>
+      <Box bg="green.100" w="2rem" h="2rem" />
+      <Box bg="blue.100" w="2rem" h="2rem" />
+      <Box bg="red.100" w="2rem" h="2rem" />
+      <Box bg="orange.100" w="2rem" h="2rem" />
+      <Box bg="purple.100" w="2rem" h="2rem" />
     </KvibSimpleGrid>
   ),
 };

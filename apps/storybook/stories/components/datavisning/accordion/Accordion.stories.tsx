@@ -1,4 +1,11 @@
-import { AccordionItem as AccItem, AccordionButton, AccordionPanel, Accordion as KvibAccordion } from "@kvib/react/src";
+import {
+  AccordionItem as AccItem,
+  AccordionButton,
+  AccordionIcon,
+  AccordionPanel,
+  Box,
+  Accordion as KvibAccordion,
+} from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibAccordion> = {
@@ -21,7 +28,7 @@ export const Preview: Story = {
       description: "If true, multiple items can be expanded at once.",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -29,7 +36,7 @@ export const Preview: Story = {
       description: "If true, expanded items may be collapsed again.",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -58,23 +65,39 @@ export const Preview: Story = {
       description: "If true, disables height animation and transition.",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
   },
   args: { allowMultiple: true, allowToggle: false, onChange: undefined },
   render: args => (
-    <KvibAccordion {...args}>
-      <AccItem>
-        <AccordionButton>Tittel 1</AccordionButton>
-        <AccordionPanel>Innhold 1</AccordionPanel>
-      </AccItem>
-      <AccItem>
-        <AccordionButton>Tittel 2</AccordionButton>
-        <AccordionPanel>Innhold 2</AccordionPanel>
-      </AccItem>
-    </KvibAccordion>
+    <Box w="100%">
+      <KvibAccordion {...args}>
+        <AccItem>
+          <h2>
+            <AccordionButton>
+              <Box as="span" flex="1" textAlign="left">
+                Tittel 1
+              </Box>
+              <AccordionIcon />
+            </AccordionButton>
+          </h2>
+          <AccordionPanel pb={4}>Innhold 1</AccordionPanel>
+        </AccItem>
+        <AccItem>
+          <h2>
+            <AccordionButton>
+              <Box as="span" flex="1" textAlign="left">
+                Tittel 2
+              </Box>
+              <AccordionIcon />
+            </AccordionButton>
+          </h2>
+          <AccordionPanel pb={4}>Innhold 2</AccordionPanel>
+        </AccItem>
+      </KvibAccordion>
+    </Box>
   ),
 };
 
@@ -91,7 +114,7 @@ export const AccordionItem: Story = {
       description: "If true, the AccordionItem will be disabled.",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -99,7 +122,7 @@ export const AccordionItem: Story = {
       description: "If true, the AccordionItem will be focusable.",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },

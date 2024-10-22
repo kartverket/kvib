@@ -38,17 +38,13 @@ import { Datepicker } from "@kvib/react";
 </DocsContainer>
 
 <DocsContainer>
-  <DocsStory
-    title="Flere detaljer"
-    description={
-      <Text>
-        Popoverkalenderen i datepicker kommer som standard uten ekstra detaljer om måneden. For å legge til ukenummer,
-        legg til propen <Code>showWeekNumber</Code>. Legg til propen <Code>showOutsideDays</Code> for å fylle ut
-        kalenderen med dager som ikke er i samme måned.
-      </Text>
-    }
-    story={<Canvas of={DatepickerStories.DatepickerDetails} />}
+
+## Slik bruker du Datepicker
+### Flere detaljer
+Popoverkalenderen i datepicker kommer som standard uten ekstra detaljer om måneden. For å legge til ukenummer, legg til propen <Code>showWeekNumber</Code>. Legg til propen <Code>showOutsideDays</Code> for å fylle ut kalenderen med dager som ikke er i samme måned.
+  <Canvas of={DatepickerStories.DatepickerDetails}
   />
+
   <DocsStory
     title="Datoområde"
     description={
