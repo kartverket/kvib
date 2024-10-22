@@ -1,1 +1,0 @@
-import{v as a}from"./visually-hidden.style-BUiBK_kv.js";import{c as s}from"./factory-C6UFhaBW.js";const i=s("span",{baseStyle:a});i.displayName="VisuallyHidden";const l=s("input",{baseStyle:a});l.displayName="VisuallyHiddenInput";export{i as V,l as a};
