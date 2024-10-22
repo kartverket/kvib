@@ -20,8 +20,8 @@ const meta: Meta<typeof KvibLinkOverlay> = {
     isExternal: {
       description: "If true, the link will open in new tab",
       table: {
-        type: { summary: Boolean },
-        defaultValue: { summary: false },
+        type: { summary: "Boolean" },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -34,16 +34,12 @@ type Story = StoryObj<typeof KvibLinkOverlay>;
 export const Preview: Story = {
   render: args => (
     <KvibLinkBox as="article" maxW="sm" p="5" borderWidth="1px" rounded="md">
-      <KvibBox>13 timer siden</KvibBox>
       <KvibHeading size="md" my="2">
         <KvibLinkOverlay {...args} href="#">
-          Ikke gå deg vill på bærtur
+          Denne kan trykkes på
         </KvibLinkOverlay>
       </KvibHeading>
-      <KvibText>
-        Bær- og soppsesongen er i full gang til skogs og fjells. Last ned Kartverkets gratis mobil-app "Hvor?", så vet
-        du hvor du er.
-      </KvibText>
+      <KvibText>Hele komponenten er en knapp</KvibText>
     </KvibLinkBox>
   ),
 };

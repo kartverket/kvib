@@ -317,19 +317,17 @@ type Story = StoryObj<typeof KvibPopover>;
 
 export const Preview: Story = {
   render: args => (
-    <Box h="40">
-      <KvibPopover {...args}>
-        <PopoverTrigger>
-          <Button>Trykk</Button>
-        </PopoverTrigger>
-        <PopoverContent>
-          <PopoverArrow />
-          <PopoverCloseButton />
-          <PopoverHeader>Bekreftelse!</PopoverHeader>
-          <PopoverBody>Er du sikker på at du vil drikke den milkshaken?</PopoverBody>
-        </PopoverContent>
-      </KvibPopover>
-    </Box>
+    <KvibPopover {...args}>
+      <PopoverTrigger>
+        <Button>Trykk</Button>
+      </PopoverTrigger>
+      <PopoverContent>
+        <PopoverArrow />
+        <PopoverCloseButton />
+        <PopoverHeader>Bekreftelse!</PopoverHeader>
+        <PopoverBody>Er du sikker på at du vil drikke den milkshaken?</PopoverBody>
+      </PopoverContent>
+    </KvibPopover>
   ),
 };
 

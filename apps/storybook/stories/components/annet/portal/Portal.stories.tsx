@@ -17,7 +17,7 @@ const meta: Meta<typeof KvibPortal> = {
         "If true, the portal will check if it is within a parent portal and append itself to the parent's portal node. This provides nesting for portals. If false, the portal will always append to `document.body` regardless of nesting. It is used to opt out of portal nesting.",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: true },
+        defaultValue: { summary: "true" },
       },
       control: "boolean",
     },
@@ -38,7 +38,7 @@ export const Preview: Story = {
   render: args => (
     <Box bg="green.500" color="white">
       Dette er en Box
-      <KvibPortal {...args}>Denne teksten er portaled til enden av document.body!</KvibPortal>
+      <PortalNestedExample {...args} />
     </Box>
   ),
 };

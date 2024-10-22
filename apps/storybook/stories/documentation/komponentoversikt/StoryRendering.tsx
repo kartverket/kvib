@@ -58,6 +58,13 @@ import * as SliderStories from "../../components/skjemaelementer/slider/Slider.s
 import * as SwitchStories from "../../components/skjemaelementer/switch/Switch.stories";
 import * as TextAreaStories from "../../components/skjemaelementer/textarea/Textarea.stories";
 import * as TimepickerStories from "../../components/skjemaelementer/timepicker/Timepicker.stories";
+import * as AlertStories from "../../components/tilbakemelding/alert/Alert.stories";
+import * as CircularProgressStories from "../../components/tilbakemelding/circular-progress/CircularProgress.stories";
+import * as ProgressStories from "../../components/tilbakemelding/progress/Progress.stories";
+import * as SkeletonStories from "../../components/tilbakemelding/skeleton/Skeleton.stories";
+import * as SpinnerStories from "../../components/tilbakemelding/spinner/Spinner.stories";
+import * as StepperStories from "../../components/tilbakemelding/stepper/Stepper.stories";
+import * as ToastStories from "../../components/tilbakemelding/toast/Toast.stories";
 import * as HeadingStories from "../../design/heading/Heading.stories";
 import * as HighlightStories from "../../design/highlight/Highlight.stories";
 import * as TextStories from "../../design/text/Text.stories";
@@ -374,6 +381,43 @@ export const AlertDialog = (colorScheme: ColorScheme) => {
 
 export const Drawer = (colorScheme: ColorScheme) => {
   const { Preview } = composeStories(DrawerStories);
+  return <Preview colorScheme={colorScheme} />;
+};
+
+// Tilbakemelding
+
+export const Toast = (colorScheme: ColorScheme) => {
+  const { Preview } = composeStories(ToastStories);
+  return <Preview colorScheme={colorScheme} />;
+};
+
+export const Spinner = (colorScheme: ColorScheme) => {
+  const { Preview } = composeStories(SpinnerStories);
+  return <Preview colorScheme={colorScheme} />;
+};
+
+export const Skeleton = (colorScheme: ColorScheme) => {
+  const { Preview } = composeStories(SkeletonStories);
+  return <Preview colorScheme={colorScheme} />;
+};
+
+export const Progress = (colorScheme: ColorScheme) => {
+  const { Preview } = composeStories(ProgressStories);
+  return <Preview colorScheme={colorScheme} />;
+};
+
+export const CircularProgress = (colorScheme: ColorScheme) => {
+  const { Preview } = composeStories(CircularProgressStories);
+  return <Preview colorScheme={colorScheme} />;
+};
+
+export const Stepper = (colorScheme: ColorScheme) => {
+  const { Preview } = composeStories(StepperStories);
+  return <Preview colorScheme={colorScheme} />;
+};
+
+export const Alert = (colorScheme: ColorScheme) => {
+  const { Preview } = composeStories(AlertStories);
   return <Preview colorScheme={colorScheme} />;
 };
 

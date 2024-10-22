@@ -38,7 +38,6 @@ const meta: Meta<typeof KvibStepper> = {
       table: {
         type: { summary: "ReactElement[]" },
       },
-      control: "array",
     },
   },
 };
@@ -49,7 +48,7 @@ type Story = StoryObj<typeof KvibStepper>;
 const steps = [
   { title: "Første", description: "Kontaktinfo" },
   { title: "Andre", description: "Dato og tid" },
-  { title: "Tredje", description: "Velg rom" },
+  { title: "Tredje", description: "Oppsummering" },
 ];
 
 const StepperExample = ({ ...args }) => {
@@ -58,9 +57,11 @@ const StepperExample = ({ ...args }) => {
     count: steps.length,
   });
 
+  const simpleSteps = [{ title: "Første" }, { title: "Andre" }];
+
   return (
     <KvibStepper {...args} index={activeStep}>
-      {steps.map((step, index) => (
+      {simpleSteps.map((step, index) => (
         <Step key={index}>
           <StepIndicator>
             <StepStatus complete={<StepIcon />} incomplete={<StepNumber />} active={<StepNumber />} />
@@ -68,7 +69,6 @@ const StepperExample = ({ ...args }) => {
 
           <Box flexShrink="0">
             <StepTitle>{step.title}</StepTitle>
-            <StepDescription>{step.description}</StepDescription>
           </Box>
           <StepSeparator />
         </Step>

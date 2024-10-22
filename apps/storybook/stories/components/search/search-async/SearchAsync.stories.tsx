@@ -145,7 +145,14 @@ export const Preview: Story = {
       },
     },
   },
-  render: args => <KvibSearchAsync {...args} />,
+  args: {
+    placeholder: "Søk i resultater asynkront...",
+  },
+  render: args => (
+    <Box w="100%">
+      <KvibSearchAsync {...args} />
+    </Box>
+  ),
 };
 
 const fruits: Fruit[] = [
