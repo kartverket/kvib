@@ -27,6 +27,9 @@ export default meta;
 type Story = StoryObj<typeof KvibHeading>;
 
 export const Preview: Story = {
+  args: {
+    textAlign: "center",
+  },
   render: args => <KvibHeading {...args}>Dette er en overskrift</KvibHeading>,
 };
 

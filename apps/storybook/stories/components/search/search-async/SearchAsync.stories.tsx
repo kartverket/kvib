@@ -145,11 +145,7 @@ export const Preview: Story = {
       },
     },
   },
-  render: args => (
-    <Box h={20}>
-      <KvibSearchAsync {...args} />
-    </Box>
-  ),
+  render: args => <KvibSearchAsync {...args} />,
 };
 
 const fruits: Fruit[] = [

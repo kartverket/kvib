@@ -48,7 +48,10 @@ export default meta;
 type Story = StoryObj<typeof KvibBadge>;
 
 export const Preview: Story = {
-  args: { children: "Badge" },
+  args: {
+    children: "Badge",
+    fontSize: "sm",
+  },
   render: args => <KvibBadge {...args} />,
 };
 

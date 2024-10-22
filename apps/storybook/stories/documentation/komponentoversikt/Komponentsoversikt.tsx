@@ -68,7 +68,6 @@ const ComponentCard = ({
     <Badge variant="solid" colorScheme={colorScheme} css={{ position: "absolute", left: "0.8rem", top: "0.8rem" }}>
       {tag}
     </Badge>
-    {/* The width needs to be set because some of the stories fills the container */}
     <LazyStory component={component} />
 
     <Stack align="center">
@@ -140,7 +139,7 @@ const LazyStory = ({ component }: { component: ReactElement }) => {
       bg="gray.50"
       border="none"
       height="11rem"
-      justifyContent={"center"}
+      justifyContent="center"
       alignItems="center"
       padding="2rem"
       width="100%"

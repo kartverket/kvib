@@ -1,4 +1,10 @@
-import { Box as KvibBox, Heading as KvibHeading, Highlight as KvibHighlight, Text as KvibText } from "@kvib/react/src";
+import {
+  Box,
+  Box as KvibBox,
+  Heading as KvibHeading,
+  Highlight as KvibHighlight,
+  Text as KvibText,
+} from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibHighlight> = {
@@ -32,8 +38,15 @@ export default meta;
 type Story = StoryObj<typeof KvibHighlight>;
 
 export const Preview: Story = {
-  args: { query: "fremheve", styles: { px: "1", py: "1", bg: "orange.100" } },
-  render: args => <KvibHighlight {...args}>Det er mulig å fremheve ord med Highlight.</KvibHighlight>,
+  args: {
+    query: "fremheve",
+    styles: { px: "1", py: "1", bg: "orange.100" },
+  },
+  render: args => (
+    <Box textAlign={"center"}>
+      <KvibHighlight {...args}>Det er mulig å fremheve ord med Highlight.</KvibHighlight>
+    </Box>
+  ),
 };
 
 export const HighlightMultiple: Story = {

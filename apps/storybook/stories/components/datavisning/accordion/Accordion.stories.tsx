@@ -21,7 +21,7 @@ export const Preview: Story = {
       description: "If true, multiple items can be expanded at once.",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -29,7 +29,7 @@ export const Preview: Story = {
       description: "If true, expanded items may be collapsed again.",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -58,7 +58,7 @@ export const Preview: Story = {
       description: "If true, disables height animation and transition.",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
