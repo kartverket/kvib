@@ -259,3 +259,11 @@ input[type="range"]::-webkit-slider-thumb:active {
 }
 
 
+.docs-story {
+  padding: 1.25rem;
+}
+
+.docs-story > :first-child {
+  display: inline-table;
+  width: 100%;
+}

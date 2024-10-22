@@ -93,7 +93,7 @@ const meta: Meta<typeof KvibSlider> = {
       description: "If true, the slider will be disabled",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },

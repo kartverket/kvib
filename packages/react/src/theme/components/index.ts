@@ -2,6 +2,7 @@ export { alertTheme as Alert } from "./alert";
 export { breadcrumbTheme as Breadcrumb } from "./breadcrumb";
 export { buttonTheme as Button } from "./button";
 export { checkboxTheme as Checkbox } from "./checkbox";
+export { closeButtonTheme as CloseButton } from "./closeButton";
 export { datepickerTheme as Datepicker } from "./datepicker";
 export { fileUploadTheme as FileUpload } from "./fileUpload";
 export { iconButtonTheme as IconButton } from "./iconButton";

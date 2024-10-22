@@ -223,7 +223,7 @@ const ModalExample = ({ ...args }) => {
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>Her er en modal</ModalHeader>
-          <ModalCloseButton />
+          <ModalCloseButton colorScheme={args.colorScheme} />
           <ModalBody>
             Modaler må kun vises etter en brukerinteraksjon, og skal ikke avbryte brukeren på noe vis.
           </ModalBody>
