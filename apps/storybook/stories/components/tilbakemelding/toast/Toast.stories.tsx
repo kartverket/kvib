@@ -39,7 +39,7 @@ const meta: Meta<KvibToast> = {
       description: "Time for the toast to disappear, in milliseconds. Set to null for infinite",
       table: {
         type: { summary: "number" },
-        defaultValue: { summary: 9000 },
+        defaultValue: { summary: "9000" },
       },
       control: { type: "number" },
     },
@@ -62,7 +62,7 @@ const meta: Meta<KvibToast> = {
       description: "if true, the toast will show a close button",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -78,7 +78,6 @@ const meta: Meta<KvibToast> = {
       table: {
         type: { summary: "() => void" },
       },
-      control: "",
     },
     position: {
       description: "Placement of the toast",
@@ -136,7 +135,7 @@ const ToastExample = ({ ...args }) => {
           })
         }
       >
-        {args.title}
+        Vis toast
       </Button>
     </Center>
   );

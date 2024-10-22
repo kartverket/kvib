@@ -40,7 +40,7 @@ const meta: Meta<typeof KvibPopover> = {
       description: "The padding required to prevent the arrow from reaching the very edge of the Popover.",
       table: {
         type: { summary: "number" },
-        defaultValue: { summary: 8 },
+        defaultValue: { summary: "8" },
       },
       control: "number",
     },
@@ -65,7 +65,7 @@ const meta: Meta<typeof KvibPopover> = {
       description: "If true, focus will be transferred to the first interactive element when the popover opens",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: true },
+        defaultValue: { summary: "true" },
       },
       control: "boolean",
     },
@@ -82,7 +82,7 @@ const meta: Meta<typeof KvibPopover> = {
       description: "",
       table: {
         type: { summary: "number" },
-        defaultValue: { summary: 200 },
+        defaultValue: { summary: "200" },
       },
       control: "number",
     },
@@ -91,7 +91,7 @@ const meta: Meta<typeof KvibPopover> = {
       description: "If true, the popover will close when you blur out it by clicking outside or tabbing out",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: true },
+        defaultValue: { summary: "true" },
       },
       control: "boolean",
     },
@@ -100,7 +100,7 @@ const meta: Meta<typeof KvibPopover> = {
       description: "If true, the popover will close when you hit the Esc key",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: true },
+        defaultValue: { summary: "true" },
       },
       control: "boolean",
     },
@@ -137,7 +137,7 @@ const meta: Meta<typeof KvibPopover> = {
         "If provided, determines whether the Popover will reposition itself on scroll and resize of the window.",
       table: {
         type: { summary: "boolean | { scroll?: boolean | undefined resize?: boolean | undefined }" },
-        defaultValue: { summary: true },
+        defaultValue: { summary: "true" },
       },
       control: "object",
     },
@@ -147,7 +147,7 @@ const meta: Meta<typeof KvibPopover> = {
         "If true, the Popover will change its placement and flip when it's about to overflow its boundary area.",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: true },
+        defaultValue: { summary: "true" },
       },
       control: "boolean",
     },
@@ -157,7 +157,7 @@ const meta: Meta<typeof KvibPopover> = {
         "The distance or margin between the reference and Popover. It is used internally to create an offset modifier. NB: If you define offset prop, it'll override the gutter.",
       table: {
         type: { summary: "number" },
-        defaultValue: { summary: 8 },
+        defaultValue: { summary: "8" },
       },
       control: "number",
     },
@@ -210,7 +210,7 @@ const meta: Meta<typeof KvibPopover> = {
         "If true, the Popover will match the width of the reference at all times. It's useful for autocomplete, `date-picker` and select patterns.",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -220,7 +220,6 @@ const meta: Meta<typeof KvibPopover> = {
       table: {
         type: { summary: "Partial<Modifier<string, any>>[]" },
       },
-      control: "array",
     },
 
     offset: {
@@ -228,7 +227,6 @@ const meta: Meta<typeof KvibPopover> = {
       table: {
         type: { summary: "[number, number]" },
       },
-      control: "array",
     },
 
     onClose: {
@@ -236,7 +234,6 @@ const meta: Meta<typeof KvibPopover> = {
       table: {
         type: { summary: "() => void" },
       },
-      control: "function",
     },
 
     onOpen: {
@@ -244,14 +241,13 @@ const meta: Meta<typeof KvibPopover> = {
       table: {
         type: { summary: "() => void" },
       },
-      control: "function",
     },
 
     openDelay: {
       description: "",
       table: {
         type: { summary: "number" },
-        defaultValue: { summary: 200 },
+        defaultValue: { summary: "200" },
       },
       control: "number",
     },
@@ -270,7 +266,7 @@ const meta: Meta<typeof KvibPopover> = {
         "If true, will prevent the popover from being cut off and ensure it's visible within the boundary area.",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: true },
+        defaultValue: { summary: "true" },
       },
       control: "boolean",
     },
@@ -279,7 +275,7 @@ const meta: Meta<typeof KvibPopover> = {
       description: "If true, focus will be returned to the element that triggers the popover when it closes",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: true },
+        defaultValue: { summary: "true" },
       },
       control: "boolean",
     },
@@ -319,13 +315,12 @@ export const Preview: Story = {
   render: args => (
     <KvibPopover {...args}>
       <PopoverTrigger>
-        <Button>Trykk</Button>
+        <Button>Vis popover</Button>
       </PopoverTrigger>
       <PopoverContent>
         <PopoverArrow />
         <PopoverCloseButton />
-        <PopoverHeader>Bekreftelse!</PopoverHeader>
-        <PopoverBody>Er du sikker på at du vil drikke den milkshaken?</PopoverBody>
+        <PopoverHeader>Dette er en popover</PopoverHeader>
       </PopoverContent>
     </KvibPopover>
   ),
@@ -465,7 +460,7 @@ const ControlledUsage = ({ ...args }) => {
           <PopoverBody>Er du sikker på at du vil fortsette?</PopoverBody>
           <PopoverFooter display="flex" justifyContent="flex-end">
             <ButtonGroup size="sm">
-              <Button variant="outline">Avbryt</Button>
+              <Button variant="tertiary">Avbryt</Button>
               <Button colorScheme="red">Godkjenn</Button>
             </ButtonGroup>
           </PopoverFooter>
