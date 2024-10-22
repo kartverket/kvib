@@ -48,7 +48,6 @@ export default meta;
 type Story = StoryObj<typeof KvibShow>;
 
 export const Preview: Story = {
-  // et eksempel for små skjermer, en for store skjermer
   render: args => (
     <>
       <KvibShow {...args} above="md">
