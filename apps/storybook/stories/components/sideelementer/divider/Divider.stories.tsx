@@ -9,7 +9,7 @@ import {
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibDivider> = {
-  title: "Sideelementer/Divider",
+  title: "Komponenter/Divider",
   component: KvibDivider,
   parameters: {
     docs: {

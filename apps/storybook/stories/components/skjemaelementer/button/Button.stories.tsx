@@ -2,7 +2,7 @@ import { Button as KvibButton, ButtonGroup as KvibButtonGroup, StackDivider, VSt
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibButton> = {
-  title: "Skjemaelementer/Button",
+  title: "Komponenter/Button",
   component: KvibButton,
   parameters: {
     docs: {
@@ -41,8 +41,8 @@ const meta: Meta<typeof KvibButton> = {
     isDisabled: {
       description: "If true, the button will be disabled.",
       table: {
-        type: { summary: Boolean },
-        defaultValue: { summary: false },
+        type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -50,7 +50,7 @@ const meta: Meta<typeof KvibButton> = {
       description: "If true, the button will show a spinner.",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },

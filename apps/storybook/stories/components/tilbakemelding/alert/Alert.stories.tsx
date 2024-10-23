@@ -2,7 +2,7 @@ import { AlertDescription, AlertIcon, AlertTitle, Box, Alert as KvibAlert, VStac
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibAlert> = {
-  title: "Tilbakemelding/Alert",
+  title: "Komponenter/Alert",
   component: KvibAlert,
   parameters: {
     docs: {

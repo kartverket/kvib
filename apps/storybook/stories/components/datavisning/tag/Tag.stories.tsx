@@ -7,7 +7,7 @@ import {
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibTag> = {
-  title: "Datavisning/Tag",
+  title: "Komponenter/Tag",
   component: KvibTag,
   parameters: {
     docs: {

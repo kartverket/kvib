@@ -3,7 +3,7 @@ import { colors } from "@kvib/react/src/theme/tokens";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibFade> = {
-  title: "Animasjoner/Fade",
+  title: "Komponenter/Animasjoner/Fade",
   component: KvibFade,
   parameters: {
     docs: {

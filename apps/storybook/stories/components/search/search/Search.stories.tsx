@@ -2,7 +2,7 @@ import { Search as KvibSearch, Stack } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibSearch> = {
-  title: "Søk/Search",
+  title: "Komponenter/Search",
   component: KvibSearch,
   parameters: {
     docs: {
@@ -61,7 +61,7 @@ const meta: Meta<typeof KvibSearch> = {
       description: "Toggles if input should be invalid",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -69,7 +69,7 @@ const meta: Meta<typeof KvibSearch> = {
       description: "Toggles if input should be disabled",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },

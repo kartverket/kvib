@@ -8,7 +8,7 @@ import {
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibSkeleton> = {
-  title: "Tilbakemelding/Skeleton",
+  title: "Komponenter/Skeleton",
   component: KvibSkeleton,
   parameters: {
     docs: {
@@ -29,7 +29,7 @@ const meta: Meta<typeof KvibSkeleton> = {
       description: "The fadeIn duration in seconds. Requires isLoaded toggled to true in order to see the transition.",
       table: {
         type: { summary: "number" },
-        defaultValue: { summary: 0.4 },
+        defaultValue: { summary: "0.4" },
       },
       control: "number",
     },
@@ -38,7 +38,7 @@ const meta: Meta<typeof KvibSkeleton> = {
       description: "If true, the skeleton will take the width of it's children",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -47,7 +47,7 @@ const meta: Meta<typeof KvibSkeleton> = {
       description: "If true, it'll render its children with a nice fade transition",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -56,7 +56,7 @@ const meta: Meta<typeof KvibSkeleton> = {
       description: "The animation speed in seconds",
       table: {
         type: { summary: "number" },
-        defaultValue: { summary: 0.8 },
+        defaultValue: { summary: "0.8" },
       },
       control: "number",
     },

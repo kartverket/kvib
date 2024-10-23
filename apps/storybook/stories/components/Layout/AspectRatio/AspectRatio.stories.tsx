@@ -4,7 +4,7 @@ import { AspectRatio as KvibAspectRatio } from "@kvib/react/src/layout";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibAspectRatio> = {
-  title: "Layout/Aspect Ratio",
+  title: "Komponenter/Aspect Ratio",
   component: KvibAspectRatio,
   parameters: {
     docs: {

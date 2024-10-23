@@ -2,7 +2,7 @@ import { FormControl, FormLabel, Icon, Select as KvibSelect, Stack as KvibStack 
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibSelect> = {
-  title: "Skjemaelementer/Select",
+  title: "Komponenter/Select",
   component: KvibSelect,
   parameters: {
     docs: {
@@ -55,7 +55,7 @@ const meta: Meta<typeof KvibSelect> = {
       description: "",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -65,7 +65,7 @@ const meta: Meta<typeof KvibSelect> = {
         "If true, the form control will be invalid. This has 2 side effects: - The FormLabel and FormErrorIcon will have `data-invalid` set to true - The form element (e.g, Input) will have `aria-invalid` set to true",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -75,7 +75,7 @@ const meta: Meta<typeof KvibSelect> = {
         "If true, the form control will be required. This has 2 side effects: - The FormLabel will show a required indicator - The form element (e.g, Input) will have `aria-required` set to true",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },

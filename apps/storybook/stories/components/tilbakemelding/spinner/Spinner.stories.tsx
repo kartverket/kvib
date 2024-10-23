@@ -2,7 +2,7 @@ import { Spinner as KvibSpinner, Stack as KvibStack } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibSpinner> = {
-  title: "Tilbakemelding/Spinner",
+  title: "Komponenter/Spinner",
   component: KvibSpinner,
   parameters: {
     docs: {

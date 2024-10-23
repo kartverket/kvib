@@ -2,7 +2,7 @@ import { Box, Progress as KvibProgress, Stack as KvibStack } from "@kvib/react/s
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibProgress> = {
-  title: "Tilbakemelding/Progress",
+  title: "Komponenter/Progress",
   component: KvibProgress,
   parameters: {
     docs: {

@@ -3,7 +3,7 @@ import { Datepicker as KvibDatepicker } from "@kvib/react/src/datepicker";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibDatepicker> = {
-  title: "Skjemaelementer/Datepicker",
+  title: "Komponenter/Datepicker",
   component: KvibDatepicker,
   parameters: {
     docs: {
@@ -127,7 +127,6 @@ const meta: Meta<typeof KvibDatepicker> = {
       table: {
         type: { summary: "Date[]" },
       },
-      control: "array",
     },
 
     useNative: {
@@ -142,7 +141,6 @@ const meta: Meta<typeof KvibDatepicker> = {
       table: {
         type: { summary: "(date: Date | undefined) => void" },
       },
-      control: "function",
     },
     colorScheme: {
       description: "Color scheme",

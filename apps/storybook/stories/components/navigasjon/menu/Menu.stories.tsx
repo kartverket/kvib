@@ -15,7 +15,7 @@ import {
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibMenu> = {
-  title: "Navigasjon/Menu",
+  title: "Komponenter/Menu",
   component: KvibMenu,
   parameters: {
     docs: {
@@ -168,7 +168,6 @@ const meta: Meta<typeof KvibMenu> = {
       table: {
         type: { summary: "[number, number]" },
       },
-      control: "array",
     },
     onClose: {
       table: {

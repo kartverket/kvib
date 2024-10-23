@@ -14,7 +14,7 @@ import { useRef } from "react";
 import { AlertDialogCenteredString, AlertDialogString, AlertDialogTransitionString } from "./srcStrings";
 
 const meta: Meta<typeof KvibAlertDialog> = {
-  title: "Overlay/Alert Dialog",
+  title: "Komponenter/Alert Dialog",
   component: KvibAlertDialog,
   parameters: {
     docs: {
@@ -44,7 +44,6 @@ const meta: Meta<typeof KvibAlertDialog> = {
       table: {
         type: { summary: "() => void" },
       },
-      control: "function",
     },
     allowPinchZoom: {
       description: "Handle zoom/pinch gestures on iOS devices when scroll locking is enabled.",
@@ -131,21 +130,18 @@ const meta: Meta<typeof KvibAlertDialog> = {
       table: {
         type: { summary: "() => void" },
       },
-      control: "function",
     },
     onEsc: {
       description: "Callback fired when the escape key is pressed and focus is within modal",
       table: {
         type: { summary: "() => void" },
       },
-      control: "function",
     },
     onOverlayClick: {
       description: "Callback fired when the overlay is clicked.",
       table: {
         type: { summary: "() => void" },
       },
-      control: "function",
     },
     portalProps: {
       description: "Props to be forwarded to the portal component",

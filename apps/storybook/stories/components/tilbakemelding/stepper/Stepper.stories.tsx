@@ -16,7 +16,7 @@ import {
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibStepper> = {
-  title: "Tilbakemelding/Stepper",
+  title: "Komponenter/Stepper",
   component: KvibStepper,
   parameters: {
     docs: {

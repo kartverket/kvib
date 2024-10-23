@@ -2,7 +2,7 @@ import { Center, Wrap as KvibWrap, WrapItem as KvibWrapItem } from "@kvib/react/
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibWrap> = {
-  title: "Layout/Wrap",
+  title: "Komponenter/Wrap",
   component: KvibWrap,
   parameters: {
     docs: {

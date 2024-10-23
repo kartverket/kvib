@@ -2,7 +2,7 @@ import { Box, HStack, Stack as KvibStack, StackDivider, VStack } from "@kvib/rea
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibStack> = {
-  title: "Layout/Stack",
+  title: "Komponenter/Stack",
   component: KvibStack,
   parameters: {
     docs: {
@@ -104,7 +104,6 @@ const meta: Meta<typeof KvibStack> = {
       description: "The space between each child",
       table: { type: { summary: "px | rem" } },
       defaultValue: { summary: "" },
-      control: { type: "string" },
     },
     wrap: {
       description: "short for flexWrap",
@@ -154,7 +153,7 @@ export const ResponsiveStack: Story = {
 
 export const StackStyled: Story = {
   render: args => (
-    <KvibStack divider={<StackDivider borderColor="gray.200" />} spacing={12}>
+    <KvibStack {...args} divider={<StackDivider borderColor="gray.200" />} spacing={12}>
       <Box width="40px" height="40px" backgroundColor="green.200">
         1
       </Box>
@@ -170,7 +169,7 @@ export const StackStyled: Story = {
 
 export const HStackDemo: Story = {
   render: args => (
-    <HStack>
+    <HStack {...args}>
       <Box width="40px" height="40px" backgroundColor="green.200">
         1
       </Box>
@@ -186,7 +185,7 @@ export const HStackDemo: Story = {
 
 export const VStackDemo: Story = {
   render: args => (
-    <VStack>
+    <VStack {...args}>
       <Box width="40px" height="40px" backgroundColor="green.200">
         1
       </Box>

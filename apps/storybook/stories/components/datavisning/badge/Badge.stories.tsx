@@ -14,7 +14,7 @@ import {
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibBadge> = {
-  title: "Datavisning/Badge",
+  title: "Komponenter/Badge",
   component: KvibBadge,
   parameters: {
     docs: {

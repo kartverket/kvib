@@ -12,7 +12,7 @@ import {
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibInput> = {
-  title: "Skjemaelementer/Input",
+  title: "Komponenter/Input",
   component: KvibInput,
   parameters: {
     docs: {
@@ -43,7 +43,7 @@ const meta: Meta<typeof KvibInput> = {
       description: "Toggles if input should be required",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -51,7 +51,7 @@ const meta: Meta<typeof KvibInput> = {
       description: "Toggles if input should be read-only",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -59,7 +59,7 @@ const meta: Meta<typeof KvibInput> = {
       description: "Toggles if input should be invalid",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -67,7 +67,7 @@ const meta: Meta<typeof KvibInput> = {
       description: "Toggles if input should be disabled",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },

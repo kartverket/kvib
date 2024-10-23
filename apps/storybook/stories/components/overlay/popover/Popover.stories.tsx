@@ -27,7 +27,7 @@ import { FC, forwardRef, Ref, useRef, useState } from "react";
 import FocusLock from "react-focus-lock";
 
 const meta: Meta<typeof KvibPopover> = {
-  title: "Overlay/Popover",
+  title: "Komponenter/Popover",
   component: KvibPopover,
   parameters: {
     docs: {

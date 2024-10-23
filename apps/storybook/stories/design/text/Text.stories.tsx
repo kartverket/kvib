@@ -2,7 +2,7 @@ import { Stack as KvibStack, Text as KvibText } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibText> = {
-  title: "Designfundament/Text",
+  title: "Komponenter/Tokens/Text",
   component: KvibText,
   parameters: {
     docs: {

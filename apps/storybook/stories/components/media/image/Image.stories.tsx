@@ -2,7 +2,7 @@ import { Image as KvibImage, Stack as KvibStack } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibImage> = {
-  title: "Media/Image",
+  title: "Komponenter/Image",
   component: KvibImage,
   parameters: {
     docs: {
@@ -75,7 +75,7 @@ const meta: Meta<typeof KvibImage> = {
       description: "If true, opt out of the fallbackSrc logic and use as img.",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },

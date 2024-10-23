@@ -3,7 +3,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import { useRef } from "react";
 
 const meta: Meta<typeof KvibPortal> = {
-  title: "Annet/Portal",
+  title: "Komponenter/Portal",
   component: KvibPortal,
   parameters: {
     docs: {

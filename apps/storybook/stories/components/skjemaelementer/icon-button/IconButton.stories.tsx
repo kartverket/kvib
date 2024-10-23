@@ -10,7 +10,7 @@ import {
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibIconButton> = {
-  title: "Skjemaelementer/Icon Button",
+  title: "Komponenter/Icon Button",
   component: KvibIconButton,
   parameters: {
     docs: {
@@ -41,7 +41,7 @@ const meta: Meta<typeof KvibIconButton> = {
       description: "If true, the button will be disabled.",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -53,7 +53,7 @@ const meta: Meta<typeof KvibIconButton> = {
     iconFill: {
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -61,7 +61,7 @@ const meta: Meta<typeof KvibIconButton> = {
       description: "If true, the button will show a spinner.",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },

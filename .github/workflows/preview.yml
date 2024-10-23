@@ -2,20 +2,24 @@ name: Deploy PR previews
 
 on:
   workflow_dispatch:
-  pull_request_target:
+  pull_request:
     types:
       - opened
       - reopened
       - synchronize
       - closed
 
-concurrency: preview-${{ github.ref }}
+permissions:
+  contents: read
+  pull-requests: write
 
 jobs:
   deploy-preview:
-    runs-on: ubuntu-20.04
+    name: Deploy PR preview
+    concurrency: preview-${{ github.ref }}
+    runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout Repo
         uses: actions/checkout@v4
 
       - name: Setup Node.js environment
@@ -24,10 +28,10 @@ jobs:
           node-version: 20
           cache: "npm"
 
-      - name: Install and Build
-        run: |
-          npm install --frozen-lockfile
-          npm run build
+      - name: Install dependencies
+        run: npm install --frozen-lockfile
+      - name: Build website
+        run: npm run build
 
       - name: Deploy preview
         uses: rossjrw/pr-preview-action@v1

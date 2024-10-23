@@ -4,7 +4,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import { IndeterminateExample } from "./IndeterminateExample";
 
 const meta: Meta<typeof KvibCheckbox> = {
-  title: "Skjemaelementer/Checkbox",
+  title: "Komponenter/Checkbox",
   component: KvibCheckbox,
   parameters: {
     docs: {
@@ -35,7 +35,7 @@ const meta: Meta<typeof KvibCheckbox> = {
       description: "If true, the checkbox will be disabled",
       table: {
         type: { summary: "true | false" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },

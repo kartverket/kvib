@@ -3,7 +3,7 @@ import { colors } from "@kvib/react/src/theme/tokens";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibCollapse> = {
-  title: "Animasjoner/Collapse",
+  title: "Komponenter/Animasjoner/Collapse",
   component: KvibCollapse,
   parameters: {
     docs: {

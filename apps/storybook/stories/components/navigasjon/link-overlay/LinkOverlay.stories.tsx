@@ -8,7 +8,7 @@ import {
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibLinkOverlay> = {
-  title: "Navigasjon/LinkOverlay",
+  title: "Komponenter/Link Overlay",
   component: KvibLinkOverlay,
   parameters: {
     docs: {

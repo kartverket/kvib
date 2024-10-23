@@ -12,7 +12,7 @@ import {
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibTable> = {
-  title: "Datavisning/Table",
+  title: "Komponenter/Table",
   component: KvibTable,
   parameters: {
     docs: {

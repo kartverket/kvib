@@ -25,7 +25,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import { useRef, useState } from "react";
 
 const meta: Meta<typeof KvibDrawer> = {
-  title: "Overlay/Drawer",
+  title: "Komponenter/Drawer",
   component: KvibDrawer,
   parameters: {
     docs: {
@@ -52,7 +52,7 @@ const meta: Meta<typeof KvibDrawer> = {
       description: "Handle zoom/pinch gestures on iOS devices when scroll locking is enabled.",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -61,7 +61,7 @@ const meta: Meta<typeof KvibDrawer> = {
         "If true, the modal will autofocus the first enabled and interactive element within the ModalContent",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: true },
+        defaultValue: { summary: "true" },
       },
       control: "boolean",
     },
@@ -69,7 +69,7 @@ const meta: Meta<typeof KvibDrawer> = {
       description: "If true, scrolling will be disabled on the body when the modal opens.",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: true },
+        defaultValue: { summary: "true" },
       },
       control: "boolean",
     },
@@ -77,7 +77,7 @@ const meta: Meta<typeof KvibDrawer> = {
       description: "If true, the modal will close when the Esc key is pressed",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: true },
+        defaultValue: { summary: "true" },
       },
       control: "boolean",
     },
@@ -85,7 +85,7 @@ const meta: Meta<typeof KvibDrawer> = {
       description: "f true, the modal will close when the overlay is clicked",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: true },
+        defaultValue: { summary: "true" },
       },
       control: "boolean",
     },
@@ -123,7 +123,7 @@ const meta: Meta<typeof KvibDrawer> = {
         "Enables aggressive focus capturing within iframes. - If true: keep focus in the lock, no matter where lock is active - If false: allows focus to move outside of iframe",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -168,7 +168,7 @@ const meta: Meta<typeof KvibDrawer> = {
         "If true, a `padding-right` will be applied to the body element that's equal to the width of the scrollbar. This can help prevent some unpleasant flickering effect and content adjustment when the modal opens",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: true },
+        defaultValue: { summary: "true" },
       },
       control: "boolean",
     },
@@ -176,7 +176,7 @@ const meta: Meta<typeof KvibDrawer> = {
       description: "If true, the modal will return focus to the element that triggered it when it closes.",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: true },
+        defaultValue: { summary: "true" },
       },
       control: "boolean",
     },
@@ -194,7 +194,7 @@ const meta: Meta<typeof KvibDrawer> = {
         "If false, focus lock will be disabled completely. This is useful in situations where you still need to interact with other surrounding elements. 🚨Warning: We don't recommend doing this because it hurts the accessibility of the modal, based on WAI-ARIA specifications.",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: true },
+        defaultValue: { summary: "true" },
       },
       control: "boolean",
     },
@@ -203,7 +203,7 @@ const meta: Meta<typeof KvibDrawer> = {
         "A11y: If true, the siblings of the modal will have `aria-hidden` set to true so that screen readers can only see the modal. This is commonly known as making the other elements **inert**",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: true },
+        defaultValue: { summary: "true" },
       },
       control: "boolean",
     },
@@ -231,11 +231,7 @@ const meta: Meta<typeof KvibDrawer> = {
 export default meta;
 type Story = StoryObj<typeof KvibDrawer>;
 
-interface CustomDrawerProps extends DrawerProps {
-  colorScheme: "green" | "blue";
-}
-
-export const DrawerExample = ({ ...args }: CustomDrawerProps) => {
+export const DrawerExample = ({ ...args }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>

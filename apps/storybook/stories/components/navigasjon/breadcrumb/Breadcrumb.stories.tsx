@@ -6,7 +6,7 @@ import {
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibBreadcrumb> = {
-  title: "Navigasjon/Breadcrumb",
+  title: "Komponenter/Breadcrumb",
   component: KvibBreadcrumb,
   parameters: {
     docs: {

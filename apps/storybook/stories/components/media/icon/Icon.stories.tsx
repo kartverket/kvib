@@ -2,7 +2,7 @@ import { HStack, Icon, useTheme } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Icon> = {
-  title: "Media/Icon",
+  title: "Komponenter/Icon",
   component: Icon,
   parameters: {
     docs: {
@@ -12,7 +12,6 @@ const meta: Meta<typeof Icon> = {
   },
   argTypes: {
     color: {
-      table: { type: "string", defaultValue: { summary: "black" } },
       control: "text",
     },
     weight: {

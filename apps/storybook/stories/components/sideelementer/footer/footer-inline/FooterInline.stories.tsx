@@ -2,7 +2,7 @@ import { FooterInline as KvibFooterInline, Link } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibFooterInline> = {
-  title: "Sideelementer/Footer/Footer-inline",
+  title: "Komponenter/Footer Inline",
   component: KvibFooterInline,
   parameters: {
     docs: {

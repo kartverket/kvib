@@ -8,7 +8,7 @@ import {
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibHighlight> = {
-  title: "Designfundament/Highlight",
+  title: "Komponenter/Tokens/Highlight",
   component: KvibHighlight,
   parameters: {
     docs: {

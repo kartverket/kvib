@@ -8,7 +8,7 @@ import {
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibList> = {
-  title: "Datavisning/List",
+  title: "Komponenter/List",
   component: KvibList,
   parameters: {
     docs: {
@@ -20,7 +20,7 @@ const meta: Meta<typeof KvibList> = {
     spacing: {
       description: "The space between each list item",
       table: {
-        type: { summary: String },
+        type: { summary: "String" },
       },
       control: "text",
     },

@@ -2,7 +2,7 @@ import { FileUpload as KvibFileUpload, Stack } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibFileUpload> = {
-  title: "Skjemaelementer/File Upload",
+  title: "Komponenter/File Upload",
   component: KvibFileUpload,
   parameters: {
     docs: {

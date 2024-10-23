@@ -2,7 +2,7 @@ import { Kbd as KvibKbd, Stack as KvibStack } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibKbd> = {
-  title: "Datavisning/Kbd",
+  title: "Komponenter/Kbd",
   component: KvibKbd,
   parameters: {
     docs: {
