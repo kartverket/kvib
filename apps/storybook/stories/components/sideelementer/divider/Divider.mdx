@@ -24,7 +24,7 @@ import { Divider } from "@kvib/react";
       Bruk <code>variant</code> prop for å endre <code>Divider</code> varianten.
     </Text>
   }
-  story={<Canvas of={DividerStories.DividerVariants} sourceState="hidden" />}
+  story={<Canvas of={DividerStories.DividerVariants} sourceState="hidden" className="fullwidth" />}
 />
 
 <DocsStory
@@ -35,7 +35,7 @@ import { Divider } from "@kvib/react";
       <code>borderWidth</code> prop.
     </Text>
   }
-  story={<Canvas of={DividerStories.DividerColorsWidths} sourceState="hidden" />}
+  story={<Canvas of={DividerStories.DividerColorsWidths} sourceState="hidden" className="fullwidth" />}
 />
 
 <DocsStory
@@ -45,7 +45,7 @@ import { Divider } from "@kvib/react";
       Bruk <code>orientation</code>prop for å sette vertikal <code>Divider</code>.
     </Text>
   }
-  story={<Canvas of={DividerStories.DividerVertical} sourceState="hidden" />}
+  story={<Canvas of={DividerStories.DividerVertical} sourceState="hidden" className="fullwidth" />}
 />
 
 <DocsStory
@@ -56,7 +56,7 @@ import { Divider } from "@kvib/react";
       <code>AbsoluteCenter</code> og <code>Text</code> komponenter.
     </Text>
   }
-  story={<Canvas of={DividerStories.DividerContent} sourceState="hidden" />}
+  story={<Canvas of={DividerStories.DividerContent} sourceState="hidden" className="fullwidth" />}
 />
 
 <DocsStory
@@ -65,7 +65,7 @@ import { Divider } from "@kvib/react";
   description={""}
   story={
     <>
-      <Canvas of={DividerStories.Preview} />
+      <Canvas of={DividerStories.Preview} className="fullwidth" />
       <Controls of={DividerStories.Preview} />
     </>
   }
