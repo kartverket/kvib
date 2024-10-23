@@ -87,7 +87,6 @@ export const Preview: Story = {
 };
 
 export const SkeletonWrapped: Story = {
-  args: { fitContent: true },
   render: args => (
     <KvibSkeleton {...args}>
       <div>Det som er wrapped i Skeleton</div>

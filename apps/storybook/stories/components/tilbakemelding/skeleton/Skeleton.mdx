@@ -23,32 +23,44 @@ import { Skeleton, SkeletonCircle, SkeletonText } from "@kvib/react";
   isVertical
   title="Wrapped rundt andre komponenter"
   description={""}
-  story={<Canvas of={SkeletonStories.SkeletonWrapped} sourceState="hidden" />}
+  story={<Canvas of={SkeletonStories.SkeletonWrapped}
+            className="fullwidth"
+
+  sourceState="hidden" />}
 />
 
 <DocsStory
   isVertical
   title="Sirkel og tekst Skeleton"
   description={""}
-  story={<Canvas of={SkeletonStories.SkeletonCircle} sourceState="hidden" />}
+  story={<Canvas of={SkeletonStories.SkeletonCircle}
+            className="fullwidth"
+  sourceState="hidden" />}
 />
 
 <DocsStory
   isVertical
   title="Farger"
   description={""}
-  story={<Canvas of={SkeletonStories.SkeletonColors} sourceState="hidden" />}
+  story={<Canvas of={SkeletonStories.SkeletonColors}
+
+            className="fullwidth"
+  sourceState="hidden" />}
 />
 
 <DocsStory
   isVertical
   title="Ferdiglastet Skeleton"
   description={""}
-  story={<Canvas of={SkeletonStories.SkeletonLoaded} sourceState="hidden" />}
+  story={<Canvas of={SkeletonStories.SkeletonLoaded}
+            className="fullwidth"
+  sourceState="hidden" />}
 />
 
 <DocsHeading light children="Props" />
-<Canvas of={SkeletonStories.Preview} />
+<Canvas of={SkeletonStories.Preview}
+            className="fullwidth"
+/>
 <Controls of={SkeletonStories.Preview} />
 
 </DocsContainer>

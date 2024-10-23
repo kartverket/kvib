@@ -130,6 +130,7 @@ export const argTypes = {
 
 const preview: Preview = {
   parameters: parameters,
+  tags: ["autodocs"],
 };
 
 export default preview;
