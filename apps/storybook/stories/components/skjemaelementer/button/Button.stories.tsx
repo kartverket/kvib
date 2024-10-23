@@ -176,7 +176,7 @@ export const ButtonGroup: Story = {
   args: { children: "Klikk her" },
   render: args => (
     <VStack divider={<StackDivider borderColor="gray.200" />}>
-      <KvibButtonGroup orientation="vertical" variant="secondary" spacing="4" size="sm" w="100%">
+      <KvibButtonGroup orientation="vertical" variant="secondary" spacing="4" size="sm">
         <KvibButton {...args}>{args.children}</KvibButton>
         <KvibButton {...args}>{args.children}</KvibButton>
       </KvibButtonGroup>
