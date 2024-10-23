@@ -1,8 +1,8 @@
-name: Deploy PR previews
+name: Deploy PR preview
 
 on:
   workflow_dispatch:
-  pull_request:
+  pull_request_target:
     types:
       - opened
       - reopened
@@ -16,7 +16,6 @@ permissions:
 jobs:
   deploy-preview:
     name: Deploy PR preview
-    concurrency: preview-${{ github.ref }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
