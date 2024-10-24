@@ -1,5 +1,12 @@
 # @kvib/react
 
+## 4.6.5
+
+### Patch Changes
+
+- a583e12: Pakker Datepicker sin popover i en portal for å alltid løfte den over andre elementer i nærheten av der den blir brukt
+- 0c5b761: CloseButton får grønn som standard hoverfarge
+
 ## 4.6.4
 
 ### Patch Changes
