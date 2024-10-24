@@ -32,6 +32,22 @@ const parameters = {
       const order = ["Introduksjon", "Endringslogg", "Komponentoversikt", "Kom i gang", "Bidra", "Komponenter"];
       const aIndex = order.indexOf(a.title.split("/")[0]);
       const bIndex = order.indexOf(b.title.split("/")[0]);
+
+      // samme som over, bare for siste element i path
+      const bidraSomUtviklerOrder = [
+        "Hurtigveiledning",
+        "Bygge",
+        "Style",
+        "Dokumentere",
+        "Teste",
+        "Publish",
+        "Kjente problemer",
+      ];
+      const aBidraIndex = bidraSomUtviklerOrder.indexOf(a.title.split("/").pop());
+      const bBidraIndex = bidraSomUtviklerOrder.indexOf(b.title.split("/").pop());
+      if (aBidraIndex < bBidraIndex) return -1;
+      if (aBidraIndex > bBidraIndex) return 1;
+
       if (aIndex < bIndex) return -1;
       if (aIndex > bIndex) return 1;
 
