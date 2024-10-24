@@ -8,7 +8,7 @@ interface Props {
 
 export const DokuTekstblokk = ({ tittel, children }: Props) => (
   <Stack rowGap={"1.125rem"}>
-    <Text as="h2" fontWeight={700} borderBottom={"none"}>
+    <Text as="h2" fontWeight={700} fontSize={"2xl"} lineHeight={"2xl"} borderBottom={"none"} m="0" p="0">
       {tittel}
     </Text>
     <Box>{children}</Box>
