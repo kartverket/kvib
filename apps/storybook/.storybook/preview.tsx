@@ -16,16 +16,21 @@ const parameters = {
   docs: {
     theme: theme,
     container: MDXContainer,
-    /* toc: {
+    toc: {
       contentsSelector: ".sbdocs-content",
       headingSelector: "h2, h3",
       collapseDepth: 0,
       title: "Innhold",
-    }, */
+    },
   },
   options: {
-    storySort: function storySort(a, b) {
-      // Grupper mapper først, så alfabetisk rekkefølge
+    storySort: (a, b) => {
+      const order = ["Introduksjon", "Endringslogg", "Komponentoversikt", "Kom i gang", "Bidra", "Komponenter"];
+      const aIndex = order.indexOf(a.title.split("/")[0]);
+      const bIndex = order.indexOf(b.title.split("/")[0]);
+      if (aIndex < bIndex) return -1;
+      if (aIndex > bIndex) return 1;
+
       const aLength = a.title.split("/").length;
       const bLength = b.title.split("/").length;
       if (aLength < bLength) return 1;
