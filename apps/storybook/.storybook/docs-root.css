@@ -6,11 +6,8 @@ div[role="main"] > :first-child {
 
 /* Container for MDX files */
 .sbdocs-wrapper {
-  padding: 20px 40px !important;
-  display: grid;
-  grid-template-columns: 82% 18%;
-  grid-gap: 12px;
-  background-color: gold;
+  display: flex;
+  align-items: flex-start;
 }
 
 .sbdocs-content {
@@ -41,8 +38,6 @@ div[role="main"] > :first-child {
 }
 
 /* Sidebar */
-/* .container.sidebar-container {
-} */
 
 /* Sidebar item */
 .sidebar-item {
@@ -79,6 +74,7 @@ div[role="main"] > :first-child {
 .sidebar-header > div > button:focus {
   color: white;
   background-color: #156630;
+
 }
 
 .sidebar-item.sidebar-item a {
@@ -97,8 +93,15 @@ button.sidebar-item.sidebar-item {
   font-weight: 400 !important;
   padding-top: 0px !important;
   padding-bottom: 0px !important;
-  align-items: center;
+  align-items: center !important;
 }
+
+[data-item-id]:not([data-item-id="komponenter"]) {
+    /* Your styling here */
+    background-color: lightblue !important;
+    border: 1px solid #ccc !important;
+}
+
 
 /* Folder when open */
 .sidebar-item.sidebar-item:focus {

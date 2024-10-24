@@ -14,20 +14,23 @@ const parameters = {
     },
   },
   docs: {
-    autodocs: true,
     theme: theme,
     container: MDXContainer,
-    toc: {
+    /* toc: {
       contentsSelector: ".sbdocs-content",
       headingSelector: "h2, h3",
       collapseDepth: 0,
       title: "Innhold",
-    },
+    }, */
   },
   options: {
-    storySort: {
-      method: "alphabetical",
-      order: ["Introduksjon", "Endringslogg", "Komponentoversikt", "Kom i gang", "Bidra", "Komponenter"],
+    storySort: function storySort(a, b) {
+      // Grupper mapper først, så alfabetisk rekkefølge
+      const aLength = a.title.split("/").length;
+      const bLength = b.title.split("/").length;
+      if (aLength < bLength) return 1;
+      if (aLength > bLength) return -1;
+      return a.title === b.title ? 0 : a.id.localeCompare(b.id, undefined, { numeric: true });
     },
   },
 };
@@ -108,6 +111,7 @@ export const argTypes = {
 };
 
 const preview: Preview = {
+  decorators: decorators,
   parameters: parameters,
   tags: ["autodocs"],
 };
