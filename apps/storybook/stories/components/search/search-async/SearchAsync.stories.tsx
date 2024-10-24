@@ -10,7 +10,7 @@ import {
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibSearchAsync> = {
-  title: "Søk/SearchAsync",
+  title: "Komponenter/Search Async",
   component: KvibSearchAsync,
   parameters: {
     docs: {
@@ -80,7 +80,6 @@ const meta: Meta<typeof KvibSearchAsync> = {
       table: {
         type: { summary: "T[] | boolean" },
       },
-      control: "array",
     },
     variant: {
       table: {

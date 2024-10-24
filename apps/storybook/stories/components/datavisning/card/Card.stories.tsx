@@ -15,7 +15,7 @@ import {
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibCard> = {
-  title: "Datavisning/Card",
+  title: "Komponenter/Card",
   component: KvibCard,
   parameters: {
     docs: {

@@ -2,7 +2,7 @@ import { Box, Button, forwardRef, HStack, Tooltip as KvibTooltip, Tag, VStack, W
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibTooltip> = {
-  title: "Overlay/Tooltip",
+  title: "Komponenter/Tooltip",
   component: KvibTooltip,
   parameters: {
     docs: {
@@ -163,7 +163,6 @@ const meta: Meta<typeof KvibTooltip> = {
       table: {
         type: { summary: "[number, number]" },
       },
-      control: "array",
     },
     onClose: {
       description: "Callback to run when the tooltip hides",

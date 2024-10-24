@@ -2,7 +2,7 @@ import { FormControl, FormLabel, Stack as KvibStack, Switch as KvibSwitch, Simpl
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibSwitch> = {
-  title: "Skjemaelementer/Switch",
+  title: "Komponenter/Switch",
   component: KvibSwitch,
   parameters: {
     docs: {
@@ -21,7 +21,7 @@ const meta: Meta<typeof KvibSwitch> = {
     "aria-invalid": {
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: true },
+        defaultValue: { summary: "true" },
       },
       control: "boolean",
     },
@@ -55,7 +55,7 @@ const meta: Meta<typeof KvibSwitch> = {
       description: "If true, the checkbox will be initially checked.",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -71,7 +71,7 @@ const meta: Meta<typeof KvibSwitch> = {
         "If true, the checkbox will be checked. You'll need to pass onChange to update its value (since it is now controlled)",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -79,7 +79,7 @@ const meta: Meta<typeof KvibSwitch> = {
       description: "If true, the checkbox will be disabled",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -87,7 +87,7 @@ const meta: Meta<typeof KvibSwitch> = {
       description: "If true and isDisabled is passed, the checkbox will remain tabbable but not interactive",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -95,7 +95,7 @@ const meta: Meta<typeof KvibSwitch> = {
       description: "If true, the checkbox is marked as invalid. Changes style of unchecked state.",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -103,7 +103,7 @@ const meta: Meta<typeof KvibSwitch> = {
       description: "If true, the checkbox will be readonly",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -111,7 +111,7 @@ const meta: Meta<typeof KvibSwitch> = {
       description: "If true, the checkbox input is marked as required, and required attribute will be added",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -127,21 +127,18 @@ const meta: Meta<typeof KvibSwitch> = {
       table: {
         type: { summary: "(event: FocusEvent<HTMLInputElement, Element>) => void" },
       },
-      control: "function",
     },
     onChange: {
       description: "The callback invoked when the checked state of the Checkbox changes.",
       table: {
         type: { summary: "(event: ChangeEvent<HTMLInputElement>) => void" },
       },
-      control: "function",
     },
     onFocus: {
       description: "The callback invoked when the checkbox is focused",
       table: {
         type: { summary: "(event: FocusEvent<HTMLInputElement, Element>) => void" },
       },
-      control: "function",
     },
     size: {
       description: "The size of the Switch",
@@ -191,10 +188,8 @@ type Story = StoryObj<typeof KvibSwitch>;
 
 export const Preview: Story = {
   render: args => (
-    <FormControl display="flex" alignItems="center">
-      <FormLabel htmlFor="email-alerts" mb="0">
-        Skru på varsler via mail?
-      </FormLabel>
+    <FormControl>
+      <FormLabel htmlFor="email-alerts">Skru på varsler via mail?</FormLabel>
       <KvibSwitch {...args} id="email-alerts" />
     </FormControl>
   ),

@@ -6,7 +6,7 @@ import {
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibCircularProgress> = {
-  title: "Tilbakemelding/Circular Progress",
+  title: "Komponenter/Circular Progress",
   component: KvibCircularProgress,
   parameters: {
     docs: {
@@ -19,7 +19,7 @@ const meta: Meta<typeof KvibCircularProgress> = {
       description: "If true, the cap of the progress indicator will be rounded.",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -41,7 +41,7 @@ const meta: Meta<typeof KvibCircularProgress> = {
       description: "If true, the cap of the progress indicator will be rounded.",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -49,7 +49,7 @@ const meta: Meta<typeof KvibCircularProgress> = {
       description: "Maximum value defining 100% progress made (must be higher than 'min')",
       table: {
         type: { summary: "number" },
-        defaultValue: { summary: 100 },
+        defaultValue: { summary: "100" },
       },
       control: "number",
     },
@@ -57,7 +57,7 @@ const meta: Meta<typeof KvibCircularProgress> = {
       description: "Minimum value defining 'no progress' (must be lower than 'max')",
       table: {
         type: { summary: "number" },
-        defaultValue: { summary: 0 },
+        defaultValue: { summary: "0" },
       },
       control: "number",
     },

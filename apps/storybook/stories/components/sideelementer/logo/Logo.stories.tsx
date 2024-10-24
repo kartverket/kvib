@@ -2,7 +2,7 @@ import { Logo as KvibLogo, Stack as KvibStack } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibLogo> = {
-  title: "Sideelementer/Logo",
+  title: "Komponenter/Logo",
   component: KvibLogo,
   parameters: {
     docs: {

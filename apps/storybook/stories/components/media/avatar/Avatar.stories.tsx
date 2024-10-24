@@ -9,7 +9,7 @@ import {
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibAvatar> = {
-  title: "Media/Avatar",
+  title: "Komponenter/Avatar",
   component: KvibAvatar,
   parameters: {
     docs: {
@@ -22,7 +22,7 @@ const meta: Meta<typeof KvibAvatar> = {
       description: "If true, opt out of the avatar's fallback logic and renders the img at all times.",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -38,7 +38,7 @@ const meta: Meta<typeof KvibAvatar> = {
       description:
         "The name of the person in the avatar. - if src has loaded, the name will be used as the alt attribute of the img - If src is not loaded, the name will be used to create the initials",
       table: {
-        type: { summary: String },
+        type: { summary: "String" },
       },
       control: "text",
     },
@@ -53,7 +53,7 @@ const meta: Meta<typeof KvibAvatar> = {
       description: "If true, the Avatar will show a border around it. Best for a group of avatars",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },

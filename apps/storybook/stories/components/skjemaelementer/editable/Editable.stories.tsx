@@ -7,7 +7,7 @@ import {
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibEditable> = {
-  title: "Skjemaelementer/Editable",
+  title: "Komponenter/Editable",
   component: KvibEditable,
   parameters: {
     docs: {
@@ -35,7 +35,7 @@ const meta: Meta<typeof KvibEditable> = {
         "If true, the read only view, has a tabIndex set to 0 so it can receive focus via the keyboard or click.",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: true },
+        defaultValue: { summary: "true" },
       },
       control: "boolean",
     },
@@ -79,7 +79,7 @@ const meta: Meta<typeof KvibEditable> = {
       description: "If true, the input's text will be highlighted on focus.",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: true },
+        defaultValue: { summary: "true" },
       },
       control: "boolean",
     },
@@ -94,7 +94,7 @@ const meta: Meta<typeof KvibEditable> = {
       description: "If true, it'll update the value onBlur and turn off the edit mode.",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: true },
+        defaultValue: { summary: "true" },
       },
       control: "boolean",
     },

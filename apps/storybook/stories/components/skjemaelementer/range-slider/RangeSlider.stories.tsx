@@ -9,7 +9,7 @@ import {
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibRangeSlider> = {
-  title: "Skjemaelementer/Range Slider",
+  title: "Komponenter/Range Slider",
   component: KvibRangeSlider,
   parameters: {
     docs: {
@@ -23,7 +23,6 @@ const meta: Meta<typeof KvibRangeSlider> = {
       table: {
         type: { summary: "string[]" },
       },
-      control: "array",
     },
 
     "aria-labelledby": {
@@ -32,7 +31,6 @@ const meta: Meta<typeof KvibRangeSlider> = {
       table: {
         type: { summary: "string[]" },
       },
-      control: "array",
     },
 
     "aria-valuetext": {
@@ -40,7 +38,6 @@ const meta: Meta<typeof KvibRangeSlider> = {
       table: {
         type: { summary: "string[]" },
       },
-      control: "array",
     },
 
     defaultValue: {
@@ -48,7 +45,6 @@ const meta: Meta<typeof KvibRangeSlider> = {
       table: {
         type: { summary: "number[]" },
       },
-      control: "array",
     },
 
     direction: {
@@ -65,7 +61,7 @@ const meta: Meta<typeof KvibRangeSlider> = {
       description: "If false, the slider handle will not capture focus when value changes.",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: true },
+        defaultValue: { summary: "true" },
       },
       control: "boolean",
     },
@@ -91,7 +87,7 @@ const meta: Meta<typeof KvibRangeSlider> = {
       description: "If true, the slider will be disabled",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -100,7 +96,7 @@ const meta: Meta<typeof KvibRangeSlider> = {
       description: "If true, the slider will be in `read-only` state",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -109,7 +105,7 @@ const meta: Meta<typeof KvibRangeSlider> = {
       description: "If true, the value will be incremented or decremented in reverse.",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -118,7 +114,7 @@ const meta: Meta<typeof KvibRangeSlider> = {
       description: "The maximum allowed value of the slider. Cannot be less than min.",
       table: {
         type: { summary: "number" },
-        defaultValue: { summary: 100 },
+        defaultValue: { summary: "100" },
       },
       control: "number",
     },
@@ -127,7 +123,7 @@ const meta: Meta<typeof KvibRangeSlider> = {
       description: "The minimum allowed value of the slider. Cannot be greater than max.",
       table: {
         type: { summary: "number" },
-        defaultValue: { summary: 0 },
+        defaultValue: { summary: "0" },
       },
       control: "number",
     },
@@ -137,7 +133,7 @@ const meta: Meta<typeof KvibRangeSlider> = {
         "The minimum distance between slider thumbs. Useful for preventing the thumbs from being too close together.",
       table: {
         type: { summary: "number" },
-        defaultValue: { summary: 0 },
+        defaultValue: { summary: "0" },
       },
       control: "number",
     },
@@ -147,14 +143,13 @@ const meta: Meta<typeof KvibRangeSlider> = {
       table: {
         type: { summary: "string | string[]" },
       },
-      control: "array",
     },
 
     step: {
       description: "The step in which increments/decrements have to be made",
       table: {
         type: { summary: "number" },
-        defaultValue: { summary: 1 },
+        defaultValue: { summary: "1" },
       },
       control: "number",
     },
@@ -164,7 +159,6 @@ const meta: Meta<typeof KvibRangeSlider> = {
       table: {
         type: { summary: "number[]" },
       },
-      control: "array",
     },
   },
 };

@@ -29,7 +29,7 @@ import {
 } from "./srcStrings";
 
 const meta: Meta<typeof KvibModal> = {
-  title: "Overlay/Modal",
+  title: "Komponenter/Modal",
   component: KvibModal,
 
   argTypes: {

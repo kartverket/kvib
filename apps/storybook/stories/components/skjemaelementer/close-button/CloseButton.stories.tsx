@@ -2,7 +2,7 @@ import { CloseButton as KvibCloseButton, Stack as KvibStack } from "@kvib/react/
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibCloseButton> = {
-  title: "Skjemaelementer/Close Button",
+  title: "Komponenter/Close Button",
   component: KvibCloseButton,
   parameters: {
     docs: {
@@ -23,8 +23,8 @@ const meta: Meta<typeof KvibCloseButton> = {
     isDisabled: {
       description: "If true, the button will be disabled.",
       table: {
-        type: { summary: Boolean },
-        defaultValue: { summary: false },
+        type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },

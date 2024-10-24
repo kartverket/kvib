@@ -5,7 +5,7 @@ import { PinInputField as KvibPinInputField } from "@kvib/react/src/pin-input/Pi
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibPinInput> = {
-  title: "Skjemaelementer/Pin Input",
+  title: "Komponenter/Pin Input",
   component: KvibPinInput,
   parameters: {
     docs: {

@@ -9,7 +9,7 @@ import {
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibTabs> = {
-  title: "Navigasjon/Tabs",
+  title: "Komponenter/Tabs",
   component: KvibTabs,
   parameters: {
     docs: {
@@ -69,30 +69,30 @@ const meta: Meta<typeof KvibTabs> = {
     isFitted: {
       description: "If true, tabs will stretch to width of the tablist.",
       table: {
-        type: { summary: Boolean },
-        defaultValue: { summary: false },
+        type: { summary: "Boolean" },
+        defaultValue: { summary: "false" },
       },
       control: { type: "boolean" },
     },
     id: {
       description: "The id of the tab",
       table: {
-        type: { summary: String },
+        type: { summary: "String" },
       },
       control: "text",
     },
     index: {
       description: "The index of the selected tab (in controlled mode)",
       table: {
-        type: { summary: Number },
+        type: { summary: "Number" },
       },
       control: "number",
     },
     isDisabled: {
       description: "If true, tabs will no longer be able to toggle.",
       table: {
-        type: { summary: Boolean },
-        defaultValue: { summary: false },
+        type: { summary: "Boolean" },
+        defaultValue: { summary: "false" },
       },
       control: { type: "boolean" },
     },

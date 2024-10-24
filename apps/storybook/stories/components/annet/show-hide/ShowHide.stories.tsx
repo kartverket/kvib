@@ -2,7 +2,7 @@ import { Box, Show as KvibShow } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibShow> = {
-  title: "Annet/Show-Hide",
+  title: "Komponenter/Show-Hide",
   component: KvibShow,
   parameters: {
     docs: {

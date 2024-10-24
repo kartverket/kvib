@@ -9,7 +9,7 @@ import {
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibAccordion> = {
-  title: "Datavisning/Accordion",
+  title: "Komponenter/Accordion",
   component: KvibAccordion,
   parameters: {
     docs: {

@@ -3,7 +3,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import { ChangeEvent, useState } from "react";
 
 const meta: Meta<typeof KvibTextarea> = {
-  title: "Skjemaelementer/Textarea",
+  title: "Komponenter/Textarea",
   component: KvibTextarea,
   parameters: {
     docs: {
@@ -123,7 +123,7 @@ const TextareaResizeExample = () => {
         </Stack>
       </RadioGroup>
 
-      <KvibTextarea placeholder="Here is a sample placeholder" size="sm" resize={resize} />
+      <KvibTextarea placeholder="Here is a sample placeholder" size="sm" />
     </>
   );
 };

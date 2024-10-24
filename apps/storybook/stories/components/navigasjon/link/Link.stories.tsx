@@ -3,7 +3,7 @@ import { Link as KvibLink } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibLink> = {
-  title: "Navigasjon/Link",
+  title: "Komponenter/Link",
   component: KvibLink,
   parameters: {
     docs: {
@@ -22,8 +22,8 @@ const meta: Meta<typeof KvibLink> = {
     isExternal: {
       description: "If true, an icon will be included.",
       table: {
-        type: { summary: Boolean },
-        defaultValue: { summary: false },
+        type: { summary: "Boolean" },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },

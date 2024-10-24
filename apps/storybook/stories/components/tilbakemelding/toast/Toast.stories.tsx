@@ -2,7 +2,7 @@ import { Box, Button, Center, HStack, Icon, UseToastOptions as KvibToast, Stack,
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<KvibToast> = {
-  title: "Tilbakemelding/Toast",
+  title: "Komponenter/Toast",
   parameters: {
     docs: {
       story: { inline: true },
@@ -13,21 +13,6 @@ const meta: Meta<KvibToast> = {
     },
   },
   argTypes: {
-    addRole: {
-      description: "",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
-      },
-      control: "boolean",
-    },
-    containerSyle: {
-      description: "Style for the outer container",
-      table: {
-        type: { summary: "styleProps" },
-      },
-      control: "text",
-    },
     description: {
       description: "Descriptive text on the toast",
       table: {
@@ -65,13 +50,6 @@ const meta: Meta<KvibToast> = {
         defaultValue: { summary: "false" },
       },
       control: "boolean",
-    },
-    onClose: {
-      description: "function to be triggered when the toast gets closed",
-      table: {
-        type: { summary: "() => void" },
-      },
-      control: "",
     },
     onCloseComplete: {
       description: "Callback function to run side effects after the toast has closed.",

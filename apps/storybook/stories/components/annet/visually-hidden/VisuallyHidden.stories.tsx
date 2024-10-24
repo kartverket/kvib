@@ -11,7 +11,7 @@ import {
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibVisuallyHidden> = {
-  title: "Annet/Visually Hidden",
+  title: "Komponenter/Visually Hidden",
   component: KvibVisuallyHidden,
   parameters: {
     docs: {

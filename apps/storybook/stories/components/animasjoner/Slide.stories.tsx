@@ -3,7 +3,7 @@ import { colors } from "@kvib/react/src/theme/tokens";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibSlide> = {
-  title: "Animasjoner/Slide",
+  title: "Komponenter/Animasjoner/Slide",
   component: KvibSlide,
   parameters: {
     docs: {

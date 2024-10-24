@@ -5,7 +5,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import React from "react";
 
 const meta: Meta<typeof KvibSlider> = {
-  title: "Skjemaelementer/Slider",
+  title: "Komponenter/Slider",
   component: KvibSlider,
   parameters: {
     docs: {

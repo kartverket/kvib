@@ -15,7 +15,7 @@ import { colors } from "@kvib/react/src/theme/tokens";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibHeader> = {
-  title: "Sideelementer/Header",
+  title: "Komponenter/Header",
   component: KvibHeader,
   parameters: {
     docs: {
@@ -39,7 +39,7 @@ const meta: Meta<typeof KvibHeader> = {
     logoLinkDisabled: {
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },

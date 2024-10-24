@@ -11,7 +11,7 @@ import {
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibTimepicker> = {
-  title: "Skjemaelementer/Timepicker",
+  title: "Komponenter/Timepicker",
   component: KvibTimepicker,
   parameters: {
     docs: {
@@ -82,7 +82,7 @@ const meta: Meta<typeof KvibTimepicker> = {
       control: { type: "boolean" },
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
     },
     isInvalid: {
@@ -90,7 +90,7 @@ const meta: Meta<typeof KvibTimepicker> = {
       control: { type: "boolean" },
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
     },
     minuteInterval: {

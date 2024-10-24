@@ -14,7 +14,6 @@ const parameters = {
     },
   },
   docs: {
-    autodocs: true,
     theme: theme,
     container: MDXContainer,
     toc: {
@@ -25,30 +24,18 @@ const parameters = {
     },
   },
   options: {
-    storySort: {
-      method: "alphabetical",
-      order: [
-        "Oversikt",
-        "Komponentoversikt",
-        "Endringslogg",
-        "For utviklere",
-        ["Bidra med kode", ["Hurtigveiledning", "Bygge", "Style", "Dokumentere", "Teste", "Publish"], "Kom i gang"],
-        "For designere",
-        ["Bidra med design", "Kom i gang"],
-        "Designfundament",
-        "Layout",
-        "Media",
-        "Hooks",
-        "Sideelementer",
-        "Navigasjon",
-        "Søk",
-        "Datavisning",
-        "Skjemaelementer",
-        "Tilbakemelding",
-        "Overlay",
-        "Animasjoner",
-        "Annet",
-      ],
+    storySort: (a, b) => {
+      const order = ["Introduksjon", "Endringslogg", "Komponentoversikt", "Kom i gang", "Bidra", "Komponenter"];
+      const aIndex = order.indexOf(a.title.split("/")[0]);
+      const bIndex = order.indexOf(b.title.split("/")[0]);
+      if (aIndex < bIndex) return -1;
+      if (aIndex > bIndex) return 1;
+
+      const aLength = a.title.split("/").length;
+      const bLength = b.title.split("/").length;
+      if (aLength < bLength) return 1;
+      if (aLength > bLength) return -1;
+      return a.title === b.title ? 0 : a.id.localeCompare(b.id, undefined, { numeric: true });
     },
   },
 };
@@ -129,6 +116,7 @@ export const argTypes = {
 };
 
 const preview: Preview = {
+  decorators: decorators,
   parameters: parameters,
   tags: ["autodocs"],
 };
