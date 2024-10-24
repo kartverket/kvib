@@ -6,6 +6,10 @@ import "./docs-root.css";
 import theme from "./theme";
 
 const parameters = {
+  backgrounds: {
+    default: "light",
+    values: [{ name: "light", value: "#ffffff" }],
+  },
   layout: "centered",
   controls: {
     matchers: {
