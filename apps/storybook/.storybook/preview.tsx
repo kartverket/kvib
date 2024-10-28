@@ -29,6 +29,7 @@ const parameters = {
   },
   options: {
     storySort: (a, b) => {
+      // Sorter hovedseksjoner og mapper i denne rekkefølgen
       const order = ["Introduksjon", "Endringslogg", "Komponentoversikt", "Kom i gang", "Bidra", "Komponenter"];
 
       const aIndex = order.indexOf(a.title.split("/")[0]);
@@ -37,10 +38,7 @@ const parameters = {
       if (aIndex < bIndex) return -1;
       if (aIndex > bIndex) return 1;
 
-      if (a.title.split("/").pop() === "Docs") return -1;
-      if (b.title.split("/").pop() === "Docs") return 1;
-
-      // samme som over, bare for siste element i path
+      // Sorter innhold i 'bidra som utvikler'
       const bidraSomUtviklerOrder = [
         "Hurtigveiledning",
         "Bygge",
@@ -57,12 +55,17 @@ const parameters = {
       if (aBidraIndex < bBidraIndex) return -1;
       if (aBidraIndex > bBidraIndex) return 1;
 
+      // Prioriter mapper over filer
       const aLength = a.title.split("/").length;
       const bLength = b.title.split("/").length;
 
       if (aLength < bLength) return 1;
       if (aLength > bLength) return -1;
 
+      // Dersom man er helt inni en mappe skal docs med Docs i tittelen vises først
+      if (a.title.includes("Docs") && !b.title.includes("Docs")) return -1;
+
+      // Sorter alfabetisk ellers
       return a.title === b.title ? 0 : a.id.localeCompare(b.id, undefined, { numeric: true });
     },
   },
