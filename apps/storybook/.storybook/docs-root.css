@@ -88,11 +88,6 @@ input[type="range"]::-webkit-slider-thumb:active {
   overflow: hidden;
 }
 
-#downshift-0-menu {
-  margin-left: -15px !important; /* storybook setter -20px her, det er alt for mye */
-  margin-right: -20px !important; /* storybook setter -20px her, det er alt for mye */
-}
-
 .toc-wrapper {
   padding: 0 12px;
 }
