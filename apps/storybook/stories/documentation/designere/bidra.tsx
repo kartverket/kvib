@@ -1,5 +1,6 @@
-import { HStack, Link, ListItem, Text, UnorderedList } from "@kvib/react/src";
+import { ListItem, Text, UnorderedList } from "@kvib/react/src";
 import { Dokumentasjonsside } from "../utils/Dokumentasjonsside";
+import { Feedback } from "../utils/Feedback";
 import { Tekstblokk } from "../utils/Tekstblokk";
 
 export const BidraMedDesign = () => (
@@ -52,33 +53,6 @@ export const BidraMedDesign = () => (
       </Text>
     </Tekstblokk>
 
-    <Tekstblokk tittel="Vil du bidra?">
-      <Text fontSize={"lg"} fontWeight={400} m="0" p="0">
-        Vi setter pris på alle tilbakemeldinger, ideer og innspill, så ikke nøl med å ta kontakt.
-        <HStack gap="2rem" pt="1.5rem">
-          <Link
-            href="mailto:kvib-feedbacks-aaaahwh252gnftmofucpaa47ca@kartverketgroup.slack.com"
-            fontSize={"lg"}
-            fontWeight={400}
-            m="0"
-            p="0"
-          >
-            Send en mail
-          </Link>
-          <Link
-            href="https://slack.com/app_redirect?channel=gen-designsystem"
-            fontSize={"lg"}
-            fontWeight={400}
-            m="0"
-            p="0"
-          >
-            Bli med i Slack-kanalen
-          </Link>
-          <Link href="https://github.com/kartverket/kvib" fontSize={"lg"} fontWeight={400} m="0" p="0">
-            Lag en pull request på Github
-          </Link>
-        </HStack>
-      </Text>
-    </Tekstblokk>
+    <Feedback />
   </Dokumentasjonsside>
 );
