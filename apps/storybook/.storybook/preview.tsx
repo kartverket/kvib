@@ -63,10 +63,6 @@ const parameters = {
       if (aLength < bLength) return 1;
       if (aLength > bLength) return -1;
 
-      if (a.title.includes("Tokens")) {
-        console.log(a);
-      }
-
       return a.title === b.title ? 0 : a.id.localeCompare(b.id, undefined, { numeric: true });
     },
   },
