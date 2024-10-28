@@ -187,7 +187,7 @@ const CustomDatepicker = forwardRef<DatepickerProps, "input">(
     const effectiveOnChange = (event: ChangeEvent<HTMLInputElement>) => {
       // Then, call the onChange from props if it the input is valid
       const dateStr = event.target.value;
-      const parsedDate = parse(dateStr, "yyyy-MM-dd", new Date());
+      const parsedDate = parse(dateStr, "dd.MM.yyyy", new Date());
       if (isValid(parsedDate)) {
         onChange?.(event);
       }

@@ -160,7 +160,7 @@ type Story = StoryObj<typeof KvibDatepicker>;
 export const Preview: Story = {
   args: {
     placeholder: "Velg dato",
-    onChange: v => console.log("Datepicker changed", v),
+    onChange: v => console.log("Du endret dato i Datepicker til " + v.target.value),
     "aria-label": "Datepicker example",
   },
   render: args => <KvibDatepicker {...args} />,
