@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 4.6.6
+
+### Patch Changes
+
+- 56dcef4: Fiks for onChange i Datepicker som ikke ble trigget
+
 ## 4.6.5
 
 ### Patch Changes
