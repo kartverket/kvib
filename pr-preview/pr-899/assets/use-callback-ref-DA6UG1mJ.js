@@ -1,1 +1,0 @@
-import{r as e}from"./index-BwDkhjyp.js";function f(t,s=[]){const r=e.useRef(t);return e.useEffect(()=>{r.current=t}),e.useCallback((...n)=>{var u;return(u=r.current)==null?void 0:u.call(r,...n)},s)}export{f as u};
