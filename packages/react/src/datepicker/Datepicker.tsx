@@ -173,7 +173,7 @@ const CustomDatepicker = ({
 
   const formatDateInput = (dateStr: string): Date | undefined => {
     try {
-      const formats = ["dd.MM.yy", "dd.MM.yyyy", "dd/MM/yy", "dd/MM/yyyy"];
+      const formats = ["dd.MM.yy", "dd.MM.yyyy", "dd/MM/yy", "dd/MM/yyyy", "dd-MM-yy", "dd-MM-yyyy"];
       for (const formatStr of formats) {
         const parsedDate = parse(dateStr, formatStr, new Date(), { locale: nb });
         if (!isNaN(parsedDate.getTime())) {
