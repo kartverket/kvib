@@ -13,9 +13,9 @@ import {
   useBoolean,
   useTheme,
 } from "@kvib/react/src";
-import { isValid, parse } from "date-fns";
+import { format, isValid, parse } from "date-fns";
 import { nb } from "date-fns/locale/nb";
-import { ChangeEvent, useEffect, useState } from "react";
+import { ChangeEvent, useState } from "react";
 import { DayPicker } from "react-day-picker";
 import "react-day-picker/style.css";
 
@@ -118,162 +118,178 @@ export const Datepicker = forwardRef<DatepickerProps, "input">(({ onChange, useN
   return <CustomDatepicker {...props} {...commonProps} onChange={onChange} />;
 });
 
-const CustomDatepicker = forwardRef<DatepickerProps, "input">(
-  (
-    {
-      onChange,
-      defaultSelected,
-      defaultMonth,
-      fromDate,
-      toDate,
-      showDropdownMonthYear,
-      disableNavigation,
-      showOutsideDays,
-      showWeekNumber,
-      disabledDays,
-      colorScheme,
-      isDisabled: isDisabledExternally = false,
-      isInvalid: isInvalidExternally = false,
-      isRequired: isRequiredExternally = false,
-      ...KVInputProps
-    },
-    ref,
-  ) => {
-    const theme = useTheme();
+const CustomDatepicker = ({
+  onChange,
+  defaultSelected,
+  defaultMonth,
+  fromDate,
+  toDate,
+  showDropdownMonthYear,
+  disableNavigation,
+  showOutsideDays,
+  showWeekNumber,
+  disabledDays,
+  colorScheme,
+  isDisabled: isDisabledExternally = false,
+  isInvalid: isInvalidExternally = false,
+  isRequired: isRequiredExternally = false,
+  ...KVInputProps
+}: DatepickerProps) => {
+  const theme = useTheme();
 
-    // Style for the day picker
-    const uniqueClassName = generateUniqueClassName("kvib-datepicker");
-    const style = css(
-      uniqueClassName,
-      theme.colors[colorScheme ?? theme.components.Datepicker.defaultProps.colorScheme],
-    );
+  // Style for the day picker
+  const uniqueClassName = generateUniqueClassName("kvib-datepicker");
+  const style = css(uniqueClassName, theme.colors[colorScheme ?? theme.components.Datepicker.defaultProps.colorScheme]);
 
-    // Get state from form control context
-    const formControlContext = useFormControlContext();
-    const isDisabledFromForm = formControlContext?.isDisabled || false;
-    const isInvalidFromForm = formControlContext?.isInvalid || false;
-    const isRequiredFromForm = formControlContext?.isRequired || false;
+  // Get state from form control context
+  const formControlContext = useFormControlContext();
+  const isDisabledFromForm = formControlContext?.isDisabled || false;
+  const isInvalidFromForm = formControlContext?.isInvalid || false;
+  const isRequiredFromForm = formControlContext?.isRequired || false;
 
-    // Determine the effective isDisabled, isInvalid and isRequired states
-    const isDisabled = isDisabledExternally || isDisabledFromForm;
-    const isInvalid = isInvalidExternally || isInvalidFromForm;
-    const isRequired = isRequiredExternally || isRequiredFromForm;
+  // Determine the effective isDisabled, isInvalid and isRequired states
+  const isDisabled = isDisabledExternally || isDisabledFromForm;
+  const isInvalid = isInvalidExternally || isInvalidFromForm;
+  const isRequired = isRequiredExternally || isRequiredFromForm;
 
-    // State for the day picker
-    const [isPickerVisible, setPickerVisible] = useBoolean(false);
-    const [selectedDate, setSelectedDate] = useState(defaultSelected ?? undefined);
-    const [month, setMonth] = useState(defaultMonth);
-    const [inputValue, setInputValue] = useState(selectedDate ? formatDate(selectedDate) : "");
+  // State for the day picker
+  const [isPickerVisible, setPickerVisible] = useBoolean(false);
+  const [selectedDate, setSelectedDate] = useState(defaultSelected ?? undefined);
+  const [month, setMonth] = useState(defaultMonth);
+  const [inputValue, setInputValue] = useState(selectedDate ? formatDate(selectedDate) : "");
 
-    useEffect(() => {
-      // Check if the selected date in the day picker has changed
-      if (selectedDate) {
-        // Call onChange to update the input value
-        effectiveOnChange({
-          target: {
-            value: formatDate(selectedDate),
-          },
-          bubbles: true,
-          type: "change",
-          persist: () => {},
-          nativeEvent: {},
-        } as ChangeEvent<HTMLInputElement>);
+  const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
+    onChange?.(event);
+    setInputValue(event.target.value);
 
-        setPickerVisible.off();
+    const parsedDate = formatDateInput(event.target.value);
+    if (parsedDate && isValid(parsedDate)) {
+      setMonth(parsedDate);
+      setSelectedDate(parsedDate);
+    } else {
+      setSelectedDate(undefined);
+    }
+  };
+
+  const formatDateInput = (dateStr: string): Date | undefined => {
+    try {
+      const formats = ["dd.MM.yy", "dd.MM.yyyy", "dd/MM/yy", "dd/MM/yyyy"];
+      for (const formatStr of formats) {
+        const parsedDate = parse(dateStr, formatStr, new Date(), { locale: nb });
+        if (!isNaN(parsedDate.getTime())) {
+          return parsedDate;
+        }
       }
-    }, [selectedDate, setPickerVisible]);
+      throw new Error("Ugyldig datoformat");
+    } catch (error) {
+      return undefined;
+    }
+  };
 
-    // Only call onChange if the input is a valid date
-    const effectiveOnChange = (event: ChangeEvent<HTMLInputElement>) => {
-      // Then, call the onChange from props if it the input is valid
-      const dateStr = event.target.value;
-      const parsedDate = parse(dateStr, "dd.MM.yyyy", new Date());
-      if (isValid(parsedDate)) {
-        onChange?.(event);
-      }
-    };
+  const formatInputOnBlur = () => {
+    const parsedDate = formatDateInput(inputValue);
+    let tmpInputValue = "";
+    if (parsedDate && isValid(parsedDate)) {
+      tmpInputValue = format(parsedDate, "dd.MM.yyyy");
+    }
+    const event = {
+      target: {
+        value: tmpInputValue,
+      },
+    } as ChangeEvent<HTMLInputElement>;
+    onChange?.(event);
+    setInputValue(tmpInputValue);
+  };
 
-    const handleDayPickerSelect = (date: Date | undefined) => {
-      if (!date) {
-        setInputValue("");
-        setSelectedDate(undefined);
-      } else {
-        setSelectedDate(date);
-        setMonth(date);
-        setInputValue(formatDate(date));
-      }
-    };
+  const handleDayPickerSelect = (date: Date | undefined) => {
+    const event = {
+      target: {
+        value: date ? format(date, "dd.MM.yyyy") : "",
+      },
+    } as ChangeEvent<HTMLInputElement>;
+    onChange?.(event);
 
-    return (
-      <Popover
-        placement="bottom-start"
-        isOpen={isPickerVisible}
-        onOpen={setPickerVisible.on}
-        onClose={setPickerVisible.off}
-      >
-        <InputGroup>
-          <PopoverAnchor>
-            <KVInput
-              value={inputValue}
-              ref={ref}
-              className="custom-datepicker"
-              isDisabled={isDisabled}
-              isInvalid={isInvalid}
-              isRequired={isRequired}
-              onChange={effectiveOnChange}
-              {...KVInputProps}
-              locale={nb}
+    if (!date) {
+      setInputValue("");
+      setSelectedDate(undefined);
+    } else {
+      setSelectedDate(date);
+      setMonth(date);
+      setInputValue(formatDate(date));
+      setPickerVisible.off();
+    }
+  };
+
+  return (
+    <Popover
+      placement="bottom-start"
+      isOpen={isPickerVisible}
+      onOpen={setPickerVisible.on}
+      onClose={setPickerVisible.off}
+    >
+      <InputGroup>
+        <PopoverAnchor>
+          <KVInput
+            value={inputValue}
+            className="custom-datepicker"
+            isDisabled={isDisabled}
+            isInvalid={isInvalid}
+            isRequired={isRequired}
+            onChange={handleInputChange}
+            onBlur={formatInputOnBlur}
+            {...KVInputProps}
+            locale={nb}
+          />
+        </PopoverAnchor>
+        <InputRightElement opacity={isDisabled ? 0.5 : 1} pointerEvents={isDisabled ? "none" : "auto"} height="100%">
+          <PopoverTrigger>
+            <IconButton
+              icon="calendar_today"
+              colorScheme={colorScheme}
+              size={KVInputProps.size}
+              aria-label="open datepicker"
+              onClick={setPickerVisible.toggle}
+              variant="tertiary"
             />
-          </PopoverAnchor>
-          <InputRightElement opacity={isDisabled ? 0.5 : 1} pointerEvents={isDisabled ? "none" : "auto"} height="100%">
-            <PopoverTrigger>
-              <IconButton
-                icon="calendar_today"
-                colorScheme={colorScheme}
-                size={KVInputProps.size}
-                aria-label="open datepicker"
-                onClick={setPickerVisible.toggle}
-                variant="tertiary"
-              />
-            </PopoverTrigger>
-          </InputRightElement>
-        </InputGroup>
-        <Portal>
-          <PopoverContent width="auto" padding="1rem">
-            <style>{style}</style>
-            <DayPicker
-              mode="single"
-              month={month}
-              onMonthChange={setMonth}
-              selected={selectedDate}
-              onSelect={handleDayPickerSelect}
-              classNames={{ root: uniqueClassName }}
-              locale={nb}
-              showOutsideDays={showOutsideDays}
-              showWeekNumber={showWeekNumber}
-              disableNavigation={disableNavigation}
-              defaultMonth={defaultMonth}
-              captionLayout={showDropdownMonthYear ? "dropdown" : "label"}
-              startMonth={fromDate}
-              endMonth={toDate}
-              required={isRequired}
-              {...(fromDate && {
-                disabled: {
-                  before: fromDate,
-                },
-              })}
-              {...(toDate && {
-                disabled: {
-                  after: toDate,
-                },
-              })}
-            />
-          </PopoverContent>
-        </Portal>
-      </Popover>
-    );
-  },
-);
+          </PopoverTrigger>
+        </InputRightElement>
+      </InputGroup>
+      <Portal>
+        <PopoverContent width="auto" padding="1rem">
+          <style>{style}</style>
+          <DayPicker
+            onSelect={handleDayPickerSelect}
+            mode="single"
+            month={month}
+            onMonthChange={setMonth}
+            selected={selectedDate}
+            classNames={{ root: uniqueClassName }}
+            locale={nb}
+            showOutsideDays={showOutsideDays}
+            showWeekNumber={showWeekNumber}
+            disableNavigation={disableNavigation}
+            defaultMonth={defaultMonth}
+            captionLayout={showDropdownMonthYear ? "dropdown" : "label"}
+            startMonth={fromDate}
+            endMonth={toDate}
+            footer={`Selected: ${selectedDate ? formatDate(selectedDate) : "None"}`}
+            required={isRequired}
+            {...(fromDate && {
+              disabled: {
+                before: fromDate,
+              },
+            })}
+            {...(toDate && {
+              disabled: {
+                after: toDate,
+              },
+            })}
+          />
+        </PopoverContent>
+      </Portal>
+    </Popover>
+  );
+};
 
 // Function to extract the props that are used by the KVInput (native) component
 function extractKVProps(props: DatepickerProps): InputProps {
