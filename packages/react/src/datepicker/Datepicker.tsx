@@ -272,7 +272,6 @@ const CustomDatepicker = ({
             captionLayout={showDropdownMonthYear ? "dropdown" : "label"}
             startMonth={fromDate}
             endMonth={toDate}
-            footer={`Selected: ${selectedDate ? formatDate(selectedDate) : "None"}`}
             required={isRequired}
             {...(fromDate && {
               disabled: {
