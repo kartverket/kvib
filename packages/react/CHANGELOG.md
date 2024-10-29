@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 4.6.7
+
+### Patch Changes
+
+- 7a2ca78: Bedre datohåndtering med tekstfeltet i Datepicker, fiks for onChange som ikke ble trigget, mulighet for å sende inn useNative-prop for større skjermer enn kun på mobil
+
 ## 4.6.6
 
 ### Patch Changes
