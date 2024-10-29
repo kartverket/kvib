@@ -58,7 +58,7 @@ const meta: Meta<typeof KvibDatepicker> = {
       description: "Variant",
       table: {
         type: { summary: "outline | filled | flushed | unstyled" },
-        defaultValue: { summary: "outlined" },
+        defaultValue: { summary: "outline" },
       },
       options: ["outline", "filled", "flushed", "unstyled"],
       control: { type: "radio" },
@@ -66,7 +66,7 @@ const meta: Meta<typeof KvibDatepicker> = {
     isRequired: {
       description: "Toggles if input should be required",
       table: {
-        type: { summary: "Boolean" },
+        type: { summary: "boolean" },
       },
       defaultValue: { summary: "false" },
       control: "boolean",
