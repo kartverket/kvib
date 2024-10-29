@@ -96,14 +96,14 @@ export type DatepickerProps = Omit<InputProps, "colorScheme" | "max" | "min" | "
   colorScheme?: "blue" | "green";
 };
 
-export const Datepicker = forwardRef<DatepickerProps, "input">(({ onChange, useNative = true, ...props }, ref) => {
+export const Datepicker = forwardRef<DatepickerProps, "input">(({ onChange, useNative = false, ...props }, ref) => {
   const KVInputProps = extractKVProps(props);
   const commonProps = getCommonInputProps(props);
   const defaultValue = props.defaultSelected ? formatDate(props.defaultSelected) : undefined;
   const isClient = typeof window === "object";
   const isMobile = isClient ? window.innerWidth < 480 : false;
 
-  if (isMobile && useNative)
+  if (isMobile || useNative)
     return (
       <KVInput
         ref={ref}
@@ -283,6 +283,9 @@ const CustomDatepicker = ({
                 after: toDate,
               },
             })}
+            {...(disabledDays && {
+              disabled: disabledDays,
+            })}
           />
         </PopoverContent>
       </Portal>
@@ -357,10 +360,10 @@ const css = (className: string, colorPalette: Record<number, string>) => {
   --rdp-week_number-font: 12px/1 sans-serif;
 
   /* Day buttons */
-  --rdp-day-width: 40px; /* Width of the day cells. */
-  --rdp-day-height: 40px; /* Height of the day cells. */
-  --rdp-day_button-height: var(--rdp-day-height); /* Height of the day buttons. */
-  --rdp-day_button-width: var(--rdp-day-width); /* Width of the day buttons. */
+  --rdp-day-width: 38px; /* Width of the day cells. */
+  --rdp-day-height: 38px; /* Height of the day cells. */
+  --rdp-day_button-height: calc(var(--rdp-day-height) + 2px); /* Height of the day buttons. */
+  --rdp-day_button-width: calc(var(--rdp-day-width) + 2px); /* Width of the day buttons. */
   --rdp-day_button-border-radius: 50%;
   --rdp-outside-opacity: 0.4; /* Opacity of the days outside the current month. */
   --rdp-disabled-opacity: 0.25; /* Opacity of the disabled days. */
@@ -374,6 +377,9 @@ const css = (className: string, colorPalette: Record<number, string>) => {
   }
 
   .rdp-day {
+    box-sizing: border-box;
+    height: var(--rdp-day_button-height);
+    width: var(--rdp-day_button-width);
     border-radius: var(--rdp-day_button-border-radius);
   }
 
@@ -385,6 +391,7 @@ const css = (className: string, colorPalette: Record<number, string>) => {
   .rdp-selected {
     background-color: var(--rdp-accent-color);
     color: white;
+    box-sizing: border-box;
   }
 
   /* Navigation buttons */
@@ -416,16 +423,23 @@ const css = (className: string, colorPalette: Record<number, string>) => {
     font-weight: 700;
     text-align: center;
     height: var(--rdp-day_button-height);
+    width: var(--rdp-day_button-width);
     text-transform: uppercase;
   }
 
+  .rdp-day_button {
+  width: 100%;
+  height: 100%;
+  }
+
+
   .rdp-week_number {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: content-box;
-    width: var(--rdp-day_button-width);
+    vertical-align: baseline;
+    transform: translateY(50%);
+    text-align: center;
     height: var(--rdp-day_button-height);
+    width: var(--rdp-day_button-width);
+    line-height: 2px;
   }
 
   /* Month caption */
