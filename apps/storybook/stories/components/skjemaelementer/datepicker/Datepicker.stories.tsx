@@ -1,11 +1,16 @@
 import { FormControl, FormLabel, Stack } from "@kvib/react/src";
 import { Datepicker as KvibDatepicker } from "@kvib/react/src/datepicker";
+import { withActions } from "@storybook/addon-actions/decorator";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibDatepicker> = {
   title: "Komponenter/Datepicker",
   component: KvibDatepicker,
+  decorators: [withActions],
   parameters: {
+    actions: {
+      argTypesRegex: "^on.*",
+    },
     docs: {
       story: { inline: true },
       canvas: { sourceState: "hidden" },
@@ -14,7 +19,32 @@ const meta: Meta<typeof KvibDatepicker> = {
       // This option disables all a11y checks on this story
     },
   },
+  args: {
+    placeholder: "Velg dato",
+    size: "md",
+    variant: "outline",
+    colorScheme: "green",
+    isRequired: false,
+    isInvalid: false,
+    isDisabled: false,
+    useNative: false,
+    disableNavigation: false,
+    showWeekNumber: false,
+    showOutsideDays: true,
+    showDropdownMonthYear: false,
+    defaultSelected: undefined,
+    defaultMonth: undefined,
+    fromDate: undefined,
+    toDate: undefined,
+  },
   argTypes: {
+    placeholder: {
+      description: "Placeholder text",
+      table: {
+        type: { summary: "string" },
+      },
+      control: "text",
+    },
     size: {
       description: "Size of input",
       table: {
@@ -37,8 +67,8 @@ const meta: Meta<typeof KvibDatepicker> = {
       description: "Toggles if input should be required",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
       },
+      defaultValue: { summary: "false" },
       control: "boolean",
     },
     isInvalid: {
@@ -64,7 +94,6 @@ const meta: Meta<typeof KvibDatepicker> = {
       },
       control: "date",
     },
-
     defaultMonth: {
       description: "The month to display in the calendar by default.",
       table: {
@@ -72,7 +101,6 @@ const meta: Meta<typeof KvibDatepicker> = {
       },
       control: "date",
     },
-
     fromDate: {
       description: "The earliest date available for selection.",
       table: {
@@ -80,7 +108,6 @@ const meta: Meta<typeof KvibDatepicker> = {
       },
       control: "date",
     },
-
     toDate: {
       description: "The latest date available for selection.",
       table: {
@@ -88,69 +115,71 @@ const meta: Meta<typeof KvibDatepicker> = {
       },
       control: "date",
     },
-
     showDropdownMonthYear: {
       description:
         "Whether or not to show dropdowns for month and year selection. `fromDate` and `toDate` must be set.",
       table: {
         type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
-
     disableNavigation: {
       description: "If set to true, navigation buttons (next/previous month) are hidden.",
       table: {
         type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
-
     showOutsideDays: {
       description: "Whether or not to show the days that fall outside the current month.",
       table: {
         type: { summary: "boolean" },
+        defaultValue: { summary: "true" },
       },
       control: "boolean",
     },
-
     showWeekNumber: {
       description: "Whether or not to display the week numbers.",
       table: {
         type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
-
     disabledDays: {
       description: "A list of dates that should be disabled for selection.",
-      table: {
-        type: { summary: "Date[]" },
+      control: {
+        type: "object",
       },
     },
-
     useNative: {
       description: "Whether or not to use the native datepicker on mobile devices.",
       table: {
         type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
-    },
-    onChange: {
-      description: "Sideeffect to be run when a date is selected.",
-      table: {
-        type: { summary: "(date: Date | undefined) => void" },
-      },
     },
     colorScheme: {
       description: "Color scheme",
       table: {
         type: { summary: "blue | green" },
-        defaultValue: { summary: "blue" },
+        defaultValue: { summary: "green" },
       },
-      options: ["blue", "green"],
+      options: ["green", "blue"],
       control: { type: "radio" },
     },
+
+    // Fjern støy fra kontrollpanelet i Storybook
+    _groupOpen: { table: { disable: true } },
+    _groupClosed: { table: { disable: true } },
+    _open: { table: { disable: true } },
+    _closed: { table: { disable: true } },
+    _complete: { table: { disable: true } },
+    _incomplete: { table: { disable: true } },
+    _current: { table: { disable: true } },
   },
 };
 
@@ -158,11 +187,6 @@ export default meta;
 type Story = StoryObj<typeof KvibDatepicker>;
 
 export const Preview: Story = {
-  args: {
-    placeholder: "Velg dato",
-    onChange: v => console.log("Du endret dato i Datepicker til " + v.target.value),
-    "aria-label": "Datepicker example",
-  },
   render: args => <KvibDatepicker {...args} />,
 };
 

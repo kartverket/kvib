@@ -6,6 +6,7 @@ import "./docs-root.css";
 import theme from "./theme";
 
 const parameters = {
+  actions: { argTypesRegex: "^on.*" },
   backgrounds: {
     default: "light",
     values: [{ name: "light", value: "#ffffff" }],
