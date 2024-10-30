@@ -1,84 +1,84 @@
-import { Link, Table, TableContainer, Tbody, Td, Text, Th, Thead, Tr } from "@kvib/react/src";
+import { Box, Link, Table, TableContainer, Tbody, Td, Text, Th, Thead, Tr } from "@kvib/react/src";
 import { Dokumentasjonsside } from "../../documentation/utils/Dokumentasjonsside";
 import { Liste } from "../../documentation/utils/Liste";
 import { Listeelement } from "../../documentation/utils/Listeelement";
 import { Tekstblokk } from "../../documentation/utils/Tekstblokk";
 
 const TypografiTable = () => (
-  <TableContainer className="sb-unstyled" border={"1px solid var(--kvib-colors-gray-200)"} mt="16px">
-    <Table
-      size="md"
-      variant="simple"
-      m="12px"
-      sx={{
-        "td, th": {
-          borderBottom: "1px solid var(--kvib-colors-gray-200)",
-        },
-      }}
-    >
-      <Thead
+  <Box border={"1px solid var(--kvib-colors-gray-200)"} mt="16px" p="16px">
+    <TableContainer className="sb-unstyled">
+      <Table
+        size="md"
         sx={{
-          th: {
-            fontSize: "md",
-            fontWeight: 700,
-            textTransform: "none",
-            color: "var(--kvib-colors-black)",
+          "td, th": {
+            borderBottom: "1px solid var(--kvib-colors-gray-200)",
           },
         }}
       >
-        <Tr>
-          <Th>Hierarki</Th>
-          <Th>Desktop (px/line-height)</Th>
-          <Th>Mobil (px/line-height)</Th>
-          <Th>Bruk</Th>
-        </Tr>
-      </Thead>
-      <Tbody
-        sx={{
-          "tr:last-of-type td": {
-            borderBottom: "none",
-          },
-        }}
-      >
-        <Tr>
-          <Td>Forside</Td>
-          <Td>5XL - Bold, 48px/48px</Td>
-          <Td>3XL - Bold, 30px/36px</Td>
-          <Td>Hovedoverskrift forside</Td>
-        </Tr>
-        <Tr>
-          <Td>H1</Td>
-          <Td>3XL - Bold, 30px/36px</Td>
-          <Td>2XL - Bold, 24px/32px</Td>
-          <Td>Seksjonsoverskrifter</Td>
-        </Tr>
-        <Tr>
-          <Td>H2</Td>
-          <Td>XL - Bold, 20px/28px</Td>
-          <Td>L - Bold, 18px/28px</Td>
-          <Td>Underseksjoner</Td>
-        </Tr>
-        <Tr>
-          <Td>H3</Td>
-          <Td>M - Bold, 16px/24px</Td>
-          <Td>M - Bold, 16px/24px</Td>
-          <Td>Underoverskrifter</Td>
-        </Tr>
-        <Tr>
-          <Td>Brødtekst</Td>
-          <Td>M - Regular, 16px</Td>
-          <Td>S - Regular, 14px</Td>
-          <Td>Generell tekst</Td>
-        </Tr>
-        <Tr>
-          <Td>Lenke</Td>
-          <Td>M - Bold, 16px, underline</Td>
-          <Td>M - Bold, 16px, underline</Td>
-          <Td>Klikkbare lenker</Td>
-        </Tr>
-      </Tbody>
-    </Table>
-  </TableContainer>
+        <Thead
+          sx={{
+            th: {
+              fontSize: "md",
+              fontWeight: 700,
+              textTransform: "none",
+              color: "var(--kvib-colors-black)",
+            },
+          }}
+        >
+          <Tr>
+            <Th>Hierarki</Th>
+            <Th>Desktop (px/line-height)</Th>
+            <Th>Mobil (px/line-height)</Th>
+            <Th>Bruk</Th>
+          </Tr>
+        </Thead>
+        <Tbody
+          sx={{
+            "tr:last-of-type td": {
+              borderBottom: "none",
+            },
+          }}
+        >
+          <Tr>
+            <Td>Forside</Td>
+            <Td>5XL - Bold, 48px/48px</Td>
+            <Td>3XL - Bold, 30px/36px</Td>
+            <Td>Hovedoverskrift forside</Td>
+          </Tr>
+          <Tr>
+            <Td>H1</Td>
+            <Td>3XL - Bold, 30px/36px</Td>
+            <Td>2XL - Bold, 24px/32px</Td>
+            <Td>Seksjonsoverskrifter</Td>
+          </Tr>
+          <Tr>
+            <Td>H2</Td>
+            <Td>XL - Bold, 20px/28px</Td>
+            <Td>L - Bold, 18px/28px</Td>
+            <Td>Underseksjoner</Td>
+          </Tr>
+          <Tr>
+            <Td>H3</Td>
+            <Td>M - Bold, 16px/24px</Td>
+            <Td>M - Bold, 16px/24px</Td>
+            <Td>Underoverskrifter</Td>
+          </Tr>
+          <Tr>
+            <Td>Brødtekst</Td>
+            <Td>M - Regular, 16px</Td>
+            <Td>S - Regular, 14px</Td>
+            <Td>Generell tekst</Td>
+          </Tr>
+          <Tr>
+            <Td>Lenke</Td>
+            <Td>M - Bold, 16px, underline</Td>
+            <Td>M - Bold, 16px, underline</Td>
+            <Td>Klikkbare lenker</Td>
+          </Tr>
+        </Tbody>
+      </Table>
+    </TableContainer>
+  </Box>
 );
 
 const Beskrivelse = () => (

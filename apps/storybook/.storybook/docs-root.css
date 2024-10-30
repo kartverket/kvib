@@ -4,17 +4,40 @@ div[role="main"] > :first-child {
   border-radius: 0 !important;
 }
 
-/* Container for MDX files */
-.sbdocs-wrapper {
+#storybook-docs {
+  padding: 0;
+  background-color: #156630;
+  box-sizing: content-box;
+}
+
+:where(*, *::before, *::after) {
+  box-sizing: content-box;
+}
+
+.sbdocs.sbdocs-wrapper {
   display: flex;
-  align-items: flex-start;
+  padding: 0;
+}
+
+.sbdocs.sbdocs-wrapper > :first-child {
+  flex: 1; /* This will allow the first child to take up the remaining space */
+}
+
+.sbdocs.sbdocs-wrapper > :last-child {
+  width: 180px; /* Fixed width for the last child */
+}
+
+/* Media query to hide the last child on smaller screens */
+@media (max-width: 1180px) {
+  .sbdocs.sbdocs-wrapper > :last-child {
+    display: none;
+  }
 }
 
 .sbdocs-content {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+padding: 80px 40px 40px 40px;
 }
+
 
 .docblock-source {
   margin: 0 !important;
