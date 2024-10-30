@@ -5,23 +5,29 @@ import { Listeelement } from "../../documentation/utils/Listeelement";
 import { Tekstblokk } from "../../documentation/utils/Tekstblokk";
 
 const TypografiTable = () => (
-  <Box border={"1px solid var(--kvib-colors-gray-200)"} mt="16px" p="16px">
-    <TableContainer className="sb-unstyled">
+  <Box border="1px solid var(--kvib-colors-gray-200)" mt="16px" p="16px" boxSizing="content-box" width="100%">
+    <TableContainer width="100%">
       <Table
+        width="100%"
+        className="sb-unstyled"
         size="md"
         sx={{
           "td, th": {
             borderBottom: "1px solid var(--kvib-colors-gray-200)",
           },
+          borderSpacing: "0",
         }}
       >
         <Thead
           sx={{
             th: {
               fontSize: "md",
+              lineHeight: "md",
               fontWeight: 700,
               textTransform: "none",
               color: "var(--kvib-colors-black)",
+              pt: "var(--kvib-space-4)",
+              pb: "var(--kvib-space-4)",
             },
           }}
         >
@@ -109,17 +115,17 @@ export const Typografi = () => (
       <TypografiTable />
     </Tekstblokk>
 
-    <Tekstblokk tittel="Retningslinjer for desktop og mobil">
+    <Tekstblokk tittel="Nyttige retningslinjer">
       <Text fontSize="md" fontWeight={700} p="0" m="0">
         Desktop
       </Text>
       <Liste pb="16px">
         <Listeelement tittel="Bredde">
-          Hovedsider bør ha en maksimal bredde på 1120 px og støttesider på 836 px. Fra 1024 px og oppover skal
-          innholdet være sentrert og følge grid-systemet med passende padding.
+          Innholdet på hovedsider bør ha en maksimal bredde på 1120 px og støttesider på 836 px. Fra 1024 px og oppover
+          skal innholdet være sentrert og følge grid-systemet med passende padding.
         </Listeelement>
         <Listeelement tittel="Padding og Whitespace">
-          Plasser H1 alltid 80 px under headeren, med 16 px under H1 for skille fra følgende innhold.
+          Plasser H1 alltid 80 px under headeren, med 16 px mellom H1 og det følgende innholdet.
         </Listeelement>
       </Liste>
 
@@ -129,8 +135,7 @@ export const Typografi = () => (
       <Liste>
         <Listeelement tittel="Bredde og marger">Bruk 16 px margin til venstre og høyre for hovedinnhold.</Listeelement>
         <Listeelement tittel="Padding og Whitespace">
-          Plasser H1 alltid 24px px under headeren, med 12 px under H1, og minst 48 px rundt interaktive elementer som
-          f.eks knapper for enkel berøring
+          Plasser H1 alltid 24 px under headeren, med 12 px mellom H1 og det følgende innholdet.
         </Listeelement>
       </Liste>
     </Tekstblokk>
