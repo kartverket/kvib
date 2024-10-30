@@ -3,12 +3,12 @@ import { Tekstblokk } from "./Tekstblokk";
 
 export const Feedback = () => (
   <Tekstblokk tittel="Vil du bidra?">
-    <Text fontSize={"lg"} fontWeight={400} m="0" p="0">
+    <Text fontSize={"md"} fontWeight={400} m="0" p="0">
       Vi setter pris på alle tilbakemeldinger, ideer og innspill, så ikke nøl med å ta kontakt.
-      <HStack gap="2rem" pt="1.5rem">
+      <HStack gap="2rem" pt="1rem">
         <Link
           href="mailto:kvib-feedbacks-aaaahwh252gnftmofucpaa47ca@kartverketgroup.slack.com"
-          fontSize={"lg"}
+          fontSize={"md"}
           fontWeight={400}
           m="0"
           p="0"
@@ -17,14 +17,14 @@ export const Feedback = () => (
         </Link>
         <Link
           href="https://slack.com/app_redirect?channel=gen-designsystem"
-          fontSize={"lg"}
+          fontSize={"md"}
           fontWeight={400}
           m="0"
           p="0"
         >
           Bli med i Slack-kanalen
         </Link>
-        <Link href="https://github.com/kartverket/kvib" fontSize={"lg"} fontWeight={400} m="0" p="0">
+        <Link href="https://github.com/kartverket/kvib" fontSize={"md"} fontWeight={400} m="0" p="0">
           Lag en pull request på Github
         </Link>
       </HStack>
