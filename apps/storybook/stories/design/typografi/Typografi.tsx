@@ -11,7 +11,6 @@ const TypografiTable = () => (
       variant="simple"
       m="12px"
       sx={{
-        // border bottom color should be gray-200 for all rows except the last one
         "td, th": {
           borderBottom: "1px solid var(--kvib-colors-gray-200)",
         },
