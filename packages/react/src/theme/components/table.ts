@@ -1,6 +1,6 @@
 import { defineStyle, defineStyleConfig } from "@chakra-ui/react";
 
-const variantStriped = defineStyle((props) => {
+const variantStriped = defineStyle(props => {
   const { colorScheme: c } = props;
 
   return {
