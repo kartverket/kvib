@@ -20,14 +20,13 @@ div[role="main"] > :first-child {
 }
 
 .sbdocs.sbdocs-wrapper > :first-child {
-  flex: 1; /* This will allow the first child to take up the remaining space */
+  flex: 1;
 }
 
 .sbdocs.sbdocs-wrapper > :last-child {
-  width: 180px; /* Fixed width for the last child */
+  width: 180px;
 }
 
-/* Media query to hide the last child on smaller screens */
 @media (max-width: 1180px) {
   .sbdocs.sbdocs-wrapper > :last-child {
     display: none;
@@ -37,7 +36,6 @@ div[role="main"] > :first-child {
 .sbdocs-content {
 padding: 80px 40px 40px 40px;
 }
-
 
 .docblock-source {
   margin: 0 !important;
