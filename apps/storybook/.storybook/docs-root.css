@@ -27,14 +27,14 @@ div[role="main"] > :first-child {
   width: 180px;
 }
 
-@media (max-width: 1180px) {
+@media (max-width: 1280px) {
   .sbdocs.sbdocs-wrapper > :last-child {
     display: none;
   }
 }
 
 .sbdocs-content {
-padding: 80px 40px 40px 40px;
+padding: 80px 80px 40px 80px;
 }
 
 .docblock-source {
