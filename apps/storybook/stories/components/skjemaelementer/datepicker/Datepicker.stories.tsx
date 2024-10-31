@@ -187,6 +187,11 @@ export default meta;
 type Story = StoryObj<typeof KvibDatepicker>;
 
 export const Preview: Story = {
+  args: {
+    showWeekNumber: true,
+    showOutsideDays: true,
+    onChange: e => console.log(e.target.value),
+  },
   render: args => <KvibDatepicker {...args} />,
 };
 

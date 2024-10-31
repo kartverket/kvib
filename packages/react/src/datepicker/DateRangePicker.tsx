@@ -1,14 +1,16 @@
 import { useTheme } from "@kvib/react/src";
-import { useState } from "react";
+import { nb } from "date-fns/locale";
 import { DateRange, DayPicker, DayPickerProps } from "react-day-picker";
 import "react-day-picker/style.css";
 
-type Props = DayPickerProps & {
+export type DateRangePickerProps = DayPickerProps & {
+  selected?: DateRange | undefined;
+  onSelect?: (range: DateRange | undefined) => void;
+  mode?: "range";
   colorScheme?: "green" | "blue";
 };
 
-export const DateRangePicker = (props: Props) => {
-  const [selectedDates, setSelectedDates] = useState<DateRange | undefined>();
+export const DateRangePicker = ({ showOutsideDays = true, ...props }: DateRangePickerProps) => {
   const uniqueClassName = generateUniqueClassName("kvib-datepicker");
   const theme = useTheme();
   const style = css(
@@ -19,11 +21,11 @@ export const DateRangePicker = (props: Props) => {
     <>
       <style>{style}</style>
       <DayPicker
+        showOutsideDays={showOutsideDays}
+        classNames={{ root: uniqueClassName }}
+        locale={nb}
         {...props}
         mode="range"
-        selected={selectedDates}
-        onSelect={range => setSelectedDates(range)}
-        classNames={{ root: uniqueClassName }}
       />
     </>
   );
@@ -48,8 +50,8 @@ const css = (className: string, colorPalette: Record<number, string>) => {
   --rdp-week_number-font: 12px/1 sans-serif;
 
   /* Day buttons */
-  --rdp-day-width: 40px; /* Width of the day cells. */
-  --rdp-day-height: 40px; /* Height of the day cells. */
+  --rdp-day-width: 42px; /* Width of the day cells. */
+  --rdp-day-height: 42px; /* Height of the day cells. */
   --rdp-day_button-height: var(--rdp-day-height); /* Height of the day buttons. */
   --rdp-day_button-width: var(--rdp-day-width); /* Width of the day buttons. */
   --rdp-day_button-border-radius: 50%;
@@ -112,6 +114,13 @@ const css = (className: string, colorPalette: Record<number, string>) => {
     text-transform: capitalize;
   }
 
+  .rdp-footer {
+  padding: 0.5em;
+  padding-left: 0.75em;
+    font-weight: 400;
+    font-size: 14px;
+  }
+
   .rdp-dropdowns {
     gap: 0.5em;
   }
@@ -140,7 +149,13 @@ const css = (className: string, colorPalette: Record<number, string>) => {
     border-radius: var(--rdp-day_button-border-radius);
   }
 
-}
+  .rdp-outside.rdp-range_start,
+  .rdp-outside.rdp-range_middle,
+  .rdp-outside.rdp-range_end {
+    opacity: 1;
+  }
+
+
 `;
 };
 
