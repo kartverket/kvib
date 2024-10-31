@@ -1,0 +1,1 @@
+import{r}from"./index-BwDkhjyp.js";import{T as o}from"./emotion-element-5486c51c.browser.esm-xLAo67gU.js";function s(){const e=r.useContext(o);if(!e)throw Error("useTheme: `theme` is undefined. Seems you forgot to wrap your app in `<ChakraProvider />` or `<ThemeProvider />`");return e}export{s as u};
