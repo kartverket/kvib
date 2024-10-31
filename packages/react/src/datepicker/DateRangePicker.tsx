@@ -8,6 +8,7 @@ export type DateRangePickerProps = DayPickerProps & {
   onSelect?: (range: DateRange | undefined) => void;
   mode?: "range";
   colorScheme?: "green" | "blue";
+  ariaLabel?: string;
 };
 
 export const DateRangePicker = ({ showOutsideDays = true, ...props }: DateRangePickerProps) => {
@@ -18,7 +19,7 @@ export const DateRangePicker = ({ showOutsideDays = true, ...props }: DateRangeP
     theme.colors[props.colorScheme ?? theme.components.Datepicker.defaultProps.colorScheme],
   );
   return (
-    <>
+    <div {...(props.ariaLabel ? { "aria-label": props.ariaLabel } : {})}>
       <style>{style}</style>
       <DayPicker
         showOutsideDays={showOutsideDays}
@@ -27,7 +28,7 @@ export const DateRangePicker = ({ showOutsideDays = true, ...props }: DateRangeP
         {...props}
         mode="range"
       />
-    </>
+    </div>
   );
 };
 

@@ -72,7 +72,15 @@ type Story = StoryObj<typeof KvibDateRangePicker>;
 const DateRangePickerExample = (props: DateRangePickerProps) => {
   const { selected, onSelect, ...rest } = props;
   const [selectedDates, setSelectedDates] = useState<DateRange | undefined>(undefined);
-  return <KvibDateRangePicker selected={selectedDates} onSelect={setSelectedDates} {...rest} mode="range" />;
+  return (
+    <KvibDateRangePicker
+      selected={selectedDates}
+      onSelect={setSelectedDates}
+      {...rest}
+      mode="range"
+      ariaLabel="Eksempel på DateRangePicker"
+    />
+  );
 };
 
 export const Preview: Story = {
