@@ -12,8 +12,9 @@ const meta: Meta<typeof KvibDateRangePicker> = {
     },
   },
   args: {
-    showOutsideDays: true,
+    showOutsideDays: false,
     showWeekNumber: false,
+    showDropdownMonthYear: false,
     colorScheme: "green",
   },
   argTypes: {
@@ -30,6 +31,14 @@ const meta: Meta<typeof KvibDateRangePicker> = {
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "true" },
+      },
+      control: "boolean",
+    },
+    showDropdownMonthYear: {
+      description: "Vis dropdown for å velge måned og år",
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
@@ -72,15 +81,7 @@ type Story = StoryObj<typeof KvibDateRangePicker>;
 const DateRangePickerExample = (props: DateRangePickerProps) => {
   const { selected, onSelect, ...rest } = props;
   const [selectedDates, setSelectedDates] = useState<DateRange | undefined>(undefined);
-  return (
-    <KvibDateRangePicker
-      selected={selectedDates}
-      onSelect={setSelectedDates}
-      {...rest}
-      mode="range"
-      ariaLabel="Eksempel på DateRangePicker"
-    />
-  );
+  return <KvibDateRangePicker selected={selectedDates} onSelect={setSelectedDates} {...rest} mode="range" />;
 };
 
 export const Preview: Story = {
