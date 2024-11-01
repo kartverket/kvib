@@ -8,6 +8,7 @@ export const DateRangePicker = () => (
   <Dokumentasjonsside
     tittel="Date Range Picker"
     beskrivelse={"En periodevelger som lar brukerne velge mellom en tidsperiode mellom to datoer."}
+    pb="0"
   >
     <Tekstblokk>
       <Text fontSize="md" fontWeight={700} p="0" m="0">
