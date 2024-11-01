@@ -55,7 +55,7 @@ const css = (className: string, colorPalette: Record<number, string>) => {
   --rdp-day-height: 42px; /* Height of the day cells. */
   --rdp-day_button-height: var(--rdp-day-height); /* Height of the day buttons. */
   --rdp-day_button-width: var(--rdp-day-width); /* Width of the day buttons. */
-  --rdp-day_button-border-radius: 50%;
+  --rdp-day_button-border-radius: var(--kvib-radii-md); /* Border radius of the day buttons. */
   --rdp-outside-opacity: 0.4; /* Opacity of the days outside the current month. */
   --rdp-disabled-opacity: 0.25; /* Opacity of the disabled days. */
 
