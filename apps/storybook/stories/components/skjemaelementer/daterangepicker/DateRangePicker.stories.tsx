@@ -30,7 +30,7 @@ const meta: Meta<typeof KvibDateRangePicker> = {
       description: "Vis datoer utenfor valgt måned",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: "true" },
+        defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
