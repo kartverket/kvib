@@ -8,10 +8,10 @@ export type DateRangePickerProps = DayPickerProps & {
   onSelect?: (range: DateRange | undefined) => void;
   mode?: "range";
   colorScheme?: "green" | "blue";
-  ariaLabel?: string;
+  showDropdownMonthYear?: boolean;
 };
 
-export const DateRangePicker = ({ showOutsideDays = true, ...props }: DateRangePickerProps) => {
+export const DateRangePicker = ({ ...props }: DateRangePickerProps) => {
   const uniqueClassName = generateUniqueClassName("kvib-datepicker");
   const theme = useTheme();
   const style = css(
@@ -19,16 +19,16 @@ export const DateRangePicker = ({ showOutsideDays = true, ...props }: DateRangeP
     theme.colors[props.colorScheme ?? theme.components.Datepicker.defaultProps.colorScheme],
   );
   return (
-    <div {...(props.ariaLabel ? { "aria-label": props.ariaLabel } : {})}>
+    <>
       <style>{style}</style>
       <DayPicker
-        showOutsideDays={showOutsideDays}
         classNames={{ root: uniqueClassName }}
         locale={nb}
+        captionLayout={props.showDropdownMonthYear ? "dropdown" : "label"}
         {...props}
         mode="range"
       />
-    </div>
+    </>
   );
 };
 
