@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 4.7.0
+
+### Minor Changes
+
+- 34df05d: Ny komponent: DateRangePicker
+
 ## 4.6.7
 
 ### Patch Changes
