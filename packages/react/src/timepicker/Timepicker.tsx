@@ -1,10 +1,9 @@
-import { useRef, useState } from "react";
-import { IconButton, Input, defaultKvibTheme } from "@kvib/react/src";
-import { useTimeFieldState } from "react-stately";
-import { TimeValue } from "@react-types/datepicker";
 import { CalendarDateTime, parseTime } from "@internationalized/date";
+import { IconButton, Input } from "@kvib/react/src";
+import { TimeValue } from "@react-types/datepicker";
+import { useRef, useState } from "react";
+import { useTimeFieldState } from "react-stately";
 import { TimeField } from "./TimeField";
-import { useFormControlContext } from "@chakra-ui/react";
 
 type TimepickerProps = {
   size?: "xs" | "sm" | "md" | "lg";

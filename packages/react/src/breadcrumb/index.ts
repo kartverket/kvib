@@ -1,7 +1,19 @@
-export { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator } from "@chakra-ui/react";
+export {
+  Breadcrumb,
+  BreadcrumbCurrentLink,
+  BreadcrumbEllipsis,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbRoot,
+  BreadcrumbSeparator,
+} from "@chakra-ui/react";
 export type {
-  BreadcrumbProps,
+  BreadcrumbCurrentLinkProps,
+  BreadcrumbEllipsisProps,
   BreadcrumbItemProps,
   BreadcrumbLinkProps,
+  BreadcrumbListProps,
+  BreadcrumbRootProps,
   BreadcrumbSeparatorProps,
 } from "@chakra-ui/react";

@@ -1,18 +1,18 @@
 export {
   Drawer,
+  DrawerBackdrop,
   DrawerBody,
+  DrawerCloseTrigger,
+  DrawerContent,
   DrawerFooter,
   DrawerHeader,
-  DrawerOverlay,
-  DrawerContent,
-  DrawerCloseButton,
 } from "@chakra-ui/react";
 export type {
-  DrawerProps,
-  ModalBodyProps,
-  ModalFooterProps,
-  ModalHeaderProps,
-  ModalOverlayProps,
+  DrawerBackdropProps,
+  DrawerBodyProps,
+  DrawerCloseTriggerProps,
   DrawerContentProps,
-  CloseButtonProps,
+  DrawerFooterProps,
+  DrawerHeaderProps,
+  DrawerRootProps,
 } from "@chakra-ui/react";

@@ -1,15 +1,15 @@
 import {
   Box,
-  Logo,
+  Collapsible,
   Flex,
-  useMediaQuery,
   IconButton,
-  useDisclosure,
-  VStack,
-  Collapse,
-  defaultKvibTheme,
   Link,
   LinkProps,
+  Logo,
+  system,
+  useMediaQuery,
+  useToggle,
+  VStack,
 } from "@kvib/react/src";
 
 type HeaderProps = {
@@ -57,14 +57,24 @@ export const Header = (props: HeaderProps) => {
     logoVariant = "horizontal",
   } = props;
 
-  const [isCollapse] = useMediaQuery(`(max-width: ${defaultKvibTheme.breakpoints[collapseBreakpoint]})`);
-  const [isSm] = useMediaQuery(`(max-width: ${defaultKvibTheme.breakpoints["sm"]})`);
+  // handle possible undefined theme
+  const breakpoints = system?._config?.theme?.breakpoints ?? {
+    sm: "30em",
+    md: "48em",
+    lg: "62em",
+    xl: "80em",
+  };
+
+  // Use the useMediaQuery hook with the breakpoints from the theme context
+  const isCollapse = useMediaQuery(`(max-width: ${breakpoints[collapseBreakpoint]})`);
+  const isSm = useMediaQuery(`(max-width: ${breakpoints["sm"]})`);
+
   const logoHorizontalSize = isSm ? 110 : 150;
   const logoVerticalSize = isSm ? 70 : 100;
   const headerSize = isSm ? 70 : 90;
   const justify = justifyContent && isCollapse ? "space-between" : justifyContent;
   const showChildren = !isCollapse;
-  const { isOpen, onToggle } = useDisclosure();
+  const [isOpen, onToggle] = useToggle(false);
   const showMenuButtonElement = (children && (isCollapse || isOpen)) || showMenuButton;
   const handleClick = onMenuButtonClick || onToggle;
 
@@ -105,12 +115,12 @@ export const Header = (props: HeaderProps) => {
         )}
       </Flex>
       {/* Slide content */}
-      <Collapse in={isOpen} animateOpacity={false}>
+      <Collapsible.Root open={onToggle} animateOpacity={false}>
         <VStack bg="gray.50" borderBottomWidth="2px" borderBottomColor="gray.200" padding={30} gap={10}>
           {showChildrenInMenu && children}
           {dropdownMenuChildren}
         </VStack>
-      </Collapse>
+      </Collapsible.Root>
     </Box>
   );
 };

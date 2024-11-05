@@ -1,14 +1,12 @@
 import {
   Input as ChakraInput,
-  InputGroup as ChakraInputGroup,
-  InputLeftElement as ChakraInputLeftElement,
+  InputElement as ChakraInputElement,
+  Group as ChakraInputGroup,
   InputProps as ChakraInputProps,
-  InputRightElement as ChakraInputRightElement,
-  forwardRef,
 } from "@chakra-ui/react";
-import { useSize } from "@chakra-ui/react-use-size";
-import { useRef } from "react";
+import { forwardRef, useRef } from "react";
 import { Button, IconButton } from "../button";
+import { useResizeObserver } from "../hooks";
 
 export type SearchProps = Omit<ChakraInputProps, "isRequired" | "colorScheme"> & {
   searchButton?: "left" | "right" | "none";
@@ -22,14 +20,14 @@ type RenderProps = {
   position: "left" | "right";
 };
 
-export const Search = forwardRef<SearchProps, "input">(
+export const Search = forwardRef<HTMLInputElement, SearchProps>(
   (
     {
       id,
       colorScheme,
       size,
       variant,
-      isDisabled,
+      disabled,
       searchButton = "none",
       buttonWidth,
       buttonVariant = "tertiary",
@@ -41,7 +39,10 @@ export const Search = forwardRef<SearchProps, "input">(
   ) => {
     // Used to calculate width of button if no buttonWidth is given and there is text in the button
     const elementRef = useRef(null);
-    const dimensions = useSize(elementRef);
+    const dimensions = useResizeObserver({
+      ref: elementRef,
+      box: "border-box",
+    });
 
     // Use IconButton when there is no text in the button
     const RenderButton = ({ position }: RenderProps) => {
@@ -54,7 +55,7 @@ export const Search = forwardRef<SearchProps, "input">(
         ...borderRadiusProps,
         colorScheme,
         variant: buttonVariant,
-        isDisabled,
+        disabled,
         width: buttonWidth,
         size,
         borderRadius: size === "sm" || size === "xs" ? "0.125rem" : undefined,
@@ -77,7 +78,7 @@ export const Search = forwardRef<SearchProps, "input">(
         : "3rem";
 
     return (
-      <ChakraInputGroup size={size} width={props.width}>
+      <ChakraInputGroup width={props.width}>
         <ChakraInput
           {...props}
           id={id}
@@ -85,19 +86,19 @@ export const Search = forwardRef<SearchProps, "input">(
           role={role}
           size={size}
           variant={variant}
-          isDisabled={isDisabled}
+          disabled={disabled}
           paddingLeft={searchButton === "left" ? inputPadding : undefined}
           paddingRight={searchButton === "right" ? inputPadding : undefined}
         />
         {searchButton === "left" && (
-          <ChakraInputLeftElement width="auto">
+          <ChakraInputElement width="auto">
             <RenderButton position={"left"} />
-          </ChakraInputLeftElement>
+          </ChakraInputElement>
         )}
         {searchButton === "right" && (
-          <ChakraInputRightElement width="auto">
+          <ChakraInputElement width="auto">
             <RenderButton position={"right"} />
-          </ChakraInputRightElement>
+          </ChakraInputElement>
         )}
       </ChakraInputGroup>
     );

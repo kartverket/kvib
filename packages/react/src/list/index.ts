@@ -1,2 +1,2 @@
-export { List, ListItem, ListIcon, OrderedList, UnorderedList } from "@chakra-ui/react";
-export type { ListProps, ListItemProps, IconProps } from "@chakra-ui/react";
+export { List, ListItem } from "@chakra-ui/react";
+export type { IconProps, ListItemProps, ListRootProps } from "@chakra-ui/react";

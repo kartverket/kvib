@@ -1,14 +1,2 @@
-export {
-  RangeSlider,
-  RangeSliderTrack,
-  RangeSliderFilledTrack,
-  RangeSliderThumb,
-  RangeSliderMark,
-} from "@chakra-ui/react";
-export type {
-  RangeSliderProps,
-  RangeSliderTrackProps,
-  RangeSliderInnerTrackProps,
-  RangeSliderThumbProps,
-  RangeSliderMarkProps,
-} from "@chakra-ui/react";
+export { SliderControl, SliderRange } from "@chakra-ui/react";
+export type { SliderControlProps, SliderRangeProps } from "@chakra-ui/react";

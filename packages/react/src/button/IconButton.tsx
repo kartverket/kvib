@@ -1,11 +1,6 @@
-import {
-  IconButton as ChakraIconButton,
-  IconButtonProps as ChakraIconButtonProps,
-  forwardRef,
-  ResponsiveValue,
-  Spinner,
-} from "@chakra-ui/react";
+import { IconButton as ChakraIconButton, IconButtonProps as ChakraIconButtonProps, Spinner } from "@chakra-ui/react";
 import { MaterialSymbol } from "material-symbols";
+import { forwardRef } from "react";
 import { Icon } from "../icon";
 
 export type IconButtonProps = Omit<ChakraIconButtonProps, "colorScheme" | "variant" | "isActive" | "icon"> & {
@@ -20,13 +15,14 @@ export type IconButtonProps = Omit<ChakraIconButtonProps, "colorScheme" | "varia
      @default green*/
   colorScheme?: "green" | "blue" | "gray" | "red";
 
-  /**The size of the component.
-   @default md*/
-  size?: ResponsiveValue<string>;
-
   /**If true, the icon will be filled.
    @default false*/
   iconFill?: boolean;
+
+  /**
+   * If true, the button will show a spinner.
+   */
+  isLoading?: boolean;
 };
 
 const IconSpinner = (props: IconButtonProps) => {
@@ -43,20 +39,12 @@ const IconSpinner = (props: IconButtonProps) => {
   );
 };
 
-export const IconButton = forwardRef<IconButtonProps, "button">(
-  (
-    { isDisabled, isLoading, iconFill, ...props },
-
-    ref,
-  ) => {
+export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
+  ({ disabled, isLoading, iconFill, icon, size, ...props }, ref) => {
     return (
-      <ChakraIconButton
-        {...props}
-        ref={ref}
-        isDisabled={isDisabled || isLoading}
-        aria-busy={isLoading}
-        icon={IconSpinner({ isLoading, iconFill, ...props })}
-      ></ChakraIconButton>
+      <ChakraIconButton {...props} variant="ghost" ref={ref} disabled={disabled || isLoading} aria-busy={isLoading}>
+        <IconSpinner isLoading={isLoading} icon={icon} iconFill={iconFill} size={size} />
+      </ChakraIconButton>
     );
   },
 );

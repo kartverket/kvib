@@ -1,2 +1,2 @@
-export { Select } from "@chakra-ui/react";
-export type { SelectProps } from "@chakra-ui/react";
+export { Select, SelectRoot } from "@chakra-ui/react";
+export type { SelectRootProps } from "@chakra-ui/react";

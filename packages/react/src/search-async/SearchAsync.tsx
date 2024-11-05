@@ -1,16 +1,15 @@
-import { ReactNode, Ref, useEffect, useRef } from "react";
 import { Text } from "@kvib/react/src";
-import { forwardRef } from "@chakra-ui/react";
 import {
   ActionMeta,
-  SelectInstance,
+  FormatOptionLabelMeta,
   GroupBase,
   OptionsOrGroups,
-  FormatOptionLabelMeta,
   AsyncSelect as ReactSearch,
+  SelectInstance,
   SizeProp,
   Variant,
 } from "chakra-react-select";
+import { forwardRef, ForwardRefRenderFunction, PropsWithoutRef, ReactNode, Ref, useEffect, useRef } from "react";
 
 export type SearchAsyncElement<T> = SelectInstance<T, boolean, GroupBase<T>>;
 
@@ -86,9 +85,9 @@ type WithoutMulti<T> = {
 export type SearchAsyncProps<T> = BaseProps<T> & (WithMulti<T> | WithoutMulti<T>);
 
 function genericForwardRef<T, P = {}>(
-  render: (props: P, ref: React.Ref<T>) => React.ReactNode,
-): (props: P, ref: React.Ref<T>) => React.ReactNode {
-  return forwardRef(render) as any;
+  render: ForwardRefRenderFunction<T, P>,
+): React.ForwardRefExoticComponent<React.PropsWithoutRef<P> & React.RefAttributes<T>> {
+  return forwardRef(render as ForwardRefRenderFunction<T, PropsWithoutRef<P>>);
 }
 
 // SearchAsync uses the async version of react-select to fetch and display options.

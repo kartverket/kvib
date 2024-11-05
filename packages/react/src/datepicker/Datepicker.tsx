@@ -1,21 +1,17 @@
-import { forwardRef, useFormControlContext } from "@chakra-ui/react";
 import {
+  Group,
   IconButton,
-  InputGroup,
+  InputElement,
   InputProps,
-  InputRightElement,
   Input as KVInput,
   Popover,
   PopoverAnchor,
-  PopoverContent,
   PopoverTrigger,
   Portal,
-  useBoolean,
-  useTheme,
 } from "@kvib/react/src";
 import { format, isValid, parse } from "date-fns";
 import { nb } from "date-fns/locale/nb";
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, forwardRef, useState } from "react";
 import { DayPicker } from "react-day-picker";
 import "react-day-picker/style.css";
 
@@ -96,27 +92,29 @@ export type DatepickerProps = Omit<InputProps, "colorScheme" | "max" | "min" | "
   colorScheme?: "blue" | "green";
 };
 
-export const Datepicker = forwardRef<DatepickerProps, "input">(({ onChange, useNative = false, ...props }, ref) => {
-  const KVInputProps = extractKVProps(props);
-  const commonProps = getCommonInputProps(props);
-  const defaultValue = props.defaultSelected ? formatDate(props.defaultSelected) : undefined;
-  const isClient = typeof window === "object";
-  const isMobile = isClient ? window.innerWidth < 480 : false;
+export const Datepicker = forwardRef<HTMLInputElement, DatepickerProps>(
+  ({ onChange, useNative = false, ...props }, ref) => {
+    const KVInputProps = extractKVProps(props);
+    const commonProps = getCommonInputProps(props);
+    const defaultValue = props.defaultSelected ? formatDate(props.defaultSelected) : undefined;
+    const isClient = typeof window === "object";
+    const isMobile = isClient ? window.innerWidth < 480 : false;
 
-  if (isMobile || useNative)
-    return (
-      <KVInput
-        ref={ref}
-        type="date"
-        defaultValue={defaultValue}
-        {...KVInputProps}
-        {...commonProps}
-        onChange={onChange}
-      />
-    );
+    if (isMobile || useNative)
+      return (
+        <KVInput
+          ref={ref}
+          type="date"
+          defaultValue={defaultValue}
+          {...KVInputProps}
+          {...commonProps}
+          onChange={onChange}
+        />
+      );
 
-  return <CustomDatepicker {...props} {...commonProps} onChange={onChange} />;
-});
+    return <CustomDatepicker {...props} {...commonProps} onChange={onChange} />;
+  },
+);
 
 const CustomDatepicker = ({
   onChange,
@@ -135,14 +133,15 @@ const CustomDatepicker = ({
   isRequired: isRequiredExternally = false,
   ...KVInputProps
 }: DatepickerProps) => {
-  const theme = useTheme();
+  /* const context = useKvibContext();
+  const theme = context._config.theme; */
 
   // Style for the day picker
   const uniqueClassName = generateUniqueClassName("kvib-datepicker");
-  const style = css(uniqueClassName, theme.colors[colorScheme ?? theme.components.Datepicker.defaultProps.colorScheme]);
+  // const style = css(uniqueClassName, theme.colors[colorScheme ?? theme.components.Datepicker.defaultProps.colorScheme]);
 
   // Get state from form control context
-  const formControlContext = useFormControlContext();
+  /* const formControlContext = useFormControlContext();
   const isDisabledFromForm = formControlContext?.isDisabled || false;
   const isInvalidFromForm = formControlContext?.isInvalid || false;
   const isRequiredFromForm = formControlContext?.isRequired || false;
@@ -150,10 +149,10 @@ const CustomDatepicker = ({
   // Determine the effective isDisabled, isInvalid and isRequired states
   const isDisabled = isDisabledExternally || isDisabledFromForm;
   const isInvalid = isInvalidExternally || isInvalidFromForm;
-  const isRequired = isRequiredExternally || isRequiredFromForm;
+  const isRequired = isRequiredExternally || isRequiredFromForm; */
 
   // State for the day picker
-  const [isPickerVisible, setPickerVisible] = useBoolean(false);
+  const [isPickerVisible, setPickerVisible] = useState<boolean>(false);
   const [selectedDate, setSelectedDate] = useState(defaultSelected ?? undefined);
   const [month, setMonth] = useState(defaultMonth);
   const [inputValue, setInputValue] = useState(selectedDate ? formatDate(selectedDate) : "");
@@ -216,47 +215,52 @@ const CustomDatepicker = ({
       setSelectedDate(date);
       setMonth(date);
       setInputValue(formatDate(date));
-      setPickerVisible.off();
+      setPickerVisible(false);
     }
   };
 
   return (
-    <Popover
+    <Popover.Root
       placement="bottom-start"
       isOpen={isPickerVisible}
-      onOpen={setPickerVisible.on}
-      onClose={setPickerVisible.off}
+      onOpen={setPickerVisible(true)}
+      onClose={setPickerVisible(false)}
     >
-      <InputGroup>
+      <Group>
         <PopoverAnchor>
           <KVInput
             value={inputValue}
             className="custom-datepicker"
-            isDisabled={isDisabled}
+            /* isDisabled={isDisabled}
             isInvalid={isInvalid}
-            isRequired={isRequired}
+            isRequired={isRequired} */
             onChange={handleInputChange}
             onBlur={formatInputOnBlur}
             {...KVInputProps}
-            locale={nb}
+            // locale={nb}
           />
         </PopoverAnchor>
-        <InputRightElement opacity={isDisabled ? 0.5 : 1} pointerEvents={isDisabled ? "none" : "auto"} height="100%">
+        <InputElement
+          placement="end"
+          /*  opacity={isDisabled ? 0.5 : 1}
+          pointerEvents={isDisabled ? "none" : "auto"} */
+          height="100%"
+        >
           <PopoverTrigger>
             <IconButton
               icon="calendar_today"
               colorScheme={colorScheme}
               size={KVInputProps.size}
               aria-label="open datepicker"
-              onClick={setPickerVisible.toggle}
-              variant="tertiary"
+              onClick={() => setPickerVisible(e => !e)}
+              // variant="tertiary"
             />
           </PopoverTrigger>
-        </InputRightElement>
-      </InputGroup>
+        </InputElement>
+      </Group>
       <Portal>
-        <PopoverContent width="auto" padding="1rem">
-          <style>{style}</style>
+        <Popover.Content>
+          {/*  <style>{style}</style> */}
           <DayPicker
             onSelect={handleDayPickerSelect}
             mode="single"
@@ -272,7 +276,7 @@ const CustomDatepicker = ({
             captionLayout={showDropdownMonthYear ? "dropdown" : "label"}
             startMonth={fromDate}
             endMonth={toDate}
-            required={isRequired}
+            /* required={isRequired} */
             {...(fromDate && {
               disabled: {
                 before: fromDate,
@@ -287,9 +291,9 @@ const CustomDatepicker = ({
               disabled: disabledDays,
             })}
           />
-        </PopoverContent>
+        </Popover.Content>
       </Portal>
-    </Popover>
+    </Popover.Root>
   );
 };
 
@@ -348,115 +352,6 @@ const getCommonInputProps = (props: DatepickerProps) => {
 };
 
 // Function to generate the css for the day picker
-const css = (className: string, colorPalette: Record<number, string>) => {
-  return `
- .${className} {
-
-   /* Colors */
-  --rdp-accent-color: ${colorPalette[500]}; /* The accent color used for selected days and UI elements. */
-  --rdp-accent-background-color: ${colorPalette[100]}; /* The accent background color used for selected days and UI elements. */
-
-  /* Fonts */
-  --rdp-week_number-font: 12px/1 sans-serif;
-
-  /* Day buttons */
-  --rdp-day-width: 38px; /* Width of the day cells. */
-  --rdp-day-height: 38px; /* Height of the day cells. */
-  --rdp-day_button-height: calc(var(--rdp-day-height) + 2px); /* Height of the day buttons. */
-  --rdp-day_button-width: calc(var(--rdp-day-width) + 2px); /* Width of the day buttons. */
-  --rdp-day_button-border-radius: 50%;
-  --rdp-outside-opacity: 0.4; /* Opacity of the days outside the current month. */
-  --rdp-disabled-opacity: 0.25; /* Opacity of the disabled days. */
-
-  /* Week numbers */
-  --rdp-weekday-text-align: center;
-
-  /* Day styles */
-  .rdp-today {
-    font-weight: 700;
-  }
-
-  .rdp-day {
-    box-sizing: border-box;
-    height: var(--rdp-day_button-height);
-    width: var(--rdp-day_button-width);
-    border-radius: var(--rdp-day_button-border-radius);
-  }
-
-
-  .rdp-day:hover:not(.rdp-selected):not(.rdp-disabled) {
-    background-color: var(--rdp-accent-background-color);
-  }
-
-  .rdp-selected {
-    background-color: var(--rdp-accent-color);
-    color: white;
-    box-sizing: border-box;
-  }
-
-  /* Navigation buttons */
-  .rdp-button_next,
-  .rdp-button_previous {
-    box-sizing: border-box;
-    height: var(--rdp-day_button-height);
-    width: var(--rdp-day_button-width);
-  }
-
-  .rdp-button_next:not(:disabled):hover,
-  .rdp-button_previous:not(:disabled):hover {
-    border-radius: var(--rdp-day_button-border-radius);
-    background-color: var(--rdp-accent-background-color);
-  }
-
-  .rdp-button_next:disabled,
-  .rdp-button_previous:disabled,
-  .rdp-day_button:disabled
-   {
-    cursor: not-allowed;
-    opacity: 0.5;
-  }
-
-  /* Weekday and week number styles */
-  .rdp-weekday {
-    vertical-align: middle;
-    font-size: 0.75em;
-    font-weight: 700;
-    text-align: center;
-    height: var(--rdp-day_button-height);
-    width: var(--rdp-day_button-width);
-    text-transform: uppercase;
-  }
-
-  .rdp-day_button {
-  width: 100%;
-  height: 100%;
-  }
-
-
-  .rdp-week_number {
-    vertical-align: baseline;
-    transform: translateY(50%);
-    text-align: center;
-    height: var(--rdp-day_button-height);
-    width: var(--rdp-day_button-width);
-    line-height: 2px;
-  }
-
-  /* Month caption */
-  .rdp-month_caption {
-    padding: 0.25em;
-    font-weight: 700;
-    font-size: 18px;
-    text-transform: capitalize;
-  }
-
-  .rdp-dropdowns {
-    gap: 0.5em;
-  }
-
-}
-`;
-};
 
 // Function to generate a unique class name
 const generateUniqueClassName = (baseName: string) => {

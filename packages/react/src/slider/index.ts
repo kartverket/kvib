@@ -1,8 +1,12 @@
-export { Slider, SliderTrack, SliderFilledTrack, SliderThumb, SliderMark } from "@chakra-ui/react";
+export { Slider, SliderThumb, SliderTrack } from "@chakra-ui/react";
 export type {
-  SliderProps,
-  SliderTrackProps,
-  SliderInnerTrackProps,
+  SliderControlProps,
+  SliderLabelProps,
+  SliderMarkerGroupProps,
+  SliderMarkerIndicatorProps,
+  SliderMarkerProps,
+  SliderRootProps,
   SliderThumbProps,
-  SliderMarkProps,
+  SliderTrackProps,
+  SliderValueTextProps,
 } from "@chakra-ui/react";

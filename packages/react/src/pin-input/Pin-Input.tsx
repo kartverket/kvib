@@ -1,9 +1,9 @@
-import { PinInput as ChakraPinInput, PinInputProps as ChakraPinInputProps } from "@chakra-ui/react";
+import { PinInput as ChakraPinInput, PinInputRootProps as ChakraPinInputProps } from "@chakra-ui/react";
 
 export const PinInput = ({ size, children, ...props }: ChakraPinInputProps) => {
   return (
-    <ChakraPinInput {...props} size={size}>
+    <ChakraPinInput.Root {...props} size={size}>
       {children}
-    </ChakraPinInput>
+    </ChakraPinInput.Root>
   );
 };

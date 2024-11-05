@@ -1,2 +1,10 @@
-export { Stat, StatLabel, StatNumber, StatHelpText, StatArrow, StatGroup } from "@chakra-ui/react";
-export type { StatProps, StatLabelProps, StatNumberProps, StatHelpTextProps, StatGroupProps } from "@chakra-ui/react";
+export {
+  Stat,
+  StatDownIndicator,
+  StatHelpText,
+  StatLabel,
+  StatRoot,
+  StatUpIndicator,
+  StatValueText,
+} from "@chakra-ui/react";
+export type { StatHelpTextProps, StatLabelProps, StatRootProps, StatValueTextProps } from "@chakra-ui/react";

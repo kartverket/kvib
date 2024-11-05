@@ -1,2 +1,2 @@
-export { SkipNavLink, SkipNavContent } from "@chakra-ui/skip-nav";
-export type { SkipNavLinkProps, SkipNavContentProps } from "@chakra-ui/skip-nav";
+export { SkipNavContent, SkipNavLink } from "@chakra-ui/react";
+export type { SkipNavContentProps, SkipNavLinkProps } from "@chakra-ui/react";

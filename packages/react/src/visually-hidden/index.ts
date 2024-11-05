@@ -1,1 +1,1 @@
-export { VisuallyHidden, VisuallyHiddenInput } from "@chakra-ui/react";
+export { VisuallyHidden, visuallyHiddenStyle } from "@chakra-ui/react";

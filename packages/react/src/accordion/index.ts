@@ -1,8 +1,7 @@
-export { Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon } from "@chakra-ui/react";
+export { Accordion, AccordionItem } from "@chakra-ui/react";
 export type {
-  AccordionProps,
+  AccordionItemBodyProps,
+  AccordionItemContentProps,
   AccordionItemProps,
-  AccordionButtonProps,
-  AccordionPanelProps,
-  AccordionIconProps,
+  AccordionRootProps,
 } from "@chakra-ui/react";
