@@ -38,7 +38,7 @@ export const Search = forwardRef<HTMLInputElement, SearchProps>(
     ref,
   ) => {
     // Used to calculate width of button if no buttonWidth is given and there is text in the button
-    const elementRef = useRef(null);
+    const elementRef = useRef<HTMLButtonElement>(null);
     const dimensions = useResizeObserver({
       ref: elementRef,
       box: "border-box",
@@ -62,7 +62,7 @@ export const Search = forwardRef<HTMLInputElement, SearchProps>(
       };
 
       return buttonText ? (
-        <Button ref={elementRef} {...buttonProps} rightIcon="search" type="submit" aria-label="search">
+        <Button {...buttonProps} rightIcon="search" type="submit" aria-label="search">
           {buttonText}
         </Button>
       ) : (

@@ -22,24 +22,24 @@ type TimepickerProps = {
 export const Timepicker = ({
   size,
   width = "fit-content",
-  variant = "outline",
+  /* variant = "outline", */
   colorScheme,
   value,
   defaultValue = getCurrentTime(),
   onChange = () => {},
-  isDisabled: isDisabledExternally = false,
-  isInvalid: isInvalidExternally = false,
+  /* isDisabled: isDisabledExternally = false,
+  isInvalid: isInvalidExternally = false, */
   minuteInterval = 30,
   ariaLabel,
 }: TimepickerProps) => {
   // Get state from form control context
-  const formControlContext = useFormControlContext();
+  /* const formControlContext = useFormControlContext();
   const isDisabledFromForm = formControlContext?.isDisabled || false;
-  const isInvalidFromForm = formControlContext?.isInvalid || false;
+  const isInvalidFromForm = formControlContext?.isInvalid || false; */
 
   // Determine the effective isDisabled and isInvalid states
-  const isDisabled = isDisabledExternally || isDisabledFromForm;
-  const isInvalid = isInvalidExternally || isInvalidFromForm;
+  /* const isDisabled = isDisabledExternally || isDisabledFromForm;
+  const isInvalid = isInvalidExternally || isInvalidFromForm; */
 
   // Hook for managing state of the time field
   const state = useTimeFieldState({
@@ -47,13 +47,13 @@ export const Timepicker = ({
     defaultValue,
     onChange,
     locale: "nb",
-    isDisabled,
-    isInvalid,
+    /* isDisabled,
+    isInvalid, */
   });
   const dateTime = state.value as CalendarDateTime | null;
   const buttonSize = size === "lg" ? "sm" : "xs";
-  const inputRef = useRef<HTMLDivElement>(null);
-  const [isFocused, setIsFocused] = useState(false);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const [_, setIsFocused] = useState(false);
 
   // Calculation for adjusting time with the arrow buttons
   const adjustTime = (direction: "forward" | "backward") => {
@@ -75,27 +75,27 @@ export const Timepicker = ({
   };
 
   // Focus styles for the input
-  const focusStyles = getFocusStyles(isFocused, isInvalid, variant);
+  /* const focusStyles = getFocusStyles(isFocused, isInvalid, variant); */
 
   return (
     <Input
       as="div"
       aria-label={ariaLabel || "timepicker"}
       display="flex"
-      variant={variant}
+      /* variant={variant} */
       size={size}
       width={width}
       paddingX={2}
       alignItems="center"
       justifyContent="space-between"
       gap={2}
-      isDisabled={isDisabled}
-      isInvalid={isInvalid}
+      /* isDisabled={isDisabled} */
+      /* isInvalid={isInvalid} */
       onClick={() => inputRef.current?.focus()}
       onFocus={() => setIsFocused(true)}
       onBlur={() => setIsFocused(false)}
       ref={inputRef}
-      sx={focusStyles}
+      /* sx={focusStyles} */
     >
       <IconButton
         onClick={() => adjustTime("backward")}
@@ -104,7 +104,7 @@ export const Timepicker = ({
         variant="ghost"
         icon="chevron_left"
         aria-label="earlier time"
-        isDisabled={isDisabled}
+        /* isDisabled={isDisabled} */
       />
       <TimeField state={state} colorScheme={colorScheme} />
       <IconButton
@@ -114,7 +114,7 @@ export const Timepicker = ({
         variant="ghost"
         icon="chevron_right"
         aria-label="later time"
-        isDisabled={isDisabled}
+        /* isDisabled={isDisabled} */
       />
     </Input>
   );
@@ -122,34 +122,3 @@ export const Timepicker = ({
 
 export const getCurrentTime = () => parseTime(new Date().toTimeString().split(" ")[0]);
 export const getTimestampFromTime = (time: CalendarDateTime | null) => `${time?.hour ?? 0}:${time?.minute ?? 0}`;
-
-const getFocusStyles = (
-  isFocused: boolean,
-  isInvalid: boolean,
-  variant: "outline" | "filled" | "flushed" | "unstyled",
-) => {
-  if (isFocused) {
-    // Check the variant and apply corresponding styles
-    switch (variant) {
-      case "outline":
-        return {
-          borderColor: "blue.500",
-          boxShadow: `0 0 0 1px ${defaultKvibTheme.colors.blue[500]}`,
-          _hover: { borderColor: isInvalid ?? "blue.500" },
-        };
-      case "flushed":
-        return {
-          borderColor: "blue.500",
-          boxShadow: `0 1px 0 0 ${defaultKvibTheme.colors.blue[500]}`,
-          _hover: { borderColor: isInvalid ?? "blue.500" },
-        };
-      default:
-        return {
-          borderColor: "blue.500",
-          _hover: { borderColor: isInvalid ?? "blue.500" },
-        };
-    }
-  } else {
-    return {}; // Return an empty object when not focused
-  }
-};
