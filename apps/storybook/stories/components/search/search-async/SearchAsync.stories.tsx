@@ -128,6 +128,14 @@ const meta: Meta<typeof KvibSearchAsync> = {
       },
       control: "text",
     },
+    menuPlacement: {
+      table: {
+        type: { summary: "bottom | top | auto" },
+        defaultValue: { summary: "bottom" },
+      },
+      options: ["bottom", "top", "auto"],
+      control: { type: "radio" },
+    },
   },
   args: { onChange: undefined, loadOptions: undefined },
 };
