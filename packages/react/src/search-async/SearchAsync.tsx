@@ -60,7 +60,7 @@ export type BaseProps<T> = {
   noOptionsMessage?: ((obj: { inputValue: string }) => ReactNode) | undefined;
 
   /** Default placement of the menu in relation to the control. 'auto' will flip when there isn't enough space below the control. */
-  menuPlacement: MenuPlacement;
+  menuPlacement?: MenuPlacement;
 
   /** Variable to override the selected value of the component. Null resets the component and undefined  is ignored. When in use update value from the onChange function */
   value?: T | null;
