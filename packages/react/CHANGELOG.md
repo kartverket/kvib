@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 4.7.1
+
+### Patch Changes
+
+- 092bc10: Legger til menuPlacement prop for SearchAsync
+
 ## 4.7.0
 
 ### Minor Changes
