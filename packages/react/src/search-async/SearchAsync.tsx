@@ -10,6 +10,7 @@ import {
   AsyncSelect as ReactSearch,
   SizeProp,
   Variant,
+  MenuPlacement,
 } from "chakra-react-select";
 
 export type SearchAsyncElement<T> = SelectInstance<T, boolean, GroupBase<T>>;
@@ -57,6 +58,9 @@ export type BaseProps<T> = {
 
   /** Function to map inputValue to a text output when no options are loaded */
   noOptionsMessage?: ((obj: { inputValue: string }) => ReactNode) | undefined;
+
+  /** Default placement of the menu in relation to the control. 'auto' will flip when there isn't enough space below the control. */
+  menuPlacement?: MenuPlacement;
 
   /** Variable to override the selected value of the component. Null resets the component and undefined  is ignored. When in use update value from the onChange function */
   value?: T | null;
@@ -110,6 +114,7 @@ const SearchAsyncNoRef = <T extends unknown>(
     noOptionsMessage,
     isDisabled,
     focusBorderColor,
+    menuPlacement = "bottom",
     value,
     optionLabelFormatter,
   }: SearchAsyncProps<T>,
@@ -161,6 +166,7 @@ const SearchAsyncNoRef = <T extends unknown>(
       isMulti={isMulti}
       isDisabled={isDisabled}
       focusBorderColor={focusBorderColor}
+      menuPlacement={menuPlacement}
       value={value}
       ref={ref}
     />
