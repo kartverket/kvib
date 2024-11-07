@@ -1,2 +1,2 @@
-export { Tag, TagLabel, TagLeftIcon, TagRightIcon, TagCloseButton } from "@chakra-ui/react";
-export type { TagProps, TagLabelProps, IconProps, TagCloseButtonProps } from "@chakra-ui/react";
+export { Tag } from "../components/ui/tag";
+export type { TagProps } from "../components/ui/tag";

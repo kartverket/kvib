@@ -1,4 +1,4 @@
-import { Card, CardBody, Text } from "@kvib/react/src";
+import { CardBody, CardRoot, Text } from "@kvib/react/src";
 
 type BannerProps = {
   children: React.ReactNode;
@@ -6,8 +6,8 @@ type BannerProps = {
 
 export const Banner = ({ children }: BannerProps) => {
   return (
-    <Card
-      variant="unstyled"
+    <CardRoot
+      variant="subtle"
       backgroundSize="contain"
       backgroundPosition="top"
       backgroundRepeat="no-repeat"
@@ -37,6 +37,6 @@ export const Banner = ({ children }: BannerProps) => {
         </Text>
       </CardBody>
       {children}
-    </Card>
+    </CardRoot>
   );
 };

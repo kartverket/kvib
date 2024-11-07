@@ -1,1 +1,1 @@
-export { extendTheme, withDefaultColorScheme } from "@chakra-ui/react";
+export { createSystem, defaultConfig } from "@chakra-ui/react";

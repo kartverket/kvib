@@ -1,4 +1,5 @@
-import { Badge as ChakraBadge, BadgeProps as ChakraBadgeProps, forwardRef } from "@chakra-ui/react";
+import { Badge as ChakraBadge, BadgeProps as ChakraBadgeProps } from "@chakra-ui/react";
+import { forwardRef } from "react";
 
 export type BadgeProps = Omit<ChakraBadgeProps, "colorScheme"> & {
   /** The color of the badge.
@@ -7,6 +8,6 @@ export type BadgeProps = Omit<ChakraBadgeProps, "colorScheme"> & {
   colorScheme?: "green" | "blue" | "red" | "gray";
 };
 
-export const Badge = forwardRef<BadgeProps, "span">(({ ...props }, ref) => {
+export const Badge = forwardRef<HTMLSpanElement, BadgeProps>(({ ...props }, ref) => {
   return <ChakraBadge {...props} ref={ref} />;
 });

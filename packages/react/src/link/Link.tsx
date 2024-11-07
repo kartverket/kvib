@@ -1,6 +1,7 @@
-import { Link as ChakraLink, LinkProps as ChakraLinkProps, forwardRef } from "@chakra-ui/react";
+import { forwardRef } from "react";
+import { LinkButton, LinkButtonProps } from "../components/ui/link-button";
 
-export type LinkProps = Omit<ChakraLinkProps, "colorScheme" | "variant"> & {
+export type LinkProps = Omit<LinkButtonProps, "colorScheme" | "variant"> & {
   /** The color of the link.
    * @default green
    */
@@ -11,10 +12,10 @@ export type LinkProps = Omit<ChakraLinkProps, "colorScheme" | "variant"> & {
  *
  * You can specify the `color` prop to get different link designs.
  */
-export const Link = forwardRef<LinkProps, "a">(({ children, ...props }, ref) => {
-  const isExternal = props.isExternal !== undefined ? props.isExternal : Boolean(props.href?.match(/^https?:\/\//));
+export const Link = forwardRef<HTMLAnchorElement, LinkProps>(({ children, ...props }, ref) => {
+  const isExternal = props.external !== undefined ? props.external : Boolean(props.href?.match(/^https?:\/\//));
   return (
-    <ChakraLink {...props} ref={ref} isExternal={isExternal}>
+    <LinkButton {...props} ref={ref} external={isExternal}>
       {children}
       {isExternal && (
         <span
@@ -26,6 +27,6 @@ export const Link = forwardRef<LinkProps, "a">(({ children, ...props }, ref) => 
           launch
         </span>
       )}
-    </ChakraLink>
+    </LinkButton>
   );
 });

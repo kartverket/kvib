@@ -1,4 +1,3 @@
-import { useTheme } from "@kvib/react/src";
 import { nb } from "date-fns/locale";
 import { DateRange, DayPicker, DayPickerProps } from "react-day-picker";
 import "react-day-picker/style.css";
@@ -13,10 +12,12 @@ export type DateRangePickerProps = DayPickerProps & {
 
 export const DateRangePicker = ({ ...props }: DateRangePickerProps) => {
   const uniqueClassName = generateUniqueClassName("kvib-datepicker");
-  const theme = useTheme();
   const style = css(
-    uniqueClassName,
-    theme.colors[props.colorScheme ?? theme.components.Datepicker.defaultProps.colorScheme],
+    uniqueClassName /* theme.colors[colorScheme ?? theme.components.Datepicker.defaultProps.colorScheme] */,
+    {
+      100: "#f0f0f0",
+      500: "#0070f3",
+    },
   );
   return (
     <>

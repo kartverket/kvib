@@ -1,12 +1,7 @@
-import {
-  Center,
-  Button as ChakraButton,
-  ButtonProps as ChakraButtonProps,
-  HStack,
-  Spinner,
-  forwardRef,
-} from "@chakra-ui/react";
+import { Center, HStack, Spinner } from "@chakra-ui/react";
 import { MaterialSymbol } from "material-symbols";
+import { forwardRef } from "react";
+import { Button as ChakraButton, ButtonProps as ChakraButtonProps } from "../components/ui/button";
 import { Icon } from "../icon";
 
 export type ButtonProps = Omit<
@@ -27,22 +22,20 @@ export type ButtonProps = Omit<
    * @default false */
   iconFill?: boolean;
 
-  variant?: "primary" | "secondary" | "tertiary" | "ghost";
-
   /**Decides whether a screen reader will vocalize the icon name or not */
   iconAriaIsHidden?: boolean;
 };
 
-export const Button = forwardRef<ButtonProps, "button">(
-  ({ children, iconFill, isDisabled, isLoading, leftIcon, rightIcon, iconAriaIsHidden, ...props }, ref) => {
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ children, iconFill, disabled, loading, leftIcon, rightIcon, iconAriaIsHidden, ...props }, ref) => {
     return (
-      <ChakraButton {...props} ref={ref} isDisabled={isDisabled || isLoading} aria-busy={isLoading}>
-        {isLoading && (
+      <ChakraButton {...props} ref={ref} disabled={disabled || loading} aria-busy={loading}>
+        {loading && (
           <Center position="absolute" right="0" left="0">
             <Spinner size="sm" />
           </Center>
         )}
-        <HStack spacing={1} visibility={isLoading ? "hidden" : "visible"}>
+        <HStack gap={1} visibility={loading ? "hidden" : "visible"}>
           {leftIcon && (
             <Icon
               icon={leftIcon}

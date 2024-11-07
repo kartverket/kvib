@@ -1,10 +1,10 @@
-import { useRef, useState } from "react";
-import { IconButton, Input, defaultKvibTheme } from "@kvib/react/src";
-import { useTimeFieldState } from "react-stately";
-import { TimeValue } from "@react-types/datepicker";
+import { Input, useFieldContext } from "@chakra-ui/react";
 import { CalendarDateTime, parseTime } from "@internationalized/date";
+import { IconButton } from "@kvib/react/src";
+import { TimeValue } from "@react-types/datepicker";
+import { useRef, useState } from "react";
+import { useTimeFieldState } from "react-stately";
 import { TimeField } from "./TimeField";
-import { useFormControlContext } from "@chakra-ui/react";
 
 type TimepickerProps = {
   size?: "xs" | "sm" | "md" | "lg";
@@ -34,7 +34,7 @@ export const Timepicker = ({
   ariaLabel,
 }: TimepickerProps) => {
   // Get state from form control context
-  const formControlContext = useFormControlContext();
+  const formControlContext = useFieldContext();
   const isDisabledFromForm = formControlContext?.isDisabled || false;
   const isInvalidFromForm = formControlContext?.isInvalid || false;
 
@@ -53,7 +53,7 @@ export const Timepicker = ({
   });
   const dateTime = state.value as CalendarDateTime | null;
   const buttonSize = size === "lg" ? "sm" : "xs";
-  const inputRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
   const [isFocused, setIsFocused] = useState(false);
 
   // Calculation for adjusting time with the arrow buttons
@@ -83,39 +83,39 @@ export const Timepicker = ({
       as="div"
       aria-label={ariaLabel || "timepicker"}
       display="flex"
-      variant={variant}
+      /* variant={variant} */
       size={size}
       width={width}
       paddingX={2}
       alignItems="center"
       justifyContent="space-between"
       gap={2}
-      isDisabled={isDisabled}
-      isInvalid={isInvalid}
+      disabled={isDisabled}
+      _invalid={isInvalid}
       onClick={() => inputRef.current?.focus()}
       onFocus={() => setIsFocused(true)}
       onBlur={() => setIsFocused(false)}
       ref={inputRef}
-      sx={focusStyles}
+      style={focusStyles}
     >
       <IconButton
         onClick={() => adjustTime("backward")}
         size={buttonSize}
         colorScheme={colorScheme}
-        variant="ghost"
+        /* variant="ghost" */
         icon="chevron_left"
         aria-label="earlier time"
-        isDisabled={isDisabled}
+        disabled={isDisabled}
       />
       <TimeField state={state} colorScheme={colorScheme} />
       <IconButton
         onClick={() => adjustTime("forward")}
         size={buttonSize}
         colorScheme={colorScheme}
-        variant="ghost"
+        /* variant="ghost" */
         icon="chevron_right"
         aria-label="later time"
-        isDisabled={isDisabled}
+        disabled={isDisabled}
       />
     </Input>
   );
@@ -135,13 +135,13 @@ const getFocusStyles = (
       case "outline":
         return {
           borderColor: "blue.500",
-          boxShadow: `0 0 0 1px ${defaultKvibTheme.colors.blue[500]}`,
+          /* boxShadow: `0 0 0 1px ${defaultKvibTheme.colors.blue[500]}`, */
           _hover: { borderColor: isInvalid ?? "blue.500" },
         };
       case "flushed":
         return {
           borderColor: "blue.500",
-          boxShadow: `0 1px 0 0 ${defaultKvibTheme.colors.blue[500]}`,
+          /* boxShadow: `0 1px 0 0 ${defaultKvibTheme.colors.blue[500]}`, */
           _hover: { borderColor: isInvalid ?? "blue.500" },
         };
       default:

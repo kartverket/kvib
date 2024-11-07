@@ -4,13 +4,13 @@ import {
   Icon,
   IconButton,
   Menu as KvibMenu,
-  MenuGroup as KvibMenuGroup,
-  MenuButton,
-  MenuDivider,
+  Group as KvibMenuGroup,
   MenuItem,
   MenuItemOption,
   MenuList,
   MenuOptionGroup,
+  MenuSeparator,
+  MenuTrigger,
 } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
@@ -217,9 +217,9 @@ type Story = StoryObj<typeof KvibMenu>;
 export const Preview: Story = {
   render: args => (
     <KvibMenu {...args}>
-      <MenuButton as={Button} rightIcon={"expand_more"}>
+      <MenuTrigger as={Button} rightIcon={"expand_more"}>
         Handlinger
-      </MenuButton>
+      </MenuTrigger>
       <MenuList>
         <MenuItem>Nedlast</MenuItem>
         <MenuItem>Lag en kopi</MenuItem>
@@ -237,9 +237,9 @@ export const MenuState: Story = {
       <KvibMenu {...args}>
         {({ isOpen }) => (
           <>
-            <MenuButton as={Button} rightIcon={"expand_more"}>
+            <MenuTrigger as={Button} rightIcon={"expand_more"}>
               {isOpen ? "Lukk" : "Åpne"}
-            </MenuButton>
+            </MenuTrigger>
             <MenuList>
               <MenuItem>Nedlast</MenuItem>
               <MenuItem onClick={() => alert("Kopi")}>Lag en kopi</MenuItem>
@@ -255,7 +255,7 @@ export const MenuIconsCommands: Story = {
   render: args => (
     <Box h="40">
       <KvibMenu {...args}>
-        <MenuButton as={IconButton} aria-label="Options" icon={"menu"} variant="primary" />
+        <MenuTrigger as={IconButton} aria-label="Options" icon={"menu"} variant="primary" />
         <MenuList>
           <MenuItem icon={<Icon weight={300} icon="add" />} command="⌘T">
             Ny fane
@@ -279,15 +279,15 @@ export const MenuGroup: Story = {
   render: args => (
     <Box h="60">
       <KvibMenu {...args}>
-        <MenuButton as={Button} colorScheme="green">
+        <MenuTrigger as={Button} colorScheme="green">
           Profil
-        </MenuButton>
+        </MenuTrigger>
         <MenuList>
           <KvibMenuGroup title="Profil">
             <MenuItem>Min konto</MenuItem>
             <MenuItem>Betaling</MenuItem>
           </KvibMenuGroup>
-          <MenuDivider />
+          <MenuSeparator />
           <KvibMenuGroup title="Hjelp">
             <MenuItem>Dokumentasjon</MenuItem>
             <MenuItem>FAQ</MenuItem>
@@ -302,7 +302,7 @@ export const MenuLink: Story = {
   render: args => (
     <Box h="20">
       <KvibMenu {...args}>
-        <MenuButton>Åpne meny</MenuButton>
+        <MenuTrigger>Åpne meny</MenuTrigger>
         <MenuList>
           <MenuItem as="a" href="#">
             Link 1

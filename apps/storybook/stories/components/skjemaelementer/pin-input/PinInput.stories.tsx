@@ -1,5 +1,4 @@
-import { HStack } from "@chakra-ui/layout";
-import { Stack } from "@kvib/react/src";
+import { HStack, Stack } from "@kvib/react/src";
 import { PinInput as KvibPinInput } from "@kvib/react/src/pin-input/Pin-Input";
 import { PinInputField as KvibPinInputField } from "@kvib/react/src/pin-input/Pin-Input-Field";
 import { Meta, StoryObj } from "@storybook/react";

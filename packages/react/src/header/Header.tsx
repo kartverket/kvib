@@ -1,15 +1,15 @@
 import {
   Box,
-  Logo,
+  Collapsible,
   Flex,
-  useMediaQuery,
   IconButton,
-  useDisclosure,
-  VStack,
-  Collapse,
-  defaultKvibTheme,
   Link,
   LinkProps,
+  Logo,
+  useChakraContext,
+  useMediaQuery,
+  useToggle,
+  VStack,
 } from "@kvib/react/src";
 
 type HeaderProps = {
@@ -57,14 +57,16 @@ export const Header = (props: HeaderProps) => {
     logoVariant = "horizontal",
   } = props;
 
-  const [isCollapse] = useMediaQuery(`(max-width: ${defaultKvibTheme.breakpoints[collapseBreakpoint]})`);
-  const [isSm] = useMediaQuery(`(max-width: ${defaultKvibTheme.breakpoints["sm"]})`);
+  const theme = useChakraContext();
+  const breakpoint = theme._config?.theme?.breakpoints?.[collapseBreakpoint];
+  const isCollapse = useMediaQuery(`(max-width: ${breakpoint})`);
+  const isSm = useMediaQuery(`(max-width: ${theme._config?.theme?.breakpoints?.["sm"]})`);
   const logoHorizontalSize = isSm ? 110 : 150;
   const logoVerticalSize = isSm ? 70 : 100;
   const headerSize = isSm ? 70 : 90;
   const justify = justifyContent && isCollapse ? "space-between" : justifyContent;
   const showChildren = !isCollapse;
-  const { isOpen, onToggle } = useDisclosure();
+  const [isOpen, onToggle] = useToggle();
   const showMenuButtonElement = (children && (isCollapse || isOpen)) || showMenuButton;
   const handleClick = onMenuButtonClick || onToggle;
 
@@ -93,7 +95,7 @@ export const Header = (props: HeaderProps) => {
         {logoLinkDisabled ? (
           <HeaderLogo />
         ) : (
-          <Link href={logoLink} isExternal={false} {...logoLinkProps}>
+          <Link href={logoLink} external={false} {...logoLinkProps}>
             <HeaderLogo />
           </Link>
         )}
@@ -101,16 +103,16 @@ export const Header = (props: HeaderProps) => {
         {showChildren && children}
 
         {showMenuButtonElement && (
-          <IconButton aria-label={"open menu"} icon={isOpen ? "close" : "menu"} variant="ghost" onClick={handleClick} />
+          <IconButton aria-label={"open menu"} icon={isOpen ? "close" : "menu"} onClick={handleClick} />
         )}
       </Flex>
       {/* Slide content */}
-      <Collapse in={isOpen} animateOpacity={false}>
+      <Collapsible.Root in={isOpen} animateOpacity={false}>
         <VStack bg="gray.50" borderBottomWidth="2px" borderBottomColor="gray.200" padding={30} gap={10}>
           {showChildrenInMenu && children}
           {dropdownMenuChildren}
         </VStack>
-      </Collapse>
+      </Collapsible.Root>
     </Box>
   );
 };

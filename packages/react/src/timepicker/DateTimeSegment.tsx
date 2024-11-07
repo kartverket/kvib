@@ -1,4 +1,4 @@
-import { useStyleConfig } from "@chakra-ui/react";
+import { useRecipe } from "@chakra-ui/react";
 import { Box } from "@kvib/react/src";
 import { useRef } from "react";
 import { useDateSegment } from "react-aria";
@@ -19,10 +19,10 @@ type DateTimeSegmentProps = {
 export const DateTimeSegment = ({ segment, state, colorScheme, ...props }: DateTimeSegmentProps) => {
   const ref = useRef(null);
   const { segmentProps } = useDateSegment(segment, state, ref);
-  const styles = useStyleConfig("Timepicker", props);
+  const styles = useRecipe({ key: "Timepicker", recipe: props });
 
   return (
-    <Box {...segmentProps} ref={ref} paddingX="1px" outline="none" borderRadius="sm" __css={{ ...styles }}>
+    <Box {...segmentProps} ref={ref} paddingX="1px" outline="none" borderRadius="sm" css={{ ...styles }}>
       {isPaddable(segment.type) ? segment.text.padStart(2, "0") : segment.text}
     </Box>
   );

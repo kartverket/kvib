@@ -1,14 +1,12 @@
-import {
-  ButtonGroup as ChakraButtonGroup,
-  ButtonGroupProps as ChakraButtonGroupProps,
-  forwardRef,
-} from "@chakra-ui/react";
+import { Group as ChakraButtonGroup, GroupProps as ChakraButtonGroupProps } from "@chakra-ui/react";
+
+import { forwardRef } from "react";
 
 export type ButtonGroupProps = Omit<ChakraButtonGroupProps, "colorScheme"> & {
   /**The visual color appearance of the component
    * @default green*/
   colorScheme?: "green" | "blue" | "gray" | "red";
 };
-export const ButtonGroup = forwardRef<ButtonGroupProps, "div">(({ ...props }, ref) => (
+export const ButtonGroup = forwardRef<HTMLDivElement, ButtonGroupProps>(({ ...props }, ref) => (
   <ChakraButtonGroup {...props} ref={ref} />
 ));

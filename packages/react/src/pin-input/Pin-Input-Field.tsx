@@ -1,9 +1,6 @@
-import {
-  PinInputField as ChakraPinInputField,
-  PinInputFieldProps as ChakraPinInputFieldProps,
-  forwardRef,
-} from "@chakra-ui/react";
+import { PinInput as ChakraPinInputField, PinInputRootProps as ChakraPinInputFieldProps } from "@chakra-ui/react";
+import { forwardRef } from "react";
 
-export const PinInputField = forwardRef<ChakraPinInputFieldProps, "input">(({ ...props }, ref) => {
-  return <ChakraPinInputField {...props} ref={ref} />;
+export const PinInputField = forwardRef<HTMLInputElement, ChakraPinInputFieldProps>(({ ...props }, ref) => {
+  return <ChakraPinInputField.Root {...props} ref={ref} />;
 });

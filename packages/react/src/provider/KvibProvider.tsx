@@ -4,14 +4,14 @@ import "@fontsource/mulish/700.css";
 import "material-symbols";
 
 import { ChakraProvider, ChakraProviderProps } from "@chakra-ui/react";
-import { defaultKvibTheme } from "../";
+import { system } from "../";
 
 /**
  * KVIBProvider er komponenten som gir de andre komponentene riktig tema og stil
  * Den må settes inn i prosjektet KVIB skal brukes, så nærme rotkomponenten som mulig.
  */
-export const KvibProvider = ({ theme = defaultKvibTheme, children, ...props }: ChakraProviderProps) => (
-  <ChakraProvider {...props} theme={theme}>
+export const KvibProvider = ({ value = system, children, ...props }: ChakraProviderProps) => (
+  <ChakraProvider {...props} value={system}>
     {children}
   </ChakraProvider>
 );

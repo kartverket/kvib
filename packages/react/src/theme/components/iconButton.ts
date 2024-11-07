@@ -1,4 +1,4 @@
-import { defineStyle, defineStyleConfig } from "@chakra-ui/react";
+import { defineStyle } from "@chakra-ui/react";
 
 const baseStyle = defineStyle({
   borderRadius: "6px",
@@ -41,11 +41,13 @@ const sizes = {
   }),
 };
 
-export const iconButtonTheme = defineStyleConfig({
-  baseStyle,
+export const iconButtonTheme = {
+  base: {
+    default: baseStyle,
+  },
   sizes,
   defaultProps: {
     variant: "primary",
     size: "md",
   },
-});
+};

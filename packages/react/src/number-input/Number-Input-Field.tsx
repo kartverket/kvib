@@ -1,13 +1,15 @@
 import {
-  NumberInputField as ChakraNumberInputField,
-  NumberInputFieldProps as ChakraNumerInputFieldProps,
-  forwardRef,
+  NumberInput as ChakraNumberInputField,
+  NumberInputRootProps as ChakraNumerInputFieldProps,
 } from "@chakra-ui/react";
+import { forwardRef } from "react";
 
-export const NumberInputField = forwardRef<ChakraNumerInputFieldProps, "input">(({ children, ...props }, ref) => {
-  return (
-    <ChakraNumberInputField {...props} ref={ref}>
-      {children}
-    </ChakraNumberInputField>
-  );
-});
+export const NumberInputField = forwardRef<HTMLInputElement, ChakraNumerInputFieldProps>(
+  ({ children, ...props }, ref) => {
+    return (
+      <ChakraNumberInputField.Root {...props} ref={ref}>
+        {children}
+      </ChakraNumberInputField.Root>
+    );
+  },
+);

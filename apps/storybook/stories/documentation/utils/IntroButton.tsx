@@ -1,4 +1,4 @@
-import { Card, Text, Flex, Grid, Icon, Box } from "@kvib/react/src";
+import { Box, Card, Flex, Grid, Icon, Text } from "@kvib/react/src";
 
 export const IntroButton = ({
   href,
@@ -13,7 +13,7 @@ export const IntroButton = ({
   isExternal: boolean;
 }) => {
   return (
-    <Card
+    <Card.Root
       as="a"
       variant="outline"
       _hover={{ background: "green.50" }}
@@ -24,7 +24,7 @@ export const IntroButton = ({
       <Flex gap="0.5rem" fontWeight="bold" marginBottom="0.5rem" alignItems="center">
         <Text fontSize="lg" as="b" color="green.500">
           {title}{" "}
-          <Box sx={{ display: isExternal ? "inline-block" : "none" }}>
+          <Box style={{ display: isExternal ? "inline-block" : "none" }}>
             <Icon icon="open_in_new" size={18} weight={400} />
           </Box>
         </Text>
@@ -32,7 +32,7 @@ export const IntroButton = ({
       <Text fontWeight="500" margin="0" color="green.500">
         {description}
       </Text>
-    </Card>
+    </Card.Root>
   );
 };
 

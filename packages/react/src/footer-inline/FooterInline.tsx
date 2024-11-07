@@ -24,7 +24,7 @@ export const FooterInline = ({
       paddingTop="10px"
       gap="2rem"
     >
-      <Link href={logoLink} isExternal={false}>
+      <Link href={logoLink} external={false}>
         <Logo size={130} variant="horizontal" />
       </Link>
       <Flex alignItems="center" gap="1rem" wrap="wrap">
