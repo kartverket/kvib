@@ -6,11 +6,13 @@ import "material-symbols";
 import { ChakraProvider, ChakraProviderProps } from "@chakra-ui/react";
 import { system } from "../";
 
+interface KvibProviderProps extends ChakraProviderProps {}
+
 /**
  * KVIBProvider er komponenten som gir de andre komponentene riktig tema og stil
  * Den må settes inn i prosjektet KVIB skal brukes, så nærme rotkomponenten som mulig.
  */
-export const KvibProvider = ({ value = system, children, ...props }: ChakraProviderProps) => (
+export const KvibProvider = ({ value = system, children, ...props }: KvibProviderProps) => (
   <ChakraProvider {...props} value={system}>
     {children}
   </ChakraProvider>

@@ -13,7 +13,9 @@ export {
   MenuRoot,
   MenuSeparator,
   MenuTrigger,
-} from "@chakra-ui/react";
+} from "@/components/ui/menu";
+
+export { Menu as KvibMenu } from "@chakra-ui/react";
 
 export type {
   MenuArrowProps,

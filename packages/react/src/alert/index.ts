@@ -1,3 +1,2 @@
-export { AlertDescription, AlertTitle } from "@chakra-ui/react";
-export type { AlertDescriptionProps, AlertRootProps, AlertTitleProps } from "@chakra-ui/react";
-export * from "./Alert";
+export { Alert } from "@/components/ui/alert";
+export type { AlertProps } from "@/components/ui/alert";

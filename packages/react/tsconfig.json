@@ -12,8 +12,8 @@
     "allowSyntheticDefaultImports": true, // Allow default imports from modules with no default export
     "strict": true, // Enable all strict type checking options
     "forceConsistentCasingInFileNames": true, // Disallow inconsistently-cased references to the same file.
-    "module": "esnext", // Specify module code generation
-    "moduleResolution": "node", // Resolve modules using Node.js style
+    "module": "ESNext", // Specify module code generation
+    "moduleResolution": "Bundler", // Resolve modules using Node.js style
     "isolatedModules": true, // Unconditionally emit imports for unresolved files
     "resolveJsonModule": true, // Include modules imported with .json extension
     "noEmit": true, // Do not emit output (meaning do not compile code, only perform type checking)
@@ -23,7 +23,10 @@
     "declarationMap": true, // Generate source map for .d.ts files back to original .ts source file
     "noUnusedLocals": true, // Report errors on unused locals
     "noUnusedParameters": true, // Report errors on unused parameters
-    "noFallthroughCasesInSwitch": true // Report errors for fallthrough cases in switch statement
+    "noFallthroughCasesInSwitch": true, // Report errors for fallthrough cases in switch statement
+    "paths": {
+      "@/*": ["./src/*"],
+    }
   },
   "include": ["."],
   "exclude": ["dist", "node_modules"]

@@ -1,3 +1,1 @@
-export * from "./Number-Input";
-export * from "./Number-Input-Field";
-export * from "./Number-Input-Stepper";
+export { NumberInputField, NumberInputLabel, NumberInputRoot } from "@/components/ui/number-input";

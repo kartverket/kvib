@@ -1,2 +1,2 @@
-export { Avatar } from "@chakra-ui/react";
-export type { AvatarRootProps } from "@chakra-ui/react";
+export { Avatar, AvatarGroup } from "@/components/ui/avatar";
+export type { AvatarProps } from "@/components/ui/avatar";

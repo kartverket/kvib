@@ -5,7 +5,7 @@ export type BadgeProps = Omit<ChakraBadgeProps, "colorScheme"> & {
   /** The color of the badge.
    * @default gray
    */
-  colorScheme?: "green" | "blue" | "red" | "gray";
+  colorPalette?: "green" | "blue" | "red" | "gray";
 };
 
 export const Badge = forwardRef<HTMLSpanElement, BadgeProps>(({ ...props }, ref) => {

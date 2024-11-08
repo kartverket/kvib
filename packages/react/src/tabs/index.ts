@@ -1,4 +1,5 @@
 export {
+  Tabs,
   TabsContent,
   TabsContentGroup,
   TabsContext,
@@ -7,6 +8,7 @@ export {
   TabsRoot,
   TabsTrigger,
 } from "@chakra-ui/react";
+
 export type {
   TabsContentGroupProps,
   TabsContentProps,

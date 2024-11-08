@@ -44,12 +44,12 @@ const StepInfo = (props: StepInfoProps) => {
   );
 };
 
-interface StepsPrevTrigger {
+interface StepsIndicatorProps {
   completedIcon: React.ReactNode;
   icon?: React.ReactNode;
 }
 
-export const StepsIndicator = (props: StepsItemProps) => {
+export const StepsIndicator = (props: StepsIndicatorProps) => {
   const { icon = <ChakraSteps.Number />, completedIcon } = props;
   return (
     <ChakraSteps.Indicator>
