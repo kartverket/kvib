@@ -1,5 +1,6 @@
 export {
-  Table,
+  Table as KvibTable,
+  TableRoot as Table,
   TableBody,
   TableCaption,
   TableCell,

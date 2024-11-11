@@ -1,2 +1,2 @@
-export { Tooltip } from "@chakra-ui/react";
-export type { TooltipRootProps as TooltipProps } from "@chakra-ui/react";
+export { Tooltip } from "@/components/ui/tooltip";
+export type { TooltipProps } from "@/components/ui/tooltip";

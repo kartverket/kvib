@@ -1,6 +1,5 @@
 export {
-  Popover,
-  PopoverAnchor,
+  PopoverRoot as Popover,
   PopoverArrow,
   PopoverBody,
   PopoverCloseTrigger,
@@ -8,7 +7,7 @@ export {
   PopoverFooter,
   PopoverHeader,
   PopoverTrigger,
-} from "@chakra-ui/react";
+} from "@/components/ui/popover";
 
 export type {
   PopoverArrowProps,

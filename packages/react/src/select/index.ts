@@ -7,7 +7,9 @@ export {
   SelectLabel,
   SelectTrigger,
   SelectValueText,
-} from "@chakra-ui/react";
+} from "@/components/ui/select";
+
+export { Select as KvibSelect } from "@chakra-ui/react";
 
 export type {
   SelectContentProps,

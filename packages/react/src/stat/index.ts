@@ -16,4 +16,6 @@ export {
   StatUpTrend,
   StatValueText,
   StatValueUnit,
-} from "../components/ui/stat";
+} from "@/components/ui/stat";
+
+export { Stat as KvibStat } from "@chakra-ui/react";

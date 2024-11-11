@@ -1,2 +1,2 @@
-export { Slider } from "@chakra-ui/react";
-export type { SliderRootProps as SliderProps } from "@chakra-ui/react";
+export { Slider } from "@/components/ui/slider";
+export type { SliderProps } from "@/components/ui/slider";

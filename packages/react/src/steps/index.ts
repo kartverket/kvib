@@ -7,6 +7,8 @@ export {
   StepsList,
   StepsNextTrigger,
   StepsPrevTrigger,
-} from "../components/ui/steps";
+} from "@/components/ui/steps";
 
-export type { StepsItemProps } from "../components/ui/steps";
+export { Steps as KvibSteps } from "@chakra-ui/react";
+
+export type { StepsItemProps } from "@/components/ui/steps";

@@ -1,7 +1,7 @@
 import { Progress as ChakraProgress, IconButton } from "@chakra-ui/react";
-import { ToggleTip } from "./toggle-tip";
 import { forwardRef } from "react";
 import { HiOutlineInformationCircle } from "react-icons/hi";
+import { ToggleTip } from "./toggle-tip";
 
 export const ProgressBar = forwardRef<HTMLDivElement, ChakraProgress.TrackProps>(function ProgressBar(props, ref) {
   return (

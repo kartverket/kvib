@@ -1,11 +1,11 @@
 export {
-  Tabs,
+  Tabs as KvibTabs,
+  TabsRoot as Tabs,
   TabsContent,
   TabsContentGroup,
   TabsContext,
   TabsIndicator,
   TabsList,
-  TabsRoot,
   TabsTrigger,
 } from "@chakra-ui/react";
 
