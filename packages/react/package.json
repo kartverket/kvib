@@ -32,7 +32,7 @@
   },
   "dependencies": {
     "@chakra-ui/layout": "^2.3.1",
-    "@chakra-ui/react": "^2.10.3",
+    "@chakra-ui/react": "^3.1.1",
     "@chakra-ui/react-use-size": "^2.1.0",
     "@chakra-ui/skip-nav": "^2.0.15",
     "@emotion/react": "^11.11.4",
