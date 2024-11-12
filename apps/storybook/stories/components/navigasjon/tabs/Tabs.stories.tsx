@@ -1,9 +1,8 @@
-import { HStack, VStack } from "@chakra-ui/layout";
 import {
-  Tab as KvibTab,
-  TabList as KvibTabList,
-  TabPanel as KvibTabPanel,
-  TabPanels as KvibTabPanels,
+  Tabs as KvibTab,
+  TabsList as KvibTabList,
+  TabsContent as KvibTabPanel,
+  TabsContentGroup as KvibTabPanels,
   Tabs as KvibTabs,
 } from "@kvib/react/src/tabs";
 import { Meta, StoryObj } from "@storybook/react";

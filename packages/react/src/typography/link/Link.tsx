@@ -1,11 +1,14 @@
+import { LinkButton, LinkButtonProps } from "@/components/ui/link-button";
 import { forwardRef } from "react";
-import { LinkButton, LinkButtonProps } from "../components/ui/link-button";
 
 export type LinkProps = Omit<LinkButtonProps, "colorScheme" | "variant"> & {
   /** The color of the link.
    * @default green
    */
-  colorScheme?: "green" | "blue";
+  colorPalette?: "green" | "blue";
+
+  /** If `true`, the link will open in a new tab. */
+  external?: boolean;
 };
 
 /** Link to different sites or parts of site
@@ -15,7 +18,7 @@ export type LinkProps = Omit<LinkButtonProps, "colorScheme" | "variant"> & {
 export const Link = forwardRef<HTMLAnchorElement, LinkProps>(({ children, ...props }, ref) => {
   const isExternal = props.external !== undefined ? props.external : Boolean(props.href?.match(/^https?:\/\//));
   return (
-    <LinkButton {...props} ref={ref} external={isExternal}>
+    <LinkButton {...props} ref={ref}>
       {children}
       {isExternal && (
         <span

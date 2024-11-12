@@ -13,7 +13,7 @@ export const IntroButton = ({
   isExternal: boolean;
 }) => {
   return (
-    <Card.Root
+    <Card
       as="a"
       variant="outline"
       _hover={{ background: "green.50" }}
@@ -32,7 +32,7 @@ export const IntroButton = ({
       <Text fontWeight="500" margin="0" color="green.500">
         {description}
       </Text>
-    </Card.Root>
+    </Card>
   );
 };
 

@@ -6,9 +6,6 @@ import {
   Menu as KvibMenu,
   Group as KvibMenuGroup,
   MenuItem,
-  MenuItemOption,
-  MenuList,
-  MenuOptionGroup,
   MenuSeparator,
   MenuTrigger,
 } from "@kvib/react/src";

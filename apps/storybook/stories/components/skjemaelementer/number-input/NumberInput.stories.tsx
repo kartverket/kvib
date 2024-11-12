@@ -1,7 +1,11 @@
-import { FormControl, FormLabel, Stack } from "@kvib/react/src";
-import { NumberInput as KvibNumberInput } from "@kvib/react/src/number-input/Number-Input";
-import { NumberInputField as KvibNumberInputField } from "@kvib/react/src/number-input/Number-Input-Field";
-import { NumberInputStepper as KvibNumberInputStepper } from "@kvib/react/src/number-input/Number-Input-Stepper";
+import {
+  Field,
+  NumberInput as KvibNumberInput,
+  NumberInputField as KvibNumberInputField,
+  NumberInputStepper as KvibNumberInputStepper,
+  Stack,
+} from "@kvib/react/src";
+
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibNumberInput> = {
@@ -172,13 +176,12 @@ export const NumberInputVariants: NumberInputStory = {
 export const NumberInputForm: NumberInputStory = {
   args: {},
   render: args => (
-    <FormControl isRequired>
-      <FormLabel>Årstall</FormLabel>
+    <Field label="Årstall" isRequired>
       <KvibNumberInput {...args}>
         <KvibNumberInputField />
         <KvibNumberInputStepper />
       </KvibNumberInput>
-    </FormControl>
+    </Field>
   ),
 };
 

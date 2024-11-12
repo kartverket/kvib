@@ -24,9 +24,11 @@
     "noUnusedLocals": true, // Report errors on unused locals
     "noUnusedParameters": true, // Report errors on unused parameters
     "noFallthroughCasesInSwitch": true, // Report errors for fallthrough cases in switch statement
+    "baseUrl": "./", // This should be the root of your project
     "paths": {
-      "@/*": ["./src/*"],
-    }
+      "@/*": ["src/*"]
+    },
+
   },
   "include": ["."],
   "exclude": ["dist", "node_modules"]

@@ -1,4 +1,4 @@
-import { Box, HStack, Stack as KvibStack, StackDivider, VStack } from "@kvib/react/src/layout";
+import { Box, HStack, Stack as KvibStack, StackSeparator, VStack } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibStack> = {
@@ -50,7 +50,7 @@ const meta: Meta<typeof KvibStack> = {
       control: { type: "radio" },
       options: ["column", "row"],
     },
-    divider: {
+    separator: {
       description: "If true, each stack item will be followed by a divider",
       table: { type: { summary: "StackDivider" } },
       defaultValue: { summary: "" },
@@ -121,7 +121,7 @@ type Story = StoryObj<typeof KvibStack>;
 export const Preview: Story = {
   args: { direction: "row" },
   render: args => (
-    <KvibStack {...args} spacing="24px">
+    <KvibStack {...args} gap="24px">
       <Box width="40px" height="40px" backgroundColor="green.200">
         1
       </Box>
@@ -137,7 +137,7 @@ export const Preview: Story = {
 
 export const ResponsiveStack: Story = {
   render: args => (
-    <KvibStack {...args} direction={["column", "row"]} spacing="24px">
+    <KvibStack {...args} direction={["column", "row"]} gap="24px">
       <Box width="40px" height="40px" backgroundColor="green.200">
         1
       </Box>
@@ -153,7 +153,7 @@ export const ResponsiveStack: Story = {
 
 export const StackStyled: Story = {
   render: args => (
-    <KvibStack {...args} divider={<StackDivider borderColor="gray.200" />} spacing={12}>
+    <KvibStack {...args} separator={<StackSeparator borderColor="gray.200" />} gap={12}>
       <Box width="40px" height="40px" backgroundColor="green.200">
         1
       </Box>

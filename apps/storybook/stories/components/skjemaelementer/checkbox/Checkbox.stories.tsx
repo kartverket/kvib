@@ -1,5 +1,4 @@
-import { Checkbox as KvibCheckbox, CheckboxGroup as KvibCheckboxGroup, Text } from "@kvib/react/src";
-import { Stack } from "@kvib/react/src/layout";
+import { Checkbox as KvibCheckbox, Group as KvibCheckboxGroup, Stack, Text } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 import { IndeterminateExample } from "./IndeterminateExample";
 

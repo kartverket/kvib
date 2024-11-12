@@ -1,5 +1,5 @@
+import { AspectRatio as KvibAspectRatio } from "@kvib/react/src";
 import { Image } from "@kvib/react/src/";
-import { AspectRatio as KvibAspectRatio } from "@kvib/react/src/layout";
 
 import { Meta, StoryObj } from "@storybook/react";
 

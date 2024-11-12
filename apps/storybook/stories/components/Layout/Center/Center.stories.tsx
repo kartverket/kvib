@@ -1,5 +1,4 @@
-import { Center as KvibCenter, Circle as KvibCircle, Square as KvibSquare } from "@kvib/react/src/layout";
-import { Text } from "@kvib/react/src/typography";
+import { Center as KvibCenter, Circle as KvibCircle, Square as KvibSquare, Text } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibCenter> = {

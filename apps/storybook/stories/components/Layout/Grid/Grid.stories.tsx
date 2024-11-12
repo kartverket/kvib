@@ -1,4 +1,4 @@
-import { GridItem, Grid as KvibGrid } from "@kvib/react/src/layout";
+import { GridItem, Grid as KvibGrid } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibGrid> = {

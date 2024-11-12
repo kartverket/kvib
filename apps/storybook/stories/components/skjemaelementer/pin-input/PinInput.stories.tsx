@@ -1,6 +1,4 @@
-import { HStack, Stack } from "@kvib/react/src";
-import { PinInput as KvibPinInput } from "@kvib/react/src/pin-input/Pin-Input";
-import { PinInputField as KvibPinInputField } from "@kvib/react/src/pin-input/Pin-Input-Field";
+import { HStack, PinInput as KvibPinInput, Field as KvibPinInputField, Stack } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibPinInput> = {

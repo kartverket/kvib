@@ -1,4 +1,4 @@
-import { Box, SimpleGrid as KvibSimpleGrid } from "@kvib/react/src/layout";
+import { Box, SimpleGrid as KvibSimpleGrid } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibSimpleGrid> = {
@@ -82,27 +82,6 @@ const meta: Meta<typeof KvibSimpleGrid> = {
       },
       control: "text",
     },
-    spacing: {
-      description: "The gap between the grid items",
-      table: {
-        type: { summary: "ResponsiveValue<string | number | (string & {})>" },
-      },
-      control: "number",
-    },
-    spacingX: {
-      description: "The column gap between the grid items",
-      table: {
-        type: { summary: "ResponsiveValue<string | number | (string & {})>" },
-      },
-      control: "text",
-    },
-    spacingY: {
-      description: "The row gap between the grid items",
-      table: {
-        type: { summary: "ResponsiveValue<string | number | (string & {})>" },
-      },
-      control: "text",
-    },
     templateAreas: {
       description: "Shorthand prop for gridTemplateAreas",
       table: {
@@ -133,7 +112,7 @@ type Story = StoryObj<typeof KvibSimpleGrid>;
 export const Preview: Story = {
   args: {
     columns: 3,
-    spacing: 5,
+    gap: 5,
   },
   render: args => (
     <KvibSimpleGrid {...args}>
@@ -149,7 +128,7 @@ export const Preview: Story = {
 export const SimpleGridResponsiveArray: Story = {
   args: {
     columns: [2, null, 3],
-    spacing: 5,
+    gap: 5,
   },
   render: args => (
     <KvibSimpleGrid {...args}>
@@ -165,7 +144,7 @@ export const SimpleGridResponsiveArray: Story = {
 export const SimpleGridResponsive: Story = {
   args: {
     minChildWidth: "120px",
-    spacing: "40px",
+    gap: "40px",
   },
   render: args => (
     <KvibSimpleGrid {...args}>
@@ -182,8 +161,8 @@ export const SimpleGridResponsive: Story = {
 export const SimpleGridSpacing: Story = {
   args: {
     columns: 2,
-    spacingX: "60px",
-    spacingY: "10px",
+    gapX: "60px",
+    gapY: "10px",
   },
   render: args => (
     <KvibSimpleGrid {...args}>

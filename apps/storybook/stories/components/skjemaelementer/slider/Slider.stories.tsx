@@ -1,4 +1,4 @@
-import { Slider as KvibSlider, SliderFilledTrack, SliderMark, SliderThumb, SliderTrack } from "@kvib/react/src/slider";
+import { Slider as KvibSlider } from "@kvib/react/src/slider";
 import { Tooltip } from "@kvib/react/src/tooltip";
 
 import { Meta, StoryObj } from "@storybook/react";
@@ -117,10 +117,10 @@ export const Preview: Story = {
   },
   render: args => (
     <KvibSlider {...args}>
-      <SliderTrack>
-        <SliderFilledTrack />
-      </SliderTrack>
-      <SliderThumb />
+      <KvibSlider.SliderTrack>
+        <KvibSlider.SliderFilledTrack />
+      </KvibSlider.SliderTrack>
+      <KvibSlider.SliderThumb />
     </KvibSlider>
   ),
 };
@@ -134,10 +134,10 @@ export const SliderDiscrete: Story = {
   },
   render: args => (
     <KvibSlider {...args}>
-      <SliderTrack>
-        <SliderFilledTrack />
-      </SliderTrack>
-      <SliderThumb />
+      <KvibSlider.SliderTrack>
+        <KvibSlider.SliderFilledTrack />
+      </KvibSlider.SliderTrack>
+      <KvibSlider.SliderThumb />
     </KvibSlider>
   ),
 };
@@ -154,20 +154,20 @@ const SliderWithTooltip = () => {
       onMouseEnter={() => setShowTooltip(true)}
       onMouseLeave={() => setShowTooltip(false)}
     >
-      <SliderMark value={25} mt="1" ml="-2.5" fontSize="sm">
+      <KvibSlider.SliderMark value={25} mt="1" ml="-2.5" fontSize="sm">
         25%
-      </SliderMark>
-      <SliderMark value={50} mt="1" ml="-2.5" fontSize="sm">
+      </KvibSlider.SliderMark>
+      <KvibSlider.SliderMark value={50} mt="1" ml="-2.5" fontSize="sm">
         50%
-      </SliderMark>
-      <SliderMark value={75} mt="1" ml="-2.5" fontSize="sm">
+      </KvibSlider.SliderMark>
+      <KvibSlider.SliderMark value={75} mt="1" ml="-2.5" fontSize="sm">
         75%
-      </SliderMark>
-      <SliderTrack>
-        <SliderFilledTrack />
-      </SliderTrack>
+      </KvibSlider.SliderMark>
+      <KvibSlider.SliderTrack>
+        <KvibSlider.SliderFilledTrack />
+      </KvibSlider.SliderTrack>
       <Tooltip hasArrow placement="top" isOpen={showTooltip} label={`${sliderValue}%`}>
-        <SliderThumb />
+        <KvibSlider.SliderThumb />
       </Tooltip>
     </KvibSlider>
   );

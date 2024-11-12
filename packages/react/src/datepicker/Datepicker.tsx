@@ -2,7 +2,6 @@ import {
   Group,
   IconButton,
   InputAddon,
-  InputGroup,
   InputProps,
   Input as KVInput,
   Popover,
@@ -150,8 +149,8 @@ const CustomDatepicker = ({
 
   // Get state from form control context
   const formControlContext = useFieldContext();
-  const isDisabledFromForm = formControlContext?.isDisabled || false;
-  const isRequiredFromForm = formControlContext?.isRequired || false;
+  const isDisabledFromForm = formControlContext?.disabled || false;
+  const isRequiredFromForm = formControlContext?.required || false;
 
   // Determine the effective isDisabled, isInvalid and isRequired states
   const isDisabled = isDisabledExternally || isDisabledFromForm;
@@ -226,13 +225,13 @@ const CustomDatepicker = ({
   };
 
   return (
-    <Popover.Root
+    <Popover
       placement="bottom-start"
       isOpen={visibility.value}
       onOpen={visibility.setTrue}
       onClose={visibility.setFalse}
     >
-      <InputGroup>
+      <Group>
         <PopoverTrigger>
           <Group attached>
             <KVInput
@@ -257,7 +256,7 @@ const CustomDatepicker = ({
             </InputAddon>
           </Group>
         </PopoverTrigger>
-      </InputGroup>
+      </Group>
       <Portal>
         <PopoverBody>
           <style>{style}</style>
@@ -293,7 +292,7 @@ const CustomDatepicker = ({
           />
         </PopoverBody>
       </Portal>
-    </Popover.Root>
+    </Popover>
   );
 };
 

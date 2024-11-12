@@ -1,4 +1,4 @@
-import { Center, Wrap as KvibWrap, WrapItem as KvibWrapItem } from "@kvib/react/src/layout";
+import { Center, Wrap as KvibWrap, WrapItem as KvibWrapItem } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibWrap> = {
