@@ -1,4 +1,4 @@
-import { Box, Code, Link, ListItem, Text, UnorderedList } from "@kvib/react/src/";
+import { Box, Code, Link, List, ListItem, Text } from "@kvib/react/src/";
 import { Canvas, Controls, Meta, Source, Story } from "@storybook/blocks";
 import { DocsAnatomy, DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
 import * as SearchAsyncStories from "./SearchAsync.stories";
@@ -37,7 +37,7 @@ import { SearchAsync } from "@kvib/react";
     <Box>
   <Text as="b">loadOptions</Text>
   <Text>SearchAsync komponentens prop <Code>loadOptions</Code> er en funksjon ment for asynkron lasting av alternativer basert på brukerinput i inputfeltet. Den tar to parametere:</Text>
-  <UnorderedList>
+  <List>
     <ListItem>
       <Text><Code>inputValue</Code>: Teksten brukeren skriver inn.</Text>
     </ListItem>
@@ -46,17 +46,17 @@ import { SearchAsync } from "@kvib/react";
         <Code>callback</Code>: En funksjon som tar en liste av objekter (<Code>options</Code>) og brukes til å returnere søkeresultatene. Hvert objekt i <Code>options</Code> må ha en <Code>label</Code> (tekst vist i dropdown) og en <Code>value</Code> (verdien returnert ved valg).
       </Text>
     </ListItem>
-  </UnorderedList>
+  </List>
 
   <Text as="b">onChange</Text>
   <Text><Code>onChange</Code> er en funksjon som håndterer endringer i valgt verdi. Den tar ett parameter:</Text>
-  <UnorderedList>
+  <List>
     <ListItem>
       <Text>
         <Code>newValue</Code>: Den nye verdien som er valgt av brukeren. Denne verdien er av typen <Code>T</Code> eller <Code>null</Code>. <Code>T</Code> representerer typen av objektene i dine <Code>options</Code>, og <Code>null</Code> brukes når det ikke er noen valgt verdi.
       </Text>
     </ListItem>
-  </UnorderedList>
+  </List>
 </Box>
 }
 story={<Canvas of={SearchAsyncStories.SearchAsyncResults} />}

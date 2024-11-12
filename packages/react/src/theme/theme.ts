@@ -1,4 +1,18 @@
 import { createSystem, defineConfig } from "@chakra-ui/react";
+import {
+  blur,
+  borders,
+  breakpoints,
+  colors,
+  fonts,
+  fontSizes,
+  fontWeights,
+  letterSpacings,
+  lineHeights,
+  radii,
+} from "./tokens";
+
+import { defaultConfig } from "@chakra-ui/react";
 
 /*  withDefaultColorScheme({ colorScheme: "green" }),
  withDefaultColorScheme({ colorScheme: "gray", components: ["Badge", "Code", "Table", "Tag"] }), */
@@ -6,11 +20,18 @@ import { createSystem, defineConfig } from "@chakra-ui/react";
 const config = defineConfig({
   theme: {
     tokens: {
-      fonts: {
-        body: { value: "system-ui, sans-serif" },
-      },
+      blurs: blur,
+      borders: borders,
+      breakpoints: breakpoints,
+      colors: colors,
+      radii: radii,
+      fonts: fonts,
+      letterSpacings: letterSpacings,
+      lineHeights: lineHeights,
+      fontWeights: fontWeights,
+      fontSizes: fontSizes,
     },
   },
 });
 
-export const system = createSystem(config);
+export const system = createSystem(defaultConfig, config);

@@ -1,4 +1,4 @@
-import { Button as KvibButton, ButtonGroup as KvibButtonGroup, StackDivider, VStack } from "@kvib/react/src";
+import { Button as KvibButton, ButtonGroup as KvibButtonGroup, StackSeparator, VStack } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibButton> = {
@@ -175,7 +175,7 @@ export const ButtonSizes: Story = {
 export const ButtonGroup: Story = {
   args: { children: "Klikk her" },
   render: args => (
-    <VStack divider={<StackDivider borderColor="gray.200" />}>
+    <VStack divider={<StackSeparator borderColor="gray.200" />}>
       <KvibButtonGroup orientation="vertical" variant="secondary" spacing="4" size="sm" w="100%">
         <KvibButton {...args}>{args.children}</KvibButton>
         <KvibButton {...args}>{args.children}</KvibButton>

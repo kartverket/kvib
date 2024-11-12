@@ -1,10 +1,10 @@
 export const blur = {
-  none: 0,
-  sm: "4px",
-  base: "8px",
-  md: "12px",
-  lg: "16px",
-  xl: "24px",
-  "2xl": "40px",
-  "3xl": "64px",
+  none: { value: 0 },
+  sm: { value: "4px" },
+  base: { value: "8px" },
+  md: { value: "12px" },
+  lg: { value: "16px" },
+  xl: { value: "24px" },
+  "2xl": { value: "40px" },
+  "3xl": { value: "64px" },
 };

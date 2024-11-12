@@ -69,7 +69,6 @@ import {
   Toast,
   Tooltip,
   VisuallyHidden,
-  Wrap,
 } from "./StoryRendering";
 
 interface Komponentdetaljer {

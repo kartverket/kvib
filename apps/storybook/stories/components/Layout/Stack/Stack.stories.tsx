@@ -52,15 +52,9 @@ const meta: Meta<typeof KvibStack> = {
     },
     separator: {
       description: "If true, each stack item will be followed by a divider",
-      table: { type: { summary: "StackDivider" } },
+      table: { type: { summary: "StackSeparator" } },
       defaultValue: { summary: "" },
       // control: { type: "text" },
-    },
-    isInline: {
-      description: "If true, the items will be stacked horizontally",
-      table: { type: { summary: "boolean" } },
-      defaultValue: { summary: "false" },
-      control: { type: "boolean" },
     },
     justify: {
       description: "Short for justifyContent",
@@ -94,13 +88,7 @@ const meta: Meta<typeof KvibStack> = {
         "unset",
       ],
     },
-    shouldWrapChildren: {
-      description: "If true, the children will be wrapped in a Box",
-      table: { type: { summary: "boolean" } },
-      defaultValue: { summary: "false" },
-      control: { type: "boolean" },
-    },
-    spacing: {
+    gap: {
       description: "The space between each child",
       table: { type: { summary: "px | rem" } },
       defaultValue: { summary: "" },

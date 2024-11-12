@@ -1,4 +1,11 @@
-import { Table, TableContainer, Tbody, Td, Th, Thead, Tr } from "@kvib/react/src";
+import {
+    Table,
+    TableBody as Tbody,
+    TableCell as Td,
+    TableCell as Th,
+    TableHeader as Thead,
+    TableRow as Tr,
+} from "@kvib/react/src";
 import { Meta } from "@storybook/addon-docs";
 import { Canvas, Source, Story } from "@storybook/blocks";
 import { DocsContainer, DocsHeading, DocsStory, Feedback } from "../templates";
@@ -22,8 +29,6 @@ import { useClipboard } from "@kvib/react";
     <DocsHeading light>Arguments</DocsHeading>
 
     **useClipboard** hook tar imot følgende argumenter:
-
-    <TableContainer>
         <Table>
             <Thead>
                 <Tr>
@@ -49,13 +54,11 @@ import { useClipboard } from "@kvib/react";
 
             </Tbody>
         </Table>
-    </TableContainer>
 
     <DocsHeading light>Return value</DocsHeading>
 
     **useClipboard** hook returnerer et objekt med følgende felt:
 
-    <TableContainer>
         <Table>
             <Thead>
                 <Tr>
@@ -92,7 +95,6 @@ import { useClipboard } from "@kvib/react";
                 </Tr>
             </Tbody>
         </Table>
-    </TableContainer>
 
   <DocsStory
     title="Bruk"

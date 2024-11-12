@@ -1,8 +1,7 @@
 import {
   AccordionItem as AccItem,
-  AccordionButton,
-  AccordionIcon,
-  AccordionPanel,
+  AccordionItemContent,
+  AccordionItemTrigger,
   Box,
   Accordion as KvibAccordion,
 } from "@kvib/react/src";
@@ -76,25 +75,23 @@ export const Preview: Story = {
       <KvibAccordion {...args}>
         <AccItem>
           <h2>
-            <AccordionButton>
+            <AccordionItemTrigger>
               <Box as="span" flex="1" textAlign="left">
                 Tittel 1
               </Box>
-              <AccordionIcon />
-            </AccordionButton>
+            </AccordionItemTrigger>
           </h2>
-          <AccordionPanel pb={4}>Innhold 1</AccordionPanel>
+          <AccordionItemContent pb={4}>Innhold 1</AccordionItemContent>
         </AccItem>
         <AccItem>
           <h2>
-            <AccordionButton>
+            <AccordionItemTrigger>
               <Box as="span" flex="1" textAlign="left">
                 Tittel 2
               </Box>
-              <AccordionIcon />
-            </AccordionButton>
+            </AccordionItemTrigger>
           </h2>
-          <AccordionPanel pb={4}>Innhold 2</AccordionPanel>
+          <AccordionItemContent pb={4}>Innhold 2</AccordionItemContent>
         </AccItem>
       </KvibAccordion>
     </Box>
@@ -131,8 +128,8 @@ export const AccordionItem: Story = {
   render: args => (
     <KvibAccordion>
       <AccItem {...args}>
-        <AccordionButton>Klikk meg</AccordionButton>
-        <AccordionPanel>Tekst skrift tekst</AccordionPanel>
+        <AccordionItemTrigger>Klikk meg</AccordionItemTrigger>
+        <AccordionItemContent>Tekst skrift tekst</AccordionItemContent>
       </AccItem>
     </KvibAccordion>
   ),
@@ -143,21 +140,21 @@ export const AccordionAllowMultiple: Story = {
   render: args => (
     <KvibAccordion {...args}>
       <AccItem>
-        <AccordionButton>Hvordan søker jeg?</AccordionButton>
-        <AccordionPanel>
+        <AccordionItemTrigger>Hvordan søker jeg?</AccordionItemTrigger>
+        <AccordionItemContent>
           Du kan søke opp en eiendom ved å bruke eiendommens adresse eller matrikkelnummer. Søket starter når du har
           skrevet inn minst tre tegn. Er du usikker på skrivemåten skriver du så langt du er sikker. For å snevre inn
           antall treff, kan du fylle ut feltet for "Sted". Et matrikkelnummer består av tall i følgende rekkefølge:
           kommunenummer, gårdsnummer, bruksnummer, festenummer, seksjonsnummer.{" "}
-        </AccordionPanel>
+        </AccordionItemContent>
       </AccItem>
       <AccItem>
-        <AccordionButton>Kan jeg se informasjon om andre eiendommer enn min egen?</AccordionButton>
-        <AccordionPanel>
+        <AccordionItemTrigger>Kan jeg se informasjon om andre eiendommer enn min egen?</AccordionItemTrigger>
+        <AccordionItemContent>
           Ja. Eiendomsdata fra grunnbok og matrikkel er, med få unntak, tilgjengelig for alle. Det vil si at du kan søke
           på hvilken som helst eiendom, og logge inn for å se en utskrift fra grunnboken. Informasjonen er offentlig
           tilgjengelig og grunneier eller andre parter blir ikke varslet dersom det blir gjort søk på eiendommen.
-        </AccordionPanel>
+        </AccordionItemContent>
       </AccItem>
     </KvibAccordion>
   ),
@@ -168,12 +165,12 @@ export const AccordionReduceMotion: Story = {
   render: args => (
     <KvibAccordion {...args}>
       <AccItem>
-        <AccordionButton>Overskrift 1</AccordionButton>
-        <AccordionPanel>Eksempel 1</AccordionPanel>
+        <AccordionItemTrigger>Overskrift 1</AccordionItemTrigger>
+        <AccordionItemContent>Eksempel 1</AccordionItemContent>
       </AccItem>
       <AccItem>
-        <AccordionButton>Overskrift 2</AccordionButton>
-        <AccordionPanel>Eksempel 2</AccordionPanel>
+        <AccordionItemTrigger>Overskrift 2</AccordionItemTrigger>
+        <AccordionItemContent>Eksempel 2</AccordionItemContent>
       </AccItem>
     </KvibAccordion>
   ),

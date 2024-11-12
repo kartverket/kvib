@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Radio, RadioGroup, Stack, Text, useToast } from "@kvib/react/src";
+import { Box, Flex, Heading, Radio, RadioGroup, Stack, Text, toaster, Toaster } from "@kvib/react/src";
 import { MapColorsType } from "@kvib/react/src/theme/tokens";
 import { Dispatch, SetStateAction, useState } from "react";
 
@@ -27,12 +27,11 @@ const Sticker = ({ colorValue }: { colorValue: string }) => {
 
 const Color = ({ value }: { value: string }) => {
   const [hovered, setHovered] = useState(false);
-  const toast = useToast();
 
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text).then(
       function () {
-        toast({
+        toaster.create({
           title: "Kopiert!",
           description: text,
           status: "success",
@@ -43,7 +42,7 @@ const Color = ({ value }: { value: string }) => {
       },
       function (err) {
         console.error("Unable to copy text: ", err);
-        toast({
+        toaster.create({
           title: "Error",
           description: "Failed to copy color.",
           status: "error",
@@ -55,19 +54,21 @@ const Color = ({ value }: { value: string }) => {
   };
 
   return (
-    <Box backgroundColor="white" height="60px" width="100%">
-      {hovered && <Sticker colorValue={value} />}
-      <Box
-        backgroundColor={value}
-        height="60px"
-        width="100%"
-        _hover={{ opacity: 0.5 }}
-        onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
-        onClick={() => copyToClipboard(value)}
-        cursor="pointer"
-      />
-    </Box>
+    <>
+      <Box backgroundColor="white" height="60px" width="100%">
+        {hovered && <Sticker colorValue={value} />}
+        <Box
+          backgroundColor={value}
+          height="60px"
+          width="100%"
+          _hover={{ opacity: 0.5 }}
+          onMouseEnter={() => setHovered(true)}
+          onMouseLeave={() => setHovered(false)}
+          onClick={() => copyToClipboard(value)}
+          cursor="pointer"
+        />
+      </Box>
+    </>
   );
 };
 
@@ -80,7 +81,7 @@ export const ColorBox = ({ value, format }: { value: string; format: string }) =
 
   return (
     <Flex
-      w={240}
+      w={"240px"}
       border={`2px ${value} solid`}
       gap="2px"
       backgroundColor={value}
@@ -89,7 +90,7 @@ export const ColorBox = ({ value, format }: { value: string; format: string }) =
       onMouseLeave={() => setHovered(false)}
     >
       {!hovered && <Sticker colorValue={value} />}
-      {opacities.map((opacity) => (
+      {opacities.map(opacity => (
         <Color key={opacity} value={colorValue(opacity)} />
       ))}
     </Flex>
@@ -106,23 +107,26 @@ export const ColorPalettes = ({ hexColors, RGBAColors }: { hexColors: MapColorsT
   }
 
   return (
-    <Flex flexDirection="column" gap={55} marginTop={30}>
-      {RGBAColors !== undefined && <ColorFormatPicker format={format} setFormat={setFormat} />}
-      {Object.entries(colors).map(([colorName, shades]) => (
-        <Box key={colorName}>
-          <Heading as="h3" size="md" id={colorName}>
-            {capitalizeFirstLetter(colorName)}
-          </Heading>
-          <Flex gap={5} flexWrap="wrap">
-            {Object.values(shades).map((shade, index) => (
-              <div key={index}>
-                <ColorBox value={shade} format={format} />
-              </div>
-            ))}
-          </Flex>
-        </Box>
-      ))}
-    </Flex>
+    <>
+      <Toaster />
+      <Flex flexDirection="column" gap={55} marginTop={30}>
+        {RGBAColors !== undefined && <ColorFormatPicker format={format} setFormat={setFormat} />}
+        {Object.entries(colors).map(([colorName, shades]) => (
+          <Box key={colorName}>
+            <Heading as="h3" size="md" id={colorName}>
+              {capitalizeFirstLetter(colorName)}
+            </Heading>
+            <Flex gap={5} flexWrap="wrap">
+              {Object.values(shades).map((shade, index) => (
+                <div key={index}>
+                  <ColorBox value={shade} format={format} />
+                </div>
+              ))}
+            </Flex>
+          </Box>
+        ))}
+      </Flex>
+    </>
   );
 };
 

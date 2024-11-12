@@ -1,4 +1,14 @@
-import { Box, Center, Table, Thead, Tbody, Tr, Th, Td, TableContainer, Code } from "@kvib/react/src";
+import {
+  Box,
+  Center,
+  Code,
+  Table,
+  TableBody as Tbody,
+  TableCell as Td,
+  TableCell as Th,
+  TableHeader as Thead,
+  TableRow as Tr,
+} from "@kvib/react/src";
 import { radii } from "@kvib/react/src/theme/tokens";
 
 const example = (radii: any) => (
@@ -7,29 +17,27 @@ const example = (radii: any) => (
 
 export const Radius = () => {
   return (
-    <TableContainer>
-      <Table variant="simple" width="100%">
-        <Thead textAlign="left">
-          <Tr>
-            <Th width="20%">Eksempel</Th>
-            <Th width="50%">Verdi</Th>
-            <Th width="30%">Kode</Th>
+    <Table width="100%">
+      <Thead textAlign="left">
+        <Tr>
+          <Th width="20%">Eksempel</Th>
+          <Th width="50%">Verdi</Th>
+          <Th width="30%">Kode</Th>
+        </Tr>
+      </Thead>
+      <Tbody>
+        {Object.entries(radii).map(([size, value]) => (
+          <Tr key={size}>
+            <Td backgroundColor="white">
+              <Center>{example(value)}</Center>
+            </Td>
+            <Td backgroundColor="white">{`${size} / ${value}`}</Td>
+            <Td backgroundColor="white">
+              <Code>{`var(--kvib-radii-${size})`}</Code>
+            </Td>
           </Tr>
-        </Thead>
-        <Tbody>
-          {Object.entries(radii).map(([size, value]) => (
-            <Tr key={size}>
-              <Td backgroundColor="white">
-                <Center>{example(value)}</Center>
-              </Td>
-              <Td backgroundColor="white">{`${size} / ${value}`}</Td>
-              <Td backgroundColor="white">
-                <Code>{`var(--kvib-radii-${size})`}</Code>
-              </Td>
-            </Tr>
-          ))}
-        </Tbody>
-      </Table>
-    </TableContainer>
+        ))}
+      </Tbody>
+    </Table>
   );
 };

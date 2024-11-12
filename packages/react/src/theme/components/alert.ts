@@ -4,7 +4,7 @@ import { colors } from "../tokens";
 
 const { defineMultiStyleConfig } = createMultiStyleConfigHelpers(alertAnatomy.keys);
 
-const variantSubtle = defineStyle((props) => {
+const variantSubtle = defineStyle(props => {
   const { status: s } = props;
 
   if (s === "error") {
@@ -38,7 +38,7 @@ const variantSubtle = defineStyle((props) => {
   return {};
 });
 
-const variantSolid = defineStyle((props) => {
+const variantSolid = defineStyle(props => {
   const { status: s } = props;
   if (s === "error") {
     return {
@@ -71,7 +71,7 @@ const variantSolid = defineStyle((props) => {
   return {};
 });
 
-const variantLeftAccent = defineStyle((props) => {
+const variantLeftAccent = defineStyle(props => {
   const { status: s } = props;
 
   if (s === "error") {
@@ -107,7 +107,7 @@ const variantLeftAccent = defineStyle((props) => {
   return {};
 });
 
-const variantTopAccent = defineStyle((props) => {
+const variantTopAccent = defineStyle(props => {
   const { status: s } = props;
 
   if (s === "error") {

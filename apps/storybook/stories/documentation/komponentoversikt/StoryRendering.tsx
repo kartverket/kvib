@@ -19,7 +19,6 @@ import * as FlexStories from "../../components/Layout/Flex/Flex.stories";
 import * as GridStories from "../../components/Layout/Grid/Grid.stories";
 import * as SimpleGridStories from "../../components/Layout/SimpleGrid/SimpleGrid.stories";
 import * as StackStories from "../../components/Layout/Stack/Stack.stories";
-import * as WrapStories from "../../components/Layout/Wrap/Wrap.stories";
 import * as AvatarStories from "../../components/media/avatar/Avatar.stories";
 import * as IconStories from "../../components/media/icon/Icon.stories";
 import * as ImageStories from "../../components/media/image/Image.stories";
@@ -69,371 +68,366 @@ import * as HeadingStories from "../../design/heading/Heading.stories";
 import * as HighlightStories from "../../design/highlight/Highlight.stories";
 import * as TextStories from "../../design/text/Text.stories";
 
-export type ColorScheme = "green" | "blue";
+export type ColorPalette = "green" | "blue";
 
 // Skjemaelementer
 
-export const Button = (colorScheme: ColorScheme) => {
+export const Button = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(ButtonStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const IconButton = (colorScheme: ColorScheme) => {
+export const IconButton = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(IconButtonStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const CloseButton = (colorScheme: ColorScheme) => {
+export const CloseButton = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(CloseButtonStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const Input = (colorScheme: ColorScheme) => {
+export const Input = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(InputStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const FormControl = (colorScheme: ColorScheme) => {
+export const FormControl = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(FormControlStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const Select = (colorScheme: ColorScheme) => {
+export const Select = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(SelectStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const TextArea = (colorScheme: ColorScheme) => {
+export const TextArea = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(TextAreaStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const NumberInput = (colorScheme: ColorScheme) => {
+export const NumberInput = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(NumberInputStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const Checkbox = (colorScheme: ColorScheme) => {
+export const Checkbox = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(CheckboxStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const Datepicker = (colorScheme: ColorScheme) => {
+export const Datepicker = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(DatepickerStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const Timepicker = (colorScheme: ColorScheme) => {
+export const Timepicker = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(TimepickerStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const Editable = (colorScheme: ColorScheme) => {
+export const Editable = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(EditableStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const Radio = (colorScheme: ColorScheme) => {
+export const Radio = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(RadioStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const Switch = (colorScheme: ColorScheme) => {
+export const Switch = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(SwitchStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const Slider = (colorScheme: ColorScheme) => {
+export const Slider = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(SliderStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const RangeSlider = (colorScheme: ColorScheme) => {
+export const RangeSlider = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(RangeSliderStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const PinInput = (colorScheme: ColorScheme) => {
+export const PinInput = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(PinInputStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const FileUpload = (colorScheme: ColorScheme) => {
+export const FileUpload = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(FileUploadStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
 // Søk
 
-export const Search = (colorScheme: ColorScheme) => {
+export const Search = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(SearchStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const SearchAsync = (_: ColorScheme) => {
+export const SearchAsync = (_: ColorPalette) => {
   const { Preview } = composeStories(SearchAsyncStories);
   return <Preview />;
 };
 
 // Datavisning
 
-export const Badge = (colorScheme: ColorScheme) => {
+export const Badge = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(BadgeStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const Table = (colorScheme: ColorScheme) => {
+export const Table = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(TableStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const Code = (colorScheme: ColorScheme) => {
+export const Code = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(CodeStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const Tag = (colorScheme: ColorScheme) => {
+export const Tag = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(TagStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const Stat = (colorScheme: ColorScheme) => {
+export const Stat = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(StatStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const Card = (colorScheme: ColorScheme) => {
+export const Card = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(CardStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const Kbd = (colorScheme: ColorScheme) => {
+export const Kbd = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(KbdStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const List = (colorScheme: ColorScheme) => {
+export const List = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(ListStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const Accordion = (colorScheme: ColorScheme) => {
+export const Accordion = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(AccordionStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
 // Layout
 
-export const Box = (colorScheme: ColorScheme) => {
+export const Box = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(BoxStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const Container = (colorScheme: ColorScheme) => {
+export const Container = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(ContainerStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const Flex = (colorScheme: ColorScheme) => {
+export const Flex = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(FlexStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const Grid = (colorScheme: ColorScheme) => {
+export const Grid = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(GridStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const Stack = (colorScheme: ColorScheme) => {
+export const Stack = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(StackStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const SimpleGrid = (colorScheme: ColorScheme) => {
+export const SimpleGrid = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(SimpleGridStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const Wrap = (colorScheme: ColorScheme) => {
-  const { Preview } = composeStories(WrapStories);
-  return <Preview colorScheme={colorScheme} />;
-};
-
-export const Center = (colorScheme: ColorScheme) => {
+export const Center = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(CenterStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const AspectRatio = (_: ColorScheme) => {
+export const AspectRatio = (_: ColorPalette) => {
   const { Preview } = composeStories(AspectRatioStories);
   return <Preview />;
 };
 
 // Designfundament
 
-export const Heading = (colorScheme: ColorScheme) => {
+export const Heading = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(HeadingStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const Text = (colorScheme: ColorScheme) => {
+export const Text = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(TextStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const Highlight = (_: ColorScheme) => {
+export const Highlight = (_: ColorPalette) => {
   const { Preview } = composeStories(HighlightStories);
   return <Preview />;
 };
 
 // Sideelementer
 
-export const Logo = (_: ColorScheme) => {
+export const Logo = (_: ColorPalette) => {
   const { Preview } = composeStories(LogoStories);
   return <Preview />;
 };
 
-export const Header = (_: ColorScheme) => {
+export const Header = (_: ColorPalette) => {
   const { Preview } = composeStories(HeaderStories);
   return <Preview />;
 };
 
-export const Footer = (_: ColorScheme) => {
+export const Footer = (_: ColorPalette) => {
   const { Preview } = composeStories(FooterStories);
   return <Preview />;
 };
 
-export const Divider = (colorScheme: ColorScheme) => {
+export const Divider = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(DividerStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
 // Media
 
-export const Image = (colorScheme: ColorScheme) => {
+export const Image = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(ImageStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const Icon = (colorScheme: ColorScheme) => {
+export const Icon = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(IconStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const Avatar = (colorScheme: ColorScheme) => {
+export const Avatar = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(AvatarStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
 // Navigasjon
 
-export const Breadcrumb = (colorScheme: ColorScheme) => {
+export const Breadcrumb = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(BreadcrumbStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const Tabs = (colorScheme: ColorScheme) => {
+export const Tabs = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(TabsStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const Menu = (colorScheme: ColorScheme) => {
+export const Menu = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(MenuStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const Link = (colorScheme: ColorScheme) => {
+export const Link = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(LinkStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const LinkOverlay = (colorScheme: ColorScheme) => {
+export const LinkOverlay = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(LinkOverlayStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const SkipNav = (colorScheme: ColorScheme) => {
+export const SkipNav = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(SkivNavStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
 // Overlay
 
-export const Tooltip = (colorScheme: ColorScheme) => {
+export const Tooltip = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(TooltipStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const Modal = (colorScheme: ColorScheme) => {
+export const Modal = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(ModalStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const Popover = (colorScheme: ColorScheme) => {
+export const Popover = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(PopoverStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const AlertDialog = (colorScheme: ColorScheme) => {
+export const AlertDialog = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(AlertDialogStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const Drawer = (colorScheme: ColorScheme) => {
+export const Drawer = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(DrawerStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
 // Tilbakemelding
 
-export const Toast = (colorScheme: ColorScheme) => {
+export const Toast = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(ToastStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const Spinner = (colorScheme: ColorScheme) => {
+export const Spinner = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(SpinnerStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const Skeleton = (colorScheme: ColorScheme) => {
+export const Skeleton = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(SkeletonStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const Progress = (colorScheme: ColorScheme) => {
+export const Progress = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(ProgressStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const CircularProgress = (colorScheme: ColorScheme) => {
+export const CircularProgress = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(CircularProgressStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const Stepper = (colorScheme: ColorScheme) => {
+export const Stepper = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(StepperStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const Alert = (colorScheme: ColorScheme) => {
+export const Alert = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(AlertStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
 // Annet
 
-export const VisuallyHidden = (colorScheme: ColorScheme) => {
+export const VisuallyHidden = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(VisuallyHiddenStories);
-  return <Preview colorScheme={colorScheme} />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
-export const ShowHide = (_: ColorScheme) => {
+export const ShowHide = (_: ColorPalette) => {
   const { Preview } = composeStories(ShowHideStories);
   return <Preview />;
 };
 
-export const Portal = (_: ColorScheme) => {
+export const Portal = (_: ColorPalette) => {
   const { Preview } = composeStories(PortalStories);
   return <Preview />;
 };

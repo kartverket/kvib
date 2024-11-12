@@ -1,4 +1,4 @@
-import { Alert, AlertDescription, AlertIcon, AlertTitle, KvibProvider } from "@kvib/react/src";
+import { Alert, AlertDescription, AlertIcon, AlertTitle } from "@kvib/react/src";
 import { Canvas, Controls, Meta } from "@storybook/blocks";
 import * as CollapseStories from "./Collapse.stories";
 
@@ -16,13 +16,12 @@ import { Collapse } from "@kvib/react";
 
 ## Props
 
-<KvibProvider>
   <Alert status="info">
     <AlertIcon />
     <AlertTitle>OBS!</AlertTitle>
     <AlertDescription>Trykk på ```in``` prop for å se animasjonen</AlertDescription>
   </Alert>
-</KvibProvider>
+
 
 <Canvas of={CollapseStories.Preview} />
 <Controls of={CollapseStories.Preview} />

@@ -3,7 +3,6 @@ export {
   AccordionItem,
   AccordionItemContent,
   AccordionItemTrigger,
-  AccordionRoot,
 } from "@/components/ui/accordion";
 
 export { Accordion as KvibAccordion } from "@chakra-ui/react";

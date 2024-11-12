@@ -1,13 +1,9 @@
 import {
   Table as KvibTable,
-  TableCaption as KvibTableCaption,
-  TableContainer as KvibTableContainer,
-  Tbody as KvibTbody,
-  Td as KvibTd,
-  Tfoot as KvibTfoot,
-  Th as KvibTh,
-  Thead as KvibThead,
-  Tr as KvibTr,
+  TableBody as KvibTbody,
+  TableCell as KvibTd,
+  TableColumnHeader as KvibTh,
+  TableRow as KvibTr,
 } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
@@ -56,109 +52,25 @@ type Story = StoryObj<typeof KvibTable>;
 
 export const Preview: Story = {
   render: args => (
-    <KvibTableContainer>
+    <>
       <KvibTable {...args}>
-        <KvibThead>
+        <KvibTable>
           <KvibTr>
             <KvibTh>Tekstkolonne</KvibTh>
-            <KvibTh isNumeric>Numerisk</KvibTh>
+            <KvibTh>Numerisk</KvibTh>
           </KvibTr>
-        </KvibThead>
+        </KvibTable>
         <KvibTbody>
           <KvibTr>
             <KvibTd>Rad 1</KvibTd>
-            <KvibTd isNumeric>1</KvibTd>
+            <KvibTd>1</KvibTd>
           </KvibTr>
           <KvibTr>
             <KvibTd>Rad 2</KvibTd>
-            <KvibTd isNumeric>2</KvibTd>
+            <KvibTd>2</KvibTd>
           </KvibTr>
         </KvibTbody>
       </KvibTable>
-    </KvibTableContainer>
-  ),
-};
-
-export const TableVariants: Story = {
-  args: { variant: "striped", colorScheme: "green", size: "md" },
-  render: args => (
-    <KvibTableContainer>
-      <KvibTable {...args}>
-        <KvibTableCaption>Imperial to metric conversion factors</KvibTableCaption>
-        <KvibThead>
-          <KvibTr>
-            <KvibTh>To convert</KvibTh>
-            <KvibTh>into</KvibTh>
-            <KvibTh isNumeric>multiply by</KvibTh>
-          </KvibTr>
-        </KvibThead>
-        <KvibTbody>
-          <KvibTr>
-            <KvibTd>inches</KvibTd>
-            <KvibTd>millimetres (mm)</KvibTd>
-            <KvibTd isNumeric>25.4</KvibTd>
-          </KvibTr>
-          <KvibTr>
-            <KvibTd>feet</KvibTd>
-            <KvibTd>centimetres (cm)</KvibTd>
-            <KvibTd isNumeric>30.48</KvibTd>
-          </KvibTr>
-          <KvibTr>
-            <KvibTd>yards</KvibTd>
-            <KvibTd>metres (m)</KvibTd>
-            <KvibTd isNumeric>0.91444</KvibTd>
-          </KvibTr>
-        </KvibTbody>
-        <KvibTfoot>
-          <KvibTr>
-            <KvibTh>To convert</KvibTh>
-            <KvibTh>into</KvibTh>
-            <KvibTh isNumeric>multiply by</KvibTh>
-          </KvibTr>
-        </KvibTfoot>
-      </KvibTable>
-    </KvibTableContainer>
-  ),
-};
-
-export const TableSizes: Story = {
-  args: { size: "sm" },
-  render: args => (
-    <KvibTableContainer>
-      <KvibTable {...args}>
-        <KvibTableCaption>Imperial to metric conversion factors</KvibTableCaption>
-        <KvibThead>
-          <KvibTr>
-            <KvibTh>To convert</KvibTh>
-            <KvibTh>into</KvibTh>
-            <KvibTh isNumeric>multiply by</KvibTh>
-          </KvibTr>
-        </KvibThead>
-        <KvibTbody>
-          <KvibTr>
-            <KvibTd>inches</KvibTd>
-            <KvibTd>millimetres (mm)</KvibTd>
-            <KvibTd isNumeric>25.4</KvibTd>
-          </KvibTr>
-          <KvibTr>
-            <KvibTd>feet</KvibTd>
-            <KvibTd>centimetres (cm)</KvibTd>
-            <KvibTd isNumeric>30.48</KvibTd>
-          </KvibTr>
-          <KvibTr>
-            <KvibTd>yards</KvibTd>
-            <KvibTd>metres (m)</KvibTd>
-            <KvibTd isNumeric>0.91444</KvibTd>
-          </KvibTr>
-        </KvibTbody>
-        <KvibTfoot>
-          <KvibTr>
-            <KvibTh>To convert</KvibTh>
-            <KvibTh>into</KvibTh>
-            <KvibTh isNumeric>multiply by</KvibTh>
-          </KvibTr>
-        </KvibTfoot>
-      </KvibTable>
-    </KvibTableContainer>
+    </>
   ),
 };

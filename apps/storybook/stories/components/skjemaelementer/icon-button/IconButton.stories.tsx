@@ -3,7 +3,7 @@ import {
   Button as KvibButton,
   ButtonGroup as KvibButtonGroup,
   IconButton as KvibIconButton,
-  StackDivider,
+  StackSeparator,
   VStack,
 } from "@kvib/react/src";
 
@@ -113,12 +113,12 @@ export const IconButtonStates: Story = {
 export const IconButtonGroup: Story = {
   args: { icon: "favorite", "aria-label": "IconButton default" },
   render: args => (
-    <VStack divider={<StackDivider borderColor="gray.200" />}>
+    <VStack separator={<StackSeparator borderColor="gray.200" />}>
       <KvibButtonGroup orientation="vertical" size="sm">
         <KvibIconButton {...args} />
         <KvibIconButton {...args} />
       </KvibButtonGroup>
-      <KvibButtonGroup colorScheme="blue" isAttached variant={"secondary"} size={"sm"}>
+      <KvibButtonGroup colorScheme="blue" att variant={"secondary"} size={"sm"}>
         <KvibButton>Lagre</KvibButton>
         <KvibIconButton icon={"add"} aria-label={"IconButton add"} />
       </KvibButtonGroup>

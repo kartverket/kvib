@@ -1,7 +1,7 @@
 export const borders = {
-  none: 0,
-  "1px": "1px solid",
-  "2px": "2px solid",
-  "4px": "4px solid",
-  "8px": "8px solid",
+  none: { value: 0 },
+  "1px": { value: "1px solid" },
+  "2px": { value: "2px solid" },
+  "4px": { value: "4px solid" },
+  "8px": { value: "8px solid" },
 };
