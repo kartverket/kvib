@@ -1,4 +1,4 @@
-import { AlertDescription, AlertIcon, AlertTitle, Box, Alert as KvibAlert, VStack } from "@kvib/react/src";
+import { AlertDescription, AlertTitle, Box, Alert as KvibAlert, VStack } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibAlert> = {
@@ -43,7 +43,6 @@ export const Preview: Story = {
   },
   render: args => (
     <KvibAlert {...args}>
-      <AlertIcon />
       <Box>
         <AlertTitle>Dette er tittelen!</AlertTitle>
         <AlertDescription>Dette er beskrivelsen.</AlertDescription>
@@ -56,7 +55,6 @@ export const AlertSuccess: Story = {
   args: { status: "success", variant: "left-accent" },
   render: args => (
     <KvibAlert status={"success"} {...args}>
-      <AlertIcon />
       <AlertDescription>Endringer lagret</AlertDescription>
     </KvibAlert>
   ),
@@ -66,7 +64,6 @@ export const AlertInfo: Story = {
   args: { status: "info" },
   render: args => (
     <KvibAlert {...args}>
-      <AlertIcon />
       <Box>
         <AlertTitle>Tips</AlertTitle>
         <AlertDescription>
@@ -81,7 +78,6 @@ export const AlertWarning: Story = {
   args: { variant: "left-accent", status: "warning" },
   render: args => (
     <KvibAlert {...args}>
-      <AlertIcon />
       <Box>
         <AlertTitle>Du er i ferd med å slette fila permanent</AlertTitle>
         <AlertDescription>Du kan ikke hente den i etterkant</AlertDescription>
@@ -94,7 +90,6 @@ export const AlertError: Story = {
   args: { status: "error" },
   render: args => (
     <KvibAlert {...args}>
-      <AlertIcon />
       <Box>
         <AlertTitle>Får ikke opprettet forbindelse med serveren</AlertTitle>
         <AlertDescription>Prøv igjen om et par minutter, eller ta kontakt hvis problemet forsetter</AlertDescription>
@@ -109,14 +104,12 @@ export const AlertEmphasisWarning: Story = {
   render: args => (
     <VStack gap="1rem">
       <KvibAlert {...args}>
-        <AlertIcon />
         <Box>
           <AlertTitle>Jeg er en viktig 'warning'</AlertTitle>
           <AlertDescription>Jeg er viktig</AlertDescription>
         </Box>
       </KvibAlert>
       <KvibAlert variant="solid" {...args}>
-        <AlertIcon />
         <Box>
           <AlertTitle>Jeg er en enda viktigere 'warning'</AlertTitle>
           <AlertDescription>Jeg er viktigere enn 'waning'-en over!</AlertDescription>

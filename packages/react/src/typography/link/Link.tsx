@@ -1,26 +1,27 @@
-import { LinkButton, LinkButtonProps } from "@/components/ui/link-button";
+import { linkRecipe } from "@/theme/recipes/link.recipe";
+import { KvibSize } from "@/theme/tokens/sizes";
+import { Link as ChakraLink, LinkProps as ChakraLinkProps, RecipeVariantProps } from "@chakra-ui/react";
 import { forwardRef } from "react";
 
-export type LinkProps = Omit<LinkButtonProps, "colorScheme" | "variant"> & {
-  /** The color of the link.
-   * @default green
-   */
-  colorPalette?: "green" | "blue";
+type LinkVariantProps = RecipeVariantProps<typeof linkRecipe>;
 
+export interface LinkProps extends ChakraLinkProps, LinkVariantProps {
   /** If `true`, the link will open in a new tab. */
   external?: boolean;
-};
+
+  /** The size of the link */
+  size?: KvibSize;
+}
 
 /** Link to different sites or parts of site
  *
  * You can specify the `color` prop to get different link designs.
  */
 export const Link = forwardRef<HTMLAnchorElement, LinkProps>(({ children, ...props }, ref) => {
-  const isExternal = props.external !== undefined ? props.external : Boolean(props.href?.match(/^https?:\/\//));
   return (
-    <LinkButton {...props} ref={ref}>
+    <ChakraLink {...props} ref={ref}>
       {children}
-      {isExternal && (
+      {props.external && (
         <span
           className="material-symbols-rounded"
           style={{ fontSize: "18px", verticalAlign: "middle", marginLeft: "4px" }}
@@ -30,6 +31,6 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(({ children, ...pro
           launch
         </span>
       )}
-    </LinkButton>
+    </ChakraLink>
   );
 });

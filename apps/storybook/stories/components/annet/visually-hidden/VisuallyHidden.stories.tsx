@@ -1,13 +1,4 @@
-import {
-  Box,
-  Button,
-  FormControl,
-  FormLabel,
-  Heading,
-  Icon,
-  VisuallyHidden as KvibVisuallyHidden,
-  VisuallyHiddenInput as KvibVisuallyHiddenInput,
-} from "@kvib/react/src";
+import { Box, Button, Field, Heading, Icon, Input, VisuallyHidden as KvibVisuallyHidden } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibVisuallyHidden> = {
@@ -57,19 +48,16 @@ export const VisuallyHiddenTextExample: Story = {
 
 const VisuallyHiddenInputExample = ({ ...args }) => {
   return (
-    <FormControl>
-      <FormLabel>
-        Visually Hidden Input
-        <KvibVisuallyHiddenInput
-          placeholder="Visually Hidden Input"
-          {...args}
-          defaultChecked
-          onChange={event => {
-            console.log(event.target.checked);
-          }}
-        />
-      </FormLabel>
-    </FormControl>
+    <Field label="Visually Hidden Input">
+      <Input
+        placeholder="Visually Hidden Input"
+        {...args}
+        defaultChecked
+        onChange={event => {
+          console.log(event.target.checked);
+        }}
+      />
+    </Field>
   );
 };
 

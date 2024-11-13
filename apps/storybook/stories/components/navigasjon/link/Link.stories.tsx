@@ -19,7 +19,7 @@ const meta: Meta<typeof KvibLink> = {
       },
       control: "text",
     },
-    isExternal: {
+    external: {
       description: "If true, an icon will be included.",
       table: {
         type: { summary: "Boolean" },
@@ -57,7 +57,7 @@ export const LinkStates: Story = {
       <KvibLink href="/?path=/" {...args}>
         Dette er en intern lenke
       </KvibLink>
-      <KvibLink isExternal href="https://chakra-ui.com/docs/components" {...args}>
+      <KvibLink external href="https://chakra-ui.com/docs/components" {...args}>
         Dette er en ekstern lenke
       </KvibLink>
     </VStack>

@@ -4,13 +4,12 @@ import "@fontsource/mulish/700.css";
 import "material-symbols";
 
 import { Provider } from "@/components/ui/provider";
+import { Theme } from "@chakra-ui/react";
 
-import { FC } from "react";
-
-interface KvibProviderProps {
-  children: React.ReactNode;
+export function KvibProvider(props: { children: React.ReactNode }) {
+  return (
+    <Provider>
+      <Theme colorPalette="green">{props.children}</Theme>
+    </Provider>
+  );
 }
-
-export const KvibProvider: FC<KvibProviderProps> = ({ children }) => {
-  return <Provider>{children}</Provider>;
-};

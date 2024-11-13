@@ -1,4 +1,4 @@
-import { createSystem, defineConfig } from "@chakra-ui/react";
+import { createSystem, defaultConfig, defineConfig, mergeConfigs } from "@chakra-ui/react";
 import {
   blur,
   borders,
@@ -10,28 +10,47 @@ import {
   letterSpacings,
   lineHeights,
   radii,
+  shadows,
+  spacing,
+  zIndices,
 } from "./tokens";
 
-import { defaultConfig } from "@chakra-ui/react";
+import { buttonRecipe } from "./recipes/button.recipe";
+import { linkRecipe } from "./recipes/link.recipe";
+import { config as kvibConfig } from "./tokens/config";
+import sizes from "./tokens/sizes";
+import { transitionDuration, transitionProperty, transitionTimingFunction } from "./tokens/transitions";
 
-/*  withDefaultColorScheme({ colorScheme: "green" }),
- withDefaultColorScheme({ colorScheme: "gray", components: ["Badge", "Code", "Table", "Tag"] }), */
-
-const config = defineConfig({
+const customConfig = defineConfig({
+  ...kvibConfig,
   theme: {
+    breakpoints: breakpoints,
     tokens: {
-      blurs: blur,
-      borders: borders,
-      breakpoints: breakpoints,
-      colors: colors,
-      radii: radii,
       fonts: fonts,
+      fontSizes: fontSizes,
+      fontWeights: fontWeights,
       letterSpacings: letterSpacings,
       lineHeights: lineHeights,
-      fontWeights: fontWeights,
-      fontSizes: fontSizes,
+      blurs: blur,
+      borders: borders,
+      colors: colors,
+      radii: radii,
+      spacing: spacing,
+      zIndex: zIndices,
+      sizes: sizes,
+      shadows: shadows,
+      durations: transitionDuration,
+      easings: transitionTimingFunction,
+      animations: transitionProperty,
+    },
+
+    recipes: {
+      link: linkRecipe,
+      button: buttonRecipe,
     },
   },
 });
 
-export const system = createSystem(defaultConfig, config);
+const config = mergeConfigs(defaultConfig, customConfig);
+
+export const system = createSystem(config);

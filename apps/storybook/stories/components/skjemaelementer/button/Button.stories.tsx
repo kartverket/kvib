@@ -10,6 +10,15 @@ const meta: Meta<typeof KvibButton> = {
       canvas: { sourceState: "hidden" },
     },
   },
+  args: {
+    colorPalette: "green",
+    variant: "primary",
+    size: "md",
+    disabled: false,
+    loading: false,
+    iconFill: false,
+    iconAriaIsHidden: false,
+  },
   argTypes: {
     size: {
       description: "Size of the Button",
@@ -29,7 +38,7 @@ const meta: Meta<typeof KvibButton> = {
       options: ["primary", "secondary", "tertiary", "ghost"],
       control: { type: "radio" },
     },
-    colorScheme: {
+    colorPalette: {
       description: "The visual color appearance of the component.",
       table: {
         type: { summary: "green | blue | gray | red" },
@@ -38,7 +47,7 @@ const meta: Meta<typeof KvibButton> = {
       options: ["green", "blue", "gray", "red"],
       control: { type: "radio" },
     },
-    isDisabled: {
+    disabled: {
       description: "If true, the button will be disabled.",
       table: {
         type: { summary: "boolean" },
@@ -46,7 +55,7 @@ const meta: Meta<typeof KvibButton> = {
       },
       control: "boolean",
     },
-    isLoading: {
+    loading: {
       description: "If true, the button will show a spinner.",
       table: {
         type: { summary: "boolean" },
@@ -89,7 +98,7 @@ export const ButtonColors: Story = {
   render: args => (
     <KvibButtonGroup orientation="vertical">
       <KvibButton {...args}>Nettside</KvibButton>
-      <KvibButton colorScheme="blue" {...args}>
+      <KvibButton colorPalette="blue" {...args}>
         Forvaltning
       </KvibButton>
     </KvibButtonGroup>
@@ -173,14 +182,14 @@ export const ButtonSizes: Story = {
 };
 
 export const ButtonGroup: Story = {
-  args: { children: "Klikk her" },
+  args: { children: "Klikk her", colorPalette: "inherit" },
   render: args => (
-    <VStack divider={<StackSeparator borderColor="gray.200" />}>
-      <KvibButtonGroup orientation="vertical" variant="secondary" spacing="4" size="sm" w="100%">
+    <VStack separator={<StackSeparator borderColor="gray.200" />}>
+      <KvibButtonGroup orientation="vertical" variant="secondary" gap="4" size="sm" w="100%">
         <KvibButton {...args}>{args.children}</KvibButton>
         <KvibButton {...args}>{args.children}</KvibButton>
       </KvibButtonGroup>
-      <KvibButtonGroup colorScheme="blue" isAttached>
+      <KvibButtonGroup colorPalette="blue" attached>
         <KvibButton {...args}>{args.children}</KvibButton>
         <KvibButton rightIcon="add" {...args}>
           {args.children}
