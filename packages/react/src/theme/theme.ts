@@ -16,6 +16,7 @@ import {
 } from "./tokens";
 
 import { buttonRecipe } from "./recipes/button.recipe";
+import { iconButtonRecipe } from "./recipes/icon-button.recipe";
 import { linkRecipe } from "./recipes/link.recipe";
 import { config as kvibConfig } from "./tokens/config";
 import sizes from "./tokens/sizes";
@@ -45,8 +46,9 @@ const customConfig = defineConfig({
     },
 
     recipes: {
-      link: linkRecipe,
       button: buttonRecipe,
+      iconButton: iconButtonRecipe,
+      link: linkRecipe,
     },
   },
 });

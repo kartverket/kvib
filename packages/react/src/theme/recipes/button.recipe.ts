@@ -3,7 +3,7 @@ import { defineRecipe } from "@chakra-ui/react";
 export const buttonRecipe = defineRecipe({
   base: {
     fontStyle: "normal",
-    fontWeight: "{fontWeights.bold}",
+    fontWeight: "{fontWeights.semibold}",
     gap: "{space.2}",
     borderRadius: "{radii.md}",
     _disabled: {

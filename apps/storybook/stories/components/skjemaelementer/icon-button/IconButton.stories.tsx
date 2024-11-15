@@ -1,11 +1,4 @@
-import {
-  HStack,
-  Button as KvibButton,
-  ButtonGroup as KvibButtonGroup,
-  IconButton as KvibIconButton,
-  StackSeparator,
-  VStack,
-} from "@kvib/react/src";
+import { IconButton as KvibIconButton } from "@kvib/react/src";
 
 import { Meta, StoryObj } from "@storybook/react";
 
@@ -18,6 +11,15 @@ const meta: Meta<typeof KvibIconButton> = {
       canvas: { sourceState: "shown" },
     },
   },
+  args: {
+    icon: "favorite",
+    variant: "primary",
+    size: "md",
+    colorPalette: "green",
+    iconFill: false,
+    loading: false,
+    disabled: false,
+  },
   argTypes: {
     size: {
       description: "Size of Icon button",
@@ -26,7 +28,7 @@ const meta: Meta<typeof KvibIconButton> = {
         defaultValue: { summary: "md" },
       },
       options: ["xs", "sm", "md", "lg"],
-      control: { type: "radio" },
+      control: { type: "select" },
     },
     variant: {
       description: "The variant of the IconButton.",
@@ -35,9 +37,9 @@ const meta: Meta<typeof KvibIconButton> = {
         defaultValue: { summary: "primary" },
       },
       options: ["primary", "secondary", "tertiary", "ghost"],
-      control: { type: "radio" },
+      control: { type: "select" },
     },
-    isDisabled: {
+    disabled: {
       description: "If true, the button will be disabled.",
       table: {
         type: { summary: "boolean" },
@@ -45,8 +47,13 @@ const meta: Meta<typeof KvibIconButton> = {
       },
       control: "boolean",
     },
-    colorScheme: {
+    colorPalette: {
+      control: {
+        type: "select",
+      },
+      options: ["green", "blue", "red", "gray"],
       table: {
+        type: { summary: "green | blue | red | gray" },
         defaultValue: { summary: "green" },
       },
     },
@@ -57,7 +64,7 @@ const meta: Meta<typeof KvibIconButton> = {
       },
       control: "boolean",
     },
-    isLoading: {
+    loading: {
       description: "If true, the button will show a spinner.",
       table: {
         type: { summary: "boolean" },
@@ -72,56 +79,5 @@ export default meta;
 type Story = StoryObj<typeof KvibIconButton>;
 
 export const Preview: Story = {
-  args: { icon: "favorite", "aria-label": "IconButton default" },
   render: args => <KvibIconButton {...args} />,
-};
-
-export const IconButtonSizes: Story = {
-  args: { icon: "add" },
-  render: args => (
-    <HStack>
-      <KvibIconButton {...args} aria-label="IconButton xs" size="xs" />
-      <KvibIconButton {...args} aria-label="IconButton sm" size="sm" />
-      <KvibIconButton {...args} aria-label="IconButton md" size="md" />
-      <KvibIconButton {...args} aria-label="IconButton lg" size="lg" />
-    </HStack>
-  ),
-};
-
-export const IconButtonVariants: Story = {
-  args: { icon: "add" },
-  render: args => (
-    <HStack>
-      <KvibIconButton {...args} aria-label="IconButton primary" variant="primary" />
-      <KvibIconButton {...args} aria-label="IconButton secondary" variant="secondary" />
-      <KvibIconButton {...args} aria-label="IconButton link" variant="tertiary" />
-      <KvibIconButton {...args} aria-label="IconButton ghost" variant="ghost" />
-    </HStack>
-  ),
-};
-
-export const IconButtonStates: Story = {
-  args: { icon: "add" },
-  render: args => (
-    <HStack>
-      <KvibIconButton {...args} aria-label="IconButton disabled" isDisabled />
-      <KvibIconButton {...args} aria-label="IconButton loading" isLoading />
-    </HStack>
-  ),
-};
-
-export const IconButtonGroup: Story = {
-  args: { icon: "favorite", "aria-label": "IconButton default" },
-  render: args => (
-    <VStack separator={<StackSeparator borderColor="gray.200" />}>
-      <KvibButtonGroup orientation="vertical" size="sm">
-        <KvibIconButton {...args} />
-        <KvibIconButton {...args} />
-      </KvibButtonGroup>
-      <KvibButtonGroup colorScheme="blue" att variant={"secondary"} size={"sm"}>
-        <KvibButton>Lagre</KvibButton>
-        <KvibIconButton icon={"add"} aria-label={"IconButton add"} />
-      </KvibButtonGroup>
-    </VStack>
-  ),
 };

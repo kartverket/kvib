@@ -1,16 +1,18 @@
-import { IconProps } from "@/typography/list";
+import { Icon } from "@/icon";
 import type { IconButtonProps as ChakraIconButtonProps } from "@chakra-ui/react";
 import { AbsoluteCenter, IconButton as ChakraIconButton, Spinner } from "@chakra-ui/react";
+import { MaterialSymbol } from "material-symbols";
 import { forwardRef } from "react";
 
 export interface IconButtonProps extends ChakraIconButtonProps {
+  icon: MaterialSymbol;
   loading?: boolean;
   loadingText?: React.ReactNode;
-  icon: IconProps;
+  iconFill?: boolean;
 }
 
 export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(function IconButton(props, ref) {
-  const { loading, disabled, loadingText, icon, ...rest } = props;
+  const { loading, disabled, loadingText, icon, iconFill, ...rest } = props;
   return (
     <ChakraIconButton
       disabled={loading || disabled}
@@ -18,10 +20,17 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(functio
       aria-label={loadingText ? loadingText.toString() : "Icon Button"}
       {...rest}
     >
-      {loading && loadingText && (
+      {loading ? (
         <AbsoluteCenter display="inline-flex">
-          <Spinner size="inherit" color="inherit" />
+          <Spinner size="inherit" />
         </AbsoluteCenter>
+      ) : (
+        <Icon
+          icon={icon}
+          filled={iconFill}
+          size={props.size === "xs" || props.size === "sm" ? 20 : 24}
+          weight={props.size === "xs" || props.size === "sm" ? 300 : 400}
+        />
       )}
     </ChakraIconButton>
   );

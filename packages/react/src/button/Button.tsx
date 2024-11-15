@@ -36,11 +36,11 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           </Center>
         )}
         <HStack gap={1} visibility={loading ? "hidden" : "visible"}>
-          {leftIcon && <Icon icon={leftIcon} ariaIsHidden={iconAriaIsHidden} isFilled={iconFill} />}
+          {leftIcon && <Icon icon={leftIcon} ariaIsHidden={iconAriaIsHidden} filled={iconFill} />}
           <Center className="text" as="span">
             {children}
           </Center>
-          {rightIcon && <Icon icon={rightIcon} ariaIsHidden={iconAriaIsHidden} isFilled={iconFill} />}
+          {rightIcon && <Icon icon={rightIcon} ariaIsHidden={iconAriaIsHidden} filled={iconFill} />}
         </HStack>
       </ChakraButton>
     );
