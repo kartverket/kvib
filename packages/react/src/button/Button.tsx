@@ -6,14 +6,7 @@ import { Icon } from "../icon";
 
 export type ButtonProps = Omit<
   ChakraButtonProps,
-  | "variant"
-  | "colorPalette"
-  | "leftIcon"
-  | "rightIcon"
-  | "iconSpacing"
-  | "isActive"
-  | "loadingText"
-  | "spinnerPlacement"
+  "variant" | "colorPalette" | "iconSpacing" | "isActive" | "loadingText" | "spinnerPlacement"
 > & {
   /**The visual color appearance of the component
    * @default green*/

@@ -5,7 +5,7 @@ import {
   Card as KvibCard,
   CardBody as KvibCardBody,
   CardFooter as KvibCardFooter,
-  Divider as KvibDivider,
+  Separator as KvibDivider,
   Heading as KvibHeading,
   Image as KvibImage,
   Stack as KvibStack,
@@ -32,7 +32,7 @@ const meta: Meta<typeof KvibBadge> = {
       options: ["solid", "subtle", "outline"],
       control: "radio",
     },
-    colorScheme: {
+    colorPalette: {
       description: "The visual color appearance of the badge",
       table: {
         type: { summary: "green | blue | red | gray" },
@@ -58,8 +58,8 @@ export const Preview: Story = {
 export const BadgeTexts: Story = {
   render: () => (
     <>
-      <KvibBadge colorScheme="green">Success</KvibBadge>
-      <KvibBadge colorScheme="red">Rejected</KvibBadge>
+      <KvibBadge colorPalette="green">Success</KvibBadge>
+      <KvibBadge colorPalette="red">Rejected</KvibBadge>
     </>
   ),
 };
@@ -67,8 +67,8 @@ export const BadgeTexts: Story = {
 export const BadgeHensikt: Story = {
   render: () => (
     <>
-      <KvibBadge colorScheme="blue">New</KvibBadge>
-      <KvibBadge colorScheme="red" variant="solid">
+      <KvibBadge colorPalette="blue">New</KvibBadge>
+      <KvibBadge colorPalette="red" variant="solid">
         Not working
       </KvibBadge>
     </>
@@ -76,15 +76,15 @@ export const BadgeHensikt: Story = {
 };
 
 export const BadgeGreen: Story = {
-  render: () => <KvibBadge colorScheme="green">Success</KvibBadge>,
+  render: () => <KvibBadge colorPalette="green">Success</KvibBadge>,
 };
 
 export const BadgeRed: Story = {
-  render: () => <KvibBadge colorScheme="red">Removed</KvibBadge>,
+  render: () => <KvibBadge colorPalette="red">Removed</KvibBadge>,
 };
 
 export const BadgeBlue: Story = {
-  render: () => <KvibBadge colorScheme="blue">New</KvibBadge>,
+  render: () => <KvibBadge colorPalette="blue">New</KvibBadge>,
 };
 
 export const BadgeCard: Story = {
@@ -92,7 +92,7 @@ export const BadgeCard: Story = {
     <KvibStack direction="column">
       <KvibCard {...args} maxW="sm">
         <KvibCardBody>
-          <KvibBadge colorScheme="green" ml="300px" mb="10px">
+          <KvibBadge colorPalette="green" ml="300px" mb="10px">
             Åpen
           </KvibBadge>
           <KvibImage
@@ -100,7 +100,7 @@ export const BadgeCard: Story = {
             alt="Boat dock with small boats"
             borderRadius="md"
           />
-          <KvibStack mt="6" spacing="3">
+          <KvibStack mt="6" gap="3">
             <KvibHeading size="md">NRL gir tryggare luftfart</KvibHeading>
             <KvibText>
               Helikopter og andre som flyg lågt, treng detaljert og påliteleg oversyn over kor det finst hinder for
@@ -111,11 +111,11 @@ export const BadgeCard: Story = {
         </KvibCardBody>
         <KvibDivider />
         <KvibCardFooter>
-          <KvibButtonGroup spacing="2">
-            <KvibButton variant="primary" colorScheme="blue">
+          <KvibButtonGroup gap="2">
+            <KvibButton variant="primary" colorPalette="blue">
               Les artikkel
             </KvibButton>
-            <KvibButton variant="ghost" colorScheme="blue">
+            <KvibButton variant="ghost" colorPalette="blue">
               Legg til i leseliste
             </KvibButton>
           </KvibButtonGroup>
@@ -123,7 +123,7 @@ export const BadgeCard: Story = {
       </KvibCard>
       <KvibCard {...args} maxW="sm">
         <KvibCardBody>
-          <KvibBadge colorScheme="red" ml="300px" mb="10px">
+          <KvibBadge colorPalette="red" ml="300px" mb="10px">
             Lukket
           </KvibBadge>
           <KvibImage
@@ -131,7 +131,7 @@ export const BadgeCard: Story = {
             alt="Boat dock with small boats"
             borderRadius="md"
           />
-          <KvibStack mt="6" spacing="3">
+          <KvibStack mt="6" gap="3">
             <KvibHeading size="md">Digitalt løft i havn</KvibHeading>
             <KvibText>
               Kystverket har tildelt 10,5 millioner kroner til prosjektet «Digital tvilling i havn» for å styrke
@@ -142,11 +142,11 @@ export const BadgeCard: Story = {
         </KvibCardBody>
         <KvibDivider />
         <KvibCardFooter>
-          <KvibButtonGroup spacing="2">
-            <KvibButton variant="primary" colorScheme="blue">
+          <KvibButtonGroup gap="2">
+            <KvibButton variant="primary" colorPalette="blue">
               Les artikkel
             </KvibButton>
-            <KvibButton variant="ghost" colorScheme="blue">
+            <KvibButton variant="ghost" colorPalette="blue">
               Legg til i leseliste
             </KvibButton>
           </KvibButtonGroup>
@@ -157,7 +157,7 @@ export const BadgeCard: Story = {
 };
 
 export const BadgeVariants: Story = {
-  args: { colorScheme: "green" },
+  args: { colorPalette: "green" },
   render: args => (
     <KvibStack direction="row">
       <KvibBadge {...args} variant="outline">

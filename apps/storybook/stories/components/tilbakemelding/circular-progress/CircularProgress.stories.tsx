@@ -1,8 +1,4 @@
-import {
-  CircularProgress as KvibCircularProgress,
-  CircularProgressLabel as KvibCircularProgressLabel,
-  HStack as KvibHStack,
-} from "@kvib/react/src";
+import { ProgressCircle as KvibCircularProgress, HStack as KvibHStack } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibCircularProgress> = {
@@ -142,12 +138,18 @@ export const CircularProgressLabel: Story = {
   args: { color: "green.400" },
   render: args => (
     <KvibHStack>
-      <KvibCircularProgress {...args} value={70} aria-label="progress bar labeled 70%">
-        <KvibCircularProgressLabel>70%</KvibCircularProgressLabel>
-      </KvibCircularProgress>
-      <KvibCircularProgress {...args} value={30} aria-label="progress bar labeled 30%">
-        <KvibCircularProgressLabel>30%</KvibCircularProgressLabel>
-      </KvibCircularProgress>
+      <KvibCircularProgress
+        {...args}
+        value={70}
+        aria-label="progress bar labeled 70%"
+        label="70%"
+      ></KvibCircularProgress>
+      <KvibCircularProgress
+        {...args}
+        value={30}
+        aria-label="progress bar labeled 30%"
+        label="30%"
+      ></KvibCircularProgress>
     </KvibHStack>
   ),
 };

@@ -1,28 +1,16 @@
 import {
-  Box,
   Button,
+  DrawerBackdrop,
   DrawerBody,
-  DrawerCloseButton,
+  CloseButton as DrawerCloseButton,
   DrawerContent,
   DrawerFooter,
   DrawerHeader,
-  DrawerOverlay,
-  DrawerProps,
-  FormLabel,
   Input,
-  InputGroup,
-  InputLeftAddon,
-  InputRightAddon,
   Drawer as KvibDrawer,
-  Stack as KvibStack,
-  Radio,
-  RadioGroup,
-  Select,
-  Textarea,
   useDisclosure,
 } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
-import { useRef, useState } from "react";
 
 const meta: Meta<typeof KvibDrawer> = {
   title: "Komponenter/Drawer",
@@ -232,14 +220,14 @@ export default meta;
 type Story = StoryObj<typeof KvibDrawer>;
 
 export const DrawerExample = ({ ...args }) => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const { open, onOpen, onClose } = useDisclosure();
   return (
     <>
       <Button colorScheme={args.colorScheme} onClick={onOpen}>
         Åpne
       </Button>
-      <KvibDrawer {...args} isOpen={isOpen} onClose={onClose}>
-        <DrawerOverlay />
+      <KvibDrawer {...args} isOpen={open} onClose={onClose}>
+        <DrawerBackdrop />
         <DrawerContent>
           <DrawerCloseButton />
           <DrawerHeader>Lag din konto</DrawerHeader>
@@ -262,148 +250,4 @@ export const DrawerExample = ({ ...args }) => {
 
 export const Preview: Story = {
   render: args => <DrawerExample {...args} />,
-};
-
-const PlacementExample = ({ ...args }: DrawerProps) => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const [placement, setPlacement] = useState<"right" | "left" | "top" | "bottom">("right");
-
-  const handlePlacementChange = (nextValue: "right" | "left" | "top" | "bottom") => {
-    setPlacement(nextValue);
-  };
-
-  return (
-    <>
-      <RadioGroup defaultValue={placement} onChange={handlePlacementChange}>
-        <KvibStack direction="row" mb="4">
-          <Radio value="top">Topp</Radio>
-          <Radio value="right">Høyre</Radio>
-          <Radio value="bottom">Bunn</Radio>
-          <Radio value="left">Venstre</Radio>
-        </KvibStack>
-      </RadioGroup>
-      <Button colorScheme="blue" onClick={onOpen}>
-        Åpne
-      </Button>
-      <KvibDrawer {...args} placement={placement} onClose={onClose} isOpen={isOpen}>
-        <DrawerOverlay />
-        <DrawerContent>
-          <DrawerHeader borderBottomWidth="1px">Drawer</DrawerHeader>
-          <DrawerBody>
-            <p>Noe innhold...</p>
-            <p>Noe innhold...</p>
-            <p>Noe innhold...</p>
-          </DrawerBody>
-        </DrawerContent>
-      </KvibDrawer>
-    </>
-  );
-};
-
-export const DrawerPlacement: Story = {
-  args: {},
-  render: args => <PlacementExample {...args} />,
-};
-
-const DrawerFocusExample = ({ ...args }: DrawerProps) => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const firstField = useRef<HTMLInputElement>(null);
-
-  return (
-    <>
-      <Button colorScheme="green" onClick={onOpen}>
-        Lag bruker
-      </Button>
-      <KvibDrawer {...args} isOpen={isOpen} placement="right" initialFocusRef={firstField} onClose={onClose}>
-        <DrawerOverlay />
-        <DrawerContent>
-          <DrawerCloseButton />
-          <DrawerHeader borderBottomWidth="1px">Lag en ny konto</DrawerHeader>
-
-          <DrawerBody>
-            <KvibStack spacing="24px">
-              <Box>
-                <FormLabel htmlFor="username">Navn</FormLabel>
-                <Input ref={firstField} id="username" placeholder="Brukernavn" />
-              </Box>
-
-              <Box>
-                <FormLabel htmlFor="url">Url</FormLabel>
-                <InputGroup>
-                  <InputLeftAddon>https://</InputLeftAddon>
-                  <Input type="url" id="url" placeholder="Domene" />
-                  <InputRightAddon>.com</InputRightAddon>
-                </InputGroup>
-              </Box>
-
-              <Box>
-                <FormLabel htmlFor="owner">Velg eier</FormLabel>
-                <Select id="owner" defaultValue="segun">
-                  <option value="ola">Ola Nordmann</option>
-                  <option value="kari">Kari Nordmann</option>
-                </Select>
-              </Box>
-
-              <Box>
-                <FormLabel htmlFor="desc">Beskrivelse</FormLabel>
-                <Textarea id="desc" />
-              </Box>
-            </KvibStack>
-          </DrawerBody>
-
-          <DrawerFooter borderTopWidth="1px">
-            <Button variant="secondary" mr={3} onClick={onClose}>
-              Avbryt
-            </Button>
-            <Button colorScheme="blue">Send inn</Button>
-          </DrawerFooter>
-        </DrawerContent>
-      </KvibDrawer>
-    </>
-  );
-};
-
-export const DrawerFocus: Story = {
-  args: {},
-  render: args => <DrawerFocusExample {...args} />,
-};
-
-const SizeExample = ({ ...args }: DrawerProps) => {
-  const [size, setSize] = useState<string | undefined>();
-  const { isOpen, onOpen, onClose } = useDisclosure();
-
-  const handleClick = (newSize: string) => {
-    setSize(newSize);
-    onOpen();
-  };
-
-  const sizes: string[] = ["xs", "sm", "md", "lg", "xl", "full"];
-
-  return (
-    <>
-      {sizes.map(size => (
-        <Button onClick={() => handleClick(size)} key={size} m={4}>{`Åpne ${size} Drawer`}</Button>
-      ))}
-
-      <KvibDrawer {...args} onClose={onClose} isOpen={isOpen} size={size}>
-        <DrawerOverlay />
-        <DrawerContent>
-          <DrawerCloseButton />
-          <DrawerHeader>{`${size} drawer innhold`}</DrawerHeader>
-          <DrawerBody>
-            <p>
-              Kartverket er Norges nasjonale kartmyndighet, og har som sin primære oppgave å bidra med geografisk
-              informasjon og tjenester av høy kvalitet til samfunnet. Dette omfatter både produksjon av kart og
-              oppmålingstjenester, samt forvaltning av eiendomsinformasjon.
-            </p>
-          </DrawerBody>
-        </DrawerContent>
-      </KvibDrawer>
-    </>
-  );
-};
-
-export const DrawerSizes: Story = {
-  args: {},
-  render: args => <SizeExample {...args} />,
 };

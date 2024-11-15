@@ -1,13 +1,14 @@
 export {
+  DrawerRoot as Drawer,
   DrawerBackdrop,
   DrawerBody,
   DrawerCloseTrigger,
   DrawerContent,
   DrawerFooter,
   DrawerHeader,
-  DrawerRoot,
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
+export { Drawer as KvibDrawer } from "@chakra-ui/react";
 
 export type { DrawerRootProps as DrawerProps } from "@chakra-ui/react";

@@ -1,10 +1,9 @@
 import {
   Avatar as KvibAvatar,
-  AvatarBadge as KvibAvatarBadge,
   AvatarGroup as KvibAvatarGroup,
   Stack as KvibStack,
-  Wrap as KvibWrap,
-  WrapItem as KvibWrapItem,
+  Flex as KvibWrap,
+  Box as KvibWrapItem,
 } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
@@ -134,15 +133,6 @@ export const AvatarFallback: Story = {
       <KvibAvatar {...args} name="Annet Eksempel" src="https://bit.ly/broken-link" />
       <KvibAvatar {...args} src="https://bit.ly/broken-link" />
     </KvibStack>
-  ),
-};
-
-export const AvatarBadge: Story = {
-  args: {},
-  render: args => (
-    <KvibAvatar {...args}>
-      <KvibAvatarBadge boxSize="1.25em" bg="green.500" />
-    </KvibAvatar>
   ),
 };
 

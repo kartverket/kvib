@@ -1,11 +1,10 @@
 import {
   Box,
   Stat as KvibStat,
-  StatArrow as KvibStatArrow,
-  StatGroup as KvibStatGroup,
+  Group as KvibStatGroup,
   StatHelpText as KvibStatHelpText,
   StatLabel as KvibStatLabel,
-  StatNumber as KvibStatNumber,
+  StatValueText as KvibStatNumber,
 } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
@@ -41,19 +40,13 @@ export const StatIndicator: Story = {
       <KvibStat {...args}>
         <KvibStatLabel>Sendt</KvibStatLabel>
         <KvibStatNumber>345,670</KvibStatNumber>
-        <KvibStatHelpText>
-          <KvibStatArrow type="increase" />
-          23.36%
-        </KvibStatHelpText>
+        <KvibStatHelpText>23.36%</KvibStatHelpText>
       </KvibStat>
 
       <KvibStat {...args}>
         <KvibStatLabel>Klikk</KvibStatLabel>
         <KvibStatNumber>45</KvibStatNumber>
-        <KvibStatHelpText>
-          <KvibStatArrow type="decrease" />
-          9.05%
-        </KvibStatHelpText>
+        <KvibStatHelpText>9.05%</KvibStatHelpText>
       </KvibStat>
     </KvibStatGroup>
   ),

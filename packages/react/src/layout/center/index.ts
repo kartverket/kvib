@@ -1,2 +1,2 @@
-export { Center } from "@chakra-ui/react";
-export type { CenterProps } from "@chakra-ui/react";
+export { AbsoluteCenter, Center } from "@chakra-ui/react";
+export type { AbsoluteCenterProps, CenterProps } from "@chakra-ui/react";

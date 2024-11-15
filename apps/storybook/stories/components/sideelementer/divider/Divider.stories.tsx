@@ -2,7 +2,7 @@ import {
   AbsoluteCenter as KvibAbsoluteCenter,
   Box as KvibBox,
   Center as KvibCenter,
-  Divider as KvibDivider,
+  Separator as KvibDivider,
   Stack as KvibStack,
   Text as KvibTekst,
 } from "@kvib/react/src";
@@ -49,7 +49,7 @@ export const Preview: Story = {
 export const DividerVariants: Story = {
   args: { borderColor: "blue.600" },
   render: args => (
-    <KvibStack spacing="4">
+    <KvibStack gap="4">
       <KvibDivider {...args} variant="solid" />
       <KvibDivider {...args} variant="dashed" />
     </KvibStack>
@@ -58,7 +58,7 @@ export const DividerVariants: Story = {
 
 export const DividerColorsWidths: Story = {
   render: args => (
-    <KvibStack spacing="4">
+    <KvibStack gap="4">
       <KvibDivider {...args} borderWidth="1px" borderColor="blue.500" />
       <KvibDivider {...args} borderWidth="2px" borderColor="green.500" />
     </KvibStack>

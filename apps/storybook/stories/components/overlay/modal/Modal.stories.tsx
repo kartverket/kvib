@@ -1,32 +1,17 @@
 import {
   Box,
   Button,
-  Flex,
-  FormControl,
-  FormLabel,
-  Input,
-  Modal as KvibModal,
-  ModalBody,
-  ModalCloseButton,
-  ModalContent,
-  ModalFooter,
-  ModalHeader,
-  ModalOverlay,
-  Select,
-  Text,
+  CloseButton,
+  DialogBackdrop,
+  DialogBody,
+  DialogContent,
+  DialogFooter,
+  DialogHeader,
+  Dialog as KvibModal,
   useDisclosure,
 } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
-import { useRef, useState } from "react";
-import {
-  ModalBackdropString,
-  ModalCenteredString,
-  ModalFocusString,
-  ModalScrollingString,
-  ModalSizesString,
-  ModalString,
-  ModalTransitionString,
-} from "./srcStrings";
+import { ModalString } from "./srcStrings";
 
 const meta: Meta<typeof KvibModal> = {
   title: "Komponenter/Modal",
@@ -212,23 +197,23 @@ export default meta;
 type Story = StoryObj<typeof KvibModal>;
 
 const ModalExample = ({ ...args }) => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const { open, onOpen, onClose } = useDisclosure();
   return (
     <>
       <Button onClick={onOpen} colorScheme={args.colorScheme}>
         Åpne modal
       </Button>
 
-      <KvibModal {...args} isOpen={isOpen} onClose={onClose}>
-        <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>Her er en modal</ModalHeader>
-          <ModalCloseButton colorScheme={args.colorScheme} />
-          <ModalBody>
+      <KvibModal {...args} isOpen={open} onClose={onClose}>
+        <DialogBackdrop />
+        <DialogContent>
+          <DialogHeader>Her er en modal</DialogHeader>
+          <CloseButton colorScheme={args.colorScheme} />
+          <DialogBody>
             Modaler må kun vises etter en brukerinteraksjon, og skal ikke avbryte brukeren på noe vis.
-          </ModalBody>
+          </DialogBody>
 
-          <ModalFooter justifyContent="space-between">
+          <DialogFooter justifyContent="space-between">
             <Button onClick={onClose} variant="tertiary" colorScheme={args.colorScheme}>
               Tertiær
             </Button>
@@ -238,8 +223,8 @@ const ModalExample = ({ ...args }) => {
               </Button>
               <Button colorScheme={args.colorScheme}>Primær</Button>
             </Box>
-          </ModalFooter>
-        </ModalContent>
+          </DialogFooter>
+        </DialogContent>
       </KvibModal>
     </>
   );
@@ -253,280 +238,6 @@ export const Preview: Story = {
         type: "code",
         language: "tsx",
         code: ModalString,
-      },
-    },
-  },
-};
-
-const ModalScrollingExample = ({ ...args }) => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  return (
-    <>
-      <Button onClick={onOpen}>Åpne modal med scroll</Button>
-
-      <KvibModal {...args} isOpen={isOpen} onClose={onClose}>
-        <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>Modal med scroll</ModalHeader>
-          <ModalCloseButton />
-          <ModalBody>
-            <Text fontWeight="bold" mb="1rem">
-              Her er en modal hvor du kan scrolle innholdet bak.
-            </Text>
-          </ModalBody>
-          <ModalFooter>
-            <Button mr={3} onClick={onClose} variant="secondary">
-              Avbryt
-            </Button>
-            <Button variant="primary">Bekreft</Button>
-          </ModalFooter>
-        </ModalContent>
-      </KvibModal>
-    </>
-  );
-};
-
-export const ModalScrolling: Story = {
-  render: args => <ModalScrollingExample {...args} />,
-  args: {
-    blockScrollOnMount: false,
-  },
-  parameters: {
-    docs: {
-      source: {
-        type: "code",
-        language: "tsx",
-        code: ModalScrollingString,
-      },
-    },
-  },
-};
-
-const ModalFocusExample = ({ ...args }) => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-
-  const initialRef = useRef(null);
-  const finalRef = useRef(null);
-
-  return (
-    <>
-      <Button onClick={onOpen}>Åpne modal</Button>
-      <Button ml={4} ref={finalRef}>
-        Jeg får fokus på close
-      </Button>
-
-      <KvibModal {...args} initialFocusRef={initialRef} finalFocusRef={finalRef} isOpen={isOpen} onClose={onClose}>
-        <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>Modal med skjema</ModalHeader>
-          <ModalCloseButton />
-          <ModalBody pb={6}>
-            <FormControl>
-              <FormLabel>Skriv inn noe</FormLabel>
-              <Input ref={initialRef} placeholder="Placeholder" />
-            </FormControl>
-          </ModalBody>
-
-          <ModalFooter>
-            <Button colorScheme={args.colorScheme} mr={3} variant="secondary">
-              Avbryt
-            </Button>
-            <Button colorScheme={args.colorScheme} onClick={onClose} variant="primary">
-              Send inn skjema
-            </Button>
-          </ModalFooter>
-        </ModalContent>
-      </KvibModal>
-    </>
-  );
-};
-
-export const ModalFocus: Story = {
-  render: args => <ModalFocusExample {...args} />,
-  parameters: {
-    docs: {
-      source: {
-        type: "code",
-        language: "tsx",
-        code: ModalFocusString,
-      },
-    },
-  },
-};
-
-const ModalCenteredExample = ({ ...args }) => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  return (
-    <>
-      <Button onClick={onOpen}>Åpne modal</Button>
-
-      <KvibModal {...args} onClose={onClose} isOpen={isOpen} isCentered>
-        <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>Sentrert modal</ModalHeader>
-          <ModalCloseButton />
-          <ModalBody>Denne modalen vises i midten av skjermen.</ModalBody>
-          <ModalFooter>
-            <Button onClick={onClose}>Lukk</Button>
-          </ModalFooter>
-        </ModalContent>
-      </KvibModal>
-    </>
-  );
-};
-
-export const ModalCentered: Story = {
-  render: args => <ModalCenteredExample {...args} />,
-  parameters: {
-    docs: {
-      source: {
-        type: "code",
-        language: "tsx",
-        code: ModalCenteredString,
-      },
-    },
-  },
-};
-
-const ModalTransitionExample = ({ ...args }) => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  return (
-    <>
-      <Button onClick={onOpen}>Åpne modal</Button>
-      <KvibModal {...args} isCentered onClose={onClose} isOpen={isOpen} motionPreset="slideInBottom">
-        <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>Modal Transition</ModalHeader>
-          <ModalCloseButton />
-          <ModalBody>Denne modalen skyves inn med animasjon.</ModalBody>
-          <ModalFooter>
-            <Button mr={3} onClick={onClose} variant="secondary">
-              Avbryt
-            </Button>
-            <Button>Bekreft</Button>
-          </ModalFooter>
-        </ModalContent>
-      </KvibModal>
-    </>
-  );
-};
-
-export const ModalTransition: Story = {
-  render: args => <ModalTransitionExample {...args} />,
-  parameters: {
-    docs: {
-      source: {
-        type: "code",
-        language: "tsx",
-        code: ModalTransitionString,
-      },
-    },
-  },
-};
-
-const ModalSizeExample = ({ ...args }) => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const [size, setSize] = useState("md");
-  const sizes = ["xs", "sm", "md", "lg", "xl", "full"];
-
-  return (
-    <>
-      <FormControl>
-        <FormLabel htmlFor="select">Velg størrelse for modal</FormLabel>
-        <Flex gap="0.5rem">
-          <Select id="select" onChange={e => setSize(e.target.value)} value={size} w="12rem">
-            {sizes.map(size => (
-              <option key={size} value={size}>
-                {size}
-              </option>
-            ))}
-          </Select>
-          <Button onClick={onOpen}>Åpne modal</Button>
-        </Flex>
-      </FormControl>
-
-      <KvibModal {...args} onClose={onClose} size={size} isOpen={isOpen}>
-        <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>Modal i forskjellige størrelser</ModalHeader>
-          <ModalCloseButton />
-          <ModalBody>
-            Du har åpnet modalen i størrelse <b>{size}</b>.
-          </ModalBody>
-          <ModalFooter>
-            <Button onClick={onClose}>Lukk</Button>
-          </ModalFooter>
-        </ModalContent>
-      </KvibModal>
-    </>
-  );
-};
-
-export const ModalSizes: Story = {
-  render: args => <ModalSizeExample {...args} />,
-  parameters: {
-    docs: {
-      source: {
-        type: "code",
-        language: "tsx",
-        code: ModalSizesString,
-      },
-    },
-  },
-};
-
-const ModalBackdropExample = ({ ...args }) => {
-  const OverlayOne = () => <ModalOverlay bg="blackAlpha.300" backdropFilter="blur(10px) hue-rotate(90deg)" />;
-
-  const OverlayTwo = () => <ModalOverlay bg="none" backdropFilter="auto" backdropInvert="80%" backdropBlur="2px" />;
-
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const [overlay, setOverlay] = useState(<OverlayOne />);
-
-  return (
-    <>
-      <Button
-        onClick={() => {
-          setOverlay(<OverlayOne />);
-          onOpen();
-        }}
-      >
-        Åpne modal med blurry bakgrunn
-      </Button>
-      <Button
-        ml="4"
-        onClick={() => {
-          setOverlay(<OverlayTwo />);
-          onOpen();
-        }}
-      >
-        Åpne modal med inverterte farger
-      </Button>
-      <KvibModal {...args} isCentered isOpen={isOpen} onClose={onClose}>
-        {overlay}
-        <ModalContent>
-          <ModalHeader>Bakteppe</ModalHeader>
-          <ModalCloseButton />
-          <ModalBody>
-            <Text>Egendefinerte baktepper!</Text>
-          </ModalBody>
-          <ModalFooter>
-            <Button onClick={onClose}>Lukk</Button>
-          </ModalFooter>
-        </ModalContent>
-      </KvibModal>
-    </>
-  );
-};
-
-export const ModalBackdrop: Story = {
-  render: args => <ModalBackdropExample {...args} />,
-  parameters: {
-    docs: {
-      source: {
-        type: "code",
-        language: "tsx",
-        code: ModalBackdropString,
       },
     },
   },

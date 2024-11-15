@@ -1,4 +1,4 @@
-import { HStack, Icon, useTheme } from "@kvib/react/src";
+import { HStack, Icon } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Icon> = {
@@ -31,7 +31,7 @@ const meta: Meta<typeof Icon> = {
       options: [20, 24, 40, 48],
       defaultValue: { summary: 24 },
     },
-    isFilled: {
+    filled: {
       table: { type: { summary: "boolean" } },
       control: "boolean",
       defaultValue: { summary: false },
@@ -61,13 +61,12 @@ export const Preview: Story = {
 export const ColorIcon: Story = {
   args: { size: 40 },
   render: args => {
-    const theme = useTheme();
     return (
       <HStack>
-        <Icon {...args} icon="home" color={theme.colors.green[400]} />
+        <Icon {...args} icon="home" color="green.400" />
         // #1A833B er theme.colors.green[400]
-        <Icon {...args} icon="home" color={theme.colors.green[400]} isFilled={true} />
-        <Icon {...args} icon="warning" color="orange" isFilled={true} />
+        <Icon {...args} icon="home" color="green.400" filled={true} />
+        <Icon {...args} icon="warning" color="orange" filled={true} />
       </HStack>
     );
   },

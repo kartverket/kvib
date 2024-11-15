@@ -2,16 +2,14 @@ import {
   Box,
   Button,
   ButtonGroup,
-  FormControl,
-  FormLabel,
+  Field,
   HStack,
   IconButton,
   Input,
   Popover as KvibPopover,
-  PopoverAnchor,
   PopoverArrow,
   PopoverBody,
-  PopoverCloseButton,
+  CloseButton as PopoverCloseButton,
   PopoverContent,
   PopoverFooter,
   PopoverHeader,
@@ -368,10 +366,10 @@ const TextInput = forwardRef<HTMLInputElement, TextInputProps>((props, ref) => {
   const { id, label, ...restProps } = props;
 
   return (
-    <FormControl>
+    <Field>
       <FormLabel htmlFor={id}>{label}</FormLabel>
       <Input ref={ref} id={id} {...restProps} />
-    </FormControl>
+    </Field>
   );
 });
 
@@ -488,18 +486,18 @@ const WithPopoverAnchor = ({ ...args }) => {
       isLazy
       lazyBehavior="keepMounted"
     >
-      <FormLabel htmlFor="anchor text">Prøv å redigere teksten</FormLabel>
+      <Field htmlFor="anchor text" label="Prøv å redigere teksten"></Field>
       <HStack>
-        <PopoverAnchor>
+        <PopoverTrigger asChild>
           <Input
             id="anchor text"
             color={color}
             w="auto"
             display="inline-flex"
-            isDisabled={!isEditing}
+            disabled={!isEditing}
             defaultValue="Popover Anchor"
           />
-        </PopoverAnchor>
+        </PopoverTrigger>
 
         <PopoverTrigger>
           <Button h="40px" colorScheme="blue">

@@ -1,9 +1,4 @@
-import {
-  HStack as KvibHStack,
-  Tag as KvibTag,
-  TagCloseButton as KvibTagCloseButton,
-  TagLabel as KvibTagLabel,
-} from "@kvib/react/src";
+import { HStack as KvibHStack, Tag as KvibTag, CloseButton as KvibTagCloseButton } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibTag> = {
@@ -55,7 +50,7 @@ export const Preview: Story = {
 
 export const TagColors: Story = {
   render: args => (
-    <KvibHStack spacing={4}>
+    <KvibHStack gap={4}>
       {["green", "blue", "red", "gray"].map(colorScheme => (
         <KvibTag {...args} key={colorScheme} colorScheme={colorScheme}>
           {colorScheme}
@@ -68,7 +63,7 @@ export const TagColors: Story = {
 export const TagSizes: Story = {
   args: { variant: "solid", colorScheme: "green" },
   render: args => (
-    <KvibHStack spacing={4}>
+    <KvibHStack gap={4}>
       {["sm", "md", "lg"].map(size => (
         <KvibTag {...args} size={size} key={size}>
           {size}
@@ -81,7 +76,7 @@ export const TagSizes: Story = {
 export const TagVariants: Story = {
   args: { colorScheme: "blue" },
   render: args => (
-    <KvibHStack spacing={4}>
+    <KvibHStack gap={4}>
       {["subtle", "solid", "outline"].map(variant => (
         <KvibTag {...args} variant={variant} key={variant}>
           {variant}
@@ -94,8 +89,7 @@ export const TagVariants: Story = {
 export const TagClose: Story = {
   args: { colorScheme: "green", variant: "solid", size: "lg" },
   render: args => (
-    <KvibTag {...args}>
-      <KvibTagLabel>Green</KvibTagLabel>
+    <KvibTag label="Green" {...args}>
       <KvibTagCloseButton />
     </KvibTag>
   ),

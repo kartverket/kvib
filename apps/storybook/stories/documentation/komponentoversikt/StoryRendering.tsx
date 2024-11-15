@@ -28,7 +28,6 @@ import * as LinkStories from "../../components/navigasjon/link/Link.stories";
 import * as MenuStories from "../../components/navigasjon/menu/Menu.stories";
 import * as SkivNavStories from "../../components/navigasjon/skip-nav/SkipNav.stories";
 import * as TabsStories from "../../components/navigasjon/tabs/Tabs.stories";
-import * as AlertDialogStories from "../../components/overlay/alert-dialog/AlertDialog.stories";
 import * as DrawerStories from "../../components/overlay/drawer/Drawer.stories";
 import * as ModalStories from "../../components/overlay/modal/Modal.stories";
 import * as PopoverStories from "../../components/overlay/popover/Popover.stories";
@@ -51,7 +50,6 @@ import * as InputStories from "../../components/skjemaelementer/Input/Input.stor
 import * as NumberInputStories from "../../components/skjemaelementer/number-input/NumberInput.stories";
 import * as PinInputStories from "../../components/skjemaelementer/pin-input/PinInput.stories";
 import * as RadioStories from "../../components/skjemaelementer/radio/Radio.stories";
-import * as RangeSliderStories from "../../components/skjemaelementer/range-slider/RangeSlider.stories";
 import * as SelectStories from "../../components/skjemaelementer/select/Select.stories";
 import * as SliderStories from "../../components/skjemaelementer/slider/Slider.stories";
 import * as SwitchStories from "../../components/skjemaelementer/switch/Switch.stories";
@@ -122,9 +120,9 @@ export const Datepicker = (colorPalette: ColorPalette) => {
   return <Preview colorPalette={colorPalette} />;
 };
 
-export const Timepicker = (colorPalette: ColorPalette) => {
+export const Timepicker = (_: ColorPalette) => {
   const { Preview } = composeStories(TimepickerStories);
-  return <Preview colorPalette={colorPalette} />;
+  return <Preview />;
 };
 
 export const Editable = (colorPalette: ColorPalette) => {
@@ -144,11 +142,6 @@ export const Switch = (colorPalette: ColorPalette) => {
 
 export const Slider = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(SliderStories);
-  return <Preview colorPalette={colorPalette} />;
-};
-
-export const RangeSlider = (colorPalette: ColorPalette) => {
-  const { Preview } = composeStories(RangeSliderStories);
   return <Preview colorPalette={colorPalette} />;
 };
 
@@ -309,9 +302,9 @@ export const Image = (colorPalette: ColorPalette) => {
   return <Preview colorPalette={colorPalette} />;
 };
 
-export const Icon = (colorPalette: ColorPalette) => {
+export const Icon = (_: ColorPalette) => {
   const { Preview } = composeStories(IconStories);
-  return <Preview colorPalette={colorPalette} />;
+  return <Preview />;
 };
 
 export const Avatar = (colorPalette: ColorPalette) => {
@@ -368,11 +361,6 @@ export const Popover = (colorPalette: ColorPalette) => {
   return <Preview colorPalette={colorPalette} />;
 };
 
-export const AlertDialog = (colorPalette: ColorPalette) => {
-  const { Preview } = composeStories(AlertDialogStories);
-  return <Preview colorPalette={colorPalette} />;
-};
-
 export const Drawer = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(DrawerStories);
   return <Preview colorPalette={colorPalette} />;
@@ -380,9 +368,9 @@ export const Drawer = (colorPalette: ColorPalette) => {
 
 // Tilbakemelding
 
-export const Toast = (colorPalette: ColorPalette) => {
+export const Toast = (_: ColorPalette) => {
   const { Preview } = composeStories(ToastStories);
-  return <Preview colorPalette={colorPalette} />;
+  return <Preview />;
 };
 
 export const Spinner = (colorPalette: ColorPalette) => {

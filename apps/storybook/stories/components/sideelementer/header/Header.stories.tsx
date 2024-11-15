@@ -1,17 +1,4 @@
-import {
-  Box,
-  Heading,
-  HStack,
-  Icon,
-  Header as KvibHeader,
-  Search,
-  SearchAsync,
-  Stack,
-  Tab,
-  TabList,
-  Tabs,
-} from "@kvib/react/src";
-import { colors } from "@kvib/react/src/theme/tokens";
+import { Box, Heading, HStack, Icon, Header as KvibHeader, Search, SearchAsync, Stack, Tabs } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibHeader> = {
@@ -131,10 +118,8 @@ export const HeaderElements: Story = {
       <Heading size="md">Eiendom</Heading>
       <Search bgColor="white" maxWidth={400} placeholder="Søk her..."></Search>
       <Tabs colorScheme="blue" size="md">
-        <TabList>
-          <Tab w={90}>Fane 1</Tab>
-          <Tab w={90}>Fane 2</Tab>
-        </TabList>
+        <Tabs w={90}>Fane 1</Tabs>
+        <Tabs w={90}>Fane 2</Tabs>
       </Tabs>
     </KvibHeader>
   ),
@@ -159,10 +144,8 @@ export const HeaderDropdownChildren: Story = {
       <HStack wrap="wrap" align="center" justify="center" gap="10">
         <Search maxWidth={400} bgColor="white" placeholder="Søk her..."></Search>
         <Tabs colorScheme="blue" size="md">
-          <TabList>
-            <Tab>Første fane</Tab>
-            <Tab>Andre fane</Tab>
-          </TabList>
+          <Tabs>Første fane</Tabs>
+          <Tabs>Andre fane</Tabs>
         </Tabs>
       </HStack>
     ),
@@ -200,7 +183,7 @@ export const HeaderSearchAsync: Story = {
             console.log("Selected Option:", selectedOption);
           }}
           size="md"
-          dropdownIndicator={<Icon icon="search" weight={500} color={colors.green[500]} />}
+          dropdownIndicator={<Icon icon="search" weight={500} color={"gree.500"} />}
           aria-label="search async"
         />
       </Box>

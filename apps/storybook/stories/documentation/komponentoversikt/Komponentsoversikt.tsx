@@ -1,27 +1,46 @@
-import { Badge, Box, Card, Flex, FormLabel, Heading, Link, Select, SimpleGrid, Stack, Text } from "@kvib/react/src";
-import { ReactElement, useEffect, useRef, useState } from "react";
+import {
+  Badge,
+  Box,
+  Card,
+  Field,
+  Flex,
+  Heading,
+  Link,
+  NativeSelect,
+  NativeSelectField,
+  SimpleGrid,
+  Stack,
+  Text,
+} from "@kvib/react/src";
+import { ChangeEvent, ReactElement, useEffect, useRef, useState } from "react";
 import { ComponentsBanner } from "../../templates/ComponentsBanner";
 import { Komponenter } from "./Komponenter";
-import { ColorScheme } from "./StoryRendering";
+import { ColorPalette } from "./StoryRendering";
 
 export const Komponentsoversikt = () => <Components />;
 
 export const Components = () => {
-  const [theme, setTheme] = useState<ColorScheme>("green");
+  const [theme, setTheme] = useState<ColorPalette>("green");
   return (
-    <Box>
+    <Box className="sb-unstyled">
       <ComponentsBanner
         title="Komponenter"
         description="Se en full oversikt over komponentene i designsystemet."
         bg={`${theme}.500`}
       />
-      <Box>
-        <FormLabel htmlFor="theme">Velg fargetema</FormLabel>
-        <Select value={theme} onChange={e => setTheme(e.target.value as ColorScheme)} marginBottom="2rem" maxW="12rem">
-          <option value="green">Grønn</option>
-          <option value="blue">Blå</option>
-        </Select>
-      </Box>
+      <Field label="Velg fargetema">
+        <NativeSelect size="md" width="240px">
+          <NativeSelectField
+            value={theme}
+            onChange={(e: ChangeEvent<HTMLSelectElement>) => setTheme(e.target.value as ColorPalette)}
+            marginBottom="2rem"
+            maxW="12rem"
+          >
+            <option value="green">Grønn</option>
+            <option value="blue">Blå</option>
+          </NativeSelectField>
+        </NativeSelect>
+      </Field>
       <Stack gap="3rem">
         {Object.keys(Komponenter(theme)).map(categoryKey => {
           const category = Komponenter(theme)[categoryKey];
@@ -33,7 +52,7 @@ export const Components = () => {
                   <ComponentCard
                     key={componentKey}
                     title={component.navn}
-                    colorScheme={theme}
+                    colorPalette={theme}
                     tag={component.tag}
                     link={component.link}
                     component={component.story}
@@ -52,20 +71,20 @@ export const Components = () => {
 const ComponentCard = ({
   title,
   component,
-  colorScheme,
+  colorPalette,
   tag,
   link,
   category,
 }: {
   title: string;
   component: ReactElement;
-  colorScheme: ColorScheme;
+  colorPalette: ColorPalette;
   tag?: string;
   link: string;
   category: string;
 }) => (
-  <Card variant="unstyled" size="md">
-    <Badge variant="solid" colorScheme={colorScheme} css={{ position: "absolute", left: "0.8rem", top: "0.8rem" }}>
+  <Card unstyled size="md">
+    <Badge variant="solid" colorPalette={colorPalette} css={{ position: "absolute", left: "0.8rem", top: "0.8rem" }}>
       {tag}
     </Badge>
     <LazyStory component={component} />
@@ -75,7 +94,7 @@ const ComponentCard = ({
         padding="1rem"
         href={`/?path=/docs/${category}-${link}--docs`}
         alignItems="center"
-        colorScheme={colorScheme}
+        colorPalette={colorPalette}
       >
         Gå til {title}
       </Link>
@@ -99,7 +118,7 @@ const ComponentCategory = ({
     <Text marginBottom={"1.5rem"} fontSize="md">
       {description}
     </Text>
-    <SimpleGrid columns={[2, null, 3]} spacing={5}>
+    <SimpleGrid columns={[2, null, 3]} gap={5}>
       {children}
     </SimpleGrid>
   </Box>

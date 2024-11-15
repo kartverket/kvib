@@ -1,4 +1,4 @@
-import { FormControl, FormLabel, Stack } from "@kvib/react/src";
+import { Field, Stack } from "@kvib/react/src";
 import { Datepicker as KvibDatepicker } from "@kvib/react/src/datepicker";
 import { withActions } from "@storybook/addon-actions/decorator";
 import { Meta, StoryObj } from "@storybook/react";
@@ -231,9 +231,8 @@ export const DatepickerArea: Story = {
 export const DatepickerForm: Story = {
   args: { placeholder: "Velg dato", "aria-label": "Datepicker example" },
   render: args => (
-    <FormControl isRequired>
-      <FormLabel>Velg dato</FormLabel>
+    <Field isRequired label="Velg dato">
       <KvibDatepicker {...args} />
-    </FormControl>
+    </Field>
   ),
 };

@@ -1,4 +1,4 @@
-import { FormControl, FormLabel, Icon, Select as KvibSelect, Stack as KvibStack } from "@kvib/react/src";
+import { Select as KvibSelect } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibSelect> = {
@@ -129,65 +129,4 @@ export const Preview: Story = {
       <option value="option3">Alternativ 3</option>
     </KvibSelect>
   ),
-};
-
-export const SelectForm: Story = {
-  args: { "aria-label": "select form" },
-  render: args => (
-    <FormControl>
-      <FormLabel htmlFor="select">Velg alternativ</FormLabel>
-      <KvibSelect {...args}>
-        <option value="option1">Alternativ 1</option>
-        <option value="option2">Alternativ 2</option>
-        <option value="option3">Alternativ 3</option>
-      </KvibSelect>
-    </FormControl>
-  ),
-};
-
-export const SelectSizes: Story = {
-  args: {},
-  render: args => (
-    <KvibStack spacing={3}>
-      <KvibSelect {...args} placeholder="extra small" size="xs" aria-label="select extra small" />
-      <KvibSelect {...args} placeholder="small" size="sm" aria-label="select small" />
-      <KvibSelect {...args} placeholder="medium" size="md" aria-label="select medium" />
-      <KvibSelect {...args} placeholder="large" size="lg" aria-label="select large" />
-    </KvibStack>
-  ),
-};
-
-export const SelectVariants: Story = {
-  args: {},
-  render: args => (
-    <KvibStack spacing={3}>
-      <KvibSelect {...args} variant="outline" placeholder="Outline" aria-label="select outline" />
-      <KvibSelect {...args} variant="filled" placeholder="Filled" aria-label="select filled" />
-      <KvibSelect {...args} variant="flushed" placeholder="Flushed" aria-label="select flushed" />
-      <KvibSelect {...args} variant="unstyled" placeholder="Unstyled" aria-label="select unstyled" />
-    </KvibStack>
-  ),
-};
-
-export const SelectIcon: Story = {
-  args: {},
-  render: args => (
-    <KvibSelect
-      {...args}
-      icon={<Icon icon="expand_circle_down" weight={300} />}
-      placeholder="Woohoo! Nytt ikon"
-      aria-label="select change Icon"
-    />
-  ),
-};
-
-export const SelectStyles: Story = {
-  args: {
-    borderColor: "green.500",
-    color: "blue.700",
-    focusBorderColor: "blue.300",
-    "aria-label": "select override style",
-    placeholder: "Overstyring av stil",
-  },
-  render: args => <KvibSelect {...args} />,
 };

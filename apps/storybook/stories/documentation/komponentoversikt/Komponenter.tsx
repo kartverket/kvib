@@ -2,7 +2,6 @@ import { ReactElement } from "react";
 import {
   Accordion,
   Alert,
-  AlertDialog,
   AspectRatio,
   Avatar,
   Badge,
@@ -15,7 +14,7 @@ import {
   CircularProgress,
   CloseButton,
   Code,
-  ColorScheme,
+  ColorPalette,
   Container,
   Datepicker,
   Divider,
@@ -46,7 +45,6 @@ import {
   Portal,
   Progress,
   Radio,
-  RangeSlider,
   Search,
   SearchAsync,
   Select,
@@ -85,7 +83,7 @@ interface Kategori {
   komponenter: Record<string, Komponentdetaljer>;
 }
 
-export const Komponenter: (colorScheme: ColorScheme) => Record<string, Kategori> = colorScheme => ({
+export const Komponenter: (colorScheme: ColorPalette) => Record<string, Kategori> = colorScheme => ({
   Skjemaelementer: {
     navn: "Skjemaelementer",
     komponenter: {
@@ -180,12 +178,6 @@ export const Komponenter: (colorScheme: ColorScheme) => Record<string, Kategori>
         beskrivelse: "Slider",
         story: Slider(colorScheme),
         link: "slider",
-      },
-      RangeSlider: {
-        navn: "RangeSlider",
-        beskrivelse: "RangeSlider",
-        story: RangeSlider(colorScheme),
-        link: "range-slider",
       },
       PinInput: {
         navn: "PinInput",
@@ -315,12 +307,6 @@ export const Komponenter: (colorScheme: ColorScheme) => Record<string, Kategori>
         beskrivelse: "",
         story: SimpleGrid(colorScheme),
         link: "simplegrid",
-      },
-      Wrap: {
-        navn: "Wrap",
-        beskrivelse: "",
-        story: Wrap(colorScheme),
-        link: "wrap",
       },
       Center: {
         navn: "Center",
@@ -475,13 +461,6 @@ export const Komponenter: (colorScheme: ColorScheme) => Record<string, Kategori>
         beskrivelse: "",
         story: Popover(colorScheme),
         link: "popover",
-      },
-      // TODO: Legg til AlertDialog direkte fra Story
-      AlertDialog: {
-        navn: "Alert Dialog",
-        beskrivelse: "",
-        story: AlertDialog(colorScheme),
-        link: "alert-dialog",
       },
       Drawer: {
         navn: "Drawer",

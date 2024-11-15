@@ -2,7 +2,7 @@ import {
   Field,
   NumberInput as KvibNumberInput,
   NumberInputField as KvibNumberInputField,
-  NumberInputStepper as KvibNumberInputStepper,
+  NumberInputControl as KvibNumberInputStepper,
   Stack,
 } from "@kvib/react/src";
 

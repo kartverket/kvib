@@ -1,3 +1,4 @@
+import { HStack, VStack } from "@kvib/react/src";
 import {
   Tabs as KvibTab,
   TabsList as KvibTabList,
@@ -116,7 +117,7 @@ export const Preview: Story = {
 export const TabsColors: Story = {
   args: { size: "md" },
   render: args => (
-    <HStack spacing="2rem">
+    <HStack gap="2rem">
       <KvibTabs {...args} colorScheme="blue">
         <KvibTabList>
           <KvibTab>Første fane</KvibTab>

@@ -1,18 +1,4 @@
-import {
-  Box,
-  Stack as KvibStack,
-  Stepper as KvibStepper,
-  Step,
-  StepDescription,
-  StepIcon,
-  StepIndicator,
-  StepNumber,
-  StepSeparator,
-  StepStatus,
-  StepTitle,
-  Text,
-  useSteps,
-} from "@kvib/react/src";
+import { Box, Steps as KvibStepper, Steps, useStepsContext } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibStepper> = {
@@ -52,7 +38,7 @@ const steps = [
 ];
 
 const StepperExample = ({ ...args }) => {
-  const { activeStep } = useSteps({
+  const { activeStep } = useStepsContext({
     index: 1,
     count: steps.length,
   });
@@ -62,16 +48,17 @@ const StepperExample = ({ ...args }) => {
   return (
     <KvibStepper {...args} index={activeStep}>
       {simpleSteps.map((step, index) => (
-        <Step key={index}>
-          <StepIndicator>
-            <StepStatus complete={<StepIcon />} incomplete={<StepNumber />} active={<StepNumber />} />
-          </StepIndicator>
+        <Steps.Item key={index}>
+          <Steps.Indicator>
+            <Steps.Status isCompleted={index < activeStep} isActive={index === activeStep} />
+          </Steps.Indicator>
 
           <Box flexShrink="0">
-            <StepTitle>{step.title}</StepTitle>
+            <Steps.Title>{step.title}</Steps.Title>
           </Box>
-          <StepSeparator />
-        </Step>
+
+          <Steps.Separator />
+        </Steps.Item>
       ))}
     </KvibStepper>
   );
@@ -79,148 +66,4 @@ const StepperExample = ({ ...args }) => {
 
 export const Preview: Story = {
   render: args => <StepperExample {...args} />,
-};
-
-const StepperOrientationExample = ({ ...args }) => {
-  const { activeStep } = useSteps({
-    index: 1,
-    count: steps.length,
-  });
-
-  return (
-    <KvibStepper {...args} index={activeStep} orientation="vertical" height="400px" gap="0">
-      {steps.map((step, index) => (
-        <Step key={index}>
-          <StepIndicator>
-            <StepStatus complete={<StepIcon />} incomplete={<StepNumber />} active={<StepNumber />} />
-          </StepIndicator>
-          <Box flexShrink="0">
-            <StepTitle>{step.title}</StepTitle>
-            <StepDescription>{step.description}</StepDescription>
-          </Box>
-
-          <StepSeparator />
-        </Step>
-      ))}
-    </KvibStepper>
-  );
-};
-
-export const StepperOrientation: Story = {
-  render: args => <StepperOrientationExample {...args} />,
-};
-
-const StepperSizeExample = ({ ...args }) => {
-  const { activeStep } = useSteps({
-    index: 1,
-    count: steps.length,
-  });
-
-  return (
-    <KvibStepper {...args} size="lg" index={activeStep}>
-      {steps.map((step, index) => (
-        <Step key={index}>
-          <StepIndicator>
-            <StepStatus complete={<StepIcon />} incomplete={<StepNumber />} active={<StepNumber />} />
-          </StepIndicator>
-          <Box flexShrink="0">
-            <StepTitle>{step.title}</StepTitle>
-            <StepDescription>{step.description}</StepDescription>
-          </Box>
-          <StepSeparator />
-        </Step>
-      ))}
-    </KvibStepper>
-  );
-};
-
-export const StepperSizes: Story = {
-  render: args => <StepperSizeExample {...args} />,
-};
-
-const StepperColorExample = ({ ...args }) => {
-  const { activeStep } = useSteps({
-    index: 1,
-    count: steps.length,
-  });
-
-  return (
-    <KvibStepper {...args} size="lg" colorScheme="red" index={activeStep}>
-      {steps.map((step, index) => (
-        <Step key={index}>
-          <StepIndicator>
-            <StepStatus complete={<StepIcon />} incomplete={<StepNumber />} active={<StepNumber />} />
-          </StepIndicator>
-          <Box flexShrink="0">
-            <StepTitle>{step.title}</StepTitle>
-            <StepDescription>{step.description}</StepDescription>
-          </Box>
-          <StepSeparator />
-        </Step>
-      ))}
-    </KvibStepper>
-  );
-};
-
-export const StepperColors: Story = {
-  render: args => <StepperColorExample {...args} />,
-};
-
-const StepperClickExample = ({ ...args }) => {
-  const { activeStep, setActiveStep } = useSteps({
-    index: 1,
-    count: steps.length,
-  });
-
-  return (
-    <KvibStepper {...args} size="lg" index={activeStep}>
-      {steps.map((step, index) => (
-        <Step key={index} onClick={() => setActiveStep(index)}>
-          <StepIndicator>
-            <StepStatus complete={<StepIcon />} incomplete={<StepNumber />} active={<StepNumber />} />
-          </StepIndicator>
-          <Box flexShrink="0">
-            <StepTitle>{step.title}</StepTitle>
-            <StepDescription>{step.description}</StepDescription>
-          </Box>
-          <StepSeparator />
-        </Step>
-      ))}
-    </KvibStepper>
-  );
-};
-
-export const StepperClick: Story = {
-  render: args => <StepperClickExample {...args} />,
-};
-
-const StepperProgressbarExample = ({ ...args }) => {
-  const { activeStep } = useSteps({
-    index: 1,
-    count: steps.length,
-  });
-
-  const activeStepText = steps[activeStep].description;
-
-  return (
-    <KvibStack>
-      <KvibStepper {...args} size="sm" index={activeStep} gap="0">
-        {steps.map((_step, index) => (
-          <Step key={index} aria-label={index.toString()} role="status">
-            <StepIndicator>
-              <StepStatus complete={<StepIcon />} />
-            </StepIndicator>
-            <StepSeparator />
-          </Step>
-        ))}
-      </KvibStepper>
-      <Text>
-        Step {activeStep + 1}: <b>{activeStepText}</b>
-      </Text>
-    </KvibStack>
-  );
-};
-
-export const StepperProgressbar: Story = {
-  render: args => <StepperProgressbarExample {...args} />,
 };

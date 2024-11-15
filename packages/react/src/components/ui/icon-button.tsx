@@ -1,12 +1,12 @@
+import { IconProps } from "@/typography/list";
 import type { IconButtonProps as ChakraIconButtonProps } from "@chakra-ui/react";
 import { AbsoluteCenter, IconButton as ChakraIconButton, Spinner } from "@chakra-ui/react";
-import { MaterialSymbol } from "material-symbols";
 import { forwardRef } from "react";
 
 export interface IconButtonProps extends ChakraIconButtonProps {
   loading?: boolean;
   loadingText?: React.ReactNode;
-  icon: MaterialSymbol;
+  icon: IconProps;
 }
 
 export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(function IconButton(props, ref) {

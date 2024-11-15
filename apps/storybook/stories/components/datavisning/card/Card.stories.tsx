@@ -5,7 +5,7 @@ import {
   CardBody as KvibCardBody,
   CardFooter as KvibCardFooter,
   CardHeader as KvibCardHeader,
-  Divider as KvibDivider,
+  Separator as KvibDivider,
   Heading as KvibHeading,
   Image as KvibImage,
   Stack as KvibStack,
@@ -80,7 +80,7 @@ export const Preview: Story = {
 export const CardVariants: Story = {
   args: { size: "sm" },
   render: args => (
-    <KvibStack spacing="4">
+    <KvibStack gap="4">
       {["elevated", "outline", "filled", "unstyled"].map(variant => (
         <KvibCard {...args} key={variant} variant={variant}>
           <KvibCardHeader>
@@ -97,7 +97,7 @@ export const CardVariants: Story = {
 
 export const CardSizes: Story = {
   render: args => (
-    <KvibStack spacing="4">
+    <KvibStack gap="4">
       {["sm", "md", "lg"].map(size => (
         <KvibCard {...args} key={size} size={size}>
           <KvibCardHeader>
@@ -121,7 +121,7 @@ export const CardComposition: Story = {
           alt="Boat dock with small boats"
           borderRadius="md"
         />
-        <KvibStack mt="6" spacing="3">
+        <KvibStack mt="6" gap="3">
           <KvibHeading size="md">Digitalt løft i havn</KvibHeading>
           <KvibText>
             Kystverket har tildelt 10,5 millioner kroner til prosjektet «Digital tvilling i havn» for å styrke
@@ -132,7 +132,7 @@ export const CardComposition: Story = {
       </KvibCardBody>
       <KvibDivider />
       <KvibCardFooter>
-        <KvibButtonGroup spacing="2">
+        <KvibButtonGroup gap="2">
           <KvibButton variant="primary" colorScheme="blue">
             Les artikkel
           </KvibButton>

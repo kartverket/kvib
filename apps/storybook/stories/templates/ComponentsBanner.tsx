@@ -9,10 +9,10 @@ interface ComponentBannerProps extends CardProps {
 export const ComponentsBanner = ({ title, description, hasCodeBelow, ...props }: ComponentBannerProps) => {
   return (
     <Card
-      variant="unstyled"
-      backgroundColor="green.500"
-      padding="1rem 2.5rem"
-      marginBottom={hasCodeBelow ? "" : "2rem"}
+      variant="subtle"
+      bg="green.500"
+      p="1rem 2.5rem"
+      mb={hasCodeBelow ? "0" : "2rem"}
       className={hasCodeBelow ? "ComponentsBanner" : ""}
       {...props}
     >

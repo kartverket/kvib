@@ -74,6 +74,11 @@ const meta: Meta<typeof KvibButton> = {
       control: "boolean",
       defaultValue: { summary: false },
     },
+    leftIcon: {
+      table: { type: { summary: "string" } },
+      control: "text",
+      defaultValue: { summary: "" },
+    },
   },
 };
 
@@ -98,7 +103,7 @@ export const ButtonColors: Story = {
   render: args => (
     <KvibButtonGroup orientation="vertical">
       <KvibButton {...args}>Nettside</KvibButton>
-      <KvibButton colorPalette="blue" {...args}>
+      <KvibButton {...args} colorPalette="blue">
         Forvaltning
       </KvibButton>
     </KvibButtonGroup>

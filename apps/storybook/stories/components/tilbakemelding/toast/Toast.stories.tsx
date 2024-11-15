@@ -1,4 +1,4 @@
-import { Box, Button, Center, HStack, Icon, UseToastOptions as KvibToast, Stack, useToast } from "@kvib/react/src";
+import { Box, Button, Center, HStack, Icon, Toaster as KvibToast, Stack, toaster } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<KvibToast> = {
@@ -94,15 +94,13 @@ const meta: Meta<KvibToast> = {
 export default meta;
 
 const ToastExample = ({ ...args }) => {
-  const toast = useToast();
-
   return (
     <Center>
       <Button
         colorScheme={args.btnClr}
         w={args.btnW}
         onClick={() =>
-          toast({
+          toaster.create({
             title: args.title,
             description: args.description,
             status: args.status,

@@ -1,5 +1,6 @@
 import {
   Breadcrumb as KvibBreadcrumb,
+  BreadcrumbCurrentLink as KvibBreadcrumbCurrentLink,
   BreadcrumbItem as KvibBreadcrumbItem,
   BreadcrumbLink as KvibBreadcrumbLink,
 } from "@kvib/react/src";
@@ -49,9 +50,9 @@ export const Preview: Story = {
         <KvibBreadcrumbLink href="#">Docs</KvibBreadcrumbLink>
       </KvibBreadcrumbItem>
 
-      <KvibBreadcrumbItem isCurrentPage>
+      <KvibBreadcrumbCurrentLink>
         <KvibBreadcrumbLink href="#">Breadcrumb</KvibBreadcrumbLink>
-      </KvibBreadcrumbItem>
+      </KvibBreadcrumbCurrentLink>
     </KvibBreadcrumb>
   ),
 };
@@ -67,9 +68,9 @@ export const BreadcrumbSeparator: Story = {
         <KvibBreadcrumbLink href="#">About</KvibBreadcrumbLink>
       </KvibBreadcrumbItem>
 
-      <KvibBreadcrumbItem isCurrentPage>
+      <KvibBreadcrumbCurrentLink>
         <KvibBreadcrumbLink href="#">Contact</KvibBreadcrumbLink>
-      </KvibBreadcrumbItem>
+      </KvibBreadcrumbCurrentLink>
     </KvibBreadcrumb>
   ),
 };

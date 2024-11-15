@@ -4,6 +4,7 @@ export {
   DialogBackdrop,
   DialogBody,
   DialogCloseTrigger,
+  DialogContent,
   DialogDescription,
   DialogFooter,
   DialogHeader,
