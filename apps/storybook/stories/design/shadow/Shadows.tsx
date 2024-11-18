@@ -26,17 +26,20 @@ export const Shadows = () => {
         </Tr>
       </Thead>
       <Tbody>
-        {Object.entries(shadows).map(([size, value]) => (
-          <Tr key={size}>
-            <Td backgroundColor="#F7FAFC">
-              <Center>{example(value)}</Center>
-            </Td>
-            <Td backgroundColor="white">{`${size} / ${value}`}</Td>
-            <Td backgroundColor="white">
-              <Code>{`var(--kvib-shadows-${size})`}</Code>
-            </Td>
-          </Tr>
-        ))}
+        {Object.entries(shadows).map(([size, value]) => {
+          const val = value.value;
+          return (
+            <Tr key={size}>
+              <Td backgroundColor="#F7FAFC">
+                <Center>{example(val)}</Center>
+              </Td>
+              <Td backgroundColor="white">{`${size} / ${val}`}</Td>
+              <Td backgroundColor="white">
+                <Code>{`var(--kvib-shadows-${size})`}</Code>
+              </Td>
+            </Tr>
+          );
+        })}
       </Tbody>
     </Table>
   );

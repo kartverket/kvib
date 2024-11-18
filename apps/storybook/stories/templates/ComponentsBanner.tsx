@@ -13,7 +13,7 @@ export const ComponentsBanner = ({ title, description, hasCodeBelow, ...props }:
       bg="green.500"
       p="1rem 2.5rem"
       mb={hasCodeBelow ? "0" : "2rem"}
-      className={hasCodeBelow ? "ComponentsBanner" : ""}
+      className={"sb-unstyled"}
       {...props}
     >
       <CardBody display="flex" flexDirection="column" justifyContent="center" margin="1rem 0">

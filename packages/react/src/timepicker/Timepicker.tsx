@@ -1,6 +1,7 @@
-import { Input, useFieldContext } from "@chakra-ui/react";
+import { IconButton } from "@/button";
+import { Field } from "@/field";
+import { useFieldContext } from "@chakra-ui/react";
 import { CalendarDateTime, parseTime } from "@internationalized/date";
-import { IconButton } from "@kvib/react/src";
 import { TimeValue } from "@react-types/datepicker";
 import { useRef, useState } from "react";
 import { useTimeFieldState } from "react-stately";
@@ -9,13 +10,13 @@ import { TimeField } from "./TimeField";
 type TimepickerProps = {
   size?: "xs" | "sm" | "md" | "lg";
   width?: "fit-content" | "full";
-  variant?: "outline" | "filled" | "flushed" | "unstyled";
-  colorScheme?: "green" | "blue";
+  variant?: "outline" | "flushed" | "unstyled";
+  colorPalette?: "green" | "blue";
   value?: TimeValue;
   defaultValue?: TimeValue;
   onChange?: (value: TimeValue) => void;
-  isDisabled?: boolean;
-  isInvalid?: boolean;
+  disabled?: boolean;
+  invalid?: boolean;
   minuteInterval?: number;
   ariaLabel?: string;
 };
@@ -24,19 +25,19 @@ export const Timepicker = ({
   size,
   width = "fit-content",
   variant = "outline",
-  colorScheme,
+  colorPalette,
   value,
   defaultValue = getCurrentTime(),
   onChange = () => {},
-  isDisabled: isDisabledExternally = false,
-  isInvalid: isInvalidExternally = false,
+  disabled: isDisabledExternally = false,
+  invalid: isInvalidExternally = false,
   minuteInterval = 30,
   ariaLabel,
 }: TimepickerProps) => {
   // Get state from form control context
   const formControlContext = useFieldContext();
-  const isDisabledFromForm = formControlContext?.isDisabled || false;
-  const isInvalidFromForm = formControlContext?.isInvalid || false;
+  const isDisabledFromForm = formControlContext?.disabled || false;
+  const isInvalidFromForm = formControlContext?.invalid || false;
 
   // Determine the effective isDisabled and isInvalid states
   const isDisabled = isDisabledExternally || isDisabledFromForm;
@@ -79,19 +80,14 @@ export const Timepicker = ({
   const focusStyles = getFocusStyles(isFocused, isInvalid, variant);
 
   return (
-    <Input
-      as="div"
+    <Field
       aria-label={ariaLabel || "timepicker"}
-      display="flex"
-      /* variant={variant} */
-      size={size}
       width={width}
-      paddingX={2}
+      flexDir="row"
       alignItems="center"
       justifyContent="space-between"
-      gap={2}
       disabled={isDisabled}
-      _invalid={isInvalid}
+      invalid={isInvalid}
       onClick={() => inputRef.current?.focus()}
       onFocus={() => setIsFocused(true)}
       onBlur={() => setIsFocused(false)}
@@ -101,23 +97,23 @@ export const Timepicker = ({
       <IconButton
         onClick={() => adjustTime("backward")}
         size={buttonSize}
-        colorScheme={colorScheme}
-        /* variant="ghost" */
+        colorPalette={colorPalette}
+        variant="ghost"
         icon="chevron_left"
         aria-label="earlier time"
         disabled={isDisabled}
       />
-      <TimeField state={state} colorScheme={colorScheme} />
+      <TimeField state={state} colorPalette={colorPalette} />
       <IconButton
         onClick={() => adjustTime("forward")}
         size={buttonSize}
-        colorScheme={colorScheme}
-        /* variant="ghost" */
+        colorPalette={colorPalette}
+        variant="ghost"
         icon="chevron_right"
         aria-label="later time"
         disabled={isDisabled}
       />
-    </Input>
+    </Field>
   );
 };
 

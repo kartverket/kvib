@@ -154,7 +154,6 @@ const LazyStory = ({ component }: { component: ReactElement }) => {
   return (
     <Flex
       ref={storyRef}
-      className="sb-unstyled"
       bg="gray.50"
       border="none"
       height="11rem"

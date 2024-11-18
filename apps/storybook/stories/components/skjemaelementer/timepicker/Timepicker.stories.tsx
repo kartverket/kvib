@@ -68,7 +68,7 @@ const meta: Meta<typeof KvibTimepicker> = {
         type: { summary: "(value: TimeValue) => void" },
       },
     },
-    isDisabled: {
+    disabled: {
       description: "If true, the Timepicker will be disabled",
       control: { type: "boolean" },
       table: {
@@ -76,7 +76,7 @@ const meta: Meta<typeof KvibTimepicker> = {
         defaultValue: { summary: "false" },
       },
     },
-    isInvalid: {
+    invalid: {
       description: "If true, the Timepicker will be marked as invalid",
       control: { type: "boolean" },
       table: {

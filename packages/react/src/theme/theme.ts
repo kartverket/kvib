@@ -15,9 +15,12 @@ import {
   zIndices,
 } from "./tokens";
 
+import { alertSlotRecipe } from "./recipes/alert.recipe";
+import { breadcrumbSlotRecipe } from "./recipes/breadcrumb.recipe";
 import { buttonRecipe } from "./recipes/button.recipe";
 import { iconButtonRecipe } from "./recipes/icon-button.recipe";
 import { linkRecipe } from "./recipes/link.recipe";
+import { selectNativeRecipe } from "./recipes/select-native.recipe";
 import { config as kvibConfig } from "./tokens/config";
 import sizes from "./tokens/sizes";
 import { transitionDuration, transitionProperty, transitionTimingFunction } from "./tokens/transitions";
@@ -44,11 +47,15 @@ const customConfig = defineConfig({
       easings: transitionTimingFunction,
       animations: transitionProperty,
     },
-
     recipes: {
       button: buttonRecipe,
       iconButton: iconButtonRecipe,
       link: linkRecipe,
+      nativeSelect: selectNativeRecipe,
+    },
+    slotRecipes: {
+      alert: alertSlotRecipe,
+      breadcrumb: breadcrumbSlotRecipe,
     },
   },
 });

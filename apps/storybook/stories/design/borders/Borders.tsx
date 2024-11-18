@@ -20,15 +20,18 @@ export const Borders = () => {
         </Tr>
       </Thead>
       <Tbody>
-        {Object.entries(borders).map(([name, value]) => (
-          <Tr key={name}>
-            <Td backgroundColor="white">{name}</Td>
-            <Td backgroundColor="white">{value}</Td>
-            <Td backgroundColor="white">
-              <Code>{`var(--kvib-borders-${name})`}</Code>
-            </Td>
-          </Tr>
-        ))}
+        {Object.entries(borders).map(([name, value]) => {
+          const val = value.value;
+          return (
+            <Tr key={name}>
+              <Td backgroundColor="white">{name}</Td>
+              <Td backgroundColor="white">{val}</Td>
+              <Td backgroundColor="white">
+                <Code>{`var(--kvib-borders-${name})`}</Code>
+              </Td>
+            </Tr>
+          );
+        })}
       </Tbody>
     </Table>
   );

@@ -8,7 +8,9 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup src/index.ts --dts --treeshake --format esm,cjs"
+    "build": "tsup src/index.ts --dts --treeshake --format esm,cjs",
+    "codegen": "chakra snippet add",
+    "typegen": "chakra typegen src/theme/theme.ts"
   },
   "sideEffects": false,
   "license": "MIT",

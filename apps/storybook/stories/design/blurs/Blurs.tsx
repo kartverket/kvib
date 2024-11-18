@@ -31,17 +31,20 @@ export const Blurs = () => {
         </Tr>
       </Thead>
       <Tbody>
-        {Object.entries(blur).map(([size, value]) => (
-          <Tr key={size}>
-            <Td backgroundColor="#F7FAFC">
-              <Center>{example(value)}</Center>
-            </Td>
-            <Td backgroundColor="white">{`${size} / ${value}`}</Td>
-            <Td backgroundColor="white">
-              <Code>{`var(--kvib-blur-${size})`}</Code>
-            </Td>
-          </Tr>
-        ))}
+        {Object.entries(blur).map(([size, value]) => {
+          const val = value.value;
+          return (
+            <Tr key={size}>
+              <Td backgroundColor="#F7FAFC">
+                <Center>{example(val)}</Center>
+              </Td>
+              <Td backgroundColor="white">{`${size} / ${val}`}</Td>
+              <Td backgroundColor="white">
+                <Code>{`var(--kvib-blur-${val})`}</Code>
+              </Td>
+            </Tr>
+          );
+        })}
       </Tbody>
     </Table>
   );

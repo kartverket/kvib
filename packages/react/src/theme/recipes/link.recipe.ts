@@ -1,10 +1,9 @@
 import { defineRecipe } from "@chakra-ui/react";
 
-export const linkRecipe = defineRecipe(props => {
-  console.log("Colorpalette", props.theme.colors);
-  return {
+export const linkRecipe = defineRecipe({
+  base: {
     textDecoration: "underline",
-    color: `${colorPalette}.500`,
+    color: "colorPalette.500",
     _focusVisible: {
       borderRadius: "1px",
       boxShadow: "none",
@@ -12,10 +11,10 @@ export const linkRecipe = defineRecipe(props => {
     },
     _hover: {
       textDecoration: "none",
-      color: `${colorPalette}.400`, // Make sure colorScheme is defined in your theme
+      color: "colorPalette.400",
     },
     _active: {
       textDecoration: "underline",
     },
-  };
+  },
 });

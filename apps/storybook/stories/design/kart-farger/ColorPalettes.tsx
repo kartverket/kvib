@@ -119,7 +119,7 @@ export const ColorPalettes = ({ hexColors, RGBAColors }: { hexColors: MapColorsT
             <Flex gap={5} flexWrap="wrap">
               {Object.values(shades).map((shade, index) => (
                 <div key={index}>
-                  <ColorBox value={shade} format={format} />
+                  <ColorBox value={shade.value} format={format} />
                 </div>
               ))}
             </Flex>

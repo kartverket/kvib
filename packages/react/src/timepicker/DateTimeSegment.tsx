@@ -1,4 +1,3 @@
-import { useRecipe } from "@chakra-ui/react";
 import { Box } from "@kvib/react/src";
 import { useRef } from "react";
 import { useDateSegment } from "react-aria";
@@ -7,7 +6,7 @@ import { DateFieldState, DateSegment } from "react-stately";
 type DateTimeSegmentProps = {
   segment: DateSegment;
   state: DateFieldState;
-  colorScheme?: "green" | "blue";
+  colorPalette?: "green" | "blue";
 };
 /**
  * A date time segment is a part of a date or a time stamp.
@@ -16,13 +15,12 @@ type DateTimeSegmentProps = {
  *
  * This component should be used with the react-aria library, and is not meant to be used directly.
  * */
-export const DateTimeSegment = ({ segment, state, colorScheme, ...props }: DateTimeSegmentProps) => {
+export const DateTimeSegment = ({ segment, state, colorPalette }: DateTimeSegmentProps) => {
   const ref = useRef(null);
   const { segmentProps } = useDateSegment(segment, state, ref);
-  const styles = useRecipe({ key: "Timepicker", recipe: props });
 
   return (
-    <Box {...segmentProps} ref={ref} paddingX="1px" outline="none" borderRadius="sm" css={{ ...styles }}>
+    <Box {...segmentProps} ref={ref} paddingX="1px" outline="none" borderRadius="sm" colorPalette={colorPalette}>
       {isPaddable(segment.type) ? segment.text.padStart(2, "0") : segment.text}
     </Box>
   );

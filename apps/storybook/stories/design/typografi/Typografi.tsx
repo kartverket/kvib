@@ -18,7 +18,6 @@ const TypografiTable = () => (
   <Box border="1px solid var(--kvib-colors-gray-200)" mt="16px" p="16px" boxSizing="content-box" width="100%">
     <Table
       width="100%"
-      className="sb-unstyled"
       size="md"
       style={{
         "td, th": {
@@ -103,13 +102,13 @@ const Beskrivelse = () => (
       href="https://www.kartverket.no/om-kartverket/kartverkets-identitet"
       target="_blank"
       rel="noopener noreferrer"
-      isExternal={false}
+      external={false}
     >
       Kartverkets designmanual
     </Link>
     . Typografien ligger tilgjengelig i Kartverkets Designsystem i Figma. Om du trenger å laste ned Mulish, kan du gjøre
     det fra{" "}
-    <Link href="https://fonts.google.com/specimen/Mulish" target="_blank" rel="noopener noreferrer" isExternal>
+    <Link href="https://fonts.google.com/specimen/Mulish" target="_blank" rel="noopener noreferrer" external>
       Google Fonts
     </Link>
     .

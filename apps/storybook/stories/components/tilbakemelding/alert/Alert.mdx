@@ -14,55 +14,8 @@ import * as AlertStories from "./Alert.stories";
 ```jsx
 import { Alert, AlertIcon, AlertTitle, AlertDescription } from "@kvib/react";
 ```
-
-<Feedback component="Alert" />
-
-<DocsHeading light>Anatomi</DocsHeading>
-
-<DocsAnatomy imgPath="assets/AlertAnatomy.svg" />
-
-<DocsHeading light>Varianter</DocsHeading>
-
-<DocsContainer>
-<DocsStory
-  title="Tittel"
-  description="Tittelen er valgfri, men hvis brukt, skal den formidle en kort og beskrivende beskjed."
-  story={<Canvas of={AlertStories.AlertError} />}
-/>
-
-<DocsStory
-  title="Beskrivelse"
-  description="Beskrivelse er alltid nødvendig. Hvis den er brukt med en tittel, skal den understreke informasjonen i tittelen, og/eller beskrive neste steg brukeren kan ta."
-  story={
-    <Canvas>
-      <Story of={AlertStories.AlertWarning} />
-      <Story of={AlertStories.AlertSuccess} />
-    </Canvas>
-  }
-/>
-
-<DocsStory
-  title="Hensikt"
-  description="La hensikten reflektere typen beskjed brukeren skal oppfatte. Bruk 'info' for ekstra informasjon eller tips, 'success' for å informere brukeren om at en handling var vellykket, 'warning' f.eks før en viktig avgjørelse eller enveishandling, og 'error' for å fortelle brukeren om at noe gikk galt."
-  story={<Canvas of={AlertStories.AlertInfo} />}
-/>
-
-<DocsStory
-  title="Utseende"
-  description="Bruk utseende for å formidle forskjellige nivå av understreking, eller for å rette 'alert' mot en bestemt retning."
-  story={<Canvas of={AlertStories.AlertEmphasisWarning} />}
-/>
-</DocsContainer>
-
-<DocsHeading light>Kjente feil</DocsHeading>
-
-<DocsContainer>
-
-Bruk av colorScheme="orange" og variant="solid" sammen gir for lav kontrast. Dette fargetemaet er også brukt med status="warning", som dermed heller ikke kan brukes sammen med variant="solid".
-
-Det er foreløpig ikke mulig å bytte ut eller droppe status-ikonet for alerter.
-
-</DocsContainer>
+<br/>
+<br/>
 
 <DocsHeading light>Props</DocsHeading>
 <Canvas of={AlertStories.Preview} />

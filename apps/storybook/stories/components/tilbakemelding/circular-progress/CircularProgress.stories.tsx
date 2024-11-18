@@ -1,9 +1,9 @@
-import { ProgressCircle as KvibCircularProgress, HStack as KvibHStack } from "@kvib/react/src";
+import { ProgressCircle, ProgressCircleRing, ProgressCircleValueText } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
-const meta: Meta<typeof KvibCircularProgress> = {
+const meta: Meta<typeof ProgressCircle> = {
   title: "Komponenter/Circular Progress",
-  component: KvibCircularProgress,
+  component: ProgressCircle,
   parameters: {
     docs: {
       story: { inline: true },
@@ -97,64 +97,13 @@ const meta: Meta<typeof KvibCircularProgress> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof KvibCircularProgress>;
+type Story = StoryObj<typeof ProgressCircle>;
 
 export const Preview: Story = {
-  args: { value: 80 },
-  render: args => <KvibCircularProgress {...args} aria-label="progress bar" />,
-};
-
-export const CircularProgressSizes: Story = {
-  args: { value: 30 },
   render: args => (
-    <KvibHStack>
-      <KvibCircularProgress {...args} size="80px" aria-label="progress bar 80px" />
-      <KvibCircularProgress {...args} size="120px" aria-label="progress bar 120px" />
-    </KvibHStack>
+    <ProgressCircle>
+      <ProgressCircleRing />
+      <ProgressCircleValueText />
+    </ProgressCircle>
   ),
-};
-
-export const CircularProgressThickness: Story = {
-  args: { value: 70 },
-  render: args => (
-    <KvibHStack>
-      <KvibCircularProgress {...args} thickness="4px" aria-label="progress bar thin" />
-      <KvibCircularProgress {...args} thickness="10px" aria-label="progress bar thick" />
-    </KvibHStack>
-  ),
-};
-
-export const CircularProgressColors: Story = {
-  args: { value: 70 },
-  render: args => (
-    <KvibHStack>
-      <KvibCircularProgress {...args} color="green.400" aria-label="progress bar green" />
-      <KvibCircularProgress {...args} color="blue.400" aria-label="progress bar blue" />
-    </KvibHStack>
-  ),
-};
-
-export const CircularProgressLabel: Story = {
-  args: { color: "green.400" },
-  render: args => (
-    <KvibHStack>
-      <KvibCircularProgress
-        {...args}
-        value={70}
-        aria-label="progress bar labeled 70%"
-        label="70%"
-      ></KvibCircularProgress>
-      <KvibCircularProgress
-        {...args}
-        value={30}
-        aria-label="progress bar labeled 30%"
-        label="30%"
-      ></KvibCircularProgress>
-    </KvibHStack>
-  ),
-};
-
-export const CircularProgressIndeterminate: Story = {
-  args: {},
-  render: args => <KvibCircularProgress {...args} isIndeterminate aria-label="progress bar indeterminate" />,
 };

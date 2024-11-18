@@ -26,17 +26,20 @@ export const Radius = () => {
         </Tr>
       </Thead>
       <Tbody>
-        {Object.entries(radii).map(([size, value]) => (
-          <Tr key={size}>
-            <Td backgroundColor="white">
-              <Center>{example(value)}</Center>
-            </Td>
-            <Td backgroundColor="white">{`${size} / ${value}`}</Td>
-            <Td backgroundColor="white">
-              <Code>{`var(--kvib-radii-${size})`}</Code>
-            </Td>
-          </Tr>
-        ))}
+        {Object.entries(radii).map(([size, value]) => {
+          const val = value.value;
+          return (
+            <Tr key={size}>
+              <Td backgroundColor="white">
+                <Center>{example(val)}</Center>
+              </Td>
+              <Td backgroundColor="white">{`${size} / ${val}`}</Td>
+              <Td backgroundColor="white">
+                <Code>{`var(--kvib-radii-${size})`}</Code>
+              </Td>
+            </Tr>
+          );
+        })}
       </Tbody>
     </Table>
   );
