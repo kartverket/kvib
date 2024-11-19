@@ -56,7 +56,7 @@ import * as SwitchStories from "../../components/skjemaelementer/switch/Switch.s
 import * as TextAreaStories from "../../components/skjemaelementer/textarea/Textarea.stories";
 import * as TimepickerStories from "../../components/skjemaelementer/timepicker/Timepicker.stories";
 import * as AlertStories from "../../components/tilbakemelding/alert/Alert.stories";
-import * as CircularProgressStories from "../../components/tilbakemelding/circular-progress/CircularProgress.stories";
+import * as ProgressCircleStories from "../../components/tilbakemelding/progress-circle/ProgressCircle.stories";
 import * as ProgressStories from "../../components/tilbakemelding/progress/Progress.stories";
 import * as SkeletonStories from "../../components/tilbakemelding/skeleton/Skeleton.stories";
 import * as SpinnerStories from "../../components/tilbakemelding/spinner/Spinner.stories";
@@ -388,8 +388,8 @@ export const Progress = (colorPalette: ColorPalette) => {
   return <Preview colorPalette={colorPalette} />;
 };
 
-export const CircularProgress = (colorPalette: ColorPalette) => {
-  const { Preview } = composeStories(CircularProgressStories);
+export const ProgressCircle = (colorPalette: ColorPalette) => {
+  const { Preview } = composeStories(ProgressCircleStories);
   return <Preview colorPalette={colorPalette} />;
 };
 

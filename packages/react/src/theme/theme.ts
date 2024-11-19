@@ -18,6 +18,8 @@ import {
 import { alertSlotRecipe } from "./recipes/alert.recipe";
 import { breadcrumbSlotRecipe } from "./recipes/breadcrumb.recipe";
 import { buttonRecipe } from "./recipes/button.recipe";
+import { cardSlotRecipe } from "./recipes/card.recipe";
+import { checkboxSlotRecipe } from "./recipes/checkbox.recipe";
 import { iconButtonRecipe } from "./recipes/icon-button.recipe";
 import { linkRecipe } from "./recipes/link.recipe";
 import { selectNativeRecipe } from "./recipes/select-native.recipe";
@@ -56,6 +58,8 @@ const customConfig = defineConfig({
     slotRecipes: {
       alert: alertSlotRecipe,
       breadcrumb: breadcrumbSlotRecipe,
+      card: cardSlotRecipe,
+      checkbox: checkboxSlotRecipe,
     },
   },
 });

@@ -1,5 +1,5 @@
 import { RadioCard } from "@chakra-ui/react";
-import { Fragment, forwardRef } from "react";
+import * as React from "react";
 
 interface RadioCardItemProps extends RadioCard.ItemProps {
   icon?: React.ReactElement;
@@ -11,7 +11,7 @@ interface RadioCardItemProps extends RadioCard.ItemProps {
   inputProps?: React.InputHTMLAttributes<HTMLInputElement>;
 }
 
-export const RadioCardItem = forwardRef<HTMLInputElement, RadioCardItemProps>(function RadioCardItem(props, ref) {
+export const RadioCardItem = React.forwardRef<HTMLInputElement, RadioCardItemProps>(function RadioCardItem(props, ref) {
   const {
     inputProps,
     label,
@@ -24,7 +24,7 @@ export const RadioCardItem = forwardRef<HTMLInputElement, RadioCardItemProps>(fu
   } = props;
 
   const hasContent = label || description || icon;
-  const ContentWrapper = indicator ? RadioCard.ItemContent : Fragment;
+  const ContentWrapper = indicator ? RadioCard.ItemContent : React.Fragment;
 
   return (
     <RadioCard.Item {...rest}>

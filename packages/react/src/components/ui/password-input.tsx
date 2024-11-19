@@ -2,7 +2,7 @@
 
 import type { ButtonProps, GroupProps, InputProps, StackProps } from "@chakra-ui/react";
 import { Box, HStack, IconButton, Input, Stack, mergeRefs, useControllableState } from "@chakra-ui/react";
-import { forwardRef, useRef } from "react";
+import * as React from "react";
 import { LuEye, LuEyeOff } from "react-icons/lu";
 import { InputGroup } from "./input-group";
 
@@ -17,7 +17,7 @@ export interface PasswordInputProps extends InputProps, PasswordVisibilityProps 
   rootProps?: GroupProps;
 }
 
-export const PasswordInput = forwardRef<HTMLInputElement, PasswordInputProps>(function PasswordInput(props, ref) {
+export const PasswordInput = React.forwardRef<HTMLInputElement, PasswordInputProps>(function PasswordInput(props, ref) {
   const {
     rootProps,
     defaultVisible,
@@ -33,7 +33,7 @@ export const PasswordInput = forwardRef<HTMLInputElement, PasswordInputProps>(fu
     onChange: onVisibleChange,
   });
 
-  const inputRef = useRef<HTMLInputElement>(null);
+  const inputRef = React.useRef<HTMLInputElement>(null);
 
   return (
     <InputGroup
@@ -58,7 +58,7 @@ export const PasswordInput = forwardRef<HTMLInputElement, PasswordInputProps>(fu
   );
 });
 
-const VisibilityTrigger = forwardRef<HTMLButtonElement, ButtonProps>(function VisibilityTrigger(props, ref) {
+const VisibilityTrigger = React.forwardRef<HTMLButtonElement, ButtonProps>(function VisibilityTrigger(props, ref) {
   return (
     <IconButton
       tabIndex={-1}
@@ -79,7 +79,7 @@ interface PasswordStrengthMeterProps extends StackProps {
   value: number;
 }
 
-export const PasswordStrengthMeter = forwardRef<HTMLDivElement, PasswordStrengthMeterProps>(
+export const PasswordStrengthMeter = React.forwardRef<HTMLDivElement, PasswordStrengthMeterProps>(
   function PasswordStrengthMeter(props, ref) {
     const { max = 4, value, ...rest } = props;
 

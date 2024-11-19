@@ -21,7 +21,7 @@
     "directory": "packages/react"
   },
   "devDependencies": {
-    "@chakra-ui/cli": "^3.1.0",
+    "@chakra-ui/cli": "^3.1.2",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.3.1",
     "react": "^18.2.0",
@@ -34,12 +34,12 @@
     "react-dom": "^18.2.0"
   },
   "dependencies": {
-    "@chakra-ui/react": "^3.1.0",
+    "@chakra-ui/react": "^3.1.2",
     "@emotion/react": "^11.13.3",
     "@fontsource/mulish": "^5.0.17",
     "chakra-react-select": "^5.0.1",
     "date-fns": "^4.1.0",
-    "material-symbols": "^0.25.1",
+    "material-symbols": "^0.27.0",
     "next-themes": "^0.4.3",
     "react-aria": "^3.35.1",
     "react-day-picker": "^9.2.1",

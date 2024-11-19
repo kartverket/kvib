@@ -1,7 +1,7 @@
 "use client";
 
 import { For, SegmentGroup } from "@chakra-ui/react";
-import { forwardRef, useMemo } from "react";
+import * as React from "react";
 
 interface Item {
   value: string;
@@ -20,10 +20,10 @@ function normalize(items: Array<string | Item>): Item[] {
   });
 }
 
-export const SegmentedControl = forwardRef<HTMLDivElement, SegmentedControlProps>(
+export const SegmentedControl = React.forwardRef<HTMLDivElement, SegmentedControlProps>(
   function SegmentedControl(props, ref) {
     const { items, ...rest } = props;
-    const data = useMemo(() => normalize(items), [items]);
+    const data = React.useMemo(() => normalize(items), [items]);
 
     return (
       <SegmentGroup.Root ref={ref} {...rest}>

@@ -11,7 +11,6 @@ import {
   Card,
   Center,
   Checkbox,
-  CircularProgress,
   CloseButton,
   Code,
   ColorPalette,
@@ -44,6 +43,7 @@ import {
   Popover,
   Portal,
   Progress,
+  ProgressCircle,
   Radio,
   Search,
   SearchAsync,
@@ -479,11 +479,11 @@ export const Komponenter: (colorScheme: ColorPalette) => Record<string, Kategori
         story: Alert(colorScheme),
         link: "alert",
       },
-      CircularProgress: {
-        navn: "Circular Progress",
+      ProgressCircle: {
+        navn: "Progress Circle",
         beskrivelse: "",
-        story: CircularProgress(colorScheme),
-        link: "circular-progress",
+        story: ProgressCircle(colorScheme),
+        link: "progress-circle",
       },
       Progress: {
         navn: "Progress",

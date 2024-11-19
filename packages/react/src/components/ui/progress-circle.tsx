@@ -1,15 +1,13 @@
 import type { SystemStyleObject } from "@chakra-ui/react";
 import { AbsoluteCenter, ProgressCircle as ChakraProgressCircle } from "@chakra-ui/react";
-import { forwardRef } from "react";
-
-export const ProgressCircleRoot = ChakraProgressCircle.Root;
+import * as React from "react";
 
 interface ProgressCircleRingProps extends ChakraProgressCircle.CircleProps {
   trackColor?: SystemStyleObject["stroke"];
   cap?: SystemStyleObject["strokeLinecap"];
 }
 
-export const ProgressCircleRing = forwardRef<SVGSVGElement, ProgressCircleRingProps>(
+export const ProgressCircleRing = React.forwardRef<SVGSVGElement, ProgressCircleRingProps>(
   function ProgressCircleRing(props, ref) {
     const { trackColor, cap, color, ...rest } = props;
     return (
@@ -21,7 +19,7 @@ export const ProgressCircleRing = forwardRef<SVGSVGElement, ProgressCircleRingPr
   },
 );
 
-export const ProgressCircleValueText = forwardRef<HTMLDivElement, ChakraProgressCircle.ValueTextProps>(
+export const ProgressCircleValueText = React.forwardRef<HTMLDivElement, ChakraProgressCircle.ValueTextProps>(
   function ProgressCircleValueText(props, ref) {
     return (
       <AbsoluteCenter>
@@ -30,3 +28,5 @@ export const ProgressCircleValueText = forwardRef<HTMLDivElement, ChakraProgress
     );
   },
 );
+
+export const ProgressCircleRoot = ChakraProgressCircle.Root;

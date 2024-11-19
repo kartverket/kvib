@@ -2,7 +2,7 @@
 
 import type { ButtonProps } from "@chakra-ui/react";
 import { Button, Toggle as ChakraToggle, useToggleContext } from "@chakra-ui/react";
-import { forwardRef } from "react";
+import * as React from "react";
 
 interface ToggleProps extends ChakraToggle.RootProps {
   variant?: keyof typeof variantMap;
@@ -16,7 +16,7 @@ const variantMap = {
   ghost: { on: "subtle", off: "ghost" },
 } as const;
 
-export const Toggle = forwardRef<HTMLButtonElement, ToggleProps>(function Toggle(props, ref) {
+export const Toggle = React.forwardRef<HTMLButtonElement, ToggleProps>(function Toggle(props, ref) {
   const { variant = "subtle", size, children, ...rest } = props;
   const variantConfig = variantMap[variant];
 
@@ -33,10 +33,12 @@ interface ToggleBaseButtonProps extends Omit<ButtonProps, "variant"> {
   variant: Record<"on" | "off", ButtonProps["variant"]>;
 }
 
-const ToggleBaseButton = forwardRef<HTMLButtonElement, ToggleBaseButtonProps>(function ToggleBaseButton(props, ref) {
-  const toggle = useToggleContext();
-  const { variant, ...rest } = props;
-  return <Button variant={toggle.pressed ? variant.on : variant.off} ref={ref} {...rest} />;
-});
+const ToggleBaseButton = React.forwardRef<HTMLButtonElement, ToggleBaseButtonProps>(
+  function ToggleBaseButton(props, ref) {
+    const toggle = useToggleContext();
+    const { variant, ...rest } = props;
+    return <Button variant={toggle.pressed ? variant.on : variant.off} ref={ref} {...rest} />;
+  },
+);
 
 export const ToggleIndicator = ChakraToggle.Indicator;

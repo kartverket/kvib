@@ -11,13 +11,13 @@ const meta: Meta<typeof KvibCard> = {
       canvas: { sourceState: "hidden" },
     },
   },
+  args: {
+    variant: "elevated",
+    size: "md",
+  },
   argTypes: {
-    direction: {
-      table: { type: { summary: "ResponsiveValue<FlexDirection>" } },
-      control: "text",
-    },
     size: {
-      description: "Size of the Card",
+      description: "Size of the component",
       table: {
         type: { summary: "sm | md | lg" },
         defaultValue: { summary: "md" },
@@ -26,12 +26,12 @@ const meta: Meta<typeof KvibCard> = {
       control: { type: "radio" },
     },
     variant: {
-      description: "The variant of the Card",
+      description: "The variant of the component",
       table: {
-        type: { summary: "elevated | outline | filled" },
+        type: { summary: "elevated | outline | subtle" },
         defaultValue: { summary: "elevated" },
       },
-      options: ["elevated", "outline", "filled", "unstyled"],
+      options: ["elevated", "outline", "subtle"],
       control: "radio",
     },
   },

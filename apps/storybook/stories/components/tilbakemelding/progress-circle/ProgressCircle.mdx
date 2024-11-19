@@ -1,0 +1,19 @@
+import { Text } from "@kvib/react/src";
+import { Canvas, Controls, Meta, Story } from "@storybook/blocks";
+import { DocsAnatomy, DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
+import * as ProgressCircleStories from "./ProgressCircle.stories";
+
+<Meta of={ProgressCircleStories} />
+
+<DocsContainer>
+
+# Progress Circle
+
+Progress Circle brukes til å indikere framgang i en prosess.
+
+
+<DocsHeading light>Props</DocsHeading>
+<Canvas of={ProgressCircleStories.Preview} />
+<Controls of={ProgressCircleStories.Preview} />
+
+</DocsContainer>
