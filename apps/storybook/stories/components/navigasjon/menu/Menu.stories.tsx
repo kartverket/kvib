@@ -1,14 +1,4 @@
-import {
-  Box,
-  Button,
-  Icon,
-  IconButton,
-  Menu as KvibMenu,
-  Group as KvibMenuGroup,
-  MenuItem,
-  MenuSeparator,
-  MenuTrigger,
-} from "@kvib/react/src";
+import { Button, Menu as KvibMenu, MenuContent, MenuItem, MenuProps, MenuTrigger } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibMenu> = {
@@ -212,127 +202,20 @@ export default meta;
 type Story = StoryObj<typeof KvibMenu>;
 
 export const Preview: Story = {
-  render: args => (
+  render: (args: MenuProps) => (
     <KvibMenu {...args}>
-      <MenuTrigger as={Button} rightIcon={"expand_more"}>
-        Handlinger
+      <MenuTrigger asChild>
+        <Button variant="subtle" size="sm">
+          Åpne
+        </Button>
       </MenuTrigger>
-      <MenuList>
-        <MenuItem>Nedlast</MenuItem>
-        <MenuItem>Lag en kopi</MenuItem>
-        <MenuItem>Marker som utkast</MenuItem>
-        <MenuItem>Slett</MenuItem>
-        <MenuItem>Bli med på en workshop</MenuItem>
-      </MenuList>
+      <MenuContent>
+        <MenuItem value="new-txt-a">Nedlast</MenuItem>
+        <MenuItem value="new-txt-b">Lag en kopi</MenuItem>
+        <MenuItem value="new-txt-c">Marker som utkast</MenuItem>
+        <MenuItem value="new-txt-d">Slett</MenuItem>
+        <MenuItem value="new-txt-e">Bli med på en workshop</MenuItem>
+      </MenuContent>
     </KvibMenu>
-  ),
-};
-
-export const MenuState: Story = {
-  render: args => (
-    <Box h="40">
-      <KvibMenu {...args}>
-        {({ isOpen }) => (
-          <>
-            <MenuTrigger as={Button} rightIcon={"expand_more"}>
-              {isOpen ? "Lukk" : "Åpne"}
-            </MenuTrigger>
-            <MenuList>
-              <MenuItem>Nedlast</MenuItem>
-              <MenuItem onClick={() => alert("Kopi")}>Lag en kopi</MenuItem>
-            </MenuList>
-          </>
-        )}
-      </KvibMenu>
-    </Box>
-  ),
-};
-
-export const MenuIconsCommands: Story = {
-  render: args => (
-    <Box h="40">
-      <KvibMenu {...args}>
-        <MenuTrigger as={IconButton} aria-label="Options" icon={"menu"} variant="primary" />
-        <MenuList>
-          <MenuItem icon={<Icon weight={300} icon="add" />} command="⌘T">
-            Ny fane
-          </MenuItem>
-          <MenuItem icon={<Icon weight={300} icon="open_in_new" />} command="⌘N">
-            Nytt vindu
-          </MenuItem>
-          <MenuItem icon={<Icon weight={300} icon="cached" />} command="⌘⇧N">
-            Åpne lukket fane
-          </MenuItem>
-          <MenuItem icon={<Icon weight={300} icon="file_open" />} command="⌘O">
-            Åpne fil...
-          </MenuItem>
-        </MenuList>
-      </KvibMenu>
-    </Box>
-  ),
-};
-
-export const MenuGroup: Story = {
-  render: args => (
-    <Box h="60">
-      <KvibMenu {...args}>
-        <MenuTrigger as={Button} colorScheme="green">
-          Profil
-        </MenuTrigger>
-        <MenuList>
-          <KvibMenuGroup title="Profil">
-            <MenuItem>Min konto</MenuItem>
-            <MenuItem>Betaling</MenuItem>
-          </KvibMenuGroup>
-          <MenuSeparator />
-          <KvibMenuGroup title="Hjelp">
-            <MenuItem>Dokumentasjon</MenuItem>
-            <MenuItem>FAQ</MenuItem>
-          </KvibMenuGroup>
-        </MenuList>
-      </KvibMenu>
-    </Box>
-  ),
-};
-
-export const MenuLink: Story = {
-  render: args => (
-    <Box h="20">
-      <KvibMenu {...args}>
-        <MenuTrigger>Åpne meny</MenuTrigger>
-        <MenuList>
-          <MenuItem as="a" href="#">
-            Link 1
-          </MenuItem>
-          <MenuItem as="a" href="#">
-            Link 2
-          </MenuItem>
-        </MenuList>
-      </KvibMenu>
-    </Box>
-  ),
-};
-
-export const MenuOptionGroups: Story = {
-  render: args => (
-    <Box h="80">
-      <KvibMenu {...args} closeOnSelect={false}>
-        <MenuButton as={Button} colorScheme="blue">
-          Sorter og filtrer
-        </MenuButton>
-        <MenuList minWidth="240px">
-          <MenuOptionGroup defaultValue="asc" title="Rekkefølge" type="radio">
-            <MenuItemOption value="asc">Stigende</MenuItemOption>
-            <MenuItemOption value="desc">Synkende</MenuItemOption>
-          </MenuOptionGroup>
-          <MenuDivider />
-          <MenuOptionGroup title="Filtrer" type="checkbox">
-            <MenuItemOption value="email">Email</MenuItemOption>
-            <MenuItemOption value="phone">Telefon</MenuItemOption>
-            <MenuItemOption value="country">Land</MenuItemOption>
-          </MenuOptionGroup>
-        </MenuList>
-      </KvibMenu>
-    </Box>
   ),
 };

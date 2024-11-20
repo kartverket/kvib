@@ -1,20 +1,33 @@
 import { defineRecipe } from "@chakra-ui/react";
 
 export const linkRecipe = defineRecipe({
+  className: "kvib-link",
   base: {
-    textDecoration: "underline",
-    color: "colorPalette.500",
-    _focusVisible: {
-      borderRadius: "1px",
-      boxShadow: "none",
-      outline: "2px solid",
+    display: "inline-flex",
+    alignItems: "center",
+    outline: "none",
+    gap: "1.5",
+    cursor: "pointer",
+    focusRing: "outside",
+    focusRingColor: "blue.500",
+  },
+
+  variants: {
+    variant: {
+      underline: {
+        color: "colorPalette.500",
+        textDecoration: "underline",
+        textUnderlineOffset: "3px",
+        textDecorationColor: "currentColor/80",
+        _hover: {
+          textDecoration: "none",
+          color: "colorPalette.400",
+        },
+      },
     },
-    _hover: {
-      textDecoration: "none",
-      color: "colorPalette.400",
-    },
-    _active: {
-      textDecoration: "underline",
-    },
+  },
+
+  defaultVariants: {
+    variant: "underline",
   },
 });

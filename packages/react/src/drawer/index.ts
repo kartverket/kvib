@@ -9,6 +9,6 @@ export {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
-export { Drawer as KvibDrawer } from "@chakra-ui/react";
+export { DrawerPositioner, Drawer as KvibDrawer } from "@chakra-ui/react";
 
 export type { DrawerRootProps as DrawerProps } from "@chakra-ui/react";

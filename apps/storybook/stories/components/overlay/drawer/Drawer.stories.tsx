@@ -6,6 +6,7 @@ import {
   DrawerContent,
   DrawerFooter,
   DrawerHeader,
+  DrawerPositioner,
   DrawerProps,
   Input,
   Drawer as KvibDrawer,
@@ -228,23 +229,25 @@ export const DrawerExample = ({ ...args }) => {
       <Button as={DrawerTrigger} colorPalette={args.colorPalette} onClick={onOpen}>
         Åpne
       </Button>
-      <DrawerContent>
-        <DrawerCloseTrigger />
-        <DrawerHeader>
-          <DrawerTitle>Lag din konto</DrawerTitle>
-        </DrawerHeader>
+      <DrawerPositioner>
+        <DrawerContent>
+          <DrawerCloseTrigger />
+          <DrawerHeader>
+            <DrawerTitle>Lag din konto</DrawerTitle>
+          </DrawerHeader>
 
-        <DrawerBody>
-          <Input placeholder="Skriv her..." />
-        </DrawerBody>
+          <DrawerBody>
+            <Input placeholder="Skriv her..." />
+          </DrawerBody>
 
-        <DrawerFooter>
-          <Button colorPalette={args.colorPalette} variant="secondary" mr={3} onClick={onClose}>
-            Avbryt
-          </Button>
-          <Button colorPalette={args.colorPalette}>Lagre</Button>
-        </DrawerFooter>
-      </DrawerContent>
+          <DrawerFooter>
+            <Button colorPalette={args.colorPalette} variant="secondary" mr={3} onClick={onClose}>
+              Avbryt
+            </Button>
+            <Button colorPalette={args.colorPalette}>Lagre</Button>
+          </DrawerFooter>
+        </DrawerContent>
+      </DrawerPositioner>
     </Drawer>
   );
 };

@@ -1,4 +1,4 @@
-import { Link as KvibLink, VStack } from "@kvib/react/src";
+import { Link as KvibLink } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibLink> = {
@@ -45,35 +45,4 @@ export const Preview: Story = {
     href: "/?path=/",
   },
   render: args => <KvibLink {...args}>{args.children}</KvibLink>,
-};
-
-export const LinkStates: Story = {
-  args: {
-    colorScheme: "blue",
-  },
-  render: args => (
-    <VStack>
-      <KvibLink href="/?path=/" {...args}>
-        Dette er en intern lenke
-      </KvibLink>
-      <KvibLink external href="https://chakra-ui.com/docs/components" {...args}>
-        Dette er en ekstern lenke
-      </KvibLink>
-    </VStack>
-  ),
-};
-
-export const LinkColorscheme: Story = {
-  args: {
-    children: "Dette er en lenke",
-    href: "/?path=/",
-  },
-  render: args => (
-    <VStack>
-      <KvibLink {...args}>{args.children}</KvibLink>
-      <KvibLink colorScheme="blue" {...args}>
-        {args.children}
-      </KvibLink>
-    </VStack>
-  ),
 };

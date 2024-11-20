@@ -1,4 +1,5 @@
-import { HStack, PinInput as KvibPinInput, Field as KvibPinInputField, Stack } from "@kvib/react/src";
+import { PinInputProps } from "@kvib/react";
+import { PinInput as KvibPinInput } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibPinInput> = {
@@ -85,111 +86,5 @@ export default meta;
 type Story = StoryObj<typeof KvibPinInput>;
 
 export const Preview: Story = {
-  render: args => (
-    <HStack>
-      <KvibPinInput {...args}>
-        <KvibPinInputField />
-        <KvibPinInputField />
-        <KvibPinInputField />
-        <KvibPinInputField />
-      </KvibPinInput>
-    </HStack>
-  ),
-};
-
-export const Alphanumeric: Story = {
-  args: { type: "alphanumeric" },
-  render: args => (
-    <HStack>
-      <KvibPinInput {...args}>
-        <KvibPinInputField />
-        <KvibPinInputField />
-        <KvibPinInputField />
-        <KvibPinInputField />
-      </KvibPinInput>
-    </HStack>
-  ),
-};
-
-export const OTP: Story = {
-  args: { otp: true },
-  render: args => (
-    <HStack>
-      <KvibPinInput {...args}>
-        <KvibPinInputField />
-        <KvibPinInputField />
-        <KvibPinInputField />
-        <KvibPinInputField />
-      </KvibPinInput>
-    </HStack>
-  ),
-};
-
-export const Mask: Story = {
-  args: { mask: true, type: "alphanumeric" },
-  render: args => (
-    <HStack>
-      <KvibPinInput {...args}>
-        <KvibPinInputField />
-        <KvibPinInputField />
-        <KvibPinInputField />
-        <KvibPinInputField />
-      </KvibPinInput>
-    </HStack>
-  ),
-};
-
-export const Size: Story = {
-  render: args => (
-    <Stack>
-      <HStack>
-        <KvibPinInput size={"xs"} {...args}>
-          <KvibPinInputField />
-          <KvibPinInputField />
-          <KvibPinInputField />
-          <KvibPinInputField />
-        </KvibPinInput>
-      </HStack>
-      <hr />
-      <HStack>
-        <KvibPinInput size={"sm"} {...args}>
-          <KvibPinInputField />
-          <KvibPinInputField />
-          <KvibPinInputField />
-          <KvibPinInputField />
-        </KvibPinInput>
-      </HStack>
-      <hr />
-      <HStack>
-        <KvibPinInput size={"md"} {...args}>
-          <KvibPinInputField />
-          <KvibPinInputField />
-          <KvibPinInputField />
-          <KvibPinInputField />
-        </KvibPinInput>
-      </HStack>
-      <hr />
-      <HStack>
-        <KvibPinInput size={"lg"} {...args}>
-          <KvibPinInputField />
-          <KvibPinInputField />
-          <KvibPinInputField />
-          <KvibPinInputField />
-        </KvibPinInput>
-      </HStack>
-    </Stack>
-  ),
-};
-
-export const Focus: Story = {
-  render: () => (
-    <HStack>
-      <KvibPinInput manageFocus={false}>
-        <KvibPinInputField />
-        <KvibPinInputField />
-        <KvibPinInputField />
-        <KvibPinInputField />
-      </KvibPinInput>
-    </HStack>
-  ),
+  render: (args: PinInputProps) => <KvibPinInput {...args} />,
 };

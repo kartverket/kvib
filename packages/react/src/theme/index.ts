@@ -24,6 +24,7 @@ import { closeButtonSlotRecipe } from "./recipes/close-button.recipe";
 import { iconButtonRecipe } from "./recipes/icon-button.recipe";
 import { inputRecipe } from "./recipes/input.recipe";
 import { linkRecipe } from "./recipes/link.recipe";
+import { pinInputRecipe } from "./recipes/pin-input.recipe";
 import { selectNativeRecipe } from "./recipes/select-native.recipe";
 import { config as kvibConfig } from "./tokens/config";
 import sizes from "./tokens/sizes";
@@ -62,6 +63,7 @@ const customConfig = defineConfig({
       input: inputRecipe,
       link: linkRecipe,
       nativeSelect: selectNativeRecipe,
+      pinInput: pinInputRecipe,
     },
     slotRecipes: {
       alert: alertSlotRecipe,

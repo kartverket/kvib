@@ -1,10 +1,5 @@
-import {
-  Field,
-  NumberInput as KvibNumberInput,
-  NumberInputField as KvibNumberInputField,
-  NumberInputControl as KvibNumberInputStepper,
-  Stack,
-} from "@kvib/react/src";
+import { NumberInputProps } from "@kvib/react";
+import { NumberInput as KvibNumberInput, NumberInputField } from "@kvib/react/src";
 
 import { Meta, StoryObj } from "@storybook/react";
 
@@ -92,7 +87,7 @@ const meta: Meta<typeof KvibNumberInput> = {
       },
       control: "boolean",
     },
-    isRequired: {
+    required: {
       description: "Toggles if input should be required",
       table: {
         type: { summary: "boolean" },
@@ -100,7 +95,7 @@ const meta: Meta<typeof KvibNumberInput> = {
       },
       control: "boolean",
     },
-    isReadOnly: {
+    readOnly: {
       description: "Toggles if input should be read-only",
       table: {
         type: { summary: "boolean" },
@@ -108,7 +103,7 @@ const meta: Meta<typeof KvibNumberInput> = {
       },
       control: "boolean",
     },
-    isInvalid: {
+    invalid: {
       description: "Toggles if input should be invalid",
       table: {
         type: { summary: "boolean" },
@@ -116,7 +111,7 @@ const meta: Meta<typeof KvibNumberInput> = {
       },
       control: "boolean",
     },
-    isDisabled: {
+    disabled: {
       description: "Toggles if input should be disabled",
       table: {
         type: { summary: "boolean" },
@@ -133,110 +128,11 @@ type NumberInputStory = StoryObj<typeof KvibNumberInput>;
 export const Preview: NumberInputStory = {
   args: {
     variant: "outline",
-    isDisabled: false,
-    isInvalid: false,
-    isReadOnly: false,
-    isRequired: false,
     defaultValue: 3507,
   },
-  render: args => (
+  render: (args: NumberInputProps) => (
     <KvibNumberInput {...args}>
-      <KvibNumberInputField />
-      <KvibNumberInputStepper />
-    </KvibNumberInput>
-  ),
-};
-
-export const NumberInputVariants: NumberInputStory = {
-  args: {
-    defaultValue: 1234,
-  },
-  render: args => (
-    <Stack gap={5}>
-      <KvibNumberInput {...args} variant={"outline"}>
-        <KvibNumberInputField />
-        <KvibNumberInputStepper />
-      </KvibNumberInput>
-      <KvibNumberInput {...args} variant={"filled"}>
-        <KvibNumberInputField />
-        <KvibNumberInputStepper />
-      </KvibNumberInput>
-      <KvibNumberInput {...args} variant={"flushed"}>
-        <KvibNumberInputField />
-        <KvibNumberInputStepper />
-      </KvibNumberInput>
-      <KvibNumberInput {...args} variant={"unstyled"}>
-        <KvibNumberInputField />
-        <KvibNumberInputStepper />
-      </KvibNumberInput>
-    </Stack>
-  ),
-};
-
-export const NumberInputForm: NumberInputStory = {
-  args: {},
-  render: args => (
-    <Field label="Årstall" isRequired>
-      <KvibNumberInput {...args}>
-        <KvibNumberInputField />
-        <KvibNumberInputStepper />
-      </KvibNumberInput>
-    </Field>
-  ),
-};
-
-export const NumberInputMinMaxValue: NumberInputStory = {
-  args: { defaultValue: 12, min: 10, max: 20 },
-  render: args => (
-    <KvibNumberInput {...args}>
-      <KvibNumberInputField />
-      <KvibNumberInputStepper />
-    </KvibNumberInput>
-  ),
-};
-
-export const NumberInputPrecision: NumberInputStory = {
-  args: { precision: 2 },
-  render: args => (
-    <KvibNumberInput {...args}>
-      <KvibNumberInputField />
-      <KvibNumberInputStepper />
-    </KvibNumberInput>
-  ),
-};
-
-export const NumberInputSizes: NumberInputStory = {
-  render: () => (
-    <Stack>
-      <KvibNumberInput size={"xs"}>
-        <KvibNumberInputField />
-        <KvibNumberInputStepper />
-      </KvibNumberInput>
-      <hr />
-      <KvibNumberInput size={"sm"}>
-        <KvibNumberInputField />
-        <KvibNumberInputStepper />
-      </KvibNumberInput>
-      <hr />
-      <KvibNumberInput size={"md"}>
-        <KvibNumberInputField />
-        <KvibNumberInputStepper />
-      </KvibNumberInput>
-      <hr />
-      <KvibNumberInput size={"lg"}>
-        <KvibNumberInputField />
-        <KvibNumberInputStepper />
-      </KvibNumberInput>
-    </Stack>
-  ),
-};
-
-export const NumberInputBlur: NumberInputStory = {
-  args: { defaultValue: 12, min: 10, max: 20 },
-  render: args => (
-    <KvibNumberInput {...args} clampValueOnBlur={false}>
-      <KvibNumberInputField />
-      <KvibNumberInputStepper />
+      <NumberInputField />
     </KvibNumberInput>
   ),
 };

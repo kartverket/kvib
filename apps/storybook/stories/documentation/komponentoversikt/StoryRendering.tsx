@@ -29,7 +29,7 @@ import * as MenuStories from "../../components/navigasjon/menu/Menu.stories";
 import * as SkivNavStories from "../../components/navigasjon/skip-nav/SkipNav.stories";
 import * as TabsStories from "../../components/navigasjon/tabs/Tabs.stories";
 import * as DrawerStories from "../../components/overlay/drawer/Drawer.stories";
-import * as ModalStories from "../../components/overlay/modal/Modal.stories";
+import * as ModalStories from "../../components/overlay/modal/Dialog.stories";
 import * as PopoverStories from "../../components/overlay/popover/Popover.stories";
 import * as TooltipStories from "../../components/overlay/tooltip/Tooltip.stories";
 import * as SearchAsyncStories from "../../components/search/search-async/SearchAsync.stories";

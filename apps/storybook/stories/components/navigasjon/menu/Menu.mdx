@@ -1,7 +1,6 @@
 import { Card, CardBody } from "@kvib/react/src";
 import { Canvas, Controls, Meta, Source, Story } from "@storybook/blocks";
 import * as MenuStories from "./Menu.stories";
-import * as MenuStrings from "./srcStrings.ts";
 
 <Meta of={MenuStories} />
 
@@ -20,55 +19,4 @@ Menu er en dropdown-meny for det vanlige dropdown menu button designmønsteret. 
   </CardBody>
 </Card>
 
-<Source code={MenuStrings.MenuString} dark />
 <Controls of={MenuStories.Preview} />
-
-## Internal state
-
-<Card variant="outline" borderRadius="0">
-  <CardBody>
-    <Story of={MenuStories.MenuState} />
-  </CardBody>
-</Card>
-
-<Source code={MenuStrings.MenuStateString} dark />
-
-## Ikoner og kommandoer
-
-<Card variant="outline" borderRadius="0">
-  <CardBody>
-    <Story of={MenuStories.MenuIconsCommands} />
-  </CardBody>
-</Card>
-
-<Source code={MenuStrings.MenuIconsCommandsString} dark />
-
-## MenuGroup
-
-<Card variant="outline" borderRadius="0">
-  <CardBody>
-    <Story of={MenuStories.MenuGroup} />
-  </CardBody>
-</Card>
-
-<Source code={MenuStrings.MenuGroupString} dark />
-
-## MenuItem med link
-
-<Card variant="outline" borderRadius="0">
-  <CardBody>
-    <Story of={MenuStories.MenuLink} />
-  </CardBody>
-</Card>
-
-<Source code={MenuStrings.MenuLinkString} dark />
-
-## Menu option groups
-
-<Card variant="outline" borderRadius="0">
-  <CardBody>
-    <Story of={MenuStories.MenuOptionGroups} />
-  </CardBody>
-</Card>
-
-<Source code={MenuStrings.MenuOptionGroupsString} dark />

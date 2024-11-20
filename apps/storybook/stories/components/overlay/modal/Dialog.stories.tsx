@@ -1,20 +1,22 @@
 import {
   Box,
   Button,
-  CloseButton,
+  DialogActionTrigger,
   DialogBackdrop,
   DialogBody,
+  DialogCloseTrigger,
   DialogContent,
   DialogFooter,
   DialogHeader,
+  DialogProps,
+  DialogTitle,
+  DialogTrigger,
   Dialog as KvibModal,
-  useDisclosure,
 } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
-import { ModalString } from "./srcStrings";
 
 const meta: Meta<typeof KvibModal> = {
-  title: "Komponenter/Modal",
+  title: "Komponenter/Dialog",
   component: KvibModal,
 
   argTypes: {
@@ -197,33 +199,36 @@ export default meta;
 type Story = StoryObj<typeof KvibModal>;
 
 const ModalExample = ({ ...args }) => {
-  const { open, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <Button onClick={onOpen} colorScheme={args.colorScheme}>
-        Åpne modal
-      </Button>
+      <KvibModal {...args}>
+        <DialogTrigger asChild>
+          <Button variant="outline">Åpne dialog</Button>
+        </DialogTrigger>
 
-      <KvibModal {...args} isOpen={open} onClose={onClose}>
         <DialogBackdrop />
         <DialogContent>
-          <DialogHeader>Her er en modal</DialogHeader>
-          <CloseButton colorScheme={args.colorScheme} />
+          <DialogHeader>
+            <DialogTitle>Her er en modal</DialogTitle>
+          </DialogHeader>
           <DialogBody>
             Modaler må kun vises etter en brukerinteraksjon, og skal ikke avbryte brukeren på noe vis.
           </DialogBody>
 
           <DialogFooter justifyContent="space-between">
-            <Button onClick={onClose} variant="tertiary" colorScheme={args.colorScheme}>
+            <Button variant="tertiary" colorPalette={args.colorPalette}>
               Tertiær
             </Button>
             <Box>
-              <Button mr={3} onClick={onClose} variant="secondary" colorScheme={args.colorScheme}>
+              <Button mr={3} variant="secondary" colorPalette={args.colorPalette}>
                 Sekundær
               </Button>
-              <Button colorScheme={args.colorScheme}>Primær</Button>
+              <DialogActionTrigger asChild>
+                <Button colorPalette={args.colorPalette}>Primær</Button>
+              </DialogActionTrigger>
             </Box>
           </DialogFooter>
+          <DialogCloseTrigger />
         </DialogContent>
       </KvibModal>
     </>
@@ -231,13 +236,12 @@ const ModalExample = ({ ...args }) => {
 };
 
 export const Preview: Story = {
-  render: args => <ModalExample {...args} />,
+  render: (args: DialogProps) => <ModalExample {...args} />,
   parameters: {
     docs: {
       source: {
         type: "code",
         language: "tsx",
-        code: ModalString,
       },
     },
   },
