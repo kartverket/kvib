@@ -1,9 +1,9 @@
-import { Box, Card, Flex, Link, Stack, Text } from "@kvib/react/src";
+import { Box, Card, Flex, Link, Stack, Text } from "@kvib/react";
 
 export const StarCard = () => {
   return (
     <IntroCard>
-      <Stack gap="2rem">
+      <Stack>
         <Text fontSize="2xl">Ledestjerner</Text>
         <Flex gap="1rem" alignItems="center">
           <Box>👨‍👨‍👦‍👦</Box> <Box fontWeight="medium">Brukerrettet og imøtekomme universell utforming</Box>

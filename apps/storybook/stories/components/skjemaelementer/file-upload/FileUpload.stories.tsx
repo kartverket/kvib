@@ -1,4 +1,11 @@
-import { FileUpload as KvibFileUpload, Stack } from "@kvib/react/src";
+import {
+  Button,
+  FileUpload,
+  FileUploadList,
+  FileUploadProps,
+  FileUploadTrigger,
+  FileUpload as KvibFileUpload,
+} from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibFileUpload> = {
@@ -62,38 +69,15 @@ const meta: Meta<typeof KvibFileUpload> = {
 export default meta;
 type FileUploadStory = StoryObj<typeof KvibFileUpload>;
 
+const FileUploadExample = (args: FileUploadProps) => (
+  <FileUpload {...args}>
+    <FileUploadTrigger>
+      <Button>Last opp fil</Button>
+    </FileUploadTrigger>
+    <FileUploadList />
+  </FileUpload>
+);
+
 export const Preview: FileUploadStory = {
-  render: args => <KvibFileUpload {...args} />,
-};
-
-export const Variant: FileUploadStory = {
-  render: args => (
-    <Stack gap={4}>
-      <KvibFileUpload {...args} variant={"outline"} />
-      <KvibFileUpload {...args} variant={"filled"} />
-      <KvibFileUpload {...args} variant={"flushed"} />
-      <KvibFileUpload {...args} variant={"unstyled"} />
-    </Stack>
-  ),
-};
-
-export const Size: FileUploadStory = {
-  render: args => (
-    <Stack gap={4}>
-      <KvibFileUpload {...args} size={"xs"} />
-      <KvibFileUpload {...args} size={"sm"} />
-      <KvibFileUpload {...args} size={"md"} />
-      <KvibFileUpload {...args} size={"lg"} />
-    </Stack>
-  ),
-};
-
-export const State: FileUploadStory = {
-  render: args => (
-    <Stack gap={4}>
-      <KvibFileUpload {...args} />
-      <KvibFileUpload {...args} isDisabled />
-      <KvibFileUpload {...args} isInvalid />
-    </Stack>
-  ),
+  render: (args: FileUploadProps) => <FileUploadExample {...args} />,
 };

@@ -11,7 +11,7 @@ import { useResizeObserver } from "../hooks";
 export type SearchProps = Omit<ChakraInputProps, "isRequired" | "colorScheme"> & {
   searchButton?: "left" | "right" | "none";
   colorScheme?: "gray" | "red" | "green" | "blue" | undefined;
-  buttonVariant?: "primary" | "secondary" | "tertiary" | "ghost";
+  buttonVariant?: "solid" | "subtle" | "surface" | "outline" | "ghost" | "plain";
   buttonWidth?: string;
   buttonText?: string;
 };
@@ -30,7 +30,7 @@ export const Search = forwardRef<HTMLInputElement, SearchProps>(
       disabled,
       searchButton = "none",
       buttonWidth,
-      buttonVariant = "tertiary",
+      buttonVariant = "outline",
       buttonText,
       role = "search",
       ...props

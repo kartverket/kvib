@@ -1,4 +1,4 @@
-import { Alert, AlertDescription, AlertIcon, Text } from "@kvib/react/src";
+import { Alert, Text } from "@kvib/react/src";
 import { KvibProvider } from "@kvib/react/src/provider/KvibProvider";
 import { Meta } from "@storybook/addon-docs";
 
@@ -64,8 +64,6 @@ export default App;
 
 <KvibProvider>
     <Alert status="info">
-        <AlertIcon/>
-        <AlertDescription>
             I utgangspunktet skal man benytte komponentene fra Kartverkets designsystem med stylingen som er der. Er
             det
             funksjoner og design du synes mangler i dagens bibliotek, ønsker vi at du bidrar med dette til biblioteket
@@ -77,8 +75,6 @@ export default App;
             styled-components.
 
             **Avklar med designer før du lager egen styling.**
-        </AlertDescription>
-
     </Alert>
 
 </KvibProvider>

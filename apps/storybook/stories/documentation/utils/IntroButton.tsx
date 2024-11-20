@@ -21,7 +21,7 @@ export const IntroButton = ({
       href={href}
       target={isExternal ? "_blank" : ""}
     >
-      <Flex gap="0.5rem" fontWeight="bold" marginBottom="0.5rem" alignItems="center">
+      <Flex gap="0.5rem" fontWeight="normal" marginBottom="0.5rem" alignItems="center">
         <Text fontSize="lg" as="b" color="green.500">
           {title}{" "}
           <Box style={{ display: isExternal ? "inline-block" : "none" }}>

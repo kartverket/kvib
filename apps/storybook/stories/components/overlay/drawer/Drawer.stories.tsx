@@ -1,11 +1,12 @@
+import { Drawer, DrawerCloseTrigger, DrawerTitle, DrawerTrigger } from "@kvib/react";
 import {
   Button,
   DrawerBackdrop,
   DrawerBody,
-  CloseButton as DrawerCloseButton,
   DrawerContent,
   DrawerFooter,
   DrawerHeader,
+  DrawerProps,
   Input,
   Drawer as KvibDrawer,
   useDisclosure,
@@ -222,32 +223,32 @@ type Story = StoryObj<typeof KvibDrawer>;
 export const DrawerExample = ({ ...args }) => {
   const { open, onOpen, onClose } = useDisclosure();
   return (
-    <>
-      <Button colorScheme={args.colorScheme} onClick={onOpen}>
+    <Drawer {...args} open={open} onClose={onClose}>
+      <DrawerBackdrop />
+      <Button as={DrawerTrigger} colorPalette={args.colorPalette} onClick={onOpen}>
         Åpne
       </Button>
-      <KvibDrawer {...args} isOpen={open} onClose={onClose}>
-        <DrawerBackdrop />
-        <DrawerContent>
-          <DrawerCloseButton />
-          <DrawerHeader>Lag din konto</DrawerHeader>
+      <DrawerContent>
+        <DrawerCloseTrigger />
+        <DrawerHeader>
+          <DrawerTitle>Lag din konto</DrawerTitle>
+        </DrawerHeader>
 
-          <DrawerBody>
-            <Input placeholder="Skriv her..." />
-          </DrawerBody>
+        <DrawerBody>
+          <Input placeholder="Skriv her..." />
+        </DrawerBody>
 
-          <DrawerFooter>
-            <Button colorScheme={args.colorScheme} variant="secondary" mr={3} onClick={onClose}>
-              Avbryt
-            </Button>
-            <Button colorScheme={args.colorScheme}>Lagre</Button>
-          </DrawerFooter>
-        </DrawerContent>
-      </KvibDrawer>
-    </>
+        <DrawerFooter>
+          <Button colorPalette={args.colorPalette} variant="secondary" mr={3} onClick={onClose}>
+            Avbryt
+          </Button>
+          <Button colorPalette={args.colorPalette}>Lagre</Button>
+        </DrawerFooter>
+      </DrawerContent>
+    </Drawer>
   );
 };
 
 export const Preview: Story = {
-  render: args => <DrawerExample {...args} />,
+  render: (args: DrawerProps) => <DrawerExample {...args} />,
 };

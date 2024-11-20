@@ -1,14 +1,13 @@
+import { colors } from "@/theme/tokens";
 import {
-  Group,
   IconButton,
-  InputAddon,
+  Input,
+  InputGroup,
   InputProps,
-  Input as KVInput,
   Popover,
   PopoverBody,
+  PopoverContent,
   PopoverTrigger,
-  Portal,
-  useBoolean,
   useFieldContext,
 } from "@kvib/react/src";
 import { format, isValid, parse } from "date-fns";
@@ -17,7 +16,7 @@ import { ChangeEvent, forwardRef, useState } from "react";
 import { DayPicker } from "react-day-picker";
 import "react-day-picker/style.css";
 
-export type DatepickerProps = Omit<InputProps, "colorScheme" | "max" | "min" | "defaultValue"> & {
+export type DatepickerProps = Omit<InputProps, "colorPalette" | "max" | "min" | "defaultValue"> & {
   /**
    * A default date to be selected when the picker is displayed.
    */
@@ -89,9 +88,9 @@ export type DatepickerProps = Omit<InputProps, "colorScheme" | "max" | "min" | "
   isRequired?: boolean;
 
   /**
-   * The colorScheme for the Datepicker.
+   * The colorPalette for the Datepicker.
    */
-  colorScheme?: "blue" | "green";
+  colorPalette?: "blue" | "green";
 };
 
 export const Datepicker = forwardRef<HTMLInputElement, DatepickerProps>(
@@ -104,7 +103,7 @@ export const Datepicker = forwardRef<HTMLInputElement, DatepickerProps>(
 
     if (isMobile || useNative)
       return (
-        <KVInput
+        <Input
           ref={ref}
           type="date"
           defaultValue={defaultValue}
@@ -129,25 +128,20 @@ const CustomDatepicker = ({
   showOutsideDays,
   showWeekNumber,
   disabledDays,
-  colorScheme,
+  colorPalette,
   isDisabled: isDisabledExternally = false,
   isInvalid: isInvalidExternally = false,
   isRequired: isRequiredExternally = false,
   ...KVInputProps
 }: DatepickerProps) => {
-  /* const theme = useChakraContext(); */
-
   // Style for the day picker
   const uniqueClassName = generateUniqueClassName("kvib-datepicker");
-  const style = css(
-    uniqueClassName /* theme.colors[colorScheme ?? theme.components.Datepicker.defaultProps.colorScheme] */,
-    {
-      100: "#f0f0f0",
-      500: "#0070f3",
-    },
-  );
+  const listOfColors = colors[colorPalette ?? "green"];
 
-  // Get state from form control context
+  const palette = Object.fromEntries(Object.entries(listOfColors).map(([key, obj]) => [key, obj.value]));
+  const style = css(uniqueClassName, palette);
+
+  // Get state from form control ccontext
   const formControlContext = useFieldContext();
   const isDisabledFromForm = formControlContext?.disabled || false;
   const isRequiredFromForm = formControlContext?.required || false;
@@ -157,7 +151,7 @@ const CustomDatepicker = ({
   const isRequired = isRequiredExternally || isRequiredFromForm;
 
   // State for the day picker
-  const visibility = useBoolean(false);
+  const [open, setOpen] = useState(false);
   const [selectedDate, setSelectedDate] = useState(defaultSelected ?? undefined);
   const [month, setMonth] = useState(defaultMonth);
   const [inputValue, setInputValue] = useState(selectedDate ? formatDate(selectedDate) : "");
@@ -172,21 +166,6 @@ const CustomDatepicker = ({
       setSelectedDate(parsedDate);
     } else {
       setSelectedDate(undefined);
-    }
-  };
-
-  const formatDateInput = (dateStr: string): Date | undefined => {
-    try {
-      const formats = ["dd.MM.yy", "dd.MM.yyyy", "dd/MM/yy", "dd/MM/yyyy", "dd-MM-yy", "dd-MM-yyyy"];
-      for (const formatStr of formats) {
-        const parsedDate = parse(dateStr, formatStr, new Date(), { locale: nb });
-        if (!isNaN(parsedDate.getTime())) {
-          return parsedDate;
-        }
-      }
-      throw new Error("Ugyldig datoformat");
-    } catch (error) {
-      return undefined;
     }
   };
 
@@ -220,44 +199,40 @@ const CustomDatepicker = ({
       setSelectedDate(date);
       setMonth(date);
       setInputValue(formatDate(date));
-      visibility.setFalse();
+      setOpen(false);
     }
   };
 
   return (
-    <Popover
-      placement="bottom-start"
-      isOpen={visibility.value}
-      onOpen={visibility.setTrue}
-      onClose={visibility.setFalse}
-    >
-      <Group>
-        <PopoverTrigger>
-          <Group attached>
-            <KVInput
-              value={inputValue}
-              className="custom-datepicker"
-              disabled={isDisabled}
-              required={isRequired}
-              onChange={handleInputChange}
-              onBlur={formatInputOnBlur}
-              {...KVInputProps}
-              // locale={nb}
+    <Popover positioning={{ placement: "bottom" }} open={open} onOpenChange={e => setOpen(e.open)}>
+      <InputGroup
+        endElement={
+          <PopoverTrigger>
+            <IconButton
+              icon="calendar_today"
+              colorPalette={colorPalette}
+              size={KVInputProps.size}
+              aria-label="open datepicker"
+              onClick={() => setOpen(!open)}
+              variant="ghost"
+              css={{
+                "&:hover": { background: "none", color: "colorPalette.400" },
+              }}
             />
-            <InputAddon opacity={isDisabled ? 0.5 : 1} pointerEvents={isDisabled ? "none" : "auto"} height="100%">
-              <IconButton
-                icon="calendar_today"
-                colorScheme={colorScheme}
-                /* size={KVInputProps.size} */
-                aria-label="open datepicker"
-                onClick={visibility.toggle}
-                /* variant="tertiary" */
-              />
-            </InputAddon>
-          </Group>
-        </PopoverTrigger>
-      </Group>
-      <Portal>
+          </PopoverTrigger>
+        }
+      >
+        <Input
+          value={inputValue}
+          className="kvib-datepicker"
+          disabled={isDisabled}
+          required={isRequired}
+          onChange={handleInputChange}
+          onBlur={formatInputOnBlur}
+          {...KVInputProps}
+        />
+      </InputGroup>
+      <PopoverContent>
         <PopoverBody>
           <style>{style}</style>
           <DayPicker
@@ -291,9 +266,24 @@ const CustomDatepicker = ({
             })}
           />
         </PopoverBody>
-      </Portal>
+      </PopoverContent>
     </Popover>
   );
+};
+
+const formatDateInput = (dateStr: string): Date | undefined => {
+  try {
+    const formats = ["dd.MM.yy", "dd.MM.yyyy", "dd/MM/yy", "dd/MM/yyyy", "dd-MM-yy", "dd-MM-yyyy"];
+    for (const formatStr of formats) {
+      const parsedDate = parse(dateStr, formatStr, new Date(), { locale: nb });
+      if (!isNaN(parsedDate.getTime())) {
+        return parsedDate;
+      }
+    }
+    throw new Error("Ugyldig datoformat");
+  } catch (error) {
+    return undefined;
+  }
 };
 
 // Function to extract the props that are used by the KVInput (native) component

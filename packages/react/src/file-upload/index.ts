@@ -2,6 +2,10 @@ export {
   FileUploadRoot as FileUpload,
   FileUploadClearTrigger,
   FileUploadDropzone,
+  FileUploadList,
+  FileUploadTrigger,
+} from "@/components/ui/file-button";
+export {
   FileUploadDropzoneContent,
   FileUploadItem,
   FileUploadItemContent,

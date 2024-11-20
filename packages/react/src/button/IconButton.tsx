@@ -2,7 +2,7 @@ import { IconButton as ChakraIconButton, IconButtonProps as ChakraIconButtonProp
 import { MaterialSymbol } from "material-symbols";
 import { forwardRef } from "react";
 
-export type IconButtonProps = Omit<ChakraIconButtonProps, "colorPalette" | "variant" | "active" | "icon"> & {
+export type IconButtonProps = Omit<ChakraIconButtonProps, "colorPalette" | "active" | "icon"> & {
   /**The icon to be used in the button.*/
   icon: MaterialSymbol;
 

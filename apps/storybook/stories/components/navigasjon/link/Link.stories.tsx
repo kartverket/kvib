@@ -1,5 +1,4 @@
-import { VStack } from "@chakra-ui/react";
-import { Link as KvibLink } from "@kvib/react/src";
+import { Link as KvibLink, VStack } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibLink> = {

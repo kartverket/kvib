@@ -33,7 +33,7 @@ export const DateRangePicker = () => (
         href="https://daypicker.dev/docs/selection-modes#range-mode"
         target="_blank"
         rel="noopener noreferrer"
-        isExternal={false}
+        external={false}
       >
         React Daypicker
       </Link>{" "}

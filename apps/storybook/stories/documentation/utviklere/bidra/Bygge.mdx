@@ -1,4 +1,4 @@
-import { Alert, AlertIcon } from "@kvib/react/src";
+import { Alert } from "@kvib/react";
 import { Meta } from "@storybook/addon-docs";
 
 <Meta title="Bidra/Som utvikler/Bygge" />
@@ -42,7 +42,6 @@ videre på denne._
   ```
 
   <Alert status="info">
-    <AlertIcon />
     _required_ props er ikke det samme som å sette default. Eksempelvis colorScheme er ikke required fordi man ønsker ikke
     at brukeren må sette colorScheme dersom hen vil ha default-verdien. Hvordan sette default-verdi kommer i senere steg
     i denne guiden.
@@ -52,7 +51,6 @@ videre på denne._
     Ved å tilegne props verdier settes default for komponenten, som er kjekt å gjøre dersom propen er satt som required.
 
 <Alert status="info">
-  <AlertIcon />
   Under [“Style komponenten”](/docs/for-utviklere-bidra-med-kode-style--docs) nevnes defaultProps som en del av .ts-filen. Default
   som settes i selve komponenten i.tsx-filen overkjører defaultPropsa som settes i styling .ts-filen.
 </Alert>
@@ -87,6 +85,5 @@ videre på denne._
 6.  Tilslutt; eksporter alt fra _Link.tsx_ i _index.tsx_, og fjern komponenten og props som blir eksportert fra Chakra i denne filen. Hvis det er flere komponenter og props i _index.tsx_; fjern kun de du har overskrevet.
 
   <Alert status="warning">
-    <AlertIcon />
     Viktig at forwardRef brukes fra chakra-ui og ikke fra react.
   </Alert>

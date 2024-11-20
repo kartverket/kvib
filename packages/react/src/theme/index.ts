@@ -20,7 +20,9 @@ import { breadcrumbSlotRecipe } from "./recipes/breadcrumb.recipe";
 import { buttonRecipe } from "./recipes/button.recipe";
 import { cardSlotRecipe } from "./recipes/card.recipe";
 import { checkboxSlotRecipe } from "./recipes/checkbox.recipe";
+import { closeButtonSlotRecipe } from "./recipes/close-button.recipe";
 import { iconButtonRecipe } from "./recipes/icon-button.recipe";
+import { inputRecipe } from "./recipes/input.recipe";
 import { linkRecipe } from "./recipes/link.recipe";
 import { selectNativeRecipe } from "./recipes/select-native.recipe";
 import { config as kvibConfig } from "./tokens/config";
@@ -29,6 +31,11 @@ import { transitionDuration, transitionProperty, transitionTimingFunction } from
 
 const customConfig = defineConfig({
   ...kvibConfig,
+  globalCss: {
+    body: {
+      color: "gray.800",
+    },
+  },
   theme: {
     breakpoints: breakpoints,
     tokens: {
@@ -52,6 +59,7 @@ const customConfig = defineConfig({
     recipes: {
       button: buttonRecipe,
       iconButton: iconButtonRecipe,
+      input: inputRecipe,
       link: linkRecipe,
       nativeSelect: selectNativeRecipe,
     },
@@ -60,6 +68,7 @@ const customConfig = defineConfig({
       breadcrumb: breadcrumbSlotRecipe,
       card: cardSlotRecipe,
       checkbox: checkboxSlotRecipe,
+      close: closeButtonSlotRecipe,
     },
   },
 });

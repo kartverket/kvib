@@ -23,10 +23,10 @@ const meta: Meta<typeof KvibInput> = {
     variant: {
       description: "Variant",
       table: {
-        type: { summary: "outline | filled | flushed | unstyled" },
+        type: { summary: "outline | subtle | flushed" },
         defaultValue: { summary: "outline" },
       },
-      options: ["outline", "filled", "flushed", "unstyled"],
+      options: ["outline", "subtle", "flushed"],
       control: { type: "radio" },
     },
     required: {
@@ -45,16 +45,16 @@ const meta: Meta<typeof KvibInput> = {
       },
       control: "boolean",
     },
-    invalid: {
-      description: "Toggles if input should be invalid",
+    disabled: {
+      description: "Toggles if input should be disabled",
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
-    disabled: {
-      description: "Toggles if input should be disabled",
+    unstyled: {
+      description: "Toggles if input should be unstyled",
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },

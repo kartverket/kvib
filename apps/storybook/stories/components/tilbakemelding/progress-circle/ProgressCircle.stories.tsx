@@ -1,4 +1,4 @@
-import { ProgressCircle, ProgressCircleRing } from "@kvib/react/src";
+import { ProgressCircle, ProgressCircleProps, ProgressCircleRing } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof ProgressCircle> = {
@@ -40,8 +40,8 @@ export default meta;
 type Story = StoryObj<typeof ProgressCircle>;
 
 export const Preview: Story = {
-  render: args => (
-    <ProgressCircle {...args.rootProps}>
+  render: (args: ProgressCircleProps) => (
+    <ProgressCircle {...args}>
       <ProgressCircleRing />
     </ProgressCircle>
   ),

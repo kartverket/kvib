@@ -1,4 +1,4 @@
-import { Alert, AlertIcon, Box, Code, Text } from "@kvib/react/src";
+import { Box, Code, Text } from "@kvib/react/src";
 import { Canvas, Controls, Meta, Source, Story } from "@storybook/blocks";
 import { DocsAnatomy, DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
 import { TooltipStrings } from "./srcTooltipStrings";
@@ -7,11 +7,6 @@ import * as TooltipStories from "./Tooltip.stories";
 <Meta of={TooltipStories} />
 
 # Tooltip
-
-<Alert status="info">
-  <AlertIcon />
-  Kjent bug for Tooltip: `placement="auto-end"` legger seg ikke som ønsket.
-</Alert>
 
 Et tooltip er en informativ melding som dukker opp når en bruker samhandler med et element.
 

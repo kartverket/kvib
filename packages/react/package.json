@@ -10,7 +10,7 @@
   "scripts": {
     "build": "tsup src/index.ts --dts --treeshake --format esm,cjs",
     "codegen": "chakra snippet add",
-    "typegen": "chakra typegen src/theme/theme.ts"
+    "typegen": "chakra typegen src/theme/index.ts"
   },
   "sideEffects": false,
   "license": "MIT",
@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@chakra-ui/cli": "^3.1.2",
-    "@types/react": "^18.2.66",
+    "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -42,7 +42,7 @@
     "material-symbols": "^0.27.0",
     "next-themes": "^0.4.3",
     "react-aria": "^3.35.1",
-    "react-day-picker": "^9.2.1",
+    "react-day-picker": "^9.3.2",
     "react-icons": "^5.3.0",
     "react-stately": "^3.32.1",
     "usehooks-ts": "^3.1.0"

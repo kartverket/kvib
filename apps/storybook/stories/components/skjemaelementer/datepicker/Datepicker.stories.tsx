@@ -1,4 +1,3 @@
-import { Field, Stack } from "@kvib/react/src";
 import { Datepicker as KvibDatepicker } from "@kvib/react/src/datepicker";
 import { withActions } from "@storybook/addon-actions/decorator";
 import { Meta, StoryObj } from "@storybook/react";
@@ -22,7 +21,6 @@ const meta: Meta<typeof KvibDatepicker> = {
   args: {
     placeholder: "Velg dato",
     size: "md",
-    variant: "outline",
     colorScheme: "green",
     isRequired: false,
     isInvalid: false,
@@ -52,15 +50,6 @@ const meta: Meta<typeof KvibDatepicker> = {
         defaultValue: { summary: "md" },
       },
       options: ["lg", "md", "sm", "xs"],
-      control: { type: "radio" },
-    },
-    variant: {
-      description: "Variant",
-      table: {
-        type: { summary: "outline | filled | flushed | unstyled" },
-        defaultValue: { summary: "outline" },
-      },
-      options: ["outline", "filled", "flushed", "unstyled"],
       control: { type: "radio" },
     },
     isRequired: {
@@ -162,8 +151,8 @@ const meta: Meta<typeof KvibDatepicker> = {
       },
       control: "boolean",
     },
-    colorScheme: {
-      description: "Color scheme",
+    colorPalette: {
+      description: "Color palette",
       table: {
         type: { summary: "blue | green" },
         defaultValue: { summary: "green" },
@@ -173,8 +162,6 @@ const meta: Meta<typeof KvibDatepicker> = {
     },
 
     // Fjern støy fra kontrollpanelet i Storybook
-    _groupOpen: { table: { disable: true } },
-    _groupClosed: { table: { disable: true } },
     _open: { table: { disable: true } },
     _closed: { table: { disable: true } },
     _complete: { table: { disable: true } },
@@ -188,51 +175,4 @@ type Story = StoryObj<typeof KvibDatepicker>;
 
 export const Preview: Story = {
   render: args => <KvibDatepicker {...args} />,
-};
-
-export const DatepickerDetails: Story = {
-  args: {
-    showOutsideDays: true,
-    showWeekNumber: true,
-    placeholder: "Velg dato",
-    "aria-label": "Datepicker example",
-  },
-  render: args => <KvibDatepicker {...args} />,
-};
-
-export const DatepickerAppearance: Story = {
-  args: {
-    placeholder: "Velg dato",
-    "aria-label": "Datepicker example",
-  },
-  render: args => (
-    <Stack gap="1rem">
-      <KvibDatepicker variant="outline" {...args} />
-      <KvibDatepicker variant="filled" {...args} />
-      <KvibDatepicker colorScheme="blue" variant="flushed" {...args} />
-      <KvibDatepicker colorScheme="blue" variant="unstyled" {...args} />
-    </Stack>
-  ),
-};
-
-export const DatepickerArea: Story = {
-  args: {
-    defaultSelected: new Date("2022-08-01"),
-    fromDate: new Date("2022-08-01"),
-    toDate: new Date("2022-12-15"),
-    showDropdownMonthYear: true,
-    disabledDays: [new Date("2022-08-16")],
-    placeholder: "Velg dato",
-    "aria-label": "Datepicker example",
-  },
-  render: args => <KvibDatepicker {...args} />,
-};
-
-export const DatepickerForm: Story = {
-  args: { placeholder: "Velg dato", "aria-label": "Datepicker example" },
-  render: args => (
-    <Field isRequired label="Velg dato">
-      <KvibDatepicker {...args} />
-    </Field>
-  ),
 };

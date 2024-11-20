@@ -1,3 +1,4 @@
+import { colors } from "@/theme/tokens";
 import { nb } from "date-fns/locale";
 import { DateRange, DayPicker, DayPickerProps } from "react-day-picker";
 import "react-day-picker/style.css";
@@ -6,19 +7,16 @@ export type DateRangePickerProps = DayPickerProps & {
   selected?: DateRange | undefined;
   onSelect?: (range: DateRange | undefined) => void;
   mode?: "range";
-  colorScheme?: "green" | "blue";
+  colorPalette?: "green" | "blue";
   showDropdownMonthYear?: boolean;
 };
 
 export const DateRangePicker = ({ ...props }: DateRangePickerProps) => {
   const uniqueClassName = generateUniqueClassName("kvib-datepicker");
-  const style = css(
-    uniqueClassName /* theme.colors[colorScheme ?? theme.components.Datepicker.defaultProps.colorScheme] */,
-    {
-      100: "#f0f0f0",
-      500: "#0070f3",
-    },
-  );
+  const listOfColors = colors[props.colorPalette ?? "green"];
+
+  const palette = Object.fromEntries(Object.entries(listOfColors).map(([key, obj]) => [key, obj.value]));
+  const style = css(uniqueClassName, palette);
   return (
     <>
       <style>{style}</style>

@@ -1,14 +1,7 @@
 import { Card, CardBody } from "@kvib/react/src";
-import { Controls, Meta, Source, Story } from "@storybook/blocks";
+import { Canvas, Controls, Meta, Source, Story } from "@storybook/blocks";
 import { DocsAnatomy, DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
 import * as DrawerStories from "./Drawer.stories";
-import {
-  DrawerFocusString,
-  DrawerFormString,
-  DrawerPlacementString,
-  DrawerSizesString,
-  DrawerString,
-} from "./srcStrings.ts";
 
 <Meta of={DrawerStories} />
 
@@ -31,48 +24,6 @@ import {
 } from "@kvib/react";
 ```
 
-<Feedback component="Drawer" />
-
-<DocsHeading light children="Plassering" />
-<Card variant="outline" borderRadius="0">
-  <CardBody>
-    <Story of={DrawerStories.DrawerPlacement} />
-  </CardBody>
-</Card>
-
-<Source code={DrawerPlacementString} dark />
-
-<DocsHeading light children="Fokus" />
-<Card variant="outline" borderRadius="0">
-  <CardBody>
-    <Story of={DrawerStories.DrawerFocus} />
-  </CardBody>
-</Card>
-
-<Source code={DrawerFocusString} dark />
-
-<DocsHeading light children="Størrelser" />
-<Card variant="outline" borderRadius="0">
-  <CardBody>
-    <Story of={DrawerStories.DrawerSizes} />
-  </CardBody>
-</Card>
-
-<Source code={DrawerSizesString} dark />
-
-<DocsHeading light children="Bruk av form i en Drawer" />
-
-Hvis du skal bruke form i en drawer må du bruke biblioteker som `react-hook-form` eller `formik`. Her er den anbefalte måten å gjøre det på:
-
-<Source code={DrawerFormString} dark />
-
-<DocsHeading light children="Props" />
-<Card variant="outline" borderRadius="0">
-  <CardBody>
-    <Story of={DrawerStories.Preview} />
-  </CardBody>
-</Card>
-
-<Source code={DrawerString} dark />
+<Canvas of={DrawerStories.Preview} />
 <Controls of={DrawerStories.Preview} />
 </DocsContainer>

@@ -1,4 +1,4 @@
-import { CloseButton as KvibCloseButton, Stack as KvibStack } from "@kvib/react/src";
+import { CloseButton as KvibCloseButton } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibCloseButton> = {
@@ -10,7 +10,21 @@ const meta: Meta<typeof KvibCloseButton> = {
       canvas: { sourceState: "shown" },
     },
   },
+  args: {
+    size: "md",
+    colorPalette: "green",
+    disabled: false,
+  },
   argTypes: {
+    colorPalette: {
+      description: "The visual color appearance of the button",
+      table: {
+        type: { summary: "green | blue | red | gray" },
+      },
+      defaultValue: { summary: "gray" },
+      options: ["green", "blue", "red", "gray"],
+      control: "radio",
+    },
     size: {
       description: "Size of the Button",
       table: {
@@ -20,7 +34,7 @@ const meta: Meta<typeof KvibCloseButton> = {
       options: ["sm", "md", "lg"],
       control: { type: "radio" },
     },
-    isDisabled: {
+    disabled: {
       description: "If true, the button will be disabled.",
       table: {
         type: { summary: "boolean" },
@@ -35,15 +49,5 @@ export default meta;
 type Story = StoryObj<typeof KvibCloseButton>;
 
 export const Preview: Story = {
-  render: args => <KvibCloseButton {...args} />,
-};
-
-export const CloseButtonSizes: Story = {
-  render: args => (
-    <KvibStack direction="row" spacing={6}>
-      <KvibCloseButton {...args} size="sm" />
-      <KvibCloseButton {...args} size="md" />
-      <KvibCloseButton {...args} size="lg" />
-    </KvibStack>
-  ),
+  render: (args: KvibCloseButton) => <KvibCloseButton {...args} />,
 };

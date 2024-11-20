@@ -1,30 +1,28 @@
 import { Box, Code, Text } from "@kvib/react/src/";
 import { Canvas, Controls, Meta, Story } from "@storybook/blocks";
 import { DocsAnatomy, DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
-import * as DividerStories from "./Divider.stories";
+import * as SeparatorStories from "./Separator.stories";
 
-<Meta of={DividerStories} />
+<Meta of={SeparatorStories} />
 
 <DocsContainer>
 
-# Divider
+# Separator
 
-Dividers brukes til å visuelt separere innhold i en liste eller gruppe.
+Separator brukes til å visuelt separere innhold i en liste eller gruppe.
 
 ```jsx
 import { Divider } from "@kvib/react";
 ```
 
-<Feedback components="Divider" />
-
 <DocsStory
-  title="Divider Varianter"
+  title="Separator-varianter"
   description={
     <Text>
       Bruk <code>variant</code> prop for å endre <code>Divider</code> varianten.
     </Text>
   }
-  story={<Canvas of={DividerStories.DividerVariants} sourceState="hidden" className="fullwidth" />}
+  story={<Canvas of={SeparatorStories.DividerVariants} sourceState="hidden" className="fullwidth" />}
 />
 
 <DocsStory
@@ -35,7 +33,7 @@ import { Divider } from "@kvib/react";
       <code>borderWidth</code> prop.
     </Text>
   }
-  story={<Canvas of={DividerStories.DividerColorsWidths} sourceState="hidden" className="fullwidth" />}
+  story={<Canvas of={SeparatorStories.DividerColorsWidths} sourceState="hidden" className="fullwidth" />}
 />
 
 <DocsStory
@@ -45,18 +43,18 @@ import { Divider } from "@kvib/react";
       Bruk <code>orientation</code>prop for å sette vertikal <code>Divider</code>.
     </Text>
   }
-  story={<Canvas of={DividerStories.DividerVertical} sourceState="hidden" className="fullwidth" />}
+  story={<Canvas of={SeparatorStories.DividerVertical} sourceState="hidden" className="fullwidth" />}
 />
 
 <DocsStory
-  title="Innhold i Divider"
+  title="Innhold i Separator"
   description={
     <Text>
       Eksempel på innhold i <code>Divider</code> ved bruk av <code>Box</code>, <code>Divider</code>,{" "}
       <code>AbsoluteCenter</code> og <code>Text</code> komponenter.
     </Text>
   }
-  story={<Canvas of={DividerStories.DividerContent} sourceState="hidden" className="fullwidth" />}
+  story={<Canvas of={SeparatorStories.DividerContent} sourceState="hidden" className="fullwidth" />}
 />
 
 <DocsStory
@@ -65,8 +63,8 @@ import { Divider } from "@kvib/react";
   description={""}
   story={
     <>
-      <Canvas of={DividerStories.Preview} className="fullwidth" />
-      <Controls of={DividerStories.Preview} />
+      <Canvas of={SeparatorStories.Preview} className="fullwidth" />
+      <Controls of={SeparatorStories.Preview} />
     </>
   }
 />

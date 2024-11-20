@@ -34,17 +34,17 @@ import * as PopoverStories from "../../components/overlay/popover/Popover.storie
 import * as TooltipStories from "../../components/overlay/tooltip/Tooltip.stories";
 import * as SearchAsyncStories from "../../components/search/search-async/SearchAsync.stories";
 import * as SearchStories from "../../components/search/search/Search.stories";
-import * as DividerStories from "../../components/sideelementer/divider/Divider.stories";
 import * as FooterStories from "../../components/sideelementer/footer/footer/Footer.stories";
 import * as HeaderStories from "../../components/sideelementer/header/Header.stories";
 import * as LogoStories from "../../components/sideelementer/logo/Logo.stories";
+import * as SeparatorStories from "../../components/sideelementer/separator/Separator.stories";
 import * as ButtonStories from "../../components/skjemaelementer/button/Button.stories";
 import * as CheckboxStories from "../../components/skjemaelementer/checkbox/Checkbox.stories";
 import * as CloseButtonStories from "../../components/skjemaelementer/close-button/CloseButton.stories";
 import * as DatepickerStories from "../../components/skjemaelementer/datepicker/Datepicker.stories";
 import * as EditableStories from "../../components/skjemaelementer/editable/Editable.stories";
+import * as FormControlStories from "../../components/skjemaelementer/field/Field.stories";
 import * as FileUploadStories from "../../components/skjemaelementer/file-upload/FileUpload.stories";
-import * as FormControlStories from "../../components/skjemaelementer/form-control/Form-control.stories";
 import * as IconButtonStories from "../../components/skjemaelementer/icon-button/IconButton.stories";
 import * as InputStories from "../../components/skjemaelementer/Input/Input.stories";
 import * as NumberInputStories from "../../components/skjemaelementer/number-input/NumberInput.stories";
@@ -291,7 +291,7 @@ export const Footer = (_: ColorPalette) => {
 };
 
 export const Divider = (colorPalette: ColorPalette) => {
-  const { Preview } = composeStories(DividerStories);
+  const { Preview } = composeStories(SeparatorStories);
   return <Preview colorPalette={colorPalette} />;
 };
 

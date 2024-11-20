@@ -1,6 +1,5 @@
 import {
   Box,
-  Collapsible,
   Flex,
   IconButton,
   Link,
@@ -107,12 +106,10 @@ export const Header = (props: HeaderProps) => {
         )}
       </Flex>
       {/* Slide content */}
-      <Collapsible.Root in={isOpen} animateOpacity={false}>
-        <VStack bg="gray.50" borderBottomWidth="2px" borderBottomColor="gray.200" padding={30} gap={10}>
-          {showChildrenInMenu && children}
-          {dropdownMenuChildren}
-        </VStack>
-      </Collapsible.Root>
+      <VStack bg="gray.50" borderBottomWidth="2px" borderBottomColor="gray.200" padding={30} gap={10}>
+        {showChildrenInMenu && children}
+        {dropdownMenuChildren}
+      </VStack>
     </Box>
   );
 };

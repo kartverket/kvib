@@ -6,17 +6,7 @@ type BannerProps = {
 
 export const Banner = ({ children }: BannerProps) => {
   return (
-    <Card
-      variant="subtle"
-      backgroundSize="contain"
-      backgroundPosition="top"
-      backgroundRepeat="no-repeat"
-      backgroundImage="assets/banner-green.svg"
-      backgroundColor="green.500"
-      marginBottom="1rem"
-      padding="3rem"
-      className="frontpage-banner"
-    >
+    <Card variant="subtle" backgroundColor="green.500" marginBottom="1rem" padding="3rem" className="frontpage-banner">
       <CardBody
         display="flex"
         flexDirection="column"

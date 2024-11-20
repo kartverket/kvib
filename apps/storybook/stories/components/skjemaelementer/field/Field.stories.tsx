@@ -1,3 +1,4 @@
+import { FieldProps } from "@kvib/react";
 import { Field as KvibFormControl, Input as KvibInput } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
@@ -46,7 +47,7 @@ export default meta;
 type Story = StoryObj<typeof KvibFormControl>;
 
 export const Preview: Story = {
-  render: args => (
+  render: (args: FieldProps) => (
     <KvibFormControl label={"Label (valgfri)"} helperText={"Hjelpetekst"} errorMessage={"Feilmelding"} {...args}>
       <KvibInput placeholder={"Eksempel"} size={"md"} variant={"outline"} />
     </KvibFormControl>
