@@ -1,11 +1,4 @@
-import { HStack, VStack } from "@kvib/react/src";
-import {
-  Tabs as KvibTab,
-  TabsList as KvibTabList,
-  TabsContent as KvibTabPanel,
-  TabsContentGroup as KvibTabPanels,
-  Tabs as KvibTabs,
-} from "@kvib/react/src/tabs";
+import { TabsList as KvibTabList, Tabs as KvibTabs, TabsContent, TabsProps, TabsTrigger } from "@kvib/react/src/tabs";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibTabs> = {
@@ -102,103 +95,19 @@ const meta: Meta<typeof KvibTabs> = {
 export default meta;
 type Story = StoryObj<typeof KvibTabs>;
 
+const TabsExample = ({ ...args }: TabsProps) => {
+  return (
+    <KvibTabs defaultValue="fane1" {...args}>
+      <KvibTabList>
+        <TabsTrigger value="fane1">Første fane</TabsTrigger>
+        <TabsTrigger value="fane2">Andre fane</TabsTrigger>
+      </KvibTabList>
+      <TabsContent value="fane1">Innhold for første fane</TabsContent>
+      <TabsContent value="fane2">Innhold for andre fane</TabsContent>
+    </KvibTabs>
+  );
+};
+
 export const Preview: Story = {
-  args: { size: "md" },
-  render: args => (
-    <KvibTabs {...args}>
-      <KvibTabList>
-        <KvibTab>Første fane</KvibTab>
-        <KvibTab>Andre fane</KvibTab>
-      </KvibTabList>
-    </KvibTabs>
-  ),
-};
-
-export const TabsColors: Story = {
-  args: { size: "md" },
-  render: args => (
-    <HStack gap="2rem">
-      <KvibTabs {...args} colorScheme="blue">
-        <KvibTabList>
-          <KvibTab>Første fane</KvibTab>
-          <KvibTab>Andre fane</KvibTab>
-        </KvibTabList>
-      </KvibTabs>
-      <KvibTabs {...args} colorScheme="green">
-        <KvibTabList>
-          <KvibTab>Første fane</KvibTab>
-          <KvibTab>Andre fane</KvibTab>
-        </KvibTabList>
-      </KvibTabs>
-    </HStack>
-  ),
-};
-
-export const TabsNumber: Story = {
-  args: { size: "md" },
-  render: args => (
-    <KvibTabs {...args}>
-      <KvibTabList>
-        <KvibTab>Første fane</KvibTab>
-        <KvibTab>Andre fane</KvibTab>
-        <KvibTab>Tredje fane</KvibTab>
-        <KvibTab>Fjerde fane</KvibTab>
-        <KvibTab>Femte fane</KvibTab>
-        <KvibTab>Sjette fane</KvibTab>
-      </KvibTabList>
-    </KvibTabs>
-  ),
-};
-
-export const TabsSizes: Story = {
-  render: args => (
-    <VStack alignItems="start">
-      <KvibTabs {...args} aria-label="Tabs small" size="sm">
-        <KvibTabList>
-          <KvibTab>Første fane</KvibTab>
-          <KvibTab>Andre fane</KvibTab>
-        </KvibTabList>
-      </KvibTabs>
-      <KvibTabs {...args} size="md">
-        <KvibTabList>
-          <KvibTab>Første fane</KvibTab>
-          <KvibTab>Andre fane</KvibTab>
-        </KvibTabList>
-      </KvibTabs>
-      <KvibTabs {...args} size="lg">
-        <KvibTabList>
-          <KvibTab>Første fane</KvibTab>
-          <KvibTab>Andre fane</KvibTab>
-        </KvibTabList>
-      </KvibTabs>
-    </VStack>
-  ),
-};
-
-export const TabsPanels: Story = {
-  args: { size: "md" },
-  render: args => (
-    <KvibTabs {...args}>
-      <KvibTabList>
-        <KvibTab>Første fane</KvibTab>
-        <KvibTab>Andre fane</KvibTab>
-      </KvibTabList>
-      <KvibTabPanels>
-        <KvibTabPanel>Fane 1</KvibTabPanel>
-        <KvibTabPanel>Fane 2</KvibTabPanel>
-      </KvibTabPanels>
-    </KvibTabs>
-  ),
-};
-
-export const TabsStates: Story = {
-  args: { size: "md" },
-  render: args => (
-    <KvibTabs {...args}>
-      <KvibTabList>
-        <KvibTab>Enabled</KvibTab>
-        <KvibTab isDisabled>Disabled</KvibTab>
-      </KvibTabList>
-    </KvibTabs>
-  ),
+  render: args => <TabsExample {...args} />,
 };

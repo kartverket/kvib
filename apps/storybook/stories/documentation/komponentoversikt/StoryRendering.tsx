@@ -1,6 +1,6 @@
 import { composeStories } from "@storybook/react";
 import * as PortalStories from "../../components/annet/portal/Portal.stories";
-import * as ShowHideStories from "../../components/annet/show-hide/ShowHide.stories";
+import * as ShowHideStories from "../../components/annet/show/Show.stories";
 import * as VisuallyHiddenStories from "../../components/annet/visually-hidden/VisuallyHidden.stories";
 import * as AccordionStories from "../../components/datavisning/accordion/Accordion.stories";
 import * as BadgeStories from "../../components/datavisning/badge/Badge.stories";
@@ -60,8 +60,8 @@ import * as ProgressCircleStories from "../../components/tilbakemelding/progress
 import * as ProgressStories from "../../components/tilbakemelding/progress/Progress.stories";
 import * as SkeletonStories from "../../components/tilbakemelding/skeleton/Skeleton.stories";
 import * as SpinnerStories from "../../components/tilbakemelding/spinner/Spinner.stories";
-import * as StepperStories from "../../components/tilbakemelding/stepper/Stepper.stories";
-import * as ToastStories from "../../components/tilbakemelding/toast/Toast.stories";
+import * as StepperStories from "../../components/tilbakemelding/steps/Steps.stories";
+import * as ToastStories from "../../components/tilbakemelding/toaster/Toaster.stories";
 import * as HeadingStories from "../../design/heading/Heading.stories";
 import * as HighlightStories from "../../design/highlight/Highlight.stories";
 import * as TextStories from "../../design/text/Text.stories";

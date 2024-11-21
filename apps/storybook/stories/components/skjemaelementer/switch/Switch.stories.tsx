@@ -1,4 +1,5 @@
-import { Field, Switch as KvibSwitch } from "@kvib/react/src";
+import { SwitchProps } from "@kvib/react";
+import { Switch as KvibSwitch } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibSwitch> = {
@@ -187,9 +188,5 @@ export default meta;
 type Story = StoryObj<typeof KvibSwitch>;
 
 export const Preview: Story = {
-  render: args => (
-    <Field label="Skru på varsler via mail?" htmlFor="email-alerts">
-      <KvibSwitch {...args} id="email-alerts" />
-    </Field>
-  ),
+  render: (args: SwitchProps) => <KvibSwitch {...args} />,
 };

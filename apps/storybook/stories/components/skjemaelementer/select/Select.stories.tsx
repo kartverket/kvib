@@ -1,4 +1,13 @@
-import { Select as KvibSelect } from "@kvib/react/src";
+import {
+  createListCollection,
+  Select as KvibSelect,
+  SelectContent,
+  SelectItem,
+  SelectLabel,
+  SelectProps,
+  SelectTrigger,
+  SelectValueText,
+} from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibSelect> = {
@@ -51,7 +60,7 @@ const meta: Meta<typeof KvibSelect> = {
       control: "text",
     },
 
-    isDisabled: {
+    disabled: {
       description: "",
       table: {
         type: { summary: "boolean" },
@@ -60,7 +69,7 @@ const meta: Meta<typeof KvibSelect> = {
       control: "boolean",
     },
 
-    isInvalid: {
+    invalid: {
       description:
         "If true, the form control will be invalid. This has 2 side effects: - The FormLabel and FormErrorIcon will have `data-invalid` set to true - The form element (e.g, Input) will have `aria-invalid` set to true",
       table: {
@@ -70,7 +79,7 @@ const meta: Meta<typeof KvibSelect> = {
       control: "boolean",
     },
 
-    isRequired: {
+    required: {
       description:
         "If true, the form control will be required. This has 2 side effects: - The FormLabel will show a required indicator - The form element (e.g, Input) will have `aria-required` set to true",
       table: {
@@ -113,6 +122,15 @@ const meta: Meta<typeof KvibSelect> = {
 export default meta;
 type Story = StoryObj<typeof KvibSelect>;
 
+const alternativer = createListCollection({
+  items: [
+    { label: "React.js", value: "react" },
+    { label: "Vue.js", value: "vue" },
+    { label: "Angular", value: "angular" },
+    { label: "Svelte", value: "svelte" },
+  ],
+});
+
 export const Preview: Story = {
   parameters: {
     docs: {
@@ -122,11 +140,19 @@ export const Preview: Story = {
     },
   },
   args: {},
-  render: args => (
-    <KvibSelect {...args} placeholder="Velg alternativ" aria-label="select">
-      <option value="option1">Alternativ 1</option>
-      <option value="option2">Alternativ 2</option>
-      <option value="option3">Alternativ 3</option>
+  render: (args: SelectProps) => (
+    <KvibSelect {...args} collection={alternativer} aria-label="select">
+      <SelectLabel>Velg et rammeverk</SelectLabel>
+      <SelectTrigger>
+        <SelectValueText placeholder="Velg..." />
+      </SelectTrigger>
+      <SelectContent>
+        {alternativer.items.map((alternativ: { label: string; value: string }) => (
+          <SelectItem item={alternativ} key={alternativ.value}>
+            {alternativ.label}
+          </SelectItem>
+        ))}
+      </SelectContent>
     </KvibSelect>
   ),
 };

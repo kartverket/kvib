@@ -1,8 +1,8 @@
-import { Box, Button, Center, HStack, Icon, Toaster as KvibToast, Stack, toaster } from "@kvib/react/src";
+import { Button, Icon, Toaster as KvibToast, Toaster, toaster } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<KvibToast> = {
-  title: "Komponenter/Toast",
+  title: "Komponenter/Toaster",
   parameters: {
     docs: {
       story: { inline: true },
@@ -95,7 +95,7 @@ export default meta;
 
 const ToastExample = ({ ...args }) => {
   return (
-    <Center>
+    <>
       <Button
         colorScheme={args.btnClr}
         w={args.btnW}
@@ -113,7 +113,8 @@ const ToastExample = ({ ...args }) => {
       >
         Vis toast
       </Button>
-    </Center>
+      <Toaster />
+    </>
   );
 };
 
@@ -128,50 +129,4 @@ export const Preview: Story = {
     icon: "check",
   },
   render: args => <ToastExample {...args} />,
-};
-
-export const ToastStatus: Story = {
-  args: { duration: 4000, btnW: "500px" },
-  render: args => (
-    <Stack>
-      <ToastExample
-        {...args}
-        btnClr="blue"
-        title="Info"
-        description="Hold inne ctrl for å zoome på kartet"
-        status="info"
-      />
-      ,
-      <ToastExample
-        {...args}
-        btnClr="orange"
-        title="Warning"
-        description="Dette kan bare gjøres to ganger til i dag"
-        status="warning"
-      />
-      ,
-      <ToastExample {...args} btnClr="green" title="Success" description="Informasjon oppdatert" status="success" />,
-      <ToastExample {...args} btnClr="red" title="Error" description="Noe gikk galt" status="error" />,
-      <ToastExample {...args} btnClr="blue" title="Loading" description="laster..." status="loading" />,
-    </Stack>
-  ),
-};
-
-export const ToastPosition: Story = {
-  args: { duration: 5000, btnW: "100px" },
-  render: args => (
-    <div>
-      <HStack>
-        <ToastExample {...args} position="top-left" title="Top-left" />,
-        <ToastExample {...args} position="top" title="Top" />,
-        <ToastExample {...args} position="top-right" title="Top-right" />,
-      </HStack>
-      <Box h="10px" />
-      <HStack>
-        <ToastExample {...args} position="bottom-left" title="Bottom-left" />,
-        <ToastExample {...args} position="bottom" title="Bottom" />,
-        <ToastExample {...args} position="bottom-right" title="Bottom-right" />,
-      </HStack>
-    </div>
-  ),
 };

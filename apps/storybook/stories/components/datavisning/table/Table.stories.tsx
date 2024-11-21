@@ -1,9 +1,12 @@
 import {
   Table as KvibTable,
-  TableBody as KvibTbody,
-  TableCell as KvibTd,
-  TableColumnHeader as KvibTh,
-  TableRow as KvibTr,
+  Table,
+  TableBody,
+  TableCell,
+  TableColumnHeader,
+  TableHeader,
+  TableProps,
+  TableRow,
 } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
@@ -20,13 +23,21 @@ const meta: Meta<typeof KvibTable> = {
     variant: {
       description: "The variant of the Table",
       table: {
-        type: { summary: "simple | striped | unstyled" },
-        defaultValue: { summary: "simple" },
+        type: { summary: "line | outline" },
+        defaultValue: { summary: "line" },
       },
-      options: ["simple", "striped", "unstyled"],
+      options: ["line", "outline"],
       control: "radio",
     },
-    colorScheme: {
+    striped: {
+      description: "Whether the Table should have striped rows",
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
+      },
+      control: "boolean",
+    },
+    colorPalette: {
       description: "The visual color appearance of the component",
       table: {
         type: { summary: "green | blue | red | gray" },
@@ -50,27 +61,27 @@ const meta: Meta<typeof KvibTable> = {
 export default meta;
 type Story = StoryObj<typeof KvibTable>;
 
+const TableExample = (args: TableProps) => (
+  <Table {...args}>
+    <TableHeader>
+      <TableRow>
+        <TableColumnHeader>Tekstkolonne</TableColumnHeader>
+        <TableColumnHeader>Numerisk</TableColumnHeader>
+      </TableRow>
+    </TableHeader>
+    <TableBody>
+      <TableRow>
+        <TableCell>Rad 1</TableCell>
+        <TableCell>1</TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell>Rad 2</TableCell>
+        <TableCell>2</TableCell>
+      </TableRow>
+    </TableBody>
+  </Table>
+);
+
 export const Preview: Story = {
-  render: args => (
-    <>
-      <KvibTable {...args}>
-        <KvibTable>
-          <KvibTr>
-            <KvibTh>Tekstkolonne</KvibTh>
-            <KvibTh>Numerisk</KvibTh>
-          </KvibTr>
-        </KvibTable>
-        <KvibTbody>
-          <KvibTr>
-            <KvibTd>Rad 1</KvibTd>
-            <KvibTd>1</KvibTd>
-          </KvibTr>
-          <KvibTr>
-            <KvibTd>Rad 2</KvibTd>
-            <KvibTd>2</KvibTd>
-          </KvibTr>
-        </KvibTbody>
-      </KvibTable>
-    </>
-  ),
+  render: args => <TableExample {...args} />,
 };

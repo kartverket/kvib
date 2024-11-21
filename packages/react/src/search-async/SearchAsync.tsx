@@ -102,7 +102,6 @@ const SearchAsyncNoRef = <T extends unknown>(
     multi = false,
     noOptionsMessage,
     disabled,
-    focusBorderColor,
     menuPlacement = "bottom",
     value,
     optionLabelFormatter,

@@ -5,6 +5,9 @@ import {
   StatHelpText as KvibStatHelpText,
   StatLabel as KvibStatLabel,
   StatValueText as KvibStatNumber,
+  StatDownTrend,
+  StatProps,
+  StatUpTrend,
 } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
@@ -23,7 +26,7 @@ export default meta;
 type Story = StoryObj<typeof KvibStat>;
 
 export const Preview: Story = {
-  render: args => (
+  render: (args: StatProps) => (
     <Box>
       <KvibStat {...args}>
         <KvibStatLabel>Utgifter</KvibStatLabel>
@@ -35,18 +38,22 @@ export const Preview: Story = {
 };
 
 export const StatIndicator: Story = {
-  render: args => (
+  render: (args: StatProps) => (
     <KvibStatGroup>
       <KvibStat {...args}>
         <KvibStatLabel>Sendt</KvibStatLabel>
         <KvibStatNumber>345,670</KvibStatNumber>
-        <KvibStatHelpText>23.36%</KvibStatHelpText>
+        <StatUpTrend variant="plain" px="0">
+          23.36%
+        </StatUpTrend>
       </KvibStat>
 
       <KvibStat {...args}>
         <KvibStatLabel>Klikk</KvibStatLabel>
         <KvibStatNumber>45</KvibStatNumber>
-        <KvibStatHelpText>9.05%</KvibStatHelpText>
+        <StatDownTrend variant="plain" px="0">
+          9.05%
+        </StatDownTrend>
       </KvibStat>
     </KvibStatGroup>
   ),

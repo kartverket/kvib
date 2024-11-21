@@ -1,3 +1,4 @@
+import { Button, TooltipProps } from "@kvib/react";
 import { Tooltip as KvibTooltip } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
@@ -217,9 +218,11 @@ export default meta;
 type Story = StoryObj<typeof KvibTooltip>;
 
 export const Preview: Story = {
-  render: args => (
-    <KvibTooltip {...args} label="Et tooltip!" aria-label="Et tooltip">
-      Hover meg
+  render: (args: TooltipProps) => (
+    <KvibTooltip {...args} content="Et tooltip!" aria-label="Et tooltip">
+      <Button variant="outline" size="sm">
+        Hover me
+      </Button>
     </KvibTooltip>
   ),
 };

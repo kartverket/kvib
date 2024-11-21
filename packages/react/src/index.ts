@@ -54,6 +54,7 @@ export * from "./timepicker";
 export * from "./toaster";
 export * from "./tooltip";
 export * from "./typography";
+export * from "./utils";
 export * from "./utils/client-only";
 export * from "./utils/environment-provider";
 export * from "./utils/for";
