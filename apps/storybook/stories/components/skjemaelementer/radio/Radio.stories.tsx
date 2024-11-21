@@ -1,3 +1,4 @@
+import { RadioProps } from "@kvib/react";
 import { Radio as KvibRadio, RadioGroup as KvibRadioGroup, Stack as KvibStack } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
@@ -146,7 +147,7 @@ type Story = StoryObj<typeof KvibRadio>;
 
 export const Preview: Story = {
   args: { onChange: undefined },
-  render: args => (
+  render: (args: RadioProps) => (
     <KvibRadioGroup defaultValue={"1"}>
       <KvibStack direction={"row"}>
         <KvibRadio {...args} value={"1"}>
@@ -157,60 +158,6 @@ export const Preview: Story = {
         </KvibRadio>
         <KvibRadio {...args} value={"3"}>
           Tre
-        </KvibRadio>
-      </KvibStack>
-    </KvibRadioGroup>
-  ),
-};
-
-export const Color: Story = {
-  args: { size: "lg" },
-  render: args => (
-    <KvibRadioGroup defaultValue="green">
-      <KvibStack direction={"row"}>
-        <KvibRadio {...args} value={"green"} colorScheme={"green"}>
-          Grønn
-        </KvibRadio>
-        <KvibRadio {...args} value={"blue"} colorScheme={"blue"}>
-          Blå
-        </KvibRadio>
-      </KvibStack>
-    </KvibRadioGroup>
-  ),
-};
-
-export const Size: Story = {
-  args: { colorScheme: "green" },
-  render: args => (
-    <KvibRadioGroup defaultValue="3">
-      <KvibStack>
-        <KvibRadio {...args} size={"sm"} value="1">
-          sm
-        </KvibRadio>
-        <KvibRadio {...args} size={"md"} value="2">
-          md
-        </KvibRadio>
-        <KvibRadio {...args} size={"lg"} value="3">
-          lg
-        </KvibRadio>
-      </KvibStack>
-    </KvibRadioGroup>
-  ),
-};
-
-export const State: Story = {
-  args: { onChange: undefined },
-  render: args => (
-    <KvibRadioGroup defaultValue={"disabled"}>
-      <KvibStack direction={"row"}>
-        <KvibRadio {...args} value={"1"}>
-          Vanlig
-        </KvibRadio>
-        <KvibRadio {...args} value={"disabled"} isDisabled>
-          Disabled
-        </KvibRadio>
-        <KvibRadio {...args} value={"3"} isInvalid>
-          Invalid
         </KvibRadio>
       </KvibStack>
     </KvibRadioGroup>

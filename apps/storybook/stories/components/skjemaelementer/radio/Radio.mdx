@@ -1,4 +1,3 @@
-import { Alert, AlertIcon, Box, Code, Text } from "@kvib/react/src";
 import { Canvas, Controls, Meta, Source } from "@storybook/blocks";
 import { DocsAnatomy, DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
 import * as RadioStories from "./Radio.stories";
@@ -19,59 +18,6 @@ feil i avkrysningen, dersom dette har skjedd (f.eks. ikke krysset av for et alte
 import { Radio } from "@kvib/react";
 ```
 
-<Feedback component="Radio" />
-
-<DocsStory
-  title="Radio"
-  description={
-    <Text>
-      Radio brukes med komponenten <Code>RadioGroup</Code>. Man må sette <Code>value</Code> på Radioknappene for at de
-      skal kunne vise hvilken som er valgt. Hvis man setter <Code>isChecked</Code> til true, må man oppdatere knappene
-      med <Code>onChange</Code>.
-    </Text>
-  }
-  story={<Canvas of={RadioStories.Preview} sourceState={"hidden"} />}
-/>
-<DocsStory
-  title="Farger"
-  description={
-    <Text>
-      Farge kan endres ved å bruke <Code>colorScheme</Code>.
-    </Text>
-  }
-  story={<Canvas of={RadioStories.Color} sourceState={"hidden"} />}
-/>
-<DocsStory
-  title="Størrelse"
-  description={
-    <Text>
-      Radio knapp kommer i 3 størrelser som kan endres og settes ved å bruke <Code>size</Code> prop. Standard størrelse
-      er medium.
-    </Text>
-  }
-  story={<Canvas of={RadioStories.Size} sourceState={"hidden"} />}
-/>
-
-<DocsStory
-  title="States"
-  isVertical
-  description={""}
-  story={<Canvas of={RadioStories.State} sourceState={"hidden"} />}
-/>
-
-  <DocsStory title={"Notat om name Prop"} isVertical description={<Text>Det er anbefalt å bruke <Code>name</Code> prop i <Code>RadioGroup</Code> komponenten, istedet om å bruke det i hvert <Code>Radio</Code> komponent.</Text>} story={  <Source code={`
-    // Do this ✅
-    <RadioGroup name="form-name">
-    <Radio>Radio 1</Radio>
-    <Radio>Radio 2</Radio>
-    </RadioGroup>
-
-    // Don't do this ❌
-    <RadioGroup >
-    <Radio name="form-name">Radio 1</Radio>
-    <Radio name="form-name">Radio 2</Radio>
-    </RadioGroup>
-    `} dark/>}/>
 
 <DocsHeading light>Props</DocsHeading>
 <Canvas of={RadioStories.Preview} />

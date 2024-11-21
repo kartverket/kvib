@@ -1,4 +1,3 @@
-import { Box, Code, Stack, Text } from "@kvib/react/src";
 import { Canvas, Controls, Meta, Story } from "@storybook/blocks";
 import { DocsAnatomy, DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
 import * as SearchStories from "./Search.stories";
@@ -23,55 +22,9 @@ import { Search } from "@kvib/react";
 
 - Innhold som lett kan navigeres til uten søk
 
-<Feedback component="Search" />
-
-</DocsContainer>
-
-<DocsContainer>
-
-<DocsStory
-  title="Utseende"
-  description={
-    <Box>
-      <Text>
-        Search har fire varianter. <Code>outline</Code> er standardvarianten og skal brukes i de fleste tilfeller.
-        <Code>filled</Code> kan brukes som et alternativ til outline. For mindre viktige søkefelt kan
-        <Code>flushed</Code> og
-        <Code>unstyled</Code> brukes.
-      </Text>
-      <Text>
-        Det er mulig å velge mellom fire forskjellige størrelser: <Code>xs</Code>, <Code>sm</Code>, <Code>md</Code> og{" "}
-        <Code>lg</Code>.<Code>md</Code> er standard.
-      </Text>
-    </Box>
-  }
-  story={<Canvas of={SearchStories.SearchVariants} />}
-/>
-
-<DocsStory
-  title="Søkeknapp"
-  description={
-    <Box>
-      <Text>
-        Search har muligheten til å legge inn knapp med søkeikon ved å benytte <Code>searchButton</Code>-proppen med
-        verdiene <Code>"left"</Code> eller <Code>"right"</Code> - standard er <Code>"none"</Code>. Disse har{" "}
-        <Code>type="submit"</Code> som gjør at de passer inn i et form. Det er også mulig å legge til tekst på knappen
-        ved bruk av <Code>buttonText</Code>.
-      </Text>
-      <Text>
-        Søkeknappen kan tilpasses ved å legge verdier til <Code>buttonVariant</Code> og <Code>buttonWidth</Code>.
-        Knappen er en <Code>IconButton</Code>/<Code>Button</Code> og har tilsvarende varianter.
-      </Text>
-    </Box>
-  }
-  story={<Canvas of={SearchStories.SearchButtonAppearance} />}
-/>
-
-</DocsContainer>
 
 <DocsHeading light>Retningslinjer</DocsHeading>
 
-<DocsContainer>
 
 ### Bredde
 
@@ -89,10 +42,5 @@ Det gjøres enten med en av ikonknappene i props, eller egen knapp.
 
 <DocsHeading light>Props</DocsHeading>
 
-<Alert status="info">
-  <AlertIcon />
-  Padding på søkeinput regnes ut ved rerender noe som gjør at endring av props på dokumentasjonssiden kan gjøre at søkefeltet
-  ser rart ut. Bytt mellom stories for å se en rerender.
-</Alert>
 <Canvas of={SearchStories.Preview} />
 <Controls of={SearchStories.Preview} />
