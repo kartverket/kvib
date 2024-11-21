@@ -6,6 +6,7 @@ export {
   PopoverContent,
   PopoverFooter,
   PopoverHeader,
+  PopoverTitle,
   PopoverTrigger,
 } from "@/components/ui/popover";
 
@@ -17,5 +18,6 @@ export type {
   PopoverFooterProps,
   PopoverHeaderProps,
   PopoverRootProps as PopoverProps,
+  PopoverTitleProps,
   PopoverTriggerProps,
 } from "@chakra-ui/react";
