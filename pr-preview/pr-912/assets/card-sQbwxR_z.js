@@ -1,0 +1,1 @@
+import{c as t}from"./create-slot-recipe-context-CYF_0Bn9.js";const{withProvider:r,withContext:o,useStyles:d,PropsProvider:e}=t({key:"card"}),a=r("div","root"),i=e,c=o("div","body"),n=o("div","header"),C=o("div","footer"),p=o("h3","title"),v=o("p","description");export{a as C,c as a,v as b,C as c,n as d,i as e,p as f};
