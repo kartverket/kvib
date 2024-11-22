@@ -49,7 +49,9 @@ export const Timepicker = ({
   const state = useTimeFieldState({
     value,
     defaultValue,
-    onChange,
+    onChange: value => {
+      onChange(value as any);
+    },
     locale: "nb",
     isDisabled,
     isInvalid,
@@ -100,6 +102,7 @@ export const Timepicker = ({
         ...focusStyles,
         ...styles,
       }}
+      aria-label={ariaLabel}
     >
       <IconButton
         onClick={() => adjustTime("backward")}

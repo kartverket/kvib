@@ -102,7 +102,6 @@ const SearchAsyncNoRef = <T extends unknown>(
     multi = false,
     noOptionsMessage,
     disabled,
-    focusBorderColor,
     menuPlacement = "bottom",
     value,
     optionLabelFormatter,
@@ -150,9 +149,8 @@ const SearchAsyncNoRef = <T extends unknown>(
       placeholder={placeholder ? placeholder : "Søk her..."}
       defaultOptions={defaultOptions}
       id={id}
-      isMulti={isMulti}
-      isDisabled={isDisabled}
-      focusBorderColor={focusBorderColor}
+      isMulti={multi}
+      isDisabled={disabled}
       menuPlacement={menuPlacement}
       value={value}
       ref={ref}
