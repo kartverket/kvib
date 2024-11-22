@@ -15,14 +15,14 @@ import {
   zIndices,
 } from "./tokens";
 
-import { alertSlotRecipe } from "./recipes/alert.recipe";
+import { alertTheme } from "./components/alert";
+import { buttonTheme } from "./components/button";
+import { iconButtonTheme } from "./components/iconButton";
+import { inputTheme } from "./components/input";
 import { breadcrumbSlotRecipe } from "./recipes/breadcrumb.recipe";
-import { buttonRecipe } from "./recipes/button.recipe";
 import { cardSlotRecipe } from "./recipes/card.recipe";
 import { checkboxSlotRecipe } from "./recipes/checkbox.recipe";
 import { closeButtonSlotRecipe } from "./recipes/close-button.recipe";
-import { iconButtonRecipe } from "./recipes/icon-button.recipe";
-import { inputRecipe } from "./recipes/input.recipe";
 import { linkRecipe } from "./recipes/link.recipe";
 import { pinInputRecipe } from "./recipes/pin-input.recipe";
 import { selectNativeRecipe } from "./recipes/select-native.recipe";
@@ -34,12 +34,14 @@ const customConfig = defineConfig({
   ...kvibConfig,
   theme: {
     breakpoints: breakpoints,
-    tokens: {
+    textStyles: {
       fonts: fonts,
-      fontSizes: fontSizes,
-      fontWeights: fontWeights,
-      letterSpacings: letterSpacings,
-      lineHeights: lineHeights,
+      sizes: fontSizes,
+      weights: fontWeights,
+      spacings: letterSpacings,
+      heights: lineHeights,
+    },
+    tokens: {
       blurs: blur,
       borders: borders,
       colors: colors,
@@ -53,15 +55,15 @@ const customConfig = defineConfig({
       animations: transitionProperty,
     },
     recipes: {
-      button: buttonRecipe,
-      iconButton: iconButtonRecipe,
-      input: inputRecipe,
+      button: buttonTheme,
+      iconButton: iconButtonTheme,
+      input: inputTheme,
       link: linkRecipe,
       nativeSelect: selectNativeRecipe,
       pinInput: pinInputRecipe,
     },
     slotRecipes: {
-      alert: alertSlotRecipe,
+      alert: alertTheme,
       breadcrumb: breadcrumbSlotRecipe,
       card: cardSlotRecipe,
       checkbox: checkboxSlotRecipe,

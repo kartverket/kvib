@@ -1,4 +1,4 @@
-import { inputRecipe } from "@/theme/recipes/input.recipe";
+import { inputTheme } from "@/theme/components/input";
 import { useFieldContext } from "@chakra-ui/react";
 import { CalendarDateTime, parseTime } from "@internationalized/date";
 import { Box, IconButton, useRecipe } from "@kvib/react/src";
@@ -34,7 +34,7 @@ export const Timepicker = ({
   minuteInterval = 30,
   ariaLabel,
 }: TimepickerProps) => {
-  const recipe = useRecipe({ recipe: inputRecipe });
+  const recipe = useRecipe({ recipe: inputTheme });
 
   // Get state from form control context
   const formControlContext = useFieldContext();

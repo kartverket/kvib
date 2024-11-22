@@ -1,7 +1,7 @@
 import { defineRecipe } from "@chakra-ui/react";
-import { inputRecipe } from "./input.recipe";
+import { inputTheme } from "../components/input";
 
-const { defaultVariants } = inputRecipe;
+const { defaultVariants } = inputTheme;
 
 export const pinInputRecipe = defineRecipe({
   className: "kvib-pin-input",
