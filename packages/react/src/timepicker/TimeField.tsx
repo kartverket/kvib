@@ -1,11 +1,10 @@
-import { Time } from "@internationalized/date";
 import { Flex } from "@kvib/react/src";
 import { useRef } from "react";
-import { AriaTimeFieldProps, useTimeField } from "react-aria";
+import { AriaTimeFieldProps, TimeValue, useTimeField } from "react-aria";
 import { TimeFieldState } from "react-stately";
 import { DateTimeSegment } from "./DateTimeSegment";
 
-type TimeFieldProps = AriaTimeFieldProps<Time> & {
+type TimeFieldProps = AriaTimeFieldProps<TimeValue> & {
   state: TimeFieldState;
   name?: string;
   colorPalette?: "green" | "blue";

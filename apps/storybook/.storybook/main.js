@@ -20,7 +20,6 @@ module.exports = {
         },
       },
     },
-    getAbsolutePath("@storybook/addon-mdx-gfm")
   ],
 
   typescript: {

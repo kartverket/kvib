@@ -32,11 +32,6 @@ import { transitionDuration, transitionProperty, transitionTimingFunction } from
 
 const customConfig = defineConfig({
   ...kvibConfig,
-  globalCss: {
-    body: {
-      color: "gray.800",
-    },
-  },
   theme: {
     breakpoints: breakpoints,
     tokens: {

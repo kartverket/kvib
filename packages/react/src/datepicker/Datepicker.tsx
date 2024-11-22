@@ -12,7 +12,7 @@ import {
 } from "@kvib/react/src";
 import { format, isValid, parse } from "date-fns";
 import { nb } from "date-fns/locale/nb";
-import { ChangeEvent, forwardRef, useState } from "react";
+import { ChangeEvent, useState } from "react";
 import { DayPicker } from "react-day-picker";
 import "react-day-picker/style.css";
 
@@ -93,29 +93,18 @@ export type DatepickerProps = Omit<InputProps, "colorPalette" | "max" | "min" | 
   colorPalette?: "blue" | "green";
 };
 
-export const Datepicker = forwardRef<HTMLInputElement, DatepickerProps>(
-  ({ onChange, useNative = false, ...props }, ref) => {
-    const KVInputProps = extractKVProps(props);
-    const commonProps = getCommonInputProps(props);
-    const defaultValue = props.defaultSelected ? formatDate(props.defaultSelected) : undefined;
-    const isClient = typeof window === "object";
-    const isMobile = isClient ? window.innerWidth < 480 : false;
+export const Datepicker = ({ onChange, useNative = false, ...props }: DatepickerProps) => {
+  const KVInputProps = extractKVProps(props);
+  const commonProps = getCommonInputProps(props);
+  const defaultValue = props.defaultSelected ? formatDate(props.defaultSelected) : undefined;
+  const isClient = typeof window === "object";
+  const isMobile = isClient ? window.innerWidth < 480 : false;
 
-    if (isMobile || useNative)
-      return (
-        <Input
-          ref={ref}
-          type="date"
-          defaultValue={defaultValue}
-          {...KVInputProps}
-          {...commonProps}
-          onChange={onChange}
-        />
-      );
+  if (isMobile || useNative)
+    return <Input type="date" defaultValue={defaultValue} {...KVInputProps} {...commonProps} onChange={onChange} />;
 
-    return <CustomDatepicker {...props} {...commonProps} onChange={onChange} />;
-  },
-);
+  return <CustomDatepicker {...props} {...commonProps} onChange={onChange} />;
+};
 
 const CustomDatepicker = ({
   onChange,

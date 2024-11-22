@@ -1,4 +1,4 @@
-import { Badge as KvibBadge, Stack as KvibStack } from "@kvib/react/src";
+import { Badge as KvibBadge } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibBadge> = {
@@ -33,6 +33,15 @@ const meta: Meta<typeof KvibBadge> = {
       options: ["green", "blue", "red", "gray"],
       control: "radio",
     },
+    size: {
+      description: "The size of the badge",
+      table: {
+        type: { summary: "sm | md | lg" },
+        defaultValue: { summary: "md" },
+      },
+      options: ["sm", "md", "lg"],
+      control: "radio",
+    },
   },
 };
 
@@ -40,58 +49,5 @@ export default meta;
 type Story = StoryObj<typeof KvibBadge>;
 
 export const Preview: Story = {
-  args: {
-    children: "Badge",
-    fontSize: "sm",
-  },
-  render: args => <KvibBadge {...args} />,
-};
-
-export const BadgeTexts: Story = {
-  render: () => (
-    <>
-      <KvibBadge colorPalette="green">Success</KvibBadge>
-      <KvibBadge colorPalette="red">Rejected</KvibBadge>
-    </>
-  ),
-};
-
-export const BadgeHensikt: Story = {
-  render: () => (
-    <>
-      <KvibBadge colorPalette="blue">New</KvibBadge>
-      <KvibBadge colorPalette="red" variant="solid">
-        Not working
-      </KvibBadge>
-    </>
-  ),
-};
-
-export const BadgeGreen: Story = {
-  render: () => <KvibBadge colorPalette="green">Success</KvibBadge>,
-};
-
-export const BadgeRed: Story = {
-  render: () => <KvibBadge colorPalette="red">Removed</KvibBadge>,
-};
-
-export const BadgeBlue: Story = {
-  render: () => <KvibBadge colorPalette="blue">New</KvibBadge>,
-};
-
-export const BadgeVariants: Story = {
-  args: { colorPalette: "green" },
-  render: args => (
-    <KvibStack direction="row">
-      <KvibBadge {...args} variant="outline">
-        Default
-      </KvibBadge>
-      <KvibBadge {...args} variant="solid">
-        Success
-      </KvibBadge>
-      <KvibBadge {...args} variant="subtle">
-        Removed
-      </KvibBadge>
-    </KvibStack>
-  ),
+  render: args => <KvibBadge {...args}>Badge</KvibBadge>,
 };

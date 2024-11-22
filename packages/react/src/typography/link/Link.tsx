@@ -1,11 +1,8 @@
-import { linkRecipe } from "@/theme/recipes/link.recipe";
 import { KvibSize } from "@/theme/tokens/sizes";
-import { Link as ChakraLink, LinkProps as ChakraLinkProps, RecipeVariantProps } from "@chakra-ui/react";
+import { Link as ChakraLink, LinkProps as ChakraLinkProps } from "@chakra-ui/react";
 import { forwardRef } from "react";
 
-type LinkVariantProps = RecipeVariantProps<typeof linkRecipe>;
-
-export interface LinkProps extends ChakraLinkProps, LinkVariantProps {
+export interface LinkProps extends ChakraLinkProps {
   /** If `true`, the link will open in a new tab. */
   external?: boolean;
 
