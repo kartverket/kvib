@@ -65,4 +65,8 @@ export const inputRecipe = defineRecipe({
       },
     },
   },
+  defaultVariants: {
+    size: "md",
+    variant: "outline",
+  },
 });

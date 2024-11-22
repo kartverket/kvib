@@ -1,6 +1,7 @@
+import { inputRecipe } from "@/theme/recipes/input.recipe";
 import { useFieldContext } from "@chakra-ui/react";
 import { CalendarDateTime, parseTime } from "@internationalized/date";
-import { IconButton, Input } from "@kvib/react/src";
+import { Box, IconButton, useRecipe } from "@kvib/react/src";
 import { useRef, useState } from "react";
 import { TimeValue } from "react-aria";
 import { useTimeFieldState } from "react-stately";
@@ -9,7 +10,7 @@ import { TimeField } from "./TimeField";
 type TimepickerProps = {
   size?: "xs" | "sm" | "md" | "lg";
   width?: "fit-content" | "full";
-  variant?: "outline" | "filled" | "flushed" | "unstyled";
+  variant?: "outline" | "subtle" | "flushed";
   colorPalette?: "green" | "blue";
   value?: TimeValue;
   defaultValue?: TimeValue;
@@ -26,13 +27,15 @@ export const Timepicker = ({
   variant = "outline",
   colorPalette,
   value,
-  defaultValue = getCurrentTime() as unknown as TimeValue,
+  defaultValue = getCurrentTime() as any,
   onChange = () => {},
   disabled: isDisabledExternally = false,
   invalid: isInvalidExternally = false,
   minuteInterval = 30,
   ariaLabel,
 }: TimepickerProps) => {
+  const recipe = useRecipe({ recipe: inputRecipe });
+
   // Get state from form control context
   const formControlContext = useFieldContext();
   const isDisabledFromForm = formControlContext?.disabled || false;
@@ -51,9 +54,9 @@ export const Timepicker = ({
     isDisabled,
     isInvalid,
   });
-  const dateTime = state.value as unknown as CalendarDateTime | null;
+  const dateTime = state.timeValue;
   const buttonSize = size === "lg" ? "sm" : "xs";
-  const inputRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLElement>();
   const [isFocused, setIsFocused] = useState(false);
 
   // Calculation for adjusting time with the arrow buttons
@@ -79,23 +82,24 @@ export const Timepicker = ({
   // Focus styles for the input
   const focusStyles = getFocusStyles(isFocused, isInvalid, variant);
 
+  const styles = recipe({
+    variant,
+    size,
+  });
+
   return (
-    <Input
-      as="div"
-      aria-label={ariaLabel || "timepicker"}
+    <Box
+      ref={inputRef}
       display="flex"
-      /* variant={variant} */
-      size={size}
-      width={width}
-      paddingX={2}
       alignItems="center"
-      justifyContent="space-between"
-      gap={2}
-      disabled={isDisabled}
+      width={width}
       onClick={() => inputRef.current?.focus()}
       onFocus={() => setIsFocused(true)}
       onBlur={() => setIsFocused(false)}
-      css={focusStyles}
+      css={{
+        ...focusStyles,
+        ...styles,
+      }}
     >
       <IconButton
         onClick={() => adjustTime("backward")}
@@ -116,18 +120,14 @@ export const Timepicker = ({
         aria-label="later time"
         disabled={isDisabled}
       />
-    </Input>
+    </Box>
   );
 };
 
 export const getCurrentTime = () => parseTime(new Date().toTimeString().split(" ")[0]);
 export const getTimestampFromTime = (time: CalendarDateTime | null) => `${time?.hour ?? 0}:${time?.minute ?? 0}`;
 
-const getFocusStyles = (
-  isFocused: boolean,
-  isInvalid: boolean,
-  variant: "outline" | "filled" | "flushed" | "unstyled",
-) => {
+const getFocusStyles = (isFocused: boolean, isInvalid: boolean, variant: "outline" | "subtle" | "flushed") => {
   if (isFocused) {
     // Check the variant and apply corresponding styles
     switch (variant) {
