@@ -1,7 +1,6 @@
 import { defineRecipe } from "@chakra-ui/react";
 
 export const inputTheme = defineRecipe({
-  base: {},
   variants: {
     outline: {
       field: {

@@ -16,14 +16,16 @@ import {
 } from "./tokens";
 
 import { alertTheme } from "./components/alert";
+import { breadcrumbTheme } from "./components/breadcrumb";
 import { buttonTheme } from "./components/button";
-import { iconButtonTheme } from "./components/iconButton";
+import { checkboxTheme } from "./components/checkbox";
+import { closeButtonTheme } from "./components/close-button";
+import { datepickerTheme } from "./components/datepicker";
+import { fileUploadTheme } from "./components/file-upload";
+import { iconButtonTheme } from "./components/icon-button";
 import { inputTheme } from "./components/input";
-import { breadcrumbSlotRecipe } from "./recipes/breadcrumb.recipe";
+import { linkTheme } from "./components/link";
 import { cardSlotRecipe } from "./recipes/card.recipe";
-import { checkboxSlotRecipe } from "./recipes/checkbox.recipe";
-import { closeButtonSlotRecipe } from "./recipes/close-button.recipe";
-import { linkRecipe } from "./recipes/link.recipe";
 import { pinInputRecipe } from "./recipes/pin-input.recipe";
 import { selectNativeRecipe } from "./recipes/select-native.recipe";
 import { config as kvibConfig } from "./tokens/config";
@@ -56,18 +58,20 @@ const customConfig = defineConfig({
     },
     recipes: {
       button: buttonTheme,
-      iconButton: iconButtonTheme,
       input: inputTheme,
-      link: linkRecipe,
       nativeSelect: selectNativeRecipe,
       pinInput: pinInputRecipe,
     },
     slotRecipes: {
       alert: alertTheme,
-      breadcrumb: breadcrumbSlotRecipe,
+      breadcrumb: breadcrumbTheme,
       card: cardSlotRecipe,
-      checkbox: checkboxSlotRecipe,
-      close: closeButtonSlotRecipe,
+      closeButton: closeButtonTheme,
+      checkbox: checkboxTheme,
+      datepicker: datepickerTheme,
+      fileUpload: fileUploadTheme,
+      iconButton: iconButtonTheme,
+      link: linkTheme,
     },
   },
 });
