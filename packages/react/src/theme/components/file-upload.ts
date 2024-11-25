@@ -3,6 +3,11 @@ import { fileUploadAnatomy } from "@chakra-ui/react/anatomy"; // Ensure you impo
 
 export const fileUploadTheme = defineSlotRecipe({
   slots: fileUploadAnatomy.keys(),
+  base: {
+    root: {
+      colorPalette: "green",
+    },
+  },
   variants: {
     size: {
       xs: {

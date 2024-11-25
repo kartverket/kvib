@@ -95,12 +95,10 @@ const outlineThemeColor = defineStyle({
     },
   },
 });
-
-const tertiaryThemeGray = defineStyle({
+const plainThemeGray = defineStyle({
   color: "gray.500 !important",
   bg: "transparent !important",
   _hover: {
-    textDecoration: "underline !important",
     color: "gray.400 !important",
     _disabled: {
       textDecoration: "none !important",
@@ -108,7 +106,6 @@ const tertiaryThemeGray = defineStyle({
     },
   },
   _active: {
-    textDecoration: "underline !important",
     color: "gray.600 !important",
     _disabled: {
       textDecoration: "none !important",
@@ -117,11 +114,10 @@ const tertiaryThemeGray = defineStyle({
   },
 });
 
-const tertiaryThemeColor = defineStyle({
+const plainTheme = defineStyle({
   color: "colorPalette.500 !important",
   bg: "transparent !important",
   _hover: {
-    textDecoration: "underline !important",
     color: "colorPalette.400 !important",
     _disabled: {
       textDecoration: "none !important",
@@ -129,7 +125,6 @@ const tertiaryThemeColor = defineStyle({
     },
   },
   _active: {
-    textDecoration: "underline !important",
     color: "colorPalette.600 !important",
     _disabled: {
       textDecoration: "none !important",
@@ -184,27 +179,27 @@ export const buttonTheme = defineRecipe({
   base: baseStyle,
   variants: {
     variant: {
-      primary: solidThemeColor,
-      secondary: outlineThemeColor,
-      tertiary: tertiaryThemeColor,
+      solid: solidThemeColor,
+      outline: outlineThemeColor,
       ghost: ghostThemeColor,
+      plain: plainTheme,
     },
   },
   compoundVariants: [
     {
-      variant: "primary",
+      variant: "solid",
       colorPalette: "gray",
       css: solidThemeGray,
     },
     {
-      variant: "secondary",
+      variant: "outline",
       colorPalette: "gray",
       css: outlineThemeGray,
     },
     {
-      variant: "tertiary",
+      variant: "plain",
       colorPalette: "gray",
-      css: tertiaryThemeGray,
+      css: plainThemeGray,
     },
     {
       variant: "ghost",
@@ -213,7 +208,7 @@ export const buttonTheme = defineRecipe({
     },
   ],
   defaultVariants: {
-    variant: "primary",
+    variant: "solid",
     colorPalette: "green",
   },
 });

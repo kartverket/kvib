@@ -4,10 +4,11 @@ import { MaterialSymbol } from "material-symbols";
 import { forwardRef } from "react";
 import { Icon } from "../icon";
 
-export type ButtonProps = Omit<
-  ChakraButtonProps,
-  "colorPalette" | "iconSpacing" | "isActive" | "loadingText" | "spinnerPlacement"
-> & {
+export type ButtonProps = Omit<ChakraButtonProps, "colorPalette" | "variant"> & {
+  /** The variants of the component
+   * @default solid */
+  variant?: "solid" | "subtle" | "surface" | "outline" | "ghost" | "plain";
+
   /**The visual color appearance of the component
    * @default green*/
   colorPalette?: "green" | "blue" | "gray" | "red";

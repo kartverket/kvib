@@ -1,4 +1,5 @@
 export {
+  FileInput,
   FileUploadRoot as FileUpload,
   FileUploadClearTrigger,
   FileUploadDropzone,

@@ -25,10 +25,12 @@ export type IconProps = {
   ariaIsHidden?: boolean;
 
   className?: string;
+
+  css?: React.CSSProperties;
 };
 
 export const Icon = forwardRef<HTMLSpanElement, IconProps>(
-  ({ icon, size, color, weight, grade, filled = false, ariaIsHidden = false, className = "" }, ref) => {
+  ({ icon, size, color, weight, grade, filled = false, ariaIsHidden = false, className = "", css }, ref) => {
     return (
       <span
         ref={ref}
@@ -41,6 +43,7 @@ export const Icon = forwardRef<HTMLSpanElement, IconProps>(
           fontVariationSettings: `'FILL' ${filled ? 1 : 0}, 'wght' ${weight ? weight : 300}, 'GRAD' ${
             grade ? grade : 0
           }`,
+          ...css,
         }}
       >
         {icon}
