@@ -11,11 +11,11 @@ export const alertTheme = defineSlotRecipe({
           color: "black !important",
         },
         root: {
-          bg: "blue.100 !important",
+          bg: "colorPalette.100 !important",
           color: "black !important",
         },
         indicator: {
-          color: "blue.500",
+          color: "colorPalette.500",
         },
       },
       solid: {
@@ -23,7 +23,7 @@ export const alertTheme = defineSlotRecipe({
           color: "white !important",
         },
         root: {
-          bg: "blue.500 !important",
+          bg: "colorPalette.500 !important",
           color: "white !important",
         },
         indicator: {
