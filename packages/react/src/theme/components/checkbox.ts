@@ -8,7 +8,7 @@ export const checkboxTheme = defineSlotRecipe({
       cursor: "pointer",
     },
     control: {
-      borderColor: "colorPalette.500 !important", // Border color when unchecked
+      borderColor: "colorPalette.500 !important",
       _checked: {
         _hover: {
           borderColor: "colorPalette.400 !important",

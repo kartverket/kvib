@@ -26,6 +26,7 @@ import { fileUploadTheme } from "./components/file-upload";
 import { iconButtonTheme } from "./components/icon-button";
 import { inputTheme } from "./components/input";
 import { linkTheme } from "./components/link";
+import { numberInputTheme } from "./components/number-input";
 import { cardSlotRecipe } from "./recipes/card.recipe";
 import { pinInputRecipe } from "./recipes/pin-input.recipe";
 import { selectNativeRecipe } from "./recipes/select-native.recipe";
@@ -74,6 +75,7 @@ const customConfig = defineConfig({
       fileUpload: fileUploadTheme,
       iconButton: iconButtonTheme,
       link: linkTheme,
+      numberInput: numberInputTheme,
     },
   },
 });
