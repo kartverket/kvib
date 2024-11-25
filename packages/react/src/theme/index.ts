@@ -21,6 +21,7 @@ import { buttonTheme } from "./components/button";
 import { checkboxTheme } from "./components/checkbox";
 import { closeButtonTheme } from "./components/close-button";
 import { datepickerTheme } from "./components/datepicker";
+import { dialogTheme } from "./components/dialog";
 import { fileUploadTheme } from "./components/file-upload";
 import { iconButtonTheme } from "./components/icon-button";
 import { inputTheme } from "./components/input";
@@ -69,6 +70,7 @@ const customConfig = defineConfig({
       closeButton: closeButtonTheme,
       checkbox: checkboxTheme,
       datepicker: datepickerTheme,
+      dialog: dialogTheme,
       fileUpload: fileUploadTheme,
       iconButton: iconButtonTheme,
       link: linkTheme,

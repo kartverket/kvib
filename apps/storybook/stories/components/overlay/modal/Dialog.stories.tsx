@@ -186,8 +186,18 @@ const meta: Meta<typeof KvibModal> = {
       },
       control: "boolean",
     },
+    colorPalette: {
+      description: "The visual color appearance of the component",
+      table: {
+        type: { summary: "green | blue | gray | red" },
+      },
+      defaultValue: { summary: "green" },
+      options: ["green", "blue", "gray", "red"],
+      control: { type: "radio" },
+    },
   },
   args: {
+    colorPalette: "green",
     onCloseComplete: undefined,
     onEsc: undefined,
     onOverlayClick: undefined,
@@ -203,7 +213,7 @@ const ModalExample = ({ ...args }) => {
     <>
       <KvibModal {...args}>
         <DialogTrigger asChild>
-          <Button variant="outline">Åpne dialog</Button>
+          <Button colorPalette={args.colorPalette}>Åpne dialog</Button>
         </DialogTrigger>
 
         <DialogBackdrop />
