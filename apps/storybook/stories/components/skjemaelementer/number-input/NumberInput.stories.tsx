@@ -73,10 +73,10 @@ const meta: Meta<typeof KvibNumberInput> = {
     variant: {
       description: "Variant",
       table: {
-        type: { summary: "outline | filled | flushed | unstyled" },
+        type: { summary: "outline | subtle | flushed | unstyled" },
         defaultValue: { summary: "outline" },
       },
-      options: ["outline", "filled", "flushed", "unstyled"],
+      options: ["outline", "subtle", "flushed"],
       control: { type: "radio" },
     },
     allowMouseWheel: {
