@@ -1,3 +1,4 @@
+import { Link } from "@kvib/react";
 import {
   Box as KvibBox,
   Heading as KvibHeading,
@@ -57,9 +58,7 @@ export const LinkOverlayNested: Story = {
         Bær- og soppsesongen er i full gang til skogs og fjells. Last ned Kartverkets gratis mobil-app "Hvor?", så vet
         du hvor du er.
       </KvibText>
-      <KvibBox as="a" color="green" href="#" fontWeight="bold">
-        En ekstra link
-      </KvibBox>
+      <Link href="#">En ekstra link</Link>
     </KvibLinkBox>
   ),
 };
