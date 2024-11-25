@@ -72,7 +72,9 @@ type FileUploadStory = StoryObj<typeof KvibFileUpload>;
 const FileUploadExample = (args: FileUploadProps) => (
   <FileUpload {...args}>
     <FileUploadTrigger>
-      <Button>Last opp fil</Button>
+      <Button leftIcon="upload_2" iconFill>
+        Last opp fil
+      </Button>
     </FileUploadTrigger>
     <FileUploadList />
   </FileUpload>
