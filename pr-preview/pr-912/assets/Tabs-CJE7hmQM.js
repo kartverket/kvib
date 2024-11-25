@@ -1,0 +1,10 @@
+import{j as e}from"./jsx-runtime-sfY7k0Xq.js";import{useMDXComponents as n}from"./index-BRkUXrbv.js";import{ae as a,af as s,ag as m}from"./index-CYK-Q4Rd.js";import{T as p,P as o}from"./Tabs.stories-B7wuMnUH.js";import"./index-CcKhGcwW.js";import"./_commonjsHelpers-Cpj98o6Y.js";import"./iframe-C0HEmsSc.js";import"../sb-preview/runtime.js";import"./index-DI5DFbIx.js";import"./index-D-8MO0q_.js";import"./index-CJyPbrN5.js";import"./index-DrFu-skq.js";import"./tabs-CWHnEAgK.js";import"./create-slot-recipe-context-CYF_0Bn9.js";import"./factory-Dr_T95xI.js";import"./empty-DSVal0bC.js";import"./create-split-props-u5h9OPvL.js";import"./render-strategy-B0jBahTc.js";import"./create-context-DPShtm6F.js";import"./factory-BHlL6AhM.js";import"./index-DkshEfrg.js";import"./index-Bdoxc4SK.js";import"./index-Ctx6eFvH.js";import"./index-BRNWFSEf.js";import"./index-33_OKIP6.js";import"./index-51odREz2.js";import"./index-BR8t6gqn.js";import"./use-environment-context-DqdFjJyw.js";import"./use-locale-context-CnLnjqE7.js";import"./use-event-CSfbiBcH.js";import"./use-presence-context-B6qRt-aB.js";function i(t){const r={code:"code",h1:"h1",h2:"h2",p:"p",pre:"pre",...n(),...t.components};return e.jsxs(e.Fragment,{children:[e.jsx(a,{of:p}),`
+`,e.jsx(r.h1,{id:"tabs",children:"Tabs"}),`
+`,e.jsxs(r.p,{children:[`Tabs brukes til å veksle mellom paneler på en side. Dette hjelper brukere med å navigere mellom relatert innhold uten bytte kontekst. Komponenten består av en rad med tab-knapper. En tab-knapp er alltid valgt, fordi et panel alltid vises.
+Du kan ha alle typer elementer i `,e.jsx(r.code,{children:"Tabs"}),", men ",e.jsx(r.code,{children:"TabList"}),"skal bare ha ",e.jsx(r.code,{children:"Tab"})," som children."]}),`
+`,e.jsx(r.h2,{id:"ta-i-bruk",children:"Ta i bruk"}),`
+`,e.jsx(r.pre,{children:e.jsx(r.code,{className:"language-jsx",children:`import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@kvib/react";
+`})}),`
+`,e.jsx(r.h2,{id:"props",children:"Props"}),`
+`,e.jsx(s,{of:o}),`
+`,e.jsx(m,{of:o})]})}function B(t={}){const{wrapper:r}={...n(),...t.components};return r?e.jsx(r,{...t,children:e.jsx(i,{...t})}):i(t)}export{B as default};
