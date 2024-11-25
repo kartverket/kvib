@@ -11,6 +11,15 @@ const meta: Meta<typeof KvibLink> = {
     },
   },
   argTypes: {
+    variant: {
+      description: "The visual style of the component.",
+      table: {
+        type: { summary: "string" },
+      },
+      defaultValue: { summary: "underline | plain" },
+      options: ["underline", "plain"],
+      control: { type: "radio" },
+    },
     children: {
       description: "This is the linktext",
       table: {

@@ -61,6 +61,7 @@ const customConfig = defineConfig({
     recipes: {
       button: buttonTheme,
       input: inputTheme,
+      link: linkTheme,
       nativeSelect: selectNativeRecipe,
       pinInput: pinInputRecipe,
     },
@@ -74,7 +75,6 @@ const customConfig = defineConfig({
       dialog: dialogTheme,
       fileUpload: fileUploadTheme,
       iconButton: iconButtonTheme,
-      link: linkTheme,
       numberInput: numberInputTheme,
     },
   },
