@@ -35,7 +35,6 @@ import sizes from "./tokens/sizes";
 import { transitionDuration, transitionProperty, transitionTimingFunction } from "./tokens/transitions";
 
 const customConfig = defineConfig({
-  ...kvibConfig,
   theme: {
     breakpoints: breakpoints,
     textStyles: {
@@ -78,6 +77,7 @@ const customConfig = defineConfig({
       numberInput: numberInputTheme,
     },
   },
+  ...kvibConfig,
 });
 
 const config = mergeConfigs(defaultConfig, customConfig);
