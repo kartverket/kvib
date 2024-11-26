@@ -39,6 +39,7 @@ import { switchTheme } from "./components/switch";
 import { tableTheme } from "./components/table";
 import { tabsTheme } from "./components/tabs";
 import { tagTheme } from "./components/tag";
+import { toastTheme } from "./components/toast";
 import { cardSlotRecipe } from "./recipes/card.recipe";
 import { selectNativeRecipe } from "./recipes/select-native.recipe";
 import { config as kvibConfig } from "./tokens/config";
@@ -97,6 +98,7 @@ const customConfig = defineConfig({
       table: tableTheme,
       tabs: tabsTheme,
       tag: tagTheme,
+      toast: toastTheme,
     },
   },
   globalCss: {

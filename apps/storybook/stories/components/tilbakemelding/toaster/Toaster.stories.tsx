@@ -43,7 +43,7 @@ const meta: Meta<KvibToast> = {
       },
       control: "text",
     },
-    isClosable: {
+    closeable: {
       description: "if true, the toast will show a close button",
       table: {
         type: { summary: "boolean" },
@@ -61,8 +61,8 @@ const meta: Meta<KvibToast> = {
       description: "Placement of the toast",
       table: {
         type: { summary: "top | top-left | top-right | bottom | bottom-left | bottom-right" },
-        defaultValue: { summary: "bottom" },
       },
+      defaultValue: { summary: "bottom" },
       control: "select",
       options: ["top", "top-left", "top-right", "bottom", "bottom-left", "bottom-right"],
     },
@@ -72,14 +72,14 @@ const meta: Meta<KvibToast> = {
         type: { summary: "React element" },
       },
     },
-    status: {
+    type: {
       description: "The status (color) of the toast",
       table: {
         type: { summary: "info | warning | success | error | loading" },
-        defaultValue: { summary: "info" },
       },
-      control: "select",
-      options: ["info", "warning", "success", "error", "loading"],
+      defaultValue: { summary: "info" },
+      control: "radio",
+      options: ["info", "warning", "success", "error"],
     },
     title: {
       description: "The title of the toast",
@@ -93,30 +93,23 @@ const meta: Meta<KvibToast> = {
 
 export default meta;
 
-const ToastExample = ({ ...args }) => {
-  return (
-    <>
-      <Button
-        colorScheme={args.btnClr}
-        w={args.btnW}
-        onClick={() =>
-          toaster.create({
-            title: args.title,
-            description: args.description,
-            status: args.status,
-            duration: args.duration,
-            isClosable: args.isClosable,
-            icon: <Icon icon={args.icon} />,
-            position: args.position,
-          })
-        }
-      >
-        Vis toast
-      </Button>
-      <Toaster />
-    </>
-  );
-};
+const ToastExample = ({ ...args }) => (
+  <>
+    <Button
+      colorPalette={args.btnClr}
+      w={args.btnW}
+      onClick={() =>
+        toaster.create({
+          icon: <Icon icon={args.icon} />,
+          ...args,
+        })
+      }
+    >
+      Vis toast
+    </Button>
+    <Toaster />
+  </>
+);
 
 type Story = StoryObj<KvibToast>;
 
@@ -124,7 +117,7 @@ export const Preview: Story = {
   args: {
     title: "Skjema innsendt",
     description: "Takk for opplysningene",
-    status: "success",
+    type: "success",
     duration: 9000,
     icon: "check",
   },

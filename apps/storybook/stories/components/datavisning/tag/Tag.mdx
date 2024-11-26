@@ -15,47 +15,6 @@ Tag skal brukes til elementer som trenger å bli merket, kategorisert eller orga
 import { Tag, TagLabel, TagLeftIcon, TagRightIcon, TagCloseButton } from "@kvib/react";
 ```
 
-<Feedback components="Tag" />
-
-<DocsStory
-  title="Farger"
-  description={
-    <Text>
-      Farge kan endres ved å bruke <code>colorScheme</code> prop.
-    </Text>
-  }
-  story={<Canvas of={TagStories.TagColors} sourceState="hidden" />}
-/>
-
-<DocsStory
-  title="Størrelser"
-  description={
-    <Text>
-      Størrelse kan endres ved bruk av <code>size</code> prop.
-    </Text>
-  }
-  story={<Canvas of={TagStories.TagSizes} sourceState="hidden" />}
-/>
-
-<DocsStory
-  title="Varianter"
-  description={
-    <Text>
-      Varianten av <code>Tag</code> kan endres ved bruk av <code>variant</code> prop.
-    </Text>
-  }
-  story={<Canvas of={TagStories.TagVariants} sourceState="hidden" />}
-/>
-
-<DocsStory
-  title="Tag med lukkeknapp"
-  description={
-    <Text>
-      <code>TagCloseButton</code> kan brukes for å legge til et lukkeknapp i <code>Tag</code>.
-    </Text>
-  }
-  story={<Canvas of={TagStories.TagClose} sourceState="hidden" />}
-/>
 
 <DocsHeading light>Props</DocsHeading>
 <Canvas of={TagStories.Preview} />
