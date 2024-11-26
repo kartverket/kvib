@@ -5,12 +5,10 @@ export const inputTheme = defineRecipe({
     _disabled: {
       layerStyle: "disabled",
     },
-    height: "var(--input-height) !important",
-    minW: "var(--input-height) !important",
-    transition: "all 0.2s",
+    transition: "all 0.2s ease-in-out",
     borderRadius: "md !important",
-    outlineWidth: "{borders.1px}",
-    outlineStyle: "solid !important",
+    outline: "{borders.1px}",
+    outlineColor: "gray.200",
     border: "none",
     _focus: {
       outlineWidth: "2px !important",

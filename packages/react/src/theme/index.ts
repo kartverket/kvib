@@ -26,9 +26,10 @@ import { fileUploadTheme } from "./components/file-upload";
 import { iconButtonTheme } from "./components/icon-button";
 import { inputTheme } from "./components/input";
 import { linkTheme } from "./components/link";
+import { menuTheme } from "./components/menu";
 import { numberInputTheme } from "./components/number-input";
+import { pinInputTheme } from "./components/pin-input";
 import { cardSlotRecipe } from "./recipes/card.recipe";
-import { pinInputRecipe } from "./recipes/pin-input.recipe";
 import { selectNativeRecipe } from "./recipes/select-native.recipe";
 import { config as kvibConfig } from "./tokens/config";
 import sizes from "./tokens/sizes";
@@ -62,7 +63,6 @@ const customConfig = defineConfig({
       input: inputTheme,
       link: linkTheme,
       nativeSelect: selectNativeRecipe,
-      pinInput: pinInputRecipe,
     },
     slotRecipes: {
       alert: alertTheme,
@@ -74,7 +74,9 @@ const customConfig = defineConfig({
       dialog: dialogTheme,
       fileUpload: fileUploadTheme,
       iconButton: iconButtonTheme,
+      menu: menuTheme,
       numberInput: numberInputTheme,
+      pinInput: pinInputTheme,
     },
   },
   ...kvibConfig,
