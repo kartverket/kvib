@@ -32,13 +32,13 @@ const meta: Meta<typeof KvibTabs> = {
       options: ["sm", "md", "lg"],
       control: { type: "radio" },
     },
-    colorScheme: {
+    colorPalette: {
       description: "The visual color appearance of the tabs",
       table: {
-        type: { summary: "green | blue | undefined" },
+        type: { summary: "green | blue" },
         defaultValue: { summary: "green" },
       },
-      options: ["green", "blue", "undefined"],
+      options: ["green", "blue"],
       control: { type: "radio" },
     },
     orientation: {
@@ -95,18 +95,16 @@ const meta: Meta<typeof KvibTabs> = {
 export default meta;
 type Story = StoryObj<typeof KvibTabs>;
 
-const TabsExample = ({ ...args }: TabsProps) => {
-  return (
-    <KvibTabs defaultValue="fane1" {...args}>
-      <KvibTabList>
-        <TabsTrigger value="fane1">Første fane</TabsTrigger>
-        <TabsTrigger value="fane2">Andre fane</TabsTrigger>
-      </KvibTabList>
-      <TabsContent value="fane1">Innhold for første fane</TabsContent>
-      <TabsContent value="fane2">Innhold for andre fane</TabsContent>
-    </KvibTabs>
-  );
-};
+const TabsExample = ({ ...args }: TabsProps) => (
+  <KvibTabs defaultValue="fane1" {...args}>
+    <KvibTabList>
+      <TabsTrigger value="fane1">Første fane</TabsTrigger>
+      <TabsTrigger value="fane2">Andre fane</TabsTrigger>
+    </KvibTabList>
+    <TabsContent value="fane1">Innhold for første fane</TabsContent>
+    <TabsContent value="fane2">Innhold for andre fane</TabsContent>
+  </KvibTabs>
+);
 
 export const Preview: Story = {
   render: args => <TabsExample {...args} />,

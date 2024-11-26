@@ -34,6 +34,10 @@ import { progressTheme } from "./components/progress";
 import { radioGroupTheme } from "./components/radio-group";
 import { sliderTheme } from "./components/slider";
 import { spinnerTheme } from "./components/spinner";
+import { stepsTheme } from "./components/steps";
+import { switchTheme } from "./components/switch";
+import { tableTheme } from "./components/table";
+import { tabsTheme } from "./components/tabs";
 import { cardSlotRecipe } from "./recipes/card.recipe";
 import { selectNativeRecipe } from "./recipes/select-native.recipe";
 import { config as kvibConfig } from "./tokens/config";
@@ -87,6 +91,10 @@ const customConfig = defineConfig({
       progress: progressTheme,
       radioGroup: radioGroupTheme,
       slider: sliderTheme,
+      steps: stepsTheme,
+      switch: switchTheme,
+      table: tableTheme,
+      tabs: tabsTheme,
     },
   },
   globalCss: {
