@@ -29,6 +29,10 @@ import { linkTheme } from "./components/link";
 import { menuTheme } from "./components/menu";
 import { numberInputTheme } from "./components/number-input";
 import { pinInputTheme } from "./components/pin-input";
+import { popoverTheme } from "./components/popover";
+import { progressTheme } from "./components/progress";
+import { radioGroupTheme } from "./components/radio-group";
+import { sliderTheme } from "./components/slider";
 import { cardSlotRecipe } from "./recipes/card.recipe";
 import { selectNativeRecipe } from "./recipes/select-native.recipe";
 import { config as kvibConfig } from "./tokens/config";
@@ -77,6 +81,15 @@ const customConfig = defineConfig({
       menu: menuTheme,
       numberInput: numberInputTheme,
       pinInput: pinInputTheme,
+      popover: popoverTheme,
+      progress: progressTheme,
+      radioGroup: radioGroupTheme,
+      slider: sliderTheme,
+    },
+  },
+  globalCss: {
+    "*, *::before, *::after": {
+      boxSizing: "border-box !important",
     },
   },
   ...kvibConfig,

@@ -1,4 +1,4 @@
-import { Box, Button, Show as KvibShow, Text } from "@kvib/react/src";
+import { Box, Button, Show as KvibShow, VStack } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 import { useState } from "react";
 
@@ -34,15 +34,21 @@ export const Preview: Story = {
   render: args => {
     const [count, setCount] = useState(0);
     return (
-      <>
-        <Button onClick={() => setCount(count + 1)}>Øk telleren</Button>
-        <Text>Teller: {count}</Text>
-        <KvibShow {...args} when={count > 5}>
-          <Box p={4} bg="yellow.50">
-            Denne teksten vises kun når telleren er større enn 5
+      <VStack>
+        <Button onClick={() => setCount(count + 1)} w="fit-content">
+          Øk telleren: {count}
+        </Button>
+        <KvibShow {...args} when={count <= 5}>
+          <Box p={4} bg="green.100" w="fit-content">
+            Denne boksen vises kun når telleren er større enn 5
           </Box>
         </KvibShow>
-      </>
+        <KvibShow {...args} when={count > 5}>
+          <Box p={4} bg="red.100" w="fit-content">
+            Denne boksen vises kun når telleren er større enn 5
+          </Box>
+        </KvibShow>
+      </VStack>
     );
   },
 };

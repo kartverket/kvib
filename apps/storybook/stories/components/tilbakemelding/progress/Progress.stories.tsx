@@ -17,7 +17,7 @@ const meta: Meta<typeof KvibProgress> = {
     },
   },
   argTypes: {
-    colorScheme: {
+    colorPalette: {
       description: "The visual color appearance of the component",
       table: {
         type: {

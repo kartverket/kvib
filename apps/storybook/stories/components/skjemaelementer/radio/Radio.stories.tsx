@@ -21,29 +21,6 @@ const meta: Meta<typeof KvibRadio> = {
       options: ["sm", "md", "lg"],
       control: { type: "radio" },
     },
-    spacing: {
-      description: "The space between the radio icon and its text",
-      table: {
-        type: { summary: "sm | md | lg" },
-        defaultValue: { summary: "md" },
-      },
-      options: ["sm", "md", "lg"],
-      control: { type: "radio" },
-    },
-    aria_describedby: {
-      description: "Refers to the id of the radio's label",
-      table: {
-        type: { summary: "string" },
-        control: { type: "boolean" },
-      },
-    },
-    id: {
-      description: "Refers to the id of the radio",
-      table: {
-        type: { summary: "string" },
-        control: { type: "text" },
-      },
-    },
     defaultChecked: {
       description: "If true, the radio wil be initially checked",
       table: {
@@ -58,7 +35,7 @@ const meta: Meta<typeof KvibRadio> = {
         type: { summary: "" },
       },
     },
-    isDisabled: {
+    disabled: {
       description: "If true, the radio will be disabled",
       table: {
         type: { summary: "boolean" },
@@ -73,7 +50,7 @@ const meta: Meta<typeof KvibRadio> = {
       },
       control: { type: "text" },
     },
-    isFocusable: {
+    focusable: {
       description: "If true, and isDisabled is true, the radio will remain focusable but not interactive",
       table: {
         type: { summary: "boolean" },
@@ -81,7 +58,7 @@ const meta: Meta<typeof KvibRadio> = {
       defaultValue: { summary: "false" },
       control: { type: "boolean" },
     },
-    isChecked: {
+    checked: {
       description:
         "If true, the radio will be set as checked. You need to pass onChange to update its value (since it is controlled)",
       table: {
@@ -90,7 +67,7 @@ const meta: Meta<typeof KvibRadio> = {
       defaultValue: { summary: "false" },
       control: { type: "boolean" },
     },
-    isInvalid: {
+    invalid: {
       description: "If true, the radio will be invalid. Sets 'aria-invalid' to true",
       table: {
         type: { summary: "boolean" },
@@ -98,7 +75,7 @@ const meta: Meta<typeof KvibRadio> = {
       defaultValue: { summary: "false" },
       control: { type: "boolean" },
     },
-    isReadOnly: {
+    readOnly: {
       description: "If true, the radio will be read-only",
       table: {
         type: { summary: "boolean" },
@@ -106,20 +83,13 @@ const meta: Meta<typeof KvibRadio> = {
       defaultValue: { summary: "false" },
       control: { type: "boolean" },
     },
-    isRequired: {
+    required: {
       description: "If true, the radio button will be required. Sets 'aria-required' to true",
       table: {
         type: { summary: "boolean" },
       },
       defaultValue: { summary: "false" },
       control: { type: "boolean" },
-    },
-    name: {
-      description: "The name of the input field in a radio",
-      table: {
-        type: { summary: "string" },
-      },
-      control: { type: "text" },
     },
     onChange: {
       description: "The function that is ran when the state of the radio changes",
@@ -128,13 +98,13 @@ const meta: Meta<typeof KvibRadio> = {
       },
       defaultValue: { summary: "none" },
     },
-    colorScheme: {
+    colorPalette: {
       description: "Color of the radio",
       table: {
         type: {
-          summary: "green | blue | gray | red | orange | purple",
+          summary: "green | blue | gray | red",
         },
-        defaultValue: { summary: "Blue" },
+        defaultValue: { summary: "green" },
       },
       options: ["green", "blue", "gray", "red", "orange", "purple"],
       control: { type: "select" },
@@ -149,7 +119,7 @@ export const Preview: Story = {
   args: { onChange: undefined },
   render: (args: RadioProps) => (
     <KvibRadioGroup defaultValue={"1"}>
-      <KvibStack direction={"row"}>
+      <KvibStack direction={"column"}>
         <KvibRadio {...args} value={"1"}>
           En
         </KvibRadio>

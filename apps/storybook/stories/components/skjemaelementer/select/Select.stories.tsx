@@ -141,7 +141,7 @@ export const Preview: Story = {
   },
   args: {},
   render: (args: SelectProps) => (
-    <KvibSelect {...args} collection={alternativer} aria-label="select">
+    <KvibSelect w="12rem" {...args} collection={alternativer} aria-label="select">
       <SelectLabel>Velg et rammeverk</SelectLabel>
       <SelectTrigger>
         <SelectValueText placeholder="Velg..." />

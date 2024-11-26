@@ -299,7 +299,7 @@ export const Preview: Story = {
   render: (args: PopoverProps) => (
     <KvibPopover {...args}>
       <PopoverTrigger asChild>
-        <Button size="sm" variant="outline">
+        <Button size="sm" variant="outline" colorPalette="green">
           Vis popover
         </Button>
       </PopoverTrigger>

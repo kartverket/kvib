@@ -8,11 +8,42 @@ export const pinInputTheme = defineSlotRecipe({
   base: {
     input: {
       ...inputTheme.base,
-      boxSizing: "border-box !important",
-      borderRadius: "{radii.md}",
     },
   },
   variants: {
-    variant: {},
+    size: {
+      sm: {
+        input: {
+          ...inputTheme.variants?.size.sm,
+        },
+      },
+      md: {
+        input: {
+          ...inputTheme.variants?.size.md,
+        },
+      },
+      lg: {
+        input: {
+          ...inputTheme.variants?.size.lg,
+        },
+      },
+    },
+    variant: {
+      outline: {
+        input: {
+          ...inputTheme.variants?.variant.outline,
+        },
+      },
+      flushed: {
+        input: {
+          ...inputTheme.variants?.variant.flushed,
+        },
+      },
+      subtle: {
+        input: {
+          ...inputTheme.variants?.variant.subtle,
+        },
+      },
+    },
   },
 });

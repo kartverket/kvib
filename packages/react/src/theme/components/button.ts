@@ -1,6 +1,7 @@
 import { defineRecipe, defineStyle, SystemStyleObject } from "@chakra-ui/react";
 
 const baseStyle = defineStyle({
+  colorPalette: "green",
   fontStyle: "normal !important",
   fontWeight: "medium !important",
   gap: "0.5 !important",

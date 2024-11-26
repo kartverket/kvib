@@ -52,8 +52,8 @@ const css = (className: string, colorPalette: Record<number, string>) => {
   /* Day buttons */
   --rdp-day-width: 42px; /* Width of the day cells. */
   --rdp-day-height: 42px; /* Height of the day cells. */
-  --rdp-day_button-height: calc(var(--rdp-day-height) - 2px); /* Height of the day buttons. */
-  --rdp-day_button-width: calc(var(--rdp-day-width) - 1px); /* Width of the day buttons. */
+  --rdp-day_button-height: calc(var(--rdp-day-height) ); /* Height of the day buttons. */
+  --rdp-day_button-width: calc(var(--rdp-day-width) + 1px); /* Width of the day buttons. */
   --rdp-day_button-border-radius: 0.375rem; /* Border radius of the day buttons. */
   --rdp-outside-opacity: 0.4; /* Opacity of the days outside the current month. */
   --rdp-disabled-opacity: 0.25; /* Opacity of the disabled days. */
