@@ -13,7 +13,7 @@ export const Tag = forwardRef<HTMLSpanElement, TagProps>(function Tag(props, ref
   const { startElement, endElement, onClose, closable = !!onClose, children, ...rest } = props;
   const tagRecipe = useSlotRecipe({ key: "tag" });
   const recipeProps = tagRecipe(props);
-  console.log("Tag", recipeProps);
+
   const {
     root: rootStyling,
     startElement: startElementStyling,

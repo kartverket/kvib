@@ -16,11 +16,10 @@ export interface LinkProps extends ChakraLinkProps {
  * You can specify the `color` prop to get different link designs.
  */
 export const Link = forwardRef<HTMLAnchorElement, LinkProps>(({ children, ...props }, ref) => {
-  const inputRecipe = useRecipe({ key: "link" });
-  const [recipeProps, restProps] = inputRecipe.splitVariantProps(props);
-  console.log("recipeProps", recipeProps);
+  const linkProps = useRecipe({ key: "link" });
+  const [recipeProps, restProps] = linkProps.splitVariantProps(props);
   return (
-    <ChakraLink css={inputRecipe(recipeProps)} {...restProps} {...props} ref={ref}>
+    <ChakraLink css={linkProps(recipeProps)} {...restProps} {...props} ref={ref}>
       {children}
       {props.external && (
         <span
