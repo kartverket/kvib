@@ -75,17 +75,17 @@ export type DatepickerProps = Omit<InputProps, "colorPalette" | "max" | "min" | 
   /**
    * Whether or not the input is disabled.
    */
-  isDisabled?: boolean;
+  disabled?: boolean;
 
   /**
    * Whether or not the input is invalid.
    */
-  isInvalid?: boolean;
+  invalid?: boolean;
 
   /**
    * Whether or not the input is required.
    */
-  isRequired?: boolean;
+  required?: boolean;
 
   /**
    * The colorPalette for the Datepicker.
@@ -118,9 +118,9 @@ const CustomDatepicker = ({
   showWeekNumber,
   disabledDays,
   colorPalette,
-  isDisabled: isDisabledExternally = false,
-  isInvalid: isInvalidExternally = false,
-  isRequired: isRequiredExternally = false,
+  disabled: isDisabledExternally = false,
+  invalid: isInvalidExternally = false,
+  required: isRequiredExternally = false,
   ...KVInputProps
 }: DatepickerProps) => {
   // Style for the day picker
@@ -193,27 +193,37 @@ const CustomDatepicker = ({
   };
 
   return (
-    <Popover positioning={{ placement: "bottom" }} open={open} onOpenChange={e => setOpen(e.open)}>
+    <Popover
+      positioning={{ placement: "bottom", offset: { mainAxis: 0, crossAxis: -15 } }}
+      open={open}
+      onOpenChange={e => setOpen(e.open)}
+    >
       <InputGroup
+        css={{
+          "& > div[data-between]": {
+            paddingInline: "0 !important",
+          },
+        }}
         endElement={
-          <PopoverTrigger>
+          <PopoverTrigger
+            css={{
+              "&:hover": { background: "none", color: "colorPalette.400" },
+            }}
+            asChild
+          >
             <IconButton
               icon="calendar_today"
               colorPalette={colorPalette}
               size={KVInputProps.size}
               aria-label="open datepicker"
               onClick={() => setOpen(!open)}
-              variant="ghost"
-              css={{
-                "&:hover": { background: "none", color: "colorPalette.400" },
-              }}
+              variant="plain"
             />
           </PopoverTrigger>
         }
       >
         <Input
           value={inputValue}
-          className="kvib-datepicker"
           disabled={isDisabled}
           required={isRequired}
           onChange={handleInputChange}

@@ -17,16 +17,6 @@ const meta: Meta<typeof KvibLinkOverlay> = {
       canvas: { sourceState: "shown" },
     },
   },
-  argTypes: {
-    isExternal: {
-      description: "If true, the link will open in new tab",
-      table: {
-        type: { summary: "Boolean" },
-        defaultValue: { summary: "false" },
-      },
-      control: "boolean",
-    },
-  },
 };
 
 export default meta;

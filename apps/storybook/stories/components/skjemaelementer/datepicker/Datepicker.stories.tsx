@@ -21,10 +21,10 @@ const meta: Meta<typeof KvibDatepicker> = {
   args: {
     placeholder: "Velg dato",
     size: "md",
-    colorScheme: "green",
-    isRequired: false,
-    isInvalid: false,
-    isDisabled: false,
+    colorPalette: "green",
+    required: false,
+    invalid: false,
+    disabled: false,
     useNative: false,
     disableNavigation: false,
     showWeekNumber: false,
@@ -36,6 +36,15 @@ const meta: Meta<typeof KvibDatepicker> = {
     toDate: undefined,
   },
   argTypes: {
+    variant: {
+      description: "Variant",
+      table: {
+        type: { summary: "outline | subtle | flushed" },
+        defaultValue: { summary: "outline" },
+      },
+      options: ["outline", "subtle", "flushed"],
+      control: { type: "radio" },
+    },
     placeholder: {
       description: "Placeholder text",
       table: {
@@ -52,7 +61,7 @@ const meta: Meta<typeof KvibDatepicker> = {
       options: ["lg", "md", "sm", "xs"],
       control: { type: "radio" },
     },
-    isRequired: {
+    required: {
       description: "Toggles if input should be required",
       table: {
         type: { summary: "boolean" },
@@ -60,15 +69,15 @@ const meta: Meta<typeof KvibDatepicker> = {
       defaultValue: { summary: "false" },
       control: "boolean",
     },
-    isInvalid: {
+    invalid: {
       description: "Toggles if input should be invalid",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
       },
+      defaultValue: { summary: "false" },
       control: "boolean",
     },
-    isDisabled: {
+    disabled: {
       description: "Toggles if input should be disabled",
       table: {
         type: { summary: "boolean" },
