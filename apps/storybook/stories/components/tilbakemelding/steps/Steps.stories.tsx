@@ -52,21 +52,17 @@ const StepperExample = ({ ...args }) => {
         <StepsItem index={2} title="Step 3" />
       </StepsList>
 
-      <StepsContent index={0}>Step 1</StepsContent>
-      <StepsContent index={1}>Step 2</StepsContent>
-      <StepsContent index={2}>Step 3</StepsContent>
-      <StepsCompletedContent>All steps are complete!</StepsCompletedContent>
+      <StepsContent index={0}>Første steg</StepsContent>
+      <StepsContent index={1}>Andre steg</StepsContent>
+      <StepsContent index={2}>Tredje steg</StepsContent>
+      <StepsCompletedContent>Ferdig med alle stegene</StepsCompletedContent>
 
       <Group>
         <StepsPrevTrigger asChild>
-          <Button variant="outline" size="sm">
-            Prev
-          </Button>
+          <Button size="sm">Forrige</Button>
         </StepsPrevTrigger>
         <StepsNextTrigger asChild>
-          <Button variant="outline" size="sm">
-            Next
-          </Button>
+          <Button size="sm">Neste</Button>
         </StepsNextTrigger>
       </Group>
     </Steps>

@@ -33,6 +33,7 @@ import { popoverTheme } from "./components/popover";
 import { progressTheme } from "./components/progress";
 import { radioGroupTheme } from "./components/radio-group";
 import { sliderTheme } from "./components/slider";
+import { spinnerTheme } from "./components/spinner";
 import { cardSlotRecipe } from "./recipes/card.recipe";
 import { selectNativeRecipe } from "./recipes/select-native.recipe";
 import { config as kvibConfig } from "./tokens/config";
@@ -67,6 +68,7 @@ const customConfig = defineConfig({
       input: inputTheme,
       link: linkTheme,
       nativeSelect: selectNativeRecipe,
+      spinner: spinnerTheme,
     },
     slotRecipes: {
       alert: alertTheme,
