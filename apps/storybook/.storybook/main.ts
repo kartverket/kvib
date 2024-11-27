@@ -30,5 +30,13 @@ const config: StorybookConfig = {
   typescript: {
     reactDocgen: "react-docgen-typescript",
   },
+  core: {
+    builder: {
+      name: "@storybook/builder-vite",
+      options: {
+        viteConfigPath: "vite.config.js",
+      },
+    },
+  },
 };
 export default config;
