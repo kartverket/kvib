@@ -1,4 +1,4 @@
-import { createSystem, defaultBaseConfig, defineConfig } from "@chakra-ui/react";
+import { createSystem, defaultBaseConfig, defaultConfig, defineConfig, mergeConfigs } from "@chakra-ui/react";
 import {
   blur,
   borders,
@@ -57,6 +57,12 @@ const customConfig = defineConfig({
       heights: lineHeights,
     },
     tokens: {
+      fonts: fonts,
+      fontSizes: fontSizes,
+      fontWeights: fontWeights,
+      letterSpacings: letterSpacings,
+      lineHeights: lineHeights,
+
       blurs: blur,
       borders: borders,
       colors: colors,
@@ -109,6 +115,6 @@ const customConfig = defineConfig({
   ...kvibConfig,
 });
 
-/* const config = mergeConfigs(defaultConfig, customConfig); */
+const config = mergeConfigs(defaultBaseConfig, defaultConfig, customConfig);
 
-export const system = createSystem(defaultBaseConfig, customConfig);
+export const system = createSystem(config);

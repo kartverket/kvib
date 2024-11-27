@@ -1,7 +1,7 @@
 import { useRecipe } from "@/hooks";
-import { KvibSize } from "@/theme/tokens/sizes";
 import { Link as ChakraLink, LinkProps as ChakraLinkProps } from "@chakra-ui/react";
 import { forwardRef } from "react";
+import { KvibSize } from "../../../theme/tokens/sizes";
 
 export interface LinkProps extends ChakraLinkProps {
   /** If `true`, the link will open in a new tab. */

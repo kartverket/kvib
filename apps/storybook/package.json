@@ -42,7 +42,8 @@
     "typescript": "^5.4.2"
   },
   "dependencies": {
-    "@fontsource-variable/mulish": "^5.0.18"
+    "@fontsource-variable/mulish": "^5.0.18",
+    "@storybook/addon-themes": "^8.4.5"
   },
   "lint-staged": {
     "*.{ts,tsx,md}": "prettier --write"

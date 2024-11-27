@@ -1,8 +1,8 @@
 import { FooterInline, KvibProvider, Link } from "@kvib/react/src";
-import { DocsContainer } from "@storybook/blocks";
+import { DocsContainer } from "@storybook/addon-docs/blocks";
 import React, { useEffect } from "react";
 
-const MDXContainer = ({ children, ...props }) => {
+export const MDXContainer = ({ children, context }) => {
   // Remove table of contents if there are no h2 or h3 elements on the page
   useEffect(() => {
     document.querySelectorAll(".sbdocs-content").forEach(el => {
@@ -16,8 +16,8 @@ const MDXContainer = ({ children, ...props }) => {
   }, []);
 
   return (
-    <KvibProvider>
-      <DocsContainer {...props}>
+    <DocsContainer context={context}>
+      <KvibProvider>
         {children}
         <FooterInline accessibilityUrl="https://uustatus.no/nb/erklaringer/publisert/f048c5ff-2167-48c5-b706-bd106c15e9c9">
           <Link
@@ -28,9 +28,7 @@ const MDXContainer = ({ children, ...props }) => {
             Github
           </Link>
         </FooterInline>
-      </DocsContainer>
-    </KvibProvider>
+      </KvibProvider>
+    </DocsContainer>
   );
 };
-
-export default MDXContainer;

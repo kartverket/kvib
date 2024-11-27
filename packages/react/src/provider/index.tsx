@@ -1,1 +1,1 @@
-export * from "./KvibProvider";
+export { KvibProvider } from "./KvibProvider";

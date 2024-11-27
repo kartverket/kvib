@@ -4,6 +4,7 @@ export const iconButtonTheme = defineSlotRecipe({
   slots: ["root", "icon"],
   base: {
     root: {
+      colorPalette: "green",
       borderRadius: "6px !important",
       outline: "0 !important",
       display: "flex !important",

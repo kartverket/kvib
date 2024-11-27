@@ -1,5 +1,4 @@
 import {
-  Badge,
   Box,
   Card,
   Field,
@@ -53,7 +52,6 @@ export const Components = () => {
                     key={componentKey}
                     title={component.navn}
                     colorPalette={theme}
-                    tag={component.tag}
                     link={component.link}
                     component={component.story}
                     category={categoryKey as string}
@@ -72,21 +70,16 @@ const ComponentCard = ({
   title,
   component,
   colorPalette,
-  tag,
   link,
   category,
 }: {
   title: string;
   component: ReactElement;
   colorPalette: ColorPalette;
-  tag?: string;
   link: string;
   category: string;
 }) => (
   <Card unstyled size="md">
-    <Badge variant="solid" colorPalette={colorPalette} css={{ position: "absolute", left: "0.8rem", top: "0.8rem" }}>
-      {tag}
-    </Badge>
     <LazyStory component={component} />
 
     <Stack align="center">

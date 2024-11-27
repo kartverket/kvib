@@ -2,7 +2,7 @@ import { defineRecipe } from "@chakra-ui/react";
 
 export const closeButtonTheme = defineRecipe({
   base: {
-    colorPalette: "gray",
+    colorPalette: "green",
     _hover: {
       bg: "colorPalette.100 !important",
     },

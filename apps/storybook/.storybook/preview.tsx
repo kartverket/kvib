@@ -1,8 +1,8 @@
 import { KvibProvider } from "@kvib/react/src";
-import { Preview } from "@storybook/react";
+import type { Preview } from "@storybook/react";
 import React from "react";
-import MDXContainer from "./MDXContainer";
 import "./docs-root.css";
+import { MDXContainer } from "./MDXContainer";
 import theme from "./theme";
 
 const parameters = {
@@ -71,7 +71,7 @@ const parameters = {
   },
 };
 
-export const decorators = [
+const decorators = [
   Story => (
     <KvibProvider>
       <Story />

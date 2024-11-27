@@ -13,7 +13,7 @@ const meta: Meta<typeof KvibIconButton> = {
   },
   args: {
     icon: "favorite",
-    variant: "primary",
+    variant: "solid",
     size: "md",
     colorPalette: "green",
     iconFill: false,
@@ -33,10 +33,10 @@ const meta: Meta<typeof KvibIconButton> = {
     variant: {
       description: "The variant of the IconButton.",
       table: {
-        type: { summary: "primary | secondary | tertiary | ghost" },
+        type: { summary: "solid | subtle | ghost | plain" },
         defaultValue: { summary: "primary" },
       },
-      options: ["primary", "secondary", "tertiary", "ghost"],
+      options: ["solid", "subtle", "ghost", "plain"],
       control: { type: "select" },
     },
     disabled: {

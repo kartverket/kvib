@@ -48,7 +48,6 @@ export * from "./table";
 export * from "./tabs";
 export * from "./tag";
 export * from "./textarea";
-export * from "./theme";
 export * from "./theme-utils";
 export * from "./timepicker";
 export * from "./toaster";

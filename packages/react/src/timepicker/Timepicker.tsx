@@ -1,10 +1,10 @@
-import { inputTheme } from "@/theme/components/input";
 import { useFieldContext } from "@chakra-ui/react";
 import { CalendarDateTime, parseTime } from "@internationalized/date";
 import { Box, IconButton, useRecipe } from "@kvib/react/src";
 import { useRef, useState } from "react";
 import { TimeValue } from "react-aria";
 import { useTimeFieldState } from "react-stately";
+import { inputTheme } from "../../theme/components/input";
 import { TimeField } from "./TimeField";
 
 type TimepickerProps = {

@@ -1,4 +1,3 @@
-import { colors } from "@/theme/tokens";
 import {
   IconButton,
   Input,
@@ -15,6 +14,7 @@ import { nb } from "date-fns/locale/nb";
 import { ChangeEvent, useState } from "react";
 import { DayPicker } from "react-day-picker";
 import "react-day-picker/style.css";
+import { colors } from "../../theme/tokens";
 
 export type DatepickerProps = Omit<InputProps, "colorPalette" | "max" | "min" | "defaultValue"> & {
   /**
