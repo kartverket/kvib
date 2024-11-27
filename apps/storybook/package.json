@@ -2,9 +2,7 @@
   "name": "@kvib/storybook",
   "version": "1.1.2",
   "description": "",
-  "main": "dist/index.js",
-  "module": "dist/package-name.esm.js",
-  "types": "dist/types/types.d.ts",
+  "main": "index.js",
   "scripts": {
     "dev": "storybook dev -p 6006 --no-open",
     "build": "storybook build",
@@ -23,7 +21,6 @@
     "@storybook/addon-essentials": "^8.4.5",
     "@storybook/addon-links": "^8.4.5",
     "@storybook/addon-storysource": "^8.4.5",
-    "@storybook/builder-vite": "^8.4.5",
     "@storybook/cli": "^8.4.5",
     "@storybook/manager-api": "^8.4.5",
     "@storybook/react-vite": "^8.4.5",
