@@ -21,6 +21,7 @@
     "declarationMap": true, // Generate source map for .d.ts files back to original .ts source file
     "noUnusedLocals": true, // Report errors on unused locals
     "noUnusedParameters": true, // Report errors on unused parameters
-    "noFallthroughCasesInSwitch": true // Report errors for fallthrough cases in switch statement
+    "noFallthroughCasesInSwitch": true,
+    "declarationDir": "./dist/types",
   }
 }

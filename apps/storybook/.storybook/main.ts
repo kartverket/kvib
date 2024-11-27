@@ -1,8 +1,10 @@
+import { StorybookConfig } from "@storybook/react-vite";
 import { dirname, join } from "path";
 
-module.exports = {
-  framework: {
-    name: getAbsolutePath("@storybook/react-vite"),
+const config: StorybookConfig = {
+  framework: getAbsolutePath("@storybook/react-vite"),
+  core: {
+    builder: "@storybook/builder-vite",
   },
 
   staticDirs: ["../public"],
@@ -24,7 +26,6 @@ module.exports = {
 
   typescript: {
     check: false,
-    checkOptions: {},
     reactDocgen: "react-docgen-typescript",
     reactDocgenTypescriptOptions: {
       shouldExtractLiteralValuesFromEnum: true,
@@ -32,13 +33,15 @@ module.exports = {
     },
   },
 
-  features: {
-    emotionAlias: false,
-  },
-
   docs: {},
+
+  async viteFinal(config, options) {
+    return config;
+  },
 };
 
 function getAbsolutePath(value) {
   return dirname(require.resolve(join(value, "package.json")));
 }
+
+export default config;
