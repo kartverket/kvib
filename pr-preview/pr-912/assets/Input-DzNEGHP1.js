@@ -1,0 +1,1 @@
+import{j as t}from"./jsx-runtime-sfY7k0Xq.js";import{I as p}from"./input-Ci7GgpUh.js";const r=e=>t.jsx(p,{...e});try{r.displayName="Input",r.__docgenInfo={description:"",displayName:"Input",props:{recipe:{defaultValue:null,description:"",name:"recipe",required:!1,type:{name:"RecipeDefinition<RecipeVariantRecord> | undefined"}}}}}catch{}export{r as I};
