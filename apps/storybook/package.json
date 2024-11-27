@@ -2,7 +2,7 @@
   "name": "@kvib/storybook",
   "version": "1.1.2",
   "description": "",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "dev": "storybook dev -p 6006 --no-open",
     "build": "storybook build",

@@ -9,7 +9,7 @@ import {
   TableHeader as Thead,
   TableRow as Tr,
 } from "@kvib/react/src";
-import { radii } from "@kvib/react/theme/tokens";
+import { radii } from "@kvib/react/src/theme/tokens";
 
 const example = (radii: any) => (
   <Box border="2px solid #4DB450" backgroundColor="#E9F4EC" width="80px" height="80px" borderRadius={radii} />

@@ -7,7 +7,7 @@ import {
   TableHeader as Thead,
   TableRow as Tr,
 } from "@kvib/react/src";
-import { borders } from "@kvib/react/theme/tokens";
+import { borders } from "@kvib/react/src/theme/tokens";
 
 export const Borders = () => {
   return (

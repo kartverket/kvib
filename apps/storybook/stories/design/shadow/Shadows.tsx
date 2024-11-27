@@ -9,7 +9,7 @@ import {
   TableHeader as Thead,
   TableRow as Tr,
 } from "@kvib/react/src";
-import { shadows } from "@kvib/react/theme/tokens";
+import { shadows } from "@kvib/react/src/theme/tokens";
 
 const example = (shadow: any) => (
   <Box backgroundColor="white" width="80px" height="80px" boxShadow={shadow} borderRadius="4px" />

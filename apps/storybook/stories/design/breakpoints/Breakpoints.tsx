@@ -7,7 +7,7 @@ import {
   TableHeader as Thead,
   TableRow as Tr,
 } from "@kvib/react/src";
-import { breakpoints } from "@kvib/react/theme/tokens";
+import { breakpoints } from "@kvib/react/src/theme/tokens";
 
 export const Breakpoints = () => {
   return (

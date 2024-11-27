@@ -1,7 +1,7 @@
 import { nb } from "date-fns/locale";
 import { DateRange, DayPicker, DayPickerProps } from "react-day-picker";
 import "react-day-picker/style.css";
-import { colors } from "../../theme/tokens";
+import { colors } from "../theme/tokens";
 
 export type DateRangePickerProps = DayPickerProps & {
   selected?: DateRange | undefined;

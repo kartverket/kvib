@@ -10,7 +10,7 @@ import {
   TableHeader as Thead,
   TableRow as Tr,
 } from "@kvib/react/src";
-import { blur } from "@kvib/react/theme/tokens";
+import { blur } from "@kvib/react/src/theme/tokens";
 
 export const example = (value: any) => {
   return (

@@ -1,4 +1,3 @@
-export * from "../theme";
 export * from "./accordion";
 export * from "./alert";
 export * from "./avatar";
@@ -49,6 +48,7 @@ export * from "./table";
 export * from "./tabs";
 export * from "./tag";
 export * from "./textarea";
+export * from "./theme";
 export * from "./theme-utils";
 export * from "./timepicker";
 export * from "./toaster";

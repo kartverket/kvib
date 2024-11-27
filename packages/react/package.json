@@ -8,7 +8,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup ./src/index.ts ./theme/index.ts --dts --treeshake --format esm,cjs",
+    "build": "tsup src/index.ts --dts --treeshake --format esm,cjs",
     "codegen": "chakra snippet add",
     "typegen": "chakra typegen ./theme/index.ts"
   },
