@@ -5,7 +5,7 @@ export const tableTheme = defineSlotRecipe({
   slots: tableAnatomy.keys(),
   base: {
     root: {
-      colorPalette: "green",
+      colorPalette: "gray",
     },
   },
   variants: {

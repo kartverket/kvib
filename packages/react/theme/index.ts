@@ -33,7 +33,7 @@ import { pinInputTheme } from "./components/pin-input";
 import { popoverTheme } from "./components/popover";
 import { progressTheme } from "./components/progress";
 import { radioGroupTheme } from "./components/radio-group";
-import { selectNativeTheme } from "./components/select-native.recipe";
+import { selectNativeTheme } from "./components/select-native";
 import { sliderTheme } from "./components/slider";
 import { spinnerTheme } from "./components/spinner";
 import { stepsTheme } from "./components/steps";
@@ -80,7 +80,6 @@ const customConfig = defineConfig({
       closeButton: closeButtonTheme,
       input: inputTheme,
       link: linkTheme,
-      nativeSelect: selectNativeTheme,
       spinner: spinnerTheme,
     },
     slotRecipes: {
@@ -93,6 +92,7 @@ const customConfig = defineConfig({
       fileUpload: fileUploadTheme,
       iconButton: iconButtonTheme,
       menu: menuTheme,
+      nativeSelect: selectNativeTheme,
       numberInput: numberInputTheme,
       pinInput: pinInputTheme,
       popover: popoverTheme,

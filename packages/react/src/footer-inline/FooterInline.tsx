@@ -16,7 +16,14 @@ export const FooterInline = ({
   children,
 }: FooterInlineProps) => {
   return (
-    <Flex borderTop={"1px solid gray.300"} mt="1rem" justifyContent="space-between" pt="10px" gap="2rem">
+    <Flex
+      borderTop="{borders.1px}"
+      borderColor="gray.500"
+      mt="1rem"
+      justifyContent="space-between"
+      pt="10px"
+      gap="2rem"
+    >
       <Link href={logoLink} external={false}>
         <Logo size={130} variant="horizontal" />
       </Link>
