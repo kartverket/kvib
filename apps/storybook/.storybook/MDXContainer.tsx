@@ -1,5 +1,5 @@
 import { FooterInline, KvibProvider, Link } from "@kvib/react/src";
-import { DocsContainer } from "@storybook/addon-docs/blocks";
+import { DocsContainer } from "@storybook/blocks";
 import React, { useEffect } from "react";
 
 export const MDXContainer = ({ children, context }) => {
