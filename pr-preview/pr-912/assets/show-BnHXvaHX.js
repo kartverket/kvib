@@ -1,0 +1,1 @@
+import{j as n}from"./jsx-runtime-CQsLhzk5.js";import{r as i}from"./index-Wp2u197Z.js";function c(o){const{when:r,fallback:s,children:e}=o;let t;return r?t=typeof e=="function"?e(r):e:t=s,i.isValidElement(t)?t:n.jsx(n.Fragment,{children:t})}export{c as S};

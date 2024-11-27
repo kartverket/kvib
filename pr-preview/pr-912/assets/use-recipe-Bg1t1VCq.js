@@ -1,0 +1,1 @@
+import{r as c}from"./index-Wp2u197Z.js";import{u}from"./factory-DbxLU_Fv.js";function i(o){const{key:e,recipe:t}=o,r=u();return c.useMemo(()=>{const s=t||(e!=null?r.getRecipe(e):{});return r.cva(structuredClone(s))},[e,t,r])}export{i as u};

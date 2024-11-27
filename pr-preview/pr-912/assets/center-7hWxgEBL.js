@@ -1,1 +1,0 @@
-import{c as e}from"./factory-Dr_T95xI.js";const n=e("div",{base:{display:"flex",alignItems:"center",justifyContent:"center"},variants:{inline:{true:{display:"inline-flex"}}}});n.displayName="Center";export{n as C};
