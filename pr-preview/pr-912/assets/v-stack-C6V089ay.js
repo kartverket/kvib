@@ -1,1 +1,0 @@
-import{j as o}from"./jsx-runtime-sfY7k0Xq.js";import{r as a}from"./index-CcKhGcwW.js";import{S as c}from"./stack-IaJndBAh.js";const m=a.forwardRef(function(r,t){return o.jsx(c,{align:"center",...r,direction:"column",ref:t})});export{m as V};
