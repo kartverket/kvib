@@ -1,47 +1,34 @@
-import { StorybookConfig } from "@storybook/react-vite";
+import type { StorybookConfig } from "@storybook/react-vite";
+
 import { dirname, join } from "path";
 
+/**
+ * This function is used to resolve the absolute path of a package.
+ * It is needed in projects that use Yarn PnP or are set up within a monorepo.
+ */
+function getAbsolutePath(value: string): any {
+  return dirname(require.resolve(join(value, "package.json")));
+}
 const config: StorybookConfig = {
-  framework: getAbsolutePath("@storybook/react-vite"),
-  core: {
-    builder: "@storybook/builder-vite",
-  },
-
-  staticDirs: ["../public"],
-  stories: ["../stories/**/*.mdx", "../stories/**/*.stories.@(js|jsx|ts|tsx)"],
+  stories: ["../stories/**/*.mdx", "../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
 
   addons: [
-    getAbsolutePath("@storybook/addon-links"),
+    getAbsolutePath("@storybook/addon-onboarding"),
     getAbsolutePath("@storybook/addon-essentials"),
-    getAbsolutePath("@storybook/addon-a11y"),
-    {
-      name: "@storybook/addon-storysource",
-      options: {
-        loaderOptions: {
-          injectStoryParameters: true,
-        },
-      },
-    },
+    getAbsolutePath("@chromatic-com/storybook"),
+    getAbsolutePath("@storybook/addon-interactions"),
+    getAbsolutePath("@storybook/addon-mdx-gfm"),
   ],
 
-  typescript: {
-    check: false,
-    reactDocgen: "react-docgen-typescript",
-    reactDocgenTypescriptOptions: {
-      shouldExtractLiteralValuesFromEnum: true,
-      propFilter: prop => (prop.parent ? !/node_modules/.test(prop.parent.fileName) : true),
-    },
+  framework: {
+    name: getAbsolutePath("@storybook/react-vite"),
+    options: {},
   },
 
   docs: {},
 
-  async viteFinal(config, options) {
-    return config;
+  typescript: {
+    reactDocgen: "react-docgen-typescript",
   },
 };
-
-function getAbsolutePath(value) {
-  return dirname(require.resolve(join(value, "package.json")));
-}
-
 export default config;

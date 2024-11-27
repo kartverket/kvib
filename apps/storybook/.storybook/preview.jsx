@@ -1,5 +1,4 @@
 import { KvibProvider } from "@kvib/react/src/provider/KvibProvider";
-import type { Preview } from "@storybook/react";
 import React from "react";
 import "./docs-root.css";
 import { MDXContainer } from "./MDXContainer";
@@ -146,10 +145,10 @@ export const argTypes = {
   _horizontal: STORYBOOK_DISABLE_CONTROL,
 };
 
-const preview: Preview = {
+const preview = {
   decorators: decorators,
   parameters: parameters,
-  tags: ["autodocs"],
+  tags: ["autodocs", "autodocs", "autodocs"],
 };
 
 export default preview;
