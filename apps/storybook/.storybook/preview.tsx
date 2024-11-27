@@ -1,4 +1,6 @@
+import { KvibProvider } from "@kvib/react/src/provider/KvibProvider";
 import type { Preview } from "@storybook/react";
+import React from "react";
 import "./docs-root.css";
 import { MDXContainer } from "./MDXContainer";
 import theme from "./theme";
@@ -68,7 +70,7 @@ const parameters = {
     },
   },
 };
-/*
+
 const decorators = [
   Story => (
     <KvibProvider>
@@ -76,7 +78,7 @@ const decorators = [
     </KvibProvider>
   ),
 ];
- */
+
 const STORYBOOK_DISABLE_CONTROL = { table: { disable: true } };
 export const argTypes = {
   as: STORYBOOK_DISABLE_CONTROL,
@@ -145,6 +147,7 @@ export const argTypes = {
 };
 
 const preview: Preview = {
+  decorators: decorators,
   parameters: parameters,
   tags: ["autodocs"],
 };

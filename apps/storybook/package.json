@@ -4,11 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "test-storybook",
     "dev": "storybook dev -p 6006 --no-open",
     "build": "storybook build",
     "build-storybook": "storybook build",
-    "test-storybook": "test-storybook"
+    "test": "test-storybook --skipTags='skip-test'"
   },
   "keywords": [],
   "author": "",

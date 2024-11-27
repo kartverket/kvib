@@ -124,13 +124,6 @@ const meta: Meta<typeof KvibDrawer> = {
       },
       control: "text",
     },
-    onEsc: {
-      description: "Callback fired when the escape key is pressed and focus is within modal",
-      table: {
-        type: { summary: "() => void" },
-      },
-      control: "text",
-    },
     onOverlayClick: {
       description: "Callback fired when the overlay is clicked.",
       table: {

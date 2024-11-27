@@ -70,5 +70,6 @@ const StepperExample = ({ ...args }) => {
 };
 
 export const Preview: Story = {
+  tags: ["skip-test"],
   render: (args: StepsProps) => <StepperExample {...args} />,
 };

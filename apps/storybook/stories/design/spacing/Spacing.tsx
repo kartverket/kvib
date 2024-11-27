@@ -8,7 +8,7 @@ import {
   TableHeader as Thead,
   TableRow as Tr,
 } from "@kvib/react/src";
-import { colors, spacing } from "@kvib/react/src/theme/tokens";
+import { colors, spacing } from "@kvib/react/theme/tokens";
 
 const example = (spacing: any) => <Box bg={colors.blue[400].value} w={spacing} h="16px" />;
 

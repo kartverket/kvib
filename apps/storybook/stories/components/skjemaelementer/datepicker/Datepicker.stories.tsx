@@ -40,8 +40,8 @@ const meta: Meta<typeof KvibDatepicker> = {
       description: "Variant",
       table: {
         type: { summary: "outline | subtle | flushed" },
-        defaultValue: { summary: "outline" },
       },
+      defaultValue: { summary: "outline" },
       options: ["outline", "subtle", "flushed"],
       control: { type: "radio" },
     },
@@ -56,8 +56,8 @@ const meta: Meta<typeof KvibDatepicker> = {
       description: "Size of input",
       table: {
         type: { summary: "lg | md | sm | xs" },
-        defaultValue: { summary: "md" },
       },
+      defaultValue: { summary: "md" },
       options: ["lg", "md", "sm", "xs"],
       control: { type: "radio" },
     },
@@ -81,8 +81,8 @@ const meta: Meta<typeof KvibDatepicker> = {
       description: "Toggles if input should be disabled",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
       },
+      defaultValue: { summary: "false" },
       control: "boolean",
     },
     defaultSelected: {
@@ -118,32 +118,32 @@ const meta: Meta<typeof KvibDatepicker> = {
         "Whether or not to show dropdowns for month and year selection. `fromDate` and `toDate` must be set.",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
       },
+      defaultValue: { summary: "false" },
       control: "boolean",
     },
     disableNavigation: {
       description: "If set to true, navigation buttons (next/previous month) are hidden.",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
       },
+      defaultValue: { summary: "false" },
       control: "boolean",
     },
     showOutsideDays: {
       description: "Whether or not to show the days that fall outside the current month.",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: "true" },
       },
+      defaultValue: { summary: "true" },
       control: "boolean",
     },
     showWeekNumber: {
       description: "Whether or not to display the week numbers.",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
       },
+      defaultValue: { summary: "false" },
       control: "boolean",
     },
     disabledDays: {
@@ -156,16 +156,16 @@ const meta: Meta<typeof KvibDatepicker> = {
       description: "Whether or not to use the native datepicker on mobile devices.",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
       },
+      defaultValue: { summary: "false" },
       control: "boolean",
     },
     colorPalette: {
       description: "Color palette",
       table: {
         type: { summary: "blue | green" },
-        defaultValue: { summary: "green" },
       },
+      defaultValue: { summary: "green" },
       options: ["green", "blue"],
       control: { type: "radio" },
     },

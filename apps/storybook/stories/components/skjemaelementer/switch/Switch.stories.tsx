@@ -188,5 +188,5 @@ export default meta;
 type Story = StoryObj<typeof KvibSwitch>;
 
 export const Preview: Story = {
-  render: (args: SwitchProps) => <KvibSwitch {...args} />,
+  render: (args: SwitchProps) => <KvibSwitch {...args}>Toggle</KvibSwitch>,
 };
