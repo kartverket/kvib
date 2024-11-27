@@ -1,6 +1,6 @@
 import { defineSlotRecipe } from "@chakra-ui/react";
 
-export const cardSlotRecipe = defineSlotRecipe({
+export const cardTheme = defineSlotRecipe({
   className: "kvib-card",
   slots: ["root", "header", "body", "footer"],
   variants: {

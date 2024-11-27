@@ -10,11 +10,6 @@ const meta: Meta<typeof KvibCloseButton> = {
       canvas: { sourceState: "shown" },
     },
   },
-  args: {
-    size: "md",
-    colorPalette: "green",
-    disabled: false,
-  },
   argTypes: {
     colorPalette: {
       description: "The visual color appearance of the button",

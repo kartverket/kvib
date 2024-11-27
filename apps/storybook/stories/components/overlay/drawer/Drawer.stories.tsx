@@ -141,9 +141,9 @@ const meta: Meta<typeof KvibDrawer> = {
     placement: {
       description: "The placement of the drawer",
       table: {
-        type: { summary: "SlideDirection | LogicalPlacement" },
-        defaultValue: { summary: "right" },
+        type: { summary: "bottom | top | start | end" },
       },
+      defaultValue: { summary: "end" },
       control: "text",
     },
     portalProps: {
@@ -205,7 +205,7 @@ const meta: Meta<typeof KvibDrawer> = {
     closeOnEsc: true,
     closeOnOverlayClick: true,
     lockFocusAcrossFrames: false,
-    placement: "right",
+    placement: "end",
     preserveScrollBarGap: true,
     returnFocusOnClose: true,
     size: "xs",

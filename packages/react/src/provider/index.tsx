@@ -1,1 +1,1 @@
-export { Provider as KvibProvider } from "@/components/ui/provider";
+export * from "./KvibProvider";

@@ -1,6 +1,6 @@
 import { defineRecipe } from "@chakra-ui/react";
 
-export const selectNativeRecipe = defineRecipe({
+export const selectNativeTheme = defineRecipe({
   base: {
     display: "flex",
     alignItems: "center",

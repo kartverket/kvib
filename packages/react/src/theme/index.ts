@@ -1,4 +1,4 @@
-import { createSystem, defaultConfig, defineConfig, mergeConfigs } from "@chakra-ui/react";
+import { createSystem, defaultBaseConfig, defineConfig } from "@chakra-ui/react";
 import {
   blur,
   borders,
@@ -18,6 +18,7 @@ import {
 import { alertTheme } from "./components/alert";
 import { breadcrumbTheme } from "./components/breadcrumb";
 import { buttonTheme } from "./components/button";
+import { cardTheme } from "./components/card";
 import { checkboxTheme } from "./components/checkbox";
 import { closeButtonTheme } from "./components/close-button";
 import { datepickerTheme } from "./components/datepicker";
@@ -32,6 +33,7 @@ import { pinInputTheme } from "./components/pin-input";
 import { popoverTheme } from "./components/popover";
 import { progressTheme } from "./components/progress";
 import { radioGroupTheme } from "./components/radio-group";
+import { selectNativeTheme } from "./components/select-native.recipe";
 import { sliderTheme } from "./components/slider";
 import { spinnerTheme } from "./components/spinner";
 import { stepsTheme } from "./components/steps";
@@ -40,8 +42,6 @@ import { tableTheme } from "./components/table";
 import { tabsTheme } from "./components/tabs";
 import { tagTheme } from "./components/tag";
 import { toastTheme } from "./components/toast";
-import { cardSlotRecipe } from "./recipes/card.recipe";
-import { selectNativeRecipe } from "./recipes/select-native.recipe";
 import { config as kvibConfig } from "./tokens/config";
 import sizes from "./tokens/sizes";
 import { transitionDuration, transitionProperty, transitionTimingFunction } from "./tokens/transitions";
@@ -71,16 +71,16 @@ const customConfig = defineConfig({
     },
     recipes: {
       button: buttonTheme,
+      closeButton: closeButtonTheme,
       input: inputTheme,
       link: linkTheme,
-      nativeSelect: selectNativeRecipe,
+      nativeSelect: selectNativeTheme,
       spinner: spinnerTheme,
     },
     slotRecipes: {
       alert: alertTheme,
       breadcrumb: breadcrumbTheme,
-      card: cardSlotRecipe,
-      closeButton: closeButtonTheme,
+      card: cardTheme,
       checkbox: checkboxTheme,
       datepicker: datepickerTheme,
       dialog: dialogTheme,
@@ -109,6 +109,6 @@ const customConfig = defineConfig({
   ...kvibConfig,
 });
 
-const config = mergeConfigs(defaultConfig, customConfig);
+/* const config = mergeConfigs(defaultConfig, customConfig); */
 
-export const system = createSystem(config);
+export const system = createSystem(defaultBaseConfig, customConfig);

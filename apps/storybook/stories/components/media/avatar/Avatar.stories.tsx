@@ -1,3 +1,4 @@
+import { AvatarProps } from "@kvib/react";
 import { Avatar as KvibAvatar } from "@kvib/react/src";
 import { Meta, StoryObj } from "@storybook/react";
 
@@ -36,10 +37,10 @@ const meta: Meta<typeof KvibAvatar> = {
     size: {
       description: "The size of the Avatar",
       table: {
-        type: { summary: "2xs | xs | sm | md | lg | xl | 2xl | full" },
+        type: { summary: "2xs | xs | sm | md | lg | xl | 2xl" },
         defaultValue: { summary: "md" },
       },
-      options: ["2xs", "xs", "sm", "md", "lg", "xl", "2xl", "full"],
+      options: ["2xs", "xs", "sm", "md", "lg", "xl", "2xl"],
       control: { type: "radio" },
     },
     src: {
@@ -56,5 +57,5 @@ export default meta;
 type Story = StoryObj<typeof KvibAvatar>;
 
 export const Preview: Story = {
-  render: args => <KvibAvatar {...args} />,
+  render: (args: AvatarProps) => <KvibAvatar {...args} />,
 };

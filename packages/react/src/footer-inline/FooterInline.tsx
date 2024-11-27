@@ -1,5 +1,4 @@
 import { Flex, Link, Logo } from "@kvib/react/src";
-import { colors } from "../theme/tokens";
 
 type FooterInlineProps = {
   logoLink?: string;
@@ -17,13 +16,7 @@ export const FooterInline = ({
   children,
 }: FooterInlineProps) => {
   return (
-    <Flex
-      borderTop={`1px solid ${colors.gray[300]}`}
-      marginTop="1rem"
-      justifyContent="space-between"
-      paddingTop="10px"
-      gap="2rem"
-    >
+    <Flex borderTop={"1px solid gray.300"} mt="1rem" justifyContent="space-between" pt="10px" gap="2rem">
       <Link href={logoLink} external={false}>
         <Logo size={130} variant="horizontal" />
       </Link>

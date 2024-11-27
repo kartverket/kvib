@@ -13,7 +13,6 @@ import * as FlexStories from "./Flex.stories";
 import { Flex, Spacer } from "@kvib/react";
 ```
 
-<Feedback component="Flex, Spacer" />
 
 <DocsStory
   title="Flex"
@@ -35,35 +34,4 @@ import { Flex, Spacer } from "@kvib/react";
   story={<Canvas of={FlexStories.Preview} sourceState="hidden" />}
 />
 
-<DocsStory
-  title="Flex med Spacer"
-  description={""}
-  story={<Canvas of={FlexStories.FlexWithSpacer} sourceState="hidden" />}
-/>
-
-<DocsStory
-  isVertical
-  title="Flex med Spacer vs Grid vs Stack"
-  description={
-    <Text>
-      <code>Flex</code> og <code>Spacer</code> komponentene, <code>Grid</code> og <code>HStack</code> behandler children
-      med ulik bredde ulikt.
-      <ul>
-        <li>
-          I <code>HStack</code> vil children ha lik avstand mellom dem, men de vil ikke dekke hele bredden på
-          beholderen.
-        </li>
-        <li>
-          I <code>Grid</code> vil startpunktene til children være like avstand fra hverandre, men gapene mellom dem vil
-          ikke være like.
-        </li>
-        <li>
-          Med <code>Flex</code> og <code>Spacer</code> vil children dekke hele bredden på beholderen og også ha lik
-          avstand mellom seg.
-        </li>
-      </ul>
-    </Text>
-  }
-  story={<Canvas of={FlexStories.FlexGridStack} sourceState="hidden" />}
-/>
 </DocsContainer>

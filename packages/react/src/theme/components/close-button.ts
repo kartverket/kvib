@@ -1,12 +1,10 @@
-import { defineSlotRecipe } from "@chakra-ui/react";
+import { defineRecipe } from "@chakra-ui/react";
 
-export const closeButtonTheme = defineSlotRecipe({
-  slots: ["root", "icon"],
+export const closeButtonTheme = defineRecipe({
   base: {
-    root: {
-      _hover: {
-        bg: "colorPalette.100 !important",
-      },
+    colorPalette: "gray",
+    _hover: {
+      bg: "colorPalette.100 !important",
     },
   },
 });
