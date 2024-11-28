@@ -1,4 +1,4 @@
-import { Code, Text } from "@kvib/react";
+import { Alert, Code, Text } from "@kvib/react";
 import { Dokumentasjonsside } from "./utils/Dokumentasjonsside";
 import { Liste } from "./utils/Liste";
 import { Listeelement } from "./utils/Listeelement";
@@ -9,6 +9,9 @@ export const Migration = () => (
     tittel="Kvib 5"
     beskrivelse="Versjon 5 av Kvib bygger på Chakra 3 og har en rekke nyheter med seg. I denne oversikten vil vi fremheve de viktigste endringene og hvordan dette påvirker brukerne av tidligere versjoner av Kvib."
   >
+    <Alert status="info" size="lg">
+      Dokumentasjonen vår vil være litt utdatert i en tid fremover etter oppdateringen.
+    </Alert>
     <Tekstblokk tittel="Komponenter med nye navn">
       Flere av komponentene har fått nye navn. Dette byr på breaking changes for de som oppgraderer fra tidligere
       versjoner av Kvib.
@@ -35,6 +38,27 @@ export const Migration = () => (
         <Listeelement tittel="spacing">
           Har blitt forenklet slik at alle komponenter bruker <Code>gap</Code>. Tidligere har det vært noen som bruker
           den ene og noen som bruker den andre, men nå er det kun <Code>gap</Code> som gjelder.
+        </Listeelement>
+      </Liste>
+    </Tekstblokk>
+    <Tekstblokk tittel="Nye komponenter">
+      <Liste>
+        <Listeelement tittel="ColorPicker">
+          Komponenten ColorPicker er nå en del av Chakra og er tilgjengelig som <Code>KvibColorPicker</Code>.
+        </Listeelement>
+        <Listeelement tittel="ColorSwatch">
+          Komponenten ColorSwatch er nå en del av Chakra og er tilgjengelig som <Code>ColorSwatch</Code>.
+        </Listeelement>
+      </Liste>
+    </Tekstblokk>
+    <Tekstblokk tittel="Syntaksendringer">
+      <Liste>
+        <Listeelement tittel="Dot-notasjon for komponentene">
+          Man kan nå importere én rot-komponent og få tilgang til alle underkomponentene gjennom dot-notasjon. Dette er
+          standarden i Chakra fra nå, men for å unngå enorme mengder med breaking changes har vi valgt å fortsatt tilby
+          komponentene våre som enkeltstående importer, i tillegg til dot-notasjon. Dette tas i bruk ved å importere{" "}
+          <Code>Kvib*</Code>-komponentene, som f.eks. <Code>KvibAccordion</Code>. Dette gir tilgang til
+          underkomponentene gjennom dot-notasjon, som f.eks. <Code>KvibAccordion.Item</Code>.
         </Listeelement>
       </Liste>
     </Tekstblokk>
