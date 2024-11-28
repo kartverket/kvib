@@ -37,6 +37,10 @@ const config: StorybookConfig = {
         alias: [
           {
             find: "@kvib/react",
+            replacement: path.resolve(__dirname, "../../../packages/react"),
+          },
+          {
+            find: "@",
             replacement: path.resolve(__dirname, "../../../packages/react/src"),
           },
         ],
