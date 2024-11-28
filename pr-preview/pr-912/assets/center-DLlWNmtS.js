@@ -1,1 +1,0 @@
-import{c as e}from"./create-slot-recipe-context-BTQZ2sOO.js";const n=e("div",{base:{display:"flex",alignItems:"center",justifyContent:"center"},variants:{inline:{true:{display:"inline-flex"}}}});n.displayName="Center";export{n as C};

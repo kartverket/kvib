@@ -1,0 +1,29 @@
+import{j as r}from"./jsx-runtime-CQsLhzk5.js";import{useMDXComponents as e}from"./index-C2WH5l5l.js";import{ae as n,af as t,ag as s,ai as a}from"./index-BjxUPiid.js";import{L as l,P as m,a as d}from"./LinkOverlay.stories-DLcTZIHo.js";import"./index-Wp2u197Z.js";import"./iframe-CKN92XBh.js";import"../sb-preview/runtime.js";import"./index-C2tM1_0x.js";import"./index-yiGAEVS0.js";import"./index-DrFu-skq.js";import"./index-DLb6jjjC.js";import"./factory-DbxLU_Fv.js";import"./create-recipe-context-uxbFyZx7.js";import"./empty-DSVal0bC.js";import"./use-recipe-Bg1t1VCq.js";import"./grid-D5vdwI11.js";import"./stat-D1jksNlM.js";import"./index-DC8FWG5U.js";import"./use-locale-context-DoP-38uM.js";import"./create-context-9KvyJVA-.js";import"./create-slot-recipe-context-Ct7AJ-u_.js";import"./icons-C5Y4X3wc.js";import"./700-9-_jkC4t.js";import"./config-BzBMZny9.js";import"./is-D1VN0Vzs.js";import"./walk-object-MOVJDcbI.js";import"./index-Dvqk0xyY.js";import"./index-BRNWFSEf.js";import"./index-3UVeZ5B9.js";import"./index-C5caIrke.js";import"./index-Cq1GvU5P.js";import"./index-Ctx6eFvH.js";import"./index-7LEGx5rD.js";import"./focus-trap.esm-CVCU0Y7G.js";import"./index-Cbd61W9O.js";import"./index-D_kLChQY.js";import"./index-BEsYcnRv.js";import"./field.anatomy-BZ5UhGuB.js";import"./index-Cj0ea3fM.js";import"./index-BYlnT0nS.js";import"./index-CSN3utww.js";import"./floating-ui.dom-BfjzW660.js";import"./index-D5MGdGv7.js";import"./index-BHo8OOaC.js";import"./index-DyXZFt-t.js";import"./index-BR8t6gqn.js";import"./index-NfPDfnaY.js";import"./index-DRg8QMUi.js";import"./index-BrYAni-i.js";import"./index-BKrsGdo-.js";import"./index-CBM63N7P.js";import"./checkbox.anatomy-u867A_q4.js";import"./index-DIcpFlx5.js";import"./index-CGv7T-fE.js";import"./index-DJhKCpBo.js";import"./show-BnHXvaHX.js";import"./select-CJWaMj8V.js";import"./create-split-props-u5h9OPvL.js";import"./factory-DzReEOQo.js";import"./split-presence-props-DcTE3k_W.js";import"./use-presence-context-CTMwjttg.js";import"./index-CPV3pteC.js";import"./use-event-BQKQuVfd.js";import"./use-environment-context-CJHKuyB_.js";import"./use-field-context-SniSo6zJ.js";import"./accordion-M2pzdkoZ.js";import"./render-strategy-Cqed6i7V.js";import"./alert-COpTbeUC.js";import"./aspect-ratio-D-39ju3D.js";import"./avatar-A0ZEHoSk.js";import"./badge-C5cg_03m.js";import"./box-BV7_-RZx.js";import"./circle-0hueYyOR.js";import"./file-upload-FrGtldY6.js";import"./breadcrumb-gdL4iWZB.js";import"./button-CYFvIhue.js";import"./icon-button-Bnp4VcWh.js";import"./card-CN8xBwHc.js";import"./center-UUwAJgr_.js";import"./absolute-center-DnFOXaWe.js";import"./checkbox-CdRhMZCs.js";import"./attr-C3Jtgmrz.js";import"./code-ztxGxAub.js";import"./container-DqexkujA.js";import"./dialog-4uy2nwr3.js";import"./editable-cbhEEXNn.js";import"./field-B2y6gKWG.js";import"./icon-CpHYjgR5.js";import"./flex-lNX0IHYU.js";import"./highlight-CmMQHCjO.js";import"./grid-item-B6vdGgFE.js";import"./simple-grid-Bsi4EGdg.js";import"./group-AZsgzFuT.js";import"./image-CQDJLaH5.js";import"./input-Bn0lBoUl.js";import"./input-element-D4-vl16v.js";import"./kbd-rVQza_r_.js";import"./link-BIDHNzfj.js";import"./list-BBbbwo6Y.js";import"./menu-Byu4ChF-.js";import"./number-input-eVN99dtj.js";import"./pin-input-CQ4GCAqg.js";import"./popover-D5ryemgo.js";import"./progress-Cm-s0-jH.js";import"./progress-value-text-D4QkzDnp.js";import"./progress-circle-DF-l7AWE.js";import"./radio-group-BaMOopLk.js";import"./separator-CmBa6_wl.js";import"./skeleton-CtY4KODc.js";import"./skip-nav-link-auHXVL3F.js";import"./slider-dcTlRt5-.js";import"./spinner-Ddxj2mVP.js";import"./h-stack-C-JeAGHw.js";import"./stack-BOCWF6Sh.js";import"./v-stack-B91jGwaF.js";import"./stack-separator-CZ4ngSMg.js";import"./steps-D35XSnNj.js";import"./switch-C1mCfDkZ.js";import"./table-B4oKXC-T.js";import"./tabs-vRnSsYb6.js";import"./tag-BPnQKiVJ.js";import"./textarea-mcxYtiXE.js";import"./toast-p9UXNINd.js";import"./heading-CoXJvVOu.js";import"./text-DjVM_lrW.js";import"./visually-hidden-BTwES0D0.js";import"./index-CYIipmwX.js";import"./iconBase-ur5FuG4R.js";import"./index-V12T2m16.js";/* empty css              */import"./style-B9SQrwGF.js";import"./index-Bokjg-wG.js";import"./react-select-async.esm-BIJGKOBz.js";import"./portal-DnyyLHII.js";import"./useDateSegment-CUyGtYKO.js";import"./parse-B55RHAPX.js";function p(o){const i={code:"code",h1:"h1",h2:"h2",p:"p",pre:"pre",...e(),...o.components};return r.jsxs(r.Fragment,{children:[r.jsx(n,{of:l}),`
+`,r.jsx(i.h1,{id:"link-overlay",children:"Link Overlay"}),`
+`,r.jsx(i.p,{children:"Link Overlay er et semantisk komponent som brukes til å wrappe elementer sammen i en link."}),`
+`,r.jsx(i.h2,{id:"ta-i-bruk",children:"Ta i bruk"}),`
+`,r.jsx(i.pre,{children:r.jsx(i.code,{className:"language-jsx",children:`import { LinkBox, LinkOverlay } from "@kvib/react";
+`})}),`
+`,r.jsx(i.h2,{id:"props",children:"Props"}),`
+`,r.jsx(t,{of:m}),`
+`,r.jsx(s,{of:m}),`
+`,r.jsx(i.h2,{id:"nested-link",children:"Nested link"}),`
+`,r.jsx(t,{of:d}),`
+`,r.jsx(i.h2,{id:"link-overlay-med-routing-library",children:"Link Overlay med Routing Library"}),`
+`,r.jsxs(i.p,{children:["For å legge til støtte for biblioteker som Next.js eller gatsby Link må du wrappe de rundt ",r.jsx(i.code,{children:"LinkOverlay"})," eller bruke de som en prop."]}),`
+`,r.jsx(a,{code:`const RoutingExample = () => {
+  return (
+    <LinkBox as="article">
+      <h2>
+        <LinkOverlay as={NextLink} href="#">
+          Some blog post
+        </LinkOverlay>
+      </h2>
+      <p>
+        As a side note, using quotation marks around an attribute value is required only if this value is not a valid
+        identifier.
+      </p>
+      <a href="#">Some inner link</a>
+    </LinkBox>
+  );
+};`,dark:!0})]})}function Ti(o={}){const{wrapper:i}={...e(),...o.components};return i?r.jsx(i,{...o,children:r.jsx(p,{...o})}):p(o)}export{Ti as default};

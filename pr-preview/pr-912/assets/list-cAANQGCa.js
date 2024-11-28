@@ -1,1 +1,0 @@
-import{a1 as o}from"./create-slot-recipe-context-BTQZ2sOO.js";const{withProvider:s,withContext:t,useStyles:r,PropsProvider:e}=o({key:"list"}),a=s("ul","root",{defaultProps:{role:"list"}}),c=e,n=t("li","item"),l=t("span","indicator");export{a as L,n as a,l as b,c};
