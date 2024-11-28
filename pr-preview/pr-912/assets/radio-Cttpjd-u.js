@@ -1,1 +1,0 @@
-import{j as o}from"./jsx-runtime-CQsLhzk5.js";import{r as d}from"./index-Wp2u197Z.js";import{R as p,a as R,b as n,c as m,d as u}from"./radio-group-BaMOopLk.js";const G=d.forwardRef(function(t,a){const{children:r,inputProps:s,rootRef:i,...e}=t;return o.jsxs(p,{ref:i,...e,children:[o.jsx(R,{ref:a,...s}),o.jsx(n,{}),r&&o.jsx(m,{children:r})]})}),I=u;export{G as R,I as a};
