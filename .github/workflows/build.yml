@@ -34,3 +34,10 @@ jobs:
 
       - name: Build
         run: npm run build
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-artifact
+          path: ./kvib-react
+
