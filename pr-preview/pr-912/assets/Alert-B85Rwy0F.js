@@ -1,9 +1,0 @@
-import{j as r}from"./jsx-runtime-CQsLhzk5.js";import{useMDXComponents as m}from"./index-C2WH5l5l.js";import{ae as n,af as s,ag as p}from"./index-QeDNNqA3.js";import{b as a}from"./Feedback-B4xLAgjS.js";import{C as l}from"./ComponentsBanner-ZzRb0E9c.js";import{A as c,P as e}from"./Alert.stories-261sKOkM.js";import"./index-Wp2u197Z.js";import"./iframe-B0W1hmWo.js";import"../sb-preview/runtime.js";import"./index-C2tM1_0x.js";import"./index-yiGAEVS0.js";import"./index-DrFu-skq.js";import"./slider-Bgj0f888.js";import"./h-stack-Bcgbt9nc.js";import"./create-slot-recipe-context-BTQZ2sOO.js";import"./box-CwJKB2Ex.js";import"./image-BLTEeVh9.js";import"./simple-grid-DRjr5Irv.js";import"./grid-C5fGnQys.js";import"./heading-X1Pa8Qgc.js";import"./create-recipe-context-DEM4M4qP.js";import"./use-recipe-BTz8rvp_.js";import"./text-CqjT0fSu.js";import"./card-f-p4b1Lj.js";import"./flex-B5WCXjfY.js";import"./Link-BmFVOlPn.js";import"./link-WFPTfeGr.js";import"./alert-uJw8qnZF.js";import"./close-button-B37B0yHd.js";import"./index-CYIipmwX.js";import"./iconBase-ur5FuG4R.js";import"./icon-button-CTSUUGYP.js";import"./button-Bq1uvldj.js";import"./alert-DTWP96EV.js";import"./icons-DREn2yCE.js";function i(o){const t={code:"code",pre:"pre",...m(),...o.components};return r.jsxs(r.Fragment,{children:[r.jsx(n,{of:c}),`
-`,r.jsx(l,{title:"Alert",description:"Alert brukes til meldinger som kommuniserer viktig informasjon sammen med, eller i, andre komponenter som brukeren interagerer med, for eksempel underveis i utfylling av skjema.",hasCodeBelow:!0}),`
-`,r.jsx(t.pre,{children:r.jsx(t.code,{className:"language-jsx",children:`import { Alert, AlertIcon, AlertTitle, AlertDescription } from "@kvib/react";
-`})}),`
-`,r.jsx("br",{}),`
-`,r.jsx("br",{}),`
-`,r.jsx(a,{light:!0,children:"Props"}),`
-`,r.jsx(s,{of:e}),`
-`,r.jsx(p,{of:e})]})}function Q(o={}){const{wrapper:t}={...m(),...o.components};return t?r.jsx(t,{...o,children:r.jsx(i,{...o})}):i(o)}export{Q as default};
