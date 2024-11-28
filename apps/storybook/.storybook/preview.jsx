@@ -1,4 +1,4 @@
-import { KvibProvider } from "@kvib/react/src/provider/KvibProvider";
+import { KvibProvider } from "@kvib/react";
 import React from "react";
 import "./docs-root.css";
 import { MDXContainer } from "./MDXContainer";
