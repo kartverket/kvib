@@ -1,4 +1,4 @@
-import { Box, Center, Flex as KvibFlex, Text } from "@kvib/react/src";
+import { Box, Center, Flex as KvibFlex, Text } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibFlex> = {

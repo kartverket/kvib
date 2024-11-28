@@ -1,4 +1,4 @@
-import { SkipNavLink as KvibSkipNavLink } from "@kvib/react/src";
+import { SkipNavLink as KvibSkipNavLink } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibSkipNavLink> = {

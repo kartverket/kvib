@@ -1,4 +1,4 @@
-import { Center as KvibCenter } from "@kvib/react/src";
+import { Center as KvibCenter } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibCenter> = {

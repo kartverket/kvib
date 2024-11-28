@@ -10,7 +10,7 @@ import {
   SimpleGrid,
   Stack,
   Text,
-} from "@kvib/react/src";
+} from "@kvib/react";
 import { ChangeEvent, ReactElement, useEffect, useRef, useState } from "react";
 import { ComponentsBanner } from "../../templates/ComponentsBanner";
 import { Komponenter } from "./Komponenter";

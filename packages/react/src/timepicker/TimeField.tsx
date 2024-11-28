@@ -1,4 +1,4 @@
-import { Flex } from "@kvib/react/src";
+import { Flex } from "@/layout";
 import { useRef } from "react";
 import { AriaTimeFieldProps, TimeValue, useTimeField } from "react-aria";
 import { TimeFieldState } from "react-stately";

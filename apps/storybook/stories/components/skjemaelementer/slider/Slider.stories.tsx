@@ -1,5 +1,4 @@
-import { SliderProps } from "@kvib/react";
-import { Slider as KvibSlider } from "@kvib/react/src/slider";
+import { Slider as KvibSlider, SliderProps } from "@kvib/react";
 
 import { Meta, StoryObj } from "@storybook/react";
 

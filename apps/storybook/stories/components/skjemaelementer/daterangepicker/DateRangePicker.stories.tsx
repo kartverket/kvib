@@ -1,4 +1,4 @@
-import { DateRange, DateRangePickerProps, DateRangePicker as KvibDateRangePicker } from "@kvib/react/src";
+import { DateRange, DateRangePickerProps, DateRangePicker as KvibDateRangePicker } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react/*";
 import { useState } from "react";
 

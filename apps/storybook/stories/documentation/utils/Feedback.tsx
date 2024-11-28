@@ -1,4 +1,4 @@
-import { HStack, Link, Text } from "@kvib/react/src";
+import { HStack, Link, Text } from "@kvib/react";
 import { Tekstblokk } from "./Tekstblokk";
 
 export const Feedback = () => (

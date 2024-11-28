@@ -8,7 +8,7 @@ import {
   TableCell as Th,
   TableHeader as Thead,
   TableRow as Tr,
-} from "@kvib/react/src";
+} from "@kvib/react";
 import { Dokumentasjonsside } from "../../documentation/utils/Dokumentasjonsside";
 import { Liste } from "../../documentation/utils/Liste";
 import { Listeelement } from "../../documentation/utils/Listeelement";

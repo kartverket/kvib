@@ -1,4 +1,4 @@
-import { Link, Text } from "@kvib/react/src";
+import { Link, Text } from "@kvib/react";
 import { Dokumentasjonsside } from "../../../documentation/utils/Dokumentasjonsside";
 import { Liste } from "../../../documentation/utils/Liste";
 import { Listeelement } from "../../../documentation/utils/Listeelement";

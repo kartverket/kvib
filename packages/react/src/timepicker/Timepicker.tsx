@@ -1,6 +1,8 @@
+import { IconButton } from "@/button";
+import { useRecipe } from "@/hooks";
+import { Box } from "@/layout";
 import { useFieldContext } from "@chakra-ui/react";
 import { CalendarDateTime, parseTime } from "@internationalized/date";
-import { Box, IconButton, useRecipe } from "@kvib/react/src";
 import { useRef, useState } from "react";
 import { TimeValue } from "react-aria";
 import { useTimeFieldState } from "react-stately";

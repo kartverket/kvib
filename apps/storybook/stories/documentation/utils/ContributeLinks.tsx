@@ -1,4 +1,4 @@
-import { Flex, FlexProps, Icon, Link } from "@kvib/react/src";
+import { Flex, FlexProps, Icon, Link } from "@kvib/react";
 
 export const ContributeLinks = (props: FlexProps) => {
   return (

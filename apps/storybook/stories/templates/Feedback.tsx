@@ -1,4 +1,4 @@
-import { Card, CardBody, Flex, Link, Text } from "@kvib/react/src";
+import { Card, CardBody, Flex, Link, Text } from "@kvib/react";
 
 type FeedbackProps = {
   component: string;

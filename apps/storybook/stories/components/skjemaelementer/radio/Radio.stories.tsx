@@ -1,5 +1,4 @@
-import { RadioProps } from "@kvib/react";
-import { Radio as KvibRadio, RadioGroup as KvibRadioGroup, Stack as KvibStack } from "@kvib/react/src";
+import { Radio as KvibRadio, RadioGroup as KvibRadioGroup, Stack as KvibStack, RadioProps } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibRadio> = {

@@ -1,4 +1,4 @@
-import { Datepicker as KvibDatepicker } from "@kvib/react/src/datepicker";
+import { Datepicker as KvibDatepicker } from "@kvib/react";
 import { withActions } from "@storybook/addon-actions/decorator";
 import { Meta, StoryObj } from "@storybook/react";
 

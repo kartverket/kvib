@@ -1,5 +1,4 @@
-import { Box, Flex, Heading, Text, VStack } from "@kvib/react/src";
-import { colors, fontSizes, fontWeights } from "@kvib/react/src/theme/tokens";
+import { Box, colors, Flex, fontSizes, fontWeights, Heading, Text, VStack } from "@kvib/react";
 
 type ColorScaleType = {
   50: { value: string };

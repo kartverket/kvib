@@ -1,4 +1,4 @@
-import { Timepicker as KvibTimepicker } from "@kvib/react/src";
+import { Timepicker as KvibTimepicker } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibTimepicker> = {

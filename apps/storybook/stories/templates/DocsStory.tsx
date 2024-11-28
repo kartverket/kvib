@@ -1,4 +1,4 @@
-import { Box, Heading, SimpleGrid, Text } from "@kvib/react/src";
+import { Box, Heading, SimpleGrid, Text } from "@kvib/react";
 
 type DocsStoryProps = {
   title: string;

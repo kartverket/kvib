@@ -1,5 +1,4 @@
-import { SwitchProps } from "@kvib/react";
-import { Switch as KvibSwitch } from "@kvib/react/src";
+import { Switch as KvibSwitch, SwitchProps } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibSwitch> = {

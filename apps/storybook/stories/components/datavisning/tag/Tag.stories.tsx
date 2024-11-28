@@ -1,5 +1,4 @@
-import { TagProps } from "@kvib/react";
-import { Tag as KvibTag } from "@kvib/react/src";
+import { Tag as KvibTag, TagProps } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibTag> = {

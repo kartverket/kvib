@@ -1,4 +1,4 @@
-import { Box, Card, Flex, Grid, Icon, Text } from "@kvib/react/src";
+import { Box, Card, Flex, Grid, Icon, Text } from "@kvib/react";
 
 export const IntroButton = ({
   href,

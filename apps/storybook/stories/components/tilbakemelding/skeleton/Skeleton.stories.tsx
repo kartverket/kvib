@@ -4,7 +4,7 @@ import {
   SkeletonCircle as KvibSkeletonCircle,
   SkeletonText as KvibSkeletonText,
   Stack as KvibStack,
-} from "@kvib/react/src";
+} from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibSkeleton> = {

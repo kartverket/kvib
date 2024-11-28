@@ -1,4 +1,4 @@
-import { Box, Heading } from "@kvib/react/src";
+import { Box, Heading } from "@kvib/react";
 
 type DocsHeadingProps = {
   children: string;

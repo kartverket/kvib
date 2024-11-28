@@ -1,4 +1,4 @@
-import { Search as KvibSearch } from "@kvib/react/src";
+import { Search as KvibSearch } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibSearch> = {

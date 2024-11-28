@@ -1,4 +1,4 @@
-import { Alert as KvibAlert } from "@kvib/react/src";
+import { Alert as KvibAlert } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibAlert> = {

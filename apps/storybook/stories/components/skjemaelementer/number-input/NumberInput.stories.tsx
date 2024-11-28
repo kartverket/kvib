@@ -1,5 +1,4 @@
-import { NumberInputProps } from "@kvib/react";
-import { NumberInput as KvibNumberInput, NumberInputField } from "@kvib/react/src";
+import { NumberInput as KvibNumberInput, NumberInputField, NumberInputProps } from "@kvib/react";
 
 import { Meta, StoryObj } from "@storybook/react";
 

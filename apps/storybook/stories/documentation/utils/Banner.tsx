@@ -1,4 +1,4 @@
-import { Card, CardBody, Text } from "@kvib/react/src";
+import { Card, CardBody, Text } from "@kvib/react";
 
 type BannerProps = {
   children: React.ReactNode;

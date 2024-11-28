@@ -1,10 +1,4 @@
-import {
-  Box,
-  Box as KvibBox,
-  Heading as KvibHeading,
-  Highlight as KvibHighlight,
-  Text as KvibText,
-} from "@kvib/react/src";
+import { Box, Box as KvibBox, Heading as KvibHeading, Highlight as KvibHighlight, Text as KvibText } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibHighlight> = {

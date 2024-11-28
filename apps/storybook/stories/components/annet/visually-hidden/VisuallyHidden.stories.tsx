@@ -1,4 +1,4 @@
-import { Box, Button, Field, Heading, Icon, Input, VisuallyHidden as KvibVisuallyHidden } from "@kvib/react/src";
+import { Box, Button, Field, Heading, Icon, Input, VisuallyHidden as KvibVisuallyHidden } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibVisuallyHidden> = {

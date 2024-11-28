@@ -1,4 +1,4 @@
-import { SearchAsync as KvibSearchAsync } from "@kvib/react/src";
+import { SearchAsync as KvibSearchAsync } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibSearchAsync> = {

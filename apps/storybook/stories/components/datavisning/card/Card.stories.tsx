@@ -1,4 +1,4 @@
-import { Card as KvibCard, CardBody as KvibCardBody, Text as KvibText } from "@kvib/react/src/";
+import { Card as KvibCard, CardBody as KvibCardBody, Text as KvibText } from "@kvib/react";
 
 import { Meta, StoryObj } from "@storybook/react";
 

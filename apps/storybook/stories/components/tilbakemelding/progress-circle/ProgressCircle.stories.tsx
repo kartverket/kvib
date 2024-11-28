@@ -1,4 +1,4 @@
-import { ProgressCircle, ProgressCircleProps, ProgressCircleRing } from "@kvib/react/src";
+import { ProgressCircle, ProgressCircleProps, ProgressCircleRing } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof ProgressCircle> = {

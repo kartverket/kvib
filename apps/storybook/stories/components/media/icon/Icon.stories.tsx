@@ -1,4 +1,4 @@
-import { HStack, Icon } from "@kvib/react/src";
+import { HStack, Icon } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Icon> = {

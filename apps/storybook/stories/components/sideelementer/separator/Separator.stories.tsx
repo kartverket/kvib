@@ -5,7 +5,7 @@ import {
   Separator as KvibSeparator,
   Stack as KvibStack,
   Text as KvibTekst,
-} from "@kvib/react/src";
+} from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibSeparator> = {

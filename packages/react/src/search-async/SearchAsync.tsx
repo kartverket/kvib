@@ -1,4 +1,4 @@
-import { Text } from "@kvib/react/src";
+import { Text } from "@/typography";
 import { forwardRef, ReactNode, Ref, useEffect, useRef } from "react";
 import {
   ActionMeta,

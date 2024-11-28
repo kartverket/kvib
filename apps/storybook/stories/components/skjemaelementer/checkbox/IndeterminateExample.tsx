@@ -1,5 +1,5 @@
+import { Checkbox, Stack } from "@kvib/react";
 import { useState } from "react";
-import { Checkbox, Stack } from "@kvib/react/src";
 export const IndeterminateExample = () => {
   const [checkedItems, setCheckedItems] = useState([false, false]);
 
@@ -11,7 +11,7 @@ export const IndeterminateExample = () => {
       <Checkbox
         isChecked={allChecked}
         isIndeterminate={isIndeterminate}
-        onChange={(e) => setCheckedItems([e.target.checked, e.target.checked])}
+        onChange={e => setCheckedItems([e.target.checked, e.target.checked])}
       >
         Parent Checkbox
       </Checkbox>
@@ -19,11 +19,11 @@ export const IndeterminateExample = () => {
         <Checkbox
           isChecked={checkedItems[0]}
           iconSize="3rem"
-          onChange={(e) => setCheckedItems([e.target.checked, checkedItems[1]])}
+          onChange={e => setCheckedItems([e.target.checked, checkedItems[1]])}
         >
           Child Checkbox 1
         </Checkbox>
-        <Checkbox isChecked={checkedItems[1]} onChange={(e) => setCheckedItems([checkedItems[0], e.target.checked])}>
+        <Checkbox isChecked={checkedItems[1]} onChange={e => setCheckedItems([checkedItems[0], e.target.checked])}>
           Child Checkbox 2
         </Checkbox>
       </Stack>

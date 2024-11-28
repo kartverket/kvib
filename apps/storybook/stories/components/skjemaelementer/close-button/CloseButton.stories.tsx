@@ -1,4 +1,4 @@
-import { CloseButton as KvibCloseButton } from "@kvib/react/src";
+import { CloseButton as KvibCloseButton } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibCloseButton> = {

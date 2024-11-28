@@ -1,15 +1,8 @@
-import {
-  Box,
-  Flex,
-  IconButton,
-  Link,
-  LinkProps,
-  Logo,
-  useChakraContext,
-  useMediaQuery,
-  useToggle,
-  VStack,
-} from "@kvib/react/src";
+import { IconButton } from "@/button";
+import { useChakraContext, useMediaQuery, useToggle } from "@/hooks";
+import { Box, Flex, VStack } from "@/layout";
+import { Logo } from "@/logo";
+import { Link, LinkProps } from "@/typography";
 
 type HeaderProps = {
   /** Determines where the content in the header is displayed. */

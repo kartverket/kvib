@@ -1,4 +1,4 @@
-import { Box, SimpleGrid as KvibSimpleGrid } from "@kvib/react/src";
+import { Box, SimpleGrid as KvibSimpleGrid } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibSimpleGrid> = {

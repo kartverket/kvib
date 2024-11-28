@@ -1,4 +1,4 @@
-import { Heading as KvibHeading, Stack as KvibStack } from "@kvib/react/src";
+import { Heading as KvibHeading, Stack as KvibStack } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibHeading> = {

@@ -1,4 +1,6 @@
-import { Flex, Link, Logo } from "@kvib/react/src";
+import { Flex } from "@/layout";
+import { Logo } from "@/logo";
+import { Link } from "@/typography";
 
 type FooterInlineProps = {
   logoLink?: string;

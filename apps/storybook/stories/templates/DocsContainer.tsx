@@ -1,4 +1,4 @@
-import { Box } from "@kvib/react/src";
+import { Box } from "@kvib/react";
 import { ReactNode } from "react";
 
 type DocsStoriesContainerProps = {

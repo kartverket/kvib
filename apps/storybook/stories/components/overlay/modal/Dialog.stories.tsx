@@ -12,7 +12,7 @@ import {
   DialogTitle,
   DialogTrigger,
   Dialog as KvibModal,
-} from "@kvib/react/src";
+} from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibModal> = {

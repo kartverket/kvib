@@ -1,5 +1,4 @@
-import { AvatarProps } from "@kvib/react";
-import { Avatar as KvibAvatar } from "@kvib/react/src";
+import { AvatarProps, Avatar as KvibAvatar } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibAvatar> = {

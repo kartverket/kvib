@@ -1,10 +1,4 @@
-import {
-  Progress as KvibProgress,
-  ProgressBar,
-  ProgressLabel,
-  ProgressProps,
-  ProgressValueText,
-} from "@kvib/react/src";
+import { Progress as KvibProgress, ProgressBar, ProgressLabel, ProgressProps, ProgressValueText } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibProgress> = {

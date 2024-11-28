@@ -1,4 +1,7 @@
-import { Box, Flex, FlexProps, Heading, Link, Logo, Separator, Text } from "@kvib/react/src";
+import { Box, Flex, FlexProps } from "@/layout";
+import { Logo } from "@/logo";
+import { Separator } from "@/separator";
+import { Heading, Link, Text } from "@/typography";
 
 export type FooterProps = {
   accessibilityUrl?: string;

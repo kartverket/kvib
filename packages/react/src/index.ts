@@ -52,6 +52,7 @@ export * from "./tag";
 export * from "./textarea";
 export * from "./theme";
 export * from "./theme-utils";
+export * from "./theme/tokens/index";
 export * from "./timepicker";
 export * from "./toaster";
 export * from "./tooltip";

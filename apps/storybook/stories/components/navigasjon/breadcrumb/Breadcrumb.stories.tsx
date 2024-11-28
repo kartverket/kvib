@@ -2,7 +2,7 @@ import {
   Breadcrumb as KvibBreadcrumb,
   BreadcrumbCurrentLink as KvibBreadcrumbCurrentLink,
   BreadcrumbLink as KvibBreadcrumbLink,
-} from "@kvib/react/src";
+} from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibBreadcrumb> = {

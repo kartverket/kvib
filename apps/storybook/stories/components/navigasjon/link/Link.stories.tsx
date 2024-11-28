@@ -1,4 +1,4 @@
-import { Link as KvibLink } from "@kvib/react/src";
+import { Link as KvibLink } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibLink> = {

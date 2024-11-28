@@ -1,4 +1,4 @@
-import { Box, Button, Show as KvibShow, VStack } from "@kvib/react/src";
+import { Box, Button, Show as KvibShow, VStack } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 import { useState } from "react";
 

@@ -1,5 +1,4 @@
-import { FieldProps } from "@kvib/react";
-import { Field as KvibFormControl, Input as KvibInput } from "@kvib/react/src";
+import { FieldProps, Field as KvibFormControl, Input as KvibInput } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibFormControl> = {

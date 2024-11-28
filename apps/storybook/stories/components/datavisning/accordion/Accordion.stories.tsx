@@ -4,7 +4,7 @@ import {
   AccordionItemTrigger,
   Box,
   Accordion as KvibAccordion,
-} from "@kvib/react/src";
+} from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibAccordion> = {

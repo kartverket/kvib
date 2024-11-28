@@ -1,4 +1,4 @@
-import { Input as KvibInput } from "@kvib/react/src";
+import { Input as KvibInput } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibInput> = {

@@ -1,4 +1,4 @@
-import { Checkbox as KvibCheckbox } from "@kvib/react/src";
+import { Checkbox as KvibCheckbox } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibCheckbox> = {
@@ -47,8 +47,8 @@ const meta: Meta<typeof KvibCheckbox> = {
       description: "If true, the checkbox will be invalid",
       table: {
         type: { summary: "true | false" },
-        defaultValue: { summary: false },
       },
+      defaultValue: { summary: false },
       control: "boolean",
     },
   },

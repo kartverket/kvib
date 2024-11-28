@@ -1,4 +1,4 @@
-import { Card, CardBody, CardProps, Text } from "@kvib/react/src";
+import { Card, CardBody, CardProps, Text } from "@kvib/react";
 
 interface ComponentBannerProps extends CardProps {
   title: string;

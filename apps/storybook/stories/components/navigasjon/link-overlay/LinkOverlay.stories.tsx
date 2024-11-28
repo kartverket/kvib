@@ -1,11 +1,11 @@
-import { Link } from "@kvib/react";
 import {
   Box as KvibBox,
   Heading as KvibHeading,
   LinkBox as KvibLinkBox,
   LinkOverlay as KvibLinkOverlay,
   Text as KvibText,
-} from "@kvib/react/src";
+  Link,
+} from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibLinkOverlay> = {

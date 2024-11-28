@@ -1,7 +1,7 @@
-import { Button, Icon, Toaster as KvibToast, Toaster, toaster } from "@kvib/react/src";
+import { Button, Icon, toaster, ToasterProps } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
-const meta: Meta<KvibToast> = {
+const meta: Meta<ToasterProps> = {
   title: "Komponenter/Toaster",
   parameters: {
     docs: {
@@ -111,7 +111,7 @@ const ToastExample = ({ ...args }) => (
   </>
 );
 
-type Story = StoryObj<KvibToast>;
+type Story = StoryObj<ToasterProps>;
 
 export const Preview: Story = {
   args: {

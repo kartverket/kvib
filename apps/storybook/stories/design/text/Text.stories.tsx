@@ -1,4 +1,4 @@
-import { Stack as KvibStack, Text as KvibText } from "@kvib/react/src";
+import { Stack as KvibStack, Text as KvibText } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibText> = {

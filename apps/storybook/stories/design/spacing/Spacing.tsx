@@ -1,14 +1,15 @@
 import {
   Box,
   Code,
+  colors,
+  spacing,
   Table,
   TableBody as Tbody,
   TableCell as Td,
   TableCell as Th,
   TableHeader as Thead,
   TableRow as Tr,
-} from "@kvib/react/src";
-import { colors, spacing } from "@kvib/react/src/theme/tokens";
+} from "@kvib/react";
 
 const example = (spacing: any) => <Box bg={colors.blue[400].value} w={spacing} h="16px" />;
 

@@ -1,4 +1,4 @@
-import { Button, Menu as KvibMenu, MenuContent, MenuItem, MenuProps, MenuTrigger } from "@kvib/react/src";
+import { Button, Menu as KvibMenu, MenuContent, MenuItem, MenuProps, MenuTrigger } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibMenu> = {

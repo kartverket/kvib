@@ -1,5 +1,4 @@
-import { Box, Flex, Heading, Radio, RadioGroup, Stack, Text, toaster, Toaster } from "@kvib/react/src";
-import { MapColorsType } from "@kvib/react/src/theme/tokens";
+import { Box, Flex, Heading, MapColorsType, Radio, RadioGroup, Stack, Text, toaster, Toaster } from "@kvib/react";
 import { Dispatch, SetStateAction, useState } from "react";
 
 const opacitiesHex = ["FF", "E6", "B3", "80", "4D", "1A"];
@@ -34,10 +33,8 @@ const Color = ({ value }: { value: string }) => {
         toaster.create({
           title: "Kopiert!",
           description: text,
-          status: "success",
+          type: "success",
           duration: 2000,
-          isClosable: true,
-          colorScheme: "blue",
         });
       },
       function (err) {
@@ -45,9 +42,8 @@ const Color = ({ value }: { value: string }) => {
         toaster.create({
           title: "Error",
           description: "Failed to copy color.",
-          status: "error",
+          type: "error",
           duration: 2000,
-          isClosable: true,
         });
       },
     );
@@ -183,7 +179,7 @@ const ColorFormatPicker = ({ format, setFormat }: { format: string; setFormat: D
   return (
     <RadioGroup onChange={setFormat} value={format}>
       <Stack direction="row" gap={5}>
-        <Radio colorScheme="blue" value="HEX">
+        <Radio colorPalette="blue" value="HEX">
           HEX
         </Radio>
         <Radio value="RGBA">RGBA</Radio>

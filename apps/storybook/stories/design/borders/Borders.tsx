@@ -1,4 +1,5 @@
 import {
+  borders,
   Code,
   Table,
   TableBody as Tbody,
@@ -6,8 +7,7 @@ import {
   TableCell as Th,
   TableHeader as Thead,
   TableRow as Tr,
-} from "@kvib/react/src";
-import { borders } from "@kvib/react/src/theme/tokens";
+} from "@kvib/react";
 
 export const Borders = () => {
   return (

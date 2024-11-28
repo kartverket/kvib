@@ -1,4 +1,4 @@
-import { ListItem } from "@kvib/react/src";
+import { ListItem } from "@kvib/react";
 import { ReactNode } from "react";
 
 export const Listeelement = ({ tittel, children }: { tittel?: string; children?: ReactNode }) => (

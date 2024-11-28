@@ -1,4 +1,4 @@
-import { FooterInline, KvibProvider, Link } from "@kvib/react/src";
+import { FooterInline, KvibProvider, Link } from "@kvib/react";
 import { DocsContainer } from "@storybook/blocks";
 import React, { useEffect } from "react";
 

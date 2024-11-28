@@ -1,14 +1,7 @@
-import {
-  IconButton,
-  Input,
-  InputGroup,
-  InputProps,
-  Popover,
-  PopoverBody,
-  PopoverContent,
-  PopoverTrigger,
-  useFieldContext,
-} from "@kvib/react/src";
+import { IconButton } from "@/button";
+import { useFieldContext } from "@/hooks";
+import { Input, InputGroup, InputProps } from "@/input";
+import { Popover, PopoverBody, PopoverContent, PopoverTrigger } from "@/popover";
 import { format, isValid, parse } from "date-fns";
 import { nb } from "date-fns/locale/nb";
 import { ChangeEvent, useState } from "react";

@@ -1,4 +1,4 @@
-import { Box, Portal as KvibPortal, PortalProps, Text } from "@kvib/react/src";
+import { Box, Portal as KvibPortal, PortalProps, Text } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 import { useRef } from "react";
 

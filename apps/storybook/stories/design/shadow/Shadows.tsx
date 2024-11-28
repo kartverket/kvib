@@ -2,14 +2,14 @@ import {
   Box,
   Center,
   Code,
+  shadows,
   Table,
   TableBody as Tbody,
   TableCell as Td,
   TableCell as Th,
   TableHeader as Thead,
   TableRow as Tr,
-} from "@kvib/react/src";
-import { shadows } from "@kvib/react/src/theme/tokens";
+} from "@kvib/react";
 
 const example = (shadow: any) => (
   <Box backgroundColor="white" width="80px" height="80px" boxShadow={shadow} borderRadius="4px" />

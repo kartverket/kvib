@@ -1,4 +1,4 @@
-import { List as KvibList, ListItem as KvibListItem } from "@kvib/react/src";
+import { List as KvibList, ListItem as KvibListItem } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibList> = {

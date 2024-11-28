@@ -1,17 +1,20 @@
-import { Drawer, DrawerCloseTrigger, DrawerTitle, DrawerTrigger } from "@kvib/react";
 import {
   Button,
+  Drawer,
   DrawerBackdrop,
   DrawerBody,
+  DrawerCloseTrigger,
   DrawerContent,
   DrawerFooter,
   DrawerHeader,
   DrawerPositioner,
   DrawerProps,
+  DrawerTitle,
+  DrawerTrigger,
   Input,
   Drawer as KvibDrawer,
   useDisclosure,
-} from "@kvib/react/src";
+} from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibDrawer> = {

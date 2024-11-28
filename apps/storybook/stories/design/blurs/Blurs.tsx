@@ -1,4 +1,5 @@
 import {
+  blur,
   Box,
   Center,
   Code,
@@ -9,8 +10,7 @@ import {
   TableCell as Th,
   TableHeader as Thead,
   TableRow as Tr,
-} from "@kvib/react/src";
-import { blur } from "@kvib/react/src/theme/tokens";
+} from "@kvib/react";
 
 export const example = (value: any) => {
   return (

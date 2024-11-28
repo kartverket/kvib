@@ -5,7 +5,6 @@
     "skipLibCheck": true,
     "paths": {
       "@/*": ["./src/*"],
-      "@/components/*": ["./src/components/*"]
     },
     "jsx": "react-jsx",
     "esModuleInterop": true,

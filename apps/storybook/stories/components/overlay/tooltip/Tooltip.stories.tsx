@@ -1,5 +1,4 @@
-import { Button, TooltipProps } from "@kvib/react";
-import { Tooltip as KvibTooltip } from "@kvib/react/src";
+import { Button, Tooltip as KvibTooltip, TooltipProps } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibTooltip> = {

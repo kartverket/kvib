@@ -1,4 +1,4 @@
-import { TabsList as KvibTabList, Tabs as KvibTabs, TabsContent, TabsProps, TabsTrigger } from "@kvib/react/src/tabs";
+import { TabsList as KvibTabList, Tabs as KvibTabs, TabsContent, TabsProps, TabsTrigger } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibTabs> = {

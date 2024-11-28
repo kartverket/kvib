@@ -1,9 +1,4 @@
-import {
-  Stat as KvibStat,
-  StatLabel as KvibStatLabel,
-  StatValueText as KvibStatNumber,
-  StatProps,
-} from "@kvib/react/src";
+import { Stat as KvibStat, StatLabel as KvibStatLabel, StatValueText as KvibStatNumber, StatProps } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibStat> = {
