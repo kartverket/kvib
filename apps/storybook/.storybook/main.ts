@@ -32,24 +32,28 @@ const config: StorybookConfig = {
     reactDocgen: "react-docgen-typescript",
   },
   viteFinal: async (config, { configType }) => {
-    console.log("Original config:", config);
+    // Determine the base path depending on the environment
+    const basePath = process.env.GITHUB_ACTIONS
+      ? path.resolve(__dirname, "../../../../packages/react")
+      : path.resolve(__dirname, "../../../packages/react");
 
-    const resolvedReactPath = path.resolve(__dirname, "./../../../packages/react");
-    const resolvedSrcPath = path.resolve(__dirname, "./../../../packages/react/src");
+    const srcPath = process.env.GITHUB_ACTIONS
+      ? path.resolve(__dirname, "../../../../packages/react/src")
+      : path.resolve(__dirname, "../../../packages/react/src");
 
-    console.log("Resolved @kvib/react path:", resolvedReactPath);
-    console.log("Resolved @ path:", resolvedSrcPath);
+    console.log("Resolved @kvib/react path:", basePath);
+    console.log("Resolved @ path:", srcPath);
 
     return mergeConfig(config, {
       resolve: {
         alias: [
           {
             find: "@kvib/react",
-            replacement: resolvedReactPath,
+            replacement: basePath,
           },
           {
             find: "@",
-            replacement: resolvedSrcPath,
+            replacement: srcPath,
           },
         ],
       },
