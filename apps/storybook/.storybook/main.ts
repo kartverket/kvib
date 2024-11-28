@@ -34,7 +34,7 @@ const config: StorybookConfig = {
   viteFinal: async (config, { configType }) => {
     console.log("Original config:", config);
 
-    const resolvedReactPath = path.resolve(__dirname, "../../../packages/react");
+    const resolvedReactPath = path.resolve(__dirname, "../../../packages/react/");
     const resolvedSrcPath = path.resolve(__dirname, "../../../packages/react/src");
 
     console.log("Resolved @kvib/react path:", resolvedReactPath);
