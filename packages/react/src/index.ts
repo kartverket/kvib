@@ -8,6 +8,8 @@ export * from "./card";
 export * from "./checkbox";
 export * from "./close-button";
 export * from "./collapsible";
+export * from "./color-picker";
+export * from "./color-swatch";
 export * from "./datepicker";
 export * from "./dialog";
 export * from "./drawer";
