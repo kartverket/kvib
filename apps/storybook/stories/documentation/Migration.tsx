@@ -7,13 +7,15 @@ import { Tekstblokk } from "./utils/Tekstblokk";
 const nyeKomponenter = [
   "Rating",
   "Select",
-  "PasswordInput",
-  "FileUpload",
-  "CheckboxCard",
+  "Passwor Input",
+  "File Upload",
+  "Checkbox Card",
   "Segment Control",
   "Nested Menu",
   "Color Swatch",
   "Color Picker",
+  "Action Bar",
+  "Clipboard",
 ];
 
 export const Migration = () => (
@@ -47,6 +49,10 @@ export const Migration = () => (
         <Listeelement tittel="Form Control">Kalles nå Field.</Listeelement>
         <Listeelement tittel="Wrap">
           Er fjernet og tilbys nå gjennom HStack med prop-en <Code>wrap=wrap</Code>.
+        </Listeelement>
+        <Listeelement tittel="Select">
+          Select har blitt Select (Native) til fordel for en helt ny Select med Chakra-styling. Select (Native) trigger
+          fortsatt den interne menyen som varierer fra nettleser til nettleser.
         </Listeelement>
       </Liste>
       <br />
