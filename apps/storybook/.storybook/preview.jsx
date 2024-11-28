@@ -29,7 +29,15 @@ const parameters = {
   options: {
     storySort: (a, b) => {
       // Sorter hovedseksjoner og mapper i denne rekkefølgen
-      const order = ["Introduksjon", "Endringslogg", "Komponentoversikt", "Kom i gang", "Bidra", "Komponenter"];
+      const order = [
+        "Introduksjon",
+        "Endringslogg",
+        "Komponentoversikt",
+        "Migrere til Kvib 5",
+        "Kom i gang",
+        "Bidra",
+        "Komponenter",
+      ];
 
       const aIndex = order.indexOf(a.title.split("/")[0]);
       const bIndex = order.indexOf(b.title.split("/")[0]);
