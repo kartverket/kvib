@@ -1,1 +1,0 @@
-import{d as e}from"./create-slot-recipe-context-BTQZ2sOO.js";const t=e("field").parts("root","errorText","helperText","input","label","select","textarea","requiredIndicator"),a=t.build();export{t as f,a as p};
