@@ -1,0 +1,1 @@
+import{j as r}from"./jsx-runtime-CQsLhzk5.js";import{r as n}from"./index-Wp2u197Z.js";import{B as s}from"./button-Bq1uvldj.js";const i=n.forwardRef(function(o,t){return r.jsx(s,{px:"0",py:"0",_icon:{fontSize:"1.2em"},ref:t,...o})});export{i as I};
