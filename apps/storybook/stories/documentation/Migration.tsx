@@ -43,12 +43,8 @@ export const Migration = () => (
     </Tekstblokk>
     <Tekstblokk tittel="Nye komponenter">
       <Liste>
-        <Listeelement tittel="ColorPicker">
-          Komponenten ColorPicker er nå en del av Chakra og er tilgjengelig som <Code>KvibColorPicker</Code>.
-        </Listeelement>
-        <Listeelement tittel="ColorSwatch">
-          Komponenten ColorSwatch er nå en del av Chakra og er tilgjengelig som <Code>ColorSwatch</Code>.
-        </Listeelement>
+        <Listeelement tittel="ColorPicker"></Listeelement>
+        <Listeelement tittel="ColorSwatch"></Listeelement>
       </Liste>
     </Tekstblokk>
     <Tekstblokk tittel="Syntaksendringer">
