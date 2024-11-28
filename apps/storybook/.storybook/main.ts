@@ -34,9 +34,12 @@ const config: StorybookConfig = {
   viteFinal: async (config, { configType }) => {
     return mergeConfig(config, {
       resolve: {
-        alias: {
-          "@": path.resolve(__dirname, "../../../packages/react/src"),
-        },
+        alias: [
+          {
+            find: "@kvib/react",
+            replacement: path.resolve(__dirname, "../../../packages/react/src"),
+          },
+        ],
       },
     });
   },

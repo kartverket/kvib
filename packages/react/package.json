@@ -1,7 +1,6 @@
 {
   "name": "@kvib/react",
   "version": "4.7.1",
-  "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
