@@ -16,8 +16,8 @@ export const MDXContainer = ({ children, context }) => {
   }, []);
 
   return (
-    <DocsContainer context={context}>
-      <KvibProvider>
+    <KvibProvider>
+      <DocsContainer context={context}>
         {children}
         <FooterInline accessibilityUrl="https://uustatus.no/nb/erklaringer/publisert/f048c5ff-2167-48c5-b706-bd106c15e9c9">
           <Link
@@ -28,7 +28,7 @@ export const MDXContainer = ({ children, context }) => {
             Github
           </Link>
         </FooterInline>
-      </KvibProvider>
-    </DocsContainer>
+      </DocsContainer>
+    </KvibProvider>
   );
 };
