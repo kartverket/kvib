@@ -6,13 +6,19 @@ export const popoverTheme = defineSlotRecipe({
   slots: popoverAnatomy.keys(),
   base: {
     content: {
+      position: "relative",
       display: "flex",
-      flexDirection: "row",
-      justifyContent: "flex-start",
-      alignItems: "center",
-      padding: "4px",
-      outline: "{borders.1px}",
-      outlineColor: "gray.200",
+      flexDirection: "column",
+      textStyle: "sm",
+      outline: "0",
+      _open: {
+        animationStyle: "scale-fade-in",
+        animationDuration: "fast",
+      },
+      _closed: {
+        animationStyle: "scale-fade-out",
+        animationDuration: "faster",
+      },
     },
   },
 });

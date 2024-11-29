@@ -1,6 +1,6 @@
 import {
   Button,
-  Popover as KvibPopover,
+  Popover,
   PopoverArrow,
   PopoverContent,
   PopoverProps,
@@ -10,9 +10,9 @@ import {
 } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
-const meta: Meta<typeof KvibPopover> = {
+const meta: Meta<typeof Popover> = {
   title: "Komponenter/Popover",
-  component: KvibPopover,
+  component: Popover,
   parameters: {
     docs: {
       story: { inline: true },
@@ -293,11 +293,11 @@ const meta: Meta<typeof KvibPopover> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof KvibPopover>;
+type Story = StoryObj<typeof Popover>;
 
 export const Preview: Story = {
   render: (args: PopoverProps) => (
-    <KvibPopover {...args}>
+    <Popover {...args}>
       <PopoverTrigger asChild>
         <Button size="sm" variant="outline" colorPalette="green">
           Vis popover
@@ -308,6 +308,6 @@ export const Preview: Story = {
         <PopoverArrow />
         <Text my="4">Hovedtekst i popover</Text>
       </PopoverContent>
-    </KvibPopover>
+    </Popover>
   ),
 };

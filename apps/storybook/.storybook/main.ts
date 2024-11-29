@@ -16,7 +16,6 @@ const config: StorybookConfig = {
   addons: [
     getAbsolutePath("@storybook/addon-onboarding"),
     getAbsolutePath("@storybook/addon-essentials"),
-    getAbsolutePath("@chromatic-com/storybook"),
     getAbsolutePath("@storybook/addon-interactions"),
     getAbsolutePath("@storybook/addon-mdx-gfm"),
   ],
@@ -32,13 +31,8 @@ const config: StorybookConfig = {
     reactDocgen: "react-docgen-typescript",
   },
   viteFinal: async (config, { configType }) => {
-    console.log("Original config:", config);
-
     const resolvedReactPath = path.resolve(__dirname, "../../../packages/react/dist/index");
     const resolvedSrcPath = path.resolve(__dirname, "../../../packages/react/src");
-
-    console.log("Resolved @kvib/react path:", resolvedReactPath);
-    console.log("Resolved @ path:", resolvedSrcPath);
 
     return mergeConfig(config, {
       resolve: {
