@@ -1,14 +1,19 @@
 name: "Component Test Runner"
 on:
-  push:
-    branches: ["master"]
-  pull_request:
-    types: [opened, synchronize]
+  workflow_run:
+    workflows: ["Build"]
+    types:
+      - completed
 jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: ./kvib-react
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
@@ -26,4 +31,4 @@ jobs:
         run: |
           npx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
             "npx http-server storybook-static --port 6006 --silent" \
-            "npx wait-on tcp:6006 && npm run test-storybook"
+            "npx wait-on tcp:6006 && npm run test"

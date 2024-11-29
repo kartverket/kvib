@@ -1,241 +1,215 @@
-import { defineStyle, defineStyleConfig } from "@chakra-ui/react";
-import { colors } from "../tokens";
+import { defineRecipe, defineStyle, SystemStyleObject } from "@chakra-ui/react";
 
 const baseStyle = defineStyle({
-  fontStyle: "normal",
-  fontWeight: "600",
-  gap: "8px",
-  borderRadius: "6px",
+  colorPalette: "green",
+  fontStyle: "normal !important",
+  fontWeight: "medium !important",
+  gap: "0.5 !important",
+  borderRadius: "md !important",
   _disabled: {
-    opacity: 0.5,
+    opacity: "0.5",
     cursor: "not-allowed",
+  },
+}) satisfies SystemStyleObject;
+
+const solidThemeGray = defineStyle({
+  bg: "gray.100 !important",
+  color: "black !important",
+  _hover: {
+    bg: "gray.200 !important",
+    _disabled: {
+      bg: "gray.100 !important",
+      color: "black !important",
+    },
+  },
+  _active: {
+    bg: "gray.300 !important",
+    _disabled: {
+      bg: "gray.100 !important",
+      color: "black !important",
+    },
   },
 });
 
-const variantSolid = defineStyle((props) => {
-  const { colorScheme: c } = props;
-
-  if (c === "gray") {
-    return {
-      bg: colors.gray[100],
-      color: colors.black,
-      _hover: {
-        bg: colors.gray[200],
-        _disabled: {
-          bg: colors.gray[100],
-          color: colors.black,
-        },
-      },
-      _active: {
-        bg: colors.gray[300],
-        _disabled: {
-          bg: colors.gray[100],
-          color: colors.black,
-        },
-      },
-    };
-  }
-  return {
-    bg: `${c}.500`,
-    color: colors.white,
-    _hover: {
-      bg: `${c}.400`,
-      _disabled: {
-        bg: `${c}.500`,
-        color: colors.white,
-      },
+const solidThemeColor = defineStyle({
+  bg: "colorPalette.500 !important",
+  color: "white !important",
+  _hover: {
+    bg: "colorPalette.400 !important",
+    _disabled: {
+      bg: "colorPalette.500 !important",
+      color: "white !important",
     },
-    _active: {
-      bg: `${c}.600`,
-      _disabled: {
-        bg: `${c}.500`,
-        color: colors.white,
-      },
+  },
+  _active: {
+    bg: "colorPalette.600 !important",
+    _disabled: {
+      bg: "colorPalette.500 !important",
+      color: "white !important",
     },
-  };
+  },
 });
 
-const variantOutline = defineStyle((props) => {
-  const { colorScheme: c } = props;
-
-  if (c === "gray") {
-    return {
-      border: "1px",
-      borderColor: colors.gray[200],
-      color: colors.black,
-      _hover: {
-        bg: colors.gray[50],
-        _disabled: {
-          bg: colors.white,
-          color: colors.black,
-        },
-      },
-      _active: {
-        bg: colors.gray[100],
-        _disabled: {
-          bg: colors.white,
-          color: colors.black,
-        },
-      },
-    };
-  }
-  return {
-    border: "1px",
-    borderColor: `${c}.500`,
-    color: `${c}.500`,
-    _hover: {
-      borderColor: `${c}.400`,
-      bg: `${c}.400`,
-      color: colors.white,
-      _disabled: {
-        bg: colors.white,
-        color: `${c}.500`,
-        border: "1px",
-      },
+const outlineThemeGray = defineStyle({
+  outline: "1px !important",
+  borderColor: "gray.200 !important",
+  color: "black !important",
+  _hover: {
+    bg: "gray.200 !important",
+    color: "black !important",
+    _disabled: {
+      bg: "gray.100 !important",
+      color: "black !important",
     },
-    _active: {
-      bg: `${c}.600`,
-      borderColor: `${c}.600`,
-      color: colors.white,
-      _disabled: {
-        bg: colors.white,
-        color: `${c}.500`,
-        border: "1px",
-      },
+  },
+  _active: {
+    bg: "gray.300 !important",
+    _disabled: {
+      bg: "gray.100 !important",
+      color: "black !important",
     },
-  };
+  },
 });
 
-const variantTertiary = defineStyle((props) => {
-  const { colorScheme: c } = props;
-
-  if (c === "gray") {
-    return {
-      color: colors.gray[800],
-      backgroundColor: "transparent",
-      _hover: {
-        textDecoration: "none",
-        color: colors.gray[500],
-        ".text": {
-          textDecoration: "Underline",
-        },
-        _disabled: {
-          ".text": {
-            textDecoration: "none",
-            color: colors.gray[800],
-          },
-        },
-      },
-      _active: {
-        color: colors.gray[900],
-        textDecoration: "none",
-        ".text": {
-          textDecoration: "Underline",
-        },
-        _disabled: {
-          color: colors.gray[800],
-        },
-      },
-      _loading: {
-        color: colors.gray[800],
-      },
-    };
-  }
-  return {
-    color: `${c}.500`,
-    backgroundColor: "transparent",
-    _hover: {
-      textDecoration: "none",
-      color: `${c}.400`,
-      ".text": {
-        textDecoration: "Underline",
-      },
-      _disabled: {
-        ".text": {
-          textDecoration: "none",
-        },
-        textDecoration: "none",
-        color: `${c}.500`,
-      },
+const outlineThemeColor = defineStyle({
+  outline: "1px !important",
+  borderColor: "colorPalette.500 !important",
+  color: "colorPalette.500 !important",
+  _hover: {
+    borderColor: "colorPalette.400 !important",
+    bg: "colorPalette.400 !important",
+    color: "white !important",
+    _disabled: {
+      bg: "colorPalette.500 !important",
+      color: "colorPalette.500 !important",
+      border: "1px !important",
     },
-    _active: {
-      textDecoration: "none",
-      color: `${c}.600`,
-      ".text": {
-        textDecoration: "underline",
-      },
-      _disabled: {
-        ".text": {
-          textDecoration: "none",
-          color: `${c}.500`,
-        },
-      },
+  },
+  _active: {
+    bg: "colorPalette.600 !important",
+    borderColor: "colorPalette.600 !important",
+    color: "white !important",
+    _disabled: {
+      bg: "colorPalette.500 !important",
+      color: "colorPalette.500 !important",
+      border: "1px !important",
     },
-    _loading: {
-      color: `${c}.500`,
+  },
+});
+const plainThemeGray = defineStyle({
+  color: "gray.500 !important",
+  bg: "transparent !important",
+  _hover: {
+    color: "gray.400 !important",
+    _disabled: {
+      textDecoration: "none !important",
+      color: "gray.500 !important",
     },
-  };
+  },
+  _active: {
+    color: "gray.600 !important",
+    _disabled: {
+      textDecoration: "none !important",
+      color: "gray.500 !important",
+    },
+  },
 });
 
-const variantGhost = defineStyle((props) => {
-  const { colorScheme: c } = props;
-
-  if (c === "gray") {
-    return {
-      bg: "transparent",
-      color: colors.gray[800],
-      _hover: {
-        bg: colors.gray[50],
-        _disabled: {
-          bg: "transparent",
-          color: colors.gray[800],
-        },
-      },
-      _active: {
-        bg: colors.gray[100],
-        color: colors.gray[900],
-        _disabled: {
-          bg: "transparent",
-          color: colors.gray[800],
-        },
-      },
-    };
-  }
-  return {
-    bg: "transparent",
-    color: `${c}.500`,
-    _hover: {
-      bg: `${c}.100`,
-      color: `${c}.400`,
-      _disabled: {
-        bg: "transparent",
-        color: `${c}.500`,
-      },
+const plainTheme = defineStyle({
+  color: "colorPalette.500 !important",
+  bg: "transparent !important",
+  _hover: {
+    color: "colorPalette.400 !important",
+    _disabled: {
+      textDecoration: "none !important",
+      color: "colorPalette.500 !important",
     },
-    _active: {
-      bg: `${c}.100`,
-      color: `${c}.600`,
-      _disabled: {
-        bg: "transparent",
-        color: `${c}.500`,
-      },
+  },
+  _active: {
+    color: "colorPalette.600 !important",
+    _disabled: {
+      textDecoration: "none !important",
+      color: "colorPalette.500 !important",
     },
-  };
+  },
 });
 
-const variants = {
-  primary: variantSolid,
-  secondary: variantOutline,
-  tertiary: variantTertiary,
-  ghost: variantGhost,
-};
+const ghostThemeGray = defineStyle({
+  bg: "transparent !important",
+  color: "gray.500 !important",
+  _hover: {
+    bg: "gray.100 !important",
+    color: "gray.400 !important",
+    _disabled: {
+      bg: "transparent !important",
+      color: "gray.500 !important",
+    },
+  },
+  _active: {
+    bg: "gray.100 !important",
+    color: "gray.600 !important",
+    _disabled: {
+      bg: "transparent !important",
+      color: "gray.500 !important",
+    },
+  },
+});
 
-export const buttonTheme = defineStyleConfig({
-  baseStyle,
-  variants,
-  defaultProps: {
-    variant: "primary",
-    size: "md",
-    colorScheme: "green",
+const ghostThemeColor = defineStyle({
+  bg: "transparent !important",
+  color: "colorPalette.500 !important",
+  _hover: {
+    bg: "colorPalette.100 !important",
+    color: "colorPalette.400 !important",
+    _disabled: {
+      bg: "transparent !important",
+      color: "colorPalette.500 !important",
+    },
+  },
+  _active: {
+    bg: "colorPalette.100 !important",
+    color: "colorPalette.600 !important",
+    _disabled: {
+      bg: "transparent !important",
+      color: "colorPalette.500 !important",
+    },
+  },
+});
+
+export const buttonTheme = defineRecipe({
+  base: baseStyle,
+  variants: {
+    variant: {
+      solid: solidThemeColor,
+      outline: outlineThemeColor,
+      ghost: ghostThemeColor,
+      plain: plainTheme,
+    },
+  },
+  compoundVariants: [
+    {
+      variant: "solid",
+      colorPalette: "gray",
+      css: solidThemeGray,
+    },
+    {
+      variant: "outline",
+      colorPalette: "gray",
+      css: outlineThemeGray,
+    },
+    {
+      variant: "plain",
+      colorPalette: "gray",
+      css: plainThemeGray,
+    },
+    {
+      variant: "ghost",
+      colorPalette: "gray",
+      css: ghostThemeGray,
+    },
+  ],
+  defaultVariants: {
+    variant: "solid",
+    colorPalette: "green",
   },
 });

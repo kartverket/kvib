@@ -1,34 +1,31 @@
-import { Box, VStack, Text, Heading, Flex } from "@kvib/react/src";
-import { colors, fontWeights, fontSizes } from "@kvib/react/src/theme/tokens";
+import { Box, colors, Flex, fontSizes, fontWeights, Heading, Text, VStack } from "@kvib/react";
 
-type ColorScaleType =
-  | string
-  | {
-      50: string;
-      100: string;
-      200: string;
-      300: string;
-      400: string;
-      500: string;
-      600: string;
-      700: string;
-      800: string;
-      900: string;
-    };
+type ColorScaleType = {
+  50: { value: string };
+  100: { value: string };
+  200: { value: string };
+  300: { value: string };
+  400: { value: string };
+  500: { value: string };
+  600: { value: string };
+  700: { value: string };
+  800: { value: string };
+  900: { value: string };
+};
 
 const capitalizeFirstLetter = (word: string) => word.charAt(0).toUpperCase() + word.slice(1);
 
-const renderColors = (name: string, colorScale: ColorScaleType) => {
-  if (typeof colorScale === "string") {
+const renderColors = (name: string, colorScale: ColorScaleType | { value: string }) => {
+  if ("value" in colorScale) {
     const hex = colorScale;
     return (
-      <VStack alignItems="flex-start" spacing="4px" borderRadius="6px" border={`1px solid ${colors.gray[100]}`} w={92}>
-        <Box backgroundColor={hex} height="60px" width="100%"></Box>
-        <Text fontWeight={fontWeights["bold"]} fontSize={fontSizes["sm"]} paddingLeft="6px">
+      <VStack alignItems="flex-start" gap="4px" borderRadius="6px" border={`1px solid ${colors.gray[100]}`} w={92}>
+        <Box backgroundColor={hex.value} height="60px" width="100%"></Box>
+        <Text fontWeight={fontWeights["bold"].value} fontSize={fontSizes["sm"].value} paddingLeft="6px">
           {name}
         </Text>
-        <Text fontSize={fontSizes["xs"]} paddingLeft="6px">
-          {hex}
+        <Text fontSize={fontSizes["xs"].value} paddingLeft="6px">
+          {hex.value}
         </Text>
       </VStack>
     );
@@ -38,20 +35,20 @@ const renderColors = (name: string, colorScale: ColorScaleType) => {
     <VStack
       key={value}
       alignItems="flex-start"
-      spacing="2px"
+      gap="2px"
       borderRadius="6px"
       border={`1px solid ${colors.gray[100]}`}
       w={92}
     >
-      <Box backgroundColor={hex} height="60px" width="100%" />
+      <Box backgroundColor={hex.value} height="60px" width="100%" />
       <Text
-        fontWeight={fontWeights["bold"]}
+        fontWeight={fontWeights["bold"].value}
         wordBreak={"break-word"}
-        fontSize={fontSizes["sm"]}
+        fontSize={fontSizes["sm"].value}
         paddingLeft="6px"
       >{`${name}-${value}`}</Text>
-      <Text fontSize={fontSizes["xs"]} paddingLeft="6px">
-        {hex}
+      <Text fontSize={fontSizes["xs"].value} paddingLeft="6px">
+        {hex.value}
       </Text>
     </VStack>
   ));

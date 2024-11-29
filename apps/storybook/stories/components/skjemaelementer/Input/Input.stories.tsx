@@ -1,14 +1,4 @@
-import {
-  FormControl,
-  FormLabel,
-  Icon as KvibIcon,
-  Input as KvibInput,
-  InputGroup as KvibInputGroup,
-  InputLeftAddon as KvibInputLeftAddon,
-  InputRightAddon as KvibInputRightAddon,
-  InputRightElement as KvibInputRightElement,
-  Stack,
-} from "@kvib/react/src";
+import { Input as KvibInput } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibInput> = {
@@ -33,13 +23,13 @@ const meta: Meta<typeof KvibInput> = {
     variant: {
       description: "Variant",
       table: {
-        type: { summary: "outline | filled | flushed | unstyled" },
+        type: { summary: "outline | subtle | flushed" },
         defaultValue: { summary: "outline" },
       },
-      options: ["outline", "filled", "flushed", "unstyled"],
+      options: ["outline", "subtle", "flushed"],
       control: { type: "radio" },
     },
-    isRequired: {
+    required: {
       description: "Toggles if input should be required",
       table: {
         type: { summary: "boolean" },
@@ -47,7 +37,7 @@ const meta: Meta<typeof KvibInput> = {
       },
       control: "boolean",
     },
-    isReadOnly: {
+    readOnly: {
       description: "Toggles if input should be read-only",
       table: {
         type: { summary: "boolean" },
@@ -55,16 +45,16 @@ const meta: Meta<typeof KvibInput> = {
       },
       control: "boolean",
     },
-    isInvalid: {
-      description: "Toggles if input should be invalid",
+    disabled: {
+      description: "Toggles if input should be disabled",
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
-    isDisabled: {
-      description: "Toggles if input should be disabled",
+    unstyled: {
+      description: "Toggles if input should be unstyled",
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
@@ -76,7 +66,6 @@ const meta: Meta<typeof KvibInput> = {
 
 export default meta;
 type InputStory = StoryObj<typeof KvibInput>;
-type InputGroupStory = StoryObj<typeof KvibInputGroup>;
 
 export const Preview: InputStory = {
   parameters: {
@@ -87,46 +76,4 @@ export const Preview: InputStory = {
     },
   },
   render: args => <KvibInput placeholder="Skriv her..." {...args} />,
-};
-
-export const InputVariants: InputStory = {
-  args: {
-    placeholder: "Skriv her...",
-    colorScheme: "green",
-  },
-  render: args => (
-    <Stack h="12rem">
-      <KvibInput {...args} variant="outline" />
-      <KvibInput {...args} variant="filled" />
-      <KvibInput {...args} variant="flushed" />
-      <KvibInput {...args} variant="unstyled" />
-    </Stack>
-  ),
-};
-
-export const InputForm: InputStory = {
-  render: args => (
-    <FormControl isRequired>
-      <FormLabel>Fornavn</FormLabel>
-      <KvibInput autoComplete="given-name" {...args} />
-    </FormControl>
-  ),
-};
-
-export const InputGroup: InputGroupStory = {
-  render: args => (
-    <Stack gap="1rem">
-      <KvibInputGroup {...args}>
-        <KvibInput placeholder={"Skriv her..."} />
-        <KvibInputRightElement>
-          <KvibIcon icon={"add"} />
-        </KvibInputRightElement>
-      </KvibInputGroup>
-      <KvibInputGroup {...args}>
-        <KvibInputLeftAddon children={"https://"} />
-        <KvibInput placeholder={"minside"} />
-        <KvibInputRightAddon children={".no"} />
-      </KvibInputGroup>
-    </Stack>
-  ),
 };

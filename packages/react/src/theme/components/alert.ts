@@ -1,153 +1,76 @@
-import { alertAnatomy } from "@chakra-ui/anatomy";
-import { createMultiStyleConfigHelpers, defineStyle } from "@chakra-ui/react";
-import { colors } from "../tokens";
+import { defineSlotRecipe } from "@chakra-ui/react";
+import { alertAnatomy } from "@chakra-ui/react/anatomy";
 
-const { defineMultiStyleConfig } = createMultiStyleConfigHelpers(alertAnatomy.keys);
-
-const variantSubtle = defineStyle((props) => {
-  const { status: s } = props;
-
-  if (s === "error") {
-    return {
-      title: {
-        color: colors.black,
+export const alertTheme = defineSlotRecipe({
+  slots: alertAnatomy.keys(),
+  base: {},
+  variants: {
+    variant: {
+      subtle: {
+        title: {
+          color: "black !important",
+        },
+        root: {
+          bg: "colorPalette.100 !important",
+          color: "black !important",
+        },
+        indicator: {
+          color: "colorPalette.500",
+        },
       },
-      container: {
-        bg: colors.red[100],
-        color: colors.black,
+      solid: {
+        title: {
+          color: "white !important",
+        },
+        root: {
+          bg: "colorPalette.500 !important",
+          color: "white !important",
+        },
+        indicator: {
+          color: "white",
+        },
       },
-      icon: {
-        color: colors.red[500],
+    },
+    status: {
+      error: {},
+      info: {},
+      warning: {},
+      success: {},
+      neutral: {},
+    },
+  },
+  compoundVariants: [
+    {
+      variant: "subtle",
+      status: "error",
+      css: {
+        title: {
+          color: "black !important",
+        },
+        root: {
+          bg: "red.100 !important",
+          color: "black !important",
+        },
+        indicator: {
+          color: "red.500 !important",
+        },
       },
-    };
-  }
-  if (s === "info") {
-    return {
-      title: {
-        color: colors.black,
+    },
+    {
+      variant: "solid",
+      status: "error",
+      css: {
+        title: {
+          color: "white !important",
+        },
+        root: {
+          bg: "red.500 !important",
+          color: "white !important",
+        },
+        indicator: {
+          color: "white !important",
+        },
       },
-      container: {
-        bg: colors.blue[100],
-        color: colors.black,
-      },
-      icon: {
-        color: colors.blue[500],
-      },
-    };
-  }
-  return {};
+    },
+  ],
 });
-
-const variantSolid = defineStyle((props) => {
-  const { status: s } = props;
-  if (s === "error") {
-    return {
-      title: {
-        color: colors.white,
-      },
-      container: {
-        bg: colors.red[500],
-        color: colors.white,
-      },
-      icon: {
-        color: colors.white,
-      },
-    };
-  }
-  if (s === "info" || s === "loading") {
-    return {
-      title: {
-        color: colors.white,
-      },
-      container: {
-        bg: colors.blue[500],
-        color: colors.white,
-      },
-      icon: {
-        color: colors.white,
-      },
-    };
-  }
-  return {};
-});
-
-const variantLeftAccent = defineStyle((props) => {
-  const { status: s } = props;
-
-  if (s === "error") {
-    return {
-      title: {
-        color: colors.black,
-      },
-      container: {
-        bg: colors.red[100],
-        color: colors.black,
-        borderColor: colors.red[500],
-      },
-      icon: {
-        color: colors.red[500],
-      },
-    };
-  }
-  if (s === "info") {
-    return {
-      title: {
-        color: colors.black,
-      },
-      container: {
-        bg: colors.blue[100],
-        color: colors.black,
-        borderColor: colors.blue[500],
-      },
-      icon: {
-        color: colors.blue[500],
-      },
-    };
-  }
-  return {};
-});
-
-const variantTopAccent = defineStyle((props) => {
-  const { status: s } = props;
-
-  if (s === "error") {
-    return {
-      title: {
-        color: colors.black,
-      },
-      container: {
-        bg: colors.red[100],
-        color: colors.black,
-        borderColor: colors.red[500],
-      },
-      icon: {
-        color: colors.red[500],
-      },
-    };
-  }
-  if (s === "info") {
-    return {
-      title: {
-        color: colors.black,
-      },
-      container: {
-        bg: colors.blue[100],
-        color: colors.black,
-        borderColor: colors.blue[500],
-      },
-      icon: {
-        color: colors.blue[500],
-      },
-    };
-  }
-  return {};
-});
-
-const variants = {
-  subtle: variantSubtle,
-  solid: variantSolid,
-  "left-accent": variantLeftAccent,
-  "top-accent": variantTopAccent,
-};
-
-export const alertTheme = defineMultiStyleConfig({ variants });

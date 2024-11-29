@@ -1,7 +1,13 @@
-import { defineStyleConfig } from "@chakra-ui/react";
+import { defineSlotRecipe } from "@chakra-ui/react";
 
-export const datepickerTheme = defineStyleConfig({
-  defaultProps: {
-    colorScheme: "green",
+export const datepickerTheme = defineSlotRecipe({
+  slots: ["root"],
+  base: {
+    root: {
+      colorPalette: "green",
+    },
+  },
+  defaultVariants: {
+    colorPalette: "green",
   },
 });

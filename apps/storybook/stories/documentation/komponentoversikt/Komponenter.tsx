@@ -2,7 +2,6 @@ import { ReactElement } from "react";
 import {
   Accordion,
   Alert,
-  AlertDialog,
   AspectRatio,
   Avatar,
   Badge,
@@ -12,10 +11,9 @@ import {
   Card,
   Center,
   Checkbox,
-  CircularProgress,
   CloseButton,
   Code,
-  ColorScheme,
+  ColorPalette,
   Container,
   Datepicker,
   Divider,
@@ -45,8 +43,8 @@ import {
   Popover,
   Portal,
   Progress,
+  ProgressCircle,
   Radio,
-  RangeSlider,
   Search,
   SearchAsync,
   Select,
@@ -69,7 +67,6 @@ import {
   Toast,
   Tooltip,
   VisuallyHidden,
-  Wrap,
 } from "./StoryRendering";
 
 interface Komponentdetaljer {
@@ -86,7 +83,7 @@ interface Kategori {
   komponenter: Record<string, Komponentdetaljer>;
 }
 
-export const Komponenter: (colorScheme: ColorScheme) => Record<string, Kategori> = colorScheme => ({
+export const Komponenter: (colorScheme: ColorPalette) => Record<string, Kategori> = colorScheme => ({
   Skjemaelementer: {
     navn: "Skjemaelementer",
     komponenter: {
@@ -181,12 +178,6 @@ export const Komponenter: (colorScheme: ColorScheme) => Record<string, Kategori>
         beskrivelse: "Slider",
         story: Slider(colorScheme),
         link: "slider",
-      },
-      RangeSlider: {
-        navn: "RangeSlider",
-        beskrivelse: "RangeSlider",
-        story: RangeSlider(colorScheme),
-        link: "range-slider",
       },
       PinInput: {
         navn: "PinInput",
@@ -316,12 +307,6 @@ export const Komponenter: (colorScheme: ColorScheme) => Record<string, Kategori>
         beskrivelse: "",
         story: SimpleGrid(colorScheme),
         link: "simplegrid",
-      },
-      Wrap: {
-        navn: "Wrap",
-        beskrivelse: "",
-        story: Wrap(colorScheme),
-        link: "wrap",
       },
       Center: {
         navn: "Center",
@@ -477,13 +462,6 @@ export const Komponenter: (colorScheme: ColorScheme) => Record<string, Kategori>
         story: Popover(colorScheme),
         link: "popover",
       },
-      // TODO: Legg til AlertDialog direkte fra Story
-      AlertDialog: {
-        navn: "Alert Dialog",
-        beskrivelse: "",
-        story: AlertDialog(colorScheme),
-        link: "alert-dialog",
-      },
       Drawer: {
         navn: "Drawer",
         beskrivelse: "",
@@ -501,11 +479,11 @@ export const Komponenter: (colorScheme: ColorScheme) => Record<string, Kategori>
         story: Alert(colorScheme),
         link: "alert",
       },
-      CircularProgress: {
-        navn: "Circular Progress",
+      ProgressCircle: {
+        navn: "Progress Circle",
         beskrivelse: "",
-        story: CircularProgress(colorScheme),
-        link: "circular-progress",
+        story: ProgressCircle(colorScheme),
+        link: "progress-circle",
       },
       Progress: {
         navn: "Progress",

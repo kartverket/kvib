@@ -1,4 +1,4 @@
-import { DateRange, DateRangePickerProps, DateRangePicker as KvibDateRangePicker } from "@kvib/react/src";
+import { DateRange, DateRangePickerProps, DateRangePicker as KvibDateRangePicker } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react/*";
 import { useState } from "react";
 
@@ -15,7 +15,7 @@ const meta: Meta<typeof KvibDateRangePicker> = {
     showOutsideDays: false,
     showWeekNumber: false,
     showDropdownMonthYear: false,
-    colorScheme: "green",
+    colorPalette: "green",
   },
   argTypes: {
     showWeekNumber: {
@@ -42,7 +42,7 @@ const meta: Meta<typeof KvibDateRangePicker> = {
       },
       control: "boolean",
     },
-    colorScheme: {
+    colorPalette: {
       description: "Fargepalett",
       table: {
         type: { summary: "green | blue" },

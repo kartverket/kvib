@@ -1,5 +1,6 @@
 export const config = {
   cssVarPrefix: "kvib",
-  initialColorMode: "light",
-  useSystemColorMode: false,
+  initialColorMode: { value: "light" },
+  useSystemColorMode: { value: false },
+  cssVarsRoot: ":where(:root, :host)",
 };

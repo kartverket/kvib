@@ -1,8 +1,6 @@
-import { Slider as KvibSlider, SliderFilledTrack, SliderMark, SliderThumb, SliderTrack } from "@kvib/react/src/slider";
-import { Tooltip } from "@kvib/react/src/tooltip";
+import { Slider as KvibSlider, SliderProps } from "@kvib/react";
 
 import { Meta, StoryObj } from "@storybook/react";
-import React from "react";
 
 const meta: Meta<typeof KvibSlider> = {
   title: "Komponenter/Slider",
@@ -100,10 +98,13 @@ const meta: Meta<typeof KvibSlider> = {
     defaultValue: {
       description: "The initial value of the slider in uncontrolled mode",
       table: {
-        type: { summary: "number" },
+        type: { summary: "number[]" },
       },
-      control: { type: "number" },
+      control: { type: "array" },
     },
+  },
+  args: {
+    defaultValue: [40],
   },
 };
 
@@ -115,64 +116,5 @@ export const Preview: Story = {
     "aria-label": "sliderDefault",
     id: "slider",
   },
-  render: args => (
-    <KvibSlider {...args}>
-      <SliderTrack>
-        <SliderFilledTrack />
-      </SliderTrack>
-      <SliderThumb />
-    </KvibSlider>
-  ),
-};
-
-export const SliderDiscrete: Story = {
-  args: {
-    "aria-label": "sliderDiscrete",
-    defaultValue: 30,
-    id: "slider",
-    step: 10,
-  },
-  render: args => (
-    <KvibSlider {...args}>
-      <SliderTrack>
-        <SliderFilledTrack />
-      </SliderTrack>
-      <SliderThumb />
-    </KvibSlider>
-  ),
-};
-
-const SliderWithTooltip = () => {
-  const [sliderValue, setSliderValue] = React.useState(5);
-  const [showTooltip, setShowTooltip] = React.useState(false);
-  return (
-    <KvibSlider
-      id="slider"
-      aria-label="sliderWithTooltip"
-      defaultValue={5}
-      onChange={v => setSliderValue(v)}
-      onMouseEnter={() => setShowTooltip(true)}
-      onMouseLeave={() => setShowTooltip(false)}
-    >
-      <SliderMark value={25} mt="1" ml="-2.5" fontSize="sm">
-        25%
-      </SliderMark>
-      <SliderMark value={50} mt="1" ml="-2.5" fontSize="sm">
-        50%
-      </SliderMark>
-      <SliderMark value={75} mt="1" ml="-2.5" fontSize="sm">
-        75%
-      </SliderMark>
-      <SliderTrack>
-        <SliderFilledTrack />
-      </SliderTrack>
-      <Tooltip hasArrow placement="top" isOpen={showTooltip} label={`${sliderValue}%`}>
-        <SliderThumb />
-      </Tooltip>
-    </KvibSlider>
-  );
-};
-
-export const SliderTooltip: Story = {
-  render: () => <SliderWithTooltip />,
+  render: (args: SliderProps) => <KvibSlider {...args} />,
 };

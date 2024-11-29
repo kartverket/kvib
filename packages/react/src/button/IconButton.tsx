@@ -1,62 +1,24 @@
-import {
-  IconButton as ChakraIconButton,
-  IconButtonProps as ChakraIconButtonProps,
-  forwardRef,
-  ResponsiveValue,
-  Spinner,
-} from "@chakra-ui/react";
+import { IconButton as ChakraIconButton, IconButtonProps as ChakraIconButtonProps } from "@/components/ui/icon-button";
 import { MaterialSymbol } from "material-symbols";
-import { Icon } from "../icon";
+import { forwardRef } from "react";
 
-export type IconButtonProps = Omit<ChakraIconButtonProps, "colorScheme" | "variant" | "isActive" | "icon"> & {
-  /**The variant of the IconButton
-   * @default primary */
-  variant?: "primary" | "secondary" | "tertiary" | "ghost";
-
+export type IconButtonProps = Omit<ChakraIconButtonProps, "colorPalette" | "active" | "icon"> & {
   /**The icon to be used in the button.*/
   icon: MaterialSymbol;
 
   /**The visual color appearance of the component.
      @default green*/
-  colorScheme?: "green" | "blue" | "gray" | "red";
+  colorPalette?: "green" | "blue" | "gray" | "red";
 
   /**The size of the component.
    @default md*/
-  size?: ResponsiveValue<string>;
+  size?: any;
 
   /**If true, the icon will be filled.
    @default false*/
   iconFill?: boolean;
 };
 
-const IconSpinner = (props: IconButtonProps) => {
-  if (props.isLoading) {
-    return <Spinner size="sm" />;
-  }
-  return (
-    <Icon
-      icon={props.icon}
-      isFilled={props.iconFill}
-      size={props.size === "xs" || props.size === "sm" ? 20 : 24}
-      weight={props.size === "xs" || props.size === "sm" ? 300 : 400}
-    />
-  );
-};
-
-export const IconButton = forwardRef<IconButtonProps, "button">(
-  (
-    { isDisabled, isLoading, iconFill, ...props },
-
-    ref,
-  ) => {
-    return (
-      <ChakraIconButton
-        {...props}
-        ref={ref}
-        isDisabled={isDisabled || isLoading}
-        aria-busy={isLoading}
-        icon={IconSpinner({ isLoading, iconFill, ...props })}
-      ></ChakraIconButton>
-    );
-  },
-);
+export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>((props, ref) => {
+  return <ChakraIconButton {...props} ref={ref} />;
+});

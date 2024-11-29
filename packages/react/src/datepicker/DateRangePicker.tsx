@@ -1,23 +1,22 @@
-import { useTheme } from "@kvib/react/src";
 import { nb } from "date-fns/locale";
 import { DateRange, DayPicker, DayPickerProps } from "react-day-picker";
 import "react-day-picker/style.css";
+import { colors } from "../theme/tokens";
 
 export type DateRangePickerProps = DayPickerProps & {
   selected?: DateRange | undefined;
   onSelect?: (range: DateRange | undefined) => void;
   mode?: "range";
-  colorScheme?: "green" | "blue";
+  colorPalette?: "green" | "blue";
   showDropdownMonthYear?: boolean;
 };
 
 export const DateRangePicker = ({ ...props }: DateRangePickerProps) => {
   const uniqueClassName = generateUniqueClassName("kvib-datepicker");
-  const theme = useTheme();
-  const style = css(
-    uniqueClassName,
-    theme.colors[props.colorScheme ?? theme.components.Datepicker.defaultProps.colorScheme],
-  );
+  const listOfColors = colors[props.colorPalette ?? "green"];
+
+  const palette = Object.fromEntries(Object.entries(listOfColors).map(([key, obj]) => [key, obj.value]));
+  const style = css(uniqueClassName, palette);
   return (
     <>
       <style>{style}</style>
@@ -53,14 +52,19 @@ const css = (className: string, colorPalette: Record<number, string>) => {
   /* Day buttons */
   --rdp-day-width: 42px; /* Width of the day cells. */
   --rdp-day-height: 42px; /* Height of the day cells. */
-  --rdp-day_button-height: var(--rdp-day-height); /* Height of the day buttons. */
-  --rdp-day_button-width: var(--rdp-day-width); /* Width of the day buttons. */
-  --rdp-day_button-border-radius: var(--kvib-radii-md); /* Border radius of the day buttons. */
+  --rdp-day_button-height: calc(var(--rdp-day-height) ); /* Height of the day buttons. */
+  --rdp-day_button-width: calc(var(--rdp-day-width) + 1px); /* Width of the day buttons. */
+  --rdp-day_button-border-radius: 0.375rem; /* Border radius of the day buttons. */
   --rdp-outside-opacity: 0.4; /* Opacity of the days outside the current month. */
   --rdp-disabled-opacity: 0.25; /* Opacity of the disabled days. */
 
   /* Week numbers */
   --rdp-weekday-text-align: center;
+
+  .rdp-selected {
+  font-weight: 400;
+  font-size: 16px;
+}
 
   /* Day styles */
   .rdp-today {

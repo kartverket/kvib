@@ -1,4 +1,4 @@
-import { Image as KvibImage, Stack as KvibStack } from "@kvib/react/src";
+import { Image as KvibImage, Stack as KvibStack } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibImage> = {
@@ -26,30 +26,6 @@ const meta: Meta<typeof KvibImage> = {
       },
       control: "text",
     },
-    fallback: {
-      description: "Fallback element to show if image is loading or image fails.",
-      table: {
-        type: { summary: "ReactElement<any, string | JSXElementConstructor<any>>" },
-      },
-      control: "text",
-    },
-    fallbackSrc: {
-      description:
-        "Fallback image src to show if image is loading or image fails. Note 🚨: We recommend you use a local image",
-      table: {
-        type: { summary: "string" },
-      },
-      control: "text",
-    },
-    fallbackStrategy: {
-      description:
-        "- beforeLoadOrError(default): loads the fallbackImage while loading the src - onError: loads the fallbackImage only if there is an error fetching the src",
-      table: {
-        type: { summary: "FallbackStrategy" },
-        defaultValue: { summary: "beforeLoadOrError" },
-      },
-      control: "text",
-    },
     fit: {
       description: "How the image to fit within its bounds. It maps to css `object-fit` property.",
       table: {
@@ -70,14 +46,6 @@ const meta: Meta<typeof KvibImage> = {
         type: { summary: "string | number" },
       },
       control: "text",
-    },
-    ignoreFallback: {
-      description: "If true, opt out of the fallbackSrc logic and use as img.",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
-      },
-      control: "boolean",
     },
     loading: {
       table: {
@@ -162,11 +130,4 @@ export const ImageBorderRadius: Story = {
     src: "https://images.unsplash.com/photo-1619468129361-605ebea04b44?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2942&q=80",
   },
   render: args => <KvibImage {...args} alt="Map with pins" />,
-};
-
-export const ImageFallback: Story = {
-  args: {},
-  render: args => (
-    <KvibImage {...args} alt="Map with pins" src="utilgjengelig.png" fallbackSrc="https://via.placeholder.com/150" />
-  ),
 };

@@ -1,4 +1,4 @@
-import { Alert, AlertIcon, Text } from "@kvib/react/src";
+import { Alert, Text } from "@kvib/react";
 import { Canvas, Controls, Meta, Source } from "@storybook/blocks";
 import { DocsContainer, DocsStory, Feedback } from "../../../templates";
 import * as IconStories from "./Icon.stories";
@@ -22,49 +22,9 @@ for å få en oversikt over ikoner du kan benytte.
 
 ## Ta i bruk
 
-<Alert status="info">
-  <AlertIcon />
-  **Dersom ikoner ikke vises:** `import 'material-symbols';` i index.js.
-</Alert>
-
 ```jsx
 import { Icon, MaterialSymbol } from "@kvib/react";
 ```
-
-<Feedback component="Icon" />
-
-<DocsStory title="Fill og farger" description={"Man kan enten bruke vanlige css argumenter (fargenavn, hex-koder, RGBA osv.), men det er også mulig å hente farger fra Designsystemet på denne måten:"}
-story={<>
-<Source code={`
-import { Icon, useTheme } from "@kvib/react";
-
-const theme = useTheme();
-
-<Icon icon="home" color={theme.colors.green[400]} />; ` }/>
-<Text as="b">OBS! Enkelte ikoner har ikke en "filled" variant.</Text>
-<Canvas of={IconStories.ColorIcon} sourceState="hidden"/>
-</>}/>
-
-<DocsStory
-  isVertical
-  title="Størrelser"
-  description={""}
-  story={<Canvas of={IconStories.SizeIcon} sourceState="hidden" />}
-/>
-
-<DocsStory
-  isVertical
-  title="Weight prop"
-  description={""}
-  story={<Canvas of={IconStories.WeightIcon} sourceState="hidden" />}
-/>
-
-<DocsStory
-  isVertical
-  title="Grade prop"
-  description={""}
-  story={<Canvas of={IconStories.GradeIcon} sourceState="hidden" />}
-/>
 
 <DocsStory
   isVertical

@@ -1,4 +1,3 @@
-export { Radio, RadioGroup } from "@chakra-ui/react";
-export type { RadioProps, RadioGroupProps } from "@chakra-ui/react";
-// export * from "./Radio";
-// export * from "./RadioGroup";
+export { Radio, RadioGroup } from "@/components/ui/radio";
+export type { RadioProps } from "@/components/ui/radio";
+export type { RadioGroupRootProps as RadioGroupProps } from "@chakra-ui/react";

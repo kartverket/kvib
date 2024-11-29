@@ -1,4 +1,4 @@
-import { Box, Progress as KvibProgress, Stack as KvibStack } from "@kvib/react/src";
+import { Progress as KvibProgress, ProgressBar, ProgressLabel, ProgressProps, ProgressValueText } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibProgress> = {
@@ -11,7 +11,7 @@ const meta: Meta<typeof KvibProgress> = {
     },
   },
   argTypes: {
-    colorScheme: {
+    colorPalette: {
       description: "The visual color appearance of the component",
       table: {
         type: {
@@ -98,70 +98,11 @@ type Story = StoryObj<typeof KvibProgress>;
 
 export const Preview: Story = {
   args: { value: 80 },
-  render: args => (
-    <Box w="100%">
-      <KvibProgress {...args} aria-label="progress bar" />
-    </Box>
-  ),
-};
-
-export const ProgressStripe: Story = {
-  args: { value: 60, hasStripe: true },
-  render: args => <KvibProgress {...args} aria-label="progress bar striped" />,
-};
-
-export const ProgressStripeAnimated: Story = {
-  args: { value: 60, hasStripe: true, isAnimated: true },
-  render: args => <KvibProgress {...args} aria-label="progress bar striped animated" />,
-};
-
-export const ProgressSizes: Story = {
-  args: { value: 20, colorScheme: "green", h: "1rem", w: "16rem" },
-  render: args => (
-    <KvibStack spacing={5}>
-      <KvibProgress {...args} size="sm" aria-label="progress bar small" />
-      <KvibProgress {...args} size="md" aria-label="progress bar medium" />
-      <KvibProgress {...args} size="lg" aria-label="progress bar large" />
-      <KvibProgress {...args} height="32px" aria-label="progress bar 32px" />
-    </KvibStack>
-  ),
-};
-
-export const ProgressColors: Story = {
-  args: { value: 40, size: "md", h: "1rem", w: "16rem" },
-  render: args => (
-    <KvibStack spacing={5}>
-      <KvibProgress {...args} colorScheme="green" aria-label="progress bar green" />
-      <KvibProgress {...args} colorScheme="blue" aria-label="progress bar blue" />
-      <KvibProgress {...args} colorScheme="red" aria-label="progress bar red" />
-      <KvibProgress {...args} colorScheme="gray" aria-label="progress bar gray" />
-      <KvibProgress {...args} colorScheme="yellow" aria-label="progress bar yellow" />
-    </KvibStack>
-  ),
-};
-
-export const ProgressLook: Story = {
-  args: { value: 40 },
-  render: args => (
-    <KvibStack spacing={5}>
-      <KvibProgress {...args} colorScheme="blue" aria-label="progress bar blue" />
-      <KvibProgress {...args} colorScheme="red" aria-label="progress bar red" />
-      <KvibProgress {...args} colorScheme="gray" aria-label="progress bar gray" />
-      <KvibProgress {...args} colorScheme="yellow" aria-label="progress bar yellow" />
-      <KvibProgress {...args} size="sm" aria-label="progress bar small" />
-      <KvibProgress {...args} size="md" aria-label="progress bar medium" />
-      <KvibProgress {...args} size="lg" aria-label="progress bar large" />
-      <KvibProgress {...args} height="32px" aria-label="progress bar 32px" />
-    </KvibStack>
-  ),
-};
-
-export const ProgressVariation: Story = {
-  args: { size: "md" },
-  render: args => (
-    <KvibStack>
-      <KvibProgress {...args} isIndeterminate aria-label="progress bar indeterminate" />,
-      <KvibProgress {...args} hasStripe isAnimated aria-label="progress bar animated stripe" value={40} />,
-    </KvibStack>
+  render: (args: ProgressProps) => (
+    <KvibProgress {...args} aria-label="progress bar">
+      <ProgressLabel />
+      <ProgressValueText />
+      <ProgressBar />
+    </KvibProgress>
   ),
 };

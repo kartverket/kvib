@@ -1,86 +1,15 @@
-import { Alert, AlertIcon, Box, Code, Text } from "@kvib/react/src";
+import { Box, Code, Text } from "@kvib/react";
 import { Canvas, Controls, Meta, Source, Story } from "@storybook/blocks";
 import { DocsAnatomy, DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
-import { TooltipStrings } from "./srcTooltipStrings";
 import * as TooltipStories from "./Tooltip.stories";
 
 <Meta of={TooltipStories} />
 
 # Tooltip
 
-<Alert status="info">
-  <AlertIcon />
-  Kjent bug for Tooltip: `placement="auto-end"` legger seg ikke som ønsket.
-</Alert>
-
 Et tooltip er en informativ melding som dukker opp når en bruker samhandler med et element.
 
 ## Ta i bruk
-
-```jsx
-import { Tooltip } from "@kvib/react";
-```
-
-<DocsContainer>
-
-<Feedback component={"Tooltip"} />
-
-</DocsContainer>
-
-<DocsContainer>
-
-<DocsStory
-  title="Bruk av egne komponenter"
-  description={
-    <Text>
-      Dersom Tooltip wrapper et funksjonelt komponent må komponentet ha en ref ved `forwardref`. Dette inkluderer også
-      bruk av ikoner fra Kartverkets designsystem. Se eksempel:
-    </Text>
-  }
-  story={
-    <>
-      <Canvas of={TooltipStories.CustomToolTip} sourceState="none" />
-      <Source code={TooltipStrings} dark />
-    </>
-  }
-/>
-
-<DocsStory
-  isVertical
-  title={"Tooltip med pil"}
-  description={""}
-  story={<Canvas of={TooltipStories.TooltipArrow} sourceState="hidden" />}
-/>
-
-<DocsStory
-  isVertical
-  title={"Tooltip med fokuserbart komponent"}
-  description={""}
-  story={<Canvas of={TooltipStories.TooltipFocusable} sourceState="hidden" />}
-/>
-
-<DocsStory
-  isVertical
-  title={"Disabled state"}
-  description={""}
-  story={<Canvas of={TooltipStories.TooltipDisabled} sourceState="hidden" />}
-/>
-
-<DocsStory
-  isVertical
-  title={"Plassering"}
-  description={""}
-  story={<Canvas of={TooltipStories.TooltipPlacement} sourceState="hidden" />}
-/>
-
-<DocsStory
-  isVertical
-  title={"Flere eksempler"}
-  description={""}
-  story={<Canvas of={TooltipStories.TooltipExamples} sourceState="hidden" />}
-/>
-
-</DocsContainer>
 
 <DocsHeading light>Props</DocsHeading>
 <Canvas of={TooltipStories.Preview} />

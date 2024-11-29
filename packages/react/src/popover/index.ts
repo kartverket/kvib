@@ -1,20 +1,26 @@
 export {
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
-  PopoverHeader,
-  PopoverBody,
-  PopoverFooter,
+  PopoverRoot as Popover,
   PopoverArrow,
-  PopoverCloseButton,
-  PopoverAnchor,
-} from "@chakra-ui/react";
+  PopoverBody,
+  PopoverCloseTrigger,
+  PopoverContent,
+  PopoverFooter,
+  PopoverHeader,
+  PopoverTitle,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+
+export { Popover as KvibPopover } from "@chakra-ui/react";
+export type { PopoverRootProps as KvibPopoverProps } from "@chakra-ui/react";
+
 export type {
-  PopoverProps,
-  PopoverContentProps,
-  PopoverHeaderProps,
-  PopoverBodyProps,
-  PopoverFooterProps,
   PopoverArrowProps,
-  CloseButtonProps,
+  PopoverBodyProps,
+  PopoverCloseTriggerProps,
+  PopoverContentProps,
+  PopoverFooterProps,
+  PopoverHeaderProps,
+  PopoverRootProps as PopoverProps,
+  PopoverTitleProps,
+  PopoverTriggerProps,
 } from "@chakra-ui/react";

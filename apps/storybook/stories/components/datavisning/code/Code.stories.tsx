@@ -1,4 +1,4 @@
-import { Code as KvibCode, Stack as KvibStack } from "@kvib/react/src";
+import { Code as KvibCode, Stack as KvibStack } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibCode> = {
@@ -20,7 +20,7 @@ const meta: Meta<typeof KvibCode> = {
       options: ["solid", "subtle", "outline"],
       control: "radio",
     },
-    colorScheme: {
+    colorPalette: {
       description: "The visual color appearance of the component",
       table: {
         type: { summary: "green | blue | red | gray | orange" },
@@ -51,8 +51,8 @@ export const CodeAppearance: Story = {
   render: args => (
     <KvibStack gap="1rem">
       <KvibCode {...args} children="console.log(kartverket)" variant="subtle" />
-      <KvibCode {...args} colorScheme="blue" children="Hello world" variant="outline" />
-      <KvibCode {...args} colorScheme="red" children="var kartverket = 'Hønefoss'" variant="solid" />
+      <KvibCode {...args} colorPalette="blue" children="Hello world" variant="outline" />
+      <KvibCode {...args} colorPalette="red" children="var kartverket = 'Hønefoss'" variant="solid" />
     </KvibStack>
   ),
 };

@@ -1,5 +1,4 @@
-import { Box, Code, Stack, Text } from "@kvib/react/src/";
-import { Alert, AlertDescription, AlertIcon } from "@kvib/react/src/alert";
+import { Box, Code, Stack, Text } from "@kvib/react";
 import { Canvas, Controls, Meta, Story } from "@storybook/blocks";
 import { DocsAnatomy, DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
 import * as InputStories from "./Input.stories";
@@ -30,52 +29,6 @@ import { Input, InputGroup, InputLeftElement, InputRightElement, InputLeftAddon,
 - Tall med interaktive knapper (bruk heller `NumberInput`)
 - Søk (bruk heller `Search` eller `SearchAsync`)
 - Interaktiv datepicker (bruk heller `DatePicker`)
-
-<Feedback component="Input" />
-
-<DocsStory
-  title="Utseende"
-  description={
-    <Box>
-      <Text>
-        Input har fire varianter. <Code>outline</Code> er standardvarianten og skal brukes i de fleste tilfeller.
-        <Code>filled</Code> kan brukes som et alternativ til outline. For mindre viktige inputfelt kan
-        <Code>flushed</Code> og
-        <Code>unstyled</Code> brukes.
-      </Text>
-      <Text>
-        Det er mulig å velge mellom fire forskjellige størrelser: <Code>xs</Code>, <Code>sm</Code>, <Code>md</Code> og{" "}
-        <Code>lg</Code>.<Code>md</Code> er standard.
-      </Text>
-    </Box>
-  }
-  story={<Canvas of={InputStories.InputVariants} />}
-/>
-
-<DocsStory
-  title="Input i FormControl"
-  description={
-    <Text>
-      Ved å benytte seg av Input sammen med <Code>Form Control</Code> vil du få kontekst som <Code>isInvalid</Code>,
-      <Code>isDisabled</Code> og
-      <Code>isRequired</Code>. Slik vil det også være enkelt å legge til en label.
-    </Text>
-  }
-  story={<Canvas of={InputStories.InputForm} />}
-/>
-
-<DocsStory
-  title="Ikoner og addons"
-  description={
-    <Text>
-      Input kan ha ikoner og addons på venstre og høyre side. Disse kan brukes til å vise tilleggsinformasjon eller
-      funksjonalitet. For å benytte seg av dette må <Code>Input</Code> plasseres i en <Code>InputGroup</Code>. Da er det
-      mulig å bruke <Code>InputLeftElement</Code> og <Code>InputRightElement</Code> for å legge til ikoner/knapper og{" "}
-      <Code>InputLeftAddon</Code> og <Code>InputRightAddon</Code> for å legge til addons.
-    </Text>
-  }
-  story={<Canvas of={InputStories.InputGroup} />}
-/>
 
 </DocsContainer>
 

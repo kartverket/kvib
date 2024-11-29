@@ -1,8 +1,8 @@
-import { Alert, AlertIcon } from "@kvib/react/src";
+
 import { Canvas, Controls, Meta, Source } from "@storybook/blocks";
 import { DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
 import * as SliderStories from "./Slider.stories";
-import { SliderStrings } from "./srcSliderStrings";
+
 
 <Meta of={SliderStories} />
 
@@ -12,47 +12,11 @@ import { SliderStrings } from "./srcSliderStrings";
 
 Her er en oversikt over Slider-komponenten, og hvordan denne bygges opp av flere andre komponenter.
 
-<Alert status="warning">
-  <AlertIcon />
-  En Slider skal alltid stå sammen med en Label. Dersom det mot formodning avviker fra dette må aria-label benyttes.
-</Alert>
 
 <br />
 
 ## Ta i bruk
 
-```jsx
-import { Slider, SliderTrack, SliderFilledTrack, SliderThumb, SliderMark } from "@kvib/react";
-```
-
-<Feedback component={"Slider"} />
-
-<DocsHeading light>Box props</DocsHeading>
-
-<DocsContainer>
-    SliderThumb, SliderTrack og SliderFilledTrack er bygget på Box-komponenten, så alle props til Box kan benyttes i disse komponentene for å endre styling. Se
-    [dokumentasjonen for Box for beskrivelse og eksempler](/docs/komponenter-layout-box--docs).
-</DocsContainer>
-
-<DocsStory
-  title={"Diskret slider med step"}
-  description={""}
-  story={<Canvas of={SliderStories.SliderDiscrete} sourceState="hidden" className="fullwidth" />}
-  isVertical
-/>
-
-
-<DocsStory
-  title={"Slider med tooltip og marks"}
-  description={""}
-  story={
-    <>
-      <Canvas of={SliderStories.SliderTooltip} sourceState={"none"} className="fullwidth" />
-      <Source code={SliderStrings} dark />
-    </>
-  }
-  isVertical
-/>
 
 <DocsHeading light>Props</DocsHeading>
 <Canvas of={SliderStories.Preview} className="fullwidth" />

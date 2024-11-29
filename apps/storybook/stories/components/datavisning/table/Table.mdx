@@ -1,8 +1,7 @@
-import { Card, CardBody, Text } from "@kvib/react/src";
+import { Card, CardBody, Text } from "@kvib/react";
 import { Canvas, Controls, Meta, Source, Story } from "@storybook/blocks";
 import { DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates/";
 import * as TableStories from "./Table.stories";
-import { TableSizesString, TableString, TableVariantsString } from "./srcStrings.ts";
 
 <Meta of={TableStories} />
 
@@ -13,44 +12,9 @@ import { TableSizesString, TableString, TableVariantsString } from "./srcStrings
 Table brukes til å organiserer og vise frem data på en effektiv måte. Den render et `<table>` element som standard.
 
 ```jsx
-import { Table, Thead, Tbody, Tfoot, Tr, Th, Td, TableCaption, TableContainer } from "@kvib/react";
+import { Table, Thead, Tbody, Tfoot, Tr, Th, Td, TableCaption } from "@kvib/react";
 ```
 
-<Feedback component="Table" />
-
-<DocsStory
-  isVertical
-  title="Varianter"
-  description={
-    <Text>
-      Table kommer med tre varianter: <code>simple</code>, <code>striped</code> og <code>unstyled</code>. Eksempel på
-      <code>striped</code> table:
-    </Text>
-  }
-  story={
-    <>
-      <Canvas of={TableStories.TableVariants} sourceState="none" />
-      <Source code={TableVariantsString} dark />
-    </>
-  }
-/>
-
-<DocsStory
-  isVertical
-  title="Størrelser"
-  description={
-    <Text>
-      Table kommer med tre forskjellige størrelser: <code>sm</code>, <code>md</code> og <code>lg</code>. Eksempel på
-      <code>sm</code> table:
-    </Text>
-  }
-  story={
-    <>
-      <Canvas of={TableStories.TableSizes} sourceState="none" />
-      <Source code={TableSizesString} dark />
-    </>
-  }
-/>
 
 <DocsHeading light>Props</DocsHeading>
 <Canvas of={TableStories.Preview} sourceState="hidden" />

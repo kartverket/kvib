@@ -1,17 +1,14 @@
-import { ReactNode, Ref, useEffect, useRef } from "react";
-import { Text } from "@kvib/react/src";
-import { forwardRef } from "@chakra-ui/react";
+import { Text } from "@/typography";
+import { forwardRef, ReactNode, Ref, useEffect, useRef } from "react";
 import {
   ActionMeta,
-  SelectInstance,
-  GroupBase,
-  OptionsOrGroups,
   FormatOptionLabelMeta,
-  AsyncSelect as ReactSearch,
-  SizeProp,
-  Variant,
+  GroupBase,
   MenuPlacement,
-} from "chakra-react-select";
+  OptionsOrGroups,
+  SelectInstance,
+} from "react-select";
+import AsyncSelect from "react-select/async";
 
 export type SearchAsyncElement<T> = SelectInstance<T, boolean, GroupBase<T>>;
 
@@ -33,25 +30,19 @@ export type BaseProps<T> = {
   className?: string;
 
   /** Allows a clear button in the input. */
-  isClearable?: boolean;
+  clearable?: boolean;
 
   /** Custom JSX for the dropdown indicator. */
   dropdownIndicator?: JSX.Element;
 
-  /** Size of the input (e.g., "small", "medium"). */
-  size?: SizeProp;
-
   /** Default options shown when no input is given. If true, all options will be shown. */
   defaultOptions?: T[] | boolean;
-
-  /** Visual style variant of the input. */
-  variant?: Variant;
 
   /** Id set to the SelectContainer component */
   id?: string;
 
   /** Determines if the input is disabled */
-  isDisabled?: boolean;
+  disabled?: boolean;
 
   /** Determines the color of the border when focused. Use color keys in `theme.colors`. */
   focusBorderColor?: string;
@@ -76,13 +67,13 @@ export type BaseProps<T> = {
 
 type WithMulti<T> = {
   /** Determines if it is possible to choose several values. */
-  isMulti: true;
+  multi: true;
   /** Callback for when the selection changes. If `isMulti=true` the type is `(newValue: readonly T[] | null, actionMeta: ActionMeta<T>) => void` */
   onChange: (newValue: readonly T[] | null, actionMeta: ActionMeta<T>) => void;
 };
 
 type WithoutMulti<T> = {
-  isMulti?: false;
+  multi?: false;
   /** If `isMulti=false`, the type is `(newValue: T | null) => void` */
   onChange: (newValue: T | null) => void;
 };
@@ -91,8 +82,8 @@ export type SearchAsyncProps<T> = BaseProps<T> & (WithMulti<T> | WithoutMulti<T>
 
 function genericForwardRef<T, P = {}>(
   render: (props: P, ref: React.Ref<T>) => React.ReactNode,
-): (props: P, ref: React.Ref<T>) => React.ReactNode {
-  return forwardRef(render) as any;
+): (props: P & React.RefAttributes<T>) => React.ReactNode {
+  return forwardRef(render as any) as any;
 }
 
 // SearchAsync uses the async version of react-select to fetch and display options.
@@ -104,16 +95,13 @@ const SearchAsyncNoRef = <T extends unknown>(
     debounceTime,
     autoFocus,
     className,
-    isClearable = true,
+    clearable = true,
     dropdownIndicator,
-    size,
     defaultOptions,
-    variant,
     id,
-    isMulti = false,
+    multi = false,
     noOptionsMessage,
-    isDisabled,
-    focusBorderColor,
+    disabled,
     menuPlacement = "bottom",
     value,
     optionLabelFormatter,
@@ -133,7 +121,7 @@ const SearchAsyncNoRef = <T extends unknown>(
 
   // Cast onChange to the right type based on if isMulti is true
   const onChangeWrapper = (newValue: readonly T[] | T | null, actionMeta?: ActionMeta<T>) => {
-    if (isMulti) {
+    if (multi) {
       const multiChange = onChange as (newValue: readonly T[] | null, actionMeta: ActionMeta<T>) => void;
       multiChange(newValue as readonly T[], actionMeta!);
     } else {
@@ -143,14 +131,14 @@ const SearchAsyncNoRef = <T extends unknown>(
   };
 
   return (
-    <ReactSearch
+    <AsyncSelect
       components={{
         DropdownIndicator: () => dropdownIndicator ?? null,
         // Only use separator when there is a dropdownindicator
         ...(!dropdownIndicator ? { IndicatorSeparator: () => null } : {}),
       }}
       formatOptionLabel={optionLabelFormatter}
-      isClearable={isClearable}
+      isClearable={clearable}
       autoFocus={autoFocus}
       className={className ? className : ""}
       onChange={onChangeWrapper}
@@ -159,13 +147,10 @@ const SearchAsyncNoRef = <T extends unknown>(
       loadOptions={debounceTime ? loadOptionsDebounce : loadOptions}
       blurInputOnSelect={false}
       placeholder={placeholder ? placeholder : "Søk her..."}
-      size={size}
       defaultOptions={defaultOptions}
-      variant={variant}
       id={id}
-      isMulti={isMulti}
-      isDisabled={isDisabled}
-      focusBorderColor={focusBorderColor}
+      isMulti={multi}
+      isDisabled={disabled}
       menuPlacement={menuPlacement}
       value={value}
       ref={ref}

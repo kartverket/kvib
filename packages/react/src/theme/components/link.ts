@@ -1,23 +1,29 @@
-import { defineStyleConfig } from "@chakra-ui/react";
-import { colors, borders } from "../tokens";
+import { defineRecipe } from "@chakra-ui/react";
 
-export const linkTheme = defineStyleConfig({
-  baseStyle: ({ colorScheme }) => ({
-    textDecoration: "underline",
-    _focusVisible: {
-      outline: borders["2px"],
-      borderRadius: "1px",
-      outlineColor: colors.blue[600],
-      boxShadow: "none",
+export const linkTheme = defineRecipe({
+  base: {
+    colorPalette: "green",
+  },
+  variants: {
+    variant: {
+      underline: {
+        color: "colorPalette.500 !important",
+        textDecoration: "underline !important",
+        _hover: {
+          color: "colorPalette.400 !important",
+          textDecoration: "none !important",
+        },
+      },
+      plain: {
+        color: "colorPalette.500 !important",
+        textDecoration: "none !important",
+        _hover: {
+          color: "colorPalette.400 !important",
+        },
+      },
     },
-    color: `${colorScheme}.500`,
-    _hover: {
-      color: `${colorScheme}.400`,
-      textDecoration: "none",
-    },
-    _active: {
-      color: `${colorScheme}.600`,
-      textDecoration: "underline",
-    },
-  }),
+  },
+  defaultVariants: {
+    variant: "underline",
+  },
 });

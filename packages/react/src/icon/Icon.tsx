@@ -1,8 +1,8 @@
 import "material-symbols";
 import { MaterialSymbol } from "material-symbols";
-import { forwardRef } from "../hooks";
+import { forwardRef } from "react";
 
-type IconProps = {
+export type IconProps = {
   /**The icon from Material symbols you want to display*/
   icon: MaterialSymbol;
 
@@ -19,16 +19,18 @@ type IconProps = {
   grade?: -25 | 0 | 200;
 
   /**Decides whether the icon is filled or not*/
-  isFilled?: boolean;
+  filled?: boolean;
 
   /**Decides whether a screen reader will vocalize the icon name or not */
   ariaIsHidden?: boolean;
 
   className?: string;
+
+  css?: React.CSSProperties;
 };
 
-export const Icon = forwardRef<IconProps, "span">(
-  ({ icon, size, color, weight, grade, isFilled = false, ariaIsHidden = false, className = "" }, ref) => {
+export const Icon = forwardRef<HTMLSpanElement, IconProps>(
+  ({ icon, size, color, weight, grade, filled = false, ariaIsHidden = false, className = "", css }, ref) => {
     return (
       <span
         ref={ref}
@@ -38,9 +40,10 @@ export const Icon = forwardRef<IconProps, "span">(
           width: size,
           fontSize: size,
           color: color,
-          fontVariationSettings: `'FILL' ${isFilled ? 1 : 0}, 'wght' ${weight ? weight : 300}, 'GRAD' ${
+          fontVariationSettings: `'FILL' ${filled ? 1 : 0}, 'wght' ${weight ? weight : 300}, 'GRAD' ${
             grade ? grade : 0
           }`,
+          ...css,
         }}
       >
         {icon}

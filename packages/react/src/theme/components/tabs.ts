@@ -1,33 +1,26 @@
-import { createMultiStyleConfigHelpers } from "@chakra-ui/react";
-import { tabsAnatomy as parts } from "@chakra-ui/anatomy";
-import { colors } from "../tokens";
+import { defineSlotRecipe } from "@chakra-ui/react";
+import { tabsAnatomy } from "@chakra-ui/react/anatomy";
 
-const helpers = createMultiStyleConfigHelpers(parts.keys);
-
-export const tabsTheme = helpers.defineMultiStyleConfig({
-  baseStyle: ({ colorScheme }) => {
-    return {
-      root: {
-        width: "fit-content",
+export const tabsTheme = defineSlotRecipe({
+  slots: tabsAnatomy.keys(),
+  base: {
+    root: {
+      colorPalette: "green",
+      width: "fit-content !important",
+    },
+    trigger: {
+      _selected: {
+        color: "colorPalette.600 !important",
       },
-      tab: {
-        color: colors.blue[900],
-        _selected: {
-          color: `${colorScheme}.500`,
-        },
+      _hover: {
+        color: "colorPalette.400 !important",
+      },
+      _disabled: {
+        color: "gray.400 !important",
         _hover: {
-          color: `${colorScheme}.400`,
-        },
-        _disabled: {
-          color: colors.gray[400],
-          _hover: {
-            color: colors.gray[400],
-          },
+          color: "gray.400 !important",
         },
       },
-    };
-  },
-  defaultProps: {
-    size: "md",
+    },
   },
 });

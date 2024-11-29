@@ -1,34 +1,18 @@
 import {
-  Box,
   Button,
-  ButtonGroup,
-  FormControl,
-  FormLabel,
-  HStack,
-  IconButton,
-  Input,
-  Popover as KvibPopover,
-  PopoverAnchor,
+  Popover,
   PopoverArrow,
-  PopoverBody,
-  PopoverCloseButton,
   PopoverContent,
-  PopoverFooter,
-  PopoverHeader,
+  PopoverProps,
+  PopoverTitle,
   PopoverTrigger,
-  Radio,
-  RadioGroup,
-  Stack,
-  useBoolean,
-  useDisclosure,
-} from "@kvib/react/src";
+  Text,
+} from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
-import { FC, forwardRef, Ref, useRef, useState } from "react";
-import FocusLock from "react-focus-lock";
 
-const meta: Meta<typeof KvibPopover> = {
+const meta: Meta<typeof Popover> = {
   title: "Komponenter/Popover",
-  component: KvibPopover,
+  component: Popover,
   parameters: {
     docs: {
       story: { inline: true },
@@ -309,240 +293,21 @@ const meta: Meta<typeof KvibPopover> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof KvibPopover>;
+type Story = StoryObj<typeof Popover>;
 
 export const Preview: Story = {
-  render: args => (
-    <KvibPopover {...args}>
-      <PopoverTrigger>
-        <Button>Vis popover</Button>
+  render: (args: PopoverProps) => (
+    <Popover {...args}>
+      <PopoverTrigger asChild>
+        <Button size="sm" variant="outline" colorPalette="green">
+          Vis popover
+        </Button>
       </PopoverTrigger>
       <PopoverContent>
+        <PopoverTitle>Dette er en popover</PopoverTitle>
         <PopoverArrow />
-        <PopoverCloseButton />
-        <PopoverHeader>Dette er en popover</PopoverHeader>
+        <Text my="4">Hovedtekst i popover</Text>
       </PopoverContent>
-    </KvibPopover>
-  ),
-};
-
-const PopoverFocusExample = ({ ...args }) => {
-  const initialFocusRef = useRef(null);
-  return (
-    <KvibPopover {...args} initialFocusRef={initialFocusRef} placement="bottom" closeOnBlur={false}>
-      <PopoverTrigger>
-        <Button>Trykk</Button>
-      </PopoverTrigger>
-      <PopoverContent color="white" bg="blue.800" borderColor="blue.800">
-        <PopoverHeader pt={4} fontWeight="bold" border="0">
-          Hjelp med oppsett
-        </PopoverHeader>
-        <PopoverArrow bg="blue.800" />
-        <PopoverCloseButton />
-        <PopoverBody>Det er lurt å sette opp emailbekreftelse for å få bekreftelse på ordren din.</PopoverBody>
-        <PopoverFooter border="0" display="flex" alignItems="center" justifyContent="space-between" pb={4}>
-          <Box fontSize="sm">Steg 2 av 4</Box>
-          <ButtonGroup size="sm">
-            <Button colorScheme="green">Legg til Email</Button>
-            <Button colorScheme="blue" ref={initialFocusRef}>
-              Neste
-            </Button>
-          </ButtonGroup>
-        </PopoverFooter>
-      </PopoverContent>
-    </KvibPopover>
-  );
-};
-
-export const PopoverFocus: Story = {
-  render: args => <PopoverFocusExample {...args} />,
-};
-
-type TextInputProps = {
-  label: string;
-  id: string;
-  [x: string]: any;
-};
-
-const TextInput = forwardRef<HTMLInputElement, TextInputProps>((props, ref) => {
-  const { id, label, ...restProps } = props;
-
-  return (
-    <FormControl>
-      <FormLabel htmlFor={id}>{label}</FormLabel>
-      <Input ref={ref} id={id} {...restProps} />
-    </FormControl>
-  );
-});
-
-type FormProps = {
-  firstFieldRef: Ref<HTMLInputElement>;
-  onCancel: () => void;
-};
-
-const Form: FC<FormProps> = ({ firstFieldRef, onCancel }) => {
-  return (
-    <Stack spacing={4}>
-      <TextInput label="Fornavn" id="first-name" ref={firstFieldRef} defaultValue="Ola" />
-      <TextInput label="Etternavn" id="last-name" defaultValue="Nordmann" />
-      <ButtonGroup display="flex" justifyContent="flex-end">
-        <Button variant="primary" onClick={onCancel}>
-          Avbryt
-        </Button>
-        <Button isDisabled colorScheme="green">
-          Lagre
-        </Button>
-      </ButtonGroup>
-    </Stack>
-  );
-};
-
-const PopoverForm = ({ ...args }) => {
-  const { onOpen, onClose, isOpen } = useDisclosure();
-  const firstFieldRef = useRef<HTMLInputElement>(null);
-
-  return (
-    <>
-      <Box display="inline-block" mr={3}>
-        Ola Nordmann
-      </Box>
-      <KvibPopover
-        {...args}
-        isOpen={isOpen}
-        initialFocusRef={firstFieldRef}
-        onOpen={onOpen}
-        onClose={onClose}
-        placement="right"
-        closeOnBlur={false}
-      >
-        <PopoverTrigger>
-          <IconButton size="sm" icon={"edit"} aria-label={"edit"} colorScheme="gray" />
-        </PopoverTrigger>
-        <PopoverContent p={5}>
-          <FocusLock returnFocus persistentFocus={false}>
-            <PopoverArrow />
-            <PopoverCloseButton />
-            <Form firstFieldRef={firstFieldRef} onCancel={onClose} />
-          </FocusLock>
-        </PopoverContent>
-      </KvibPopover>
-    </>
-  );
-};
-
-export const PopoverTrappingFocus: Story = {
-  render: args => <PopoverForm {...args} />,
-};
-
-const ControlledUsage = ({ ...args }) => {
-  const { isOpen, onToggle, onClose } = useDisclosure();
-
-  return (
-    <>
-      <Button mr={5} onClick={onToggle}>
-        Trigger
-      </Button>
-      <KvibPopover
-        {...args}
-        returnFocusOnClose={false}
-        isOpen={isOpen}
-        onClose={onClose}
-        placement="right"
-        closeOnBlur={false}
-      >
-        <PopoverTrigger>
-          <Button colorScheme="red">Popover</Button>
-        </PopoverTrigger>
-        <PopoverContent>
-          <PopoverHeader fontWeight="semibold">Bekreftelse</PopoverHeader>
-          <PopoverArrow />
-          <PopoverCloseButton />
-          <PopoverBody>Er du sikker på at du vil fortsette?</PopoverBody>
-          <PopoverFooter display="flex" justifyContent="flex-end">
-            <ButtonGroup size="sm">
-              <Button variant="tertiary">Avbryt</Button>
-              <Button colorScheme="red">Godkjenn</Button>
-            </ButtonGroup>
-          </PopoverFooter>
-        </PopoverContent>
-      </KvibPopover>
-    </>
-  );
-};
-
-export const PopoverControlled: Story = {
-  render: args => <ControlledUsage {...args} />,
-};
-
-const WithPopoverAnchor = ({ ...args }) => {
-  const [isEditing, setIsEditing] = useBoolean();
-  const [color, setColor] = useState("red");
-
-  return (
-    <KvibPopover
-      {...args}
-      isOpen={isEditing}
-      onOpen={setIsEditing.on}
-      onClose={setIsEditing.off}
-      closeOnBlur={false}
-      isLazy
-      lazyBehavior="keepMounted"
-    >
-      <FormLabel htmlFor="anchor text">Prøv å redigere teksten</FormLabel>
-      <HStack>
-        <PopoverAnchor>
-          <Input
-            id="anchor text"
-            color={color}
-            w="auto"
-            display="inline-flex"
-            isDisabled={!isEditing}
-            defaultValue="Popover Anchor"
-          />
-        </PopoverAnchor>
-
-        <PopoverTrigger>
-          <Button h="40px" colorScheme="blue">
-            {isEditing ? "Lagre" : "Rediger"}
-          </Button>
-        </PopoverTrigger>
-      </HStack>
-
-      <PopoverContent>
-        <PopoverBody>
-          Farger:
-          <RadioGroup value={color} onChange={newColor => setColor(newColor)}>
-            <Stack direction="row">
-              <Radio value="red">rød</Radio>
-              <Radio value="blue">blå</Radio>
-              <Radio value="green">grønn</Radio>
-              <Radio value="purple">lilla</Radio>
-            </Stack>
-          </RadioGroup>
-        </PopoverBody>
-      </PopoverContent>
-    </KvibPopover>
-  );
-};
-
-export const PopoverAnchorExample: Story = {
-  render: args => <WithPopoverAnchor {...args} />,
-};
-
-export const PopoverCustomizing: Story = {
-  render: args => (
-    <Box h="40">
-      <KvibPopover {...args}>
-        <PopoverTrigger>
-          <Box tabIndex={0} role="button" aria-label="Some box" p={5} w="120px" bg="gray.300" children="Klikk her" />
-        </PopoverTrigger>
-        <PopoverContent bg="tomato" color="white">
-          <PopoverHeader fontWeight="semibold">Tilpasning</PopoverHeader>
-          <PopoverArrow bg="pink.500" />
-          <PopoverCloseButton bg="purple.500" />
-          <PopoverBody>Tadaa!! Farge og bakgrunn er endret. Sjekk ut props på hvert komponent.</PopoverBody>
-        </PopoverContent>
-      </KvibPopover>
-    </Box>
+    </Popover>
   ),
 };

@@ -1,18 +1,14 @@
 export {
-  Drawer,
+  DrawerRoot as Drawer,
+  DrawerBackdrop,
   DrawerBody,
+  DrawerCloseTrigger,
+  DrawerContent,
   DrawerFooter,
   DrawerHeader,
-  DrawerOverlay,
-  DrawerContent,
-  DrawerCloseButton,
-} from "@chakra-ui/react";
-export type {
-  DrawerProps,
-  ModalBodyProps,
-  ModalFooterProps,
-  ModalHeaderProps,
-  ModalOverlayProps,
-  DrawerContentProps,
-  CloseButtonProps,
-} from "@chakra-ui/react";
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
+export { DrawerPositioner, Drawer as KvibDrawer } from "@chakra-ui/react";
+
+export type { DrawerRootProps as DrawerProps } from "@chakra-ui/react";

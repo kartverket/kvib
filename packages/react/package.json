@@ -8,7 +8,9 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup src/index.ts --dts --treeshake --format esm,cjs"
+    "build": "tsup src/index.ts --dts --treeshake --format esm,cjs",
+    "codegen": "chakra snippet add",
+    "typegen": "chakra typegen ./src/theme/index.ts"
   },
   "sideEffects": false,
   "license": "MIT",
@@ -19,7 +21,8 @@
     "directory": "packages/react"
   },
   "devDependencies": {
-    "@types/react": "^18.2.66",
+    "@chakra-ui/cli": "^3.2.0",
+    "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -31,19 +34,18 @@
     "react-dom": "^18.2.0"
   },
   "dependencies": {
-    "@chakra-ui/layout": "^2.3.1",
-    "@chakra-ui/react": "^2.10.3",
-    "@chakra-ui/react-use-size": "^2.1.0",
-    "@chakra-ui/skip-nav": "^2.0.15",
-    "@emotion/react": "^11.11.4",
-    "@emotion/styled": "^11.10.6",
+    "@chakra-ui/react": "^3.2.0",
+    "@emotion/react": "^11.13.5",
     "@fontsource/mulish": "^5.0.17",
-    "chakra-react-select": "^5.0.1",
     "date-fns": "^4.1.0",
-    "material-symbols": "^0.25.1",
+    "material-symbols": "^0.27.0",
+    "next-themes": "^0.4.3",
     "react-aria": "^3.35.1",
-    "react-day-picker": "^9.2.1",
-    "react-stately": "^3.32.1"
+    "react-day-picker": "^9.3.2",
+    "react-icons": "^5.3.0",
+    "react-select": "^5.8.3",
+    "react-stately": "^3.32.1",
+    "usehooks-ts": "^3.1.0"
   },
   "lint-staged": {
     "*.{ts,tsx,md}": "prettier --write"

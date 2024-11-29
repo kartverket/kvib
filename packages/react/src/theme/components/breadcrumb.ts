@@ -1,31 +1,37 @@
-import { createMultiStyleConfigHelpers } from "@chakra-ui/styled-system";
-import { breadcrumbAnatomy as parts } from "@chakra-ui/anatomy";
-import { borders, colors } from "../tokens";
+import { defineSlotRecipe } from "@chakra-ui/react";
+import { breadcrumbAnatomy } from "@chakra-ui/react/anatomy";
 
-// This function creates a set of function that helps us create multipart component styles.
-const helpers = createMultiStyleConfigHelpers(parts.keys);
-
-export const breadcrumbTheme = helpers.defineMultiStyleConfig({
-  baseStyle: ({ colorScheme }) => ({
+export const breadcrumbTheme = defineSlotRecipe({
+  slots: breadcrumbAnatomy.keys(),
+  base: {
     link: {
       "&:not([aria-current=page])": {
-        color: `${colorScheme}.500`,
-        textDecoration: "underline",
+        color: "colorPalette.500 !important",
+        textDecoration: "underline !important",
         _focusVisible: {
-          outline: borders["2px"],
-          borderRadius: "1px",
-          outlineColor: colors.blue[600],
-          boxShadow: "none",
+          outline: "{borders.2px} !important",
+          borderRadius: "1px !important",
+          outlineColor: "blue.600 !important",
+          boxShadow: "none !important",
         },
         _active: {
-          color: `${colorScheme}.600`,
-          textDecoration: "underline",
+          color: "colorPalette.600 !important",
+          textDecoration: "underline !important",
         },
         _hover: {
-          color: `${colorScheme}.400`,
-          textDecoration: "none",
+          color: "colorPalette.400 !important",
+          textDecoration: "none !important",
         },
       },
     },
-  }),
+  },
+  variants: {
+    variant: {
+      plain: {
+        link: {
+          textDecoration: "none !important",
+        },
+      },
+    },
+  },
 });

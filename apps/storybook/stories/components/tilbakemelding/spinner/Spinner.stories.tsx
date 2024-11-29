@@ -1,4 +1,4 @@
-import { Spinner as KvibSpinner, Stack as KvibStack } from "@kvib/react/src";
+import { Spinner as KvibSpinner, Stack as KvibStack } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibSpinner> = {

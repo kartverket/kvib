@@ -1,4 +1,4 @@
-import { Box, Code, Text } from "@kvib/react/src/";
+import { Box, Code, Text } from "@kvib/react";
 import { Canvas, Controls, Meta } from "@storybook/blocks";
 import { DocsAnatomy, DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
 import * as AccordionStories from "./Accordion.stories";
@@ -18,18 +18,6 @@ import * as AccordionStories from "./Accordion.stories";
 ```jsx
 import { Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon } from "@kvib/react";
 ```
-
-<DocsStory
-  title="Eksempel for allowMultiple"
-  description={""}
-  story={<Canvas of={AccordionStories.AccordionAllowMultiple} sourceState="hidden" />}
-/>
-
-<DocsStory
-  title="Eksempel for reduceMotion"
-  description={""}
-  story={<Canvas of={AccordionStories.AccordionReduceMotion} sourceState="hidden" />}
-/>
 
 <DocsStory
   isVertical

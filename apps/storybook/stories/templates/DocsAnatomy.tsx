@@ -1,4 +1,4 @@
-import { Image } from "@kvib/react/src";
+import { Image } from "@kvib/react";
 
 type DocsAnatomyProps = {
   imgPath: string;

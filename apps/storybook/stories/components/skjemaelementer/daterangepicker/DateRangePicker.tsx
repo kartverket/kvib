@@ -1,4 +1,4 @@
-import { Link, Text } from "@kvib/react/src";
+import { Link, Text } from "@kvib/react";
 import { Dokumentasjonsside } from "../../../documentation/utils/Dokumentasjonsside";
 import { Liste } from "../../../documentation/utils/Liste";
 import { Listeelement } from "../../../documentation/utils/Listeelement";
@@ -33,7 +33,7 @@ export const DateRangePicker = () => (
         href="https://daypicker.dev/docs/selection-modes#range-mode"
         target="_blank"
         rel="noopener noreferrer"
-        isExternal={false}
+        external={false}
       >
         React Daypicker
       </Link>{" "}

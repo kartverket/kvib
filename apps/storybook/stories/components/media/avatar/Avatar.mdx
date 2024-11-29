@@ -1,4 +1,4 @@
-import { List, ListItem, Text } from "@kvib/react/src";
+import { List, ListItem, Text } from "@kvib/react";
 import { Canvas, Controls, Meta } from "@storybook/blocks";
 import { DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
 import * as AvatarStories from "./Avatar.stories";
@@ -17,56 +17,8 @@ Avatar brukes til å representere brukere. Den viser frem profilbilde, initialer
 import { Avatar, AvatarAvatar, AvatarGroup } from "@kvib/react";
 ```
 
-<Feedback component="Avatar" />
-
-<DocsStory
-  title="Fallback Avatar"
-  description={
-    <>
-      <Text>Det er to fallbacks dersom det er en error når avataren skal lastes:</Text>
-      <ul>
-        <li>
-          Dersom Avataren har proppen <code>name</code>, vil initialene vises.
-        </li>
-        <li>
-          Dersom Avataren ikke har <code>name</code>, vil default-avataren vises.
-        </li>
-      </ul>
-    </>
-  }
-  story={<Canvas of={AvatarStories.AvatarFallback} sourceState="hidden" />}
-/>
-
-<DocsStory
-  isVertical
-  title="Størrelser"
-  description={
-    <Text>
-      Bruk <code>size</code> prop for å endre på Avatar størrelsen.
-    </Text>
-  }
-  story={<Canvas of={AvatarStories.AvatarSizes} sourceState="hidden" />}
-/>
-
-<DocsStory
-  title="Avatar med badge"
-  description={
-    <Text>
-      <code>AvatarBadge</code> kan brukes for å sette på status ikon på <code>Avatar</code>.
-    </Text>
-  }
-  story={<Canvas of={AvatarStories.AvatarBadge} sourceState="hidden" />}
-/>
-
-<DocsStory
-  title="Avatar gruppering"
-  description={
-    <Text>
-      <code>Avatar</code> kan grupperes ved å bruke <code>AvatarGroup</code>.
-    </Text>
-  }
-  story={<Canvas of={AvatarStories.AvatarGrouping} sourceState="hidden" />}
-/>
+<br/>
+<br/>
 
 <DocsStory
   isVertical

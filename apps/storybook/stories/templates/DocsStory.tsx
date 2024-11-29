@@ -1,4 +1,4 @@
-import { Box, Heading, SimpleGrid, Text } from "@kvib/react/src";
+import { Box, Heading, SimpleGrid, Text } from "@kvib/react";
 
 type DocsStoryProps = {
   title: string;
@@ -9,7 +9,7 @@ type DocsStoryProps = {
 
 export const DocsStory = ({ title, description, story, isVertical }: DocsStoryProps) => {
   return (
-    <SimpleGrid columns={[1, 1, isVertical ? 1 : 2]} spacing={[0, 0, isVertical ? 0 : "2rem"]}>
+    <SimpleGrid columns={[1, 1, isVertical ? 1 : 2]} gap={[0, 0, isVertical ? 0 : "2rem"]}>
       <Box>
         {title !== "" && (
           <Heading mt="25px" size="md" as="h3" id={title}>

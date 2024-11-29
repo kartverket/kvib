@@ -1,4 +1,4 @@
-import { Text } from "@kvib/react/src/";
+import { Text } from "@kvib/react";
 import { Canvas, Controls, Meta, Story } from "@storybook/blocks";
 import { DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates/";
 import * as BadgeStories from "./Badge.stories";
@@ -28,23 +28,6 @@ import { Badge } from "@kvib/react";
 </DocsContainer>
 
 <DocsContainer>
-    <DocsStory
-        title="Beskrivelse"
-        description="Badge skal inneholde en kort tekst som beskrivelse."
-        story={<Canvas of={BadgeStories.BadgeTexts} />}
-    />
-
-    <DocsStory
-        title="Hensikt"
-        description="Hensikten med Badge kan forsterkes med farge og varianter.
-        Sterkere farger fanger blikket til brukeren og vil automatisk bli oppfattet som viktig.
-        Derfor rangerer vi variantene solid, subtle og outline fra viktigst til mindre viktig."
-        story={
-            <Canvas>
-                <Story of={BadgeStories.BadgeCard}/>
-            </Canvas>
-        }
-    />
 
 <DocsHeading light>Retningslinjer</DocsHeading>
 

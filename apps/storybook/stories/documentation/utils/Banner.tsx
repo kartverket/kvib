@@ -1,4 +1,4 @@
-import { Card, CardBody, Text } from "@kvib/react/src";
+import { Card, CardBody, Text } from "@kvib/react";
 
 type BannerProps = {
   children: React.ReactNode;
@@ -6,24 +6,8 @@ type BannerProps = {
 
 export const Banner = ({ children }: BannerProps) => {
   return (
-    <Card
-      variant="unstyled"
-      backgroundSize="contain"
-      backgroundPosition="top"
-      backgroundRepeat="no-repeat"
-      backgroundImage="assets/banner-green.svg"
-      backgroundColor="green.500"
-      marginBottom="1rem"
-      padding="3rem"
-      className="frontpage-banner"
-    >
-      <CardBody
-        display="flex"
-        flexDirection="column"
-        justifyContent="center"
-        width={["100%", "80%", "45%"]}
-        margin="2rem 0 6rem 0"
-      >
+    <Card variant="subtle" bg="green.500" mb="1rem" p="3rem" className="frontpage-banner">
+      <CardBody display="flex" flexDirection="column" justifyContent="center" m="2rem 0 6rem 0">
         <Text color="white" fontSize="3xl" fontWeight="bold" marginTop="0" marginBottom="1rem">
           Alt du trenger på ett sted
         </Text>

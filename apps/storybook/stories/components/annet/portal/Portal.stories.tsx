@@ -1,4 +1,4 @@
-import { Box, Portal as KvibPortal } from "@kvib/react/src";
+import { Box, Portal as KvibPortal, PortalProps, Text } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 import { useRef } from "react";
 
@@ -35,70 +35,21 @@ export default meta;
 type Story = StoryObj<typeof KvibPortal>;
 
 export const Preview: Story = {
-  render: args => (
-    <Box bg="green.500" color="white">
-      Dette er en Box
-      <PortalNestedExample {...args} />
-    </Box>
-  ),
-};
-
-const PortalCustomExample = ({ ...args }) => {
-  const ref = useRef<HTMLDivElement | null>(null);
-
-  return (
-    <Box bg="green.500" color="white">
-      Dette er en box
-      <KvibPortal {...args} containerRef={ref}>
-        Portal: Denne teksten er portaled til den blå boksen!
-      </KvibPortal>
-      <Box ref={ref} bg="blue.400">
-        <div>Container: Hei</div>
-      </Box>
-    </Box>
-  );
-};
-
-export const PortalCustom: Story = {
-  render: args => <PortalCustomExample {...args} />,
+  render: (args: PortalProps) => <PortalNestedExample {...args} />,
 };
 
 export const PortalNestedExample = ({ ...args }) => {
   const ref = useRef(null);
   return (
-    <div>
-      <KvibPortal {...args} containerRef={ref}>
-        <Box bg="green.500" color="white">
-          Parent: Hei, velkommen
-          <KvibPortal {...args}>Child: Jeg er festet til min parent portal</KvibPortal>
+    <>
+      <KvibPortal {...args} containerRef={ref} asChild>
+        <Box bg="green.500" color="white" w="12rem" h="4rem">
+          <Text>Parent: Hei, velkommen</Text>
         </Box>
       </KvibPortal>
-      <Box bg="red.500" color="white" ref={ref} />
-    </div>
+      <Box bg="red.500" color="white" ref={ref} w="12rem" h="4rem">
+        <Text>Hei, velkommen</Text>
+      </Box>
+    </>
   );
-};
-
-export const PortalNested: Story = {
-  render: args => <PortalNestedExample {...args} />,
-};
-
-function PortalNotAppendedExample({ ...args }) {
-  const ref = useRef(null);
-  return (
-    <div>
-      <KvibPortal {...args} containerRef={ref}>
-        <Box bg="green.500" color="white">
-          Parent: Hei, velkommen
-          <KvibPortal {...args} appendToParentPortal={false}>
-            Child: Jeg går til document.body
-          </KvibPortal>
-        </Box>
-      </KvibPortal>
-      <div style={{ background: "red" }} ref={ref} />
-    </div>
-  );
-}
-
-export const PortalNotAppended: Story = {
-  render: args => <PortalNotAppendedExample {...args} />,
 };

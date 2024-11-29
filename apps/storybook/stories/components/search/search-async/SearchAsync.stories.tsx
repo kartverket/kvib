@@ -1,12 +1,4 @@
-import {
-  Badge,
-  Box,
-  Icon,
-  SearchAsync as KvibSearchAsync,
-  Stack as KvibStack,
-  SearchAsyncProps,
-  Text,
-} from "@kvib/react/src";
+import { SearchAsync as KvibSearchAsync } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibSearchAsync> = {
@@ -56,7 +48,7 @@ const meta: Meta<typeof KvibSearchAsync> = {
       },
       control: "text",
     },
-    isClearable: {
+    clearable: {
       table: {
         type: { summary: "boolean" },
       },
@@ -95,7 +87,7 @@ const meta: Meta<typeof KvibSearchAsync> = {
       },
       control: "text",
     },
-    isMulti: {
+    multi: {
       table: {
         type: { summary: "boolean" },
         defualtValue: { summary: "false" },
@@ -114,7 +106,7 @@ const meta: Meta<typeof KvibSearchAsync> = {
       },
       control: "text",
     },
-    isDisabled: {
+    disabled: {
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
@@ -152,207 +144,6 @@ export const Preview: Story = {
       },
     },
   },
-  args: {
-    placeholder: "Søk i resultater asynkront...",
-  },
-  render: args => (
-    <Box w="100%">
-      <KvibSearchAsync {...args} />
-    </Box>
-  ),
-};
 
-const fruits: Fruit[] = [
-  { label: "Eple", value: "eple" },
-  { label: "Banan", value: "banan" },
-  { label: "Kirsebær", value: "kirsebær" },
-  { label: "Pære", value: "pære" },
-  { label: "Svarthyll", value: "svarthyll" },
-  { label: "Mango", value: "mango" },
-  { label: "Ananas", value: "ananas" },
-  { label: "Kiwi", value: "kiwi" },
-  { label: "Papaya", value: "papaya" },
-  { label: "Blåbær", value: "blåbær" },
-  { label: "Jordbær", value: "jordbær" },
-  { label: "Appelsin", value: "appelsin" },
-  { label: "Druer", value: "druer" },
-  { label: "Sitron", value: "sitron" },
-  { label: "Melon", value: "melon" },
-];
-
-const mockLoadOptions = (inputValue: string, callback: (options: typeof fruits) => void) => {
-  setTimeout(() => {
-    const filteredFruits = fruits.filter(fruit => fruit.label.toLowerCase().includes(inputValue.toLowerCase()));
-    callback(filteredFruits);
-  }, 500);
-};
-
-const handleChange = (selectedOption: any) => {
-  console.log("Selected Option:", selectedOption);
-};
-
-export const SearchAsyncResults: Story = {
-  args: {
-    loadOptions: mockLoadOptions,
-    onChange: handleChange,
-    placeholder: "Søk etter frukt...",
-    isMulti: false,
-  },
-  render: (args: SearchAsyncProps<Fruit>) => (
-    <Box h="20rem">
-      <KvibSearchAsync {...args} />
-    </Box>
-  ),
-};
-
-const boldAndBadgeLabelFormatter = (data: Fruit) => {
-  return (
-    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", width: "100%" }}>
-      <b>{data.label}</b>
-      {data.label === "Kiwi" ? <Badge>Frukt (ekkel)</Badge> : <Badge>Frukt</Badge>}
-    </div>
-  );
-};
-
-export const SearchAsyncResultsFormatted: Story = {
-  args: {
-    loadOptions: mockLoadOptions,
-    onChange: handleChange,
-    optionLabelFormatter: boldAndBadgeLabelFormatter,
-    placeholder: "Søk etter frukt...",
-    isMulti: false,
-  },
-  render: (args: SearchAsyncProps<Fruit>) => (
-    <Box h="20rem">
-      <KvibSearchAsync {...args} />
-    </Box>
-  ),
-};
-
-const mockLoadOptionsWithRule = (inputValue: string, callback: (options: typeof fruits) => void) => {
-  if (inputValue.length <= 2) {
-    callback([]);
-    return;
-  }
-  setTimeout(() => {
-    const filteredFruits = fruits.filter(fruit => fruit.label.toLowerCase().includes(inputValue.toLowerCase()));
-    callback(filteredFruits);
-  }, 500);
-};
-
-const noOptionsMessage = ({ inputValue }: { inputValue: string }) => {
-  if (inputValue.length > 0) {
-    if (inputValue.length <= 2) {
-      return <Text>Søket må inneholde minst 3 tegn</Text>;
-    } else {
-      return <Text>Fant ingen resultater</Text>;
-    }
-  }
-  return null;
-};
-
-export const SearchAsyncNoOptions: Story = {
-  args: {
-    loadOptions: mockLoadOptionsWithRule,
-    onChange: handleChange,
-    noOptionsMessage: noOptionsMessage,
-    placeholder: "Søk etter frukt...",
-    isMulti: false,
-  },
-  render: args => (
-    <Box h={40}>
-      <KvibSearchAsync {...args} />
-    </Box>
-  ),
-};
-
-export const SearchAsyncResultsDebounce: Story = {
-  args: {
-    loadOptions: mockLoadOptions,
-    onChange: handleChange,
-    debounceTime: 3000,
-    placeholder: "Søk etter frukt...",
-  },
-  render: args => (
-    <Box h={40}>
-      <KvibSearchAsync {...args} />
-    </Box>
-  ),
-};
-
-export const SearchAsyncDropdown: Story = {
-  args: {
-    loadOptions: mockLoadOptions,
-    onChange: handleChange,
-    dropdownIndicator: <Icon icon="expand_more" weight={400} />,
-    defaultOptions: true,
-    placeholder: "Søk eller velg frukt...",
-  },
-  render: args => (
-    <Box h="20rem">
-      <KvibSearchAsync {...args} />
-    </Box>
-  ),
-};
-
-const handleChangeMulti = (newValue: any, actionMeta: any) => {
-  console.log("Changed value:", newValue);
-  console.log("Action:", actionMeta);
-};
-
-export const SearchAsyncMulti: Story = {
-  args: { loadOptions: mockLoadOptions, onChange: handleChangeMulti, isMulti: true, placeholder: "Søk etter frukt..." },
-  render: args => (
-    <Box h={40}>
-      <KvibSearchAsync {...args} />
-    </Box>
-  ),
-};
-
-export const SearchAsyncMultiDropdown: Story = {
-  args: {
-    loadOptions: mockLoadOptions,
-    onChange: handleChangeMulti,
-    isMulti: true,
-    dropdownIndicator: <Icon icon="expand_more" weight={400} />,
-    defaultOptions: true,
-    placeholder: "Søk eller velg frukt...",
-  },
-  render: args => (
-    <Box h="20rem">
-      <KvibSearchAsync {...args} />
-    </Box>
-  ),
-};
-
-export const SearchAsyncSizes: Story = {
-  args: {
-    loadOptions: mockLoadOptions,
-    onChange: handleChange,
-    placeholder: "Søk etter frukt...",
-  },
-  render: args => (
-    <KvibStack>
-      <KvibSearchAsync {...args} size="sm" />
-      <KvibSearchAsync {...args} size="md" />
-      <KvibSearchAsync {...args} size="lg" />
-    </KvibStack>
-  ),
-};
-
-export const SearchAsyncVariants: Story = {
-  args: {
-    loadOptions: mockLoadOptions,
-    onChange: handleChange,
-    placeholder: "Søk etter frukt...",
-    focusBorderColor: "green.500",
-  },
-  render: args => (
-    <KvibStack h={"12rem"}>
-      <KvibSearchAsync {...args} variant="outline" />
-      <KvibSearchAsync {...args} variant="filled" />
-      <KvibSearchAsync {...args} variant="flushed" />
-      <KvibSearchAsync {...args} variant="unstyled" />
-    </KvibStack>
-  ),
+  render: args => <KvibSearchAsync {...args} />,
 };

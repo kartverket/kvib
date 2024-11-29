@@ -1,12 +1,12 @@
-import { defineStyleConfig } from "@chakra-ui/react";
+import { defineSlotRecipe } from "@chakra-ui/react";
+import { switchAnatomy } from "@chakra-ui/react/anatomy";
 
-export const switchTheme = defineStyleConfig({
-  baseStyle: ({ colorScheme }) => ({
-    track: {
-      bg: "gray.300", // Border color when unchecked
-      _checked: {
-        bg: `${colorScheme}.500`,
-      },
+export const switchTheme = defineSlotRecipe({
+  className: "kvib-switch",
+  slots: switchAnatomy.keys(),
+  base: {
+    root: {
+      colorPalette: "green",
     },
-  }),
+  },
 });

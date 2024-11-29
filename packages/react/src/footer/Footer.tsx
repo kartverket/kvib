@@ -1,4 +1,7 @@
-import { Box, Divider, Flex, FlexProps, Heading, Link, Logo, Text } from "@kvib/react/src";
+import { Box, Flex, FlexProps } from "@/layout";
+import { Logo } from "@/logo";
+import { Separator } from "@/separator";
+import { Heading, Link, Text } from "@/typography";
 
 export type FooterProps = {
   accessibilityUrl?: string;
@@ -145,7 +148,7 @@ export const Footer = ({
             </FooterToggleableFlex>
           </Flex>
         </Flex>
-        <Divider opacity="1" borderColor="gray.400" />
+        <Separator opacity="1" borderColor="gray.400" />
         <Flex align="center" justify="space-between" gap={10} flexWrap="wrap">
           {excludeSocialMedia ? (
             <Box></Box>

@@ -1,13 +1,12 @@
-import { Card, CardBody } from "@kvib/react/src";
+
 import { Canvas, Controls, Meta, Source, Story } from "@storybook/blocks";
 import * as PortalStories from "./Portal.stories";
-import * as PortalStrings from "./srcStrings";
 
 <Meta of={PortalStories} />
 
 # Portal
 
-Portal er et komponent som kan bli rendered på utsiden av det nåværende DOM hierarkiet.
+Portal bruker ReactDOM.createPortal-APIet for å legge til et element på slutten av document.body eller en spesifikk container.
 
 ## Ta i bruk
 
@@ -19,33 +18,3 @@ import { Portal } from "@kvib/react";
 
 <Canvas of={PortalStories.Preview} />
 <Controls of={PortalStories.Preview} />
-
-## Egendefinert container
-
-<Card variant="outline" borderRadius="0">
-  <CardBody>
-    <Story of={PortalStories.PortalCustom} />
-  </CardBody>
-</Card>
-
-<Source code={PortalStrings.PortalCustomString} dark />
-
-## Nested Portal
-
-<Card variant="outline" borderRadius="0">
-  <CardBody>
-    <Story of={PortalStories.PortalNested} />
-  </CardBody>
-</Card>
-
-<Source code={PortalStrings.PortalNestedString} dark />
-
-## Separert nested portal
-
-<Card variant="outline" borderRadius="0">
-  <CardBody>
-    <Story of={PortalStories.PortalNotAppended} />
-  </CardBody>
-</Card>
-
-<Source code={PortalStrings.PortalNotAppendedString} dark />

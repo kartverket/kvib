@@ -1,18 +1,7 @@
-export {
-  Input,
-  InputGroup,
-  InputAddon,
-  InputLeftAddon,
-  InputRightAddon,
-  InputLeftElement,
-  InputRightElement,
-} from "@chakra-ui/react";
-export type {
-  InputProps,
-  InputGroupProps,
-  InputAddonProps,
-  InputLeftAddonProps,
-  InputRightAddonProps,
-  InputLeftElementProps,
-  InputRightElementProps,
-} from "@chakra-ui/react";
+export { InputGroup } from "@/components/ui/input-group";
+export { InputAddon, InputElement } from "@chakra-ui/react";
+export { Input } from "./Input";
+export type { InputProps } from "./Input";
+
+export type { InputGroupProps } from "@/components/ui/input-group";
+export type { InputAddonProps, InputElementProps } from "@chakra-ui/react";

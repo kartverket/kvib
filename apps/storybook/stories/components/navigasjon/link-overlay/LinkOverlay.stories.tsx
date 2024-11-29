@@ -4,7 +4,8 @@ import {
   LinkBox as KvibLinkBox,
   LinkOverlay as KvibLinkOverlay,
   Text as KvibText,
-} from "@kvib/react/src";
+  Link,
+} from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibLinkOverlay> = {
@@ -14,16 +15,6 @@ const meta: Meta<typeof KvibLinkOverlay> = {
     docs: {
       story: { inline: true },
       canvas: { sourceState: "shown" },
-    },
-  },
-  argTypes: {
-    isExternal: {
-      description: "If true, the link will open in new tab",
-      table: {
-        type: { summary: "Boolean" },
-        defaultValue: { summary: "false" },
-      },
-      control: "boolean",
     },
   },
 };
@@ -57,9 +48,7 @@ export const LinkOverlayNested: Story = {
         Bær- og soppsesongen er i full gang til skogs og fjells. Last ned Kartverkets gratis mobil-app "Hvor?", så vet
         du hvor du er.
       </KvibText>
-      <KvibBox as="a" color="green" href="#" fontWeight="bold">
-        En ekstra link
-      </KvibBox>
+      <Link href="#">En ekstra link</Link>
     </KvibLinkBox>
   ),
 };

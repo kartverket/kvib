@@ -1,0 +1,21 @@
+import { Canvas, Controls, Meta, Source, Story } from "@storybook/blocks";
+import { DocsAnatomy, DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
+import * as ToastStories from "./Toaster.stories";
+
+<Meta of={ToastStories} />
+
+<DocsContainer>
+
+# Toaster
+
+Toast brukes for å gi brukeren tilbakemelding etter en handling. Toast skal forsvinne enten når den blir lukket,
+eller av seg selv etterhvert. Flere toasts kan være på skjermen samtidig.
+
+På [Chakra-ui.com](https://chakra-ui.com/docs/components/toast) finner du noen niche brukseksempler.
+
+
+## Props
+
+<Canvas of={ToastStories.Preview} />
+<Controls of={ToastStories.Preview} />
+</DocsContainer>

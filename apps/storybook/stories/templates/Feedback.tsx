@@ -1,4 +1,4 @@
-import { Card, CardBody, Flex, Link, Text } from "@kvib/react/src";
+import { Card, CardBody, Flex, Link, Text } from "@kvib/react";
 
 type FeedbackProps = {
   component: string;
@@ -10,7 +10,7 @@ export const Feedback = ({ component, width }: FeedbackProps) => {
 
   return (
     <Card
-      variant="unstyled"
+      unstyled
       backgroundColor="green.50"
       width={width || ["fit-content", "fit-content", "auto"]}
       margin={"2rem 0"}
@@ -33,7 +33,7 @@ export const Feedback = ({ component, width }: FeedbackProps) => {
           <Link href={issueUrl} target="_blank" size="xs">
             Send inn et forslag
           </Link>
-          <Link href="/?path=/docs/for-utviklere-bidra-med-kode-hurtigveiledning--docs" colorScheme="green" size="xs">
+          <Link href="/?path=/docs/for-utviklere-bidra-med-kode-hurtigveiledning--docs" size="xs">
             Bidra med PR
           </Link>
         </Flex>

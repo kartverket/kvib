@@ -1,21 +1,17 @@
-import {
-  Center,
-  Button as ChakraButton,
-  ButtonProps as ChakraButtonProps,
-  HStack,
-  Spinner,
-  forwardRef,
-} from "@chakra-ui/react";
+import { Button as ChakraButton, ButtonProps as ChakraButtonProps } from "@/components/ui/button";
+import { Center, HStack, Spinner } from "@chakra-ui/react";
 import { MaterialSymbol } from "material-symbols";
+import { forwardRef } from "react";
 import { Icon } from "../icon";
 
-export type ButtonProps = Omit<
-  ChakraButtonProps,
-  "variant" | "colorScheme" | "leftIcon" | "rightIcon" | "iconSpacing" | "isActive" | "loadingText" | "spinnerPlacement"
-> & {
+export type ButtonProps = Omit<ChakraButtonProps, "colorPalette" | "variant"> & {
+  /** The variants of the component
+   * @default solid */
+  variant?: "solid" | "subtle" | "surface" | "outline" | "ghost" | "plain";
+
   /**The visual color appearance of the component
    * @default green*/
-  colorScheme?: "green" | "blue" | "gray" | "red";
+  colorPalette?: "green" | "blue" | "gray" | "red";
 
   /**If added, the button will show an icon before the button's label.*/
   leftIcon?: MaterialSymbol;
@@ -27,41 +23,25 @@ export type ButtonProps = Omit<
    * @default false */
   iconFill?: boolean;
 
-  variant?: "primary" | "secondary" | "tertiary" | "ghost";
-
   /**Decides whether a screen reader will vocalize the icon name or not */
   iconAriaIsHidden?: boolean;
 };
 
-export const Button = forwardRef<ButtonProps, "button">(
-  ({ children, iconFill, isDisabled, isLoading, leftIcon, rightIcon, iconAriaIsHidden, ...props }, ref) => {
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ children, iconFill, disabled, loading, leftIcon, rightIcon, iconAriaIsHidden, ...props }, ref) => {
     return (
-      <ChakraButton {...props} ref={ref} isDisabled={isDisabled || isLoading} aria-busy={isLoading}>
-        {isLoading && (
+      <ChakraButton {...props} ref={ref} disabled={disabled || loading} aria-busy={loading}>
+        {loading && (
           <Center position="absolute" right="0" left="0">
-            <Spinner size="sm" />
+            <Spinner />
           </Center>
         )}
-        <HStack spacing={1} visibility={isLoading ? "hidden" : "visible"}>
-          {leftIcon && (
-            <Icon
-              icon={leftIcon}
-              ariaIsHidden={iconAriaIsHidden}
-              isFilled={iconFill}
-              size={props.size === "xs" || props.size === "sm" ? 20 : 24}
-            />
-          )}
+        <HStack gap={1} visibility={loading ? "hidden" : "visible"}>
+          {leftIcon && <Icon icon={leftIcon} ariaIsHidden={iconAriaIsHidden} filled={iconFill} />}
           <Center className="text" as="span">
             {children}
           </Center>
-          {rightIcon && (
-            <Icon
-              icon={rightIcon}
-              ariaIsHidden={iconAriaIsHidden}
-              isFilled={iconFill}
-              size={props.size === "xs" || props.size === "sm" ? 20 : 24}
-            />
-          )}
+          {rightIcon && <Icon icon={rightIcon} ariaIsHidden={iconAriaIsHidden} filled={iconFill} />}
         </HStack>
       </ChakraButton>
     );

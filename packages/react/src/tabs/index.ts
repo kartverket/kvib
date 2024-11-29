@@ -1,3 +1,19 @@
-export * from "./Tabs";
-export { Tab, TabList, TabPanel, TabPanels } from "@chakra-ui/react";
-export type { TabProps, TabListProps, TabPanelProps, TabPanelsProps } from "@chakra-ui/react";
+export {
+  Tabs as KvibTabs,
+  TabsRoot as Tabs,
+  TabsContent,
+  TabsContentGroup,
+  TabsContext,
+  TabsIndicator,
+  TabsList,
+  TabsTrigger,
+} from "@chakra-ui/react";
+
+export type {
+  TabsContentGroupProps,
+  TabsContentProps,
+  TabsIndicatorProps,
+  TabsListProps,
+  TabsRootProps as TabsProps,
+  TabsTriggerProps,
+} from "@chakra-ui/react";

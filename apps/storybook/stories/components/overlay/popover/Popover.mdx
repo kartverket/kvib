@@ -1,8 +1,7 @@
-import { Card, CardBody } from "@kvib/react/src";
+import { Card, CardBody } from "@kvib/react";
 import { Canvas, Controls, Meta, Source, Story } from "@storybook/blocks";
 import { DocsAnatomy, DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
 import * as PopoverStories from "./Popover.stories";
-import * as PopoverStrings from "./srcStrings.ts";
 
 <Meta of={PopoverStories} />
 
@@ -12,69 +11,6 @@ import * as PopoverStrings from "./srcStrings.ts";
 
 Popover er en dialog som flyter rundt en trigger.
 
-```jsx
-import {
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
-  PopoverHeader,
-  PopoverBody,
-  PopoverFooter,
-  PopoverArrow,
-  PopoverCloseButton,
-  PopoverAnchor,
-} from "@kvib/react";
-```
-
-<Feedback component="Popover" />
-
-<DocsHeading light children="Fokus på element når Popover åpnes" />
-<Card variant="outline" borderRadius="0">
-  <CardBody>
-    <Story of={PopoverStories.PopoverFocus} />
-  </CardBody>
-</Card>
-
-<Source code={PopoverStrings.PopoverFocusString} dark />
-
-<DocsHeading light children="Fange fokus i Popover" />
-
-Hvis Popover har en form, vil du kanskje fange fokus inne i Popoveren og lukke den når brukeren er ferdig og trykker på "Lagre".
-Bruk `react-focus-lock` for å fange fokus inne i `PopoveContent`
-
-<Card variant="outline" borderRadius="0">
-  <CardBody>
-    <Story of={PopoverStories.PopoverTrappingFocus} />
-  </CardBody>
-</Card>
-
-<Source code={PopoverStrings.PopoverTrappingFocusString} dark />
-
-<DocsHeading light children="Kontrollert bruk" />
-
-<Card variant="outline" borderRadius="0">
-  <CardBody>
-    <Story of={PopoverStories.PopoverControlled} />
-  </CardBody>
-</Card>
-
-<Source code={PopoverStrings.PopoverControlledString} dark />
-
-<DocsHeading light children="Popover Anchor" />
-
-<Card variant="outline" borderRadius="0">
-  <CardBody>
-    <Story of={PopoverStories.PopoverAnchorExample} />
-  </CardBody>
-</Card>
-
-<Source code={PopoverStrings.PopoverAnchorString} dark />
-
-<DocsStory
-  title="Tilpasse stil"
-  description={""}
-  story={<Canvas of={PopoverStories.PopoverCustomizing} sourceState="hidden" />}
-/>
 
 <DocsHeading light children="Props"/>
 <Canvas of={PopoverStories.Preview} />

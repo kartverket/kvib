@@ -1,4 +1,4 @@
-import { Box, Code, Text } from "@kvib/react/src/";
+import { Box, Code, Text } from "@kvib/react";
 import { Canvas, Controls, Meta, Story } from "@storybook/blocks";
 import { DocsAnatomy, DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
 import * as SelectStories from "./Select.stories";
@@ -26,42 +26,6 @@ import { Select } from "@kvib/react";
 - Å velge flere alternativ
 - Færre enn 7 alternativer
 
-<Feedback component="Select" />
-
-</DocsContainer>
-
-<DocsContainer>
-
-<DocsStory
-  title="Utseende"
-  description={
-    <Box>
-      <Text>
-        Select har fire varianter. <Code>outline</Code> er standardvarianten og skal brukes i de fleste tilfeller.
-        <Code>filled</Code> kan brukes som et alternativ til outline. For mindre viktige selecter kan
-        <Code>flushed</Code> og
-        <Code>unstyled</Code> brukes.
-      </Text>
-      <Text>
-        Det er mulig å velge mellom fire forskjellige størrelser: <Code>xs</Code>, <Code>sm</Code>, <Code>md</Code> og
-        <Code>lg</Code>.<Code>md</Code> er standard.
-      </Text>
-    </Box>
-  }
-  story={<Canvas of={SelectStories.SelectVariants} />}
-/>
-
-<DocsStory
-  title="Select i form"
-  description={
-    <Text>
-      Ved å benytte seg av Select sammen med <Code>Form Control</Code> vil du få kontekst som <Code>isInvalid</Code>,
-      <Code>isDisabled</Code> og
-      <Code>isRequired</Code>. Slik vil det også være enkelt å legge til en label.
-    </Text>
-  }
-  story={<Canvas of={SelectStories.SelectForm} />}
-/>
 
 </DocsContainer>
 

@@ -1,4 +1,4 @@
-import { Stack as KvibStack, Text as KvibText } from "@kvib/react/src";
+import { Stack as KvibStack, Text as KvibText } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibText> = {
@@ -8,22 +8,6 @@ const meta: Meta<typeof KvibText> = {
     docs: {
       story: { inline: true },
       canvas: { sourceState: "shown" },
-    },
-  },
-  argTypes: {
-    align: {
-      description: "The CSS `text-align` property",
-      table: {
-        type: { summary: "ResponsiveValue<TextAlign>" },
-      },
-      control: "text",
-    },
-    casing: {
-      description: "The CSS `text-transform` property",
-      table: {
-        type: { summary: "ResponsiveValue<TextTransform>" },
-      },
-      control: "text",
     },
   },
 };
@@ -39,11 +23,11 @@ export const Preview: Story = {
 export const TextSizes: Story = {
   args: {},
   render: args => (
-    <KvibStack spacing={3}>
-      <KvibText {...args} fontSize="6xl" noOfLines={1}>
+    <KvibStack gap={3}>
+      <KvibText {...args} fontSize="6xl" maxLines={1}>
         (6xl) Kartverkets interaksjon- og designbibliotek
       </KvibText>
-      <KvibText {...args} fontSize="5xl" noOfLines={1}>
+      <KvibText {...args} fontSize="5xl" maxLines={1}>
         (5xl) Kartverkets interaksjon- og designbibliotek
       </KvibText>
       <KvibText {...args} fontSize="4xl">

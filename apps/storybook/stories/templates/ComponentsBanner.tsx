@@ -1,4 +1,4 @@
-import { Card, CardBody, CardProps, Text } from "@kvib/react/src";
+import { Card, CardBody, CardProps, Text } from "@kvib/react";
 
 interface ComponentBannerProps extends CardProps {
   title: string;
@@ -9,11 +9,11 @@ interface ComponentBannerProps extends CardProps {
 export const ComponentsBanner = ({ title, description, hasCodeBelow, ...props }: ComponentBannerProps) => {
   return (
     <Card
-      variant="unstyled"
-      backgroundColor="green.500"
-      padding="1rem 2.5rem"
-      marginBottom={hasCodeBelow ? "" : "2rem"}
-      className={hasCodeBelow ? "ComponentsBanner" : ""}
+      variant="subtle"
+      bg="green.500"
+      p="1rem 2.5rem"
+      mb={hasCodeBelow ? "0" : "2rem"}
+      className={"sb-unstyled"}
       {...props}
     >
       <CardBody display="flex" flexDirection="column" justifyContent="center" margin="1rem 0">

@@ -1,21 +1,24 @@
-import { useRef, useState } from "react";
-import { IconButton, Input, defaultKvibTheme } from "@kvib/react/src";
-import { useTimeFieldState } from "react-stately";
-import { TimeValue } from "@react-types/datepicker";
+import { IconButton } from "@/button";
+import { useRecipe } from "@/hooks";
+import { Box } from "@/layout";
+import { useFieldContext } from "@chakra-ui/react";
 import { CalendarDateTime, parseTime } from "@internationalized/date";
+import { useRef, useState } from "react";
+import { TimeValue } from "react-aria";
+import { useTimeFieldState } from "react-stately";
+import { inputTheme } from "../theme/components/input";
 import { TimeField } from "./TimeField";
-import { useFormControlContext } from "@chakra-ui/react";
 
 type TimepickerProps = {
   size?: "xs" | "sm" | "md" | "lg";
   width?: "fit-content" | "full";
-  variant?: "outline" | "filled" | "flushed" | "unstyled";
-  colorScheme?: "green" | "blue";
+  variant?: "outline" | "subtle" | "flushed";
+  colorPalette?: "green" | "blue";
   value?: TimeValue;
   defaultValue?: TimeValue;
   onChange?: (value: TimeValue) => void;
-  isDisabled?: boolean;
-  isInvalid?: boolean;
+  disabled?: boolean;
+  invalid?: boolean;
   minuteInterval?: number;
   ariaLabel?: string;
 };
@@ -24,19 +27,21 @@ export const Timepicker = ({
   size,
   width = "fit-content",
   variant = "outline",
-  colorScheme,
+  colorPalette,
   value,
-  defaultValue = getCurrentTime(),
+  defaultValue = getCurrentTime() as any,
   onChange = () => {},
-  isDisabled: isDisabledExternally = false,
-  isInvalid: isInvalidExternally = false,
+  disabled: isDisabledExternally = false,
+  invalid: isInvalidExternally = false,
   minuteInterval = 30,
   ariaLabel,
 }: TimepickerProps) => {
+  const recipe = useRecipe({ recipe: inputTheme });
+
   // Get state from form control context
-  const formControlContext = useFormControlContext();
-  const isDisabledFromForm = formControlContext?.isDisabled || false;
-  const isInvalidFromForm = formControlContext?.isInvalid || false;
+  const formControlContext = useFieldContext();
+  const isDisabledFromForm = formControlContext?.disabled || false;
+  const isInvalidFromForm = formControlContext?.invalid || false;
 
   // Determine the effective isDisabled and isInvalid states
   const isDisabled = isDisabledExternally || isDisabledFromForm;
@@ -46,14 +51,16 @@ export const Timepicker = ({
   const state = useTimeFieldState({
     value,
     defaultValue,
-    onChange,
+    onChange: value => {
+      onChange(value as any);
+    },
     locale: "nb",
     isDisabled,
     isInvalid,
   });
-  const dateTime = state.value as CalendarDateTime | null;
+  const dateTime = state.timeValue;
   const buttonSize = size === "lg" ? "sm" : "xs";
-  const inputRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLElement>();
   const [isFocused, setIsFocused] = useState(false);
 
   // Calculation for adjusting time with the arrow buttons
@@ -68,80 +75,77 @@ export const Timepicker = ({
       // forward
       minutesAdjustment = minuteInterval - (dateTime.minute % minuteInterval) || minuteInterval;
     }
-    state.setValue(
-      state.value.add({
-        minutes: minutesAdjustment,
-      }),
-    );
+    if (state.value !== null)
+      state.setValue(
+        state.value.add({
+          minutes: minutesAdjustment,
+        }),
+      );
   };
 
   // Focus styles for the input
   const focusStyles = getFocusStyles(isFocused, isInvalid, variant);
 
+  const styles = recipe({
+    variant,
+    size,
+  });
+
   return (
-    <Input
-      as="div"
-      aria-label={ariaLabel || "timepicker"}
+    <Box
+      ref={inputRef}
       display="flex"
-      variant={variant}
-      size={size}
-      width={width}
-      paddingX={2}
       alignItems="center"
-      justifyContent="space-between"
-      gap={2}
-      isDisabled={isDisabled}
-      isInvalid={isInvalid}
+      width={width}
       onClick={() => inputRef.current?.focus()}
       onFocus={() => setIsFocused(true)}
       onBlur={() => setIsFocused(false)}
-      ref={inputRef}
-      sx={focusStyles}
+      css={{
+        ...focusStyles,
+        ...styles,
+      }}
+      aria-label={ariaLabel}
     >
       <IconButton
         onClick={() => adjustTime("backward")}
         size={buttonSize}
-        colorScheme={colorScheme}
+        colorPalette={colorPalette}
         variant="ghost"
         icon="chevron_left"
         aria-label="earlier time"
-        isDisabled={isDisabled}
+        disabled={isDisabled}
       />
-      <TimeField state={state} colorScheme={colorScheme} />
+      <TimeField state={state} colorPalette={colorPalette} />
       <IconButton
         onClick={() => adjustTime("forward")}
         size={buttonSize}
-        colorScheme={colorScheme}
+        colorPalette={colorPalette}
         variant="ghost"
         icon="chevron_right"
         aria-label="later time"
-        isDisabled={isDisabled}
+        disabled={isDisabled}
       />
-    </Input>
+    </Box>
   );
 };
 
 export const getCurrentTime = () => parseTime(new Date().toTimeString().split(" ")[0]);
 export const getTimestampFromTime = (time: CalendarDateTime | null) => `${time?.hour ?? 0}:${time?.minute ?? 0}`;
 
-const getFocusStyles = (
-  isFocused: boolean,
-  isInvalid: boolean,
-  variant: "outline" | "filled" | "flushed" | "unstyled",
-) => {
+const getFocusStyles = (isFocused: boolean, isInvalid: boolean, variant: "outline" | "subtle" | "flushed") => {
   if (isFocused) {
     // Check the variant and apply corresponding styles
     switch (variant) {
       case "outline":
         return {
           borderColor: "blue.500",
-          boxShadow: `0 0 0 1px ${defaultKvibTheme.colors.blue[500]}`,
+          boxShadow: `0 0 0 1px blue.500`,
           _hover: { borderColor: isInvalid ?? "blue.500" },
         };
       case "flushed":
         return {
           borderColor: "blue.500",
-          boxShadow: `0 1px 0 0 ${defaultKvibTheme.colors.blue[500]}`,
+          boxShadow: `0 1px 0 0 blue.500`,
           _hover: { borderColor: isInvalid ?? "blue.500" },
         };
       default:

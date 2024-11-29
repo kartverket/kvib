@@ -1,8 +1,18 @@
-export { Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon } from "@chakra-ui/react";
+export {
+  AccordionRoot as Accordion,
+  AccordionItem,
+  AccordionItemContent,
+  AccordionItemTrigger,
+} from "@/components/ui/accordion";
+
+export { Accordion as KvibAccordion } from "@chakra-ui/react";
+
 export type {
-  AccordionProps,
+  AccordionItemBodyProps,
+  AccordionItemContentProps,
+  AccordionItemIndicatorProps,
   AccordionItemProps,
-  AccordionButtonProps,
-  AccordionPanelProps,
-  AccordionIconProps,
+  AccordionItemTriggerProps,
+  AccordionRootProps as AccordionProps,
+  AccordionRootProviderProps,
 } from "@chakra-ui/react";

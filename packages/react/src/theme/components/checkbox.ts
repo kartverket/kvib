@@ -1,30 +1,33 @@
-import { defineStyleConfig, defineStyle } from "@chakra-ui/react";
-import { colors } from "../tokens";
+import { defineSlotRecipe } from "@chakra-ui/react";
+import { checkboxAnatomy } from "@chakra-ui/react/anatomy"; // Ensure you import the correct anatomy if needed
 
-const baseStyle = defineStyle((props) => {
-  const { colorScheme: c } = props;
-
-  return {
+export const checkboxTheme = defineSlotRecipe({
+  slots: checkboxAnatomy.keys(), // Define the slots for the checkbox
+  base: {
+    root: {
+      cursor: "pointer",
+    },
     control: {
-      borderColor: `${c}.500`, // Border color when unchecked
+      borderColor: "colorPalette.500 !important",
       _checked: {
         _hover: {
-          borderColor: `${c}.400`,
-          backgroundColor: `${c}.400`,
+          borderColor: "colorPalette.400 !important",
+          backgroundColor: "colorPalette.400 !important",
         },
       },
       _invalid: {
         _checked: {
-          backgroundColor: colors.red[500],
+          backgroundColor: "red.500 !important",
           _hover: {
-            borderColor: colors.red[400],
-            backgroundColor: colors.red[400],
+            borderColor: "red.400 !important",
+            backgroundColor: "red.400 !important",
           },
         },
       },
     },
-  };
-});
-export const checkboxTheme = defineStyleConfig({
-  baseStyle,
+  },
+  variants: {
+    // Define variants if needed
+  },
+  compoundVariants: [], // Add compound variants if necessary
 });

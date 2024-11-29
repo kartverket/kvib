@@ -1,18 +1,10 @@
-import { Input as ChakraInput, InputProps as ChakraInputProps, forwardRef } from "@chakra-ui/react";
+"use client";
 
-export const Input = forwardRef<ChakraInputProps, "input">(
-  ({ size, variant, isRequired, isReadOnly, isInvalid, isDisabled, ...props }, ref) => {
-    return (
-      <ChakraInput
-        {...props}
-        ref={ref}
-        size={size}
-        variant={variant}
-        isRequired={isRequired}
-        isReadOnly={isReadOnly}
-        isInvalid={isInvalid}
-        isDisabled={isDisabled}
-      />
-    );
-  },
-);
+import type { InputProps as ChakraInputProps } from "@chakra-ui/react";
+import { Input as ChakraInput } from "@chakra-ui/react";
+
+export interface InputProps extends ChakraInputProps {}
+
+export const Input = (props: InputProps) => {
+  return <ChakraInput {...props} />;
+};

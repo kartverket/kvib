@@ -1,4 +1,4 @@
-import { Box, Stack, StackProps } from "@kvib/react/src";
+import { Box, Stack, StackProps } from "@kvib/react";
 
 export const DocsCanvas = (props: StackProps) => (
   <Box

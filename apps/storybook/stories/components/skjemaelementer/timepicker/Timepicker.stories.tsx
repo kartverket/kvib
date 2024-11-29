@@ -1,13 +1,4 @@
-import {
-  FormControl,
-  FormLabel,
-  KvibProvider,
-  Timepicker as KvibTimepicker,
-  Stack,
-  defaultKvibTheme,
-  extendTheme,
-  withDefaultColorScheme,
-} from "@kvib/react/src";
+import { Timepicker as KvibTimepicker } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibTimepicker> = {
@@ -77,7 +68,7 @@ const meta: Meta<typeof KvibTimepicker> = {
         type: { summary: "(value: TimeValue) => void" },
       },
     },
-    isDisabled: {
+    disabled: {
       description: "If true, the Timepicker will be disabled",
       control: { type: "boolean" },
       table: {
@@ -85,7 +76,7 @@ const meta: Meta<typeof KvibTimepicker> = {
         defaultValue: { summary: "false" },
       },
     },
-    isInvalid: {
+    invalid: {
       description: "If true, the Timepicker will be marked as invalid",
       control: { type: "boolean" },
       table: {
@@ -115,71 +106,4 @@ type Story = StoryObj<typeof KvibTimepicker>;
 
 export const Preview: Story = {
   render: args => <KvibTimepicker {...args} />,
-};
-
-export const TimepickerInterval: Story = {
-  render: args => (
-    <Stack>
-      <KvibTimepicker {...args} minuteInterval={15} />
-      <KvibTimepicker {...args} minuteInterval={60} />
-    </Stack>
-  ),
-};
-
-export const TimepickerAppearance: Story = {
-  render: args => (
-    <Stack>
-      <KvibTimepicker {...args} variant="outline" />
-      <KvibTimepicker {...args} variant="filled" />
-      <KvibTimepicker {...args} variant="flushed" />
-      <KvibTimepicker {...args} variant="unstyled" />
-    </Stack>
-  ),
-};
-
-export const TimepickerSize: Story = {
-  render: args => (
-    <Stack>
-      <KvibTimepicker {...args} size="xs" />
-      <KvibTimepicker {...args} size="sm" />
-      <KvibTimepicker {...args} size="md" />
-      <KvibTimepicker {...args} size="lg" width="fit-content" />
-      <KvibTimepicker {...args} size="md" width="full" />
-    </Stack>
-  ),
-};
-
-export const TimepickerForm: Story = {
-  render: args => (
-    <FormControl>
-      <FormLabel>Tid</FormLabel>
-      <KvibTimepicker {...args} />
-    </FormControl>
-  ),
-};
-
-const greenTheme = extendTheme(withDefaultColorScheme({ colorScheme: "green" }), defaultKvibTheme);
-
-export const TimepickerGreenProvider: Story = {
-  tags: ["no-tests"],
-  decorators: [
-    Story => (
-      <KvibProvider theme={greenTheme}>
-        <Story />
-      </KvibProvider>
-    ),
-  ],
-};
-
-const blueTheme = extendTheme(withDefaultColorScheme({ colorScheme: "blue" }), defaultKvibTheme);
-
-export const TimepickerBlueProvider: Story = {
-  tags: ["no-tests"],
-  decorators: [
-    Story => (
-      <KvibProvider theme={blueTheme}>
-        <Story />
-      </KvibProvider>
-    ),
-  ],
 };

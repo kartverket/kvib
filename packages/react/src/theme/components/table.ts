@@ -1,32 +1,22 @@
-import { defineStyle, defineStyleConfig } from "@chakra-ui/react";
+import { defineSlotRecipe } from "@chakra-ui/react";
+import { tableAnatomy } from "@chakra-ui/react/anatomy";
 
-const variantStriped = defineStyle(props => {
-  const { colorScheme: c } = props;
-
-  return {
-    tbody: {
-      tr: {
-        "&:nth-of-type(odd)": {
-          "td, th": {
-            bg: `${c}.50`,
-            borderBottomColor: `${c}.50`, // må ha denne to steder
+export const tableTheme = defineSlotRecipe({
+  slots: tableAnatomy.keys(),
+  base: {
+    root: {
+      colorPalette: "gray",
+    },
+  },
+  variants: {
+    striped: {
+      true: {
+        row: {
+          "&:nth-of-type(odd) td": {
+            bg: "colorPalette.50 !important",
           },
         },
-        "td, th": {
-          borderBottomColor: `${c}.50`,
-        },
       },
     },
-    thead: {
-      th: {
-        borderBottomColor: `${c}.50`,
-      },
-    },
-  };
-});
-
-export const tableTheme = defineStyleConfig({
-  variants: {
-    striped: variantStriped,
   },
 });

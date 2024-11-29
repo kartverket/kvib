@@ -1,17 +1,12 @@
-import { defineStyle, defineStyleConfig } from "@chakra-ui/react";
+import { defineSlotRecipe } from "@chakra-ui/react";
+import { sliderAnatomy } from "@chakra-ui/react/anatomy";
 
-const baseStyle = defineStyle((props) => {
-  return {
-    track: {
-      bg: "gray.300",
+export const sliderTheme = defineSlotRecipe({
+  className: "kvib-slider",
+  slots: sliderAnatomy.keys(),
+  base: {
+    root: {
+      colorPalette: "green",
     },
-    thumb: {
-      borderWidth: "2px",
-      borderColor: `${props.colorScheme}.500`,
-    },
-  };
-});
-
-export const sliderTheme = defineStyleConfig({
-  baseStyle,
+  },
 });

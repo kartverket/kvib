@@ -1,4 +1,4 @@
-import { Stack, StackProps, Text } from "@kvib/react/src";
+import { Stack, StackProps, Text } from "@kvib/react";
 import { ReactNode } from "react";
 
 interface Props extends StackProps {

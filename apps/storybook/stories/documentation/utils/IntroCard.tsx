@@ -1,9 +1,9 @@
-import { Box, Card, Flex, Link, Stack, Text } from "@kvib/react/src";
+import { Box, Card, Flex, Link, Stack, Text } from "@kvib/react";
 
 export const StarCard = () => {
   return (
     <IntroCard>
-      <Stack spacing="2rem">
+      <Stack>
         <Text fontSize="2xl">Ledestjerner</Text>
         <Flex gap="1rem" alignItems="center">
           <Box>👨‍👨‍👦‍👦</Box> <Box fontWeight="medium">Brukerrettet og imøtekomme universell utforming</Box>
@@ -46,7 +46,7 @@ export const LinksCard = () => {
         <Link
           fontWeight="bold"
           href="https://kartverket.atlassian.net/wiki/spaces/TB/overview?homepageId=325713953"
-          isExternal={false}
+          external={false}
         >
           Confluence
         </Link>
@@ -57,7 +57,7 @@ export const LinksCard = () => {
         <Link
           fontWeight="bold"
           href="https://kartverket.atlassian.net/jira/software/projects/KOMP/boards/80"
-          isExternal={false}
+          external={false}
         >
           Oppgaveboardet i Jira
         </Link>
@@ -65,7 +65,7 @@ export const LinksCard = () => {
       </Element>
 
       <Element>
-        <Link fontWeight="bold" href="https://github.com/kartverket/kvib" isExternal={false}>
+        <Link fontWeight="bold" href="https://github.com/kartverket/kvib" external={false}>
           Github
         </Link>
         Github-repoet er et monorepo som består av dokumentasjonssiden til designsystemet i Storybook og
@@ -73,18 +73,14 @@ export const LinksCard = () => {
       </Element>
 
       <Element>
-        <Link
-          fontWeight="bold"
-          href="https://www.figma.com/file/j0OBUEuQZlrbQOV6ariHTo/Designsystem"
-          isExternal={false}
-        >
+        <Link fontWeight="bold" href="https://www.figma.com/file/j0OBUEuQZlrbQOV6ariHTo/Designsystem" external={false}>
           Figma
         </Link>
         I Figma finner du komponenter og tokens som er klare til bruk.
       </Element>
 
       <Element>
-        <Link fontWeight="bold" href="https://kartverket.atlassian.net/wiki/spaces/UX/overview" isExternal={false}>
+        <Link fontWeight="bold" href="https://kartverket.atlassian.net/wiki/spaces/UX/overview" external={false}>
           Håndboken i interaksjonsdesign
         </Link>
         Benytt deg av håndboken i interaksjonsdesign for å jobbe brukersentrert med design og utvikling i Kartverket.
@@ -113,7 +109,7 @@ export const SurveyCard = () => {
         <Link
           fontWeight="bold"
           href="https://forms.office.com/Pages/ResponsePage.aspx?id=osh0f85Dskaw6LYwbLpzo2TDj9LhmetKqqmL3qbrXF5UQjVGMkVNVFZFVUQ0WElFNFo1N1dQUFVNRi4u"
-          isExternal={false}
+          external={false}
         >
           Spørreundersøkelse i Microsoft Forms
         </Link>
@@ -140,7 +136,7 @@ export const FeedbackCard = () => {
       </Element>
 
       <Element>
-        <Link fontWeight="bold" href="https://github.com/kartverket/kvib/issues/new/choose" isExternal={false}>
+        <Link fontWeight="bold" href="https://github.com/kartverket/kvib/issues/new/choose" external={false}>
           Opprett en issue på github
         </Link>
         Sjekk at issuen ikke finnes fra før og fyll ut et av skjemaene.
@@ -150,7 +146,7 @@ export const FeedbackCard = () => {
         <Link
           fontWeight="bold"
           href="/?path=/docs/for-utviklere-bidra-med-kode-hurtigveiledning--docs"
-          isExternal={false}
+          external={false}
         >
           Bidra med en PR
         </Link>

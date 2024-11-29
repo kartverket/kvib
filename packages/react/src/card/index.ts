@@ -1,3 +1,18 @@
-export * from "./Card";
-export { CardHeader, CardBody, CardFooter } from "@chakra-ui/react";
-export type { CardProps, CardHeaderProps, CardBodyProps, CardFooterProps } from "@chakra-ui/react";
+export {
+  CardRoot as Card,
+  CardBody,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+  Card as KvibCard,
+} from "@chakra-ui/react";
+
+export type {
+  CardBodyProps,
+  CardDescriptionProps,
+  CardFooterProps,
+  CardHeaderProps,
+  CardRootProps as CardProps,
+  CardTitleProps,
+} from "@chakra-ui/react";

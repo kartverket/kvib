@@ -1,4 +1,4 @@
-import { Footer as KvibFooter } from "@kvib/react/src/footer/Footer";
+import { Footer as KvibFooter } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibFooter> = {

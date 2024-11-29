@@ -1,4 +1,4 @@
-import { Stack as KvibStack, Textarea as KvibTextarea, Radio, RadioGroup, Stack, Text } from "@kvib/react/src";
+import { Stack as KvibStack, Textarea as KvibTextarea, Radio, RadioGroup, Stack, Text } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 import { ChangeEvent, useState } from "react";
 
