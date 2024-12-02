@@ -1,4 +1,4 @@
-import { Button, Icon, toaster, ToasterProps } from "@kvib/react";
+import { Button, Toaster, toaster, ToasterProps } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<ToasterProps> = {
@@ -100,7 +100,6 @@ const ToastExample = ({ ...args }) => (
       w={args.btnW}
       onClick={() =>
         toaster.create({
-          icon: <Icon icon={args.icon} />,
           ...args,
         })
       }

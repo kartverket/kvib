@@ -1,9 +1,9 @@
-import { Radio as KvibRadio, RadioGroup as KvibRadioGroup, Stack as KvibStack, RadioProps } from "@kvib/react";
+import { HStack, Radio, RadioGroup, RadioGroupProps } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
-const meta: Meta<typeof KvibRadio> = {
+const meta: Meta<typeof RadioGroup> = {
   title: "Komponenter/Radio",
-  component: KvibRadio,
+  component: RadioGroup,
   parameters: {
     docs: {
       story: { inline: true },
@@ -103,8 +103,8 @@ const meta: Meta<typeof KvibRadio> = {
         type: {
           summary: "green | blue | gray | red",
         },
-        defaultValue: { summary: "green" },
       },
+      defaultValue: { summary: "green" },
       options: ["green", "blue", "gray", "red", "orange", "purple"],
       control: { type: "select" },
     },
@@ -112,23 +112,17 @@ const meta: Meta<typeof KvibRadio> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof KvibRadio>;
+type Story = StoryObj<typeof RadioGroup>;
 
 export const Preview: Story = {
-  args: { onChange: undefined },
-  render: (args: RadioProps) => (
-    <KvibRadioGroup defaultValue={"1"}>
-      <KvibStack direction={"column"}>
-        <KvibRadio {...args} value={"1"}>
-          En
-        </KvibRadio>
-        <KvibRadio {...args} value={"2"}>
-          To
-        </KvibRadio>
-        <KvibRadio {...args} value={"3"}>
-          Tre
-        </KvibRadio>
-      </KvibStack>
-    </KvibRadioGroup>
+  render: (args: RadioGroupProps) => (
+    <RadioGroup defaultValue={"1"} {...args}>
+      <HStack gap="6">
+        <Radio colorPalette="blue" value="1">
+          Valg 1
+        </Radio>
+        <Radio value="2">Valg 2</Radio>
+      </HStack>
+    </RadioGroup>
   ),
 };

@@ -29,7 +29,7 @@ import * as MenuStories from "../../components/navigasjon/menu/Menu.stories";
 import * as SkivNavStories from "../../components/navigasjon/skip-nav/SkipNav.stories";
 import * as TabsStories from "../../components/navigasjon/tabs/Tabs.stories";
 import * as DrawerStories from "../../components/overlay/drawer/Drawer.stories";
-import * as ModalStories from "../../components/overlay/modal/Dialog.stories";
+import * as DialogStoriea from "../../components/overlay/modal/Dialog.stories";
 import * as PopoverStories from "../../components/overlay/popover/Popover.stories";
 import * as TooltipStories from "../../components/overlay/tooltip/Tooltip.stories";
 import * as SearchAsyncStories from "../../components/search/search-async/SearchAsync.stories";
@@ -65,8 +65,7 @@ import * as ToastStories from "../../components/tilbakemelding/toaster/Toaster.s
 import * as HeadingStories from "../../design/heading/Heading.stories";
 import * as HighlightStories from "../../design/highlight/Highlight.stories";
 import * as TextStories from "../../design/text/Text.stories";
-
-export type ColorPalette = "green" | "blue";
+import { ColorPalette } from "./Komponenter";
 
 // Skjemaelementer
 
@@ -351,8 +350,8 @@ export const Tooltip = (colorPalette: ColorPalette) => {
   return <Preview colorPalette={colorPalette} />;
 };
 
-export const Modal = (colorPalette: ColorPalette) => {
-  const { Preview } = composeStories(ModalStories);
+export const Dialog = (colorPalette: ColorPalette) => {
+  const { Preview } = composeStories(DialogStoriea);
   return <Preview colorPalette={colorPalette} />;
 };
 

@@ -1,10 +1,10 @@
 export {
   Toast as KvibToast,
+  ToastRoot as Toast,
   ToastActionTrigger,
   ToastCloseTrigger,
   ToastDescription,
   ToastIndicator,
-  ToastRoot,
   ToastTitle,
   createToaster,
 } from "@chakra-ui/react";

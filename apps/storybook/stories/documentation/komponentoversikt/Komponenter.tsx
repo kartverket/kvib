@@ -13,9 +13,9 @@ import {
   Checkbox,
   CloseButton,
   Code,
-  ColorPalette,
   Container,
   Datepicker,
+  Dialog,
   Divider,
   Drawer,
   Editable,
@@ -37,7 +37,6 @@ import {
   List,
   Logo,
   Menu,
-  Modal,
   NumberInput,
   PinInput,
   Popover,
@@ -82,6 +81,8 @@ interface Kategori {
   beskrivelse?: string;
   komponenter: Record<string, Komponentdetaljer>;
 }
+
+export type ColorPalette = "green" | "blue";
 
 export const Komponenter: (colorScheme: ColorPalette) => Record<string, Kategori> = colorScheme => ({
   Skjemaelementer: {
@@ -164,7 +165,7 @@ export const Komponenter: (colorScheme: ColorPalette) => Record<string, Kategori
       Radio: {
         navn: "Radio",
         beskrivelse: "Radio",
-        story: Radio(colorScheme),
+        story: Radio(),
         link: "radio",
       },
       Switch: {
@@ -449,12 +450,11 @@ export const Komponenter: (colorScheme: ColorPalette) => Record<string, Kategori
         story: Tooltip(colorScheme),
         link: "tooltip",
       },
-      // TODO: Legg til modal direkte fra Story
-      Modal: {
-        navn: "Modal",
+      Dialog: {
+        navn: "Dialog",
         beskrivelse: "",
-        story: Modal(colorScheme),
-        link: "modal",
+        story: Dialog(colorScheme),
+        link: "dialog",
       },
       Popover: {
         navn: "Popover",

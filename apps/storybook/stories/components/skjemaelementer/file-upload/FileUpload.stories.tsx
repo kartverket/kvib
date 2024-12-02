@@ -63,6 +63,17 @@ const meta: Meta<typeof KvibFileUpload> = {
       },
       control: "boolean",
     },
+    colorPalette: {
+      description: "Color of the radio",
+      table: {
+        type: {
+          summary: "green | blue | gray | red",
+        },
+      },
+      defaultValue: { summary: "green" },
+      options: ["green", "blue", "gray", "red", "orange", "purple"],
+      control: { type: "select" },
+    },
   },
 };
 
@@ -72,7 +83,9 @@ type FileUploadStory = StoryObj<typeof KvibFileUpload>;
 const FileUploadExample = (args: FileUploadProps) => (
   <FileUpload {...args}>
     <FileUploadTrigger>
-      <Button leftIcon="upload_2">Last opp fil</Button>
+      <Button colorPalette={args.colorPalette} leftIcon="upload_2">
+        Last opp fil
+      </Button>
     </FileUploadTrigger>
     <FileUploadList />
   </FileUpload>
