@@ -7,7 +7,7 @@ import { Tekstblokk } from "./utils/Tekstblokk";
 const nyeKomponenter = [
   "Rating",
   "Select",
-  "Passwor Input",
+  "Password Input",
   "File Upload",
   "Checkbox Card",
   "Segment Control",
@@ -16,6 +16,11 @@ const nyeKomponenter = [
   "Color Picker",
   "Action Bar",
   "Clipboard",
+  "Radio Card",
+  "Timeline",
+  "Toggle Tip",
+  "Collapsible",
+  "For",
 ];
 
 export const Migration = () => (
@@ -54,6 +59,18 @@ export const Migration = () => (
           Select har blitt Select (Native) til fordel for en helt ny Select med Chakra-styling. Select (Native) trigger
           fortsatt den interne menyen som varierer fra nettleser til nettleser.
         </Listeelement>
+        <Listeelement tittel="Show/Hide">Kalles nå Show.</Listeelement>
+        <Listeelement tittel="<X>Button">
+          Enkelte komponenter som har hatt en Button som child-komponent, slik som Accordion med AccordionButton, har nå
+          blitt omdøpt til <Code>{`<X>Trigger`}</Code>.
+        </Listeelement>
+        <Listeelement tittel="<X>CloseButton">
+          Alle forskjellige CloseButton-komponenter, som f.eks. ModalCloseButton, har nå blitt samlet under én komponent
+          som heter CloseButton.
+        </Listeelement>
+        <Listeelement tittel="Overlay">
+          Kalles nå <Code>Backdrop</Code>.
+        </Listeelement>
       </Liste>
       <br />
       <Text as="h3" fontWeight={700} fontSize={"md"}>
@@ -76,6 +93,9 @@ export const Migration = () => (
         <Listeelement tittel="sx">
           <Code>sx</Code> har nå bli erstattet med <Code>css</Code>.
         </Listeelement>
+        <Listeelement tittel="status">
+          Heter nå <Code>type</Code>.
+        </Listeelement>
       </Liste>
     </Tekstblokk>
     <Tekstblokk tittel="Nye komponenter">
@@ -83,6 +103,13 @@ export const Migration = () => (
         {nyeKomponenter.sort().map(komponent => (
           <Listeelement key={komponent} tittel={komponent} />
         ))}
+      </Liste>
+    </Tekstblokk>
+    <Tekstblokk tittel="Fjernede komponenter">
+      <Liste>
+        <Listeelement tittel="Wrap">
+          Er fjernet og tilbys nå gjennom HStack med prop-en <Code>wrap=wrap</Code>.
+        </Listeelement>
       </Liste>
     </Tekstblokk>
   </Dokumentasjonsside>

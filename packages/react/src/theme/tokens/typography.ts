@@ -40,8 +40,8 @@ export const fontWeights = {
 export const fonts = {
   // add color to the font value
   body: { value: `'Mulish', sans-serif`, color: "gray.800" },
-  heading: { value: `'Mulish', sans-serif` },
-  mono: { value: `SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace` },
+  heading: { value: `'Mulish', sans-serif`, color: "gray.800" },
+  mono: { value: `SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace`, color: "gray.800" },
 };
 
 export const fontSizes = {

@@ -74,7 +74,6 @@ export const Components = () => {
                     colorPalette={theme}
                     link={component.link}
                     component={component.story}
-                    category={categoryKey as string}
                   />
                 );
               })}
@@ -91,13 +90,11 @@ const ComponentCard = ({
   component,
   colorPalette,
   link,
-  category,
 }: {
   title: string;
   component: ReactElement;
   colorPalette: ColorPalette;
   link: string;
-  category: string;
 }) => (
   <Card unstyled size="md">
     <LazyStory component={component} />

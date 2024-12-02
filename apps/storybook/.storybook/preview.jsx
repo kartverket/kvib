@@ -1,4 +1,4 @@
-import { KvibProvider } from "@kvib/react";
+import { KvibProvider, Toaster } from "@kvib/react";
 import React from "react";
 import "./docs-root.css";
 import { MDXContainer } from "./MDXContainer";
@@ -81,6 +81,7 @@ const parameters = {
 const decorators = [
   Story => (
     <KvibProvider>
+      <Toaster />
       <Story />
     </KvibProvider>
   ),
