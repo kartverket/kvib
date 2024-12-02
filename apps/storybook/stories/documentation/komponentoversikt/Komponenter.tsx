@@ -165,7 +165,7 @@ export const Komponenter: (colorScheme: ColorPalette) => Record<string, Kategori
       Radio: {
         navn: "Radio",
         beskrivelse: "Radio",
-        story: Radio(),
+        story: Radio(colorScheme),
         link: "radio",
       },
       Switch: {

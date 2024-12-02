@@ -105,7 +105,7 @@ const ComponentCard = ({
     <Stack align="center">
       <Link
         padding="1rem"
-        href={`/?path=/docs/${category}-${link}--docs`}
+        href={`/?path=/docs/komponenter-${link}--docs`}
         alignItems="center"
         colorPalette={colorPalette}
       >
