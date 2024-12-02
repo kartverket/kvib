@@ -1,3 +1,5 @@
+export { Float } from "@chakra-ui/react";
+export type { FloatProps } from "@chakra-ui/react";
 export * from "./aspect-ratio";
 export * from "./bleed";
 export * from "./box";
