@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 5.0.1
+
+### Patch Changes
+
+- 6dd0eb7: Setter standard fargetema til lyst
+
 ## 5.0.0
 
 ### Major Changes
