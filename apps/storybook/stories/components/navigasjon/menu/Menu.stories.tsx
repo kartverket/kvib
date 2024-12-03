@@ -205,7 +205,7 @@ export const Preview: Story = {
   render: (args: MenuProps) => (
     <KvibMenu {...args}>
       <MenuTrigger asChild>
-        <Button variant="subtle" size="sm">
+        <Button variant="subtle" colorPalette={args.colorPalette} size="sm">
           Åpne
         </Button>
       </MenuTrigger>

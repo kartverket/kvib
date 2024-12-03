@@ -1,5 +1,14 @@
 export { RadioCardRoot as RadioCard, RadioCardItem, RadioCardLabel } from "@/components/ui/radio-card";
-export { RadioCard as KvibRadioCard } from "@chakra-ui/react";
+export {
+  RadioCard as KvibRadioCard,
+  RadioCardContext,
+  RadioCardItemAddon,
+  RadioCardItemContent,
+  RadioCardItemControl,
+  RadioCardItemDescription,
+  RadioCardItemIndicator,
+  RadioCardItemText,
+} from "@chakra-ui/react";
 export type {
   RadioCardItemAddonProps,
   RadioCardItemContentProps,
@@ -10,4 +19,6 @@ export type {
   RadioCardItemTextProps,
   RadioCardLabelProps,
   RadioCardRootProps as RadioCardProps,
+  RadioCardPropsProvider,
+  RadioCardRootProviderProps,
 } from "@chakra-ui/react";

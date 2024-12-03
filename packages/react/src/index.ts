@@ -18,6 +18,7 @@ export * from "./field";
 export * from "./file-upload";
 export * from "./footer";
 export * from "./footer-inline";
+export * from "./for";
 export * from "./header";
 export * from "./hooks";
 export * from "./icon";
@@ -67,3 +68,5 @@ export * from "./utils/locale-provider";
 export * from "./utils/portal";
 export * from "./utils/show";
 export * from "./utils/visually-hidden";
+
+export * from "./other";

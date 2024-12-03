@@ -1,8 +1,8 @@
-import { Button, Icon, toaster, ToasterProps } from "@kvib/react";
+import { Button, toaster, ToasterProps } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<ToasterProps> = {
-  title: "Komponenter/Toaster",
+  title: "Komponenter/Toast",
   parameters: {
     docs: {
       story: { inline: true },
@@ -94,21 +94,17 @@ const meta: Meta<ToasterProps> = {
 export default meta;
 
 const ToastExample = ({ ...args }) => (
-  <>
-    <Button
-      colorPalette={args.btnClr}
-      w={args.btnW}
-      onClick={() =>
-        toaster.create({
-          icon: <Icon icon={args.icon} />,
-          ...args,
-        })
-      }
-    >
-      Vis toast
-    </Button>
-    <Toaster />
-  </>
+  <Button
+    colorPalette={args.btnClr}
+    w={args.btnW}
+    onClick={() =>
+      toaster.create({
+        ...args,
+      })
+    }
+  >
+    Vis toast
+  </Button>
 );
 
 type Story = StoryObj<ToasterProps>;

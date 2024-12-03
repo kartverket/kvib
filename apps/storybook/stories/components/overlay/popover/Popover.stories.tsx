@@ -299,7 +299,7 @@ export const Preview: Story = {
   render: (args: PopoverProps) => (
     <Popover {...args}>
       <PopoverTrigger asChild>
-        <Button size="sm" variant="outline" colorPalette="green">
+        <Button size="sm" variant="outline" colorPalette={args.colorPalette}>
           Vis popover
         </Button>
       </PopoverTrigger>

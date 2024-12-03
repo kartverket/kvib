@@ -9,8 +9,6 @@ export {
   SelectValueText,
 } from "@/components/ui/select";
 
-export { Select as KvibSelect } from "@chakra-ui/react";
-
 export type {
   SelectContentProps,
   SelectItemGroupProps,

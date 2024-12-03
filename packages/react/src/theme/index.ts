@@ -48,7 +48,6 @@ import { transitionDuration, transitionProperty, transitionTimingFunction } from
 
 const customConfig = defineConfig({
   theme: {
-    breakpoints: breakpoints,
     textStyles: {
       fonts: fonts,
       sizes: fontSizes,
@@ -57,12 +56,12 @@ const customConfig = defineConfig({
       heights: lineHeights,
     },
     tokens: {
+      breakpoints: breakpoints,
       fonts: fonts,
       fontSizes: fontSizes,
       fontWeights: fontWeights,
       letterSpacings: letterSpacings,
       lineHeights: lineHeights,
-
       blurs: blur,
       borders: borders,
       colors: colors,

@@ -1,20 +1,30 @@
+import { CollectionItem, createListCollection } from "@chakra-ui/react";
 import {
   Box,
   Card,
-  Field,
   Flex,
   Heading,
   Link,
-  NativeSelect,
-  NativeSelectField,
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValueText,
   SimpleGrid,
   Stack,
   Text,
 } from "@kvib/react";
-import { ChangeEvent, ReactElement, useEffect, useRef, useState } from "react";
+import { ReactElement, useEffect, useRef, useState } from "react";
 import { ComponentsBanner } from "../../templates/ComponentsBanner";
-import { Komponenter } from "./Komponenter";
-import { ColorPalette } from "./StoryRendering";
+import { ColorPalette, Komponenter } from "./Komponenter";
+
+const fargevalg = createListCollection({
+  items: [
+    { value: "green", label: "Grønn" },
+    { value: "blue", label: "Blå" },
+  ],
+});
 
 export const Komponentsoversikt = () => <Components />;
 
@@ -27,19 +37,27 @@ export const Components = () => {
         description="Se en full oversikt over komponentene i designsystemet."
         bg={`${theme}.500`}
       />
-      <Field label="Velg fargetema">
-        <NativeSelect size="md" width="240px">
-          <NativeSelectField
-            value={theme}
-            onChange={(e: ChangeEvent<HTMLSelectElement>) => setTheme(e.target.value as ColorPalette)}
-            marginBottom="2rem"
-            maxW="12rem"
-          >
-            <option value="green">Grønn</option>
-            <option value="blue">Blå</option>
-          </NativeSelectField>
-        </NativeSelect>
-      </Field>
+      <Select
+        collection={fargevalg}
+        size="sm"
+        width="200px"
+        value={theme}
+        onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setTheme(e.target.value as ColorPalette)}
+        defaultValue={theme}
+        mb="3rem"
+      >
+        <SelectLabel>Velg fargepalett</SelectLabel>
+        <SelectTrigger>
+          <SelectValueText placeholder="Velg fargepalett" />
+        </SelectTrigger>
+        <SelectContent>
+          {fargevalg.items.map((item: CollectionItem) => (
+            <SelectItem key={item.value} item={item}>
+              {item.label}
+            </SelectItem>
+          ))}
+        </SelectContent>
+      </Select>
       <Stack gap="3rem">
         {Object.keys(Komponenter(theme)).map(categoryKey => {
           const category = Komponenter(theme)[categoryKey];
@@ -54,7 +72,6 @@ export const Components = () => {
                     colorPalette={theme}
                     link={component.link}
                     component={component.story}
-                    category={categoryKey as string}
                   />
                 );
               })}
@@ -71,13 +88,11 @@ const ComponentCard = ({
   component,
   colorPalette,
   link,
-  category,
 }: {
   title: string;
   component: ReactElement;
   colorPalette: ColorPalette;
   link: string;
-  category: string;
 }) => (
   <Card unstyled size="md">
     <LazyStory component={component} />
@@ -85,7 +100,7 @@ const ComponentCard = ({
     <Stack align="center">
       <Link
         padding="1rem"
-        href={`/?path=/docs/${category}-${link}--docs`}
+        href={`/?path=/docs/komponenter-${link}--docs`}
         alignItems="center"
         colorPalette={colorPalette}
       >
