@@ -1,8 +1,14 @@
 import { Alert, Code, Text } from "@kvib/react";
-import { Dokumentasjonsside } from "./utils/Dokumentasjonsside";
-import { Liste } from "./utils/Liste";
-import { Listeelement } from "./utils/Listeelement";
-import { Tekstblokk } from "./utils/Tekstblokk";
+import { Source } from "@storybook/blocks";
+import { Dokumentasjonsside } from "../utils/Dokumentasjonsside";
+import { Liste } from "../utils/Liste";
+import { Listeelement } from "../utils/Listeelement";
+import { Tekstblokk } from "../utils/Tekstblokk";
+import { MigreringAccordion } from "./komponenter/MigreringAccordion";
+import { MigreringAlert } from "./komponenter/MigreringAlert";
+import { MigreringInputGroup } from "./komponenter/MigreringInputGroup";
+import { MigreringNumberInput } from "./komponenter/MigreringNumberInput";
+import { MigreringToast } from "./komponenter/MigreringToast";
 
 const nyeKomponenter = [
   "Rating",
@@ -130,15 +136,8 @@ const kompMedNyeNavn = [
     title: "OrderedList og UnorderedList",
     description: (
       <>
-        Har blitt forenklet til <Code>List</Code> med prop-en <Code>as</Code> for å velge mellom ulike typer lister.
-      </>
-    ),
-  },
-  {
-    title: "InputLeftAddon og InputRightAddon",
-    description: (
-      <>
-        Kalles nå <Code>InputAddon</Code> med <Code>placement</Code>-prop-en.
+        Har blitt forenklet til <Code>List</Code> med prop-en <Code>as</Code> for å velge mellom ulike typer lister. Her
+        setter man <Code>as="ol"</Code> for en ordnet liste og <Code>as="ul"</Code> for en uordnet liste.
       </>
     ),
   },
@@ -301,6 +300,23 @@ const nyeProps = [
       </>
     ),
   },
+  {
+    title: "as",
+    description: (
+      <>
+        Der man tidligere har kunne inferere props gjennom <Code>as</Code>, slik som{" "}
+        <Code>{`<Button as={ReactRouterLink} to="..." />`}</Code> for å legge til støtte for andre routing-verktøy i en
+        knapp, må man nå bruke <Code>asChild</Code> på rot-komponenten i stedet. Eksempelet over vil da se slik ut:
+        <Source
+          code={`
+<Button asChild>
+  <ReactRouterLink to="..." />
+</Button>
+          `}
+        />
+      </>
+    ),
+  },
 ];
 
 const nyeVarianter = [
@@ -408,6 +424,23 @@ const fjernedeKomponenter = [
     title: "allowPinZoom",
     description: <>Er tatt bort.</>,
   },
+  {
+    title: "LinkOverlay sin isExternal-prop",
+    description: (
+      <>
+        Denne er fjernet. Man kan heller inkludere en knapp som en del av div-en som blir overlayet og legge til{" "}
+        <Code>external</Code> på denne.
+      </>
+    ),
+  },
+  {
+    title: "align på Text-komponenten",
+    description: (
+      <>
+        Fjernet til fordel for <Code>textAlign</Code>.
+      </>
+    ),
+  },
 ];
 
 const nySyntaks = [
@@ -444,6 +477,12 @@ export const Migration = () => (
           ))}
       </Liste>
     </Tekstblokk>
+    <Text as="h2">Endringer i komponenter</Text>
+    <MigreringAccordion />
+    <MigreringAlert />
+    <MigreringInputGroup />
+    <MigreringNumberInput />
+    <MigreringToast />
     <Tekstblokk tittel="Komponenter med nye navn">
       Flere av komponentene har fått nye navn. Dette byr på breaking changes for de som oppgraderer fra tidligere
       versjoner av Kvib.
