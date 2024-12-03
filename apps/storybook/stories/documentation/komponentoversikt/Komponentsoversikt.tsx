@@ -30,8 +30,6 @@ export const Komponentsoversikt = () => <Components />;
 
 export const Components = () => {
   const [theme, setTheme] = useState<ColorPalette>("green");
-
-  console.log(fargevalg);
   return (
     <Box className="sb-unstyled">
       <ComponentsBanner
