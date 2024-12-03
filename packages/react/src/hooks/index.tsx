@@ -9,6 +9,7 @@ export {
   useControllableState,
   useDisclosure,
   useFieldContext,
+  useChakraContext as useKvibContext,
   useRecipe,
   useSlotRecipe,
   useToken,

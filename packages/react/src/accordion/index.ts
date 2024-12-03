@@ -1,10 +1,8 @@
 export {
   AccordionRoot as Accordion,
-  AccordionItemTrigger as AccordionButton,
   AccordionItem,
   AccordionItemContent,
   AccordionItemTrigger,
-  AccordionItemContent as AccordionPanel,
 } from "@/components/ui/accordion";
 
 export { AccordionItemIndicator as AccordionIcon, AccordionItemBody, AccordionItemIndicator } from "@chakra-ui/react";
@@ -20,3 +18,9 @@ export type {
   AccordionRootProps as AccordionProps,
   AccordionRootProviderProps,
 } from "@chakra-ui/react";
+
+/** @deprecated Bruk AccordionItemTrigger istedenfor */
+export { AccordionItemTrigger as AccordionButton } from "@/components/ui/accordion";
+
+/** @deprecated Bruk AccordionItemContent istedenfor */
+export { AccordionItemContent as AccordionPanel } from "@/components/ui/accordion";

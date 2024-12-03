@@ -4,6 +4,7 @@ import { Dokumentasjonsside } from "../utils/Dokumentasjonsside";
 import { Liste } from "../utils/Liste";
 import { Listeelement } from "../utils/Listeelement";
 import { Tekstblokk } from "../utils/Tekstblokk";
+import { Kodeeksempel } from "./Kodeeksempel";
 import { MigreringAccordion } from "./komponenter/MigreringAccordion";
 import { MigreringAlert } from "./komponenter/MigreringAlert";
 import { MigreringInputGroup } from "./komponenter/MigreringInputGroup";
@@ -438,6 +439,28 @@ const fjernedeKomponenter = [
     description: (
       <>
         Fjernet til fordel for <Code>textAlign</Code>.
+      </>
+    ),
+  },
+  {
+    title: "useTheme",
+    description: (
+      <>
+        Er fjernet. Man kan nå hente ut tokens ved å bruke <Code>useKvibContext</Code> og kalle på <Code>token()</Code>.
+        <Kodeeksempel
+          beskrivelse="Bruk av tokens tidligere:"
+          kildekode={`
+const theme = useTheme()
+const largeBreakpoint = theme.breakpoints.lg
+`}
+        />
+        <Kodeeksempel
+          beskrivelse="Nå hentes tokens ut slik:"
+          kildekode={`
+  const system = useKvibContext();
+  const largeBreakpoint = system.token("breakpoints.lg");
+`}
+        />
       </>
     ),
   },
