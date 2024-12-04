@@ -8,6 +8,7 @@ export {
   DialogDescription,
   DialogFooter,
   DialogHeader,
+  DialogRoot,
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
@@ -23,6 +24,7 @@ export type {
   DialogFooterProps,
   DialogHeaderProps,
   DialogRootProps as DialogProps,
+  DialogRootProps,
   DialogTitleProps,
   DialogTriggerProps,
 } from "@chakra-ui/react";
@@ -56,3 +58,21 @@ export { DialogBody as ModalBody } from "@/components/ui/dialog";
 
 /** @deprecated Bruk DialogTitle istedenfor */
 export { DialogTitle as ModalTitle } from "@/components/ui/dialog";
+
+/** @deprecated Bruk Dialog istedenfor */
+export { DialogRoot as AlertDialog } from "@/components/ui/dialog";
+
+/** @deprecated Bruk DialogCloseTrigger istedenfor */
+export { DialogActionTrigger as AlertDialogCloseButton } from "@/components/ui/dialog";
+
+/** @deprecated Bruk DialogContent istedenfor */
+export { DialogContent as AlertDialogContent } from "@/components/ui/dialog";
+
+/** @deprecated Bruk DialogFooter istedenfor */
+export { DialogFooter as AlertDialogFooter } from "@/components/ui/dialog";
+
+/** @deprecated Bruk DialogHeader istedenfor */
+export { DialogHeader as AlertDialogHeader } from "@/components/ui/dialog";
+
+/** @deprecated Bruk DialogBackdrop istedenfor */
+export { DialogBackdrop as AlertDialogOverlay } from "@/components/ui/dialog";

@@ -11,6 +11,7 @@ export {
   ColorPickerInlineContent,
   ColorPickerInput,
   ColorPickerLabel,
+  ColorPickerRoot,
   ColorPickerSliders,
   ColorPickerSwatchGroup,
   ColorPickerSwatchTrigger,
@@ -19,18 +20,23 @@ export {
   ColorPickerValueText,
 } from "@/components/ui/color-picker";
 
-export { ColorPicker as KvibColorPicker } from "@chakra-ui/react/color-picker";
+export { ColorPicker as KvibColorPicker } from "@chakra-ui/react";
 
 export type {
+  ColorPickerAreaBackgroundProps,
   ColorPickerAreaProps,
   ColorPickerAreaThumbProps,
+  ColorPickerChannelInputProps,
   ColorPickerContentProps,
   ColorPickerControlProps,
+  ColorPickerFormatSelectProps,
   ColorPickerLabelProps,
   ColorPickerPositionerProps,
   ColorPickerRootProps as ColorPickerProps,
+  ColorPickerRootProps,
+  ColorPickerSwatchGroupProps,
   ColorPickerSwatchProps,
   ColorPickerTriggerProps,
   ColorPickerValueTextProps,
   ColorPickerViewProps,
-} from "@chakra-ui/react/color-picker";
+} from "@chakra-ui/react";

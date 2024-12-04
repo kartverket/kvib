@@ -7,6 +7,7 @@ export {
   StepsList,
   StepsNextTrigger,
   StepsPrevTrigger,
+  StepsRoot,
 } from "@/components/ui/steps";
 
 export {
