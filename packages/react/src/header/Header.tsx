@@ -1,5 +1,5 @@
 import { IconButton } from "@/button";
-import { useChakraContext, useMediaQuery, useToggle } from "@/hooks";
+import { useKvibContext, useMediaQuery, useToggle } from "@/hooks";
 import { Box, Flex, VStack } from "@/layout";
 import { Logo } from "@/logo";
 import { Link, LinkProps } from "@/typography";
@@ -49,10 +49,9 @@ export const Header = (props: HeaderProps) => {
     logoVariant = "horizontal",
   } = props;
 
-  const theme = useChakraContext();
-  const breakpoint = theme._config?.theme?.breakpoints?.[collapseBreakpoint];
-  const isCollapse = useMediaQuery(`(max-width: ${breakpoint})`);
-  const isSm = useMediaQuery(`(max-width: ${theme._config?.theme?.breakpoints?.["sm"]})`);
+  const system = useKvibContext();
+  const isCollapse = useMediaQuery(`(max-width: ${system.token("breakpoints." + collapseBreakpoint)})`);
+  const isSm = useMediaQuery(`(max-width: ${system.token("breakpoints.sm")})`);
   const logoHorizontalSize = isSm ? 110 : 150;
   const logoVerticalSize = isSm ? 70 : 100;
   const headerSize = isSm ? 70 : 90;

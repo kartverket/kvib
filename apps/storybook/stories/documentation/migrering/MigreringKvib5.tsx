@@ -9,6 +9,8 @@ import { MigreringAlert } from "./komponenter/MigreringAlert";
 import { MigreringDialog } from "./komponenter/MigreringDialog";
 import { MigreringInputGroup } from "./komponenter/MigreringInputGroup";
 import { MigreringNumberInput } from "./komponenter/MigreringNumberInput";
+import { MigreringShow } from "./komponenter/MigreringShow";
+import { MigreringSteps } from "./komponenter/MigreringSteps";
 import { MigreringTable } from "./komponenter/MigreringTable";
 import { MigreringToast } from "./komponenter/MigreringToast";
 import { MigreringTooltip } from "./komponenter/MigreringTooltip";
@@ -75,9 +77,15 @@ export const Migration = () => (
     <Text as="h2">Endringer i komponenter</Text>
     <MigreringAccordion />
     <MigreringAlert />
+    <Tekstblokk tittel="Alert Dialog">
+      Slått sammen med <Code>Modal</Code> i den nye komponenten <Code>Dialog</Code>, hvor man kan sette propen{" "}
+      <Code>role="alertdialog"</Code> for å få en Alert Dialog som før.
+    </Tekstblokk>
     <MigreringDialog />
     <MigreringInputGroup />
     <MigreringNumberInput />
+    <MigreringShow />
+    <MigreringSteps />
     <MigreringTable />
     <MigreringToast />
     <MigreringTooltip />

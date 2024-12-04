@@ -13,22 +13,40 @@ export {
   MenuRoot,
   MenuSeparator,
   MenuTrigger,
+  MenuTriggerItem,
 } from "@/components/ui/menu";
 
-export { Menu as KvibMenu } from "@chakra-ui/react";
+export {
+  Menu as KvibMenu,
+  MenuArrowTip,
+  MenuIndicator,
+  MenuItemContext,
+  MenuItemGroupLabel,
+  MenuPositioner,
+  MenuRootProvider,
+  useMenu,
+  useMenuContext,
+  useMenuItemContext,
+  useMenuStyles,
+} from "@chakra-ui/react";
 
 export type {
   MenuArrowProps,
+  MenuArrowTipProps,
   MenuCheckboxItemProps,
   MenuContentProps,
   MenuContextTriggerProps,
+  MenuIndicatorProps,
   MenuItemCommandProps,
   MenuItemGroupProps,
   MenuItemProps,
   MenuItemTextProps,
+  MenuOpenChangeDetails,
   MenuRootProps as MenuProps,
   MenuRadioItemGroupProps,
   MenuRadioItemProps,
+  MenuSelectionDetails,
   MenuSeparatorProps,
+  MenuTriggerItemProps,
   MenuTriggerProps,
 } from "@chakra-ui/react";

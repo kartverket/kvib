@@ -4,8 +4,10 @@ export {
   CardDescription,
   CardFooter,
   CardHeader,
+  CardRoot,
   CardTitle,
   Card as KvibCard,
+  useCardStyles,
 } from "@chakra-ui/react";
 
 export type {
@@ -14,5 +16,6 @@ export type {
   CardFooterProps,
   CardHeaderProps,
   CardRootProps as CardProps,
+  CardRootProps,
   CardTitleProps,
 } from "@chakra-ui/react";

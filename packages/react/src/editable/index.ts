@@ -7,9 +7,14 @@ export {
   EditableEditTrigger,
   EditableInput,
   EditablePreview,
+  EditableRoot,
+  EditableRootProvider,
   EditableSubmitTrigger,
   EditableTextarea,
   Editable as KvibEditable,
+  useEditable,
+  useEditableContext,
+  useEditableStyles,
 } from "@chakra-ui/react";
 
 export type {
@@ -20,6 +25,8 @@ export type {
   EditableInputProps,
   EditablePreviewProps,
   EditableRootProps as EditableProps,
+  EditableRootProps,
   EditableSubmitTriggerProps,
   EditableTextareaProps,
+  EditableValueChangeDetails,
 } from "@chakra-ui/react";

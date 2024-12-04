@@ -1,2 +1,2 @@
-export { ColorSwatch, ColorSwatchMix } from "@chakra-ui/react/color-swatch";
-export type { ColorSwatchMixProps, ColorSwatchProps } from "@chakra-ui/react/color-swatch";
+export { ColorSwatch, ColorSwatchMix, ColorSwatchPropsProvider } from "@chakra-ui/react";
+export type { ColorSwatchBaseProps, ColorSwatchMixProps, ColorSwatchProps } from "@chakra-ui/react";

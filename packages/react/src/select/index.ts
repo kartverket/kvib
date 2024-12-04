@@ -5,9 +5,21 @@ export {
   SelectItemGroup,
   SelectItemText,
   SelectLabel,
+  SelectRoot,
   SelectTrigger,
   SelectValueText,
 } from "@/components/ui/select";
+
+export {
+  SelectClearTrigger,
+  SelectContext,
+  SelectHiddenSelect,
+  SelectIndicator,
+  SelectIndicatorGroup,
+  useSelect,
+  useSelectContext,
+  useSelectStyles,
+} from "@chakra-ui/react";
 
 export type {
   SelectContentProps,

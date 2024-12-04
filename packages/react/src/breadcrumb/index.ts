@@ -3,10 +3,16 @@ export {
   BreadcrumbCurrentLink,
   BreadcrumbEllipsis,
   BreadcrumbLink,
+  BreadcrumbRoot,
 } from "@/components/ui/breadcrumb";
-export { BreadcrumbItem, BreadcrumbSeparator, Breadcrumb as KvibBreadcrumb } from "@chakra-ui/react";
+export {
+  BreadcrumbItem,
+  BreadcrumbSeparator,
+  Breadcrumb as KvibBreadcrumb,
+  useBreadcrumbStyles,
+} from "@chakra-ui/react";
 
-export type { BreadcrumbRootProps as BreadcrumbProps } from "@/components/ui/breadcrumb";
+export type { BreadcrumbRootProps as BreadcrumbProps, BreadcrumbRootProps } from "@/components/ui/breadcrumb";
 
 export type {
   BreadcrumbCurrentLinkProps,

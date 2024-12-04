@@ -9,8 +9,10 @@ export {
   TableColumnHeader,
   TableFooter,
   TableHeader,
+  TableRootPropsProvider,
   TableRow,
   TableScrollArea,
+  useTableStyles,
 } from "@chakra-ui/react";
 
 export type {
@@ -44,3 +46,6 @@ export { TableColumnHeader as Th } from "@chakra-ui/react";
 
 /** @deprecated Bruk TableFooter istedenfor */
 export { TableFooter as Tfoot } from "@chakra-ui/react";
+
+/** @deprecated Bruk TableScrollArea istedenfor */
+export { TableScrollArea as TableOverflow } from "@chakra-ui/react";
