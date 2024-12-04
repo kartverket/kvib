@@ -11,22 +11,22 @@ export const MigreringTable = () => (
         <Code>Table</Code>, slik som dette: <Code>{`<Table striped>`}</Code>.
       </Listeelement>
       <Listeelement tittel="Thead">
-        Er omdøpt til <Code>TableHeader</Code>.
+        Omdøpt til <Code>TableHeader</Code>.
       </Listeelement>
       <Listeelement tittel="Tbody">
-        Er omdøpt til <Code>TableBody</Code>.
+        Omdøpt til <Code>TableBody</Code>.
       </Listeelement>
       <Listeelement tittel="Tr">
-        Er omdøpt til <Code>TableRow</Code>.
+        Omdøpt til <Code>TableRow</Code>.
       </Listeelement>
       <Listeelement tittel="Th">
-        Er omdøpt til <Code>TableColumnHeader</Code>.
+        Omdøpt til <Code>TableColumnHeader</Code>.
       </Listeelement>
       <Listeelement tittel="Td">
-        Er omdøpt til <Code>TableCell</Code>.
+        Omdøpt til <Code>TableCell</Code>.
       </Listeelement>
       <Listeelement tittel="Tfoot">
-        Er omdøpt til <Code>TableFooter</Code>.
+        Omdøpt til <Code>TableFooter</Code>.
       </Listeelement>
     </Liste>
   </Tekstblokk>
