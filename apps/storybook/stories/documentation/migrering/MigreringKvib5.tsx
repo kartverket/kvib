@@ -78,7 +78,8 @@ export const Migration = () => (
     <MigreringAccordion />
     <MigreringAlert />
     <Tekstblokk tittel="Alert Dialog">
-      Slått sammen med <Code>Modal</Code> i den nye komponenten <Code>Dialog</Code>.
+      Slått sammen med <Code>Modal</Code> i den nye komponenten <Code>Dialog</Code>, hvor man kan sette propen{" "}
+      <Code>role="alertdialog"</Code> for å få en Alert Dialog som før.
     </Tekstblokk>
     <MigreringDialog />
     <MigreringInputGroup />

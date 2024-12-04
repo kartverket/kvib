@@ -131,4 +131,12 @@ export const kompMedNyeNavn = [
       </>
     ),
   },
+  {
+    title: "TagLeftIcon og TagRightIcon",
+    description: (
+      <>
+        Er erstattet med å rendre ikonet direkte inne i <Code>Tag</Code>-komponenten.
+      </>
+    ),
+  },
 ];

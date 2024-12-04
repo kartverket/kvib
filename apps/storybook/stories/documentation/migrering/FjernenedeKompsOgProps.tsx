@@ -103,8 +103,8 @@ const largeBreakpoint = theme.breakpoints.lg
         <Kodeeksempel
           beskrivelse="Nå hentes tokens ut slik:"
           kildekode={`
-  const system = useKvibContext();
-  const largeBreakpoint = system.token("breakpoints.lg");
+const system = useKvibContext();
+const largeBreakpoint = system.token("breakpoints.lg");
 `}
         />
       </>
