@@ -7,7 +7,7 @@ import { Icon } from "../icon";
 export type ButtonProps = Omit<ChakraButtonProps, "colorPalette" | "variant"> & {
   /** The variants of the component
    * @default solid */
-  variant?: "solid" | "subtle" | "surface" | "outline" | "ghost" | "plain";
+  variant?: "primary" | "secondary" | "tertiary" | "solid" | "outline" | "ghost" | "plain";
 
   /**The visual color appearance of the component
    * @default green*/
@@ -27,10 +27,24 @@ export type ButtonProps = Omit<ChakraButtonProps, "colorPalette" | "variant"> & 
   iconAriaIsHidden?: boolean;
 };
 
+export type ButtonVariant = "solid" | "outline" | "ghost" | "plain";
+
+export const buttonVariantMap = {
+  primary: "solid",
+  solid: "solid",
+  secondary: "outline",
+  outline: "outline",
+  tertiary: "plain",
+  plain: "plain",
+  ghost: "ghost",
+};
+
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ children, iconFill, disabled, loading, leftIcon, rightIcon, iconAriaIsHidden, ...props }, ref) => {
+  ({ children, iconFill, disabled, loading, leftIcon, rightIcon, iconAriaIsHidden, variant, ...props }, ref) => {
+    const buttonVariant = buttonVariantMap[variant || "solid"] as ButtonVariant;
+
     return (
-      <ChakraButton {...props} ref={ref} disabled={disabled || loading} aria-busy={loading}>
+      <ChakraButton {...props} ref={ref} disabled={disabled || loading} aria-busy={loading} variant={buttonVariant}>
         {loading && (
           <Center position="absolute" right="0" left="0">
             <Spinner />
