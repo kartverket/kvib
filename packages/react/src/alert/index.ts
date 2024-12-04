@@ -7,6 +7,7 @@ export type {
   AlertIndicatorProps,
   AlertRootProps,
   AlertTitleProps,
+  useAlertStyles,
 } from "@chakra-ui/react";
 
 /** @deprecated Bruk AlertIndicator istedenfor */

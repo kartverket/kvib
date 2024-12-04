@@ -5,7 +5,10 @@ export {
   FieldsetErrorText,
   FieldsetHelperText,
   FieldsetLegend,
+  FieldsetRoot,
   Fieldset as KvibFieldset,
+  useFieldStyles,
+  useFieldsetContext,
 } from "@chakra-ui/react";
 
 export type {
@@ -14,4 +17,5 @@ export type {
   FieldsetHelperTextProps,
   FieldsetLegendProps,
   FieldsetRootProps as FieldsetProps,
+  FieldsetRootProps,
 } from "@chakra-ui/react";

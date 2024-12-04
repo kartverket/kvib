@@ -1,5 +1,4 @@
-import { LogoHorizontal } from "@kvib/react/assets";
-import { LogoVertical } from "@kvib/react/assets";
+import { LogoHorizontal, LogoVertical } from "@kvib/react/assets";
 
 export type LogoProps = {
   /** The variant of the logo

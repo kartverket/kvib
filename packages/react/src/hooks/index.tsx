@@ -1,8 +1,7 @@
 export {
-  useAccordion,
-  useAccordionContext,
-  useAccordionItemContext,
+  useBreakpoint,
   useBreakpointValue,
+  useCallbackRef,
   useChakraContext,
   useClipboard,
   useControllableProp,
@@ -10,6 +9,8 @@ export {
   useDisclosure,
   useFieldContext,
   useChakraContext as useKvibContext,
+  useMediaQuery,
+  useParentRecipeProps,
   useRecipe,
   useSlotRecipe,
   useToken,
@@ -35,7 +36,6 @@ export {
   useIsomorphicLayoutEffect,
   useLocalStorage,
   useMap,
-  useMediaQuery,
   useOnClickOutside,
   useReadLocalStorage,
   useResizeObserver,
@@ -50,5 +50,3 @@ export {
   useUnmount,
   useWindowSize,
 } from "usehooks-ts";
-
-export type { UseControllableStateProps, UseDisclosureProps, UseDisclosureReturn } from "@chakra-ui/react";

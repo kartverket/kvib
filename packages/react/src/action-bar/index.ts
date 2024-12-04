@@ -7,6 +7,8 @@ export {
   ActionBarSeparator,
 } from "@/components/ui/action-bar";
 
+export { useActionBar, useActionBarContext, useActionBarStyles } from "@chakra-ui/react";
+
 export type {
   ActionBarCloseTriggerProps,
   ActionBarContentProps,

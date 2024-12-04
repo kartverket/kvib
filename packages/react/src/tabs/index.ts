@@ -6,7 +6,11 @@ export {
   TabsContext,
   TabsIndicator,
   TabsList,
+  TabsRootProvider,
   TabsTrigger,
+  useTabs,
+  useTabsContext,
+  useTabsStyles,
 } from "@chakra-ui/react";
 
 export type {
@@ -15,5 +19,6 @@ export type {
   TabsIndicatorProps,
   TabsListProps,
   TabsRootProps as TabsProps,
+  TabsRootProviderProps,
   TabsTriggerProps,
 } from "@chakra-ui/react";

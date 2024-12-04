@@ -7,6 +7,7 @@ export {
   CardRoot,
   CardTitle,
   Card as KvibCard,
+  useCardStyles,
 } from "@chakra-ui/react";
 
 export type {

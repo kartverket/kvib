@@ -12,10 +12,35 @@ export {
 
 export {
   Steps as KvibSteps,
+  StepsDescription,
+  StepsItemContext,
+  StepsNumber,
+  StepsPropsProvider,
   StepsRootProvider as StepsProvider,
   StepsSeparator,
+  StepsStatus,
+  StepsTitle,
+  StepsTrigger,
+  useSteps,
   useStepsContext,
+  useStepsItemContext,
+  useStepsStyles,
 } from "@chakra-ui/react";
 
 export type { StepsItemProps } from "@/components/ui/steps";
-export type { StepsRootProps as StepsProps } from "@chakra-ui/react";
+export type {
+  StepsChangeDetails,
+  StepsContentProps,
+  StepsDescriptionProps,
+  StepsIndicatorProps,
+  StepsNextTriggerProps,
+  StepsNumberProps,
+  StepsPrevTriggerProps,
+  StepsRootProps as StepsProps,
+  StepsSeparatorProps,
+  StepsStatusProps,
+  StepsTitleProps,
+  StepsTriggerProps,
+  UseStepsProps,
+  UseStepsReturn,
+} from "@chakra-ui/react";

@@ -5,18 +5,22 @@ export {
   ToastCloseTrigger,
   ToastDescription,
   ToastIndicator,
+  ToastRoot,
   ToastTitle,
   createToaster,
+  useToastStyles,
 } from "@chakra-ui/react";
 
 export { Toaster, toaster } from "@/components/ui/toaster";
 
 export type {
+  CreateToasterProps,
   ToastActionTriggerProps,
   ToastCloseTriggerProps,
   ToastDescriptionProps,
   ToastIndicatorProps,
   ToastRootProps as ToastProps,
+  ToastRootProps,
   ToastTitleProps,
   ToasterProps,
 } from "@chakra-ui/react";

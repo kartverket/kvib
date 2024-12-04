@@ -7,6 +7,9 @@ export {
   CollapsibleRootProvider,
   CollapsibleTrigger,
   Collapsible as KvibCollapsible,
+  useCollapsible,
+  useCollapsibleContext,
+  useCollapsibleStyles,
 } from "@chakra-ui/react";
 
 export type {

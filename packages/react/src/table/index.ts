@@ -9,8 +9,10 @@ export {
   TableColumnHeader,
   TableFooter,
   TableHeader,
+  TableRootPropsProvider,
   TableRow,
   TableScrollArea,
+  useTableStyles,
 } from "@chakra-ui/react";
 
 export type {

@@ -6,7 +6,15 @@ export {
   AccordionRoot,
 } from "@/components/ui/accordion";
 
-export { AccordionItemIndicator as AccordionIcon, AccordionItemBody, AccordionItemIndicator } from "@chakra-ui/react";
+export {
+  AccordionItemIndicator as AccordionIcon,
+  AccordionItemBody,
+  AccordionItemIndicator,
+  useAccordion,
+  useAccordionContext,
+  useAccordionItemContext,
+  useAccordionStyles,
+} from "@chakra-ui/react";
 
 export { Accordion as KvibAccordion } from "@chakra-ui/react";
 

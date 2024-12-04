@@ -13,7 +13,7 @@ export {
   DialogTrigger,
 } from "@/components/ui/dialog";
 
-export { Dialog as KvibDialog } from "@chakra-ui/react";
+export { Dialog as KvibDialog, useDialog, useDialogContext, useDialogStyles } from "@chakra-ui/react";
 
 export type {
   DialogActionTriggerProps,

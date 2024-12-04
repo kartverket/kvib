@@ -1,1 +1,36 @@
-export { createSystem, defaultConfig } from "@chakra-ui/react";
+export {
+  createContext,
+  createIcon,
+  createListCollection,
+  createRecipeContext,
+  createSlotRecipeContext,
+  createSystem,
+  defaultBaseConfig,
+  defaultConfig,
+  defaultSystem,
+  defineAnimationStyles,
+  defineConditions,
+  defineConfig,
+  defineGlobalStyles,
+  defineKeyframes,
+  defineLayerStyles,
+  defineRecipe,
+  defineSemanticTokens,
+  defineSlotRecipe,
+  defineStyle,
+  defineTextStyles,
+  defineTokens,
+  isValidSystem,
+} from "@chakra-ui/react";
+
+export type {
+  AnimationStyles,
+  LayerStyles,
+  SystemConfig,
+  SystemContext,
+  SystemRecipeFn,
+  SystemSlotRecipeFn,
+  SystemStyleObject,
+  TextStyles,
+  Tokens,
+} from "@chakra-ui/react";

@@ -1,5 +1,6 @@
 export { Field } from "@/components/ui/field";
 export type { FieldProps } from "@/components/ui/field";
+
 export {
   FieldErrorIcon,
   FieldErrorText,
@@ -7,13 +8,17 @@ export {
   FieldLabel,
   FieldRequiredIndicator,
   Field as KvibField,
+  useFieldContext,
+  useFieldStyles,
 } from "@chakra-ui/react";
+
 export type {
   FieldErrorIconProps,
   FieldErrorTextProps,
   FieldHelperTextProps,
   FieldLabelProps,
   FieldRequiredIndicatorProps,
+  FieldRootProps,
 } from "@chakra-ui/react";
 
 /** @deprecated Bruk Field istedenfor */

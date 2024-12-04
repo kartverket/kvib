@@ -10,6 +10,9 @@ export {
   CheckboxCardRoot,
   CheckboxCardRootPropsProvider,
   CheckboxCardRootProvider,
+  useCheckboxCard,
+  useCheckboxCardContext,
+  useCheckboxCardStyles,
 } from "@chakra-ui/react";
 
 export type { CheckboxCardProps } from "@/components/ui/checkbox-card";
