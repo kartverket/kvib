@@ -5,7 +5,7 @@
 ### Patch Changes
 
 - 36f797b: Legger til aliaser for komponenter med nye navn
-- 61708e2: Legger til flere komponenter som For, Spacer og Float. Eksporterer flere typer.
+- 61708e2: Legger til flere komponenter som FormLabel, Spacer og Float, både nye og gamle komponenter som fortsatt skal være med
 
 ## 5.0.1
 
