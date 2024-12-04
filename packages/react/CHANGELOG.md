@@ -1,5 +1,12 @@
 # @kvib/react
 
+## 5.0.2
+
+### Patch Changes
+
+- 36f797b: Legger til aliaser for komponenter med nye navn
+- 61708e2: Legger til flere komponenter som For, Spacer og Float. Eksporterer flere typer.
+
 ## 5.0.1
 
 ### Patch Changes
