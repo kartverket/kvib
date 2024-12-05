@@ -1,5 +1,6 @@
 import { Popover as ChakraPopover, Portal } from "@chakra-ui/react";
 import * as React from "react";
+import { PropsWithChildren } from "react";
 import { CloseButton } from "./close-button";
 
 interface PopoverContentProps extends ChakraPopover.ContentProps {
@@ -7,7 +8,7 @@ interface PopoverContentProps extends ChakraPopover.ContentProps {
   portalRef?: React.RefObject<HTMLElement>;
 }
 
-export const PopoverContent = React.forwardRef<HTMLDivElement, PopoverContentProps>(
+export const PopoverContent = React.forwardRef<HTMLDivElement, PropsWithChildren<PopoverContentProps>>(
   function PopoverContent(props, ref) {
     const { portalled = true, portalRef, ...rest } = props;
     return (

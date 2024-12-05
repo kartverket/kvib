@@ -2,7 +2,8 @@ import "material-symbols";
 import { MaterialSymbol } from "material-symbols";
 import { forwardRef } from "react";
 
-export type IconProps = {
+// extend SpanProps
+export interface IconProps extends React.HTMLAttributes<HTMLSpanElement> {
   /**The icon from Material symbols you want to display*/
   icon: MaterialSymbol;
 
@@ -27,10 +28,10 @@ export type IconProps = {
   className?: string;
 
   css?: React.CSSProperties;
-};
+}
 
 export const Icon = forwardRef<HTMLSpanElement, IconProps>(
-  ({ icon, size, color, weight, grade, filled = false, ariaIsHidden = false, className = "", css }, ref) => {
+  ({ icon, size, color, weight, grade, filled = false, ariaIsHidden = false, className = "", css, ...rest }, ref) => {
     return (
       <span
         ref={ref}
@@ -45,6 +46,7 @@ export const Icon = forwardRef<HTMLSpanElement, IconProps>(
           }`,
           ...css,
         }}
+        {...rest}
       >
         {icon}
       </span>
