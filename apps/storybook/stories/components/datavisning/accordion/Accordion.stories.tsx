@@ -1,9 +1,15 @@
-import { Box, KvibAccordion } from "@kvib/react";
+import {
+  AccordionItem as AccItem,
+  AccordionItemContent,
+  AccordionItemTrigger,
+  Box,
+  Accordion as KvibAccordion,
+} from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
-const meta: Meta<typeof KvibAccordion.Root> = {
+const meta: Meta<typeof KvibAccordion> = {
   title: "Komponenter/Accordion",
-  component: KvibAccordion.Root,
+  component: KvibAccordion,
   parameters: {
     docs: {
       story: { inline: true },
@@ -13,11 +19,11 @@ const meta: Meta<typeof KvibAccordion.Root> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof KvibAccordion.Root>;
+type Story = StoryObj<typeof KvibAccordion>;
 
 export const Preview: Story = {
   argTypes: {
-    multiple: {
+    allowMultiple: {
       description: "If true, multiple items can be expanded at once.",
       table: {
         type: { summary: "boolean" },
@@ -25,7 +31,7 @@ export const Preview: Story = {
       },
       control: "boolean",
     },
-    collapsible: {
+    allowToggle: {
       description: "If true, expanded items may be collapsed again.",
       table: {
         type: { summary: "boolean" },
@@ -63,27 +69,31 @@ export const Preview: Story = {
       control: "boolean",
     },
   },
-  args: { multiple: true, collapsible: false, onChange: undefined },
+  args: { allowMultiple: true, allowToggle: false, onChange: undefined },
   render: args => (
     <Box w="100%">
-      <KvibAccordion.Root {...args}>
-        <KvibAccordion.Item>
-          <KvibAccordion.ItemTrigger>
-            <Box as="span" flex="1" textAlign="left">
-              Tittel 1
-            </Box>
-          </KvibAccordion.ItemTrigger>
-          <KvibAccordion.ItemContent>Innhold 1</KvibAccordion.ItemContent>
-        </KvibAccordion.Item>
-        <KvibAccordion.Item>
-          <KvibAccordion.ItemTrigger>
-            <Box as="span" flex="1" textAlign="left">
-              Tittel 2
-            </Box>
-          </KvibAccordion.ItemTrigger>
-          <KvibAccordion.ItemContent>Innhold 2</KvibAccordion.ItemContent>
-        </KvibAccordion.Item>
-      </KvibAccordion.Root>
+      <KvibAccordion {...args}>
+        <AccItem>
+          <h2>
+            <AccordionItemTrigger>
+              <Box as="span" flex="1" textAlign="left">
+                Tittel 1
+              </Box>
+            </AccordionItemTrigger>
+          </h2>
+          <AccordionItemContent>Innhold 1</AccordionItemContent>
+        </AccItem>
+        <AccItem>
+          <h2>
+            <AccordionItemTrigger>
+              <Box as="span" flex="1" textAlign="left">
+                Tittel 2
+              </Box>
+            </AccordionItemTrigger>
+          </h2>
+          <AccordionItemContent>Innhold 2</AccordionItemContent>
+        </AccItem>
+      </KvibAccordion>
     </Box>
   ),
 };
