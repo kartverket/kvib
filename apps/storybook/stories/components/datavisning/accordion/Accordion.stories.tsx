@@ -1,15 +1,9 @@
-import {
-  AccordionItem as AccItem,
-  AccordionItemContent,
-  AccordionItemTrigger,
-  Box,
-  Accordion as KvibAccordion,
-} from "@kvib/react";
+import { Box, KvibAccordion } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
-const meta: Meta<typeof KvibAccordion> = {
+const meta: Meta<typeof KvibAccordion.Root> = {
   title: "Komponenter/Accordion",
-  component: KvibAccordion,
+  component: KvibAccordion.Root,
   parameters: {
     docs: {
       story: { inline: true },
@@ -19,11 +13,11 @@ const meta: Meta<typeof KvibAccordion> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof KvibAccordion>;
+type Story = StoryObj<typeof KvibAccordion.Root>;
 
 export const Preview: Story = {
   argTypes: {
-    allowMultiple: {
+    multiple: {
       description: "If true, multiple items can be expanded at once.",
       table: {
         type: { summary: "boolean" },
@@ -31,7 +25,7 @@ export const Preview: Story = {
       },
       control: "boolean",
     },
-    allowToggle: {
+    collapsible: {
       description: "If true, expanded items may be collapsed again.",
       table: {
         type: { summary: "boolean" },
@@ -69,68 +63,27 @@ export const Preview: Story = {
       control: "boolean",
     },
   },
-  args: { allowMultiple: true, allowToggle: false, onChange: undefined },
+  args: { multiple: true, collapsible: false, onChange: undefined },
   render: args => (
     <Box w="100%">
-      <KvibAccordion {...args}>
-        <AccItem>
-          <h2>
-            <AccordionItemTrigger>
-              <Box as="span" flex="1" textAlign="left">
-                Tittel 1
-              </Box>
-            </AccordionItemTrigger>
-          </h2>
-          <AccordionItemContent pb={4}>Innhold 1</AccordionItemContent>
-        </AccItem>
-        <AccItem>
-          <h2>
-            <AccordionItemTrigger>
-              <Box as="span" flex="1" textAlign="left">
-                Tittel 2
-              </Box>
-            </AccordionItemTrigger>
-          </h2>
-          <AccordionItemContent pb={4}>Innhold 2</AccordionItemContent>
-        </AccItem>
-      </KvibAccordion>
+      <KvibAccordion.Root {...args}>
+        <KvibAccordion.Item>
+          <KvibAccordion.ItemTrigger>
+            <Box as="span" flex="1" textAlign="left">
+              Tittel 1
+            </Box>
+          </KvibAccordion.ItemTrigger>
+          <KvibAccordion.ItemContent>Innhold 1</KvibAccordion.ItemContent>
+        </KvibAccordion.Item>
+        <KvibAccordion.Item>
+          <KvibAccordion.ItemTrigger>
+            <Box as="span" flex="1" textAlign="left">
+              Tittel 2
+            </Box>
+          </KvibAccordion.ItemTrigger>
+          <KvibAccordion.ItemContent>Innhold 2</KvibAccordion.ItemContent>
+        </KvibAccordion.Item>
+      </KvibAccordion.Root>
     </Box>
-  ),
-};
-
-export const AccordionItem: Story = {
-  argTypes: {
-    id: {
-      description: "Unique id for the AccordionItem.",
-      table: {
-        type: { summary: "string" },
-      },
-      control: "text",
-    },
-    isDisabled: {
-      description: "If true, the AccordionItem will be disabled.",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
-      },
-      control: "boolean",
-    },
-    isFocusable: {
-      description: "If true, the AccordionItem will be focusable.",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
-      },
-      control: "boolean",
-    },
-  },
-  args: { isDisabled: false, isFocusable: false },
-  render: args => (
-    <KvibAccordion>
-      <AccItem {...args}>
-        <AccordionItemTrigger>Klikk meg</AccordionItemTrigger>
-        <AccordionItemContent>Tekst skrift tekst</AccordionItemContent>
-      </AccItem>
-    </KvibAccordion>
   ),
 };

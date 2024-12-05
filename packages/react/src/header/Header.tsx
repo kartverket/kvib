@@ -50,8 +50,12 @@ export const Header = (props: HeaderProps) => {
   } = props;
 
   const system = useKvibContext();
-  const isCollapse = useMediaQuery(`(max-width: ${system.token("breakpoints." + collapseBreakpoint)})`);
-  const isSm = useMediaQuery(`(max-width: ${system.token("breakpoints.sm")})`);
+  const isCollapse = useMediaQuery([`(max-width: ${system.token("breakpoints." + collapseBreakpoint)})`], {
+    fallback: [false],
+  });
+  const isSm = useMediaQuery([`(max-width: ${system.token("breakpoints.sm")})`], {
+    fallback: [false],
+  });
   const logoHorizontalSize = isSm ? 110 : 150;
   const logoVerticalSize = isSm ? 70 : 100;
   const headerSize = isSm ? 70 : 90;
