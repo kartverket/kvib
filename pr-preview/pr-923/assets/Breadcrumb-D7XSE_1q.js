@@ -1,0 +1,10 @@
+import{j as r}from"./index-DEI-gQ2V.js";import{useMDXComponents as s}from"./index-CReAWd7O.js";import{ae as a,af as i,ag as m}from"./index-B6uN4WV1.js";import{B as c,P as o}from"./Breadcrumb.stories-BaHTq_qh.js";import"./index-B3RgaFea.js";import"./index-Czf9F28i.js";import"./iframe-iP7nHREK.js";import"../sb-preview/runtime.js";import"./index-CHGET4sZ.js";import"./index-DrFu-skq.js";import"./index-CDC5Dcly.js";function t(n){const e={code:"code",h1:"h1",h2:"h2",p:"p",pre:"pre",...s(),...n.components};return r.jsxs(r.Fragment,{children:[r.jsx(a,{of:c}),`
+`,r.jsx(e.h1,{id:"breadcrumb",children:"Breadcrumb"}),`
+`,r.jsxs(e.p,{children:["Breadcrumb er et navigasjonsmønster som hjelper brukerne å forstå hierarkiet på en nettside. Legg til ",r.jsx(e.code,{children:"ìsCurrentPage"}),"-proppen på ",r.jsx(e.code,{children:"BreacrumbItem"}),` brukeren står i.
+Breadcrumb inneholder `,r.jsx(e.code,{children:"Box"})," så det er mulig å bruke alle style props derfra."]}),`
+`,r.jsx(e.h2,{id:"ta-i-bruk",children:"Ta i bruk"}),`
+`,r.jsx(e.pre,{children:r.jsx(e.code,{className:"language-jsx",children:`import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator } from "@kvib/react";
+`})}),`
+`,r.jsx(e.h2,{id:"props",children:"Props"}),`
+`,r.jsx(i,{of:o}),`
+`,r.jsx(m,{of:o})]})}function k(n={}){const{wrapper:e}={...s(),...n.components};return e?r.jsx(e,{...n,children:r.jsx(t,{...n})}):t(n)}export{k as default};
