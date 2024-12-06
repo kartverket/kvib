@@ -24,15 +24,15 @@
     "*.{ts,tsx,md}": "prettier --write"
   },
   "devDependencies": {
-    "react": "18.3.1",
     "@types/react": "18.3.11",
     "@types/react-dom": "18.3.0",
     "tsup": "^8.3.5",
     "@chakra-ui/cli": "^3.2.3",
-    "react-dom": "18.3.1",
     "typescript": "^5.7.2"
   },
   "dependencies": {
+    "react-dom": "18.3.1",
+    "react": "18.3.1",
     "@chakra-ui/react": "^3.2.3",
     "date-fns": "^4.1.0",
     "material-symbols": "^0.27.2",
