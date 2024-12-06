@@ -154,6 +154,7 @@ export const argTypes = {
   _horizontal: STORYBOOK_DISABLE_CONTROL,
 };
 
+/** @type { import('@storybook/react').Preview } */
 const preview = {
   decorators: decorators,
   parameters: parameters,
