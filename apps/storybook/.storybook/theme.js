@@ -1,4 +1,3 @@
-import "@fontsource-variable/mulish";
 import { create } from "@storybook/theming";
 import logo from "./kvib_logo.svg";
 

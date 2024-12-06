@@ -36,6 +36,7 @@ export const buttonVariantMap = {
   outline: "outline",
   tertiary: "plain",
   plain: "plain",
+  link: "plain",
   ghost: "ghost",
 };
 

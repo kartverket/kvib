@@ -116,4 +116,6 @@ const customConfig = defineConfig({
 
 const config = mergeConfigs(defaultBaseConfig, defaultConfig, customConfig);
 
-export const system = createSystem(config);
+export const kvibSystem = createSystem(config);
+
+export default kvibSystem;

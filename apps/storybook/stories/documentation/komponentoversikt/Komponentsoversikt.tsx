@@ -1,4 +1,3 @@
-import { CollectionItem, createListCollection } from "@chakra-ui/react";
 import {
   Box,
   Card,
@@ -19,12 +18,10 @@ import { ReactElement, useEffect, useRef, useState } from "react";
 import { ComponentsBanner } from "../../templates/ComponentsBanner";
 import { ColorPalette, Komponenter } from "./Komponenter";
 
-const fargevalg = createListCollection({
-  items: [
-    { value: "green", label: "Grønn" },
-    { value: "blue", label: "Blå" },
-  ],
-});
+const fargevalg = [
+  { value: "green", label: "Grønn" },
+  { value: "blue", label: "Blå" },
+];
 
 export const Komponentsoversikt = () => <Components />;
 
@@ -51,7 +48,7 @@ export const Components = () => {
           <SelectValueText placeholder="Velg fargepalett" />
         </SelectTrigger>
         <SelectContent>
-          {fargevalg.items.map((item: CollectionItem) => (
+          {fargevalg.map(item => (
             <SelectItem key={item.value} item={item}>
               {item.label}
             </SelectItem>

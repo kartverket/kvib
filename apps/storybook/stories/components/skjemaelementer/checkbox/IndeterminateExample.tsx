@@ -15,7 +15,7 @@ export const IndeterminateExample = () => {
       >
         Parent Checkbox
       </Checkbox>
-      <Stack pl={6} mt={1} spacing={1}>
+      <Stack pl={6} mt={1} gap={1}>
         <Checkbox
           isChecked={checkedItems[0]}
           iconSize="3rem"
