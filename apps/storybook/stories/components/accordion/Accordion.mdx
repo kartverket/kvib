@@ -1,0 +1,21 @@
+import { Box, Code, Text } from "@kvib/react";
+import { Canvas, Controls, Meta } from "@storybook/blocks";
+import { DocsAnatomy, DocsContainer, DocsHeading, DocsStory, Feedback } from "../../templates";
+import * as AccordionStories from "./Accordion.stories";
+import { AccordionDocs } from "./AccordionDocs";
+
+<Meta of={AccordionStories} />
+
+<AccordionDocs />
+
+### Props for Root
+<Canvas of={AccordionStories.Preview}
+sourceState="hidden"
+/>
+<Controls of={AccordionStories.Preview} />
+
+### Props for AccordionItem
+<Canvas of={AccordionStories.AccordionItem}
+sourceState="hidden"
+/>
+<Controls of={AccordionStories.AccordionItem} />

@@ -7,9 +7,9 @@ interface Props {
 }
 
 export const Tekstblokk = ({ tittel, children }: Props) => (
-  <Stack rowGap="16px">
+  <Stack rowGap={0}>
     {tittel && (
-      <Text as="h2" fontWeight={700} fontSize={"xl"} lineHeight={"xl"} borderBottom={"none"} m="0" p="0">
+      <Text as="h2" fontWeight={700} fontSize={"md"} lineHeight={"md"} borderBottom={"none"} m="0" p="0">
         {tittel}
       </Text>
     )}

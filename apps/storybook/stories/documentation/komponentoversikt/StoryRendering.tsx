@@ -1,8 +1,8 @@
 import { composeStories } from "@storybook/react";
+import * as AccordionStories from "../../components/accordion/Accordion.stories";
 import * as PortalStories from "../../components/annet/portal/Portal.stories";
 import * as ShowHideStories from "../../components/annet/show/Show.stories";
 import * as VisuallyHiddenStories from "../../components/annet/visually-hidden/VisuallyHidden.stories";
-import * as AccordionStories from "../../components/datavisning/accordion/Accordion.stories";
 import * as BadgeStories from "../../components/datavisning/badge/Badge.stories";
 import * as CardStories from "../../components/datavisning/card/Card.stories";
 import * as CodeStories from "../../components/datavisning/code/Code.stories";
