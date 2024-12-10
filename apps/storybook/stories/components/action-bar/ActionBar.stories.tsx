@@ -4,15 +4,20 @@ import {
   ActionBarSelectionTrigger,
   ActionBarSeparator,
   Button,
-  Checkbox,
+  Field,
+  FormLabel,
+  Switch,
+  VStack,
 } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
-import { useState } from "react";
+import React from "react";
 
 const meta: Meta<typeof ActionBar> = {
   title: "Komponenter/Action Bar",
+  component: ActionBar,
   parameters: {
     docs: {
+      story: { inline: true },
       canvas: { sourceState: "hidden" },
     },
   },
@@ -22,11 +27,14 @@ export default meta;
 type Story = StoryObj<typeof ActionBar>;
 
 const Demo = () => {
-  const [checked, setChecked] = useState(false);
+  const [open, setOpen] = React.useState(false);
   return (
-    <>
-      <Checkbox onCheckedChange={e => setChecked(!!e.checked)}>Vis Action Bar</Checkbox>
-      <ActionBar open={checked}>
+    <Field>
+      <VStack>
+        <FormLabel>Vis Action Bar</FormLabel>
+        <Switch isChecked={open} onChange={() => setOpen(!open)}></Switch>
+      </VStack>
+      <ActionBar open={open}>
         <ActionBarContent>
           <ActionBarSelectionTrigger>2 elementer valgt</ActionBarSelectionTrigger>
           <ActionBarSeparator />
@@ -35,7 +43,7 @@ const Demo = () => {
           </Button>
         </ActionBarContent>
       </ActionBar>
-    </>
+    </Field>
   );
 };
 

@@ -1,8 +1,11 @@
 import { ActionBar, Portal } from "@chakra-ui/react";
 import * as React from "react";
+import { HTMLAttributes } from "react";
 import { CloseButton } from "./close-button";
 
-interface ActionBarContentProps extends ActionBar.ContentProps {
+interface ActionBarContentProps
+  extends Omit<HTMLAttributes<HTMLDivElement>, "color" | "content" | "translate">,
+    ActionBar.ContentProps {
   portalled?: boolean;
   portalRef?: React.RefObject<HTMLElement>;
 }
