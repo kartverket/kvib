@@ -7,9 +7,13 @@ interface StepInfoProps {
   description?: React.ReactNode;
 }
 
-export interface StepsItemProps extends Omit<ChakraSteps.ItemProps, "title">, StepInfoProps {
+export interface StepsItemProps
+  extends Omit<React.HTMLAttributes<HTMLDivElement>, "color" | "content" | "translate" | "title">,
+    Omit<ChakraSteps.ItemProps, "title">,
+    StepInfoProps {
   completedIcon?: React.ReactNode;
   icon?: React.ReactNode;
+  index: number;
 }
 
 export const StepsItem = React.forwardRef<HTMLDivElement, StepsItemProps>(function StepsItem(props, ref) {
@@ -65,8 +69,29 @@ export const StepsIndicator = React.forwardRef<HTMLDivElement, StepsIndicatorPro
 
 export const StepsList = ChakraSteps.List;
 export const StepsRoot = ChakraSteps.Root;
-export const StepsContent = ChakraSteps.Content;
+
+interface StepsContentProps extends Omit<React.HTMLAttributes<HTMLDivElement>, "color" | "content" | "translate"> {
+  index: number;
+}
+
+export const StepsContent = React.forwardRef<HTMLDivElement, StepsContentProps>(function StepsContent(props, ref) {
+  return <ChakraSteps.Content ref={ref} {...props} />;
+});
+
 export const StepsCompletedContent = ChakraSteps.CompletedContent;
 
-export const StepsNextTrigger = ChakraSteps.NextTrigger;
-export const StepsPrevTrigger = ChakraSteps.PrevTrigger;
+interface StepsTriggerProps extends Omit<React.HTMLAttributes<HTMLButtonElement>, "color" | "content" | "translate"> {
+  asChild?: boolean;
+}
+
+export const StepsNextTrigger = React.forwardRef<HTMLButtonElement, StepsTriggerProps>(
+  function StepsNextTrigger(props, ref) {
+    return <ChakraSteps.NextTrigger ref={ref} {...props} />;
+  },
+);
+
+export const StepsPrevTrigger = React.forwardRef<HTMLButtonElement, StepsTriggerProps>(
+  function StepsPrevTrigger(props, ref) {
+    return <ChakraSteps.PrevTrigger ref={ref} {...props} />;
+  },
+);
