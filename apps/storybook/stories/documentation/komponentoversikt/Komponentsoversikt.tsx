@@ -28,7 +28,6 @@ export const Komponentsoversikt = () => <Components />;
 
 export const Components = () => {
   const [theme, setTheme] = useState<ColorPalette>("green");
-  // lag en liste med alle komponenter på kryss av kategorier
   const komponenter = Object.keys(Komponenter(theme))
     .flatMap(categoryKey => {
       const category = Komponenter(theme)[categoryKey];

@@ -1,14 +1,17 @@
 import {
   ActionBar,
+  ActionBarCloseTrigger,
   ActionBarContent,
   ActionBarProps,
   ActionBarSelectionTrigger,
   ActionBarSeparator,
   Button,
-  Switch,
+  Checkbox,
+  MenuOpenChangeDetails,
+  SwitchCheckedChangeDetails,
 } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
-import React from "react";
+import { useState } from "react";
 
 const meta: Meta<typeof ActionBar> = {
   title: "Komponenter/Action Bar",
@@ -25,19 +28,32 @@ export default meta;
 type Story = StoryObj<typeof ActionBar>;
 
 const Demo = (props: ActionBarProps) => {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
   return (
     <>
-      <Switch isChecked={open} onChange={() => setOpen(!open)} colorPalette={props.colorPalette}>
-        Vis Action Bar
-      </Switch>
-      <ActionBar open={open} {...props}>
+      <Checkbox
+        onCheckedChange={(e: SwitchCheckedChangeDetails) => {
+          setOpen((e as { checked: boolean }).checked);
+        }}
+        colorPalette={props.colorPalette}
+      >
+        Vis Action bar
+      </Checkbox>
+      <ActionBar
+        open={open}
+        onOpenChange={(e: MenuOpenChangeDetails) => {
+          setOpen((e as { open: boolean }).open);
+        }}
+        closeOnInteractOutside={false}
+        {...props}
+      >
         <ActionBarContent>
           <ActionBarSelectionTrigger>2 elementer valgt</ActionBarSelectionTrigger>
           <ActionBarSeparator />
-          <Button variant="outline" size="sm">
+          <Button variant="outline" size="sm" colorPalette={props.colorPalette}>
             Del
           </Button>
+          <ActionBarCloseTrigger colorPalette={props.colorPalette} />
         </ActionBarContent>
       </ActionBar>
     </>

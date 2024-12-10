@@ -26,7 +26,13 @@ export const ActionBarContent = React.forwardRef<HTMLDivElement, ActionBarConten
   },
 );
 
-export const ActionBarCloseTrigger = React.forwardRef<HTMLButtonElement, ActionBar.CloseTriggerProps>(
+interface ActionBarCloseTriggerProps
+  extends Omit<HTMLAttributes<HTMLButtonElement>, "color">,
+    ActionBar.CloseTriggerProps {
+  colorPalette?: string;
+}
+
+export const ActionBarCloseTrigger = React.forwardRef<HTMLButtonElement, ActionBarCloseTriggerProps>(
   function ActionBarCloseTrigger(props, ref) {
     return (
       <ActionBar.CloseTrigger {...props} asChild ref={ref}>
