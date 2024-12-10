@@ -1,0 +1,10 @@
+import { Canvas, Controls, Meta } from "@storybook/blocks";
+import { DocsHeading } from "../../templates";
+import * as AlertStories from "./Alert.stories";
+import { AlertDocs } from "./AlertDocs";
+
+<Meta of={AlertStories} />
+<AlertDocs />
+
+<Canvas of={AlertStories.Preview} />
+<Controls of={AlertStories.Preview} />
