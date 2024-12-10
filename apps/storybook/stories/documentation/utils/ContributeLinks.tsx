@@ -18,7 +18,7 @@ export const ContributeLinks = (props: FlexProps) => {
         Bli med i slack-kanalen
       </Link>
       <Link href="https://github.com/kartverket/kvib" fontSize={"lg"} fontWeight={400} m="0" p="0">
-        <Icon size="40" icon="polyline" />
+        <Icon size={40} icon="polyline" />
         Lag en pull-request på github
       </Link>
     </Flex>

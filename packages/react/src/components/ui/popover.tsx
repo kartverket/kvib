@@ -42,7 +42,28 @@ export const PopoverCloseTrigger = React.forwardRef<HTMLButtonElement, ChakraPop
   },
 );
 
-export const PopoverTitle = ChakraPopover.Title;
+export interface PopoverTitleProps
+  extends Omit<React.HTMLAttributes<HTMLDivElement>, "color" | "content" | "translate">,
+    ChakraPopover.TitleProps {
+  fontWeight?: string | number;
+  fontSize?: string | number;
+  lineHeight?: string | number;
+  letterSpacing?: string | number;
+  color?: string;
+  fontFamily?: string;
+  textAlign?: string;
+  textTransform?: string;
+  fontStyle?: string;
+  textDecoration?: string;
+  whiteSpace?: string;
+  wordBreak?: string;
+  overflowWrap?: string;
+}
+
+export const PopoverTitle = React.forwardRef<HTMLDivElement, PopoverTitleProps>(function PopoverTitle(props, ref) {
+  return <ChakraPopover.Title ref={ref} {...props} />;
+});
+
 export const PopoverDescription = ChakraPopover.Description;
 export const PopoverFooter = ChakraPopover.Footer;
 export const PopoverHeader = ChakraPopover.Header;

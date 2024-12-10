@@ -11,29 +11,13 @@ const meta: Meta<typeof KvibSpinner> = {
     },
   },
   argTypes: {
-    color: {
-      description: "The color of the spinner",
+    colorPalette: {
+      description: "The colorpalette of the component",
       table: {
-        type: { summary: "string" },
+        type: { summary: "green | blue | gray" },
       },
-      control: "text",
-    },
-    emptyColor: {
-      description: "The color of the empty area in the spinner",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "transparent" },
-      },
-      control: "text",
-    },
-    label: {
-      description:
-        "For accessibility, it is important to add a fallback loading text. This text will be visible to screen readers.",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "Loading..." },
-      },
-      control: "text",
+      control: { type: "radio" },
+      options: ["green", "blue", "gray"],
     },
     size: {
       description: "The size of the Spinner",
@@ -43,22 +27,6 @@ const meta: Meta<typeof KvibSpinner> = {
       },
       options: ["xs", "sm", "md", "lg", "xl"],
       control: { type: "radio" },
-    },
-    speed: {
-      description: "The speed of the spinner",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "0.45s" },
-      },
-      control: "text",
-    },
-    thickness: {
-      description: "The thickness of the spinner",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "2px" },
-      },
-      control: "text",
     },
   },
 };
@@ -94,6 +62,6 @@ export const SpinnerSizes: Story = {
 };
 
 export const SpinnerArea: Story = {
-  args: { size: "xl", emptyColor: "gray.200", speed: "0.65s", color: "green.500", thickness: "4px" },
+  args: { size: "xl", color: "green.500" },
   render: args => <KvibSpinner {...args} />,
 };

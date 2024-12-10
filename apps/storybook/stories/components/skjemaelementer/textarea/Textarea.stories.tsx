@@ -1,6 +1,5 @@
-import { Stack as KvibStack, Textarea as KvibTextarea, Radio, RadioGroup, Stack, Text } from "@kvib/react";
+import { Textarea as KvibTextarea } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
-import { ChangeEvent, useState } from "react";
 
 const meta: Meta<typeof KvibTextarea> = {
   title: "Komponenter/Textarea",
@@ -12,21 +11,7 @@ const meta: Meta<typeof KvibTextarea> = {
     },
   },
   argTypes: {
-    errorBorderColor: {
-      description: "The border color when the textarea is invalid. Use color keys in `theme.colors`",
-      table: {
-        type: { summary: "string" },
-      },
-      control: "text",
-    },
-    focusBorderColor: {
-      description: "The border color when the textarea is focused. Use color keys in `theme.colors`",
-      table: {
-        type: { summary: "string" },
-      },
-      control: "text",
-    },
-    isDisabled: {
+    disabled: {
       description:
         "If true, the form control will be disabled. This has 2 side effects: - The FormLabel will have `data-disabled` attribute - The form element (e.g, Input) will be disabled",
       table: {
@@ -35,16 +20,7 @@ const meta: Meta<typeof KvibTextarea> = {
       },
       control: "boolean",
     },
-    isInvalid: {
-      description:
-        "If true, the form control will be invalid. This has 2 side effects: - The FormLabel and FormErrorIcon will have `data-invalid` set to true - The form element (e.g, Input) will have `aria-invalid` set to true",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
-      },
-      control: "boolean",
-    },
-    isReadOnly: {
+    readOnly: {
       description: "If true, the form control will be readonly",
       table: {
         type: { summary: "boolean" },
@@ -52,7 +28,7 @@ const meta: Meta<typeof KvibTextarea> = {
       },
       control: "boolean",
     },
-    isRequired: {
+    required: {
       description:
         "If true, the form control will be required. This has 2 side effects: - The FormLabel will show a required indicator - The form element (e.g, Input) will have `aria-required` set to true",
       table: {
@@ -88,80 +64,4 @@ type Story = StoryObj<typeof KvibTextarea>;
 export const Preview: Story = {
   args: { placeholder: "Dette er et eksempel på placeholder" },
   render: args => <KvibTextarea {...args} />,
-};
-
-const TextAreaControlledExample = ({ ...args }) => {
-  let [value, setValue] = useState<string>("");
-
-  let handleInputChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
-    let inputValue = e.target.value;
-    setValue(inputValue);
-  };
-  return (
-    <>
-      <Text mb="8px">Value: {value}</Text>
-      <KvibTextarea {...args} value={value} onChange={handleInputChange} />
-    </>
-  );
-};
-
-export const TextareaControlled: Story = {
-  args: { placeholder: "Placeholder", size: "sm" },
-  render: args => <TextAreaControlledExample {...args} />,
-};
-
-const TextareaResizeExample = () => {
-  const [resize, setResize] = useState("horizontal");
-
-  return (
-    <>
-      <RadioGroup defaultValue={resize} onChange={setResize} mb={6}>
-        <Stack direction="row" spacing={5}>
-          <Radio value="horizontal">Horizontal</Radio>
-          <Radio value="vertical">Vertical</Radio>
-          <Radio value="none">None</Radio>
-        </Stack>
-      </RadioGroup>
-
-      <KvibTextarea placeholder="Here is a sample placeholder" size="sm" />
-    </>
-  );
-};
-
-export const TextareaResize: Story = {
-  render: () => <TextareaResizeExample />,
-};
-
-export const TextareaSizes: Story = {
-  args: {},
-  render: args => (
-    <KvibStack>
-      <KvibTextarea {...args} size="xs" placeholder="xs" />
-      <KvibTextarea {...args} size="sm" placeholder="sm" />
-      <KvibTextarea {...args} size="md" placeholder="md" />
-      <KvibTextarea {...args} size="lg" placeholder="lg" />
-    </KvibStack>
-  ),
-};
-
-export const TextareaVariants: Story = {
-  args: {},
-  render: args => (
-    <KvibStack>
-      <KvibTextarea {...args} variant="outline" placeholder="outline" />
-      <KvibTextarea {...args} variant="filled" placeholder="filled" />
-      <KvibTextarea {...args} variant="flushed" placeholder="flushed" />
-      <KvibTextarea {...args} variant="unstyled" placeholder="unstyled" />
-    </KvibStack>
-  ),
-};
-
-export const TextareaStates: Story = {
-  render: () => (
-    <Stack>
-      <KvibTextarea placeholder="isInvalid" isInvalid />
-      <KvibTextarea placeholder="isReadOnly" isReadOnly />
-      <KvibTextarea placeholder="isDisabled" isDisabled />
-    </Stack>
-  ),
 };
