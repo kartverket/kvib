@@ -1,13 +1,11 @@
 import {
   ActionBar,
   ActionBarContent,
+  ActionBarProps,
   ActionBarSelectionTrigger,
   ActionBarSeparator,
   Button,
-  Field,
-  FormLabel,
   Switch,
-  VStack,
 } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 import React from "react";
@@ -26,15 +24,14 @@ const meta: Meta<typeof ActionBar> = {
 export default meta;
 type Story = StoryObj<typeof ActionBar>;
 
-const Demo = () => {
+const Demo = (props: ActionBarProps) => {
   const [open, setOpen] = React.useState(false);
   return (
-    <Field>
-      <VStack>
-        <FormLabel>Vis Action Bar</FormLabel>
-        <Switch isChecked={open} onChange={() => setOpen(!open)}></Switch>
-      </VStack>
-      <ActionBar open={open}>
+    <>
+      <Switch isChecked={open} onChange={() => setOpen(!open)} colorPalette={props.colorPalette}>
+        Vis Action Bar
+      </Switch>
+      <ActionBar open={open} {...props}>
         <ActionBarContent>
           <ActionBarSelectionTrigger>2 elementer valgt</ActionBarSelectionTrigger>
           <ActionBarSeparator />
@@ -43,10 +40,10 @@ const Demo = () => {
           </Button>
         </ActionBarContent>
       </ActionBar>
-    </Field>
+    </>
   );
 };
 
 export const Preview: Story = {
-  render: () => <Demo />,
+  render: args => <Demo {...args} />,
 };

@@ -2,7 +2,7 @@ import { CollectionItem, createListCollection } from "@chakra-ui/react";
 import {
   Box,
   Card,
-  Flex,
+  Center,
   Heading,
   Link,
   Select,
@@ -62,7 +62,7 @@ export const Components = () => {
         {Object.keys(Komponenter(theme)).map(categoryKey => {
           const category = Komponenter(theme)[categoryKey];
           return (
-            <ComponentCategory key={categoryKey} title={category.navn} description={category.beskrivelse}>
+            <SimpleGrid columns={[2, null, 3]} gap={5}>
               {Object.keys(category.komponenter).map(componentKey => {
                 const component = category.komponenter[componentKey];
                 return (
@@ -75,7 +75,7 @@ export const Components = () => {
                   />
                 );
               })}
-            </ComponentCategory>
+            </SimpleGrid>
           );
         })}
       </Stack>
@@ -160,20 +160,17 @@ const LazyStory = ({ component }: { component: ReactElement }) => {
   }, [component]);
 
   return (
-    <Flex
+    <Center
       ref={storyRef}
       bg="gray.50"
       border="none"
       height="11rem"
-      justifyContent="center"
-      alignItems="center"
       padding="2rem"
-      width="100%"
       borderRadius="md"
       overflow="hidden"
-      boxSizing="border-box"
+      className="komp-story"
     >
       {isVisible && component}
-    </Flex>
+    </Center>
   );
 };
