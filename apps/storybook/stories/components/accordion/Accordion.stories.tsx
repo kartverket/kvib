@@ -1,4 +1,11 @@
-import { Accordion, KvibAccordion } from "@kvib/react";
+import {
+  AccordionItem as AccItem,
+  Accordion,
+  AccordionItemContent,
+  AccordionItemIndicator,
+  AccordionItemTrigger,
+  KvibAccordion,
+} from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Accordion> = {
@@ -90,19 +97,19 @@ export const Preview: Story = {
     },
   },
   render: args => (
-    <KvibAccordion.Root {...args}>
-      <KvibAccordion.Item>
-        <KvibAccordion.ItemTrigger>
+    <Accordion {...args}>
+      <AccItem>
+        <AccordionItemTrigger>
           Tittel 1
-          <KvibAccordion.ItemIndicator />
-        </KvibAccordion.ItemTrigger>
-        <KvibAccordion.ItemContent>Innhold 1</KvibAccordion.ItemContent>
-      </KvibAccordion.Item>
-      <KvibAccordion.Item>
-        <KvibAccordion.ItemTrigger>Tittel 2</KvibAccordion.ItemTrigger>
-        <KvibAccordion.ItemContent>Innhold 2</KvibAccordion.ItemContent>
-      </KvibAccordion.Item>
-    </KvibAccordion.Root>
+          <AccordionItemIndicator />
+        </AccordionItemTrigger>
+        <AccordionItemContent>Innhold 1</AccordionItemContent>
+      </AccItem>
+      <AccItem>
+        <AccordionItemTrigger>Tittel 2</AccordionItemTrigger>
+        <AccordionItemContent>Innhold 2</AccordionItemContent>
+      </AccItem>
+    </Accordion>
   ),
 };
 
