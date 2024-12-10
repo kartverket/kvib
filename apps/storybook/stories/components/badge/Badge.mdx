@@ -1,0 +1,11 @@
+import { Text } from "@kvib/react";
+import { Canvas, Controls, Meta, Story } from "@storybook/blocks";
+import { DocsContainer, DocsHeading, DocsStory, Feedback } from "../../templates/";
+import * as BadgeStories from "./Badge.stories";
+import { BadgeDocs } from "./BadgeDocs";
+
+<Meta of={BadgeStories} />
+<BadgeDocs />
+
+<Canvas of={BadgeStories.Preview} />
+<Controls of={BadgeStories.Preview} />

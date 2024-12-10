@@ -1,4 +1,4 @@
-import { Box, Portal as KvibPortal, PortalProps, Text } from "@kvib/react";
+import { Portal as KvibPortal, Portal, PortalProps } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 import { useRef } from "react";
 
@@ -35,21 +35,17 @@ export default meta;
 type Story = StoryObj<typeof KvibPortal>;
 
 export const Preview: Story = {
-  render: (args: PortalProps) => <PortalNestedExample {...args} />,
+  render: (args: PortalProps) => <Demo {...args} />,
 };
 
-export const PortalNestedExample = ({ ...args }) => {
-  const ref = useRef(null);
+const Demo = () => {
+  const containerRef = useRef<HTMLDivElement | null>(null);
   return (
     <>
-      <KvibPortal {...args} containerRef={ref} asChild>
-        <Box bg="green.500" color="white" w="12rem" h="4rem">
-          <Text>Parent: Hei, velkommen</Text>
-        </Box>
-      </KvibPortal>
-      <Box bg="red.500" color="white" ref={ref} w="12rem" h="4rem">
-        <Text>Hei, velkommen</Text>
-      </Box>
+      <Portal container={containerRef}>
+        <div>Portal content</div>
+      </Portal>
+      <div ref={containerRef} />
     </>
   );
 };

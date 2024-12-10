@@ -2,7 +2,9 @@ import { Dialog as ChakraDialog, Portal } from "@chakra-ui/react";
 import * as React from "react";
 import { CloseButton } from "./close-button";
 
-interface DialogContentProps extends ChakraDialog.ContentProps {
+interface DialogContentProps
+  extends Omit<React.HTMLAttributes<HTMLElement>, "color" | "content" | "translate">,
+    ChakraDialog.ContentProps {
   portalled?: boolean;
   portalRef?: React.RefObject<HTMLElement>;
   backdrop?: boolean;
@@ -42,5 +44,17 @@ export const DialogBody = ChakraDialog.Body;
 export const DialogBackdrop = ChakraDialog.Backdrop;
 export const DialogTitle = ChakraDialog.Title;
 export const DialogDescription = ChakraDialog.Description;
-export const DialogTrigger = ChakraDialog.Trigger;
+
+interface DialogTriggerProps
+  extends Omit<React.HTMLAttributes<HTMLButtonElement>, "color" | "content" | "translate">,
+    ChakraDialog.TriggerProps {
+  asChild?: boolean;
+}
+
+export const DialogTrigger = React.forwardRef<HTMLButtonElement, DialogTriggerProps>(
+  function DialogTrigger(props, ref) {
+    return <ChakraDialog.Trigger ref={ref} {...props} />;
+  },
+);
+
 export const DialogActionTrigger = ChakraDialog.ActionTrigger;

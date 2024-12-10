@@ -34,21 +34,7 @@ import { Box } from "@kvib/react";
         Box-komponenten aksepterer alle styling props man kan sende til en div eller et View. Dette omfatter en mengde props som dekker de fleste brukstilfeller. Det er også lagt til forkortelser for de vanligste propsene (f.eks. <Code>bg</Code> istedenfor <Code>backgroundColor</Code>).
       </Text>
     }
-    story={<Canvas of={BoxStories.BoxExample} />}
+    story={<Canvas of={BoxStories.Preview} />}
 
 />
-
-<DocsStory
-    title="Override med as-prop"
-    description={
-      <Text>
-        Box har en <Code>as</Code>-prop som lar deg overstyre hvilket DOM-element som rendres. Dette kan være nyttig hvis du ønsker å bruke en annen type element enn <Code>div</Code>, men starte fra "scratch" når det kommer til styling av komponentet.
-        Det vil si at det er mulig å dra nytte av egenskapene til en link ("a"), uten å måtte bruke stylingen til <Code>Link</Code>.
-        I de fleste tilfeller vil det være mer hensiktsmessig å bruke en av de andre komponentene som er bygget på Box, men i komplekse situasjoner kan det være nyttig.
-      </Text>
-    }
-    story={<Canvas of={BoxStories.BoxAsLink} />}
-
-/>
-
 </DocsContainer>

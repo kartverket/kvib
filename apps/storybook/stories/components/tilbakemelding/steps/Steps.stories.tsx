@@ -45,16 +45,14 @@ type Story = StoryObj<typeof KvibStepper>;
 
 const StepperExample = ({ ...args }) => {
   return (
-    <Steps w="24rem" defaultValue={1} count={3} {...args}>
+    <Steps w="16rem" defaultValue={1} count={2} {...args}>
       <StepsList>
         <StepsItem index={0} title="Steg 1" />
         <StepsItem index={1} title="Steg 2" />
-        <StepsItem index={2} title="Steg 3" />
       </StepsList>
 
       <StepsContent index={0}>Innhold i første steg</StepsContent>
       <StepsContent index={1}>Annet innhold i andre steg</StepsContent>
-      <StepsContent index={2}>Dette er siste steg</StepsContent>
       <StepsCompletedContent>Ferdig med alle stegene</StepsCompletedContent>
 
       <Group>

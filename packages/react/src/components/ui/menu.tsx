@@ -4,7 +4,9 @@ import { AbsoluteCenter, Menu as ChakraMenu, Portal } from "@chakra-ui/react";
 import * as React from "react";
 import { LuCheck, LuChevronRight } from "react-icons/lu";
 
-interface MenuContentProps extends ChakraMenu.ContentProps {
+interface MenuContentProps
+  extends Omit<React.HTMLAttributes<HTMLDivElement>, "color" | "content" | "translate">,
+    ChakraMenu.ContentProps {
   portalled?: boolean;
   portalRef?: React.RefObject<HTMLElement>;
 }
@@ -91,7 +93,25 @@ export const MenuContextTrigger = ChakraMenu.ContextTrigger;
 export const MenuRoot = ChakraMenu.Root;
 export const MenuSeparator = ChakraMenu.Separator;
 
-export const MenuItem = ChakraMenu.Item;
+interface MenuItemProps
+  extends Omit<React.HTMLAttributes<HTMLDivElement>, "color" | "content" | "translate">,
+    ChakraMenu.ItemProps {
+  value: string;
+}
+
+export const MenuItem = React.forwardRef<HTMLDivElement, MenuItemProps>(function MenuItem(props, ref) {
+  return <ChakraMenu.Item ref={ref} {...props} />;
+});
+
 export const MenuItemText = ChakraMenu.ItemText;
 export const MenuItemCommand = ChakraMenu.ItemCommand;
-export const MenuTrigger = ChakraMenu.Trigger;
+
+interface MenuTriggerProps
+  extends Omit<React.HTMLAttributes<HTMLButtonElement>, "color" | "content" | "translate">,
+    ChakraMenu.TriggerProps {
+  asChild?: boolean;
+}
+
+export const MenuTrigger = React.forwardRef<HTMLButtonElement, MenuTriggerProps>(function MenuTrigger(props, ref) {
+  return <ChakraMenu.Trigger ref={ref} {...props} />;
+});

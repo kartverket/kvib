@@ -1,0 +1,11 @@
+import { List, ListItem, Text } from "@kvib/react";
+import { Canvas, Controls, Meta } from "@storybook/blocks";
+import { DocsContainer, DocsHeading, DocsStory, Feedback } from "../../templates";
+import * as AvatarStories from "./Avatar.stories";
+import { AvatarDocs } from "./AvatarDocs";
+
+<Meta of={AvatarStories} />
+<AvatarDocs />
+
+<Canvas of={AvatarStories.Preview} />
+<Controls of={AvatarStories.Preview} />

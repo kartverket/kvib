@@ -44,5 +44,5 @@ export default meta;
 type Story = StoryObj<typeof KvibCloseButton>;
 
 export const Preview: Story = {
-  render: (args: KvibCloseButton) => <KvibCloseButton {...args} />,
+  render: args => <KvibCloseButton {...args} />,
 };

@@ -95,13 +95,6 @@ const meta: Meta<typeof KvibSlider> = {
       },
       control: "boolean",
     },
-    defaultValue: {
-      description: "The initial value of the slider in uncontrolled mode",
-      table: {
-        type: { summary: "number[]" },
-      },
-      control: { type: "array" },
-    },
   },
   args: {
     defaultValue: [40],

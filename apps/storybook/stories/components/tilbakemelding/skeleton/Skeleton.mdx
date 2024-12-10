@@ -11,51 +11,6 @@ import * as SkeletonStories from "./Skeleton.stories";
 
 Skeleton blir brukt til å vise innlastingstatus på en komponent.
 
-## Ta i bruk
-
-```jsx
-import { Skeleton, SkeletonCircle, SkeletonText } from "@kvib/react";
-```
-
-<Feedback component="Skeleton" />
-
-<DocsStory
-  isVertical
-  title="Wrapped rundt andre komponenter"
-  description={""}
-  story={<Canvas of={SkeletonStories.SkeletonWrapped}
-            className="fullwidth"
-
-  sourceState="hidden" />}
-/>
-
-<DocsStory
-  isVertical
-  title="Sirkel og tekst Skeleton"
-  description={""}
-  story={<Canvas of={SkeletonStories.SkeletonCircle}
-            className="fullwidth"
-  sourceState="hidden" />}
-/>
-
-<DocsStory
-  isVertical
-  title="Farger"
-  description={""}
-  story={<Canvas of={SkeletonStories.SkeletonColors}
-
-            className="fullwidth"
-  sourceState="hidden" />}
-/>
-
-<DocsStory
-  isVertical
-  title="Ferdiglastet Skeleton"
-  description={""}
-  story={<Canvas of={SkeletonStories.SkeletonLoaded}
-            className="fullwidth"
-  sourceState="hidden" />}
-/>
 
 <DocsHeading light children="Props" />
 <Canvas of={SkeletonStories.Preview}
