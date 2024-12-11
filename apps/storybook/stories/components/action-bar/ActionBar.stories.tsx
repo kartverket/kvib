@@ -1,17 +1,15 @@
 import {
   ActionBar,
-  ActionBarCloseTrigger,
   ActionBarContent,
   ActionBarProps,
   ActionBarSelectionTrigger,
   ActionBarSeparator,
   Button,
   Checkbox,
-  MenuOpenChangeDetails,
   SwitchCheckedChangeDetails,
+  useDisclosure,
 } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
-import { useState } from "react";
 
 const meta: Meta<typeof ActionBar> = {
   title: "Komponenter/Action Bar",
@@ -27,33 +25,30 @@ const meta: Meta<typeof ActionBar> = {
 export default meta;
 type Story = StoryObj<typeof ActionBar>;
 
-const Demo = (props: ActionBarProps) => {
-  const [open, setOpen] = useState(false);
+const ActionBarExample = (props: ActionBarProps) => {
+  const { open, onOpen, onClose } = useDisclosure();
+
   return (
     <>
       <Checkbox
         onCheckedChange={(e: SwitchCheckedChangeDetails) => {
-          setOpen((e as { checked: boolean }).checked);
+          if ((e as { checked: boolean }).checked) {
+            onOpen();
+          } else {
+            onClose();
+          }
         }}
         colorPalette={props.colorPalette}
       >
         Vis Action Bar
       </Checkbox>
-      <ActionBar
-        open={open}
-        onOpenChange={(e: MenuOpenChangeDetails) => {
-          setOpen((e as { open: boolean }).open);
-        }}
-        closeOnInteractOutside={false}
-        {...props}
-      >
+      <ActionBar open={open} onClose={onClose} closeOnInteractOutside={false} {...props}>
         <ActionBarContent>
           <ActionBarSelectionTrigger>2 elementer valgt</ActionBarSelectionTrigger>
           <ActionBarSeparator />
           <Button variant="outline" size="sm" colorPalette={props.colorPalette}>
             Del
           </Button>
-          <ActionBarCloseTrigger colorPalette={props.colorPalette} />
         </ActionBarContent>
       </ActionBar>
     </>
@@ -61,5 +56,5 @@ const Demo = (props: ActionBarProps) => {
 };
 
 export const Preview: Story = {
-  render: args => <Demo {...args} />,
+  render: args => <ActionBarExample {...args} />,
 };
