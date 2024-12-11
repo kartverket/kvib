@@ -1,14 +1,13 @@
 "use client";
 
+import { BoxProps } from "@/layout"; // Assuming BoxProps is imported from your layout utilities
 import type { CollectionItem } from "@chakra-ui/react";
 import { Select as ChakraSelect, Portal } from "@chakra-ui/react";
 import * as React from "react";
-import { HTMLAttributes } from "react";
+import { Merge } from "../utils";
 import { CloseButton } from "./close-button";
 
-interface SelectTriggerProps
-  extends Omit<HTMLAttributes<HTMLDivElement>, "color" | "content" | "translate">,
-    ChakraSelect.ControlProps {
+interface SelectTriggerProps extends Merge<BoxProps, ChakraSelect.ControlProps> {
   clearable?: boolean;
 }
 
@@ -37,9 +36,7 @@ const SelectClearTrigger = React.forwardRef<HTMLButtonElement, ChakraSelect.Clea
   },
 );
 
-interface SelectContentProps
-  extends Omit<HTMLAttributes<HTMLDivElement>, "color" | "content" | "translate">,
-    ChakraSelect.ContentProps {
+interface SelectContentProps extends Merge<BoxProps, ChakraSelect.ContentProps> {
   portalled?: boolean;
   portalRef?: React.RefObject<HTMLElement>;
 }
@@ -55,9 +52,7 @@ export const SelectContent = React.forwardRef<HTMLDivElement, SelectContentProps
   );
 });
 
-interface SelectItemProps
-  extends Omit<HTMLAttributes<HTMLDivElement>, "color" | "content" | "translate">,
-    ChakraSelect.ItemProps {
+interface SelectItemProps extends Merge<BoxProps, ChakraSelect.ItemProps> {
   item: CollectionItem;
 }
 
@@ -71,9 +66,7 @@ export const SelectItem = React.forwardRef<HTMLDivElement, SelectItemProps>(func
   );
 });
 
-interface SelectValueTextProps
-  extends Omit<HTMLAttributes<HTMLSpanElement>, "color" | "content" | "translate" | "children">,
-    Omit<ChakraSelect.ValueTextProps, "children"> {
+interface SelectValueTextProps extends Omit<ChakraSelect.ValueTextProps, "children"> {
   placeholder?: string;
   children?(items: CollectionItem[]): React.ReactNode;
 }
@@ -112,7 +105,7 @@ export const SelectRoot = React.forwardRef<HTMLDivElement, ChakraSelect.RootProp
   );
 }) as ChakraSelect.RootComponent;
 
-interface SelectItemGroupProps extends ChakraSelect.ItemGroupProps {
+interface SelectItemGroupProps extends Merge<BoxProps, ChakraSelect.ItemGroupProps> {
   label: React.ReactNode;
 }
 
