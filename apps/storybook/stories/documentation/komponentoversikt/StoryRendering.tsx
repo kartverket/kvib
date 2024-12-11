@@ -15,6 +15,7 @@ import * as CheckboxStories from "../../components/checkbox/Checkbox.stories";
 import * as ClipboardStories from "../../components/clipboard/Clipboard.stories";
 import * as CloseButtonStories from "../../components/close-button/CloseButton.stories";
 import * as CollapsibleStories from "../../components/collapsible/Collapsible.stories";
+import * as ColorPickerStories from "../../components/color-picker/ColorPicker.stories";
 import * as CodeStories from "../../components/datavisning/code/Code.stories";
 import * as KbdStories from "../../components/datavisning/kbd/Kbd.stories";
 import * as ListStories from "../../components/datavisning/list/List.stories";
@@ -90,6 +91,11 @@ export const Clipboard = (colorPalette: ColorPalette) => {
 
 export const Collapsible = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(CollapsibleStories);
+  return <Preview colorPalette={colorPalette} />;
+};
+
+export const ColorPicker = (colorPalette: ColorPalette) => {
+  const { Preview } = composeStories(ColorPickerStories);
   return <Preview colorPalette={colorPalette} />;
 };
 

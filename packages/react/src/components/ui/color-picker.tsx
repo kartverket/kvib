@@ -1,3 +1,4 @@
+import { BoxProps } from "@/layout";
 import type { IconButtonProps, StackProps } from "@chakra-ui/react";
 import { ColorPicker as ChakraColorPicker, For, IconButton, Portal, Span, Stack, Text, VStack } from "@chakra-ui/react";
 import { forwardRef } from "react";
@@ -21,7 +22,7 @@ export const ColorPickerInput = forwardRef<HTMLInputElement, Omit<ChakraColorPic
   },
 );
 
-interface ColorPickerContentProps extends ChakraColorPicker.ContentProps {
+interface ColorPickerContentProps extends ChakraColorPicker.ContentProps, BoxProps {
   portalled?: boolean;
   portalRef?: React.RefObject<HTMLElement>;
 }

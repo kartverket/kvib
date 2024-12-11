@@ -18,7 +18,7 @@ type Story = StoryObj<typeof Collapsible>;
 
 const CollapsibleExample = (props: CollapsibleRootProps) => (
   <Collapsible {...props}>
-    <CollapsibleTrigger>Vis Collapsible</CollapsibleTrigger>
+    <CollapsibleTrigger py={"4px"}>Vis Collapsible</CollapsibleTrigger>
     <CollapsibleContent>
       <Box padding="4" borderWidth="1px">
         Denne teksten dukker opp når man åpner en collapsible
