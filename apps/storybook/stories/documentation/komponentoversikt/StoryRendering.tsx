@@ -14,9 +14,9 @@ import * as CheckboxCardStories from "../../components/checkbox-card/CheckboxCar
 import * as CheckboxStories from "../../components/checkbox/Checkbox.stories";
 import * as ClipboardStories from "../../components/clipboard/Clipboard.stories";
 import * as CloseButtonStories from "../../components/close-button/CloseButton.stories";
+import * as CodeStories from "../../components/code/Code.stories";
 import * as CollapsibleStories from "../../components/collapsible/Collapsible.stories";
 import * as ColorPickerStories from "../../components/color-picker/ColorPicker.stories";
-import * as CodeStories from "../../components/datavisning/code/Code.stories";
 import * as KbdStories from "../../components/datavisning/kbd/Kbd.stories";
 import * as ListStories from "../../components/datavisning/list/List.stories";
 import * as StatStories from "../../components/datavisning/stat/Stat.stories";
