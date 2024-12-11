@@ -1,10 +1,13 @@
+import { BoxProps } from "@/layout";
 import { Drawer as ChakraDrawer, Portal } from "@chakra-ui/react";
 import * as React from "react";
+import { ButtonProps } from "./button";
 import { CloseButton } from "./close-button";
 
-interface DrawerContentProps
-  extends Omit<React.HTMLAttributes<HTMLElement>, "color" | "content" | "translate">,
-    ChakraDrawer.ContentProps {
+// Utility type to merge two interfaces, prioritizing properties from B
+type Merge<A, B> = Omit<A, keyof B> & B;
+
+interface DrawerContentProps extends Merge<BoxProps, ChakraDrawer.ContentProps> {
   portalled?: boolean;
   portalRef?: React.RefObject<HTMLElement>;
   offset?: ChakraDrawer.ContentProps["padding"];
@@ -33,7 +36,18 @@ export const DrawerCloseTrigger = React.forwardRef<HTMLButtonElement, ChakraDraw
   },
 );
 
-export const DrawerTrigger = ChakraDrawer.Trigger;
+interface DrawerTriggerProps extends ChakraDrawer.TriggerProps, ButtonProps {}
+
+export const DrawerTrigger = React.forwardRef<HTMLButtonElement, DrawerTriggerProps>(
+  function DrawerTrigger(props, ref) {
+    return (
+      <ChakraDrawer.Trigger {...props} ref={ref} asChild>
+        {props.children}
+      </ChakraDrawer.Trigger>
+    );
+  },
+);
+
 export const DrawerRoot = ChakraDrawer.Root;
 export const DrawerFooter = ChakraDrawer.Footer;
 export const DrawerHeader = ChakraDrawer.Header;

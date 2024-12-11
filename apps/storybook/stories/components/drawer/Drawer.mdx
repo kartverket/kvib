@@ -1,0 +1,8 @@
+import { Canvas, Controls, Meta } from "@storybook/blocks";
+import * as DrawerStories from "./Drawer.stories";
+import { DrawerDocs } from "./DrawerDocs";
+
+<Meta of={DrawerStories} />
+<DrawerDocs />
+<Canvas of={DrawerStories.Preview} />
+<Controls of={DrawerStories.Preview} />
