@@ -1,9 +1,10 @@
+import { ButtonProps } from "@/button";
+import { BoxProps } from "@/layout";
 import { Tabs as ChakraTabs } from "@chakra-ui/react";
 import React from "react";
+import { Merge } from "../utils";
 
-export interface TabsTriggerProps
-  extends Omit<React.HTMLAttributes<HTMLButtonElement>, "color" | "content" | "translate">,
-    ChakraTabs.TriggerProps {
+export interface TabsTriggerProps extends Merge<ButtonProps, ChakraTabs.TriggerProps> {
   value: string;
 }
 
@@ -11,9 +12,7 @@ export const TabsTrigger = React.forwardRef<HTMLButtonElement, TabsTriggerProps>
   return <ChakraTabs.Trigger ref={ref} {...props} />;
 });
 
-export interface TabsContentProps
-  extends Omit<React.HTMLAttributes<HTMLDivElement>, "color" | "content" | "translate">,
-    ChakraTabs.ContentProps {
+export interface TabsContentProps extends Merge<BoxProps, ChakraTabs.ContentProps> {
   value: string;
 }
 

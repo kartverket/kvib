@@ -1,10 +1,11 @@
+import { ButtonProps } from "@/button";
+import { BoxProps } from "@/layout";
 import { Popover as ChakraPopover, Portal } from "@chakra-ui/react";
 import * as React from "react";
+import { Merge } from "../utils";
 import { CloseButton } from "./close-button";
 
-interface PopoverContentProps
-  extends Omit<React.HTMLAttributes<HTMLDivElement>, "color" | "content" | "translate">,
-    ChakraPopover.ContentProps {
+interface PopoverContentProps extends Merge<BoxProps, ChakraPopover.ContentProps> {
   portalled?: boolean;
   portalRef?: React.RefObject<HTMLElement>;
 }
@@ -32,7 +33,9 @@ export const PopoverArrow = React.forwardRef<HTMLDivElement, ChakraPopover.Arrow
   },
 );
 
-export const PopoverCloseTrigger = React.forwardRef<HTMLButtonElement, ChakraPopover.CloseTriggerProps>(
+interface PopoverCloseTriggerProps extends Merge<ButtonProps, ChakraPopover.CloseTriggerProps> {}
+
+export const PopoverCloseTrigger = React.forwardRef<HTMLButtonElement, PopoverCloseTriggerProps>(
   function PopoverCloseTrigger(props, ref) {
     return (
       <ChakraPopover.CloseTrigger position="absolute" top="1" insetEnd="1" {...props} asChild ref={ref}>
@@ -42,23 +45,7 @@ export const PopoverCloseTrigger = React.forwardRef<HTMLButtonElement, ChakraPop
   },
 );
 
-export interface PopoverTitleProps
-  extends Omit<React.HTMLAttributes<HTMLDivElement>, "color" | "content" | "translate">,
-    ChakraPopover.TitleProps {
-  fontWeight?: string | number;
-  fontSize?: string | number;
-  lineHeight?: string | number;
-  letterSpacing?: string | number;
-  color?: string;
-  fontFamily?: string;
-  textAlign?: string;
-  textTransform?: string;
-  fontStyle?: string;
-  textDecoration?: string;
-  whiteSpace?: string;
-  wordBreak?: string;
-  overflowWrap?: string;
-}
+export interface PopoverTitleProps extends Merge<BoxProps, ChakraPopover.TitleProps> {}
 
 export const PopoverTitle = React.forwardRef<HTMLDivElement, PopoverTitleProps>(function PopoverTitle(props, ref) {
   return <ChakraPopover.Title ref={ref} {...props} />;
@@ -70,11 +57,7 @@ export const PopoverHeader = ChakraPopover.Header;
 export const PopoverRoot = ChakraPopover.Root;
 export const PopoverBody = ChakraPopover.Body;
 
-interface PopoverTriggerProps
-  extends Omit<React.HTMLAttributes<HTMLButtonElement>, "color" | "content" | "translate">,
-    ChakraPopover.TriggerProps {
-  asChild?: boolean;
-}
+interface PopoverTriggerProps extends Merge<ButtonProps, ChakraPopover.TriggerProps> {}
 
 export const PopoverTrigger = React.forwardRef<HTMLButtonElement, PopoverTriggerProps>(
   function PopoverTrigger(props, ref) {

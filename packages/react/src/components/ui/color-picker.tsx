@@ -3,6 +3,7 @@ import type { IconButtonProps, StackProps } from "@chakra-ui/react";
 import { ColorPicker as ChakraColorPicker, For, IconButton, Portal, Span, Stack, Text, VStack } from "@chakra-ui/react";
 import { forwardRef } from "react";
 import { LuCheck, LuPipette } from "react-icons/lu";
+import { Merge } from "../utils";
 
 export const ColorPickerTrigger = forwardRef<
   HTMLButtonElement,
@@ -22,7 +23,7 @@ export const ColorPickerInput = forwardRef<HTMLInputElement, Omit<ChakraColorPic
   },
 );
 
-interface ColorPickerContentProps extends ChakraColorPicker.ContentProps, BoxProps {
+interface ColorPickerContentProps extends Merge<BoxProps, ChakraColorPicker.ContentProps> {
   portalled?: boolean;
   portalRef?: React.RefObject<HTMLElement>;
 }

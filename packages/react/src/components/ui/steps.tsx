@@ -1,16 +1,16 @@
+import { ButtonProps } from "@/button";
+import { BoxProps } from "@/layout";
 import { Box, Steps as ChakraSteps } from "@chakra-ui/react";
 import * as React from "react";
 import { LuCheck } from "react-icons/lu";
+import { Merge } from "../utils";
 
 interface StepInfoProps {
   title?: React.ReactNode;
   description?: React.ReactNode;
 }
 
-export interface StepsItemProps
-  extends Omit<React.HTMLAttributes<HTMLDivElement>, "color" | "content" | "translate" | "title">,
-    Omit<ChakraSteps.ItemProps, "title">,
-    StepInfoProps {
+export interface StepsItemProps extends Merge<BoxProps, Merge<Omit<ChakraSteps.ItemProps, "title">, StepInfoProps>> {
   completedIcon?: React.ReactNode;
   icon?: React.ReactNode;
   index: number;
@@ -70,9 +70,7 @@ export const StepsIndicator = React.forwardRef<HTMLDivElement, StepsIndicatorPro
 export const StepsList = ChakraSteps.List;
 export const StepsRoot = ChakraSteps.Root;
 
-interface StepsContentProps extends Omit<React.HTMLAttributes<HTMLDivElement>, "color" | "content" | "translate"> {
-  index: number;
-}
+interface StepsContentProps extends Merge<BoxProps, { index: number }> {}
 
 export const StepsContent = React.forwardRef<HTMLDivElement, StepsContentProps>(function StepsContent(props, ref) {
   return <ChakraSteps.Content ref={ref} {...props} />;
@@ -80,9 +78,7 @@ export const StepsContent = React.forwardRef<HTMLDivElement, StepsContentProps>(
 
 export const StepsCompletedContent = ChakraSteps.CompletedContent;
 
-interface StepsTriggerProps extends Omit<React.HTMLAttributes<HTMLButtonElement>, "color" | "content" | "translate"> {
-  asChild?: boolean;
-}
+interface StepsTriggerProps extends Merge<ButtonProps, ChakraSteps.TriggerProps> {}
 
 export const StepsNextTrigger = React.forwardRef<HTMLButtonElement, StepsTriggerProps>(
   function StepsNextTrigger(props, ref) {
