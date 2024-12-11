@@ -17,6 +17,8 @@ import * as CloseButtonStories from "../../components/close-button/CloseButton.s
 import * as CodeStories from "../../components/code/Code.stories";
 import * as CollapsibleStories from "../../components/collapsible/Collapsible.stories";
 import * as ColorPickerStories from "../../components/color-picker/ColorPicker.stories";
+import * as ColorSwatchStories from "../../components/color-swatch/ColorSwatch.stories";
+import * as DataListStories from "../../components/data-list/DataList.stories";
 import * as KbdStories from "../../components/datavisning/kbd/Kbd.stories";
 import * as ListStories from "../../components/datavisning/list/List.stories";
 import * as StatStories from "../../components/datavisning/stat/Stat.stories";
@@ -96,6 +98,16 @@ export const Collapsible = (colorPalette: ColorPalette) => {
 
 export const ColorPicker = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(ColorPickerStories);
+  return <Preview colorPalette={colorPalette} />;
+};
+
+export const ColorSwatch = (colorPalette: ColorPalette) => {
+  const { Preview } = composeStories(ColorSwatchStories);
+  return <Preview colorPalette={colorPalette} />;
+};
+
+export const DataList = (colorPalette: ColorPalette) => {
+  const { Preview } = composeStories(DataListStories);
   return <Preview colorPalette={colorPalette} />;
 };
 

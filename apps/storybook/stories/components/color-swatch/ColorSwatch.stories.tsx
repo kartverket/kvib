@@ -11,7 +11,7 @@ const meta: Meta<typeof ColorSwatch> = {
     },
   },
   args: {
-    value: "#CF914A",
+    value: "#EB5E41",
     size: "md",
   },
   argTypes: {
