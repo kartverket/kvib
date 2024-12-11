@@ -5,7 +5,6 @@ import * as React from "react";
 import { LuChevronDown } from "react-icons/lu";
 import { Merge } from "../utils";
 
-// Existing interface for AccordionItemTriggerProps
 interface AccordionItemTriggerProps extends Merge<ButtonProps, Accordion.ItemTriggerProps> {
   indicatorPlacement?: "start" | "end";
 }
@@ -33,7 +32,6 @@ export const AccordionItemTrigger = React.forwardRef<HTMLButtonElement, Accordio
   },
 );
 
-// New or extended interface for AccordionItemContentProps
 interface AccordionItemContentProps extends Merge<BoxProps, Accordion.ItemContentProps> {}
 
 export const AccordionItemContent = React.forwardRef<HTMLDivElement, AccordionItemContentProps>(
@@ -46,14 +44,12 @@ export const AccordionItemContent = React.forwardRef<HTMLDivElement, AccordionIt
   },
 );
 
-// New interface for AccordionRootProps
 interface AccordionRootProps extends Merge<BoxProps, Accordion.RootProps> {}
 
 export const AccordionRoot = React.forwardRef<HTMLDivElement, AccordionRootProps>(function AccordionRoot(props, ref) {
   return <Accordion.Root {...props} ref={ref} />;
 });
 
-// New or extended interface for AccordionItemProps
 interface AccordionItemProps extends Merge<BoxProps, Accordion.ItemProps> {}
 
 export const AccordionItem = React.forwardRef<HTMLDivElement, AccordionItemProps>(function AccordionItem(props, ref) {
