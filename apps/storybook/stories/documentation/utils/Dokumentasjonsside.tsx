@@ -4,7 +4,7 @@ import { ReactNode } from "react";
 interface Props extends StackProps {
   tittel: string;
   beskrivelse?: ReactNode;
-  children: ReactNode;
+  children?: ReactNode;
 }
 
 export const Dokumentasjonsside = ({ tittel, beskrivelse, ...props }: Props) => (

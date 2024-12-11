@@ -60,7 +60,7 @@ type Story = StoryObj<typeof KvibCheckbox>;
 export const Preview: Story = {
   render: args => (
     <KvibCheckbox defaultChecked {...args}>
-      En sjekkboks
+      En avmerkingsboks
     </KvibCheckbox>
   ),
 };

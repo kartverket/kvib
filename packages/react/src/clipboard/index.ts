@@ -14,9 +14,6 @@ export {
   ClipboardIndicator,
   ClipboardRootProvider,
   ClipboardTrigger,
-  useClipboard,
-  useClipboardContext,
-  useClipboardStyles,
 } from "@chakra-ui/react";
 
 export type {

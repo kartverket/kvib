@@ -37,7 +37,7 @@ const Demo = (props: ActionBarProps) => {
         }}
         colorPalette={props.colorPalette}
       >
-        Vis Action bar
+        Vis Action Bar
       </Checkbox>
       <ActionBar
         open={open}

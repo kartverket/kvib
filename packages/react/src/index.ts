@@ -7,6 +7,8 @@ export * from "./breadcrumb";
 export * from "./button";
 export * from "./card";
 export * from "./checkbox";
+export * from "./checkbox-card";
+export * from "./clipboard";
 export * from "./close-button";
 export * from "./collapsible";
 export * from "./color-picker";

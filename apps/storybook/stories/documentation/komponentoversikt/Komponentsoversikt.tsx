@@ -34,8 +34,6 @@ export const Components = () => {
       return Object.keys(category.komponenter).map(componentKey => category.komponenter[componentKey]);
     })
     .sort((a, b) => a.navn.localeCompare(b.navn));
-
-  console.log(komponenter);
   return (
     <Box className="sb-unstyled">
       <ComponentsBanner

@@ -1,0 +1,8 @@
+import { Canvas, Controls, Meta } from "@storybook/blocks";
+import * as ClipboardStories from "./Clipboard.stories";
+import { ClipboardDocs } from "./ClipboardDocs";
+
+<Meta of={ClipboardStories} />
+<ClipboardDocs />
+<Canvas of={ClipboardStories.Preview} />
+<Controls of={ClipboardStories.Preview} />

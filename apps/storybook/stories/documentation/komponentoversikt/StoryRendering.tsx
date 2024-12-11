@@ -9,7 +9,12 @@ import * as AvatarStories from "../../components/avatar/Avatar.stories";
 import * as BadgeStories from "../../components/badge/Badge.stories";
 import * as BreadcrumbStories from "../../components/breadcrumb/Breadcrumb.stories";
 import * as ButtonStories from "../../components/button/Button.stories";
-import * as CardStories from "../../components/datavisning/card/Card.stories";
+import * as CardStories from "../../components/card/Card.stories";
+import * as CheckboxCardStories from "../../components/checkbox-card/CheckboxCard.stories";
+import * as CheckboxStories from "../../components/checkbox/Checkbox.stories";
+import * as ClipboardStories from "../../components/clipboard/Clipboard.stories";
+import * as CloseButtonStories from "../../components/close-button/CloseButton.stories";
+import * as CollapsibleStories from "../../components/collapsible/Collapsible.stories";
 import * as CodeStories from "../../components/datavisning/code/Code.stories";
 import * as KbdStories from "../../components/datavisning/kbd/Kbd.stories";
 import * as ListStories from "../../components/datavisning/list/List.stories";
@@ -41,8 +46,6 @@ import * as FooterStories from "../../components/sideelementer/footer/footer/Foo
 import * as HeaderStories from "../../components/sideelementer/header/Header.stories";
 import * as LogoStories from "../../components/sideelementer/logo/Logo.stories";
 import * as SeparatorStories from "../../components/sideelementer/separator/Separator.stories";
-import * as CheckboxStories from "../../components/skjemaelementer/checkbox/Checkbox.stories";
-import * as CloseButtonStories from "../../components/skjemaelementer/close-button/CloseButton.stories";
 import * as DatepickerStories from "../../components/skjemaelementer/datepicker/Datepicker.stories";
 import * as EditableStories from "../../components/skjemaelementer/editable/Editable.stories";
 import * as FormControlStories from "../../components/skjemaelementer/field/Field.stories";
@@ -72,6 +75,21 @@ import { ColorPalette } from "./Komponenter";
 
 export const ActionBar = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(ActionBarStories);
+  return <Preview colorPalette={colorPalette} />;
+};
+
+export const CheckboxCard = (colorPalette: ColorPalette) => {
+  const { Preview } = composeStories(CheckboxCardStories);
+  return <Preview colorPalette={colorPalette} />;
+};
+
+export const Clipboard = (colorPalette: ColorPalette) => {
+  const { Preview } = composeStories(ClipboardStories);
+  return <Preview colorPalette={colorPalette} />;
+};
+
+export const Collapsible = (colorPalette: ColorPalette) => {
+  const { Preview } = composeStories(CollapsibleStories);
   return <Preview colorPalette={colorPalette} />;
 };
 
