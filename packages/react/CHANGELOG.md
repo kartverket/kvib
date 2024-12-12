@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 5.0.4
+
+### Patch Changes
+
+- 2abe0d8: Typefikser for Icon og NumberInput
+
 ## 5.0.3
 
 ### Patch Changes
