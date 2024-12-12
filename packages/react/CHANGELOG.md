@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 5.0.3
+
+### Patch Changes
+
+- 0e61f77: Workaround for de vanligste typefeilene fra Chakra når det gjelder Accordion, ActionBar, Breadcrumb, Collapsible, ColorPicker, ColorSwatch, Dialog, Drawer, Menu, Popover, Radio, Select, Steps og Tabs
+
 ## 5.0.2
 
 ### Patch Changes
