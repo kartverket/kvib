@@ -2,30 +2,32 @@ import "material-symbols";
 import { MaterialSymbol } from "material-symbols";
 import { forwardRef } from "react";
 
-export type IconProps = {
-  /**The icon from Material symbols you want to display*/
+export type IconProps = React.HTMLAttributes<HTMLSpanElement> & {
+  /** The icon from Material symbols you want to display */
   icon: MaterialSymbol;
 
-  /**The font size of the icon */
+  /** The font size of the icon */
   size?: 20 | 24 | 40 | 48 | number;
 
-  /**The color of the icon*/
+  /** The color of the icon */
   color?: string;
 
-  /**The weight of the icon*/
+  /** The weight of the icon */
   weight?: 100 | 200 | 300 | 400 | 500 | 600 | 700;
 
-  /**The of grade the icon*/
+  /** The grade of the icon */
   grade?: -25 | 0 | 200;
 
-  /**Decides whether the icon is filled or not*/
+  /** Decides whether the icon is filled or not */
   filled?: boolean;
 
-  /**Decides whether a screen reader will vocalize the icon name or not */
+  /** Decides whether a screen reader will vocalize the icon name or not */
   ariaIsHidden?: boolean;
 
+  /** Custom class name for styling */
   className?: string;
 
+  /** Inline CSS styles */
   css?: React.CSSProperties;
 };
 
