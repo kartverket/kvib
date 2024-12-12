@@ -1,8 +1,11 @@
+import { ButtonProps } from "@/button";
+import { BoxProps } from "@/layout";
 import { Popover as ChakraPopover, Portal } from "@chakra-ui/react";
 import * as React from "react";
+import { Merge } from "../utils";
 import { CloseButton } from "./close-button";
 
-interface PopoverContentProps extends ChakraPopover.ContentProps {
+interface PopoverContentProps extends Merge<BoxProps, ChakraPopover.ContentProps> {
   portalled?: boolean;
   portalRef?: React.RefObject<HTMLElement>;
 }
@@ -30,7 +33,9 @@ export const PopoverArrow = React.forwardRef<HTMLDivElement, ChakraPopover.Arrow
   },
 );
 
-export const PopoverCloseTrigger = React.forwardRef<HTMLButtonElement, ChakraPopover.CloseTriggerProps>(
+interface PopoverCloseTriggerProps extends Merge<ButtonProps, ChakraPopover.CloseTriggerProps> {}
+
+export const PopoverCloseTrigger = React.forwardRef<HTMLButtonElement, PopoverCloseTriggerProps>(
   function PopoverCloseTrigger(props, ref) {
     return (
       <ChakraPopover.CloseTrigger position="absolute" top="1" insetEnd="1" {...props} asChild ref={ref}>
@@ -40,10 +45,22 @@ export const PopoverCloseTrigger = React.forwardRef<HTMLButtonElement, ChakraPop
   },
 );
 
-export const PopoverTitle = ChakraPopover.Title;
+export interface PopoverTitleProps extends Merge<BoxProps, ChakraPopover.TitleProps> {}
+
+export const PopoverTitle = React.forwardRef<HTMLDivElement, PopoverTitleProps>(function PopoverTitle(props, ref) {
+  return <ChakraPopover.Title ref={ref} {...props} />;
+});
+
 export const PopoverDescription = ChakraPopover.Description;
 export const PopoverFooter = ChakraPopover.Footer;
 export const PopoverHeader = ChakraPopover.Header;
 export const PopoverRoot = ChakraPopover.Root;
 export const PopoverBody = ChakraPopover.Body;
-export const PopoverTrigger = ChakraPopover.Trigger;
+
+interface PopoverTriggerProps extends Merge<ButtonProps, ChakraPopover.TriggerProps> {}
+
+export const PopoverTrigger = React.forwardRef<HTMLButtonElement, PopoverTriggerProps>(
+  function PopoverTrigger(props, ref) {
+    return <ChakraPopover.Trigger ref={ref} {...props} />;
+  },
+);

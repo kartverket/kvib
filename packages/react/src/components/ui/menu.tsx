@@ -1,10 +1,13 @@
 "use client";
 
+import { BoxProps } from "@/layout";
 import { AbsoluteCenter, Menu as ChakraMenu, Portal } from "@chakra-ui/react";
 import * as React from "react";
 import { LuCheck, LuChevronRight } from "react-icons/lu";
+import { Merge } from "../utils";
+import { ButtonProps } from "./button";
 
-interface MenuContentProps extends ChakraMenu.ContentProps {
+interface MenuContentProps extends Merge<BoxProps, ChakraMenu.ContentProps> {
   portalled?: boolean;
   portalRef?: React.RefObject<HTMLElement>;
 }
@@ -69,7 +72,7 @@ export const MenuItemGroup = React.forwardRef<HTMLDivElement, ChakraMenu.ItemGro
   },
 );
 
-export interface MenuTriggerItemProps extends ChakraMenu.ItemProps {
+export interface MenuTriggerItemProps extends Merge<ButtonProps, ChakraMenu.ItemProps> {
   startIcon?: React.ReactNode;
 }
 
@@ -87,11 +90,31 @@ export const MenuTriggerItem = React.forwardRef<HTMLDivElement, MenuTriggerItemP
 );
 
 export const MenuRadioItemGroup = ChakraMenu.RadioItemGroup;
-export const MenuContextTrigger = ChakraMenu.ContextTrigger;
+
+interface MenuContextTriggerProps extends Merge<ButtonProps, ChakraMenu.ContextTriggerProps> {}
+
+export const MenuContextTrigger = React.forwardRef<HTMLButtonElement, MenuContextTriggerProps>(
+  function MenuContextTrigger(props, ref) {
+    return <ChakraMenu.ContextTrigger ref={ref} {...props} />;
+  },
+);
+
 export const MenuRoot = ChakraMenu.Root;
 export const MenuSeparator = ChakraMenu.Separator;
 
-export const MenuItem = ChakraMenu.Item;
+interface MenuItemProps extends Merge<BoxProps, ChakraMenu.ItemProps> {
+  value: string;
+}
+
+export const MenuItem = React.forwardRef<HTMLDivElement, MenuItemProps>(function MenuItem(props, ref) {
+  return <ChakraMenu.Item ref={ref} {...props} />;
+});
+
 export const MenuItemText = ChakraMenu.ItemText;
 export const MenuItemCommand = ChakraMenu.ItemCommand;
-export const MenuTrigger = ChakraMenu.Trigger;
+
+interface MenuTriggerProps extends Merge<ButtonProps, ChakraMenu.TriggerProps> {}
+
+export const MenuTrigger = React.forwardRef<HTMLButtonElement, MenuTriggerProps>(function MenuTrigger(props, ref) {
+  return <ChakraMenu.Trigger ref={ref} {...props} />;
+});

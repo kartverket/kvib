@@ -1,7 +1,10 @@
+import { BoxProps } from "@/layout";
 import { RadioGroup as ChakraRadioGroup } from "@chakra-ui/react";
 import * as React from "react";
+import { Merge } from "../utils";
 
-export interface RadioProps extends ChakraRadioGroup.ItemProps {
+export interface RadioProps extends Merge<BoxProps, ChakraRadioGroup.ItemProps> {
+  value: string;
   rootRef?: React.Ref<HTMLDivElement>;
   inputProps?: React.InputHTMLAttributes<HTMLInputElement>;
 }

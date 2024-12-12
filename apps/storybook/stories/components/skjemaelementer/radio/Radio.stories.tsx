@@ -103,10 +103,10 @@ const meta: Meta<typeof RadioGroup> = {
         type: {
           summary: "green | blue | gray | red",
         },
+        defaultValue: { summary: "green" },
       },
-      defaultValue: { summary: "green" },
       options: ["green", "blue", "gray", "red", "orange", "purple"],
-      control: { type: "select" },
+      control: { type: "radio" },
     },
   },
 };
@@ -118,9 +118,7 @@ export const Preview: Story = {
   render: (args: RadioGroupProps) => (
     <RadioGroup defaultValue={"1"} {...args}>
       <HStack gap="6">
-        <Radio colorPalette="blue" value="1">
-          Valg 1
-        </Radio>
+        <Radio value="1">Valg 1</Radio>
         <Radio value="2">Valg 2</Radio>
       </HStack>
     </RadioGroup>

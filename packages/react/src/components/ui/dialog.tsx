@@ -1,8 +1,11 @@
+import { ButtonProps } from "@/button";
+import { BoxProps } from "@/layout";
 import { Dialog as ChakraDialog, Portal } from "@chakra-ui/react";
 import * as React from "react";
+import { Merge } from "../utils";
 import { CloseButton } from "./close-button";
 
-interface DialogContentProps extends ChakraDialog.ContentProps {
+interface DialogContentProps extends Merge<BoxProps, ChakraDialog.ContentProps> {
   portalled?: boolean;
   portalRef?: React.RefObject<HTMLElement>;
   backdrop?: boolean;
@@ -23,7 +26,9 @@ export const DialogContent = React.forwardRef<HTMLDivElement, DialogContentProps
   );
 });
 
-export const DialogCloseTrigger = React.forwardRef<HTMLButtonElement, ChakraDialog.CloseTriggerProps>(
+interface DialogCloseTriggerProps extends Merge<ButtonProps, ChakraDialog.CloseTriggerProps> {}
+
+export const DialogCloseTrigger = React.forwardRef<HTMLButtonElement, DialogCloseTriggerProps>(
   function DialogCloseTrigger(props, ref) {
     return (
       <ChakraDialog.CloseTrigger position="absolute" top="2" insetEnd="2" colorPalette={"inherit"} {...props} asChild>
@@ -42,5 +47,13 @@ export const DialogBody = ChakraDialog.Body;
 export const DialogBackdrop = ChakraDialog.Backdrop;
 export const DialogTitle = ChakraDialog.Title;
 export const DialogDescription = ChakraDialog.Description;
-export const DialogTrigger = ChakraDialog.Trigger;
+
+interface DialogTriggerProps extends Merge<BoxProps, ChakraDialog.TriggerProps> {}
+
+export const DialogTrigger = React.forwardRef<HTMLButtonElement, DialogTriggerProps>(
+  function DialogTrigger(props, ref) {
+    return <ChakraDialog.Trigger ref={ref} {...props} />;
+  },
+);
+
 export const DialogActionTrigger = ChakraDialog.ActionTrigger;

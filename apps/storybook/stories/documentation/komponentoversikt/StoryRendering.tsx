@@ -1,16 +1,32 @@
 import { composeStories } from "@storybook/react";
+import * as AccordionStories from "../../components/accordion/Accordion.stories";
+import * as ActionBarStories from "../../components/action-bar/ActionBar.stories";
+import * as AlertStories from "../../components/alert/Alert.stories";
 import * as PortalStories from "../../components/annet/portal/Portal.stories";
 import * as ShowHideStories from "../../components/annet/show/Show.stories";
 import * as VisuallyHiddenStories from "../../components/annet/visually-hidden/VisuallyHidden.stories";
-import * as AccordionStories from "../../components/datavisning/accordion/Accordion.stories";
-import * as BadgeStories from "../../components/datavisning/badge/Badge.stories";
-import * as CardStories from "../../components/datavisning/card/Card.stories";
-import * as CodeStories from "../../components/datavisning/code/Code.stories";
+import * as AvatarStories from "../../components/avatar/Avatar.stories";
+import * as BadgeStories from "../../components/badge/Badge.stories";
+import * as BreadcrumbStories from "../../components/breadcrumb/Breadcrumb.stories";
+import * as ButtonStories from "../../components/button/Button.stories";
+import * as CardStories from "../../components/card/Card.stories";
+import * as CheckboxCardStories from "../../components/checkbox-card/CheckboxCard.stories";
+import * as CheckboxStories from "../../components/checkbox/Checkbox.stories";
+import * as ClipboardStories from "../../components/clipboard/Clipboard.stories";
+import * as CloseButtonStories from "../../components/close-button/CloseButton.stories";
+import * as CodeStories from "../../components/code/Code.stories";
+import * as CollapsibleStories from "../../components/collapsible/Collapsible.stories";
+import * as ColorPickerStories from "../../components/color-picker/ColorPicker.stories";
+import * as ColorSwatchStories from "../../components/color-swatch/ColorSwatch.stories";
+import * as DataListStories from "../../components/data-list/DataList.stories";
 import * as KbdStories from "../../components/datavisning/kbd/Kbd.stories";
 import * as ListStories from "../../components/datavisning/list/List.stories";
 import * as StatStories from "../../components/datavisning/stat/Stat.stories";
 import * as TableStories from "../../components/datavisning/table/Table.stories";
 import * as TagStories from "../../components/datavisning/tag/Tag.stories";
+import * as DatepickerStories from "../../components/datepicker/Datepicker.stories";
+import * as DialogStoriea from "../../components/dialog/Dialog.stories";
+import * as DrawerStories from "../../components/drawer/Drawer.stories";
 import * as AspectRatioStories from "../../components/Layout/AspectRatio/AspectRatio.stories";
 import * as BoxStories from "../../components/Layout/Box/Box.stories";
 import * as CenterStories from "../../components/Layout/Center/Center.stories";
@@ -19,17 +35,13 @@ import * as FlexStories from "../../components/Layout/Flex/Flex.stories";
 import * as GridStories from "../../components/Layout/Grid/Grid.stories";
 import * as SimpleGridStories from "../../components/Layout/SimpleGrid/SimpleGrid.stories";
 import * as StackStories from "../../components/Layout/Stack/Stack.stories";
-import * as AvatarStories from "../../components/media/avatar/Avatar.stories";
 import * as IconStories from "../../components/media/icon/Icon.stories";
 import * as ImageStories from "../../components/media/image/Image.stories";
-import * as BreadcrumbStories from "../../components/navigasjon/breadcrumb/Breadcrumb.stories";
 import * as LinkOverlayStories from "../../components/navigasjon/link-overlay/LinkOverlay.stories";
 import * as LinkStories from "../../components/navigasjon/link/Link.stories";
 import * as MenuStories from "../../components/navigasjon/menu/Menu.stories";
 import * as SkivNavStories from "../../components/navigasjon/skip-nav/SkipNav.stories";
 import * as TabsStories from "../../components/navigasjon/tabs/Tabs.stories";
-import * as DrawerStories from "../../components/overlay/drawer/Drawer.stories";
-import * as DialogStoriea from "../../components/overlay/modal/Dialog.stories";
 import * as PopoverStories from "../../components/overlay/popover/Popover.stories";
 import * as TooltipStories from "../../components/overlay/tooltip/Tooltip.stories";
 import * as SearchAsyncStories from "../../components/search/search-async/SearchAsync.stories";
@@ -38,10 +50,6 @@ import * as FooterStories from "../../components/sideelementer/footer/footer/Foo
 import * as HeaderStories from "../../components/sideelementer/header/Header.stories";
 import * as LogoStories from "../../components/sideelementer/logo/Logo.stories";
 import * as SeparatorStories from "../../components/sideelementer/separator/Separator.stories";
-import * as ButtonStories from "../../components/skjemaelementer/button/Button.stories";
-import * as CheckboxStories from "../../components/skjemaelementer/checkbox/Checkbox.stories";
-import * as CloseButtonStories from "../../components/skjemaelementer/close-button/CloseButton.stories";
-import * as DatepickerStories from "../../components/skjemaelementer/datepicker/Datepicker.stories";
 import * as EditableStories from "../../components/skjemaelementer/editable/Editable.stories";
 import * as FormControlStories from "../../components/skjemaelementer/field/Field.stories";
 import * as FileUploadStories from "../../components/skjemaelementer/file-upload/FileUpload.stories";
@@ -55,7 +63,6 @@ import * as SliderStories from "../../components/skjemaelementer/slider/Slider.s
 import * as SwitchStories from "../../components/skjemaelementer/switch/Switch.stories";
 import * as TextAreaStories from "../../components/skjemaelementer/textarea/Textarea.stories";
 import * as TimepickerStories from "../../components/skjemaelementer/timepicker/Timepicker.stories";
-import * as AlertStories from "../../components/tilbakemelding/alert/Alert.stories";
 import * as ProgressCircleStories from "../../components/tilbakemelding/progress-circle/ProgressCircle.stories";
 import * as ProgressStories from "../../components/tilbakemelding/progress/Progress.stories";
 import * as SkeletonStories from "../../components/tilbakemelding/skeleton/Skeleton.stories";
@@ -66,6 +73,43 @@ import * as HeadingStories from "../../design/heading/Heading.stories";
 import * as HighlightStories from "../../design/highlight/Highlight.stories";
 import * as TextStories from "../../design/text/Text.stories";
 import { ColorPalette } from "./Komponenter";
+
+// Komponenter
+
+export const ActionBar = (colorPalette: ColorPalette) => {
+  const { Preview } = composeStories(ActionBarStories);
+  return <Preview colorPalette={colorPalette} />;
+};
+
+export const CheckboxCard = (colorPalette: ColorPalette) => {
+  const { Preview } = composeStories(CheckboxCardStories);
+  return <Preview colorPalette={colorPalette} />;
+};
+
+export const Clipboard = (colorPalette: ColorPalette) => {
+  const { Preview } = composeStories(ClipboardStories);
+  return <Preview colorPalette={colorPalette} />;
+};
+
+export const Collapsible = (colorPalette: ColorPalette) => {
+  const { Preview } = composeStories(CollapsibleStories);
+  return <Preview colorPalette={colorPalette} />;
+};
+
+export const ColorPicker = (colorPalette: ColorPalette) => {
+  const { Preview } = composeStories(ColorPickerStories);
+  return <Preview colorPalette={colorPalette} />;
+};
+
+export const ColorSwatch = (colorPalette: ColorPalette) => {
+  const { Preview } = composeStories(ColorSwatchStories);
+  return <Preview colorPalette={colorPalette} />;
+};
+
+export const DataList = (colorPalette: ColorPalette) => {
+  const { Preview } = composeStories(DataListStories);
+  return <Preview colorPalette={colorPalette} />;
+};
 
 // Skjemaelementer
 

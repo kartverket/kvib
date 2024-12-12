@@ -2,8 +2,7 @@ import { CollectionItem, createListCollection } from "@chakra-ui/react";
 import {
   Box,
   Card,
-  Flex,
-  Heading,
+  Center,
   Link,
   Select,
   SelectContent,
@@ -13,7 +12,6 @@ import {
   SelectValueText,
   SimpleGrid,
   Stack,
-  Text,
 } from "@kvib/react";
 import { ReactElement, useEffect, useRef, useState } from "react";
 import { ComponentsBanner } from "../../templates/ComponentsBanner";
@@ -30,6 +28,12 @@ export const Komponentsoversikt = () => <Components />;
 
 export const Components = () => {
   const [theme, setTheme] = useState<ColorPalette>("green");
+  const komponenter = Object.keys(Komponenter(theme))
+    .flatMap(categoryKey => {
+      const category = Komponenter(theme)[categoryKey];
+      return Object.keys(category.komponenter).map(componentKey => category.komponenter[componentKey]);
+    })
+    .sort((a, b) => a.navn.localeCompare(b.navn));
   return (
     <Box className="sb-unstyled">
       <ComponentsBanner
@@ -59,25 +63,19 @@ export const Components = () => {
         </SelectContent>
       </Select>
       <Stack gap="3rem">
-        {Object.keys(Komponenter(theme)).map(categoryKey => {
-          const category = Komponenter(theme)[categoryKey];
-          return (
-            <ComponentCategory key={categoryKey} title={category.navn} description={category.beskrivelse}>
-              {Object.keys(category.komponenter).map(componentKey => {
-                const component = category.komponenter[componentKey];
-                return (
-                  <ComponentCard
-                    key={componentKey}
-                    title={component.navn}
-                    colorPalette={theme}
-                    link={component.link}
-                    component={component.story}
-                  />
-                );
-              })}
-            </ComponentCategory>
-          );
-        })}
+        <SimpleGrid columns={[1, 2, 3]} gap="2rem">
+          {komponenter.map(component => {
+            return (
+              <ComponentCard
+                key={component.navn}
+                title={component.navn}
+                colorPalette={theme}
+                link={component.link}
+                component={component.story}
+              />
+            );
+          })}
+        </SimpleGrid>
       </Stack>
     </Box>
   );
@@ -110,28 +108,6 @@ const ComponentCard = ({
   </Card>
 );
 
-const ComponentCategory = ({
-  title,
-  children,
-  description,
-}: {
-  title: string;
-  children: ReactElement[];
-  description?: string;
-}) => (
-  <Box>
-    <Heading as="h3" size="md" id={title}>
-      {title}
-    </Heading>
-    <Text marginBottom={"1.5rem"} fontSize="md">
-      {description}
-    </Text>
-    <SimpleGrid columns={[2, null, 3]} gap={5}>
-      {children}
-    </SimpleGrid>
-  </Box>
-);
-
 // Don't render the story until it's visible in the viewport
 const LazyStory = ({ component }: { component: ReactElement }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -160,20 +136,17 @@ const LazyStory = ({ component }: { component: ReactElement }) => {
   }, [component]);
 
   return (
-    <Flex
+    <Center
       ref={storyRef}
       bg="gray.50"
       border="none"
       height="11rem"
-      justifyContent="center"
-      alignItems="center"
       padding="2rem"
-      width="100%"
       borderRadius="md"
       overflow="hidden"
-      boxSizing="border-box"
+      className="komp-story"
     >
       {isVisible && component}
-    </Flex>
+    </Center>
   );
 };

@@ -1,4 +1,4 @@
-import { Button, Menu as KvibMenu, MenuContent, MenuItem, MenuProps, MenuTrigger } from "@kvib/react";
+import { Button, Center, Menu as KvibMenu, MenuContent, MenuItem, MenuProps, MenuTrigger } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibMenu> = {
@@ -195,7 +195,6 @@ const meta: Meta<typeof KvibMenu> = {
       control: { type: "radio" },
     },
   },
-  args: { onClose: undefined, onOpen: undefined },
 };
 
 export default meta;
@@ -203,19 +202,21 @@ type Story = StoryObj<typeof KvibMenu>;
 
 export const Preview: Story = {
   render: (args: MenuProps) => (
-    <KvibMenu {...args}>
-      <MenuTrigger asChild>
-        <Button variant="subtle" colorPalette={args.colorPalette} size="sm">
-          Åpne
-        </Button>
-      </MenuTrigger>
-      <MenuContent>
-        <MenuItem value="new-txt-a">Nedlast</MenuItem>
-        <MenuItem value="new-txt-b">Lag en kopi</MenuItem>
-        <MenuItem value="new-txt-c">Marker som utkast</MenuItem>
-        <MenuItem value="new-txt-d">Slett</MenuItem>
-        <MenuItem value="new-txt-e">Bli med på en workshop</MenuItem>
-      </MenuContent>
-    </KvibMenu>
+    <Center>
+      <KvibMenu {...args}>
+        <MenuTrigger asChild>
+          <Button variant="outline" colorPalette={args.colorPalette} size="sm">
+            Åpne meny
+          </Button>
+        </MenuTrigger>
+        <MenuContent>
+          <MenuItem value="new-txt-a">Nedlast</MenuItem>
+          <MenuItem value="new-txt-b">Lag en kopi</MenuItem>
+          <MenuItem value="new-txt-c">Marker som utkast</MenuItem>
+          <MenuItem value="new-txt-d">Slett</MenuItem>
+          <MenuItem value="new-txt-e">Bli med på en workshop</MenuItem>
+        </MenuContent>
+      </KvibMenu>
+    </Center>
   ),
 };

@@ -1,7 +1,7 @@
 import { List, ListProps } from "@kvib/react";
 
 export const Liste = (props: ListProps) => (
-  <List pl="1.75rem" pt="1rem" m="0" gap="16px" {...props}>
+  <List pl="1.5rem" m="0" gap="0" {...props} fontSize="md" lineHeight="md">
     {props.children}
   </List>
 );

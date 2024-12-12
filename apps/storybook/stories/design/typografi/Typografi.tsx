@@ -19,7 +19,7 @@ const TypografiTable = () => (
     <Table
       width="100%"
       size="md"
-      style={{
+      css={{
         "td, th": {
           borderBottom: "1px solid var(--kvib-colors-gray-200)",
         },
@@ -27,7 +27,7 @@ const TypografiTable = () => (
       }}
     >
       <Thead
-        style={{
+        css={{
           th: {
             fontSize: "md",
             lineHeight: "md",
@@ -47,7 +47,7 @@ const TypografiTable = () => (
         </Tr>
       </Thead>
       <Tbody
-        style={{
+        css={{
           "tr:last-of-type td": {
             borderBottom: "none",
           },
@@ -123,8 +123,8 @@ export const Typografi = () => (
     </Tekstblokk>
 
     <Tekstblokk tittel="Nyttige retningslinjer">
-      <Text fontSize="md" fontWeight={700} p="0" m="0">
-        Desktop
+      <Text fontSize="md" fontWeight={500} p="0" m="0" mt="1rem">
+        For desktop:
       </Text>
       <Liste pb="16px">
         <Listeelement tittel="Bredde">
@@ -136,8 +136,8 @@ export const Typografi = () => (
         </Listeelement>
       </Liste>
 
-      <Text fontSize="md" fontWeight={700} p="0" m="0">
-        Mobil
+      <Text fontSize="md" fontWeight={500} p="0" m="0">
+        For mobil:
       </Text>
       <Liste>
         <Listeelement tittel="Bredde og marger">Bruk 16 px margin til venstre og høyre for hovedinnhold.</Listeelement>

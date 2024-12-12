@@ -1,5 +1,6 @@
 import { Breadcrumb, type SystemStyleObject } from "@chakra-ui/react";
 import * as React from "react";
+import { Merge } from "../utils";
 
 export interface BreadcrumbRootProps extends Breadcrumb.RootProps {
   separator?: React.ReactNode;
@@ -31,5 +32,13 @@ export const BreadcrumbRoot = React.forwardRef<HTMLDivElement, BreadcrumbRootPro
 );
 
 export const BreadcrumbLink = Breadcrumb.Link;
-export const BreadcrumbCurrentLink = Breadcrumb.CurrentLink;
+
+interface BreadcrumbCurrentLinkProps extends Merge<Breadcrumb.LinkProps, Breadcrumb.CurrentLinkProps> {}
+
+export const BreadcrumbCurrentLink = React.forwardRef<HTMLAnchorElement, BreadcrumbCurrentLinkProps>(
+  function BreadcrumbCurrentLink(props, ref) {
+    return <Breadcrumb.CurrentLink ref={ref} {...props} />;
+  },
+);
+
 export const BreadcrumbEllipsis = Breadcrumb.Ellipsis;

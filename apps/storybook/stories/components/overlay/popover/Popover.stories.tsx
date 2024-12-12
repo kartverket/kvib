@@ -2,6 +2,7 @@ import {
   Button,
   Popover,
   PopoverArrow,
+  PopoverBody,
   PopoverContent,
   PopoverProps,
   PopoverTitle,
@@ -304,9 +305,11 @@ export const Preview: Story = {
         </Button>
       </PopoverTrigger>
       <PopoverContent>
-        <PopoverTitle>Dette er en popover</PopoverTitle>
         <PopoverArrow />
-        <Text my="4">Hovedtekst i popover</Text>
+        <PopoverBody>
+          <PopoverTitle fontWeight="bold">Tittel</PopoverTitle>
+          <Text my="4">Beskrivelse i popover som vises når man har trykket på triggeren.</Text>
+        </PopoverBody>
       </PopoverContent>
     </Popover>
   ),

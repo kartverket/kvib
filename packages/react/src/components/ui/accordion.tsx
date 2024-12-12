@@ -1,8 +1,11 @@
+import { ButtonProps } from "@/button";
+import { BoxProps } from "@/layout";
 import { Accordion, HStack } from "@chakra-ui/react";
 import * as React from "react";
 import { LuChevronDown } from "react-icons/lu";
+import { Merge } from "../utils";
 
-interface AccordionItemTriggerProps extends Accordion.ItemTriggerProps {
+interface AccordionItemTriggerProps extends Merge<ButtonProps, Accordion.ItemTriggerProps> {
   indicatorPlacement?: "start" | "end";
 }
 
@@ -29,7 +32,7 @@ export const AccordionItemTrigger = React.forwardRef<HTMLButtonElement, Accordio
   },
 );
 
-interface AccordionItemContentProps extends Accordion.ItemContentProps {}
+interface AccordionItemContentProps extends Merge<BoxProps, Accordion.ItemContentProps> {}
 
 export const AccordionItemContent = React.forwardRef<HTMLDivElement, AccordionItemContentProps>(
   function AccordionItemContent(props, ref) {
@@ -41,5 +44,18 @@ export const AccordionItemContent = React.forwardRef<HTMLDivElement, AccordionIt
   },
 );
 
-export const AccordionRoot = Accordion.Root;
-export const AccordionItem = Accordion.Item;
+interface AccordionRootProps extends Merge<BoxProps, Accordion.RootProps> {}
+
+export const AccordionRoot = React.forwardRef<HTMLDivElement, AccordionRootProps>(function AccordionRoot(props, ref) {
+  return <Accordion.Root {...props} ref={ref} />;
+});
+
+interface AccordionItemProps extends Merge<BoxProps, Accordion.ItemProps> {}
+
+export const AccordionItem = React.forwardRef<HTMLDivElement, AccordionItemProps>(function AccordionItem(props, ref) {
+  return (
+    <Accordion.Item {...props} ref={ref}>
+      {props.children}
+    </Accordion.Item>
+  );
+});

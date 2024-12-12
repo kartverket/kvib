@@ -1,5 +1,6 @@
 import {
   Button,
+  Center,
   FileUpload,
   FileUploadList,
   FileUploadProps,
@@ -81,14 +82,16 @@ export default meta;
 type FileUploadStory = StoryObj<typeof KvibFileUpload>;
 
 const FileUploadExample = (args: FileUploadProps) => (
-  <FileUpload {...args}>
-    <FileUploadTrigger>
-      <Button colorPalette={args.colorPalette} leftIcon="upload_2">
-        Last opp fil
-      </Button>
-    </FileUploadTrigger>
-    <FileUploadList />
-  </FileUpload>
+  <Center>
+    <FileUpload {...args}>
+      <FileUploadTrigger>
+        <Button colorPalette={args.colorPalette} leftIcon="upload_2">
+          Last opp fil
+        </Button>
+      </FileUploadTrigger>
+      <FileUploadList />
+    </FileUpload>
+  </Center>
 );
 
 export const Preview: FileUploadStory = {
