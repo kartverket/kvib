@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 5.0.6
+
+### Patch Changes
+
+- 67f3504: Øker fontstørrelse for knapper
+
 ## 5.0.5
 
 ### Patch Changes
