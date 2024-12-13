@@ -186,18 +186,23 @@ export const buttonTheme = defineRecipe({
     size: {
       sm: {
         fontWeight: "{fontWeights.medium}",
+        fontSize: "{fontSizes.sm}",
       },
       md: {
         fontWeight: "{fontWeights.semibold}",
+        fontSize: "{fontSizes.md}",
       },
       lg: {
         fontWeight: "{fontWeights.semibold}",
+        fontSize: "{fontSizes.lg}",
       },
       xl: {
         fontWeight: "{fontWeights.bold}",
+        fontSize: "{fontSizes.xl}",
       },
       "2xl": {
         fontWeight: "{fontWeights.extrabold}",
+        fontSize: "{fontSizes.2xl}",
       },
     },
   },
