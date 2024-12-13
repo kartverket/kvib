@@ -3,22 +3,25 @@ import { defineRecipe } from "@chakra-ui/react";
 export const linkTheme = defineRecipe({
   base: {
     colorPalette: "green",
+    fontWeight: 400,
   },
   variants: {
     variant: {
       underline: {
-        color: "colorPalette.500 !important",
-        textDecoration: "underline !important",
+        "& > *:not(span)": {
+          textDecoration: "none",
+        },
+        color: "colorPalette.500",
         _hover: {
-          color: "colorPalette.400 !important",
-          textDecoration: "none !important",
+          color: "colorPalette.400",
+          textDecoration: "none",
         },
       },
       plain: {
-        color: "colorPalette.500 !important",
-        textDecoration: "none !important",
+        color: "colorPalette.500",
+        textDecoration: "none",
         _hover: {
-          color: "colorPalette.400 !important",
+          color: "colorPalette.400",
         },
       },
     },

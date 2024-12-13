@@ -6,14 +6,14 @@ export const inputTheme = defineRecipe({
       layerStyle: "disabled",
     },
     transition: "all 0.2s ease-in-out",
-    borderRadius: "md !important",
+    borderRadius: "md",
     outline: "{borders.1px}",
     outlineColor: "gray.200",
     border: "none",
     _focus: {
-      outlineWidth: "2px !important",
-      outlineColor: "blue.500 !important",
-      boxShadow: "none !important",
+      outlineWidth: "2px",
+      outlineColor: "blue.500",
+      boxShadow: "none",
     },
   },
   variants: {
@@ -58,22 +58,22 @@ export const inputTheme = defineRecipe({
       outline: {
         outlineColor: "gray.400",
         boxShadow: "none",
-        _focusVisible: { outlineColor: "blue.500 !important", boxShadow: "none !important" },
+        _focusVisible: { outlineColor: "blue.500", boxShadow: "none" },
         _active: {
-          outlineColor: "blue.500 !important",
-          boxShadow: "none !important",
+          outlineColor: "blue.500",
+          boxShadow: "none",
         },
         _focus: {
-          outlineColor: "blue.500 !important",
-          boxShadow: "none !important",
+          outlineColor: "blue.500",
+          boxShadow: "none",
         },
       },
       flushed: {
         outlineColor: "transparent",
-        boxShadow: "0 1px 0 {currentColor} !important",
+        boxShadow: "0 1px 0 {currentColor}",
         _focus: {
-          outlineColor: "transparent !important",
-          boxShadow: "0 2px 0 {colors.blue.500} !important",
+          outlineColor: "transparent",
+          boxShadow: "0 2px 0 {colors.blue.500}",
         },
       },
       subtle: {

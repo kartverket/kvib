@@ -12,22 +12,22 @@ export const fileUploadTheme = defineSlotRecipe({
     size: {
       xs: {
         root: {
-          padding: "padding.px !important",
+          padding: "padding.px",
         },
       },
       sm: {
         root: {
-          padding: "padding.2 !important",
+          padding: "padding.2",
         },
       },
       md: {
         root: {
-          padding: "padding.5 !important",
+          padding: "padding.5",
         },
       },
       lg: {
         root: {
-          padding: "padding.5 !important",
+          padding: "padding.5",
         },
       },
     },

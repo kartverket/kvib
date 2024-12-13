@@ -11,7 +11,7 @@ export const dialogTheme = defineSlotRecipe({
       colorPalette: "green",
     },
     backdrop: {
-      bg: "blackAlpha.700 !important",
+      bg: "blackAlpha.700",
     },
   },
 });

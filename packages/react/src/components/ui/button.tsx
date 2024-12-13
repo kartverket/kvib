@@ -45,7 +45,6 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(function 
         <Center
           className="text"
           as="span"
-          // if variant is plain, add textdecoration underline on hover and active only for classname "text"
           _hover={
             props.variant === "plain"
               ? {

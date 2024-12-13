@@ -8,11 +8,11 @@ export const alertTheme = defineSlotRecipe({
     variant: {
       subtle: {
         title: {
-          color: "black !important",
+          color: "black",
         },
         root: {
-          bg: "colorPalette.100 !important",
-          color: "black !important",
+          bg: "colorPalette.100 ",
+          color: "black ",
         },
         indicator: {
           color: "colorPalette.500",
@@ -20,11 +20,11 @@ export const alertTheme = defineSlotRecipe({
       },
       solid: {
         title: {
-          color: "white !important",
+          color: "white ",
         },
         root: {
-          bg: "colorPalette.500 !important",
-          color: "white !important",
+          bg: "colorPalette.500 ",
+          color: "white ",
         },
         indicator: {
           color: "white",
@@ -45,14 +45,14 @@ export const alertTheme = defineSlotRecipe({
       status: "error",
       css: {
         title: {
-          color: "black !important",
+          color: "black",
         },
         root: {
-          bg: "red.100 !important",
-          color: "black !important",
+          bg: "red.100",
+          color: "black",
         },
         indicator: {
-          color: "red.500 !important",
+          color: "red.500",
         },
       },
     },
@@ -61,14 +61,14 @@ export const alertTheme = defineSlotRecipe({
       status: "error",
       css: {
         title: {
-          color: "white !important",
+          color: "white",
         },
         root: {
-          bg: "red.500 !important",
-          color: "white !important",
+          bg: "red.500",
+          color: "white",
         },
         indicator: {
-          color: "white !important",
+          color: "white",
         },
       },
     },
