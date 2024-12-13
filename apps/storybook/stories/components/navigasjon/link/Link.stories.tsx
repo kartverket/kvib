@@ -53,9 +53,5 @@ export const Preview: Story = {
     children: "Dette er en lenke",
     href: "/?path=/",
   },
-  render: args => (
-    <KvibLink {...args} external>
-      {args.children}
-    </KvibLink>
-  ),
+  render: args => <KvibLink {...args}>{args.children}</KvibLink>,
 };
