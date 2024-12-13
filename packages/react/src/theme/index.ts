@@ -55,6 +55,14 @@ const customConfig = defineConfig({
       spacings: letterSpacings,
       heights: lineHeights,
     },
+    breakpoints: {
+      base: "0",
+      sm: breakpoints.sm.value,
+      md: breakpoints.md.value,
+      lg: breakpoints.lg.value,
+      xl: breakpoints.xl.value,
+      "2xl": breakpoints["2xl"].value,
+    },
     tokens: {
       breakpoints: breakpoints,
       fonts: fonts,

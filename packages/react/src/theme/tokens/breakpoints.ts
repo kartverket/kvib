@@ -10,6 +10,9 @@ export const breakpoints = {
 };
 
 type BreakpointCondition =
+  | "base"
+  | "baseOnly"
+  | "baseDown"
   | "sm"
   | "smOnly"
   | "smDown"
