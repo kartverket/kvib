@@ -54,6 +54,14 @@ const customConfig = defineConfig({
       weights: fontWeights,
       spacings: letterSpacings,
       heights: lineHeights,
+      colors: {
+        text: {
+          primary: colors.gray["900"],
+          secondary: colors.gray["700"],
+          tertiary: colors.gray["500"],
+          quaternary: colors.gray["300"],
+        },
+      },
     },
     breakpoints: {
       base: "0",
@@ -117,6 +125,9 @@ const customConfig = defineConfig({
   globalCss: {
     "*, *::before, *::after": {
       boxSizing: "border-box !important",
+    },
+    body: {
+      color: "gray.900",
     },
   },
   ...kvibConfig,

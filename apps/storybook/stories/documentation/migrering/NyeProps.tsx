@@ -198,4 +198,32 @@ export const nyeProps = [
       </>
     ),
   },
+  {
+    title: "tokens",
+    description: (
+      <>
+        Tokens har blitt litt omstrukturert og brukes nå på en litt annen måte.
+        <br />
+        <br />
+        Før brukte man de slik:
+        <Source
+          code={`
+<Box bg="gray.50" />
+        `}
+        />
+        <br />
+        Nå bruker man de slik (merk krøllparentesene):
+        <Source
+          code={`
+<Box bg="{colors.gray.50}" />
+        `}
+        />
+        <br />
+        Det samme gjelder for alle tokens, der man bytter ut "colors" med token-navnet (f.eks. "spacing", "sizes",
+        osv.).
+        <br />
+        <br />
+      </>
+    ),
+  },
 ];
