@@ -1,4 +1,4 @@
-import { Box, Stack, Text } from "@kvib/react";
+import { Box, Flex, Stack, Text } from "@kvib/react";
 import { ReactNode } from "react";
 
 interface Props {
@@ -9,9 +9,20 @@ interface Props {
 export const Tekstblokk = ({ tittel, children }: Props) => (
   <Stack rowGap={0}>
     {tittel && (
-      <Text as="h2" fontWeight={700} fontSize={"md"} lineHeight={"md"} borderBottom={"none"} m="0" p="0">
-        {tittel}
-      </Text>
+      <Flex alignItems={"center"}>
+        <Text
+          as="h3"
+          fontWeight={700}
+          fontSize={"md"}
+          lineHeight={"md"}
+          borderBottom={"none"}
+          m="0"
+          p="0"
+          id={tittel.replace(/\s/g, "-").toLowerCase()}
+        >
+          {tittel}
+        </Text>
+      </Flex>
     )}
     <Box>{children}</Box>
   </Stack>
