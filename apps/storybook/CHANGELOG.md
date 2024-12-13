@@ -1,5 +1,11 @@
 # @kvib/storybook
 
+## 1.1.3
+
+### Patch Changes
+
+- 1724daa: Oppgraderer avhengigheter
+
 ## 1.1.2
 
 ### Patch Changes
