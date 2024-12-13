@@ -1,4 +1,4 @@
-import { Code } from "@kvib/react";
+import { Code, Link } from "@kvib/react";
 import { Kodeeksempel } from "./Kodeeksempel";
 
 export const fjernedeKomponenter = [
@@ -114,9 +114,10 @@ const largeBreakpoint = system.token("breakpoints.lg");
         `}
           kildekode={`
 const system = useKvibContext();
-const isTablet = useMediaQuery(system.breakpoints.conditions["mdToLg"].toString().replace("@media", "only"));
+const isTablet = useMediaQuery(system, getBreakpointCondition("mdToLg"));
 `}
         />
+        <Link href="/?path=/docs/komponenter-tokens-breakpoints--docs">Les mer om breakpoints her.</Link>
       </>
     ),
   },

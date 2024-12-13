@@ -6,11 +6,13 @@ import {
   Table,
   TableBody as Tbody,
   TableCell as Td,
+  Text,
   TableCell as Th,
   TableHeader as Thead,
   TableRow as Tr,
   useKvibContext,
 } from "@kvib/react";
+import { Kodeeksempel } from "../../documentation/migrering/Kodeeksempel";
 
 export const Breakpoints = () => {
   const system = useKvibContext();
@@ -43,6 +45,19 @@ export const Breakpoints = () => {
           ))}
         </Tbody>
       </Table>
+      <Text as="h2" fontSize={"lg"} fontWeight={700} mt="2rem">
+        Breakpoint-betingelser
+      </Text>
+      <Kodeeksempel
+        beskrivelse={`
+        For å gjøre det enklere å hente ut breakpoint-betingelser tilbyr Kvib støttefunksjonen getBreakpointCondition() som tar systemet man bruker og navnet på et breakpoint som argument og returnerer en media query i CSS. Nyttig i kombinasjon med useMediaQuery-hooken.
+      `}
+        kildekode={`
+const system = useKvibContext();
+const isTablet = useMediaQuery(system, getBreakpointCondition("mdToLg"));
+console.log(isTablet); // true hvis skjermstørrelsen er mellom md og lg
+`}
+      />
       <Table width="100%" marginTop="2rem">
         <Thead textAlign="left">
           <Tr>
