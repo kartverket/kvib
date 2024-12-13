@@ -43,29 +43,21 @@ export const LinksCard = () => {
       <Text fontSize="2xl">Nyttige lenker</Text>
 
       <Element>
-        <Link
-          fontWeight="bold"
-          href="https://kartverket.atlassian.net/wiki/spaces/TB/overview?homepageId=325713953"
-          external={false}
-        >
+        <Link fontWeight="bold" href="https://kartverket.atlassian.net/wiki/spaces/TB/overview?homepageId=325713953">
           Confluence
         </Link>
         Følg teamet og prosjektet i Confluence.
       </Element>
 
       <Element>
-        <Link
-          fontWeight="bold"
-          href="https://kartverket.atlassian.net/jira/software/projects/KOMP/boards/80"
-          external={false}
-        >
+        <Link fontWeight="bold" href="https://kartverket.atlassian.net/jira/software/projects/KOMP/boards/80">
           Oppgaveboardet i Jira
         </Link>
         Se status på designsystemet og oppgaver som er under arbeid på oppgaveboardet i Jira.
       </Element>
 
       <Element>
-        <Link fontWeight="bold" href="https://github.com/kartverket/kvib" external={false}>
+        <Link fontWeight="bold" href="https://github.com/kartverket/kvib">
           Github
         </Link>
         Github-repoet er et monorepo som består av dokumentasjonssiden til designsystemet i Storybook og
@@ -73,14 +65,14 @@ export const LinksCard = () => {
       </Element>
 
       <Element>
-        <Link fontWeight="bold" href="https://www.figma.com/file/j0OBUEuQZlrbQOV6ariHTo/Designsystem" external={false}>
+        <Link fontWeight="bold" href="https://www.figma.com/file/j0OBUEuQZlrbQOV6ariHTo/Designsystem">
           Figma
         </Link>
         I Figma finner du komponenter og tokens som er klare til bruk.
       </Element>
 
       <Element>
-        <Link fontWeight="bold" href="https://kartverket.atlassian.net/wiki/spaces/UX/overview" external={false}>
+        <Link fontWeight="bold" href="https://kartverket.atlassian.net/wiki/spaces/UX/overview">
           Håndboken i interaksjonsdesign
         </Link>
         Benytt deg av håndboken i interaksjonsdesign for å jobbe brukersentrert med design og utvikling i Kartverket.

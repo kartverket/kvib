@@ -5,18 +5,18 @@ export const iconButtonTheme = defineSlotRecipe({
   base: {
     root: {
       colorPalette: "green",
-      borderRadius: "6px !important",
-      outline: "0 !important",
-      display: "flex !important",
-      alignItems: "center !important",
-      justifyContent: "center !important",
-      flexShrink: "0 !important",
+      borderRadius: "6px",
+      outline: "0",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      flexShrink: "0",
       _focusVisible: {
-        boxShadow: "outline !important",
+        boxShadow: "outline",
       },
       _disabled: {
-        opacity: "0.5 !important",
-        cursor: "not-allowed !important",
+        opacity: "0.5",
+        cursor: "not-allowed",
       },
     },
   },
@@ -24,32 +24,32 @@ export const iconButtonTheme = defineSlotRecipe({
     size: {
       xs: {
         root: {
-          padding: "6px !important",
-          gap: "6px !important",
-          width: "24px !important",
-          height: "24px !important",
+          padding: "6px",
+          gap: "6px",
+          width: "24px",
+          height: "24px",
         },
       },
       sm: {
         root: {
-          padding: "9px !important",
-          width: "32px !important",
-          height: "32px !important",
+          padding: "9px",
+          width: "32px",
+          height: "32px",
         },
       },
       md: {
         root: {
-          padding: "12px !important",
-          width: "40px !important",
-          height: "40px !important",
+          padding: "12px",
+          width: "40px",
+          height: "40px",
         },
       },
       lg: {
         root: {
-          lineHeight: "28px !important",
-          padding: "15px !important",
-          width: "48px !important",
-          height: "48px !important",
+          lineHeight: "28px",
+          padding: "15px",
+          width: "48px",
+          height: "48px",
         },
       },
     },

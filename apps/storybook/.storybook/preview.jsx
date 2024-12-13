@@ -19,12 +19,7 @@ const parameters = {
   docs: {
     theme: theme,
     container: MDXContainer,
-    toc: {
-      contentsSelector: ".sbdocs-content",
-      headingSelector: "h2, h3",
-      collapseDepth: 0,
-      title: "Innhold",
-    },
+    toc: true,
   },
   options: {
     storySort: (a, b) => {

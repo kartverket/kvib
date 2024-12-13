@@ -8,7 +8,7 @@ export const numberInputTheme = defineSlotRecipe({
   base: {
     root: {
       "& > *": {
-        boxSizing: "border-box !important",
+        boxSizing: "border-box",
       },
     },
     input: {

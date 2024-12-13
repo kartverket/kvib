@@ -6,21 +6,21 @@ export const breadcrumbTheme = defineSlotRecipe({
   base: {
     link: {
       "&:not([aria-current=page])": {
-        color: "colorPalette.500 !important",
-        textDecoration: "underline !important",
+        color: "colorPalette.500 ",
+        textDecoration: "underline ",
         _focusVisible: {
-          outline: "{borders.2px} !important",
-          borderRadius: "1px !important",
-          outlineColor: "blue.600 !important",
-          boxShadow: "none !important",
+          outline: "{borders.2px} ",
+          borderRadius: "1px ",
+          outlineColor: "blue.600 ",
+          boxShadow: "none ",
         },
         _active: {
-          color: "colorPalette.600 !important",
-          textDecoration: "underline !important",
+          color: "colorPalette.600 ",
+          textDecoration: "underline ",
         },
         _hover: {
-          color: "colorPalette.400 !important",
-          textDecoration: "none !important",
+          color: "colorPalette.400 ",
+          textDecoration: "none ",
         },
       },
     },
@@ -29,7 +29,7 @@ export const breadcrumbTheme = defineSlotRecipe({
     variant: {
       plain: {
         link: {
-          textDecoration: "none !important",
+          textDecoration: "none ",
         },
       },
     },

@@ -14,21 +14,21 @@ export const tagTheme = defineSlotRecipe({
     variant: {
       solid: {
         root: {
-          bg: "colorPalette.500 !important",
-          color: "white !important",
+          bg: "colorPalette.500",
+          color: "white",
         },
       },
       outline: {
         root: {
-          outline: "1px !important",
-          borderColor: "colorPalette.500 !important",
-          color: "colorPalette.500 !important",
+          outline: "1px",
+          borderColor: "colorPalette.500",
+          color: "colorPalette.500",
         },
       },
       plain: {
         root: {
-          color: "colorPalette.500 !important",
-          bg: "transparent !important",
+          color: "colorPalette.500",
+          bg: "transparent",
         },
       },
     },
@@ -39,8 +39,8 @@ export const tagTheme = defineSlotRecipe({
       colorPalette: "gray",
       css: {
         root: {
-          bg: "gray.100 !important",
-          color: "black !important",
+          bg: "gray.100",
+          color: "black",
         },
       },
     },
@@ -49,9 +49,9 @@ export const tagTheme = defineSlotRecipe({
       colorPalette: "gray",
       css: {
         root: {
-          outline: "1px !important",
-          borderColor: "gray.200 !important",
-          color: "black !important",
+          outline: "1px",
+          borderColor: "gray.200",
+          color: "black",
         },
       },
     },
@@ -60,8 +60,8 @@ export const tagTheme = defineSlotRecipe({
       colorPalette: "gray",
       css: {
         root: {
-          color: "gray.500 !important",
-          bg: "transparent !important",
+          color: "gray.500",
+          bg: "transparent",
         },
       },
     },

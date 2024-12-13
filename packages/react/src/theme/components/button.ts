@@ -2,10 +2,10 @@ import { defineRecipe, defineStyle, SystemStyleObject } from "@chakra-ui/react";
 
 const baseStyle = defineStyle({
   colorPalette: "green",
-  fontStyle: "normal !important",
-  fontWeight: "medium !important",
-  gap: "0.5 !important",
-  borderRadius: "md !important",
+  fontStyle: "normal",
+  fontWeight: "medium",
+  gap: "0.5",
+  borderRadius: "md",
   _disabled: {
     opacity: "0.5",
     cursor: "not-allowed",
@@ -13,165 +13,165 @@ const baseStyle = defineStyle({
 }) satisfies SystemStyleObject;
 
 const solidThemeGray = defineStyle({
-  bg: "gray.100 !important",
-  color: "black !important",
+  bg: "gray.100",
+  color: "black",
   _hover: {
-    bg: "gray.200 !important",
+    bg: "gray.200",
     _disabled: {
-      bg: "gray.100 !important",
-      color: "black !important",
+      bg: "gray.100",
+      color: "black",
     },
   },
   _active: {
-    bg: "gray.300 !important",
+    bg: "gray.300",
     _disabled: {
-      bg: "gray.100 !important",
-      color: "black !important",
+      bg: "gray.100",
+      color: "black",
     },
   },
 });
 
 const solidThemeColor = defineStyle({
-  bg: "colorPalette.500 !important",
-  color: "white !important",
+  bg: "colorPalette.500",
+  color: "white",
   _hover: {
-    bg: "colorPalette.400 !important",
+    bg: "colorPalette.400",
     _disabled: {
-      bg: "colorPalette.500 !important",
-      color: "white !important",
+      bg: "colorPalette.500",
+      color: "white",
     },
   },
   _active: {
-    bg: "colorPalette.600 !important",
+    bg: "colorPalette.600",
     _disabled: {
-      bg: "colorPalette.500 !important",
-      color: "white !important",
+      bg: "colorPalette.500",
+      color: "white",
     },
   },
 });
 
 const outlineThemeGray = defineStyle({
-  outline: "1px !important",
-  borderColor: "gray.200 !important",
-  color: "black !important",
+  outline: "1px",
+  borderColor: "gray.200",
+  color: "black",
   _hover: {
-    bg: "gray.200 !important",
-    color: "black !important",
+    bg: "gray.200",
+    color: "black",
     _disabled: {
-      bg: "gray.100 !important",
-      color: "black !important",
+      bg: "gray.100",
+      color: "black",
     },
   },
   _active: {
-    bg: "gray.300 !important",
+    bg: "gray.300",
     _disabled: {
-      bg: "gray.100 !important",
-      color: "black !important",
+      bg: "gray.100",
+      color: "black",
     },
   },
 });
 
 const outlineThemeColor = defineStyle({
-  outline: "1px !important",
-  borderColor: "colorPalette.500 !important",
-  color: "colorPalette.500 !important",
+  outline: "1px",
+  borderColor: "colorPalette.500",
+  color: "colorPalette.500",
   _hover: {
-    borderColor: "colorPalette.400 !important",
-    bg: "colorPalette.400 !important",
-    color: "white !important",
+    borderColor: "colorPalette.400",
+    bg: "colorPalette.400",
+    color: "white",
     _disabled: {
-      bg: "colorPalette.500 !important",
-      color: "colorPalette.500 !important",
-      border: "1px !important",
+      bg: "colorPalette.500",
+      color: "colorPalette.500",
+      border: "1px",
     },
   },
   _active: {
-    bg: "colorPalette.600 !important",
-    borderColor: "colorPalette.600 !important",
-    color: "white !important",
+    bg: "colorPalette.600",
+    borderColor: "colorPalette.600",
+    color: "white",
     _disabled: {
-      bg: "colorPalette.500 !important",
-      color: "colorPalette.500 !important",
-      border: "1px !important",
+      bg: "colorPalette.500",
+      color: "colorPalette.500",
+      border: "1px",
     },
   },
 });
 const plainThemeGray = defineStyle({
-  color: "gray.500 !important",
-  bg: "transparent !important",
+  color: "gray.500",
+  bg: "transparent",
   _hover: {
-    color: "gray.400 !important",
+    color: "gray.400",
     _disabled: {
-      textDecoration: "none !important",
-      color: "gray.500 !important",
+      textDecoration: "none",
+      color: "gray.500",
     },
   },
   _active: {
-    color: "gray.600 !important",
+    color: "gray.600",
     _disabled: {
-      textDecoration: "none !important",
-      color: "gray.500 !important",
+      textDecoration: "none",
+      color: "gray.500",
     },
   },
 });
 
 const plainTheme = defineStyle({
-  color: "colorPalette.500 !important",
-  bg: "transparent !important",
+  color: "colorPalette.500",
+  bg: "transparent",
   _hover: {
-    color: "colorPalette.400 !important",
+    color: "colorPalette.400",
     _disabled: {
-      textDecoration: "none !important",
-      color: "colorPalette.500 !important",
+      textDecoration: "none",
+      color: "colorPalette.500",
     },
   },
   _active: {
-    color: "colorPalette.600 !important",
+    color: "colorPalette.600",
     _disabled: {
-      textDecoration: "none !important",
-      color: "colorPalette.500 !important",
+      textDecoration: "none",
+      color: "colorPalette.500",
     },
   },
 });
 
 const ghostThemeGray = defineStyle({
-  bg: "transparent !important",
-  color: "gray.500 !important",
+  bg: "transparent",
+  color: "gray.500",
   _hover: {
-    bg: "gray.100 !important",
-    color: "gray.400 !important",
+    bg: "gray.100",
+    color: "gray.400",
     _disabled: {
-      bg: "transparent !important",
-      color: "gray.500 !important",
+      bg: "transparent",
+      color: "gray.500",
     },
   },
   _active: {
-    bg: "gray.100 !important",
-    color: "gray.600 !important",
+    bg: "gray.100",
+    color: "gray.600",
     _disabled: {
-      bg: "transparent !important",
-      color: "gray.500 !important",
+      bg: "transparent",
+      color: "gray.500",
     },
   },
 });
 
 const ghostThemeColor = defineStyle({
-  bg: "transparent !important",
-  color: "colorPalette.500 !important",
+  bg: "transparent",
+  color: "colorPalette.500",
   _hover: {
-    bg: "colorPalette.100 !important",
-    color: "colorPalette.400 !important",
+    bg: "colorPalette.100",
+    color: "colorPalette.400",
     _disabled: {
-      bg: "transparent !important",
-      color: "colorPalette.500 !important",
+      bg: "transparent",
+      color: "colorPalette.500",
     },
   },
   _active: {
-    bg: "colorPalette.100 !important",
-    color: "colorPalette.600 !important",
+    bg: "colorPalette.100",
+    color: "colorPalette.600",
     _disabled: {
-      bg: "transparent !important",
-      color: "colorPalette.500 !important",
+      bg: "transparent",
+      color: "colorPalette.500",
     },
   },
 });

@@ -4,7 +4,7 @@ export const closeButtonTheme = defineRecipe({
   base: {
     colorPalette: "green",
     _hover: {
-      bg: "colorPalette.100 !important",
+      bg: "colorPalette.100",
     },
   },
 });

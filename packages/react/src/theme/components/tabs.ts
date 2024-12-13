@@ -6,19 +6,19 @@ export const tabsTheme = defineSlotRecipe({
   base: {
     root: {
       colorPalette: "green",
-      width: "fit-content !important",
+      width: "fit-content",
     },
     trigger: {
       _selected: {
-        color: "colorPalette.600 !important",
+        color: "colorPalette.600",
       },
       _hover: {
-        color: "colorPalette.400 !important",
+        color: "colorPalette.400",
       },
       _disabled: {
-        color: "gray.400 !important",
+        color: "gray.400",
         _hover: {
-          color: "gray.400 !important",
+          color: "gray.400",
         },
       },
     },

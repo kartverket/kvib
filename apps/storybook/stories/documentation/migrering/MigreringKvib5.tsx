@@ -62,7 +62,7 @@ export const Migration = () => (
     <Alert status="info" size="lg">
       Dokumentasjonen vår vil være litt utdatert i en tid fremover etter oppdateringen.
     </Alert>
-    <Tekstblokk tittel="Syntaksendringer">
+    <Tekstblokk tittel="Ny syntaks">
       <Liste>
         {nySyntaks
           .sort((a, b) => (a.title > b.title ? 1 : -1))

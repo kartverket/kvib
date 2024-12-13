@@ -13,7 +13,7 @@ export const tableTheme = defineSlotRecipe({
       true: {
         row: {
           "&:nth-of-type(odd) td": {
-            bg: "colorPalette.50 !important",
+            bg: "colorPalette.50",
           },
         },
       },

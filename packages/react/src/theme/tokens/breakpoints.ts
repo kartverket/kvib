@@ -1,3 +1,5 @@
+import { SystemContext } from "@/theme-utils";
+
 export const breakpoints = {
   base: { value: "0em" },
   sm: { value: "30em" },
@@ -6,3 +8,41 @@ export const breakpoints = {
   xl: { value: "80em" },
   "2xl": { value: "96em" },
 };
+
+type BreakpointCondition =
+  | "base"
+  | "baseOnly"
+  | "baseDown"
+  | "sm"
+  | "smOnly"
+  | "smDown"
+  | "md"
+  | "mdOnly"
+  | "mdDown"
+  | "lg"
+  | "lgOnly"
+  | "lgDown"
+  | "xl"
+  | "xlOnly"
+  | "xlDown"
+  | "2xl"
+  | "2xlOnly"
+  | "2xlDown"
+  | "smToMd"
+  | "smToLg"
+  | "smToXl"
+  | "smTo2xl"
+  | "mdToLg"
+  | "mdToXl"
+  | "mdTo2xl"
+  | "lgToXl"
+  | "lgTo2xl"
+  | "xlTo2xl";
+
+export function getBreakpointCondition(system: SystemContext, breakpoint: BreakpointCondition) {
+  return system.breakpoints.conditions[breakpoint].toString().replace("@media", "only");
+}
+
+export function getBreakpointValue(system: SystemContext, breakpoint: BreakpointCondition) {
+  return system.token(`breakpoints.${breakpoint}`);
+}

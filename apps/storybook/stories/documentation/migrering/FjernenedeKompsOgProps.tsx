@@ -1,4 +1,5 @@
-import { Code } from "@kvib/react";
+import { Code, Link } from "@kvib/react";
+import { Unstyled } from "@storybook/blocks";
 import { Kodeeksempel } from "./Kodeeksempel";
 
 export const fjernedeKomponenter = [
@@ -107,6 +108,19 @@ const system = useKvibContext();
 const largeBreakpoint = system.token("breakpoints.lg");
 `}
         />
+        <Kodeeksempel
+          beskrivelse={`
+            I noen tilfeller har man tidligere ønsket å kombinere breakpoint-verdier med <Code>useMediaQuery</Code> for å
+        sjekke om man befinner seg innenfor et visst breakpoint. Følgende kodesnutt viser et eksempel på hvordan man kan bruke breakpointet "mdToLg" for å sjekke om man befinner seg på tablet eller tilsvarende størrelse:
+        `}
+          kildekode={`
+const system = useKvibContext();
+const isTablet = useMediaQuery(system, getBreakpointCondition("mdToLg"));
+`}
+        />
+        <Unstyled>
+          <Link href="/?path=/docs/komponenter-tokens-breakpoints--docs">Les mer om breakpoints her.</Link>
+        </Unstyled>
       </>
     ),
   },
