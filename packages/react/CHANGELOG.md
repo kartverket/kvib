@@ -1,5 +1,13 @@
 # @kvib/react
 
+## 5.0.5
+
+### Patch Changes
+
+- 1724daa: Legger til støttefunksjoner for å forenkle uthenting av breakpoints. Forbedrer styling av enkelte komponenter.
+- 1724daa: Oppgraderer avhengigheter
+- 98dabc8: Gjeninnfører standardfarger for typografi
+
 ## 5.0.4
 
 ### Patch Changes
