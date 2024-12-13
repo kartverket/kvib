@@ -107,6 +107,16 @@ const system = useKvibContext();
 const largeBreakpoint = system.token("breakpoints.lg");
 `}
         />
+        <Kodeeksempel
+          beskrivelse={`
+            I noen tilfeller har man tidligere ønsket å kombinere breakpoint-verdier med <Code>useMediaQuery</Code> for å
+        sjekke om man befinner seg innenfor et visst breakpoint. Følgende kodesnutt viser et eksempel på hvordan man kan bruke breakpointet "mdToLg" for å sjekke om man befinner seg på tablet eller tilsvarende størrelse:
+        `}
+          kildekode={`
+const system = useKvibContext();
+const isTablet = useMediaQuery(system.breakpoints.conditions["mdToLg"].toString().replace("@media", "only"));
+`}
+        />
       </>
     ),
   },
