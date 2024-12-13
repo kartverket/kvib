@@ -39,3 +39,7 @@ type BreakpointCondition =
 export function getBreakpointCondition(system: SystemContext, breakpoint: BreakpointCondition) {
   return system.breakpoints.conditions[breakpoint].toString().replace("@media", "only");
 }
+
+export function getBreakpointValue(system: SystemContext, breakpoint: BreakpointCondition) {
+  return system.token(`breakpoints.${breakpoint}`);
+}
