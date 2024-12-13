@@ -183,6 +183,23 @@ export const buttonTheme = defineRecipe({
       ghost: ghostThemeColor,
       plain: plainTheme,
     },
+    size: {
+      sm: {
+        fontWeight: "{fontWeights.medium}",
+      },
+      md: {
+        fontWeight: "{fontWeights.semibold}",
+      },
+      lg: {
+        fontWeight: "{fontWeights.semibold}",
+      },
+      xl: {
+        fontWeight: "{fontWeights.bold}",
+      },
+      "2xl": {
+        fontWeight: "{fontWeights.extrabold}",
+      },
+    },
   },
   compoundVariants: [
     {
@@ -208,6 +225,7 @@ export const buttonTheme = defineRecipe({
   ],
   defaultVariants: {
     variant: "solid",
+    size: "md",
     colorPalette: "green",
   },
 });

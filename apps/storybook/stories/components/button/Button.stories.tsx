@@ -23,10 +23,10 @@ const meta: Meta<typeof KvibButton> = {
     size: {
       description: "Size of the Button",
       table: {
-        type: { summary: "xs | sm | md | lg" },
+        type: { summary: "xs | sm | md | lg | xl | 2xl" },
         defaultValue: { summary: "md" },
       },
-      options: ["xs", "sm", "md", "lg"],
+      options: ["xs", "sm", "md", "lg", "xl", "2xl"],
       control: { type: "radio" },
     },
     variant: {
