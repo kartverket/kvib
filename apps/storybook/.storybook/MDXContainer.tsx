@@ -16,10 +16,10 @@ export const MDXContainer = ({ children, context }) => {
   }, []);
 
   return (
-    <Unstyled>
-      <KvibProvider>
-        <DocsContainer context={context}>
-          {children}
+    <KvibProvider>
+      <DocsContainer context={context}>
+        {children}
+        <Unstyled>
           <FooterInline accessibilityUrl="https://uustatus.no/nb/erklaringer/publisert/f048c5ff-2167-48c5-b706-bd106c15e9c9">
             <Link
               href="https://github.com/kartverket/kvib"
@@ -29,8 +29,8 @@ export const MDXContainer = ({ children, context }) => {
               Github
             </Link>
           </FooterInline>
-        </DocsContainer>
-      </KvibProvider>
-    </Unstyled>
+        </Unstyled>
+      </DocsContainer>
+    </KvibProvider>
   );
 };

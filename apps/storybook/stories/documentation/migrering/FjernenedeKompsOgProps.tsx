@@ -1,4 +1,5 @@
 import { Code, Link } from "@kvib/react";
+import { Unstyled } from "@storybook/blocks";
 import { Kodeeksempel } from "./Kodeeksempel";
 
 export const fjernedeKomponenter = [
@@ -117,7 +118,9 @@ const system = useKvibContext();
 const isTablet = useMediaQuery(system, getBreakpointCondition("mdToLg"));
 `}
         />
-        <Link href="/?path=/docs/komponenter-tokens-breakpoints--docs">Les mer om breakpoints her.</Link>
+        <Unstyled>
+          <Link href="/?path=/docs/komponenter-tokens-breakpoints--docs">Les mer om breakpoints her.</Link>
+        </Unstyled>
       </>
     ),
   },
