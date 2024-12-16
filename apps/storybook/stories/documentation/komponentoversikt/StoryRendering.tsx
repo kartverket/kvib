@@ -27,6 +27,9 @@ import * as TagStories from "../../components/datavisning/tag/Tag.stories";
 import * as DatepickerStories from "../../components/datepicker/Datepicker.stories";
 import * as DialogStoriea from "../../components/dialog/Dialog.stories";
 import * as DrawerStories from "../../components/drawer/Drawer.stories";
+import * as EditableStories from "../../components/editable/Editable.stories";
+import * as EmptyStateStories from "../../components/empty-state/EmptyState.stories";
+import * as FormControlStories from "../../components/field/Field.stories";
 import * as AspectRatioStories from "../../components/Layout/AspectRatio/AspectRatio.stories";
 import * as BoxStories from "../../components/Layout/Box/Box.stories";
 import * as CenterStories from "../../components/Layout/Center/Center.stories";
@@ -50,8 +53,6 @@ import * as FooterStories from "../../components/sideelementer/footer/footer/Foo
 import * as HeaderStories from "../../components/sideelementer/header/Header.stories";
 import * as LogoStories from "../../components/sideelementer/logo/Logo.stories";
 import * as SeparatorStories from "../../components/sideelementer/separator/Separator.stories";
-import * as EditableStories from "../../components/skjemaelementer/editable/Editable.stories";
-import * as FormControlStories from "../../components/skjemaelementer/field/Field.stories";
 import * as FileUploadStories from "../../components/skjemaelementer/file-upload/FileUpload.stories";
 import * as IconButtonStories from "../../components/skjemaelementer/icon-button/IconButton.stories";
 import * as InputStories from "../../components/skjemaelementer/Input/Input.stories";
@@ -109,6 +110,11 @@ export const ColorSwatch = (colorPalette: ColorPalette) => {
 export const DataList = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(DataListStories);
   return <Preview colorPalette={colorPalette} />;
+};
+
+export const EmptyState = (_: ColorPalette) => {
+  const { Preview } = composeStories(EmptyStateStories);
+  return <Preview />;
 };
 
 // Skjemaelementer

@@ -40,7 +40,7 @@ const nyeVarianter = [
     title: "tertiary",
     description: (
       <>
-        <Code>ghost</Code>
+        <Code>plain</Code>
       </>
     ),
   },
@@ -48,7 +48,7 @@ const nyeVarianter = [
     title: "ghost",
     description: (
       <>
-        <Code>plain</Code>
+        <Code>ghost</Code>
       </>
     ),
   },

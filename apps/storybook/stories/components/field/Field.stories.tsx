@@ -7,32 +7,32 @@ const meta: Meta<typeof KvibFormControl> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "shown" },
+      canvas: { sourceState: "hidden" },
     },
   },
   argTypes: {
-    isRequired: {
+    required: {
       description: "Toggles if input should be required",
       table: {
         type: { summary: "boolean" },
       },
       control: "boolean",
     },
-    isInvalid: {
+    invalid: {
       description: "Toggles if input should be invalid",
       table: {
         type: { summary: "boolean" },
       },
       control: "boolean",
     },
-    isDisabled: {
+    disabled: {
       description: "Toggles if input should be disabled",
       table: {
         type: { summary: "boolean" },
       },
       control: "boolean",
     },
-    isReadOnly: {
+    readOnly: {
       description: "Toggles if input should be disabled",
       table: {
         type: { summary: "boolean" },

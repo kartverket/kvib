@@ -6,6 +6,7 @@ export {
   EmptyStateIndicator,
   EmptyStateRoot,
   EmptyStateTitle,
+  EmptyState as KvibEmptyState,
   useEmptyStateStyles,
 } from "@chakra-ui/react";
 export type {

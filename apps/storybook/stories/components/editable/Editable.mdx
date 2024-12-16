@@ -1,0 +1,8 @@
+import { Canvas, Controls, Meta } from "@storybook/blocks";
+import * as EditableStories from "./Editable.stories";
+import { EditableDocs } from "./EditableDocs";
+
+<Meta of={EditableStories} />
+<EditableDocs />
+<Canvas of={EditableStories.Preview} />
+<Controls of={EditableStories.Preview} />

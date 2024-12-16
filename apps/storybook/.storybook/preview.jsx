@@ -152,7 +152,7 @@ export const argTypes = {
 const preview = {
   decorators: decorators,
   parameters: parameters,
-  tags: ["autodocs"],
+  tags: ["autodocs", "autodocs"],
 };
 
 export default preview;
