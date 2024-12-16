@@ -2,4 +2,4 @@
 "@kvib/react": patch
 ---
 
-Typehåndtering for RadioGroup og PopoverHeader, legger til en ny komponent: Emtpy State
+Typehåndtering for RadioGroup og PopoverHeader. Eksporterer følgende nye komponenter fra Chakra: Empty State, Fieldset
