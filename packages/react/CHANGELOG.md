@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 5.0.7
+
+### Patch Changes
+
+- 38555e0: Typehåndtering for RadioGroup og PopoverHeader. Eksporterer følgende nye komponenter fra Chakra: Empty State, Fieldset
+
 ## 5.0.6
 
 ### Patch Changes
