@@ -20,6 +20,7 @@ export * from "./drawer";
 export * from "./editable";
 export * from "./empty-state";
 export * from "./field";
+export * from "./fieldset";
 export * from "./file-upload";
 export * from "./footer";
 export * from "./footer-inline";

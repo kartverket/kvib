@@ -15,7 +15,7 @@ const meta: Meta<typeof KvibFileUpload> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "shown" },
+      canvas: { sourceState: "hidden" },
     },
     a11y: {
       // This option disables all a11y checks on this story
@@ -23,41 +23,14 @@ const meta: Meta<typeof KvibFileUpload> = {
     },
   },
   argTypes: {
-    type: {
-      description: "Input type",
-      table: {
-        type: { summary: "file" },
-        defaultValue: { summary: "file" },
-      },
-      options: ["file"],
-      control: { type: "radio" },
-    },
-    size: {
-      description: "Input size",
-      table: {
-        type: { summary: "lg | md | sm | xs" },
-        defaultValue: { summary: "md" },
-      },
-      options: ["lg", "md", "sm", "xs"],
-      control: { type: "radio" },
-    },
-    variant: {
-      description: "Variant",
-      table: {
-        type: { summary: "outline | filled | flushed | unstyled" },
-        defaultValue: { summary: "outline" },
-      },
-      options: ["outline", "filled", "flushed", "unstyled"],
-      control: { type: "radio" },
-    },
-    isInvalid: {
+    invalid: {
       description: "Toggles if input should be invalid",
       table: {
         type: { summary: "boolean" },
       },
       control: "boolean",
     },
-    isDisabled: {
+    disabled: {
       description: "Toggles if input should be disabled",
       table: {
         type: { summary: "boolean" },
@@ -70,10 +43,48 @@ const meta: Meta<typeof KvibFileUpload> = {
         type: {
           summary: "green | blue | gray | red",
         },
+        defaultValue: {
+          summary: "green",
+        },
       },
-      defaultValue: { summary: "green" },
       options: ["green", "blue", "gray", "red", "orange", "purple"],
       control: { type: "select" },
+    },
+    allowDrop: {
+      description: "Whether to allow drag and drop in the dropzone element",
+      table: {
+        type: {
+          summary: "boolean",
+        },
+        defaultValue: {
+          summary: "true",
+        },
+      },
+      control: "boolean",
+    },
+    maxFiles: {
+      description: "The maximum number of files",
+      table: {
+        type: {
+          summary: "number",
+        },
+        defaultValue: {
+          summary: "1",
+        },
+      },
+      control: "number",
+    },
+    maxFileSize: {
+      description: "The maximum file size in bytes",
+      table: {
+        type: {
+          summary: "number",
+        },
+        defaultValue: {
+          summary: "Infinity",
+        },
+      },
+      control: "number",
     },
   },
 };
@@ -95,5 +106,5 @@ const FileUploadExample = (args: FileUploadProps) => (
 );
 
 export const Preview: FileUploadStory = {
-  render: (args: FileUploadProps) => <FileUploadExample {...args} />,
+  render: args => <FileUploadExample {...args} />,
 };
