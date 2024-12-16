@@ -1,5 +1,4 @@
 import { Button as ChakraButton, ButtonProps as ChakraButtonProps } from "@/components/ui/button";
-import { useRecipe } from "@/hooks";
 import { Center, HStack, Spinner } from "@chakra-ui/react";
 import { MaterialSymbol } from "material-symbols";
 import { forwardRef } from "react";
@@ -44,19 +43,8 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ children, iconFill, disabled, loading, leftIcon, rightIcon, iconAriaIsHidden, variant, ...props }, ref) => {
     const buttonVariant = buttonVariantMap[variant || "solid"] as ButtonVariant;
 
-    const recipe = useRecipe({ key: "button" });
-    const [recipeProps, restProps] = recipe.splitVariantProps(props);
-    const styles = recipe(recipeProps);
-
     return (
-      <ChakraButton
-        css={styles}
-        {...restProps}
-        ref={ref}
-        disabled={disabled || loading}
-        aria-busy={loading}
-        variant={buttonVariant}
-      >
+      <ChakraButton {...props} ref={ref} disabled={disabled || loading} aria-busy={loading} variant={buttonVariant}>
         {loading && (
           <Center position="absolute" right="0" left="0">
             <Spinner />
