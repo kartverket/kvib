@@ -29,7 +29,8 @@ import * as DialogStoriea from "../../components/dialog/Dialog.stories";
 import * as DrawerStories from "../../components/drawer/Drawer.stories";
 import * as EditableStories from "../../components/editable/Editable.stories";
 import * as EmptyStateStories from "../../components/empty-state/EmptyState.stories";
-import * as FormControlStories from "../../components/field/Field.stories";
+import * as FieldStories from "../../components/field/Field.stories";
+import * as FieldsetStories from "../../components/fieldset/Fieldset.stories";
 import * as FileUploadStories from "../../components/file-upload/FileUpload.stories";
 import * as FooterStories from "../../components/footer/Footer.stories";
 import * as AspectRatioStories from "../../components/Layout/AspectRatio/AspectRatio.stories";
@@ -117,6 +118,16 @@ export const EmptyState = (_: ColorPalette) => {
   return <Preview />;
 };
 
+export const Field = (colorPalette: ColorPalette) => {
+  const { Preview } = composeStories(FieldStories);
+  return <Preview colorPalette={colorPalette} />;
+};
+
+export const Fieldset = (_: ColorPalette) => {
+  const { Preview } = composeStories(FieldsetStories);
+  return <Preview />;
+};
+
 // Skjemaelementer
 
 export const Button = (colorPalette: ColorPalette) => {
@@ -140,7 +151,7 @@ export const Input = (colorPalette: ColorPalette) => {
 };
 
 export const FormControl = (colorPalette: ColorPalette) => {
-  const { Preview } = composeStories(FormControlStories);
+  const { Preview } = composeStories(FieldStories);
   return <Preview colorPalette={colorPalette} />;
 };
 
