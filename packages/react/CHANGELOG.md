@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 5.0.8
+
+### Patch Changes
+
+- 30b0fb7: Fiks for Button som var låst til én variant
+
 ## 5.0.7
 
 ### Patch Changes
