@@ -27,6 +27,12 @@ import * as TagStories from "../../components/datavisning/tag/Tag.stories";
 import * as DatepickerStories from "../../components/datepicker/Datepicker.stories";
 import * as DialogStoriea from "../../components/dialog/Dialog.stories";
 import * as DrawerStories from "../../components/drawer/Drawer.stories";
+import * as EditableStories from "../../components/editable/Editable.stories";
+import * as EmptyStateStories from "../../components/empty-state/EmptyState.stories";
+import * as FieldStories from "../../components/field/Field.stories";
+import * as FieldsetStories from "../../components/fieldset/Fieldset.stories";
+import * as FileUploadStories from "../../components/file-upload/FileUpload.stories";
+import * as FooterStories from "../../components/footer/Footer.stories";
 import * as AspectRatioStories from "../../components/Layout/AspectRatio/AspectRatio.stories";
 import * as BoxStories from "../../components/Layout/Box/Box.stories";
 import * as CenterStories from "../../components/Layout/Center/Center.stories";
@@ -46,13 +52,9 @@ import * as PopoverStories from "../../components/overlay/popover/Popover.storie
 import * as TooltipStories from "../../components/overlay/tooltip/Tooltip.stories";
 import * as SearchAsyncStories from "../../components/search/search-async/SearchAsync.stories";
 import * as SearchStories from "../../components/search/search/Search.stories";
-import * as FooterStories from "../../components/sideelementer/footer/footer/Footer.stories";
 import * as HeaderStories from "../../components/sideelementer/header/Header.stories";
 import * as LogoStories from "../../components/sideelementer/logo/Logo.stories";
 import * as SeparatorStories from "../../components/sideelementer/separator/Separator.stories";
-import * as EditableStories from "../../components/skjemaelementer/editable/Editable.stories";
-import * as FormControlStories from "../../components/skjemaelementer/field/Field.stories";
-import * as FileUploadStories from "../../components/skjemaelementer/file-upload/FileUpload.stories";
 import * as IconButtonStories from "../../components/skjemaelementer/icon-button/IconButton.stories";
 import * as InputStories from "../../components/skjemaelementer/Input/Input.stories";
 import * as NumberInputStories from "../../components/skjemaelementer/number-input/NumberInput.stories";
@@ -111,6 +113,21 @@ export const DataList = (colorPalette: ColorPalette) => {
   return <Preview colorPalette={colorPalette} />;
 };
 
+export const EmptyState = (_: ColorPalette) => {
+  const { Preview } = composeStories(EmptyStateStories);
+  return <Preview />;
+};
+
+export const Field = (colorPalette: ColorPalette) => {
+  const { Preview } = composeStories(FieldStories);
+  return <Preview colorPalette={colorPalette} />;
+};
+
+export const Fieldset = (_: ColorPalette) => {
+  const { Preview } = composeStories(FieldsetStories);
+  return <Preview />;
+};
+
 // Skjemaelementer
 
 export const Button = (colorPalette: ColorPalette) => {
@@ -134,7 +151,7 @@ export const Input = (colorPalette: ColorPalette) => {
 };
 
 export const FormControl = (colorPalette: ColorPalette) => {
-  const { Preview } = composeStories(FormControlStories);
+  const { Preview } = composeStories(FieldStories);
   return <Preview colorPalette={colorPalette} />;
 };
 

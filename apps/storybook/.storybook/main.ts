@@ -1,5 +1,5 @@
 import type { StorybookConfig } from "@storybook/react-vite";
-
+import react from "@vitejs/plugin-react";
 import path, { dirname, join } from "path";
 import { mergeConfig } from "vite";
 
@@ -35,6 +35,7 @@ const config: StorybookConfig = {
     const resolvedSrcPath = path.resolve(__dirname, "../../../packages/react/src");
 
     return mergeConfig(config, {
+      plugins: [react()],
       resolve: {
         alias: [
           {

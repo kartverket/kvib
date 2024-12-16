@@ -40,7 +40,8 @@ toast({
     <Kodeeksempel
       beskrivelse={
         <>
-          Nå vil man først rendre <Code>Toaster</Code> i appen slik som dette:
+          Nå vil man først rendre <Code>Toaster</Code> i appen slik som dette, der komponenten legges inn i f.eks.{" "}
+          <Code>App.tsx</Code>:
         </>
       }
       kildekode={`

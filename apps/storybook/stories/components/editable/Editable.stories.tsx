@@ -2,7 +2,6 @@ import {
   Editable as KvibEditable,
   EditableInput as KvibEditableInput,
   EditablePreview as KvibEditablePreview,
-  EditableTextarea as KvibEditableTextarea,
 } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
@@ -12,7 +11,7 @@ const meta: Meta<typeof KvibEditable> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "shown" },
+      canvas: { sourceState: "hidden" },
     },
   },
   argTypes: {
@@ -123,16 +122,6 @@ export const Preview: Story = {
     <KvibEditable {...args}>
       <KvibEditablePreview />
       <KvibEditableInput />
-    </KvibEditable>
-  ),
-};
-
-export const EditableTextarea: Story = {
-  args: { defaultValue: "Redigerbar tekst" },
-  render: args => (
-    <KvibEditable {...args}>
-      <KvibEditablePreview />
-      <KvibEditableTextarea />
     </KvibEditable>
   ),
 };

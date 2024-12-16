@@ -7,8 +7,6 @@ export {
   FieldsetLegend,
   FieldsetRoot,
   Fieldset as KvibFieldset,
-  useFieldStyles,
-  useFieldsetContext,
 } from "@chakra-ui/react";
 
 export type {

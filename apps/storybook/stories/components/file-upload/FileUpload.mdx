@@ -1,0 +1,8 @@
+import { Canvas, Controls, Meta } from "@storybook/blocks";
+import * as FileUploadStories from "./FileUpload.stories";
+import { FileUploadDocs } from "./FileUploadDocs";
+
+<Meta of={FileUploadStories} />
+<FileUploadDocs />
+<Canvas of={FileUploadStories.Preview} />
+<Controls of={FileUploadStories.Preview} />

@@ -53,7 +53,13 @@ export const PopoverTitle = React.forwardRef<HTMLDivElement, PopoverTitleProps>(
 
 export const PopoverDescription = ChakraPopover.Description;
 export const PopoverFooter = ChakraPopover.Footer;
-export const PopoverHeader = ChakraPopover.Header;
+
+interface PopoverHeaderProps extends Merge<BoxProps, ChakraPopover.HeaderProps> {}
+
+export const PopoverHeader = React.forwardRef<HTMLDivElement, PopoverHeaderProps>(function PopoverHeader(props, ref) {
+  return <ChakraPopover.Header ref={ref} {...props} />;
+});
+
 export const PopoverRoot = ChakraPopover.Root;
 export const PopoverBody = ChakraPopover.Body;
 

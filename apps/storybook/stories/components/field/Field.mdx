@@ -1,0 +1,8 @@
+import { Canvas, Controls, Meta } from "@storybook/blocks";
+import * as FieldStories from "./Field.stories";
+import { FieldDocs } from "./FieldDocs";
+
+<Meta of={FieldStories} />
+<FieldDocs />
+<Canvas of={FieldStories.Preview} />
+<Controls of={FieldStories.Preview} />
