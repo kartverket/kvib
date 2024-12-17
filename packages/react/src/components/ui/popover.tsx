@@ -5,7 +5,6 @@ import * as React from "react";
 import { Merge } from "../utils";
 import { CloseButton } from "./close-button";
 
-// Create a context for the colorPalette
 const ColorPaletteContext = React.createContext<"gray" | "red" | "green" | "blue" | undefined>(undefined);
 
 interface PopoverContentProps extends Merge<BoxProps, ChakraPopover.ContentProps> {
