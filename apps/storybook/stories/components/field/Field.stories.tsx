@@ -47,7 +47,7 @@ type Story = StoryObj<typeof KvibFormControl>;
 
 export const Preview: Story = {
   render: (args: FieldProps) => (
-    <KvibFormControl label={"Label (valgfri)"} helperText={"Hjelpetekst"} errorMessage={"Feilmelding"} {...args}>
+    <KvibFormControl label={"Label (valgfri)"} helperText={"Hjelpetekst"} {...args}>
       <KvibInput placeholder={"Eksempel"} size={"md"} variant={"outline"} />
     </KvibFormControl>
   ),
