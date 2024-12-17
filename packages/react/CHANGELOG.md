@@ -1,5 +1,12 @@
 # @kvib/react
 
+## 5.0.9
+
+### Patch Changes
+
+- afb2278: Fiks for Accordions som ble åpnet ved feil
+- 77007ae: Forbedringer på styling av Alert, Breadcrumb, Popover, Tooltip
+
 ## 5.0.8
 
 ### Patch Changes
