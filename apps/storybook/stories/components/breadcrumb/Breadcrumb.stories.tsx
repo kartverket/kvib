@@ -56,10 +56,10 @@ const meta: Meta<typeof KvibBreadcrumb> = {
     colorPalette: {
       description: "The color palette of the breadcrumb",
       table: {
-        type: { summary: "green | blue" },
+        type: { summary: "green | blue | gray" },
       },
       defaultValue: { summary: "green" },
-      options: ["green", "blue"],
+      options: ["green", "blue", "gray"],
       control: { type: "radio" },
     },
   },

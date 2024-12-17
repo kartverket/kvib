@@ -3,7 +3,15 @@ import { alertAnatomy } from "@chakra-ui/react/anatomy";
 
 export const alertTheme = defineSlotRecipe({
   slots: alertAnatomy.keys(),
-  base: {},
+  base: {
+    root: {
+      fontSize: "fontSizes.md",
+    },
+    title: {
+      fontSize: "fontSizes.md",
+      fontWeight: "bold",
+    },
+  },
   variants: {
     variant: {
       subtle: {
@@ -11,7 +19,7 @@ export const alertTheme = defineSlotRecipe({
           color: "black",
         },
         root: {
-          bg: "colorPalette.100 !important",
+          bg: "colorPalette.100",
           color: "black ",
         },
         indicator: {
@@ -23,7 +31,7 @@ export const alertTheme = defineSlotRecipe({
           color: "white ",
         },
         root: {
-          bg: "colorPalette.500 !important",
+          bg: "colorPalette.500",
           color: "white ",
         },
         indicator: {

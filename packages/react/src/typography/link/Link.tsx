@@ -1,4 +1,3 @@
-import { useRecipe } from "@/hooks";
 import { Link as ChakraLink, LinkProps as ChakraLinkProps } from "@chakra-ui/react";
 import { forwardRef } from "react";
 import { LuExternalLink } from "react-icons/lu";
@@ -17,14 +16,10 @@ export interface LinkProps extends ChakraLinkProps {
  * You can specify the `color` prop to get different link designs.
  */
 export const Link = forwardRef<HTMLAnchorElement, LinkProps>(({ children, ...props }, ref) => {
-  const recipe = useRecipe({ key: "link" });
-  const [recipeProps, restProps] = recipe.splitVariantProps(props);
-  const styles = recipe(recipeProps);
-
   return (
-    <ChakraLink css={styles} {...restProps} ref={ref}>
+    <ChakraLink {...props} ref={ref}>
       {children}
-      {restProps.external && <LuExternalLink />}
+      {props.external && <LuExternalLink />}
     </ChakraLink>
   );
 });

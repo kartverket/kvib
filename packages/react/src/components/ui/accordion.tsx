@@ -44,7 +44,9 @@ export const AccordionItemContent = React.forwardRef<HTMLDivElement, AccordionIt
   },
 );
 
-interface AccordionRootProps extends Merge<BoxProps, Accordion.RootProps> {}
+interface AccordionRootProps extends Merge<BoxProps, Accordion.RootProps> {
+  collapsible?: boolean;
+}
 
 export const AccordionRoot = React.forwardRef<HTMLDivElement, AccordionRootProps>(function AccordionRoot(props, ref) {
   return <Accordion.Root {...props} ref={ref} />;

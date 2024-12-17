@@ -14,7 +14,6 @@ const meta: Meta<typeof KvibAvatar> = {
     name: "Hans Hansen",
     src: "https://bit.ly/broken-link",
     size: "md",
-    showBorder: false,
   },
   argTypes: {
     name: {
@@ -24,14 +23,6 @@ const meta: Meta<typeof KvibAvatar> = {
         type: { summary: "string" },
       },
       control: "text",
-    },
-    showBorder: {
-      description: "If true, the Avatar will show a border around it. Best for a group of avatars",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
-      },
-      control: "boolean",
     },
     size: {
       description: "The size of the Avatar",
