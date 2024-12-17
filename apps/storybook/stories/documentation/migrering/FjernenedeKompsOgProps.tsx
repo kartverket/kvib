@@ -124,4 +124,13 @@ const isTablet = useMediaQuery(getBreakpointCondition(system, "mdToLg"));
       </>
     ),
   },
+  {
+    title: "<X>Title-komponent i flere komponenter",
+    description: (
+      <>
+        I flere av komponentene som tidligere har tatt inn en <Code>{`<X>Title`}</Code>, som f.eks. <Code>Popover</Code>{" "}
+        med <Code>PopoverTitle</Code>, er dette endret til prop-en <Code>title</Code> i rot-komponenten i stedet.
+      </>
+    ),
+  },
 ];

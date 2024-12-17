@@ -7,7 +7,7 @@ interface Props {
 }
 
 export const Tekstblokk = ({ tittel, children }: Props) => (
-  <Stack rowGap={0}>
+  <Stack rowGap={2}>
     {tittel && (
       <Flex alignItems={"center"}>
         <Text
