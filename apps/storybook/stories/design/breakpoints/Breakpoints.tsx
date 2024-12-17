@@ -54,7 +54,7 @@ export const Breakpoints = () => {
       `}
         kildekode={`
 const system = useKvibContext();
-const isTablet = useMediaQuery(system, getBreakpointCondition("mdToLg"));
+const isTablet = useMediaQuery(getBreakpointCondition(system, "mdToLg"));
 console.log(isTablet); // true hvis skjermstørrelsen er mellom md og lg
 `}
       />

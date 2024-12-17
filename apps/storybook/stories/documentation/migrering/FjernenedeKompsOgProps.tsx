@@ -115,7 +115,7 @@ const largeBreakpoint = system.token("breakpoints.lg");
         `}
           kildekode={`
 const system = useKvibContext();
-const isTablet = useMediaQuery(system, getBreakpointCondition("mdToLg"));
+const isTablet = useMediaQuery(getBreakpointCondition(system, "mdToLg"));
 `}
         />
         <Unstyled>
