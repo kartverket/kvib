@@ -98,14 +98,14 @@ export const Preview: Story = {
   },
   render: args => (
     <Accordion {...args}>
-      <AccItem>
+      <AccItem key="1" value="test">
         <AccordionItemTrigger>
           Tittel 1
           <AccordionItemIndicator />
         </AccordionItemTrigger>
         <AccordionItemContent>Innhold 1</AccordionItemContent>
       </AccItem>
-      <AccItem>
+      <AccItem key="2" value="test2">
         <AccordionItemTrigger>Tittel 2</AccordionItemTrigger>
         <AccordionItemContent>Innhold 2</AccordionItemContent>
       </AccItem>

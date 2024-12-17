@@ -52,7 +52,9 @@ export const AccordionRoot = React.forwardRef<HTMLDivElement, AccordionRootProps
   return <Accordion.Root {...props} ref={ref} />;
 });
 
-interface AccordionItemProps extends Merge<BoxProps, Accordion.ItemProps> {}
+interface AccordionItemProps extends Merge<BoxProps, Accordion.ItemProps> {
+  value: string;
+}
 
 export const AccordionItem = React.forwardRef<HTMLDivElement, AccordionItemProps>(function AccordionItem(props, ref) {
   return (
