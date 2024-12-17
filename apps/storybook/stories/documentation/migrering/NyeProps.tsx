@@ -226,4 +226,14 @@ export const nyeProps = [
       </>
     ),
   },
+  {
+    title: "objectFit på Image-komponenten",
+    description: (
+      <>
+        <Code>objectFit</Code> på <Code>Image</Code>-komponenten har endret standardverdi til <Code>cover</Code>. Ønsker
+        man at bildet ikke skal fylle hele bilderammen kan man bruke <Code>objectFit="contain"</Code> eller{" "}
+        <Code>objectFit="fit"</Code>.
+      </>
+    ),
+  },
 ];
