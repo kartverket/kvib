@@ -42,6 +42,7 @@ import { tableTheme } from "./components/table";
 import { tabsTheme } from "./components/tabs";
 import { tagTheme } from "./components/tag";
 import { toastTheme } from "./components/toast";
+import { tooltipTheme } from "./components/tooltip";
 import { config as kvibConfig } from "./tokens/config";
 import sizes from "./tokens/sizes";
 import { transitionDuration, transitionProperty, transitionTimingFunction } from "./tokens/transitions";
@@ -120,6 +121,7 @@ const customConfig = defineConfig({
       tabs: tabsTheme,
       tag: tagTheme,
       toast: toastTheme,
+      tooltip: tooltipTheme,
     },
   },
   globalCss: {
