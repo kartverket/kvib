@@ -14,15 +14,18 @@ export const popoverTheme = defineSlotRecipe({
     },
     arrowTip: {
       border: "none",
-      // borderTopWidth: "1px",
-      // borderInlineStartWidth: "1px",
-      // borderColor: "colorPalette.100",
-
-      // box shadow top and left side only
       "--box-shadow-color": "{colors.colorPalette.100}",
 
       boxShadow:
         "-1px -1px 1px -1px rgba(0, 0, 0, 0.1), -4px -4px 6px -2px rgba(0, 0, 0, 0.05), inset 1px 1px 0 var(--box-shadow-color)",
+    },
+    closeTrigger: {
+      position: "absolute",
+      top: "2px",
+      right: "2px",
+      width: "1rem",
+      height: "1rem",
+      boxSizing: "content-box",
     },
   },
   defaultVariants: {

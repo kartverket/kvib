@@ -3,6 +3,7 @@ import {
   Popover,
   PopoverArrow,
   PopoverBody,
+  PopoverCloseTrigger,
   PopoverContent,
   PopoverProps,
   PopoverTitle,
@@ -45,6 +46,7 @@ export const Preview: Story = {
         </Button>
       </PopoverTrigger>
       <PopoverContent>
+        <PopoverCloseTrigger size={"sm"} />
         <PopoverArrow />
         <PopoverBody>
           <PopoverTitle fontWeight="bold">Tittel</PopoverTitle>
