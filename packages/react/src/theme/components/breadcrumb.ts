@@ -4,6 +4,15 @@ import { breadcrumbAnatomy } from "@chakra-ui/react/anatomy";
 export const breadcrumbTheme = defineSlotRecipe({
   slots: breadcrumbAnatomy.keys(),
   base: {
+    root: {
+      display: "flex",
+      flexWrap: "wrap",
+    },
+    list: {
+      display: "flex",
+      alignItems: "center",
+      wordBreak: "normal",
+    },
     link: {
       _focusVisible: {
         outline: "{borders.1px}",
