@@ -8,6 +8,7 @@ export const tooltipTheme = defineSlotRecipe({
     content: {
       fontSize: "fontSizes.sm",
       bg: "gray.700",
+      pb: "2",
     },
   },
 });

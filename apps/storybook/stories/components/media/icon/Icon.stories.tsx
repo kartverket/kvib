@@ -64,7 +64,6 @@ export const ColorIcon: Story = {
     return (
       <HStack>
         <Icon {...args} icon="home" color="green.400" />
-        // #1A833B er theme.colors.green[400]
         <Icon {...args} icon="home" color="green.400" filled={true} />
         <Icon {...args} icon="warning" color="orange" filled={true} />
       </HStack>

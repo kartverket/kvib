@@ -1,8 +1,10 @@
+import { Merge } from "@/components/utils";
+import { IconProps as ChakraIconProps } from "@chakra-ui/react";
 import "material-symbols";
 import { MaterialSymbol } from "material-symbols";
 import { forwardRef } from "react";
 
-export type IconProps = React.HTMLAttributes<HTMLSpanElement> & {
+export type IconProps = Merge<ChakraIconProps, Omit<React.HTMLAttributes<HTMLSpanElement>, "color">> & {
   /** The icon from Material symbols you want to display */
   icon: MaterialSymbol;
 
@@ -26,30 +28,40 @@ export type IconProps = React.HTMLAttributes<HTMLSpanElement> & {
 
   /** Custom class name for styling */
   className?: string;
-
-  /** Inline CSS styles */
-  css?: React.CSSProperties;
 };
 
 export const Icon = forwardRef<HTMLSpanElement, IconProps>(
-  ({ icon, size, color, weight, grade, filled = false, ariaIsHidden = false, className = "", css }, ref) => {
-    return (
-      <span
-        ref={ref}
-        className={`material-symbols-rounded ${className}`}
-        aria-hidden={ariaIsHidden}
-        style={{
-          width: size,
-          fontSize: size,
+  (
+    {
+      icon,
+      size = 24,
+      color = "currentColor",
+      weight,
+      grade,
+      filled,
+      ariaIsHidden = true,
+      className = "",
+      style,
+      ...props
+    },
+    ref,
+  ) => (
+    <span
+      ref={ref}
+      className={`material-symbols-rounded ${className}`}
+      aria-hidden={ariaIsHidden}
+      style={
+        {
+          ...style,
           color: color,
-          fontVariationSettings: `'FILL' ${filled ? 1 : 0}, 'wght' ${weight ? weight : 300}, 'GRAD' ${
-            grade ? grade : 0
-          }`,
-          ...css,
-        }}
-      >
-        {icon}
-      </span>
-    );
-  },
+          fontSize: size,
+          fontWeight: weight,
+          fontVariationSettings: `'FILL' ${filled ? 1 : 0}, 'wght' ${weight ? weight : 300}, 'GRAD' ${grade ? grade : 0}`,
+        } as React.CSSProperties
+      }
+      {...props}
+    >
+      {icon}
+    </span>
+  ),
 );
