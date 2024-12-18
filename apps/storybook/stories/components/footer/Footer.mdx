@@ -1,8 +1,14 @@
 import { Canvas, Controls, Meta } from "@storybook/blocks";
 import * as FooterStories from "./Footer.stories";
 import { FooterDocs } from "./FooterDocs";
+import { FooterInlineDocs } from "./FooterInlineDocs";
 
 <Meta of={FooterStories} />
 <FooterDocs />
 <Canvas of={FooterStories.Preview} />
 <Controls of={FooterStories.Preview} />
+<br />
+<br />
+<FooterInlineDocs />
+<Canvas of={FooterStories.FooterInline} />
+<Controls of={FooterStories.FooterInline} />

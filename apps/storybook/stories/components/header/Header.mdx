@@ -1,0 +1,8 @@
+import { Canvas, Controls, Meta } from "@storybook/blocks";
+import * as HeaderStories from "./Header.stories";
+import { HeaderDocs } from "./HeaderDocs";
+
+<Meta of={HeaderStories} />
+<HeaderDocs />
+<Canvas of={HeaderStories.Preview} />
+<Controls of={HeaderStories.Preview} />
