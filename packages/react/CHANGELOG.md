@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 5.0.11
+
+### Patch Changes
+
+- bcabb6f: Utvider interface til AccordionRoot med multiple-prop siden denne heller ikke kom som standard fra Chakra
+
 ## 5.0.10
 
 ### Patch Changes
