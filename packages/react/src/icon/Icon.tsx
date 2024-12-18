@@ -35,14 +35,14 @@ export const Icon = forwardRef<HTMLSpanElement, IconProps>(
     {
       icon,
       size = 24,
-      color = "colorPalette.500",
+      color,
       weight,
       grade,
       filled,
       ariaIsHidden = true,
       className = "",
       style,
-      colorPalette = "green",
+      colorPalette,
       ...props
     },
     ref,

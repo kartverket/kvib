@@ -61,7 +61,7 @@ export default meta;
 type Story = StoryObj<typeof Icon>;
 
 export const Preview: Story = {
-  render: args => <Icon {...args} />,
+  render: args => <Icon color="colorPalette.500" {...args} />,
 };
 
 export const ColorIcon: Story = {
