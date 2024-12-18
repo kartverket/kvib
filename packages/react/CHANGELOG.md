@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 5.0.10
+
+### Patch Changes
+
+- a1789ba: Fiks for mangel av color-prop på Icon. Ørliten justering i høyden på TooltipContent.
+
 ## 5.0.9
 
 ### Patch Changes
