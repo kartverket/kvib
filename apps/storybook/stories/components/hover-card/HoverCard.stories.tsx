@@ -23,7 +23,59 @@ const meta: Meta<typeof HoverCard> = {
       disable: true,
     },
   },
-  argTypes: {},
+  argTypes: {
+    closeDelay: {
+      description: "The duration from when the mouse leaves the trigger or content until the hover card closes.",
+      table: {
+        type: { summary: "number" },
+        defaultValue: { summary: "300" },
+      },
+      control: "number",
+    },
+    openDelay: {
+      description: "The duration from when the mouse enters the trigger until the hover card opens.",
+      table: {
+        type: { summary: "number" },
+        defaultValue: { summary: "700" },
+      },
+      control: "number",
+    },
+    size: {
+      description: "The size of the component",
+      table: {
+        type: { summary: "'xs' | 'sm' | 'md' | 'lg'" },
+        defaultValue: { summary: "md" },
+      },
+      options: ["xs", "sm", "md", "lg"],
+      control: "radio",
+    },
+    defaultOpen: {
+      description:
+        "The initial open state of the hover card when it is first rendered. Use when you do not need to control its open state.",
+      table: {
+        type: { summary: "boolean" },
+      },
+    },
+    onExitComplete: {
+      description: "Function called when the animation ends in the closed state",
+      table: {
+        type: { summary: "() => void" },
+      },
+    },
+    onOpenChange: {
+      description: "Function called when the hover card opens or closes.",
+      table: {
+        type: { summary: "(details: OpenChangeDetails) => void" },
+      },
+    },
+    open: {
+      description: "Whether the hover card is open",
+      table: {
+        type: { summary: "boolean" },
+      },
+      control: "boolean",
+    },
+  },
 };
 
 export default meta;
