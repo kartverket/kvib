@@ -68,12 +68,5 @@ export default meta;
 type InputStory = StoryObj<typeof KvibInput>;
 
 export const Preview: InputStory = {
-  parameters: {
-    docs: {
-      canvas: {
-        sourceState: "shown",
-      },
-    },
-  },
   render: args => <KvibInput placeholder="Skriv her..." {...args} />,
 };

@@ -1,7 +1,10 @@
+import { ButtonProps } from "@/button";
+import { BoxProps } from "@/layout";
 import { HoverCard, Portal } from "@chakra-ui/react";
 import * as React from "react";
+import { Merge } from "../utils";
 
-interface HoverCardContentProps extends HoverCard.ContentProps {
+interface HoverCardContentProps extends Merge<BoxProps, HoverCard.ContentProps> {
   portalled?: boolean;
   portalRef?: React.RefObject<HTMLElement>;
 }
@@ -31,4 +34,10 @@ export const HoverCardArrow = React.forwardRef<HTMLDivElement, HoverCard.ArrowPr
 );
 
 export const HoverCardRoot = HoverCard.Root;
-export const HoverCardTrigger = HoverCard.Trigger;
+
+interface HoverCardTriggerProps extends Merge<ButtonProps, HoverCard.TriggerProps> {}
+export const HoverCardTrigger = React.forwardRef<HTMLButtonElement, HoverCardTriggerProps>(
+  function HoverCardTrigger(props, ref) {
+    return <HoverCard.Trigger ref={ref} {...props} />;
+  },
+);

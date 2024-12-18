@@ -1,0 +1,9 @@
+import { Canvas, Controls, Meta } from "@storybook/blocks";
+import { DocsContainer, DocsStory, Feedback } from "../../templates";
+import * as HighlightStories from "./Highlight.stories";
+import { HighlightDocs } from "./HighlightDocs";
+
+<Meta of={HighlightStories} />
+<HighlightDocs />
+<Canvas of={HighlightStories.Preview} />
+<Controls />

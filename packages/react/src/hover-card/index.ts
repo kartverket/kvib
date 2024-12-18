@@ -17,4 +17,14 @@ export {
   useHoverCardStyles,
 } from "@chakra-ui/react";
 
-export type { HoverCardOpenChangeDetails } from "@chakra-ui/react";
+export type {
+  HoverCardArrowProps,
+  HoverCardArrowTipProps,
+  HoverCardContentProps,
+  HoverCardOpenChangeDetails,
+  HoverCardPositionerProps,
+  HoverCardRootProps as HoverCardProps,
+  HoverCardRootProps,
+  HoverCardRootProviderProps,
+  HoverCardTriggerProps,
+} from "@chakra-ui/react";
