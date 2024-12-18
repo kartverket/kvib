@@ -133,6 +133,11 @@ export const Footer = (_: ColorPalette) => {
   return <FooterInline />;
 };
 
+export const Icon = (colorPalette: ColorPalette) => {
+  const { Preview } = composeStories(IconStories);
+  return <Preview colorPalette={colorPalette} />;
+};
+
 // Skjemaelementer
 
 export const Button = (colorPalette: ColorPalette) => {
@@ -355,11 +360,6 @@ export const Divider = (colorPalette: ColorPalette) => {
 export const Image = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(ImageStories);
   return <Preview colorPalette={colorPalette} />;
-};
-
-export const Icon = (_: ColorPalette) => {
-  const { Preview } = composeStories(IconStories);
-  return <Preview />;
 };
 
 export const Avatar = (colorPalette: ColorPalette) => {

@@ -1,5 +1,5 @@
 import { Merge } from "@/components/utils";
-import { IconProps as ChakraIconProps } from "@chakra-ui/react";
+import { Icon as ChakraIcon, IconProps as ChakraIconProps } from "@chakra-ui/react";
 import "material-symbols";
 import { MaterialSymbol } from "material-symbols";
 import { forwardRef } from "react";
@@ -35,33 +35,35 @@ export const Icon = forwardRef<HTMLSpanElement, IconProps>(
     {
       icon,
       size = 24,
-      color = "currentColor",
+      color = "colorPalette.500",
       weight,
       grade,
       filled,
       ariaIsHidden = true,
       className = "",
       style,
+      colorPalette = "green",
       ...props
     },
     ref,
   ) => (
-    <span
-      ref={ref}
-      className={`material-symbols-rounded ${className}`}
-      aria-hidden={ariaIsHidden}
-      style={
-        {
-          ...style,
-          color: color,
-          fontSize: size,
-          fontWeight: weight,
-          fontVariationSettings: `'FILL' ${filled ? 1 : 0}, 'wght' ${weight ? weight : 300}, 'GRAD' ${grade ? grade : 0}`,
-        } as React.CSSProperties
-      }
-      {...props}
-    >
-      {icon}
-    </span>
+    <ChakraIcon colorPalette={colorPalette} color={color}>
+      <span
+        ref={ref}
+        className={`material-symbols-rounded ${className}`}
+        aria-hidden={ariaIsHidden}
+        style={
+          {
+            ...style,
+            fontSize: size,
+            fontWeight: weight,
+            fontVariationSettings: `'FILL' ${filled ? 1 : 0}, 'wght' ${weight ? weight : 300}, 'GRAD' ${grade ? grade : 0}`,
+          } as React.CSSProperties
+        }
+        {...props}
+      >
+        {icon}
+      </span>
+    </ChakraIcon>
   ),
 );

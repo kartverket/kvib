@@ -164,6 +164,12 @@ export const Komponenter: (colorPalette: ColorPalette) => Record<string, Kategor
         link: "footer",
         tag: "beta",
       },
+      Icon: {
+        navn: "Icon",
+        beskrivelse: "",
+        story: Icon(colorPalette),
+        link: "icon",
+      },
     },
   },
   Skjemaelementer: {
@@ -454,12 +460,7 @@ export const Komponenter: (colorPalette: ColorPalette) => Record<string, Kategor
         story: Image(colorPalette),
         link: "image",
       },
-      Icon: {
-        navn: "Icon",
-        beskrivelse: "",
-        story: Icon(colorPalette),
-        link: "ikoner",
-      },
+
       Avatar: {
         navn: "Avatar",
         beskrivelse: "",
