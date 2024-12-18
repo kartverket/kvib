@@ -1,4 +1,5 @@
-import { Footer as KvibFooter } from "@kvib/react";
+import { Footer as KvibFooter, FooterInline as KvibFooterInline } from "@kvib/react";
+
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibFooter> = {
@@ -85,15 +86,32 @@ export const Preview: Story = {
   render: args => <KvibFooter {...args} />,
 };
 
-export const FooterNone: Story = {
-  args: {
-    accessibilityUrl: undefined,
-    excludeContactInfo: true,
-    excludeHelp: true,
-    excludeNews: true,
-    excludeOpeningHours: true,
-    excludePrivacyLink: true,
-    excludeSocialMedia: true,
+type InlineStory = StoryObj<typeof KvibFooterInline>;
+
+export const FooterInline: InlineStory = {
+  argTypes: {
+    accessibilityUrl: {
+      description: "Link to accessibility statement",
+      table: {
+        type: { summary: "string" },
+      },
+      control: "text",
+    },
+    privacyUrl: {
+      description: "Link to privacy statement",
+      table: {
+        type: { summary: "string" },
+      },
+      control: "text",
+    },
+    logoLink: {
+      description: "href for logo link",
+      table: {
+        type: { summary: "string" },
+        defaulValue: { summary: "/" },
+      },
+      control: "text",
+    },
   },
-  render: args => <KvibFooter {...args} />,
+  render: args => <KvibFooterInline {...args} />,
 };

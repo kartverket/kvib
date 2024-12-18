@@ -32,7 +32,6 @@ import {
   FileUpload,
   Flex,
   Footer,
-  FormControl,
   Grid,
   Header,
   Heading,
@@ -158,6 +157,19 @@ export const Komponenter: (colorPalette: ColorPalette) => Record<string, Kategor
         story: Fieldset(colorPalette),
         link: "fieldset",
       },
+      Footer: {
+        navn: "Footer",
+        beskrivelse: "",
+        story: Footer(colorPalette),
+        link: "footer",
+        tag: "beta",
+      },
+      Icon: {
+        navn: "Icon",
+        beskrivelse: "",
+        story: Icon(colorPalette),
+        link: "icon",
+      },
     },
   },
   Skjemaelementer: {
@@ -186,12 +198,6 @@ export const Komponenter: (colorPalette: ColorPalette) => Record<string, Kategor
         beskrivelse: "Input",
         story: Input(colorPalette),
         link: "input",
-      },
-      FormControl: {
-        navn: "FormControl",
-        beskrivelse: "FormControl",
-        story: FormControl(colorPalette),
-        link: "form-control",
       },
       Select: {
         navn: "Select",
@@ -437,13 +443,6 @@ export const Komponenter: (colorPalette: ColorPalette) => Record<string, Kategor
         link: "header",
         tag: "beta",
       },
-      Footer: {
-        navn: "Footer",
-        beskrivelse: "",
-        story: Footer(colorPalette),
-        link: "footer-footer",
-        tag: "beta",
-      },
       Divider: {
         navn: "Divider",
         beskrivelse: "",
@@ -461,12 +460,7 @@ export const Komponenter: (colorPalette: ColorPalette) => Record<string, Kategor
         story: Image(colorPalette),
         link: "image",
       },
-      Icon: {
-        navn: "Icon",
-        beskrivelse: "",
-        story: Icon(colorPalette),
-        link: "ikoner",
-      },
+
       Avatar: {
         navn: "Avatar",
         beskrivelse: "",

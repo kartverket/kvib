@@ -33,6 +33,7 @@ import * as FieldStories from "../../components/field/Field.stories";
 import * as FieldsetStories from "../../components/fieldset/Fieldset.stories";
 import * as FileUploadStories from "../../components/file-upload/FileUpload.stories";
 import * as FooterStories from "../../components/footer/Footer.stories";
+import * as HeaderStories from "../../components/header/Header.stories";
 import * as AspectRatioStories from "../../components/Layout/AspectRatio/AspectRatio.stories";
 import * as BoxStories from "../../components/Layout/Box/Box.stories";
 import * as CenterStories from "../../components/Layout/Center/Center.stories";
@@ -52,7 +53,6 @@ import * as PopoverStories from "../../components/overlay/popover/Popover.storie
 import * as TooltipStories from "../../components/overlay/tooltip/Tooltip.stories";
 import * as SearchAsyncStories from "../../components/search/search-async/SearchAsync.stories";
 import * as SearchStories from "../../components/search/search/Search.stories";
-import * as HeaderStories from "../../components/sideelementer/header/Header.stories";
 import * as LogoStories from "../../components/sideelementer/logo/Logo.stories";
 import * as SeparatorStories from "../../components/sideelementer/separator/Separator.stories";
 import * as IconButtonStories from "../../components/skjemaelementer/icon-button/IconButton.stories";
@@ -128,6 +128,16 @@ export const Fieldset = (_: ColorPalette) => {
   return <Preview />;
 };
 
+export const Footer = (_: ColorPalette) => {
+  const { FooterInline } = composeStories(FooterStories);
+  return <FooterInline />;
+};
+
+export const Icon = (colorPalette: ColorPalette) => {
+  const { Preview } = composeStories(IconStories);
+  return <Preview colorPalette={colorPalette} />;
+};
+
 // Skjemaelementer
 
 export const Button = (colorPalette: ColorPalette) => {
@@ -147,11 +157,6 @@ export const CloseButton = (colorPalette: ColorPalette) => {
 
 export const Input = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(InputStories);
-  return <Preview colorPalette={colorPalette} />;
-};
-
-export const FormControl = (colorPalette: ColorPalette) => {
-  const { Preview } = composeStories(FieldStories);
   return <Preview colorPalette={colorPalette} />;
 };
 
@@ -345,11 +350,6 @@ export const Header = (_: ColorPalette) => {
   return <Preview />;
 };
 
-export const Footer = (_: ColorPalette) => {
-  const { Preview } = composeStories(FooterStories);
-  return <Preview />;
-};
-
 export const Divider = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(SeparatorStories);
   return <Preview colorPalette={colorPalette} />;
@@ -360,11 +360,6 @@ export const Divider = (colorPalette: ColorPalette) => {
 export const Image = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(ImageStories);
   return <Preview colorPalette={colorPalette} />;
-};
-
-export const Icon = (_: ColorPalette) => {
-  const { Preview } = composeStories(IconStories);
-  return <Preview />;
 };
 
 export const Avatar = (colorPalette: ColorPalette) => {

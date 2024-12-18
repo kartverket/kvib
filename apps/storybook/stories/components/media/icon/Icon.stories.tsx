@@ -17,7 +17,7 @@ const meta: Meta<typeof Icon> = {
     weight: {
       table: { type: { summary: "100 | 200 | 300 | 400 | 500 | 600 | 700" } },
       control: { type: "range", min: 100, max: 700, step: 100 },
-      defaultValue: { summary: 600 },
+      defaultValue: { summary: 400 },
     },
     grade: {
       table: { type: { summary: "-25 | 0 | 200" } },
@@ -48,13 +48,19 @@ const meta: Meta<typeof Icon> = {
       control: "text",
     },
   },
+  args: {
+    icon: "favorite",
+    filled: false,
+    size: 24,
+    grade: 0,
+    weight: 400,
+  },
 };
 
 export default meta;
 type Story = StoryObj<typeof Icon>;
 
 export const Preview: Story = {
-  args: { icon: "favorite" },
   render: args => <Icon {...args} />,
 };
 
@@ -64,7 +70,6 @@ export const ColorIcon: Story = {
     return (
       <HStack>
         <Icon {...args} icon="home" color="green.400" />
-        // #1A833B er theme.colors.green[400]
         <Icon {...args} icon="home" color="green.400" filled={true} />
         <Icon {...args} icon="warning" color="orange" filled={true} />
       </HStack>
