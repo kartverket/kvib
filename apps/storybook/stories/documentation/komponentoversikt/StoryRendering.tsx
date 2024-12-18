@@ -34,6 +34,12 @@ import * as FieldsetStories from "../../components/fieldset/Fieldset.stories";
 import * as FileUploadStories from "../../components/file-upload/FileUpload.stories";
 import * as FooterStories from "../../components/footer/Footer.stories";
 import * as HeaderStories from "../../components/header/Header.stories";
+import * as HighlightStories from "../../components/highlight/Highlight.stories";
+import * as HoverCardStories from "../../components/hover-card/HoverCard.stories";
+import * as IconButtonStories from "../../components/icon-button/IconButton.stories";
+import * as IconStories from "../../components/icon/Icon.stories";
+import * as ImageStories from "../../components/image/Image.stories";
+import * as InputStories from "../../components/input/Input.stories";
 import * as AspectRatioStories from "../../components/Layout/AspectRatio/AspectRatio.stories";
 import * as BoxStories from "../../components/Layout/Box/Box.stories";
 import * as CenterStories from "../../components/Layout/Center/Center.stories";
@@ -42,8 +48,6 @@ import * as FlexStories from "../../components/Layout/Flex/Flex.stories";
 import * as GridStories from "../../components/Layout/Grid/Grid.stories";
 import * as SimpleGridStories from "../../components/Layout/SimpleGrid/SimpleGrid.stories";
 import * as StackStories from "../../components/Layout/Stack/Stack.stories";
-import * as IconStories from "../../components/media/icon/Icon.stories";
-import * as ImageStories from "../../components/media/image/Image.stories";
 import * as LinkOverlayStories from "../../components/navigasjon/link-overlay/LinkOverlay.stories";
 import * as LinkStories from "../../components/navigasjon/link/Link.stories";
 import * as MenuStories from "../../components/navigasjon/menu/Menu.stories";
@@ -55,8 +59,6 @@ import * as SearchAsyncStories from "../../components/search/search-async/Search
 import * as SearchStories from "../../components/search/search/Search.stories";
 import * as LogoStories from "../../components/sideelementer/logo/Logo.stories";
 import * as SeparatorStories from "../../components/sideelementer/separator/Separator.stories";
-import * as IconButtonStories from "../../components/skjemaelementer/icon-button/IconButton.stories";
-import * as InputStories from "../../components/skjemaelementer/Input/Input.stories";
 import * as NumberInputStories from "../../components/skjemaelementer/number-input/NumberInput.stories";
 import * as PinInputStories from "../../components/skjemaelementer/pin-input/PinInput.stories";
 import * as RadioStories from "../../components/skjemaelementer/radio/Radio.stories";
@@ -72,7 +74,6 @@ import * as SpinnerStories from "../../components/tilbakemelding/spinner/Spinner
 import * as StepperStories from "../../components/tilbakemelding/steps/Steps.stories";
 import * as ToastStories from "../../components/tilbakemelding/toaster/Toaster.stories";
 import * as HeadingStories from "../../design/heading/Heading.stories";
-import * as HighlightStories from "../../design/highlight/Highlight.stories";
 import * as TextStories from "../../design/text/Text.stories";
 import { ColorPalette } from "./Komponenter";
 
@@ -131,6 +132,11 @@ export const Fieldset = (_: ColorPalette) => {
 export const Footer = (_: ColorPalette) => {
   const { FooterInline } = composeStories(FooterStories);
   return <FooterInline />;
+};
+
+export const HoverCard = (colorPalette: ColorPalette) => {
+  const { Preview } = composeStories(HoverCardStories);
+  return <Preview colorPalette={colorPalette} />;
 };
 
 export const Icon = (colorPalette: ColorPalette) => {

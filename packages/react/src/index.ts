@@ -26,6 +26,7 @@ export * from "./footer";
 export * from "./footer-inline";
 export * from "./header";
 export * from "./hooks";
+export * from "./hover-card";
 export * from "./icon";
 export * from "./image";
 export * from "./input";

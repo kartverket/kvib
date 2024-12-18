@@ -1,0 +1,8 @@
+import { Canvas, Controls, Meta } from "@storybook/blocks";
+import * as ImageStories from "./Image.stories";
+import { ImageDocs } from "./ImageDocs";
+
+<Meta of={ImageStories} />
+<ImageDocs />
+<Canvas of={ImageStories.Preview} />
+<Controls of={ImageStories.Preview} />

@@ -8,7 +8,7 @@ const meta: Meta<typeof KvibIconButton> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "shown" },
+      canvas: { sourceState: "hidden" },
     },
   },
   args: {
