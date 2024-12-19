@@ -1,0 +1,8 @@
+import { Canvas, Controls, Meta } from "@storybook/blocks";
+import * as LogoStories from "./Logo.stories";
+import { LogoDocs } from "./LogoDocs";
+
+<Meta of={LogoStories} />
+<LogoDocs />
+<Canvas of={LogoStories.Preview} />
+<Controls of={LogoStories.Preview} />

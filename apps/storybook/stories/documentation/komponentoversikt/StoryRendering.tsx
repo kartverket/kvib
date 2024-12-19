@@ -19,8 +19,6 @@ import * as CollapsibleStories from "../../components/collapsible/Collapsible.st
 import * as ColorPickerStories from "../../components/color-picker/ColorPicker.stories";
 import * as ColorSwatchStories from "../../components/color-swatch/ColorSwatch.stories";
 import * as DataListStories from "../../components/data-list/DataList.stories";
-import * as KbdStories from "../../components/datavisning/kbd/Kbd.stories";
-import * as ListStories from "../../components/datavisning/list/List.stories";
 import * as StatStories from "../../components/datavisning/stat/Stat.stories";
 import * as TableStories from "../../components/datavisning/table/Table.stories";
 import * as TagStories from "../../components/datavisning/tag/Tag.stories";
@@ -40,6 +38,7 @@ import * as IconButtonStories from "../../components/icon-button/IconButton.stor
 import * as IconStories from "../../components/icon/Icon.stories";
 import * as ImageStories from "../../components/image/Image.stories";
 import * as InputStories from "../../components/input/Input.stories";
+import * as KbdStories from "../../components/kbd/Kbd.stories";
 import * as AspectRatioStories from "../../components/Layout/AspectRatio/AspectRatio.stories";
 import * as BoxStories from "../../components/Layout/Box/Box.stories";
 import * as CenterStories from "../../components/Layout/Center/Center.stories";
@@ -48,8 +47,10 @@ import * as FlexStories from "../../components/Layout/Flex/Flex.stories";
 import * as GridStories from "../../components/Layout/Grid/Grid.stories";
 import * as SimpleGridStories from "../../components/Layout/SimpleGrid/SimpleGrid.stories";
 import * as StackStories from "../../components/Layout/Stack/Stack.stories";
-import * as LinkOverlayStories from "../../components/navigasjon/link-overlay/LinkOverlay.stories";
-import * as LinkStories from "../../components/navigasjon/link/Link.stories";
+import * as LinkOverlayStories from "../../components/link-overlay/LinkOverlay.stories";
+import * as LinkStories from "../../components/link/Link.stories";
+import * as ListStories from "../../components/list/List.stories";
+import * as LogoStories from "../../components/logo/Logo.stories";
 import * as MenuStories from "../../components/navigasjon/menu/Menu.stories";
 import * as SkivNavStories from "../../components/navigasjon/skip-nav/SkipNav.stories";
 import * as TabsStories from "../../components/navigasjon/tabs/Tabs.stories";
@@ -57,7 +58,6 @@ import * as PopoverStories from "../../components/overlay/popover/Popover.storie
 import * as TooltipStories from "../../components/overlay/tooltip/Tooltip.stories";
 import * as SearchAsyncStories from "../../components/search/search-async/SearchAsync.stories";
 import * as SearchStories from "../../components/search/search/Search.stories";
-import * as LogoStories from "../../components/sideelementer/logo/Logo.stories";
 import * as SeparatorStories from "../../components/sideelementer/separator/Separator.stories";
 import * as NumberInputStories from "../../components/skjemaelementer/number-input/NumberInput.stories";
 import * as PinInputStories from "../../components/skjemaelementer/pin-input/PinInput.stories";
