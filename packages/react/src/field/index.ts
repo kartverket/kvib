@@ -8,8 +8,6 @@ export {
   FieldLabel,
   FieldRequiredIndicator,
   Field as KvibField,
-  useFieldContext,
-  useFieldStyles,
 } from "@chakra-ui/react";
 
 export type {

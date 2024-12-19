@@ -1,0 +1,8 @@
+import { Canvas, Controls, Meta } from "@storybook/blocks";
+import * as PaginationStories from "./Pagination.stories";
+import { PaginationDocs } from "./PaginationDocs";
+
+<Meta of={PaginationStories} />
+<PaginationDocs />
+<Canvas of={PaginationStories.Preview} />
+<Controls of={PaginationStories.Preview} />

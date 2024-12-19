@@ -36,6 +36,7 @@ export * from "./menu";
 export * from "./number-input";
 export * from "./other";
 export * from "./pagination";
+export * from "./password-input";
 export * from "./pin-input";
 export * from "./popover";
 export * from "./progress";

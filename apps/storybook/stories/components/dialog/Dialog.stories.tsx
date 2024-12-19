@@ -1,6 +1,7 @@
 import {
   Box,
   Button,
+  Dialog,
   DialogActionTrigger,
   DialogBody,
   DialogCloseTrigger,
@@ -10,13 +11,12 @@ import {
   DialogProps,
   DialogTitle,
   DialogTrigger,
-  Dialog as KvibModal,
 } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
-const meta: Meta<typeof KvibModal> = {
+const meta: Meta<typeof Dialog> = {
   title: "Komponenter/Dialog",
-  component: KvibModal,
+  component: Dialog,
 
   argTypes: {
     isOpen: {
@@ -205,12 +205,12 @@ const meta: Meta<typeof KvibModal> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof KvibModal>;
+type Story = StoryObj<typeof Dialog>;
 
 const ModalExample = ({ ...args }) => {
   return (
     <>
-      <KvibModal {...args}>
+      <Dialog {...args}>
         <DialogTrigger asChild>
           <Button colorPalette={args.colorPalette}>Åpne dialog</Button>
         </DialogTrigger>
@@ -237,7 +237,7 @@ const ModalExample = ({ ...args }) => {
           </DialogFooter>
           <DialogCloseTrigger />
         </DialogContent>
-      </KvibModal>
+      </Dialog>
     </>
   );
 };

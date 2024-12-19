@@ -1,0 +1,8 @@
+import { Canvas, Controls, Meta } from "@storybook/blocks";
+import * as MenuStories from "./Menu.stories";
+import { MenuDocs } from "./MenuDocs";
+
+<Meta of={MenuStories} />
+<MenuDocs />
+<Canvas of={MenuStories.Preview} />
+<Controls of={MenuStories.Preview} />

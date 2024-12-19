@@ -1,4 +1,11 @@
-import { Progress as KvibProgress, ProgressBar, ProgressLabel, ProgressProps, ProgressValueText } from "@kvib/react";
+import {
+  HStack,
+  Progress as KvibProgress,
+  ProgressBar,
+  ProgressProps,
+  ProgressRoot,
+  ProgressValueText,
+} from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibProgress> = {
@@ -97,12 +104,13 @@ export default meta;
 type Story = StoryObj<typeof KvibProgress>;
 
 export const Preview: Story = {
-  args: { value: 80 },
+  args: { value: 40, width: "12rem" },
   render: (args: ProgressProps) => (
-    <KvibProgress {...args} aria-label="progress bar">
-      <ProgressLabel />
-      <ProgressValueText />
-      <ProgressBar />
-    </KvibProgress>
+    <ProgressRoot defaultValue={40} {...args}>
+      <HStack gap="5">
+        <ProgressBar flex="1" />
+        <ProgressValueText>40%</ProgressValueText>
+      </HStack>
+    </ProgressRoot>
   ),
 };
