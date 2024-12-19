@@ -31,6 +31,15 @@ const meta: Meta<typeof Popover> = {
       control: "radio",
       options: ["gray", "blue", "green", "red"],
     },
+    modal: {
+      description:
+        "Whether the popover should be modal. When set to `true`: - interaction with outside elements will be disabled - only popover content will be visible to screen readers - scrolling is blocked - focus is trapped within the popover",
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
+      },
+      control: "boolean",
+    },
   },
 };
 
