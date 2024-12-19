@@ -1,5 +1,12 @@
 # @kvib/react
 
+## 5.0.12
+
+### Patch Changes
+
+- 7ed6941: Fiks for Breadcrumb som ikke brukte Flexbox
+- baa0907: Ny komponent: Hover Card
+
 ## 5.0.11
 
 ### Patch Changes
