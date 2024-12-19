@@ -58,6 +58,7 @@ import * as NumberInputStories from "../../components/number-input/NumberInput.s
 import * as PopoverStories from "../../components/overlay/popover/Popover.stories";
 import * as TooltipStories from "../../components/overlay/tooltip/Tooltip.stories";
 import * as PaginationStories from "../../components/pagination/Pagination.stories";
+import * as PasswordInputStories from "../../components/password-input/PasswordInput.stories";
 import * as SearchAsyncStories from "../../components/search/search-async/SearchAsync.stories";
 import * as SearchStories from "../../components/search/search/Search.stories";
 import * as SeparatorStories from "../../components/sideelementer/separator/Separator.stories";
@@ -147,6 +148,11 @@ export const Icon = (colorPalette: ColorPalette) => {
 
 export const Pagination = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(PaginationStories);
+  return <Preview colorPalette={colorPalette} />;
+};
+
+export const PasswordInput = (colorPalette: ColorPalette) => {
+  const { Preview } = composeStories(PasswordInputStories);
   return <Preview colorPalette={colorPalette} />;
 };
 

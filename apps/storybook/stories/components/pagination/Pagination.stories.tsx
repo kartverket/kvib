@@ -82,9 +82,5 @@ const PaginationExample = (args: PaginationProps) => (
 );
 
 export const Preview: Story = {
-  args: {
-    variant: "outline",
-    defaultValue: 3507,
-  },
   render: args => <PaginationExample {...args} />,
 };
