@@ -14,7 +14,7 @@ const meta: Meta<typeof KvibLinkOverlay> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "shown" },
+      canvas: { sourceState: "hidden" },
     },
   },
 };

@@ -1,0 +1,8 @@
+import { Canvas, Controls, Meta } from "@storybook/blocks";
+import * as ListStories from "./List.stories";
+import { ListDocs } from "./ListDocs";
+
+<Meta of={ListStories} />
+<ListDocs />
+<Canvas of={ListStories.Preview} sourceState="hidden" />
+<Controls of={ListStories.Preview} />
