@@ -1,5 +1,6 @@
 "use client";
 
+import { useSlotRecipe } from "@/hooks";
 import { For, SegmentGroup } from "@chakra-ui/react";
 import * as React from "react";
 
@@ -25,13 +26,17 @@ export const SegmentedControl = React.forwardRef<HTMLDivElement, SegmentedContro
     const { items, ...rest } = props;
     const data = React.useMemo(() => normalize(items), [items]);
 
+    const recipe = useSlotRecipe({ key: "segmentedControl" });
+    const styles = recipe({ ...rest });
+    const { root, item, itemText, indicator } = styles;
+
     return (
-      <SegmentGroup.Root ref={ref} {...rest}>
-        <SegmentGroup.Indicator />
+      <SegmentGroup.Root ref={ref} css={root} {...rest}>
+        <SegmentGroup.Indicator css={indicator} />
         <For each={data}>
-          {item => (
-            <SegmentGroup.Item key={item.value} value={item.value} disabled={item.disabled}>
-              <SegmentGroup.ItemText>{item.label}</SegmentGroup.ItemText>
+          {element => (
+            <SegmentGroup.Item key={element.value} value={element.value} disabled={element.disabled} css={item}>
+              <SegmentGroup.ItemText css={itemText}>{element.label}</SegmentGroup.ItemText>
               <SegmentGroup.ItemHiddenInput />
             </SegmentGroup.Item>
           )}

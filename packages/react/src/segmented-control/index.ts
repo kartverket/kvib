@@ -1,4 +1,4 @@
-export { SegmentedControl } from "@/components/ui/segmented-control";
+export { SegmentedControl, SegmentedControl as SegmentedControlRoot } from "@/components/ui/segmented-control";
 export type { SegmentedControlProps } from "@/components/ui/segmented-control";
 export {
   SegmentGroup as KvibSegmentGroup,
@@ -12,10 +12,6 @@ export {
   SegmentGroupPropsProvider,
   SegmentGroupRoot,
   SegmentGroupRootProvider,
-  useSegmentGroup,
-  useSegmentGroupContext,
-  useSegmentGroupItemContext,
-  useSegmentGroupStyles,
 } from "@chakra-ui/react";
 export type {
   SegmentGroupIndicatorProps,
