@@ -56,9 +56,9 @@ type Story = StoryObj<typeof List>;
 
 const ListExample = (args: ListProps) => (
   <List {...args}>
-    <ListItem>Item 1</ListItem>
-    <ListItem>Item 2</ListItem>
-    <ListItem>Item 3</ListItem>
+    <ListItem>Listeelement 1</ListItem>
+    <ListItem>Listeelement 2</ListItem>
+    <ListItem>Listeelement 3</ListItem>
   </List>
 );
 
