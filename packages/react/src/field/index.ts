@@ -1,5 +1,5 @@
-export { Field } from "@/components/ui/field";
-export type { FieldProps } from "@/components/ui/field";
+export { Field, Field as FieldRoot } from "@/components/ui/field";
+export type { FieldProps, FieldProps as FieldRootProps } from "@/components/ui/field";
 
 export {
   FieldErrorIcon,
@@ -16,7 +16,6 @@ export type {
   FieldHelperTextProps,
   FieldLabelProps,
   FieldRequiredIndicatorProps,
-  FieldRootProps,
 } from "@chakra-ui/react";
 
 /** @deprecated Bruk Field istedenfor */
