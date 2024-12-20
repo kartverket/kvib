@@ -2,4 +2,4 @@
 "@kvib/react": patch
 ---
 
-Ny komponent: Password Input
+Nye komponenter: Pagination, Password Input, Radio Card og Rating
