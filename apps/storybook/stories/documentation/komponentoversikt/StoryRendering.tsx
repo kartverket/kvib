@@ -380,7 +380,7 @@ export const Header = (_: ColorPalette) => {
   return <Preview />;
 };
 
-export const Divider = (colorPalette: ColorPalette) => {
+export const Separator = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(SeparatorStories);
   return <Preview colorPalette={colorPalette} />;
 };

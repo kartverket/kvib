@@ -40,7 +40,7 @@ export const Preview: Story = {
         </Button>
         <KvibShow {...args} when={count <= 5}>
           <Box p={4} bg="green.100" w="fit-content">
-            Denne boksen vises kun når telleren er større enn 5
+            Denne boksen vises kun når telleren er mindre enn 5
           </Box>
         </KvibShow>
         <KvibShow {...args} when={count > 5}>
