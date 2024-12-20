@@ -62,10 +62,12 @@ import * as PopoverStories from "../../components/popover/Popover.stories";
 import * as PortalStories from "../../components/portal/Portal.stories";
 import * as ProgressCircleStories from "../../components/progress-circle/ProgressCircle.stories";
 import * as ProgressStories from "../../components/progress/Progress.stories";
+import * as RadioCardStories from "../../components/radio-card/RadioCard.stories";
+import * as RadioStories from "../../components/radio/Radio.stories";
+import * as RatingStories from "../../components/rating/Rating.stories";
 import * as SearchAsyncStories from "../../components/search/search-async/SearchAsync.stories";
 import * as SearchStories from "../../components/search/search/Search.stories";
 import * as SeparatorStories from "../../components/sideelementer/separator/Separator.stories";
-import * as RadioStories from "../../components/skjemaelementer/radio/Radio.stories";
 import * as SelectStories from "../../components/skjemaelementer/select/Select.stories";
 import * as SliderStories from "../../components/skjemaelementer/slider/Slider.stories";
 import * as SwitchStories from "../../components/skjemaelementer/switch/Switch.stories";
@@ -153,6 +155,16 @@ export const Pagination = (colorPalette: ColorPalette) => {
 
 export const PasswordInput = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(PasswordInputStories);
+  return <Preview colorPalette={colorPalette} />;
+};
+
+export const RadioCard = (colorPalette: ColorPalette) => {
+  const { Preview } = composeStories(RadioCardStories);
+  return <Preview colorPalette={colorPalette} />;
+};
+
+export const Rating = (colorPalette: ColorPalette) => {
+  const { Preview } = composeStories(RatingStories);
   return <Preview colorPalette={colorPalette} />;
 };
 

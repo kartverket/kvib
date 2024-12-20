@@ -10,7 +10,7 @@ export const ProgressCircleDocs = () => (
   >
     <Tekstblokk tittel="Egnet til:">
       <Liste>
-        <Listeelement>vvisualisering av fremdrift i prosesser med kjent varighet.</Listeelement>
+        <Listeelement>visualisering av fremdrift i prosesser med kjent varighet.</Listeelement>
         <Listeelement>indikasjon av prosent fullført i en kompakt, sirkulær visning.</Listeelement>
         <Listeelement>bruk i dashboards eller steder med begrenset plass.</Listeelement>
       </Liste>

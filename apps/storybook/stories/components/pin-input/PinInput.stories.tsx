@@ -7,7 +7,7 @@ const meta: Meta<typeof KvibPinInput> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "shown" },
+      canvas: { sourceState: "hidden" },
     },
     a11y: {
       // This option disables all a11y checks on this story

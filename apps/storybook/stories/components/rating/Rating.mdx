@@ -1,0 +1,8 @@
+import { Canvas, Controls, Meta } from "@storybook/blocks";
+import * as RatingStories from "./Rating.stories";
+import { RatingDocs } from "./RatingDocs";
+
+<Meta of={RatingStories} />
+<RatingDocs />
+<Canvas of={RatingStories.Preview} />
+<Controls of={RatingStories.Preview} />

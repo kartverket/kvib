@@ -43,6 +43,8 @@ export * from "./progress";
 export * from "./progress-circle";
 export * from "./provider";
 export * from "./radio";
+export * from "./radio-card";
+export * from "./rating";
 export * from "./search";
 export * from "./search-async";
 export * from "./select";

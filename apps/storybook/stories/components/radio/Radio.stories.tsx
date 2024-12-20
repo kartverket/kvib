@@ -7,7 +7,7 @@ const meta: Meta<typeof RadioGroup> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "shown" },
+      canvas: { sourceState: "hidden" },
     },
   },
   argTypes: {
