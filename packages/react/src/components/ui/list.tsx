@@ -15,7 +15,7 @@ export type { ListRootProps };
 interface ListItemProps extends Merge<BoxProps, ChakraList.ItemProps> {}
 
 export const ListItem = React.forwardRef<HTMLLIElement, ListItemProps>(({ children, ...props }, ref) => (
-  <ChakraList.Item as="li" ref={ref} {...props}>
+  <ChakraList.Item as="li" marginLeft={"1em"} ref={ref} {...props}>
     {children}
   </ChakraList.Item>
 ));

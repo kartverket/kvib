@@ -7,6 +7,7 @@ export {
   FieldHelperText,
   FieldLabel,
   FieldRequiredIndicator,
+  FieldRoot,
   Field as KvibField,
 } from "@chakra-ui/react";
 
