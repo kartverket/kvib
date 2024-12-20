@@ -47,6 +47,7 @@ export * from "./radio-card";
 export * from "./rating";
 export * from "./search";
 export * from "./search-async";
+export * from "./segmented-control";
 export * from "./select";
 export * from "./select-native";
 export * from "./separator";
