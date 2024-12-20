@@ -2,7 +2,6 @@ import { composeStories } from "@storybook/react";
 import * as AccordionStories from "../../components/accordion/Accordion.stories";
 import * as ActionBarStories from "../../components/action-bar/ActionBar.stories";
 import * as AlertStories from "../../components/alert/Alert.stories";
-import * as PortalStories from "../../components/annet/portal/Portal.stories";
 import * as ShowHideStories from "../../components/annet/show/Show.stories";
 import * as VisuallyHiddenStories from "../../components/annet/visually-hidden/VisuallyHidden.stories";
 import * as AvatarStories from "../../components/avatar/Avatar.stories";
@@ -51,24 +50,29 @@ import * as LinkOverlayStories from "../../components/link-overlay/LinkOverlay.s
 import * as LinkStories from "../../components/link/Link.stories";
 import * as ListStories from "../../components/list/List.stories";
 import * as LogoStories from "../../components/logo/Logo.stories";
-import * as MenuStories from "../../components/navigasjon/menu/Menu.stories";
+import * as MenuStories from "../../components/menu/Menu.stories";
 import * as SkivNavStories from "../../components/navigasjon/skip-nav/SkipNav.stories";
 import * as TabsStories from "../../components/navigasjon/tabs/Tabs.stories";
-import * as PopoverStories from "../../components/overlay/popover/Popover.stories";
+import * as NumberInputStories from "../../components/number-input/NumberInput.stories";
 import * as TooltipStories from "../../components/overlay/tooltip/Tooltip.stories";
+import * as PaginationStories from "../../components/pagination/Pagination.stories";
+import * as PasswordInputStories from "../../components/password-input/PasswordInput.stories";
+import * as PinInputStories from "../../components/pin-input/PinInput.stories";
+import * as PopoverStories from "../../components/popover/Popover.stories";
+import * as PortalStories from "../../components/portal/Portal.stories";
+import * as ProgressCircleStories from "../../components/progress-circle/ProgressCircle.stories";
+import * as ProgressStories from "../../components/progress/Progress.stories";
+import * as RadioCardStories from "../../components/radio-card/RadioCard.stories";
+import * as RadioStories from "../../components/radio/Radio.stories";
+import * as RatingStories from "../../components/rating/Rating.stories";
 import * as SearchAsyncStories from "../../components/search/search-async/SearchAsync.stories";
 import * as SearchStories from "../../components/search/search/Search.stories";
 import * as SeparatorStories from "../../components/sideelementer/separator/Separator.stories";
-import * as NumberInputStories from "../../components/skjemaelementer/number-input/NumberInput.stories";
-import * as PinInputStories from "../../components/skjemaelementer/pin-input/PinInput.stories";
-import * as RadioStories from "../../components/skjemaelementer/radio/Radio.stories";
 import * as SelectStories from "../../components/skjemaelementer/select/Select.stories";
 import * as SliderStories from "../../components/skjemaelementer/slider/Slider.stories";
 import * as SwitchStories from "../../components/skjemaelementer/switch/Switch.stories";
 import * as TextAreaStories from "../../components/skjemaelementer/textarea/Textarea.stories";
 import * as TimepickerStories from "../../components/skjemaelementer/timepicker/Timepicker.stories";
-import * as ProgressCircleStories from "../../components/tilbakemelding/progress-circle/ProgressCircle.stories";
-import * as ProgressStories from "../../components/tilbakemelding/progress/Progress.stories";
 import * as SkeletonStories from "../../components/tilbakemelding/skeleton/Skeleton.stories";
 import * as SpinnerStories from "../../components/tilbakemelding/spinner/Spinner.stories";
 import * as StepperStories from "../../components/tilbakemelding/steps/Steps.stories";
@@ -141,6 +145,26 @@ export const HoverCard = (colorPalette: ColorPalette) => {
 
 export const Icon = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(IconStories);
+  return <Preview colorPalette={colorPalette} />;
+};
+
+export const Pagination = (colorPalette: ColorPalette) => {
+  const { Preview } = composeStories(PaginationStories);
+  return <Preview colorPalette={colorPalette} />;
+};
+
+export const PasswordInput = (colorPalette: ColorPalette) => {
+  const { Preview } = composeStories(PasswordInputStories);
+  return <Preview colorPalette={colorPalette} />;
+};
+
+export const RadioCard = (colorPalette: ColorPalette) => {
+  const { Preview } = composeStories(RadioCardStories);
+  return <Preview colorPalette={colorPalette} />;
+};
+
+export const Rating = (colorPalette: ColorPalette) => {
+  const { Preview } = composeStories(RatingStories);
   return <Preview colorPalette={colorPalette} />;
 };
 
