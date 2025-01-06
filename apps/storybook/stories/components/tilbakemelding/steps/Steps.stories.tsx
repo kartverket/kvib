@@ -23,14 +23,6 @@ const meta: Meta<typeof KvibStepper> = {
     },
   },
   argTypes: {
-    index: {
-      name: "index*",
-      description: "The active step index",
-      table: {
-        type: { summary: "number" },
-      },
-      control: "number",
-    },
     children: {
       description: "The children of the stepper. Must be Step components",
       table: {
