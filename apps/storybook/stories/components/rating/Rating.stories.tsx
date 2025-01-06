@@ -36,7 +36,7 @@ const meta: Meta<typeof Rating> = {
       control: "number",
     },
     colorPalette: {
-      description: "Color of the radio",
+      description: "Color palette of the component",
       table: {
         type: {
           summary: "green | blue | gray | red",

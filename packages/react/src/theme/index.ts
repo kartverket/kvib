@@ -33,6 +33,7 @@ import { pinInputTheme } from "./components/pin-input";
 import { popoverTheme } from "./components/popover";
 import { progressTheme } from "./components/progress";
 import { radioGroupTheme } from "./components/radio-group";
+import { segmentedControlTheme } from "./components/segmented-control";
 import { selectNativeTheme } from "./components/select-native";
 import { sliderTheme } from "./components/slider";
 import { spinnerTheme } from "./components/spinner";
@@ -114,6 +115,7 @@ const customConfig = defineConfig({
       popover: popoverTheme,
       progress: progressTheme,
       radioGroup: radioGroupTheme,
+      segmentedControl: segmentedControlTheme,
       slider: sliderTheme,
       steps: stepsTheme,
       switch: switchTheme,
