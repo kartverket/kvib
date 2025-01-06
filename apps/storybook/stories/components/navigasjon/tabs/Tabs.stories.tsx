@@ -59,7 +59,7 @@ const meta: Meta<typeof KvibTabs> = {
       options: ["line", "enclosed", "enclosed-colored", "soft-rounded", "solid-rounded", "unstyled"],
       control: { type: "radio" },
     },
-    isFitted: {
+    fitted: {
       description: "If true, tabs will stretch to width of the tablist.",
       table: {
         type: { summary: "Boolean" },
@@ -73,21 +73,6 @@ const meta: Meta<typeof KvibTabs> = {
         type: { summary: "String" },
       },
       control: "text",
-    },
-    index: {
-      description: "The index of the selected tab (in controlled mode)",
-      table: {
-        type: { summary: "Number" },
-      },
-      control: "number",
-    },
-    isDisabled: {
-      description: "If true, tabs will no longer be able to toggle.",
-      table: {
-        type: { summary: "Boolean" },
-        defaultValue: { summary: "false" },
-      },
-      control: { type: "boolean" },
     },
   },
 };
