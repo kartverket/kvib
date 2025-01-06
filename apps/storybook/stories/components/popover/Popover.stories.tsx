@@ -5,7 +5,6 @@ import {
   PopoverBody,
   PopoverCloseTrigger,
   PopoverContent,
-  PopoverProps,
   PopoverTitle,
   PopoverTrigger,
   Text,
@@ -44,10 +43,15 @@ const meta: Meta<typeof Popover> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof Popover>;
+
+/** Trenger eget interface for å arve fargepaletten til knappen i eksempelet */
+interface Props {
+  colorPalette: "gray" | "blue" | "green" | "red";
+}
+type Story = StoryObj<Props>;
 
 export const Preview: Story = {
-  render: (args: PopoverProps) => (
+  render: (args: Props) => (
     <Popover {...args}>
       <PopoverTrigger asChild>
         <Button size="sm" variant="outline" colorPalette={args.colorPalette}>
@@ -55,7 +59,7 @@ export const Preview: Story = {
         </Button>
       </PopoverTrigger>
       <PopoverContent>
-        <PopoverCloseTrigger size={"sm"} />
+        <PopoverCloseTrigger />
         <PopoverArrow />
         <PopoverBody>
           <PopoverTitle fontWeight="bold">Tittel</PopoverTitle>
