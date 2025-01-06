@@ -5,7 +5,6 @@ import {
   ActionBarSeparator,
   Button,
   Checkbox,
-  KvibActionBar,
   SwitchCheckedChangeDetails,
   useDisclosure,
 } from "@kvib/react";
@@ -23,9 +22,14 @@ const meta: Meta<typeof ActionBar> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof ActionBar>;
 
-const ActionBarExample = (props: KvibActionBar.ContentProps) => {
+/** Trenger eget interface for å arve fargepaletten til knappen i eksempelet */
+interface Props {
+  colorPalette: "gray" | "blue" | "green" | "red";
+}
+type Story = StoryObj<Props>;
+
+const ActionBarExample = (props: Props) => {
   const { open, onOpen, onClose } = useDisclosure();
 
   return (
