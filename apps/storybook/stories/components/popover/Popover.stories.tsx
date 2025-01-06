@@ -5,6 +5,7 @@ import {
   PopoverBody,
   PopoverCloseTrigger,
   PopoverContent,
+  PopoverProps,
   PopoverTitle,
   PopoverTrigger,
   Text,
@@ -45,7 +46,7 @@ const meta: Meta<typeof Popover> = {
 export default meta;
 
 /** Trenger eget interface for å arve fargepaletten til knappen i eksempelet */
-interface Props {
+interface Props extends PopoverProps {
   colorPalette: "gray" | "blue" | "green" | "red";
 }
 type Story = StoryObj<Props>;

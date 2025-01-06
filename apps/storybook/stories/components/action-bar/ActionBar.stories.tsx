@@ -1,6 +1,7 @@
 import {
   ActionBar,
   ActionBarContent,
+  ActionBarProps,
   ActionBarSelectionTrigger,
   ActionBarSeparator,
   Button,
@@ -24,7 +25,7 @@ const meta: Meta<typeof ActionBar> = {
 export default meta;
 
 /** Trenger eget interface for å arve fargepaletten til knappen i eksempelet */
-interface Props {
+interface Props extends ActionBarProps {
   colorPalette: "gray" | "blue" | "green" | "red";
 }
 type Story = StoryObj<Props>;
