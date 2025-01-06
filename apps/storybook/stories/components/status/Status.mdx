@@ -1,0 +1,8 @@
+import { Canvas, Controls, Meta, } from "@storybook/blocks";
+import * as StatusStories from "./Status.stories";
+import { StatusDocs } from "./StatusDocs";
+
+<Meta of={StatusStories} />
+<StatusDocs />
+<Canvas of={StatusStories.Preview} />
+<Controls of={StatusStories.Preview} />

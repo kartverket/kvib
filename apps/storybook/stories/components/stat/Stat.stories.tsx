@@ -7,7 +7,17 @@ const meta: Meta<typeof KvibStat> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "shown" },
+    },
+  },
+  argTypes: {
+    size: {
+      description: "The size of the Spinner",
+      table: {
+        type: { summary: " sm | md | lg" },
+        defaultValue: { summary: "md" },
+      },
+      options: ["sm", "md", "lg"],
+      control: { type: "radio" },
     },
   },
 };

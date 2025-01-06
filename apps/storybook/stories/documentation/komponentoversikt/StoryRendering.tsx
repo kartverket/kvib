@@ -17,7 +17,6 @@ import * as CollapsibleStories from "../../components/collapsible/Collapsible.st
 import * as ColorPickerStories from "../../components/color-picker/ColorPicker.stories";
 import * as ColorSwatchStories from "../../components/color-swatch/ColorSwatch.stories";
 import * as DataListStories from "../../components/data-list/DataList.stories";
-import * as StatStories from "../../components/datavisning/stat/Stat.stories";
 import * as TableStories from "../../components/datavisning/table/Table.stories";
 import * as TagStories from "../../components/datavisning/tag/Tag.stories";
 import * as DatepickerStories from "../../components/datepicker/Datepicker.stories";
@@ -50,7 +49,6 @@ import * as LinkStories from "../../components/link/Link.stories";
 import * as ListStories from "../../components/list/List.stories";
 import * as LogoStories from "../../components/logo/Logo.stories";
 import * as MenuStories from "../../components/menu/Menu.stories";
-import * as SkivNavStories from "../../components/navigasjon/skip-nav/SkipNav.stories";
 import * as TabsStories from "../../components/navigasjon/tabs/Tabs.stories";
 import * as NumberInputStories from "../../components/number-input/NumberInput.stories";
 import * as TooltipStories from "../../components/overlay/tooltip/Tooltip.stories";
@@ -71,11 +69,14 @@ import * as SelectStories from "../../components/select/Select.stories";
 import * as SeparatorStories from "../../components/separator/Separator.stories";
 import * as ShowHideStories from "../../components/show/Show.stories";
 import * as SkeletonStories from "../../components/skeleton/Skeleton.stories";
-import * as SliderStories from "../../components/skjemaelementer/slider/Slider.stories";
+import * as SkivNavStories from "../../components/skip-nav/SkipNav.stories";
 import * as SwitchStories from "../../components/skjemaelementer/switch/Switch.stories";
 import * as TextAreaStories from "../../components/skjemaelementer/textarea/Textarea.stories";
 import * as TimepickerStories from "../../components/skjemaelementer/timepicker/Timepicker.stories";
-import * as SpinnerStories from "../../components/tilbakemelding/spinner/Spinner.stories";
+import * as SliderStories from "../../components/slider/Slider.stories";
+import * as SpinnerStories from "../../components/spinner/Spinner.stories";
+import * as StatStories from "../../components/stat/Stat.stories";
+import * as StatusStories from "../../components/status/Status.stories";
 import * as StepperStories from "../../components/tilbakemelding/steps/Steps.stories";
 import * as ToastStories from "../../components/tilbakemelding/toaster/Toaster.stories";
 import * as HeadingStories from "../../design/heading/Heading.stories";
@@ -166,6 +167,11 @@ export const RadioCard = (colorPalette: ColorPalette) => {
 
 export const Rating = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(RatingStories);
+  return <Preview colorPalette={colorPalette} />;
+};
+
+export const Status = (colorPalette: ColorPalette) => {
+  const { Preview } = composeStories(StatusStories);
   return <Preview colorPalette={colorPalette} />;
 };
 

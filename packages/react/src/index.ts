@@ -56,6 +56,7 @@ export * from "./skip-nav";
 export * from "./slider";
 export * from "./spinner";
 export * from "./stat";
+export * from "./status";
 export * from "./steps";
 export * from "./switch";
 export * from "./table";
