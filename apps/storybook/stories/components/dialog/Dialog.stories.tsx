@@ -28,15 +28,6 @@ const meta: Meta<typeof Dialog> = {
       options: ["xs", "sm", "md", "lg", "xl", "full"],
       control: { type: "radio" },
     },
-    colorPalette: {
-      description: "The color palette of the component",
-      table: {
-        type: { summary: "green | blue | gray | red" },
-        defaultValue: { summary: "green" },
-      },
-      control: { type: "radio" },
-      options: ["green", "blue", "gray", "red"],
-    },
     open: {
       name: "open",
       description: "Whether the dialog is open",
@@ -111,14 +102,6 @@ const meta: Meta<typeof Dialog> = {
     },
     preventScroll: {
       description: "Whether the dialog should prevent scrolling on the body",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "true" },
-      },
-      control: "boolean",
-    },
-    centered: {
-      description: "Whether the dialog should be centered",
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "true" },

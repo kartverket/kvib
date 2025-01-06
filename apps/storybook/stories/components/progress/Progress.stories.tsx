@@ -31,8 +31,7 @@ const meta: Meta<typeof KvibProgress> = {
         type: "radio",
       },
     },
-
-    hasStripe: {
+    striped: {
       description: "If true, the progress bar will show stripe",
       table: {
         type: { summary: "boolean" },
@@ -40,8 +39,7 @@ const meta: Meta<typeof KvibProgress> = {
       },
       control: "boolean",
     },
-
-    isAnimated: {
+    animated: {
       description: "If true, and hasStripe is true, the stripes will be animated",
       table: {
         type: { summary: "boolean" },
@@ -49,16 +47,6 @@ const meta: Meta<typeof KvibProgress> = {
       },
       control: "boolean",
     },
-
-    isIndeterminate: {
-      description: "If true, the progress will be indeterminate and the value prop will be ignored",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
-      },
-      control: "boolean",
-    },
-
     max: {
       description: "The maximum value of the progress",
       table: {

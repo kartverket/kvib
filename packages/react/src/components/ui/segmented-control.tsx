@@ -1,6 +1,7 @@
 "use client";
 
 import { useSlotRecipe } from "@/hooks";
+import { segmentedControlTheme } from "@/theme/components/segmented-control";
 import { For, SegmentGroup } from "@chakra-ui/react";
 import * as React from "react";
 
@@ -26,7 +27,7 @@ export const SegmentedControl = React.forwardRef<HTMLDivElement, SegmentedContro
     const { items, ...rest } = props;
     const data = React.useMemo(() => normalize(items), [items]);
 
-    const recipe = useSlotRecipe({ key: "segmentedControl" });
+    const recipe = useSlotRecipe({ recipe: segmentedControlTheme });
     const styles = recipe({ ...rest });
     const { root, item, itemText, indicator } = styles;
 

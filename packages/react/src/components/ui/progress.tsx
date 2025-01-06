@@ -1,20 +1,18 @@
-import { BoxProps } from "@/layout";
 import { Progress as ChakraProgress } from "@chakra-ui/react";
 import * as React from "react";
-import { Merge } from "../utils";
 import { InfoTip } from "./toggle-tip";
 
-interface ProgressBarProps extends Merge<BoxProps, ChakraProgress.TrackProps> {}
+export const ProgressBar = React.forwardRef<HTMLDivElement, ChakraProgress.TrackProps>(
+  function ProgressBar(props, ref) {
+    return (
+      <ChakraProgress.Track {...props} ref={ref}>
+        <ChakraProgress.Range />
+      </ChakraProgress.Track>
+    );
+  },
+);
 
-export const ProgressBar = React.forwardRef<HTMLDivElement, ProgressBarProps>(function ProgressBar(props, ref) {
-  return (
-    <ChakraProgress.Track {...props} ref={ref}>
-      <ChakraProgress.Range />
-    </ChakraProgress.Track>
-  );
-});
-
-export interface ProgressLabelProps extends Merge<BoxProps, ChakraProgress.LabelProps> {
+export interface ProgressLabelProps extends ChakraProgress.LabelProps {
   info?: React.ReactNode;
 }
 

@@ -23,9 +23,14 @@ const meta: Meta<typeof ActionBar> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof ActionBar>;
 
-const ActionBarExample = (props: ActionBarProps) => {
+/** Trenger eget interface for å arve fargepaletten til knappen i eksempelet */
+interface Props extends ActionBarProps {
+  colorPalette: "gray" | "blue" | "green" | "red";
+}
+type Story = StoryObj<Props>;
+
+const ActionBarExample = (props: Props) => {
   const { open, onOpen, onClose } = useDisclosure();
 
   return (
@@ -42,8 +47,8 @@ const ActionBarExample = (props: ActionBarProps) => {
       >
         Vis Action Bar
       </Checkbox>
-      <ActionBar open={open} onClose={onClose} closeOnInteractOutside={false} {...props}>
-        <ActionBarContent>
+      <ActionBar open={open} onExitComplete={onClose} closeOnInteractOutside={false}>
+        <ActionBarContent {...props}>
           <ActionBarSelectionTrigger>2 elementer valgt</ActionBarSelectionTrigger>
           <ActionBarSeparator />
           <Button variant="outline" size="sm" colorPalette={props.colorPalette}>

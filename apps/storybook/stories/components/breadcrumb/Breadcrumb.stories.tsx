@@ -1,13 +1,9 @@
-import {
-  Breadcrumb as KvibBreadcrumb,
-  BreadcrumbCurrentLink as KvibBreadcrumbCurrentLink,
-  BreadcrumbLink as KvibBreadcrumbLink,
-} from "@kvib/react";
+import { Breadcrumb, BreadcrumbCurrentLink, BreadcrumbLink } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
-const meta: Meta<typeof KvibBreadcrumb> = {
+const meta: Meta<typeof Breadcrumb> = {
   title: "Komponenter/Breadcrumb",
-  component: KvibBreadcrumb,
+  component: Breadcrumb,
   parameters: {
     docs: {
       story: { inline: true },
@@ -66,14 +62,14 @@ const meta: Meta<typeof KvibBreadcrumb> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof KvibBreadcrumb>;
+type Story = StoryObj<typeof Breadcrumb>;
 
 export const Preview: Story = {
   render: args => (
-    <KvibBreadcrumb {...args}>
-      <KvibBreadcrumbLink href="#">Home</KvibBreadcrumbLink>
-      <KvibBreadcrumbLink href="#">Docs</KvibBreadcrumbLink>
-      <KvibBreadcrumbCurrentLink href="#">Breadcrumb</KvibBreadcrumbCurrentLink>
-    </KvibBreadcrumb>
+    <Breadcrumb {...args}>
+      <BreadcrumbLink href="#">Home</BreadcrumbLink>
+      <BreadcrumbLink href="#">Docs</BreadcrumbLink>
+      <BreadcrumbCurrentLink>Breadcrumb</BreadcrumbCurrentLink>
+    </Breadcrumb>
   ),
 };

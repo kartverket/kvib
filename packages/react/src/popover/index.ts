@@ -12,7 +12,6 @@ export {
   PopoverTrigger,
 } from "@/components/ui/popover";
 
-export type { PopoverTitleProps } from "@/components/ui/popover";
 export { Popover as KvibPopover } from "@chakra-ui/react";
 
 export type {

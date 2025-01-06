@@ -3,7 +3,7 @@ export {
   NumberInputField,
   NumberInputLabel,
   NumberInputRoot,
-  NumberInputScruber,
+  NumberInputScrubber,
 } from "@/components/ui/number-input";
 
 export {

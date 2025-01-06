@@ -20,46 +20,6 @@ const meta: Meta<typeof KvibSelect> = {
     },
   },
   argTypes: {
-    errorBorderColor: {
-      description: "The border color when the select is invalid. Use color keys in `theme.colors`",
-      table: {
-        type: { summary: "string" },
-      },
-      control: "text",
-    },
-
-    focusBorderColor: {
-      description: "The border color when the select is focused. Use color keys in `theme.colors`",
-      table: {
-        type: { summary: "string" },
-      },
-      control: "text",
-    },
-
-    icon: {
-      description: "The icon element to use in the select",
-      table: {
-        type: { summary: "ReactElement<any, string | JSXElementConstructor<any>>" },
-      },
-      control: "text",
-    },
-
-    iconColor: {
-      description: "The color of the icon",
-      table: {
-        type: { summary: "string" },
-      },
-      control: "text",
-    },
-
-    iconSize: {
-      description: "The size (width and height) of the icon",
-      table: {
-        type: { summary: "string" },
-      },
-      control: "text",
-    },
-
     disabled: {
       description: "",
       table: {
@@ -68,7 +28,6 @@ const meta: Meta<typeof KvibSelect> = {
       },
       control: "boolean",
     },
-
     invalid: {
       description:
         "If true, the form control will be invalid. This has 2 side effects: - The FormLabel and FormErrorIcon will have `data-invalid` set to true - The form element (e.g, Input) will have `aria-invalid` set to true",
@@ -78,7 +37,6 @@ const meta: Meta<typeof KvibSelect> = {
       },
       control: "boolean",
     },
-
     required: {
       description:
         "If true, the form control will be required. This has 2 side effects: - The FormLabel will show a required indicator - The form element (e.g, Input) will have `aria-required` set to true",
@@ -88,15 +46,6 @@ const meta: Meta<typeof KvibSelect> = {
       },
       control: "boolean",
     },
-
-    rootProps: {
-      description: "Props to forward to the root div element",
-      table: {
-        type: { summary: "RootProps" },
-      },
-      control: "text",
-    },
-
     size: {
       description: "The size of the Select",
       table: {
@@ -106,7 +55,6 @@ const meta: Meta<typeof KvibSelect> = {
       options: ["lg", "md", "sm", "xs"],
       control: "radio",
     },
-
     variant: {
       description: "The variant of the Select",
       table: {

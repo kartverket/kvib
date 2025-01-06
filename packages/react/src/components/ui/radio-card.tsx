@@ -1,17 +1,14 @@
-import { BoxProps } from "@/layout";
 import { RadioCard } from "@chakra-ui/react";
 import * as React from "react";
-import { Merge } from "../utils";
 
-interface RadioCardItemProps extends Merge<BoxProps, RadioCard.ItemProps> {
-  inputProps?: React.InputHTMLAttributes<HTMLInputElement>;
+interface RadioCardItemProps extends RadioCard.ItemProps {
+  icon?: React.ReactElement;
   label?: React.ReactNode;
   description?: React.ReactNode;
   addon?: React.ReactNode;
-  icon?: React.ReactNode;
-  indicator?: React.ReactNode;
-  indicatorPlacement?: "start" | "inside" | "end";
-  value: string;
+  indicator?: React.ReactNode | null;
+  indicatorPlacement?: "start" | "end" | "inside";
+  inputProps?: React.InputHTMLAttributes<HTMLInputElement>;
 }
 
 export const RadioCardItem = React.forwardRef<HTMLInputElement, RadioCardItemProps>(function RadioCardItem(props, ref) {

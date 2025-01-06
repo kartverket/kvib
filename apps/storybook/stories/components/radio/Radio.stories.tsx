@@ -28,12 +28,6 @@ const meta: Meta<typeof RadioGroup> = {
       defaultValue: { summary: "false" },
       control: { type: "boolean" },
     },
-    inputProps: {
-      description: "Additional props forwarded to the input element",
-      table: {
-        type: { summary: "" },
-      },
-    },
     disabled: {
       description: "If true, the radio will be disabled",
       table: {
@@ -49,41 +43,8 @@ const meta: Meta<typeof RadioGroup> = {
       },
       control: { type: "text" },
     },
-    focusable: {
-      description: "If true, and isDisabled is true, the radio will remain focusable but not interactive",
-      table: {
-        type: { summary: "boolean" },
-      },
-      defaultValue: { summary: "false" },
-      control: { type: "boolean" },
-    },
-    checked: {
-      description:
-        "If true, the radio will be set as checked. You need to pass onChange to update its value (since it is controlled)",
-      table: {
-        type: { summary: "boolean" },
-      },
-      defaultValue: { summary: "false" },
-      control: { type: "boolean" },
-    },
-    invalid: {
-      description: "If true, the radio will be invalid. Sets 'aria-invalid' to true",
-      table: {
-        type: { summary: "boolean" },
-      },
-      defaultValue: { summary: "false" },
-      control: { type: "boolean" },
-    },
     readOnly: {
       description: "If true, the radio will be read-only",
-      table: {
-        type: { summary: "boolean" },
-      },
-      defaultValue: { summary: "false" },
-      control: { type: "boolean" },
-    },
-    required: {
-      description: "If true, the radio button will be required. Sets 'aria-required' to true",
       table: {
         type: { summary: "boolean" },
       },

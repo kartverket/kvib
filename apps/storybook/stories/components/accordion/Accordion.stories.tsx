@@ -113,7 +113,9 @@ export const Preview: Story = {
   ),
 };
 
-export const AccordionItem: Story = {
+type AccordionItemStory = StoryObj<KvibAccordion.ItemProps>;
+
+export const AccordionItem: AccordionItemStory = {
   argTypes: {
     value: {
       description: "The value of the accordion item.",
@@ -134,7 +136,7 @@ export const AccordionItem: Story = {
     <KvibAccordion.Root>
       <KvibAccordion.Item {...args}>
         <KvibAccordion.ItemTrigger>Klikk meg</KvibAccordion.ItemTrigger>
-        <KvibAccordion.ItemContent>Tekst skrift tekst</KvibAccordion.ItemContent>
+        <KvibAccordion.ItemContent>Innhold i AccordionItem</KvibAccordion.ItemContent>
       </KvibAccordion.Item>
     </KvibAccordion.Root>
   ),
