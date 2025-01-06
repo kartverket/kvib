@@ -18,4 +18,5 @@ export type {
   CollapsibleRootProps as CollapsibleProps,
   CollapsibleRootProps,
   CollapsibleRootProviderProps,
+  CollapsibleTriggerProps,
 } from "@chakra-ui/react";
