@@ -51,7 +51,7 @@ const ActionBarExample = (props: Props) => {
         <ActionBarContent {...props}>
           <ActionBarSelectionTrigger>2 elementer valgt</ActionBarSelectionTrigger>
           <ActionBarSeparator />
-          <Button variant="outline" size="sm" colorPalette={props.colorPalette as "green" | "blue" | "gray" | "red"}>
+          <Button variant="outline" size="sm" colorPalette={props.colorPalette}>
             Del
           </Button>
         </ActionBarContent>
