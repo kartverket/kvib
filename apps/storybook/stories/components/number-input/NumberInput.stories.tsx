@@ -39,21 +39,6 @@ const meta: Meta<typeof KvibNumberInput> = {
       },
       control: "boolean",
     },
-    precision: {
-      description: "The number of decimal points used to round the value.",
-      table: {
-        type: { summary: "number" },
-      },
-      control: "text",
-    },
-    keepWithinRange: {
-      description: "Toggles if value should be kept within the range of max and min.",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
-      },
-      control: "boolean",
-    },
     step: {
       description: "The step used to increment of decrement the value.",
       table: {
@@ -127,7 +112,7 @@ type NumberInputStory = StoryObj<typeof KvibNumberInput>;
 export const Preview: NumberInputStory = {
   args: {
     variant: "outline",
-    defaultValue: 3507,
+    defaultValue: "3507",
   },
   render: (args: NumberInputProps) => (
     <KvibNumberInput {...args}>
