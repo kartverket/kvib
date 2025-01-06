@@ -13,8 +13,6 @@ export {
 
 export { CollapsibleTrigger } from "@/components/ui/collapsible";
 
-export type { CollapsibleTriggerProps } from "@/components/ui/collapsible";
-
 export type {
   CollapsibleContentProps,
   CollapsibleRootProps as CollapsibleProps,
