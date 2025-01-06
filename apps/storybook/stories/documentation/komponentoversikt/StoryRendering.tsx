@@ -2,7 +2,6 @@ import { composeStories } from "@storybook/react";
 import * as AccordionStories from "../../components/accordion/Accordion.stories";
 import * as ActionBarStories from "../../components/action-bar/ActionBar.stories";
 import * as AlertStories from "../../components/alert/Alert.stories";
-import * as ShowHideStories from "../../components/annet/show/Show.stories";
 import * as VisuallyHiddenStories from "../../components/annet/visually-hidden/VisuallyHidden.stories";
 import * as AvatarStories from "../../components/avatar/Avatar.stories";
 import * as BadgeStories from "../../components/badge/Badge.stories";
@@ -65,15 +64,17 @@ import * as ProgressStories from "../../components/progress/Progress.stories";
 import * as RadioCardStories from "../../components/radio-card/RadioCard.stories";
 import * as RadioStories from "../../components/radio/Radio.stories";
 import * as RatingStories from "../../components/rating/Rating.stories";
-import * as SearchAsyncStories from "../../components/search/search-async/SearchAsync.stories";
-import * as SearchStories from "../../components/search/search/Search.stories";
-import * as SeparatorStories from "../../components/sideelementer/separator/Separator.stories";
-import * as SelectStories from "../../components/skjemaelementer/select/Select.stories";
+import * as SearchAsyncStories from "../../components/search-async/SearchAsync.stories";
+import * as SearchStories from "../../components/search/Search.stories";
+import * as SelectNativeStories from "../../components/select-native/SelectNative.stories";
+import * as SelectStories from "../../components/select/Select.stories";
+import * as SeparatorStories from "../../components/separator/Separator.stories";
+import * as ShowHideStories from "../../components/show/Show.stories";
+import * as SkeletonStories from "../../components/skeleton/Skeleton.stories";
 import * as SliderStories from "../../components/skjemaelementer/slider/Slider.stories";
 import * as SwitchStories from "../../components/skjemaelementer/switch/Switch.stories";
 import * as TextAreaStories from "../../components/skjemaelementer/textarea/Textarea.stories";
 import * as TimepickerStories from "../../components/skjemaelementer/timepicker/Timepicker.stories";
-import * as SkeletonStories from "../../components/tilbakemelding/skeleton/Skeleton.stories";
 import * as SpinnerStories from "../../components/tilbakemelding/spinner/Spinner.stories";
 import * as StepperStories from "../../components/tilbakemelding/steps/Steps.stories";
 import * as ToastStories from "../../components/tilbakemelding/toaster/Toaster.stories";
@@ -192,6 +193,11 @@ export const Input = (colorPalette: ColorPalette) => {
 
 export const Select = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(SelectStories);
+  return <Preview colorPalette={colorPalette} />;
+};
+
+export const SelectNative = (colorPalette: ColorPalette) => {
+  const { Preview } = composeStories(SelectNativeStories);
   return <Preview colorPalette={colorPalette} />;
 };
 

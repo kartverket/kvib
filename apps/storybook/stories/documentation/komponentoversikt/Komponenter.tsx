@@ -234,6 +234,12 @@ export const Komponenter: (colorPalette: ColorPalette) => Record<string, Kategor
         story: Select(colorPalette),
         link: "select",
       },
+      SelectNative: {
+        navn: "SelectNative",
+        beskrivelse: "SelectNative",
+        story: Select(colorPalette),
+        link: "select-native",
+      },
       Textarea: {
         navn: "Textarea",
         beskrivelse: "Textarea",

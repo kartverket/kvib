@@ -113,9 +113,13 @@ const meta: Meta<typeof Dialog> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof Dialog>;
+/** Trenger eget interface for å arve fargepaletten til knappen i eksempelet */
+interface Props extends DialogProps {
+  colorPalette: "gray" | "blue" | "green" | "red";
+}
+type Story = StoryObj<Props>;
 
-const DialogExample = ({ ...args }) => {
+const DialogExample = (args: Props) => {
   return (
     <>
       <Dialog {...args}>
@@ -151,7 +155,7 @@ const DialogExample = ({ ...args }) => {
 };
 
 export const Preview: Story = {
-  render: (args: DialogProps) => <DialogExample {...args} />,
+  render: args => <DialogExample {...args} />,
   parameters: {
     docs: {
       source: {

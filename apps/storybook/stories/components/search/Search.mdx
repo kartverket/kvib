@@ -1,0 +1,8 @@
+import { Canvas, Controls, Meta } from "@storybook/blocks";
+import * as SearchStories from "./Search.stories";
+import { SearchDocs } from "./SearchDocs";
+
+<Meta of={SearchStories} />
+<SearchDocs />
+<Canvas of={SearchStories.Preview} />
+<Controls of={SearchStories.Preview} />

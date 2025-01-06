@@ -1,0 +1,8 @@
+import { Canvas, Controls, Meta } from "@storybook/blocks";
+import * as SkeletonStories from "./Skeleton.stories";
+import { SkeletonDocs } from "./SkeletonDocs";
+
+<Meta of={SkeletonStories} />
+<SkeletonDocs />
+<Canvas of={SkeletonStories.Preview} className="fullwidth" />
+<Controls of={SkeletonStories.Preview} />

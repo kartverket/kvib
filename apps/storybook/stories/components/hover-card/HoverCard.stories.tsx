@@ -79,9 +79,14 @@ const meta: Meta<typeof HoverCard> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof HoverCard>;
 
-const HoverCardExample = (props: HoverCardProps) => (
+/** Trenger eget interface for å arve fargepaletten til knappen i eksempelet */
+interface Props extends HoverCardProps {
+  colorPalette: "green" | "blue" | "gray" | "red";
+}
+type Story = StoryObj<Props>;
+
+const HoverCardExample = (props: Props) => (
   <HoverCard {...props}>
     <HoverCardTrigger asChild>
       <Link href="#">Hover for å vise et kort</Link>

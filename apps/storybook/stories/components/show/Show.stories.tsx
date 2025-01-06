@@ -8,7 +8,6 @@ const meta: Meta<typeof KvibShow> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "shown" },
     },
   },
   argTypes: {

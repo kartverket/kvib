@@ -40,7 +40,6 @@ const meta: Meta<typeof KvibSearch> = {
       options: ["outline", "filled", "flushed", "unstyled"],
       control: { type: "radio" },
     },
-
     searchButton: {
       description: "Add search button to input",
       table: {
@@ -56,14 +55,6 @@ const meta: Meta<typeof KvibSearch> = {
       },
       options: ["gray", "red", "green", "blue"],
       control: { type: "radio" },
-    },
-    invalid: {
-      description: "Toggles if input should be invalid",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
-      },
-      control: "boolean",
     },
     disabled: {
       description: "Toggles if input should be disabled",
@@ -98,20 +89,12 @@ const meta: Meta<typeof KvibSearch> = {
       control: "text",
     },
   },
-  args: {},
 };
 
 export default meta;
 type SearchStory = StoryObj<typeof KvibSearch>;
 
 export const Preview: SearchStory = {
-  parameters: {
-    docs: {
-      canvas: {
-        sourceState: "shown",
-      },
-    },
-  },
   args: {
     placeholder: "Søk her...",
     variant: "outline",

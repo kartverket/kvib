@@ -1,0 +1,8 @@
+import { Canvas, Controls, Meta, } from "@storybook/blocks";
+import * as SelectStories from "./Select.stories";
+import { SelectDocs } from "./SelectDocs";
+
+<Meta of={SelectStories} />
+<SelectDocs />
+<Canvas of={SelectStories.Preview} />
+<Controls of={SelectStories.Preview} />

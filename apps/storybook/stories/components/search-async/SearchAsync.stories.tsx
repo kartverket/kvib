@@ -137,13 +137,5 @@ type Fruit = { label: string; value: string };
 type Story = StoryObj<typeof KvibSearchAsync<Fruit>>;
 
 export const Preview: Story = {
-  parameters: {
-    docs: {
-      canvas: {
-        sourceState: "shown",
-      },
-    },
-  },
-
   render: args => <KvibSearchAsync {...args} />,
 };
