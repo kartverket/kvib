@@ -1,11 +1,11 @@
 import {
   ActionBar,
   ActionBarContent,
-  ActionBarProps,
   ActionBarSelectionTrigger,
   ActionBarSeparator,
   Button,
   Checkbox,
+  KvibActionBar,
   SwitchCheckedChangeDetails,
   useDisclosure,
 } from "@kvib/react";
@@ -25,7 +25,7 @@ const meta: Meta<typeof ActionBar> = {
 export default meta;
 type Story = StoryObj<typeof ActionBar>;
 
-const ActionBarExample = (props: ActionBarProps) => {
+const ActionBarExample = (props: KvibActionBar.ContentProps) => {
   const { open, onOpen, onClose } = useDisclosure();
 
   return (
@@ -42,11 +42,11 @@ const ActionBarExample = (props: ActionBarProps) => {
       >
         Vis Action Bar
       </Checkbox>
-      <ActionBar open={open} onClose={onClose} closeOnInteractOutside={false} {...props}>
-        <ActionBarContent>
+      <ActionBar open={open} onExitComplete={onClose} closeOnInteractOutside={false}>
+        <ActionBarContent {...props}>
           <ActionBarSelectionTrigger>2 elementer valgt</ActionBarSelectionTrigger>
           <ActionBarSeparator />
-          <Button variant="outline" size="sm" colorPalette={props.colorPalette}>
+          <Button variant="outline" size="sm" colorPalette={props.colorPalette as "green" | "blue" | "gray" | "red"}>
             Del
           </Button>
         </ActionBarContent>

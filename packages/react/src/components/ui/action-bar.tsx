@@ -1,11 +1,8 @@
-import { ButtonProps } from "@/button";
-import { BoxProps } from "@/layout";
 import { ActionBar, Portal } from "@chakra-ui/react";
 import * as React from "react";
-import { Merge } from "../utils";
 import { CloseButton } from "./close-button";
 
-interface ActionBarContentProps extends Merge<BoxProps, ActionBar.ContentProps> {
+interface ActionBarContentProps extends ActionBar.ContentProps {
   portalled?: boolean;
   portalRef?: React.RefObject<HTMLElement>;
 }
@@ -26,11 +23,7 @@ export const ActionBarContent = React.forwardRef<HTMLDivElement, ActionBarConten
   },
 );
 
-interface ActionBarCloseTriggerProps extends Merge<ButtonProps, ActionBar.CloseTriggerProps> {
-  colorPalette?: string;
-}
-
-export const ActionBarCloseTrigger = React.forwardRef<HTMLButtonElement, ActionBarCloseTriggerProps>(
+export const ActionBarCloseTrigger = React.forwardRef<HTMLButtonElement, ActionBar.CloseTriggerProps>(
   function ActionBarCloseTrigger(props, ref) {
     return (
       <ActionBar.CloseTrigger {...props} asChild ref={ref}>
