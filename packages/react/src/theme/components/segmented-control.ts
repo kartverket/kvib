@@ -8,10 +8,8 @@ export const segmentedControlTheme = defineSlotRecipe({
     root: {
       colorPalette: "green",
     },
-    item: {
-      "&[data-state=checked][data-ssr]": {
-        bg: "white", // TODO: rett opp i denne som får feil farge
-      },
+    indicator: {
+      bg: "white",
     },
   },
 });
