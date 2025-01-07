@@ -1,0 +1,4 @@
+import{j as e}from"./index-D6_wGsWO.js";import{useMDXComponents as s}from"./index-BGZZYR5m.js";import{ae as i,af as a,ag as m}from"./index-S1mwQsH7.js";import{S as p,P as r}from"./Skeleton.stories-CU-r9jSV.js";import{D as l}from"./Dokumentasjonsside-B1aQ9uEg.js";import"./index-C7I6S4tq.js";import"./index-EN4ZLXvn.js";import"./iframe-F5qzHdRI.js";import"../sb-preview/runtime.js";import"./index-CHGET4sZ.js";import"./index-DrFu-skq.js";import"./index-DlM2nGIA.js";const f=()=>e.jsx(l,{tittel:"Skeleton",beskrivelse:"Vi bruker Skeleton for å vise at innhold lastes inn. Dette gir brukeren en indikasjon på at data er på vei, og forbedrer opplevelsen ved å redusere opplevd ventetid."});function n(t){return e.jsxs(e.Fragment,{children:[e.jsx(i,{of:p}),`
+`,e.jsx(f,{}),`
+`,e.jsx(a,{of:r,className:"fullwidth"}),`
+`,e.jsx(m,{of:r})]})}function g(t={}){const{wrapper:o}={...s(),...t.components};return o?e.jsx(o,{...t,children:e.jsx(n,{...t})}):n()}export{g as default};

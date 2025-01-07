@@ -1,0 +1,5 @@
+import{j as r}from"./index-D6_wGsWO.js";import{bn as a,bo as l}from"./index-DlM2nGIA.js";const c={title:"Komponenter/Progress Circle",component:a,parameters:{docs:{story:{inline:!0},canvas:{sourceState:"hidden"}}},args:{value:80,colorPalette:"green"},argTypes:{value:{table:{type:{summary:"number"}},defaultValue:{summary:80},control:"number"},colorPalette:{table:{type:{summary:"green | blue"},defaultValue:{summary:"green"}},control:"radio",options:["green","blue"]}}},e={render:n=>r.jsx(a,{...n,children:r.jsx(l,{})})};var o,s,t;e.parameters={...e.parameters,docs:{...(o=e.parameters)==null?void 0:o.docs,source:{originalSource:`{
+  render: (args: ProgressCircleProps) => <ProgressCircle {...args}>
+      <ProgressCircleRing />
+    </ProgressCircle>
+}`,...(t=(s=e.parameters)==null?void 0:s.docs)==null?void 0:t.source}}};const i=["Preview"],g=Object.freeze(Object.defineProperty({__proto__:null,Preview:e,__namedExportsOrder:i,default:c},Symbol.toStringTag,{value:"Module"}));export{g as P,e as a};
