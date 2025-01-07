@@ -1,0 +1,8 @@
+import { Canvas, Controls, Meta, Source } from "@storybook/blocks";
+import * as BleedStories from "./Bleed.stories";
+import { BleedDocs } from "./BleedDocs";
+
+<Meta of={BleedStories} />
+<BleedDocs />
+<Canvas of={BleedStories.Preview} />
+<Controls of={BleedStories.Preview} />

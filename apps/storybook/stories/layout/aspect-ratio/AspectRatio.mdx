@@ -1,0 +1,8 @@
+import { Canvas, Controls, Meta, } from "@storybook/blocks";
+import * as AspectRatioStories from "./AspectRatio.stories";
+import { AspectRatioDocs } from "./AspectRatioDocs";
+
+<Meta of={AspectRatioStories} />
+<AspectRatioDocs />
+<Canvas of={AspectRatioStories.Preview} />
+<Controls of={AspectRatioStories.Preview} />

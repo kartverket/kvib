@@ -34,14 +34,6 @@ import * as IconStories from "../../components/icon/Icon.stories";
 import * as ImageStories from "../../components/image/Image.stories";
 import * as InputStories from "../../components/input/Input.stories";
 import * as KbdStories from "../../components/kbd/Kbd.stories";
-import * as AspectRatioStories from "../../components/Layout/AspectRatio/AspectRatio.stories";
-import * as BoxStories from "../../components/Layout/Box/Box.stories";
-import * as CenterStories from "../../components/Layout/Center/Center.stories";
-import * as ContainerStories from "../../components/Layout/Container/Container.stories";
-import * as FlexStories from "../../components/Layout/Flex/Flex.stories";
-import * as GridStories from "../../components/Layout/Grid/Grid.stories";
-import * as SimpleGridStories from "../../components/Layout/SimpleGrid/SimpleGrid.stories";
-import * as StackStories from "../../components/Layout/Stack/Stack.stories";
 import * as LinkOverlayStories from "../../components/link-overlay/LinkOverlay.stories";
 import * as LinkStories from "../../components/link/Link.stories";
 import * as ListStories from "../../components/list/List.stories";
@@ -82,6 +74,14 @@ import * as ToggleTipStories from "../../components/toggle-tip/ToggleTip.stories
 import * as TooltipStories from "../../components/tooltip/Tooltip.stories";
 import * as HeadingStories from "../../design/heading/Heading.stories";
 import * as TextStories from "../../design/text/Text.stories";
+import * as AspectRatioStories from "../../layout/aspect-ratio/AspectRatio.stories";
+import * as BoxStories from "../../layout/Box/Box.stories";
+import * as CenterStories from "../../layout/Center/Center.stories";
+import * as ContainerStories from "../../layout/Container/Container.stories";
+import * as FlexStories from "../../layout/Flex/Flex.stories";
+import * as GridStories from "../../layout/Grid/Grid.stories";
+import * as SimpleGridStories from "../../layout/SimpleGrid/SimpleGrid.stories";
+import * as StackStories from "../../layout/Stack/Stack.stories";
 import { ColorPalette } from "./Komponenter";
 
 // Komponenter
