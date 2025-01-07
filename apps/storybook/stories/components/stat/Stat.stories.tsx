@@ -11,7 +11,7 @@ const meta: Meta<typeof KvibStat> = {
   },
   argTypes: {
     size: {
-      description: "The size of the Spinner",
+      description: "The size of the component",
       table: {
         type: { summary: " sm | md | lg" },
         defaultValue: { summary: "md" },

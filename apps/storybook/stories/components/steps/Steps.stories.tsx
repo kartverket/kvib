@@ -19,15 +19,6 @@ const meta: Meta<typeof KvibStepper> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "shown" },
-    },
-  },
-  argTypes: {
-    children: {
-      description: "The children of the stepper. Must be Step components",
-      table: {
-        type: { summary: "ReactElement[]" },
-      },
     },
   },
 };

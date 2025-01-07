@@ -70,14 +70,14 @@ import * as SeparatorStories from "../../components/separator/Separator.stories"
 import * as ShowHideStories from "../../components/show/Show.stories";
 import * as SkeletonStories from "../../components/skeleton/Skeleton.stories";
 import * as SkivNavStories from "../../components/skip-nav/SkipNav.stories";
-import * as SwitchStories from "../../components/skjemaelementer/switch/Switch.stories";
 import * as TextAreaStories from "../../components/skjemaelementer/textarea/Textarea.stories";
 import * as TimepickerStories from "../../components/skjemaelementer/timepicker/Timepicker.stories";
 import * as SliderStories from "../../components/slider/Slider.stories";
 import * as SpinnerStories from "../../components/spinner/Spinner.stories";
 import * as StatStories from "../../components/stat/Stat.stories";
 import * as StatusStories from "../../components/status/Status.stories";
-import * as StepperStories from "../../components/tilbakemelding/steps/Steps.stories";
+import * as StepperStories from "../../components/steps/Steps.stories";
+import * as SwitchStories from "../../components/switch/Switch.stories";
 import * as ToastStories from "../../components/tilbakemelding/toaster/Toaster.stories";
 import * as HeadingStories from "../../design/heading/Heading.stories";
 import * as TextStories from "../../design/text/Text.stories";
