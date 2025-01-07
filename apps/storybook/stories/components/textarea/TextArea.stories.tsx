@@ -2,7 +2,7 @@ import { Textarea as KvibTextarea } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibTextarea> = {
-  title: "Komponenter/Textarea",
+  title: "Komponenter/Text Area",
   component: KvibTextarea,
   parameters: {
     docs: {

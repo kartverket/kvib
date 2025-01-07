@@ -1,0 +1,8 @@
+import { Canvas, Controls, Meta, } from "@storybook/blocks";
+import * as TimelineStories from "./Timeline.stories";
+import { TimelineDocs } from "./TimelineDocs";
+
+<Meta of={TimelineStories} />
+<TimelineDocs />
+<Canvas of={TimelineStories.Preview} />
+<Controls of={TimelineStories.Preview} />

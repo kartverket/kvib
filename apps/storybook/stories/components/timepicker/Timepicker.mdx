@@ -1,0 +1,8 @@
+import { Canvas, Controls, Meta, } from "@storybook/blocks";
+import * as TimepickerStories from "./Timepicker.stories";
+import { TimepickerDocs } from "./TimepickerDocs";
+
+<Meta of={TimepickerStories} />
+<TimepickerDocs />
+<Canvas of={TimepickerStories.Preview} />
+<Controls of={TimepickerStories.Preview} />

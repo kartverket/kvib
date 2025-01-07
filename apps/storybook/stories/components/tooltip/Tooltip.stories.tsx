@@ -108,9 +108,7 @@ type Story = StoryObj<Props>;
 export const Preview: Story = {
   render: (args: Props) => (
     <KvibTooltip {...args} content="Et tooltip!" aria-label="Et tooltip">
-      <Button variant="outline" size="sm" colorPalette={args.colorPalette}>
-        Hover me
-      </Button>
+      <Button colorPalette={args.colorPalette}>Hover me</Button>
     </KvibTooltip>
   ),
 };

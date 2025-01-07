@@ -16,7 +16,6 @@ const meta: Meta<typeof KvibTable> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "closed" },
     },
   },
   argTypes: {

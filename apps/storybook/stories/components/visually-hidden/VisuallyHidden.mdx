@@ -1,0 +1,8 @@
+import { Canvas, Controls, Meta, } from "@storybook/blocks";
+import * as VisuallyHiddenStories from "./VisuallyHidden.stories";
+import { VisuallyHiddenDocs } from "./VisuallyHiddenDocs";
+
+<Meta of={VisuallyHiddenStories} />
+<VisuallyHiddenDocs />
+<Canvas of={VisuallyHiddenStories.Preview} />
+<Controls of={VisuallyHiddenStories.Preview} />

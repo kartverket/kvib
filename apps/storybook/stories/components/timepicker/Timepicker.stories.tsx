@@ -38,7 +38,7 @@ const meta: Meta<typeof KvibTimepicker> = {
         defaultValue: { summary: "outline" },
       },
     },
-    colorScheme: {
+    colorPalette: {
       description: "The color scheme of the Timepicker",
       options: ["green", "blue"],
       control: { type: "radio" },

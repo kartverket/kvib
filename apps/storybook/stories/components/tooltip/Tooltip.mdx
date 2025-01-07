@@ -1,0 +1,8 @@
+import { Canvas, Controls, Meta, } from "@storybook/blocks";
+import * as TooltipStories from "./Tooltip.stories";
+import { TooltipDocs } from "./TooltipDocs";
+
+<Meta of={TooltipStories} />
+<TooltipDocs />
+<Canvas of={TooltipStories.Preview} />
+<Controls of={TooltipStories.Preview} />

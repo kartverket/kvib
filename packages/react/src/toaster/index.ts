@@ -8,7 +8,6 @@ export {
   ToastRoot,
   ToastTitle,
   createToaster,
-  useToastStyles,
 } from "@chakra-ui/react";
 
 export { Toaster, toaster } from "@/components/ui/toaster";

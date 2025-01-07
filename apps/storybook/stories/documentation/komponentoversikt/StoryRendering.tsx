@@ -2,7 +2,6 @@ import { composeStories } from "@storybook/react";
 import * as AccordionStories from "../../components/accordion/Accordion.stories";
 import * as ActionBarStories from "../../components/action-bar/ActionBar.stories";
 import * as AlertStories from "../../components/alert/Alert.stories";
-import * as VisuallyHiddenStories from "../../components/annet/visually-hidden/VisuallyHidden.stories";
 import * as AvatarStories from "../../components/avatar/Avatar.stories";
 import * as BadgeStories from "../../components/badge/Badge.stories";
 import * as BreadcrumbStories from "../../components/breadcrumb/Breadcrumb.stories";
@@ -17,7 +16,6 @@ import * as CollapsibleStories from "../../components/collapsible/Collapsible.st
 import * as ColorPickerStories from "../../components/color-picker/ColorPicker.stories";
 import * as ColorSwatchStories from "../../components/color-swatch/ColorSwatch.stories";
 import * as DataListStories from "../../components/data-list/DataList.stories";
-import * as TableStories from "../../components/datavisning/table/Table.stories";
 import * as TagStories from "../../components/datavisning/tag/Tag.stories";
 import * as DatepickerStories from "../../components/datepicker/Datepicker.stories";
 import * as DialogStoriea from "../../components/dialog/Dialog.stories";
@@ -49,9 +47,7 @@ import * as LinkStories from "../../components/link/Link.stories";
 import * as ListStories from "../../components/list/List.stories";
 import * as LogoStories from "../../components/logo/Logo.stories";
 import * as MenuStories from "../../components/menu/Menu.stories";
-import * as TabsStories from "../../components/navigasjon/tabs/Tabs.stories";
 import * as NumberInputStories from "../../components/number-input/NumberInput.stories";
-import * as TooltipStories from "../../components/overlay/tooltip/Tooltip.stories";
 import * as PaginationStories from "../../components/pagination/Pagination.stories";
 import * as PasswordInputStories from "../../components/password-input/PasswordInput.stories";
 import * as PinInputStories from "../../components/pin-input/PinInput.stories";
@@ -70,15 +66,20 @@ import * as SeparatorStories from "../../components/separator/Separator.stories"
 import * as ShowHideStories from "../../components/show/Show.stories";
 import * as SkeletonStories from "../../components/skeleton/Skeleton.stories";
 import * as SkivNavStories from "../../components/skip-nav/SkipNav.stories";
-import * as TextAreaStories from "../../components/skjemaelementer/textarea/Textarea.stories";
-import * as TimepickerStories from "../../components/skjemaelementer/timepicker/Timepicker.stories";
 import * as SliderStories from "../../components/slider/Slider.stories";
 import * as SpinnerStories from "../../components/spinner/Spinner.stories";
 import * as StatStories from "../../components/stat/Stat.stories";
 import * as StatusStories from "../../components/status/Status.stories";
 import * as StepperStories from "../../components/steps/Steps.stories";
 import * as SwitchStories from "../../components/switch/Switch.stories";
-import * as ToastStories from "../../components/tilbakemelding/toaster/Toaster.stories";
+import * as TableStories from "../../components/table/Table.stories";
+import * as TabsStories from "../../components/tabs/Tabs.stories";
+import * as TextAreaStories from "../../components/textarea/TextArea.stories";
+import * as TimelineStories from "../../components/timeline/Timeline.stories";
+import * as TimepickerStories from "../../components/timepicker/Timepicker.stories";
+import * as ToastStories from "../../components/toaster/Toaster.stories";
+import * as ToggleTipStories from "../../components/toggle-tip/ToggleTip.stories";
+import * as TooltipStories from "../../components/tooltip/Tooltip.stories";
 import * as HeadingStories from "../../design/heading/Heading.stories";
 import * as TextStories from "../../design/text/Text.stories";
 import { ColorPalette } from "./Komponenter";
@@ -172,6 +173,16 @@ export const Rating = (colorPalette: ColorPalette) => {
 
 export const Status = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(StatusStories);
+  return <Preview colorPalette={colorPalette} />;
+};
+
+export const Timeline = (colorPalette: ColorPalette) => {
+  const { Preview } = composeStories(TimelineStories);
+  return <Preview colorPalette={colorPalette} />;
+};
+
+export const ToggleTip = (colorPalette: ColorPalette) => {
+  const { Preview } = composeStories(ToggleTipStories);
   return <Preview colorPalette={colorPalette} />;
 };
 
@@ -465,9 +476,9 @@ export const Drawer = (colorPalette: ColorPalette) => {
 
 // Tilbakemelding
 
-export const Toast = (_: ColorPalette) => {
+export const Toast = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(ToastStories);
-  return <Preview />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
 export const Spinner = (colorPalette: ColorPalette) => {
@@ -502,12 +513,7 @@ export const Alert = (colorPalette: ColorPalette) => {
 
 // Annet
 
-export const VisuallyHidden = (colorPalette: ColorPalette) => {
-  const { Preview } = composeStories(VisuallyHiddenStories);
-  return <Preview colorPalette={colorPalette} />;
-};
-
-export const ShowHide = (_: ColorPalette) => {
+export const Show = (_: ColorPalette) => {
   const { Preview } = composeStories(ShowHideStories);
   return <Preview />;
 };
