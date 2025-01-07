@@ -1,0 +1,8 @@
+import { Canvas, Controls, Meta } from "@storybook/blocks";
+import * as SearchAsyncStories from "./SearchAsync.stories";
+import { SearchAsyncDocs } from "./SearchAsyncDocs";
+
+<Meta of={SearchAsyncStories} />
+<SearchAsyncDocs />
+<Canvas of={SearchAsyncStories.Preview} />
+<Controls of={SearchAsyncStories.Preview} />

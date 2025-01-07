@@ -69,6 +69,7 @@ import {
   Spinner,
   Stack,
   Stat,
+  Status,
   Stepper,
   Switch,
   Table,
@@ -199,6 +200,12 @@ export const Komponenter: (colorPalette: ColorPalette) => Record<string, Kategor
         story: Rating(colorPalette),
         link: "rating",
       },
+      Status: {
+        navn: "Status",
+        beskrivelse: "",
+        story: Status(colorPalette),
+        link: "status",
+      },
     },
   },
   Skjemaelementer: {
@@ -233,6 +240,12 @@ export const Komponenter: (colorPalette: ColorPalette) => Record<string, Kategor
         beskrivelse: "Select",
         story: Select(colorPalette),
         link: "select",
+      },
+      SelectNative: {
+        navn: "SelectNative",
+        beskrivelse: "SelectNative",
+        story: Select(colorPalette),
+        link: "select-native",
       },
       Textarea: {
         navn: "Textarea",

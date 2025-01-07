@@ -1,0 +1,8 @@
+import { Canvas, Controls, Meta, } from "@storybook/blocks";
+import * as SeparatorStories from "./Separator.stories";
+import { SeparatorDocs } from "./SeparatorDocs";
+
+<Meta of={SeparatorStories} />
+<SeparatorDocs />
+<Canvas of={SeparatorStories.Preview} className={"fullwidth"} />
+<Controls of={SeparatorStories.Preview} />

@@ -1,6 +1,5 @@
 "use client";
 
-import { useSlotRecipe } from "@/hooks";
 import { NativeSelect as Select } from "@chakra-ui/react";
 import * as React from "react";
 
@@ -11,15 +10,10 @@ interface NativeSelectRootProps extends Select.RootProps {
 export const NativeSelectRoot = React.forwardRef<HTMLDivElement, NativeSelectRootProps>(
   function NativeSelect(props, ref) {
     const { icon, children, ...rest } = props;
-
-    const nativeSelectProps = useSlotRecipe({ key: "nativeSelect" });
-    const recipeProps = nativeSelectProps(props);
-    const { root: rootStyling, indicator: indicatorStyling } = recipeProps;
-
     return (
-      <Select.Root ref={ref} css={rootStyling} {...rest}>
+      <Select.Root ref={ref} {...rest}>
         {children}
-        <Select.Indicator css={indicatorStyling}>{icon}</Select.Indicator>
+        <Select.Indicator>{icon}</Select.Indicator>
       </Select.Root>
     );
   },
