@@ -61,7 +61,7 @@ import {
   SearchAsync,
   Select,
   Separator,
-  ShowHide,
+  Show,
   SimpleGrid,
   Skeleton,
   SkipNav,
@@ -77,10 +77,11 @@ import {
   Tag,
   Text,
   TextArea,
+  Timeline,
   Timepicker,
   Toast,
+  ToggleTip,
   Tooltip,
-  VisuallyHidden,
 } from "./StoryRendering";
 
 interface Komponentdetaljer {
@@ -206,6 +207,18 @@ export const Komponenter: (colorPalette: ColorPalette) => Record<string, Kategor
         story: Status(colorPalette),
         link: "status",
       },
+      Timeline: {
+        navn: "Timeline",
+        beskrivelse: "",
+        story: Timeline(colorPalette),
+        link: "timeline",
+      },
+      ToggleTip: {
+        navn: "Toggle Tip",
+        beskrivelse: "",
+        story: ToggleTip(colorPalette),
+        link: "toggle-tip",
+      },
     },
   },
   Skjemaelementer: {
@@ -242,16 +255,16 @@ export const Komponenter: (colorPalette: ColorPalette) => Record<string, Kategor
         link: "select",
       },
       SelectNative: {
-        navn: "SelectNative",
+        navn: "Select (Native)",
         beskrivelse: "SelectNative",
         story: Select(colorPalette),
         link: "select-native",
       },
       Textarea: {
-        navn: "Textarea",
+        navn: "Text Area",
         beskrivelse: "Textarea",
         story: TextArea(colorPalette),
-        link: "textarea",
+        link: "text-area",
       },
       NumberInput: {
         navn: "NumberInput",
@@ -637,16 +650,10 @@ export const Komponenter: (colorPalette: ColorPalette) => Record<string, Kategor
   Annet: {
     navn: "Annet",
     komponenter: {
-      VisuallyHidden: {
-        navn: "Visually Hidden",
-        beskrivelse: "",
-        story: VisuallyHidden(colorPalette),
-        link: "visually-hidden",
-      },
       ShowHide: {
         navn: "Show",
         beskrivelse: "",
-        story: ShowHide(colorPalette),
+        story: Show(colorPalette),
         link: "show",
       },
       Portal: {

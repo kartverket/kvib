@@ -1,0 +1,8 @@
+import { Canvas, Controls, Meta, } from "@storybook/blocks";
+import * as TabsStories from "./Tabs.stories";
+import { TabsDocs } from "./TabsDocs";
+
+<Meta of={TabsStories} />
+<TabsDocs />
+<Canvas of={TabsStories.Preview} />
+<Controls of={TabsStories.Preview} />

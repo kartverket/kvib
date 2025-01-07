@@ -7,7 +7,6 @@ const meta: Meta<typeof KvibTabs> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "shown" },
     },
     a11y: {
       config: {
