@@ -19,6 +19,7 @@ const meta: Meta<typeof KvibShow> = {
       control: "text",
     },
     when: {
+      description: "If `true`, it will render the `children` prop",
       table: {
         type: { summary: "T | null | undefined" },
       },

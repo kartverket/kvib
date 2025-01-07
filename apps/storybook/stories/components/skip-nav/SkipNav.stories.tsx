@@ -10,14 +10,24 @@ const meta: Meta<typeof KvibSkipNavLink> = {
       canvas: { sourceState: "shown" },
     },
   },
-  argTypes: {},
+  argTypes: {
+    children: {
+      description: "The content of the SkipNavLink",
+      table: {
+        type: { summary: "ReactNode" },
+      },
+      control: "text",
+    },
+  },
+  args: {
+    children: "Hopp til innhold",
+  },
 };
 
 export default meta;
 type Story = StoryObj<typeof KvibSkipNavLink>;
 
 export const Preview: Story = {
-  args: { children: "SkipNav" },
   render: args => (
     <div>
       Trykk her + tab

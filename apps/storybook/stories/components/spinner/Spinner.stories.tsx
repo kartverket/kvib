@@ -14,6 +14,7 @@ const meta: Meta<typeof KvibSpinner> = {
       description: "The color palette of the component",
       table: {
         type: { summary: "green | blue | gray" },
+        defaultValue: { summary: "green" },
       },
       control: { type: "radio" },
       options: ["green", "blue", "gray"],

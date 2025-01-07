@@ -15,18 +15,18 @@ const meta: Meta<typeof KvibSkeleton> = {
       description: "If true, the skeleton will be visible",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
+        defaultValue: { summary: "true" },
       },
       control: "boolean",
     },
     variant: {
       description: "The variant of the skeleton",
       table: {
-        type: { summary: "pulse | shine | none" },
+        type: { summary: "pulse | shine" },
         defaultValue: { summary: "pulse" },
       },
       control: "radio",
-      options: ["pulse", "shine", "none"],
+      options: ["pulse", "shine"],
     },
   },
 };
