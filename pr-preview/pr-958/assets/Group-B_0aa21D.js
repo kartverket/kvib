@@ -1,4 +1,0 @@
-import{j as r}from"./index-Bqoz-m_F.js";import{useMDXComponents as n}from"./index-BGZZYR5m.js";import{ae as i,af as m,ag as a}from"./index-BjFP4los.js";import{G as p,P as t}from"./Group.stories-DyoLi_Wl.js";import{D as u}from"./Dokumentasjonsside-Dk34KFjO.js";import"./index-C7I6S4tq.js";import"./index-EN4ZLXvn.js";import"./iframe-B-fRmO-F.js";import"../sb-preview/runtime.js";import"./index-CHGET4sZ.js";import"./index-DrFu-skq.js";import"./index-DuafSpvy.js";const f=()=>r.jsx(u,{tittel:"Group",beskrivelse:"Vi bruker Group til å gruppere og organisere visuelle elementer som hører sammen, for å skape oversiktelig og brukervennlige layouter. "});function s(o){return r.jsxs(r.Fragment,{children:[r.jsx(i,{of:p}),`
-`,r.jsx(f,{}),`
-`,r.jsx(m,{of:t}),`
-`,r.jsx(a,{of:t})]})}function b(o={}){const{wrapper:e}={...n(),...o.components};return e?r.jsx(e,{...o,children:r.jsx(s,{...o})}):s()}export{b as default};
