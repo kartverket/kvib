@@ -1,34 +1,12 @@
-import { Text } from "@kvib/react";
-import { Canvas, Controls, Meta, Story, Title } from "@storybook/blocks";
-import { DocsAnatomy, DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
+import { Code } from "@kvib/react";
+import { Canvas, Meta } from "@storybook/blocks";
+import { Tekstblokk } from "../../documentation/utils/Tekstblokk";
 import * as CenterStories from "./Center.stories";
+import { CenterDocs } from "./CenterDocs";
 
 <Meta of={CenterStories} />
-
-<DocsContainer>
-
-# Center
-
-```jsx
-import { Center, Square, Circle } from "@kvib/react";
-```
-
-<Feedback component="Center" />
-
-<DocsStory
-  title="Komponent eksempel:"
-  description={
-    <Text>
-      <code>Center</code> er en boks der innholdet sentreres. Det finnes også andre varianter:<code>Square</code> og
-      <code>Circle</code>.<br />
-      <br />
-      <code>Center</code>, <code>Square</code> og <code>Circle</code> arver alle props fra <code>Box</code>.
-    </Text>
-  }
-  story={
-      <Canvas of={CenterStories.Preview} sourceState="hidden" />
-
-  }
-/>
-
-</DocsContainer>
+<CenterDocs />
+<Canvas of={CenterStories.Preview} />
+<Tekstblokk tittel="Props">
+  <Code>Center</Code> støtter alle CSS-egenskaper og er derfor en veldig fleksibel komponent.
+</Tekstblokk>

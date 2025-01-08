@@ -1,40 +1,12 @@
-import { Box, Code, Text } from "@kvib/react";
-import { Canvas, Controls, Meta, Story, Title } from "@storybook/blocks";
-import { DocsAnatomy, DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
-
+import { Code } from "@kvib/react";
+import { Canvas, Meta } from "@storybook/blocks";
+import { Tekstblokk } from "../../documentation/utils/Tekstblokk";
 import * as BoxStories from "./Box.stories";
+import { BoxDocs } from "./BoxDocs";
 
 <Meta of={BoxStories} />
-
-<DocsContainer>
-
-# Box
-
-Box er grunnpillaren til alle komponentene i Kartverkets Designsystem. Du kan tenke på den som en `<div />` som du kan style med props og design tokens.
-
-```jsx
-import { Box } from "@kvib/react";
-```
-
-**Egnet til:**
-
-- Enkle containers
-- Wrapper for mer komplekse komponenter
-
-**Uegnet til:**
-
-- Avanserte layout-justeringer
-
-<Feedback component="Box" />
-
-<DocsStory
-    title="Props"
-    description={
-      <Text>
-        Box-komponenten aksepterer alle styling props man kan sende til en div eller et View. Dette omfatter en mengde props som dekker de fleste brukstilfeller. Det er også lagt til forkortelser for de vanligste propsene (f.eks. <Code>bg</Code> istedenfor <Code>backgroundColor</Code>).
-      </Text>
-    }
-    story={<Canvas of={BoxStories.Preview} />}
-
-/>
-</DocsContainer>
+<BoxDocs />
+<Canvas of={BoxStories.Preview} />
+<Tekstblokk tittel="Props">
+  <Code>Box</Code> støtter alle CSS-egenskaper og er derfor en veldig fleksibel komponent.
+</Tekstblokk>

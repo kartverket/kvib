@@ -74,14 +74,6 @@ import * as ToggleTipStories from "../../components/toggle-tip/ToggleTip.stories
 import * as TooltipStories from "../../components/tooltip/Tooltip.stories";
 import * as HeadingStories from "../../design/heading/Heading.stories";
 import * as TextStories from "../../design/text/Text.stories";
-import * as AspectRatioStories from "../../layout/aspect-ratio/AspectRatio.stories";
-import * as BoxStories from "../../layout/Box/Box.stories";
-import * as CenterStories from "../../layout/Center/Center.stories";
-import * as ContainerStories from "../../layout/Container/Container.stories";
-import * as FlexStories from "../../layout/Flex/Flex.stories";
-import * as GridStories from "../../layout/Grid/Grid.stories";
-import * as SimpleGridStories from "../../layout/SimpleGrid/SimpleGrid.stories";
-import * as StackStories from "../../layout/Stack/Stack.stories";
 import { ColorPalette } from "./Komponenter";
 
 // Komponenter
@@ -330,48 +322,6 @@ export const List = (colorPalette: ColorPalette) => {
 export const Accordion = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(AccordionStories);
   return <Preview colorPalette={colorPalette} />;
-};
-
-// Layout
-
-export const Box = (colorPalette: ColorPalette) => {
-  const { Preview } = composeStories(BoxStories);
-  return <Preview colorPalette={colorPalette} />;
-};
-
-export const Container = (colorPalette: ColorPalette) => {
-  const { Preview } = composeStories(ContainerStories);
-  return <Preview colorPalette={colorPalette} />;
-};
-
-export const Flex = (colorPalette: ColorPalette) => {
-  const { Preview } = composeStories(FlexStories);
-  return <Preview colorPalette={colorPalette} />;
-};
-
-export const Grid = (colorPalette: ColorPalette) => {
-  const { Preview } = composeStories(GridStories);
-  return <Preview colorPalette={colorPalette} />;
-};
-
-export const Stack = (colorPalette: ColorPalette) => {
-  const { Preview } = composeStories(StackStories);
-  return <Preview colorPalette={colorPalette} />;
-};
-
-export const SimpleGrid = (colorPalette: ColorPalette) => {
-  const { Preview } = composeStories(SimpleGridStories);
-  return <Preview colorPalette={colorPalette} />;
-};
-
-export const Center = (colorPalette: ColorPalette) => {
-  const { Preview } = composeStories(CenterStories);
-  return <Preview colorPalette={colorPalette} />;
-};
-
-export const AspectRatio = (_: ColorPalette) => {
-  const { Preview } = composeStories(AspectRatioStories);
-  return <Preview />;
 };
 
 // Designfundament
