@@ -45,9 +45,8 @@ export const Components = () => {
         collection={fargevalg}
         size="sm"
         width="200px"
-        value={theme}
-        onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setTheme(e.target.value as ColorPalette)}
-        defaultValue={theme}
+        onValueChange={e => setTheme(e.value.toString() as ColorPalette)}
+        defaultValue={[fargevalg.items[0].value]}
         mb="3rem"
       >
         <SelectLabel>Velg fargepalett</SelectLabel>

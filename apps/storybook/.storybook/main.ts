@@ -1,7 +1,5 @@
 import type { StorybookConfig } from "@storybook/react-vite";
-import react from "@vitejs/plugin-react";
-import path, { dirname, join } from "path";
-import { mergeConfig } from "vite";
+import { dirname, join } from "path";
 
 /**
  * This function is used to resolve the absolute path of a package.
@@ -12,43 +10,21 @@ function getAbsolutePath(value: string): any {
 }
 const config: StorybookConfig = {
   stories: ["../stories/**/*.mdx", "../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
-
   addons: [
     getAbsolutePath("@storybook/addon-onboarding"),
     getAbsolutePath("@storybook/addon-essentials"),
     getAbsolutePath("@storybook/addon-interactions"),
     getAbsolutePath("@storybook/addon-mdx-gfm"),
   ],
-
+  core: {
+    builder: "@storybook/builder-vite",
+  },
   framework: {
     name: getAbsolutePath("@storybook/react-vite"),
     options: {},
   },
-
-  docs: {},
-
   typescript: {
     reactDocgen: "react-docgen-typescript",
-  },
-  viteFinal: async (config, { configType }) => {
-    const resolvedReactPath = path.resolve(__dirname, "../../../packages/react/dist/index");
-    const resolvedSrcPath = path.resolve(__dirname, "../../../packages/react/src");
-
-    return mergeConfig(config, {
-      plugins: [react()],
-      resolve: {
-        alias: [
-          {
-            find: "@kvib/react",
-            replacement: resolvedReactPath,
-          },
-          {
-            find: "@",
-            replacement: resolvedSrcPath,
-          },
-        ],
-      },
-    });
   },
 };
 export default config;

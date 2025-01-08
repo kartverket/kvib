@@ -1,0 +1,8 @@
+import { Canvas, Controls, Meta } from "@storybook/blocks";
+import * as SimpleGridStories from "./SimpleGrid.stories";
+import { SimpleGridDocs } from "./SimpleGridDocs";
+
+<Meta of={SimpleGridStories} />
+<SimpleGridDocs />
+<Canvas of={SimpleGridStories.Preview} />
+<Controls of={SimpleGridStories.Preview} />

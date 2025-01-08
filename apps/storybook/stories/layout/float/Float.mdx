@@ -1,0 +1,8 @@
+import { Canvas, Controls, Meta } from "@storybook/blocks";
+import * as FloatStories from "./Float.stories";
+import { FloatDocs } from "./FloatDocs";
+
+<Meta of={FloatStories} />
+<FloatDocs />
+<Canvas of={FloatStories.Preview} />
+<Controls of={FloatStories.Preview} />

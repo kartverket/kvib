@@ -1,0 +1,12 @@
+import { Code } from "@kvib/react";
+import { Canvas, Meta } from "@storybook/blocks";
+import { Tekstblokk } from "../../documentation/utils/Tekstblokk";
+import * as CenterStories from "./Center.stories";
+import { CenterDocs } from "./CenterDocs";
+
+<Meta of={CenterStories} />
+<CenterDocs />
+<Canvas of={CenterStories.Preview} />
+<Tekstblokk tittel="Props">
+  <Code>Center</Code> støtter alle CSS-egenskaper og er derfor en veldig fleksibel komponent.
+</Tekstblokk>
