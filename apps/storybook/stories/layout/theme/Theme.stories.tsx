@@ -4,11 +4,6 @@ import { Meta, StoryObj } from "@storybook/react";
 const meta: Meta<typeof Theme> = {
   title: "Komponenter/Layout/Theme",
   component: Theme,
-  parameters: {
-    docs: {
-      story: { inline: true },
-    },
-  },
   argTypes: {
     appearance: {
       table: {
