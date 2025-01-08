@@ -29,7 +29,9 @@ export default meta;
 type Story = StoryObj<typeof Theme>;
 
 const themeString = `
-
+<Theme p="1rem" {...args}>
+  <Button variant="outline">Button</Button>
+</Theme>
 `;
 
 export const Preview: Story = {
