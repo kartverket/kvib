@@ -1,48 +1,15 @@
-import { Box, HStack, Stack as KvibStack, StackSeparator, VStack } from "@kvib/react";
+import { Box, Stack } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
-const meta: Meta<typeof KvibStack> = {
-  title: "Komponenter/Stack",
-  component: KvibStack,
+const meta: Meta<typeof Stack> = {
+  title: "Komponenter/Layout/Stack",
+  component: Stack,
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "hidden" },
     },
   },
   argTypes: {
-    align: {
-      description: "Short for alingItems",
-      table: {
-        type: {
-          summary:
-            "normal | stretch | center | start | end | flex-start | flex-end | self-start | self-end | baseline | first baseline | last baseline | safe center | unsafe center | inherit | initial | revert | revert-layer | unset",
-        },
-      },
-      defaultValue: { summary: "" },
-      control: { type: "select" },
-      options: [
-        "normal",
-        "stretch",
-        "center",
-        "start",
-        "end",
-        "flex-start",
-        "flex-end",
-        "self-start",
-        "self-end",
-        "baseline",
-        "first baseline",
-        "last baseline",
-        "safe center",
-        "unsafe center",
-        "inherit",
-        "initial",
-        "revert",
-        "revert-layer",
-        "unset",
-      ],
-    },
     direction: {
       description: "Direction to stack items",
       table: { type: { summary: "column | row" } },
@@ -51,138 +18,46 @@ const meta: Meta<typeof KvibStack> = {
       options: ["column", "row"],
     },
     separator: {
-      description: "If true, each stack item will be followed by a divider",
+      description: "React-element to be placed between each item",
       table: { type: { summary: "StackSeparator" } },
-      defaultValue: { summary: "" },
-      // control: { type: "text" },
-    },
-    justify: {
-      description: "Short for justifyContent",
-      table: {
-        type: {
-          summary:
-            "center | start | end | flex-start | flex-end | left | right | normal | space-between | space-around | space-evenly | stretch | safe center | unsafe center | inherit | initial | revert | revert-layer | unset",
-        },
-      },
-      defaultValue: { summary: "" },
-      control: { type: "select" },
-      options: [
-        "center",
-        "start",
-        "end",
-        "flex-start",
-        "flex-end",
-        "left",
-        "right",
-        "normal",
-        "space-between",
-        "space-around",
-        "space-evenly",
-        "stretch",
-        "safe center",
-        "unsafe center",
-        "inherit",
-        "initial",
-        "revert",
-        "revert-layer",
-        "unset",
-      ],
-    },
-    gap: {
-      description: "The space between each child",
-      table: { type: { summary: "px | rem" } },
-      defaultValue: { summary: "" },
-    },
-    wrap: {
-      description: "short for flexWrap",
-      table: { type: { summary: "nowrap | wrap | wrap-reverse | inherit | initial | revert | revert-layer | unset" } },
-      defaultValue: { summary: "" },
-      control: { type: "select" },
-      options: ["nowrap", "wrap", "wrap-reverse", "inherit", "initial", "revert", "revert-layer", "unset"],
     },
   },
 };
 
 export default meta;
-type Story = StoryObj<typeof KvibStack>;
+type Story = StoryObj<typeof Stack>;
+
+const stackString = `
+<Stack {...args}>
+  <Box w="40px" h="40px" bg="green.200">
+    1
+  </Box>
+  <Box w="40px" h="40px" bg="blue.200">
+    2
+  </Box>
+  <Box w="40px" h="40px" bg="red.200">
+    3
+  </Box>
+</Stack>
+`;
 
 export const Preview: Story = {
-  args: { direction: "row" },
   render: args => (
-    <KvibStack {...args} gap="24px">
-      <Box width="40px" height="40px" backgroundColor="green.200">
+    <Stack {...args}>
+      <Box w="40px" h="40px" bg="green.200">
         1
       </Box>
-      <Box width="40px" height="40px" backgroundColor="blue.200">
+      <Box w="40px" h="40px" bg="blue.200">
         2
       </Box>
-      <Box width="40px" height="40px" backgroundColor="red.200">
+      <Box w="40px" h="40px" bg="red.200">
         3
       </Box>
-    </KvibStack>
+    </Stack>
   ),
-};
-
-export const ResponsiveStack: Story = {
-  render: args => (
-    <KvibStack {...args} direction={["column", "row"]} gap="24px">
-      <Box width="40px" height="40px" backgroundColor="green.200">
-        1
-      </Box>
-      <Box width="40px" height="40px" backgroundColor="blue.200">
-        2
-      </Box>
-      <Box width="40px" height="40px" backgroundColor="red.200">
-        3
-      </Box>
-    </KvibStack>
-  ),
-};
-
-export const StackStyled: Story = {
-  render: args => (
-    <KvibStack {...args} separator={<StackSeparator borderColor="gray.200" />} gap={12}>
-      <Box width="40px" height="40px" backgroundColor="green.200">
-        1
-      </Box>
-      <Box width="40px" height="40px" backgroundColor="blue.200">
-        2
-      </Box>
-      <Box width="40px" height="40px" backgroundColor="red.200">
-        3
-      </Box>
-    </KvibStack>
-  ),
-};
-
-export const HStackDemo: Story = {
-  render: args => (
-    <HStack {...args}>
-      <Box width="40px" height="40px" backgroundColor="green.200">
-        1
-      </Box>
-      <Box width="40px" height="40px" backgroundColor="blue.200">
-        2
-      </Box>
-      <Box width="40px" height="40px" backgroundColor="red.200">
-        3
-      </Box>
-    </HStack>
-  ),
-};
-
-export const VStackDemo: Story = {
-  render: args => (
-    <VStack {...args}>
-      <Box width="40px" height="40px" backgroundColor="green.200">
-        1
-      </Box>
-      <Box width="40px" height="40px" backgroundColor="blue.200">
-        2
-      </Box>
-      <Box width="40px" height="40px" backgroundColor="red.200">
-        3
-      </Box>
-    </VStack>
-  ),
+  parameters: {
+    docs: {
+      source: { code: stackString },
+    },
+  },
 };

@@ -1,13 +1,12 @@
-import { Box, SimpleGrid as KvibSimpleGrid } from "@kvib/react";
+import { Box, SimpleGrid } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
-const meta: Meta<typeof KvibSimpleGrid> = {
-  title: "Komponenter/Simple Grid",
-  component: KvibSimpleGrid,
+const meta: Meta<typeof SimpleGrid> = {
+  title: "Komponenter/Layout/Simple Grid",
+  component: SimpleGrid,
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "hidden" },
     },
   },
   argTypes: {
@@ -107,71 +106,37 @@ const meta: Meta<typeof KvibSimpleGrid> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof KvibSimpleGrid>;
+type Story = StoryObj<typeof SimpleGrid>;
+
+const simpleGridString = `
+<SimpleGrid {...args}>
+  <Box bg="green.100" w="2rem" h="2rem" />
+  <Box bg="blue.100" w="2rem" h="2rem" />
+  <Box bg="red.100" w="2rem" h="2rem" />
+  <Box bg="orange.100" w="2rem" h="2rem" />
+  <Box bg="purple.100" w="2rem" h="2rem" />
+</SimpleGrid>
+`;
 
 export const Preview: Story = {
   args: {
     columns: 3,
-    gap: 5,
+    gap: "5",
   },
   render: args => (
-    <KvibSimpleGrid {...args}>
+    <SimpleGrid {...args}>
       <Box bg="green.100" w="2rem" h="2rem" />
       <Box bg="blue.100" w="2rem" h="2rem" />
       <Box bg="red.100" w="2rem" h="2rem" />
       <Box bg="orange.100" w="2rem" h="2rem" />
       <Box bg="purple.100" w="2rem" h="2rem" />
-    </KvibSimpleGrid>
+    </SimpleGrid>
   ),
-};
-
-export const SimpleGridResponsiveArray: Story = {
-  args: {
-    columns: [2, null, 3],
-    gap: 5,
+  parameters: {
+    docs: {
+      source: {
+        code: simpleGridString,
+      },
+    },
   },
-  render: args => (
-    <KvibSimpleGrid {...args}>
-      <Box bg="blue.100" height="80px"></Box>
-      <Box bg="blue.100" height="80px"></Box>
-      <Box bg="blue.100" height="80px"></Box>
-      <Box bg="blue.100" height="80px"></Box>
-      <Box bg="blue.100" height="80px"></Box>
-    </KvibSimpleGrid>
-  ),
-};
-
-export const SimpleGridResponsive: Story = {
-  args: {
-    minChildWidth: "120px",
-    gap: "40px",
-  },
-  render: args => (
-    <KvibSimpleGrid {...args}>
-      <Box bg="red.100" height="80px"></Box>
-      <Box bg="red.100" height="80px"></Box>
-      <Box bg="red.100" height="80px"></Box>
-      <Box bg="red.100" height="80px"></Box>
-      <Box bg="red.100" height="80px"></Box>
-      <Box bg="red.100" height="80px"></Box>
-    </KvibSimpleGrid>
-  ),
-};
-
-export const SimpleGridSpacing: Story = {
-  args: {
-    columns: 2,
-    gapX: "60px",
-    gapY: "10px",
-  },
-  render: args => (
-    <KvibSimpleGrid {...args}>
-      <Box bg="purple.100" height="80px"></Box>
-      <Box bg="purple.100" height="80px"></Box>
-      <Box bg="purple.100" height="80px"></Box>
-      <Box bg="purple.100" height="80px"></Box>
-      <Box bg="purple.100" height="80px"></Box>
-      <Box bg="purple.100" height="80px"></Box>
-    </KvibSimpleGrid>
-  ),
 };

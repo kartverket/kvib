@@ -22,7 +22,7 @@ const centerString = `
 
 export const Preview: CenterStory = {
   args: { backgroundColor: "green.50", padding: "6" },
-  render: args => <KvibCenter {...args}>En boks med sentrert innhold</KvibCenter>,
+  render: args => <KvibCenter {...args}>Center content</KvibCenter>,
   parameters: {
     docs: {
       source: {

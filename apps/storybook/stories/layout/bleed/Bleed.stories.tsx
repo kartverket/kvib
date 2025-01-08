@@ -81,7 +81,7 @@ const BleedExample = (args: BleedProps) => (
       )"
         height="20"
       >
-        Bleed
+        Bleed content
       </Box>
     </Bleed>
 

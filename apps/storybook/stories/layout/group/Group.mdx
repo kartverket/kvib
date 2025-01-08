@@ -1,0 +1,8 @@
+import { Canvas, Controls, Meta } from "@storybook/blocks";
+import * as GroupStories from "./Group.stories";
+import { GroupDocs } from "./GroupDocs";
+
+<Meta of={GroupStories} />
+<GroupDocs />
+<Canvas of={GroupStories.Preview} />
+<Controls of={GroupStories.Preview} />

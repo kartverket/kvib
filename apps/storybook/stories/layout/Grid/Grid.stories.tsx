@@ -1,13 +1,12 @@
-import { GridItem, Grid as KvibGrid } from "@kvib/react";
+import { Grid, GridItem } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
-const meta: Meta<typeof KvibGrid> = {
-  title: "Komponenter/Grid",
-  component: KvibGrid,
+const meta: Meta<typeof Grid> = {
+  title: "Komponenter/Layout/Grid",
+  component: Grid,
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "hidden" },
     },
   },
   argTypes: {
@@ -92,69 +91,33 @@ const meta: Meta<typeof KvibGrid> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof KvibGrid>;
+type Story = StoryObj<typeof Grid>;
+
+const gridString = `
+<Grid templateColumns="repeat(3, 4rem)" gap="4" {...args}>
+  <GridItem h="12" bg="blue.500" />
+  <GridItem h="12" bg="green.500" />
+  <GridItem h="12" bg="yellow.500" />
+  <GridItem h="12" bg="red.500" />
+  <GridItem h="12" bg="purple.500" />
+</Grid>
+`;
 
 export const Preview: Story = {
-  args: { templateColumns: "repeat(5, 1fr)", gap: 4, minH: "2rem", minW: "12rem" },
   render: args => (
-    <KvibGrid {...args}>
-      <GridItem w="100%" h="10" bg="blue.500" />
-      <GridItem w="100%" h="10" bg="blue.500" />
-      <GridItem w="100%" h="10" bg="blue.500" />
-      <GridItem w="100%" h="10" bg="blue.500" />
-      <GridItem w="100%" h="10" bg="blue.500" />
-    </KvibGrid>
+    <Grid templateColumns="repeat(3, 4rem)" gap="4" {...args}>
+      <GridItem h="12" bg="blue.500" />
+      <GridItem h="12" bg="green.500" />
+      <GridItem h="12" bg="yellow.500" />
+      <GridItem h="12" bg="red.500" />
+      <GridItem h="12" bg="purple.500" />
+    </Grid>
   ),
-};
-
-export const GridSpanning: Story = {
-  args: { h: "200px", templateRows: "repeat(2, 1fr)", templateColumns: "repeat(5, 1fr)", gap: 4 },
-  render: args => (
-    <KvibGrid {...args}>
-      <GridItem rowSpan={2} colSpan={1} bg="red.400" />
-      <GridItem colSpan={2} bg="orange.200" />
-      <GridItem colSpan={2} bg="orange.200" />
-      <GridItem colSpan={4} bg="red.400" />
-    </KvibGrid>
-  ),
-};
-
-export const GridStartEnd: Story = {
-  args: { templateColumns: "repeat(5, 1fr)", gap: 4 },
-  render: args => (
-    <KvibGrid {...args}>
-      <GridItem colSpan={2} h="10" bg="red.400" />
-      <GridItem colStart={4} colEnd={6} h="10" bg="orange.200" />
-    </KvibGrid>
-  ),
-};
-
-export const GridTemplateAreas: Story = {
-  args: {
-    templateAreas: `"header header"
-                  "nav main"
-                  "nav footer"`,
-    gridTemplateRows: "50px 1fr 30px",
-    gridTemplateColumns: "150px 1fr",
-    h: "200px",
-    gap: "1",
-    color: "black",
-    fontWeight: "bold",
+  parameters: {
+    docs: {
+      source: {
+        code: gridString,
+      },
+    },
   },
-  render: args => (
-    <KvibGrid {...args}>
-      <GridItem pl="2" bg="orange.300" area={"header"}>
-        Header
-      </GridItem>
-      <GridItem pl="2" bg="pink.300" area={"nav"}>
-        Nav
-      </GridItem>
-      <GridItem pl="2" bg="green.300" area={"main"}>
-        Main
-      </GridItem>
-      <GridItem pl="2" bg="blue.300" area={"footer"}>
-        Footer
-      </GridItem>
-    </KvibGrid>
-  ),
 };

@@ -1,37 +1,8 @@
-import { Text } from "@kvib/react";
-import { Canvas, Controls, Meta, Story, Title } from "@storybook/blocks";
-import { DocsAnatomy, DocsContainer, DocsHeading, DocsStory, Feedback } from "../../../templates";
+import { Canvas, Controls, Meta } from "@storybook/blocks";
 import * as FlexStories from "./Flex.stories";
+import { FlexDocs } from "./FlexDocs";
 
 <Meta of={FlexStories} />
-
-<DocsContainer>
-
-# Flex
-
-```jsx
-import { Flex, Spacer } from "@kvib/react";
-```
-
-
-<DocsStory
-  title="Flex"
-  description={
-    <>
-      <Text>
-        Flex er en boks med display satt til flex og kommer med en rekke hjelpsomme forkortelser. Den rendres som et{" "}
-        <code>div</code> element.
-      </Text>
-      <Text>
-        <Text as="b">Flex:</Text> En <code>Box</code> med <code>display: flex</code>.
-      </Text>
-      <Text>
-        <Text as="b">Spacer:</Text> Er en justerbar tomt rom som kan brukes til å justere avstanden mellom
-        underelementene i <code>Flex</code>.
-      </Text>
-    </>
-  }
-  story={<Canvas of={FlexStories.Preview} sourceState="hidden" />}
-/>
-
-</DocsContainer>
+<FlexDocs />
+<Canvas of={FlexStories.Preview} />
+<Controls of={FlexStories.Preview} />

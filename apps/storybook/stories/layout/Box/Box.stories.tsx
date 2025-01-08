@@ -22,7 +22,7 @@ const boxString = `
 
 export const Preview: Story = {
   args: { backgroundColor: "green.50" },
-  render: args => <KvibBox {...args}>En veldig enkel boks</KvibBox>,
+  render: args => <KvibBox {...args}>Box content</KvibBox>,
   parameters: {
     docs: {
       source: {
