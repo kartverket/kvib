@@ -1,0 +1,4 @@
+import{j as t}from"./index-Bqoz-m_F.js";import{useMDXComponents as i}from"./index-BGZZYR5m.js";import{ae as n,af as a,ag as m}from"./index-BjFP4los.js";import{A as p,P as e}from"./AspectRatio.stories-DiNcXX45.js";import{D as c}from"./Dokumentasjonsside-Dk34KFjO.js";import"./index-C7I6S4tq.js";import"./index-EN4ZLXvn.js";import"./iframe-B-fRmO-F.js";import"../sb-preview/runtime.js";import"./index-CHGET4sZ.js";import"./index-DrFu-skq.js";import"./index-DuafSpvy.js";const f=()=>t.jsx(c,{tittel:"Aspect Ratio",beskrivelse:"Vi bruker Aspect Ratio for å legge inn resposive bilder, video, kart osv. "});function r(o){return t.jsxs(t.Fragment,{children:[t.jsx(n,{of:p}),`
+`,t.jsx(f,{}),`
+`,t.jsx(a,{of:e}),`
+`,t.jsx(m,{of:e})]})}function k(o={}){const{wrapper:s}={...i(),...o.components};return s?t.jsx(s,{...o,children:t.jsx(r,{...o})}):r()}export{k as default};
