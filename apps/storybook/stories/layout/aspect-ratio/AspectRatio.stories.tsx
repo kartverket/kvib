@@ -31,13 +31,9 @@ const meta: Meta<typeof KvibAspectRatio> = {
 export default meta;
 type Story = StoryObj<typeof KvibAspectRatio>;
 
-const aspectRatioString = `
-<AspectRatio>
-  <Image
-    src="..."
-  />
-</AspectRatio>
-`;
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+KvibAspectRatio.displayName = "AspectRatio";
+Image.displayName = "Image";
 
 export const Preview: Story = {
   args: { ratio: 4 / 3, w: "560px" },
@@ -50,10 +46,6 @@ export const Preview: Story = {
     </KvibAspectRatio>
   ),
   parameters: {
-    docs: {
-      source: {
-        code: aspectRatioString,
-      },
-    },
+    layout: "centered",
   },
 };

@@ -62,6 +62,13 @@ export const Migration = () => (
     <Alert status="info" size="lg">
       Dokumentasjonen vår vil være litt utdatert i en tid fremover etter oppdateringen.
     </Alert>
+    <Tekstblokk tittel="Viktig endring i tsconfig.json">
+      Dersom du bruker TypeScript i prosjektet ditt, må du gjøre følgende endring i tsconfig.json:{" "}
+      <Code>moduleResolution</Code> må settes til <Code>bundler</Code>. Dette er fordi Chakra UI 3 bruker ES Modules.
+      Uten denne endringen vil du få feilmeldinger om at moduler enten ikke kan importeres, eller at props til
+      komponenter ikke er definert.
+    </Tekstblokk>
+
     <Tekstblokk tittel="Ny syntaks">
       <Liste>
         {nySyntaks

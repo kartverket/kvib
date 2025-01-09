@@ -14,20 +14,14 @@ const meta: Meta<typeof KvibBox> = {
 export default meta;
 type Story = StoryObj<typeof KvibBox>;
 
-const boxString = `
-<Box>
-  ...
-</Box>
-`;
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+KvibBox.displayName = "Box";
 
 export const Preview: Story = {
-  args: { backgroundColor: "green.50" },
-  render: args => <KvibBox {...args}>Box content</KvibBox>,
-  parameters: {
-    docs: {
-      source: {
-        code: boxString,
-      },
-    },
-  },
+  args: {},
+  render: args => (
+    <KvibBox bg="green.100" p="1rem" {...args}>
+      Box content
+    </KvibBox>
+  ),
 };

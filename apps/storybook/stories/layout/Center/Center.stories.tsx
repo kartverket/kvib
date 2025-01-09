@@ -1,4 +1,4 @@
-import { Center as KvibCenter } from "@kvib/react";
+import { Box, Center as KvibCenter } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibCenter> = {
@@ -14,20 +14,18 @@ const meta: Meta<typeof KvibCenter> = {
 export default meta;
 type CenterStory = StoryObj<typeof KvibCenter>;
 
-const centerString = `
-<Center>
-  ...
-</Center>
-`;
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+KvibCenter.displayName = "Center";
 
 export const Preview: CenterStory = {
-  args: { backgroundColor: "green.50", padding: "6" },
-  render: args => <KvibCenter {...args}>Center content</KvibCenter>,
-  parameters: {
-    docs: {
-      source: {
-        code: centerString,
-      },
-    },
-  },
+  render: args => (
+    <KvibCenter bg="green.100" p="1rem" {...args}>
+      <Box bg="white" p="1rem">
+        Content
+      </Box>
+      <Box bg="blue.200" p="1rem">
+        Content
+      </Box>
+    </KvibCenter>
+  ),
 };

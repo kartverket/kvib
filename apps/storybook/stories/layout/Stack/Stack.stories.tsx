@@ -27,37 +27,22 @@ const meta: Meta<typeof Stack> = {
 export default meta;
 type Story = StoryObj<typeof Stack>;
 
-const stackString = `
-<Stack {...args}>
-  <Box w="40px" h="40px" bg="green.200">
-    1
-  </Box>
-  <Box w="40px" h="40px" bg="blue.200">
-    2
-  </Box>
-  <Box w="40px" h="40px" bg="red.200">
-    3
-  </Box>
-</Stack>
-`;
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+Box.displayName = "Box";
+Stack.displayName = "Stack";
 
 export const Preview: Story = {
   render: args => (
     <Stack {...args}>
-      <Box w="40px" h="40px" bg="green.200">
+      <Box h="40px" bg="green.200">
         1
       </Box>
-      <Box w="40px" h="40px" bg="blue.200">
+      <Box h="40px" bg="blue.200">
         2
       </Box>
-      <Box w="40px" h="40px" bg="red.200">
+      <Box h="40px" bg="red.200">
         3
       </Box>
     </Stack>
   ),
-  parameters: {
-    docs: {
-      source: { code: stackString },
-    },
-  },
 };

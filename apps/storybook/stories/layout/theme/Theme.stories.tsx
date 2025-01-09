@@ -23,11 +23,9 @@ const meta: Meta<typeof Theme> = {
 export default meta;
 type Story = StoryObj<typeof Theme>;
 
-const themeString = `
-<Theme p="1rem" {...args}>
-  <Button variant="outline">Button</Button>
-</Theme>
-`;
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+Button.displayName = "Button";
+Theme.displayName = "Theme";
 
 export const Preview: Story = {
   render: args => (
@@ -37,7 +35,10 @@ export const Preview: Story = {
   ),
   parameters: {
     docs: {
-      source: { code: themeString },
+      source: {
+        language: "tsx",
+      },
     },
+    layout: "centered",
   },
 };
