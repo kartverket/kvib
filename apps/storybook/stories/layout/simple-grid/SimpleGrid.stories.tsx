@@ -108,15 +108,9 @@ const meta: Meta<typeof SimpleGrid> = {
 export default meta;
 type Story = StoryObj<typeof SimpleGrid>;
 
-const simpleGridString = `
-<SimpleGrid {...args}>
-  <Box bg="green.100" w="2rem" h="2rem" />
-  <Box bg="blue.100" w="2rem" h="2rem" />
-  <Box bg="red.100" w="2rem" h="2rem" />
-  <Box bg="orange.100" w="2rem" h="2rem" />
-  <Box bg="purple.100" w="2rem" h="2rem" />
-</SimpleGrid>
-`;
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+SimpleGrid.displayName = "SimpleGrid";
+Box.displayName = "Box";
 
 export const Preview: Story = {
   args: {
@@ -125,18 +119,11 @@ export const Preview: Story = {
   },
   render: args => (
     <SimpleGrid {...args}>
-      <Box bg="green.100" w="2rem" h="2rem" />
-      <Box bg="blue.100" w="2rem" h="2rem" />
-      <Box bg="red.100" w="2rem" h="2rem" />
-      <Box bg="orange.100" w="2rem" h="2rem" />
-      <Box bg="purple.100" w="2rem" h="2rem" />
+      <Box bg="green.100" h="2rem" />
+      <Box bg="blue.100" h="2rem" />
+      <Box bg="red.100" h="2rem" />
+      <Box bg="orange.100" h="2rem" />
+      <Box bg="purple.100" h="2rem" />
     </SimpleGrid>
   ),
-  parameters: {
-    docs: {
-      source: {
-        code: simpleGridString,
-      },
-    },
-  },
 };

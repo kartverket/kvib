@@ -68,42 +68,24 @@ const meta: Meta<BleedProps> = {
 export default meta;
 type Story = StoryObj<BleedProps>;
 
-const BleedExample = (args: BleedProps) => (
-  <Box padding="10" rounded="sm" borderWidth="1px">
-    <Bleed inline="10" {...args}>
-      <Box
-        background="repeating-linear-gradient(
-        125deg,
-        #c0c0c0,
-        #c0c0c0 1px,
-        #f0f0f0 1px,
-        #f0f0f0 5px
-      )"
-        height="20"
-      >
-        Bleed content
-      </Box>
-    </Bleed>
-
-    <Stack mt="6">
-      <Heading size="md">Heading</Heading>
-    </Stack>
-  </Box>
-);
-
-const bleedString = `
-<Bleed>
-  ...
-</Bleed>
-`;
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+Bleed.displayName = "Bleed";
+Box.displayName = "Box";
+Stack.displayName = "Stack";
+Heading.displayName = "Heading";
 
 export const Preview: Story = {
-  render: args => <BleedExample {...args} />,
-  parameters: {
-    docs: {
-      source: {
-        code: bleedString,
-      },
-    },
-  },
+  render: args => (
+    <Box padding="10" rounded="sm" borderWidth="1px">
+      <Bleed inline="10" {...args}>
+        <Box background="orange.50" height="20">
+          Bleed content
+        </Box>
+      </Bleed>
+
+      <Stack mt="6">
+        <Heading size="md">Heading</Heading>
+      </Stack>
+    </Box>
+  ),
 };

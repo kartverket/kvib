@@ -1,5 +1,6 @@
-import { Box, Center, Flex, Text } from "@kvib/react";
+import { Flex } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
+import { DecorativeBox } from "../../documentation/utils/DecorativeBox";
 
 const meta: Meta<typeof Flex> = {
   title: "Komponenter/Layout/Flex",
@@ -37,6 +38,10 @@ const meta: Meta<typeof Flex> = {
           summary: "SystemStyleObject['flexDirection']",
         },
       },
+      control: {
+        type: "select",
+      },
+      options: ["row", "row-reverse", "column", "column-reverse"],
     },
     basis: {
       table: {
@@ -76,39 +81,15 @@ const meta: Meta<typeof Flex> = {
 export default meta;
 type Story = StoryObj<typeof Flex>;
 
-const flexString = `
-<Flex {...args}>
-  <Center width="100px" bg="green.100">
-    <Text>Text 1</Text>
-  </Center>
-  <Center width="100px" height="150px" bg="blue.100">
-    <Text>Text 2</Text>
-  </Center>
-  <Box flex="1" bg="yellow.100">
-    <Text>Text 3</Text>
-  </Box>
-</Flex>
-`;
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+Flex.displayName = "Flex";
 
 export const Preview: Story = {
   render: args => (
-    <Flex {...args}>
-      <Center width="100px" bg="green.100">
-        <Text>Text 1</Text>
-      </Center>
-      <Center width="100px" height="150px" bg="blue.100">
-        <Text>Text 2</Text>
-      </Center>
-      <Box flex="1" bg="yellow.100">
-        <Text>Text 3</Text>
-      </Box>
+    <Flex gap="4" {...args}>
+      <DecorativeBox height="10" />
+      <DecorativeBox height="10" />
+      <DecorativeBox height="10" />
     </Flex>
   ),
-  parameters: {
-    docs: {
-      source: {
-        code: flexString,
-      },
-    },
-  },
 };

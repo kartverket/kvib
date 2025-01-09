@@ -60,27 +60,19 @@ const meta: Meta<typeof Float> = {
 export default meta;
 type Story = StoryObj<typeof Float>;
 
-const floatString = `
-<Box position="relative" w="80px" h="80px" bg="gray.200">
-  <Float {...args}>
-    <Box borderRadius={"full"} bg="red.400" h="24px" w="24px" />
-  </Float>
-</Box>
-`;
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+Float.displayName = "Float";
+Box.displayName = "Box";
 
 export const Preview: Story = {
   render: args => (
-    <Box position="relative" w="80px" h="80px" bg="gray.200">
+    <Box pos="relative" w="80px" h="80px" bg="gray.200">
       <Float {...args}>
         <Box borderRadius={"full"} bg="red.400" h="24px" w="24px" />
       </Float>
     </Box>
   ),
   parameters: {
-    docs: {
-      source: {
-        code: floatString,
-      },
-    },
+    layout: "centered",
   },
 };

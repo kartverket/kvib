@@ -93,19 +93,13 @@ const meta: Meta<typeof Grid> = {
 export default meta;
 type Story = StoryObj<typeof Grid>;
 
-const gridString = `
-<Grid templateColumns="repeat(3, 4rem)" gap="4" {...args}>
-  <GridItem h="12" bg="blue.500" />
-  <GridItem h="12" bg="green.500" />
-  <GridItem h="12" bg="yellow.500" />
-  <GridItem h="12" bg="red.500" />
-  <GridItem h="12" bg="purple.500" />
-</Grid>
-`;
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+Grid.displayName = "Grid";
+GridItem.displayName = "GridItem";
 
 export const Preview: Story = {
   render: args => (
-    <Grid templateColumns="repeat(3, 4rem)" gap="4" {...args}>
+    <Grid templateColumns="repeat(3, 1fr)" gap="4" {...args}>
       <GridItem h="12" bg="blue.500" />
       <GridItem h="12" bg="green.500" />
       <GridItem h="12" bg="yellow.500" />
@@ -113,11 +107,4 @@ export const Preview: Story = {
       <GridItem h="12" bg="purple.500" />
     </Grid>
   ),
-  parameters: {
-    docs: {
-      source: {
-        code: gridString,
-      },
-    },
-  },
 };

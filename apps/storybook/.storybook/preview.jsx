@@ -9,7 +9,7 @@ const parameters = {
     default: "light",
     values: [{ name: "light", value: "#ffffff" }],
   },
-  layout: "centered",
+  layout: "padded",
   controls: {
     matchers: {
       color: /(background|color)$/i,

@@ -34,6 +34,17 @@ const meta: Meta<typeof KvibContainer> = {
         type: "boolean",
       },
     },
+    maxWidth: {
+      description: "Max width of container",
+      table: {
+        type: {
+          summary: "string",
+        },
+      },
+      control: {
+        type: "text",
+      },
+    },
     p: {
       table: {
         disable: true,
@@ -50,20 +61,15 @@ const meta: Meta<typeof KvibContainer> = {
 export default meta;
 type Story = StoryObj<typeof KvibContainer>;
 
-const containerString = `
-<Container>
-  ...
-</Container>
-`;
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+KvibContainer.displayName = "Container";
 
 export const Preview: Story = {
   args: { bg: "green.50", p: "2" },
-  render: args => <KvibContainer {...args}>Container content</KvibContainer>,
-  parameters: {
-    docs: {
-      source: {
-        code: containerString,
-      },
-    },
-  },
+  render: args => (
+    <KvibContainer {...args}>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur, tortor in lacinia eleifend, dui nisl
+      tristique nunc.
+    </KvibContainer>
+  ),
 };

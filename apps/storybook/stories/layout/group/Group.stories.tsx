@@ -40,12 +40,9 @@ const meta: Meta<typeof Group> = {
 export default meta;
 type Story = StoryObj<typeof Group>;
 
-const groupString = `
-<Group {...args}>
-  <Button variant="outline">First</Button>
-  <Button variant="outline">Second</Button>
-</Group>
-`;
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+Button.displayName = "Button";
+Group.displayName = "Group";
 
 export const Preview: Story = {
   render: args => (
@@ -55,10 +52,6 @@ export const Preview: Story = {
     </Group>
   ),
   parameters: {
-    docs: {
-      source: {
-        code: groupString,
-      },
-    },
+    layout: "centered",
   },
 };
