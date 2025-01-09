@@ -16,7 +16,6 @@ import * as CollapsibleStories from "../../components/collapsible/Collapsible.st
 import * as ColorPickerStories from "../../components/color-picker/ColorPicker.stories";
 import * as ColorSwatchStories from "../../components/color-swatch/ColorSwatch.stories";
 import * as DataListStories from "../../components/data-list/DataList.stories";
-import * as TagStories from "../../components/datavisning/tag/Tag.stories";
 import * as DatepickerStories from "../../components/datepicker/Datepicker.stories";
 import * as DialogStoriea from "../../components/dialog/Dialog.stories";
 import * as DrawerStories from "../../components/drawer/Drawer.stories";
@@ -67,6 +66,7 @@ import * as StepperStories from "../../components/steps/Steps.stories";
 import * as SwitchStories from "../../components/switch/Switch.stories";
 import * as TableStories from "../../components/table/Table.stories";
 import * as TabsStories from "../../components/tabs/Tabs.stories";
+import * as TagStories from "../../components/tag/Tag.stories";
 import * as TextAreaStories from "../../components/textarea/TextArea.stories";
 import * as TimelineStories from "../../components/timeline/Timeline.stories";
 import * as TimepickerStories from "../../components/timepicker/Timepicker.stories";
