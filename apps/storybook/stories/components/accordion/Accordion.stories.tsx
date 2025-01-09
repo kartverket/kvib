@@ -22,6 +22,13 @@ const meta: Meta<typeof Accordion> = {
 export default meta;
 type Story = StoryObj<typeof Accordion>;
 
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+Accordion.displayName = "Accordion";
+AccItem.displayName = "AccordionItem";
+AccordionItemContent.displayName = "AccordionItemContent";
+AccordionItemIndicator.displayName = "AccordionItemIndicator";
+AccordionItemTrigger.displayName = "AccordionItemTrigger";
+
 export const Preview: Story = {
   argTypes: {
     multiple: {
@@ -97,20 +104,26 @@ export const Preview: Story = {
     },
   },
   render: args => (
-    <Accordion {...args}>
-      <AccItem key="1" value="test">
+    <Accordion collapsible {...args}>
+      <AccItem key="1" value="item1">
         <AccordionItemTrigger>
-          Tittel 1
+          Title 1
           <AccordionItemIndicator />
         </AccordionItemTrigger>
-        <AccordionItemContent>Innhold 1</AccordionItemContent>
+        <AccordionItemContent>Content 1</AccordionItemContent>
       </AccItem>
-      <AccItem key="2" value="test2">
-        <AccordionItemTrigger>Tittel 2</AccordionItemTrigger>
-        <AccordionItemContent>Innhold 2</AccordionItemContent>
+      <AccItem key="2" value="item2">
+        <AccordionItemTrigger>
+          Title 2
+          <AccordionItemIndicator />
+        </AccordionItemTrigger>
+        <AccordionItemContent>Content 2</AccordionItemContent>
       </AccItem>
     </Accordion>
   ),
+  parameters: {
+    layout: "centered",
+  },
 };
 
 type AccordionItemStory = StoryObj<KvibAccordion.ItemProps>;
@@ -133,11 +146,14 @@ export const AccordionItem: AccordionItemStory = {
     },
   },
   render: args => (
-    <KvibAccordion.Root>
+    <KvibAccordion.Root collapsible>
       <KvibAccordion.Item {...args}>
-        <KvibAccordion.ItemTrigger>Klikk meg</KvibAccordion.ItemTrigger>
-        <KvibAccordion.ItemContent>Innhold i AccordionItem</KvibAccordion.ItemContent>
+        <KvibAccordion.ItemTrigger>Accordion item 1</KvibAccordion.ItemTrigger>
+        <KvibAccordion.ItemContent>Content 1</KvibAccordion.ItemContent>
       </KvibAccordion.Item>
     </KvibAccordion.Root>
   ),
+  parameters: {
+    layout: "centered",
+  },
 };

@@ -7,14 +7,8 @@ const meta: Meta<typeof KvibCheckbox> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "shown" },
     },
-  },
-  args: {
-    colorPalette: "green",
-    size: "md",
-    disabled: false,
-    invalid: false,
+    layout: "centered",
   },
   argTypes: {
     colorPalette: {
@@ -57,10 +51,13 @@ const meta: Meta<typeof KvibCheckbox> = {
 export default meta;
 type Story = StoryObj<typeof KvibCheckbox>;
 
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+KvibCheckbox.displayName = "Checkbox";
+
 export const Preview: Story = {
   render: args => (
     <KvibCheckbox defaultChecked {...args}>
-      En avmerkingsboks
+      Checkbox label
     </KvibCheckbox>
   ),
 };

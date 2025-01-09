@@ -19,6 +19,7 @@ const meta: Meta<typeof ActionBar> = {
       story: { inline: true },
       canvas: { sourceState: "hidden" },
     },
+    layout: "centered",
   },
 };
 
@@ -45,14 +46,14 @@ const ActionBarExample = (props: Props) => {
         }}
         colorPalette={props.colorPalette}
       >
-        Vis Action Bar
+        Show Action Bar
       </Checkbox>
-      <ActionBar open={open} onExitComplete={onClose} closeOnInteractOutside={false}>
-        <ActionBarContent {...props}>
-          <ActionBarSelectionTrigger>2 elementer valgt</ActionBarSelectionTrigger>
+      <ActionBar open={open} onExitComplete={onClose} closeOnInteractOutside={false} {...props}>
+        <ActionBarContent>
+          <ActionBarSelectionTrigger>Selection content</ActionBarSelectionTrigger>
           <ActionBarSeparator />
           <Button variant="outline" size="sm" colorPalette={props.colorPalette}>
-            Del
+            Action
           </Button>
         </ActionBarContent>
       </ActionBar>
@@ -60,6 +61,25 @@ const ActionBarExample = (props: Props) => {
   );
 };
 
+const actionBarString = `
+<ActionBar open={open} onExitComplete={onClose} closeOnInteractOutside={false} {...props}>
+  <ActionBarContent>
+    <ActionBarSelectionTrigger>Selection content</ActionBarSelectionTrigger>
+    <ActionBarSeparator />
+    <Button>
+      Action
+    </Button>
+  </ActionBarContent>
+</ActionBar>
+`;
+
 export const Preview: Story = {
   render: args => <ActionBarExample {...args} />,
+  parameters: {
+    docs: {
+      source: {
+        code: actionBarString,
+      },
+    },
+  },
 };

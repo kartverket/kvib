@@ -1,4 +1,4 @@
-import { Card as KvibCard, CardBody as KvibCardBody, Text as KvibText } from "@kvib/react";
+import { Card as KvibCard, CardBody as KvibCardBody } from "@kvib/react";
 
 import { Meta, StoryObj } from "@storybook/react";
 
@@ -8,12 +8,8 @@ const meta: Meta<typeof KvibCard> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "hidden" },
     },
-  },
-  args: {
-    variant: "elevated",
-    size: "md",
+    layout: "centered",
   },
   argTypes: {
     size: {
@@ -40,19 +36,14 @@ const meta: Meta<typeof KvibCard> = {
 export default meta;
 type Story = StoryObj<typeof KvibCard>;
 
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+KvibCard.displayName = "Card";
+KvibCardBody.displayName = "CardBody";
+
 export const Preview: Story = {
-  parameters: {
-    docs: {
-      canvas: {
-        sourceState: "shown",
-      },
-    },
-  },
   render: args => (
     <KvibCard {...args}>
-      <KvibCardBody>
-        <KvibText>Se alle endringer på eiendomsgrenser i år.</KvibText>
-      </KvibCardBody>
+      <KvibCardBody>Card content</KvibCardBody>
     </KvibCard>
   ),
 };

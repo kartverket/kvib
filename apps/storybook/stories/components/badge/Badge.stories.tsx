@@ -9,6 +9,7 @@ const meta: Meta<typeof KvibBadge> = {
       story: { inline: true },
       canvas: { sourceState: "hidden" },
     },
+    layout: "centered",
   },
   args: {
     colorPalette: "gray",
@@ -47,6 +48,9 @@ const meta: Meta<typeof KvibBadge> = {
 
 export default meta;
 type Story = StoryObj<typeof KvibBadge>;
+
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+KvibBadge.displayName = "Badge";
 
 export const Preview: Story = {
   render: args => <KvibBadge {...args}>Badge</KvibBadge>,

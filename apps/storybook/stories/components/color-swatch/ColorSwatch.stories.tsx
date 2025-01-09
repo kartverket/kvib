@@ -1,4 +1,4 @@
-import { ColorSwatch, ColorSwatchProps } from "@kvib/react";
+import { ColorSwatch } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof ColorSwatch> = {
@@ -7,8 +7,8 @@ const meta: Meta<typeof ColorSwatch> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "hidden" },
     },
+    layout: "centered",
   },
   args: {
     value: "#EB5E41",
@@ -36,8 +36,9 @@ const meta: Meta<typeof ColorSwatch> = {
 export default meta;
 type Story = StoryObj<typeof ColorSwatch>;
 
-const ColorSwatchExample = (props: ColorSwatchProps) => <ColorSwatch {...props} />;
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+ColorSwatch.displayName = "ColorSwatch";
 
 export const Preview: Story = {
-  render: args => <ColorSwatchExample {...args} />,
+  render: args => <ColorSwatch {...args} />,
 };

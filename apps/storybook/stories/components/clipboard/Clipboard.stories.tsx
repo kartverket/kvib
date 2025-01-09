@@ -1,14 +1,14 @@
-import { ClipboardIconButton, ClipboardRoot, ClipboardRootProps } from "@kvib/react";
+import { Clipboard, ClipboardIconButton } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
-const meta: Meta<typeof ClipboardRoot> = {
+const meta: Meta<typeof Clipboard> = {
   title: "Komponenter/Clipboard",
-  component: ClipboardRoot,
+  component: Clipboard,
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "hidden" },
     },
+    layout: "centered",
   },
   argTypes: {
     timeout: {
@@ -35,14 +35,16 @@ const meta: Meta<typeof ClipboardRoot> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof ClipboardRoot>;
+type Story = StoryObj<typeof Clipboard>;
 
-const ClipboardExample = (props: ClipboardRootProps) => (
-  <ClipboardRoot value="Denne teksten havner i utklippstavla" {...props}>
-    <ClipboardIconButton />
-  </ClipboardRoot>
-);
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+Clipboard.displayName = "Clipboard";
+ClipboardIconButton.displayName = "ClipboardIconButton";
 
 export const Preview: Story = {
-  render: args => <ClipboardExample {...args} />,
+  render: args => (
+    <Clipboard value="Text copied to the clipboard" {...args}>
+      <ClipboardIconButton />
+    </Clipboard>
+  ),
 };
