@@ -1,1 +1,0 @@
-import{r as c}from"./index-C7I6S4tq.js";import{u}from"./factory-CpD2hwoa.js";function i(o){const{key:e,recipe:t}=o,r=u();return c.useMemo(()=>{const s=t||(e!=null?r.getRecipe(e):{});return r.cva(structuredClone(s))},[e,t,r])}export{i as u};
