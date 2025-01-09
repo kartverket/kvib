@@ -44,7 +44,7 @@ ClipboardIconButton.displayName = "ClipboardIconButton";
 export const Preview: Story = {
   render: args => (
     <Clipboard value="Text copied to the clipboard" {...args}>
-      <ClipboardIconButton />
+      <ClipboardIconButton colorPalette={args.colorPalette} />
     </Clipboard>
   ),
 };
