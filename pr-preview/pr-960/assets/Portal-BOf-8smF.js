@@ -1,0 +1,4 @@
+import{j as t}from"./jsx-runtime-DgHZ7iq2.js";import{useMDXComponents as i}from"./index-BGZZYR5m.js";import{ae as s,af as m,ag as a}from"./index-CQxF77q4.js";import{P as p,a as n}from"./Portal.stories--K6Rl5zB.js";import"./index-C7I6S4tq.js";import"./iframe-CSdxMFqb.js";import"../sb-preview/runtime.js";import"./index-DGxgJC0M.js";import"./index-EN4ZLXvn.js";import"./index-CHGET4sZ.js";import"./index-DrFu-skq.js";import"./portal-BqskmCPs.js";import"./create-context-B_OvqDKw.js";import"./use-environment-context-CwI7sxJj.js";function e(o){const{PortalDocs:r}={...i(),...o.components};return r||c("PortalDocs"),t.jsxs(t.Fragment,{children:[t.jsx(s,{of:p}),`
+`,t.jsx(r,{}),`
+`,t.jsx(m,{of:n}),`
+`,t.jsx(a,{of:n})]})}function y(o={}){const{wrapper:r}={...i(),...o.components};return r?t.jsx(r,{...o,children:t.jsx(e,{...o})}):e(o)}function c(o,r){throw new Error("Expected component `"+o+"` to be defined: you likely forgot to import, pass, or provide it.")}export{y as default};

@@ -1,0 +1,20 @@
+import{j as e}from"./jsx-runtime-DgHZ7iq2.js";import{K as r}from"./kbd-BL1YlofU.js";import{S as c}from"./stack-DR__wOga.js";const p={title:"Komponenter/Kbd",component:r,parameters:{docs:{story:{inline:!0},canvas:{sourceState:"hidden"}}}},n={args:{fontSize:"sm"},render:s=>e.jsxs("span",{children:[e.jsx(r,{...s,children:"shift"})," + ",e.jsx(r,{...s,children:"H"})]})},i={render:s=>e.jsxs(c,{children:[e.jsxs("span",{children:[e.jsx(r,{...s,children:"shift"})," + ",e.jsx(r,{...s,children:"H"})]}),e.jsxs("span",{children:[e.jsx(r,{...s,children:"shift"})," then ",e.jsx(r,{...s,children:"H"})]}),e.jsxs("span",{children:[e.jsx(r,{...s,children:"alt"})," or ",e.jsx(r,{...s,children:"option"})]})]})};var a,t,d;n.parameters={...n.parameters,docs:{...(a=n.parameters)==null?void 0:a.docs,source:{originalSource:`{
+  args: {
+    fontSize: "sm"
+  },
+  render: args => <span>
+      <KvibKbd {...args}>shift</KvibKbd> + <KvibKbd {...args}>H</KvibKbd>
+    </span>
+}`,...(d=(t=n.parameters)==null?void 0:t.docs)==null?void 0:d.source}}};var o,b,K;i.parameters={...i.parameters,docs:{...(o=i.parameters)==null?void 0:o.docs,source:{originalSource:`{
+  render: args => <KvibStack>
+      <span>
+        <KvibKbd {...args}>shift</KvibKbd> + <KvibKbd {...args}>H</KvibKbd>
+      </span>
+      <span>
+        <KvibKbd {...args}>shift</KvibKbd> then <KvibKbd {...args}>H</KvibKbd>
+      </span>
+      <span>
+        <KvibKbd {...args}>alt</KvibKbd> or <KvibKbd {...args}>option</KvibKbd>
+      </span>
+    </KvibStack>
+}`,...(K=(b=i.parameters)==null?void 0:b.docs)==null?void 0:K.source}}};const l=["Preview","KbdModifier"],j=Object.freeze(Object.defineProperty({__proto__:null,KbdModifier:i,Preview:n,__namedExportsOrder:l,default:p},Symbol.toStringTag,{value:"Module"}));export{j as K,n as P};
