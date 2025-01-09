@@ -8,7 +8,6 @@ const meta: Meta<typeof ColorSwatch> = {
     docs: {
       story: { inline: true },
     },
-    layout: "centered",
   },
   args: {
     value: "#EB5E41",

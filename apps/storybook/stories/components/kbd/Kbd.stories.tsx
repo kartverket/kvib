@@ -7,13 +7,16 @@ const meta: Meta<typeof KvibKbd> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "hidden" },
     },
   },
 };
 
 export default meta;
 type Story = StoryObj<typeof KvibKbd>;
+
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+KvibKbd.displayName = "Kbd";
+KvibStack.displayName = "Stack";
 
 export const Preview: Story = {
   args: {

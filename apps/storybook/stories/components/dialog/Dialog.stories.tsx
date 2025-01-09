@@ -18,7 +18,6 @@ const meta: Meta<typeof Dialog> = {
   title: "Komponenter/Dialog (Modal)",
   component: Dialog,
   parameters: {
-    layout: "centered",
     docs: {
       story: { inline: true },
     },

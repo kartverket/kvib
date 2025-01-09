@@ -8,7 +8,6 @@ const meta: Meta<typeof KvibButton> = {
     docs: {
       story: { inline: true },
     },
-    layout: "centered",
   },
   args: {
     colorPalette: "green",

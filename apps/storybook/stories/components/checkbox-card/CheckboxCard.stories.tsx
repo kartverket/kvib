@@ -8,7 +8,6 @@ const meta: Meta<typeof CheckboxCard> = {
     docs: {
       story: { inline: true },
     },
-    layout: "centered",
   },
   argTypes: {
     colorPalette: {

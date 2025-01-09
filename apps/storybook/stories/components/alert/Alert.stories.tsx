@@ -7,9 +7,7 @@ const meta: Meta<typeof KvibAlert> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "hidden" },
     },
-    layout: "centered",
   },
   args: {
     title: "Alert title",

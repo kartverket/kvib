@@ -18,7 +18,6 @@ const meta: Meta<typeof Popover> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "hidden" },
     },
   },
   argTypes: {
@@ -51,20 +50,29 @@ interface Props extends PopoverProps {
 }
 type Story = StoryObj<Props>;
 
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+(Popover as any).displayName = "Popover";
+PopoverTrigger.displayName = "PopoverTrigger";
+PopoverContent.displayName = "PopoverContent";
+PopoverArrow.displayName = "PopoverArrow";
+PopoverBody.displayName = "PopoverBody";
+PopoverTitle.displayName = "PopoverTitle";
+PopoverCloseTrigger.displayName = "PopoverCloseTrigger";
+Button.displayName = "Button";
+Text.displayName = "Text";
+
 export const Preview: Story = {
   render: (args: Props) => (
     <Popover {...args}>
       <PopoverTrigger asChild>
-        <Button size="sm" variant="outline" colorPalette={args.colorPalette}>
-          Vis popover
-        </Button>
+        <Button colorPalette={args.colorPalette}>Open Popover</Button>
       </PopoverTrigger>
       <PopoverContent>
         <PopoverCloseTrigger />
         <PopoverArrow />
         <PopoverBody>
-          <PopoverTitle fontWeight="bold">Tittel</PopoverTitle>
-          <Text my="4">Beskrivelse i popover som vises når man har trykket på triggeren.</Text>
+          <PopoverTitle fontWeight="bold">Popover title</PopoverTitle>
+          <Text mt="4px">Popover content</Text>
         </PopoverBody>
       </PopoverContent>
     </Popover>

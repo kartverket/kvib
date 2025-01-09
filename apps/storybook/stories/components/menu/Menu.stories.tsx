@@ -1,4 +1,4 @@
-import { Button, Center, KvibMenu, MenuContent, MenuItem, MenuTrigger } from "@kvib/react";
+import { Button, KvibMenu, MenuContent, MenuItem, MenuTrigger } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<KvibMenu.RootProps> = {
@@ -7,7 +7,6 @@ const meta: Meta<KvibMenu.RootProps> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "hidden" },
     },
   },
   argTypes: {
@@ -77,23 +76,24 @@ interface Props extends KvibMenu.RootProps {
 }
 type Story = StoryObj<Props>;
 
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+KvibMenu.Root.displayName = "Menu";
+MenuTrigger.displayName = "MenuTrigger";
+MenuContent.displayName = "MenuContent";
+MenuItem.displayName = "MenuItem";
+Button.displayName = "Button";
+
 export const Preview: Story = {
   render: (args: Props) => (
-    <Center>
-      <KvibMenu.Root {...args}>
-        <MenuTrigger asChild>
-          <Button variant="outline" size="sm" colorPalette={args.colorPalette}>
-            Åpne meny
-          </Button>
-        </MenuTrigger>
-        <MenuContent>
-          <MenuItem value="new-txt-a">Nedlast</MenuItem>
-          <MenuItem value="new-txt-b">Lag en kopi</MenuItem>
-          <MenuItem value="new-txt-c">Marker som utkast</MenuItem>
-          <MenuItem value="new-txt-d">Slett</MenuItem>
-          <MenuItem value="new-txt-e">Bli med på en workshop</MenuItem>
-        </MenuContent>
-      </KvibMenu.Root>
-    </Center>
+    <KvibMenu.Root {...args}>
+      <MenuTrigger asChild>
+        <Button colorPalette={args.colorPalette}>Open Menu</Button>
+      </MenuTrigger>
+      <MenuContent>
+        <MenuItem value="op1">Option 1</MenuItem>
+        <MenuItem value="op2">Option 2</MenuItem>
+        <MenuItem value="op3">Option 3</MenuItem>
+      </MenuContent>
+    </KvibMenu.Root>
   ),
 };

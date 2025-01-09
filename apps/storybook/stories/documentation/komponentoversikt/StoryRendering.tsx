@@ -27,6 +27,7 @@ import * as FieldsetStories from "../../components/fieldset/Fieldset.stories";
 import * as FileUploadStories from "../../components/file-upload/FileUpload.stories";
 import * as FooterStories from "../../components/footer/Footer.stories";
 import * as HeaderStories from "../../components/header/Header.stories";
+import * as HeadingStories from "../../components/heading/Heading.stories";
 import * as HighlightStories from "../../components/highlight/Highlight.stories";
 import * as HoverCardStories from "../../components/hover-card/HoverCard.stories";
 import * as IconButtonStories from "../../components/icon-button/IconButton.stories";
@@ -72,7 +73,6 @@ import * as TimepickerStories from "../../components/timepicker/Timepicker.stori
 import * as ToastStories from "../../components/toaster/Toaster.stories";
 import * as ToggleTipStories from "../../components/toggle-tip/ToggleTip.stories";
 import * as TooltipStories from "../../components/tooltip/Tooltip.stories";
-import * as HeadingStories from "../../design/heading/Heading.stories";
 import * as TextStories from "../../design/text/Text.stories";
 import { ColorPalette } from "./Komponenter";
 

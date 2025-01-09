@@ -1,4 +1,4 @@
-import { Logo as KvibLogo, Stack as KvibStack } from "@kvib/react";
+import { Logo as KvibLogo } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibLogo> = {
@@ -7,7 +7,6 @@ const meta: Meta<typeof KvibLogo> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "hidden" },
     },
   },
   argTypes: {
@@ -37,23 +36,10 @@ const meta: Meta<typeof KvibLogo> = {
 export default meta;
 type Story = StoryObj<typeof KvibLogo>;
 
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+(KvibLogo as any).displayName = "Logo";
+
 export const Preview: Story = {
   args: { label: "Logo" },
   render: args => <KvibLogo {...args} />,
-};
-
-export const LogoHorizontal: Story = {
-  args: { label: "Logo", variant: "horizontal" },
-  render: args => <KvibLogo {...args} />,
-};
-
-export const LogoSizes: Story = {
-  args: { label: "Logo", variant: "horizontal" },
-  render: args => (
-    <KvibStack>
-      <KvibLogo {...args} size={100} />
-      <KvibLogo {...args} size={200} />
-      <KvibLogo {...args} size={300} />
-    </KvibStack>
-  ),
 };

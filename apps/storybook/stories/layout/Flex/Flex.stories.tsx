@@ -9,6 +9,7 @@ const meta: Meta<typeof Flex> = {
     docs: {
       story: { inline: true },
     },
+    layout: "padded",
   },
   argTypes: {
     align: {

@@ -19,7 +19,6 @@ const meta: Meta<typeof ActionBar> = {
       story: { inline: true },
       canvas: { sourceState: "hidden" },
     },
-    layout: "centered",
   },
 };
 

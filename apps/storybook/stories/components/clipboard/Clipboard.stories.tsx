@@ -8,7 +8,6 @@ const meta: Meta<typeof Clipboard> = {
     docs: {
       story: { inline: true },
     },
-    layout: "centered",
   },
   argTypes: {
     timeout: {

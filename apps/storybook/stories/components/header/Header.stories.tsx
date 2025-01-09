@@ -7,7 +7,6 @@ const meta: Meta<typeof KvibHeader> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "hidden" },
     },
     a11y: {
       // Label warnings + contrast ratio because of chakra wrapper.
@@ -84,6 +83,9 @@ const meta: Meta<typeof KvibHeader> = {
 
 export default meta;
 type Story = StoryObj<typeof KvibHeader>;
+
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+(KvibHeader as any).displayName = "Header";
 
 export const Preview: Story = {
   args: { logoAltText: "Kartverket-logo" },

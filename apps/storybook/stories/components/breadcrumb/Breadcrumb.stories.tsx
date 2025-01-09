@@ -7,9 +7,7 @@ const meta: Meta<typeof Breadcrumb> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "shown" },
     },
-    layout: "centered",
   },
   args: {
     size: "md",

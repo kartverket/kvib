@@ -7,7 +7,6 @@ const meta: Meta<typeof ProgressCircle> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "hidden" },
     },
   },
   args: {
@@ -38,6 +37,10 @@ const meta: Meta<typeof ProgressCircle> = {
 
 export default meta;
 type Story = StoryObj<typeof ProgressCircle>;
+
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+ProgressCircle.displayName = "ProgressCircle";
+ProgressCircleRing.displayName = "ProgressCircleRing";
 
 export const Preview: Story = {
   render: (args: ProgressCircleProps) => (

@@ -8,7 +8,6 @@ const meta: Meta<typeof KvibIconButton> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "hidden" },
     },
   },
   args: {
@@ -77,6 +76,9 @@ const meta: Meta<typeof KvibIconButton> = {
 
 export default meta;
 type Story = StoryObj<typeof KvibIconButton>;
+
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+KvibIconButton.displayName = "IconButton";
 
 export const Preview: Story = {
   render: args => <KvibIconButton {...args} />,

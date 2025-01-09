@@ -1,11 +1,4 @@
-import {
-  HStack,
-  Progress as KvibProgress,
-  ProgressBar,
-  ProgressProps,
-  ProgressRoot,
-  ProgressValueText,
-} from "@kvib/react";
+import { HStack, Progress as KvibProgress, Progress, ProgressBar, ProgressRoot, ProgressValueText } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibProgress> = {
@@ -14,7 +7,6 @@ const meta: Meta<typeof KvibProgress> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "hidden" },
     },
   },
   argTypes: {
@@ -55,7 +47,6 @@ const meta: Meta<typeof KvibProgress> = {
       },
       control: "number",
     },
-
     min: {
       description: "The minimum value of the progress",
       table: {
@@ -64,7 +55,6 @@ const meta: Meta<typeof KvibProgress> = {
       },
       control: "number",
     },
-
     size: {
       description: "The size of the Progress",
       table: {
@@ -76,7 +66,6 @@ const meta: Meta<typeof KvibProgress> = {
         type: "radio",
       },
     },
-
     value: {
       description: "The value of the progress indicator. If undefined the progress bar will be in indeterminate state",
       table: {
@@ -91,14 +80,21 @@ const meta: Meta<typeof KvibProgress> = {
 export default meta;
 type Story = StoryObj<typeof KvibProgress>;
 
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+Progress.displayName = "Progress";
+ProgressBar.displayName = "ProgressBar";
+ProgressRoot.displayName = "ProgressRoot";
+ProgressValueText.displayName = "ProgressValueText";
+HStack.displayName = "HStack";
+
 export const Preview: Story = {
-  args: { value: 40, width: "12rem" },
-  render: (args: ProgressProps) => (
-    <ProgressRoot defaultValue={40} {...args}>
+  args: { value: 40, width: "12rem", defaultValue: 40 },
+  render: args => (
+    <Progress {...args}>
       <HStack gap="5">
         <ProgressBar flex="1" />
         <ProgressValueText>40%</ProgressValueText>
       </HStack>
-    </ProgressRoot>
+    </Progress>
   ),
 };

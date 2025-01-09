@@ -22,7 +22,6 @@ const meta: Meta<typeof KvibDrawer> = {
     docs: {
       story: { inline: true },
     },
-    layout: "centered",
   },
   argTypes: {
     open: {

@@ -12,7 +12,6 @@ const meta: Meta<typeof KvibEditable> = {
     docs: {
       story: { inline: true },
     },
-    layout: "centered",
   },
   argTypes: {
     activationMode: {

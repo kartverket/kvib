@@ -7,9 +7,7 @@ const meta: Meta<typeof KvibBadge> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "hidden" },
     },
-    layout: "centered",
   },
   args: {
     colorPalette: "gray",

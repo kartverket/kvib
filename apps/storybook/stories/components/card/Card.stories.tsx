@@ -9,7 +9,6 @@ const meta: Meta<typeof KvibCard> = {
     docs: {
       story: { inline: true },
     },
-    layout: "centered",
   },
   argTypes: {
     size: {

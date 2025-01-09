@@ -13,7 +13,6 @@ const meta: Meta<typeof KvibDatepicker> = {
     docs: {
       story: { inline: true },
     },
-    layout: "centered",
     a11y: {
       // This option disables all a11y checks on this story
     },

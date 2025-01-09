@@ -8,7 +8,6 @@ const meta: Meta<typeof KvibCheckbox> = {
     docs: {
       story: { inline: true },
     },
-    layout: "centered",
   },
   argTypes: {
     colorPalette: {

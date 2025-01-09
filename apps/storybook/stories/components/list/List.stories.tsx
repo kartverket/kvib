@@ -1,4 +1,4 @@
-import { List, ListItem, ListProps } from "@kvib/react";
+import { List, ListItem } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof List> = {
@@ -7,7 +7,6 @@ const meta: Meta<typeof List> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "hidden" },
     },
   },
   argTypes: {
@@ -54,14 +53,16 @@ const meta: Meta<typeof List> = {
 export default meta;
 type Story = StoryObj<typeof List>;
 
-const ListExample = (args: ListProps) => (
-  <List {...args}>
-    <ListItem>Listeelement 1</ListItem>
-    <ListItem>Listeelement 2</ListItem>
-    <ListItem>Listeelement 3</ListItem>
-  </List>
-);
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+List.displayName = "List";
+ListItem.displayName = "ListItem";
 
 export const Preview: Story = {
-  render: args => <ListExample {...args} />,
+  render: args => (
+    <List {...args}>
+      <ListItem>Item 1</ListItem>
+      <ListItem>Item 2</ListItem>
+      <ListItem>Item 3</ListItem>
+    </List>
+  ),
 };

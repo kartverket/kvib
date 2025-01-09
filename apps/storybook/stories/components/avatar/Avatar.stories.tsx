@@ -7,9 +7,7 @@ const meta: Meta<typeof KvibAvatar> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "shown" },
     },
-    layout: "centered",
   },
   args: {
     name: "Hans Hansen",

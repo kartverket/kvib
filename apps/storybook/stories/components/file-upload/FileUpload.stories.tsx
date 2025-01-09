@@ -16,7 +16,6 @@ const meta: Meta<typeof KvibFileUpload> = {
     docs: {
       story: { inline: true },
     },
-    layout: "centered",
     a11y: {
       // This option disables all a11y checks on this story
       disable: true,

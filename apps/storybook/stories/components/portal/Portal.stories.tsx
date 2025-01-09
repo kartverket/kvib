@@ -12,21 +12,19 @@ const meta: Meta<typeof KvibPortal> = {
     },
   },
   argTypes: {
-    appendToParentPortal: {
-      description:
-        "If true, the portal will check if it is within a parent portal and append itself to the parent's portal node. This provides nesting for portals. If false, the portal will always append to `document.body` regardless of nesting. It is used to opt out of portal nesting.",
+    container: {
       table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "true" },
+        type: {
+          summary: "RefObject<HTMLElement | null>",
+        },
       },
-      control: "boolean",
     },
-    containerRef: {
-      description: "The ref to the component where the portal will be attached to.",
+    disabled: {
       table: {
-        type: { summary: "RefObject<HTMLElement | null>" },
+        type: {
+          summary: "boolean",
+        },
       },
-      control: "object",
     },
   },
 };
@@ -34,18 +32,19 @@ const meta: Meta<typeof KvibPortal> = {
 export default meta;
 type Story = StoryObj<typeof KvibPortal>;
 
-export const Preview: Story = {
-  render: (args: PortalProps) => <Demo {...args} />,
-};
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+(KvibPortal as any).displayName = "Portal";
 
-const Demo = () => {
-  const containerRef = useRef<HTMLDivElement | null>(null);
-  return (
-    <>
-      <Portal container={containerRef}>
-        <div>Portal content</div>
-      </Portal>
-      <div ref={containerRef} />
-    </>
-  );
+export const Preview: Story = {
+  render: (args: PortalProps) => {
+    const containerRef = useRef<HTMLDivElement | null>(null);
+    return (
+      <>
+        <Portal container={containerRef} {...args}>
+          <div>Portal content</div>
+        </Portal>
+        <div ref={containerRef} />
+      </>
+    );
+  },
 };

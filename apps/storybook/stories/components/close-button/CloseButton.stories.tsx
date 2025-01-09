@@ -8,7 +8,6 @@ const meta: Meta<typeof KvibCloseButton> = {
     docs: {
       story: { inline: true },
     },
-    layout: "centered",
   },
   argTypes: {
     colorPalette: {

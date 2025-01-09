@@ -8,7 +8,6 @@ const meta: Meta<typeof KvibCode> = {
     docs: {
       story: { inline: true },
     },
-    layout: "centered",
   },
   argTypes: {
     variant: {

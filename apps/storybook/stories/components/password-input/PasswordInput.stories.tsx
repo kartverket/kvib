@@ -1,4 +1,4 @@
-import { PasswordInput, PasswordInputProps } from "@kvib/react";
+import { PasswordInput } from "@kvib/react";
 
 import { Meta, StoryObj } from "@storybook/react";
 
@@ -8,7 +8,6 @@ const meta: Meta<typeof PasswordInput> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "hidden" },
     },
     a11y: {
       // This option disables all a11y checks on this story
@@ -50,8 +49,9 @@ const meta: Meta<typeof PasswordInput> = {
 export default meta;
 type Story = StoryObj<typeof PasswordInput>;
 
-const PasswordInputExample = (args: PasswordInputProps) => <PasswordInput {...args} />;
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+PasswordInput.displayName = "PasswordInput";
 
 export const Preview: Story = {
-  render: args => <PasswordInputExample {...args} />,
+  render: args => <PasswordInput {...args} />,
 };

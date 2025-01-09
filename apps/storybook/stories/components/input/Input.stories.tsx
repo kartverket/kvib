@@ -7,7 +7,6 @@ const meta: Meta<typeof KvibInput> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "hidden" },
     },
   },
   argTypes: {
@@ -67,6 +66,9 @@ const meta: Meta<typeof KvibInput> = {
 export default meta;
 type InputStory = StoryObj<typeof KvibInput>;
 
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+(KvibInput as any).displayName = "Input";
+
 export const Preview: InputStory = {
-  render: args => <KvibInput placeholder="Skriv her..." {...args} />,
+  render: args => <KvibInput placeholder="Write something..." {...args} />,
 };

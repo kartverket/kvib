@@ -19,7 +19,6 @@ const meta: Meta<typeof ColorPicker> = {
     docs: {
       story: { inline: true },
     },
-    layout: "centered",
   },
   argTypes: {
     defaultValue: {

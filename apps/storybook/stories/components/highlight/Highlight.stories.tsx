@@ -7,7 +7,6 @@ const meta: Meta<typeof KvibHighlight> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "hidden" },
     },
   },
   argTypes: {
@@ -31,14 +30,17 @@ const meta: Meta<typeof KvibHighlight> = {
 export default meta;
 type Story = StoryObj<typeof KvibHighlight>;
 
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+(KvibHighlight as any).displayName = "Highlight";
+
 export const Preview: Story = {
   args: {
-    query: "fremheve",
+    query: "Highlight",
     styles: { px: "1", py: "1", bg: "orange.100" },
   },
   render: args => (
     <Box textAlign={"center"}>
-      <KvibHighlight {...args}>Det er mulig å fremheve ord med Highlight.</KvibHighlight>
+      <KvibHighlight {...args}>Highlight content</KvibHighlight>
     </Box>
   ),
 };

@@ -6,7 +6,6 @@ const meta: Meta<typeof KvibDateRangePicker> = {
   title: "Komponenter/DateRangePicker",
   component: KvibDateRangePicker,
   parameters: {
-    layout: "centered",
     docs: {
       story: { inline: true },
     },

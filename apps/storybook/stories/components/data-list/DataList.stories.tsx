@@ -8,7 +8,6 @@ const meta: Meta<typeof DataList> = {
     docs: {
       story: { inline: true },
     },
-    layout: "centered",
   },
   argTypes: {
     colorPalette: {
@@ -44,10 +43,7 @@ const meta: Meta<typeof DataList> = {
 export default meta;
 type Story = StoryObj<typeof DataList>;
 
-const stats = [
-  { label: "Number", value: 428 },
-  { label: "Label", value: "value" },
-];
+const stats = [{ label: "Number value", value: 428 }];
 
 /** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
 DataList.displayName = "DataList";

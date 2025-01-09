@@ -121,9 +121,6 @@ export const Preview: Story = {
       </AccItem>
     </Accordion>
   ),
-  parameters: {
-    layout: "centered",
-  },
 };
 
 type AccordionItemStory = StoryObj<KvibAccordion.ItemProps>;
@@ -153,7 +150,4 @@ export const AccordionItem: AccordionItemStory = {
       </KvibAccordion.Item>
     </KvibAccordion.Root>
   ),
-  parameters: {
-    layout: "centered",
-  },
 };

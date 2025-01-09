@@ -7,7 +7,6 @@ const meta: Meta<typeof KvibLink> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "hidden" },
     },
   },
   argTypes: {
@@ -48,9 +47,12 @@ const meta: Meta<typeof KvibLink> = {
 export default meta;
 type Story = StoryObj<typeof KvibLink>;
 
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+KvibLink.displayName = "Link";
+
 export const Preview: Story = {
   args: {
-    children: "Dette er en lenke",
+    children: "This is a link",
     href: "/?path=/",
   },
   render: args => <KvibLink {...args}>{args.children}</KvibLink>,

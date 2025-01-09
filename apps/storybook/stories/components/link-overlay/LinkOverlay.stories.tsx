@@ -1,11 +1,4 @@
-import {
-  Box as KvibBox,
-  Heading as KvibHeading,
-  LinkBox as KvibLinkBox,
-  LinkOverlay as KvibLinkOverlay,
-  Text as KvibText,
-  Link,
-} from "@kvib/react";
+import { LinkBox as KvibLinkBox, LinkOverlay as KvibLinkOverlay, Text as KvibText } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibLinkOverlay> = {
@@ -14,7 +7,6 @@ const meta: Meta<typeof KvibLinkOverlay> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "hidden" },
     },
   },
 };
@@ -22,33 +14,16 @@ const meta: Meta<typeof KvibLinkOverlay> = {
 export default meta;
 type Story = StoryObj<typeof KvibLinkOverlay>;
 
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+KvibLinkBox.displayName = "LinkBox";
+KvibLinkOverlay.displayName = "LinkOverlay";
+KvibText.displayName = "Text";
+
 export const Preview: Story = {
   render: args => (
     <KvibLinkBox as="article" maxW="sm" p="5" borderWidth="1px" rounded="md">
-      <KvibHeading size="md" my="2">
-        <KvibLinkOverlay {...args} href="#">
-          Denne kan trykkes på
-        </KvibLinkOverlay>
-      </KvibHeading>
-      <KvibText>Hele komponenten er en knapp</KvibText>
-    </KvibLinkBox>
-  ),
-};
-
-export const LinkOverlayNested: Story = {
-  render: args => (
-    <KvibLinkBox as="article" maxW="sm" p="5" borderWidth="1px" rounded="md">
-      <KvibBox>13 timer siden</KvibBox>
-      <KvibHeading size="md" my="2">
-        <KvibLinkOverlay {...args} href="#">
-          Ikke gå deg vill på bærtur
-        </KvibLinkOverlay>
-      </KvibHeading>
-      <KvibText mb="3">
-        Bær- og soppsesongen er i full gang til skogs og fjells. Last ned Kartverkets gratis mobil-app "Hvor?", så vet
-        du hvor du er.
-      </KvibText>
-      <Link href="#">En ekstra link</Link>
+      <KvibLinkOverlay {...args} href="#" />
+      <KvibText>This area is clickable</KvibText>
     </KvibLinkBox>
   ),
 };
