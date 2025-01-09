@@ -7,11 +7,10 @@ const meta: Meta<typeof KvibAlert> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "hidden" },
     },
   },
   args: {
-    title: "Dette er tittelen!",
+    title: "Alert title",
     status: "info",
     variant: "subtle",
     size: "md",
@@ -49,6 +48,9 @@ const meta: Meta<typeof KvibAlert> = {
 export default meta;
 type Story = StoryObj<typeof KvibAlert>;
 
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+KvibAlert.displayName = "Alert";
+
 export const Preview: Story = {
-  render: args => <KvibAlert {...args}>Dette er beskrivelsen.</KvibAlert>,
+  render: args => <KvibAlert {...args}>Informative description.</KvibAlert>,
 };

@@ -1,4 +1,4 @@
-import { Code as KvibCode, Stack as KvibStack } from "@kvib/react";
+import { Code as KvibCode } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibCode> = {
@@ -7,7 +7,6 @@ const meta: Meta<typeof KvibCode> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "hidden" },
     },
   },
   argTypes: {
@@ -35,24 +34,9 @@ const meta: Meta<typeof KvibCode> = {
 export default meta;
 type Story = StoryObj<typeof KvibCode>;
 
-export const Preview: Story = {
-  parameters: {
-    docs: {
-      canvas: {
-        sourceState: "shown",
-      },
-    },
-  },
-  render: args => <KvibCode {...args}>$ npm install @kvib/react</KvibCode>,
-};
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+KvibCode.displayName = "Code";
 
-export const CodeAppearance: Story = {
-  args: { width: "fit-content" },
-  render: args => (
-    <KvibStack gap="1rem">
-      <KvibCode {...args} children="console.log(kartverket)" variant="subtle" />
-      <KvibCode {...args} colorPalette="blue" children="Hello world" variant="outline" />
-      <KvibCode {...args} colorPalette="red" children="var kartverket = 'Hønefoss'" variant="solid" />
-    </KvibStack>
-  ),
+export const Preview: Story = {
+  render: args => <KvibCode {...args}>$ npm install @kvib/react</KvibCode>,
 };

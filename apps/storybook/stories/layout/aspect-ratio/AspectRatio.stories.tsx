@@ -44,7 +44,4 @@ export const Preview: Story = {
       />
     </KvibAspectRatio>
   ),
-  parameters: {
-    layout: "centered",
-  },
 };

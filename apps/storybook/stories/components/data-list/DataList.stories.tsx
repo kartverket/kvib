@@ -1,4 +1,4 @@
-import { DataList, DataListItem, DataListProps, DataListRoot } from "@kvib/react";
+import { DataList, DataListItem } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof DataList> = {
@@ -7,7 +7,6 @@ const meta: Meta<typeof DataList> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "hidden" },
     },
   },
   argTypes: {
@@ -44,21 +43,18 @@ const meta: Meta<typeof DataList> = {
 export default meta;
 type Story = StoryObj<typeof DataList>;
 
-const kommunerStats = [
-  { label: "Tallverdi", value: 428 },
-  { label: "Strengverdi", value: "Verdi" },
-];
+const stats = [{ label: "Number value", value: 428 }];
 
-const DataListExample = (props: DataListProps) => {
-  return (
-    <DataListRoot {...props}>
-      {kommunerStats.map(item => (
-        <DataListItem key={item.label} label={item.label} value={item.value} />
-      ))}
-    </DataListRoot>
-  );
-};
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+DataList.displayName = "DataList";
+DataListItem.displayName = "DataListItem";
 
 export const Preview: Story = {
-  render: args => <DataListExample {...args} />,
+  render: args => (
+    <DataList {...args}>
+      {stats.map(item => (
+        <DataListItem key={item.label} label={item.label} value={item.value} />
+      ))}
+    </DataList>
+  ),
 };

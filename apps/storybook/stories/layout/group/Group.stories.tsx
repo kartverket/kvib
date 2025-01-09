@@ -51,7 +51,4 @@ export const Preview: Story = {
       <Button variant="outline">Second</Button>
     </Group>
   ),
-  parameters: {
-    layout: "centered",
-  },
 };

@@ -7,7 +7,6 @@ const meta: Meta<typeof KvibTag> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "shown" },
     },
   },
   argTypes: {
@@ -45,5 +44,5 @@ export default meta;
 type Story = StoryObj<typeof KvibTag>;
 
 export const Preview: Story = {
-  render: (args: TagProps) => <KvibTag {...args}>Eksempeltag</KvibTag>,
+  render: (args: TagProps) => <KvibTag {...args}>Tag</KvibTag>,
 };

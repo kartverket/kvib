@@ -7,7 +7,6 @@ const meta: Meta<typeof KvibImage> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "hidden" },
     },
   },
   argTypes: {
@@ -90,14 +89,13 @@ const meta: Meta<typeof KvibImage> = {
       control: "text",
     },
   },
-  args: {
-    onError: undefined,
-    onLoad: undefined,
-  },
 };
 
 export default meta;
 type Story = StoryObj<typeof KvibImage>;
+
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+(KvibImage as any).displayName = "Image";
 
 export const Preview: Story = {
   args: {

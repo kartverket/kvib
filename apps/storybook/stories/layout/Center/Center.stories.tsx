@@ -8,6 +8,7 @@ const meta: Meta<typeof KvibCenter> = {
     docs: {
       story: { inline: true },
     },
+    layout: "padded",
   },
 };
 

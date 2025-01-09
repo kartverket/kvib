@@ -72,7 +72,4 @@ export const Preview: Story = {
       </Float>
     </Box>
   ),
-  parameters: {
-    layout: "centered",
-  },
 };

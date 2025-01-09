@@ -8,6 +8,7 @@ const meta: Meta<typeof SimpleGrid> = {
     docs: {
       story: { inline: true },
     },
+    layout: "padded",
   },
   argTypes: {
     autoColumns: {

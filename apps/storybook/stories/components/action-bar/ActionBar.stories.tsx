@@ -30,36 +30,41 @@ interface Props extends ActionBarProps {
 }
 type Story = StoryObj<Props>;
 
-const ActionBarExample = (props: Props) => {
-  const { open, onOpen, onClose } = useDisclosure();
-
-  return (
-    <>
-      <Checkbox
-        onCheckedChange={(e: SwitchCheckedChangeDetails) => {
-          if ((e as { checked: boolean }).checked) {
-            onOpen();
-          } else {
-            onClose();
-          }
-        }}
-        colorPalette={props.colorPalette}
-      >
-        Vis Action Bar
-      </Checkbox>
-      <ActionBar open={open} onExitComplete={onClose} closeOnInteractOutside={false}>
-        <ActionBarContent {...props}>
-          <ActionBarSelectionTrigger>2 elementer valgt</ActionBarSelectionTrigger>
-          <ActionBarSeparator />
-          <Button variant="outline" size="sm" colorPalette={props.colorPalette}>
-            Del
-          </Button>
-        </ActionBarContent>
-      </ActionBar>
-    </>
-  );
-};
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+ActionBar.displayName = "ActionBar";
+ActionBarContent.displayName = "ActionBarContent";
+ActionBarSelectionTrigger.displayName = "ActionBarSelectionTrigger";
+ActionBarSeparator.displayName = "ActionBarSeparator";
+Button.displayName = "Button";
 
 export const Preview: Story = {
-  render: args => <ActionBarExample {...args} />,
+  render: args => {
+    const { open, onOpen, onClose } = useDisclosure();
+
+    return (
+      <>
+        <Checkbox
+          onCheckedChange={(e: SwitchCheckedChangeDetails) => {
+            if ((e as { checked: boolean }).checked) {
+              onOpen();
+            } else {
+              onClose();
+            }
+          }}
+          colorPalette={args.colorPalette}
+        >
+          Show Action Bar
+        </Checkbox>
+        <ActionBar open={open} onExitComplete={onClose} closeOnInteractOutside={false} {...args}>
+          <ActionBarContent>
+            <ActionBarSelectionTrigger>Selection content</ActionBarSelectionTrigger>
+            <ActionBarSeparator />
+            <Button variant="outline" size="sm" colorPalette={args.colorPalette}>
+              Action
+            </Button>
+          </ActionBarContent>
+        </ActionBar>
+      </>
+    );
+  },
 };

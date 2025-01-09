@@ -7,7 +7,6 @@ const meta: Meta<typeof KvibButton> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "hidden" },
     },
   },
   args: {
@@ -90,8 +89,10 @@ const meta: Meta<typeof KvibButton> = {
 export default meta;
 type Story = StoryObj<typeof KvibButton>;
 
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+KvibButton.displayName = "Button";
+
 export const Preview: Story = {
-  args: { children: "Klikk her" },
   parameters: {
     docs: {
       canvas: {
@@ -99,7 +100,5 @@ export const Preview: Story = {
       },
     },
   },
-  render: function Render(args) {
-    return <KvibButton {...args}>{args.children}</KvibButton>;
-  },
+  render: args => <KvibButton {...args}>Button</KvibButton>,
 };

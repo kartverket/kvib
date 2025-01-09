@@ -1,4 +1,4 @@
-import { Breadcrumb, BreadcrumbCurrentLink, BreadcrumbLink } from "@kvib/react";
+import { Box, Breadcrumb, BreadcrumbCurrentLink, BreadcrumbLink, Icon } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Breadcrumb> = {
@@ -7,7 +7,6 @@ const meta: Meta<typeof Breadcrumb> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "shown" },
     },
   },
   args: {
@@ -64,12 +63,31 @@ const meta: Meta<typeof Breadcrumb> = {
 export default meta;
 type Story = StoryObj<typeof Breadcrumb>;
 
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+Breadcrumb.displayName = "Breadcrumb";
+BreadcrumbLink.displayName = "BreadcrumbLink";
+BreadcrumbCurrentLink.displayName = "BreadcrumbCurrentLink";
+Icon.displayName = "Icon";
+
 export const Preview: Story = {
   render: args => (
-    <Breadcrumb {...args}>
-      <BreadcrumbLink href="#">Home</BreadcrumbLink>
-      <BreadcrumbLink href="#">Docs</BreadcrumbLink>
-      <BreadcrumbCurrentLink>Breadcrumb</BreadcrumbCurrentLink>
+    <Breadcrumb
+      {...args}
+      separator={
+        <Box
+          css={{
+            m: 0,
+            p: 0,
+            height: "1.5em",
+          }}
+        >
+          <Icon icon="chevron_right" />
+        </Box>
+      }
+    >
+      <BreadcrumbLink href="#">Level 1</BreadcrumbLink>
+      <BreadcrumbLink href="#">Level 2</BreadcrumbLink>
+      <BreadcrumbCurrentLink>Level 3</BreadcrumbCurrentLink>
     </Breadcrumb>
   ),
 };

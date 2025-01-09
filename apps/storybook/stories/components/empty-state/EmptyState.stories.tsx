@@ -7,7 +7,6 @@ const meta: Meta<typeof EmptyState> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "hidden" },
     },
   },
   argTypes: {
@@ -33,14 +32,17 @@ const meta: Meta<typeof EmptyState> = {
     },
   },
   args: {
-    title: "Her var det tomt",
-    description: "Empty State vises når det ikke er noe å vise",
+    title: "Empty State title",
+    description: "Description",
   },
 };
 
 export default meta;
 type Story = StoryObj<typeof EmptyState>;
 
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+EmptyState.displayName = "EmptyState";
+
 export const Preview: Story = {
-  render: args => <EmptyState {...args}></EmptyState>,
+  render: args => <EmptyState {...args} />,
 };

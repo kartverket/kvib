@@ -7,7 +7,6 @@ const meta: Meta<typeof KvibCloseButton> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "hidden" },
     },
   },
   argTypes: {
@@ -42,6 +41,9 @@ const meta: Meta<typeof KvibCloseButton> = {
 
 export default meta;
 type Story = StoryObj<typeof KvibCloseButton>;
+
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+KvibCloseButton.displayName = "CloseButton";
 
 export const Preview: Story = {
   render: args => <KvibCloseButton {...args} />,

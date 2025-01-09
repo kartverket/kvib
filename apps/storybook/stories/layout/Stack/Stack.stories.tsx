@@ -8,6 +8,7 @@ const meta: Meta<typeof Stack> = {
     docs: {
       story: { inline: true },
     },
+    layout: "padded",
   },
   argTypes: {
     direction: {

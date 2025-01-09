@@ -1,11 +1,4 @@
-import {
-  HStack,
-  Pagination,
-  PaginationItems,
-  PaginationNextTrigger,
-  PaginationPrevTrigger,
-  PaginationProps,
-} from "@kvib/react";
+import { HStack, Pagination, PaginationItems, PaginationNextTrigger, PaginationPrevTrigger } from "@kvib/react";
 
 import { Meta, StoryObj } from "@storybook/react";
 
@@ -15,7 +8,6 @@ const meta: Meta<typeof Pagination> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "hidden" },
     },
     a11y: {
       // This option disables all a11y checks on this story
@@ -71,16 +63,19 @@ const meta: Meta<typeof Pagination> = {
 export default meta;
 type Story = StoryObj<typeof Pagination>;
 
-const PaginationExample = (args: PaginationProps) => (
-  <Pagination count={15} pageSize={5} defaultPage={1} {...args}>
-    <HStack>
-      <PaginationPrevTrigger />
-      <PaginationItems />
-      <PaginationNextTrigger />
-    </HStack>
-  </Pagination>
-);
-
 export const Preview: Story = {
-  render: args => <PaginationExample {...args} />,
+  args: {
+    count: 10,
+    defaultPage: 1,
+    pageSize: 5,
+  },
+  render: args => (
+    <Pagination {...args}>
+      <HStack>
+        <PaginationPrevTrigger />
+        <PaginationItems />
+        <PaginationNextTrigger />
+      </HStack>
+    </Pagination>
+  ),
 };

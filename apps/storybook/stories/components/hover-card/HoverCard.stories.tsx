@@ -1,13 +1,4 @@
-import {
-  HoverCard,
-  HoverCardArrow,
-  HoverCardContent,
-  HoverCardProps,
-  HoverCardTrigger,
-  Link,
-  Stack,
-  Text,
-} from "@kvib/react";
+import { HoverCard, HoverCardContent, HoverCardProps, HoverCardTrigger, Link, Stack, Text } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof HoverCard> = {
@@ -16,7 +7,6 @@ const meta: Meta<typeof HoverCard> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "hidden" },
     },
     a11y: {
       // Label warnings + contrast ratio because of chakra wrapper.
@@ -86,25 +76,25 @@ interface Props extends HoverCardProps {
 }
 type Story = StoryObj<Props>;
 
-const HoverCardExample = (props: Props) => (
-  <HoverCard {...props}>
-    <HoverCardTrigger asChild>
-      <Link href="#">Hover for å vise et kort</Link>
-    </HoverCardTrigger>
-    <HoverCardContent>
-      <HoverCardArrow />
-      <Stack gap="1">
-        <Text textStyle="sm" fontWeight="semibold">
-          Her er det innhold!
-        </Text>
-        <Text textStyle="sm" color="fg.muted">
-          Denne dukker opp mens man holder over lenken.
-        </Text>
-      </Stack>
-    </HoverCardContent>
-  </HoverCard>
-);
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+HoverCard.displayName = "HoverCard";
 
 export const Preview: Story = {
-  render: args => <HoverCardExample {...args} />,
+  render: args => (
+    <HoverCard {...args}>
+      <HoverCardTrigger asChild>
+        <Link href="#">Hover for å vise et kort</Link>
+      </HoverCardTrigger>
+      <HoverCardContent>
+        <Stack gap="1">
+          <Text textStyle="sm" fontWeight="semibold">
+            Her er det innhold!
+          </Text>
+          <Text textStyle="sm" color="fg.muted">
+            Denne dukker opp mens man holder over lenken.
+          </Text>
+        </Stack>
+      </HoverCardContent>
+    </HoverCard>
+  ),
 };

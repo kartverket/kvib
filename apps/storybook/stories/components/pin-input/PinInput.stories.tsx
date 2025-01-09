@@ -7,7 +7,6 @@ const meta: Meta<typeof KvibPinInput> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "hidden" },
     },
     a11y: {
       // This option disables all a11y checks on this story
@@ -15,14 +14,6 @@ const meta: Meta<typeof KvibPinInput> = {
     },
   },
   argTypes: {
-    manageFocus: {
-      description: "If true, focus will move automatically to the next input once filled",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "true" },
-      },
-      control: "boolean",
-    },
     mask: {
       description: "If true, the input's value will be masked just like `type=password`",
       table: {
@@ -64,14 +55,14 @@ const meta: Meta<typeof KvibPinInput> = {
       options: ["outline", "filled", "flushed", "unstyled"],
       control: { type: "radio" },
     },
-    isInvalid: {
+    invalid: {
       description: "Toggles if input should be invalid",
       table: {
         type: { summary: "boolean" },
       },
       control: "boolean",
     },
-    isDisabled: {
+    disabled: {
       description: "Toggles if input should be disabled",
       table: {
         type: { summary: "boolean" },
@@ -83,6 +74,9 @@ const meta: Meta<typeof KvibPinInput> = {
 
 export default meta;
 type Story = StoryObj<typeof KvibPinInput>;
+
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+KvibPinInput.displayName = "PinInput";
 
 export const Preview: Story = {
   render: (args: PinInputProps) => <KvibPinInput {...args} />,

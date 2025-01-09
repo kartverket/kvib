@@ -33,12 +33,4 @@ export const Preview: Story = {
       <Button variant="outline">Button</Button>
     </Theme>
   ),
-  parameters: {
-    docs: {
-      source: {
-        language: "tsx",
-      },
-    },
-    layout: "centered",
-  },
 };

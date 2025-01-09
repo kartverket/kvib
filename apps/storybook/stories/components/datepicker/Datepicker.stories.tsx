@@ -12,14 +12,13 @@ const meta: Meta<typeof KvibDatepicker> = {
     },
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "hidden" },
     },
     a11y: {
       // This option disables all a11y checks on this story
     },
   },
   args: {
-    placeholder: "Velg dato",
+    placeholder: "Select date",
     size: "md",
     colorPalette: "green",
     required: false,

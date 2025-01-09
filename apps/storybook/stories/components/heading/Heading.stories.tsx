@@ -26,6 +26,9 @@ const meta: Meta<typeof KvibHeading> = {
 export default meta;
 type Story = StoryObj<typeof KvibHeading>;
 
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+KvibHeading.displayName = "Heading";
+
 export const Preview: Story = {
   args: {
     textAlign: "center",
@@ -36,14 +39,14 @@ export const Preview: Story = {
 export const HeadingSizes: Story = {
   args: {},
   render: args => (
-    <KvibStack spacing={6}>
-      <KvibHeading {...args} as="h1" size="4xl" noOfLines={1}>
+    <KvibStack gap={6}>
+      <KvibHeading {...args} as="h1" size="4xl" lineClamp={1}>
         (4xl) Kartverkets interaksjon- og designbibliotek
       </KvibHeading>
-      <KvibHeading {...args} as="h2" size="3xl" noOfLines={1}>
+      <KvibHeading {...args} as="h2" size="3xl" lineClamp={1}>
         (3xl) Kartverkets interaksjon- og designbibliotek
       </KvibHeading>
-      <KvibHeading {...args} as="h2" size="2xl" noOfLines={1}>
+      <KvibHeading {...args} as="h2" size="2xl" lineClamp={1}>
         (2xl) Kartverkets interaksjon- og designbibliotek
       </KvibHeading>
       <KvibHeading {...args} as="h2" size="xl">

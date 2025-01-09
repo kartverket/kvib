@@ -7,14 +7,7 @@ const meta: Meta<typeof CheckboxCard> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "shown" },
     },
-  },
-  args: {
-    colorPalette: "green",
-    size: "md",
-    disabled: false,
-    invalid: false,
   },
   argTypes: {
     colorPalette: {
@@ -57,13 +50,8 @@ const meta: Meta<typeof CheckboxCard> = {
 export default meta;
 type Story = StoryObj<typeof CheckboxCard>;
 
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+
 export const Preview: Story = {
-  render: args => (
-    <CheckboxCard
-      defaultChecked
-      label="Avmerkingsboks i kort"
-      description="Med en beskrivelse"
-      {...args}
-    ></CheckboxCard>
-  ),
+  render: args => <CheckboxCard defaultChecked label="Label" description="Checkbox Card description" {...args} />,
 };

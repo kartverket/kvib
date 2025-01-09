@@ -7,7 +7,6 @@ const meta: Meta<typeof KvibFormControl> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "hidden" },
     },
   },
   argTypes: {
@@ -45,10 +44,18 @@ const meta: Meta<typeof KvibFormControl> = {
 export default meta;
 type Story = StoryObj<typeof KvibFormControl>;
 
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+KvibFormControl.displayName = "Field";
+(KvibInput as any).displayName = "Input";
+
 export const Preview: Story = {
+  args: {
+    label: "Label",
+    helperText: "Helper text",
+  },
   render: (args: FieldProps) => (
-    <KvibFormControl label={"Label (valgfri)"} helperText={"Hjelpetekst"} {...args}>
-      <KvibInput placeholder={"Eksempel"} size={"md"} variant={"outline"} />
+    <KvibFormControl {...args}>
+      <KvibInput />
     </KvibFormControl>
   ),
 };

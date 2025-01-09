@@ -8,6 +8,7 @@ const meta: Meta<typeof Grid> = {
     docs: {
       story: { inline: true },
     },
+    layout: "padded",
   },
   argTypes: {
     autoColumns: {

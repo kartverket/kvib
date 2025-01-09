@@ -8,7 +8,6 @@ const meta: Meta<typeof KvibNumberInput> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "hidden" },
     },
     a11y: {
       // This option disables all a11y checks on this story
@@ -109,9 +108,12 @@ const meta: Meta<typeof KvibNumberInput> = {
 export default meta;
 type NumberInputStory = StoryObj<typeof KvibNumberInput>;
 
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+(KvibNumberInput as any).displayName = "NumberInput";
+NumberInputField.displayName = "NumberInputField";
+
 export const Preview: NumberInputStory = {
   args: {
-    variant: "outline",
     defaultValue: "3507",
   },
   render: (args: NumberInputProps) => (

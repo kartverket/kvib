@@ -7,7 +7,6 @@ const meta: Meta<typeof KvibAvatar> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "shown" },
     },
   },
   args: {
@@ -45,6 +44,9 @@ const meta: Meta<typeof KvibAvatar> = {
 
 export default meta;
 type Story = StoryObj<typeof KvibAvatar>;
+
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+KvibAvatar.displayName = "Avatar";
 
 export const Preview: Story = {
   render: (args: AvatarProps) => <KvibAvatar {...args} />,

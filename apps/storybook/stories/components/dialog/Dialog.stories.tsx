@@ -17,7 +17,11 @@ import { Meta, StoryObj } from "@storybook/react";
 const meta: Meta<typeof Dialog> = {
   title: "Komponenter/Dialog (Modal)",
   component: Dialog,
-
+  parameters: {
+    docs: {
+      story: { inline: true },
+    },
+  },
   argTypes: {
     size: {
       description: "The size of the component",
@@ -119,49 +123,45 @@ interface Props extends DialogProps {
 }
 type Story = StoryObj<Props>;
 
-const DialogExample = (args: Props) => {
-  return (
-    <>
-      <Dialog {...args}>
-        <DialogTrigger asChild>
-          <Button colorPalette={args.colorPalette}>Åpne dialog</Button>
-        </DialogTrigger>
-        <DialogContent>
-          <DialogHeader>
-            <DialogTitle>Her er en modal</DialogTitle>
-          </DialogHeader>
-          <DialogBody>
-            Modaler må kun vises etter en brukerinteraksjon, og skal ikke avbryte brukeren på noe vis.
-          </DialogBody>
-
-          <DialogFooter justifyContent="space-between">
-            <Button variant="tertiary" colorPalette={args.colorPalette}>
-              Tertiær
-            </Button>
-            <Box>
-              <Button mr={3} variant="secondary" colorPalette={args.colorPalette}>
-                Sekundær
-              </Button>
-              <DialogActionTrigger asChild>
-                <Button colorPalette={args.colorPalette}>Primær</Button>
-              </DialogActionTrigger>
-            </Box>
-          </DialogFooter>
-          <DialogCloseTrigger />
-        </DialogContent>
-      </Dialog>
-    </>
-  );
-};
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+Dialog.displayName = "Dialog";
+DialogTrigger.displayName = "DialogTrigger";
+DialogContent.displayName = "DialogContent";
+DialogHeader.displayName = "DialogHeader";
+DialogTitle.displayName = "DialogTitle";
+DialogBody.displayName = "DialogBody";
+DialogFooter.displayName = "DialogFooter";
+DialogActionTrigger.displayName = "DialogActionTrigger";
+DialogCloseTrigger.displayName = "DialogCloseTrigger";
+Button.displayName = "Button";
 
 export const Preview: Story = {
-  render: args => <DialogExample {...args} />,
-  parameters: {
-    docs: {
-      source: {
-        type: "code",
-        language: "tsx",
-      },
-    },
-  },
+  render: args => (
+    <Dialog {...args}>
+      <DialogTrigger asChild>
+        <Button colorPalette={args.colorPalette}>Open Dialog</Button>
+      </DialogTrigger>
+      <DialogContent>
+        <DialogHeader>
+          <DialogTitle>Dialog title</DialogTitle>
+        </DialogHeader>
+        <DialogBody>Dialog content</DialogBody>
+
+        <DialogFooter justifyContent="space-between">
+          <Button variant="tertiary" colorPalette={args.colorPalette}>
+            Button
+          </Button>
+          <Box>
+            <Button mr={3} variant="secondary" colorPalette={args.colorPalette}>
+              Button
+            </Button>
+            <DialogActionTrigger asChild>
+              <Button colorPalette={args.colorPalette}>Button</Button>
+            </DialogActionTrigger>
+          </Box>
+        </DialogFooter>
+        <DialogCloseTrigger />
+      </DialogContent>
+    </Dialog>
+  ),
 };

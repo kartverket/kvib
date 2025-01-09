@@ -7,7 +7,6 @@ const meta: Meta<typeof Icon> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "hidden" },
     },
   },
   argTypes: {
@@ -59,6 +58,10 @@ const meta: Meta<typeof Icon> = {
 
 export default meta;
 type Story = StoryObj<typeof Icon>;
+
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+Icon.displayName = "Icon";
+HStack.displayName = "HStack";
 
 export const Preview: Story = {
   render: args => <Icon color="colorPalette.500" {...args} />,
