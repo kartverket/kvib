@@ -15,8 +15,8 @@ const meta: Meta<typeof KvibFileUpload> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "hidden" },
     },
+    layout: "centered",
     a11y: {
       // This option disables all a11y checks on this story
       disable: true,
@@ -36,19 +36,6 @@ const meta: Meta<typeof KvibFileUpload> = {
         type: { summary: "boolean" },
       },
       control: "boolean",
-    },
-    colorPalette: {
-      description: "Color of the radio",
-      table: {
-        type: {
-          summary: "green | blue | gray | red",
-        },
-        defaultValue: {
-          summary: "green",
-        },
-      },
-      options: ["green", "blue", "gray", "red", "orange", "purple"],
-      control: { type: "select" },
     },
     allowDrop: {
       description: "Whether to allow drag and drop in the dropzone element",
@@ -90,14 +77,19 @@ const meta: Meta<typeof KvibFileUpload> = {
 };
 
 export default meta;
-type FileUploadStory = StoryObj<typeof KvibFileUpload>;
 
-const FileUploadExample = (args: FileUploadProps) => (
+interface Props extends Omit<FileUploadProps, "colorPalette"> {
+  colorPalette: "green" | "blue" | "gray";
+}
+
+type FileUploadStory = StoryObj<Props>;
+
+const FileUploadExample = (args: Props) => (
   <Center>
     <FileUpload {...args}>
       <FileUploadTrigger>
         <Button colorPalette={args.colorPalette} leftIcon="upload_2">
-          Last opp fil
+          Upload file
         </Button>
       </FileUploadTrigger>
       <FileUploadList />

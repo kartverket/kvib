@@ -11,113 +11,131 @@ const meta: Meta<typeof KvibEditable> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "hidden" },
     },
+    layout: "centered",
   },
   argTypes: {
-    defaultValue: {
-      description: "The initial value of the Editable in both edit & preview mode",
+    activationMode: {
+      description: "The activation mode of the component",
       table: {
-        type: { summary: "string" },
+        type: { summary: "ActivationMode" },
+        defaultValue: { summary: "'click'" },
       },
-      control: "text",
+      options: ["click", "dblclick"],
+      control: { type: "radio" },
     },
-    isDisabled: {
-      description: "If true, the Editable will be disabled.",
-      table: {
-        type: { summary: "boolean" },
-      },
-      control: "boolean",
-    },
-    isPreviewFocusable: {
-      description:
-        "If true, the read only view, has a tabIndex set to 0 so it can receive focus via the keyboard or click.",
+    autoResize: {
+      description: "Whether the editable should auto-resize to fit the content.",
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "true" },
       },
       control: "boolean",
     },
-    onCancel: {
+    defaultEdit: {
       description:
-        "Callback invoked when user cancels input with the Esc key. It provides the last confirmed value as argument.",
+        "The initial edit state of the editable when it is first rendered. Use when you do not need to control its edit state.",
       table: {
-        type: { summary: "(previousValue: string) => void" },
+        type: { summary: "boolean" },
+      },
+      control: "boolean",
+    },
+    defaultValue: {
+      description: "The initial value of the editable",
+      table: {
+        type: { summary: "string" },
       },
       control: "text",
     },
-    onChange: {
-      description: "Callback invoked when user changes input.",
+    edit: {
+      description: "Whether the editable is in edit mode",
       table: {
-        type: { summary: "(nextValue: string) => void" },
+        type: { summary: "boolean" },
+      },
+      control: "boolean",
+    },
+    finalFocusEl: {
+      description: "The element to focus when exiting edit mode",
+      table: {
+        type: { summary: "() => HTMLElement | null" },
+      },
+    },
+    onEditChange: {
+      description: "Callback invoked when the edit state changes",
+      table: {
+        type: { summary: "(details: EditChangeDetails) => void" },
       },
       control: "text",
     },
-    onEdit: {
-      description: "Callback invoked once the user enters edit mode.",
+    onFocusOutside: {
+      description: "Callback invoked when the editable loses focus",
       table: {
-        type: { summary: "() => void" },
+        type: { summary: "(event: FocusOutsideEvent) => void" },
       },
-      control: "text",
     },
-    onSubmit: {
-      description: "Callback invoked when user confirms value with enter key or by blurring input.",
+    onInteractOutside: {
+      description: "Callback invoked when an interaction happens outside the editable",
       table: {
-        type: { summary: "(nextValue: string) => void" },
+        type: { summary: "(event: InteractOutsideEvent) => void" },
       },
-      control: "text",
+    },
+    onPointerDownOutside: {
+      description: "Callback invoked when a pointer down event happens outside the editable",
+      table: {
+        type: { summary: "(event: PointerDownOutsideEvent) => void" },
+      },
+    },
+    onValueChange: {
+      description: "Callback invoked when the value changes",
+      table: {
+        type: { summary: "(details: ValueChangeDetails) => void" },
+      },
+    },
+    onValueCommit: {
+      description: "Callback invoked when the value is committed",
+      table: {
+        type: { summary: "(details: ValueChangeDetails) => void" },
+      },
+    },
+    onValueRevert: {
+      description: "Callback invoked when the value is reverted",
+      table: {
+        type: { summary: "(details: ValueChangeDetails) => void" },
+      },
     },
     placeholder: {
-      description: "The placeholder text when the value is empty.",
+      description: "The placeholder text when the editable is empty",
       table: {
         type: { summary: "string" },
       },
       control: "text",
     },
-    selectAllOnFocus: {
-      description: "If true, the input's text will be highlighted on focus.",
+    translations: {
+      description: "Specifies the localized strings that identifies the accessibility elements and their states",
       table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "true" },
+        type: { summary: "IntlTranslations" },
       },
-      control: "boolean",
-    },
-    startWithEditView: {
-      description: "If true, the Editable will start with edit mode by default.",
-      table: {
-        type: { summary: "boolean" },
-      },
-      control: "boolean",
-    },
-    submitOnBlur: {
-      description: "If true, it'll update the value onBlur and turn off the edit mode.",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "true" },
-      },
-      control: "boolean",
     },
     value: {
-      description: "The value of the Editable in both edit & preview mode",
+      description: "The value of the editable",
       table: {
         type: { summary: "string" },
       },
       control: "text",
     },
-  },
-  args: {
-    onCancel: undefined,
-    onChange: undefined,
-    onEdit: undefined,
-    onSubmit: undefined,
   },
 };
 
 export default meta;
 type Story = StoryObj<typeof KvibEditable>;
 
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+KvibEditable.displayName = "Editable";
+KvibEditableInput.displayName = "EditableInput";
+KvibEditablePreview.displayName = "EditablePreview";
+
 export const Preview: Story = {
-  args: { defaultValue: "Redigerbar tekst" },
+  args: { defaultValue: "Editable text" },
   render: args => (
     <KvibEditable {...args}>
       <KvibEditablePreview />

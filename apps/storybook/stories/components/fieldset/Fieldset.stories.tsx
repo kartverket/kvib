@@ -7,8 +7,8 @@ const meta: Meta<typeof Fieldset> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "hidden" },
     },
+    layout: "centered",
   },
   argTypes: {
     invalid: {
@@ -27,8 +27,8 @@ type Story = StoryObj<typeof Fieldset>;
 export const Preview: Story = {
   render: args => (
     <Fieldset {...args}>
-      <FieldsetLegend>Tittel i et Fieldset</FieldsetLegend>
-      <FieldsetContent>En samling av flere Field</FieldsetContent>
+      <FieldsetLegend>Fieldset title</FieldsetLegend>
+      <FieldsetContent>Fieldset content</FieldsetContent>
     </Fieldset>
   ),
 };

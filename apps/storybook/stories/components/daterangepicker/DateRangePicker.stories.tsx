@@ -1,14 +1,14 @@
-import { DateRange, DateRangePickerProps, DateRangePicker as KvibDateRangePicker } from "@kvib/react";
-import { Meta, StoryObj } from "@storybook/react/*";
+import { DateRange, DateRangePicker as KvibDateRangePicker } from "@kvib/react";
+import { Meta, StoryObj } from "@storybook/react";
 import { useState } from "react";
 
 const meta: Meta<typeof KvibDateRangePicker> = {
   title: "Komponenter/DateRangePicker",
   component: KvibDateRangePicker,
   parameters: {
+    layout: "centered",
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "hidden" },
     },
   },
   args: {
@@ -78,12 +78,9 @@ const meta: Meta<typeof KvibDateRangePicker> = {
 export default meta;
 type Story = StoryObj<typeof KvibDateRangePicker>;
 
-const DateRangePickerExample = (props: DateRangePickerProps) => {
-  const { selected, onSelect, ...rest } = props;
-  const [selectedDates, setSelectedDates] = useState<DateRange | undefined>(undefined);
-  return <KvibDateRangePicker selected={selectedDates} onSelect={setSelectedDates} {...rest} mode="range" />;
-};
-
 export const Preview: Story = {
-  render: args => <DateRangePickerExample {...args} />,
+  render: args => {
+    const [selected, setSelected] = useState<DateRange | undefined>(args.selected);
+    return <KvibDateRangePicker {...args} selected={selected} onSelect={setSelected} />;
+  },
 };

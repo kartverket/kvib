@@ -10,7 +10,6 @@ import {
   DrawerProps,
   DrawerTitle,
   DrawerTrigger,
-  Input,
   Drawer as KvibDrawer,
   useDisclosure,
 } from "@kvib/react";
@@ -22,8 +21,8 @@ const meta: Meta<typeof KvibDrawer> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "shown" },
     },
+    layout: "centered",
   },
   argTypes: {
     open: {
@@ -88,36 +87,44 @@ interface Props extends DrawerProps {
 }
 type Story = StoryObj<Props>;
 
-const DrawerExample = (args: Props) => {
-  const { open, onOpen, onClose } = useDisclosure();
-  return (
-    <Drawer {...args} open={open} onExitComplete={onClose}>
-      <DrawerTrigger asChild>
-        <Button colorPalette={args.colorPalette} onClick={onOpen}>
-          Åpne
-        </Button>
-      </DrawerTrigger>
-      <DrawerPositioner>
-        <DrawerContent>
-          <DrawerCloseTrigger />
-          <DrawerHeader>
-            <DrawerTitle>Lag din konto</DrawerTitle>
-          </DrawerHeader>
-          <DrawerBody>
-            <Input placeholder="Skriv her..." />
-          </DrawerBody>
-          <DrawerFooter>
-            <Button colorPalette={args.colorPalette} variant="secondary" mr={3} onClick={onClose}>
-              Avbryt
-            </Button>
-            <Button colorPalette={args.colorPalette}>Lagre</Button>
-          </DrawerFooter>
-        </DrawerContent>
-      </DrawerPositioner>
-    </Drawer>
-  );
-};
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+Drawer.displayName = "Drawer";
+DrawerTrigger.displayName = "DrawerTrigger";
+DrawerPositioner.displayName = "DrawerPositioner";
+DrawerContent.displayName = "DrawerContent";
+DrawerHeader.displayName = "DrawerHeader";
+DrawerTitle.displayName = "DrawerTitle";
+DrawerBody.displayName = "DrawerBody";
+DrawerFooter.displayName = "DrawerFooter";
+DrawerCloseTrigger.displayName = "DrawerCloseTrigger";
+Button.displayName = "Button";
 
 export const Preview: Story = {
-  render: args => <DrawerExample {...args} />,
+  render: args => {
+    const { open, onOpen, onClose } = useDisclosure();
+    return (
+      <Drawer {...args} open={open} onExitComplete={onClose}>
+        <DrawerTrigger asChild>
+          <Button colorPalette={args.colorPalette} onClick={onOpen}>
+            Open Drawer
+          </Button>
+        </DrawerTrigger>
+        <DrawerPositioner>
+          <DrawerContent>
+            <DrawerCloseTrigger colorPalette={args.colorPalette} onClick={onClose}></DrawerCloseTrigger>
+
+            <DrawerHeader>
+              <DrawerTitle>Drawer title</DrawerTitle>
+            </DrawerHeader>
+            <DrawerBody>Drawer content</DrawerBody>
+            <DrawerFooter>
+              <Button colorPalette={args.colorPalette} onClick={onClose}>
+                Close
+              </Button>
+            </DrawerFooter>
+          </DrawerContent>
+        </DrawerPositioner>
+      </Drawer>
+    );
+  },
 };

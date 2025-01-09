@@ -8,7 +8,6 @@ const meta: Meta<typeof KvibFooter> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "hidden" },
     },
   },
   argTypes: {
@@ -73,6 +72,9 @@ const meta: Meta<typeof KvibFooter> = {
 export default meta;
 type Story = StoryObj<typeof KvibFooter>;
 
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+(KvibFooter as any).displayName = "Footer";
+
 export const Preview: Story = {
   args: {
     accessibilityUrl: "/",
@@ -87,6 +89,9 @@ export const Preview: Story = {
 };
 
 type InlineStory = StoryObj<typeof KvibFooterInline>;
+
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+(KvibFooterInline as any).displayName = "FooterInline";
 
 export const FooterInline: InlineStory = {
   argTypes: {
