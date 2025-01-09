@@ -8,7 +8,6 @@ const meta: Meta<typeof KvibAspectRatio> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "shown" },
     },
     a11y: {
       disable: true,
