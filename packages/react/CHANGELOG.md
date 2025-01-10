@@ -1,6 +1,10 @@
 # @kvib/react
 
-## 5.0.12
+## 5.1.0
+
+### Minor Changes
+
+- 7383a3a: Oppdaterer til Chakra 3.3.0
 
 ### Patch Changes
 
@@ -9,7 +13,6 @@
 - 2f09c05: Ny komponent: Segmented Control
 - 816eade: Ny komponent: Status
 - baa0907: Ny komponent: Hover Card
-- 7383a3a: Oppdaterer til Chakra 3.3.0
 - 7383a3a: Forbedring av styling for Accordion, Menu, Select, Input, Number Input,Radio, Radio Card, Avatar. Legger til valg for å endre synligheten til Number Input sine steppers.
 - 7ed6941: Fiks for Breadcrumb som ikke brukte Flexbox
 
