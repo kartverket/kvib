@@ -1,1 +1,0 @@
-import{c as t}from"./create-slot-recipe-context-KvBbDfRP.js";const{withProvider:r,withContext:o,useStyles:a,PropsProvider:e}=t({key:"card"}),d=r("div","root"),i=e,c=o("div","body"),n=o("div","header"),C=o("div","footer"),p=o("h3","title"),v=o("p","description");export{d as C,c as a,v as b,C as c,n as d,i as e,p as f,a as u};
