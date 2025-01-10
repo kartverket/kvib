@@ -7,7 +7,6 @@ const meta: Meta<typeof KvibSearchAsync> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "hidden" },
     },
     a11y: {
       // Label warnings + contrast ratio because of chakra wrapper.
@@ -60,26 +59,10 @@ const meta: Meta<typeof KvibSearchAsync> = {
       },
       control: "text",
     },
-    size: {
-      table: {
-        type: { summary: "sm | md | lg" },
-        defaultValue: { summary: "md" },
-      },
-      options: ["sm", "md", "lg"],
-      control: { type: "radio" },
-    },
     defaultOptions: {
       table: {
         type: { summary: "T[] | boolean" },
       },
-    },
-    variant: {
-      table: {
-        type: { summary: "outline | filled | flushed | unstyled" },
-        defaultValue: { summary: "outline" },
-      },
-      options: ["outline", "filled", "flushed", "unstyled"],
-      control: { type: "radio" },
     },
     id: {
       table: {
@@ -129,12 +112,14 @@ const meta: Meta<typeof KvibSearchAsync> = {
       control: { type: "radio" },
     },
   },
-  args: { onChange: undefined, loadOptions: undefined },
 };
 
 export default meta;
 type Fruit = { label: string; value: string };
 type Story = StoryObj<typeof KvibSearchAsync<Fruit>>;
+
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+(KvibSearchAsync as any).displayName = "SearchAsync";
 
 export const Preview: Story = {
   render: args => <KvibSearchAsync {...args} />,

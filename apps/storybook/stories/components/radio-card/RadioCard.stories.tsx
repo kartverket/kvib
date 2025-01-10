@@ -1,4 +1,4 @@
-import { HStack, RadioCard, RadioCardItem, RadioCardLabel, RadioCardProps } from "@kvib/react";
+import { HStack, RadioCard, RadioCardItem } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof RadioCard> = {
@@ -7,7 +7,6 @@ const meta: Meta<typeof RadioCard> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "hidden" },
     },
   },
   argTypes: {
@@ -76,23 +75,23 @@ export default meta;
 type Story = StoryObj<typeof RadioCard>;
 
 const items = [
-  { value: "valg1", title: "Valg 1" },
-  { value: "valg2", title: "Valg 2" },
+  { value: "option1", title: "Option 1" },
+  { value: "option2", title: "Option 2" },
 ];
 
-const RadioCardExample = (args: RadioCardProps) => {
-  return (
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+RadioCard.displayName = "RadioCard";
+RadioCardItem.displayName = "RadioCardItem";
+HStack.displayName = "HStack";
+
+export const Preview: Story = {
+  render: args => (
     <RadioCard defaultValue="next" {...args}>
-      <RadioCardLabel>Velg et kort</RadioCardLabel>
       <HStack align="stretch">
         {items.map(item => (
           <RadioCardItem label={item.title} key={item.value} value={item.value} />
         ))}
       </HStack>
     </RadioCard>
-  );
-};
-
-export const Preview: Story = {
-  render: args => <RadioCardExample {...args} />,
+  ),
 };

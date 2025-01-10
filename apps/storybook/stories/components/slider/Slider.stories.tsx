@@ -9,6 +9,7 @@ const meta: Meta<typeof KvibSlider> = {
     docs: {
       story: { inline: true },
     },
+    layout: "padded",
   },
   argTypes: {
     colorPalette: {
@@ -62,6 +63,9 @@ const meta: Meta<typeof KvibSlider> = {
 export default meta;
 type Story = StoryObj<typeof KvibSlider>;
 
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+KvibSlider.displayName = "Slider";
+
 export const Preview: Story = {
-  render: (args: SliderProps) => <KvibSlider {...args} />,
+  render: (args: SliderProps) => <KvibSlider w="100%" {...args} />,
 };

@@ -62,28 +62,50 @@ interface Props {
   colorPalette: "green" | "blue"; // Kun for framvisning i komponentoversikt
 }
 
-const ToastExample = (args: Props) => (
-  <>
-    <Toaster />
-    <Button
-      colorPalette={args.colorPalette}
-      w={"fit-content"}
-      onClick={() =>
-        toaster.create({
-          title: args.title,
-          description: args.description,
-          type: args.type,
-          duration: args.duration,
-        })
-      }
-    >
-      Vis toast
-    </Button>
-  </>
-);
-
 type Story = StoryObj<Props>;
 
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+(Toaster as any).displayName = "Toaster";
+Button.displayName = "Button";
+
 export const Preview: Story = {
-  render: args => <ToastExample {...args} />,
+  render: args => (
+    <>
+      <Toaster />
+      <Button
+        colorPalette={args.colorPalette}
+        w={"fit-content"}
+        onClick={() =>
+          toaster.create({
+            title: args.title,
+            description: args.description,
+            type: args.type,
+            duration: args.duration,
+          })
+        }
+      >
+        Show Toast
+      </Button>
+    </>
+  ),
+  parameters: {
+    docs: {
+      source: {
+        code: `
+<Button
+  onClick={() =>
+    toaster.create({
+      title: args.title,
+      description: args.description,
+      type: args.type,
+      duration: args.duration,
+    })
+  }
+>
+  Show Toast
+</Button>
+        `,
+      },
+    },
+  },
 };

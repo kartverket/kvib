@@ -1,0 +1,8 @@
+import { Canvas, Controls, Meta, } from "@storybook/blocks";
+import * as TextStories from "./Text.stories";
+import { TextDocs } from "./TextDocs";
+
+<Meta of={TextStories} />
+<TextDocs />
+<Canvas of={TextStories.Preview} />
+<Controls of={TextStories.Preview} />

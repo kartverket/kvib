@@ -7,7 +7,6 @@ const meta: Meta<typeof KvibTimepicker> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "hidden" },
     },
   },
   argTypes: {
@@ -103,6 +102,9 @@ const meta: Meta<typeof KvibTimepicker> = {
 
 export default meta;
 type Story = StoryObj<typeof KvibTimepicker>;
+
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+(KvibTimepicker as any).displayName = "Timepicker";
 
 export const Preview: Story = {
   render: args => <KvibTimepicker {...args} />,

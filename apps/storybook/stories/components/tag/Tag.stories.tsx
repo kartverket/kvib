@@ -43,6 +43,9 @@ const meta: Meta<typeof KvibTag> = {
 export default meta;
 type Story = StoryObj<typeof KvibTag>;
 
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+KvibTag.displayName = "Tag";
+
 export const Preview: Story = {
   render: (args: TagProps) => <KvibTag {...args}>Tag</KvibTag>,
 };

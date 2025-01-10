@@ -34,6 +34,9 @@ const meta: Meta<typeof KvibSpinner> = {
 export default meta;
 type Story = StoryObj<typeof KvibSpinner>;
 
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+KvibSpinner.displayName = "Spinner";
+
 export const Preview: Story = {
   render: args => <KvibSpinner {...args} />,
 };

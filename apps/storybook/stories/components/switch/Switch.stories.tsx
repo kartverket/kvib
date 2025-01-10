@@ -84,6 +84,9 @@ const meta: Meta<typeof KvibSwitch> = {
 export default meta;
 type Story = StoryObj<typeof KvibSwitch>;
 
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+KvibSwitch.displayName = "Switch";
+
 export const Preview: Story = {
-  render: (args: SwitchProps) => <KvibSwitch {...args}>Toggle</KvibSwitch>,
+  render: (args: SwitchProps) => <KvibSwitch {...args} />,
 };

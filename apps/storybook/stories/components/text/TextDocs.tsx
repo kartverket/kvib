@@ -1,3 +1,4 @@
+import React from "react";
 import { Dokumentasjonsside } from "../../documentation/utils/Dokumentasjonsside";
 
 export const TextDocs = () => (

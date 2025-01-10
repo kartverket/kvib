@@ -7,8 +7,8 @@ const meta: Meta<typeof KvibSeparator> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "hidden" },
     },
+    layout: "padded",
   },
   argTypes: {
     variant: {
@@ -34,6 +34,9 @@ const meta: Meta<typeof KvibSeparator> = {
 
 export default meta;
 type Story = StoryObj<typeof KvibSeparator>;
+
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+KvibSeparator.displayName = "Separator";
 
 export const Preview: Story = {
   render: args => <KvibSeparator {...args} />,

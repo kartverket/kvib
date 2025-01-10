@@ -67,13 +67,13 @@ import * as SwitchStories from "../../components/switch/Switch.stories";
 import * as TableStories from "../../components/table/Table.stories";
 import * as TabsStories from "../../components/tabs/Tabs.stories";
 import * as TagStories from "../../components/tag/Tag.stories";
+import * as TextStories from "../../components/text/Text.stories";
 import * as TextAreaStories from "../../components/textarea/TextArea.stories";
 import * as TimelineStories from "../../components/timeline/Timeline.stories";
 import * as TimepickerStories from "../../components/timepicker/Timepicker.stories";
 import * as ToastStories from "../../components/toaster/Toaster.stories";
 import * as ToggleTipStories from "../../components/toggle-tip/ToggleTip.stories";
 import * as TooltipStories from "../../components/tooltip/Tooltip.stories";
-import * as TextStories from "../../design/text/Text.stories";
 import { ColorPalette } from "./Komponenter";
 
 // Komponenter

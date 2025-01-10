@@ -7,7 +7,6 @@ const meta: Meta<typeof KvibSearch> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "hidden" },
     },
     a11y: {
       // This option disables all a11y checks on this story
@@ -94,11 +93,13 @@ const meta: Meta<typeof KvibSearch> = {
 export default meta;
 type SearchStory = StoryObj<typeof KvibSearch>;
 
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+KvibSearch.displayName = "Search";
+
 export const Preview: SearchStory = {
   args: {
-    placeholder: "Søk her...",
+    placeholder: "Search",
     variant: "outline",
-    disabled: false,
   },
   render: args => <KvibSearch {...args} />,
 };
