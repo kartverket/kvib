@@ -15,6 +15,14 @@ const meta: Meta<typeof KvibNumberInput> = {
     },
   },
   argTypes: {
+    steppers: {
+      description: "If true, the input will have stepper buttons",
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
+      },
+      control: "boolean",
+    },
     max: {
       description: "Maximum value of the counter",
       table: {
@@ -115,6 +123,7 @@ NumberInputField.displayName = "NumberInputField";
 export const Preview: NumberInputStory = {
   args: {
     defaultValue: "3507",
+    steppers: true,
   },
   render: (args: NumberInputProps) => (
     <KvibNumberInput {...args}>

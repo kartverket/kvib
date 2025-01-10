@@ -2,17 +2,13 @@ import { defineRecipe } from "@chakra-ui/react";
 
 export const inputTheme = defineRecipe({
   base: {
-    _disabled: {
-      layerStyle: "disabled",
-    },
-    transition: "all 0.2s ease-in-out",
+    transition: "outline 0.25s ease-in-out",
     borderRadius: "md",
     outline: "{borders.1px}",
     outlineColor: "gray.200",
+    "--focus-ring-width": "2px",
     border: "none",
     _focus: {
-      outlineWidth: "2px",
-      outlineColor: "blue.500",
       boxShadow: "none",
     },
   },

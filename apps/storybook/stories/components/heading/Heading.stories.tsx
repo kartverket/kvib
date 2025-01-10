@@ -33,7 +33,7 @@ export const Preview: Story = {
   args: {
     textAlign: "center",
   },
-  render: args => <KvibHeading {...args}>Dette er en overskrift</KvibHeading>,
+  render: args => <KvibHeading {...args}>Example header</KvibHeading>,
 };
 
 export const HeadingSizes: Story = {
