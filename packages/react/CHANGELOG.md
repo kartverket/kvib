@@ -1,5 +1,20 @@
 # @kvib/react
 
+## 5.0.12
+
+### Patch Changes
+
+- 8a28e08: Typefiks for List
+- a70cb4c: Nye komponenter: Pagination, Password Input, Radio Card og Rating
+- 7383a3a: Oppdaterer til Chakra 3.3.0
+- 7383a3a: Forbedring av styling for Accordion, Menu, Select, Input, Number Input,Radio, Radio Card, Avatar. Legger til valg for å endre synligheten til Number Input sine steppers.
+- 7ed6941: Fiks for Breadcrumb som ikke brukte Flexbox
+- cb476d6: Oppdaterer til Chakra 3.2.5
+- e4ac0f8: Nye komponenter: Toggle Tip og Timeline
+- 2f09c05: Ny komponent: Segmented Control
+- 816eade: Ny komponent: Status
+- baa0907: Ny komponent: Hover Card
+
 ## 5.0.11
 
 ### Patch Changes
