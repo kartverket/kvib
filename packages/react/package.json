@@ -34,7 +34,7 @@
     "react-dom": "^18.2.0"
   },
   "dependencies": {
-    "@chakra-ui/react": "^3.2.2",
+    "@chakra-ui/react": "^3.3.0",
     "@emotion/react": "^11.13.5",
     "@fontsource/mulish": "^5.0.17",
     "date-fns": "^4.1.0",
