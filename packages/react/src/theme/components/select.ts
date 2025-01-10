@@ -1,9 +1,9 @@
 import { defineSlotRecipe } from "@chakra-ui/react";
-import { menuAnatomy } from "@chakra-ui/react/anatomy";
+import { selectAnatomy } from "@chakra-ui/react/anatomy";
 
-export const menuTheme = defineSlotRecipe({
-  className: "kvib-menu",
-  slots: menuAnatomy.keys(),
+export const selectTheme = defineSlotRecipe({
+  className: "kvib-select",
+  slots: selectAnatomy.keys(),
   base: {
     item: {
       _hover: {

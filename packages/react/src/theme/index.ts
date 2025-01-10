@@ -15,6 +15,7 @@ import {
   zIndices,
 } from "./tokens";
 
+import { accordionTheme } from "./components/accordion";
 import { alertTheme } from "./components/alert";
 import { breadcrumbTheme } from "./components/breadcrumb";
 import { buttonTheme } from "./components/button";
@@ -34,6 +35,7 @@ import { popoverTheme } from "./components/popover";
 import { progressTheme } from "./components/progress";
 import { radioGroupTheme } from "./components/radio-group";
 import { segmentedControlTheme } from "./components/segmented-control";
+import { selectTheme } from "./components/select";
 import { selectNativeTheme } from "./components/select-native";
 import { sliderTheme } from "./components/slider";
 import { spinnerTheme } from "./components/spinner";
@@ -101,6 +103,7 @@ const customConfig = defineConfig({
     },
     slotRecipes: {
       alert: alertTheme,
+      accordion: accordionTheme,
       breadcrumb: breadcrumbTheme,
       card: cardTheme,
       checkbox: checkboxTheme,
@@ -115,6 +118,7 @@ const customConfig = defineConfig({
       popover: popoverTheme,
       progress: progressTheme,
       radioGroup: radioGroupTheme,
+      select: selectTheme,
       segmentedControl: segmentedControlTheme,
       slider: sliderTheme,
       steps: stepsTheme,
