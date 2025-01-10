@@ -17,6 +17,7 @@ import {
 
 import { accordionTheme } from "./components/accordion";
 import { alertTheme } from "./components/alert";
+import { avatarTheme } from "./components/avatar";
 import { breadcrumbTheme } from "./components/breadcrumb";
 import { buttonTheme } from "./components/button";
 import { cardTheme } from "./components/card";
@@ -103,6 +104,7 @@ const customConfig = defineConfig({
     },
     slotRecipes: {
       alert: alertTheme,
+      avatar: avatarTheme,
       accordion: accordionTheme,
       breadcrumb: breadcrumbTheme,
       card: cardTheme,

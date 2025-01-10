@@ -1,4 +1,4 @@
-import { AvatarProps, Avatar as KvibAvatar } from "@kvib/react";
+import { Avatar as KvibAvatar } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibAvatar> = {
@@ -49,5 +49,5 @@ type Story = StoryObj<typeof KvibAvatar>;
 KvibAvatar.displayName = "Avatar";
 
 export const Preview: Story = {
-  render: (args: AvatarProps) => <KvibAvatar {...args} />,
+  render: args => <KvibAvatar {...args} />,
 };
