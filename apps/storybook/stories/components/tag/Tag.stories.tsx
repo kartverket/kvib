@@ -31,10 +31,10 @@ const meta: Meta<typeof KvibTag> = {
     size: {
       description: "The size of the Tag",
       table: {
-        type: { summary: "sm | md | lg" },
+        type: { summary: "sm | md | lg | xl" },
         defaultValue: { summary: "md" },
       },
-      options: ["sm", "md", "lg"],
+      options: ["sm", "md", "lg", "xl"],
       control: { type: "radio" },
     },
   },

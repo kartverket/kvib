@@ -1,14 +1,17 @@
 import {
   Box,
   Center,
+  Clipboard,
+  ClipboardIconButton,
   Code,
-  radii,
+  Flex,
   Table,
   TableBody as Tbody,
   TableCell as Td,
   TableCell as Th,
   TableHeader as Thead,
   TableRow as Tr,
+  useKvibContext,
 } from "@kvib/react";
 
 const example = (radii: any) => (
@@ -16,26 +19,35 @@ const example = (radii: any) => (
 );
 
 export const Radius = () => {
+  const system = useKvibContext();
+  const tokens = system.tokens;
+  const variants = Object.keys(tokens.getCategoryValues("radii"));
   return (
     <Table width="100%">
       <Thead textAlign="left">
         <Tr>
           <Th width="20%">Eksempel</Th>
           <Th width="50%">Verdi</Th>
-          <Th width="30%">Kode</Th>
+          <Th width="30%">Bruk</Th>
         </Tr>
       </Thead>
       <Tbody>
-        {Object.entries(radii).map(([size, value]) => {
-          const val = value.value;
+        {variants.map(variant => {
+          const variantValue = tokens.getByName(`radii.${variant}`)?.originalValue;
+
           return (
-            <Tr key={size}>
+            <Tr key={variant}>
               <Td backgroundColor="white">
-                <Center>{example(val)}</Center>
+                <Center>{example(variant)}</Center>
               </Td>
-              <Td backgroundColor="white">{`${size} / ${val}`}</Td>
+              <Td backgroundColor="white">{variantValue}</Td>
               <Td backgroundColor="white">
-                <Code>{`var(--kvib-radii-${size})`}</Code>
+                <Flex gap="1rem" justifyContent={"space-between"}>
+                  <Code>{`borderRadius="${variant}"`}</Code>
+                  <Clipboard value={`borderRadius="${variant}`}>
+                    <ClipboardIconButton />
+                  </Clipboard>
+                </Flex>
               </Td>
             </Tr>
           );

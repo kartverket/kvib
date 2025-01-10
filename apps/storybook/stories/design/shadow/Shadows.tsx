@@ -1,14 +1,17 @@
 import {
   Box,
   Center,
+  Clipboard,
+  ClipboardIconButton,
   Code,
-  shadows,
+  Flex,
   Table,
   TableBody as Tbody,
   TableCell as Td,
   TableCell as Th,
   TableHeader as Thead,
   TableRow as Tr,
+  useKvibContext,
 } from "@kvib/react";
 
 const example = (shadow: any) => (
@@ -16,6 +19,9 @@ const example = (shadow: any) => (
 );
 
 export const Shadows = () => {
+  const system = useKvibContext();
+  const tokens = system.tokens;
+  const variants = Object.keys(tokens.getCategoryValues("shadows"));
   return (
     <Table width="100%">
       <Thead textAlign="left">
@@ -26,16 +32,21 @@ export const Shadows = () => {
         </Tr>
       </Thead>
       <Tbody>
-        {Object.entries(shadows).map(([size, value]) => {
-          const val = value.value;
+        {variants.map(variant => {
+          const variantValue = tokens.getByName(`shadows.${variant}`)?.value;
           return (
-            <Tr key={size}>
+            <Tr key={variant}>
               <Td backgroundColor="#F7FAFC">
-                <Center>{example(val)}</Center>
+                <Center>{example(variant)}</Center>
               </Td>
-              <Td backgroundColor="white">{`${size} / ${val}`}</Td>
+              <Td backgroundColor="white">{variantValue}</Td>
               <Td backgroundColor="white">
-                <Code>{`var(--kvib-shadows-${size})`}</Code>
+                <Flex gap="1rem" justifyContent={"space-between"}>
+                  <Code>{`boxShadow="${variant}"`}</Code>
+                  <Clipboard value={`boxShadow="${variant}`}>
+                    <ClipboardIconButton />
+                  </Clipboard>
+                </Flex>
               </Td>
             </Tr>
           );
