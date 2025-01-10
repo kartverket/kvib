@@ -34,6 +34,8 @@ import { numberInputTheme } from "./components/number-input";
 import { pinInputTheme } from "./components/pin-input";
 import { popoverTheme } from "./components/popover";
 import { progressTheme } from "./components/progress";
+import { radioTheme } from "./components/radio";
+import { radioCardTheme } from "./components/radio-card";
 import { radioGroupTheme } from "./components/radio-group";
 import { segmentedControlTheme } from "./components/segmented-control";
 import { selectTheme } from "./components/select";
@@ -120,6 +122,8 @@ const customConfig = defineConfig({
       popover: popoverTheme,
       progress: progressTheme,
       radioGroup: radioGroupTheme,
+      radio: radioTheme,
+      radioCard: radioCardTheme,
       select: selectTheme,
       segmentedControl: segmentedControlTheme,
       slider: sliderTheme,

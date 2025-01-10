@@ -5,8 +5,8 @@ export const radioGroupTheme = defineSlotRecipe({
   className: "kvib-radio-group",
   slots: radioGroupAnatomy.keys(),
   base: {
-    root: {
-      colorPalette: "green",
+    itemControl: {
+      cursor: "pointer",
     },
   },
 });
