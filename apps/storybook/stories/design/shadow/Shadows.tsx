@@ -28,7 +28,7 @@ export const Shadows = () => {
         <Tr>
           <Th width="20%">Eksempel</Th>
           <Th width="50%">Verdi</Th>
-          <Th width="30%">Kode</Th>
+          <Th width="30%">Bruk</Th>
         </Tr>
       </Thead>
       <Tbody>
