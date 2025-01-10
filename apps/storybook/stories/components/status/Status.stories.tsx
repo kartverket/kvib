@@ -37,6 +37,9 @@ const meta: Meta<typeof Status> = {
 export default meta;
 type Story = StoryObj<typeof Status>;
 
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+Status.displayName = "Status";
+
 export const Preview: Story = {
   render: args => <Status {...args}>Status</Status>,
 };

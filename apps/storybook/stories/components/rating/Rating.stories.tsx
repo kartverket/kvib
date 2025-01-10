@@ -1,4 +1,4 @@
-import { Rating, RatingProps } from "@kvib/react";
+import { Rating } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Rating> = {
@@ -7,7 +7,6 @@ const meta: Meta<typeof Rating> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "hidden" },
     },
   },
   argTypes: {
@@ -64,10 +63,9 @@ const meta: Meta<typeof Rating> = {
 export default meta;
 type Story = StoryObj<typeof Rating>;
 
-const RatingExample = (args: RatingProps) => {
-  return <Rating {...args} />;
-};
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+Rating.displayName = "Rating";
 
 export const Preview: Story = {
-  render: args => <RatingExample {...args} />,
+  render: args => <Rating {...args} />,
 };

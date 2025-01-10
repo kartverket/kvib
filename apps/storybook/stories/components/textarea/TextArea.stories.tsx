@@ -7,7 +7,6 @@ const meta: Meta<typeof KvibTextarea> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "shown" },
     },
   },
   argTypes: {
@@ -61,7 +60,9 @@ const meta: Meta<typeof KvibTextarea> = {
 export default meta;
 type Story = StoryObj<typeof KvibTextarea>;
 
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+KvibTextarea.displayName = "Textarea";
+
 export const Preview: Story = {
-  args: { placeholder: "Dette er et eksempel på placeholder" },
   render: args => <KvibTextarea {...args} />,
 };

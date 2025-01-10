@@ -22,9 +22,6 @@ const meta: Meta<ToggleTipProps> = {
       control: "boolean",
     },
   },
-  args: {
-    size: "md",
-  },
 };
 
 export default meta;
@@ -34,14 +31,16 @@ interface Props extends ToggleTipProps {
   colorPalette: "green" | "blue";
 }
 
-const ToggleTipExample = (args: Props) => (
-  <ToggleTip content="Toggle Tip content" {...args}>
-    <Button colorPalette={args.colorPalette}>Show Toggle Tip</Button>
-  </ToggleTip>
-);
-
 type Story = StoryObj<Props>;
 
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+ToggleTip.displayName = "ToggleTip";
+Button.displayName = "Button";
+
 export const Preview: Story = {
-  render: args => <ToggleTipExample {...args} />,
+  render: args => (
+    <ToggleTip content="Toggle Tip content" {...args}>
+      <Button colorPalette={args.colorPalette}>Show Toggle Tip</Button>
+    </ToggleTip>
+  ),
 };

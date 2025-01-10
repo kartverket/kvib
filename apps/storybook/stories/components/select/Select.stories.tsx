@@ -16,7 +16,6 @@ const meta: Meta<typeof KvibSelect> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "hidden" },
     },
   },
   argTypes: {
@@ -70,12 +69,19 @@ const meta: Meta<typeof KvibSelect> = {
 export default meta;
 type Story = StoryObj<typeof KvibSelect>;
 
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+(KvibSelect as any).displayName = "Select";
+SelectLabel.displayName = "SelectLabel";
+SelectTrigger.displayName = "SelectTrigger";
+SelectValueText.displayName = "SelectValueText";
+SelectContent.displayName = "SelectContent";
+SelectItem.displayName = "SelectItem";
+
 const alternativer = createListCollection({
   items: [
-    { label: "React.js", value: "react" },
-    { label: "Vue.js", value: "vue" },
-    { label: "Angular", value: "angular" },
-    { label: "Svelte", value: "svelte" },
+    { label: "Item 1", value: "one" },
+    { label: "Item 2", value: "two" },
+    { label: "Item 3", value: "three" },
   ],
 });
 
@@ -90,9 +96,9 @@ export const Preview: Story = {
   args: {},
   render: (args: SelectProps) => (
     <KvibSelect w="12rem" {...args} collection={alternativer} aria-label="select">
-      <SelectLabel>Velg et rammeverk</SelectLabel>
+      <SelectLabel>Select an item</SelectLabel>
       <SelectTrigger>
-        <SelectValueText placeholder="Velg..." />
+        <SelectValueText />
       </SelectTrigger>
       <SelectContent>
         {alternativer.items.map((alternativ: { label: string; value: string }) => (

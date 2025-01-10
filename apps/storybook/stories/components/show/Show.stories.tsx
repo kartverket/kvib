@@ -1,4 +1,4 @@
-import { Box, Button, Show as KvibShow, VStack } from "@kvib/react";
+import { Button, Show as KvibShow, VStack } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 import { useState } from "react";
 
@@ -30,23 +30,24 @@ const meta: Meta<typeof KvibShow> = {
 export default meta;
 type Story = StoryObj<typeof KvibShow>;
 
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+(KvibShow as any).displayName = "Show";
+Button.displayName = "Button";
+VStack.displayName = "VStack";
+
 export const Preview: Story = {
   render: args => {
     const [count, setCount] = useState(0);
     return (
       <VStack>
         <Button onClick={() => setCount(count + 1)} w="fit-content">
-          Øk telleren: {count}
+          Value: {count}
         </Button>
-        <KvibShow {...args} when={count <= 5}>
-          <Box p={4} bg="green.100" w="fit-content">
-            Denne boksen vises kun når telleren er mindre enn 5
-          </Box>
+        <KvibShow {...args} when={count <= 3}>
+          Content visible when 3 or less
         </KvibShow>
-        <KvibShow {...args} when={count > 5}>
-          <Box p={4} bg="red.100" w="fit-content">
-            Denne boksen vises kun når telleren er større enn 5
-          </Box>
+        <KvibShow {...args} when={count > 3}>
+          Content visible when more than 3
         </KvibShow>
       </VStack>
     );

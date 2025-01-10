@@ -1,4 +1,4 @@
-import { Stack as KvibStack, Text as KvibText } from "@kvib/react";
+import { Flex, Stack as KvibStack, Text as KvibText } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibText> = {
@@ -7,7 +7,38 @@ const meta: Meta<typeof KvibText> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "shown" },
+    },
+  },
+  argTypes: {
+    fontSize: {
+      description: "Size of the text",
+      table: { type: { summary: "string" } },
+      control: "text",
+    },
+    textStyle: {
+      description: "Use either fontSize or textStyle to set the size of the text",
+      table: {
+        type: { summary: "'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl'" },
+        defaultValue: { summary: "md" },
+      },
+      control: "select",
+      options: ["xs", "sm", "md", "lg", "xl", "2xl", "3xl", "4xl", "5xl", "6xl"],
+    },
+    truncate: {
+      description: "Truncate text with ellipsis after a single line",
+      table: { type: { summary: "boolean" } },
+      control: "boolean",
+    },
+    lineClamp: {
+      description: "Limit the number of lines displayed",
+      table: { type: { summary: "number" } },
+      control: "number",
+    },
+    fontWeight: {
+      description: "Font weight of the text",
+      table: { type: { summary: "50 | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900" } },
+      control: "select",
+      options: [50, 100, 200, 300, 400, 500, 600, 700, 800, 900],
     },
   },
 };
@@ -15,9 +46,17 @@ const meta: Meta<typeof KvibText> = {
 export default meta;
 type Story = StoryObj<typeof KvibText>;
 
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+KvibText.displayName = "Text";
+Flex.displayName = "Flex";
+
 export const Preview: Story = {
-  args: { children: "Dette er en eksempeltekst" },
-  render: args => <KvibText {...args} />,
+  args: { children: "Example text" },
+  render: args => (
+    <Flex maxW="sm">
+      <KvibText {...args} />
+    </Flex>
+  ),
 };
 
 export const TextSizes: Story = {

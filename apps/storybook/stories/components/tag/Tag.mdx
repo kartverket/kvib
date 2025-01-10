@@ -1,23 +1,8 @@
-import { Text } from "@kvib/react";
-import { Canvas, Controls, Meta, Story } from "@storybook/blocks";
-import { DocsContainer, DocsHeading, DocsStory, Feedback } from "../../templates/";
+import { Canvas, Controls, Meta, } from "@storybook/blocks";
 import * as TagStories from "./Tag.stories";
+import { TagDocs } from "./TagDocs";
 
 <Meta of={TagStories} />
-
-<DocsContainer>
-
-# Tag
-
-Tag skal brukes til elementer som trenger å bli merket, kategorisert eller organisert med nøkkelord som beskriver dem.
-
-```jsx
-import { Tag, TagLabel, TagLeftIcon, TagRightIcon, TagCloseButton } from "@kvib/react";
-```
-
-
-<DocsHeading light>Props</DocsHeading>
+<TagDocs />
 <Canvas of={TagStories.Preview} />
 <Controls of={TagStories.Preview} />
-
-</DocsContainer>

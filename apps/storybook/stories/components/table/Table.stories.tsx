@@ -1,13 +1,4 @@
-import {
-  Table as KvibTable,
-  Table,
-  TableBody,
-  TableCell,
-  TableColumnHeader,
-  TableHeader,
-  TableProps,
-  TableRow,
-} from "@kvib/react";
+import { Table as KvibTable, Table, TableBody, TableCell, TableColumnHeader, TableHeader, TableRow } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibTable> = {
@@ -60,27 +51,30 @@ const meta: Meta<typeof KvibTable> = {
 export default meta;
 type Story = StoryObj<typeof KvibTable>;
 
-const TableExample = (args: TableProps) => (
-  <Table {...args}>
-    <TableHeader>
-      <TableRow>
-        <TableColumnHeader>Tekstkolonne</TableColumnHeader>
-        <TableColumnHeader>Numerisk</TableColumnHeader>
-      </TableRow>
-    </TableHeader>
-    <TableBody>
-      <TableRow>
-        <TableCell>Rad 1</TableCell>
-        <TableCell>1</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell>Rad 2</TableCell>
-        <TableCell>2</TableCell>
-      </TableRow>
-    </TableBody>
-  </Table>
-);
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+KvibTable.displayName = "Table";
+TableHeader.displayName = "TableHeader";
+TableRow.displayName = "TableRow";
+TableColumnHeader.displayName = "TableColumnHeader";
+TableCell.displayName = "TableCell";
+TableBody.displayName = "TableBody";
 
 export const Preview: Story = {
-  render: args => <TableExample {...args} />,
+  render: args => (
+    <Table {...args}>
+      <TableHeader>
+        <TableRow>
+          <TableColumnHeader>Column 1</TableColumnHeader>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>Row 1</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>Row 2</TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
+  ),
 };

@@ -25,7 +25,7 @@ export const Breakpoints = () => {
           <Tr>
             <Th width="20%">Navn</Th>
             <Th width="50%">Verdi</Th>
-            <Th width="30%">Kode</Th>
+            <Th width="30%">Bruk</Th>
           </Tr>
         </Thead>
         <Tbody>

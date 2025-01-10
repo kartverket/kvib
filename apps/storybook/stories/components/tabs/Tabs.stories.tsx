@@ -1,4 +1,4 @@
-import { TabsList as KvibTabList, Tabs as KvibTabs, TabsContent, TabsProps, TabsTrigger } from "@kvib/react";
+import { TabsList as KvibTabList, Tabs as KvibTabs, TabsContent, TabsTrigger } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibTabs> = {
@@ -79,17 +79,21 @@ const meta: Meta<typeof KvibTabs> = {
 export default meta;
 type Story = StoryObj<typeof KvibTabs>;
 
-const TabsExample = ({ ...args }: TabsProps) => (
-  <KvibTabs defaultValue="fane1" {...args}>
-    <KvibTabList>
-      <TabsTrigger value="fane1">Første fane</TabsTrigger>
-      <TabsTrigger value="fane2">Andre fane</TabsTrigger>
-    </KvibTabList>
-    <TabsContent value="fane1">Innhold for første fane</TabsContent>
-    <TabsContent value="fane2">Innhold for andre fane</TabsContent>
-  </KvibTabs>
-);
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+KvibTabs.displayName = "Tabs";
+KvibTabList.displayName = "TabsList";
+TabsTrigger.displayName = "TabsTrigger";
+TabsContent.displayName = "TabsContent";
 
 export const Preview: Story = {
-  render: args => <TabsExample {...args} />,
+  render: args => (
+    <KvibTabs defaultValue="tab1" {...args}>
+      <KvibTabList>
+        <TabsTrigger value="tab1">Tab 1</TabsTrigger>
+        <TabsTrigger value="tab2">Tab 2</TabsTrigger>
+      </KvibTabList>
+      <TabsContent value="tab1">Tab 1 content</TabsContent>
+      <TabsContent value="tab2">Tab 2 content</TabsContent>
+    </KvibTabs>
+  ),
 };

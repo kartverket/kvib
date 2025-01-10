@@ -1,4 +1,4 @@
-import { createListCollection, NativeSelectField, NativeSelectRoot } from "@kvib/react";
+import { createListCollection, NativeSelect, NativeSelectField, NativeSelectRoot } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof NativeSelectRoot> = {
@@ -7,7 +7,6 @@ const meta: Meta<typeof NativeSelectRoot> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "hidden" },
     },
   },
   argTypes: {
@@ -52,19 +51,22 @@ const meta: Meta<typeof NativeSelectRoot> = {
 export default meta;
 type Story = StoryObj<typeof NativeSelectRoot>;
 
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+NativeSelect.displayName = "NativeSelect";
+NativeSelectField.displayName = "NativeSelectField";
+
 const alternativer = createListCollection({
   items: [
-    { label: "React.js", value: "react" },
-    { label: "Vue.js", value: "vue" },
-    { label: "Angular", value: "angular" },
-    { label: "Svelte", value: "svelte" },
+    { label: "Item 1", value: "one" },
+    { label: "Item 2", value: "two" },
+    { label: "Item 3", value: "three" },
   ],
 });
 
 export const Preview: Story = {
   render: args => (
-    <NativeSelectRoot size="sm" width="240px" {...args}>
-      <NativeSelectField placeholder="Velg et element" items={alternativer.items} />
-    </NativeSelectRoot>
+    <NativeSelect size="sm" width="240px" {...args}>
+      <NativeSelectField placeholder="Select an item" items={alternativer.items} />
+    </NativeSelect>
   ),
 };

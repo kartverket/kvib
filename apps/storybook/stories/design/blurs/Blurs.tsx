@@ -1,8 +1,10 @@
 import {
-  blur,
   Box,
   Center,
+  Clipboard,
+  ClipboardIconButton,
   Code,
+  Flex,
   Logo,
   Table,
   TableBody as Tbody,
@@ -10,37 +12,44 @@ import {
   TableCell as Th,
   TableHeader as Thead,
   TableRow as Tr,
+  useKvibContext,
 } from "@kvib/react";
 
-export const example = (value: any) => {
-  return (
-    <Box filter="auto" blur={value} w="80px">
-      <Logo size={80} />
-    </Box>
-  );
-};
+export const example = (value: string) => (
+  <Box filter="auto" blur={value} w="80px">
+    <Logo size={80} />
+  </Box>
+);
 
 export const Blurs = () => {
+  const system = useKvibContext();
+  const tokens = system.tokens;
+  const variants = Object.keys(tokens.getCategoryValues("blurs"));
+
   return (
     <Table width="100%">
       <Thead textAlign="left">
         <Tr>
           <Th width="20%">Eksempel</Th>
           <Th width="50%">Verdi</Th>
-          <Th width="30%">Kode</Th>
+          <Th width="30%">Bruk</Th>
         </Tr>
       </Thead>
       <Tbody>
-        {Object.entries(blur).map(([size, value]) => {
-          const val = value.value;
+        {variants.map(variant => {
           return (
-            <Tr key={size}>
+            <Tr key={variant}>
               <Td backgroundColor="#F7FAFC">
-                <Center>{example(val)}</Center>
+                <Center>{example(variant)}</Center>
               </Td>
-              <Td backgroundColor="white">{`${size} / ${val}`}</Td>
+              <Td backgroundColor="white">{`${variant} / ${tokens.getByName(`blurs.${variant}`)?.originalValue}`}</Td>
               <Td backgroundColor="white">
-                <Code>{`var(--kvib-blur-${val})`}</Code>
+                <Flex gap="1rem" justifyContent={"space-between"}>
+                  <Code>{`blur="${variant}"`}</Code>
+                  <Clipboard value={`blur="${variant}`}>
+                    <ClipboardIconButton />
+                  </Clipboard>
+                </Flex>
               </Td>
             </Tr>
           );

@@ -7,8 +7,8 @@ const meta: Meta<typeof KvibSkeleton> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "shown" },
     },
+    layout: "padded",
   },
   argTypes: {
     loading: {
@@ -34,6 +34,9 @@ const meta: Meta<typeof KvibSkeleton> = {
 export default meta;
 type Story = StoryObj<typeof KvibSkeleton>;
 
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+KvibSkeleton.displayName = "Skeleton";
+
 export const Preview: Story = {
-  render: args => <KvibSkeleton {...args} height="20px" />,
+  render: args => <KvibSkeleton {...args} height="20px" w="100%" />,
 };

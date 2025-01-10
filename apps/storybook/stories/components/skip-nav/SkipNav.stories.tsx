@@ -1,4 +1,4 @@
-import { SkipNavLink as KvibSkipNavLink } from "@kvib/react";
+import { Code, SkipNavLink as KvibSkipNavLink } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibSkipNavLink> = {
@@ -7,7 +7,6 @@ const meta: Meta<typeof KvibSkipNavLink> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "shown" },
     },
   },
   argTypes: {
@@ -20,17 +19,20 @@ const meta: Meta<typeof KvibSkipNavLink> = {
     },
   },
   args: {
-    children: "Hopp til innhold",
+    children: "Skip to content",
   },
 };
 
 export default meta;
 type Story = StoryObj<typeof KvibSkipNavLink>;
 
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+KvibSkipNavLink.displayName = "SkipNavLink";
+
 export const Preview: Story = {
   render: args => (
     <div>
-      Trykk her + tab
+      Click and press <Code>tab</Code>.
       <KvibSkipNavLink {...args} />
     </div>
   ),

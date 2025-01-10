@@ -7,7 +7,6 @@ const meta: Meta<typeof RadioGroup> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "hidden" },
     },
   },
   argTypes: {
@@ -75,12 +74,17 @@ const meta: Meta<typeof RadioGroup> = {
 export default meta;
 type Story = StoryObj<typeof RadioGroup>;
 
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+RadioGroup.displayName = "RadioGroup";
+Radio.displayName = "Radio";
+HStack.displayName = "HStack";
+
 export const Preview: Story = {
   render: (args: RadioGroupProps) => (
     <RadioGroup defaultValue={"1"} {...args}>
       <HStack gap="6">
-        <Radio value="1">Valg 1</Radio>
-        <Radio value="2">Valg 2</Radio>
+        <Radio value="1">Option 1</Radio>
+        <Radio value="2">Option 2</Radio>
       </HStack>
     </RadioGroup>
   ),

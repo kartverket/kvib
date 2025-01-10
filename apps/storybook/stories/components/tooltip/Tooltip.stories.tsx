@@ -7,7 +7,6 @@ const meta: Meta<typeof KvibTooltip> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "shown" },
     },
   },
   argTypes: {
@@ -105,9 +104,13 @@ interface Props extends TooltipProps {
 }
 type Story = StoryObj<Props>;
 
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+KvibTooltip.displayName = "Tooltip";
+Button.displayName = "Button";
+
 export const Preview: Story = {
   render: (args: Props) => (
-    <KvibTooltip {...args} content="Et tooltip!" aria-label="Et tooltip">
+    <KvibTooltip {...args} content="Tooltip content">
       <Button colorPalette={args.colorPalette}>Hover me</Button>
     </KvibTooltip>
   ),

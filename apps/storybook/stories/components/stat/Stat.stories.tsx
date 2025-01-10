@@ -25,11 +25,16 @@ const meta: Meta<typeof KvibStat> = {
 export default meta;
 type Story = StoryObj<typeof KvibStat>;
 
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+KvibStat.displayName = "Stat";
+KvibStatLabel.displayName = "StatLabel";
+KvibStatNumber.displayName = "StatNumber";
+
 export const Preview: Story = {
   render: (args: StatProps) => (
     <KvibStat {...args}>
-      <KvibStatLabel>Utgifter</KvibStatLabel>
-      <KvibStatNumber>3200kr</KvibStatNumber>
+      <KvibStatLabel>Label</KvibStatLabel>
+      <KvibStatNumber>3200</KvibStatNumber>
     </KvibStat>
   ),
 };

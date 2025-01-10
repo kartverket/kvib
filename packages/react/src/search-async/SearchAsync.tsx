@@ -146,7 +146,7 @@ const SearchAsyncNoRef = <T extends unknown>(
       loadingMessage={() => <Text>Laster...</Text>}
       loadOptions={debounceTime ? loadOptionsDebounce : loadOptions}
       blurInputOnSelect={false}
-      placeholder={placeholder ? placeholder : "Søk her..."}
+      placeholder={placeholder}
       defaultOptions={defaultOptions}
       id={id}
       isMulti={multi}
