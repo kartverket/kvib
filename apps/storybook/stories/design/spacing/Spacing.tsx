@@ -15,16 +15,12 @@ export const Spacing = () => {
   const system = useKvibContext();
   const tokens = system.tokens;
   const variants = tokens.getCategoryValues("spacing");
-  // filter strings that negative numbers
   const filtered = Object.entries(variants).filter(elem => {
     const size = elem[0];
-    // try to parse the size as a number
     const parsed = parseFloat(size);
-    // if the size is a number and it's not negative
     return !isNaN(parsed) && parsed >= 0;
   });
 
-  // sort the sizes
   const sorted = filtered.sort((a, b) => {
     const aSize = parseFloat(a[0]);
     const bSize = parseFloat(b[0]);
