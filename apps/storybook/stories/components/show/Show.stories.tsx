@@ -1,8 +1,12 @@
-import { Button, Show as KvibShow, VStack } from "@kvib/react";
+import { Button, Show as KvibShow, ShowProps, VStack } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 import { useState } from "react";
 
-const meta: Meta<typeof KvibShow> = {
+interface Props extends ShowProps<string> {
+  colorPalette: "green" | "blue";
+}
+
+const meta: Meta<Props> = {
   title: "Komponenter/Show",
   component: KvibShow,
   parameters: {
@@ -28,7 +32,7 @@ const meta: Meta<typeof KvibShow> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof KvibShow>;
+type Story = StoryObj<Props>;
 
 /** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
 (KvibShow as any).displayName = "Show";
@@ -37,10 +41,10 @@ VStack.displayName = "VStack";
 
 export const Preview: Story = {
   render: args => {
-    const [count, setCount] = useState(0);
+    const [count, setCount] = useState(1);
     return (
       <VStack>
-        <Button onClick={() => setCount(count + 1)} w="fit-content">
+        <Button onClick={() => setCount(count + 1)} w="fit-content" colorPalette={args.colorPalette}>
           Value: {count}
         </Button>
         <KvibShow {...args} when={count <= 3}>

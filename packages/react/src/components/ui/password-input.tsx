@@ -40,6 +40,7 @@ export const PasswordInput = React.forwardRef<HTMLInputElement, PasswordInputPro
       width="full"
       endElement={
         <VisibilityTrigger
+          colorPalette={rest.colorPalette}
           disabled={rest.disabled}
           onPointerDown={e => {
             if (rest.disabled) return;

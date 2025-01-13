@@ -128,9 +128,9 @@ export const Fieldset = (_: ColorPalette) => {
   return <Preview />;
 };
 
-export const Footer = (_: ColorPalette) => {
+export const Footer = (colorPalette: ColorPalette) => {
   const { FooterInline } = composeStories(FooterStories);
-  return <FooterInline />;
+  return <FooterInline colorPalette={colorPalette} />;
 };
 
 export const HoverCard = (colorPalette: ColorPalette) => {
@@ -230,9 +230,9 @@ export const Datepicker = (colorPalette: ColorPalette) => {
   return <Preview colorPalette={colorPalette} />;
 };
 
-export const Timepicker = (_: ColorPalette) => {
+export const Timepicker = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(TimepickerStories);
-  return <Preview />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
 export const Editable = (colorPalette: ColorPalette) => {
@@ -463,9 +463,9 @@ export const Alert = (colorPalette: ColorPalette) => {
 
 // Annet
 
-export const Show = (_: ColorPalette) => {
+export const Show = (colorPalette: ColorPalette) => {
   const { Preview } = composeStories(ShowHideStories);
-  return <Preview />;
+  return <Preview colorPalette={colorPalette} />;
 };
 
 export const Portal = (_: ColorPalette) => {
