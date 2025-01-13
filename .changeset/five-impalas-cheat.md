@@ -2,7 +2,7 @@
 "@kvib/react": patch
 ---
 
-Definerer standardfarge for Checkbox.
+Definerer standardfarge for Checkbox og Checkbox Card
 Endrer TableColumnHeader til å ha bold som standard-fontvekt.
 Endrer SearchAsync til å bruke Input sin styling.
 Legger til colorPalette for Footer og FooterInline.

@@ -22,6 +22,7 @@ import { breadcrumbTheme } from "./components/breadcrumb";
 import { buttonTheme } from "./components/button";
 import { cardTheme } from "./components/card";
 import { checkboxTheme } from "./components/checkbox";
+import { checkboxCardTheme } from "./components/checkbox-card";
 import { closeButtonTheme } from "./components/close-button";
 import { datepickerTheme } from "./components/datepicker";
 import { dialogTheme } from "./components/dialog";
@@ -111,6 +112,7 @@ const customConfig = defineConfig({
       breadcrumb: breadcrumbTheme,
       card: cardTheme,
       checkbox: checkboxTheme,
+      checkboxCard: checkboxCardTheme,
       datepicker: datepickerTheme,
       dialog: dialogTheme,
       fileUpload: fileUploadTheme,
