@@ -83,15 +83,17 @@ export const Preview: Story = {
   render: args => (
     <HoverCard {...args}>
       <HoverCardTrigger asChild>
-        <Link href="#">Hover for å vise et kort</Link>
+        <Link href="#" colorPalette={args.colorPalette}>
+          Hover for content
+        </Link>
       </HoverCardTrigger>
       <HoverCardContent>
         <Stack gap="1">
           <Text textStyle="sm" fontWeight="semibold">
-            Her er det innhold!
+            Content title
           </Text>
           <Text textStyle="sm" color="fg.muted">
-            Denne dukker opp mens man holder over lenken.
+            Description
           </Text>
         </Stack>
       </HoverCardContent>

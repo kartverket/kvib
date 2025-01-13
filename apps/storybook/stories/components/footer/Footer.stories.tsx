@@ -66,6 +66,15 @@ const meta: Meta<typeof KvibFooter> = {
     contactInfoEmailAddress: {
       control: "text",
     },
+    colorPalette: {
+      description: "The color palette of the footer links",
+      table: {
+        type: { summary: "'green' | 'blue' | 'gray'" },
+        defaultValue: { summary: "green" },
+      },
+      control: { type: "radio" },
+      options: ["green", "blue", "gray"],
+    },
   },
 };
 
@@ -116,6 +125,15 @@ export const FooterInline: InlineStory = {
         defaulValue: { summary: "/" },
       },
       control: "text",
+    },
+    colorPalette: {
+      description: "The color palette of the footer links",
+      table: {
+        type: { summary: "'green' | 'blue' | 'gray'" },
+        defaultValue: { summary: "green" },
+      },
+      control: { type: "radio" },
+      options: ["green", "blue", "gray"],
     },
   },
   render: args => <KvibFooterInline {...args} />,

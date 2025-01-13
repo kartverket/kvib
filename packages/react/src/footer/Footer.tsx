@@ -14,6 +14,7 @@ export type FooterProps = {
   /**The contact info email-adress
    * @default post@kartverket.no*/
   contactInfoEmailAddress?: string;
+  colorPalette?: "green" | "blue" | "gray";
 };
 
 const FooterToggleableFlex = (props: FlexProps) => {
@@ -34,6 +35,7 @@ export const Footer = ({
   excludeNews,
   excludeSocialMedia,
   excludePrivacyLink,
+  colorPalette = "green",
   contactInfoEmailAddress = "post@kartverket.no",
 }: FooterProps) => {
   const onlyOneIncluded =
@@ -52,7 +54,12 @@ export const Footer = ({
                 </Heading>
                 <Text>
                   Telefon:{" "}
-                  <Link fontWeight="bold" aria-label="Ring Kartverket på telefon" href="tel:32118000">
+                  <Link
+                    fontWeight="bold"
+                    aria-label="Ring Kartverket på telefon"
+                    href="tel:32118000"
+                    colorPalette={colorPalette}
+                  >
                     {" "}
                     32 11 80 00{" "}
                   </Link>
@@ -63,6 +70,7 @@ export const Footer = ({
                     fontWeight="bold"
                     aria-label="Send e-post til Kartverket"
                     href={"mailto:" + contactInfoEmailAddress}
+                    colorPalette={colorPalette}
                   >
                     {" "}
                     {contactInfoEmailAddress}{" "}
@@ -73,6 +81,7 @@ export const Footer = ({
                   fontWeight="bold"
                   aria-label="Besøk Kartverket sin kontaktinformasjon"
                   href="https://kartverket.no/om-kartverket/kontakt-oss"
+                  colorPalette={colorPalette}
                 >
                   {" "}
                   Kontaktinfo og adresser{" "}
@@ -90,6 +99,7 @@ export const Footer = ({
                 href="https://status.kartverket.no/"
                 aria-label="Besøk Kartverket sine driftsmeldinger"
                 fontWeight="bold"
+                colorPalette={colorPalette}
               >
                 {" "}
                 Driftsmeldinger{" "}
@@ -98,6 +108,7 @@ export const Footer = ({
                 href="https://kartverket.no/om-kartverket/faq"
                 aria-label="Besøk Kartverket sin oversikt over ofte spurte spørsmål"
                 fontWeight="bold"
+                colorPalette={colorPalette}
               >
                 {" "}
                 Ofte stilte spørsmål{" "}
@@ -106,6 +117,7 @@ export const Footer = ({
                 href="https://kartverket.no/eiendom/skjema/alleskjema"
                 aria-label="Besøk Kartverket sin oversikt over skjemaer"
                 fontWeight="bold"
+                colorPalette={colorPalette}
               >
                 {" "}
                 Skjemaer{" "}
@@ -117,6 +129,7 @@ export const Footer = ({
                 href="https://kartverket.no/om-kartverket/arrangement"
                 aria-label="Besøk Kartverket sin oversikt over Arrangementer og kurs"
                 fontWeight="bold"
+                colorPalette={colorPalette}
               >
                 {" "}
                 Arrangementer og kurs{" "}
@@ -125,6 +138,7 @@ export const Footer = ({
                 href="https://kartverket.no/om-kartverket/nyheter"
                 aria-label="Besøk Kartverket sine Nyheter"
                 fontWeight="bold"
+                colorPalette={colorPalette}
               >
                 {" "}
                 Nyheter{" "}
@@ -133,6 +147,7 @@ export const Footer = ({
                 href="https://kartverket.no/om-kartverket/jobb-i-kartverket"
                 aria-label="Besøk Kartverket sin side med informasjon for jobb i Kartverket"
                 fontWeight="bold"
+                colorPalette={colorPalette}
               >
                 {" "}
                 Ledige stillinger{" "}
@@ -141,6 +156,7 @@ export const Footer = ({
                 href="https://kartverket.no/om-kartverket/presse"
                 aria-label="Besøk Kartverket sin presse-side"
                 fontWeight="bold"
+                colorPalette={colorPalette}
               >
                 {" "}
                 Presse{" "}
@@ -159,6 +175,7 @@ export const Footer = ({
                 href="https://www.facebook.com/kartverket.no"
                 aria-label="Besøk Kartverket sin Facebook-side"
                 fontWeight="bold"
+                colorPalette={colorPalette}
               >
                 Facebook
               </Link>
@@ -166,6 +183,7 @@ export const Footer = ({
                 href="https://twitter.com/Kartverket"
                 aria-label="Besøk Kartverket sin Twitter-side"
                 fontWeight="bold"
+                colorPalette={colorPalette}
               >
                 Twitter
               </Link>
@@ -173,6 +191,7 @@ export const Footer = ({
                 href="https://www.instagram.com/kartverket.no/"
                 aria-label="Besøk Kartverket sin Instagram-side"
                 fontWeight="bold"
+                colorPalette={colorPalette}
               >
                 Instagram
               </Link>
@@ -180,6 +199,7 @@ export const Footer = ({
                 href="https://www.linkedin.com/company/65713"
                 aria-label="Besøk Kartverket sin LinkedIn-side"
                 fontWeight="bold"
+                colorPalette={colorPalette}
               >
                 LinkedIn
               </Link>
@@ -187,13 +207,15 @@ export const Footer = ({
                 href="https://pub.dialogapi.no/s/3403d74a-8e34-4ab5-a221-1bf58c425982"
                 aria-label="Besøk Kartverket sin side for å melde seg på nyhetsvarsler"
                 fontWeight="bold"
+                colorPalette={colorPalette}
               >
                 Newsletter
               </Link>
               <Link
                 href="https://vimeo.com/kartverket/videos"
-                aria-label="Besøk Kartverket sin Video-side"
+                aria-label="Besøk Kartverket sin Vimeo-side"
                 fontWeight="bold"
+                colorPalette={colorPalette}
               >
                 Video
               </Link>
@@ -205,12 +227,18 @@ export const Footer = ({
                 href="https://kartverket.no/om-kartverket/personvern"
                 aria-label="Besøk Kartverket sin personvernserklæring"
                 fontWeight="bold"
+                colorPalette={colorPalette}
               >
                 Personvern
               </Link>
             )}
             {accessibilityUrl && (
-              <Link href={accessibilityUrl} aria-label="Besøk denne sidens tilgjengelighetserklæring" fontWeight="bold">
+              <Link
+                href={accessibilityUrl}
+                aria-label="Besøk denne sidens tilgjengelighetserklæring"
+                fontWeight="bold"
+                colorPalette={colorPalette}
+              >
                 {" "}
                 Tilgjengelighetserklæring
               </Link>

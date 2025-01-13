@@ -6,7 +6,15 @@ export const accordionTheme = defineSlotRecipe({
   className: "kvib-accordion",
   base: {
     itemTrigger: {
+      padding: "0 1rem",
       cursor: "pointer",
+      transition: "background-color 0.2s",
+      _hover: {
+        bg: "blackAlpha.50",
+      },
+    },
+    itemContent: {
+      padding: "0 1rem",
     },
   },
 });

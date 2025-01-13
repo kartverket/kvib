@@ -1,3 +1,4 @@
+import { Input } from "@/input";
 import { Text } from "@/typography";
 import { forwardRef, ReactNode, Ref, useEffect, useRef } from "react";
 import {
@@ -86,6 +87,13 @@ function genericForwardRef<T, P = {}>(
   return forwardRef(render as any) as any;
 }
 
+const CustomControl = (
+  { children, innerProps, innerRef, ...props }: any,
+  ref: Ref<SelectInstance<unknown, boolean, GroupBase<unknown>>>,
+) => {
+  return <Input ref={ref} {...innerProps} {...props} />;
+};
+
 // SearchAsync uses the async version of react-select to fetch and display options.
 const SearchAsyncNoRef = <T extends unknown>(
   {
@@ -136,6 +144,8 @@ const SearchAsyncNoRef = <T extends unknown>(
         DropdownIndicator: () => dropdownIndicator ?? null,
         // Only use separator when there is a dropdownindicator
         ...(!dropdownIndicator ? { IndicatorSeparator: () => null } : {}),
+        Input: CustomControl,
+        Placeholder: () => null,
       }}
       formatOptionLabel={optionLabelFormatter}
       isClearable={clearable}
@@ -154,6 +164,11 @@ const SearchAsyncNoRef = <T extends unknown>(
       menuPlacement={menuPlacement}
       value={value}
       ref={ref}
+      styles={{
+        control: () => ({
+          all: "unset",
+        }),
+      }}
     />
   );
 };

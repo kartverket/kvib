@@ -25,6 +25,7 @@ interface ButtonVariantContext {
   size: ButtonProps["size"];
   variantMap: ButtonVariantMap;
   getHref?: (page: number) => string;
+  colorPalette: "green" | "blue" | "gray";
 }
 
 const [RootPropsProvider, useRootProps] = createContext<ButtonVariantContext>({
@@ -35,6 +36,7 @@ export interface PaginationRootProps extends Omit<ChakraPagination.RootProps, "t
   size?: ButtonProps["size"];
   variant?: PaginationVariant;
   getHref?: (page: number) => string;
+  colorPalette?: "green" | "blue" | "gray";
 }
 
 const variantMap: Record<PaginationVariant, ButtonVariantMap> = {
@@ -45,9 +47,9 @@ const variantMap: Record<PaginationVariant, ButtonVariantMap> = {
 
 export const PaginationRoot = React.forwardRef<HTMLDivElement, PaginationRootProps>(
   function PaginationRoot(props, ref) {
-    const { size = "sm", variant = "outline", getHref, ...rest } = props;
+    const { size = "sm", variant = "outline", colorPalette = "green", getHref, ...rest } = props;
     return (
-      <RootPropsProvider value={{ size, variantMap: variantMap[variant], getHref }}>
+      <RootPropsProvider value={{ size, variantMap: variantMap[variant], getHref, colorPalette }}>
         <ChakraPagination.Root ref={ref} type={getHref ? "link" : "button"} {...rest} />
       </RootPropsProvider>
     );
@@ -56,10 +58,10 @@ export const PaginationRoot = React.forwardRef<HTMLDivElement, PaginationRootPro
 
 export const PaginationEllipsis = React.forwardRef<HTMLDivElement, ChakraPagination.EllipsisProps>(
   function PaginationEllipsis(props, ref) {
-    const { size, variantMap } = useRootProps();
+    const { size, variantMap, colorPalette } = useRootProps();
     return (
       <ChakraPagination.Ellipsis ref={ref} {...props} asChild>
-        <Button as="span" variant={variantMap.ellipsis} size={size}>
+        <Button as="span" variant={variantMap.ellipsis} size={size} colorPalette={colorPalette}>
           <HiMiniEllipsisHorizontal />
         </Button>
       </ChakraPagination.Ellipsis>
@@ -70,14 +72,14 @@ export const PaginationEllipsis = React.forwardRef<HTMLDivElement, ChakraPaginat
 export const PaginationItem = React.forwardRef<HTMLButtonElement, ChakraPagination.ItemProps>(
   function PaginationItem(props, ref) {
     const { page } = usePaginationContext();
-    const { size, variantMap, getHref } = useRootProps();
+    const { size, variantMap, getHref, colorPalette } = useRootProps();
 
     const current = page === props.value;
     const variant = current ? variantMap.current : variantMap.default;
 
     if (getHref) {
       return (
-        <LinkButton href={getHref(props.value)} variant={variant} size={size}>
+        <LinkButton href={getHref(props.value)} variant={variant} size={size} colorPalette={colorPalette}>
           {props.value}
         </LinkButton>
       );
@@ -85,7 +87,7 @@ export const PaginationItem = React.forwardRef<HTMLButtonElement, ChakraPaginati
 
     return (
       <ChakraPagination.Item ref={ref} {...props} asChild>
-        <Button variant={variant} size={size}>
+        <Button variant={variant} size={size} colorPalette={colorPalette}>
           {props.value}
         </Button>
       </ChakraPagination.Item>
@@ -95,7 +97,7 @@ export const PaginationItem = React.forwardRef<HTMLButtonElement, ChakraPaginati
 
 export const PaginationPrevTrigger = React.forwardRef<HTMLButtonElement, ChakraPagination.PrevTriggerProps>(
   function PaginationPrevTrigger(props, ref) {
-    const { size, variantMap, getHref } = useRootProps();
+    const { size, variantMap, getHref, colorPalette } = useRootProps();
     const { previousPage } = usePaginationContext();
 
     if (getHref) {
@@ -104,6 +106,7 @@ export const PaginationPrevTrigger = React.forwardRef<HTMLButtonElement, ChakraP
           href={previousPage != null ? getHref(previousPage) : undefined}
           variant={variantMap.default}
           size={size}
+          colorPalette={colorPalette}
         >
           <HiChevronLeft />
         </LinkButton>
@@ -112,7 +115,7 @@ export const PaginationPrevTrigger = React.forwardRef<HTMLButtonElement, ChakraP
 
     return (
       <ChakraPagination.PrevTrigger ref={ref} asChild {...props}>
-        <IconButton variant={variantMap.default} size={size}>
+        <IconButton variant={variantMap.default} size={size} colorPalette={colorPalette}>
           <HiChevronLeft />
         </IconButton>
       </ChakraPagination.PrevTrigger>
@@ -122,12 +125,17 @@ export const PaginationPrevTrigger = React.forwardRef<HTMLButtonElement, ChakraP
 
 export const PaginationNextTrigger = React.forwardRef<HTMLButtonElement, ChakraPagination.NextTriggerProps>(
   function PaginationNextTrigger(props, ref) {
-    const { size, variantMap, getHref } = useRootProps();
+    const { size, variantMap, getHref, colorPalette } = useRootProps();
     const { nextPage } = usePaginationContext();
 
     if (getHref) {
       return (
-        <LinkButton href={nextPage != null ? getHref(nextPage) : undefined} variant={variantMap.default} size={size}>
+        <LinkButton
+          href={nextPage != null ? getHref(nextPage) : undefined}
+          variant={variantMap.default}
+          size={size}
+          colorPalette={colorPalette}
+        >
           <HiChevronRight />
         </LinkButton>
       );
@@ -135,7 +143,7 @@ export const PaginationNextTrigger = React.forwardRef<HTMLButtonElement, ChakraP
 
     return (
       <ChakraPagination.NextTrigger ref={ref} asChild {...props}>
-        <IconButton variant={variantMap.default} size={size}>
+        <IconButton variant={variantMap.default} size={size} colorPalette={colorPalette}>
           <HiChevronRight />
         </IconButton>
       </ChakraPagination.NextTrigger>

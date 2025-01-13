@@ -7,6 +7,9 @@ export const tableTheme = defineSlotRecipe({
     root: {
       colorPalette: "gray",
     },
+    columnHeader: {
+      fontWeight: "bold",
+    },
   },
   variants: {
     striped: {
