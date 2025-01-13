@@ -1,5 +1,17 @@
 # @kvib/react
 
+## 5.1.1
+
+### Patch Changes
+
+- 5b339cb: Definerer standardfarge for Checkbox og Checkbox Card
+  Endrer TableColumnHeader til å ha bold som standard-fontvekt.
+  Endrer SearchAsync til å bruke Input sin styling.
+  Legger til colorPalette for Footer og FooterInline.
+  Legger til colorPalette for Pagination og utvider variants med "subtle"-variant for denne.
+  Legger til hovereffekt og padding på Accordion.
+- 3c6e6f6: Oppdaterer avhengigheter
+
 ## 5.1.0
 
 ### Minor Changes
