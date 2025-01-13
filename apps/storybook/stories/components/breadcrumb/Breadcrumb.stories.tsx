@@ -86,8 +86,7 @@ export const Preview: Story = {
       }
     >
       <BreadcrumbLink href="#">Level 1</BreadcrumbLink>
-      <BreadcrumbLink href="#">Level 2</BreadcrumbLink>
-      <BreadcrumbCurrentLink>Level 3</BreadcrumbCurrentLink>
+      <BreadcrumbCurrentLink>Level 2</BreadcrumbCurrentLink>
     </Breadcrumb>
   ),
 };

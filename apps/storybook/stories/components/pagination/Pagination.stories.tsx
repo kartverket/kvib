@@ -16,7 +16,7 @@ const meta: Meta<typeof Pagination> = {
   },
   argTypes: {
     size: {
-      description: "The size of the pagination component.",
+      description: "The size of the component.",
       table: {
         type: { summary: "'sm' | 'md' | 'lg'" },
         defaultValue: { summary: "md" },
@@ -25,18 +25,26 @@ const meta: Meta<typeof Pagination> = {
       options: ["sm", "md", "lg"],
     },
     variant: {
-      description: "The variant of the pagination component.",
+      description: "The variant of the component.",
       table: {
-        type: { summary: "'solid' | 'outline'" },
+        type: { summary: "'solid' | 'outline' | 'subtle'" },
         defaultValue: { summary: "outline" },
       },
       control: "radio",
-      options: ["solid", "outline"],
+      options: ["outline", "solid", "subtle"],
     },
     defaultPage: {
       description: "The default page number.",
       table: {
         type: { summary: "number" },
+      },
+      control: "number",
+    },
+    page: {
+      description: "The active page.",
+      table: {
+        type: { summary: "number" },
+        defaultValue: { summary: "1" },
       },
       control: "number",
     },
@@ -51,24 +59,82 @@ const meta: Meta<typeof Pagination> = {
       description: "The number of items per page.",
       table: {
         type: { summary: "number" },
+        defaultValue: { summary: "10" },
       },
       control: "number",
+    },
+    colorPalette: {
+      description: "The color palette of the component.",
+      table: {
+        type: { summary: "'green' | 'blue' | 'gray'" },
+      },
+      defaultValue: { summary: "green" },
+      options: ["green", "blue", "gray"],
+      control: { type: "radio" },
+    },
+    getHref: {
+      description: "Function that returns the href for a page.",
+      table: {
+        type: { summary: "(page: number) => string" },
+      },
+    },
+    siblingCount: {
+      description: "Number of pages to show beside active page.",
+      table: {
+        type: { summary: "number" },
+        defaultValue: { summary: "1" },
+      },
+      control: "number",
+    },
+    onPageChange: {
+      description: "Called when the page number is changed.",
+      table: {
+        type: { summary: "(details: PageChangeDetails) => void" },
+      },
+    },
+    onPageSizeChange: {
+      description: "Called when the page size is changed.",
+      table: {
+        type: { summary: "(details: PageSizeChangeDetails) => void" },
+      },
+    },
+    ids: {
+      description: "The ids of the elements in the accordion. Useful for composition",
+      table: {
+        type: {
+          summary:
+            "Partial<{ root: string ellipsis(index: number): string prevTrigger: string nextTrigger: string item(page: number): string }>",
+        },
+      },
+    },
+    translations: {
+      description: "Specifies the localized strings that identifies the accessibility elements and their states.",
+      table: {
+        type: { summary: "IntlTranslations" },
+      },
     },
   },
   args: {
     size: "sm",
+    variant: "outline",
+    colorPalette: "green",
+    count: 2,
+    defaultPage: 1,
+    pageSize: 1,
   },
 };
 
 export default meta;
 type Story = StoryObj<typeof Pagination>;
 
+/** Manuell navngivning av komponenter for å unngå at kompilert kode vises ved "Show Code" i Storybook */
+Pagination.displayName = "Pagination";
+(PaginationItems as any).displayName = "PaginationItems";
+PaginationNextTrigger.displayName = "PaginationNextTrigger";
+PaginationPrevTrigger.displayName = "PaginationPrevTrigger";
+HStack.displayName = "HStack";
+
 export const Preview: Story = {
-  args: {
-    count: 10,
-    defaultPage: 1,
-    pageSize: 5,
-  },
   render: args => (
     <Pagination {...args}>
       <HStack>
