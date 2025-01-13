@@ -1,13 +1,15 @@
 import { defineSlotRecipe } from "@chakra-ui/react";
-import { checkboxAnatomy } from "@chakra-ui/react/anatomy"; // Ensure you import the correct anatomy if needed
+import { checkboxAnatomy } from "@chakra-ui/react/anatomy";
 
 export const checkboxTheme = defineSlotRecipe({
-  slots: checkboxAnatomy.keys(), // Define the slots for the checkbox
+  slots: checkboxAnatomy.keys(),
   base: {
     root: {
+      colorPalette: "green",
       cursor: "pointer",
     },
     control: {
+      borderWidth: "2px",
       borderColor: "colorPalette.500",
       _checked: {
         _hover: {
@@ -26,8 +28,7 @@ export const checkboxTheme = defineSlotRecipe({
       },
     },
   },
-  variants: {
-    // Define variants if needed
+  defaultVariants: {
+    colorPalette: "green",
   },
-  compoundVariants: [], // Add compound variants if necessary
 });
