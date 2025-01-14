@@ -1,3 +1,4 @@
+import { FieldErrorText, FieldHelperText, FieldLabel } from "@/field";
 import { Field as ChakraField } from "@chakra-ui/react";
 import * as React from "react";
 
@@ -24,3 +25,75 @@ export const Field = React.forwardRef<HTMLDivElement, FieldProps>(function Field
     </ChakraField.Root>
   );
 });
+
+/**
+ * @deprecated
+ *
+ * This component has been deprecated, please use Field instead
+ *
+ * Before:
+ *
+ * `<FormControl />`
+ *
+ * After:
+ *
+ * `<Field />`
+ *
+ * @deprecatedSince 5.0.0
+ *
+ */
+export const FormControl = Field;
+
+/**
+ * @deprecated
+ *
+ * This component has been deprecated, please use the label prop on the root component or FieldLabel instead
+ *
+ * Before:
+ *
+ * `<FormLabel />`
+ *
+ * After:
+ *
+ * `<Field label="..." />`
+ *
+ * @deprecatedSince 5.0.0
+ *
+ */
+export const FormLabel = FieldLabel;
+
+/**
+ * @deprecated
+ *
+ * This component has been deprecated, please use the helperText prop on the root component or FieldHelperText instead
+ *
+ * Before:
+ *
+ * `<FormHelperText />`
+ *
+ * After:
+ *
+ * `<Field helperText="..." />`
+ *
+ * @deprecatedSince 5.0.0
+ *
+ */
+export const FormHelperText = FieldHelperText;
+
+/**
+ * @deprecated
+ *
+ * This component has been deprecated, please use the errorText prop on the root component or FieldErrorText instead
+ *
+ * Before:
+ *
+ * `<FormErrorMessage />`
+ *
+ * After:
+ *
+ * `<Field errorText="..." />`
+ *
+ * @deprecatedSince 5.0.0
+ *
+ */
+export const FormErrorMessage = FieldErrorText;

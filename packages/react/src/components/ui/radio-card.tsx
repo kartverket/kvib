@@ -49,3 +49,21 @@ export const RadioCardItem = React.forwardRef<HTMLInputElement, RadioCardItemPro
 export const RadioCardRoot = RadioCard.Root;
 export const RadioCardLabel = RadioCard.Label;
 export const RadioCardItemIndicator = RadioCard.ItemIndicator;
+
+/**
+ * @deprecated
+ *
+ * This component has been deprecated, please use RadioCardItemIndicator instead
+ *
+ * Before:
+ *
+ * `<RadioCardItemIcon />`
+ *
+ * After:
+ *
+ * `<RadioCardItemIndicator />`
+ *
+ * @deprecatedSince 5.0.0
+ *
+ */
+export const RadioCardItemIcon = RadioCardItemIndicator;

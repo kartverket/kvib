@@ -1,4 +1,4 @@
-export { CheckboxCard, CheckboxCardIndicator } from "@/components/ui/checkbox-card";
+export { CheckboxCard, CheckboxCardIcon, CheckboxCardIndicator } from "@/components/ui/checkbox-card";
 export {
   CheckboxCardAddon,
   CheckboxCardContent,
@@ -26,6 +26,3 @@ export type {
   CheckboxCardRootProps,
   CheckboxCardRootProviderProps,
 } from "@chakra-ui/react";
-
-/** @deprecated Bruk CheckboxCardIndicator istedenfor */
-export { CheckboxCardIndicator as CheckboxCardIcon } from "@/components/ui/checkbox-card";

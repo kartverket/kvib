@@ -31,3 +31,21 @@ export const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert
     </ChakraAlert.Root>
   );
 });
+
+/**
+ * @deprecated
+ *
+ * This component has been deprecated, please use AlertIndicator instead
+ *
+ * Before:
+ *
+ * `<AlertIcon />`
+ *
+ * After:
+ *
+ * `<AlertIndicator />`
+ *
+ * @deprecatedSince 5.0.0
+ *
+ */
+export const AlertIcon = ChakraAlert.Indicator;

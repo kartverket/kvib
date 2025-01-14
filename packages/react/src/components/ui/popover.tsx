@@ -92,3 +92,39 @@ export const PopoverTrigger = React.forwardRef<HTMLButtonElement, ChakraPopover.
     return <ChakraPopover.Trigger ref={ref} colorPalette={colorPalette} {...props} />;
   },
 );
+
+/**
+ * @deprecated
+ *
+ * This component has been deprecated, please use PopoverTrigger instead
+ *
+ * Before:
+ *
+ * `<PopoverButton />`
+ *
+ * After:
+ *
+ * `<PopoverTrigger />`
+ *
+ * @deprecatedSince 5.0.0
+ *
+ */
+export const PopoverButton = PopoverTrigger;
+
+/**
+ * @deprecated
+ *
+ * This component has been deprecated, please use PopoverCloseTrigger instead
+ *
+ * Before:
+ *
+ * `<PopoverCloseButton />`
+ *
+ * After:
+ *
+ * `<PopoverCloseTrigger />`
+ *
+ * @deprecatedSince 5.0.0
+ *
+ */
+export const PopoverCloseButton = PopoverCloseTrigger;

@@ -18,14 +18,4 @@ export type {
   FieldRequiredIndicatorProps,
 } from "@chakra-ui/react";
 
-/** @deprecated Bruk Field istedenfor */
-export { Field as FormControl } from "@/components/ui/field";
-
-/** @deprecated Bruk FieldLabel istedenfor */
-export { FieldLabel as FormLabel } from "@chakra-ui/react";
-
-/** @deprecated Bruk FieldHelperText istedenfor */
-export { FieldHelperText as FormHelperText } from "@chakra-ui/react";
-
-/** @deprecated Bruk FieldErrorText istedenfor */
-export { FieldErrorText as FormErrorMessage } from "@chakra-ui/react";
+export { FormControl, FormErrorMessage, FormHelperText, FormLabel } from "@/components/ui/field";

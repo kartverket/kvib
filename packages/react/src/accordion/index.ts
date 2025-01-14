@@ -29,8 +29,4 @@ export type {
   AccordionRootProviderProps,
 } from "@chakra-ui/react";
 
-/** @deprecated Bruk AccordionItemTrigger istedenfor */
-export { AccordionItemTrigger as AccordionButton } from "@/components/ui/accordion";
-
-/** @deprecated Bruk AccordionItemContent istedenfor */
-export { AccordionItemContent as AccordionPanel } from "@/components/ui/accordion";
+export { AccordionButton, AccordionPanel } from "@/components/ui/accordion";

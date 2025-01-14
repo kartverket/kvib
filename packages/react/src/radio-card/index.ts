@@ -31,5 +31,4 @@ export type {
   RadioCardValueChangeDetails,
 } from "@chakra-ui/react";
 
-/** @deprecated Bruk RadioCardItemIndicator istedenfor */
-export { RadioCardItemIndicator as RadioCardItemIcon } from "@/components/ui/radio-card";
+export { RadioCardItemIcon } from "@/components/ui/radio-card";
