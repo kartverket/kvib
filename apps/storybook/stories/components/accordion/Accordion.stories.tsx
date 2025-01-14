@@ -14,7 +14,6 @@ const meta: Meta<typeof Accordion> = {
   parameters: {
     docs: {
       story: { inline: true },
-      canvas: { sourceState: "hidden" },
     },
   },
 };

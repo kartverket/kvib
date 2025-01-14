@@ -10,5 +10,4 @@ export type {
   useAlertStyles,
 } from "@chakra-ui/react";
 
-/** @deprecated Bruk AlertIndicator istedenfor */
-export { AlertIndicator as AlertIcon } from "@chakra-ui/react";
+export { AlertIcon } from "@/components/ui/alert";

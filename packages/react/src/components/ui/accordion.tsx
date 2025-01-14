@@ -29,6 +29,24 @@ export const AccordionItemTrigger = React.forwardRef<HTMLButtonElement, Accordio
   },
 );
 
+/**
+ * @deprecated
+ *
+ * This component has been deprecated, please use AccordionItemTrigger instead
+ *
+ * Before:
+ *
+ * `<AccordionButton />`
+ *
+ * After:
+ *
+ * `<AccordionItemTrigger />`
+ *
+ * @deprecatedSince 5.0.0
+ *
+ */
+export const AccordionButton = AccordionItemTrigger;
+
 interface AccordionItemContentProps extends Accordion.ItemContentProps {}
 
 export const AccordionItemContent = React.forwardRef<HTMLDivElement, AccordionItemContentProps>(
@@ -40,6 +58,24 @@ export const AccordionItemContent = React.forwardRef<HTMLDivElement, AccordionIt
     );
   },
 );
+
+/**
+ * @deprecated
+ *
+ * This component has been deprecated, please use AccordionItemContent instead
+ *
+ * Before:
+ *
+ * `<AccordionPanel />`
+ *
+ * After:
+ *
+ * `<AccordionItemContent />`
+ *
+ * @deprecatedSince 5.0.0
+ *
+ */
+export const AccordionPanel = AccordionItemContent;
 
 export const AccordionRoot = Accordion.Root;
 export const AccordionItem = Accordion.Item;
