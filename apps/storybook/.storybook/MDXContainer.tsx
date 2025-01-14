@@ -9,6 +9,14 @@ export const MDXContainer = ({ children, context }) => {
       const tocContainer = el.nextElementSibling;
       const headings = el.querySelectorAll("h2, h3");
 
+      // remove ":" from heading display
+      headings.forEach(heading => {
+        const tmp = heading.textContent?.replace(/:/g, "");
+        if (tmp) {
+          heading.textContent = tmp;
+        }
+      });
+
       if (headings.length <= 1 && tocContainer) {
         tocContainer.classList.add("toc-no-children");
       }

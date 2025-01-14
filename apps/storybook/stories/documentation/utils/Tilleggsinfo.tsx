@@ -7,10 +7,19 @@ interface Props extends StackProps {
   children?: ReactNode;
 }
 
-export const Dokumentasjonsside = ({ tittel, beskrivelse, ...props }: Props) => (
-  <Stack rowGap={"34px"} pb="24px" {...props}>
+export const Tilleggsinfo = ({ tittel, beskrivelse, ...props }: Props) => (
+  <Stack rowGap={"34px"} pt="12px" pb="12px" {...props}>
     <Stack rowGap={"16px"}>
-      <Text as="h1" fontWeight={700} fontSize="3xl" m="0" p="0">
+      <Text
+        as="h3"
+        fontWeight={700}
+        fontSize={"xl"}
+        lineHeight={"xl"}
+        borderBottom={"none"}
+        m="0"
+        p="0"
+        id={tittel.replace(/\s/g, "-").toLowerCase()}
+      >
         {tittel}
       </Text>
       {beskrivelse && (

@@ -4,7 +4,7 @@ import theme from "./theme";
 
 addons.setConfig({
   theme,
-  title: "Kartverkets Designsystem",
+  title: "Kartverkets designsystem",
   showToolbar: false,
   panelPosition: "bottom",
   sidebar: {

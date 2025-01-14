@@ -9,12 +9,6 @@ const meta: Meta<typeof KvibAlert> = {
       story: { inline: true },
     },
   },
-  args: {
-    title: "Alert title",
-    status: "info",
-    variant: "subtle",
-    size: "md",
-  },
   argTypes: {
     title: {
       description: "The title of the alert.",
@@ -52,5 +46,47 @@ type Story = StoryObj<typeof KvibAlert>;
 KvibAlert.displayName = "Alert";
 
 export const Preview: Story = {
+  args: {
+    title: "Alert title",
+    status: "info",
+    variant: "subtle",
+    size: "md",
+  },
   render: args => <KvibAlert {...args}>Informative description.</KvibAlert>,
+};
+
+export const InformativeAlert: Story = {
+  name: "Informative",
+  render: _ => (
+    <KvibAlert title="Oppdaterte kart er tilgjengelig" status="info">
+      Sjekk de nyeste kartdataene før du starter planleggingen.
+    </KvibAlert>
+  ),
+};
+
+export const SuccessAlert: Story = {
+  name: "Success",
+  render: _ => (
+    <KvibAlert title="Gratulerer! Eiendomsregistreringen er fullført" status="success">
+      Din eiendom er nå registrert, og du kan gå videre med planleggingen av dine prosjekter.
+    </KvibAlert>
+  ),
+};
+
+export const WarningAlert: Story = {
+  name: "Warning",
+  render: _ => (
+    <KvibAlert title="Vi har tekniske problemer" status="warning">
+      Det kan føre til at du blir avbrutt mens du fyller ut skjemaet. Vi jobber med å rette problemene.
+    </KvibAlert>
+  ),
+};
+
+export const ErrorAlert: Story = {
+  name: "Error",
+  render: _ => (
+    <KvibAlert title="Vi klarer ikke å lagre skjemaet" status="error">
+      Vi har mistet forbindelsen med serveren og får ikke lagret skjemaet. Vent litt og prøv en gang til.
+    </KvibAlert>
+  ),
 };

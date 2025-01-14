@@ -2,6 +2,7 @@ import { Dokumentasjonsside } from "../../documentation/utils/Dokumentasjonsside
 import { Liste } from "../../documentation/utils/Liste";
 import { Listeelement } from "../../documentation/utils/Listeelement";
 import { Tekstblokk } from "../../documentation/utils/Tekstblokk";
+import { Tilleggsinfo } from "../../documentation/utils/Tilleggsinfo";
 
 export const AlertDocs = () => (
   <Dokumentasjonsside
@@ -20,4 +21,36 @@ export const AlertDocs = () => (
       </Liste>
     </Tekstblokk>
   </Dokumentasjonsside>
+);
+
+export const InformativeAlertDocs = () => (
+  <Tilleggsinfo
+    tittel="Informative"
+    beskrivelse={
+      "Bruk Info til å formidle nyttig informasjon for brukerne som ikke er kritisk for å fullføre oppgaven."
+    }
+  />
+);
+
+export const SuccessAlertDocs = () => (
+  <Tilleggsinfo
+    tittel="Success"
+    beskrivelse={"Bruk Success for å bekrefte at en oppgave er fullført, eller at handlingen ble utført vellykket."}
+  />
+);
+
+export const WarningAlertDocs = () => (
+  <Tilleggsinfo
+    tittel="Warning"
+    beskrivelse={
+      "Bruk warning når du vil at brukeren skal foreta en bestemt handling eller for å advare dem om noe viktig."
+    }
+  />
+);
+
+export const ErrorAlertDocs = () => (
+  <Tilleggsinfo
+    tittel="Error"
+    beskrivelse={"Bruk Error for å informere om noe som er kritisk eller som hindrer brukeren i å komme videre."}
+  />
 );
