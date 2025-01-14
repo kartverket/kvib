@@ -29,8 +29,4 @@ export type {
   usePopoverStyles,
 } from "@chakra-ui/react";
 
-/** @deprecated Bruk PopoverTrigger istedenfor */
-export { PopoverTrigger as PopoverButton } from "@/components/ui/popover";
-
-/** @deprecated Bruk PopoverCloseTrigger istedenfor */
-export { PopoverCloseTrigger as PopoverCloseButton } from "@/components/ui/popover";
+export { PopoverButton, PopoverCloseButton } from "@/components/ui/popover";

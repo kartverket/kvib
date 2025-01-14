@@ -47,3 +47,21 @@ export const CheckboxCard = React.forwardRef<HTMLInputElement, CheckboxCardProps
 });
 
 export const CheckboxCardIndicator = ChakraCheckboxCard.Indicator;
+
+/**
+ * @deprecated
+ *
+ * This component has been deprecated, please use CheckboxCardIndicator instead
+ *
+ * Before:
+ *
+ * `<CheckboxCardIcon />`
+ *
+ * After:
+ *
+ * `<CheckboxCardIndicator />`
+ *
+ * @deprecatedSince 5.0.0
+ *
+ */
+export const CheckboxCardIcon = ChakraCheckboxCard.Indicator;
