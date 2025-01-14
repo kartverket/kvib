@@ -1,5 +1,5 @@
-import { Link as KvibLink } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
+import { Link as KvibLink } from "../../../../../packages/react/src/typography/link/Link";
 
 const meta: Meta<typeof KvibLink> = {
   title: "Komponenter/Link",
