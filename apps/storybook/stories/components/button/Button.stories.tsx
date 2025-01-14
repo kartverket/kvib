@@ -93,12 +93,5 @@ type Story = StoryObj<typeof KvibButton>;
 KvibButton.displayName = "Button";
 
 export const Preview: Story = {
-  parameters: {
-    docs: {
-      canvas: {
-        sourceState: "shown",
-      },
-    },
-  },
   render: args => <KvibButton {...args}>Button</KvibButton>,
 };
