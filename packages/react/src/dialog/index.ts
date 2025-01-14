@@ -5,6 +5,7 @@ export {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogOverlay,
+  DialogRoot as Dialog,
   DialogActionTrigger,
   DialogBackdrop,
   DialogBody,
