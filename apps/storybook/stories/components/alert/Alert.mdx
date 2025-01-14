@@ -1,10 +1,30 @@
 import { Canvas, Controls, Meta } from "@storybook/blocks";
+import { BottomSpace } from "../../documentation/utils/BottomSpace";
 import { DocsHeading } from "../../templates";
 import * as AlertStories from "./Alert.stories";
-import { AlertDocs } from "./AlertDocs";
+import {
+  AlertDocs,
+  ErrorAlertDocs,
+  InformativeAlertDocs,
+  SuccessAlertDocs, WarningAlertDocs
+} from "./AlertDocs";
 
 <Meta of={AlertStories} />
 <AlertDocs />
 
 <Canvas of={AlertStories.Preview} />
 <Controls of={AlertStories.Preview} />
+
+<InformativeAlertDocs />
+<Canvas of={AlertStories.InformativeAlert} />
+
+<SuccessAlertDocs />
+<Canvas of={AlertStories.SuccessAlert} />
+
+<WarningAlertDocs />
+<Canvas of={AlertStories.WarningAlert} />
+
+<ErrorAlertDocs />
+<Canvas of={AlertStories.ErrorAlert} />
+
+<BottomSpace />
