@@ -26,6 +26,7 @@ export interface ButtonProps extends ChakraButtonProps, ButtonLoadingProps {
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(function Button(props, ref) {
   const { loading, disabled, loadingText, leftIcon, rightIcon, iconAriaIsHidden, iconFill, children, ...rest } = props;
+
   return (
     <ChakraButton disabled={loading || disabled} ref={ref} {...rest}>
       {loading && (

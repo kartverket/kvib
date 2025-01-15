@@ -86,7 +86,7 @@ HStack.displayName = "HStack";
 
 export const Preview: Story = {
   render: args => (
-    <RadioCard defaultValue="next" {...args}>
+    <RadioCard defaultValue="option1" {...args}>
       <HStack align="stretch">
         {items.map(item => (
           <RadioCardItem label={item.title} key={item.value} value={item.value} />

@@ -19,6 +19,14 @@ const meta: Meta<typeof KvibSpinner> = {
       control: { type: "radio" },
       options: ["green", "blue", "gray"],
     },
+    color: {
+      description: "The color of the component",
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "currentColor" },
+      },
+      control: "text",
+    },
     size: {
       description: "The size of the component",
       table: {
@@ -38,5 +46,11 @@ type Story = StoryObj<typeof KvibSpinner>;
 KvibSpinner.displayName = "Spinner";
 
 export const Preview: Story = {
+  args: {
+    colorPalette: "green",
+    color: "colorPalette.500",
+    size: "md",
+  },
+
   render: args => <KvibSpinner {...args} />,
 };

@@ -8,7 +8,7 @@ interface Props extends StackProps {
 }
 
 export const Dokumentasjonsside = ({ tittel, beskrivelse, ...props }: Props) => (
-  <Stack rowGap={"34px"} pb="24px" {...props}>
+  <Stack rowGap={"24px"} pb="24px" {...props}>
     <Stack rowGap={"16px"}>
       <Text as="h1" fontWeight={700} fontSize="3xl" m="0" p="0">
         {tittel}
