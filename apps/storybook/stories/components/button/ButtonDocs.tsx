@@ -7,7 +7,7 @@ import { Tilleggsinfo } from "../../documentation/utils/Tilleggsinfo";
 export const ButtonDocs = () => (
   <Dokumentasjonsside
     tittel="Button"
-    beskrivelse={`Vi bruker Button for å la brukerne utføre handlinger. Det finnes fire varianter: solid (primær), outline (sekundær), ghost og plain (tertiær), som kommer i ulike farger og størrelser. Knappetekstene skal være korte, enkle og handlingsfokuserte, helst med maks to ord. For nettsider som skal gå under kartverket.no bruker vi grønn og for forvaltningstjenester bruker vi blå.`}
+    beskrivelse={`Vi bruker Button for å la brukerne utføre handlinger. Det finnes fire varianter: primary, secondary, tertiary og plain, som kommer i ulike farger og størrelser. Knappetekstene skal være korte, enkle og handlingsfokuserte, helst med maks to ord. For nettsider som skal gå under kartverket.no bruker vi grønn og for forvaltningstjenester bruker vi blå.`}
   >
     <Tekstblokk tittel="Egnet til:">
       <Liste>
@@ -24,7 +24,7 @@ export const ButtonDocs = () => (
 
 export const SolidButtonDocs = () => (
   <Tilleggsinfo
-    tittel="Solid (primær)"
+    tittel="Solid (Primary Button)"
     beskrivelse={
       'Vi bruker denne knappen til den viktigste handlingen på en side - hovedhandlingen, som "Lagre", "Neste" eller "Send søknad". En side kan noen ganger ha mer enn en hovedhandling, men ikke mange.'
     }
@@ -33,7 +33,7 @@ export const SolidButtonDocs = () => (
 
 export const OutlineButtonDocs = () => (
   <Tilleggsinfo
-    tittel="Outline (sekundær)"
+    tittel="Outline (Secondary Button)"
     beskrivelse={
       'Vi bruker denne knappen til valg som ikke er hovedhandlingen, ofte sammen med en primærknapp. For eksempel kan en sekundærknapp være "Avbryt" når hovedknappen er "Lagre".'
     }
@@ -42,7 +42,7 @@ export const OutlineButtonDocs = () => (
 
 export const GhostButtonDocs = () => (
   <Tilleggsinfo
-    tittel="Ghost"
+    tittel="Ghost (Tertiary Button)"
     beskrivelse={
       "Vi bruker denne knappen til nedtonede valg. Hvis den brukes alene, bør den ha et ikon for å tydeliggjøre at det er en knapp."
     }
@@ -51,7 +51,7 @@ export const GhostButtonDocs = () => (
 
 export const PlainButtonDocs = () => (
   <Tilleggsinfo
-    tittel="Plain (tertiær)"
+    tittel="Plain Button"
     beskrivelse={
       "Vi bruker denne knappen til nedtonede valg. Hvis den brukes alene, bør den ha et ikon for å tydeliggjøre at det er en knapp."
     }
