@@ -19,6 +19,15 @@ const meta: Meta<typeof KvibLink> = {
       options: ["underline", "plain"],
       control: { type: "radio" },
     },
+    colorPalette: {
+      description: "The color of the link.",
+      table: {
+        type: { summary: "'green' | 'blue' | 'gray' | 'red'" },
+        defaultValue: { summary: "green" },
+      },
+      options: ["green", "blue", "gray", "red"],
+      control: { type: "radio" },
+    },
     children: {
       description: "This is the linktext",
       table: {
