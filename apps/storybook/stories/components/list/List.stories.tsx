@@ -59,7 +59,7 @@ ListItem.displayName = "ListItem";
 
 export const Preview: Story = {
   render: args => (
-    <List {...args}>
+    <List listStyleType={"disc"} {...args}>
       <ListItem>Item 1</ListItem>
       <ListItem>Item 2</ListItem>
       <ListItem>Item 3</ListItem>

@@ -2,10 +2,33 @@ import { Box, Code, Text } from "@kvib/react";
 import { Canvas, Controls, Meta, Story, Title } from "@storybook/blocks";
 import { DocsAnatomy, DocsContainer, DocsHeading, DocsStory, Feedback } from "../../templates";
 import * as ButtonStories from "./Button.stories";
-import { ButtonDocs } from "./ButtonDocs";
+import { ButtonDocs, DisabledButtonDocs, ErrorDangerButtonDocs, GhostButtonDocs, LoadingButtonDocs, NeutralButtonDocs, OutlineButtonDocs, PlainButtonDocs, SolidButtonDocs } from "./ButtonDocs";
 
 <Meta of={ButtonStories} />
 <ButtonDocs />
 <Canvas of={ButtonStories.Preview} />
 <Controls of={ButtonStories.Preview} />
 
+<SolidButtonDocs />
+<Canvas of={ButtonStories.SolidButton} />
+
+<OutlineButtonDocs />
+<Canvas of={ButtonStories.OutlineButton} />
+
+<GhostButtonDocs />
+<Canvas of={ButtonStories.GhostButton} />
+
+<PlainButtonDocs />
+<Canvas of={ButtonStories.PlainButton} />
+
+<NeutralButtonDocs />
+<Canvas of={ButtonStories.NeutralButton} />
+
+<ErrorDangerButtonDocs />
+<Canvas of={ButtonStories.ErrorDangerButton} />
+
+<LoadingButtonDocs />
+<Canvas of={ButtonStories.LoadingButton} />
+
+<DisabledButtonDocs />
+<Canvas of={ButtonStories.DisabledButton} />
