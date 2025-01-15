@@ -1,5 +1,5 @@
-import { Link as KvibLink } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
+import { Link as KvibLink } from "../../../../../packages/react/src/typography/link/Link";
 
 const meta: Meta<typeof KvibLink> = {
   title: "Komponenter/Link",
@@ -15,31 +15,54 @@ const meta: Meta<typeof KvibLink> = {
       table: {
         type: { summary: "string" },
       },
-      defaultValue: { summary: "underline | plain" },
+      defaultValue: { summary: "underline" },
       options: ["underline", "plain"],
+      control: { type: "radio" },
+    },
+    colorPalette: {
+      description: "The color of the link.",
+      table: {
+        type: { summary: "'green' | 'blue' | 'gray' | 'red'" },
+        defaultValue: { summary: "green" },
+      },
+      options: ["green", "blue", "gray", "red"],
+      control: { type: "radio" },
+    },
+    size: {
+      description: "The size of the link.",
+      table: {
+        type: { summary: "'sm' | 'md' | 'lg'" },
+        defaultValue: { summary: "md" },
+      },
+      options: ["sm", "md", "lg"],
       control: { type: "radio" },
     },
     children: {
       description: "This is the linktext",
       table: {
-        type: { summary: "string" },
+        type: { summary: "string | ReactNode" },
       },
       control: "text",
     },
     external: {
       description: "If true, an icon will be included.",
       table: {
-        type: { summary: "Boolean" },
+        type: { summary: "boolean" },
         defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
     href: {
-      description: "This is the link.",
+      description: "The URL the link should navigate to.",
       table: {
         type: { summary: "string" },
       },
       control: "text",
+    },
+    recipe: {
+      table: {
+        disable: true,
+      },
     },
   },
 };
@@ -52,8 +75,12 @@ KvibLink.displayName = "Link";
 
 export const Preview: Story = {
   args: {
-    children: "This is a link",
     href: "/?path=/",
+    children: "This is a link",
+    variant: "underline",
+    colorPalette: "green",
+    size: "md",
+    external: false,
   },
   render: args => <KvibLink {...args}>{args.children}</KvibLink>,
 };
