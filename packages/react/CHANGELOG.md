@@ -1,5 +1,13 @@
 # @kvib/react
 
+## 5.1.2
+
+### Patch Changes
+
+- 95c5a12: Fiks for external-ikon som plasserte seg feil i Link dersom lenketeksten ble veldig lang
+- c20d907: Endrer måten komponenter blir markert som deprecated slik at man fra nå av vil få advarseler om slike komponenter i IDE-en.
+- 21608c2: Retter opp i feil spinner-farge på Button med loading="true"
+
 ## 5.1.1
 
 ### Patch Changes
