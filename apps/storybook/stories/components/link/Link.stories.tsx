@@ -52,8 +52,8 @@ KvibLink.displayName = "Link";
 
 export const Preview: Story = {
   args: {
-    children: "This is a link",
     href: "/?path=/",
+    children: "This is a link",
   },
   render: args => <KvibLink {...args}>{args.children}</KvibLink>,
 };
