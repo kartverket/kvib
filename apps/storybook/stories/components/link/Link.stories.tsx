@@ -15,7 +15,7 @@ const meta: Meta<typeof KvibLink> = {
       table: {
         type: { summary: "string" },
       },
-      defaultValue: { summary: "underline | plain" },
+      defaultValue: { summary: "underline" },
       options: ["underline", "plain"],
       control: { type: "radio" },
     },
