@@ -1,16 +1,11 @@
-import {
-  Input as ChakraInput,
-  InputElement as ChakraInputElement,
-  Group as ChakraInputGroup,
-  InputProps as ChakraInputProps,
-} from "@chakra-ui/react";
+import { Input, InputGroup, InputProps } from "@/input";
+import { Box } from "@/layout";
 import { forwardRef, useRef } from "react";
 import { Button, IconButton } from "../button";
-import { useResizeObserver } from "../hooks";
 
-export type SearchProps = Omit<ChakraInputProps, "isRequired" | "colorScheme"> & {
+export type SearchProps = Omit<InputProps, "required" | "colorPalette"> & {
   searchButton?: "left" | "right" | "none";
-  colorScheme?: "gray" | "red" | "green" | "blue" | undefined;
+  colorPalette?: "gray" | "red" | "green" | "blue";
   buttonVariant?: "solid" | "outline" | "ghost" | "plain";
   buttonWidth?: string;
   buttonText?: string;
@@ -21,28 +16,22 @@ type RenderProps = {
 };
 
 export const Search = forwardRef<HTMLInputElement, SearchProps>(
-  (
-    {
-      id,
-      colorScheme,
-      size,
-      variant,
-      disabled,
-      searchButton = "none",
-      buttonWidth,
-      buttonVariant = "outline",
-      buttonText,
-      role = "search",
-      ...props
-    },
-    ref,
-  ) => {
+  ({
+    colorPalette,
+    size,
+    searchButton = "none",
+    buttonWidth,
+    buttonVariant = "outline",
+    buttonText,
+    role = "search",
+    ...props
+  }) => {
     // Used to calculate width of button if no buttonWidth is given and there is text in the button
     const elementRef = useRef<HTMLButtonElement>(null);
-    const dimensions = useResizeObserver({
+    /* const dimensions = useResizeObserver({
       ref: elementRef,
       box: "border-box",
-    });
+    }); */
 
     // Use IconButton when there is no text in the button
     const RenderButton = ({ position }: RenderProps) => {
@@ -52,55 +41,36 @@ export const Search = forwardRef<HTMLInputElement, SearchProps>(
           : { borderBottomLeftRadius: 0, borderTopLeftRadius: 0 };
 
       const buttonProps = {
+        borderRadius: size === "sm" || size === "xs" ? size : undefined,
         ...borderRadiusProps,
-        colorScheme,
+        colorPalette,
         variant: buttonVariant,
-        disabled,
+        disabled: props.disabled,
         width: buttonWidth,
         size,
-        borderRadius: size === "sm" || size === "xs" ? "0.125rem" : undefined,
       };
 
-      return buttonText ? (
-        <Button ref={elementRef} {...buttonProps} rightIcon="search" type="submit" aria-label="search">
-          {buttonText}
-        </Button>
-      ) : (
-        <IconButton {...buttonProps} type="submit" icon="search" />
+      return (
+        <Box boxSizing={"border-box"}>
+          {buttonText ? (
+            <Button ref={elementRef} {...buttonProps} rightIcon="search" type="submit" aria-label="search">
+              {buttonText}
+            </Button>
+          ) : (
+            <IconButton {...buttonProps} type="submit" icon="search" />
+          )}
+        </Box>
       );
     };
 
-    // Padding on inputfield based on the width of the button
-    const inputPadding = buttonWidth
-      ? `calc(${buttonWidth} + 0.5rem)`
-      : buttonText && dimensions
-        ? `calc(${dimensions.width}px + 0.5rem)`
-        : "3rem";
-
     return (
-      <ChakraInputGroup width={props.width}>
-        <ChakraInput
-          {...props}
-          id={id}
-          ref={ref}
-          role={role}
-          size={size}
-          variant={variant}
-          disabled={disabled}
-          paddingLeft={searchButton === "left" ? inputPadding : undefined}
-          paddingRight={searchButton === "right" ? inputPadding : undefined}
-        />
-        {searchButton === "left" && (
-          <ChakraInputElement width="auto">
-            <RenderButton position={"left"} />
-          </ChakraInputElement>
-        )}
-        {searchButton === "right" && (
-          <ChakraInputElement width="auto">
-            <RenderButton position={"right"} />
-          </ChakraInputElement>
-        )}
-      </ChakraInputGroup>
+      <InputGroup
+        width={props.width}
+        startElement={searchButton === "left" ? <RenderButton position={"left"} /> : undefined}
+        endElement={searchButton === "right" ? <RenderButton position={"right"} /> : undefined}
+      >
+        <Input {...props} role={role} size={size} boxSizing={"border-box"} />
+      </InputGroup>
     );
   },
 );

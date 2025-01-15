@@ -47,12 +47,12 @@ const meta: Meta<typeof KvibSearch> = {
       options: ["none", "left", "right"],
       control: { type: "radio" },
     },
-    colorScheme: {
-      description: "Change Icon color",
+    colorPalette: {
+      description: "The color palette of the component",
       table: {
         defaultValue: { summary: "green" },
       },
-      options: ["gray", "red", "green", "blue"],
+      options: ["green", "blue", "gray", "red"],
       control: { type: "radio" },
     },
     disabled: {

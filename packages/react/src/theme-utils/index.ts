@@ -21,6 +21,9 @@ export {
   defineTextStyles,
   defineTokens,
   isValidSystem,
+  mergeConfigs,
+  mergeProps,
+  mergeRefs,
 } from "@chakra-ui/react";
 
 export type {
