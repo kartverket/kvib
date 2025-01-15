@@ -28,10 +28,6 @@ export const Search = forwardRef<HTMLInputElement, SearchProps>(
   }) => {
     // Used to calculate width of button if no buttonWidth is given and there is text in the button
     const elementRef = useRef<HTMLButtonElement>(null);
-    /* const dimensions = useResizeObserver({
-      ref: elementRef,
-      box: "border-box",
-    }); */
 
     // Use IconButton when there is no text in the button
     const RenderButton = ({ position }: RenderProps) => {
@@ -69,7 +65,7 @@ export const Search = forwardRef<HTMLInputElement, SearchProps>(
         startElement={searchButton === "left" ? <RenderButton position={"left"} /> : undefined}
         endElement={searchButton === "right" ? <RenderButton position={"right"} /> : undefined}
       >
-        <Input {...props} role={role} size={size} boxSizing={"border-box"} />
+        <Input {...props} role={role} size={size} />
       </InputGroup>
     );
   },

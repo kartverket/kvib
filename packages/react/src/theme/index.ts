@@ -29,6 +29,7 @@ import { dialogTheme } from "./components/dialog";
 import { fileUploadTheme } from "./components/file-upload";
 import { iconButtonTheme } from "./components/icon-button";
 import { inputTheme } from "./components/input";
+import { inputGroupTheme } from "./components/input-group";
 import { linkTheme } from "./components/link";
 import { menuTheme } from "./components/menu";
 import { numberInputTheme } from "./components/number-input";
@@ -102,6 +103,7 @@ const customConfig = defineConfig({
       button: buttonTheme,
       closeButton: closeButtonTheme,
       input: inputTheme,
+      inputGroup: inputGroupTheme,
       link: linkTheme,
       spinner: spinnerTheme,
     },

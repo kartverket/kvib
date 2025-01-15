@@ -1,6 +1,7 @@
 import { defineRecipe } from "@chakra-ui/react";
 
 export const inputTheme = defineRecipe({
+  className: "kvib-input",
   base: {
     borderRadius: "md",
     outline: "{borders.1px}",
