@@ -28,27 +28,41 @@ const meta: Meta<typeof KvibLink> = {
       options: ["green", "blue", "gray", "red"],
       control: { type: "radio" },
     },
+    size: {
+      description: "The size of the link.",
+      table: {
+        type: { summary: "'sm' | 'md' | 'lg'" },
+        defaultValue: { summary: "md" },
+      },
+      options: ["sm", "md", "lg"],
+      control: { type: "radio" },
+    },
     children: {
       description: "This is the linktext",
       table: {
-        type: { summary: "string" },
+        type: { summary: "string | ReactNode" },
       },
       control: "text",
     },
     external: {
       description: "If true, an icon will be included.",
       table: {
-        type: { summary: "Boolean" },
+        type: { summary: "boolean" },
         defaultValue: { summary: "false" },
       },
       control: "boolean",
     },
     href: {
-      description: "This is the link.",
+      description: "The URL the link should navigate to.",
       table: {
         type: { summary: "string" },
       },
       control: "text",
+    },
+    recipe: {
+      table: {
+        disable: true,
+      },
     },
   },
 };
@@ -63,6 +77,10 @@ export const Preview: Story = {
   args: {
     href: "/?path=/",
     children: "This is a link",
+    variant: "underline",
+    colorPalette: "green",
+    size: "md",
+    external: false,
   },
   render: args => <KvibLink {...args}>{args.children}</KvibLink>,
 };
