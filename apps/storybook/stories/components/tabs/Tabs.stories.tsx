@@ -55,7 +55,7 @@ const meta: Meta<typeof KvibTabs> = {
         type: { summary: "line | enclosed | enclosed-colored | soft-rounded | solid-rounded | unstyled" },
         defaultValue: { summary: "line" },
       },
-      options: ["line", "enclosed", "enclosed-colored", "soft-rounded", "solid-rounded", "unstyled"],
+      options: ["line", "subtle", "enclosed", "outline", "plain"],
       control: { type: "radio" },
     },
     fitted: {

@@ -1,4 +1,4 @@
-import { Button, Toaster, toaster } from "@kvib/react";
+import { Box, Button, KvibToastIndicator, Stack, Toaster, toaster, useSlotRecipe } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<Props> = {
@@ -104,6 +104,132 @@ export const Preview: Story = {
 >
   Show Toast
 </Button>
+        `,
+      },
+    },
+  },
+};
+
+export const InformativeToast: Story = {
+  render: _ => {
+    const recipe = useSlotRecipe({
+      key: "toast",
+    });
+    const styles = recipe({});
+
+    return (
+      <Box css={styles.root} data-type="info">
+        <KvibToastIndicator type="info" />
+        <Stack gap="1" flex="1" maxWidth="100%" pb="1px">
+          <Box css={styles.description}>Saken går til automatisk behandling</Box>
+        </Stack>
+      </Box>
+    );
+  },
+  parameters: {
+    docs: {
+      source: {
+        code: `
+toaster.create({
+  description: "Saken går til automatisk behandling",
+  type: "info",
+})
+        `,
+      },
+    },
+  },
+};
+
+export const SuccessToast: Story = {
+  render: _ => {
+    const recipe = useSlotRecipe({
+      key: "toast",
+    });
+    const styles = recipe({});
+
+    return (
+      <Box css={styles.root} data-type="success">
+        <KvibToastIndicator type="success" />
+        <Stack gap="1" flex="1" maxWidth="100%" pb="1px">
+          <Box css={styles.description}>Takk! Din sak er opprettet.</Box>
+        </Stack>
+      </Box>
+    );
+  },
+  parameters: {
+    docs: {
+      source: {
+        code: `
+toaster.create({
+  description: "Takk! Din sak er opprettet.",
+  type: "success",
+})
+        `,
+      },
+    },
+  },
+};
+
+export const WarningToast: Story = {
+  render: _ => {
+    const recipe = useSlotRecipe({
+      key: "toast",
+    });
+    const styles = recipe({});
+
+    return (
+      <Box css={styles.root} data-type="warning">
+        <KvibToastIndicator type="warning" />
+        <Stack gap="1" flex="1" maxWidth="100%" pb="1px">
+          <Box css={styles.title}>Mistet internettforbindelsen</Box>
+          <Box css={styles.description}>
+            Du kan fortsette å fylle ut skjemaet, men får ikke lagret før forbindelsen er tilbake.
+          </Box>
+        </Stack>
+      </Box>
+    );
+  },
+  parameters: {
+    docs: {
+      source: {
+        code: `
+toaster.create({
+  title: "Mistet internettforbindelsen",
+  description: "Du kan fortsette å fylle ut skjemaet, men får ikke lagret før forbindelsen er tilbake.",
+  type: "warning",
+})
+        `,
+      },
+    },
+  },
+};
+
+export const ErrorToast: Story = {
+  render: _ => {
+    const recipe = useSlotRecipe({
+      key: "toast",
+    });
+    const styles = recipe({});
+
+    return (
+      <Box css={styles.root} data-type="error">
+        <KvibToastIndicator type="error" />
+        <Stack gap="1" flex="1" maxWidth="100%" pb="1px">
+          <Box css={styles.title}>Ingen internettforbindelse</Box>
+          <Box css={styles.description}>Du kan ikke lagre før forbindelsen er tilbake.</Box>
+        </Stack>
+      </Box>
+    );
+  },
+  parameters: {
+    docs: {
+      source: {
+        code: `
+toaster.create({
+  title: "Ingen internettforbindelse",
+  description: "Du kan ikke lagre før forbindelsen er tilbake.",
+  type: "error",
+})
         `,
       },
     },

@@ -1,8 +1,21 @@
 import { Canvas, Controls, Meta, } from "@storybook/blocks";
 import * as ToasterStories from "./Toaster.stories";
-import { ToasterDocs } from "./ToasterDocs";
+import { ErrorToasterDocs, InformativeToasterDocs, SuccessToasterDocs, ToasterDocs, WarningToasterDocs } from "./ToasterDocs";
 
 <Meta of={ToasterStories} />
 <ToasterDocs />
 <Canvas of={ToasterStories.Preview} />
 <Controls of={ToasterStories.Preview} />
+
+<InformativeToasterDocs />
+<Canvas of={ToasterStories.InformativeToast} />
+
+<SuccessToasterDocs />
+<Canvas of={ToasterStories.SuccessToast} />
+
+<WarningToasterDocs />
+<Canvas of={ToasterStories.WarningToast} />
+
+<ErrorToasterDocs />
+<Canvas of={ToasterStories.ErrorToast} />
+
