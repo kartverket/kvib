@@ -1,6 +1,16 @@
-# Kartverkets designsystem
+<h1 align="center">
+    <br/><br/>Kartverkets designsystem
+</h1>
 
-Dokumentasjonssiden for designsystemet er https://design.kartverket.no. Der finner du bidragsløype, oppsett av designsystemet osv.
+<div align="center">
+    <p>
+      <img alt="PRs" src="https://img.shields.io/badge/PRs-welcome-green.svg?color=%23262626" /></a>&nbsp;
+      <a href="https://www.npmjs.com/package/@kvib/react"><img alt="npm" src="https://img.shields.io/npm/v/@kvib/react?label=version" /></a>&nbsp;
+    </p>
+    <p>
+      <a href="https://design.kartverket.no">Nettside</a> | <a href="https://github.com/kartverket/kvib/issues">Issues</a>
+    </p>
+</div>
 
 ## Kom i gang
 
