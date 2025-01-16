@@ -41,7 +41,7 @@ export const WarningToasterDocs = () => (
   <Tilleggsinfo
     tittel="Warning"
     beskrivelse={
-      "Bruk warning når du vil at brukeren skal foreta en bestemt handling eller for å advare dem om noe viktig."
+      "Bruk Warning når du vil at brukeren skal foreta en bestemt handling eller for å advare dem om noe viktig."
     }
   />
 );
@@ -56,6 +56,6 @@ export const ErrorToasterDocs = () => (
 export const SuccessToasterDocs = () => (
   <Tilleggsinfo
     tittel="Success"
-    beskrivelse={"Bruk success for å bekrefte at en oppgave er fullført, eller at handlingen ble utført vellykket."}
+    beskrivelse={"Bruk Success for å bekrefte at en oppgave er fullført, eller at handlingen ble utført vellykket."}
   />
 );
