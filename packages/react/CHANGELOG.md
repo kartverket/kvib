@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 5.1.3
+
+### Patch Changes
+
+- cc466de: Forbedrer styling av Toast og Input
+
 ## 5.1.2
 
 ### Patch Changes
