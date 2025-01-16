@@ -14,13 +14,13 @@
 
 ## Kom i gang
 
-Etter man har klonet repoet kommer man i gang ved å laster ned avhengigheter først:
+Etter man har klonet repoet kommer man i gang ved å laste ned avhengigheter først:
 
 ```
 npm i
 ```
 
-Når disse avhengighetene er lastet ned kjører man opp Storybook lokalt:
+Etterpå kjører man opp Storybook lokalt:
 
 ```
 npm run dev
