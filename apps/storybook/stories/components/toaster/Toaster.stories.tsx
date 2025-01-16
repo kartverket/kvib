@@ -1,4 +1,4 @@
-import { Box, Button, Stack, Toaster, toaster, useSlotRecipe } from "@kvib/react";
+import { Box, Button, KvibToastIndicator, Stack, Toaster, toaster, useSlotRecipe } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<Props> = {
@@ -109,6 +109,7 @@ export const Preview: Story = {
     },
   },
 };
+
 export const InformativeToast: Story = {
   render: _ => {
     const recipe = useSlotRecipe({
@@ -118,10 +119,9 @@ export const InformativeToast: Story = {
 
     return (
       <Box css={styles.root} data-type="info">
-        {/* Foreløpig har den ingen ikon, men den skal ha det ifølge skissene våre
-        <InfoIcon css={styles.indicator} height="20px" /> */}
-        <Stack gap="1" flex="1" maxWidth="100%">
-          <Box css={styles.title}>Saken går til automatisk behandling</Box>
+        <KvibToastIndicator type="info" />
+        <Stack gap="1" flex="1" maxWidth="100%" pb="1px">
+          <Box css={styles.description}>Saken går til automatisk behandling</Box>
         </Stack>
       </Box>
     );
@@ -131,7 +131,7 @@ export const InformativeToast: Story = {
       source: {
         code: `
 toaster.create({
-  title: "Saken går til automatisk behandling",
+  description: "Saken går til automatisk behandling",
   type: "info",
 })
         `,
@@ -140,12 +140,6 @@ toaster.create({
   },
 };
 
-// Hentet fra Chakra sin egen kodebase for å hacke til fremvisning av Toast i Storybook
-const CheckCircleIcon = (props: any) => (
-  <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 24 24" {...props}>
-    <path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11.0026 16L6.75999 11.7574L8.17421 10.3431L11.0026 13.1716L16.6595 7.51472L18.0737 8.92893L11.0026 16Z" />
-  </svg>
-);
 export const SuccessToast: Story = {
   render: _ => {
     const recipe = useSlotRecipe({
@@ -155,9 +149,9 @@ export const SuccessToast: Story = {
 
     return (
       <Box css={styles.root} data-type="success">
-        <CheckCircleIcon css={styles.indicator} height="20px" />
-        <Stack gap="1" flex="1" maxWidth="100%">
-          <Box css={styles.title}>Takk! Din sak er opprettet.</Box>
+        <KvibToastIndicator type="success" />
+        <Stack gap="1" flex="1" maxWidth="100%" pb="1px">
+          <Box css={styles.description}>Takk! Din sak er opprettet.</Box>
         </Stack>
       </Box>
     );
@@ -167,7 +161,7 @@ export const SuccessToast: Story = {
       source: {
         code: `
 toaster.create({
-  title: "Takk! Din sak er opprettet.",
+  description: "Takk! Din sak er opprettet.",
   type: "success",
 })
         `,
@@ -175,13 +169,6 @@ toaster.create({
     },
   },
 };
-
-// Hentet fra Chakra sin egen kodebase for å hacke til fremvisning av Toast i Storybook
-const WarningIcon = (props: any) => (
-  <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 24 24" {...props}>
-    <path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11 15H13V17H11V15ZM11 7H13V13H11V7Z" />
-  </svg>
-);
 
 export const WarningToast: Story = {
   render: _ => {
@@ -192,8 +179,8 @@ export const WarningToast: Story = {
 
     return (
       <Box css={styles.root} data-type="warning">
-        <WarningIcon css={styles.indicator} height="20px" />
-        <Stack gap="1" flex="1" maxWidth="100%">
+        <KvibToastIndicator type="warning" />
+        <Stack gap="1" flex="1" maxWidth="100%" pb="1px">
           <Box css={styles.title}>Mistet internettforbindelsen</Box>
           <Box css={styles.description}>
             Du kan fortsette å fylle ut skjemaet, men får ikke lagret før forbindelsen er tilbake.
@@ -226,8 +213,8 @@ export const ErrorToast: Story = {
 
     return (
       <Box css={styles.root} data-type="error">
-        <WarningIcon css={styles.indicator} height="20px" />
-        <Stack gap="1" flex="1" maxWidth="100%">
+        <KvibToastIndicator type="error" />
+        <Stack gap="1" flex="1" maxWidth="100%" pb="1px">
           <Box css={styles.title}>Ingen internettforbindelse</Box>
           <Box css={styles.description}>Du kan ikke lagre før forbindelsen er tilbake.</Box>
         </Stack>

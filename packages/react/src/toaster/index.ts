@@ -11,7 +11,7 @@ export {
   ToastTitle,
 } from "@chakra-ui/react";
 
-export { Toaster, toaster } from "@/components/ui/toaster";
+export { KvibToastIndicator, Toaster, toaster } from "@/components/ui/toaster";
 
 export type {
   CreateToasterProps,
