@@ -92,6 +92,7 @@ export const Preview: Story = {
     docs: {
       source: {
         code: `
+<Toaster />
 <Button
   onClick={() =>
     toaster.create({
