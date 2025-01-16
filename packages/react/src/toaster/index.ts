@@ -1,5 +1,7 @@
 export {
+  createToaster,
   Toast as KvibToast,
+  Toaster as KvibToaster,
   ToastRoot as Toast,
   ToastActionTrigger,
   ToastCloseTrigger,
@@ -7,7 +9,6 @@ export {
   ToastIndicator,
   ToastRoot,
   ToastTitle,
-  createToaster,
 } from "@chakra-ui/react";
 
 export { Toaster, toaster } from "@/components/ui/toaster";
@@ -17,9 +18,9 @@ export type {
   ToastActionTriggerProps,
   ToastCloseTriggerProps,
   ToastDescriptionProps,
+  ToasterProps,
   ToastIndicatorProps,
   ToastRootProps as ToastProps,
   ToastRootProps,
   ToastTitleProps,
-  ToasterProps,
 } from "@chakra-ui/react";

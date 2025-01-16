@@ -2,6 +2,7 @@ import { Dokumentasjonsside } from "../../documentation/utils/Dokumentasjonsside
 import { Liste } from "../../documentation/utils/Liste";
 import { Listeelement } from "../../documentation/utils/Listeelement";
 import { Tekstblokk } from "../../documentation/utils/Tekstblokk";
+import { Tilleggsinfo } from "../../documentation/utils/Tilleggsinfo";
 
 export const ToasterDocs = () => (
   <Dokumentasjonsside
@@ -25,4 +26,36 @@ export const ToasterDocs = () => (
       </Liste>
     </Tekstblokk>
   </Dokumentasjonsside>
+);
+
+export const InformativeToasterDocs = () => (
+  <Tilleggsinfo
+    tittel="Informative"
+    beskrivelse={
+      "Bruk Info til å formidle nyttig informasjon for brukerne som ikke er kritisk for å fullføre oppgaven."
+    }
+  />
+);
+
+export const WarningToasterDocs = () => (
+  <Tilleggsinfo
+    tittel="Warning"
+    beskrivelse={
+      "Bruk warning når du vil at brukeren skal foreta en bestemt handling eller for å advare dem om noe viktig."
+    }
+  />
+);
+
+export const ErrorToasterDocs = () => (
+  <Tilleggsinfo
+    tittel="Error"
+    beskrivelse={"Bruk Error for å informere om noe som er kritisk eller som hindrer brukeren i å komme videre."}
+  />
+);
+
+export const SuccessToasterDocs = () => (
+  <Tilleggsinfo
+    tittel="Success"
+    beskrivelse={"Bruk success for å bekrefte at en oppgave er fullført, eller at handlingen ble utført vellykket."}
+  />
 );
