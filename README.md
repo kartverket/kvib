@@ -1,13 +1,17 @@
 <h1 align="center">
-    <img src="./apps/storybook/public/assets/kvib.png" style="width:10rem" />
+    <br />
+    <img src="./apps/storybook/public/assets/kvib.png" style="width:12rem;" />
     <br/><br/>Kvib
 </h1>
 
 <div align="center">
-    <p>Kartverkets designsystem</p>
+    <h4>Kartverkets designsystem</h4>
+    <br/>
     <p>
       <a href="https://www.npmjs.com/package/@kvib/react"><img alt="npm" src="https://img.shields.io/npm/v/@kvib/react?label=version" /></a>&nbsp;
+      <a href="https://design.kartverket.no"><img alt="Storybook" src="https://shields.io/badge/storybook-white?logo=storybook&style=flat" /></a>&nbsp;
     </p>
+    <br/>
 </div>
 
 ## Kom i gang
