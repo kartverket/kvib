@@ -1,14 +1,12 @@
 <h1 align="center">
-    <br/><br/>Kartverkets designsystem
+    <img src="./apps/storybook/public/assets/kvib.png" style="width:10rem" />
+    <br/><br/>Kvib
 </h1>
 
 <div align="center">
+    <p>Kartverkets designsystem</p>
     <p>
-      <img alt="PRs" src="https://img.shields.io/badge/PRs-welcome-green.svg?color=%23262626" /></a>&nbsp;
       <a href="https://www.npmjs.com/package/@kvib/react"><img alt="npm" src="https://img.shields.io/npm/v/@kvib/react?label=version" /></a>&nbsp;
-    </p>
-    <p>
-      <a href="https://design.kartverket.no">Nettside</a> | <a href="https://github.com/kartverket/kvib/issues">Issues</a>
     </p>
 </div>
 
