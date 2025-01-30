@@ -6,7 +6,7 @@ import { Tekstblokk } from "../../documentation/utils/Tekstblokk";
 export const AccordionDocs = () => (
   <Dokumentasjonsside
     tittel="Accordion"
-    beskrivelse={`Vi bruker accordion for å organisere mye informasjon ved å skjule innhold i seksjoner som brukeren kan åpne og lukke. Bruk tydelige og beskrivende seksjonstitler som gjenspeiler innholdet, i stedet for vage titler som "Vis mer" eller "Les mer".`}
+    beskrivelse={`Vi bruker accordion for å organisere mye informasjon ved å skjule innhold i seksjoner, som brukeren kan åpne og lukke. Bruk tydelige og beskrivende seksjonstitler som gjenspeiler innholdet, i stedet for vage titler som "Vis mer" eller "Les mer".`}
   >
     <Tekstblokk tittel="Egnet til:">
       <Liste>
