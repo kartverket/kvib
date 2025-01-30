@@ -7,7 +7,7 @@ import { Tilleggsinfo } from "../../documentation/utils/Tilleggsinfo";
 export const ButtonDocs = () => (
   <Dokumentasjonsside
     tittel="Button"
-    beskrivelse={`Vi bruker Button for å la brukerne utføre handlinger. Det finnes fire varianter: primary, secondary, tertiary og plain, som kommer i ulike farger og størrelser. Knappetekstene skal være korte, enkle og handlingsfokuserte, helst med maks to ord. For nettsider som skal gå under kartverket.no bruker vi grønn og for forvaltningstjenester bruker vi blå.`}
+    beskrivelse={`Vi bruker Button for å la brukerne utføre handlinger. Det finnes fire varianter: primary, secondary, tertiary og ghost som kommer i ulike farger og størrelser. Knappetekstene skal være korte, enkle og handlingsfokuserte, helst med maks to ord. For nettsider som skal gå under kartverket.no bruker vi grønn og for forvaltningstjenester bruker vi blå.`}
   >
     <Tekstblokk tittel="Egnet til:">
       <Liste>
