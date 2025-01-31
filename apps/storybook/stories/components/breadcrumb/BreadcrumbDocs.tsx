@@ -6,7 +6,7 @@ import { Tekstblokk } from "../../documentation/utils/Tekstblokk";
 export const BreadcrumbDocs = () => (
   <Dokumentasjonsside
     tittel="Breadcrumb"
-    beskrivelse={`Vi bruker brødsmulestier (breadcrumbs) som et navigasjonselement for å vise brukerens plassering på et overordnet nivå, for eksempel på et nettsted. De plasseres høyt på siden, gjerne rett under hovedmenyen og -navigasjonen, men over sidetittelen.`}
+    beskrivelse={`Vi bruker brødsmulestier (breadcrumb) som et navigasjonselement for å vise brukerens plassering på et overordnet nivå, for eksempel på et nettsted. De plasseres høyt på siden, gjerne rett under hovedmenyen og -navigasjonen, men over sidetittelen.`}
   >
     <Tekstblokk tittel="Egnet til:">
       <Liste>
