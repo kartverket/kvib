@@ -20,9 +20,9 @@ export const CheckboxDocs = () => (
     <Tekstblokk tittel="Ikke egnet til:">
       <Liste>
         <Listeelement>
-          når det kun er mulig å velge ett alternativ fra listen (bruk radiobuttons i stedet).
+          når det kun er mulig å velge ett alternativ fra listen (bruk{""} <Link href="/?path=/docs/komponenter-radio--docs">radio</Link> i stedet).
         </Listeelement>
-        <Listeelement>når det er mer enn 10 alternativer å velge mellom (bruk select i stedet).</Listeelement>
+        <Listeelement>når det er mer enn 10 alternativer å velge mellom (bruk{""} <Link href="/?path=/docs/komponenter-select--docs">select</Link> i stedet).</Listeelement>
       </Liste>
     </Tekstblokk>
   </Dokumentasjonsside>
