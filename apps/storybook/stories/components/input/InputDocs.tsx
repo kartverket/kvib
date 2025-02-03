@@ -18,7 +18,7 @@ export const InputDocs = () => (
       <Liste>
         <Listeelement>
           mer utfyllende svar som er lengre enn én linje (bruk{" "}
-          <Link href="/?path=/docs/komponenter-textarea--docs">Textarea</Link>).
+          <Link href="/?path=/docs/komponenter-text-area--docs">Textarea</Link>).
         </Listeelement>
         <Listeelement>
           søk; bruk <Link href="/?path=/docs/komponenter-search--docs">Search</Link>
