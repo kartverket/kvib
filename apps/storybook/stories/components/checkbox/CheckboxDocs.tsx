@@ -2,6 +2,7 @@ import { Dokumentasjonsside } from "../../documentation/utils/Dokumentasjonsside
 import { Liste } from "../../documentation/utils/Liste";
 import { Listeelement } from "../../documentation/utils/Listeelement";
 import { Tekstblokk } from "../../documentation/utils/Tekstblokk";
+import { Link } from "@kvib/react";
 
 export const CheckboxDocs = () => (
   <Dokumentasjonsside
