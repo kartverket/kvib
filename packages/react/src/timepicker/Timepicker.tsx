@@ -60,7 +60,7 @@ export const Timepicker = ({
   });
   const dateTime = state.timeValue;
   const buttonSize = size === "lg" ? "sm" : "xs";
-  const inputRef = useRef<HTMLElement>();
+  const inputRef = useRef<HTMLElement | undefined>(undefined);
   const [isFocused, setIsFocused] = useState(false);
 
   // Calculation for adjusting time with the arrow buttons
