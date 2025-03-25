@@ -71,7 +71,7 @@ Kort fortalt gjøres endringer i følgende rekkefølge:
 - Naviger med piltastene ned til `@kvib/react`, marker denne med et trykk på `Space`-tasten
 - Trykker man `Enter` vil man få spørsmål om hvilken type endring dette er. For de fleste endringer vil det være småjusteringer som kun trenger en patch-release, så dersom endringen ikke er gedigen trykker man `Enter` igjen for spørsmålene om major og minor-releases.
 - Etter å ha hoppet over major og minor blir man bedt om å skrive et sammendrag. Dette vil vises i [endringsloggen](https://design.kartverket.no/?path=/docs/endringslogg--docs), så gjør det kort og presist.
-- Til slutt sjekker man inn denne markdown-filen som blir opprettet og inkluderer denne i PR-en på GitHub.
+- Til slutt sjekker man inn markdown-filen som blir opprettet under `.changeset` og inkluderer denne i PR-en på GitHub.
 
 4. Lag en Pull Request på GitHub og få denne godkjent og merget inn i `master`
 5. Siste steg for publisering av endringen i `@kvib/react` krever at man _også_ godkjenner og merger en ny Pull Request kalt Version Packages som opprettes gjennom våre automatiseringer når noe havner i `master`. Ved å merge denne vil man trigge prosessen som lanserer endringen i pakkehåndteringsverktøyet NPM.
