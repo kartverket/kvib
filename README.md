@@ -18,13 +18,19 @@
 
 Etter man har klonet repoet kommer man i gang ved å laste ned avhengigheter først:
 
-```
+```shell
 npm i
+```
+
+Bygg ev. prosjektet før man kjører opp:
+
+```shell
+npm run build
 ```
 
 Etterpå kjører man opp Storybook lokalt:
 
-```
+```shell
 npm run dev
 ```
 
@@ -46,7 +52,7 @@ I Kvib 5 bygger komponentene på Chakra UI sin versjon 3, så her er de fleste a
 
 Fargetema og utseende til slike Chakra-komponenter får styling gjennom et konsept som de kaller `recipe`s. Alle slike oppskrifter er definert i `theme/index.ts`. Gjør man endringer her kan det kreve at man kjører CLI-verktøyet som Chakra tilbyr for å bygge typer, tilgjengelig gjennom:
 
-```
+```shell
 npm run typegen
 ```
 
@@ -59,7 +65,7 @@ Kort fortalt gjøres endringer i følgende rekkefølge:
 3. Klargjør for lansering ved å opprette et `Changeset` (kun aktuelt for endringer i React-koden)
 
 - Fra rot i prosjektet, kjør:
-  ```
+  ```shell
   npx changeset
   ```
 - Naviger med piltastene ned til `@kvib/react`, marker denne med et trykk på `Space`-tasten
