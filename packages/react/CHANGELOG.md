@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 5.1.4
+
+### Patch Changes
+
+- c1a2add: Oppdater til React 19
+
 ## 5.1.3
 
 ### Patch Changes
