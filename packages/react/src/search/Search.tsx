@@ -4,8 +4,8 @@ import {
   Group as ChakraInputGroup,
   InputProps as ChakraInputProps,
 } from "@chakra-ui/react";
-import { forwardRef, useRef } from "react";
-import { Button, IconButton } from "../button";
+import  { ForwardedRef, forwardRef, useRef, RefObject } from "react";
+import { Button, IconButton } from "@/button";
 import { useResizeObserver } from "../hooks";
 
 export type SearchProps = Omit<ChakraInputProps, "isRequired" | "colorScheme"> & {
@@ -35,13 +35,13 @@ export const Search = forwardRef<HTMLInputElement, SearchProps>(
       role = "search",
       ...props
     },
-    ref,
+    ref: ForwardedRef<HTMLInputElement>,
   ) => {
     // Used to calculate width of button if no buttonWidth is given and there is text in the button
     const elementRef = useRef<HTMLButtonElement>(null);
     const dimensions = useResizeObserver({
-      ref: elementRef,
       box: "border-box",
+      ref: elementRef as RefObject<HTMLElement>
     });
 
     // Use IconButton when there is no text in the button

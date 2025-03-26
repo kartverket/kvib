@@ -1,6 +1,6 @@
 import { Input } from "@/input";
 import { Text } from "@/typography";
-import { forwardRef, ReactNode, Ref, useEffect, useRef } from "react";
+import { forwardRef, JSX, ReactNode, Ref, useEffect, useRef } from "react";
 import {
   ActionMeta,
   FormatOptionLabelMeta,
@@ -87,11 +87,8 @@ function genericForwardRef<T, P = {}>(
   return forwardRef(render as any) as any;
 }
 
-const CustomControl = (
-  { children, innerProps, innerRef, ...props }: any,
-  ref: Ref<SelectInstance<unknown, boolean, GroupBase<unknown>>>,
-) => {
-  return <Input ref={ref} {...innerProps} {...props} />;
+const CustomControl = ({ children, innerProps, innerRef, ...props }: any) => {
+  return <Input {...innerProps} {...props} />;
 };
 
 // SearchAsync uses the async version of react-select to fetch and display options.
@@ -180,7 +177,7 @@ type SomeFunction<T> = (inputValue: string, callback: (options: OptionsOrGroups<
 
 const useDebounce = <T extends unknown>(func: SomeFunction<T>, delay = 300) => {
   // useRef is used to hold a mutable reference to the timer which doesn't cause re-renders.
-  const timer = useRef<Timer>();
+  const timer = useRef<Timer | undefined>(undefined);
 
   // useEffect is used to handle cleanup: clearing the timer when the component unmounts.
   useEffect(() => {
