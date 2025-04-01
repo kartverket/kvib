@@ -1,5 +1,11 @@
 # @kvib/storybook
 
+## 1.1.4
+
+### Patch Changes
+
+- a37930a: Oppdatert Storybook til v.8.6.9
+
 ## 1.1.3
 
 ### Patch Changes
