@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 5.2.0
+
+### Minor Changes
+
+- e5c82b5: Bumped peer react peer dependencies
+
 ## 5.1.4
 
 ### Patch Changes
