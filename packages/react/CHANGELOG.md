@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 5.2.2
+
+### Patch Changes
+
+- a666c19: Change React peer dependency correctly
+
 ## 5.2.1
 
 ### Patch Changes
