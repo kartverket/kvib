@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 5.2.1
+
+### Patch Changes
+
+- 2232f7b: Allow a broader range of React as peer dependency
+
 ## 5.2.0
 
 ### Minor Changes
