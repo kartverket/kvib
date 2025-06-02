@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@chakra-ui/cli": "3.19.1",
-    "@types/react": "19.1.4",
+    "@types/react": "19.1.6",
     "@types/react-dom": "19.1.5",
     "react": "19.1.0",
     "react-dom": "19.1.0",
@@ -38,13 +38,13 @@
     "@emotion/react": "^11.13.5",
     "@fontsource/mulish": "5.2.5",
     "date-fns": "^4.1.0",
-    "material-symbols": "^0.31.3",
+    "material-symbols": "^0.31.4",
     "next-themes": "^0.4.6",
-    "react-aria": "^3.39.0",
+    "react-aria": "^3.40.0",
     "react-day-picker": "9.7.0",
     "react-icons": "^5.5.0",
     "react-select": "^5.10.1",
-    "react-stately": "^3.37.0",
+    "react-stately": "^3.38.0",
     "usehooks-ts": "^3.1.1"
   },
   "lint-staged": {
