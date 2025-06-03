@@ -17,11 +17,11 @@
   },
   "devDependencies": {
     "husky": "^9.1.7",
-    "lint-staged": "^16.0.0",
+    "lint-staged": "^16.1.0",
     "prettier": "^3.5.3",
     "syncpack": "^13.0.4",
     "tsconfig-paths": "^4.2.0",
-    "turbo": "^2.5.3"
+    "turbo": "^2.5.4"
   },
   "dependencies": {
     "@changesets/cli": "^2.29.4"
