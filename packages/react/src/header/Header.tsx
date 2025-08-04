@@ -16,10 +16,10 @@ type HeaderProps = {
   logoLinkProps?: Omit<LinkProps, "href">;
   /** Alt Text for logo */
   logoAltText?: string;
-  /** Header title to display beside the logo (hidden on mobile/small screens) */
-  headerTitle?: string;
-  /** Link URL for the header title */
-  headerLink?: string;
+  /** Title to display beside the logo (hidden on mobile/small screens) */
+  title?: string;
+  /** Link URL for the title */
+  titleLink?: string;
   /** Children to be displayed in the header. */
   children?: React.ReactNode;
   /** If true, a menu button will be displayed. */
@@ -44,8 +44,8 @@ export const Header = (props: HeaderProps) => {
     logoLink = "/",
     logoLinkProps,
     logoAltText,
-    headerTitle,
-    headerLink,
+    title,
+    titleLink,
     children,
     showMenuButton = false,
     dropdownMenuChildren,
@@ -98,18 +98,18 @@ export const Header = (props: HeaderProps) => {
               <HeaderLogo />
             </Link>
           )}
-          {headerTitle && !isSm && (
+          {title && !isSm && (
             <HStack marginBottom="3px" gap={5}>
               <Separator orientation="vertical" height="28px" />
-              {headerLink ? (
-                <Link href={headerLink} variant="plain">
+              {titleLink ? (
+                <Link href={titleLink} variant="plain">
                   <Text fontSize="lg" fontWeight="semibold" color="gray.800">
-                    {headerTitle}
+                    {title}
                   </Text>
                 </Link>
               ) : (
                 <Text fontSize="lg" fontWeight="semibold" color="gray.800">
-                  {headerTitle}
+                  {title}
                 </Text>
               )}
             </HStack>

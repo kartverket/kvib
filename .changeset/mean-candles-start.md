@@ -3,4 +3,4 @@
 "@kvib/react": patch
 ---
 
-Legg til headerTitle og headerLink i Header komponenten
+Legg til title og titleLink i Header komponenten

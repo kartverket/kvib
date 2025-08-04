@@ -47,14 +47,14 @@ const meta: Meta<typeof KvibHeader> = {
       },
       control: "text",
     },
-    headerTitle: {
+    title: {
       table: {
         type: { summary: "string" },
         defaultValue: { summary: undefined },
       },
       control: "text",
     },
-    headerLink: {
+    titleLink: {
       table: {
         type: { summary: "string" },
         defaultValue: { summary: undefined },
