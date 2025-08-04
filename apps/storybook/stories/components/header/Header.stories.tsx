@@ -5,6 +5,7 @@ const meta: Meta<typeof KvibHeader> = {
   title: "Komponenter/Header",
   component: KvibHeader,
   parameters: {
+    layout: "fullscreen",
     docs: {
       story: { inline: true },
     },
@@ -39,6 +40,26 @@ const meta: Meta<typeof KvibHeader> = {
     logoLinkProps: {
       table: { summary: "object" },
       defaultValue: { summary: undefined },
+    },
+    logoAltText: {
+      table: {
+        type: { summary: "string" },
+      },
+      control: "text",
+    },
+    title: {
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: undefined },
+      },
+      control: "text",
+    },
+    titleLink: {
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: undefined },
+      },
+      control: "text",
     },
     showMenuButton: {
       table: {

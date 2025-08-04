@@ -1,8 +1,9 @@
 import { IconButton } from "@/button";
 import { useKvibContext, useMediaQuery, useToggle } from "@/hooks";
-import { Box, Flex, VStack } from "@/layout";
+import { Box, Flex, VStack, HStack } from "@/layout";
 import { Logo } from "@/logo";
-import { Link, LinkProps } from "@/typography";
+import { Link, LinkProps, Text } from "@/typography";
+import { Separator } from "@/separator";
 
 type HeaderProps = {
   /** Determines where the content in the header is displayed. */
@@ -15,6 +16,10 @@ type HeaderProps = {
   logoLinkProps?: Omit<LinkProps, "href">;
   /** Alt Text for logo */
   logoAltText?: string;
+  /** Title to display beside the logo (hidden on mobile/small screens) */
+  title?: string;
+  /** Link URL for the title */
+  titleLink?: string;
   /** Children to be displayed in the header. */
   children?: React.ReactNode;
   /** If true, a menu button will be displayed. */
@@ -39,6 +44,8 @@ export const Header = (props: HeaderProps) => {
     logoLink = "/",
     logoLinkProps,
     logoAltText,
+    title,
+    titleLink,
     children,
     showMenuButton = false,
     dropdownMenuChildren,
@@ -83,13 +90,31 @@ export const Header = (props: HeaderProps) => {
         justifyContent={justify}
         gap={gap}
       >
-        {logoLinkDisabled ? (
-          <HeaderLogo />
-        ) : (
-          <Link href={logoLink} external={false} {...logoLinkProps}>
+        <Flex alignItems="flex-end" gap={5}>
+          {logoLinkDisabled ? (
             <HeaderLogo />
-          </Link>
-        )}
+          ) : (
+            <Link href={logoLink} external={false} {...logoLinkProps}>
+              <HeaderLogo />
+            </Link>
+          )}
+          {title && !isSm && (
+            <HStack marginBottom="3px" gap={5}>
+              <Separator orientation="vertical" height="28px" />
+              {titleLink ? (
+                <Link href={titleLink} variant="plain">
+                  <Text fontSize="lg" fontWeight="semibold" color="gray.800">
+                    {title}
+                  </Text>
+                </Link>
+              ) : (
+                <Text fontSize="lg" fontWeight="semibold" color="gray.800">
+                  {title}
+                </Text>
+              )}
+            </HStack>
+          )}
+        </Flex>
 
         {showChildren && children}
 
