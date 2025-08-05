@@ -1,5 +1,11 @@
 # @kvib/storybook
 
+## 1.1.5
+
+### Patch Changes
+
+- 9c93a0b: Legg til title og titleLink i Header komponenten
+
 ## 1.1.4
 
 ### Patch Changes
