@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 5.2.3
+
+### Patch Changes
+
+- 9c93a0b: Legg til title og titleLink i Header komponenten
+
 ## 5.2.2
 
 ### Patch Changes
