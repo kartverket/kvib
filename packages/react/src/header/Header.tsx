@@ -22,14 +22,12 @@ type HeaderProps = {
   title?: string;
   /** Link URL for the title */
   titleLink?: string;
-  /** Children to be displayed in the header. */
-  children?: React.ReactNode;
+  /** Content to be displayed in the header. */
+  content?: React.ReactNode;
   /** If true, a menu button will be displayed. */
   showMenuButton?: boolean;
-  /** If true, the header children will be displayed in the dropdown menu. */
-  showChildrenInMenu?: boolean;
-  /** Custom children to be displayed in the dropdown menu. Also to modify dropdown layout. */
-  dropdownMenuChildren?: React.ReactNode;
+  /** Custom content to be displayed in the opened menu. Also to modify menu layout. */
+  menuContent?: React.ReactNode;
   /** Screen breakpoint for when the header should collapse and display menu button instead. */
   collapseBreakpoint?: "sm" | "md" | "lg";
   /** If provided: a custom function to be called when the menu button is clicked. */
@@ -50,10 +48,9 @@ export const Header = (props: HeaderProps) => {
     logoAltText,
     title,
     titleLink,
-    children,
+    content,
     showMenuButton = false,
-    dropdownMenuChildren,
-    showChildrenInMenu = true,
+    menuContent,
     collapseBreakpoint = "sm",
     onMenuButtonClick,
     gap = 90,
@@ -68,9 +65,9 @@ export const Header = (props: HeaderProps) => {
   const logoVerticalSize = isSm ? 70 : 100;
   const headerSize = isSm ? 70 : 90;
   const justify = justifyContent && isCollapse ? "space-between" : justifyContent;
-  const showChildren = !isCollapse;
+  const showContent = !isCollapse;
   const [isOpen, onToggle] = useToggle();
-  const showMenuButtonElement = (children && (isCollapse || isOpen)) || showMenuButton;
+  const showMenuButtonElement = (content && (isCollapse || isOpen)) || showMenuButton;
   const handleClick = onMenuButtonClick || onToggle;
 
   const HeaderLogo = () => {
@@ -121,7 +118,7 @@ export const Header = (props: HeaderProps) => {
             )}
           </Flex>
 
-          {showChildren && children}
+          {showContent && content}
 
           {showMenuButtonElement &&
             (isCollapse ? (
@@ -161,8 +158,7 @@ export const Header = (props: HeaderProps) => {
               role="navigation"
               aria-label="Hovedmeny"
             >
-              {showChildrenInMenu && children}
-              {dropdownMenuChildren}
+              {menuContent}
             </VStack>
           </CollapsibleContent>
         </CollapsibleRoot>
@@ -181,8 +177,7 @@ export const Header = (props: HeaderProps) => {
                 role="navigation"
                 aria-label="Hovedmeny"
               >
-                {showChildrenInMenu && children}
-                {dropdownMenuChildren}
+                {menuContent}
               </VStack>
             </DrawerBody>
           </DrawerContent>

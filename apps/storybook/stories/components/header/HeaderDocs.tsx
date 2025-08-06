@@ -15,7 +15,7 @@ export const HeaderDocs = () => (
         <Listeelement>interaktive elementer (søk, meny, innlogging/logg ut) plasseres til høyre.</Listeelement>
         <Listeelement>Kartverket-logoen skal brukes i sin helhet og ikke kombineres med andre navn.</Listeelement>
         <Listeelement>klikk på logoen tar brukeren tilbake til forsiden.</Listeelement>
-        <Listeelement>på mobil skjules enkelte elementer og legges i menyen.</Listeelement>
+        <Listeelement>på mobil skjules enkelte elementer og må legges i menyen.</Listeelement>
         <Listeelement>
           headertittel kan legges til ved siden av logoen som en klikkbar lenke og skjules automatisk på mobile enheter.
         </Listeelement>

@@ -68,13 +68,6 @@ const meta: Meta<typeof KvibHeader> = {
       },
       control: "boolean",
     },
-    showChildrenInMenu: {
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "true" },
-      },
-      control: "boolean",
-    },
     collapseBreakpoint: {
       table: {
         type: { summary: "sm | md | lg" },
