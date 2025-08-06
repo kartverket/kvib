@@ -1,4 +1,6 @@
-import { IconButton } from "@/button";
+import { Button, IconButton } from "@/button";
+import { CollapsibleRoot, CollapsibleContent } from "@/collapsible";
+import { DrawerRoot, DrawerContent, DrawerBody, DrawerBackdrop, DrawerCloseTrigger } from "@/drawer";
 import { useKvibContext, useMediaQuery, useToggle } from "@/hooks";
 import { Box, Flex, VStack, HStack } from "@/layout";
 import { Logo } from "@/logo";
@@ -119,14 +121,70 @@ export const Header = (props: HeaderProps) => {
         {showChildren && children}
 
         {showMenuButtonElement && (
-          <IconButton aria-label={"open menu"} icon={isOpen ? "close" : "menu"} onClick={handleClick} />
+          isCollapse ? (
+            <IconButton
+              aria-label={isOpen ? "Lukk meny" : "Åpne meny"}
+              aria-expanded={isOpen}
+              icon={isOpen ? "close" : "menu"}
+              onClick={handleClick}
+              variant="plain"
+            />
+          ) : (
+            <Button
+              variant="plain"
+              rightIcon={isOpen ? "close" : "menu"}
+              onClick={handleClick}
+              aria-expanded={isOpen}
+              aria-controls="navigation-menu"
+            >
+              Meny
+            </Button>
+          )
         )}
       </Flex>
-      {/* Slide content */}
-      <VStack bg="gray.50" borderBottomWidth="2px" borderBottomColor="gray.200" padding={30} gap={10}>
-        {showChildrenInMenu && children}
-        {dropdownMenuChildren}
-      </VStack>
+
+      {/* Conditional rendering based on screen size */}
+      {isCollapse ? (
+        /* Small screens: Use collapsible dropdown */
+        <CollapsibleRoot open={isOpen}>
+          <CollapsibleContent>
+            <VStack
+              id="navigation-menu"
+              bg="white"
+              borderBottomWidth="2px"
+              borderBottomColor="gray.200"
+              padding={30}
+              gap={10}
+              role="navigation"
+              aria-label="Hovedmeny"
+            >
+              {showChildrenInMenu && children}
+              {dropdownMenuChildren}
+            </VStack>
+          </CollapsibleContent>
+        </CollapsibleRoot>
+      ) : (
+        /* Large screens: Use side drawer */
+        <DrawerRoot open={isOpen} onOpenChange={onToggle} placement="end">
+          <DrawerBackdrop />
+          <DrawerContent>
+            <DrawerCloseTrigger />
+            <DrawerBody>
+              <VStack
+                id="navigation-menu"
+                padding={30}
+                gap={10}
+                align="stretch"
+                role="navigation"
+                aria-label="Hovedmeny"
+              >
+                {showChildrenInMenu && children}
+                {dropdownMenuChildren}
+              </VStack>
+            </DrawerBody>
+          </DrawerContent>
+        </DrawerRoot>
+      )}
     </Box>
   );
 };
