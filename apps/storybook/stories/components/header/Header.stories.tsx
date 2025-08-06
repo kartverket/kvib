@@ -98,6 +98,13 @@ const meta: Meta<typeof KvibHeader> = {
       options: ["horizontal", "vertical"],
       control: { type: "radio" },
     },
+    contentMaxWidth: {
+      table: {
+        type: { summary: "string | number" },
+        defaultValue: { summary: "1140px" },
+      },
+      control: "text",
+    },
   },
   args: { onMenuButtonClick: undefined },
 };

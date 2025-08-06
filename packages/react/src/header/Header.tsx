@@ -37,6 +37,8 @@ type HeaderProps = {
   /** Gap between header elements. */
   gap?: number;
   logoVariant?: "horizontal" | "vertical";
+  /** Maximum width of the header content. */
+  contentMaxWidth?: string | number;
 };
 
 export const Header = (props: HeaderProps) => {
@@ -56,6 +58,7 @@ export const Header = (props: HeaderProps) => {
     onMenuButtonClick,
     gap = 90,
     logoVariant = "horizontal",
+    contentMaxWidth = "1140px",
   } = props;
 
   const system = useKvibContext();
@@ -82,66 +85,66 @@ export const Header = (props: HeaderProps) => {
 
   return (
     <Box>
-      <Flex
-        bg="white"
-        borderBottomWidth="2px"
-        borderBottomColor="gray.200"
-        padding={30}
-        height={headerSize}
-        alignItems="center"
-        justifyContent={justify}
-        gap={gap}
-      >
-        <Flex alignItems="flex-end" gap={5}>
-          {logoLinkDisabled ? (
-            <HeaderLogo />
-          ) : (
-            <Link href={logoLink} external={false} {...logoLinkProps}>
+      <Box bg="white" borderBottomWidth="2px" borderBottomColor="gray.200">
+        <Flex
+          maxWidth={contentMaxWidth}
+          margin="0 auto"
+          padding={30}
+          height={headerSize}
+          alignItems="center"
+          justifyContent={justify}
+          gap={gap}
+        >
+          <Flex alignItems="flex-end" gap={5}>
+            {logoLinkDisabled ? (
               <HeaderLogo />
-            </Link>
-          )}
-          {title && !isSm && (
-            <HStack marginBottom="3px" gap={5}>
-              <Separator orientation="vertical" height="28px" />
-              {titleLink ? (
-                <Link href={titleLink} variant="plain">
+            ) : (
+              <Link href={logoLink} external={false} {...logoLinkProps}>
+                <HeaderLogo />
+              </Link>
+            )}
+            {title && !isSm && (
+              <HStack marginBottom="3px" gap={5}>
+                <Separator orientation="vertical" height="28px" />
+                {titleLink ? (
+                  <Link href={titleLink} variant="plain">
+                    <Text fontSize="lg" fontWeight="semibold" color="gray.800">
+                      {title}
+                    </Text>
+                  </Link>
+                ) : (
                   <Text fontSize="lg" fontWeight="semibold" color="gray.800">
                     {title}
                   </Text>
-                </Link>
-              ) : (
-                <Text fontSize="lg" fontWeight="semibold" color="gray.800">
-                  {title}
-                </Text>
-              )}
-            </HStack>
-          )}
+                )}
+              </HStack>
+            )}
+          </Flex>
+
+          {showChildren && children}
+
+          {showMenuButtonElement &&
+            (isCollapse ? (
+              <IconButton
+                aria-label={isOpen ? "Lukk meny" : "Åpne meny"}
+                aria-expanded={isOpen}
+                icon={isOpen ? "close" : "menu"}
+                onClick={handleClick}
+                variant="plain"
+              />
+            ) : (
+              <Button
+                variant="plain"
+                rightIcon={isOpen ? "close" : "menu"}
+                onClick={handleClick}
+                aria-expanded={isOpen}
+                aria-controls="navigation-menu"
+              >
+                Meny
+              </Button>
+            ))}
         </Flex>
-
-        {showChildren && children}
-
-        {showMenuButtonElement && (
-          isCollapse ? (
-            <IconButton
-              aria-label={isOpen ? "Lukk meny" : "Åpne meny"}
-              aria-expanded={isOpen}
-              icon={isOpen ? "close" : "menu"}
-              onClick={handleClick}
-              variant="plain"
-            />
-          ) : (
-            <Button
-              variant="plain"
-              rightIcon={isOpen ? "close" : "menu"}
-              onClick={handleClick}
-              aria-expanded={isOpen}
-              aria-controls="navigation-menu"
-            >
-              Meny
-            </Button>
-          )
-        )}
-      </Flex>
+      </Box>
 
       {/* Conditional rendering based on screen size */}
       {isCollapse ? (
