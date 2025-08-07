@@ -68,13 +68,6 @@ const meta: Meta<typeof KvibHeader> = {
       },
       control: "boolean",
     },
-    showChildrenInMenu: {
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "true" },
-      },
-      control: "boolean",
-    },
     collapseBreakpoint: {
       table: {
         type: { summary: "sm | md | lg" },
@@ -97,6 +90,13 @@ const meta: Meta<typeof KvibHeader> = {
       },
       options: ["horizontal", "vertical"],
       control: { type: "radio" },
+    },
+    contentMaxWidth: {
+      table: {
+        type: { summary: "string | number" },
+        defaultValue: { summary: "1140px" },
+      },
+      control: "text",
     },
   },
   args: { onMenuButtonClick: undefined },
