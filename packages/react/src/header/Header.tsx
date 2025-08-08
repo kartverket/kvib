@@ -65,7 +65,6 @@ export const Header = (props: HeaderProps) => {
   const logoVerticalSize = isSm ? 70 : 100;
   const headerSize = isSm ? 70 : 90;
   const justify = justifyContent && isCollapse ? "space-between" : justifyContent;
-  const showContent = !isCollapse;
   const [isOpen, onToggle] = useToggle();
   const showMenuButtonElement = (content && (isCollapse || isOpen)) || showMenuButton;
   const handleClick = onMenuButtonClick || onToggle;
@@ -118,28 +117,30 @@ export const Header = (props: HeaderProps) => {
             )}
           </Flex>
 
-          {showContent && content}
+          <>
+            {content}
 
-          {showMenuButtonElement &&
-            (isCollapse ? (
-              <IconButton
-                aria-label={isOpen ? "Lukk meny" : "Åpne meny"}
-                aria-expanded={isOpen}
-                icon={isOpen ? "close" : "menu"}
-                onClick={handleClick}
-                variant="plain"
-              />
-            ) : (
-              <Button
-                variant="plain"
-                rightIcon={isOpen ? "close" : "menu"}
-                onClick={handleClick}
-                aria-expanded={isOpen}
-                aria-controls="navigation-menu"
-              >
-                Meny
-              </Button>
-            ))}
+            {showMenuButtonElement &&
+              (isCollapse ? (
+                <IconButton
+                  aria-label={isOpen ? "Lukk meny" : "Åpne meny"}
+                  aria-expanded={isOpen}
+                  icon={isOpen ? "close" : "menu"}
+                  onClick={handleClick}
+                  variant="plain"
+                />
+              ) : (
+                <Button
+                  variant="plain"
+                  rightIcon={isOpen ? "close" : "menu"}
+                  onClick={handleClick}
+                  aria-expanded={isOpen}
+                  aria-controls="navigation-menu"
+                >
+                  Meny
+                </Button>
+              ))}
+          </>
         </Flex>
       </Box>
 
@@ -157,6 +158,7 @@ export const Header = (props: HeaderProps) => {
               gap={10}
               role="navigation"
               aria-label="Hovedmeny"
+              alignItems="start"
             >
               {menuContent}
             </VStack>
