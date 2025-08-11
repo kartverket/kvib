@@ -1,5 +1,14 @@
 # @kvib/react
 
+## 6.0.1
+
+### Patch Changes
+
+- 6d3f321: Header:
+  - Aligner content i drawer til venstre istedenfor midten
+  - Viser alltid content slik at det kan velges fra brukeren av komponenten
+  - Grupperer menyknapp og content slik at det kun blir to deler i headeren
+
 ## 6.0.0
 
 ### Major Changes
