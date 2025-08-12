@@ -1,7 +1,0 @@
-import{j as t}from"./jsx-runtime-D_zvdyIk.js";import{ak as r,al as s}from"./index-BFEzvpvH.js";const l={title:"Komponenter/List",component:r,parameters:{docs:{story:{inline:!0}}},argTypes:{gap:{description:"The space between each list item",table:{type:{summary:"string"}},control:"text"},listStyleType:{description:"The style of the list item marker",table:{type:{summary:"string"},defaultValue:{summary:"circle"}},control:"text"},listStylePosition:{description:"The position of the list item marker",table:{type:{summary:"string"},defaultValue:{summary:"outside"}},control:"text"},listStyleImage:{description:"The image of the list item marker",table:{type:{summary:"string"}},control:"text"},_marker:{description:"The marker of the list item.",table:{type:{summary:"string"}},control:"text"}}};r.displayName="List";s.displayName="ListItem";const e={render:a=>t.jsxs(r,{listStyleType:"disc",...a,children:[t.jsx(s,{children:"Item 1"}),t.jsx(s,{children:"Item 2"}),t.jsx(s,{children:"Item 3"})]})};var i,m,o;e.parameters={...e.parameters,docs:{...(i=e.parameters)==null?void 0:i.docs,source:{originalSource:`{
-  render: args => <List listStyleType={"disc"} {...args}>
-      <ListItem>Item 1</ListItem>
-      <ListItem>Item 2</ListItem>
-      <ListItem>Item 3</ListItem>
-    </List>
-}`,...(o=(m=e.parameters)==null?void 0:m.docs)==null?void 0:o.source}}};const n=["Preview"],d=Object.freeze(Object.defineProperty({__proto__:null,Preview:e,__namedExportsOrder:n,default:l},Symbol.toStringTag,{value:"Module"}));export{d as L,e as P};
