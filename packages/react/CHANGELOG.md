@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 6.0.3
+
+### Patch Changes
+
+- dc4ee86: Se forrige changelog
+
 ## 6.0.2
 
 ### Patch Changes
