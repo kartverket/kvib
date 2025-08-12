@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 6.0.2
+
+### Patch Changes
+
+- f8fa428: Se forrige changelog
+
 ## 6.0.1
 
 ### Patch Changes
