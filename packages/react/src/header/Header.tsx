@@ -117,7 +117,7 @@ export const Header = (props: HeaderProps) => {
             )}
           </Flex>
 
-          <>
+          <Box>
             {content}
 
             {showMenuButtonElement &&
@@ -140,7 +140,7 @@ export const Header = (props: HeaderProps) => {
                   Meny
                 </Button>
               ))}
-          </>
+          </Box>
         </Flex>
       </Box>
 
