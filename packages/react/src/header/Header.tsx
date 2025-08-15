@@ -82,7 +82,7 @@ export const Header = (props: HeaderProps) => {
 
   return (
     <Box>
-      <Box bg="white" borderBottomWidth="2px" borderBottomColor="gray.200">
+      <Box bg="white" borderBottomWidth="1px" borderBottomColor="gray.200">
         <Flex
           maxWidth={contentMaxWidth}
           margin="0 auto"
