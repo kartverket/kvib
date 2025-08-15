@@ -34,7 +34,7 @@ type HeaderProps = {
   onMenuButtonClick?: React.MouseEventHandler<HTMLButtonElement>;
   /** Gap between header elements. */
   gap?: number;
-  logoVariant?: "horizontal" | "vertical";
+  logoVariant?: "horizontal" | "vertical" | "symbol";
   /** Maximum width of the header content. */
   contentMaxWidth?: string | number;
 };
@@ -63,6 +63,7 @@ export const Header = (props: HeaderProps) => {
   const isSm = useMediaQuery(`(max-width: ${system.token("breakpoints.sm")})`);
   const logoHorizontalSize = isSm ? 110 : 150;
   const logoVerticalSize = isSm ? 70 : 100;
+  const logoSymbolSize = isSm ? 33 : 37;
   const headerSize = isSm ? 70 : 90;
   const justify = justifyContent && isCollapse ? "space-between" : justifyContent;
   const [isOpen, onToggle] = useToggle();
@@ -74,7 +75,7 @@ export const Header = (props: HeaderProps) => {
       <Logo
         label={logoAltText}
         variant={logoVariant}
-        size={logoVariant == "horizontal" ? logoHorizontalSize : logoVerticalSize}
+        size={logoVariant == "horizontal" ? logoHorizontalSize : logoVariant == "vertical" ? logoVerticalSize : logoSymbolSize}
       />
     );
   };
@@ -99,7 +100,7 @@ export const Header = (props: HeaderProps) => {
                 <HeaderLogo />
               </Link>
             )}
-            {title && !isSm && (
+            {title && (
               <HStack marginBottom="3px" gap={5}>
                 <Separator orientation="vertical" height="28px" />
                 {titleLink ? (
