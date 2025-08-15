@@ -18,10 +18,10 @@ const meta: Meta<typeof KvibLogo> = {
     },
     variant: {
       table: {
-        type: { summary: "vertical | horizontal" },
+        type: { summary: "vertical | horizontal | symbol" },
         defaultValue: { summary: "vertical" },
       },
-      options: ["vertical", "horizontal"],
+      options: ["vertical", "horizontal", "symbol"],
       control: { type: "radio" },
     },
     size: {
