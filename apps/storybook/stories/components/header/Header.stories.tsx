@@ -85,10 +85,10 @@ const meta: Meta<typeof KvibHeader> = {
     },
     logoVariant: {
       table: {
-        type: { summary: "horizontal | vertical | symbol" },
+        type: { summary: "horizontal | vertical" },
         defaultValue: { summary: "horizontal" },
       },
-      options: ["horizontal", "vertical", "symbol"],
+      options: ["horizontal", "vertical"],
       control: { type: "radio" },
     },
     contentMaxWidth: {
