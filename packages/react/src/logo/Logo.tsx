@@ -5,7 +5,7 @@ export type LogoProps = {
    * @default "vertical"*/
   variant?: "vertical" | "horizontal" | "symbol";
   /** The size of the logo. Width in pixels.
-   * @default 184/125/37*/
+   * @default 184/125/42*/
   size?: number;
   /** Aria-label for the logo.
    * @default "logo"*/
