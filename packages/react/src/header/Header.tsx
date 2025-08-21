@@ -75,7 +75,13 @@ export const Header = (props: HeaderProps) => {
       <Logo
         label={logoAltText}
         variant={logoVariant}
-        size={logoVariant == "horizontal" ? logoHorizontalSize : logoVariant == "vertical" ? logoVerticalSize : logoSymbolSize}
+        size={
+          logoVariant == "horizontal"
+            ? logoHorizontalSize
+            : logoVariant == "vertical"
+              ? logoVerticalSize
+              : logoSymbolSize
+        }
       />
     );
   };
@@ -92,7 +98,7 @@ export const Header = (props: HeaderProps) => {
           justifyContent={justify}
           gap={gap}
         >
-          <Flex alignItems="flex-end" gap={5}>
+          <Flex alignItems={logoVariant === "horizontal" ? "flex-end" : "center"} gap={5}>
             {logoLinkDisabled ? (
               <HeaderLogo />
             ) : (
@@ -101,7 +107,7 @@ export const Header = (props: HeaderProps) => {
               </Link>
             )}
             {title && (
-              <HStack marginBottom="3px" gap={5}>
+              <HStack marginBottom={logoVariant === "horizontal" ? "3px" : "0"} gap={5}>
                 <Separator orientation="vertical" height="28px" />
                 {titleLink ? (
                   <Link href={titleLink} variant="plain">
