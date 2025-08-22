@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 6.1.0
+
+### Minor Changes
+
+- 6239da7: Fikser styling på mobilversjon av Header-komponenten
+
 ## 6.0.4
 
 ### Patch Changes
