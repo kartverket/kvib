@@ -65,6 +65,7 @@ export const Header = (props: HeaderProps) => {
   const logoVerticalSize = isSm ? 70 : 100;
   const logoSymbolSize = isSm ? 33 : 37;
   const headerSize = isSm ? 70 : 90;
+  const headerPadding = 30;
   const justify = justifyContent && isCollapse ? "space-between" : justifyContent;
   const [isOpen, onToggle] = useToggle();
   const showMenuButtonElement = (content && (isCollapse || isOpen)) || showMenuButton;
@@ -90,9 +91,13 @@ export const Header = (props: HeaderProps) => {
     <Box>
       <Box bg="white" borderBottomWidth="1px" borderBottomColor="gray.200">
         <Flex
-          maxWidth={contentMaxWidth}
+          maxWidth={
+            typeof contentMaxWidth === "number"
+              ? contentMaxWidth + headerPadding * 2
+              : `calc(${contentMaxWidth} + (${headerPadding} * 2px))`
+          }
           margin="0 auto"
-          padding={30}
+          padding={headerPadding}
           height={headerSize}
           alignItems="center"
           justifyContent={justify}
@@ -161,7 +166,7 @@ export const Header = (props: HeaderProps) => {
               bg="white"
               borderBottomWidth="2px"
               borderBottomColor="gray.200"
-              padding={30}
+              padding={headerPadding}
               gap={10}
               role="navigation"
               aria-label="Hovedmeny"
@@ -180,7 +185,7 @@ export const Header = (props: HeaderProps) => {
             <DrawerBody>
               <VStack
                 id="navigation-menu"
-                padding={30}
+                padding={headerPadding}
                 gap={10}
                 align="stretch"
                 role="navigation"
