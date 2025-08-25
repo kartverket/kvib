@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 6.1.1
+
+### Patch Changes
+
+- 6ee27c3: Fikser at contentMaxWidth Header ble for stor pga padding
+
 ## 6.1.0
 
 ### Minor Changes
