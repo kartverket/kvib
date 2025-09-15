@@ -22,6 +22,7 @@
     "@rollup/pluginutils": "^5.1.4",
     "@storybook/addon-a11y": "^9.1.5",
     "@storybook/addon-docs": "^9.1.5",
+    "@storybook/builder-vite": "^9.1.5",
     "@storybook/addon-essentials": "^8.6.14",
     "@storybook/addon-interactions": "^8.6.14",
     "@storybook/addon-links": "^9.1.5",
