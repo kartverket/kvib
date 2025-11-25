@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 6.1.2
+
+### Patch Changes
+
+- aac7dc9: Bump Chakra UI dependencies to v3.30.0.
+
 ## 6.1.1
 
 ### Patch Changes
@@ -17,11 +23,9 @@
 ### Patch Changes
 
 - 59bd3c8: Logo:
-
   - Legger til en ny logovariant symbol som er uten Kartverket teksten
 
   Header:
-
   - Legger til nye logovarianten i Header
   - Små fikser på header
 
@@ -51,7 +55,6 @@
 ### Major Changes
 
 - 2f252ca: Header:
-
   - **BREAKING**: Endret props fra `children` til `content`og `dropdownMenuChildren` til `menuContent`
   - **BREAKING**: Fjernet `showChildrenInMenu` ettersom horisontalt content sjeldent passer med vertikalt, her bør heller `menuContent` tilpasses.
   - Lagt til en `contentMaxWidth` prop med default verdi `1140px`
@@ -457,7 +460,6 @@
 ### Patch Changes
 
 - 156780f: Bumping packages patch and minor:
-
   - @types/react from 18.2.41 to 18.2.45
   - @types/react-dom from 18.2.17 to 18.2.18
   - @react-stately/datepicker from 3.9.0 to 3.9.1
@@ -485,7 +487,6 @@
 ### Minor Changes
 
 - dd3ce42: Forbedrer datepicker:
-
   - Fikser opp i oppførsel med og uten form (isDisabled, isRequired, isInvalid).
   - Lukker Datepicker etter valgt dato.
   - Legger til colorscheme + bedre fargevalg.
@@ -501,14 +502,12 @@
 - a09ac7feb: Legger til støtte for å legge til tekst på søkeknappen i Search. Bruk `buttonText`.
 
   Breaking changes:
-
   - Fjerner `leftSearchButton` og `rightSearchButton` til fordel for å legge til ny prop.
   - Legger til ny prop `searchButton?: "left" | "right" | "none";`
 
 ### Patch Changes
 
 - cb60b4369: Bumping packages patch and minor:
-
   - esbuild from 0.19.6 to 0.19.8
   - @types/react from 18.2.37 to 18.2.38
   - @types/react-dom from 18.2.15 to 18.2.17
@@ -540,7 +539,6 @@
 
 - e013f34f8: SearchAsync - Legger til to nye props: isDisabled og focusBorderColor.
 - c325a9326: Bumping packages patch and minor:
-
   - @types/react from 18.2.36 to 18.2.37
   - @types/react-dom from 18.2.14 to 18.2.15
   - @chakra-ui/react from 2.8.1 to 2.8.2
@@ -565,7 +563,6 @@
 
 - b0581f12c: SearchAsync: Legger til noOptionsMessage-prop.
 - 4fe2942fc: Bumping packages patch and minor:
-
   - @types/react from 18.2.31 to 18.2.33
   - chakra-react-select from 4.7.5 to 4.7.6
   - material-symbols from 0.13.1 to 0.13.2
@@ -582,7 +579,6 @@
 
 - a0361e91f: Oppdatert @types/react, @types/react-dom og @fontsource/mulish
 - 6cfa0c41e: Bumping packages patch and minor:
-
   - Chakra-react-select from 4.7.4 to 4.7.5.
   - material-symbols from 0.13.0 to 0.13.1
   - @types/react from 18.2.30 to 18.2.31
@@ -593,7 +589,6 @@
 ### Patch Changes
 
 - c195cadec: Bumping packages patch and minor:
-
   - @types/react from 18.2.25 to 18.2.28.
   - @types/react-dom from 18.2.11 to 18.2.13.
   - chakra-react-select from 4.7.3 to 4.7.4.
@@ -609,7 +604,6 @@
 ### Patch Changes
 
 - 2329a2f71: Bumping packages patch and minor:
-
   - @fontsource-variable/mulish from 5.0.8 to 5.0.12
   - @types/react from 18.0.26 to 18.2.25
   - @types/react-dom from 18.0.9 to 18.2.10
@@ -628,7 +622,6 @@
 ### Patch Changes
 
 - 5a96c2ae7: Bumping packages major:
-
   - @testing-library/jest-dom from 5.16.5 to 6.1.3
   - @testing-library/react from 13.4.0 to 14.0.0
   - clsx from 1.2.1 to 2.0.0
@@ -636,7 +629,6 @@
 
 - 34cc5ec20: Bump @chakra-ui/react from 2.8.0 to 2.8.1
 - 2522343ea: Bumping packages patch and minor:
-
   - @types/react from 18.0.26 to 18.2.24.
   - @types/react-dom from 18.0.9 to 18.2.8
   - chakra-react-select from 4.7.0 to 4.7.2
@@ -662,7 +654,6 @@
 ### Minor Changes
 
 - b413753fb: SearchAsync:
-
   - Oppdateres til å støtte multiselect.
   - Props har blitt oppdatert og typer forenklet (dobbeltsjekk i prosjektet ditt om det lager problemer):
     - Alle typer for props er nå inkludert i KVIB.
@@ -713,7 +704,6 @@
 - f105e5be6: - Legger til id i SearchAsync.
 
   **Breaking changes på SearchAsync:**
-
   - Endrer type på handleFromChange i SearchAsync. Trenger ikke lenger å importere SingleValue.
   - Endrer navn på prop "handleFromChange" til "onChange".
 
@@ -722,7 +712,6 @@
 ### Major Changes
 
 - 7c58cd3e8: **Breaking changes på Button og IconButton:**
-
   - Endrer navn på verdier i proppen "variant" på knapper.
 
   Solid -> Primary, Outline -> Secondary, Link -> Tertiary, Ghost -> Ghost.
@@ -922,7 +911,6 @@
 ### Minor Changes
 
 - 101242e35: ButtonGroup-komponent er tilgjengelig med Kartverkets Design. Dokumentasjon er oppdatert.Kritiske endringer:
-
   - **colorScheme** er lagt til med verdier: "green" (default), "blue", "gray", "red".
 
 ## 1.6.0
@@ -936,7 +924,6 @@
 ### Minor Changes
 
 - 5ba55d2c8: Bugfix:
-
   - IconButton: **colorScheme** og **variant** er ikke lenger required prop.
   - Link: aria-attributes for ikon er oppdatert. **colorScheme** er ikke lenger required prop.
   - Tabs: importert manglende komponenter; TabList, TabPanels, Tab, TabPanel
@@ -1013,7 +1000,6 @@
 ### Minor Changes
 
 - 250f0e82d: Eksportert
-
   - InputGroup
   - InputAddon
   - InputLeftAddon
@@ -1052,13 +1038,11 @@
 - 96eacd306: Eksportert følgende komponenter:
 
   Disclosure
-
   - Accordion
   - Tabs
   - VisuallyHidden
 
   Navigation
-
   - Breadcrumbs
   - Link
   - LinkBox
@@ -1066,7 +1050,6 @@
   - Stepper
 
   Media and icons
-
   - Avatar
   - Icon
   - Image
@@ -1092,7 +1075,6 @@
 ### Minor Changes
 
 - 191b6d340: Eksportert flere Typografi-komponenter (Highlight) og alle Overlay-komponenter
-
   - Alert Dialog
   - Drawer
   - Menu
@@ -1139,7 +1121,6 @@
 ### Minor Changes
 
 - d808ad6c3: Lagt til feedback-komponenter:
-
   - Alert
   - Circular Progress
   - Progress
@@ -1152,7 +1133,6 @@
 ### Minor Changes
 
 - 5c3b951d0: Eksportert alle data display-komponenter:
-
   - Badge
   - Card
   - Divider
