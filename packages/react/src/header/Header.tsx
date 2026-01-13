@@ -32,6 +32,8 @@ type HeaderProps = {
   collapseBreakpoint?: "sm" | "md" | "lg";
   /** If provided: a custom function to be called when the menu button is clicked. */
   onMenuButtonClick?: React.MouseEventHandler<HTMLButtonElement>;
+  /** If set, overrides the automatic logic for showing the menu button. When undefined, the menu button visibility is determined automatically based on menuContent, tabBarContent, and screen size. */
+  showMenuButton?: boolean;
   /** Gap between header elements. */
   gap?: number;
   logoVariant?: "horizontal" | "vertical" | "symbol";
@@ -53,6 +55,7 @@ export const Header = (props: HeaderProps) => {
     tabBarContent,
     collapseBreakpoint = "sm",
     onMenuButtonClick,
+    showMenuButton,
     gap = 90,
     logoVariant = "horizontal",
     contentMaxWidth = "1140px",
@@ -68,7 +71,9 @@ export const Header = (props: HeaderProps) => {
   const headerPadding = 30;
   const justify = justifyContent && isCollapse ? "space-between" : justifyContent;
   const [isOpen, onToggle] = useToggle();
-  const showMenuButtonElement = (menuContent && (!tabBarContent || isCollapse)) || (content && (isCollapse || isOpen));
+  const automaticShowMenuButton =
+    (menuContent && (!tabBarContent || isCollapse)) || (content && (isCollapse || isOpen));
+  const showMenuButtonElement = showMenuButton !== undefined ? showMenuButton : automaticShowMenuButton;
   const handleClick = onMenuButtonClick || onToggle;
 
   // Ensure contentMaxWidth is treated as a string with units for calc()

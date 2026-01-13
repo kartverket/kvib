@@ -70,6 +70,15 @@ const meta: Meta<typeof KvibHeader> = {
       options: ["sm", "md", "lg"],
       control: { type: "radio" },
     },
+    showMenuButton: {
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: undefined },
+      },
+      control: "boolean",
+      description:
+        "If set, overrides the automatic logic for showing the menu button. When undefined, the menu button visibility is determined automatically based on menuContent, tabBarContent, and screen size.",
+    },
     gap: {
       table: {
         type: { summary: "number" },
