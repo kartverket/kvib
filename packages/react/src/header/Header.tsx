@@ -77,7 +77,8 @@ export const Header = (props: HeaderProps) => {
   const handleClick = onMenuButtonClick || onToggle;
 
   // Ensure contentMaxWidth is treated as a string with units for calc()
-  const maxWidthValue = String(contentMaxWidth).match(/\d+$/) ? `${contentMaxWidth}px` : contentMaxWidth;
+  // Check if the value is purely numeric (no units) and add 'px' suffix
+  const maxWidthValue = !isNaN(Number(contentMaxWidth)) ? `${contentMaxWidth}px` : contentMaxWidth;
   const containerMaxWidth = `calc(${maxWidthValue} + ${headerPadding * 2}px)`;
 
   const HeaderLogo = () => {
