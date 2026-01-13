@@ -24,10 +24,10 @@ type HeaderProps = {
   titleLink?: string;
   /** Content to be displayed in the header. */
   content?: React.ReactNode;
-  /** If true, a menu button will be displayed. */
-  showMenuButton?: boolean;
-  /** Custom content to be displayed in the opened menu. Also to modify menu layout. */
+  /** Custom content to be displayed in the opened menu. Also to modify menu layout. Shows as a side drawer on large screens (unless tabBarContent is provided) and as a collapsible dropdown on small screens. When both menuContent and tabBarContent are defined, menuContent takes priority on small screens. */
   menuContent?: React.ReactNode;
+  /** Content to be displayed as a tab bar attached to the bottom of the header. Shows on all screen sizes when menuContent is not defined. When both are defined, tabBarContent shows on large screens and menuContent shows on small screens. Choose between menuContent (side drawer/dropdown) or tabBarContent (tab bar) for navigation. */
+  tabBarContent?: React.ReactNode;
   /** Screen breakpoint for when the header should collapse and display menu button instead. */
   collapseBreakpoint?: "sm" | "md" | "lg";
   /** If provided: a custom function to be called when the menu button is clicked. */
@@ -49,8 +49,8 @@ export const Header = (props: HeaderProps) => {
     title,
     titleLink,
     content,
-    showMenuButton = false,
     menuContent,
+    tabBarContent,
     collapseBreakpoint = "sm",
     onMenuButtonClick,
     gap = 90,
@@ -68,8 +68,12 @@ export const Header = (props: HeaderProps) => {
   const headerPadding = 30;
   const justify = justifyContent && isCollapse ? "space-between" : justifyContent;
   const [isOpen, onToggle] = useToggle();
-  const showMenuButtonElement = (content && (isCollapse || isOpen)) || showMenuButton;
+  const showMenuButtonElement = (menuContent && (!tabBarContent || isCollapse)) || (content && (isCollapse || isOpen));
   const handleClick = onMenuButtonClick || onToggle;
+
+  // Ensure contentMaxWidth is treated as a string with units for calc()
+  const maxWidthValue = String(contentMaxWidth).match(/\d+$/) ? `${contentMaxWidth}px` : contentMaxWidth;
+  const containerMaxWidth = `calc(${maxWidthValue} + ${headerPadding * 2}px)`;
 
   const HeaderLogo = () => {
     return (
@@ -89,13 +93,13 @@ export const Header = (props: HeaderProps) => {
 
   return (
     <Box>
-      <Box bg="white" borderBottomWidth="1px" borderBottomColor="gray.200">
+      <Box
+        bg="white"
+        borderBottomWidth={tabBarContent && (!menuContent || !isCollapse) ? 0 : "1px"}
+        borderBottomColor="gray.200"
+      >
         <Flex
-          maxWidth={
-            typeof contentMaxWidth === "number"
-              ? contentMaxWidth + headerPadding * 2
-              : `calc(${contentMaxWidth} + (${headerPadding} * 2px))`
-          }
+          maxWidth={containerMaxWidth}
           margin="0 auto"
           padding={headerPadding}
           height={headerSize}
@@ -107,7 +111,7 @@ export const Header = (props: HeaderProps) => {
             {logoLinkDisabled ? (
               <HeaderLogo />
             ) : (
-              <Link href={logoLink} external={false} {...logoLinkProps}>
+              <Link href={logoLink} external={false} {...logoLinkProps} aria-label={logoAltText || "Gå til forsiden"}>
                 <HeaderLogo />
               </Link>
             )}
@@ -137,66 +141,84 @@ export const Header = (props: HeaderProps) => {
                 <IconButton
                   aria-label={isOpen ? "Lukk meny" : "Åpne meny"}
                   aria-expanded={isOpen}
+                  aria-controls="navigation-menu"
                   icon={isOpen ? "close" : "menu"}
                   onClick={handleClick}
                   variant="plain"
                 />
               ) : (
-                <Button
-                  variant="plain"
-                  rightIcon={isOpen ? "close" : "menu"}
-                  onClick={handleClick}
-                  aria-expanded={isOpen}
-                  aria-controls="navigation-menu"
-                >
-                  Meny
-                </Button>
+                !tabBarContent && (
+                  <Button
+                    variant="plain"
+                    rightIcon={isOpen ? "close" : "menu"}
+                    onClick={handleClick}
+                    aria-expanded={isOpen}
+                    aria-controls="navigation-menu"
+                  >
+                    Meny
+                  </Button>
+                )
               ))}
           </HStack>
         </Flex>
       </Box>
 
-      {/* Conditional rendering based on screen size */}
-      {isCollapse ? (
-        /* Small screens: Use collapsible dropdown */
-        <CollapsibleRoot open={isOpen}>
-          <CollapsibleContent>
-            <VStack
-              id="navigation-menu"
-              bg="white"
-              borderBottomWidth="2px"
-              borderBottomColor="gray.200"
-              padding={headerPadding}
-              gap={10}
-              role="navigation"
-              aria-label="Hovedmeny"
-              alignItems="start"
-            >
-              {menuContent}
-            </VStack>
-          </CollapsibleContent>
-        </CollapsibleRoot>
-      ) : (
-        /* Large screens: Use side drawer */
-        <DrawerRoot open={isOpen} onOpenChange={onToggle} placement="end">
-          <DrawerBackdrop />
-          <DrawerContent>
-            <DrawerCloseTrigger />
-            <DrawerBody>
+      {/* Conditional rendering based on content type and screen size */}
+      {tabBarContent && (!menuContent || !isCollapse) ? (
+        /* tabBarContent: Display as tab bar on all screen sizes if no menuContent, or only on large screens if menuContent exists */
+        <Box bg="white" borderBottomWidth="1px" borderBottomColor="gray.200">
+          <Flex
+            maxWidth={containerMaxWidth}
+            margin="0 auto"
+            paddingX={headerPadding}
+            width="full"
+            role="navigation"
+            aria-label="Hovedmeny"
+          >
+            {tabBarContent}
+          </Flex>
+        </Box>
+      ) : menuContent ? (
+        /* menuContent: Show as collapsible dropdown on small screens, side drawer on large screens (when no tabBarContent) */
+        isCollapse ? (
+          <CollapsibleRoot open={isOpen}>
+            <CollapsibleContent>
               <VStack
                 id="navigation-menu"
+                bg="white"
+                borderBottomWidth="2px"
+                borderBottomColor="gray.200"
                 padding={headerPadding}
                 gap={10}
-                align="stretch"
                 role="navigation"
                 aria-label="Hovedmeny"
+                alignItems="start"
               >
                 {menuContent}
               </VStack>
-            </DrawerBody>
-          </DrawerContent>
-        </DrawerRoot>
-      )}
+            </CollapsibleContent>
+          </CollapsibleRoot>
+        ) : (
+          <DrawerRoot open={isOpen} onOpenChange={onToggle} placement="end">
+            <DrawerBackdrop />
+            <DrawerContent>
+              <DrawerCloseTrigger />
+              <DrawerBody>
+                <VStack
+                  id="navigation-menu"
+                  padding={headerPadding}
+                  gap={10}
+                  align="stretch"
+                  role="navigation"
+                  aria-label="Hovedmeny"
+                >
+                  {menuContent}
+                </VStack>
+              </DrawerBody>
+            </DrawerContent>
+          </DrawerRoot>
+        )
+      ) : null}
     </Box>
   );
 };

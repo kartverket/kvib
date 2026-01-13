@@ -8,11 +8,11 @@ export type LogoProps = {
    * @default 184/125/42*/
   size?: number;
   /** Aria-label for the logo.
-   * @default "logo"*/
+   * @default "Kartverket logo"*/
   label?: string;
 };
 
-export const Logo = ({ variant = "vertical", size, label }: LogoProps) => {
+export const Logo = ({ variant = "vertical", size, label = "Kartverket logo" }: LogoProps) => {
   const { width, height } = computeDimensions(variant, size);
 
   switch (variant) {
