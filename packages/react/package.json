@@ -21,30 +21,30 @@
     "directory": "packages/react"
   },
   "devDependencies": {
-    "@chakra-ui/cli": "3.30.0",
-    "@types/react": "19.1.15",
-    "@types/react-dom": "19.1.9",
-    "react": "19.1.1",
-    "react-dom": "19.1.1",
-    "tsup": "^8.5.0",
-    "typescript": "5.9.2"
+    "@chakra-ui/cli": "3.31.0",
+    "@types/react": "19.2.8",
+    "@types/react-dom": "19.2.3",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "tsup": "^8.5.1",
+    "typescript": "5.9.3"
   },
   "peerDependencies": {
     "react": ">=18.0.0",
     "react-dom": ">=18.0.0"
   },
   "dependencies": {
-    "@chakra-ui/react": "3.30.0",
+    "@chakra-ui/react": "3.31.0",
     "@emotion/react": "^11.13.5",
     "@fontsource/mulish": "5.2.8",
     "date-fns": "^4.1.0",
-    "material-symbols": "^0.36.1",
+    "material-symbols": "^0.40.2",
     "next-themes": "^0.4.6",
-    "react-aria": "^3.43.2",
-    "react-day-picker": "9.11.0",
+    "react-aria": "^3.45.0",
+    "react-day-picker": "9.13.0",
     "react-icons": "^5.5.0",
     "react-select": "^5.10.2",
-    "react-stately": "^3.41.0",
+    "react-stately": "^3.43.0",
     "usehooks-ts": "^3.1.1"
   },
   "lint-staged": {
