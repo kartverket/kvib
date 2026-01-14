@@ -48,7 +48,7 @@
     "react-docgen": "^8.0.1",
     "react-docgen-typescript": "^2.4.0",
     "react-dom": "^19.1.1",
-    "storybook": "^8.6.14",
+    "storybook": "^8.6.15",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.9.2"
   },
