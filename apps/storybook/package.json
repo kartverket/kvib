@@ -37,7 +37,7 @@
     "@types/react": "^19.1.15",
     "@types/react-dom": "^19.1.9",
     "@storybook/theming": "^8.6.11",
-    "@vitejs/plugin-react": "^4.5.0",
+    "@vitejs/plugin-react": "^5.1.2",
     "axe-playwright": "^2.2.2",
     "babel-loader": "^10.0.0",
     "chromatic": "^11.28.2",
