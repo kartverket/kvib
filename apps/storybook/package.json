@@ -50,7 +50,7 @@
     "react-dom": "^19.1.1",
     "storybook": "^8.6.15",
     "tsconfig-paths": "^4.2.0",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.3"
   },
   "dependencies": {
     "@chakra-ui/react": "3.30.0",
