@@ -53,7 +53,7 @@
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "@chakra-ui/react": "3.30.0",
+    "@chakra-ui/react": "3.31.0",
     "@fontsource-variable/mulish": "^5.2.8"
   },
   "lint-staged": {
