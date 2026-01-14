@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 6.2.1
+
+### Patch Changes
+
+- aacc37b: Updated dependencies
+
 ## 6.2.0
 
 ### Minor Changes
