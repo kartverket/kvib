@@ -1,1 +1,0 @@
-import{r as e}from"./index-CbFAwPTn.js";import{u as a}from"./factory-C_AV5G8T.js";import{c as n}from"./create-recipe-context-BJGsumvR.js";function x(o,r){const s=a();return e.useMemo(()=>(Array.isArray(r)?r:[r]).map(t=>s.token(`${o}.${t}`,t)),[s,o,r])}const{withContext:i,PropsProvider:f}=n({key:"link"}),C=i("a");export{C as L,x as u};
