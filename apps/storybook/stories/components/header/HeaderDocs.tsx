@@ -19,6 +19,10 @@ export const HeaderDocs = () => (
         <Listeelement>
           headertittel kan legges til ved siden av logoen som en klikkbar lenke og skjules automatisk på mobile enheter.
         </Listeelement>
+        <Listeelement>
+          tabBarContent vises på alle skjermstørrelser hvis menuContent ikke er definert. Hvis både menuContent og
+          tabBarContent er definert, vises tabBarContent på store skjermer og menuContent (dropdown) på små skjermer.
+        </Listeelement>
       </Liste>
     </Tekstblokk>
   </Dokumentasjonsside>

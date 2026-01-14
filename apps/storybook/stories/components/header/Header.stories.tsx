@@ -1,5 +1,6 @@
-import { Header as KvibHeader } from "@kvib/react";
+import { Header as KvibHeader, Tabs, TabsList, TabsTrigger } from "@kvib/react";
 import { Meta, StoryObj } from "@storybook/react";
+import { Button, VStack } from "@chakra-ui/react";
 
 const meta: Meta<typeof KvibHeader> = {
   title: "Komponenter/Header",
@@ -61,13 +62,6 @@ const meta: Meta<typeof KvibHeader> = {
       },
       control: "text",
     },
-    showMenuButton: {
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
-      },
-      control: "boolean",
-    },
     collapseBreakpoint: {
       table: {
         type: { summary: "sm | md | lg" },
@@ -75,6 +69,15 @@ const meta: Meta<typeof KvibHeader> = {
       },
       options: ["sm", "md", "lg"],
       control: { type: "radio" },
+    },
+    showMenuButton: {
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: undefined },
+      },
+      control: "boolean",
+      description:
+        "If set, overrides the automatic logic for showing the menu button. When undefined, the menu button visibility is determined automatically based on menuContent, tabBarContent, and screen size.",
     },
     gap: {
       table: {
@@ -98,6 +101,22 @@ const meta: Meta<typeof KvibHeader> = {
       },
       control: "text",
     },
+    menuContent: {
+      table: {
+        type: { summary: "React.ReactNode" },
+        defaultValue: { summary: undefined },
+      },
+      description:
+        "Custom content to be displayed in the opened menu. Shows as a side drawer on large screens (unless tabBarContent is provided) and as a collapsible dropdown on small screens. When both menuContent and tabBarContent are defined, menuContent takes priority on small screens.",
+    },
+    tabBarContent: {
+      table: {
+        type: { summary: "React.ReactNode" },
+        defaultValue: { summary: undefined },
+      },
+      description:
+        "Content to be displayed as a tab bar attached to the bottom of the header. Shows on all screen sizes when menuContent is not defined. When both are defined, tabBarContent shows on large screens and menuContent shows on small screens.",
+    },
   },
   args: { onMenuButtonClick: undefined },
 };
@@ -110,5 +129,78 @@ type Story = StoryObj<typeof KvibHeader>;
 
 export const Preview: Story = {
   args: { logoAltText: "Kartverket-logo" },
+  render: args => <KvibHeader {...args} />,
+};
+
+export const WithTabBarAndMenu: Story = {
+  args: {
+    logoAltText: "Kartverket-logo",
+    tabBarContent: (
+      <Tabs defaultValue="hjem" width="full" colorPalette="green">
+        <TabsList style={{ borderBottomWidth: 0 }}>
+          <TabsTrigger value="hjem">Hjem</TabsTrigger>
+          <TabsTrigger value="tjenester">Tjenester</TabsTrigger>
+          <TabsTrigger value="om">Om oss</TabsTrigger>
+          <TabsTrigger value="kontakt">Kontakt</TabsTrigger>
+        </TabsList>
+      </Tabs>
+    ),
+    menuContent: (
+      <VStack gap={2} width="100%">
+        <Button value="hjem" variant="plain">
+          Hjem
+        </Button>
+        <Button value="tjenester" variant="plain">
+          Tjenester
+        </Button>
+        <Button value="om" variant="plain">
+          Om oss
+        </Button>
+        <Button value="kontakt" variant="plain">
+          Kontakt
+        </Button>
+      </VStack>
+    ),
+  },
+  render: args => <KvibHeader {...args} />,
+};
+
+export const WithTabBarWithoutMenu: Story = {
+  args: {
+    logoAltText: "Kartverket-logo",
+    tabBarContent: (
+      <Tabs defaultValue="hjem" width="full" colorPalette="green">
+        <TabsList style={{ borderBottomWidth: 0 }}>
+          <TabsTrigger value="hjem">Hjem</TabsTrigger>
+          <TabsTrigger value="tjenester">Tjenester</TabsTrigger>
+          <TabsTrigger value="om">Om oss</TabsTrigger>
+          <TabsTrigger value="kontakt">Kontakt</TabsTrigger>
+        </TabsList>
+      </Tabs>
+    ),
+  },
+  render: args => <KvibHeader {...args} />,
+};
+
+export const WithMenu: Story = {
+  args: {
+    logoAltText: "Kartverket-logo",
+    menuContent: (
+      <VStack gap={2} width="100%">
+        <Button value="hjem" variant="plain">
+          Hjem
+        </Button>
+        <Button value="tjenester" variant="plain">
+          Tjenester
+        </Button>
+        <Button value="om" variant="plain">
+          Om oss
+        </Button>
+        <Button value="kontakt" variant="plain">
+          Kontakt
+        </Button>
+      </VStack>
+    ),
+  },
   render: args => <KvibHeader {...args} />,
 };
