@@ -1,15 +1,19 @@
 # @kvib/storybook
 
+## 1.2.0
+
+### Minor Changes
+
+- eb048c8: Oppdaterer Header-komponent. Introduserer en ny parameter tabBarContent, som lar deg legge til navigasjon som en del av headeren under resten av innholdet
+
 ## 1.1.7
 
 ### Patch Changes
 
 - 59bd3c8: Logo:
-
   - Legger til en ny logovariant symbol som er uten Kartverket teksten
 
   Header:
-
   - Legger til nye logovarianten i Header
   - Små fikser på header
 
@@ -18,7 +22,6 @@
 ### Patch Changes
 
 - 2f252ca: Header:
-
   - **BREAKING**: Endret props fra `children` til `content`og `dropdownMenuChildren` til `menuContent`
   - **BREAKING**: Fjernet `showChildrenInMenu` ettersom horisontalt content sjeldent passer med vertikalt, her bør heller `menuContent` tilpasses.
   - Lagt til en `contentMaxWidth` prop med default verdi `1140px`

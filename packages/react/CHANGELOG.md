@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 6.2.0
+
+### Minor Changes
+
+- eb048c8: Oppdaterer Header-komponent. Introduserer en ny parameter tabBarContent, som lar deg legge til navigasjon som en del av headeren under resten av innholdet
+
 ## 6.1.2
 
 ### Patch Changes
