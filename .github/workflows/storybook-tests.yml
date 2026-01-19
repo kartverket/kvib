@@ -9,11 +9,6 @@ jobs:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
-      - name: Download artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: build-artifact
-          path: ./kvib-react
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
