@@ -8,3 +8,15 @@ spec:
   type: website
   lifecycle: production
   owner: designsystem
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: kvib-react
+  tags:
+    - public
+spec:
+  type: library
+  owner: group:default/designsystem
+  lifecycle: production
