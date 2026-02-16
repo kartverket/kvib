@@ -33,7 +33,7 @@ const computeDimensions = (variant: "vertical" | "horizontal" | "symbol", size?:
   switch (variant) {
     case "horizontal":
       defaultWidth = 184;
-      aspectRatio = 64 / 184;
+      aspectRatio = 51 / 184;
       break;
     case "symbol":
       defaultWidth = 42;
@@ -42,7 +42,7 @@ const computeDimensions = (variant: "vertical" | "horizontal" | "symbol", size?:
     case "vertical":
     default:
       defaultWidth = 125;
-      aspectRatio = 91 / 125;
+      aspectRatio = 74 / 125;
       break;
   }
 

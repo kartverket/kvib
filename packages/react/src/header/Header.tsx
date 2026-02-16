@@ -113,7 +113,7 @@ export const Header = (props: HeaderProps) => {
           justifyContent={justify}
           gap={gap}
         >
-          <Flex alignItems={logoVariant === "horizontal" ? "flex-end" : "center"} gap={5}>
+          <Flex alignItems="center" gap={5}>
             {logoLinkDisabled ? (
               <HeaderLogo />
             ) : (
@@ -122,7 +122,7 @@ export const Header = (props: HeaderProps) => {
               </Link>
             )}
             {title && (
-              <HStack marginBottom={logoVariant === "horizontal" ? "3px" : "0"} gap={5}>
+              <HStack gap={5}>
                 <Separator orientation="vertical" height="28px" />
                 {titleLink ? (
                   <Link href={titleLink} variant="plain">
