@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 6.2.2
+
+### Patch Changes
+
+- c9c7349: Endrer til ny logo med midtstilt tekst + tilpasser Header-tittel til at teksten nå er midtstilt
+
 ## 6.2.1
 
 ### Patch Changes
