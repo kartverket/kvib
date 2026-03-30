@@ -19,7 +19,7 @@
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
     "prettier": "^3.7.4",
-    "syncpack": "^13.0.4",
+    "syncpack": "^14.3.0",
     "tsconfig-paths": "^4.2.0",
     "turbo": "^2.7.4"
   },
