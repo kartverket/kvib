@@ -1,5 +1,0 @@
-version: 3.0
-organization: IT
-product: Designsystemet
-repo_types: [PublicClient,Library]
-platforms: [Github]
