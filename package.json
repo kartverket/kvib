@@ -17,14 +17,14 @@
   },
   "devDependencies": {
     "husky": "^9.1.7",
-    "lint-staged": "^16.2.7",
+    "lint-staged": "^17.4.1",
     "prettier": "^3.7.4",
-    "syncpack": "^14.0.0",
+    "syncpack": "^15.3.3",
     "tsconfig-paths": "^4.2.0",
     "turbo": "^2.7.4"
   },
   "dependencies": {
-    "@changesets/cli": "^2.29.8"
+    "@changesets/cli": "^3.0.1"
   },
   "packageManager": "npm@9.5.0",
   "lint-staged": {
