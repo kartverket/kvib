@@ -23,6 +23,18 @@ export default defineConfig({
             tags: { exclude: ["skip-test", "no-tests"] },
           }),
         ],
+        // On a cold cache (every CI run) Vite discovers these mid-run and reloads, which
+        // makes every story test file fail. Add new entries here if Vitest warns
+        // "Vite unexpectedly reloaded a test".
+        optimizeDeps: {
+          include: [
+            "react/jsx-dev-runtime",
+            "@chakra-ui/react",
+            "storybook/actions",
+            "storybook/theming",
+            "usehooks-ts",
+          ],
+        },
         test: {
           name: "storybook",
           browser: {
