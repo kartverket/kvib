@@ -1,0 +1,1 @@
+import{r as e}from"./index-BQvhbVge.js";import{u as o}from"./factory-CLoA9iA8.js";import{c as n}from"./create-recipe-context-C3YO1THl.js";function f(s,r){const t=o();return e.useMemo(()=>(Array.isArray(r)?r:[r]).map(a=>t.token(`${s}.${a}`,a)),[t,s,r])}const{withContext:i}=n({key:"link"}),m=i("a");m.displayName="Link";export{m as L,f as u};
