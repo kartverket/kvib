@@ -32,6 +32,9 @@
   },
   "overrides": {
     "axios": "^1.7.4",
-    "@joshwooding/vite-plugin-react-docgen-typescript": "^0.9.1"
+    "@joshwooding/vite-plugin-react-docgen-typescript": "^0.9.1",
+    "@chakra-ui/cli": {
+      "zod": "^4.6.6"
+    }
   }
 }
