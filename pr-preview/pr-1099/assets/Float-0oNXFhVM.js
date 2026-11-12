@@ -1,0 +1,4 @@
+import{j as e,u as l,M as c,ck as j,cl as m}from"./iframe-B_C8pV-B.js";import{F as x,P as s}from"./Float.stories-J1i_QemY.js";import{D as d}from"./Dokumentasjonsside-dkKLcAOS.js";import{T as o,L as r,a as i}from"./Tekstblokk-BRlR_mqY.js";import"./preload-helper-Dp1pzeXC.js";const k=()=>e.jsxs(d,{tittel:"Float",beskrivelse:"Vi bruker Float til å forankre elementer til kanten på en container.",children:[e.jsx(o,{tittel:"Egnet til:",children:e.jsx(r,{children:e.jsx(i,{children:"nøyaktig posisjonering innenfor layout."})})}),e.jsx(o,{tittel:"Ikke egnet til:",children:e.jsx(r,{children:e.jsx(i,{children:"dynamisk plassering av elementer."})})})]});function a(t){return e.jsxs(e.Fragment,{children:[e.jsx(c,{of:x}),`
+`,e.jsx(k,{}),`
+`,e.jsx(j,{of:s}),`
+`,e.jsx(m,{of:s})]})}function D(t={}){const{wrapper:n}={...l(),...t.components};return n?e.jsx(n,{...t,children:e.jsx(a,{...t})}):a()}export{D as default};
