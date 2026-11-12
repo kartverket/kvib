@@ -1,5 +1,5 @@
 export const blur = {
-  none: { value: 0 },
+  none: { value: "0" },
   sm: { value: "4px" },
   base: { value: "8px" },
   md: { value: "12px" },
