@@ -17,18 +17,14 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
+          cache: "npm"
       - name: Install dependencies
-        run: npm install
+        run: npm ci
       - name: Install Playwright
         working-directory: ./apps/storybook
-        run: npx playwright install --with-deps
-      - name: Build Storybook
-        working-directory: ./apps/storybook
-        run: npm run build
-      - name: Serve Storybook and run tests
-        working-directory: ./apps/storybook
-        run: |
-          npx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
-            "npx http-server storybook-static --port 6006 --silent" \
-            "npx wait-on tcp:6006 && npm run test"
+        run: npx playwright install --with-deps chromium
+      # Stories run directly in Vitest browser mode, so no Storybook server is needed.
+      # Turbo builds @kvib/react first, since the stories import its dist output.
+      - name: Run Storybook tests
+        run: npx turbo run test --filter=@kvib/storybook

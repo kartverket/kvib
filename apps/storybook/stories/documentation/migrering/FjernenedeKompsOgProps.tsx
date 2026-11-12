@@ -1,5 +1,5 @@
 import { Code, Link } from "@kvib/react";
-import { Unstyled } from "@storybook/blocks";
+import { Unstyled } from "@storybook/addon-docs/blocks";
 import { Kodeeksempel } from "./Kodeeksempel";
 
 export const fjernedeKomponenter = [
