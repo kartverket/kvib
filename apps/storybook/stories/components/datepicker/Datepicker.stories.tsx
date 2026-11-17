@@ -1,15 +1,11 @@
 import { Datepicker as KvibDatepicker } from "@kvib/react";
-import { withActions } from "@storybook/addon-actions/decorator";
+import { action } from "storybook/actions";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof KvibDatepicker> = {
   title: "Komponenter/Datepicker",
   component: KvibDatepicker,
-  decorators: [withActions],
   parameters: {
-    actions: {
-      argTypesRegex: "^on.*",
-    },
     docs: {
       story: { inline: true },
     },
@@ -29,6 +25,7 @@ const meta: Meta<typeof KvibDatepicker> = {
     showWeekNumber: false,
     showOutsideDays: true,
     showDropdownMonthYear: false,
+    onChange: action("onChange"),
     defaultSelected: undefined,
     defaultMonth: undefined,
     fromDate: undefined,

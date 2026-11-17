@@ -1,5 +1,5 @@
 import { Code } from "@kvib/react";
-import { Source } from "@storybook/blocks";
+import { Source } from "@storybook/addon-docs/blocks";
 import { Kodeeksempel } from "./Kodeeksempel";
 
 export const nyeProps = [

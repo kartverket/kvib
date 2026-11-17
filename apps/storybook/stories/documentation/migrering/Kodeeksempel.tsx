@@ -1,5 +1,5 @@
 import { Stack } from "@kvib/react";
-import { Source } from "@storybook/blocks";
+import { Source } from "@storybook/addon-docs/blocks";
 
 interface Props {
   beskrivelse: React.ReactNode;
