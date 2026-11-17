@@ -1,5 +1,11 @@
 # @kvib/react
 
+## 6.2.3
+
+### Patch Changes
+
+- ea239f7: Updated @chakra-ui/react to 3.38.0
+
 ## 6.2.2
 
 ### Patch Changes
