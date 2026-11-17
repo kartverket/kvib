@@ -1,0 +1,4 @@
+import{j as e,u as l,M as d,ck as c,cl as x}from"./iframe-Bsatxhr7.js";import{G as j,P as t}from"./Grid.stories-DQ6TXozP.js";import{D as m}from"./Dokumentasjonsside-pH3MxJDo.js";import{T as n,L as o,a as i}from"./Tekstblokk-cu5ZBrSt.js";import"./preload-helper-Dp1pzeXC.js";const u=()=>e.jsxs(m,{tittel:"Grid",beskrivelse:"Vi bruker Grid for å lage layouter der innhold organiseres i rader og kolonner.",children:[e.jsx(n,{tittel:"Egnet til:",children:e.jsx(o,{children:e.jsx(i,{children:"oppbygging av komplekse sidelayouts."})})}),e.jsx(n,{tittel:"Ikke egnet til:",children:e.jsx(o,{children:e.jsx(i,{children:"organisering av elementer."})})})]});function a(s){return e.jsxs(e.Fragment,{children:[e.jsx(d,{of:j}),`
+`,e.jsx(u,{}),`
+`,e.jsx(c,{of:t}),`
+`,e.jsx(x,{of:t})]})}function D(s={}){const{wrapper:r}={...l(),...s.components};return r?e.jsx(r,{...s,children:e.jsx(a,{...s})}):a()}export{D as default};
