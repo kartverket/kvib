@@ -1,0 +1,8 @@
+import{j as e,u as m,M as j,ck as s,cl as i}from"./iframe-B_C8pV-B.js";import{A as k,P as t,a as l}from"./Accordion.stories-DeM1sX56.js";import{D as x}from"./Dokumentasjonsside-dkKLcAOS.js";import{T as d,L as c,a as o}from"./Tekstblokk-BRlR_mqY.js";import"./preload-helper-Dp1pzeXC.js";const h=()=>e.jsxs(x,{tittel:"Accordion",beskrivelse:'Vi bruker accordion for å organisere mye informasjon ved å skjule innhold i seksjoner, som brukeren kan åpne og lukke. Bruk tydelige og beskrivende seksjonstitler som gjenspeiler innholdet, i stedet for vage titler som "Vis mer" eller "Les mer".',children:[e.jsx(d,{tittel:"Egnet til:",children:e.jsxs(c,{children:[e.jsx(o,{children:"redusere scrolling på sider med mye innhold."}),e.jsx(o,{children:"gruppere informasjon der brukeren kun trenger én seksjon om gangen."})]})}),e.jsx(d,{tittel:"Ikke egnet til:",children:e.jsxs(c,{children:[e.jsx(o,{children:"presentere viktig innhold brukeren alltid må ha tilgang til, som foreksempel feilmeldinger."}),e.jsx(o,{children:"dele opp en logisk flyt eller håndtere komplekse interaksjoner som skjemaer."}),e.jsx(o,{children:"la brukeren velge mellom ulike alternativer."})]})})]});function a(n){const r={h3:"h3",...m(),...n.components};return e.jsxs(e.Fragment,{children:[e.jsx(j,{of:k}),`
+`,e.jsx(h,{}),`
+`,e.jsx(r.h3,{id:"props-for-root",children:"Props for Root"}),`
+`,e.jsx(s,{of:t}),`
+`,e.jsx(i,{of:t}),`
+`,e.jsx(r.h3,{id:"props-for-accordionitem",children:"Props for AccordionItem"}),`
+`,e.jsx(s,{of:l}),`
+`,e.jsx(i,{of:l})]})}function b(n={}){const{wrapper:r}={...m(),...n.components};return r?e.jsx(r,{...n,children:e.jsx(a,{...n})}):a(n)}export{b as default};

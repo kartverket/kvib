@@ -1,0 +1,4 @@
+import{j as e,u as o,M as a,ck as i,cl as l}from"./iframe-B_C8pV-B.js";import{S as p,P as n}from"./Separator.stories-BRYNV2lh.js";import{D as m}from"./Dokumentasjonsside-dkKLcAOS.js";import"./preload-helper-Dp1pzeXC.js";const u=()=>e.jsx(m,{tittel:"Separator",beskrivelse:"Vi bruker Separator for å skille innholdselementer visuelt ved hjelp av en linje. Dette bidrar til å tydeliggjøre strukturen og forbedre lesbarheten i grensesnittet. Komponenten er nyttig for å dele opp seksjoner eller grupper av relaterte elementer på en enkel og effektiv måte."});function s(t){return e.jsxs(e.Fragment,{children:[e.jsx(a,{of:p}),`
+`,e.jsx(u,{}),`
+`,e.jsx(i,{of:n,className:"fullwidth"}),`
+`,e.jsx(l,{of:n})]})}function x(t={}){const{wrapper:r}={...o(),...t.components};return r?e.jsx(r,{...t,children:e.jsx(s,{...t})}):s()}export{x as default};
