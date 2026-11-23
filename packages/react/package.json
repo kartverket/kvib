@@ -22,10 +22,10 @@
   },
   "devDependencies": {
     "@chakra-ui/cli": "3.38.0",
-    "@types/react": "19.2.8",
-    "@types/react-dom": "19.2.3",
-    "react": "19.2.3",
-    "react-dom": "19.2.3",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
     "tsup": "^8.5.1",
     "typescript": "5.9.3"
   },
@@ -36,13 +36,13 @@
   "dependencies": {
     "@chakra-ui/react": "3.38.0",
     "@emotion/react": "^11.13.5",
-    "@fontsource/mulish": "5.2.8",
-    "date-fns": "^4.1.0",
-    "material-symbols": "^0.40.2",
+    "@fontsource/mulish": "5.3.0",
+    "date-fns": "^4.4.0",
+    "material-symbols": "^0.49.0",
     "next-themes": "^0.4.6",
-    "react-aria": "^3.45.0",
+    "react-aria": "^3.53.1",
     "react-day-picker": "9.13.0",
-    "react-icons": "^5.5.0",
+    "react-icons": "^5.7.0",
     "react-select": "^5.10.2",
     "react-stately": "^3.43.0",
     "usehooks-ts": "^3.1.1"
